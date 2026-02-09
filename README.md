@@ -1,6 +1,6 @@
 # ROS Newcomer Onboarding Analysis Dataset
 
-This repository contains the dataset and pipeline for analyzing newcomer onboarding and participation in open-source ROS (Robot Operating System) packages.
+This repository contains the dataset and pipeline for analyzing newcomer onboarding and participation in open-source ROS packages.
 
 ## Overview
 
@@ -56,7 +56,7 @@ This runs 12 sequential scripts that:
 5. Build final package dataset
 6. Fill missing repository info from index.ros.org
 7. Generate diagnostic reports
-8. Build paper-ready dataset
+8. Build dataset
 9. Extract unique repositories
 10. Calculate repo overlap statistics
 11. Extract repository features and commit history
@@ -143,27 +143,3 @@ last_chance/
 ├── .gitignore                    # Git ignore rules
 └── README.md                     # This file
 ```
-
-## Key Metrics in Final Dataset
-
-- **Basic Info**: Name, Owner, Description, GitHub URL
-- **Popularity**: Stars, Forks, Watchers
-- **Activity**: Commits, Contributors, Open Issues
-- **Code**: Repository Size, Languages, License
-- **Community**: Topics, has_README, has_CONTRIBUTING, has_CODE_OF_CONDUCT, has_PR_TEMPLATE, has_ISSUE_TEMPLATE
-- **Distributions**: List of ROS distributions the package is in
-
-## Troubleshooting
-
-### GitHub API rate limit exceeded
-- Increase `REQUEST_SLEEP` in `10_extract_repo_features_and_commits.py`
-- Or use a higher-tier GitHub token (increases limit from 60 to 5000 requests/hour)
-
-### Missing `general_info.json` for some repos
-- Some repositories may be private or deleted
-- Check diagnostic reports in `out/diagnostics/`
-
-### Script timeouts
-- The `run_all.py` script has no timeout - long-running scripts will complete
-- To run scripts individually, edit the `SCRIPTS` list in `run_all.py`
-
