@@ -210,7 +210,6 @@ def build_row(owner: str, repo: str, distros_present: str) -> Dict[str, Any]:
     issue_template = read_snapshot_file(repo_dir, "issue_template.json") or {}
     pr_template = read_snapshot_file(repo_dir, "pr_template.json") or {}
     labels_json = read_snapshot_file(repo_dir, "labels.json") or {}
-    maintainers_json = read_snapshot_file(repo_dir, "maintainers.json") or []
     owner_info = read_snapshot_file(repo_dir, "owner_info.json") or {}
     first_commits = read_snapshot_file(repo_dir, "first_commits_by_author.json") or []
     contributors = read_snapshot_file(repo_dir, "contributors.json") or []
@@ -263,9 +262,6 @@ def build_row(owner: str, repo: str, distros_present: str) -> Dict[str, Any]:
         else:
             found_newcomer_labels = ""
     
-    # maintainers_count (users with push access)
-    maintainers_count = len(maintainers_json) if isinstance(maintainers_json, list) else 0
-    
     # owner_type (Organization or User)
     owner_type = ""
     if isinstance(owner_info, dict):
@@ -309,7 +305,6 @@ def build_row(owner: str, repo: str, distros_present: str) -> Dict[str, Any]:
         "has_newcomer_labels": has_newcomer_labels,
         "found_newcomer_labels": found_newcomer_labels,
         "contributors_count": contributors_count,
-        "maintainers_count": maintainers_count,
         "commits_count": commits_count,
         "first_contributor_date": first_contributor_date,
         "first_commit_files_changed": first_commit_files_changed,
@@ -364,7 +359,7 @@ def main():
         "List of topics", "License",
         "has_readme", "has_contributing", "has_code_of_conduct", "has_pr_template", "has_issue_template",
         "has_newcomer_labels", "found_newcomer_labels",
-        "contributors_count", "maintainers_count", "commits_count",
+        "contributors_count", "commits_count",
         "first_contributor_date", "first_commit_files_changed", "first_commit_additions", "first_commit_deletions", "first_commit_type",
         "owner_type",
         "size", "subscribers_count", "watchers_count",

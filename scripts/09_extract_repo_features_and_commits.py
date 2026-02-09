@@ -26,7 +26,6 @@ Output (per repo):
     - issue_template.json
     - pr_template.json
     - labels.json
-    - maintainers.json
     - owner_info.json
     - first_commits_by_author.json
 
@@ -389,37 +388,6 @@ def infer_commit_type(message: str, files: list) -> str:
     # Default: code
     return "code"
 
-def fetch_maintainers(owner, repo):
-    """
-    Fetch collaborators with push access (maintainers).
-    GitHub API /repos/{owner}/{repo}/collaborators requires authentication.
-    """
-    url = f"https://api.github.com/repos/{owner}/{repo}/collaborators"
-    maintainers = []
-    page = 1
-    
-    while True:
-        # per_page and permission filter
-        r = fetch_rest(url, params={"per_page": PER_PAGE, "page": page, "affiliation": "all"})
-        if not r:
-            break
-        if not isinstance(r, list) or len(r) == 0:
-            break
-        
-        for collab in r:
-            perm = (collab.get("permissions") or {})
-            # push = write access = maintainer
-            if perm.get("push"):
-                maintainers.append({
-                    "login": collab.get("login"),
-                    "type": collab.get("type"),  # User or Bot
-                    "permissions": perm,
-                })
-        
-        page += 1
-    
-    return maintainers
-
 def fetch_owner_info(owner):
     """
     Fetch owner info to determine if it's an organization or user account.
@@ -457,34 +425,54 @@ def fetch_pr_template(owner, repo):
 
 def fetch_commits(owner, repo):
     """
-    Fetch commits with detailed metadata including files changed, additions, deletions.
+    Fetch commits with basic metadata (list endpoint).
+    For detailed commit info with files/stats, use fetch_commit_detail().
     """
     url = f"https://api.github.com/repos/{owner}/{repo}/commits"
     out = []
     page = 1
     while True:
         r = fetch_rest(url, params={"per_page": PER_PAGE, "page": page})
-        if not r:
+        if not r or not isinstance(r, list) or len(r) == 0:
             break
-        if not isinstance(r, list) or len(r) == 0:
-            break
+
         for c in r:
             out.append({
                 "sha": c.get("sha"),
                 "author": (c.get("commit") or {}).get("author", {}).get("name"),
-                "author_login": (c.get("author") or {}).get("login"),  # GitHub username
+                "author_login": (c.get("author") or {}).get("login"),
                 "date": (c.get("commit") or {}).get("author", {}).get("date"),
                 "message": (c.get("commit") or {}).get("message"),
-                "files_changed": c.get("files", []),
-                "stats": {
-                    "additions": c.get("stats", {}).get("additions", 0),
-                    "deletions": c.get("stats", {}).get("deletions", 0),
-                    "total": c.get("stats", {}).get("total", 0),
-                }
             })
         page += 1
     return out
 
+def fetch_commit_detail(owner, repo, sha):
+    """
+    Fetch individual commit detail including files and stats.
+    """
+    url = f"https://api.github.com/repos/{owner}/{repo}/commits/{sha}"
+    r = fetch_rest(url)
+    if not isinstance(r, dict):
+        return None
+    
+    files = r.get("files", []) or []
+    stats = r.get("stats") or {}
+    
+    return {
+        "sha": r.get("sha"),
+        "author": (r.get("commit") or {}).get("author", {}).get("name"),
+        "author_login": (r.get("author") or {}).get("login"),
+        "date": (r.get("commit") or {}).get("author", {}).get("date"),
+        "message": (r.get("commit") or {}).get("message"),
+        "files_changed": len(files),
+        "files": files,
+        "stats": {
+            "additions": stats.get("additions", 0),
+            "deletions": stats.get("deletions", 0),
+            "total": stats.get("total", 0),
+        }
+    }
 def fetch_forks(owner, repo):
     url = f"https://api.github.com/repos/{owner}/{repo}/forks"
     out = []
@@ -666,7 +654,6 @@ REQUIRED_FILES = [
     "issue_template.json",
     "pr_template.json",
     "labels.json",
-    "maintainers.json",
     "owner_info.json",
     "first_commits_by_author.json",
 ]
@@ -784,10 +771,6 @@ def process_repo(owner: str, repo: str):
                            meta={"source": "github_rest", "endpoint": "/repos/{owner}/{repo}/stats/commit_activity", "owner": owner, "repo": repo})
 
     # 7) maintainers and owner info
-    if "maintainers.json" in missing:
-        maintainers = fetch_maintainers(owner, repo)
-        save_snapshot_json(maintainers, os.path.join(repo_dir, "maintainers.json"),
-                           meta={"source": "github_rest", "endpoint": "/repos/{owner}/{repo}/collaborators?affiliation=all", "owner": owner, "repo": repo, "per_page": PER_PAGE})
 
     if "owner_info.json" in missing:
         owner_info = fetch_owner_info(owner)
@@ -796,11 +779,10 @@ def process_repo(owner: str, repo: str):
 
     # 8) first commits by author (derived from commits.json)
     if "first_commits_by_author.json" in missing:
-        commits_data = load_json(os.path.join(repo_dir, "commits.json"))
-        if isinstance(commits_data, dict) and "data" in commits_data:
-            commits = commits_data["data"]
-        else:
-            commits = commits_data if isinstance(commits_data, list) else []
+        # ALWAYS refetch commits when first_commits_by_author.json is missing
+        commits = fetch_commits(owner, repo)
+        save_snapshot_json(commits, os.path.join(repo_dir, "commits.json"),
+                         meta={"source": "github_rest", "endpoint": "/repos/{owner}/{repo}/commits", "owner": owner, "repo": repo})
         
         # Group commits by author_login, sort by date to find first
         from collections import defaultdict
@@ -811,50 +793,65 @@ def process_repo(owner: str, repo: str):
             if author:
                 commits_by_author[author].append(c)
         
-        # Extract first commit per author
+       # Extract first commit per author
         first_commits = []
+
         for author, commits_list in commits_by_author.items():
+            if not commits_list:
+                continue
+
             # Sort by date (ISO format)
             try:
                 sorted_commits = sorted(commits_list, key=lambda x: x.get("date", ""))
-            except:
+            except Exception:
                 sorted_commits = commits_list
+
+            if not sorted_commits:
+                continue
+
+            # pick first commit (earliest)
+            first = sorted_commits[0]
+            sha = first.get("sha")
+
+            # Fetch detailed commit info to get files/stats
+            commit_detail = None
+            if sha:
+                commit_detail = fetch_commit_detail(owner, repo, sha)
             
-            if sorted_commits:
-                first = sorted_commits[0]
-                files = first.get("files_changed", [])
-                files_count = len(files) if files else 0
-                
-                # Extract file info
+            if commit_detail:
+                files = commit_detail.get("files", []) or []
+                files_count = commit_detail.get("files_changed", 0) or 0
+                total_additions = int(commit_detail.get("stats", {}).get("additions", 0) or 0)
+                total_deletions = int(commit_detail.get("stats", {}).get("deletions", 0) or 0)
+            else:
+                files = []
+                files_count = 0
                 total_additions = 0
                 total_deletions = 0
-                if files:
-                    for f in files:
-                        if isinstance(f, dict):
-                            total_additions += f.get("additions", 0)
-                            total_deletions += f.get("deletions", 0)
-                
-                # Use stats from commit if available
-                stats = first.get("stats", {})
-                if isinstance(stats, dict):
-                    total_additions = stats.get("additions", total_additions)
-                    total_deletions = stats.get("deletions", total_deletions)
-                
-                commit_type = infer_commit_type(first.get("message", ""), files)
-                
-                first_commits.append({
-                    "author": author,
-                    "date": first.get("date"),
-                    "sha": first.get("sha"),
-                    "message": first.get("message"),
-                    "files_changed": files_count,
-                    "additions": total_additions,
-                    "deletions": total_deletions,
-                    "commit_type": commit_type,
-                })
-        
-        save_snapshot_json(first_commits, os.path.join(repo_dir, "first_commits_by_author.json"),
-                           meta={"source": "derived", "derivation": "first commit per author_login from commits.json", "owner": owner, "repo": repo})
+
+            commit_type = infer_commit_type(first.get("message", ""), files)
+
+            first_commits.append({
+                "author": author,
+                "date": first.get("date"),
+                "sha": sha,
+                "message": first.get("message"),
+                "files_changed": files_count,
+                "additions": total_additions,
+                "deletions": total_deletions,
+                "commit_type": commit_type,
+            })
+
+        save_snapshot_json(
+            first_commits,
+            os.path.join(repo_dir, "first_commits_by_author.json"),
+            meta={
+                "source": "derived+rest",
+                "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+                "owner": owner,
+                "repo": repo,
+            },
+        )
 
 def process_csv(csv_path: str):
     os.makedirs(OUT_ROOT, exist_ok=True)
