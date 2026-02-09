@@ -6,7 +6,6 @@ This repository contains the dataset and pipeline for analyzing newcomer onboard
 
 This project explores onboarding of newcomers in open-source robotics repositories, specifically analyzing ROS packages across three active distributions: **ROS 2 Humble**, **ROS 2 Jazzy**, and **ROS 2 Kilted**.
 
-**Paper**: Submitted to ICSME 2026 Industry Track  
 **Research Focus**: Newcomer onboarding patterns and community practices supporting contributor participation
 
 ## Quick Start
