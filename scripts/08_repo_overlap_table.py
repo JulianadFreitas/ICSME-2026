@@ -1,7 +1,7 @@
 import csv
 from collections import defaultdict, Counter
 
-IN_PATH = "out/final/packages_to_repos_github_only.csv"
+IN_PATH = "out/diagnostics/resolved_ok.csv"
 OUT_CSV = "out/repos/repo_overlap_summary.csv"
 
 def main():
@@ -9,9 +9,9 @@ def main():
 
     repo_distros = defaultdict(set)
     for r in rows:
-        repo = (r.get("full_name") or "").strip()
+        repo = (r.get("github_owner") or "").strip() + "/" + (r.get("github_repo") or "").strip()
         distro = (r.get("ros_distro") or "").strip()
-        if repo and distro:
+        if repo != "/" and distro:
             repo_distros[repo].add(distro)
 
     # Unique repos per distro

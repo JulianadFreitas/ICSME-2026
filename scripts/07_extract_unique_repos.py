@@ -2,7 +2,7 @@ import os
 import csv
 from collections import defaultdict, Counter
 
-IN_PATH = "out/final/packages_to_repos_github_only.csv"
+IN_PATH = "out/diagnostics/resolved_ok.csv"
 OUT_DIR = "out/repos"
 os.makedirs(OUT_DIR, exist_ok=True)
 
@@ -20,8 +20,8 @@ def main():
     distro_pkg_counter = defaultdict(Counter)
 
     for r in rows:
-        repo = (r.get("full_name") or "").strip()
-        if not repo:
+        repo = (r.get("github_owner") or "").strip() + "/" + (r.get("github_repo") or "").strip()
+        if repo == "/":
             continue
 
         distro = (r.get("ros_distro") or "").strip()
@@ -36,8 +36,7 @@ def main():
         if repo not in agg:
             agg[repo] = {
                 "full_name": repo,
-                "repo_url_normalized": (r.get("repo_url_normalized") or "").strip(),
-                "host": (r.get("host") or "").strip(),
+                "repo_url": (r.get("repo_url") or "").strip(),
             }
 
     out = []
@@ -65,8 +64,7 @@ def main():
                 "full_name": repo,
                 "ros_distro": d,
                 "n_packages_in_distro": distro_pkg_counter[repo][d],
-                "repo_url_normalized": base["repo_url_normalized"],
-                "host": base["host"],
+                "repo_url": base["repo_url"],
             })
 
     out.sort(key=lambda r: int(r["n_packages_total"]), reverse=True)

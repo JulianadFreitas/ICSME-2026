@@ -12,14 +12,13 @@ SCRIPTS = [
     "01_build_mapping_from_rosdistro.py",
     "02_join_index_with_rosdistro.py",
     "03_validate_and_stats.py",
+    "04_build_final_dataset.py",
     "05_fill_missing_from_index_html.py",
     "06_diagnose_unresolved.py",
-    "04_build_final_dataset.py",
-    "07_build_paper_proof_dataset.py",
-    "08_extract_unique_repos.py",
-    "09_repo_overlap_table.py",
-    "10_extract_repo_features_and_commits.py",
-    "11_build_final_repo_dataset.py",
+    "07_extract_unique_repos.py",
+    "08_repo_overlap_table.py",
+    "09_extract_repo_features_and_commits.py",
+    "10_build_final_repo_dataset.py",
 ]
 
 def main():
