@@ -25,6 +25,10 @@ Output (per repo):
     - code_of_conduct.json
     - issue_template.json
     - pr_template.json
+    - labels.json
+    - maintainers.json
+    - owner_info.json
+    - first_commits_by_author.json
 
 All JSON files are saved as SNAPSHOTS:
 {
@@ -33,9 +37,18 @@ All JSON files are saved as SNAPSHOTS:
 }
 
 Notes:
-- This script DOES NOT create/modify github_repos_unique.csv.
-- Commits are stored as simplified objects (sha, author, date, message) to keep size manageable.
+- Commits are stored with files_changed array, additions/deletions stats.
 - weekly_commit_activity uses the stats endpoint and retries 202 responses.
+- Labels detection identifies top 20 newcomer-oriented labels (from research).
+- first_commits_by_author infers commit_type (code|docs|config|test|ci) from message and files.
+- Maintainers are filtered as users with push access to the repository.
+
+References:
+- Xin Tan, Minghui Zhou, and Zeyu Sun. 2020. A first look at good first issues on GitHub. 
+  In Proceedings of the 28th ACM Joint Meeting on European Software Engineering Conference 
+  and Symposium on the Foundations of Software Engineering (ESEC/FSE 2020). 
+  Association for Computing Machinery, New York, NY, USA, 398–409. 
+  https://doi.org/10.1145/3368089.3409746
 """
 
 import os
@@ -242,6 +255,84 @@ def fetch_code_of_conduct(owner, repo):
             return {"found": True, "path": path, "download_url": content_url, "preview": None}
     return {"found": False, "path": None, "download_url": None, "preview": None}
 
+def fetch_newcomer_labels(owner, repo):
+    """
+    Fetch all repository labels and detect newcomer-oriented labels.
+    
+    Top 20 labels for newcomers (from research):
+    Tan et al. (2020) identified these common labels on GitHub repositories 
+    to indicate issues suitable for newcomers:
+    - good first issue
+    - easy / Easy
+    - low hanging fruit
+    - minor bug / Minor Bug
+    - easy pick / easy-pick / Easy Pick
+    - easy to fix / Easy to Fix
+    - good first bug
+    - beginner / beginner-task
+    - good first contribution / Good first task
+    - newbie
+    - starter bug
+    - minor feature
+    - help wanted (easy)
+    - up-for-grabs
+    
+    Reference:
+    Tan, X., Zhou, M., & Sun, Z. (2020). A first look at good first issues on GitHub.
+    In Proceedings of the 28th ACM Joint Meeting on European Software Engineering 
+    Conference and Symposium on the Foundations of Software Engineering (ESEC/FSE 2020),
+    398–409. https://doi.org/10.1145/3368089.3409746
+    """
+    NEWCOMER_LABELS = {
+        "good first issue",
+        "easy",
+        "low hanging fruit",
+        "minor bug",
+        "easy pick",
+        "easy to fix",
+        "good first bug",
+        "beginner",
+        "good first contribution",
+        "good first task",
+        "newbie",
+        "starter bug",
+        "beginner-task",
+        "minor feature",
+        "help wanted (easy)",
+        "up-for-grabs",
+    }
+    
+    url = f"https://api.github.com/repos/{owner}/{repo}/labels"
+    out = []
+    page = 1
+    found_newcomer = set()
+    
+    while True:
+        r = fetch_rest(url, params={"per_page": PER_PAGE, "page": page})
+        if not r:
+            break
+        if not isinstance(r, list) or len(r) == 0:
+            break
+        
+        for label in r:
+            label_name = label.get("name", "").lower().strip()
+            out.append({
+                "name": label.get("name"),
+                "color": label.get("color"),
+                "description": label.get("description"),
+            })
+            # Check if this is a newcomer label (case-insensitive)
+            if label_name in NEWCOMER_LABELS:
+                found_newcomer.add(label.get("name"))
+        
+        page += 1
+    
+    return {
+        "all_labels": out,
+        "found_newcomer_labels": list(found_newcomer),
+        "has_newcomer_labels": len(found_newcomer) > 0,
+    }
+
 def fetch_issue_template(owner, repo):
     url = f"https://api.github.com/repos/{owner}/{repo}/contents/.github/ISSUE_TEMPLATE"
     r = fetch_rest(url)
@@ -250,6 +341,100 @@ def fetch_issue_template(owner, repo):
         found = any(("issue" in (x.get("name", "").lower())) for x in r)
         return {"has_issue_template": bool(found), "files": [x.get("name") for x in r]}
     return {"has_issue_template": False, "files": []}
+
+def infer_commit_type(message: str, files: list) -> str:
+    """
+    Infer commit type from message and files changed.
+    Types: code, docs, config, test, ci
+    """
+    if not message:
+        message = ""
+    
+    msg_lower = message.lower()
+    
+    # Check CI/CD patterns
+    if any(kw in msg_lower for kw in ["ci:", "github actions", "workflow", ".github", "pytest", "coverage"]):
+        return "ci"
+    
+    # Check docs patterns
+    if any(kw in msg_lower for kw in ["doc:", "docs:", "readme", "documentation", "comment"]):
+        return "docs"
+    
+    # Check test patterns
+    if any(kw in msg_lower for kw in ["test:", "tests:", "test_", "unittest", "pytest"]):
+        return "test"
+    
+    # Check config patterns
+    if any(kw in msg_lower for kw in ["config:", "configure", "setup.py", "setup.cfg", "pyproject.toml", "requirements"]):
+        return "config"
+    
+    # Check files if message alone is inconclusive
+    if files:
+        file_extensions = set()
+        for f in files:
+            if isinstance(f, dict):
+                filename = f.get("filename", "").lower()
+            else:
+                filename = str(f).lower()
+            
+            if filename.endswith((".md", ".rst", ".txt", ".doc")):
+                return "docs"
+            if filename.endswith((".test.py", "_test.py", "test_", "/tests/")):
+                return "test"
+            if filename.endswith((".yml", ".yaml", ".cfg", ".conf", ".ini", ".toml", ".json", ".xml")):
+                return "config"
+            if filename.startswith(".github/") or filename.startswith("docker"):
+                return "ci"
+    
+    # Default: code
+    return "code"
+
+def fetch_maintainers(owner, repo):
+    """
+    Fetch collaborators with push access (maintainers).
+    GitHub API /repos/{owner}/{repo}/collaborators requires authentication.
+    """
+    url = f"https://api.github.com/repos/{owner}/{repo}/collaborators"
+    maintainers = []
+    page = 1
+    
+    while True:
+        # per_page and permission filter
+        r = fetch_rest(url, params={"per_page": PER_PAGE, "page": page, "affiliation": "all"})
+        if not r:
+            break
+        if not isinstance(r, list) or len(r) == 0:
+            break
+        
+        for collab in r:
+            perm = (collab.get("permissions") or {})
+            # push = write access = maintainer
+            if perm.get("push"):
+                maintainers.append({
+                    "login": collab.get("login"),
+                    "type": collab.get("type"),  # User or Bot
+                    "permissions": perm,
+                })
+        
+        page += 1
+    
+    return maintainers
+
+def fetch_owner_info(owner):
+    """
+    Fetch owner info to determine if it's an organization or user account.
+    """
+    url = f"https://api.github.com/users/{owner}"
+    r = fetch_rest(url)
+    if r:
+        return {
+            "login": r.get("login"),
+            "type": r.get("type"),  # Organization, User, Bot
+            "public_repos": r.get("public_repos"),
+            "followers": r.get("followers"),
+            "company": r.get("company"),
+        }
+    return None
 
 def fetch_pr_template(owner, repo):
     candidates = [
@@ -271,6 +456,9 @@ def fetch_pr_template(owner, repo):
     return {"has_pr_template": False, "path": None, "download_url": None}
 
 def fetch_commits(owner, repo):
+    """
+    Fetch commits with detailed metadata including files changed, additions, deletions.
+    """
     url = f"https://api.github.com/repos/{owner}/{repo}/commits"
     out = []
     page = 1
@@ -284,8 +472,15 @@ def fetch_commits(owner, repo):
             out.append({
                 "sha": c.get("sha"),
                 "author": (c.get("commit") or {}).get("author", {}).get("name"),
+                "author_login": (c.get("author") or {}).get("login"),  # GitHub username
                 "date": (c.get("commit") or {}).get("author", {}).get("date"),
                 "message": (c.get("commit") or {}).get("message"),
+                "files_changed": c.get("files", []),
+                "stats": {
+                    "additions": c.get("stats", {}).get("additions", 0),
+                    "deletions": c.get("stats", {}).get("deletions", 0),
+                    "total": c.get("stats", {}).get("total", 0),
+                }
             })
         page += 1
     return out
@@ -470,6 +665,10 @@ REQUIRED_FILES = [
     "code_of_conduct.json",
     "issue_template.json",
     "pr_template.json",
+    "labels.json",
+    "maintainers.json",
+    "owner_info.json",
+    "first_commits_by_author.json",
 ]
 
 def get_missing(repo_dir: str):
@@ -531,7 +730,11 @@ def process_repo(owner: str, repo: str):
         save_snapshot_json(pt, os.path.join(repo_dir, "pr_template.json"),
                            meta={"source": "github_rest", "endpoint": "/repos/{owner}/{repo}/contents/<PR_TEMPLATE*>", "owner": owner, "repo": repo})
 
-    # 3) commits (save ALL as JSON snapshot)
+    # 6) labels (newcomer-oriented detection)
+    if "labels.json" in missing:
+        labels = fetch_newcomer_labels(owner, repo)
+        save_snapshot_json(labels, os.path.join(repo_dir, "labels.json"),
+                           meta={"source": "github_rest", "endpoint": "/repos/{owner}/{repo}/labels", "owner": owner, "repo": repo, "per_page": PER_PAGE})
     if "commits.json" in missing:
         commits = fetch_commits(owner, repo)
         save_snapshot_json(commits, os.path.join(repo_dir, "commits.json"),
@@ -580,7 +783,78 @@ def process_repo(owner: str, repo: str):
         save_snapshot_json(w, os.path.join(repo_dir, "weekly_commit_activity.json"),
                            meta={"source": "github_rest", "endpoint": "/repos/{owner}/{repo}/stats/commit_activity", "owner": owner, "repo": repo})
 
-    print(f"[DONE] {owner}/{repo}")
+    # 7) maintainers and owner info
+    if "maintainers.json" in missing:
+        maintainers = fetch_maintainers(owner, repo)
+        save_snapshot_json(maintainers, os.path.join(repo_dir, "maintainers.json"),
+                           meta={"source": "github_rest", "endpoint": "/repos/{owner}/{repo}/collaborators?affiliation=all", "owner": owner, "repo": repo, "per_page": PER_PAGE})
+
+    if "owner_info.json" in missing:
+        owner_info = fetch_owner_info(owner)
+        save_snapshot_json(owner_info, os.path.join(repo_dir, "owner_info.json"),
+                           meta={"source": "github_rest", "endpoint": "/users/{owner}", "owner": owner, "repo": repo})
+
+    # 8) first commits by author (derived from commits.json)
+    if "first_commits_by_author.json" in missing:
+        commits_data = load_json(os.path.join(repo_dir, "commits.json"))
+        if isinstance(commits_data, dict) and "data" in commits_data:
+            commits = commits_data["data"]
+        else:
+            commits = commits_data if isinstance(commits_data, list) else []
+        
+        # Group commits by author_login, sort by date to find first
+        from collections import defaultdict
+        commits_by_author = defaultdict(list)
+        
+        for c in commits:
+            author = c.get("author_login") or c.get("author", "unknown")
+            if author:
+                commits_by_author[author].append(c)
+        
+        # Extract first commit per author
+        first_commits = []
+        for author, commits_list in commits_by_author.items():
+            # Sort by date (ISO format)
+            try:
+                sorted_commits = sorted(commits_list, key=lambda x: x.get("date", ""))
+            except:
+                sorted_commits = commits_list
+            
+            if sorted_commits:
+                first = sorted_commits[0]
+                files = first.get("files_changed", [])
+                files_count = len(files) if files else 0
+                
+                # Extract file info
+                total_additions = 0
+                total_deletions = 0
+                if files:
+                    for f in files:
+                        if isinstance(f, dict):
+                            total_additions += f.get("additions", 0)
+                            total_deletions += f.get("deletions", 0)
+                
+                # Use stats from commit if available
+                stats = first.get("stats", {})
+                if isinstance(stats, dict):
+                    total_additions = stats.get("additions", total_additions)
+                    total_deletions = stats.get("deletions", total_deletions)
+                
+                commit_type = infer_commit_type(first.get("message", ""), files)
+                
+                first_commits.append({
+                    "author": author,
+                    "date": first.get("date"),
+                    "sha": first.get("sha"),
+                    "message": first.get("message"),
+                    "files_changed": files_count,
+                    "additions": total_additions,
+                    "deletions": total_deletions,
+                    "commit_type": commit_type,
+                })
+        
+        save_snapshot_json(first_commits, os.path.join(repo_dir, "first_commits_by_author.json"),
+                           meta={"source": "derived", "derivation": "first commit per author_login from commits.json", "owner": owner, "repo": repo})
 
 def process_csv(csv_path: str):
     os.makedirs(OUT_ROOT, exist_ok=True)

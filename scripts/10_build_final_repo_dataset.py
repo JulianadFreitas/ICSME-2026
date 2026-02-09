@@ -209,6 +209,10 @@ def build_row(owner: str, repo: str, distros_present: str) -> Dict[str, Any]:
     coc = read_snapshot_file(repo_dir, "code_of_conduct.json") or {}
     issue_template = read_snapshot_file(repo_dir, "issue_template.json") or {}
     pr_template = read_snapshot_file(repo_dir, "pr_template.json") or {}
+    labels_json = read_snapshot_file(repo_dir, "labels.json") or {}
+    maintainers_json = read_snapshot_file(repo_dir, "maintainers.json") or []
+    owner_info = read_snapshot_file(repo_dir, "owner_info.json") or {}
+    first_commits = read_snapshot_file(repo_dir, "first_commits_by_author.json") or []
     contributors = read_snapshot_file(repo_dir, "contributors.json") or []
     commits = read_snapshot_file(repo_dir, "commits.json") or []
     license_json = read_snapshot_file(repo_dir, "license.json") or {}
@@ -248,6 +252,43 @@ def build_row(owner: str, repo: str, distros_present: str) -> Dict[str, Any]:
     has_code_of_conduct = bool_found(coc)
     has_issue_template = bool_from_has(issue_template, "has_issue_template")
     has_pr_template = bool_from_has(pr_template, "has_pr_template")
+    
+    # newcomer labels
+    has_newcomer_labels = bool_from_has(labels_json, "has_newcomer_labels")
+    found_newcomer_labels = []
+    if isinstance(labels_json, dict) and "found_newcomer_labels" in labels_json:
+        found_newcomer_labels = labels_json.get("found_newcomer_labels", [])
+        if isinstance(found_newcomer_labels, list):
+            found_newcomer_labels = ";".join(found_newcomer_labels)
+        else:
+            found_newcomer_labels = ""
+    
+    # maintainers_count (users with push access)
+    maintainers_count = len(maintainers_json) if isinstance(maintainers_json, list) else 0
+    
+    # owner_type (Organization or User)
+    owner_type = ""
+    if isinstance(owner_info, dict):
+        owner_type = owner_info.get("type", "")
+    
+    # first commit metrics
+    first_contributor_date = ""
+    first_commit_files_changed = 0
+    first_commit_additions = 0
+    first_commit_deletions = 0
+    first_commit_type = ""
+    
+    if isinstance(first_commits, list) and len(first_commits) > 0:
+        # Find the earliest commit overall
+        try:
+            earliest = min(first_commits, key=lambda x: x.get("date", ""))
+            first_contributor_date = earliest.get("date", "")
+            first_commit_files_changed = earliest.get("files_changed", 0)
+            first_commit_additions = earliest.get("additions", 0)
+            first_commit_deletions = earliest.get("deletions", 0)
+            first_commit_type = earliest.get("commit_type", "")
+        except:
+            pass
 
     return {
         "Name": repo,
@@ -265,8 +306,17 @@ def build_row(owner: str, repo: str, distros_present: str) -> Dict[str, Any]:
         "has_code_of_conduct": has_code_of_conduct,
         "has_pr_template": has_pr_template,
         "has_issue_template": has_issue_template,
+        "has_newcomer_labels": has_newcomer_labels,
+        "found_newcomer_labels": found_newcomer_labels,
         "contributors_count": contributors_count,
+        "maintainers_count": maintainers_count,
         "commits_count": commits_count,
+        "first_contributor_date": first_contributor_date,
+        "first_commit_files_changed": first_commit_files_changed,
+        "first_commit_additions": first_commit_additions,
+        "first_commit_deletions": first_commit_deletions,
+        "first_commit_type": first_commit_type,
+        "owner_type": owner_type,
         "size": size,
         "subscribers_count": subscribers_count,
         "watchers_count": watchers_count,
@@ -313,7 +363,11 @@ def main():
         "Repository Size", "Number of stars", "Number of forks", "Number of open issues",
         "List of topics", "License",
         "has_readme", "has_contributing", "has_code_of_conduct", "has_pr_template", "has_issue_template",
-        "contributors_count", "commits_count", "size", "subscribers_count", "watchers_count",
+        "has_newcomer_labels", "found_newcomer_labels",
+        "contributors_count", "maintainers_count", "commits_count",
+        "first_contributor_date", "first_commit_files_changed", "first_commit_additions", "first_commit_deletions", "first_commit_type",
+        "owner_type",
+        "size", "subscribers_count", "watchers_count",
         "languages",
         "full_name", "distros_present",
     ]
