@@ -12,7 +12,7 @@ SCRIPTS = [
     "01_build_mapping_from_rosdistro.py",
     "02_join_index_with_rosdistro.py",
     "03_validate_and_stats.py",
-    "04_build_final_dataset.py",
+    "04_analyze_resolved_packages.py",
     "05_fill_missing_from_index_html.py",
     "06_diagnose_unresolved.py",
     "07_extract_unique_repos.py",
