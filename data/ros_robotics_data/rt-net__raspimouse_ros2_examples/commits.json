@@ -1,0 +1,414 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-07T22:58:32Z",
+    "source": "github_rest",
+    "endpoint": "/repos/{owner}/{repo}/commits",
+    "owner": "rt-net",
+    "repo": "raspimouse_ros2_examples",
+    "per_page": 100
+  },
+  "data": [
+    {
+      "sha": "8de759d7342c767ed331a87c472191321a249ddc",
+      "author": "Kazushi Kurasawa",
+      "date": "2026-02-05T10:49:52Z",
+      "message": "README更新 (#64)\n\n* 日本語ドキュメントの雛形作成\n\n* リポジトリトップのREADMEを整備\n\n* QuickStartを簡潔に修正。\n\n* パッケージインストール手順追加\n\n* リポジトリトップの画像サイズ修正\n\n* バッジのURL修正\n\n* ドキュメント名変更\n\n* Examplesの一覧を明示\n\n* Exampleの画像サイズ修正\n\n* 画像サイズなど修正\n\n* 画像サイズ修正\n\n* 画像のサイズやリンク方法を修正\n\n* 各種動作の詳細を追加\n\n* 組み立てマニュアルを追記\n\n* 各種サンプル名を他のリポジトリと統一\n\n* ROS 1へのリンクを削除\n\n* 画像間のスペース追加\n\n* リポジトリトップREADMEのサンプル名を変更\n\n* リポジトリトップの英語ドキュメント追加\n\n* Example.en.mdを作成\n\n* 古いドキュメントを削除\n\n* 英語版の古いドキュメントを削除\n\n* リンクミス修正\n\n* ライセンスのミスを修正\n\n* 誤字脱字の修正\n\n* 日本語のExample.mdをREADME.mに統合\n\n* Example.en.mdをREADME.en.mdに統合\n\n* README.mdのサンプルのコードが長いため、ブロックで畳む\n\n* 折りたたむブロック名を変更\n\n* README.en.mdのサンプル集をブロックで畳むように変更\n\n* Back to example listのリンク先を修正\n\n* apt install コマンドに$ROS_DISTRO追加\n\nCo-authored-by: YusukeKato <YusukeKato@users.noreply.github.com>\n\n* README.en.mdの中の日本語記述を削除\n\n* apt installコマンドに$ROS_DISTROを追加\n\nCo-authored-by: YusukeKato <YusukeKato@users.noreply.github.com>\n\n* 詳細のタブを一旦削除\n\n* NOTEの装飾をテスト\n\n* NOTEの記述をテスト\n\n* NOTEの記述を差しかえ\n\n* Noteの文字列を追加\n\n* 全てのNoteの記述法を差し替え（<details>でネストできる形式に置き換え）\n\n* 不足しているdetailsのブロック終端を追加\n\n* QuickStartの項目を削除\n\n* 自然な文体になるように、文章中にスペースを追加\n\n* ()の記述ミスを修正\n\n* スペースを追加\n\n* 一部の半角を全角に修正\n\n* How to Use Examplesの箇条書きを修正\n\n* リポジトリトップのREADMEのサンプルの列挙を削除\n\n---------\n\nCo-authored-by: YusukeKato <YusukeKato@users.noreply.github.com>"
+    },
+    {
+      "sha": "ff5f5dbc8db8bd40be5859bc9674967ede8e5525",
+      "author": "Kazushi Kurasawa",
+      "date": "2024-11-25T06:52:01Z",
+      "message": "リリース3.0.0への対応 (#63)\n\n* Update version and CHANGELOG\r\n\r\n* Add date information"
+    },
+    {
+      "sha": "b0ac05587321a77950a27462e061434448b9247a",
+      "author": "Kazushi Kurasawa",
+      "date": "2024-11-25T01:08:08Z",
+      "message": "ROS 2 Jazzy対応 (#62)\n\n* The header file \"cv_bridge.h\" in the cv_bridge package has been renamed to \"cv_bridge.hpp\". This change has been applied to all corresponding \"#include\" statements.\r\n\r\n* Replaced \"Twist\" with \"TwistStamped\" in \"joystick_control.py\"\r\n\r\n* Replaced \"Twist\" with \"TwistStamped\" for \"camera_line_follower.launch.py\"\r\n\r\n* Replaced \"Twist\" with \"TwistStamped\" for \"object_tracking.launch.py\"\r\n\r\n* Replaced \"Twist\" with \"TwistStamped\" (Changed in all instances, revert if any unexpected issues occur, \"revert\").\r\n\r\n* Modify CI to ensure compatibility with the act tool\r\n\r\n* Add author\r\n\r\n* Update README for Support Jazzy\r\n\r\n* Add CI settings for Rolling\r\n\r\n* Revert \"Add CI settings for Rolling\"\r\n\r\nThis reverts commit 5996db3226d4d2340659d48411bb86b8562599f7.\r\n\r\n* Replace ROS_REPO: [ros] with ROS_REPO: [main]\r\n\r\n* Add rosinstall for CI\r\n\r\n* Adapt clang-format with Google style\r\n\r\n* Fix order of include in c file\r\n\r\n* Revert \"Add rosinstall for CI\"\r\n\r\nThis reverts commit b9605cd9fe072790801e70af384c22851083c28d.\r\n\r\n* Reapply \"Add rosinstall for CI\"\r\n\r\nThis reverts commit a06b8a9e68346bccf4a36196962cf368b5bd13e2.\r\n\r\n* Revert \"Fix order of include in c file\"\r\n\r\nThis reverts commit 356a417c83db166834756630dac80638e5d534fa.\r\n\r\n* Revert \"Adapt clang-format with Google style\"\r\n\r\nThis reverts commit 0a420431a45f3d96bc840e58502d364106c554f0.\r\n\r\n* fix typo of distribution name\r\n\r\n* Applied \"ament_clang_format\" and passed cpplint, with manual adjustments made to the \"include\" order\r\n\r\n* Adapted ruff formetter\r\n\r\n* fix \"import\" module order\r\n\r\n* Adaptted \"ament_uncrustify\"\r\n\r\n* Update README.en.md fo Jazzy\r\n\r\n* Fix pictures and page links\r\n\r\n* Fix images for README in japanese\r\n\r\n* Update Copyright years\r\n\r\n* Fix Indent and replace .h with .hpp\r\n\r\n* FIxed autho name\r\n\r\n* Add warnings for camera settings"
+    },
+    {
+      "sha": "b049273aa0ae01f5a946a247c03ea99974bcdc45",
+      "author": "YusukeKato",
+      "date": "2024-08-28T01:15:32Z",
+      "message": "2.2.1リリースのためにCHANGELOG.rstとpackage.xmlを更新 (#60)\n\n* 2.2.1リリースのためにCHANGELOG.rstを更新\r\n\r\n* 2.2.1"
+    },
+    {
+      "sha": "77237e9b1a682570dc149f027e3bdfed6c14d05e",
+      "author": "YusukeKato",
+      "date": "2024-08-27T04:24:32Z",
+      "message": "サービスクライアントでexecutorを使用しない (#59)"
+    },
+    {
+      "sha": "2c61cb4df9351f5107d750af87e565acbff15c00",
+      "author": "YusukeKato",
+      "date": "2024-08-20T01:57:12Z",
+      "message": "SubscriberとService Clientに別々のcallback_groupを設定 (#58)\n\n* subscriberとclientに別々のcallback_groupを設定\r\n\r\n* subsciriberをclientの後に宣言するように変更"
+    },
+    {
+      "sha": "bdef32ba4d575385584d8b9519460548d1945ee9",
+      "author": "YusukeKato",
+      "date": "2024-03-06T06:05:43Z",
+      "message": "Merge branch 'humble-devel' into master"
+    },
+    {
+      "sha": "d685bc8c5a5fd1a36c94d641667b5eaaf5f5dd4c",
+      "author": "YusukeKato",
+      "date": "2024-03-05T10:07:27Z",
+      "message": "2.2.0リリースのためにCHANGELOG.rstとpackage.xmlを更新 (#54)\n\n* リリースのためにCHANGELOGを更新\r\n\r\n* 2.2.0"
+    },
+    {
+      "sha": "ec57501911e3999050990c53da3781fa82df37ea",
+      "author": "YusukeKato",
+      "date": "2024-02-29T11:14:33Z",
+      "message": "READMEにSLAM&Navigationパッケージの案内を追加 (#53)\n\n* READMEにSLAM&Navigationパッケージの案内を追加\r\n\r\n* READMEからSLAMの実行方法を削除"
+    },
+    {
+      "sha": "afc8cb1a34cd967e71bccbe5e7abe3e4a1449893",
+      "author": "YusukeKato",
+      "date": "2024-02-07T08:22:39Z",
+      "message": "Camera_FollowerクラスをCameraFollowerに変更 (#52)"
+    },
+    {
+      "sha": "930dc29a71171bd18b7d18cad32278102c48e708",
+      "author": "Shota Aoki",
+      "date": "2024-02-07T07:15:13Z",
+      "message": "Update camera line follower: Set motor power with switch input. Add area_threthold param. (#51)\n\n* Set motor power via switch input\r\n\r\n* Add area_threthold param\r\n\r\n* Update README\r\n\r\n* Update to pass lint check"
+    },
+    {
+      "sha": "29ad3514de93ac98b02f1f5f606684bb742e90d0",
+      "author": "Shota Aoki",
+      "date": "2024-02-06T09:39:15Z",
+      "message": "Add velocity parameters for camera_line_follower (#50)\n\n* Add velocity parameters for camera_line_follower\r\n\r\n* update parameter names\r\n\r\n* Update README.en.md\r\n\r\nCo-authored-by: YusukeKato <YusukeKato@users.noreply.github.com>\r\n\r\n---------\r\n\r\nCo-authored-by: YusukeKato <YusukeKato@users.noreply.github.com>"
+    },
+    {
+      "sha": "85b3bf01c2e22f86318ddae9dd96369630f396f2",
+      "author": "YusukeKato",
+      "date": "2024-02-05T09:52:19Z",
+      "message": "カメラライントレースを修正 (#49)\n\n* READMEにカメラライントレースの情報を追記\r\n\r\n* リサイズした画像に変更\r\n\r\n* 目次にカメラライントレースの項目を追加\r\n\r\n* rqt_image_viewのリンクが切れていたので更新\r\n\r\n* usb_camの配信頻度を30FPSから10FPSに変更\r\n\r\n* READMEにカメラライントレースのスイッチ操作の説明を追加\r\n\r\n* usb_camの画像サイズを320x240に設定\r\n\r\n* adaptiveThreshold関数で画像を2値化\r\n\r\n* 速度調整&inRange関数使用&findContours関数の引数を変更\r\n\r\n* 2値化のしきい値をパラメータで設定\r\n\r\n* デバッグ用の出力を削除\r\n\r\n* コードの体裁を整える\r\n\r\n* READMEに2値化のしきい値のパラメータの設定方法を追加\r\n\r\n* デバッグ用に使用していた係数を削除\r\n\r\n* detecting_line()をdetect_line()に変更\r\n\r\n* READMEのConfigureの項目を削除\r\n\r\n* シミュレータ環境でライントレースが行えるように2値化のしきい値を調整"
+    },
+    {
+      "sha": "8eedd499d433539c1a1c4f54779685be98f8454d",
+      "author": "ShotaAk",
+      "date": "2024-01-15T02:36:50Z",
+      "message": "Change threthold of line detection"
+    },
+    {
+      "sha": "6ce932b845a0f1d724041613cb4f70e3a3b1f470",
+      "author": "Shota Aoki",
+      "date": "2024-01-15T00:51:42Z",
+      "message": "Add usb_cam dependency (#48)"
+    },
+    {
+      "sha": "153c25c7d69616bfa9f209c5583990b432ff4db3",
+      "author": "YusukeKato",
+      "date": "2023-12-06T09:36:20Z",
+      "message": "RGBカメラによるライントレースの実装 (#47)\n\n* カメラによるライントレース用のファイルを作成\r\n\r\n* 実行可能な状態に更新\r\n\r\n* ライントレースが実行可能な状態に更新\r\n\r\n* スイッチ0を押してcmd_velの配信をオンオフできるように変更\r\n\r\n* スイッチの処理を修正\r\n\r\n* colcon testが通るように修正\r\n\r\n* Copyrightの文面を修正\r\n\r\nCo-authored-by: Shota Aoki <s.aoki@rt-net.jp>\r\n\r\n* Copyrightの文面を修正\r\n\r\nCo-authored-by: Shota Aoki <s.aoki@rt-net.jp>\r\n\r\n* Copyrightの文面を修正\r\n\r\nCo-authored-by: Shota Aoki <s.aoki@rt-net.jp>\r\n\r\n* 使用されていないmsgを削除\r\n\r\nCo-authored-by: Shota Aoki <s.aoki@rt-net.jp>\r\n\r\n* usingをnamespace内で使用するように変更\r\n\r\n* 変数にconstを付ける\r\n\r\n* is_bigendianの行を削除\r\n\r\n* 内部変数を変更しない関数にconstを付ける\r\n\r\nCo-authored-by: Shota Aoki <s.aoki@rt-net.jp>\r\n\r\n* ソースコードのほうでもconstを付ける\r\n\r\n* cmd_velを関数内で宣言する\r\n\r\n* constをconstexprに変更\r\n\r\nCo-authored-by: Shota Aoki <s.aoki@rt-net.jp>\r\n\r\n* コメントを修正\r\n\r\n* スイッチの処理を修正\r\n\r\n* following()をdetecting_lineに変更\r\n\r\n* 検出結果の文字の色を青から白に変更\r\n\r\n* コメントを修正\r\n\r\nCo-authored-by: Shota Aoki <s.aoki@rt-net.jp>\r\n\r\n* 返り値をbool型に変更\r\n\r\n* 関数にconstを付ける\r\n\r\n---------\r\n\r\nCo-authored-by: Shota Aoki <s.aoki@rt-net.jp>"
+    },
+    {
+      "sha": "acee967a7df003a40d25ab7fd0d69a8df5d15e4f",
+      "author": "YusukeKato",
+      "date": "2023-11-07T06:08:41Z",
+      "message": "2.1.0リリースのためにmasterの変更差分をhumble-develへマージ (#46)\n\n* object_trackingにおいて画像トピックをサブスクライブするように変更 (#43)\r\n\r\n* 画像トピックのサブスクライバを実装\r\n\r\n* 画像トピックがRGBなのでBGRに変換\r\n\r\n* mouseとcamera_nodeのオンオフを実装\r\n\r\n* 実機で動作するように変更\r\n\r\n* 物体追従のパラメータ調整\r\n\r\n* 不要なメンバ変数を削除\r\n\r\n* コールバック関数の名前を変更\r\n\r\n* コメントアウトしていた不要な行を削除\r\n\r\n* rclcpp::SensorDataQoS()を使用するように変更\r\n\r\n* std::placeholders::_1を直接書くように修正\r\n\r\n* raspimouseノードにComposableNodeを使用\r\n\r\n* usb_camノードにもComposableNodeを使用\r\n\r\n* 各ノードのuse_intra_process_commsをtrueに変更\r\n\r\n* image_pub_を削除\r\n\r\n* READMEのobject_trackingのコマンドを修正\r\n\r\n* Gazeboの場合のコマンド例を削除\r\n\r\n* READMEにGazeboでも実行できることを追記 (#44)\r\n\r\n* READMEにGazeboでも動作することを追記\r\n\r\n* 英語版のREADMEにもGazeboの情報を追記\r\n\r\n* READMEのサンプル集のリンクを修正\r\n\r\n* READMEのraspimouse_simのリンクを修正\r\n\r\n* リリースのためにCHANGELOG.rstとpackage.xmlを更新 (#45)\r\n\r\n* リリースのためにCHANGELOG.rstを更新\r\n\r\n* 2.1.0"
+    },
+    {
+      "sha": "f35d35a2f7723382e8fd2313ac69187432a4d5e3",
+      "author": "YusukeKato",
+      "date": "2023-11-07T05:58:23Z",
+      "message": "リリースのためにCHANGELOG.rstとpackage.xmlを更新 (#45)\n\n* リリースのためにCHANGELOG.rstを更新\r\n\r\n* 2.1.0"
+    },
+    {
+      "sha": "6e839e7f57b38e66146439db2d4028cbf69a5519",
+      "author": "YusukeKato",
+      "date": "2023-11-06T02:36:48Z",
+      "message": "READMEにGazeboでも実行できることを追記 (#44)\n\n* READMEにGazeboでも動作することを追記\r\n\r\n* 英語版のREADMEにもGazeboの情報を追記\r\n\r\n* READMEのサンプル集のリンクを修正\r\n\r\n* READMEのraspimouse_simのリンクを修正"
+    },
+    {
+      "sha": "7c323abcb0f99469986b564c45a01e52841f5707",
+      "author": "YusukeKato",
+      "date": "2023-11-01T09:28:59Z",
+      "message": "object_trackingにおいて画像トピックをサブスクライブするように変更 (#43)\n\n* 画像トピックのサブスクライバを実装\r\n\r\n* 画像トピックがRGBなのでBGRに変換\r\n\r\n* mouseとcamera_nodeのオンオフを実装\r\n\r\n* 実機で動作するように変更\r\n\r\n* 物体追従のパラメータ調整\r\n\r\n* 不要なメンバ変数を削除\r\n\r\n* コールバック関数の名前を変更\r\n\r\n* コメントアウトしていた不要な行を削除\r\n\r\n* rclcpp::SensorDataQoS()を使用するように変更\r\n\r\n* std::placeholders::_1を直接書くように修正\r\n\r\n* raspimouseノードにComposableNodeを使用\r\n\r\n* usb_camノードにもComposableNodeを使用\r\n\r\n* 各ノードのuse_intra_process_commsをtrueに変更\r\n\r\n* image_pub_を削除\r\n\r\n* READMEのobject_trackingのコマンドを修正\r\n\r\n* Gazeboの場合のコマンド例を削除"
+    },
+    {
+      "sha": "55468404708194ecf2ef1fbc20748dad90f06a51",
+      "author": "YusukeKato",
+      "date": "2023-08-03T08:12:01Z",
+      "message": "HumbleリリースのためにCHANGELOG.rstとpackage.xmlを更新 (#42)\n\n* update changelog\r\n\r\n* 2.0.0"
+    },
+    {
+      "sha": "b02297db5567fcf044673228db7ffd3044e81d50",
+      "author": "Shuhei Kozasa",
+      "date": "2023-07-24T05:51:18Z",
+      "message": "Humble対応 (#41)\n\n* Specifies sensor_msgs library\r\n\r\n* Updates the FutureReturnCode line\r\n\r\n* Changes ci to Humble\r\n\r\n* Changes the order of the libraries\r\n\r\n* Adds namespace\r\n\r\n* Update Github Actions setting\r\n\r\n* Updates README\r\n\r\n* Adds .gitignore directory\r\n\r\n* Updates parameter value\r\n\r\n* Updates url and adds imu package\r\n\r\n* Updates the frame rate for SLAM\r\n\r\n* Adds notes about the imu cable.\r\n\r\n* remove git clone.\r\n\r\nCo-authored-by: Shota Aoki <s.aoki@rt-net.jp>\r\n\r\n* Updates README.md\r\n\r\nCo-authored-by: Shota Aoki <s.aoki@rt-net.jp>\r\n\r\n* Removes foxy related links and updates ubuntu version to 22.04\r\n\r\n* Adds ROS 2 distribution section\r\n\r\n* Update README.en.md\r\n\r\nCo-authored-by: Shota Aoki <s.aoki@rt-net.jp>\r\n\r\n* Update README.md\r\n\r\nCo-authored-by: Shota Aoki <s.aoki@rt-net.jp>\r\n\r\n---------\r\n\r\nCo-authored-by: Shota Aoki <s.aoki@rt-net.jp>"
+    },
+    {
+      "sha": "6e88dde41cdd1cd13dbe9935f36fe4b20ee71697",
+      "author": "Shuhei Kozasa",
+      "date": "2022-07-29T04:16:24Z",
+      "message": "Merge pull request #39 from rt-net/prepare-foxy-release\n\nPrepare foxy release 1.0.0"
+    },
+    {
+      "sha": "d0bf5e1bb70da7beb7c2f169903dbbc93ea3416a",
+      "author": "Shota Aoki",
+      "date": "2022-07-29T02:44:53Z",
+      "message": "Update CHANGELOG.rst\n\nCo-authored-by: Shuhei Kozasa <kozasa@rt-net.jp>"
+    },
+    {
+      "sha": "336d7afabf3c6bbd8c59191eb28d58c7ae123d23",
+      "author": "ShotaAk",
+      "date": "2022-07-28T09:55:42Z",
+      "message": "Add CHANGELOG.rst"
+    },
+    {
+      "sha": "8d970f5ffc683702715512fbac1c73241d4cea52",
+      "author": "ShotaAk",
+      "date": "2022-07-28T09:35:54Z",
+      "message": "Fix package.xml"
+    },
+    {
+      "sha": "f16aef6c087a6e6325801b9f6a10b272b4d59c91",
+      "author": "Shuhei Kozasa",
+      "date": "2021-12-10T05:41:30Z",
+      "message": "Update map command (#38)\n\n* Update README\r\n\r\n* Update README.en.md\r\n\r\nCo-authored-by: Shota Aoki <s.aoki@rt-net.jp>\r\n\r\n* Update README.md\r\n\r\nCo-authored-by: Shota Aoki <s.aoki@rt-net.jp>\r\n\r\nCo-authored-by: Shota Aoki <s.aoki@rt-net.jp>"
+    },
+    {
+      "sha": "50b63846027ef1253fdaa4e7dc768d811ba4f8c3",
+      "author": "Shuhei Kozasa",
+      "date": "2021-11-18T08:07:33Z",
+      "message": "Adds config file for DUALSHOCK4 (#36)"
+    },
+    {
+      "sha": "0ec4652f5da85042f267edafa029c80e2537ece9",
+      "author": "Shota Aoki",
+      "date": "2021-06-03T10:13:09Z",
+      "message": "Update README for foxy-devel (#34)\n\n* Update README for foxy-devel\r\n\r\n* Fix ubuntu distribution and download URL"
+    },
+    {
+      "sha": "1e2bd799a2a512363c5ab2a72347bd50d7f1a784",
+      "author": "Shota Aoki",
+      "date": "2021-05-28T09:45:16Z",
+      "message": "Remove node_ prefix from launch files (#33)"
+    },
+    {
+      "sha": "60c833643df446c548c0fdd529fbc5ebd5280ca0",
+      "author": "Shota Aoki",
+      "date": "2021-05-28T06:23:26Z",
+      "message": "Use ament_export_targets instead of ament_export_interfaces. (#31)"
+    },
+    {
+      "sha": "6698e281c404bce969573f81193a6bdc2c7d83aa",
+      "author": "Shota Aoki",
+      "date": "2021-05-14T10:45:15Z",
+      "message": "Remove dashing check from CI (#32)"
+    },
+    {
+      "sha": "fd9930a485ba5e630baf15a8af05cabdaac08aae",
+      "author": "Shota Aoki",
+      "date": "2021-05-14T05:58:21Z",
+      "message": "Update rviz config to show scan and graph topics (#29)"
+    },
+    {
+      "sha": "8958802b221c3ecbb311b1998738a32eaa72d9ac",
+      "author": "Shota Aoki",
+      "date": "2021-05-14T05:58:07Z",
+      "message": "Add descriptions to READMEs for use_pulse_counters param settings (#28)\n\n* Add descriptions to READMEs for use_pulse_counters param settings\r\n\r\nCo-authored-by: Daisuke Sato <daisuke.sato@rt-net.jp>"
+    },
+    {
+      "sha": "e1dc20fabdacd73ae1d7b50db812aeda490a4e2f",
+      "author": "Shota Aoki",
+      "date": "2021-05-14T05:57:35Z",
+      "message": "Use joy_linux instead of joy (#27)"
+    },
+    {
+      "sha": "f0fce04b5fd18c9bd834ac48e7ed05eda0108975",
+      "author": "Shota Aoki",
+      "date": "2021-05-13T03:13:28Z",
+      "message": "Update CI to support ROS Foxy (#26)\n\n* Update CI to support ROS foxy\r\n\r\n* Add fail-fast to CI to check dashing and foxy build same time\r\n\r\n* Fix code formats to pass amnent_uncrustify lint tool checks"
+    },
+    {
+      "sha": "7ce3802f89d5e918d41cc41206e863d6d802c932",
+      "author": "Shota Aoki",
+      "date": "2021-04-20T09:48:02Z",
+      "message": "Update package.xml (#25)"
+    },
+    {
+      "sha": "3e802e53df00cab27f3d7a542b4ccf0d03748376",
+      "author": "Shota Aoki",
+      "date": "2020-12-17T10:44:16Z",
+      "message": "Install raspimouse2 and imu packages via rosdep command (#22)"
+    },
+    {
+      "sha": "2dba3ebcf64099f50f72effa1ad6c6c589b779b9",
+      "author": "Shota Aoki",
+      "date": "2020-10-13T03:03:23Z",
+      "message": "Add rt_usb_9axisimu_driver dependency to package.xml (#21)"
+    },
+    {
+      "sha": "327fca38c1af8298b994d6b3208c2f2123c0a6c4",
+      "author": "Shota Aoki",
+      "date": "2020-09-14T10:00:14Z",
+      "message": "Add direction control example (#18)\n\nCo-authored-by: Daisuke Sato <daisuke.sato@rt-net.jp>"
+    },
+    {
+      "sha": "7a312565197a7f7e856d22cded8d08700a45a1d4",
+      "author": "Shota Aoki",
+      "date": "2020-07-29T02:34:33Z",
+      "message": "Use images of rt-net/images repo. (#17)"
+    },
+    {
+      "sha": "3089ba88ea1ac50a3b581afb6dc27a2cb3e89d6c",
+      "author": "ShotaAk",
+      "date": "2020-07-29T01:44:29Z",
+      "message": "update README"
+    },
+    {
+      "sha": "ac8d8bac4c478f42ebf4493f4b30c072ac6de491",
+      "author": "Shota Aoki",
+      "date": "2020-07-28T11:03:43Z",
+      "message": "Add lidar example (#14)\n\nCo-authored-by: Daisuke Sato <daisuke.sato@rt-net.jp>"
+    },
+    {
+      "sha": "2b3312da24a5452362c8ac0d8b8d7de7968b072b",
+      "author": "Shota Aoki",
+      "date": "2020-07-14T06:33:40Z",
+      "message": "Turn on/off leds with joy inputs (#15)"
+    },
+    {
+      "sha": "fab0c04604f17e3c36cb1725439bba6062805eb0",
+      "author": "Daisuke Sato",
+      "date": "2020-06-26T09:10:58Z",
+      "message": "Update Gamepad F710 usage in README (#13)"
+    },
+    {
+      "sha": "3f8c15e46bc6b586833a5353ebd383ab5fab2d53",
+      "author": "Shota Aoki",
+      "date": "2020-06-26T09:07:59Z",
+      "message": "Use multi threads in the object tracking example to stabilize the tracking (#11)"
+    },
+    {
+      "sha": "bb368848b33431949097e97cf59c40e28d96be6f",
+      "author": "Shota Aoki",
+      "date": "2020-06-26T06:08:47Z",
+      "message": "update video link (#12)"
+    },
+    {
+      "sha": "48c2f96087dfd0c5a64926e3716412b59f7c8718",
+      "author": "Shota Aoki",
+      "date": "2020-06-12T09:29:34Z",
+      "message": "Merge teleop_joy launch files into one file. (#10)\n\n* Update arguments of teleop_joy_launch\r\n\r\n* Update README\r\n\r\n* Delete teleop_joy_with_mouse.launch.py"
+    },
+    {
+      "sha": "17350a1ad2aaaea513672e67b0e5794ab53a38a3",
+      "author": "ShotaAk",
+      "date": "2020-06-03T06:37:11Z",
+      "message": "Add use_pulse_counters parameter to line_follower.launch.py"
+    },
+    {
+      "sha": "dabda451db2c972d29417545d6f2dea3d7b0ae18",
+      "author": "Shota Aoki",
+      "date": "2020-06-03T01:00:45Z",
+      "message": "Add line follower examples (#9)\n\n* Add base files of line_follower example\r\n\r\n* Beep buzzer\r\n\r\n* Use manual composition\r\n\r\n* Use rclcpp::sleep_for to beeping buzzer\r\n\r\n* Add multisampling\r\n\r\n* Add set_thresholds function\r\n\r\n* indicate line detections\r\n\r\n* Add line following function\r\n\r\n* Refactoring\r\n\r\n* update README.md\r\n\r\n* Add a file .ci.rosinstall for github workflow\r\n\r\n* Update CMakeLists.txt"
+    },
+    {
+      "sha": "8f171aba31204344a2d5d0a27998a590aca1a2c0",
+      "author": "Shota Aoki",
+      "date": "2020-05-28T02:35:33Z",
+      "message": "Add object tracking sample (#8)\n\n* Add simple composable node\r\n\r\n* Add changeState function\r\n\r\n* Delete service client from Talker\r\n\r\n* update objecttracking.cpp\r\n\r\n* fix typo\r\n\r\n* refactoring\r\n\r\n* fix service name\r\n\r\n* refactoring\r\n\r\n* Rename component talker to tracker\r\n\r\n* Change Tracker component to lifecycle node\r\n\r\n* object_tracking node control all node lifecycles\r\n\r\n* Publish camera images\r\n\r\n* refactoring\r\n\r\n* Fix typo\r\n\r\n* fix typo\r\n\r\n* Fix log message of object_tracking.cpp\r\n\r\n* Fix qos parameters and timer for stable activity.\r\n\r\n* Refactoring\r\n\r\n* Publish a result image after processing\r\n\r\n* Detect an orange colored object from camera image\r\n\r\n* disable light sensors\r\n\r\n* object tracking with rotation\r\n\r\n* Object tracking with forward and rotation control\r\n\r\n* Fix dependencies\r\n\r\n* Delete unused function\r\n\r\n* Refactoring\r\n\r\n* Stable control\r\n\r\n* Remove frame_id\r\n\r\n* Can detect green, blue colored object\r\n\r\n* update\r\n\r\n* add parameter for object_tracking.cpp\r\n\r\n* Rename\r\n\r\n* Refactoring\r\n\r\n* Refactoring\r\n\r\n* Add camera.bash\r\n\r\n* Fix typo\r\n\r\n* update README\r\n\r\n* Update README.md\r\n\r\n* Update README.en.md\r\n\r\n* Update README.md\r\n\r\nCo-authored-by: Daisuke Sato <daisuke.sato@rt-net.jp>\r\n\r\n* Update README.md\r\n\r\nCo-authored-by: Daisuke Sato <daisuke.sato@rt-net.jp>\r\n\r\n* Update package.xml\r\n\r\nCo-authored-by: Daisuke Sato <daisuke.sato@rt-net.jp>\r\n\r\n* Delete v4l-utils installation from README\r\n\r\n* update camera.bash\r\n\r\n* Fix object_tracking_component.cpp for stable control\r\n\r\n* Refactoring\r\n\r\n* Rename camera.bash to configure_camera.bash\r\n\r\n* Update README\r\n\r\n* Update README\r\n\r\n* update README\r\n\r\n* Update README.md\r\n\r\n* Update README.en.md\r\n\r\nCo-authored-by: Daisuke Sato <daisuke.sato@rt-net.jp>"
+    },
+    {
+      "sha": "ac268e0c1af73d152f1174456d1d9ef622a3e24b",
+      "author": "Shota Aoki",
+      "date": "2020-05-12T08:40:49Z",
+      "message": "Rename launch files (#7)"
+    },
+    {
+      "sha": "81d89239b2b2eea71c40cb2d6711d782bed8ba1a",
+      "author": "Shota Aoki",
+      "date": "2020-05-12T06:45:13Z",
+      "message": "Refactoring (#6)\n\n* Fix client creation\r\n\r\n* update README\r\n\r\n* delte blank line\r\n\r\n* Refactoring to pass flake8 check"
+    },
+    {
+      "sha": "7a6ea8c53c1a98dcf491e09834f0b071ab548cde",
+      "author": "Shota Aoki",
+      "date": "2020-05-12T06:11:14Z",
+      "message": "Support remote control (#5)\n\n* Fix client creation\r\n\r\n* update README\r\n\r\n* delte blank line"
+    },
+    {
+      "sha": "aaf0deca3fe92ab7a5f246f5b5cd0f745fa11c68",
+      "author": "ShotaAk",
+      "date": "2020-05-08T10:45:23Z",
+      "message": "Fix license and package.xml"
+    },
+    {
+      "sha": "b3dfb0ce0be46d1a5ced6bac74d0a222ddc845a9",
+      "author": "ShotaAk",
+      "date": "2020-05-08T09:57:09Z",
+      "message": "Delete Dashing workflow"
+    },
+    {
+      "sha": "bb1f8e734c9b20a5876a04d809d9351333e398af",
+      "author": "Shota Aoki",
+      "date": "2020-05-08T09:54:25Z",
+      "message": "Add Joystic example (#4)\n\n* Add buzzer function to joystick example\r\n\r\n* Use config file for parameter settings\r\n\r\n* Rename config file\r\n\r\n* Add motor control\r\n\r\n* Add motor onoff\r\n\r\n* Port all functions from ROS 1 joystick exampe\r\n\r\n* Refactoring\r\n\r\n* update telop_with_mouse.launch\r\n\r\n* Add mouse.yml\r\n\r\n* call lifecycle transitoin in joystick_control node\r\n\r\n* Dlete comments from launch files\r\n\r\n* Rename config file\r\n\r\n* Add config file for f710\r\n\r\n* Fix service function\r\n\r\n* Refactoring\r\n\r\n* Update README.md\r\n\r\n* Create README.en.md"
+    },
+    {
+      "sha": "58f5c3579553e060fb85fec10fee54280a7afb8c",
+      "author": "Daisuke Sato",
+      "date": "2020-03-26T06:41:57Z",
+      "message": "Add industrial_ci test settings (#3)\n\n* Add industrial_ci test settings\r\n\r\n* Add status badge to README"
+    },
+    {
+      "sha": "5fc8837adf6949581d1583072d517aff2b493698",
+      "author": "Shota Aoki",
+      "date": "2020-03-02T06:55:24Z",
+      "message": "Fix teleop.launch for flake8 check (#2)"
+    },
+    {
+      "sha": "dc3d34cbde86f9a67229d75b40632d404261e6c1",
+      "author": "Shota Aoki",
+      "date": "2020-03-02T06:46:47Z",
+      "message": "Add github workflow (#1)\n\n* Add github workflow\r\n\r\n* Update workflow\r\n\r\n* Update workflow\r\n\r\n* Update README.md"
+    },
+    {
+      "sha": "3791c0da1da0857c81a828fc77013a97baa00774",
+      "author": "ShotaAk",
+      "date": "2020-03-02T05:55:46Z",
+      "message": "Use cmake instead of setup.py"
+    },
+    {
+      "sha": "8a439cee7a01b40c448943f778ea679c19358d64",
+      "author": "ShotaAk",
+      "date": "2020-02-28T08:15:28Z",
+      "message": "Add copyrights"
+    },
+    {
+      "sha": "8a32e6294cb323be8eece4e96be60f7f66c7790e",
+      "author": "ShotaAk",
+      "date": "2020-02-28T08:04:37Z",
+      "message": "Add CONTRIBUTING.md"
+    },
+    {
+      "sha": "bddc9081c0d71f05a252b2bc228be2f06d98122a",
+      "author": "ShotaAk",
+      "date": "2020-02-28T07:57:07Z",
+      "message": "Add README.md"
+    },
+    {
+      "sha": "63a7564883dcffce8d57143abe4e5d9b2e7c2c9c",
+      "author": "ShotaAk",
+      "date": "2020-02-28T07:55:21Z",
+      "message": "Add LICENSE file"
+    },
+    {
+      "sha": "7192784a1f8e9bfea904886f6582e98d5935baa9",
+      "author": "ShotaAk",
+      "date": "2020-02-28T07:52:11Z",
+      "message": "add joystick_control.py"
+    },
+    {
+      "sha": "707eb577067a5bd5d74fa2f30d986b64c3023321",
+      "author": "ShotaAk",
+      "date": "2020-02-28T04:57:59Z",
+      "message": "first commit"
+    }
+  ]
+}

@@ -1,0 +1,294 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-07T22:24:51Z",
+    "source": "github_rest",
+    "endpoint": "/repos/{owner}/{repo}/commits",
+    "owner": "ros2",
+    "repo": "performance_test_fixture",
+    "per_page": 100
+  },
+  "data": [
+    {
+      "sha": "9d8bd9ebafcba8bbea9a2fc1d36aeafabe83728b",
+      "author": "Chris Lalancette",
+      "date": "2025-07-29T21:11:04Z",
+      "message": "0.4.1"
+    },
+    {
+      "sha": "c4bfbd156dbc5fad009e6d4bd824b706ecda3059",
+      "author": "Chris Lalancette",
+      "date": "2025-07-29T21:10:58Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "3d594aacbe4a6ac9f2a43d3deb5b971f86ed813c",
+      "author": "mosfet80",
+      "date": "2025-07-25T07:05:36Z",
+      "message": "fix cmake deprecation (#31)\n\ncmake version < then 3.10 is deprecated\n\nSigned-off-by: mosfet80 <10235105+mosfet80@users.noreply.github.com>"
+    },
+    {
+      "sha": "1e7237690fc2a307a70d768294c0a5b7cad6045b",
+      "author": "Scott K Logan",
+      "date": "2025-04-24T19:49:42Z",
+      "message": "0.4.0"
+    },
+    {
+      "sha": "3e0177bcd49ddc898f371ff6ea5b76d7d5ded46d",
+      "author": "Chris Lalancette",
+      "date": "2024-11-27T09:14:58Z",
+      "message": "Remove CODEOWNERS and mirror-rolling-to-main workflow. (#28)\n\nThey are both outdated and both no longer serving their\nintended purpose.\n\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "ea87e5d74064d91b2a166a29a47600028fd61f2e",
+      "author": "Chris Lalancette",
+      "date": "2024-06-17T14:28:47Z",
+      "message": "0.3.1"
+    },
+    {
+      "sha": "68b87fd3032ca166b4ec357be9e3f87544f4e1cf",
+      "author": "Chris Lalancette",
+      "date": "2024-06-17T14:28:42Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "e406c3cf4a352ab3f89c43fcebe7503781be5905",
+      "author": "Chris Lalancette",
+      "date": "2024-04-26T22:04:20Z",
+      "message": "Fix a warning when building on Ubuntu Noble. (#26)\n\nIn particular, gcc 13.2 was complaining that we were\r\naccessing a pointer after a free.  And that was technically\r\ntrue; the calls to DoNotOptimize(ptr) were after the\r\nfree.  Just move this before the free (when the ptr is still\r\nvalid) to remove the warning, but still ensure that we don't\r\noptimize the pointer away.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "cfd63ec4edf63b07c3b0887e75a15b6ebcaddfce",
+      "author": "Marco A. Gutierrez",
+      "date": "2024-04-26T16:34:53Z",
+      "message": "0.3.0"
+    },
+    {
+      "sha": "a74d4bbd830cf353eb3b9b12b8758f7938682651",
+      "author": "Marco A. Gutierrez",
+      "date": "2024-04-26T16:34:50Z",
+      "message": "Changelog.\n\nSigned-off-by: Marco A. Gutierrez <marcogg@marcogg.com>"
+    },
+    {
+      "sha": "694a35fa4ae3dfcee02a272b73698f6e098bf30b",
+      "author": "Yadunund",
+      "date": "2023-04-27T08:17:20Z",
+      "message": "0.2.0"
+    },
+    {
+      "sha": "a3f2988118cd36bffdf2e027c1d9b3cbdd192c37",
+      "author": "Chris Lalancette",
+      "date": "2023-04-11T15:48:05Z",
+      "message": "0.1.1"
+    },
+    {
+      "sha": "8462f5f05f33a88e12c59dbf83ca5eeb5e21f18f",
+      "author": "Chris Lalancette",
+      "date": "2023-04-11T15:47:57Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "ba1cde0c47d31713736d1d2604c544dfb23925bf",
+      "author": "Scott K Logan",
+      "date": "2023-04-07T17:13:35Z",
+      "message": "Resolve use-after-free compiler warnings (#24)\n\nSigned-off-by: Scott K Logan <logans@cottsay.net>"
+    },
+    {
+      "sha": "eaf0e87f7d5fb50a5d79606d49d854c097414c8b",
+      "author": "Chris Lalancette",
+      "date": "2023-02-13T21:49:06Z",
+      "message": "0.1.0"
+    },
+    {
+      "sha": "3cf907ad9704999384db5e7058a11e251b01e00b",
+      "author": "Chris Lalancette",
+      "date": "2023-02-13T21:48:42Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "fe9857b35526d499615cabac25c2e14f3221de62",
+      "author": "Chris Lalancette",
+      "date": "2023-01-30T13:54:57Z",
+      "message": "Update performance_test_fixture to C++17. (#21)\n\nThe two reasons to do this are:\r\n\r\n1. So that we can compile performance_test_fixture\r\n   with the clang static analyzer. As of clang++-14\r\n   (what is in Ubuntu 22.04), the default still seems\r\n   to be C++14, so we need to specify C++17 so that new\r\n   things in the rclcpp headers work properly.\r\n2. So we can build with a newer version of gtest which requires this.\r\n\r\nFurther, due to reasons I don't fully understand, I needed to\r\nset CMAKE_CXX_STANDARD_REQUIRED in order for clang to really use\r\nthat version. So set this as well.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "ec8ae54e557c7f7ef3978c0197c289320c5ddf47",
+      "author": "Audrow Nash",
+      "date": "2022-11-16T18:14:46Z",
+      "message": "[rolling] Update maintainers - 2022-11-07 (#20)\n\n* Add Alejandro Hernandez Cordero to CODEOWNERs file\r\n\r\nSigned-off-by: Audrow Nash <audrow@openrobotics.org>"
+    },
+    {
+      "sha": "afb01872d0c03e31cd4fda04e91af8e5548de0a3",
+      "author": "Jacob Perron",
+      "date": "2022-07-25T19:13:34Z",
+      "message": "0.0.9"
+    },
+    {
+      "sha": "71343d506002812b45baaa2b8badf26ce7c034d7",
+      "author": "Audrow Nash",
+      "date": "2022-06-28T14:19:57Z",
+      "message": "Mirror rolling to main"
+    },
+    {
+      "sha": "d736c276d292a78f9750aba39108d5222bf9629e",
+      "author": "Chris Lalancette",
+      "date": "2022-05-16T18:32:31Z",
+      "message": "Add \"cstring\" to the list of includes. (#19)\n\nNeeded because this file uses strcmp().\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "2455a9905ad240d35938fcb9e7ead47c606b44c5",
+      "author": "Jacob Perron",
+      "date": "2022-01-15T01:59:38Z",
+      "message": "0.0.8"
+    },
+    {
+      "sha": "85cd5dd048baf7185e796e2e1a4bc73b02288208",
+      "author": "Jacob Perron",
+      "date": "2022-01-12T22:24:34Z",
+      "message": "Fix include order for cpplint (#16)\n\n* Fix include order for cpplint\r\n\r\nRelates to https://github.com/ament/ament_lint/pull/324\r\n\r\nSigned-off-by: Jacob Perron <jacob@openrobotics.org>\r\n\r\n* Use double-quotes for backwards compatibility\r\n\r\nSigned-off-by: Jacob Perron <jacob@openrobotics.org>"
+    },
+    {
+      "sha": "8a0627f2eedfbdccf86aa37671dd2da4dd189dc4",
+      "author": "Chris Lalancette",
+      "date": "2021-03-18T15:24:27Z",
+      "message": "0.0.7"
+    },
+    {
+      "sha": "5f447e4ba8914aa28c1c85f73179327bc2aa0618",
+      "author": "Chris Lalancette",
+      "date": "2021-03-18T15:24:19Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "00655007c5fffb0f1101c6a0ac575fe9c6285b93",
+      "author": "Scott K Logan",
+      "date": "2020-11-25T00:15:08Z",
+      "message": "Record calls to calloc, update tests (#15)\n\nLooks like we're completely missing calls to calloc in the memory\r\nmetrics right now. This change condenses the callbacks and updates the\r\ntests as well as registering for calloc events.\r\n\r\nSigned-off-by: Scott K Logan <logans@cottsay.net>"
+    },
+    {
+      "sha": "470b404224e5a98e12c55cdb78c137c0f17f43cb",
+      "author": "Stephen Brawner",
+      "date": "2020-11-19T23:08:23Z",
+      "message": "0.0.6"
+    },
+    {
+      "sha": "803f6f80f3503e1ea62f293d44e39a0755c92e0a",
+      "author": "Stephen Brawner",
+      "date": "2020-11-19T23:07:23Z",
+      "message": "Changelog 0.0.6\n\nSigned-off-by: Stephen Brawner <brawner@gmail.com>"
+    },
+    {
+      "sha": "7dcad774b6ffcb520a10d8e44f6cafb2a2576f14",
+      "author": "Scott K Logan",
+      "date": "2020-11-13T22:31:21Z",
+      "message": "Make allocation counter atomic (#13)\n\nEven if the benchmark itself isn't threaded, the process we're testing\r\ncould be. In any case, this should prevent those shenanigans from\r\nmessing up the measurement.\r\n\r\nSigned-off-by: Scott K Logan <logans@cottsay.net>"
+    },
+    {
+      "sha": "177a86fe7cda386da555fd89cd9f81d10b76d518",
+      "author": "brawner",
+      "date": "2020-11-13T19:42:35Z",
+      "message": "Add methods for pausing/resuming performance metrics (#10)\n\n* Add methods for pausing/resuming performance metrics\r\n\r\nSigned-off-by: Stephen Brawner <brawner@gmail.com>"
+    },
+    {
+      "sha": "1d57dd6e61409081a03186a8b4cb9ed19e6bf5d1",
+      "author": "brawner",
+      "date": "2020-11-13T18:18:57Z",
+      "message": "Add benchmarks to evaluate overhead (#11)\n\n* Add benchmarks to evaluate overhead in performance tests\r\n\r\nSigned-off-by: Stephen Brawner <brawner@gmail.com>"
+    },
+    {
+      "sha": "057332661e1319ff5cd77049c3aeb9b7cb167706",
+      "author": "brawner",
+      "date": "2020-11-11T01:46:02Z",
+      "message": "Add namespace performance_test_fixture to .cpp (#9)\n\nSigned-off-by: Stephen Brawner <brawner@gmail.com>"
+    },
+    {
+      "sha": "567b3511fef5960239c60d5d4b0695c24b0495d5",
+      "author": "ahcorde",
+      "date": "2020-10-21T19:33:34Z",
+      "message": "0.0.5"
+    },
+    {
+      "sha": "6ccd136929d7470a84cb20fed83d31808f9b24ef",
+      "author": "ahcorde",
+      "date": "2020-10-21T19:32:23Z",
+      "message": "changelog\n\nSigned-off-by: ahcorde <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "78d56b589da01c56fa09ba188e4539f7887df959",
+      "author": "Scott K Logan",
+      "date": "2020-10-21T18:16:26Z",
+      "message": "Export dependency on benchmark and osrf_testing_tools_cpp (#8)\n\nThis should ensure that those targets are imported and available to link\r\nagainst when the macros are invoked.\r\n\r\nSigned-off-by: Scott K Logan <logans@cottsay.net>"
+    },
+    {
+      "sha": "c422bfbd2f97a7d7d031dbf74f572582f3b2a6df",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2020-10-08T07:42:59Z",
+      "message": "Update maintainers (#7)\n\n* Update maintainers\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Update package.xml\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\nCo-authored-by: Scott K Logan <logans@cottsay.net>\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\nCo-authored-by: Scott K Logan <logans@cottsay.net>"
+    },
+    {
+      "sha": "4790a64ddd38f36f6907dcb85f4be85ae1a78a2d",
+      "author": "Scott K Logan",
+      "date": "2020-09-17T17:26:43Z",
+      "message": "0.0.4"
+    },
+    {
+      "sha": "0aeba9d8dae5edc6f55e1a2ddab6bec6a6d3c8e9",
+      "author": "Scott K Logan",
+      "date": "2020-09-17T17:24:54Z",
+      "message": "Expose a function for resetting the heap counters (#6)\n\nSigned-off-by: Scott K Logan <logans@cottsay.net>"
+    },
+    {
+      "sha": "568dc11197a77e121b61c09c34b8c8598511e323",
+      "author": "Scott K Logan",
+      "date": "2020-09-17T17:06:08Z",
+      "message": "Stop recording memory operations sooner (#5)\n\nIt looks like the process of recording the number of allocations\r\ninvolves performing allocations itself, which we're obviously not\r\ninterested in including in the statistics.\r\n\r\nSigned-off-by: Scott K Logan <logans@cottsay.net>"
+    },
+    {
+      "sha": "a0d25c2cbbfa956ebb99a0b384919d92e16c21b4",
+      "author": "Scott K Logan",
+      "date": "2020-09-09T22:55:52Z",
+      "message": "Suppress memory tools warning if tests will be skipped (#4)\n\nI'd prefer to inspect the test itself to see if it will be skipped\r\nindividually, but this warning is implemented in a common location so\r\nthat it is printed once, instead of once for each defined test. Looking\r\nat the source variable, `AMENT_RUN_PERFORMANCE_TESTS`, should give us\r\nthe same behavior.\r\n\r\nSigned-off-by: Scott K Logan <logans@cottsay.net>"
+    },
+    {
+      "sha": "2620912602a7b4ab42eee5e076fa9e5da60ca935",
+      "author": "Scott K Logan",
+      "date": "2020-09-03T00:46:18Z",
+      "message": "0.0.3"
+    },
+    {
+      "sha": "c9c1c091e75dc3c2203c4f0ffa2d8e09222989d3",
+      "author": "Scott K Logan",
+      "date": "2020-09-03T00:45:25Z",
+      "message": "Export dependency on ament_cmake_google_benchmark (#3)\n\nSince the *-extras.cmake for this package calls macros defined in\r\nament_cmake_google_benchmark, it must be find_package()'d before this\r\npackage. The simplest way to ensure that happens is to export the ament\r\ndependency.\r\n\r\nSigned-off-by: Scott K Logan <logans@cottsay.net>"
+    },
+    {
+      "sha": "d8e2e37e392cd4b7dfc489b717c199aa24d48157",
+      "author": "Scott K Logan",
+      "date": "2020-07-23T18:15:01Z",
+      "message": "0.0.2"
+    },
+    {
+      "sha": "6ab298ee5c3524110300806b637ec81fa006a2ea",
+      "author": "Scott K Logan",
+      "date": "2020-07-23T18:10:59Z",
+      "message": "Add missing dependency on ament_cmake_google_benchmark (#2)\n\nSigned-off-by: Scott K Logan <logans@cottsay.net>"
+    },
+    {
+      "sha": "b64e70a1c52be846486853830fbf568ea6ad44aa",
+      "author": "Scott K Logan",
+      "date": "2020-07-23T17:16:21Z",
+      "message": "0.0.1"
+    },
+    {
+      "sha": "c6b452c96f06de6fd28e167c35e7a1cc318f38ed",
+      "author": "Scott K Logan",
+      "date": "2020-07-20T21:19:04Z",
+      "message": "Initial 'performance_test_fixture' package (#1)\n\nSigned-off-by: Scott K Logan <logans@cottsay.net>"
+    },
+    {
+      "sha": "c3bf3fea4a9aac5972e22b857546eb546f1f754c",
+      "author": "Scott K Logan",
+      "date": "2020-07-16T20:50:32Z",
+      "message": "Initial commit\n\nSigned-off-by: Scott K Logan <logans@cottsay.net>"
+    }
+  ]
+}

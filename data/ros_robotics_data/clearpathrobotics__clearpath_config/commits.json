@@ -1,0 +1,4032 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-07T05:45:11Z",
+    "source": "github_rest",
+    "endpoint": "/repos/{owner}/{repo}/commits",
+    "owner": "clearpathrobotics",
+    "repo": "clearpath_config",
+    "per_page": 100
+  },
+  "data": [
+    {
+      "sha": "b076b05ad87b80617b3e116e0a4308f4f7ff4cc2",
+      "author": "Tony Baltovski",
+      "date": "2026-02-02T15:11:25Z",
+      "message": "Added mergify and auto-label. (#207)"
+    },
+    {
+      "sha": "122c42e7723df6394e6ed31aba0877580c7a1f5d",
+      "author": "Tony Baltovski",
+      "date": "2025-12-16T15:40:58Z",
+      "message": "2.8.2"
+    },
+    {
+      "sha": "16f51432f372989799f293ff7a8a056dd2a49f80",
+      "author": "Tony Baltovski",
+      "date": "2025-12-16T15:40:47Z",
+      "message": "Changes."
+    },
+    {
+      "sha": "2f180190f05910dcb8a33d657ef5ed9850ad129c",
+      "author": "luis-camero",
+      "date": "2025-11-17T21:16:15Z",
+      "message": "Fix reading arm_id (#204)"
+    },
+    {
+      "sha": "aa5cb2ef5d3594deae002637f2d0687e0d579e36",
+      "author": "Tony Baltovski",
+      "date": "2025-11-06T16:32:14Z",
+      "message": "2.8.1"
+    },
+    {
+      "sha": "a229ecc1d5900bb380e63c14be4f71899ac76f6d",
+      "author": "Tony Baltovski",
+      "date": "2025-11-06T16:32:02Z",
+      "message": "Changes."
+    },
+    {
+      "sha": "542ff113d2979d2050d986b8272325d4c03d67f3",
+      "author": "luis-camero",
+      "date": "2025-11-06T16:20:25Z",
+      "message": "Fix: Ewellix Parameters (#203)\n\nAdd mount parameter and remove redefinition of urdf functions"
+    },
+    {
+      "sha": "2b67b2bb222f0ee522968764ad77a1760e2501b4",
+      "author": "Tony Baltovski",
+      "date": "2025-10-23T17:30:21Z",
+      "message": "2.8.0"
+    },
+    {
+      "sha": "9fb66d951f253ffa9afb3b85b50efda340217ccb",
+      "author": "Tony Baltovski",
+      "date": "2025-10-23T17:29:59Z",
+      "message": "Changes."
+    },
+    {
+      "sha": "519863f9ff51368dded3191ea11715ec1f2154fc",
+      "author": "Tony Baltovski",
+      "date": "2025-10-23T15:19:48Z",
+      "message": "Merge pull request #198 from clearpathrobotics/rc/jazzy/2.8\n\nJazzy 2.8 Release"
+    },
+    {
+      "sha": "feba22cc9533604af1131d7721855a925a9ab782",
+      "author": "Chris Iverach-Brereton",
+      "date": "2025-10-15T21:02:48Z",
+      "message": "Add a new `platform.wireless` section to config (#201)\n\n* Add a new `platform.wireless` section to contain router, base station, wireless_watcher parameters\n\n* Fixed linting.\n\n---------\n\nCo-authored-by: Tony Baltovski <tbaltovski@clearpathrobotics.com>"
+    },
+    {
+      "sha": "29b752551def84280cfe11b3dc91235432931152",
+      "author": "Chris Iverach-Brereton",
+      "date": "2025-10-15T17:41:03Z",
+      "message": "Replace `assert` with `raise` + relevant Exception (#200)\n\n* Raise a FileNotFound exception instead of an assertion error if the middleware config path doesn't exist; this makes it easier to catch those exceptions in CI tests. Fix a bug where setting the extra launch to None raises an unintended exception\n\n* Start replacing all `assert CONDITION[, 'error message']` instances with `if` + `raise` with more precise exceptions (generally PermissionError, FileNotFoundError, ValueError, or TypeError)\n\n* Replace more asserts\n\n* Replace asserts in username. Don't allow underscores; these are not valid in Linux usernames. Verify that the first character is not a digit or hyphen\n\n* More asserts\n\n* More asserts\n\n* More asserts\n\n* More asserts\n\n* Fix length check\n\n* id -> _id\n\n* .config -> .control\n\n* UR_TYPE -> UR_TYPES\n\n* More asserts\n\n* Finish first pass removing all asserts\n\n* Missing negative sign\n\n* Fix wonky indent\n\n* Fix formatting issues"
+    },
+    {
+      "sha": "f14ac3102663894bc38dfbd3709aeb5e39d7d8ae",
+      "author": "luis-camero",
+      "date": "2025-10-07T20:09:02Z",
+      "message": "Fix: OakD Parameters (#202)\n\n- Use empty strings as defaults"
+    },
+    {
+      "sha": "6980281fbb6fc96b7ba1c4e0a2ba3c841a2af79b",
+      "author": "Chris Iverach-Brereton",
+      "date": "2025-10-07T16:09:30Z",
+      "message": "Raise a FileNotFound exception instead of an assertion error if the middleware config path doesn't exist; this makes it easier to catch those exceptions in CI tests. Fix a bug where setting the extra launch to None raises an unintended exception (#199)"
+    },
+    {
+      "sha": "2584bf074a8f40af62f8eebd0699eb5d9244adf8",
+      "author": "Chris Iverach-Brereton",
+      "date": "2025-09-30T19:12:52Z",
+      "message": "Add `system.bash` support (#196)\n\n* Add `system.bash` section to robot.yaml with `source` and `env` sub-fields for adding additional bash sources and envars\n\n* Add new envar to Flir camera sample"
+    },
+    {
+      "sha": "0ffd93533236e650d65b77985d7f95180f1ee2a3",
+      "author": "Chris Iverach-Brereton",
+      "date": "2025-09-29T20:43:53Z",
+      "message": "Allow multiple launch files to be listed in platform.extras.launch, add launch arguments field (#197)"
+    },
+    {
+      "sha": "7d257c84b96a77f03a73268c510524e228cf78e6",
+      "author": "Chris Iverach-Brereton",
+      "date": "2025-09-18T15:42:46Z",
+      "message": "Add support for automatic discovery range (#191)\n\n* Add ROS_STATIC_PEERS and ROS_AUTOMATIC_DISCOVERY_RANGE setters to middleware\n\n* Add middleware samples"
+    },
+    {
+      "sha": "fad7336205b80dc907afddf8ece22619cd29019f",
+      "author": "Chris Iverach-Brereton",
+      "date": "2025-09-18T15:07:18Z",
+      "message": "Rename `oakd` namespace in robot.yaml to `luxonis_oakd` (#192)"
+    },
+    {
+      "sha": "1b7b422cfe2f0c421054b2a3cc4d09b508192965",
+      "author": "Tony Baltovski",
+      "date": "2025-09-18T19:25:41Z",
+      "message": "2.7.3"
+    },
+    {
+      "sha": "413fb1292356b13d0d1d2c1479a0ce0cbd92a336",
+      "author": "Tony Baltovski",
+      "date": "2025-09-18T19:25:21Z",
+      "message": "Changes."
+    },
+    {
+      "sha": "f39d08f260efaab20d016f2f6a21b2e07fb82d2f",
+      "author": "luis-camero",
+      "date": "2025-09-18T14:09:06Z",
+      "message": "Feature: Kinova Jazzy Support (#193)\n\n* Remove unsupported exception on Kinova\n\n* Lint and remove unused imports\n\n* Add arm reference from within arm's gripper"
+    },
+    {
+      "sha": "be0c56215f8ff1e43c5e56436338f142a96ed22c",
+      "author": "Tony Baltovski",
+      "date": "2025-09-16T13:01:25Z",
+      "message": "2.7.2"
+    },
+    {
+      "sha": "1b23133b3ec8513f04b362a51969b61ae4ac9e4b",
+      "author": "Tony Baltovski",
+      "date": "2025-09-16T13:01:16Z",
+      "message": "Changes."
+    },
+    {
+      "sha": "18d89425a785354e3ed8bbd667f13baefb2334fa",
+      "author": "luis-camero",
+      "date": "2025-09-09T19:01:13Z",
+      "message": "Fix: URDF Parameters on Kinova and Grippers (#190)\n\n* Add URDF parameters to Kinova and Grippers\n\n* Lint: Add line\n\n* Check empty string to allow false boolean"
+    },
+    {
+      "sha": "e840279de58ddaa1f75e567ab6683433b4207b1f",
+      "author": "Tony Baltovski",
+      "date": "2025-09-08T20:10:01Z",
+      "message": "2.7.1"
+    },
+    {
+      "sha": "bdecda487560b2b68bd92a834ce08897668838d8",
+      "author": "Tony Baltovski",
+      "date": "2025-09-08T20:09:50Z",
+      "message": "Changes."
+    },
+    {
+      "sha": "b5b1469164e822084e4e83846ed7ab1d95a51414",
+      "author": "luis-camero",
+      "date": "2025-09-05T17:41:02Z",
+      "message": "Feature: Franka in Jazzy (#189)\n\n* Forward from Humble: Feature Franka\n\n* Initial Franka arm description\n\n* Add arm_id property to franka manipulators\n\n* Add joint count to Franka arm\n\n* Pass MoveIt delay from config"
+    },
+    {
+      "sha": "078bc6a2338e079b2b4c95900252e76a22d44641",
+      "author": "luis-camero",
+      "date": "2025-09-05T17:15:45Z",
+      "message": "Jazzy Feature: Zed (#188)\n\n* Remove unsupported exception on StereolabsZed\n\n* Remove unused imports"
+    },
+    {
+      "sha": "3552bcc733bb3b37db3f473b027958808e769fa6",
+      "author": "Tony Baltovski",
+      "date": "2025-08-25T22:21:37Z",
+      "message": "2.7.0"
+    },
+    {
+      "sha": "1fe6651665bbde82009487915a6cd321fd211cac",
+      "author": "Tony Baltovski",
+      "date": "2025-08-25T22:21:25Z",
+      "message": "Changes."
+    },
+    {
+      "sha": "9d0214696385bc7ace78c43286b5b229b8a2bd9b",
+      "author": "Tony Baltovski",
+      "date": "2025-08-25T18:53:22Z",
+      "message": "Merge pull request #185 from clearpathrobotics/rc/jazzy/2.7\n\nJazzy 2.7 Release"
+    },
+    {
+      "sha": "52c1257d9dadb94e68a56dee13058195abd7dad6",
+      "author": "Tony Baltovski",
+      "date": "2025-08-22T01:53:04Z",
+      "message": "2.6.3"
+    },
+    {
+      "sha": "1b0a0eb49e195ad6918be15ee7b25acb7d254a30",
+      "author": "Tony Baltovski",
+      "date": "2025-08-22T01:52:56Z",
+      "message": "Changes."
+    },
+    {
+      "sha": "8bc8cfdd40ed7d7024ccbc31c414492f52d10b54",
+      "author": "Hilary Luo",
+      "date": "2025-08-21T21:46:00Z",
+      "message": "Ensure MX_ID is passed through (#187)"
+    },
+    {
+      "sha": "fc2af85a14c1715f62c39e299a7c58b94a0d22b2",
+      "author": "luis-camero",
+      "date": "2025-08-18T17:43:43Z",
+      "message": "Fix: OAK-D Parameters (#186)"
+    },
+    {
+      "sha": "9f889060ba340b79bcdb07fdc1c21e18c46b5f8c",
+      "author": "Hilary Luo",
+      "date": "2025-07-31T19:21:51Z",
+      "message": "A200 lidar example requires pacs plate (#184)"
+    },
+    {
+      "sha": "3499a9116d78723c23d91b160a6db27cc52786aa",
+      "author": "Tony Baltovski",
+      "date": "2025-07-29T17:21:38Z",
+      "message": "2.6.2"
+    },
+    {
+      "sha": "55e6e9e2d2e2d91a62960711afd629edebbcd15c",
+      "author": "Tony Baltovski",
+      "date": "2025-07-29T17:21:28Z",
+      "message": "Changes."
+    },
+    {
+      "sha": "08c64aa8aa52f87812d82d19e13e73d04fe80559",
+      "author": "luis-camero",
+      "date": "2025-07-29T14:25:05Z",
+      "message": "Fix: Overwrite defined values with ROS parameters (#182)\n\n* Overwrite defined values with ROS parameters\n\n* Remove comment"
+    },
+    {
+      "sha": "80634d75e613d8ab3f7740891ada3e0628ea77f8",
+      "author": "Roni Kreinin",
+      "date": "2025-07-23T21:19:41Z",
+      "message": "Drivetrains (#178)\n\n* Added drivetrain support\n* Split 2wd into fwd and rwd\n* Added samples\n* Renamed drivetrain 'type' to 'control'\n* Split wheels into front and rear\n* Added caster wheel\n* Removed 2WD options for Dingo-O and Ridgeback\n* Changed J100, A200, W200 to 4WD\n* Reset the global serial number variable\n* Fixed A300 sample drivetrain section\n* Added drivetrain to other platform outline samples\n* Fixed Dingo-D control type\n\n---------\n\nCo-authored-by: Luis Camero <lcamero@clearpathrobotics.com>"
+    },
+    {
+      "sha": "d9493b844ab5f9d40005bdd7d896be7f976114a6",
+      "author": "Chris Iverach-Brereton",
+      "date": "2025-07-22T18:20:41Z",
+      "message": "Add the 2d lidar to the wireless charger (#181)"
+    },
+    {
+      "sha": "a808eed778d9516db1adc5e76ec7506ed2544010",
+      "author": "Tony Baltovski",
+      "date": "2025-07-21T19:26:50Z",
+      "message": "Merge pull request #180 from clearpathrobotics/fix/service-user\n\nChanged sample username to robot."
+    },
+    {
+      "sha": "eed06c69c1f63c192b9fc9da36fdd843fdd30410",
+      "author": "Tony Baltovski",
+      "date": "2025-07-18T17:20:46Z",
+      "message": "Changed sample username to robot."
+    },
+    {
+      "sha": "ef80abdd9abe41731f36fe82913527dc341dae7e",
+      "author": "Tony Baltovski",
+      "date": "2025-07-07T20:49:41Z",
+      "message": "2.6.1"
+    },
+    {
+      "sha": "fa93cbca069a5cfee2a5b327eb1f443d9fa4cfba",
+      "author": "Tony Baltovski",
+      "date": "2025-07-07T20:49:36Z",
+      "message": "Changes."
+    },
+    {
+      "sha": "7bd6fbdc7ac669c18cbbd11b71fc1f0212fe91d8",
+      "author": "luis-camero",
+      "date": "2025-07-07T20:29:23Z",
+      "message": "Forward Fix: Add ur_type parameter to UniversalRobots manipulator (#177)"
+    },
+    {
+      "sha": "5136f1faf60001712bf0791f57025ae0098b4e60",
+      "author": "Tony Baltovski",
+      "date": "2025-07-04T15:24:26Z",
+      "message": "2.6.0"
+    },
+    {
+      "sha": "be6b6ff1b81695e5e8c35a21824b034bbcfd219b",
+      "author": "Tony Baltovski",
+      "date": "2025-07-04T15:24:03Z",
+      "message": "Changes."
+    },
+    {
+      "sha": "c211e6e3b67182d8ec454214b6cb1eb1e233ee13",
+      "author": "Tony Baltovski",
+      "date": "2025-07-04T14:53:04Z",
+      "message": "Merge pull request #172 from clearpathrobotics/rc/jazzy/2.6\n\nJazzy 2.6 Release"
+    },
+    {
+      "sha": "7de56698ef20a3807822e43fa761a6098b60398f",
+      "author": "luis-camero",
+      "date": "2025-06-27T14:23:09Z",
+      "message": "Feature: All Platforms Supported (#176)\n\n* All platforms are now supported\n\n* Remove unused dependencies"
+    },
+    {
+      "sha": "2ce490e55c7e4993cd671e34b25fd68eedfb8306",
+      "author": "Tony Baltovski",
+      "date": "2025-06-23T14:40:42Z",
+      "message": "Added sensor sample for phidgets_spatial. (#175)"
+    },
+    {
+      "sha": "9cccdd6d3f2e05c3e1f30aa644853bdda4c5f7d6",
+      "author": "Hilary Luo",
+      "date": "2025-06-09T17:23:07Z",
+      "message": "Enable foxglove bridge by default (#173)"
+    },
+    {
+      "sha": "5b76bc1db03d15850cca78ef8b897ecad4a3a276",
+      "author": "Chris Iverach-Brereton",
+      "date": "2025-06-04T20:06:30Z",
+      "message": "Add A300 AMP attachments, samples (#158)\n\n* Add attachments for A300 Observer\n\n* Add A300 Observer sample\n\n* Add parameters to set the Ouster OS-1 base & cap type\n\n* Add spotlight attachment"
+    },
+    {
+      "sha": "6c71e658235d4016487d2474786c907dd1adc4cf",
+      "author": "Tony Baltovski",
+      "date": "2025-05-29T20:37:02Z",
+      "message": "2.5.0"
+    },
+    {
+      "sha": "f07345a8f449664c505409d36e89949f6b6ea71d",
+      "author": "Tony Baltovski",
+      "date": "2025-05-29T20:36:30Z",
+      "message": "Changes."
+    },
+    {
+      "sha": "882fd166df80ae26bdcd4c8595e38ebf07e5291e",
+      "author": "Tony Baltovski",
+      "date": "2025-05-29T19:59:16Z",
+      "message": "Merge pull request #167 from clearpathrobotics/rc/jazzy/2.5\n\nJazzy 2.5 Release"
+    },
+    {
+      "sha": "922b2ee5bc4be3478d35d29bc9c48faa4eab3f57",
+      "author": "luis-camero",
+      "date": "2025-05-28T21:00:40Z",
+      "message": "Fix: PACS Limits (#171)"
+    },
+    {
+      "sha": "ddbdc60226a7a621e31730e46934d7b45cf08f9c",
+      "author": "luis-camero",
+      "date": "2025-05-27T17:52:15Z",
+      "message": "Add foxglove bridge enable to platform section (#169)\n\nCo-authored-by: Tony Baltovski <tbaltovski@clearpathrobotics.com>"
+    },
+    {
+      "sha": "22c194699080acb599a3a703a920621dc8f252cc",
+      "author": "Hilary Luo",
+      "date": "2025-05-27T17:34:44Z",
+      "message": "Add enable setting for wireless-watcher (#170)\n\n* Add enable setting for wireless-watcher\n\n* Update comment"
+    },
+    {
+      "sha": "95898cbd3aace58b9b37586aece184c97117a002",
+      "author": "luis-camero",
+      "date": "2025-05-21T16:45:39Z",
+      "message": "Feature: CAN Bridge Parameters (#166)"
+    },
+    {
+      "sha": "05470010a736759a750c1504e866e8c1c7db7fa0",
+      "author": "Chris Iverach-Brereton",
+      "date": "2025-05-13T15:52:55Z",
+      "message": "Add cap_type parameter to the OS1 sample since it's supported (#163)"
+    },
+    {
+      "sha": "0e109a1fda67ab269492ab1eb7b91082773352d6",
+      "author": "Hilary Luo",
+      "date": "2025-05-26T14:18:39Z",
+      "message": "Fix/issue typos (#168)\n\n* Fix typos in issue templates\n\n* correct package name in issue template"
+    },
+    {
+      "sha": "e29acb8e199c3e7072afcc939c75f3351fee7224",
+      "author": "Tony Baltovski",
+      "date": "2025-05-01T14:12:46Z",
+      "message": "2.4.0"
+    },
+    {
+      "sha": "084ae81cbc2af456b84f5595c7220cf979286fd9",
+      "author": "Tony Baltovski",
+      "date": "2025-05-01T14:12:25Z",
+      "message": "Changes."
+    },
+    {
+      "sha": "bff52ab45c7ab0584652bda8f16a11561cf52ada",
+      "author": "Tony Baltovski",
+      "date": "2025-05-01T14:08:56Z",
+      "message": "Merge pull request #161 from clearpathrobotics/rc/jazzy/2.4\n\nJazzy 2.4 Release"
+    },
+    {
+      "sha": "730c746e786584a0ba363f96343e37c4c7991694",
+      "author": "luis-camero",
+      "date": "2025-05-01T14:07:31Z",
+      "message": "Keep default can_bridge entries (#160)"
+    },
+    {
+      "sha": "13c61c257aa5136029a3e45d7c5fea6663a565c6",
+      "author": "Tony Baltovski",
+      "date": "2025-04-28T17:22:04Z",
+      "message": "2.3.1"
+    },
+    {
+      "sha": "a283301d06f276568825a2c1219f869221e2f7f9",
+      "author": "Tony Baltovski",
+      "date": "2025-04-28T17:21:58Z",
+      "message": "Changes."
+    },
+    {
+      "sha": "c75c27aad8da4b6170a1b034250fa89bbc6c1b33",
+      "author": "Tony Baltovski",
+      "date": "2025-04-28T16:39:09Z",
+      "message": "Merge pull request #159 from clearpathrobotics/fix/a300-sample-serial\n\nFixed the Husky A300 serial sample to match the real serial."
+    },
+    {
+      "sha": "7f575aef757c700af1d5d4609022eb7d7ebdbd30",
+      "author": "Tony Baltovski",
+      "date": "2025-04-28T13:24:47Z",
+      "message": "Fixed the Husky A300 serial sample to match the real serial."
+    },
+    {
+      "sha": "e8728810d2c7c80f58cb1f8006a26ea7d44acfa3",
+      "author": "Tony Baltovski",
+      "date": "2025-04-11T19:00:52Z",
+      "message": "2.3.0"
+    },
+    {
+      "sha": "d661e20d8d0c6cc887cfa9f2055a76208e697126",
+      "author": "Tony Baltovski",
+      "date": "2025-04-11T18:59:16Z",
+      "message": "Changes."
+    },
+    {
+      "sha": "09da36ad7f4363891084a49a7524f71b1a14fa44",
+      "author": "Tony Baltovski",
+      "date": "2025-04-11T17:09:09Z",
+      "message": "Merge pull request #138 from clearpathrobotics/rc/jazzy/2.3\n\nJazzy 2.3 Release"
+    },
+    {
+      "sha": "eb8d3503108b0a17b601ca5fd7cf42a94ac8d552",
+      "author": "Tony Baltovski",
+      "date": "2025-04-11T16:29:03Z",
+      "message": "Added a single Hokuyo laser to default R100 sample. (#157)\n\n* Added a single Hokuyo laser to default R100 sample.\n\n* Added newline at EOF."
+    },
+    {
+      "sha": "574f36f1ff4f34f7b2ba61ed8578fe19a4255c02",
+      "author": "luis-camero",
+      "date": "2025-04-10T19:19:13Z",
+      "message": "Maintain default can adapters but allow overwriting if matching names (#155)"
+    },
+    {
+      "sha": "22e3653a232bca20153b9233ec7b30dd359dd7f5",
+      "author": "luis-camero",
+      "date": "2025-04-09T16:48:02Z",
+      "message": "Feature: Wiferion Charger (#154)\n\n* Add charger sensors\n\n* Removed unused imports"
+    },
+    {
+      "sha": "31a8a361bf293cea6a9366155bfe0b15fe7ae549",
+      "author": "luis-camero",
+      "date": "2025-04-09T14:34:08Z",
+      "message": "Feature: Add CAN adapters  (#153)\n\n* Add CAN adapters to config\n\n* Fix platform list to include do100"
+    },
+    {
+      "sha": "7ae7303f1fabc43be75c7b448f3e50b3c00470c0",
+      "author": "Chris Iverach-Brereton",
+      "date": "2025-04-08T20:14:54Z",
+      "message": "Rename camera IMU topics from imu to imu/data_raw (per RPSW-2503) (#150)"
+    },
+    {
+      "sha": "564e0fd315aebc49186b0b4fec211437244e689a",
+      "author": "luis-camero",
+      "date": "2025-04-08T16:02:18Z",
+      "message": "Fast Forward Feature: Add delay to manipulator controller (#146)"
+    },
+    {
+      "sha": "a68d84cd205443ee557bc7b05aa6e660f86890fe",
+      "author": "luis-camero",
+      "date": "2025-04-08T15:14:52Z",
+      "message": "Fast Forward Feature: Manipulator URDF Parameters (#145)\n\n* Fast Forward Feature: Manipulator URDF Parameters\n\n* Fix outstanding merge issue"
+    },
+    {
+      "sha": "fa17570a123a3b2470945e7c35242bffac1f14b7",
+      "author": "luis-camero",
+      "date": "2025-04-08T14:35:46Z",
+      "message": "Fast Forward Feature: MoveIt Parameters and Enable (#144)"
+    },
+    {
+      "sha": "a6db05ef7cad8c8a247c8c16abe7596031dbe9a5",
+      "author": "luis-camero",
+      "date": "2025-04-07T17:05:15Z",
+      "message": "Fast-Forward Feature: Manipulator Samples and Poses (#143)\n\n* Fast-Forward Feature: Manipulator Samples and Poses\n\n* Remove double quotes"
+    },
+    {
+      "sha": "02a2f15e7e5333d685f706a029b1459377eea08e",
+      "author": "Roni Kreinin",
+      "date": "2025-04-07T17:04:39Z",
+      "message": "Removed J100 from unsupported platforms (#149)"
+    },
+    {
+      "sha": "b7735a3f458d6d270c489017fffdc79be05050c8",
+      "author": "Tony Baltovski",
+      "date": "2025-04-01T18:49:42Z",
+      "message": "Changed all sensor samples to the Husky A300. (#148)"
+    },
+    {
+      "sha": "ad78c3637755a5e8746511320586a7a7c84b74eb",
+      "author": "Tony Baltovski",
+      "date": "2025-03-28T00:59:50Z",
+      "message": "2.2.2"
+    },
+    {
+      "sha": "1e1dcbf0d5d9ce20a2cfbcbecbbfb5653a2fd6d7",
+      "author": "Tony Baltovski",
+      "date": "2025-03-28T00:59:36Z",
+      "message": "Changes."
+    },
+    {
+      "sha": "823e6a0d9266f90b15cc767ab906df29376fb46b",
+      "author": "Tony Baltovski",
+      "date": "2025-03-28T00:58:34Z",
+      "message": "Merge pull request #147 from clearpathrobotics/fix/imu-parent-link\n\nUpdated the parent link of the base IMU on the A300."
+    },
+    {
+      "sha": "c1de778ed17dbdaea792af44b3b692288ff4dce8",
+      "author": "Tony Baltovski",
+      "date": "2025-03-28T00:51:29Z",
+      "message": "Updated the parent link of the base IMU on the A300."
+    },
+    {
+      "sha": "5e17efbaa2ef4515cef4ba9daf6bce401a3b5c2c",
+      "author": "Chris Iverach-Brereton",
+      "date": "2025-03-27T20:16:34Z",
+      "message": "Add support for INS sensors + Fixposition XVN (#142)\n\n* Add INS type to indexing profile, SensorConfig. Add beginnings of Fixposition XVN\n\n* Add __len__, __getitem__ methods to the list, add assertions to make sure required methods are implemented\n\n* Add accessors, mutators for INS sensors\n\n* Add the ROS parameter template + associated properties\n\n* Make the default antenna mount default_mount instead of base_link\n\n* Add sample for XVN\n\n* Change port parameter to a string, add default values for the topics"
+    },
+    {
+      "sha": "68b136430ed107becb2eb081fe333445c120883e",
+      "author": "Tony Baltovski",
+      "date": "2025-03-17T14:55:57Z",
+      "message": "2.2.1"
+    },
+    {
+      "sha": "f1d40f3f0ae7f1f09430002c42a213c054cbf107",
+      "author": "Tony Baltovski",
+      "date": "2025-03-17T14:55:47Z",
+      "message": "Changes."
+    },
+    {
+      "sha": "560081b9291a11b814902632cb4e015307addde2",
+      "author": "Tony Baltovski",
+      "date": "2025-03-13T17:36:22Z",
+      "message": "Merge pull request #139 from clearpathrobotics/fix/a300/battery-samples\n\nAdded battery to A300 samples."
+    },
+    {
+      "sha": "8533873690342a4945d409b04010cfc34b17a340",
+      "author": "Tony Baltovski",
+      "date": "2025-03-13T14:28:59Z",
+      "message": "Added battery to A300 samples."
+    },
+    {
+      "sha": "eb9e85045c194fdecef45903ea071021eabb3f32",
+      "author": "Roni Kreinin",
+      "date": "2025-03-12T13:24:33Z",
+      "message": "Removed Dingo and Ridgeback from unsupported exception (#137)"
+    },
+    {
+      "sha": "ff453aa2b9d41edc92a162a963f2bd424a8c05ae",
+      "author": "Tony Baltovski",
+      "date": "2025-03-11T21:40:13Z",
+      "message": "2.2.0"
+    },
+    {
+      "sha": "964d7176e10b6f5466cf950cb7538720a1bf11c0",
+      "author": "Tony Baltovski",
+      "date": "2025-03-11T21:40:01Z",
+      "message": "Changes."
+    },
+    {
+      "sha": "6bce10c608b65fbe5729201ff0cd1f5a41b4ddca",
+      "author": "Tony Baltovski",
+      "date": "2025-03-11T21:05:27Z",
+      "message": "Merge pull request #134 from clearpathrobotics/rc/jazzy/2.2\n\nJazzy 2.2"
+    },
+    {
+      "sha": "b7a58a0e67df4f53f50336437be0d1bcdace87b1",
+      "author": "luis-camero",
+      "date": "2025-03-11T20:32:17Z",
+      "message": "Feature Jazzy Ouster (#132)\n\n* Add OusterOS1\n\n* Add ouster sample\n\n* Alphabetical entries to Lidar3D models"
+    },
+    {
+      "sha": "0515ba840a6cfc7cfcceee389a0beb69ec0c6272",
+      "author": "Chris Iverach-Brereton",
+      "date": "2025-03-10T17:56:05Z",
+      "message": "Add D455, D456 to supported devices (#136)"
+    },
+    {
+      "sha": "53ee1b4932d7eb50e861104db51ab17ef1315141",
+      "author": "Chris Iverach-Brereton",
+      "date": "2025-03-10T17:53:41Z",
+      "message": "Add support for OAK-D Pro W PoE (#135)\n\n* Add OAK-D Pro W PoE to sensor types. Add IP address field to OAK-D camera class, defaulting to None (for non-PoE models). Add a new assertion to validate IPv4 addresses\n\n* Support the `device_type` parameter for OAK-D cameras\n\n* Add i_mx_id, i_ip for identifying multiple cameras. Fix serial so it maps to i_usb_port_id\n\n* Rename variable to avoid overwriting python builtin\n\n* Allow empty strings as well as None for the IP address\n\n* Add assert_is_ipv4_address to BaseSensor"
+    },
+    {
+      "sha": "512ae46d3b33bd3d8bed0dc16e0ef6a662514752",
+      "author": "Chris Iverach-Brereton",
+      "date": "2025-03-04T20:50:38Z",
+      "message": "Add URDF-only support for the Seyond Robin W (#131)\n\n* Add the SeyondLidar class\n\n* Add sample for the Seyond Robin W"
+    },
+    {
+      "sha": "d10392a78c0487987fb42ef6a53bdfc57cdcb18b",
+      "author": "Tony Baltovski",
+      "date": "2025-02-05T18:18:56Z",
+      "message": "2.1.1"
+    },
+    {
+      "sha": "2255343e8c43c886f18e0b68f963fdb54ef7d905",
+      "author": "Tony Baltovski",
+      "date": "2025-02-05T18:17:36Z",
+      "message": "Changes."
+    },
+    {
+      "sha": "9c40390b3b527e8f175c51da904689d520543022",
+      "author": "Tony Baltovski",
+      "date": "2025-02-04T20:28:12Z",
+      "message": "Fixed docs link for Robot YAML. (#124)"
+    },
+    {
+      "sha": "c79d12e272d52f7fb50253432c2783ae096cf2b2",
+      "author": "Tony Baltovski",
+      "date": "2025-02-03T18:00:44Z",
+      "message": "Merge pull request #122 from clearpathrobotics/fix/a300-imu-location\n\nUpdated the A300's default IMU location."
+    },
+    {
+      "sha": "9b7f53207b03edd1249e5ce17074c9b5c5da1c43",
+      "author": "Tony Baltovski",
+      "date": "2025-02-03T14:33:01Z",
+      "message": "Updated the A300's default IMU location."
+    },
+    {
+      "sha": "a1cab682e8caac45e3bcb6fe5167e622e902c677",
+      "author": "Tony Baltovski",
+      "date": "2025-01-31T20:23:11Z",
+      "message": "2.1.0"
+    },
+    {
+      "sha": "36d0331853e57ebdb29caa250d786b1c22a47cbf",
+      "author": "Tony Baltovski",
+      "date": "2025-01-31T20:23:01Z",
+      "message": "Changes."
+    },
+    {
+      "sha": "fe8aca73ba69f0f0bf15afbd2f042950cc44ad5f",
+      "author": "Tony Baltovski",
+      "date": "2025-01-31T19:42:54Z",
+      "message": "Merge pull request #118 from clearpathrobotics/rc/jazzy-2.1\n\nJazzy 2.1 RC"
+    },
+    {
+      "sha": "569c5e6ba91d6d36c3be3bfcde39b189c0ac79ee",
+      "author": "luis-camero",
+      "date": "2025-01-31T19:17:50Z",
+      "message": "Jazzy Phidgets IMU Filter (#119)\n\n* Add filter to IMU entry\r\n\r\n* Enable mag only for Phidgets\r\n\r\n* Add DATA topic to Phidget"
+    },
+    {
+      "sha": "a881f81d7324bf335250732e691f3708d47bf66c",
+      "author": "luis-camero",
+      "date": "2025-01-31T19:16:47Z",
+      "message": "Add the phidget to default sample (#120)"
+    },
+    {
+      "sha": "7e986d2305408897c194c03d16d7718bf31bd540",
+      "author": "luis-camero",
+      "date": "2025-01-31T19:10:50Z",
+      "message": "Change default user to robot (#121)"
+    },
+    {
+      "sha": "ed966539d9aeadbfbd8973bf22c2a48efa458c09",
+      "author": "Hilary Luo",
+      "date": "2025-01-28T19:57:15Z",
+      "message": "Feature/diagnostics (#117)\n\n* Switched class (shared) variables to non-muteable types to prevent unexpected behaviour if they were ever changed\r\n\r\n* Remove redundant getters and setters\r\n\r\n* Remove duplicate variable definition\r\n\r\n* Add topic message type and correct rates so they are not shared muteable variables"
+    },
+    {
+      "sha": "1b6a292934065eec712fa3b666b35482027c0bfb",
+      "author": "luis-camero",
+      "date": "2025-01-24T14:39:03Z",
+      "message": "Ewellix Lift (#115)\n\n* Added Ewellix Lift (#109)\r\n\r\n* Initial add of lifts to config\r\n\r\n* Added ewellix parameters\r\n\r\n* Fix lint"
+    },
+    {
+      "sha": "237dd995517f0239068a2917b65e98c3461ac6b9",
+      "author": "luis-camero",
+      "date": "2025-01-23T17:27:18Z",
+      "message": "Merge pull request #114 from clearpathrobotics/fix/univeral_robots\n\nUniversal Robots Jazzy"
+    },
+    {
+      "sha": "097bf0201c67f41c5e0f4ac83186bacbbb221468",
+      "author": "Luis Camero",
+      "date": "2025-01-20T18:03:18Z",
+      "message": "Removed deprecated parameters"
+    },
+    {
+      "sha": "5c7b221476178cec38f5006b35345d4811b7e282",
+      "author": "Tony Baltovski",
+      "date": "2025-01-16T21:28:02Z",
+      "message": "2.0.1"
+    },
+    {
+      "sha": "062572336e9a4613bbf0f28f84cc4ff00a617ab5",
+      "author": "Tony Baltovski",
+      "date": "2025-01-16T21:27:50Z",
+      "message": "Changes."
+    },
+    {
+      "sha": "d0d3e726838e1f0e872df4aef21f9a94471bffb0",
+      "author": "Chris Iverach-Brereton",
+      "date": "2025-01-16T20:11:49Z",
+      "message": "Add Zenoh support (#113)\n\n* Add Zenoh to the list of supported RMW implementations\r\n\r\n* Add zenoh_router_config_uri parameter to middleware config\r\n\r\n* Add a sanity check to make sure we aren't trying to use Zenoh on a MicroROS-using platform\r\n\r\n* Allow Zenoh on generic platforms"
+    },
+    {
+      "sha": "5317ebcc13638b5e02e3dbc61e4440366a27b227",
+      "author": "Tony Baltovski",
+      "date": "2025-01-14T18:52:37Z",
+      "message": "2.0.0"
+    },
+    {
+      "sha": "dbddaeef1fd9f89742ef791575ae6790bcab4482",
+      "author": "Tony Baltovski",
+      "date": "2025-01-14T18:52:19Z",
+      "message": "Changes."
+    },
+    {
+      "sha": "6f8121ec2b1fa14b216b635d932152c5b42a3240",
+      "author": "Tony Baltovski",
+      "date": "2025-01-14T18:41:49Z",
+      "message": "Merge pull request #92 from clearpathrobotics/jazzy-2.0RC\n\nJazzy 2.0 RC"
+    },
+    {
+      "sha": "ee84ecb12ef8366d88e3ea47bda28f68a134e9d5",
+      "author": "Chris Iverach-Brereton",
+      "date": "2025-01-14T18:37:10Z",
+      "message": "Add HE2410 & HE2411 battery support (#110) (#111)\n\n* Add support for the HE2410 and HE2411 batteries to J100 and A200"
+    },
+    {
+      "sha": "bc7aa893fc83d5744e82dbbbe5bf048f25752e1c",
+      "author": "Tony Baltovski",
+      "date": "2025-01-14T18:24:25Z",
+      "message": "Fixed tests."
+    },
+    {
+      "sha": "d0a3a081789fde2f87bac3350098a7bf7e2f8239",
+      "author": "Tony Baltovski",
+      "date": "2025-01-14T16:02:54Z",
+      "message": "Merge branch 'jazzy' into jazzy-2.0RC"
+    },
+    {
+      "sha": "12e21f3fa4e720e8574ce02dbcd8e149659ea83f",
+      "author": "Chris Iverach-Brereton",
+      "date": "2025-01-06T21:24:24Z",
+      "message": "Add additional controllers (#105)\n\n* Add Xbox controller support\r\n* Add PS5 controller support"
+    },
+    {
+      "sha": "55636b0f2bf225ec2f25cfe7eb8ff04ae9e06e82",
+      "author": "Chris Iverach-Brereton",
+      "date": "2024-12-17T21:51:56Z",
+      "message": "Add enable_ekf property to platform (#106)"
+    },
+    {
+      "sha": "736eafd3c44f4c7af4774a0246a979405a3564d1",
+      "author": "Chris Iverach-Brereton",
+      "date": "2024-12-17T21:36:51Z",
+      "message": "Re-add the A200/A201 Observer sample now that https://github.com/clearpathrobotics/clearpath_common/pull/122 is merged (#107)"
+    },
+    {
+      "sha": "c4032554379f92dd45b21dafdda11b17ae58bab0",
+      "author": "Chris Iverach-Brereton",
+      "date": "2024-12-16T22:04:38Z",
+      "message": "Fix failing tests (#104)\n\n* Remove the husky observer sample; it depends on as-yet-unmerged changes to clearpath_common\r\n\r\n* Flag the Zed camera as unsupported for now\r\n\r\n* Skip any additional tests if there's an unsupported platform or accessory in the sample"
+    },
+    {
+      "sha": "a2010ed39cbaa7aeb5078804a327ba4e5921130a",
+      "author": "Chris Iverach-Brereton",
+      "date": "2024-12-16T16:42:46Z",
+      "message": "Fix the Axis camera topics (#100)"
+    },
+    {
+      "sha": "736bc8f0da94315c129bf9f1a716bced43bae20e",
+      "author": "Chris Iverach-Brereton",
+      "date": "2024-12-16T16:42:19Z",
+      "message": "Raise an UnsupportedPlatformException for the Jackal (for now); we don't have Jazzy firmware for it yet (#103)"
+    },
+    {
+      "sha": "c8d3a62759ff7391474513e791f4fd7455a51b7f",
+      "author": "Roni Kreinin",
+      "date": "2024-12-16T14:30:30Z",
+      "message": "A300 VCAN (#102)\n\n* A300 vcan0 bridge\n\n* Disable vcan1 bridge for now"
+    },
+    {
+      "sha": "c6012d345566fdbc1ec19acf2edafdcbb852a0a1",
+      "author": "Chris Iverach-Brereton",
+      "date": "2024-12-05T17:40:20Z",
+      "message": "Fix support for the device_type parameter; previously the camera would always be a Q62 (#99)"
+    },
+    {
+      "sha": "a76a9e091b415b7b9dc4a3c320d5b6b6a593a590",
+      "author": "Chris Iverach-Brereton",
+      "date": "2024-12-05T17:39:50Z",
+      "message": "Add the A200 Observer backpack attachment (#96)\n\n* Add the A200 Observer backpack attachment\r\n\r\n* Add the Husky Observer sample\r\n\r\n* Add the IMU to the sample\r\n\r\n* Add source CI\r\n\r\n* Linting for new CI\r\n\r\n* More linting\r\n\r\n* Silently replace the A201 prefix with A200; this lets us support the Observer with minimal changes elsewhere (and the number of A201 bases is very small)\r\n\r\n* Update the Observer sample to use the A201 serial numbers"
+    },
+    {
+      "sha": "86d2c6854a8d8a0bac3f137d5251b54f39e5a429",
+      "author": "Chris Iverach-Brereton",
+      "date": "2024-12-05T17:38:17Z",
+      "message": "Add A300 samples (#98)\n\n* Add the AMP mount attachment\r\n\r\n* Add A300 samples\r\n\r\n* Add the outline sample\r\n\r\n* Add AMP frame to sample"
+    },
+    {
+      "sha": "082f1479371177923d6400cc98943ed6e09031e0",
+      "author": "Yoan Mollard",
+      "date": "2024-12-02T17:29:47Z",
+      "message": "Bugfix MODEL.keys() (#97)"
+    },
+    {
+      "sha": "858d4cc487b9338ebb116cb4c9c5ec9f0ddf20b6",
+      "author": "Roni Kreinin",
+      "date": "2024-11-27T20:00:33Z",
+      "message": "Merge pull request #94 from clearpathrobotics/feature/a300\n\nA300"
+    },
+    {
+      "sha": "8429fba592652c2916cf7e44d2da8e3398dff826",
+      "author": "Luis Camero",
+      "date": "2024-11-25T22:13:58Z",
+      "message": "A300 battery comment to LiFEPO4"
+    },
+    {
+      "sha": "f9169218513d8795dfe598bcf1444a2e10269b53",
+      "author": "Luis Camero",
+      "date": "2024-11-25T22:06:48Z",
+      "message": "Fix all linting errors"
+    },
+    {
+      "sha": "0c9085913392dc7bb53f5e30fb77f51fc5e63996",
+      "author": "Luis Camero",
+      "date": "2024-11-25T20:23:26Z",
+      "message": "Add a300 extra ros parameters"
+    },
+    {
+      "sha": "f4bb5b3f9ce3c6c2d4ad8a863a0156696c61cd83",
+      "author": "Luis Camero",
+      "date": "2024-11-25T20:23:07Z",
+      "message": "Add a300 to attachment mux"
+    },
+    {
+      "sha": "a440138892d688a138e6e971ad03ffe314db76b9",
+      "author": "Luis Camero",
+      "date": "2024-11-25T20:15:48Z",
+      "message": "Add a300 platform empty ros parameters"
+    },
+    {
+      "sha": "ef74611de1b4a907707e3f72e015e42c4749ed80",
+      "author": "Luis Camero",
+      "date": "2024-11-25T20:15:14Z",
+      "message": "Add a300 can interfaces"
+    },
+    {
+      "sha": "48808bde432673012fab8d72bec9c5a38a40eb1d",
+      "author": "Luis Camero",
+      "date": "2024-11-25T20:14:49Z",
+      "message": "Add a300 platform battery"
+    },
+    {
+      "sha": "f6625d3479f6cfcf6199f470052449078799f995",
+      "author": "Luis Camero",
+      "date": "2024-11-25T20:14:21Z",
+      "message": "Add a300 platform attachments"
+    },
+    {
+      "sha": "e899332189024d744e14f096d8852cee60bf39ea",
+      "author": "Luis Camero",
+      "date": "2024-11-25T20:14:02Z",
+      "message": "Add A300 platform entry"
+    },
+    {
+      "sha": "03961b4428c50778c7803ecb59d011b25baa1e38",
+      "author": "Chris Iverach-Brereton",
+      "date": "2024-11-06T17:13:19Z",
+      "message": "Add the ability to flag previously-supported accessories & platforms as not (currently) supported (#86)\n\n* Add initial support for flagging unsupported accessories (e.g. Kinova arms, whose binary drivers don't exist in Jazzy yet)\n\n* classmethod -> staticmethod\n\n* Use the ROS_DISTRO variable from clearpath_generator_common instead of hard-coding the distro\n\n* Start fixing up python linter errors, code formatting, replace % strings with f'' strings.\n\n* Finish first-pass replacing \" -> '\n\n* Fix remaining linter errors. Some tests are still failing, but the major code tidying-up should be done now\n\n* Fix type -> _type\n\n* Update CI for Jazy\n\n* Update Python package workflow for Jazzy\n\n* Remove dependency on clearpath_generator_common; doing so creates a circular dependency. Instead use the system level envar\n\n* Add the ability to flag whole platforms as deprecated and/or unsupported\n\n* Docs\n\n* Fix imperative tone, missing periods in docstrings, missing newline at end of file\n\n* Mark everything besides Jackal and Husky as presently unsupported\n\n* Fix up sample yaml formatting. Remove unmatched quotation marks, restructure to avoid `foo.bar.spam: eggs` notation\n\n* Fix quotation marks for the sample serial number"
+    },
+    {
+      "sha": "3fb729d08708a569421147fe449bb64c8e564695",
+      "author": "Luis Camero",
+      "date": "2024-11-22T16:47:19Z",
+      "message": "Add default vcan ROS interfaces based on platform"
+    },
+    {
+      "sha": "c66f884d77f7acb5b1421b576ba3f0025b27940a",
+      "author": "Chris Iverach-Brereton",
+      "date": "2024-11-19T22:10:59Z",
+      "message": "Add support for Axis cameras (#90)\n\n* Add the initial AxisCamera class with all ROS parameters defined in axis_camera's launch files & nodes\n\n* Remove duplicate argument\n\n* Add the AxisCamera class to the sensors generator\n\n* Add the serial to the axis camera's template\n\n* Add serial to the template keys too\n\n* Add serial getter/setter. Use empty string as default serial\n\n* Refactoring, set the property to the value for the template\n\n* frame_width -> width, frame_height -> height\n\n* Rename setter\n\n* Make the scales & offsets floats by default\n\n* Add the TF prefix parameter\n\n* Add the camera_info_url parameter\n\n* camera_num -> camera\n\n* Note that the serial isn't used, fix the name of the PTZ teleop parameter\n\n* Add the remaining camera topics to the Topics object\n\n* image_raw -> image\n\n* Add axis_camera sample\n\n* Linting fixes\n\n* End docstring with `.`"
+    },
+    {
+      "sha": "0fd671136e4c4c4baec4746e8dcdbf84283be04d",
+      "author": "Luis Camero",
+      "date": "2024-11-14T22:05:27Z",
+      "message": "Add ur_arm"
+    },
+    {
+      "sha": "e10a7aea6f11738a3bce4130e41b4281797e9eb4",
+      "author": "Luis Camero",
+      "date": "2024-10-08T20:16:14Z",
+      "message": "Add a sample for each sensor"
+    },
+    {
+      "sha": "debd4e24da73016a3b4217e6320c6afb22f9b9e5",
+      "author": "Tony Baltovski",
+      "date": "2024-10-04T21:02:36Z",
+      "message": "0.3.4"
+    },
+    {
+      "sha": "88ee93d802a6a6c93b6fce9d665bb3449550c583",
+      "author": "Tony Baltovski",
+      "date": "2024-10-04T20:52:19Z",
+      "message": "Changes."
+    },
+    {
+      "sha": "56fee901d776c1bdf0edcf98a4b826be7cd5a020",
+      "author": "Luis Camero",
+      "date": "2024-11-22T16:47:19Z",
+      "message": "Add default vcan ROS interfaces based on platform"
+    },
+    {
+      "sha": "f3824771fe8a423686f43e51a006090bed159634",
+      "author": "Chris Iverach-Brereton",
+      "date": "2024-11-19T22:10:59Z",
+      "message": "Add support for Axis cameras (#90)\n\n* Add the initial AxisCamera class with all ROS parameters defined in axis_camera's launch files & nodes\r\n\r\n* Remove duplicate argument\r\n\r\n* Add the AxisCamera class to the sensors generator\r\n\r\n* Add the serial to the axis camera's template\r\n\r\n* Add serial to the template keys too\r\n\r\n* Add serial getter/setter. Use empty string as default serial\r\n\r\n* Refactoring, set the property to the value for the template\r\n\r\n* frame_width -> width, frame_height -> height\r\n\r\n* Rename setter\r\n\r\n* Make the scales & offsets floats by default\r\n\r\n* Add the TF prefix parameter\r\n\r\n* Add the camera_info_url parameter\r\n\r\n* camera_num -> camera\r\n\r\n* Note that the serial isn't used, fix the name of the PTZ teleop parameter\r\n\r\n* Add the remaining camera topics to the Topics object\r\n\r\n* image_raw -> image\r\n\r\n* Add axis_camera sample\r\n\r\n* Linting fixes\r\n\r\n* End docstring with `.`"
+    },
+    {
+      "sha": "2fa9b6199c12053135b8faf695f7acf04f7433d2",
+      "author": "Luis Camero",
+      "date": "2024-11-18T15:08:05Z",
+      "message": "Remove empty line at EoF"
+    },
+    {
+      "sha": "e81a037459ef8f396973106c3975cdce845759c4",
+      "author": "Luis Camero",
+      "date": "2024-10-09T14:57:36Z",
+      "message": "Add header"
+    },
+    {
+      "sha": "b4d4b64323c5760628086e6796d4ed0202488d39",
+      "author": "Luis Camero",
+      "date": "2024-08-27T17:13:53Z",
+      "message": "rx and tx topics for can bridge"
+    },
+    {
+      "sha": "319533b8ac1177b8364bc370125e97d719586250",
+      "author": "Luis Camero",
+      "date": "2024-08-27T16:57:29Z",
+      "message": "Initial can_bridges add"
+    },
+    {
+      "sha": "d5664055e46f20ea798703d552a6740f81ce285d",
+      "author": "Luis Camero",
+      "date": "2024-11-14T22:05:27Z",
+      "message": "Add ur_arm"
+    },
+    {
+      "sha": "fbb29fe792d0945509ad94afb7090b0ff9739f5e",
+      "author": "Luis Camero",
+      "date": "2024-10-08T20:16:14Z",
+      "message": "Add a sample for each sensor"
+    },
+    {
+      "sha": "4058a229513fe5d64540df66544258a5def74a3f",
+      "author": "Tony Baltovski",
+      "date": "2024-10-04T21:02:36Z",
+      "message": "0.3.4"
+    },
+    {
+      "sha": "f0e2935dfa15cc134b43f59a79ca417574876f77",
+      "author": "Tony Baltovski",
+      "date": "2024-10-04T20:52:19Z",
+      "message": "Changes."
+    },
+    {
+      "sha": "6c392881683efc585c18b4ef1d32cf88100a80de",
+      "author": "Chris Iverach-Brereton",
+      "date": "2024-11-06T17:13:19Z",
+      "message": "Add the ability to flag previously-supported accessories & platforms as not (currently) supported (#86)\n\n* Add initial support for flagging unsupported accessories (e.g. Kinova arms, whose binary drivers don't exist in Jazzy yet)\r\n\r\n* classmethod -> staticmethod\r\n\r\n* Use the ROS_DISTRO variable from clearpath_generator_common instead of hard-coding the distro\r\n\r\n* Start fixing up python linter errors, code formatting, replace % strings with f'' strings.\r\n\r\n* Finish first-pass replacing \" -> '\r\n\r\n* Fix remaining linter errors. Some tests are still failing, but the major code tidying-up should be done now\r\n\r\n* Fix type -> _type\r\n\r\n* Update CI for Jazy\r\n\r\n* Update Python package workflow for Jazzy\r\n\r\n* Remove dependency on clearpath_generator_common; doing so creates a circular dependency. Instead use the system level envar\r\n\r\n* Add the ability to flag whole platforms as deprecated and/or unsupported\r\n\r\n* Docs\r\n\r\n* Fix imperative tone, missing periods in docstrings, missing newline at end of file\r\n\r\n* Mark everything besides Jackal and Husky as presently unsupported\r\n\r\n* Fix up sample yaml formatting. Remove unmatched quotation marks, restructure to avoid `foo.bar.spam: eggs` notation\r\n\r\n* Fix quotation marks for the sample serial number"
+    },
+    {
+      "sha": "8e1f908ed6553e5e72347d6e4b8564c304c672fb",
+      "author": "luis-camero",
+      "date": "2024-10-10T16:32:55Z",
+      "message": "Merge pull request #81 from clearpathrobotics/lcamero/wip-jazzy\n\nROS 2 Socket CAN Bridges"
+    },
+    {
+      "sha": "5c73f3962f13c29089818a5f00e29e8b5531b344",
+      "author": "Luis Camero",
+      "date": "2024-10-10T16:24:05Z",
+      "message": "Removed line at EOF"
+    },
+    {
+      "sha": "932968dd517dea5178d24045b148ce6550841c42",
+      "author": "Luis Camero",
+      "date": "2024-10-09T14:57:36Z",
+      "message": "Add header"
+    },
+    {
+      "sha": "2601767ee1ceaa99f3a5d4f157953579ced17b9c",
+      "author": "Tony Baltovski",
+      "date": "2024-10-04T14:03:38Z",
+      "message": "Merge pull request #82 from clearpathrobotics/lcamero/phidgets_spatial\n\nAdd phidgets spatial to config"
+    },
+    {
+      "sha": "9f44812f7031b4d0bb2381681c8d5ce6af2dd2fb",
+      "author": "Luis Camero",
+      "date": "2024-10-03T21:49:14Z",
+      "message": "Add OAKD"
+    },
+    {
+      "sha": "d9ff6abfcfbc79b4899b50a94a01f59549597de6",
+      "author": "Luis Camero",
+      "date": "2024-08-27T17:13:53Z",
+      "message": "rx and tx topics for can bridge"
+    },
+    {
+      "sha": "29051638db36bbd2641704bd1783f1ffca717df5",
+      "author": "Luis Camero",
+      "date": "2024-08-27T16:57:29Z",
+      "message": "Initial can_bridges add"
+    },
+    {
+      "sha": "e08cf33f53575e21e541706159e1ca1391faed6b",
+      "author": "Tony Baltovski",
+      "date": "2024-09-29T23:28:16Z",
+      "message": "0.3.3"
+    },
+    {
+      "sha": "ef38c700c0141d001017f1a9d9a794eaae052628",
+      "author": "Tony Baltovski",
+      "date": "2024-09-29T23:28:00Z",
+      "message": "Changes.x"
+    },
+    {
+      "sha": "abfc9248c6c9f1852c3b66cfbc3d5805a223fbc0",
+      "author": "Tony Baltovski",
+      "date": "2024-09-28T01:04:06Z",
+      "message": "Merge pull request #79 from clearpathrobotics/lcamero/all_params\n\nAllow all parameters to be modified"
+    },
+    {
+      "sha": "f11ff2fa031586bef5148f2272d82df33e0f94a6",
+      "author": "Luis Camero",
+      "date": "2024-09-27T15:19:35Z",
+      "message": "Allow all parameters to be modified"
+    },
+    {
+      "sha": "0e2fd0eadadb49671c1d3a2edd7a164915ac2bf3",
+      "author": "Tony Baltovski",
+      "date": "2024-09-23T22:07:33Z",
+      "message": "0.3.2"
+    },
+    {
+      "sha": "80a4cb48554f6abd75489c31812e69a8cf1f9fa8",
+      "author": "Tony Baltovski",
+      "date": "2024-09-23T22:07:16Z",
+      "message": "Changes."
+    },
+    {
+      "sha": "1df3a38357ef040575610efbd9ae1b9118221e8f",
+      "author": "Tony Baltovski",
+      "date": "2024-09-20T16:56:08Z",
+      "message": "Merge pull request #78 from clearpathrobotics/lcamero/setup\n\nManipulators to setup"
+    },
+    {
+      "sha": "42adf68c96c30dc679debb5c518cab38772a54bd",
+      "author": "Luis Camero",
+      "date": "2024-09-20T15:21:49Z",
+      "message": "Alphabetically order packages"
+    },
+    {
+      "sha": "d1eefe9aa19dea20b4cd2b36bd7a47f2aea26e74",
+      "author": "Luis Camero",
+      "date": "2024-09-20T15:20:45Z",
+      "message": "Add manipulators to setup"
+    },
+    {
+      "sha": "cc079fbea7d36a0777f9633b03312c60883c3aac",
+      "author": "Tony Baltovski",
+      "date": "2024-09-19T19:56:00Z",
+      "message": "0.3.1"
+    },
+    {
+      "sha": "bec348d9a6acd054459565614218f6e103b620b3",
+      "author": "Tony Baltovski",
+      "date": "2024-09-19T19:55:52Z",
+      "message": "Changes."
+    },
+    {
+      "sha": "0613a482b12ed9f3d2ffd0853a126fd994aa2c1b",
+      "author": "Tony Baltovski",
+      "date": "2024-09-19T18:04:59Z",
+      "message": "Merge pull request #77 from clearpathrobotics/lcamero/r100_sample\n\nFix battery in r100 sample"
+    },
+    {
+      "sha": "10ed83d3bebf69850dbf3aea32fc108292cfb956",
+      "author": "Luis Camero",
+      "date": "2024-09-19T17:39:56Z",
+      "message": "Fix battery in r100 sample"
+    },
+    {
+      "sha": "56a1042bc0ebea458d6086294f08112ad59708dc",
+      "author": "Tony Baltovski",
+      "date": "2024-09-19T15:15:54Z",
+      "message": "0.3.0"
+    },
+    {
+      "sha": "6d2159bb77c46fbe65cff3194007d1a32b3ce6b4",
+      "author": "Tony Baltovski",
+      "date": "2024-09-19T15:15:40Z",
+      "message": "Changes."
+    },
+    {
+      "sha": "4bc4f0e57904653b49d6ea4967bbd2583363699a",
+      "author": "Tony Baltovski",
+      "date": "2024-09-11T18:52:02Z",
+      "message": "Merge pull request #76 from clearpathrobotics/lcamero/install_samples\n\nAdd samples to setup.py"
+    },
+    {
+      "sha": "b58d1b475f8524168f14d9cf9be6e087424eb2c0",
+      "author": "Luis Camero",
+      "date": "2024-09-11T18:12:58Z",
+      "message": "Add samples to setup.py"
+    },
+    {
+      "sha": "24eafd10d738fe5e73e9c10482a1dc15789e5308",
+      "author": "luis-camero",
+      "date": "2024-09-09T18:50:44Z",
+      "message": "Merge pull request #75 from clearpathrobotics/lcamero/0.3-attachments\n\n0.3 Attachments"
+    },
+    {
+      "sha": "031dc41d755cf841e8beae45c5163cf455d7e592",
+      "author": "Luis Camero",
+      "date": "2024-09-09T18:32:50Z",
+      "message": "Remove empty line in D150 attachments"
+    },
+    {
+      "sha": "4d44ac027bf7d190a3e5652df920a261f959e52a",
+      "author": "Luis Camero",
+      "date": "2024-08-30T16:21:21Z",
+      "message": "Height parameters for tower shoulder"
+    },
+    {
+      "sha": "4f756952284aba3489551e3018355fdeadbfad22",
+      "author": "Luis Camero",
+      "date": "2024-08-30T13:47:58Z",
+      "message": "FAMS, HAMS, and Tower as separate attachments"
+    },
+    {
+      "sha": "027b5b25d212aa788cc774e55e3baf18f077a23d",
+      "author": "Luis Camero",
+      "date": "2024-08-27T20:37:57Z",
+      "message": "Add height parameter to Dingo top plate"
+    },
+    {
+      "sha": "1eec3789a3ac3d01ca030d389cfa663eeb5e66d8",
+      "author": "Tony Baltovski",
+      "date": "2024-08-19T12:41:28Z",
+      "message": "Merge pull request #74 from clearpathrobotics/lcamero/0.3-samples\n\nAdd samples for Dingo O and Ridgeback"
+    },
+    {
+      "sha": "0a8350ab07ec20357213585994f06b6b8a2d0d53",
+      "author": "Luis Camero",
+      "date": "2024-08-16T15:48:45Z",
+      "message": "Add samples for Dingo O and Ridgeback"
+    },
+    {
+      "sha": "acc1a3482dcae85a184e2d2312bfd1e63c946403",
+      "author": "Tony Baltovski",
+      "date": "2024-08-13T20:26:29Z",
+      "message": "Merge pull request #68 from clearpathrobotics/0.3-RC\n\n0.3 RC"
+    },
+    {
+      "sha": "2ff635dcec098ed7fde43f20a911b862e4e6e6c4",
+      "author": "luis-camero",
+      "date": "2024-08-13T17:03:39Z",
+      "message": "0.3 Release Candidate with Main Changes (#73)\n\n* Renamed node to intel_realsense in config\r\n\r\n* Changes.\r\n\r\n* 0.2.8\r\n\r\n* Added Zed as type of camera\r\n\r\n* Added Zed to configuration\r\n\r\n* Changes.\r\n\r\n* 0.2.9\r\n\r\n* Updated Realsense parameters\r\n\r\n* Updated Microstrain link parameter\r\n\r\n* Changes.\r\n\r\n* 0.2.10\r\n\r\n* Adds GQ7 as possible sensor\r\n\r\n* Changes.\r\n\r\n* 0.2.11\r\n\r\n---------\r\n\r\nCo-authored-by: Tony Baltovski <tbaltovski@clearpathrobotics.com>\r\nCo-authored-by: robbiefish <rob.fisher@hbkworld.com>"
+    },
+    {
+      "sha": "db049080024d15d0ff4b7321ab10cd47f1e36615",
+      "author": "Tony Baltovski",
+      "date": "2024-08-08T16:39:47Z",
+      "message": "0.2.11"
+    },
+    {
+      "sha": "c3bdf642b91de0296dfd0b3ccabaad3e05825a78",
+      "author": "Tony Baltovski",
+      "date": "2024-08-08T16:39:37Z",
+      "message": "Changes."
+    },
+    {
+      "sha": "a997927b08810fff04bc7669f17f5b2ecc3999e2",
+      "author": "Tony Baltovski",
+      "date": "2024-08-07T18:46:55Z",
+      "message": "Merge pull request #71 from robbiefish/main\n\nAdds GQ7 as possible sensor"
+    },
+    {
+      "sha": "888ef81b9c33202654a6e6359538bf9f9561f39e",
+      "author": "Tony Baltovski",
+      "date": "2024-08-07T15:54:37Z",
+      "message": "Merge pull request #72 from clearpathrobotics/lcamero/ridgeback\n\nFix ridgeback battery configuration"
+    },
+    {
+      "sha": "3aa81a4b89fd41e237bee27e89f65cbd82aedce4",
+      "author": "Luis Camero",
+      "date": "2024-08-02T19:31:59Z",
+      "message": "Fix ridgeback battery configuration"
+    },
+    {
+      "sha": "cd827496c3f5afb5c2be1c9aafdea88b16b34ee6",
+      "author": "robbiefish",
+      "date": "2024-07-31T20:07:58Z",
+      "message": "Adds GQ7 as possible sensor"
+    },
+    {
+      "sha": "bfe7c92eb99c3baa4195979f955a9c1813a12989",
+      "author": "Tony Baltovski",
+      "date": "2024-07-22T18:14:36Z",
+      "message": "0.2.10"
+    },
+    {
+      "sha": "7d4e616451cddeb58f1908d50abc84f91e14a8a8",
+      "author": "Tony Baltovski",
+      "date": "2024-07-22T18:14:27Z",
+      "message": "Changes."
+    },
+    {
+      "sha": "98bd8b8e1d66b0d6cafa729483975d1c1b41043c",
+      "author": "luis-camero",
+      "date": "2024-07-22T17:28:38Z",
+      "message": "Merge pull request #67 from clearpathrobotics/lcamero/rs_params\n\nUpdated Realsense Parameters"
+    },
+    {
+      "sha": "fde7de89c8671e16a7096e0150e81dba213264e2",
+      "author": "Luis Camero",
+      "date": "2024-07-08T19:56:41Z",
+      "message": "Updated Microstrain link parameter"
+    },
+    {
+      "sha": "b4b49076b3892fc316f41a5d3ade6a52444edf34",
+      "author": "Luis Camero",
+      "date": "2024-07-08T16:42:51Z",
+      "message": "Updated Realsense parameters"
+    },
+    {
+      "sha": "996eb50d0b05c87b65b8ffddcddd33239abd422e",
+      "author": "Tony Baltovski",
+      "date": "2024-05-28T18:07:38Z",
+      "message": "0.2.9"
+    },
+    {
+      "sha": "ae0ecb2b6dc19dc5a92f6c3d1c5b4917f577924f",
+      "author": "Tony Baltovski",
+      "date": "2024-05-28T18:07:12Z",
+      "message": "Changes."
+    },
+    {
+      "sha": "ee9542abe4e7ff3502ba3c901afdf80b2d65dd0b",
+      "author": "Tony Baltovski",
+      "date": "2024-05-28T18:06:21Z",
+      "message": "Merge pull request #66 from clearpathrobotics/lcamero/zed\n\nStereolabs Zed"
+    },
+    {
+      "sha": "d0b85020dc0423766539762db18a5c76d56d3248",
+      "author": "Luis Camero",
+      "date": "2024-05-28T15:06:57Z",
+      "message": "Added Zed to configuration"
+    },
+    {
+      "sha": "8401a18c86f83ceb2de3133adc58085d226bbc3a",
+      "author": "Luis Camero",
+      "date": "2024-05-28T15:06:37Z",
+      "message": "Added Zed as type of camera"
+    },
+    {
+      "sha": "5b348e6d981747a9fbe6bc918b574c16713fa3c8",
+      "author": "luis-camero",
+      "date": "2024-05-21T13:22:05Z",
+      "message": "Merge pull request #64 from clearpathrobotics/lcamero/manipulation\n\nManipulation"
+    },
+    {
+      "sha": "8e6b1f2748ef67ce53235256ec200857c3b02fbf",
+      "author": "Luis Camero",
+      "date": "2024-05-17T16:34:13Z",
+      "message": "Merge 0.3"
+    },
+    {
+      "sha": "2404ebc2728468604fb71ccef8f971094cbacc1b",
+      "author": "Tony Baltovski",
+      "date": "2024-05-14T13:06:49Z",
+      "message": "0.2.8"
+    },
+    {
+      "sha": "091e5a215345fad8d1068ae73397696b83ebe989",
+      "author": "Tony Baltovski",
+      "date": "2024-05-14T13:06:38Z",
+      "message": "Changes."
+    },
+    {
+      "sha": "42ee4ee1a913a45e9a5febca42df004b7eaf9434",
+      "author": "Luis Camero",
+      "date": "2024-05-13T20:50:50Z",
+      "message": "Renamed node to intel_realsense in config"
+    },
+    {
+      "sha": "fb877cedc0e5a0eb0b0e787ffa6680d688637e64",
+      "author": "Tony Baltovski",
+      "date": "2024-04-08T16:08:06Z",
+      "message": "0.2.7"
+    },
+    {
+      "sha": "d38b2a95c35ebdfad4de0bd0faf1d3ed1eceda10",
+      "author": "Tony Baltovski",
+      "date": "2024-04-08T16:07:50Z",
+      "message": "Changes."
+    },
+    {
+      "sha": "9ba3704eeb0c0baeccad823a34aedaa1fc9ee988",
+      "author": "Luis Camero",
+      "date": "2024-03-22T15:46:19Z",
+      "message": "W200 attachments default to 0"
+    },
+    {
+      "sha": "d08dd0d37c2d10ab06588e61d8ea1e0ca2a91a67",
+      "author": "Luis Camero",
+      "date": "2024-03-22T16:07:06Z",
+      "message": "Re-added host and namespace"
+    },
+    {
+      "sha": "eefab8de50317f6e4949492b4204cfad6ee0a3c7",
+      "author": "Luis Camero",
+      "date": "2024-03-18T17:41:10Z",
+      "message": "Minimal samples."
+    },
+    {
+      "sha": "b82236480438b328fd940673ad95aa18027402cb",
+      "author": "Luis Camero",
+      "date": "2024-03-15T13:45:09Z",
+      "message": "Removed long line"
+    },
+    {
+      "sha": "466c10f4990d2ceecb785877a0e2d974b9033e82",
+      "author": "Luis Camero",
+      "date": "2024-03-13T15:32:18Z",
+      "message": "Added launch to extras"
+    },
+    {
+      "sha": "9b517d8c2cb08daed8b7de0a996c044da3f7a6d3",
+      "author": "Tony Baltovski",
+      "date": "2024-03-18T14:07:44Z",
+      "message": "0.2.6"
+    },
+    {
+      "sha": "d86eef76bf88748f74bd95e62798dd28ed135fdd",
+      "author": "Tony Baltovski",
+      "date": "2024-03-18T14:07:29Z",
+      "message": "Changes."
+    },
+    {
+      "sha": "da71cb016783b42724482906e33aa839df7d326c",
+      "author": "Hilary Luo",
+      "date": "2024-03-07T15:10:54Z",
+      "message": "Switched local server to be referenced as loopback in the ROS_DISCOVERY_SERVER envar"
+    },
+    {
+      "sha": "288685d5af2329a31ba0bf3bd6e999b84214fdac",
+      "author": "Hilary Luo",
+      "date": "2024-03-04T03:00:12Z",
+      "message": "Add discovery server support"
+    },
+    {
+      "sha": "fb9e5517929b58424dda0d795cb43ea438cb2f13",
+      "author": "Hilary Luo",
+      "date": "2024-03-04T02:59:36Z",
+      "message": "assertion error if the hostname is blank (otherwise causes an invalid index exception)"
+    },
+    {
+      "sha": "fb91125156a25f9288cf640889d4b09b90fe6d93",
+      "author": "Hilary Luo",
+      "date": "2024-02-26T16:24:00Z",
+      "message": "Add localhost field which is set automatically"
+    },
+    {
+      "sha": "106a138881f3a960db9af4c3d35c7fcd878e9887",
+      "author": "Hilary Luo",
+      "date": "2024-02-24T04:02:20Z",
+      "message": "Reformat hosts section to single list of all computers"
+    },
+    {
+      "sha": "8b07980eee30933915be3d05517efa6211504eda",
+      "author": "Tony Baltovski",
+      "date": "2024-03-06T15:29:44Z",
+      "message": "0.2.5"
+    },
+    {
+      "sha": "f7b8c0fe780704a0fe0f098bc6ca6de20d2a4bd9",
+      "author": "Tony Baltovski",
+      "date": "2024-03-06T15:29:36Z",
+      "message": "Changes."
+    },
+    {
+      "sha": "0929c0b5f9215ac00cd9b280c7b9ddd6ae41ac22",
+      "author": "Hilary Luo",
+      "date": "2024-01-19T04:56:50Z",
+      "message": "Added battery launch arguments to support launching the valence bms node"
+    },
+    {
+      "sha": "a624e0f7aecb9958478314e6d2bf93b981e6e653",
+      "author": "Luis Camero",
+      "date": "2024-02-01T20:21:02Z",
+      "message": "Add republishers to camera"
+    },
+    {
+      "sha": "34e2debb0dedce64b80e07aaf4f84faedd751f30",
+      "author": "Tony Baltovski",
+      "date": "2024-05-14T13:06:49Z",
+      "message": "0.2.8"
+    },
+    {
+      "sha": "8cc3a3b4b2cf7c9fa7e83266719518d5e1a0e761",
+      "author": "Tony Baltovski",
+      "date": "2024-05-14T13:06:38Z",
+      "message": "Changes."
+    },
+    {
+      "sha": "3c5b73f4d7e78670fdc2b303aa199ce0e652b60d",
+      "author": "Tony Baltovski",
+      "date": "2024-05-13T22:42:56Z",
+      "message": "Merge pull request #65 from clearpathrobotics/luis-camero/realsense\n\nRenamed Realsense"
+    },
+    {
+      "sha": "6431b779b44e8700fb6ef8867db9f95729cbe29a",
+      "author": "Luis Camero",
+      "date": "2024-05-13T20:50:50Z",
+      "message": "Renamed node to intel_realsense in config"
+    },
+    {
+      "sha": "a183a2d680f200099a8d3dc44054be5be07e3552",
+      "author": "Luis Camero",
+      "date": "2024-05-10T17:21:20Z",
+      "message": "Add IP and Port parameters to manipulator config"
+    },
+    {
+      "sha": "eb422d353826eae9da1bed6adcc5c01da718e325",
+      "author": "Luis Camero",
+      "date": "2024-05-09T17:46:47Z",
+      "message": "Added manipulator to config"
+    },
+    {
+      "sha": "7968e894daf842ff8b7a060b30ecce6c875027d7",
+      "author": "Luis Camero",
+      "date": "2024-05-09T17:46:15Z",
+      "message": "Added methods to replace entries in a dictionary"
+    },
+    {
+      "sha": "3eeaa4505429962a4bfdd276fb2750779adcf41e",
+      "author": "Luis Camero",
+      "date": "2024-05-09T17:45:39Z",
+      "message": "YAML reader properly displays original path in assertions"
+    },
+    {
+      "sha": "2ea5688f49f1091eaecd7ad1f619eaebc7d4e141",
+      "author": "Tony Baltovski",
+      "date": "2024-04-08T16:08:06Z",
+      "message": "0.2.7"
+    },
+    {
+      "sha": "ea65dadfbf32fbb3ab23f84595cb78803bd68f70",
+      "author": "Tony Baltovski",
+      "date": "2024-04-08T16:07:50Z",
+      "message": "Changes."
+    },
+    {
+      "sha": "73491d3d5cf7160236cdcfe1a7a8704707057c53",
+      "author": "Tony Baltovski",
+      "date": "2024-03-26T01:21:31Z",
+      "message": "Merge pull request #62 from clearpathrobotics/lcamero/warthog_attachments\n\nW200 attachment update"
+    },
+    {
+      "sha": "20fddf076b0515b22df39a26f60dc203083a8930",
+      "author": "Tony Baltovski",
+      "date": "2024-03-22T19:39:23Z",
+      "message": "Merge pull request #60 from clearpathrobotics/lcamero/samples\n\nMinimal samples."
+    },
+    {
+      "sha": "e38cb05d2fa89dd7b26d7629c45bcf8e78fff80f",
+      "author": "Luis Camero",
+      "date": "2024-03-22T16:07:06Z",
+      "message": "Re-added host and namespace"
+    },
+    {
+      "sha": "1876928ec2d7d38fbb0de2193a9f712cf2905622",
+      "author": "Luis Camero",
+      "date": "2024-03-22T15:46:19Z",
+      "message": "W200 attachments default to 0"
+    },
+    {
+      "sha": "cc13e964e063659345e65a4714badc37fd50364d",
+      "author": "Luis Camero",
+      "date": "2024-03-18T17:41:10Z",
+      "message": "Minimal samples."
+    },
+    {
+      "sha": "19ad4b3f0b085836281a549605130b67787eb5b4",
+      "author": "Tony Baltovski",
+      "date": "2024-03-18T14:13:28Z",
+      "message": "Merge pull request #59 from clearpathrobotics/lcamero/extra_launch\n\nExtra launch file"
+    },
+    {
+      "sha": "5adec7c04af74902d9b2799d13e6c8b9bdffed69",
+      "author": "Tony Baltovski",
+      "date": "2024-03-18T14:07:44Z",
+      "message": "0.2.6"
+    },
+    {
+      "sha": "cd159add2364c80bb8c2d35d91c2ae7c22ac0017",
+      "author": "Tony Baltovski",
+      "date": "2024-03-18T14:07:29Z",
+      "message": "Changes."
+    },
+    {
+      "sha": "fb9deadc404c4f0f6f429b7c6b596a14a583c2a4",
+      "author": "Luis Camero",
+      "date": "2024-03-15T13:45:09Z",
+      "message": "Removed long line"
+    },
+    {
+      "sha": "5ed599867a66160b4e4f4c68f1bdc70aead8c36b",
+      "author": "Luis Camero",
+      "date": "2024-03-13T15:32:18Z",
+      "message": "Added launch to extras"
+    },
+    {
+      "sha": "c3ac7d1799e2d1f90d48724707625e619e3dcfc0",
+      "author": "luis-camero",
+      "date": "2024-03-08T16:20:07Z",
+      "message": "Merge pull request #58 from clearpathrobotics/discovery-server\n\nDiscovery server support"
+    },
+    {
+      "sha": "bdc0243ee5a92ec97391ebfeef6ec12d5459ca43",
+      "author": "Hilary Luo",
+      "date": "2024-03-07T15:10:54Z",
+      "message": "Switched local server to be referenced as loopback in the ROS_DISCOVERY_SERVER envar"
+    },
+    {
+      "sha": "cfb03215d3708f68c40d60b137c58fda1e09ac68",
+      "author": "Tony Baltovski",
+      "date": "2024-03-06T15:29:44Z",
+      "message": "0.2.5"
+    },
+    {
+      "sha": "62b6ff08529cfb12d70eda1b86ee920770fc31af",
+      "author": "Tony Baltovski",
+      "date": "2024-03-06T15:29:36Z",
+      "message": "Changes."
+    },
+    {
+      "sha": "daef8992790e497a067378fb6369c19b18e63430",
+      "author": "Hilary Luo",
+      "date": "2024-03-04T03:00:12Z",
+      "message": "Add discovery server support"
+    },
+    {
+      "sha": "a0bdc17e03d7df93189e9594b73ab9b7308e9d7b",
+      "author": "Hilary Luo",
+      "date": "2024-03-04T02:59:36Z",
+      "message": "assertion error if the hostname is blank (otherwise causes an invalid index exception)"
+    },
+    {
+      "sha": "81db679d7273fbdf86042fa6beea59e4ad965e6c",
+      "author": "Hilary Luo",
+      "date": "2024-02-26T16:24:00Z",
+      "message": "Add localhost field which is set automatically"
+    },
+    {
+      "sha": "3b2884657ba1fada2e3382ab972a8b68e48eaa06",
+      "author": "Hilary Luo",
+      "date": "2024-02-24T04:02:20Z",
+      "message": "Reformat hosts section to single list of all computers"
+    },
+    {
+      "sha": "d0fd413a31fcad7d9418744c6954fba0e9aa5afc",
+      "author": "Tony Baltovski",
+      "date": "2024-02-15T17:05:28Z",
+      "message": "Merge pull request #55 from clearpathrobotics/battery-launch-args\n\nAdded battery launch arguments to support launching the valence bms node"
+    },
+    {
+      "sha": "6263e8d5c1860065460f5d5583971ee7124e4577",
+      "author": "Tony Baltovski",
+      "date": "2024-02-15T16:29:04Z",
+      "message": "Merge pull request #57 from clearpathrobotics/lcamero/main-republishers\n\nRepublishers"
+    },
+    {
+      "sha": "0cdf9308b2af9c00951fdc3f4ddc93ed8cfd01ae",
+      "author": "Luis Camero",
+      "date": "2024-02-01T20:21:02Z",
+      "message": "Add republishers to camera"
+    },
+    {
+      "sha": "22d08a30789c2b8854b74cfc332e6fcfaa052679",
+      "author": "Hilary Luo",
+      "date": "2024-01-19T04:56:50Z",
+      "message": "Added battery launch arguments to support launching the valence bms node"
+    },
+    {
+      "sha": "e1b323895bdcc3e9ec4fd340f9fc5dc791333818",
+      "author": "Luis Camero",
+      "date": "2024-01-22T15:02:36Z",
+      "message": "Fix ros_parameters"
+    },
+    {
+      "sha": "9182d8c1f70ead4e2ae56a09b7631fbd5ed2d1cf",
+      "author": "Tony Baltovski",
+      "date": "2024-01-23T20:49:49Z",
+      "message": "Merge pull request #53 from clearpathrobotics/ros_parameter_fixes\n\nFix ros_parameters"
+    },
+    {
+      "sha": "41cf6077611420f24e4dc446a11536302a8833bb",
+      "author": "Tony Baltovski",
+      "date": "2024-01-22T15:05:12Z",
+      "message": "0.2.4"
+    },
+    {
+      "sha": "15624987e6fe04c0553716c59f85514c95cd4e03",
+      "author": "Tony Baltovski",
+      "date": "2024-01-22T15:04:45Z",
+      "message": "Changes."
+    },
+    {
+      "sha": "51734350f1619b6d437a5763c0f3703e97a884da",
+      "author": "Tony Baltovski",
+      "date": "2024-01-20T15:32:49Z",
+      "message": "Install the W200 samples."
+    },
+    {
+      "sha": "cdfb73e91c9c6e32fa448becda35c6c9951289d3",
+      "author": "Roni Kreinin",
+      "date": "2024-01-18T22:33:15Z",
+      "message": "Fixed j100 and w200 laser sample"
+    },
+    {
+      "sha": "743559361be2b33911ec4d46bb3b964a28ec9f3a",
+      "author": "Tony Baltovski",
+      "date": "2024-01-10T16:28:30Z",
+      "message": "0.2.3"
+    },
+    {
+      "sha": "aac48fa28a22f924383f817fa67b4ca43f03fecb",
+      "author": "Tony Baltovski",
+      "date": "2024-01-10T16:28:23Z",
+      "message": "Changes."
+    },
+    {
+      "sha": "5a7406537e513578eee55d543270a7b5fa505136",
+      "author": "Hilary Luo",
+      "date": "2024-01-05T19:25:57Z",
+      "message": "Give option to get topic without namespace"
+    },
+    {
+      "sha": "482fc9b1a77ad23131a4ed0a0409d1c0ca0ce99f",
+      "author": "Tony Baltovski",
+      "date": "2024-01-08T16:52:32Z",
+      "message": "0.2.2"
+    },
+    {
+      "sha": "926e94cfcaf700c01c354dbcb423e1d9cf4a2616",
+      "author": "Tony Baltovski",
+      "date": "2024-01-08T16:52:22Z",
+      "message": "Changes."
+    },
+    {
+      "sha": "04b3df16ad2ea018a3bb57d3425718e46a5d0230",
+      "author": "Hilary Luo",
+      "date": "2024-01-05T21:26:18Z",
+      "message": "Fix how blank urdf extras is handled"
+    },
+    {
+      "sha": "a63ae57ada5a97538f1c37605559ec6871a8085f",
+      "author": "Tony Baltovski",
+      "date": "2024-01-04T20:16:40Z",
+      "message": "0.2.1"
+    },
+    {
+      "sha": "c062c80ae41c7ac06951299caa2a54239c002837",
+      "author": "Tony Baltovski",
+      "date": "2024-01-04T20:16:29Z",
+      "message": "Changes."
+    },
+    {
+      "sha": "c8da2980126ca737fc9c9c018249b2eeca2c067e",
+      "author": "Hilary Luo",
+      "date": "2024-01-04T16:23:59Z",
+      "message": "Find packages for meshes / extras urdf (#45)\n\n* Allow meshes visual and extras urdf to be linked using find package functionality"
+    },
+    {
+      "sha": "bfd23a7829a41b67836d695b3454ad32511b44ea",
+      "author": "Tony Baltovski",
+      "date": "2024-01-22T15:05:12Z",
+      "message": "0.2.4"
+    },
+    {
+      "sha": "e3302d34f7f00b85cf6b0f16756c39bae3ccd604",
+      "author": "Tony Baltovski",
+      "date": "2024-01-22T15:04:45Z",
+      "message": "Changes."
+    },
+    {
+      "sha": "acf27c2c30aa4261f668baed86a7d497cdc5b39c",
+      "author": "Luis Camero",
+      "date": "2024-01-22T15:02:36Z",
+      "message": "Fix ros_parameters"
+    },
+    {
+      "sha": "e34f95e85faa3125fe2dab7436be90b32c340fe4",
+      "author": "luis-camero",
+      "date": "2024-01-22T14:27:58Z",
+      "message": "Merge pull request #52 from clearpathrobotics/install-w200-samples\n\nInstall the W200 samples."
+    },
+    {
+      "sha": "76ba1b86b031c5ddfa74c85b8e1a97da18ccabd8",
+      "author": "Tony Baltovski",
+      "date": "2024-01-20T15:32:49Z",
+      "message": "Install the W200 samples."
+    },
+    {
+      "sha": "e14423f98f6e28aa22911f96ef56e3b25c2e1c03",
+      "author": "Tony Baltovski",
+      "date": "2024-01-18T23:09:45Z",
+      "message": "Merge pull request #51 from clearpathrobotics/rkreinin/samples\n\nFixed j100 and w200 laser sample"
+    },
+    {
+      "sha": "3926a9360019506e8df5b9dab4182c13e645186f",
+      "author": "Roni Kreinin",
+      "date": "2024-01-18T22:33:15Z",
+      "message": "Fixed j100 and w200 laser sample"
+    },
+    {
+      "sha": "f41368722e3bb0329c9271cf313bc409ad700b87",
+      "author": "luis-camero",
+      "date": "2024-01-15T15:28:59Z",
+      "message": "Merge pull request #50 from clearpathrobotics/lcamero/ridgeback\n\nRidgeback Platform and Attachments"
+    },
+    {
+      "sha": "32a5dd463398a123ff1182bbbaadfc746359fb47",
+      "author": "Luis Camero",
+      "date": "2024-01-11T16:14:15Z",
+      "message": "Added Ridgeback attachments"
+    },
+    {
+      "sha": "adee69b679c591f46fb56aa4745981dbb43612f2",
+      "author": "Tony Baltovski",
+      "date": "2024-01-10T16:28:30Z",
+      "message": "0.2.3"
+    },
+    {
+      "sha": "6db5442f9768c74096e8e8b8d7133188ff8b14af",
+      "author": "Tony Baltovski",
+      "date": "2024-01-10T16:28:23Z",
+      "message": "Changes."
+    },
+    {
+      "sha": "1efa7dc1d55582237e095c9c697dc7573131cdf0",
+      "author": "Tony Baltovski",
+      "date": "2024-01-10T15:55:38Z",
+      "message": "Merge pull request #48 from clearpathrobotics/sensor-get-topic\n\nGive option to get topic without namespace"
+    },
+    {
+      "sha": "43ef0fecfdf8529af774a6f5a24621a3f45ad23a",
+      "author": "Hilary Luo",
+      "date": "2024-01-05T19:25:57Z",
+      "message": "Give option to get topic without namespace"
+    },
+    {
+      "sha": "195b7ae3504535efbab993b3ed92ae58e2ea7194",
+      "author": "Tony Baltovski",
+      "date": "2024-01-08T16:52:32Z",
+      "message": "0.2.2"
+    },
+    {
+      "sha": "c2aa5e696850f7bf2c97ece8a3aa88b231a08779",
+      "author": "Tony Baltovski",
+      "date": "2024-01-08T16:52:22Z",
+      "message": "Changes."
+    },
+    {
+      "sha": "3c5e5d5f5925e20d9a682e5af3c216cda1854d81",
+      "author": "Tony Baltovski",
+      "date": "2024-01-08T16:51:12Z",
+      "message": "Merge pull request #47 from clearpathrobotics/extras-urdf-fix\n\nExtras URDF Fix"
+    },
+    {
+      "sha": "2646acdd38ad913ec9203ec6d6e50db31451ea02",
+      "author": "Hilary Luo",
+      "date": "2024-01-05T21:26:18Z",
+      "message": "Fix how blank urdf extras is handled"
+    },
+    {
+      "sha": "01bcb566e279637b8a0357db12b596a866e13034",
+      "author": "Tony Baltovski",
+      "date": "2024-01-04T20:16:40Z",
+      "message": "0.2.1"
+    },
+    {
+      "sha": "6313d3a3d43508c68f79a43eadc8a2bf084d2139",
+      "author": "Tony Baltovski",
+      "date": "2024-01-04T20:16:29Z",
+      "message": "Changes."
+    },
+    {
+      "sha": "2f2833198fb565aae7a790ad40da39c5b4efd9bb",
+      "author": "Hilary Luo",
+      "date": "2024-01-04T16:23:59Z",
+      "message": "Find packages for meshes / extras urdf (#45)\n\n* Allow meshes visual and extras urdf to be linked using find package functionality"
+    },
+    {
+      "sha": "e7e86685c67c0eadd3487ab2fc84eac9d642ba37",
+      "author": "Luis Camero",
+      "date": "2023-12-18T20:07:35Z",
+      "message": "Initial Ridgeback"
+    },
+    {
+      "sha": "382219fced81f829c3d006688fa1b256dc77f3fa",
+      "author": "Tony Baltovski",
+      "date": "2023-12-07T20:49:49Z",
+      "message": "0.2.0"
+    },
+    {
+      "sha": "3a4ec0cb0a40784de5b5bbdcd6bd9b2093735819",
+      "author": "Tony Baltovski",
+      "date": "2023-12-07T20:49:35Z",
+      "message": "Changes."
+    },
+    {
+      "sha": "f65b76142d0d1c151ea4af9340197e66a524b409",
+      "author": "Tony Baltovski",
+      "date": "2023-12-07T19:22:02Z",
+      "message": "Merge pull request #43 from clearpathrobotics/0.2.0-RC\n\n0.2.0 rc"
+    },
+    {
+      "sha": "984236502e0b99da99c3cb0ce059ce05fb9b2aa7",
+      "author": "luis-camero",
+      "date": "2023-12-06T16:49:38Z",
+      "message": "Merge pull request #42 from clearpathrobotics/lcamero/wheel\n\nInitial Wheel Parameter Added"
+    },
+    {
+      "sha": "283d5aad37149dda1f60eb24e00545feb1721f94",
+      "author": "Luis Camero",
+      "date": "2023-12-05T21:15:03Z",
+      "message": "Added wheel parameter to platform"
+    },
+    {
+      "sha": "d04c9807a6babec58a23edc7921ecf722bd52453",
+      "author": "luis-camero",
+      "date": "2023-11-28T21:55:21Z",
+      "message": "Merge pull request #41 from clearpathrobotics/lcamero/dingo\n\nDingo Entries for all Versions"
+    },
+    {
+      "sha": "a20affc3a7d5269ce9658ca9c710125b4183e8ca",
+      "author": "Luis Camero",
+      "date": "2023-11-28T21:46:55Z",
+      "message": "Fixed typo"
+    },
+    {
+      "sha": "494bd8b6dad5ba1da44830931bf4bc0a58936061",
+      "author": "Luis Camero",
+      "date": "2023-11-28T21:34:22Z",
+      "message": "Added dd150 samples"
+    },
+    {
+      "sha": "dcf0e6ad48037a52be74d10abe2a0e052ce30159",
+      "author": "Luis Camero",
+      "date": "2023-11-28T21:33:03Z",
+      "message": "Added dd100 samples"
+    },
+    {
+      "sha": "5746cc257fe1e2d5b257811d6483d6ae94aece48",
+      "author": "Luis Camero",
+      "date": "2023-11-23T21:43:39Z",
+      "message": "Fixed origin of pacs mounts"
+    },
+    {
+      "sha": "e9a831ea33a2a9ee9f6e4e9e78d29ae1b6ecd91e",
+      "author": "Luis Camero",
+      "date": "2023-11-23T20:23:57Z",
+      "message": "Renamed SLA on Dingo"
+    },
+    {
+      "sha": "90ed5abac9aab44675a75d4e8a3f2873fb4bdf3b",
+      "author": "Luis Camero",
+      "date": "2023-11-22T21:34:55Z",
+      "message": "Added entries for all dingo"
+    },
+    {
+      "sha": "75164d3765be014b664a888738cfb0b6497ffc4f",
+      "author": "luis-camero",
+      "date": "2023-11-22T20:16:40Z",
+      "message": "Merge pull request #39 from clearpathrobotics/lcamero/generic\n\nGeneric Description, Control, and Launch"
+    },
+    {
+      "sha": "f1c35f155ba1be890b60c835b8a8bdf7bfc19b8d",
+      "author": "Luis Camero",
+      "date": "2023-11-22T14:39:37Z",
+      "message": "Updated sample to match attachments rework"
+    },
+    {
+      "sha": "00bbbb5413fec30369e254253721fe6aa6a28bab",
+      "author": "Luis Camero",
+      "date": "2023-11-21T18:25:01Z",
+      "message": "Fixed merge issues"
+    },
+    {
+      "sha": "4a13a90f3bff9fcd0ea63b75a95d734c4af8617a",
+      "author": "luis-camero",
+      "date": "2023-11-21T18:06:08Z",
+      "message": "Merge branch '0.2.0-RC' into lcamero/generic"
+    },
+    {
+      "sha": "b71868274d5fa2d7dff4e7507975cc5714565e89",
+      "author": "luis-camero",
+      "date": "2023-11-17T20:36:08Z",
+      "message": "Merge pull request #40 from clearpathrobotics/lcamero/attachments\n\nAttachments Rework"
+    },
+    {
+      "sha": "e39ff12d7a02280e854df16d746476f4a83248cb",
+      "author": "Luis Camero",
+      "date": "2023-11-17T20:29:18Z",
+      "message": "Added more warthog samples"
+    },
+    {
+      "sha": "0ccab94614701290252dffd4569d407062cb39ee",
+      "author": "Luis Camero",
+      "date": "2023-11-17T20:29:05Z",
+      "message": "Updated sample default_mount"
+    },
+    {
+      "sha": "f72f4fe4e6ee57dd1b6d25b18a15d9e7f8fa3d7d",
+      "author": "Luis Camero",
+      "date": "2023-11-17T19:48:11Z",
+      "message": "Removed duplicate"
+    },
+    {
+      "sha": "1703daca95ada7a0bbb2d7866f5bf79f01aef75f",
+      "author": "Luis Camero",
+      "date": "2023-11-16T23:11:07Z",
+      "message": "Added W200 attachments"
+    },
+    {
+      "sha": "f7f492adb5c74362daa3cb9920f9b38defd30faa",
+      "author": "Luis Camero",
+      "date": "2023-11-16T23:10:58Z",
+      "message": "Updated default mounts on j100"
+    },
+    {
+      "sha": "ecd40ee87f29da5f5312d4138db18ba4837e2c9d",
+      "author": "Luis Camero",
+      "date": "2023-11-16T23:10:22Z",
+      "message": "Updated default mounts on a200"
+    },
+    {
+      "sha": "f86e717a0ce9b4db28fd2edb10291bc970aa67c0",
+      "author": "Luis Camero",
+      "date": "2023-11-16T23:09:41Z",
+      "message": "Changed default parent link to default_mount"
+    },
+    {
+      "sha": "ddc20f3e4014632256fda278e53ab49681d84dd6",
+      "author": "Luis Camero",
+      "date": "2023-11-14T23:50:24Z",
+      "message": "Changed the parent link of attachments"
+    },
+    {
+      "sha": "47212fcf6d2d41b5206b4156636e7ac5466a1df8",
+      "author": "Luis Camero",
+      "date": "2023-11-07T20:36:19Z",
+      "message": "Removed blannk line"
+    },
+    {
+      "sha": "f69330313236a4abe11854b72f09df35b137d938",
+      "author": "Luis Camero",
+      "date": "2023-11-07T20:26:40Z",
+      "message": "Removed top_plate from tests"
+    },
+    {
+      "sha": "4fcc6d9d98da1cf4a5ce71c44abf0f8eaef28586",
+      "author": "Luis Camero",
+      "date": "2023-11-07T20:11:51Z",
+      "message": "Updated samples"
+    },
+    {
+      "sha": "6cc93542d7984a7a4ee6bba835c21b772982b072",
+      "author": "Luis Camero",
+      "date": "2023-11-07T20:11:36Z",
+      "message": "Common attachments accross platforms"
+    },
+    {
+      "sha": "bd3fbba894bdfb51a9c811832432b22ad28f05e0",
+      "author": "Luis Camero",
+      "date": "2023-11-07T20:09:17Z",
+      "message": "Concatenate lists"
+    },
+    {
+      "sha": "c7286319a5e7f809b421ac6bca646e93a1282b1a",
+      "author": "Luis Camero",
+      "date": "2023-11-06T15:26:14Z",
+      "message": "Updated all platform attachments"
+    },
+    {
+      "sha": "f0670b26f6681ededca3aade96ca7394b3c576e4",
+      "author": "Luis Camero",
+      "date": "2023-11-06T15:20:36Z",
+      "message": "Updated base attachment"
+    },
+    {
+      "sha": "e3563b7868f5d3bf78ab3c49ff532cdd888bdb27",
+      "author": "Luis Camero",
+      "date": "2023-11-06T15:19:21Z",
+      "message": "Attachments now list"
+    },
+    {
+      "sha": "5f01d149761890ba3491dddf37511592e8bd2142",
+      "author": "Luis Camero",
+      "date": "2023-11-06T15:18:39Z",
+      "message": "Updated Attachments to more genric case"
+    },
+    {
+      "sha": "b856079f6061aeeb254ab2ae057555492c71e441",
+      "author": "Luis Camero",
+      "date": "2023-11-06T15:18:08Z",
+      "message": "Removed specific attachment classes"
+    },
+    {
+      "sha": "900348cabcdbe7ffa1d8c3075011027f6e7132eb",
+      "author": "Luis Camero",
+      "date": "2023-11-03T14:08:39Z",
+      "message": "Remove all from list"
+    },
+    {
+      "sha": "6363850641a3b05df9784bae8f8abb93e4a2f1fc",
+      "author": "Luis Camero",
+      "date": "2023-11-03T14:06:38Z",
+      "message": "Accessory from/to dict"
+    },
+    {
+      "sha": "d498757f2c3fc93d3dc0d22251e36a4d5886dbb6",
+      "author": "luis-camero",
+      "date": "2023-10-30T14:33:01Z",
+      "message": "Merge pull request #38 from clearpathrobotics/lcamero/username\n\nMoved username out of ROS2 section"
+    },
+    {
+      "sha": "2af12f7fb9e2e75e9a49799af1ece109666cd122",
+      "author": "luis-camero",
+      "date": "2023-10-25T14:46:18Z",
+      "message": "Merge pull request #37 from clearpathrobotics/lcamero/battery\n\nBattery"
+    },
+    {
+      "sha": "d5e94d3c215ec831c6e157c858677a240755adf8",
+      "author": "Luis Camero",
+      "date": "2023-10-25T14:24:00Z",
+      "message": "Fixed long line for linter"
+    },
+    {
+      "sha": "9333e5d8d72dab3c64d46901934fea8d036ea38c",
+      "author": "Luis Camero",
+      "date": "2023-10-25T14:19:02Z",
+      "message": "Moved username out of ros2 section"
+    },
+    {
+      "sha": "2edcc429a0946f5e71f685ac6530bf9cfee4e1a3",
+      "author": "Luis Camero",
+      "date": "2023-10-24T21:10:14Z",
+      "message": "Re-define DEFAULTS based on platform"
+    },
+    {
+      "sha": "753dcbc2f58142ea68ebeb60a7577f3fdd6c0789",
+      "author": "Luis Camero",
+      "date": "2023-10-23T22:03:24Z",
+      "message": "Detailed errors"
+    },
+    {
+      "sha": "56a447eb7eb9f395b8f3c3ab7f67375bf7c1bd01",
+      "author": "Luis Camero",
+      "date": "2023-10-23T21:52:07Z",
+      "message": "Fixed typo in samples"
+    },
+    {
+      "sha": "61d5259e1022cb579acb05532e1b35a77d580ffb",
+      "author": "Luis Camero",
+      "date": "2023-10-23T21:42:59Z",
+      "message": "Updated battery model"
+    },
+    {
+      "sha": "b06766d2d2f079db20b80e908b63c5d1c97f0c55",
+      "author": "Luis Camero",
+      "date": "2023-10-23T21:38:16Z",
+      "message": "Switched configurations"
+    },
+    {
+      "sha": "30db3756e031c0f625427be5c142a6751c7021f7",
+      "author": "Luis Camero",
+      "date": "2023-10-23T21:20:47Z",
+      "message": "Update commit"
+    },
+    {
+      "sha": "f7850621a5eedd58e2c30be72502aeba4198e233",
+      "author": "Luis Camero",
+      "date": "2023-10-23T21:23:38Z",
+      "message": "Revert \"Added battery to platform\"\n\nThis reverts commit fce11835ca8d6c477890084761075b5b46532bf2."
+    },
+    {
+      "sha": "fce11835ca8d6c477890084761075b5b46532bf2",
+      "author": "Luis Camero",
+      "date": "2023-10-23T21:20:47Z",
+      "message": "Added battery to platform"
+    },
+    {
+      "sha": "5fd6258ab9c90a0c270abf048956b3a8aa8d289b",
+      "author": "Luis Camero",
+      "date": "2023-10-13T19:54:51Z",
+      "message": "Added control section"
+    },
+    {
+      "sha": "cea316ddeea5a35d3a0dfa3974985de6b9978529",
+      "author": "luis-camero",
+      "date": "2023-10-12T21:30:40Z",
+      "message": "Merge pull request #36 from clearpathrobotics/topics\n\nDiagnostics"
+    },
+    {
+      "sha": "fef40cecb27451955c368a2704e60673d3ddc057",
+      "author": "luis-camero",
+      "date": "2023-10-10T20:03:54Z",
+      "message": "Consistent naming"
+    },
+    {
+      "sha": "5a2f547c58747acf64e3b0af11a3f4482403b6f6",
+      "author": "Luis Camero",
+      "date": "2023-10-10T19:46:33Z",
+      "message": "Added topics to base and fixed typos"
+    },
+    {
+      "sha": "52b752202ac5474f18408763db8fefb05ab345a7",
+      "author": "Luis Camero",
+      "date": "2023-10-10T14:26:10Z",
+      "message": "Added get_topic and get_topic_rate"
+    },
+    {
+      "sha": "4c43df64f1c4a4da1e71c77c2cc7a6e34e685399",
+      "author": "Luis Camero",
+      "date": "2023-10-06T21:18:01Z",
+      "message": "Added TOPICS and get_topic"
+    },
+    {
+      "sha": "9b74fbe9930257f86e8277108f7f15aac5aa3117",
+      "author": "Luis Camero",
+      "date": "2023-10-05T15:43:49Z",
+      "message": "Added description and launch to generic robot platform"
+    },
+    {
+      "sha": "d9722f3af38a47c471ab021b4d2568a338b89a07",
+      "author": "Tony Baltovski",
+      "date": "2023-10-02T20:07:39Z",
+      "message": "0.1.1"
+    },
+    {
+      "sha": "98f8356521c8a0e03762cc5f9eb2a53a3c462939",
+      "author": "Tony Baltovski",
+      "date": "2023-10-02T20:07:28Z",
+      "message": "Changes."
+    },
+    {
+      "sha": "c6e49866285c74f3d74f61719f051baf8790a442",
+      "author": "luis-camero",
+      "date": "2023-10-02T19:16:22Z",
+      "message": "Merge pull request #35 from clearpathrobotics/blackfly-fix\n\nBlackfly fix"
+    },
+    {
+      "sha": "3c89f838d80814d0775210e83fde303108168754",
+      "author": "Tony Baltovski",
+      "date": "2023-09-29T18:41:47Z",
+      "message": "Merge pull request #34 from clearpathrobotics/node_names\n\nUpdated config to match changes"
+    },
+    {
+      "sha": "026b0c12a5263aadfb77e69dbccbebd0321eeaac",
+      "author": "Luis Camero",
+      "date": "2023-09-27T20:55:32Z",
+      "message": "Removed micro_ros_ws"
+    },
+    {
+      "sha": "aafa746cbf58bd3f9f9cc480e47fc2900a7a6947",
+      "author": "Luis Camero",
+      "date": "2023-09-27T20:52:29Z",
+      "message": "Velodyne changes"
+    },
+    {
+      "sha": "7004767a584a09a262c42448fe93969155d75db8",
+      "author": "Luis Camero",
+      "date": "2023-09-27T20:43:02Z",
+      "message": "clearpath_config/sensors/types/lidars_2d.py"
+    },
+    {
+      "sha": "c1715c9228df67d73d3419d70c9986b5d6cabd13",
+      "author": "Hilary Luo",
+      "date": "2023-09-26T03:48:17Z",
+      "message": "FPS expected as float"
+    },
+    {
+      "sha": "a54d4cdd5f03051f34aa3b5d2430864b7f3d1c7d",
+      "author": "Hilary Luo",
+      "date": "2023-09-25T19:27:12Z",
+      "message": "Added ros_parameter_template"
+    },
+    {
+      "sha": "6a4063fa52fb02aba626694d9abf111de008a92b",
+      "author": "Tony Baltovski",
+      "date": "2023-08-31T13:41:52Z",
+      "message": "0.1.0"
+    },
+    {
+      "sha": "e1a71f2370273094f3d0d46ca2a8b867f14f9eba",
+      "author": "Tony Baltovski",
+      "date": "2023-08-31T13:41:17Z",
+      "message": "Changes."
+    },
+    {
+      "sha": "304aacba6d96597bdec7df4947658a7ba18e6f5b",
+      "author": "luis-camero",
+      "date": "2023-08-16T20:21:18Z",
+      "message": "Merge pull request #33 from clearpathrobotics/humble-devel/samples\n\nUpdated samples to include workspace"
+    },
+    {
+      "sha": "994240f2a99af681b5fd4075d7f1801933369d86",
+      "author": "Luis Camero",
+      "date": "2023-08-16T20:20:51Z",
+      "message": "Updated samples to include workspace"
+    },
+    {
+      "sha": "b950f1e1e429ae420615bdc742c670eb61e7bc1c",
+      "author": "Luis Camero",
+      "date": "2023-08-10T14:05:51Z",
+      "message": "Added Warthog without Attachments or ROS Parameters"
+    },
+    {
+      "sha": "10132b2d5e83aac9003a1f941e0248a5b0727c33",
+      "author": "Tony Baltovski",
+      "date": "2023-08-10T17:01:03Z",
+      "message": "0.0.6"
+    },
+    {
+      "sha": "bea74c436aebe94d4019fba4f64f50cae9f44628",
+      "author": "Tony Baltovski",
+      "date": "2023-08-10T17:00:36Z",
+      "message": "Changes."
+    },
+    {
+      "sha": "7a514c9a453e13de5c2a8633c1efa53c01236073",
+      "author": "luis-camero",
+      "date": "2023-08-10T16:52:08Z",
+      "message": "Merge pull request #32 from clearpathrobotics/humble-devel/setup\n\nAdded all modules to setup.py"
+    },
+    {
+      "sha": "e8e4a60ce5680a6c0acb7cdeeff63e12c4863584",
+      "author": "Luis Camero",
+      "date": "2023-08-10T14:34:45Z",
+      "message": "Added all modules to setup.py"
+    },
+    {
+      "sha": "820ee0e8dc5baa0e4f857094e2de6c062020caa3",
+      "author": "luis-camero",
+      "date": "2023-08-09T17:30:35Z",
+      "message": "Merge pull request #31 from clearpathrobotics/lcamero/remove_bumpers\n\nRemoved J100 bumpers from samples"
+    },
+    {
+      "sha": "9eee393394dd8fbec000514c7171e062f53b70ee",
+      "author": "Luis Camero",
+      "date": "2023-08-09T17:19:56Z",
+      "message": "Removed J100 bumpers from samples"
+    },
+    {
+      "sha": "63f5b8fc8dc9d59a032d48c4d4c26305dadfa104",
+      "author": "luis-camero",
+      "date": "2023-08-02T18:37:00Z",
+      "message": "Merge pull request #29 from clearpathrobotics/ust\n\nRenamed ust10 to ust"
+    },
+    {
+      "sha": "69c24e32301338acbb1fda0c51afb77e9fafcf01",
+      "author": "Luis Camero",
+      "date": "2023-08-02T12:54:54Z",
+      "message": "Updated sample configs"
+    },
+    {
+      "sha": "318dc5972cc4db95a471c8a7138c5d6857fad8df",
+      "author": "Luis Camero",
+      "date": "2023-08-02T12:52:29Z",
+      "message": "Merge branch 'main' into ust"
+    },
+    {
+      "sha": "f7e2969ac9a070240be2a84cf8fe84f498fd0340",
+      "author": "luis-camero",
+      "date": "2023-08-01T21:46:44Z",
+      "message": "Merge pull request #30 from clearpathrobotics/post\n\nSplit tower into post and disk"
+    },
+    {
+      "sha": "bd3ad1562b62eb00974a4c65c60daa6135122b0f",
+      "author": "Luis Camero",
+      "date": "2023-08-01T21:46:08Z",
+      "message": "Added posts and disks to samples"
+    },
+    {
+      "sha": "367ad153a36d7298dd88974f2af970242b81a7ae",
+      "author": "Luis Camero",
+      "date": "2023-08-01T21:32:15Z",
+      "message": "Removed unused include"
+    },
+    {
+      "sha": "d417cb47bd13419b7bf6f259852583f878b58c2d",
+      "author": "Luis Camero",
+      "date": "2023-08-01T21:28:22Z",
+      "message": "Split tower into post and disk"
+    },
+    {
+      "sha": "0894d02b57f76ab56b799ceedf6a4521eb663ef9",
+      "author": "luis-camero",
+      "date": "2023-08-01T20:46:11Z",
+      "message": "Merge pull request #28 from clearpathrobotics/samples\n\nSamples"
+    },
+    {
+      "sha": "73cec87d7fa0bd22d370a9a84527d5de1def6326",
+      "author": "Luis Camero",
+      "date": "2023-08-01T20:39:41Z",
+      "message": "Renamed ust10 to ust"
+    },
+    {
+      "sha": "e31925180fa883d73c86b5c3f80da85b37c32991",
+      "author": "Luis Camero",
+      "date": "2023-08-01T20:33:16Z",
+      "message": "Updated README"
+    },
+    {
+      "sha": "c804534e65e994d1d138ec922b2170f55de1d722",
+      "author": "Luis Camero",
+      "date": "2023-08-01T20:01:08Z",
+      "message": "Updated samples"
+    },
+    {
+      "sha": "26f2ef6cfa997e84adc8783a5d0f4c805a0bad91",
+      "author": "luis-camero",
+      "date": "2023-07-31T14:16:42Z",
+      "message": "Merge pull request #26 from clearpathrobotics/gh-actions\n\nAdded ROS CI, issue templates and codeowners."
+    },
+    {
+      "sha": "3b44b6b249886698bbfdb780b5358c9a0c23074e",
+      "author": "Luis Camero",
+      "date": "2023-07-31T14:12:41Z",
+      "message": "Removed eof line"
+    },
+    {
+      "sha": "1840c65292b68316e819b79414c41890f20b518f",
+      "author": "Luis Camero",
+      "date": "2023-07-31T14:11:39Z",
+      "message": "Merge branch 'main' into gh-actions"
+    },
+    {
+      "sha": "669a32f7c351dab57a462ed8a1bc3574872ae1ca",
+      "author": "luis-camero",
+      "date": "2023-07-31T13:57:48Z",
+      "message": "Merge pull request #27 from clearpathrobotics/fenders\n\nFenders"
+    },
+    {
+      "sha": "3152422c7939ee400c71d3c5e67fc72adbd0e13e",
+      "author": "Tony Baltovski",
+      "date": "2023-07-31T13:43:29Z",
+      "message": "Merge pull request #25 from clearpathrobotics/umx\n\nAdded UM7/UM6"
+    },
+    {
+      "sha": "032fbf8b379e01a7c1b650d73a56e4a48bbd2379",
+      "author": "Luis Camero",
+      "date": "2023-07-31T13:33:31Z",
+      "message": "Fixed port paths"
+    },
+    {
+      "sha": "48ce20b46b561afbae59fc397886e703a8bbc0ab",
+      "author": "Luis Camero",
+      "date": "2023-07-31T13:32:23Z",
+      "message": "Added fenders, default disabled"
+    },
+    {
+      "sha": "9638312c1675ab4d63a93a0a6ca34e0cc65efbfe",
+      "author": "luis-camero",
+      "date": "2023-07-31T13:30:42Z",
+      "message": "Merge pull request #24 from clearpathrobotics/new_mounts\n\nNew Mounts"
+    },
+    {
+      "sha": "672c017e81ed3bb89b1de74d548091500a2848b7",
+      "author": "Tony Baltovski",
+      "date": "2023-07-31T13:16:48Z",
+      "message": "Added ROS CI, issue templates and codeowners."
+    },
+    {
+      "sha": "a52165087163caaa206902fa266ccfbbd4a34921",
+      "author": "Luis Camero",
+      "date": "2023-07-31T13:03:01Z",
+      "message": "Added sick stand and variable-leg tower"
+    },
+    {
+      "sha": "d46ca76fb6f5b31c0e502ea5813a6bd27fa904c6",
+      "author": "Tony Baltovski",
+      "date": "2023-07-31T12:37:36Z",
+      "message": "0.0.5"
+    },
+    {
+      "sha": "2b9df90077bbfdacc466708cf8d87f629b4b502e",
+      "author": "Tony Baltovski",
+      "date": "2023-07-31T12:37:24Z",
+      "message": "Changes."
+    },
+    {
+      "sha": "1f6548d3c3eae0220ce734ad55f10438382cfa66",
+      "author": "Luis Camero",
+      "date": "2023-07-28T16:46:08Z",
+      "message": "Added UM7/UM6"
+    },
+    {
+      "sha": "d02293221b98504bc02243b335686a5dd3779a61",
+      "author": "luis-camero",
+      "date": "2023-07-27T21:35:07Z",
+      "message": "Merge pull request #22 from clearpathrobotics/rosparameters\n\nROS Paramater Node Names"
+    },
+    {
+      "sha": "551bfd479592e650700a41c336f09d3b7cb74a34",
+      "author": "Luis Camero",
+      "date": "2023-07-27T20:08:58Z",
+      "message": "Split novatel GPS"
+    },
+    {
+      "sha": "009844bd62cd7c2fa8eb3442a515bf9ee9faf860",
+      "author": "Luis Camero",
+      "date": "2023-07-27T20:05:16Z",
+      "message": "PyTest issues"
+    },
+    {
+      "sha": "e67051afd721e0d6447366145c1906f0192805c2",
+      "author": "Luis Camero",
+      "date": "2023-07-27T19:56:43Z",
+      "message": "Linter issues"
+    },
+    {
+      "sha": "2ddd8b440b4ab81cd7cc1cbd3bbef62f903c7957",
+      "author": "Luis Camero",
+      "date": "2023-07-27T19:53:26Z",
+      "message": "Node names and flatten dictionaries"
+    },
+    {
+      "sha": "c8fb4729cab9df12653ab5f7352cc45739bca145",
+      "author": "Luis Camero",
+      "date": "2023-07-25T17:53:22Z",
+      "message": "Added ros_parameters to extras"
+    },
+    {
+      "sha": "cb8f440c48cc07a400ec1dee593b3d6c0ab49017",
+      "author": "Luis Camero",
+      "date": "2023-07-19T21:13:05Z",
+      "message": "Added Garmin and Novatel gps"
+    },
+    {
+      "sha": "49765c1a7a78e61013fb3841531b221e4bbc292f",
+      "author": "Luis Camero",
+      "date": "2023-07-19T20:49:10Z",
+      "message": "Added node names to rosparameters in sensors"
+    },
+    {
+      "sha": "ec3e9e32141f5ecdc32a0f84ad7ef33a1ea17843",
+      "author": "Luis Camero",
+      "date": "2023-07-19T13:13:34Z",
+      "message": "Update hostname and namespace to match serial"
+    },
+    {
+      "sha": "75ab789881216b0f021743e572a5c10ddae54888",
+      "author": "Luis Camero",
+      "date": "2023-07-19T12:50:39Z",
+      "message": "Resolved indexing issue"
+    },
+    {
+      "sha": "8657d55b93ccf8d1498db21f1bf512dab918f37a",
+      "author": "Tony Baltovski",
+      "date": "2023-07-17T14:28:14Z",
+      "message": "0.0.4"
+    },
+    {
+      "sha": "3700d64b05b74fe6e1b5e829c071e2857fbb0197",
+      "author": "Tony Baltovski",
+      "date": "2023-07-17T14:27:13Z",
+      "message": "Changes."
+    },
+    {
+      "sha": "25496701910fb7cb092c53fa35bbbef23fef9947",
+      "author": "luis-camero",
+      "date": "2023-07-17T14:20:06Z",
+      "message": "Merge pull request #21 from clearpathrobotics/fixes\n\nFixes"
+    },
+    {
+      "sha": "4503891bf433791076c5e915761863116a01cffa",
+      "author": "Luis Camero",
+      "date": "2023-07-17T13:55:25Z",
+      "message": "Added __init__ to common"
+    },
+    {
+      "sha": "59f7ada43b17b6d028c34868624e6e0be6f48a66",
+      "author": "Luis Camero",
+      "date": "2023-07-17T13:54:01Z",
+      "message": "Only run pytest on clearpath_config"
+    },
+    {
+      "sha": "69c728f6e00a1323e3e726fdde7be76b80959ae3",
+      "author": "Luis Camero",
+      "date": "2023-07-17T13:47:49Z",
+      "message": "Linting errors"
+    },
+    {
+      "sha": "c38aa43d8e60fe05db92f8991092a992d81729bc",
+      "author": "Luis Camero",
+      "date": "2023-07-17T13:47:39Z",
+      "message": "Added samples to installed share"
+    },
+    {
+      "sha": "a69fc8403330d2305bd3726b10abc4d8b7e0a06a",
+      "author": "Luis Camero",
+      "date": "2023-07-17T13:47:21Z",
+      "message": "Removed parser"
+    },
+    {
+      "sha": "29a95b3f6de532928724ce04d406c971fdbb9afb",
+      "author": "Luis Camero",
+      "date": "2023-07-17T13:47:11Z",
+      "message": "Updated pytests"
+    },
+    {
+      "sha": "5c449d3211c6ae518046e100cf028c102a091276",
+      "author": "Luis Camero",
+      "date": "2023-07-17T13:46:58Z",
+      "message": "Renamed configs"
+    },
+    {
+      "sha": "f66bd23168102365a163cfd0fc489011d6c99476",
+      "author": "Luis Camero",
+      "date": "2023-07-14T19:58:56Z",
+      "message": "Added license file"
+    },
+    {
+      "sha": "b41ede27147df20b7a242db5eef3b6b85c11b6c9",
+      "author": "Luis Camero",
+      "date": "2023-07-14T19:58:32Z",
+      "message": "Added license headers"
+    },
+    {
+      "sha": "1ba787735c8ec3592fd11760714ea0e80292bb47",
+      "author": "Luis Camero",
+      "date": "2023-07-14T19:27:45Z",
+      "message": "Renamed accessories to links in top level config"
+    },
+    {
+      "sha": "42c29aaa4e6723cdeb229d5a58a2ecee560e3f1a",
+      "author": "Luis Camero",
+      "date": "2023-07-14T19:27:23Z",
+      "message": "Replaced accessories module with links"
+    },
+    {
+      "sha": "28d0efea8e7c014d442d48b7b3c74ee98922795d",
+      "author": "Luis Camero",
+      "date": "2023-07-14T14:24:41Z",
+      "message": "Renamed decorations and accessories"
+    },
+    {
+      "sha": "04bcfa18f1963d50b783968d4a7a12550aaff1ec",
+      "author": "Luis Camero",
+      "date": "2023-07-06T21:26:25Z",
+      "message": "Standard lists"
+    },
+    {
+      "sha": "66071f69aa122e6a55c394d6875b9d54d7f6828d",
+      "author": "Luis Camero",
+      "date": "2023-07-06T21:23:32Z",
+      "message": "Removed all old samples"
+    },
+    {
+      "sha": "83205ad30bfde3fca0e1407beed8a1c685c8f768",
+      "author": "Luis Camero",
+      "date": "2023-07-06T21:14:18Z",
+      "message": "Added workspace setter"
+    },
+    {
+      "sha": "953adb9d56e863cd94f9446e2925dc295e163ee8",
+      "author": "Luis Camero",
+      "date": "2023-07-06T21:11:27Z",
+      "message": "Added workspaces"
+    },
+    {
+      "sha": "c904c09a152e8bbe52b218231ec500eef97d93d4",
+      "author": "Luis Camero",
+      "date": "2023-07-06T21:07:16Z",
+      "message": "Fixed rpy type"
+    },
+    {
+      "sha": "bdf32048f07dbc15cb76c7f6e95f4a6662dfa5e1",
+      "author": "Luis Camero",
+      "date": "2023-07-06T21:03:24Z",
+      "message": "Removed copy"
+    },
+    {
+      "sha": "429417a2a9c8f36ae70d082073ce4cc65de61016",
+      "author": "Tony Baltovski",
+      "date": "2023-07-06T15:42:11Z",
+      "message": "0.0.3"
+    },
+    {
+      "sha": "7a48d23e61cc17f5681e12d18714d31880a0e145",
+      "author": "Tony Baltovski",
+      "date": "2023-07-06T15:41:58Z",
+      "message": "Changes."
+    },
+    {
+      "sha": "88f0c245f6aa23bfb1f5e5343ece37d5c7976617",
+      "author": "Tony Baltovski",
+      "date": "2023-07-06T15:28:31Z",
+      "message": "Merge pull request #20 from clearpathrobotics/property-setters\n\nUnified Parser with Config"
+    },
+    {
+      "sha": "f5b97d6dd8a8ab369b701e78514f7b24eaf5a441",
+      "author": "Luis Camero",
+      "date": "2023-07-04T20:51:54Z",
+      "message": "Fixed parsing issues"
+    },
+    {
+      "sha": "e5a03bd5877f260c5feb1fece512c8d22b673b9c",
+      "author": "Luis Camero",
+      "date": "2023-06-30T13:46:40Z",
+      "message": "Added python3-yaml to dependencies"
+    },
+    {
+      "sha": "fd6a6ee83e31edfe009eadac294d52a883b7c639",
+      "author": "Luis Camero",
+      "date": "2023-06-30T13:33:06Z",
+      "message": "Removed old parser"
+    },
+    {
+      "sha": "a94fa95990d45b8ca07a169d9751988c26966736",
+      "author": "Luis Camero",
+      "date": "2023-06-30T13:26:08Z",
+      "message": "Removed unused code"
+    },
+    {
+      "sha": "0dff50f9c7583cd2771b025097c6faae04a1af9f",
+      "author": "Luis Camero",
+      "date": "2023-06-30T02:41:22Z",
+      "message": "Added updates to change indexing based on serial number"
+    },
+    {
+      "sha": "4c27d3c07d99a4a0e14ba0c9f71dc0a00bf1b7b2",
+      "author": "Luis Camero",
+      "date": "2023-06-30T02:40:43Z",
+      "message": "Added sensors to property system"
+    },
+    {
+      "sha": "8f2c76ecf29e154e4a0d1aefb4e4a310cc723cde",
+      "author": "Luis Camero",
+      "date": "2023-06-30T00:40:44Z",
+      "message": "Added __init__ to all subfolders"
+    },
+    {
+      "sha": "4e361ff82d0cfc5e3cfc63b7f74f4925cc5a551d",
+      "author": "Luis Camero",
+      "date": "2023-06-30T00:39:57Z",
+      "message": "Added mounts to main config"
+    },
+    {
+      "sha": "b73fd602c236fa10b6cb235ba50e5ee17c45ff8e",
+      "author": "Luis Camero",
+      "date": "2023-06-30T00:39:22Z",
+      "message": "Moved mount types to separate folder"
+    },
+    {
+      "sha": "247e675c87802c37278d19f393ea31f62d144c8f",
+      "author": "Luis Camero",
+      "date": "2023-06-29T22:14:26Z",
+      "message": "Added read and write functions to ClearpathConfig"
+    },
+    {
+      "sha": "d35eb8e1db49d587de53bba74168deffb9976bfc",
+      "author": "Luis Camero",
+      "date": "2023-06-29T21:52:35Z",
+      "message": "Added accessories to property method"
+    },
+    {
+      "sha": "43ecca6bdde5c1e61652ad02488339a5bc9be3df",
+      "author": "Luis Camero",
+      "date": "2023-06-29T18:31:03Z",
+      "message": "Updated all configs to use properties instead of setters"
+    },
+    {
+      "sha": "dd94ab8ced61665f1e2167561dd820f49d7a4d24",
+      "author": "Luis Camero",
+      "date": "2023-06-29T18:30:26Z",
+      "message": "Updated base config to use properties to update config"
+    },
+    {
+      "sha": "0ee0031b79eee89c93f8ff9b9c0c263234d7236b",
+      "author": "Luis Camero",
+      "date": "2023-06-28T21:32:09Z",
+      "message": "Updated clearpath config to property setters"
+    },
+    {
+      "sha": "accd01a91fd0ce81fb93e38379925d9b64ab1371",
+      "author": "Luis Camero",
+      "date": "2023-06-28T21:31:49Z",
+      "message": "Removed old common and updated serial number type"
+    },
+    {
+      "sha": "cdc7bff359af40c12ccd1969f5765214d0a5bab5",
+      "author": "Luis Camero",
+      "date": "2023-06-28T21:31:19Z",
+      "message": "Updated system to use global serial number"
+    },
+    {
+      "sha": "dce9251ad0acb8108129abdf78e84045dca7c48c",
+      "author": "Luis Camero",
+      "date": "2023-06-28T21:27:42Z",
+      "message": "Updated platform to property setters"
+    },
+    {
+      "sha": "5bbcfcf9f871865730607a0f7ffa3cb89977a7ce",
+      "author": "Luis Camero",
+      "date": "2023-06-22T13:51:06Z",
+      "message": "Changed System config to property setters"
+    },
+    {
+      "sha": "5f3d7dd8d97d3cfe685ad5ba5af0c963f7bf9571",
+      "author": "Tony Baltovski",
+      "date": "2023-06-13T01:54:23Z",
+      "message": "0.0.2"
+    },
+    {
+      "sha": "55646ba00ba4d60272d83f64e84d94282493ecbe",
+      "author": "Tony Baltovski",
+      "date": "2023-06-13T01:54:13Z",
+      "message": "Changes."
+    },
+    {
+      "sha": "fdff5331e7622792ad8c4ffacec36f0fd7039345",
+      "author": "Roni Kreinin",
+      "date": "2023-06-12T17:58:35Z",
+      "message": "Merge pull request #19 from clearpathrobotics/gps_index\n\nFixed GPS indexing"
+    },
+    {
+      "sha": "f43b4807cbf76e5fa8f5187a00da0d5a08215817",
+      "author": "Luis Camero",
+      "date": "2023-05-30T19:40:10Z",
+      "message": "Fixed gps indexing"
+    },
+    {
+      "sha": "cad71d3b907308b094e12b8980a1593194127786",
+      "author": "luis-camero",
+      "date": "2023-05-29T17:41:09Z",
+      "message": "Merge pull request #18 from clearpathrobotics/system-updates\n\nSystem Updates"
+    },
+    {
+      "sha": "bcc458f99c66f2c66d8e1ba822d3946ba0d29ded",
+      "author": "Luis Camero",
+      "date": "2023-05-29T13:35:04Z",
+      "message": "Added system ROS2 parameters"
+    },
+    {
+      "sha": "cc6fc9a97b22ba96c368e581ef4dc1f55b842426",
+      "author": "Luis Camero",
+      "date": "2023-05-25T13:17:28Z",
+      "message": "Decorations enabled by default"
+    },
+    {
+      "sha": "4be5337a2a9128d2bd917c44a479e4f0c9ae7be5",
+      "author": "Luis Camero",
+      "date": "2023-05-25T13:17:14Z",
+      "message": "Added resource and package.xml to install data files"
+    },
+    {
+      "sha": "bebdf756ed2b7941464bc77569e47c9c00a9bf5e",
+      "author": "Luis Camero",
+      "date": "2023-05-04T22:29:08Z",
+      "message": "0.0.1"
+    },
+    {
+      "sha": "f30f60a959a74a0d0455e4947ba5491ef6c9907e",
+      "author": "Luis Camero",
+      "date": "2023-05-04T22:28:58Z",
+      "message": "Set version in setup.py"
+    },
+    {
+      "sha": "16ec608e90da447862825471ed253456c5b16baf",
+      "author": "Luis Camero",
+      "date": "2023-05-04T22:28:27Z",
+      "message": "Directly set version in setup.py"
+    },
+    {
+      "sha": "a88aadb9cf3eac4c99344902fb2a522128430fc5",
+      "author": "Luis Camero",
+      "date": "2023-05-04T22:26:27Z",
+      "message": "Added CHANGELOG"
+    },
+    {
+      "sha": "068a5c1af9a52c1dc19c2edce76b8043eb07a606",
+      "author": "luis-camero",
+      "date": "2023-05-04T21:58:52Z",
+      "message": "Merge pull request #17 from clearpathrobotics/readme\n\nUpdated README with up-to-date configs"
+    },
+    {
+      "sha": "1ad9d3402aeec123173284148146031cf131e3c2",
+      "author": "Luis Camero",
+      "date": "2023-05-04T21:58:20Z",
+      "message": "Updated README with up-to-date configs"
+    },
+    {
+      "sha": "4c39010f7ca6fd299619747ab8fbb5d94f550f80",
+      "author": "luis-camero",
+      "date": "2023-05-04T20:21:51Z",
+      "message": "Merge pull request #16 from clearpathrobotics/ros2\n\nROS2 Package"
+    },
+    {
+      "sha": "8e99f73c2019741e51c85ec02a5f2d851d7773be",
+      "author": "luis-camero",
+      "date": "2023-05-04T20:13:58Z",
+      "message": "Merge pull request #15 from clearpathrobotics/controller\n\nController"
+    },
+    {
+      "sha": "e7a3d4f1c8893474307660335e61a97b217da022",
+      "author": "luis-camero",
+      "date": "2023-05-04T20:12:27Z",
+      "message": "Merge pull request #14 from clearpathrobotics/accessory\n\nAccessory"
+    },
+    {
+      "sha": "d6cc7fbf1576ace30d169c5f0b0491eb62f15a0b",
+      "author": "Luis Camero",
+      "date": "2023-05-04T15:53:27Z",
+      "message": "Add metadatat to  setup.py"
+    },
+    {
+      "sha": "e0706f8132e743a985989f1f9d08d7a3b704657c",
+      "author": "Luis Camero",
+      "date": "2023-05-04T15:52:30Z",
+      "message": "Added ROS tests"
+    },
+    {
+      "sha": "4b05684b61c56d962fba9fe854d7f69ea528289c",
+      "author": "Luis Camero",
+      "date": "2023-05-04T15:52:16Z",
+      "message": "Updated cfg with install directories"
+    },
+    {
+      "sha": "aa7e62ebe3daeb56d2a3a8e5e9ac4da5601d01cd",
+      "author": "Luis Camero",
+      "date": "2023-05-04T15:51:37Z",
+      "message": "Added package.xml"
+    },
+    {
+      "sha": "8fd79aaf7ac995eb71fe70fea66cd0c1393fcad6",
+      "author": "Luis Camero",
+      "date": "2023-05-03T18:36:35Z",
+      "message": "Fixed decoration parser"
+    },
+    {
+      "sha": "d77e3509501bb1e2e3a9a06993e78d60bf77bb88",
+      "author": "Luis Camero",
+      "date": "2023-05-03T18:36:35Z",
+      "message": "Fixed Decoration parsing"
+    },
+    {
+      "sha": "1cb89b6f4b4140159996b3787e7f82e9c1448f15",
+      "author": "Luis Camero",
+      "date": "2023-05-03T14:35:59Z",
+      "message": "Linter errors"
+    },
+    {
+      "sha": "7ea5566a7edafb259fd792abf34e6e6f037547ae",
+      "author": "Luis Camero",
+      "date": "2023-05-03T14:32:30Z",
+      "message": "Added controller"
+    },
+    {
+      "sha": "3bb504805e78cb3276c2ad74d0bef567c49b9c54",
+      "author": "Luis Camero",
+      "date": "2023-05-02T22:27:46Z",
+      "message": "Added Accessories to YAML"
+    },
+    {
+      "sha": "e069301e719eee634bee70f90c979396d8dc27dd",
+      "author": "Luis Camero",
+      "date": "2023-05-02T17:34:41Z",
+      "message": "Added all lists for Accessories"
+    },
+    {
+      "sha": "fc3ccb2b3f2e11b8bffa54924563247276f4bf16",
+      "author": "Luis Camero",
+      "date": "2023-05-02T17:34:20Z",
+      "message": "Fixed type assertion"
+    },
+    {
+      "sha": "72e88190bbe08895254d3163dbdc26ef071a7de4",
+      "author": "Luis Camero",
+      "date": "2023-05-02T16:41:32Z",
+      "message": "Updated link to common BaseAccessory"
+    },
+    {
+      "sha": "fda1fac93cccc46568efbe7a972ea740338df1fe",
+      "author": "Luis Camero",
+      "date": "2023-05-02T16:00:05Z",
+      "message": "Added visual file path"
+    },
+    {
+      "sha": "601584debf3a1e3947e89ed0bb55e45056ad9588",
+      "author": "Luis Camero",
+      "date": "2023-05-02T15:58:00Z",
+      "message": "Added check for triple values"
+    },
+    {
+      "sha": "15215c0109e6a2a892e686edc9f82e47e693d199",
+      "author": "Luis Camero",
+      "date": "2023-05-02T15:57:17Z",
+      "message": "Add Mesh"
+    },
+    {
+      "sha": "a018014b283bf46e75f9f72c72a3d41730f71e51",
+      "author": "Luis Camero",
+      "date": "2023-05-02T15:57:06Z",
+      "message": "Added Sphere"
+    },
+    {
+      "sha": "04f1d7aac73f050c54b4e0a48b18cde3d463a6b4",
+      "author": "Luis Camero",
+      "date": "2023-05-02T15:56:50Z",
+      "message": "Added Cylinder"
+    },
+    {
+      "sha": "70747a713154a890f7ef45b7bf80f3e94089640e",
+      "author": "Luis Camero",
+      "date": "2023-05-02T15:56:42Z",
+      "message": "Added Box"
+    },
+    {
+      "sha": "4399e1623cd5380c940120b943c5bfa6d8e00682",
+      "author": "Luis Camero",
+      "date": "2023-05-02T15:56:19Z",
+      "message": "Added"
+    },
+    {
+      "sha": "3ea2a3815da0ae80b13dfc3ecb232937c9827a78",
+      "author": "Luis Camero",
+      "date": "2023-05-02T15:55:15Z",
+      "message": "BaseAccessory"
+    },
+    {
+      "sha": "d98d38115df6b331035c9e474092f05ee39266b2",
+      "author": "Luis Camero",
+      "date": "2023-05-01T20:35:05Z",
+      "message": "Updated sample config"
+    },
+    {
+      "sha": "89a75fe5cfb04171d7c9e47381d31d6fba94edab",
+      "author": "Luis Camero",
+      "date": "2023-05-01T20:34:50Z",
+      "message": "Added  to decorations"
+    },
+    {
+      "sha": "f1856fb6b3d276ae9c64a346314aaf669e52ab1f",
+      "author": "Luis Camero",
+      "date": "2023-05-01T20:34:04Z",
+      "message": "Set 'None' does nothing"
+    },
+    {
+      "sha": "e3b1ba6ad274344ff188d996d4ea810c5842bff6",
+      "author": "Luis Camero",
+      "date": "2023-05-01T19:19:17Z",
+      "message": "Decorations are now Accessories"
+    },
+    {
+      "sha": "9107bc5882e3a017bc457630d969cdfee42125cc",
+      "author": "luis-camero",
+      "date": "2023-05-01T17:57:56Z",
+      "message": "Merge pull request #13 from clearpathrobotics/gps\n\nAdded GPS"
+    },
+    {
+      "sha": "4b945851c153d1f1295276ad7eebd6447db75a4c",
+      "author": "Luis Camero",
+      "date": "2023-04-28T19:49:13Z",
+      "message": "Default microstrain port to"
+    },
+    {
+      "sha": "d26c688a1ff8fa59887210e06eb2005971461866",
+      "author": "Luis Camero",
+      "date": "2023-04-28T19:46:45Z",
+      "message": "Added Fixed and Target frame to Velodyne"
+    },
+    {
+      "sha": "7e2705c6b41e2082bb95090bb034b38dc37b3454",
+      "author": "Luis Camero",
+      "date": "2023-04-27T22:04:58Z",
+      "message": "Fixed GPS ros_parameter keys"
+    },
+    {
+      "sha": "7ff88f8fe292f80a67c7270237870777c4ab0b99",
+      "author": "luis-camero",
+      "date": "2023-04-27T21:42:47Z",
+      "message": "Merge pull request #12 from clearpathrobotics/lidar_3d\n\nLidar3D"
+    },
+    {
+      "sha": "7aee7e59d1ad8255ee63f66befce60d00547481d",
+      "author": "Luis Camero",
+      "date": "2023-04-27T21:42:18Z",
+      "message": "Added GPS"
+    },
+    {
+      "sha": "464d2bc26026c744e3edde512ba0b4f3084b3078",
+      "author": "Luis Camero",
+      "date": "2023-04-27T20:24:44Z",
+      "message": "Added Lidar3D to sample config"
+    },
+    {
+      "sha": "f3a39f376c679637c0401b9aa4313b44efe9fa48",
+      "author": "Luis Camero",
+      "date": "2023-04-27T20:24:25Z",
+      "message": "Parse Lidar3D"
+    },
+    {
+      "sha": "2cb0e2f3430a6c9266200a0d151382dad577cead",
+      "author": "Luis Camero",
+      "date": "2023-04-27T20:23:58Z",
+      "message": "Added lidar3d"
+    },
+    {
+      "sha": "b33077acf3875cd78389c81ae9bc72793fa8c8cb",
+      "author": "Luis Camero",
+      "date": "2023-04-27T20:23:41Z",
+      "message": "Updated Port to ensure always stores"
+    },
+    {
+      "sha": "b5e0d4b5dc412e210cd3766fa3d6d5be1841f795",
+      "author": "luis-camero",
+      "date": "2023-04-27T13:57:58Z",
+      "message": "Merge pull request #11 from clearpathrobotics/imu\n\nIMU"
+    },
+    {
+      "sha": "0cd845c5791485ffb84b778d29b43480616b6681",
+      "author": "luis-camero",
+      "date": "2023-04-26T18:26:12Z",
+      "message": "Add IMU to get_all_sensors"
+    },
+    {
+      "sha": "d76770e7d3b74c813652f997a23fb6d52da20f55",
+      "author": "luis-camero",
+      "date": "2023-04-26T17:02:34Z",
+      "message": "Merge pull request #10 from clearpathrobotics/ros_parameters\n\nROS Parameters"
+    },
+    {
+      "sha": "f70773d9ff8398b442e364ee67629b32e4b9f065",
+      "author": "Luis Camero",
+      "date": "2023-04-26T17:01:22Z",
+      "message": "Added check to increment IMU index"
+    },
+    {
+      "sha": "54f91f2e7c167065122f2eb885e5f02dcd14b0d1",
+      "author": "Luis Camero",
+      "date": "2023-04-26T15:04:57Z",
+      "message": "Added IMU to sample A200 config"
+    },
+    {
+      "sha": "a1173d5dc8d2c4e83a7867bec2a42f7361a96723",
+      "author": "Luis Camero",
+      "date": "2023-04-26T15:04:06Z",
+      "message": "Minor fix to return type"
+    },
+    {
+      "sha": "6d24e76489fd68d7c3bc66aa2e0a85ad93303c4e",
+      "author": "Luis Camero",
+      "date": "2023-04-26T15:03:37Z",
+      "message": "Added IMU to parser"
+    },
+    {
+      "sha": "301037ee17a535458eb637988e53b32da8a37505",
+      "author": "Luis Camero",
+      "date": "2023-04-25T20:20:05Z",
+      "message": "Removed checking for nested parameters (assume flattened ros_parameters)"
+    },
+    {
+      "sha": "71258c3ec0d94ff42f43d63bc81c56444d5f6eda",
+      "author": "Luis Camero",
+      "date": "2023-04-25T20:19:10Z",
+      "message": "Flatten ros_parameters dict"
+    },
+    {
+      "sha": "f321c090f7e567e97a0272d031129938208a89e6",
+      "author": "Luis Camero",
+      "date": "2023-04-25T20:18:50Z",
+      "message": "Added flatten dict"
+    },
+    {
+      "sha": "2c2f1ad3772fc69dc744fbdc334516d3bbe09630",
+      "author": "Luis Camero",
+      "date": "2023-04-25T19:29:58Z",
+      "message": "Added  to Realsense"
+    },
+    {
+      "sha": "e8fcac8042898880260553895e8fc795149d98e6",
+      "author": "Luis Camero",
+      "date": "2023-04-25T19:01:03Z",
+      "message": "Fixed camera return type"
+    },
+    {
+      "sha": "4b0534bc828b31ec9e1faf0f46f8ced4439be5f3",
+      "author": "Luis Camero",
+      "date": "2023-04-25T18:49:05Z",
+      "message": "Initial IMU commit"
+    },
+    {
+      "sha": "c018e123098fdc7a6f4c7face7f896bd4a03f324",
+      "author": "Luis Camero",
+      "date": "2023-04-25T18:48:43Z",
+      "message": "Added frame_id to parser"
+    },
+    {
+      "sha": "d8773fcdc8d80f450d78d6ea98c6f44cafd935c8",
+      "author": "Luis Camero",
+      "date": "2023-04-25T18:48:12Z",
+      "message": "Fixed comments"
+    },
+    {
+      "sha": "92a782e7bf2ded9498d6fb2afabc8e8275e91740",
+      "author": "Luis Camero",
+      "date": "2023-04-25T18:47:47Z",
+      "message": "Added FRAME_ID"
+    },
+    {
+      "sha": "b2a75bdab573d3d719c7b761cf63f046c9c34aef",
+      "author": "Luis Camero",
+      "date": "2023-04-25T13:46:31Z",
+      "message": "Added ros_parameters to config"
+    },
+    {
+      "sha": "378b1c81550f5badae617845c1a92deb6f0539ef",
+      "author": "Luis Camero",
+      "date": "2023-04-25T13:44:14Z",
+      "message": "Parse ros_parameters"
+    },
+    {
+      "sha": "b9097276be5dbd78c2e754ba58f6a7a37e3b924c",
+      "author": "Luis Camero",
+      "date": "2023-04-25T13:44:01Z",
+      "message": "Added ros_parameters"
+    },
+    {
+      "sha": "d6c8969d5323726a6fd10e5d11020d1bdf449d13",
+      "author": "luis-camero",
+      "date": "2023-04-24T17:58:55Z",
+      "message": "Merge pull request #9 from clearpathrobotics/indexing\n\nIndexing"
+    },
+    {
+      "sha": "0c9350338fd01bbbe24d4d80541eef791dd93596",
+      "author": "Luis Camero",
+      "date": "2023-04-21T17:47:24Z",
+      "message": "Added ros_parameters as empty dict"
+    },
+    {
+      "sha": "8ecb556d915d22d81920b5787b1e5bae52863bf6",
+      "author": "Luis Camero",
+      "date": "2023-04-19T14:17:04Z",
+      "message": "Added empty config"
+    },
+    {
+      "sha": "ea26e54d60711de2866f8b60afb0c0b089338df4",
+      "author": "Luis Camero",
+      "date": "2023-04-19T14:16:43Z",
+      "message": "Mounts, sensors, and decorations no longer required"
+    },
+    {
+      "sha": "b63aea5faa63aa16faaa4f204edd748ab9eee588",
+      "author": "Luis Camero",
+      "date": "2023-04-18T21:36:11Z",
+      "message": "Sensors use IndexedAccessory and can have first index changed"
+    },
+    {
+      "sha": "bee161d278c0e0cdb90851e2348a6aac5706ca6a",
+      "author": "Luis Camero",
+      "date": "2023-04-18T21:31:31Z",
+      "message": "All mounts have indexes"
+    },
+    {
+      "sha": "24979beebda5bb694db379723d15a6565ca63a7a",
+      "author": "Luis Camero",
+      "date": "2023-04-18T21:23:46Z",
+      "message": "Created IndexedAccessory as base to all iterable accessories"
+    },
+    {
+      "sha": "35d83e8f4b931fc01b8f3d9dda91c554143c539c",
+      "author": "Luis Camero",
+      "date": "2023-04-18T20:21:03Z",
+      "message": "Use built-in set and get for idx"
+    },
+    {
+      "sha": "6a756597906c763f20e3bbeb1f85e5b075e60267",
+      "author": "luis-camero",
+      "date": "2023-04-17T16:13:01Z",
+      "message": "Merge pull request #8 from clearpathrobotics/wip-iterable-sensors\n\nIterable Sensors"
+    },
+    {
+      "sha": "5fc16672bbbb36439515470ed7fe42999c585fc0",
+      "author": "Luis Camero",
+      "date": "2023-04-17T15:50:51Z",
+      "message": "Removed tests for older versions of python"
+    },
+    {
+      "sha": "ccf3bbcfacd0e7ac2f1de3296492ff64175d634f",
+      "author": "Luis Camero",
+      "date": "2023-04-17T15:50:15Z",
+      "message": "Fixed imports for Decoration tests"
+    },
+    {
+      "sha": "1915eaab60498a8b2910c173bfc354f9ac7f6a71",
+      "author": "Luis Camero",
+      "date": "2023-04-13T18:19:26Z",
+      "message": "Manufacturer names added to sensor models and class names"
+    },
+    {
+      "sha": "6b69a4e3007a35b85da87b576ec222513200692c",
+      "author": "Luis Camero",
+      "date": "2023-04-12T20:08:38Z",
+      "message": "Sensor Types and Sensor Models"
+    },
+    {
+      "sha": "815d4e198b991b0d08db7c7ca7232a4b9039c147",
+      "author": "Luis Camero",
+      "date": "2023-04-12T17:29:18Z",
+      "message": "Updated setuptools"
+    },
+    {
+      "sha": "bb2b072fd3563d33cc07e8809537e98a97fa2416",
+      "author": "Luis Camero",
+      "date": "2023-04-12T15:32:42Z",
+      "message": "Fixed  get_all_sensors"
+    },
+    {
+      "sha": "aae5524beaa306ba222632a9829db675a99fd552",
+      "author": "Luis Camero",
+      "date": "2023-04-12T15:21:57Z",
+      "message": "Added __init__"
+    },
+    {
+      "sha": "64035bbe8dda6ffded584934338926753af9875e",
+      "author": "Luis Camero",
+      "date": "2023-04-10T23:21:30Z",
+      "message": "added sensors to clearpath config"
+    },
+    {
+      "sha": "13095863b04f14ff9eefec52d36ca511d9826e4a",
+      "author": "Luis Camero",
+      "date": "2023-04-10T23:21:09Z",
+      "message": "Added sensors to the parser"
+    },
+    {
+      "sha": "324a8e2607f00023b9d9f6d225de14de6c187468",
+      "author": "Luis Camero",
+      "date": "2023-04-10T22:43:30Z",
+      "message": "Fixed bug in get function"
+    },
+    {
+      "sha": "0caa09d147f6f55131d0b1d77d2afc75aab92dee",
+      "author": "Luis Camero",
+      "date": "2023-04-10T22:43:11Z",
+      "message": "Added OrderedList of sensors with access functions"
+    },
+    {
+      "sha": "5843bc81982b5d9db4abba434c07d937cb7989f8",
+      "author": "Luis Camero",
+      "date": "2023-04-10T22:42:28Z",
+      "message": "Added sensors"
+    },
+    {
+      "sha": "edf2d71ca2ad1241f137438b24b61faa8bff2204",
+      "author": "Luis Camero",
+      "date": "2023-04-10T22:42:11Z",
+      "message": "Added sub-type models"
+    },
+    {
+      "sha": "29e90ecead6b3067138b77d823cf620941da8a47",
+      "author": "Luis Camero",
+      "date": "2023-04-10T22:41:22Z",
+      "message": "Added SENSOR_MODEL"
+    },
+    {
+      "sha": "6f7ea74505c3a8f63daa295ff8430eb4b0ecfad5",
+      "author": "Luis Camero",
+      "date": "2023-04-06T15:10:56Z",
+      "message": "Added Port class"
+    },
+    {
+      "sha": "1bb989b9ae4e6e2521af52feebd6909fd7d01c97",
+      "author": "Luis Camero",
+      "date": "2023-03-30T19:00:30Z",
+      "message": "Added Base class for lidars and cameras"
+    },
+    {
+      "sha": "5b64d4f4140186bcd853acba4a9a96c181b42d77",
+      "author": "Luis Camero",
+      "date": "2023-03-27T19:55:33Z",
+      "message": "Added sensors"
+    },
+    {
+      "sha": "4b6bac4f443eb36c5d378d86c14ade657d6a9245",
+      "author": "Luis Camero",
+      "date": "2023-03-16T18:17:14Z",
+      "message": "Added Topic, URDF Enable, and Launch Enable to BaseSensor"
+    },
+    {
+      "sha": "a754b3b76f135aa80ccc74cb6446da71a5c4e103",
+      "author": "luis-camero",
+      "date": "2023-03-14T15:01:32Z",
+      "message": "Init Sensors"
+    },
+    {
+      "sha": "13c46a1b2da1547f78f3c6df014618df2530a016",
+      "author": "luis-camero",
+      "date": "2023-04-05T15:16:58Z",
+      "message": "Merge pull request #7 from clearpathrobotics/wip-iterables\n\nIterables"
+    },
+    {
+      "sha": "2fdc66b1bd740ea979374e0c6e2ad9204f3da291",
+      "author": "Luis Camero",
+      "date": "2023-04-05T14:17:19Z",
+      "message": "Removed height from Husky sample"
+    },
+    {
+      "sha": "f297ffc987a65f11af5b2a53f001cd3d412e599f",
+      "author": "Luis Camero",
+      "date": "2023-04-04T21:49:11Z",
+      "message": "Updated A200 sample"
+    },
+    {
+      "sha": "de1600ed56a8e6d5e8f44ac09a37a0d072b7f09a",
+      "author": "Luis Camero",
+      "date": "2023-04-04T21:48:55Z",
+      "message": "Added get_enabled"
+    },
+    {
+      "sha": "31a75d7eec74763fa2ad87c724d697628508c4bc",
+      "author": "Luis Camero",
+      "date": "2023-04-04T21:43:02Z",
+      "message": "Added method to retrieve all decorations"
+    },
+    {
+      "sha": "d3bb6bce537e1179cb27ee4ac9f3efb91e0eeed5",
+      "author": "Luis Camero",
+      "date": "2023-04-04T21:39:11Z",
+      "message": "Added Decoration.NEW class"
+    },
+    {
+      "sha": "a42ed01468770f9a856855d427b216e79623a73c",
+      "author": "Luis Camero",
+      "date": "2023-04-04T21:11:06Z",
+      "message": "Added method to retrieve all mounts"
+    },
+    {
+      "sha": "ec952d29cb51bdd60263117507de9def47b6a0b4",
+      "author": "Luis Camero",
+      "date": "2023-04-04T20:47:59Z",
+      "message": "Set decorations to enabled if not specified but exist"
+    },
+    {
+      "sha": "b3c07c41b6829e165ca4f1ea6a0a8207153dd055",
+      "author": "Luis Camero",
+      "date": "2023-04-04T20:46:26Z",
+      "message": "Fixed top plate in parser"
+    },
+    {
+      "sha": "7f8cf03af9ecc00c78a53ab442408a3bec95ce66",
+      "author": "Luis Camero",
+      "date": "2023-04-04T20:44:44Z",
+      "message": "Added BaseDecoration; by default disabled"
+    },
+    {
+      "sha": "a2e128f73f4a8b7505db88f7ec54e115297b0911",
+      "author": "Luis Camero",
+      "date": "2023-04-04T19:03:44Z",
+      "message": "Added __init__ to mounts"
+    },
+    {
+      "sha": "729ea1f8ace1c650b328d29b764ddf2d0220ff4d",
+      "author": "Luis Camero",
+      "date": "2023-04-04T18:58:27Z",
+      "message": "Updated Husky sampl"
+    },
+    {
+      "sha": "1f3f85fe46a8c7da43defa311d350f18412b5a71",
+      "author": "Luis Camero",
+      "date": "2023-04-04T18:49:03Z",
+      "message": "Removed  and"
+    },
+    {
+      "sha": "03594b9016bcc8cc6d6ddff56fd45daef6d55619",
+      "author": "Luis Camero",
+      "date": "2023-04-04T18:43:52Z",
+      "message": "Fixed key error print statement"
+    },
+    {
+      "sha": "016d29453aef19b1b456e89beebd25eceabbf399",
+      "author": "Luis Camero",
+      "date": "2023-04-04T14:50:37Z",
+      "message": "Upgraded parser to match new mounts"
+    },
+    {
+      "sha": "bd9f6ef4fded20cc1023ee456ec7c7e93f425eee",
+      "author": "Luis Camero",
+      "date": "2023-04-04T14:50:23Z",
+      "message": "Removed name as required argument"
+    },
+    {
+      "sha": "dd1141aff215d1e7b9137fb9b6d4378320d842d3",
+      "author": "Luis Camero",
+      "date": "2023-04-04T14:49:27Z",
+      "message": "Completely disabled all PACS testing"
+    },
+    {
+      "sha": "d11336d52d6088ebfd25f4595c8ac0fe5233321f",
+      "author": "Luis Camero",
+      "date": "2023-04-04T14:48:16Z",
+      "message": "Removed 'pacs_' prefix from brackets and risers"
+    },
+    {
+      "sha": "e8224e8673f227155c3ad70ed101182281b312c4",
+      "author": "Luis Camero",
+      "date": "2023-04-04T14:47:44Z",
+      "message": "BaseMount no longer requires a name, default to index"
+    },
+    {
+      "sha": "6c0428b3281635afff36f7c546efc9f74e3b1ec0",
+      "author": "Luis Camero",
+      "date": "2023-04-04T14:47:10Z",
+      "message": "Clear OrderedConfigList if empty list is set"
+    },
+    {
+      "sha": "d965a62744ade2606c06415e4110c86d397281a4",
+      "author": "Luis Camero",
+      "date": "2023-04-04T14:45:27Z",
+      "message": "Updated sample to new mount iterables"
+    },
+    {
+      "sha": "580e2f16de68d2ce6aefcf0c3b8e56a8d684bb3f",
+      "author": "Luis Camero",
+      "date": "2023-04-03T23:52:19Z",
+      "message": "Added mounts as individual ordered lists"
+    },
+    {
+      "sha": "7e07db60615a3efae0c121a7c16cad9238c9f825",
+      "author": "Luis Camero",
+      "date": "2023-04-03T23:40:07Z",
+      "message": "Moved ListConfig and all PACS from the Platform base"
+    },
+    {
+      "sha": "909893622adbdc21ed4c3fb3e472d802ab2d8c1c",
+      "author": "Luis Camero",
+      "date": "2023-04-03T23:38:20Z",
+      "message": "Removed PACS from platform"
+    },
+    {
+      "sha": "fd346fe6a3254e4c392f24e981fc5bdd31fdf911",
+      "author": "Luis Camero",
+      "date": "2023-04-03T23:37:54Z",
+      "message": "Removed name as a default parameter"
+    },
+    {
+      "sha": "830b7e9bd0b9bb4edfaf8fdb73ef5e2a3c4f210a",
+      "author": "Luis Camero",
+      "date": "2023-04-03T23:37:08Z",
+      "message": "Added name from id to BaseMount"
+    },
+    {
+      "sha": "d6d69ef642404c006af77d0705afbd057663fd5b",
+      "author": "Luis Camero",
+      "date": "2023-04-03T23:36:48Z",
+      "message": "Added OrderedListConfig"
+    },
+    {
+      "sha": "d04cab7873b76331e34425855630793bd0c9ae0c",
+      "author": "Luis Camero",
+      "date": "2023-04-03T20:58:16Z",
+      "message": "Removed mounting link from fath and flir moutns"
+    },
+    {
+      "sha": "feb651e186920a9d07094b46cd7814fc6cf06ad3",
+      "author": "Luis Camero",
+      "date": "2023-04-03T20:57:11Z",
+      "message": "Removed mounting link and model"
+    },
+    {
+      "sha": "21b930503b198e7e930a1f9554812714d0cd878d",
+      "author": "Luis Camero",
+      "date": "2023-04-03T20:36:43Z",
+      "message": "Added uid checks to ListConfig"
+    },
+    {
+      "sha": "fdd47dace9ab78df4b88e4bfd7e38f6cac9860b1",
+      "author": "Luis Camero",
+      "date": "2023-03-30T21:20:52Z",
+      "message": "Split up mounts"
+    },
+    {
+      "sha": "1dda483938dabfeba1b2c05aae6cc763f593e4f1",
+      "author": "Luis Camero",
+      "date": "2023-03-30T21:07:06Z",
+      "message": "Added get and set methods for individual mounts"
+    },
+    {
+      "sha": "75772fad92239de4d530429b932eca8d9d05936a",
+      "author": "Luis Camero",
+      "date": "2023-03-30T21:04:36Z",
+      "message": "Small lint fixes in common"
+    },
+    {
+      "sha": "05ad4ec01acbe71cd69f3b07c57e6c50346eef1d",
+      "author": "Luis Camero",
+      "date": "2023-03-30T21:00:45Z",
+      "message": "Removed mount pseudo namespace"
+    },
+    {
+      "sha": "5422062f402749574a567d241bc7a73f0045f108",
+      "author": "Luis Camero",
+      "date": "2023-03-30T20:59:55Z",
+      "message": "Updated remove function"
+    },
+    {
+      "sha": "5c6aaa38f391c7cec5eb3234d8ea4d6ffbcd6b5b",
+      "author": "Luis Camero",
+      "date": "2023-03-30T20:59:36Z",
+      "message": "Moved ListConfig"
+    },
+    {
+      "sha": "3012a170dc9da1c8d9946a36320496e0eca87548",
+      "author": "Luis Camero",
+      "date": "2023-03-16T18:16:29Z",
+      "message": "Fixed lint errors in mounts"
+    },
+    {
+      "sha": "3f88d692444b00c44c538a08a11ef526fb913ebe",
+      "author": "Luis Camero",
+      "date": "2023-03-16T18:12:22Z",
+      "message": "Fixed lint errors in clearpath_config"
+    },
+    {
+      "sha": "6ccddb5de77daf26405752323a017a271110112f",
+      "author": "Luis Camero",
+      "date": "2023-03-29T14:06:29Z",
+      "message": "Removed PACS Config testers"
+    },
+    {
+      "sha": "f2b598430b5413d2222d348ce8f552f45fcd4294",
+      "author": "Luis Camero",
+      "date": "2023-03-28T21:37:45Z",
+      "message": "Switched parser to new decorations config"
+    },
+    {
+      "sha": "240487b563b123a36ad88f274ba7d921adeb5618",
+      "author": "Luis Camero",
+      "date": "2023-03-28T21:37:30Z",
+      "message": "Updated path to base decorations config"
+    },
+    {
+      "sha": "9e1f35352e53f16d71e6a595988e1838d3d0d777",
+      "author": "Luis Camero",
+      "date": "2023-03-28T21:13:01Z",
+      "message": "Updated path to config in Platform"
+    },
+    {
+      "sha": "e54062c9d62ffa573b49a9c50297ce36bc73997d",
+      "author": "Luis Camero",
+      "date": "2023-03-28T21:09:04Z",
+      "message": "Updated J100 to iterable decorations"
+    },
+    {
+      "sha": "5902e23578af4f0381fb3fe1518abc51ddc9366c",
+      "author": "Luis Camero",
+      "date": "2023-03-28T21:07:03Z",
+      "message": "Updated A200 to iterable decorations"
+    },
+    {
+      "sha": "5d5b36c1b3284b599915e44c60afbb57ef0f7062",
+      "author": "Luis Camero",
+      "date": "2023-03-28T21:06:35Z",
+      "message": "Fixed assertion indenting"
+    },
+    {
+      "sha": "e5300930c0f616b4aa2aba7898d173b5fdedf77f",
+      "author": "Luis Camero",
+      "date": "2023-03-28T21:05:07Z",
+      "message": "Removed unused imports"
+    },
+    {
+      "sha": "99698ecd4f3761df90dc191e773d0d527a7ff7f6",
+      "author": "Luis Camero",
+      "date": "2023-03-28T21:04:47Z",
+      "message": "Fixed assertion indenting"
+    },
+    {
+      "sha": "d9d1fadb38c800b9ef5c0eb05d74ced923bd0999",
+      "author": "Luis Camero",
+      "date": "2023-03-28T21:04:20Z",
+      "message": "Added get and set functions to ListConfig"
+    },
+    {
+      "sha": "c0d1346bb04f826eb041dcc35c008504bc7d93dc",
+      "author": "Luis Camero",
+      "date": "2023-03-28T19:18:08Z",
+      "message": "Removed PACS specific configs"
+    },
+    {
+      "sha": "f4e0dee3ae6115137fc499c47a3d3e0a89fd75ec",
+      "author": "Luis Camero",
+      "date": "2023-03-28T19:16:51Z",
+      "message": "Added base decorations config"
+    },
+    {
+      "sha": "78e9ab3d7db489be8956c50fe91ec7323eec3ea4",
+      "author": "Luis Camero",
+      "date": "2023-03-28T19:16:13Z",
+      "message": "Removed unecessary platform specific decorations"
+    },
+    {
+      "sha": "7c8d53b70530e975050e5b12e1bb0dbf89c2f0fd",
+      "author": "luis-camero",
+      "date": "2023-03-23T20:02:04Z",
+      "message": "Merge pull request #5 from clearpathrobotics/wip-mounts\n\nMounts: Flir PTU and Fath Pivot"
+    },
+    {
+      "sha": "faa131b5e12b0085e320d501b20f0ec27e810ce5",
+      "author": "luis-camero",
+      "date": "2023-03-13T14:21:03Z",
+      "message": "Fixed merge issues"
+    },
+    {
+      "sha": "ddea64b264a7fe617c4c29b3b52a1e5f860e9e69",
+      "author": "luis-camero",
+      "date": "2023-03-13T14:02:10Z",
+      "message": "Added mounts config"
+    },
+    {
+      "sha": "748d6694ccfcc14e2082e572e73209db758ec34c",
+      "author": "luis-camero",
+      "date": "2023-03-13T13:59:07Z",
+      "message": "Added mounts to sample config"
+    },
+    {
+      "sha": "1a31d66ae1d75feccdbcdb4d5f394130062e05f8",
+      "author": "luis-camero",
+      "date": "2023-03-13T13:58:44Z",
+      "message": "Added platform parser"
+    },
+    {
+      "sha": "6d839058ba236a6955e7514cf8d629fa71e438d4",
+      "author": "luis-camero",
+      "date": "2023-03-10T20:37:46Z",
+      "message": "Added  check to Accessory"
+    },
+    {
+      "sha": "dff2463c27cd5fbbbb7af630eb3739a927001d9c",
+      "author": "luis-camero",
+      "date": "2023-03-09T20:02:01Z",
+      "message": "Merge branch 'main' of https://github.com/clearpathrobotics/clearpath_config into main"
+    },
+    {
+      "sha": "f1da95cbc9b221f609936f8ee531e17fb1b12248",
+      "author": "luis-camero",
+      "date": "2023-03-08T18:49:14Z",
+      "message": "Remove old test config yaml"
+    },
+    {
+      "sha": "416b803e16fb0a7653de46906ac9b0a5720ee740",
+      "author": "luis-camero",
+      "date": "2023-03-08T16:53:13Z",
+      "message": "Merge pull request #4 from clearpathrobotics/wip-lint\n\nLint Errors and Warnings"
+    },
+    {
+      "sha": "cc1bb91de9526e0b467afe50dd791d21a1b6ff5c",
+      "author": "luis-camero",
+      "date": "2023-03-08T16:43:16Z",
+      "message": "Increased flake8 line length to 100"
+    },
+    {
+      "sha": "32c199355077d700b5c76e4d49aa638dbc2b70c3",
+      "author": "luis-camero",
+      "date": "2023-03-08T16:39:22Z",
+      "message": "Fixed all lint errors"
+    },
+    {
+      "sha": "0979c6a6e467c54d3eeb2aad0c552d6b877b8d12",
+      "author": "luis-camero",
+      "date": "2023-03-08T14:48:57Z",
+      "message": "Merge pull request #3 from clearpathrobotics/wip-tests\n\nMoved tests into the clearpath_config package"
+    },
+    {
+      "sha": "c47d2de745844f201e2bcdd8b1115cfd31a5153b",
+      "author": "luis-camero",
+      "date": "2023-03-08T14:46:37Z",
+      "message": "Added PyYaml"
+    },
+    {
+      "sha": "40a4604da858a5660604ba375270e8c02be96d9b",
+      "author": "luis-camero",
+      "date": "2023-03-08T14:45:15Z",
+      "message": "Added pytest-cov"
+    },
+    {
+      "sha": "09c7248667aa963fc69540e43d52b0ab9822dbe5",
+      "author": "luis-camero",
+      "date": "2023-03-08T14:43:00Z",
+      "message": "Create python-package.yml"
+    },
+    {
+      "sha": "9071a54d869f0bfa66f8afb1f51b54d7ecaba8dd",
+      "author": "luis-camero",
+      "date": "2023-03-08T14:36:13Z",
+      "message": "Moved tests into the clearpath_config package"
+    },
+    {
+      "sha": "c7fcfa969df17fe98b70f4a2fe396aecc8df09fa",
+      "author": "luis-camero",
+      "date": "2023-03-08T14:34:52Z",
+      "message": "Merge pull request #2 from clearpathrobotics/wip-platform\n\nAdded Platform and Updated Parser"
+    },
+    {
+      "sha": "f5965769f670970dbabe092154f4a57b6159168f",
+      "author": "luis-camero",
+      "date": "2023-03-07T22:28:43Z",
+      "message": "Added init files to submodules"
+    },
+    {
+      "sha": "17643ccc3f0cdba1eee677deec311031c4817ffd",
+      "author": "luis-camero",
+      "date": "2023-03-07T21:51:16Z",
+      "message": "Updated setuptools"
+    },
+    {
+      "sha": "b99dda58fb80c83fee7b09cef1a61ae69901c036",
+      "author": "luis-camero",
+      "date": "2023-03-07T21:44:59Z",
+      "message": "Removed unused unittest dependency"
+    },
+    {
+      "sha": "a8590e49fc84794b6e9036ebce27e28067854350",
+      "author": "luis-camero",
+      "date": "2023-03-07T21:44:22Z",
+      "message": "Added platform config tests"
+    },
+    {
+      "sha": "6eb77e03a87f7a0f55eef12ed81fa9b540a8f52f",
+      "author": "luis-camero",
+      "date": "2023-03-07T21:43:48Z",
+      "message": "Added sets to all PACS parts and configs"
+    },
+    {
+      "sha": "7bc1f3d3756f6053bacee9c10e3fba0b64f1de85",
+      "author": "luis-camero",
+      "date": "2023-03-07T21:43:15Z",
+      "message": "Added checks on bumper extension"
+    },
+    {
+      "sha": "6fb6ace7dbbaf060652dc3ef631dcd039c799c7e",
+      "author": "luis-camero",
+      "date": "2023-03-07T19:50:59Z",
+      "message": "Renamed genx to generic in platform"
+    },
+    {
+      "sha": "2a0241e8533fa8f77970fa843602d8a1db361a1f",
+      "author": "luis-camero",
+      "date": "2023-03-07T19:50:22Z",
+      "message": "Renamed genx to generic in common"
+    },
+    {
+      "sha": "4b8c8af903f4dc502cca303f54f877805f2fc92d",
+      "author": "luis-camero",
+      "date": "2023-03-07T19:49:46Z",
+      "message": "Renamed GENX to generic"
+    },
+    {
+      "sha": "dfa1f6c825647156cc0600408cc7759a133cb1b6",
+      "author": "luis-camero",
+      "date": "2023-03-05T23:11:25Z",
+      "message": "Added a200 and j100 sample config"
+    },
+    {
+      "sha": "57c69ddddcdb4f54939ab1f5d2e7099fc66ae444",
+      "author": "luis-camero",
+      "date": "2023-03-05T23:10:51Z",
+      "message": "Added J100 to parser"
+    },
+    {
+      "sha": "46c3f873ab428516d85dea81124b6f2ddbe75410",
+      "author": "luis-camero",
+      "date": "2023-03-05T22:32:32Z",
+      "message": "Changed import path to match new file structure"
+    },
+    {
+      "sha": "0cb4dbddb6f82bc748c6ccad56502be17df188ef",
+      "author": "luis-camero",
+      "date": "2023-03-05T22:31:47Z",
+      "message": "Added A200, J100, and GENX (generic)"
+    },
+    {
+      "sha": "2e4389e1f8daf75fe095cf1b6dc4aa374ab2671e",
+      "author": "luis-camero",
+      "date": "2023-03-05T22:31:20Z",
+      "message": "Moved platform and system to new folder structure"
+    },
+    {
+      "sha": "81a961cb584020a869c0b8b6552d518bf579e830",
+      "author": "luis-camero",
+      "date": "2023-03-05T22:27:18Z",
+      "message": "Changed parser to math new folder structure"
+    },
+    {
+      "sha": "37c6fd7d092e019db5191e386dc17e428a6201a9",
+      "author": "luis-camero",
+      "date": "2023-03-05T22:23:19Z",
+      "message": "Fixed RPY and XYZ setters"
+    },
+    {
+      "sha": "5351d6e5457c76521ee1da97c14cd65d320cdb7f",
+      "author": "luis-camero",
+      "date": "2023-03-05T22:22:32Z",
+      "message": "Changed import for the new folder structure"
+    },
+    {
+      "sha": "60aba7ca5392eb9b1e52d14e0a392fbb1ae393d7",
+      "author": "luis-camero",
+      "date": "2023-03-02T17:43:33Z",
+      "message": "Platforms referenced only by product code, i.e. A200, to avoid version issues"
+    },
+    {
+      "sha": "4edd0a88154501d7f79d7daf75d93d10f2ca506c",
+      "author": "luis-camero",
+      "date": "2023-03-02T17:32:08Z",
+      "message": "Use setters to initialize Accessory"
+    },
+    {
+      "sha": "3aab506707cf1f1827a275f6a9400a6bcd7ac844",
+      "author": "luis-camero",
+      "date": "2023-03-01T12:59:35Z",
+      "message": "Merge pull request #1 from clearpathrobotics/wip-object-structure\n\nSplit Parsing and Config Containers"
+    },
+    {
+      "sha": "09945aa8d4327d65009f50e5fd32b1dc537342b0",
+      "author": "luis-camero",
+      "date": "2023-03-01T03:42:47Z",
+      "message": "Updated sample config to match changes"
+    },
+    {
+      "sha": "da67a2a6ebcb98cde3dd0af70928a343e9bf0a6a",
+      "author": "luis-camero",
+      "date": "2023-03-01T03:42:25Z",
+      "message": "Added extras to parser"
+    },
+    {
+      "sha": "279b7c6c6bfc9c246aa7ba0492ae8b7489bf50ca",
+      "author": "luis-camero",
+      "date": "2023-03-01T03:41:30Z",
+      "message": "Default extras file paths set to empty strings"
+    },
+    {
+      "sha": "e2c699ed1f2f4ca25ebfdcaefbe5f463b34968f8",
+      "author": "luis-camero",
+      "date": "2023-03-01T03:40:44Z",
+      "message": "Fixed File class __str__ method"
+    },
+    {
+      "sha": "71b62b6b1c9ea40c32b2df2534b08347ddf3bcb6",
+      "author": "luis-camero",
+      "date": "2023-03-01T03:22:13Z",
+      "message": "Moved everything out of Parser class, and added Parser suffix"
+    },
+    {
+      "sha": "9f6580d35357ab3f4b1789d7f54d1eff113c4464",
+      "author": "luis-camero",
+      "date": "2023-03-01T03:21:30Z",
+      "message": "Swap to multi-class inheritance for PACS configs"
+    },
+    {
+      "sha": "71372a807c646f68dbc8640d1deb985489a23943",
+      "author": "luis-camero",
+      "date": "2023-03-01T03:12:00Z",
+      "message": "Removed parsing from clearpath_config"
+    },
+    {
+      "sha": "e3439253c89950082aaffd092171e09001d6e658",
+      "author": "luis-camero",
+      "date": "2023-03-01T03:11:21Z",
+      "message": "Fixed bugs in setting remotes"
+    },
+    {
+      "sha": "363d78d52d23b23cd90e580d5e121c22bdfa4e55",
+      "author": "luis-camero",
+      "date": "2023-02-28T16:10:44Z",
+      "message": "Added Platform Config, Only Husky and Jackal"
+    },
+    {
+      "sha": "a09592d67e2f251c64a373623af4d5688e7989b5",
+      "author": "luis-camero",
+      "date": "2023-02-28T16:09:32Z",
+      "message": "Changed prefix to name"
+    },
+    {
+      "sha": "81abe3da0a6e6f0fb272c2a171436db93255b392",
+      "author": "luis-camero",
+      "date": "2023-02-27T15:42:47Z",
+      "message": "Added Accessory class"
+    },
+    {
+      "sha": "cf2e879f8408e9cc032155a0d37e35d2b6e2963f",
+      "author": "luis-camero",
+      "date": "2023-02-23T20:55:04Z",
+      "message": "Added Platform to common"
+    },
+    {
+      "sha": "41aecfc453b59f9aa77bb596c8c66b99623dfb43",
+      "author": "luis-camero",
+      "date": "2023-02-23T19:25:14Z",
+      "message": "Added File and SerialNumber classes"
+    },
+    {
+      "sha": "8927e069b143500a5584f2281bf0e03e44c25806",
+      "author": "luis-camero",
+      "date": "2023-02-23T15:12:36Z",
+      "message": "Added proper spacing"
+    },
+    {
+      "sha": "b62d31bba2ba8d8130dc1645e55c994aa199d67a",
+      "author": "luis-camero",
+      "date": "2023-02-22T16:52:16Z",
+      "message": "Added too many fields test"
+    },
+    {
+      "sha": "d0058b69cf93f2e372afd00b60842edce615420d",
+      "author": "luis-camero",
+      "date": "2023-02-22T16:51:44Z",
+      "message": "Regex expression set to raw string"
+    },
+    {
+      "sha": "9f331b5dd0352df9f347eed007380482a9e594f3",
+      "author": "luis-camero",
+      "date": "2023-02-22T16:47:53Z",
+      "message": "Fixed SystemConfig init"
+    },
+    {
+      "sha": "3695c9d16fde3e942bf865b2b87191510c544279",
+      "author": "luis-camero",
+      "date": "2023-02-22T16:45:29Z",
+      "message": "Added check that hostname must be str"
+    },
+    {
+      "sha": "3dde97a0d710f87edec4a38b57413f6f276803d3",
+      "author": "luis-camero",
+      "date": "2023-02-22T16:42:07Z",
+      "message": "Fixed initialization of HostConfig"
+    },
+    {
+      "sha": "4e32a01bd96134f3796ed83c4f444805f5b37dd1",
+      "author": "luis-camero",
+      "date": "2023-02-22T16:34:12Z",
+      "message": "Removed checks from parser"
+    },
+    {
+      "sha": "1b0f7df465db82dc2fd8d65101d79a98bf5abade",
+      "author": "luis-camero",
+      "date": "2023-02-21T18:24:13Z",
+      "message": "Added UnitTest information to README"
+    },
+    {
+      "sha": "2a7ce27129c1b0923311c546729e6d5d4b32b8a5",
+      "author": "luis-camero",
+      "date": "2023-02-21T18:17:34Z",
+      "message": "Removed utils"
+    },
+    {
+      "sha": "3ad9c5a104b9ac77628dfd91aced8848e1dcc44a",
+      "author": "luis-camero",
+      "date": "2023-02-21T18:12:36Z",
+      "message": "Added tests for SystemConfig"
+    },
+    {
+      "sha": "7e788e68d373e6c403591b0dde3ff87a23e34da0",
+      "author": "luis-camero",
+      "date": "2023-02-09T22:11:03Z",
+      "message": "Moved all class files out of base"
+    },
+    {
+      "sha": "300f6e070f36cdca1b23bec869e5af64880b068d",
+      "author": "luis-camero",
+      "date": "2023-02-09T20:47:07Z",
+      "message": "Added keys"
+    },
+    {
+      "sha": "24eacb8457d63b1c5172d67dcb438d8a55210673",
+      "author": "luis-camero",
+      "date": "2023-02-03T16:11:17Z",
+      "message": "Moved version"
+    },
+    {
+      "sha": "56331da7940c8580a8ea3dd41835c54573b88538",
+      "author": "luis-camero",
+      "date": "2023-02-03T15:31:11Z",
+      "message": "Initial config parser structure"
+    },
+    {
+      "sha": "e1b370e1a228b31ea286c5589408d917421bc6fc",
+      "author": "luis-camero",
+      "date": "2023-01-23T22:31:46Z",
+      "message": "Initial commit"
+    }
+  ]
+}

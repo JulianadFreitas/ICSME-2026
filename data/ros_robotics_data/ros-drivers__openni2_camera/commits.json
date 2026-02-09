@@ -1,0 +1,1476 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-07T22:12:40Z",
+    "source": "github_rest",
+    "endpoint": "/repos/{owner}/{repo}/commits",
+    "owner": "ros-drivers",
+    "repo": "openni2_camera",
+    "per_page": 100
+  },
+  "data": [
+    {
+      "sha": "05a576116e2a7520ec5d37a8dd84c113572e95ad",
+      "author": "Michael Ferguson",
+      "date": "2025-05-22T17:37:48Z",
+      "message": "fix name of branch in readme"
+    },
+    {
+      "sha": "c4cb8f8f36d0438a184594f1b3aeae8e5081aa92",
+      "author": "Michael Ferguson",
+      "date": "2025-05-21T12:26:40Z",
+      "message": "2.3.0"
+    },
+    {
+      "sha": "a50d11b5c1abd9ef3bfaf1046b5248e551f86774",
+      "author": "Michael Ferguson",
+      "date": "2025-05-21T12:26:21Z",
+      "message": "update changelogs"
+    },
+    {
+      "sha": "7c660b772ff57d72661c28dc51bdb7e4b8610d11",
+      "author": "Michael Ferguson",
+      "date": "2025-05-21T12:24:50Z",
+      "message": "update branches in README"
+    },
+    {
+      "sha": "8e9cd20de3c2035fd0301e98879088716efd5127",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2025-05-21T12:23:05Z",
+      "message": "Replace ament_target_dependencies with target_link_libraries (#145)\n\n`ament_target_dependencies` is deprecated, it will require a release on\n`rolling`\n\nSigned-off-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "9574be235063d767a80f1ef2bc14f70d5f2365ca",
+      "author": "Michael Ferguson",
+      "date": "2024-11-03T14:27:39Z",
+      "message": "2.2.2"
+    },
+    {
+      "sha": "f2291c065d03f575c373ae612c8475306c69e20f",
+      "author": "Michael Ferguson",
+      "date": "2024-11-03T14:27:32Z",
+      "message": "update changelogs"
+    },
+    {
+      "sha": "1e22cfaf0d80b83cfa47a02d44670e752654b1e5",
+      "author": "Michael Ferguson",
+      "date": "2024-11-03T13:54:54Z",
+      "message": "update notes on openni2_launch"
+    },
+    {
+      "sha": "b277de32436c24b4e214ec7306432745c6ab4713",
+      "author": "Michael Ferguson",
+      "date": "2024-11-03T00:55:56Z",
+      "message": "add dynamic parameters (#141)\n\nIn ROS 1, a number of things were dynamic - this PR re-adds them using\r\nthe new ROS 2 paradigm for parameter updating. I've tested this with a\r\nPrimesense device and am able to disable auto_exposure and\r\nauto_white_balance."
+    },
+    {
+      "sha": "fb118432e2b2ada99e9092245e348ecefab0b2eb",
+      "author": "Michael Ferguson",
+      "date": "2024-08-11T13:39:35Z",
+      "message": "2.2.1"
+    },
+    {
+      "sha": "c41704370e3a83be8358f51678c571163ae491ae",
+      "author": "Michael Ferguson",
+      "date": "2024-08-11T13:39:31Z",
+      "message": "update changelog"
+    },
+    {
+      "sha": "0e439b64678d4e8d19e067c4c90d2d85fab6f26c",
+      "author": "Michael Ferguson",
+      "date": "2024-08-10T19:46:23Z",
+      "message": "update readme - lazy pub/sub is implemented"
+    },
+    {
+      "sha": "3927ec067a9d98cc008fab47c4f7c32bb87d2ef0",
+      "author": "Michael Ferguson",
+      "date": "2024-08-10T19:44:54Z",
+      "message": "rename depth/image_raw to depth_raw/image (#140)\n\nWithout this change, both depth/image and depth/image_raw publish the\r\nsame camera_info topic (depth/camera_info) - this has several issues:\r\n* subscribing to either image causes both to be published along with\r\ntheir respective camera_info\r\n * remapping either camera_info, remaps both\r\n* In Jazzy, it appears that the double camera_info also causes minor\r\nissues with message_filters in downstream packages"
+    },
+    {
+      "sha": "215a85cd6b7388bc6375b2de8a68ed3209636d81",
+      "author": "Michael Ferguson",
+      "date": "2024-03-14T22:56:46Z",
+      "message": "2.2.0"
+    },
+    {
+      "sha": "6e34b9a455f91a2a8365f49ad3f9a2042285afdd",
+      "author": "Michael Ferguson",
+      "date": "2024-03-14T22:56:26Z",
+      "message": "update changelog"
+    },
+    {
+      "sha": "0dfb84da6a3a8121313d6761236ee3ce88ebcf8d",
+      "author": "Michael Ferguson",
+      "date": "2024-03-14T22:04:44Z",
+      "message": "fix build on Ubuntu Noble (24.04) (#138)\n\nadd missing header"
+    },
+    {
+      "sha": "dab527b086ac2a5611064a4467e20268e74e765c",
+      "author": "Michael Ferguson",
+      "date": "2024-02-14T14:04:36Z",
+      "message": "2.1.0"
+    },
+    {
+      "sha": "b574f9d885944b197cfb16cccfb97e398edc3ed7",
+      "author": "Michael Ferguson",
+      "date": "2024-02-14T14:04:28Z",
+      "message": "update changelog"
+    },
+    {
+      "sha": "01f3ddbe40180b57219be5e68df62cf638821e36",
+      "author": "Michael Ferguson",
+      "date": "2024-02-01T20:19:46Z",
+      "message": "implement proper lazy subscribers (#136)\n\nFixes #119, works in Jazzy and later"
+    },
+    {
+      "sha": "e84265c76463cc9bdf860c450ec258385a29e30c",
+      "author": "Michael Ferguson",
+      "date": "2024-02-01T20:12:59Z",
+      "message": "update CI on ros2 branch to only target rolling"
+    },
+    {
+      "sha": "e0db51fdfb060f42a39155472e515a2127101d31",
+      "author": "Michael Ferguson",
+      "date": "2024-02-01T20:12:05Z",
+      "message": "update readme to note new iron branch"
+    },
+    {
+      "sha": "512d8cdf3c2a1cc4df1ddfc1d674a20b7b391fe4",
+      "author": "Christian Rauch",
+      "date": "2023-11-13T22:15:17Z",
+      "message": "publish tfs and set matching frame names (#135)\n\nThis PR ports the TFs from original\r\n[`kinect_frames.launch`](https://github.com/ros-drivers/rgbd_launch/blob/noetic-devel/launch/kinect_frames.launch)\r\nto the ROS 2 launch files and sets the image frame names appropriately."
+    },
+    {
+      "sha": "e07df4ea928515a5bb16a3bad169e093a5bf54f0",
+      "author": "TinLethax",
+      "date": "2023-07-27T23:34:25Z",
+      "message": "Depth-only point cloud launch file for Non-RGB PrimeSense device. (#132)\n\nSome Depth camera based on PS1080 SoC such as Asus Xtion and (some)\r\nXtion Pro don't come with RGB camera.\r\n\r\nThe original 'camera_with_cloud' launch file requires the missing RGB\r\ncolor stream, which Xtion and (some) Xtion Pro don't provide. This make\r\npoint cloud topic publish no message at all.\r\n\r\nSolving by changing `depth_image_proc::PointCloudXyzrgbNode` to\r\n`depth_image_proc::PointCloudXyzNode` and remove all RGB related topic\r\nremap in launch file. Resulted in the new launch file named\r\n'camera_with_cloud_norgb'. Modified from 'camera_with_cloud' launch\r\nfile.\r\n\r\nI tested with these following device and environment\r\n\r\n- Asus Xtion ([Possibly pre-production or custom made\r\nunit](https://www.aliexpress.com/item/1005004788630548.html?))\r\n- ROS2 Humble\r\n- Ubuntu 22.04 on WSL2 \r\n- USBIP\r\n\r\nSigned-off-by: Tin LetHax <thipok17@gmail.com>"
+    },
+    {
+      "sha": "c990db17e97d5d3ef08710f28456dc4835201c8f",
+      "author": "Michael Ferguson",
+      "date": "2023-04-26T16:00:01Z",
+      "message": "2.0.2"
+    },
+    {
+      "sha": "ba3c5c5d3284e10e6f3801834b37ee9e3c577ec6",
+      "author": "Michael Ferguson",
+      "date": "2023-04-26T15:59:54Z",
+      "message": "update changelogs"
+    },
+    {
+      "sha": "716bbb3def97f3eac197f7b4cdebbaf3cd6ac2f9",
+      "author": "Mario Prats",
+      "date": "2023-04-26T15:58:37Z",
+      "message": "add depth_image_proc exec dep (#131)\n\nNeeded when starting the camera with point cloud processing."
+    },
+    {
+      "sha": "43aa1add7165f7c0f06705445bd928a07c3891dd",
+      "author": "Michael Ferguson",
+      "date": "2023-03-03T02:47:36Z",
+      "message": "2.0.1"
+    },
+    {
+      "sha": "11a266b16b06d7451373ccc60f5de9443798470b",
+      "author": "Michael Ferguson",
+      "date": "2023-03-03T02:46:58Z",
+      "message": "prepare changelog"
+    },
+    {
+      "sha": "ded261ce159eb6e80954155cef766d40cdfe35ba",
+      "author": "Michael Ferguson",
+      "date": "2023-03-03T02:45:44Z",
+      "message": "fix device time (#129)"
+    },
+    {
+      "sha": "93cd00e9c23b282000b9f97ca4d6a7c22ce98c95",
+      "author": "Michael Ferguson",
+      "date": "2023-03-03T02:38:38Z",
+      "message": "add build depend on pkg-config (#128)"
+    },
+    {
+      "sha": "7bfa8f01bd5cc73fbadced28b109fa7e61df7eef",
+      "author": "Michael Ferguson",
+      "date": "2023-03-02T02:45:53Z",
+      "message": "2.0.0"
+    },
+    {
+      "sha": "c1cd57bfdb7f82cf3cc51f66a3cbed7296e71fb4",
+      "author": "Michael Ferguson",
+      "date": "2023-03-02T02:45:38Z",
+      "message": "prepare changelog"
+    },
+    {
+      "sha": "d576000a69896ff2683a92e1c16e9459b06211aa",
+      "author": "Michael Ferguson",
+      "date": "2023-02-26T16:23:58Z",
+      "message": "revive the test wrapper (#127)\n\nresolves #123"
+    },
+    {
+      "sha": "1b38c21f0af8dfb7828c76ae46ac6ce42942fb5e",
+      "author": "Michael Ferguson",
+      "date": "2023-02-26T16:21:32Z",
+      "message": "fix license file\nI was trying to make sure the auto detection in github worked,\nbut accidently grabbed the BSD-3-Clear rather than the actual\nBSD-3-New license"
+    },
+    {
+      "sha": "9018dad99f258cb8d29e20d51971beda591186b0",
+      "author": "Michael Ferguson",
+      "date": "2023-02-26T16:13:57Z",
+      "message": "add license file (#125)"
+    },
+    {
+      "sha": "c930cd74215072cfba8ce90414a7bbd42cb125d7",
+      "author": "Michael Ferguson",
+      "date": "2023-02-23T01:09:03Z",
+      "message": "remove boost and unused files (#122)\n\n* replace boost functionality by standard C++\r\n* remove ROS nodelet metadata\r\n* store parameter callback\r\n* remove ROS1 node\r\n* remove unused os import\r\n\r\nCo-authored-by: Christian Rauch <Rauch.Christian@gmx.de>"
+    },
+    {
+      "sha": "2a22f7dfcfc32efaae377201f14dd9dfb1a5bc75",
+      "author": "Michael Ferguson",
+      "date": "2023-02-22T22:22:34Z",
+      "message": "remove unused travis file (#117)"
+    },
+    {
+      "sha": "50210276bec9c8efe557ac2cfd9008e13e422971",
+      "author": "Michael Ferguson",
+      "date": "2023-02-22T22:10:08Z",
+      "message": "fix build, target only humble and later (#118)"
+    },
+    {
+      "sha": "7b9886f673c4506486d586a3a28e42052a390e2f",
+      "author": "Isaac I.Y. Saito",
+      "date": "2023-02-22T21:47:58Z",
+      "message": "Capability: [CI] Add GitHub Action (#116)\n\n* Capability: [CI] Add GitHub Action\r\n* Maintenance: Update maintaner contact"
+    },
+    {
+      "sha": "a02f7886f0b9741ece4701bd428f0d7e679f7ecf",
+      "author": "Isaac I.Y. Saito",
+      "date": "2023-02-22T21:35:16Z",
+      "message": "Merge pull request #115 from mikeferguson/ros2_clean\n\ninitial port to ROS2"
+    },
+    {
+      "sha": "7cae6a0f6fa916b4b22d79f3cc4508dd33cef156",
+      "author": "Michael Ferguson",
+      "date": "2023-02-22T17:31:25Z",
+      "message": "update readme"
+    },
+    {
+      "sha": "c23ce30e0084f95589890232f716e88eff05ab60",
+      "author": "Michael Ferguson",
+      "date": "2023-02-22T16:36:54Z",
+      "message": "update CI to ros2"
+    },
+    {
+      "sha": "d4ab0d26380c45acaca7c8f2c4d44b9f5c3e3973",
+      "author": "Michael Ferguson",
+      "date": "2020-06-10T02:02:05Z",
+      "message": "initial port to ROS2"
+    },
+    {
+      "sha": "dd6f453ed11e3a68404cfa889530d0d149474645",
+      "author": "Isaac I.Y. Saito",
+      "date": "2022-04-12T10:07:52Z",
+      "message": "Merge pull request #114 from ros-drivers/release-1.6.0\n\n1.6.0"
+    },
+    {
+      "sha": "89b67109be853fb57b18f68b0bf3f404a6a20bc9",
+      "author": "Isaac I.Y. Saito",
+      "date": "2022-04-12T09:56:03Z",
+      "message": "1.6.0"
+    },
+    {
+      "sha": "99fa19467eb52ef0626983583ce734c5f6681db5",
+      "author": "Isaac I.Y. Saito",
+      "date": "2022-03-23T02:20:45Z",
+      "message": "Merge pull request #111 from iory/depth_registered\n\nAdd depth_registered and depth_registered_filtered arguments"
+    },
+    {
+      "sha": "c63596373989d60e8e78cc6043da91c38f317ed4",
+      "author": "iory",
+      "date": "2022-02-04T09:04:18Z",
+      "message": "Add depth_registered and depth_registered_filtered arguments"
+    },
+    {
+      "sha": "f7a95a54d8c8a85a7ad1be9bab37a0b481e98e5d",
+      "author": "Isaac I.Y. Saito",
+      "date": "2021-02-01T14:52:37Z",
+      "message": "1.5.1"
+    },
+    {
+      "sha": "8a632ad451624ccb134abcdffae0e56064e2f287",
+      "author": "Isaac I.Y. Saito",
+      "date": "2021-02-01T14:51:54Z",
+      "message": "Merge pull request #107 from plusone-robotics/release-1.5.1\n\nRelease 1.5.1"
+    },
+    {
+      "sha": "10f657a1b85fe7e45c40cf0d7c374005b346546b",
+      "author": "Isaac I.Y. Saito",
+      "date": "2021-02-01T14:34:38Z",
+      "message": "changelog 1.5.1"
+    },
+    {
+      "sha": "c23a9a828ac97b9d30113eced1a7a9e35f3e2912",
+      "author": "Isaac I.Y. Saito",
+      "date": "2021-02-01T14:32:34Z",
+      "message": "[doc] Add a repo top level doc. Add about dev branching."
+    },
+    {
+      "sha": "8987d175cef39712040b919b11bff40e07f7a646",
+      "author": "Isaac I.Y. Saito",
+      "date": "2021-02-01T11:39:09Z",
+      "message": "Merge pull request #106 from tue-robotics/gh_actions\n\nReplace Travis by GH Actions"
+    },
+    {
+      "sha": "ec082f32f882de87e675d24b38fef16f949e7e55",
+      "author": "Isaac I.Y. Saito",
+      "date": "2021-02-01T11:00:59Z",
+      "message": "Merge pull request #105 from tue-robotics/ros1\n\nFix travis of ROS1"
+    },
+    {
+      "sha": "b0276a9909037277c849680b3f7efc99c88fba6d",
+      "author": "Matthijs van der Burgh",
+      "date": "2021-01-30T17:46:50Z",
+      "message": "(actions) add GH actions"
+    },
+    {
+      "sha": "b2e7070b84675c3254806063401d7db9826f2873",
+      "author": "Matthijs van der Burgh",
+      "date": "2021-01-30T23:06:04Z",
+      "message": "(travis) fix undefined variable"
+    },
+    {
+      "sha": "00933529a40890e467865152abb4fbebf7f92efd",
+      "author": "Matthijs van der Burgh",
+      "date": "2021-01-30T15:41:59Z",
+      "message": "(travis) fix warnings/cleanup"
+    },
+    {
+      "sha": "d7e18896c5ca046a14cef69c4f86cfccf7992f73",
+      "author": "Matthijs van der Burgh",
+      "date": "2021-01-30T15:39:26Z",
+      "message": "(travis) update ABICHECK_URL"
+    },
+    {
+      "sha": "44cf73103db3cbaa50d2926550af00fe33608ee7",
+      "author": "Isaac I.Y. Saito",
+      "date": "2021-01-12T14:58:45Z",
+      "message": "1.5.0"
+    },
+    {
+      "sha": "45a5e77ac58642805bfaa8ffb2d40ba1d0f3b08c",
+      "author": "Isaac I.Y. Saito",
+      "date": "2021-01-12T11:53:01Z",
+      "message": "Merge pull request #101 from tue-robotics/noetic-devel\n\nUse serialnumber in camera names"
+    },
+    {
+      "sha": "377a82590f24e067b44ea46f93e8148723faef77",
+      "author": "Matthijs van der Burgh",
+      "date": "2021-01-09T22:18:20Z",
+      "message": "Add 'serialnumber_as_name' to launch files"
+    },
+    {
+      "sha": "fcd44937eecc7b580f29b8c08ff5b643bfd39c46",
+      "author": "Matthijs van der Burgh",
+      "date": "2021-01-09T22:13:59Z",
+      "message": "Add missing 'enable_reconnect' to launch files"
+    },
+    {
+      "sha": "0ec835ba70b08229b24fa3ae9ac09214fe4de62a",
+      "author": "Matthijs van der Burgh",
+      "date": "2021-01-09T22:06:51Z",
+      "message": "Match regular and tf_prefix launch files"
+    },
+    {
+      "sha": "0b1723c8fa9fd3c24dca9a8e8917823b7f40fbd4",
+      "author": "Matthijs van der Burgh",
+      "date": "2021-01-09T21:57:11Z",
+      "message": "Add xml tags"
+    },
+    {
+      "sha": "f502b673ec89ce39ed9d82143512d608587759e1",
+      "author": "Matthijs van der Burgh",
+      "date": "2020-11-21T20:14:01Z",
+      "message": "Add option to switch between serial and stringID in cam name"
+    },
+    {
+      "sha": "6f41f28cebcbe68a4778ae034e119d7dba1319f7",
+      "author": "Matthijs van der Burgh",
+      "date": "2020-11-14T14:52:36Z",
+      "message": "Use serialnumber in camera names"
+    },
+    {
+      "sha": "6736cd2ef0cedd69d435ad99cdb997bc9c8fac7f",
+      "author": "Isaac I.Y. Saito",
+      "date": "2020-06-03T22:37:03Z",
+      "message": "Merge pull request #98 from ros-drivers/release-noetic\n\nRelease for Noetic"
+    },
+    {
+      "sha": "c3d18cb27946d98633d0196b9c2adb3a497da7bc",
+      "author": "Isaac I.Y. Saito",
+      "date": "2020-06-03T22:34:21Z",
+      "message": "1.4.2"
+    },
+    {
+      "sha": "bdd3ee434c489751e9ccc90f687317a7e6b98c09",
+      "author": "Isaac I.Y. Saito",
+      "date": "2020-06-03T22:33:57Z",
+      "message": "changelog 1.4.2"
+    },
+    {
+      "sha": "cbb931d1ed4a001683dcfa586af145b182f2a262",
+      "author": "Michael Ferguson",
+      "date": "2020-06-02T14:50:12Z",
+      "message": "update package.xml for noetic support"
+    },
+    {
+      "sha": "247d7a3246d43cda529b95e3bfb85d7ee2edd954",
+      "author": "Isaac I.Y. Saito",
+      "date": "2020-06-02T23:57:57Z",
+      "message": "[CI] Cleanup jobs for obsolete distros. Reduce job nums. Use bleeding edge of ICI."
+    },
+    {
+      "sha": "91ad6bfe418a4929517eed01815a1955846f4b40",
+      "author": "Isaac I.Y. Saito",
+      "date": "2018-12-02T01:02:36Z",
+      "message": "0.4.2"
+    },
+    {
+      "sha": "c994505ae763b34ba7a387a13dd54db60cf3c56c",
+      "author": "Isaac I.Y. Saito",
+      "date": "2018-12-02T01:02:12Z",
+      "message": "changelog 0.4.2"
+    },
+    {
+      "sha": "2441430c387f828c3357e63825069abdfa8f766c",
+      "author": "Isaac I.Y. Saito",
+      "date": "2018-12-02T00:40:44Z",
+      "message": "Merge pull request #92 from 130s/fix_lsusb_missin\n\nFix missing dependency on roswtf plugin."
+    },
+    {
+      "sha": "92bf786aca568b2543cb95bdc6ace65367ec01cb",
+      "author": "Isaac I.Y. Saito",
+      "date": "2018-10-29T22:56:10Z",
+      "message": "Fix missing dependency on roswtf plugin.\n\nWithout usbutils installed/available, `roswtf` plugin fails with unintuitive error message like the following (.\n\n```\n\nLoaded plugin tf.tfwtf\nLoaded plugin openni2_launch.wtf_plugin\nNo package or stack in context\n================================================================================\nStatic checks summary:\n\nFound 1 warning(s).\nWarnings are things that may be just fine, but are sometimes at fault\n\n:\n\n================================================================================\nBeginning tests of your ROS graph. These may take awhile...\nanalyzing graph...\n... done analyzing graph\nrunning graph rules...\n... done running graph rules\nTraceback (most recent call last):\n  File \"/opt/ros/kinetic/lib/python2.7/dist-packages/roswtf/__init__.py\", line 224, in _roswtf_main\n      p(ctx)\n        File \"/opt/ros/kinetic/lib/python2.7/dist-packages/openni2_launch/wtf_plugin.py\", line 114, in roswtf_plugin_online\n    error_rule(r, r[0](ctx), ctx)\n      File \"/opt/ros/kinetic/lib/python2.7/dist-packages/openni2_launch/wtf_plugin.py\", line 86, in sensor_notfound\n          id_manufacturer=id_manufacturer, id_product=id_product)\n    File \"/opt/ros/kinetic/lib/python2.7/dist-packages/openni2_launch/wtf_plugin.py\", line 56, in _device_notfound_subproc\n        df = subprocess.check_output(\"lsusb\")\n  File \"/usr/lib/python2.7/subprocess.py\", line 567, in check_output\n      process = Popen(stdout=PIPE, *popenargs, **kwargs)\n        File \"/usr/lib/python2.7/subprocess.py\", line 711, in __init__\n    errread, errwrite)\n      File \"/usr/lib/python2.7/subprocess.py\", line 1343, in _execute_child\n          raise child_exception\nOSError: [Errno 2] No such file or directory\n[Errno 2] No such file or directory\n```"
+    },
+    {
+      "sha": "d64ac02e7066c1f7f760c589f70b2dbda8f75ffd",
+      "author": "Isaac I.Y. Saito",
+      "date": "2018-10-20T08:52:25Z",
+      "message": "0.4.1"
+    },
+    {
+      "sha": "1e346bd83a0278d977fc2e6e86f5ed730b1c7879",
+      "author": "Isaac I.Y. Saito",
+      "date": "2018-10-20T08:52:04Z",
+      "message": "changelog 0.4.1"
+    },
+    {
+      "sha": "5e9ae5266d8fdf4bfd7a3a8e43854cbc287bd186",
+      "author": "Isaac I.Y. Saito",
+      "date": "2018-10-20T08:49:34Z",
+      "message": "Merge pull request #76 from 130s/i/remove_unused_params\n\nRemove unused ROS Parameters."
+    },
+    {
+      "sha": "153a6321393e5d3afe96422112be150ce353c8e9",
+      "author": "Isaac I.Y. Saito",
+      "date": "2018-10-20T07:45:22Z",
+      "message": "Merge pull request #89 from 130s/fix88/i\n\n[roswtf plugin] Accept vendor and product IDs (fix #88)."
+    },
+    {
+      "sha": "290938d2a882ec9ab0b0723d8479d4e77d5193f1",
+      "author": "Isaac I.Y. Saito",
+      "date": "2018-10-20T07:29:24Z",
+      "message": "[CI] Use ABI check to auto.\nSee https://github.com/ros-industrial/industrial_ci/blob/master/doc/index.rst#use-custom-docker-images for 'ABICHECK_MERGE'."
+    },
+    {
+      "sha": "1ba6a9826edfcad47dbe23b3a637cdeb48788542",
+      "author": "Isaac I.Y. Saito",
+      "date": "2018-10-04T07:40:58Z",
+      "message": "[openni_launch] Add roslaunch check."
+    },
+    {
+      "sha": "2d2df077867859a88b03a45821af9ed4f8863928",
+      "author": "Isaac I.Y. Saito",
+      "date": "2018-10-04T07:31:21Z",
+      "message": "[roswtf plugin] Accept vendor and product IDs (fix #88)."
+    },
+    {
+      "sha": "58d42b3d1b7d1630765f28f209ccc073dd9ae5a7",
+      "author": "Isaac I.Y. Saito",
+      "date": "2018-07-18T02:42:21Z",
+      "message": "0.4.0"
+    },
+    {
+      "sha": "3f9e9289954247034f6057fb81836cc67dbb6c04",
+      "author": "Isaac I.Y. Saito",
+      "date": "2018-07-18T02:41:34Z",
+      "message": "changelog 0.4.0"
+    },
+    {
+      "sha": "9851f782888ef7a131b821f198b22c72d8cc3da2",
+      "author": "Isaac I.Y. Saito",
+      "date": "2018-07-18T02:37:06Z",
+      "message": "Merge pull request #80 from plusone-robotics/add_roswtf/indigo_devel\n\nAdd a simple roswtf plugin that checks the number of connected devices"
+    },
+    {
+      "sha": "506b0d0ac0873624da11a8d67f62aaad10aa5acf",
+      "author": "PlusOne Robotics Inc",
+      "date": "2018-07-18T01:48:56Z",
+      "message": "[CI] Update Travis conf: Remove EOLed distro. Add Melodic."
+    },
+    {
+      "sha": "ff647b83d86cbcd57bba08fb6a5ac85a62386b98",
+      "author": "PlusOne Robotics Inc",
+      "date": "2018-07-18T01:29:55Z",
+      "message": "[roswtf plugin] Accept vendor and product IDs."
+    },
+    {
+      "sha": "2954fd0cd1b1006372878ec9403c76cdc39cda09",
+      "author": "Isaac I.Y. Saito",
+      "date": "2018-06-08T00:10:14Z",
+      "message": "[roswtf] sensor detection needs to be run in online check since it uses ROS Param server."
+    },
+    {
+      "sha": "e4fc5574d5ae2152bfe27a989530476fdc63ac45",
+      "author": "Isaac I.Y. Saito",
+      "date": "2018-06-07T18:23:22Z",
+      "message": "[roswtf plugin] Replace with Linux-dependent command."
+    },
+    {
+      "sha": "636cb523ee7589d0209b87262603be57eb1e301b",
+      "author": "Isaac I.Y. Saito",
+      "date": "2018-06-06T06:12:12Z",
+      "message": "[roswtf] Depend on a deb (address https://github.com/ros-drivers/openni2_camera/pull/80#discussion_r193295442)."
+    },
+    {
+      "sha": "8a3e3f9e79c4633fe154836badcd02ff2d89da86",
+      "author": "Isaac I.Y. Saito",
+      "date": "2018-06-06T04:13:59Z",
+      "message": "Add a simple roswtf plugin."
+    },
+    {
+      "sha": "93794e4f1d3dd0af4b070ad387d7e690a54a7519",
+      "author": "Isaac I.Y. Saito",
+      "date": "2018-01-10T14:46:54Z",
+      "message": "Merge pull request #75 from 130s/ci/abi_check\n\n[CI] Add ABI check using industrial_ci. Update for ROS Jade"
+    },
+    {
+      "sha": "89769c6cd30470a92e8ed0bfa054977154519d90",
+      "author": "Isaac I.Y. Saito",
+      "date": "2017-12-13T06:20:18Z",
+      "message": "[CI] Remove shadow and prerelease for Jade, which is EoLed so no use for checking with the release candidates.\n[CI] Slightly more readable file format."
+    },
+    {
+      "sha": "b4927e1e87543097ab0bd9f5bccd5c7326f68030",
+      "author": "Isaac I.Y. Saito",
+      "date": "2017-12-13T06:18:48Z",
+      "message": "[CI] Add ABI check using industrial_ci.\n\n[CI] Remove ABI check from Indigo as it fails.\nSee https://github.com/ros-drivers/openni2_camera/pull/75#issuecomment-351389011"
+    },
+    {
+      "sha": "a2df3dda45801135fa34bd4536e5e24e10bd406d",
+      "author": "Isaac I.Y. Saito",
+      "date": "2017-12-21T20:20:44Z",
+      "message": "Remove unused ROS Parameters.\n\n`auto_exposure` is defined as both ROS Parameter and Dynamic Reconfigure entry as you see in the following search result, and in the code only those dynamic reconf version is used.\n\nThere seems to be other Parameters in the same situation. In this PR Param versions are removed except `arg`s in launch file to retain backward compatibility of launch files.\n\n```\n$ git log -1\ncommit 21ea067c02dbb2f576410208fcb45b79e6fb1521\nAuthor: Isaac I.Y. Saito <130s@2000.jukuin.keio.ac.jp>\nDate:   Fri Nov 3 20:09:21 2017 -0700\n\n    0.3.0\n\n$ ack-grep -B 1 -A 1 -i auto_exposure .\nopenni2_camera/include/openni2_camera/openni2_driver.h\n177-\n178:  bool auto_exposure_;\n179-  bool auto_white_balance_;\n\nopenni2_camera/cfg/OpenNI2.cfg\n30-gen.add(\"color_depth_synchronization\", bool_t, 0, \"Synchronization of color and depth camera\", False)\n31:gen.add(\"auto_exposure\", bool_t, 0, \"Auto-Exposure\", True)\n32-gen.add(\"auto_white_balance\", bool_t, 0, \"Auto-White-Balance\", True)\n\nopenni2_camera/src/openni2_driver.cpp\n203-\n204:  auto_exposure_ = config.auto_exposure;\n205-  auto_white_balance_ = config.auto_white_balance;\n--\n298-  {\n299:    if (!config_init_ || (old_config_.auto_exposure != auto_exposure_))\n300:      device_->setAutoExposure(auto_exposure_);\n301-  }\n--\n320-  // this check is always performed and exposure set.\n321:  if( (!auto_exposure_ && !auto_white_balance_) && exposure_ != 0 )\n322-  {\n--\n931-        // white balance are disabled, and FIXED exposure is used instead.\n932:        if((!auto_exposure_ && !auto_white_balance_ ) && exposure_ == 0)\n933-        {\n--\n944-          ROS_WARN_STREAM(\"Resetting auto exposure and white balance to previous values\");\n945:          device_->setAutoExposure(auto_exposure_);\n946-          device_->setAutoWhiteBalance(auto_white_balance_);\n\nopenni2_launch/launch/includes/device.launch\n11-  <arg name=\"color_depth_synchronization\" default=\"false\" />\n12:  <arg name=\"auto_exposure\" default=\"true\" />\n13-  <arg name=\"auto_white_balance\" default=\"true\" />\n\nopenni2_launch/launch/includes/device.launch.xml\n18-  <arg name=\"color_depth_synchronization\" default=\"false\" />\n19:  <arg name=\"auto_exposure\" default=\"true\" />\n20-  <arg name=\"auto_white_balance\" default=\"true\" />\n--\n47-    <param name=\"color_depth_synchronization\" value=\"$(arg color_depth_synchronization)\" />\n48:    <param name=\"auto_exposure\" value=\"$(arg auto_exposure)\" />\n49-    <param name=\"auto_white_balance\" value=\"$(arg auto_white_balance)\" />\n\nopenni2_launch/launch/openni2_tf_prefix.launch\n26-  <arg name=\"color_depth_synchronization\"     default=\"false\" />\n27:  <arg name=\"auto_exposure\"                   default=\"true\" />\n28-  <arg name=\"auto_white_balance\"              default=\"true\" />\n--\n85-      <arg name=\"color_depth_synchronization\"     value=\"$(arg color_depth_synchronization)\" />\n86:      <arg name=\"auto_exposure\"                   value=\"$(arg auto_exposure)\" />\n87-      <arg name=\"auto_white_balance\"              value=\"$(arg auto_white_balance)\" />\n\nopenni2_launch/launch/openni2.launch\n25-  <arg name=\"color_depth_synchronization\"     default=\"false\" />\n26:  <arg name=\"auto_exposure\"                   default=\"true\" />\n27-  <arg name=\"auto_white_balance\"              default=\"true\" />\n--\n84-      <arg name=\"color_depth_synchronization\"     value=\"$(arg color_depth_synchronization)\" />\n85:      <arg name=\"auto_exposure\"                   value=\"$(arg auto_exposure)\" />\n86-      <arg name=\"auto_white_balance\"              value=\"$(arg auto_white_balance)\" />\n```"
+    },
+    {
+      "sha": "21ea067c02dbb2f576410208fcb45b79e6fb1521",
+      "author": "Isaac I.Y. Saito",
+      "date": "2017-11-04T03:09:21Z",
+      "message": "0.3.0"
+    },
+    {
+      "sha": "7386215742fccca6cca9aeef186e58122fb793b5",
+      "author": "Isaac I.Y. Saito",
+      "date": "2017-11-04T03:09:06Z",
+      "message": "[openni2_launch] Use same version as openni2_camera pkg, in order for these pkgs to be release-ready."
+    },
+    {
+      "sha": "ede289965f5eb4ac998d79a5628faf135608099c",
+      "author": "Isaac I.Y. Saito",
+      "date": "2017-11-03T13:37:15Z",
+      "message": "changelog 0.3.0"
+    },
+    {
+      "sha": "96462322bf5259e35e46953fdfb61c8625e66891",
+      "author": "Isaac I.Y. Saito",
+      "date": "2017-11-04T03:04:57Z",
+      "message": "Merge pull request #57 from 130s/i/doc_launch\n\n[launch] Add usage doc."
+    },
+    {
+      "sha": "300455afafdc63effdb9f829c5756c343689170f",
+      "author": "Isaac I.Y. Saito",
+      "date": "2017-11-03T22:39:48Z",
+      "message": "[maintenance] Update maintainer."
+    },
+    {
+      "sha": "576b616023175f75028430f47c2f72184cfa4587",
+      "author": "Isaac I.Y. Saito",
+      "date": "2017-11-03T13:44:55Z",
+      "message": "[launch] Add usage doc."
+    },
+    {
+      "sha": "c8274f84fc62e852ffd472d9c70629744bf57028",
+      "author": "Isaac I.Y. Saito",
+      "date": "2017-11-03T12:45:01Z",
+      "message": "Merge pull request #55 from 130s/merge/openni2_launch\n\nMove openni2_launch package into this repository"
+    },
+    {
+      "sha": "878398afeef5f9c17966f2e4802af3e4515cac14",
+      "author": "Isaac I.Y. Saito",
+      "date": "2017-10-09T09:13:25Z",
+      "message": "[CI] Update with ROS IJKL distros."
+    },
+    {
+      "sha": "536bb2819c7a4b06ff53e2c07eff0c0f7b68089c",
+      "author": "Isaac I.Y. Saito",
+      "date": "2017-10-09T09:07:07Z",
+      "message": "openni2_launch package as a subfolder."
+    },
+    {
+      "sha": "b10ca3c304180db0d114acc48d1a7ed585c3487e",
+      "author": "Isaac I.Y. Saito",
+      "date": "2017-10-09T08:42:13Z",
+      "message": "0.2.3"
+    },
+    {
+      "sha": "e1d46726162fdb03d2f59c3e702c7328ea953a51",
+      "author": "Isaac I.Y. Saito",
+      "date": "2016-05-18T18:24:40Z",
+      "message": "Add CI config (Travis CI using industrial_ci). - All Jade jobs are allow-failure since it's (close to) EOLed. - All pre-release jobs are allow-failure since they are not always necessary (although almost always helpful)."
+    },
+    {
+      "sha": "4ca5440c65cad0f1a809934695770d0337b2fcee",
+      "author": "Isaac I.Y. Saito",
+      "date": "2017-08-23T19:13:15Z",
+      "message": "Add a maintainer"
+    },
+    {
+      "sha": "7f9e5d5dc9a39ad62567d7f0b5b33cbe66a506c0",
+      "author": "Johannes Meyer",
+      "date": "2016-08-17T13:30:30Z",
+      "message": "openni2_launch: disable bonding if respawn argument is false"
+    },
+    {
+      "sha": "5bae6a0293041c7859ab1a1b9e70b8aa686ffe19",
+      "author": "Ryosuke Tajima",
+      "date": "2016-04-04T09:01:55Z",
+      "message": "add '(ir|color|depth)_mode' arguments to change the resolution/FPS of each channel"
+    },
+    {
+      "sha": "d3f4912d1153d6e98a08d72e586fa159578b0c91",
+      "author": "Michael Ferguson",
+      "date": "2015-01-24T04:33:42Z",
+      "message": "0.2.2"
+    },
+    {
+      "sha": "6f205a10fba04d5edbd34dd0ef11dede246f655b",
+      "author": "Michael Ferguson",
+      "date": "2015-01-24T04:33:34Z",
+      "message": "update changelog"
+    },
+    {
+      "sha": "1ed40d4f7c84492e1c6986cb7a5e6ddcf71bd2c9",
+      "author": "Michael Ferguson",
+      "date": "2015-01-19T05:03:41Z",
+      "message": "add tf_prefix version, as per #16"
+    },
+    {
+      "sha": "e9e8e72fd14223a7725989e76dcd03bad8f3a8ac",
+      "author": "Michael Ferguson",
+      "date": "2015-01-19T05:03:24Z",
+      "message": "fix #19, reverts #16"
+    },
+    {
+      "sha": "a0048053f68507459e354765f9160658058ccb29",
+      "author": "Michael Ferguson",
+      "date": "2014-05-22T20:02:17Z",
+      "message": "0.2.1"
+    },
+    {
+      "sha": "f6cec2b99773f22e0476ab3a868cc2ca001483df",
+      "author": "Michael Ferguson",
+      "date": "2014-05-22T20:02:06Z",
+      "message": "update changelog"
+    },
+    {
+      "sha": "6bfb90413d2760ea503dc3de12425b6d058a5ba2",
+      "author": "Dariush Forouher",
+      "date": "2014-05-21T09:33:15Z",
+      "message": "Force device_id to string type\n\ndevice_id might look like an integer. in that case, getParam()\ndoesn't want to parse the param as a string for some reason (not\nsure if this is by design).\n\nThis patch works around that issue."
+    },
+    {
+      "sha": "cf6b7ae2bfcde807bd7507a57bec797ab573860d",
+      "author": "Michael Ferguson",
+      "date": "2014-05-21T03:21:40Z",
+      "message": "0.2.0"
+    },
+    {
+      "sha": "664804f93dfc831091c16da916e30459ceb3e488",
+      "author": "Michael Ferguson",
+      "date": "2014-05-21T03:20:59Z",
+      "message": "update changelog"
+    },
+    {
+      "sha": "661e2940463c9fe16beb642837ad5d07d4243a2e",
+      "author": "Piyush Khandelwal",
+      "date": "2014-05-06T19:57:12Z",
+      "message": "Remove machine arg, as it is not necessary. Closes #17"
+    },
+    {
+      "sha": "a4eb3fb8316b724badeade6d349c7692fa40d6df",
+      "author": "Mark Pitchless",
+      "date": "2014-04-30T15:51:15Z",
+      "message": "Add tf_prefix same as openni"
+    },
+    {
+      "sha": "c09b83a83b53dad23103ba5f55f2222f8bd215b0",
+      "author": "Libor Wagner",
+      "date": "2013-10-01T09:03:09Z",
+      "message": "Fix issue #9\n\nThis way the defaults for depth processing are set apropriately for both\nhardware and software registration."
+    },
+    {
+      "sha": "51711ed08ae01882232e28bc9ee29d70542eec21",
+      "author": "Michael Ferguson",
+      "date": "2013-09-30T18:29:33Z",
+      "message": "0.1.2"
+    },
+    {
+      "sha": "2b7b3f5315db1950fbee9d3a94f1e55152f406a0",
+      "author": "Michael Ferguson",
+      "date": "2013-09-30T18:29:04Z",
+      "message": "update changelog"
+    },
+    {
+      "sha": "a0dd94c3b09ba88b3b0aa242d9d647820c63e9ee",
+      "author": "Libor Wagner",
+      "date": "2013-09-30T13:03:41Z",
+      "message": "Exposing driver parameters"
+    },
+    {
+      "sha": "9a5e44aac662cc3df0c7e44dc9533dbe86fe5057",
+      "author": "Michael Ferguson",
+      "date": "2013-09-25T18:29:54Z",
+      "message": "0.1.1"
+    },
+    {
+      "sha": "b0b585165e1eb3c57efbbc9a624058c1af2ba0f5",
+      "author": "Michael Ferguson",
+      "date": "2013-09-25T18:29:25Z",
+      "message": "add changelog"
+    },
+    {
+      "sha": "e31bbecec2ce78ed54c69726cfa5be47d6ed466d",
+      "author": "Marcus Liebhardt",
+      "date": "2013-09-23T03:00:49Z",
+      "message": "enables parameter for hardware depth registration"
+    },
+    {
+      "sha": "ef38fb389b8fdf98377393af8f33ad41fafc316e",
+      "author": "Marcus Liebhardt",
+      "date": "2013-09-16T07:23:19Z",
+      "message": "enables proper namespacing"
+    },
+    {
+      "sha": "30bc81364c4c4064028fc381c1f2bb5ff4055cea",
+      "author": "Michael Ferguson",
+      "date": "2013-09-10T10:43:40Z",
+      "message": "0.1.0"
+    },
+    {
+      "sha": "31895bb029590276159dc79f83a685a2f2877c22",
+      "author": "Michael Ferguson",
+      "date": "2013-09-10T06:27:44Z",
+      "message": "update package.xml for new maintainer, and depend on rgbd_launch"
+    },
+    {
+      "sha": "8ede07d324bafff960e5813269fe27589bd6dd9f",
+      "author": "Michael Ferguson",
+      "date": "2013-09-05T22:27:57Z",
+      "message": "manually update for machine parameters"
+    },
+    {
+      "sha": "cdd43000fa56310ffdb5f147994c79622b232d4d",
+      "author": "Michael Ferguson",
+      "date": "2013-09-05T03:13:01Z",
+      "message": "update kinect_frames to use rgbd_launch version"
+    },
+    {
+      "sha": "5d63e16210e66957fc3f729bbb099c3263719502",
+      "author": "Michael Ferguson",
+      "date": "2013-09-05T02:52:02Z",
+      "message": "remap topics to work with rgbd_launch and be more standard"
+    },
+    {
+      "sha": "4ed6f55e13ba8b48b8e967f2aadd55d8316964e2",
+      "author": "Michael Ferguson",
+      "date": "2013-09-05T01:52:35Z",
+      "message": "update to use rgbd_launch, deprecate internal stuff"
+    },
+    {
+      "sha": "e2535362012aa083235349f01bf1643514b4cd58",
+      "author": "Michael Ferguson",
+      "date": "2013-09-04T20:52:14Z",
+      "message": "make device.launch internal"
+    },
+    {
+      "sha": "11081204c366cc58992e48ed959e82a06f7b7f35",
+      "author": "Dave Hershberger",
+      "date": "2013-07-23T18:11:05Z",
+      "message": "removed leading slashes from tf frames"
+    },
+    {
+      "sha": "b91477ecbdac22b9a2c7f5142ace8e90bc5e4138",
+      "author": "Julius Kammerl",
+      "date": "2013-04-29T21:35:50Z",
+      "message": "adding launch/openni2.launch"
+    },
+    {
+      "sha": "13a4e91d010ba272ef6b5b8452b375b8a80ef057",
+      "author": "Julius Kammerl",
+      "date": "2013-04-29T21:35:22Z",
+      "message": "minor"
+    },
+    {
+      "sha": "4cc124fefda01220277e8c7bc97e9be6fa693b42",
+      "author": "Julius Kammerl",
+      "date": "2013-04-27T02:31:18Z",
+      "message": "initial commit"
+    },
+    {
+      "sha": "e42f59c420f19a02197e80a0030026c2b1f43df9",
+      "author": "Isaac I.Y. Saito",
+      "date": "2017-10-09T08:56:33Z",
+      "message": "openni2_camera package as a subfolder."
+    },
+    {
+      "sha": "f8a47500ea9f1ed6d2b2070615e6f106644be8b7",
+      "author": "Isaac I.Y. Saito",
+      "date": "2017-10-31T06:38:51Z",
+      "message": "Merge pull request #56 from ros-drivers/mikaelarguedas-patch-1\n\nupdate to use non deprecated pluginlib macro"
+    },
+    {
+      "sha": "30186c3cd93e495d807b1a07649a32a971f122d7",
+      "author": "Mikael Arguedas",
+      "date": "2017-10-27T19:06:32Z",
+      "message": "update to use non deprecated pluginlib macro"
+    },
+    {
+      "sha": "2ae2b77f806a3eb4c4247f71c4f76d0036e2389d",
+      "author": "Isaac I.Y. Saito",
+      "date": "2017-10-26T17:49:58Z",
+      "message": "[maintenance] Add maintainer."
+    },
+    {
+      "sha": "5f5ca981da047cbfbc58fa29d7c21fd2e33b4671",
+      "author": "Isaac I.Y. Saito",
+      "date": "2017-10-26T06:02:07Z",
+      "message": "0.2.9"
+    },
+    {
+      "sha": "6972bfef73c922ee794b85c0a3d968be53c14f3b",
+      "author": "Isaac I.Y. Saito",
+      "date": "2017-10-26T06:01:47Z",
+      "message": "changelog 0.2.9"
+    },
+    {
+      "sha": "c26921651fe919320d8b81ad2223e55dd0cce18b",
+      "author": "Isaac I.Y. Saito",
+      "date": "2017-10-26T05:50:32Z",
+      "message": "Merge pull request #53 from plusone-robotics/plusone-robotics/indigo/fix36\n\nAdd device re-connection"
+    },
+    {
+      "sha": "0f93870509d0252261dbd5e99bd1e60c4a14efa3",
+      "author": "Isaac I.Y. Saito",
+      "date": "2017-10-01T20:24:44Z",
+      "message": "Merge pull request #48 from mintar/projector_info\n\nPublish projector/camera_info (fixes disparity img)"
+    },
+    {
+      "sha": "d11c7f12a623f2e116c96d15c9eb5b5653fe781d",
+      "author": "Isaac I.Y. Saito",
+      "date": "2017-08-31T18:25:27Z",
+      "message": "Merge pull request #2 from plusone-robotics/se_fix_51\n\n[WIP] Added fixed exposure capability"
+    },
+    {
+      "sha": "91d08a389ac5c4275e7fbd5bf50118c366c0d2ff",
+      "author": "Isaac I.Y. Saito",
+      "date": "2017-08-31T16:58:17Z",
+      "message": "Merge pull request #1 from plusone-robotics/se_fix_36\n\nCamera re-connection logic"
+    },
+    {
+      "sha": "c4ab205d861560629bd78192b74e1d9da4100e6f",
+      "author": "Shaun Edwards",
+      "date": "2017-08-31T13:27:39Z",
+      "message": "Fixes for reconnection when exposure is fixed"
+    },
+    {
+      "sha": "681e30c7943e7b273979c0354d1932b3865f3fb2",
+      "author": "Shaun Edwards",
+      "date": "2017-08-31T12:38:02Z",
+      "message": "Added work around for issue #51"
+    },
+    {
+      "sha": "6df48ccd7f2de946145fb9284ddd4219f5b016e4",
+      "author": "Shaun Edwards",
+      "date": "2017-08-31T03:11:07Z",
+      "message": "Cleaned up logging, added work-around when auto exposure/white balance are disabled"
+    },
+    {
+      "sha": "cfe64da9531d5779cf340489d8dc20777bbfb245",
+      "author": "Shaun Edwards",
+      "date": "2017-08-30T20:57:32Z",
+      "message": "Initial commit of device reconnection"
+    },
+    {
+      "sha": "77666bb2717e033bf076ff9248e777de8c46a156",
+      "author": "Isaac I.Y. Saito",
+      "date": "2017-08-18T06:27:21Z",
+      "message": "0.2.8"
+    },
+    {
+      "sha": "2a4d0778e20a531bff5923da65c437cb6af3aa83",
+      "author": "Isaac I.Y. Saito",
+      "date": "2017-08-18T06:26:46Z",
+      "message": "changelog 0.2.8"
+    },
+    {
+      "sha": "ef4ab7820d7168a9915a5e05b2af94680c6fdcc8",
+      "author": "Martin Günther",
+      "date": "2017-05-30T13:39:00Z",
+      "message": "Publish projector/camera_info (fixes disparity img)\n\nBoth `freenect_camera` and `openni_camera` publish the topic\n`/camera/projector/camera_info`, but `openni2_camera` didn't. This\ncommit fixes that.\n\nThe topic is required for the disparity image to work (see\nros-drivers/rgbd_launch#6). This commit is a port from the original\nopenni_camera driver.\n\nHow to test:\n\n    roslaunch openni2_launch openni2.launch disparity_processing:=true\n    rosrun image_view disparity_view image:=/camera/depth/disparity\n\nor:\n\n    roslaunch openni2_launch openni2.launch depth_registration:=true disparity_registered_processing:=true\n    rosrun image_view disparity_view image:=/camera/depth_registered/disparity"
+    },
+    {
+      "sha": "3c5b884e7bbd9d0a6eb401847fa04297e2db48b5",
+      "author": "Martin Günther",
+      "date": "2017-05-30T13:34:17Z",
+      "message": "openni2_device: Add getBaseline()\n\nPorted from PCL: https://github.com/PointCloudLibrary/pcl/blob/ecd2e89e748bc1151b7fa9a384ba5e0c3ae0c26f/io/src/openni2/openni2_device.cpp#L79-L85\n\nThe old openni_camera used a property provided by the OpenNI library for this, but these have been removed in OpenNI2: https://github.com/ros-drivers/openni_camera/blob/84dec85d79075451f41c3dcf37e1b8eacbd14212/src/openni_device.cpp#L180-L183"
+    },
+    {
+      "sha": "c0991d9dcfcc96c935433e3c97751f8e608d181d",
+      "author": "Michael Ferguson",
+      "date": "2017-04-29T23:31:00Z",
+      "message": "Merge pull request #46 from taketwo/add-exposure-control\n\nAdd exposure time control"
+    },
+    {
+      "sha": "538069f9f9789316834cd00b92372606836101ff",
+      "author": "Michael Ferguson",
+      "date": "2017-04-29T23:14:59Z",
+      "message": "Merge pull request #47 from mintar/fix_resolve_device_uri\n\nFix resolveDeviceURI: <bus>@<devicenr> format, don't connect if invalid"
+    },
+    {
+      "sha": "6666fdb682d4eb101fc51b284866baea3ba7f223",
+      "author": "Martin Guenther",
+      "date": "2016-12-21T16:52:10Z",
+      "message": "Make <bus>@<devicenr> device_id format work\n\nWithout this patch, things like `device_id = '2@0'` worked (meaning\nany device on bus 2), but `device_id = '2@8'` (meaning device number 8\non bus 2) didn't."
+    },
+    {
+      "sha": "ebfc45e55010c11f03e811e0194da5bbe4ef00e7",
+      "author": "Martin Guenther",
+      "date": "2016-12-21T16:51:26Z",
+      "message": "Don't connect to any device if URI cannot be resolved\n\nFixes #35."
+    },
+    {
+      "sha": "8a0a022a81e732075370c5d448fc12932eed235b",
+      "author": "Sergey Alexandrov",
+      "date": "2016-06-16T15:20:32Z",
+      "message": "Add exposure time control\n\nThis commit adds getter/setter methods for exposure time and a dynamic\nreconfigure option to manipulate this setting."
+    },
+    {
+      "sha": "c60a46c91ebcd33a69a2a588dfd390d5649e2bd2",
+      "author": "Michael Ferguson",
+      "date": "2016-06-07T16:16:28Z",
+      "message": "0.2.7"
+    },
+    {
+      "sha": "f9e7901be6cde5bd85feda856f7c0ddb25bd9c8f",
+      "author": "Michael Ferguson",
+      "date": "2016-06-07T16:16:12Z",
+      "message": "update changelog"
+    },
+    {
+      "sha": "0815ca67c8244c107e8a5e57636233d626e195d0",
+      "author": "Michael Ferguson",
+      "date": "2016-06-02T05:24:09Z",
+      "message": "Merge pull request #44 from jacquelinekay/fix_kinetic_build\n\nfix compile on kinetic"
+    },
+    {
+      "sha": "aad78b79c09f9045d37c668e436d95c11a1d6eed",
+      "author": "Jackie Kay",
+      "date": "2016-05-26T19:22:36Z",
+      "message": "fix compile on kinetic"
+    },
+    {
+      "sha": "a9955f46dd4e7eb86bf51ef4c7e61131f5ab84f4",
+      "author": "Isaac I.Y. Saito",
+      "date": "2016-05-04T16:49:06Z",
+      "message": "0.2.6"
+    },
+    {
+      "sha": "f4c1a85bb5d424094653e155912bba84158bd025",
+      "author": "Isaac I.Y. Saito",
+      "date": "2016-05-04T16:47:53Z",
+      "message": "changelog 0.2.6 (or greater)"
+    },
+    {
+      "sha": "d98af4a9c655435d0a9745d39705df0021291c15",
+      "author": "Isaac I.Y. Saito",
+      "date": "2016-04-16T15:13:18Z",
+      "message": "Merge pull request #40 from 130s/add/travis\n\n[CI] Add Travis config."
+    },
+    {
+      "sha": "6e2e6102c28c8e424a237ce3bfd3f9e5ed25e44d",
+      "author": "Isaac I.Y. Saito",
+      "date": "2016-04-15T08:25:13Z",
+      "message": "[CI] Add Travis config."
+    },
+    {
+      "sha": "2dc246feb39f13a8e7f8b362dc1c5478abae668d",
+      "author": "Michael Ferguson",
+      "date": "2015-12-02T21:45:09Z",
+      "message": "Merge pull request #30 from hgaiser/indigo-devel\n\nCompile fix for OSX"
+    },
+    {
+      "sha": "f546a371cf156fc9b3e2b0ba5561127180d6a4d3",
+      "author": "Michael Ferguson",
+      "date": "2015-10-15T16:41:07Z",
+      "message": "0.2.5"
+    },
+    {
+      "sha": "8a37e4b95359df00c8e0a5ecc5dd7f2fda6ffaa5",
+      "author": "Michael Ferguson",
+      "date": "2015-10-15T16:41:00Z",
+      "message": "update changelog"
+    },
+    {
+      "sha": "c53722e114f908b0d8f9fabf110977229035cf00",
+      "author": "Hans Gaiser",
+      "date": "2015-09-24T12:34:13Z",
+      "message": "Crashfix for OSX and warning fixes."
+    },
+    {
+      "sha": "cf40191eb7c1114637b8a0ac3c2f155a6b9cb29b",
+      "author": "Michael Ferguson",
+      "date": "2015-07-08T18:09:01Z",
+      "message": "Merge pull request #34 from Intermodalics/feature/get_serial_service\n\nadded get_serial service"
+    },
+    {
+      "sha": "fe16af31b97da11c1931d92a701776a8479d29e9",
+      "author": "Ruben Smits",
+      "date": "2015-07-08T13:14:24Z",
+      "message": "added get_serial service\n\nSigned-off-by: Ruben Smits <ruben.smits@intermodalics.eu>"
+    },
+    {
+      "sha": "fab009f0d9dbc4705552e9904ae7f04ca0d1e032",
+      "author": "Hans Gaiser",
+      "date": "2015-04-10T09:19:04Z",
+      "message": "Compile fix for OSX"
+    },
+    {
+      "sha": "0ede5dd527c18d60ca003c4becf29b728bacf97a",
+      "author": "Michael Ferguson",
+      "date": "2015-04-06T08:39:46Z",
+      "message": "0.2.4"
+    },
+    {
+      "sha": "6e72b25946f345afa6d0f86690924cfd017e4b55",
+      "author": "Michael Ferguson",
+      "date": "2015-04-06T08:39:32Z",
+      "message": "update changelogs"
+    },
+    {
+      "sha": "64e8bfb8892838a70bee4adfa07db58e16e541e7",
+      "author": "Michael Ferguson",
+      "date": "2015-04-03T06:34:32Z",
+      "message": "update maintainer email"
+    },
+    {
+      "sha": "a2528a68e805985dbffc6f535860f9131c258107",
+      "author": "Michael Ferguson",
+      "date": "2015-04-03T06:32:39Z",
+      "message": "Merge pull request #28 from stwirth/improve-device-id-lookup\n\nImprove device id lookup"
+    },
+    {
+      "sha": "17c10725a3df469d9663e6f6ffd0bea5dbf2bf6d",
+      "author": "Stephan Wirth",
+      "date": "2015-04-02T10:30:56Z",
+      "message": "proper usage of device_id parameter in resolveDeviceURI, resolve unique parts of device URIs, too"
+    },
+    {
+      "sha": "8c400fa8681b898db9bb3b3d40f1e6ad9eb87215",
+      "author": "Stephan Wirth",
+      "date": "2015-04-02T10:28:28Z",
+      "message": "print vendor id and product id as hex value (like in lsusb)"
+    },
+    {
+      "sha": "0b153619128c4356d093298a59b28eed505d8741",
+      "author": "Michael Ferguson",
+      "date": "2015-01-16T21:13:43Z",
+      "message": "0.2.3"
+    },
+    {
+      "sha": "cdaa3732bf6c5f7c91c0b2d2b87a38876c9f26e1",
+      "author": "Michael Ferguson",
+      "date": "2015-01-16T21:13:35Z",
+      "message": "update changelog"
+    },
+    {
+      "sha": "0894dd81e7604ca7151775b73eddc03ae114f21a",
+      "author": "Michael Ferguson",
+      "date": "2015-01-16T21:12:17Z",
+      "message": "Merge pull request #25 from stwirth/explicit-serial-query\n\nExplicit serial query in OpenNI2Driver::resolveDeviceURI instead of one-time query in OpenNI2DeviceListener::onDeviceConnected & new binary to list devices"
+    },
+    {
+      "sha": "2290783442d032e78f8b99d0eacdcec2cf86feda",
+      "author": "Stephan Wirth",
+      "date": "2014-12-10T21:07:00Z",
+      "message": "adds 'list_devices' binary to check which devices are connected and retrieve their serial number"
+    },
+    {
+      "sha": "2e79f55a98a0297563631526dfa12640c2c01c07",
+      "author": "Stephan Wirth",
+      "date": "2014-12-09T20:52:38Z",
+      "message": "explicitly ask for serial number when trying to resolve device URI instead of doing it once on device connected, fixes #24"
+    },
+    {
+      "sha": "29c38572f4eb4e2414ba9029e152a185e4fe46d8",
+      "author": "Michael Ferguson",
+      "date": "2014-10-07T04:12:23Z",
+      "message": "0.2.2"
+    },
+    {
+      "sha": "2768186dd8c50fcdd9b97711e803cb0a5899dc35",
+      "author": "Michael Ferguson",
+      "date": "2014-10-07T04:11:43Z",
+      "message": "update changelogs"
+    },
+    {
+      "sha": "1655ddc69eecf626fa92c9aad65f0020a34e90fb",
+      "author": "Michael Ferguson",
+      "date": "2014-10-05T03:03:09Z",
+      "message": "Merge pull request #22 from k-okada/add_usb_test_indigo\n\nadd usb_reset"
+    },
+    {
+      "sha": "404d77accc4e8a56b1579e742a4860fb6c667d39",
+      "author": "Kei Okada",
+      "date": "2014-10-02T06:42:39Z",
+      "message": "add usb_reset"
+    },
+    {
+      "sha": "dd529beb42ba12636f97fb4fe10fe2ebbdcbc01d",
+      "author": "Michael Ferguson",
+      "date": "2014-08-23T00:19:47Z",
+      "message": "0.2.1"
+    },
+    {
+      "sha": "70aeba3669c7eaaf0176d791f54c35c1e4de5361",
+      "author": "Michael Ferguson",
+      "date": "2014-08-23T00:19:38Z",
+      "message": "update changelog"
+    },
+    {
+      "sha": "ef0570908bfbaaf07dfbb8cb1af4d6dc07323168",
+      "author": "Michael Ferguson",
+      "date": "2014-08-20T19:47:16Z",
+      "message": "Merge pull request #20 from blackcoder/indigo-devel\n\nDepth only sensors"
+    },
+    {
+      "sha": "f36b2e43e2de1190ef6db318aa2fdb1dbae41fec",
+      "author": "Tarek Taha",
+      "date": "2014-08-20T14:57:25Z",
+      "message": "- Fixed a annoying bug that prevents depth only sensors from properly calculating the point cloud due to incorrect focal length"
+    },
+    {
+      "sha": "66ea1467d1f149b86bd833f09aea2a28d6452e31",
+      "author": "Michael Ferguson",
+      "date": "2014-07-28T19:48:32Z",
+      "message": "Merge pull request #19 from colincsl/patch-1\n\nUpdated cmakelists for OSX"
+    },
+    {
+      "sha": "5488b52720174cdd27c19c0481d71597b70d2a34",
+      "author": "Colin Lea",
+      "date": "2014-07-28T19:43:27Z",
+      "message": "Updated for OSX\n\nPreviously this wouldn't work on OSX. The OpenNI2 library is just called 'openni2' (not 'libopenni2'). This now first checks for 'libopenni2' and if it doesn't find it then it checks for 'openni2'."
+    },
+    {
+      "sha": "22efb4ffac8016f86946a9cb48356d8d67175a44",
+      "author": "Michael Ferguson",
+      "date": "2014-05-22T20:06:18Z",
+      "message": "0.2.0"
+    },
+    {
+      "sha": "04af810813b75bf6b7448e1526977161ce216638",
+      "author": "Michael Ferguson",
+      "date": "2014-05-22T20:05:53Z",
+      "message": "update changelog"
+    },
+    {
+      "sha": "d2a46e8d43468e942b634e64694e69277ddda4f4",
+      "author": "Michael Ferguson",
+      "date": "2014-05-22T20:04:20Z",
+      "message": "Merge pull request #18 from forouher/feature/indigo/serial\n\ndevice_id: find camera by serial number"
+    },
+    {
+      "sha": "97631eeef2fcb7a83415063e778c726900731102",
+      "author": "Dariush Forouher",
+      "date": "2014-05-21T09:42:40Z",
+      "message": "device_id: find camera by serial number\n\nthis brings back a feature from the old openni(1): Selecting a camera based\non its serial number.\n\nThe procedure is simple: When enumerating all available devices, briefly\nopen and query each one for its serial number. After that, compare the\ngiven device_id with the available serial numbers and select the matching\ncamera (if available)."
+    },
+    {
+      "sha": "65777a3c77c341b80cc70c2eb6ea88ab761f93da",
+      "author": "Michael Ferguson",
+      "date": "2014-02-05T01:35:10Z",
+      "message": "Make freenect_stack link a real link for wiki."
+    },
+    {
+      "sha": "61dbf59d03b771af47db1bcdfcf92bf2eed8975b",
+      "author": "Michael Ferguson",
+      "date": "2014-02-03T20:37:06Z",
+      "message": "0.1.2"
+    },
+    {
+      "sha": "4400ce2ca472026361c8dc89b9743672953c73d1",
+      "author": "Michael Ferguson",
+      "date": "2014-02-03T20:36:55Z",
+      "message": "update changelogs"
+    },
+    {
+      "sha": "0ae3b8a876f2914dff5cb4cc4604eb6a4dd8013a",
+      "author": "Michael Ferguson",
+      "date": "2014-02-02T03:50:09Z",
+      "message": "Remove debugging message.\n\nIn looking at the history of this line, it appears to be left over debugging info."
+    },
+    {
+      "sha": "b46f16dc12cb9af629b6b6b9008c6d50dbdc9cbf",
+      "author": "Michael Ferguson",
+      "date": "2014-02-02T03:39:34Z",
+      "message": "Merge pull request #17 from bchretien/hydro-devel\n\nFix CMake error."
+    },
+    {
+      "sha": "4b9951850b4acf7b67c18ab53dcf338bffd654e0",
+      "author": "Benjamin Chrétien",
+      "date": "2014-02-01T20:16:39Z",
+      "message": "Fix CMake error.\n\nCMake Error at CMakeLists.txt:26 (message):\n  message called with incorrect number of arguments"
+    },
+    {
+      "sha": "eb7f8e5ac3ec4276ccc90cb2f46a2a00fa9e7cd4",
+      "author": "Michael Ferguson",
+      "date": "2013-11-13T20:12:50Z",
+      "message": "0.1.1"
+    },
+    {
+      "sha": "78479ad2b0961379b8684cb01d4e0f63f8cc20da",
+      "author": "Michael Ferguson",
+      "date": "2013-11-13T20:12:42Z",
+      "message": "add changelog"
+    },
+    {
+      "sha": "5cefdd106b9ddb1a49d5bb5710c5d6f204798fd7",
+      "author": "Julius Kammerl",
+      "date": "2013-11-12T22:07:17Z",
+      "message": "Fixed default value of ir_mode. Thanks @nxdefiant\n\nhttps://github.com/ros-drivers/openni2_camera/issues/16"
+    },
+    {
+      "sha": "59b6ef54517c35b24c7f746267bfbf47c8dfe739",
+      "author": "Michael Ferguson",
+      "date": "2013-08-29T05:59:38Z",
+      "message": "0.1.0"
+    },
+    {
+      "sha": "db04c1f198245b8b4e3f2db5b197ded3084fba59",
+      "author": "Michael Ferguson",
+      "date": "2013-08-29T05:58:46Z",
+      "message": "update description/maintainer email for release"
+    },
+    {
+      "sha": "97e4a346e76f6632b811c0b380fe18c1950fe4ed",
+      "author": "jonbinney",
+      "date": "2013-08-20T18:20:37Z",
+      "message": "Merge pull request #12 from mikeferguson/device_bus_id\n\nenable selection of device based on the bus id using @<bus>"
+    },
+    {
+      "sha": "cf3e4b774d6fe5cbe070ad3c2170d4da05e5a143",
+      "author": "Michael Ferguson",
+      "date": "2013-08-19T22:12:27Z",
+      "message": "change to openni_camera compatible bus@index, add error checking for malformed URIs and unfound devices"
+    },
+    {
+      "sha": "1aa0b0c9118a32118e55185afe91e85838a262e3",
+      "author": "Michael Ferguson",
+      "date": "2013-08-19T19:58:45Z",
+      "message": "enable selection of device based on the bus id using @<bus>"
+    },
+    {
+      "sha": "c0d8fd77978fb280f3e8ace0c5d1a40be2bcf400",
+      "author": "jonbinney",
+      "date": "2013-07-02T18:50:47Z",
+      "message": "Create README.md"
+    },
+    {
+      "sha": "7849b93dd750c8d8955c88c080c7f1ad59d7b81c",
+      "author": "Jon Binney",
+      "date": "2013-06-21T23:46:03Z",
+      "message": "install node and nodelet"
+    },
+    {
+      "sha": "81367b0fd454be591399063e3921dba63d866dcd",
+      "author": "jonbinney",
+      "date": "2013-06-08T20:06:26Z",
+      "message": "Merge pull request #8 from jkammerl/callback_subscriber_check\n\nAttempt to fix invalid image_transport::CameraPublisher crashes during start-up."
+    },
+    {
+      "sha": "dc1508fe318948e5e9226a8d430d9e3eac426c83",
+      "author": "Julius Kammerl",
+      "date": "2013-06-08T15:17:35Z",
+      "message": "video mode setter methods should not read video mode from class members"
+    },
+    {
+      "sha": "4f5bdf3a5d0f5cbf069ad52cc20759795fb88429",
+      "author": "Julius Kammerl",
+      "date": "2013-06-08T15:13:42Z",
+      "message": "checking for subscribers in color and ir callbacks before publishing"
+    },
+    {
+      "sha": "31cc88570132942e34fe2e39a809cf75fad52752",
+      "author": "jonbinney",
+      "date": "2013-06-03T20:33:37Z",
+      "message": "Merge pull request #5 from stwirth/no_mirroring\n\ndisable mirroring of all streams at startup"
+    },
+    {
+      "sha": "79a45e069dca5623be0b2f0f45c1096392f9d052",
+      "author": "Stephan Wirth",
+      "date": "2013-06-03T18:45:44Z",
+      "message": "disable mirroring of all streams at startup"
+    },
+    {
+      "sha": "bef65f421a0621f6e73dea4998350e37b150af50",
+      "author": "jonbinney",
+      "date": "2013-05-31T17:27:01Z",
+      "message": "Merge pull request #4 from stwirth/master\n\nAdded the ability to resolve device ids like \"#1\" to actual device URIs."
+    },
+    {
+      "sha": "e09cf6b3dab2e9cbb67ca49e75ef5a27b8c00b83",
+      "author": "Stephan Wirth",
+      "date": "2013-05-30T23:54:55Z",
+      "message": "added numbered device id handling, fixes ros-drivers/openni2_camera#2"
+    },
+    {
+      "sha": "81da2c149c2413a5d2bc1df0174a65e608dd96ad",
+      "author": "jonbinney",
+      "date": "2013-05-30T21:32:25Z",
+      "message": "Merge pull request #3 from stwirth/master\n\nadded libopenni2-dev dependency"
+    },
+    {
+      "sha": "ada02cd47520fa2c4a593bfc0c3c1c1a6cd6593a",
+      "author": "Stephan Wirth",
+      "date": "2013-05-30T21:19:00Z",
+      "message": "added libopenni2-dev dependency"
+    },
+    {
+      "sha": "8d7d8ad038a9fdbc09576ade685fff7d79139a43",
+      "author": "Chad Rockey",
+      "date": "2013-05-23T22:56:25Z",
+      "message": "Merge pull request #1 from jkammerl/master\n\ncamera_info fix (wrong focal length)"
+    },
+    {
+      "sha": "4c02f9b3d4c1786b2116c36edfa841183d5dce3a",
+      "author": "Julius Kammerl",
+      "date": "2013-05-06T21:18:27Z",
+      "message": "adjusting time offset in cfg file"
+    },
+    {
+      "sha": "a1d2129e0aa6a27312967054f0cd664c1f940ba8",
+      "author": "Julius Kammerl",
+      "date": "2013-05-04T02:23:36Z",
+      "message": "adding depth scaling parameter"
+    },
+    {
+      "sha": "447c666c58bccb0e6c8a56e633109ff4dcca5685",
+      "author": "Julius Kammerl",
+      "date": "2013-05-03T21:30:12Z",
+      "message": "fixed wrong focal length"
+    },
+    {
+      "sha": "457680011a15b5285911e4c0794379d72e592501",
+      "author": "Julius Kammerl",
+      "date": "2013-05-03T01:25:21Z",
+      "message": "minor"
+    },
+    {
+      "sha": "f5c7c243d9d0573911f1260ddda1ef0b9536f15e",
+      "author": "Julius Kammerl",
+      "date": "2013-05-03T00:50:34Z",
+      "message": "Merge branch 'master' of github.com:jkammerl/openni2_camera\n\nConflicts:\n\tsrc/openni2_driver.cpp"
+    },
+    {
+      "sha": "bc91e1d2bc28f146827a7a1501662f85b0a2b7b9",
+      "author": "Julius Kammerl",
+      "date": "2013-05-03T00:43:02Z",
+      "message": "fixing step parameter in floatin point depth image"
+    },
+    {
+      "sha": "a57ca4fb354384d5428f715ce953ed9232c437f4",
+      "author": "Julius Kammerl",
+      "date": "2013-05-03T00:43:02Z",
+      "message": "fixing step parameter in floatin point depth image"
+    },
+    {
+      "sha": "a23f027bbaaece984e3786d72ca1d5b583733e42",
+      "author": "Julius Kammerl",
+      "date": "2013-04-29T23:04:49Z",
+      "message": "adding ir, color & depth timing correction parameters to dynconfig"
+    },
+    {
+      "sha": "62fd99ad014a308304975680cc28cbacc7b1c8ba",
+      "author": "Julius Kammerl",
+      "date": "2013-04-29T22:08:56Z",
+      "message": "minor"
+    },
+    {
+      "sha": "b8a793d044d2d3d906ea54fd12c1fc408f13539e",
+      "author": "Julius Kammerl",
+      "date": "2013-04-29T21:08:15Z",
+      "message": "fixing copyright headers"
+    },
+    {
+      "sha": "056f17714f934a3871b3eb9d0557f58eb9b449ea",
+      "author": "Julius Kammerl",
+      "date": "2013-04-29T21:05:08Z",
+      "message": "adding timer filter class"
+    },
+    {
+      "sha": "e7c3c37853bfb491aa64dbafd1e7a59136639d66",
+      "author": "Julius Kammerl",
+      "date": "2013-04-29T21:03:40Z",
+      "message": "adding option to sync to internal device clock"
+    },
+    {
+      "sha": "4ada9f7fbb60c1175c3a1c1fd3a9a5aa14a3e0e9",
+      "author": "Julius Kammerl",
+      "date": "2013-04-27T02:29:15Z",
+      "message": "major fixes & optimization"
+    },
+    {
+      "sha": "39e8df3089b0be1627794e59644ac747656ddc22",
+      "author": "Julius Kammerl",
+      "date": "2013-04-27T02:29:01Z",
+      "message": "adding openni2_nodelets.xml"
+    },
+    {
+      "sha": "96ad7fa48a2c06a52a7392d35aecfd3e9cf65708",
+      "author": "Julius Kammerl",
+      "date": "2013-04-26T04:48:08Z",
+      "message": "fixing video mode switching"
+    },
+    {
+      "sha": "511aeb5a70f39271e4525f2cd02af49c3874ca52",
+      "author": "Julius Kammerl",
+      "date": "2013-04-26T02:15:30Z",
+      "message": "first working version of ROS wrapper & ROS driver"
+    },
+    {
+      "sha": "c1fc54f4ea7dd4284ad4f120278ecab3fd3ecb82",
+      "author": "Julius Kammerl",
+      "date": "2013-04-24T00:55:00Z",
+      "message": "initial commit of openni2 wrapper"
+    }
+  ]
+}

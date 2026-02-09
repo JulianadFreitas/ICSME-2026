@@ -1,0 +1,456 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-07T06:34:10Z",
+    "source": "github_rest",
+    "endpoint": "/repos/{owner}/{repo}/commits",
+    "owner": "eProsima",
+    "repo": "foonathan_memory_vendor",
+    "per_page": 100
+  },
+  "data": [
+    {
+      "sha": "d73c6a3f66dea82cff0af9095900c7090b319383",
+      "author": "mosfet80",
+      "date": "2026-01-12T18:56:14Z",
+      "message": "Change upstream to fix build with clang and avoid patch command (#80)\n\n* fix compile \n\nfix error: identifier '_GB' preceded by whitespace in a literal operator declaration is deprecated [-Werror,-Wdeprecated-literal-operator]\r\n  684 |             constexpr std::size_t operator\"\" _GB(unsigned long long value) noexcept\r\n\n\nSigned-off-by: mosfet80 <10235105+mosfet80@users.noreply.github.com>\n\n* Update changelog\n\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>\n\n* Change upstream to eProsima fork to avoid patch command\n\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>\n\n---------\n\nSigned-off-by: mosfet80 <10235105+mosfet80@users.noreply.github.com>\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>\nCo-authored-by: Miguel Company <miguelcompany@eprosima.com>"
+    },
+    {
+      "sha": "3f133c3de05c9af4eb1f249a726c3ff6a46877d3",
+      "author": "Miguel Company",
+      "date": "2026-01-05T08:01:38Z",
+      "message": "Prepare for release 1.4.0 (#79)\n\n* Refs #24032. Bump version to 1.4.0\n\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>\n\n* Refs #24032. Update changelog.\n\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>\n\n---------\n\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>"
+    },
+    {
+      "sha": "0a0f1c479b8d78737bcf8e3d729b04851cc723b1",
+      "author": "mosfet80",
+      "date": "2026-01-02T15:16:41Z",
+      "message": "Bump foonathan memory to 0.7-4 (#75)\n\n* bump foonathan memory\n\nswitch to version 0.7-4\n changelog: https://github.com/foonathan/memory/releases/tag/v0.7-4\n\nSigned-off-by: mosfet80 <realeandrea@yahoo.it>\n\n* Refs #24032. Patch with fix for C++11.\n\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>\n\n* Refs #24032. Remove `INSTALLER_PLATFORM` patches.\n\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>\n\n* Refs #24032. Update changelog.\n\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>\n\n---------\n\nSigned-off-by: mosfet80 <realeandrea@yahoo.it>\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>\nCo-authored-by: Miguel Company <miguelcompany@eprosima.com>"
+    },
+    {
+      "sha": "125dafb05bca4814c5a0e8598339fe2d0fc41c4d",
+      "author": "Miguel Company",
+      "date": "2025-12-22T07:41:19Z",
+      "message": "Full changelog for 1.3.2 (#78)\n\n* Change release date for version 1.3.2\n\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>\n\n* Update CHANGELOG for version 1.3.2 changes\n\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>\n\n---------\n\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>"
+    },
+    {
+      "sha": "43efd605ebe344b9aaef9fe504838bb73294aad0",
+      "author": "Miguel Company",
+      "date": "2025-12-22T06:59:12Z",
+      "message": "Update version and description in package.xml (#77)\n\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>"
+    },
+    {
+      "sha": "716cfd8c15ba6d85be89ccc6cbc076ce78be3a10",
+      "author": "LuciaEchevarria99",
+      "date": "2024-10-17T05:58:06Z",
+      "message": "Merge pull request #73 from eProsima/hotfix/21890\n\nUpdate commercial support section in project README"
+    },
+    {
+      "sha": "3d38cd41429e9840f7399317bed454f669409e9c",
+      "author": "eProsima",
+      "date": "2024-10-15T09:24:08Z",
+      "message": "Refs #21890: Update commercial support section in project README\n\nSigned-off-by: eProsima <jesuspoderoso@eprosima.com>"
+    },
+    {
+      "sha": "ff121da55424f083a89da3e01b8a32fd3beeb6d0",
+      "author": "Jesús Poderoso",
+      "date": "2024-03-12T12:56:22Z",
+      "message": "Add line break to please linters (#70)\n\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>"
+    },
+    {
+      "sha": "30d9d82691c566735864868a1d3893c83714ed25",
+      "author": "Xavier Solé Nogués",
+      "date": "2024-03-12T10:21:46Z",
+      "message": "Add force vendored build CMake option (#69)\n\n* Add FORCE_BUILD option to cmake\r\n\r\n* Code Review requested fixes\r\n\r\n* Code Review: Typo\r\n\r\nCo-authored-by: Jesús Poderoso <120394830+JesusPoderoso@users.noreply.github.com>\r\n\r\n---------\r\n\r\nCo-authored-by: Jesús Poderoso <120394830+JesusPoderoso@users.noreply.github.com>"
+    },
+    {
+      "sha": "48e5e2c9a1e4948c80e11d5aec78e23dc27b6714",
+      "author": "Ricardo González",
+      "date": "2023-10-25T08:36:42Z",
+      "message": "Fix ament_lint_cmake errors (#68)\n\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>"
+    },
+    {
+      "sha": "b45e80e38aa75b67a5586a79d7078d3c61239e27",
+      "author": "Ricardo González",
+      "date": "2023-10-25T05:50:27Z",
+      "message": "Change mechanism to find an installation of foonathan_memory (#67)\n\n* Use another mechanism to find library\r\n\r\nSigned-off-by: Ricardo González <correoricky@gmail.com>\r\n\r\n* Use debug option\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Bump version 1.3.2\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n---------\r\n\r\nSigned-off-by: Ricardo González <correoricky@gmail.com>\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>"
+    },
+    {
+      "sha": "e91681a25711c1811b2eaf2ba1e6996e0d9ecc84",
+      "author": "jsantiago-eProsima",
+      "date": "2023-05-10T14:09:52Z",
+      "message": "Bump version and update changelog (#66)\n\nSigned-off-by: Javier Santiago <javiersantiago@eprosima.com>"
+    },
+    {
+      "sha": "fd6ac25119d2f66e89d77c18c454267f4915059d",
+      "author": "James Choi",
+      "date": "2023-03-23T12:12:58Z",
+      "message": "Added support for QNX 7.1 build (#65)\n\nSigned-off-by: James Choi <chachoi@blackberry.com>"
+    },
+    {
+      "sha": "8db2afc097db4cebe414ae27cdb3af1480ae46e7",
+      "author": "Miguel Company",
+      "date": "2023-02-14T08:53:50Z",
+      "message": "Bump to 1.3.0 (#64)\n\n* Refs #17123. Update changelog.\r\n\r\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>\r\n\r\n* Refs #17123. Bump version.\r\n\r\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>"
+    },
+    {
+      "sha": "1d5d42ca5666bcc4664b3b985b557cf023c79864",
+      "author": "Miguel Company",
+      "date": "2023-02-07T06:23:34Z",
+      "message": "Update installers patch to 0.7-3 (#63)\n\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>"
+    },
+    {
+      "sha": "34f5f4d1ebaa83ff29ee0a52e044b723f9aec982",
+      "author": "Ricardo González",
+      "date": "2023-01-24T06:14:58Z",
+      "message": "Use last version of foonathan_memory 0.7-3 (#62)\n\n* Refs #16441. Use last version of foonathan_memory\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Update CMakeLists.txt\r\n\r\nCo-authored-by: Miguel Company <miguelcompany@eprosima.com>\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\nCo-authored-by: Miguel Company <miguelcompany@eprosima.com>"
+    },
+    {
+      "sha": "2ef9fc02d9e5483d719d32b06c4670514b25c62a",
+      "author": "José Luis Bueno López",
+      "date": "2022-12-12T11:04:22Z",
+      "message": "Bump version to v1.2.2 and update CHANGELOG (#61)\n\n* Refs #16440: update CHANGELOG\r\n\r\nSigned-off-by: JLBuenoLopez-eProsima <joseluisbueno@eprosima.com>\r\n\r\n* Refs #16440: bump version to v1.2.2\r\n\r\nSigned-off-by: JLBuenoLopez-eProsima <joseluisbueno@eprosima.com>\r\n\r\nSigned-off-by: JLBuenoLopez-eProsima <joseluisbueno@eprosima.com>"
+    },
+    {
+      "sha": "ad694c09662971b8181c00cd15c556cc9172949d",
+      "author": "Ricardo González",
+      "date": "2022-12-07T13:46:39Z",
+      "message": "Increase cmake_minimum_required to 3.14 (#60)\n\nWhich is the minimum required by the upstream repo since [this commit](https://github.com/foonathan/memory/commit/62a41ddcf919d7066436a2e86cd3567337458e8b)\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>"
+    },
+    {
+      "sha": "5d315b2147585688368ecd9657ab6d628d077949",
+      "author": "Eduardo Ponz Segrelles",
+      "date": "2022-02-24T10:40:14Z",
+      "message": "Bump version to v1.2.1 (#59)\n\n* Refs 13785: Bump version to v1.2.1\r\n\r\nSigned-off-by: Eduardo Ponz <eduardoponz@eprosima.com>\r\n\r\n* Refs 13785: Update changelog\r\n\r\nSigned-off-by: Eduardo Ponz <eduardoponz@eprosima.com>\r\n\r\n* Refs 13785: Add badges to README.md\r\n\r\nSigned-off-by: Eduardo Ponz <eduardoponz@eprosima.com>"
+    },
+    {
+      "sha": "61d4050bdfbf27c09fa196e781242faa24a176a3",
+      "author": "Eduardo Ponz Segrelles",
+      "date": "2022-02-23T08:00:58Z",
+      "message": "Build as static by default (#58)\n\n* Refs 13951: Build as static by default\r\n\r\nSigned-off-by: Eduardo Ponz <eduardoponz@eprosima.com>\r\n\r\n* Refs 13951: Porpagate CMAKE_POSITION_INDEPENDENT_CODE\r\n\r\nSigned-off-by: Eduardo Ponz <eduardoponz@eprosima.com>"
+    },
+    {
+      "sha": "5bf0a40176e69f6bd6550c9b16b540e47ec0918b",
+      "author": "MiguelBarro",
+      "date": "2022-02-22T09:34:14Z",
+      "message": "Refs 13853. Remove unused file that bewilder CMake find mechanism (#57)\n\nSigned-off-by: Miguel Barro <miguelbarro@eprosima.com>"
+    },
+    {
+      "sha": "6df3bcf9fe2d68446c17afcc260a03232d941597",
+      "author": "Eduardo Ponz Segrelles",
+      "date": "2022-02-22T06:19:33Z",
+      "message": "Propagate CMake flags correctly\n\n* Refs 13853: Propagate BUILD_SHARED_LIBS and CMAKE_POSITION_INDEPENDENT_CODE correctly\r\n\r\nSigned-off-by: Eduardo Ponz <eduardoponz@eprosima.com>\r\n\r\n* Refs 13853: Apply suggestions\r\n\r\nSigned-off-by: Eduardo Ponz <eduardoponz@eprosima.com>"
+    },
+    {
+      "sha": "da062db05975d24a4b53de5a4122b47f6824997f",
+      "author": "Miguel Company",
+      "date": "2021-11-25T14:03:07Z",
+      "message": "1.2.0 (#53)\n\n* Prepare 1.2.0.\r\n\r\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>\r\n\r\n* Update changelog.\r\n\r\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>\r\n\r\n* Fixed QD related typos.\r\n\r\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>"
+    },
+    {
+      "sha": "0f04117bcb52f46c2a092ef4502eb8a824c11803",
+      "author": "Ricardo González",
+      "date": "2021-11-02T06:11:02Z",
+      "message": "Update upstream to release 0.7-1 (#49)\n\n* Update to last foonathan/memory master\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Add path of Miguel fixing a warning\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Update to last commit\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Tag last version\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>"
+    },
+    {
+      "sha": "0be8f746ee33b3366528d2533087754ce14732b0",
+      "author": "Miguel Company",
+      "date": "2021-05-18T12:37:25Z",
+      "message": "1.1.0 (#47)\n\n* Prepare 1.1.0\r\n\r\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>\r\n\r\n* Added ChangeLog\r\n\r\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>\r\n\r\n* Fix sublist style\r\n\r\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>"
+    },
+    {
+      "sha": "1ec8d223cb8dd77f62d26c4b9f49d792d5216a53",
+      "author": "MiguelBarro",
+      "date": "2021-05-18T05:31:07Z",
+      "message": "Upgrade installer to support cmake linking statically or dynamically to Fast-DDS (#46)\n\n* [11561] Add a FASTDDS_STATIC CMake variable to link statically to the binary deployment\r\n\r\nSigned-off-by: Miguel Barro <miguelbarro@eprosima.com>\r\n\r\n* [11561] Addressing reviewer's comments\r\n\r\nSigned-off-by: Miguel Barro <miguelbarro@eprosima.com>"
+    },
+    {
+      "sha": "cf611b5fdbea1e504df2b520340ba42971f7ef72",
+      "author": "MiguelBarro",
+      "date": "2021-05-13T07:32:01Z",
+      "message": "[11489] update package scripts for VS2019 (#45)\n\nSigned-off-by: Miguel Barro <miguelbarro@eprosima.com>"
+    },
+    {
+      "sha": "ac8e182476db44e601d34d300083f245fb66f1b8",
+      "author": "Scott K Logan",
+      "date": "2021-02-12T03:43:49Z",
+      "message": "Shorten some excessively long lines of CMake (#44)\n\nThe line length enforcement in ament_lint_cmake has been broken for some\r\ntime, but will be fixed by ament/ament_lint#236. This change brings this\r\npackage into compliance with a 120 column limit.\r\n\r\nSigned-off-by: Scott K Logan <logans@cottsay.net>"
+    },
+    {
+      "sha": "0e6174a7f28c45faf711030697a6c32547336acd",
+      "author": "Miguel Company",
+      "date": "2020-10-23T05:49:17Z",
+      "message": "Use git apply instead of cherry-pick (#42)\n\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>"
+    },
+    {
+      "sha": "d0340347b4da74b13dd53ae91aa33d1997463c47",
+      "author": "Miguel Company",
+      "date": "2020-10-22T14:17:46Z",
+      "message": "Fixed test dependency (#41)\n\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>"
+    },
+    {
+      "sha": "e3f41ae281c152b3ff06ccdc870600f0fcf4d66d",
+      "author": "Louise Poubel",
+      "date": "2020-10-13T05:45:04Z",
+      "message": "Point to upstream quality declaration and bump to level 2 (#39)\n\nSigned-off-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "702182f9a128d5f3a30c68b83b78cbcc772741bb",
+      "author": "Miguel Company",
+      "date": "2020-09-23T09:00:15Z",
+      "message": "Fixed linter issues (#38)\n\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>"
+    },
+    {
+      "sha": "fa2cb36783bccdab73556342031558048b81962e",
+      "author": "mauropasse",
+      "date": "2020-09-23T07:39:23Z",
+      "message": "Add options instead of forcing them (#32)\n\n* Add build memory tools option\r\n\r\nSigned-off-by: Mauro <mpasserino@irobot.com>\r\n\r\n* Add options for building tests and examples\r\n\r\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>\r\n\r\n* Added option dependency validation\r\n\r\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>\r\n\r\nCo-authored-by: Mauro <mpasserino@irobot.com>\r\nCo-authored-by: Miguel Company <MiguelCompany@eprosima.com>"
+    },
+    {
+      "sha": "7ca1e109c2d4d7f0b3b03f6880c770ef00ed79de",
+      "author": "Michel Hidalgo",
+      "date": "2020-07-01T17:22:47Z",
+      "message": "Update vendor package Quality Declaration to QL3. (#35)\n\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>"
+    },
+    {
+      "sha": "262d804f9654719cc68d9ed4179e927953e27eeb",
+      "author": "Chris Lalancette",
+      "date": "2020-06-02T20:06:36Z",
+      "message": "QD Security Vulnerability Declaration: REP 2006 (#34)\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "8261cb40e3cb00731051e9d6599a8af0e5db4b57",
+      "author": "Steven! Ragnarök",
+      "date": "2020-05-18T12:48:27Z",
+      "message": "Prepare 1.0.0 (#30)"
+    },
+    {
+      "sha": "5bf0626e38bc617c7e993c516d4bae24c6faf536",
+      "author": "brawner",
+      "date": "2020-05-13T19:42:13Z",
+      "message": "Adjust feature documentation in QD (#31)"
+    },
+    {
+      "sha": "c7f81a0cd1b5542d3377adc258ae3eb6cad9da01",
+      "author": "brawner",
+      "date": "2020-05-12T15:50:09Z",
+      "message": "Quality declaration for foonathan_memory_vendor (#27)"
+    },
+    {
+      "sha": "9984a154df589f3a46023c911cc4d4c9e48ed1e0",
+      "author": "brawner",
+      "date": "2020-04-29T21:34:47Z",
+      "message": "Add quality declaration for foonathan_memory (#22)"
+    },
+    {
+      "sha": "0f3e758aec1612e8c86a7f7eaec37cd3d8f1aefc",
+      "author": "Steven! Ragnarök",
+      "date": "2020-04-26T12:41:48Z",
+      "message": "0.6.0"
+    },
+    {
+      "sha": "e7d4e9ce38ecdc542bef7bf2b79564505bf3f0b9",
+      "author": "Steven! Ragnarök",
+      "date": "2020-04-26T12:38:44Z",
+      "message": "Merge pull request #20 from Blast545/blast545/fix_bug_linters"
+    },
+    {
+      "sha": "0dafad39034735590c20f57c5463106aef01484a",
+      "author": "Jorge J. Perez",
+      "date": "2020-02-04T19:38:48Z",
+      "message": "Remove not needed test dependency\n\nThis dependency is now added in ament_cmake_test\n\nSigned-off-by: Jorge J. Perez <jjperez@ekumenlabs.com>"
+    },
+    {
+      "sha": "c6b6263e4db8bc46ada1eb960037ae82383cd6c9",
+      "author": "Jorge J. Perez",
+      "date": "2020-02-04T18:52:22Z",
+      "message": "Add dependency required to set BUILD_TESTING env var\n\nSigned-off-by: Jorge J. Perez <jjperez@ekumenlabs.com>"
+    },
+    {
+      "sha": "a0ea39265ba23eea5fcd5772df5f3a99aa15bebc",
+      "author": "Michael Carroll",
+      "date": "2020-04-10T06:04:17Z",
+      "message": "Use a specific revision of foonathan/memory (#24)\n\nSigned-off-by: Michael Carroll <michael@openrobotics.org>"
+    },
+    {
+      "sha": "ebf1fe58949148afd4352fbaddd9cf8d22b9e5a9",
+      "author": "Jorge Perez",
+      "date": "2020-02-04T05:59:31Z",
+      "message": "Enable linter and copyright tests to the package (#19)\n\n* Enable linter and copyright tests to the package\r\n\r\nSigned-off-by: Jorge J. Perez <jjperez@ekumenlabs.com>\r\n\r\n* Fix to use test dependencies only when found\r\n\r\nSigned-off-by: Jorge J. Perez <jjperez@ekumenlabs.com>\r\n\r\n* Fix to look for test dependencies only when testing\r\n\r\nSigned-off-by: Jorge J. Perez <jjperez@ekumenlabs.com>"
+    },
+    {
+      "sha": "6850cfbaae72d5ff46e6a43f03c203f2875ff898",
+      "author": "Miguel Company",
+      "date": "2020-01-15T11:05:52Z",
+      "message": "0.5.0"
+    },
+    {
+      "sha": "4088b7682587db511c3f87101df6261da1096c42",
+      "author": "Miguel Company",
+      "date": "2020-01-15T10:47:36Z",
+      "message": "Update CMakeLists.txt.patch (#18)"
+    },
+    {
+      "sha": "7c66b812e9cf6028922f7763f6e9a553ccd33dfb",
+      "author": "Miguel Company",
+      "date": "2019-11-21T13:23:40Z",
+      "message": "0.4.0"
+    },
+    {
+      "sha": "3cc7f3b284b1c512cfcf94648aee93f701c181f3",
+      "author": "laura",
+      "date": "2019-11-21T05:56:34Z",
+      "message": "Update CMakeLists patch (#17)"
+    },
+    {
+      "sha": "017ff0bdfd2c93930bf525a01f8663a032337a14",
+      "author": "Steven! Ragnarök",
+      "date": "2019-09-24T05:28:49Z",
+      "message": "Add nuclearsandwich as a maintainer and complete 0.3.0 release. (#13)\n\n* Add myself as a package maintainer.\r\n\r\nSigned-off-by: Steven! Ragnarök <steven@nuclearsandwich.com>\r\n\r\n* 0.3.0\r\n\r\nSigned-off-by: Steven! Ragnarök <steven@nuclearsandwich.com>"
+    },
+    {
+      "sha": "f3ab481cda60adc18d4172367f16af6076d8fde4",
+      "author": "Raquel Alvarez",
+      "date": "2019-09-18T13:16:42Z",
+      "message": "Merge pull request #12 from eProsima/feature/revert-platform-specific-libpath\n\nRevert #11"
+    },
+    {
+      "sha": "65ea142b767a09c8c8fafcbd5d92fe7a9f2c5a49",
+      "author": "Miguel Company",
+      "date": "2019-09-18T13:07:54Z",
+      "message": "Revert \"[6337] Allow foonathan_memory_vendor to behave as any other target under VC generator. (#11)\"\n\nThis reverts commit eb152cafa1689f52697145a5a8f56a7e38301dd6."
+    },
+    {
+      "sha": "eb152cafa1689f52697145a5a8f56a7e38301dd6",
+      "author": "MiguelBarro",
+      "date": "2019-09-18T05:38:08Z",
+      "message": "[6337] Allow foonathan_memory_vendor to behave as any other target under VC generator. (#11)\n\n* Allow foonathan_memory_vendor to behave as any other target under VC generator.\r\n\r\nVC Generator forces you to specify architecture (Win32 or x64) when the Buildsystem is generated (first stage), for example:\r\n\r\nproject > cmake -A x64 -B build64 .\r\n\r\nthen on the build (second stage) a config (Release, Debug, ...) is specified, for example:\r\n\r\nproject > cmake --build build64 --config Debug\r\n\r\nas foonathan_memory_vendor was implemented once the project was generated for an architecture (x64 for example) no other architecture was allowed, for example the following command:\r\n\r\nproject > cmake -A Win32 -B build32 .\r\n\r\nwouldn't generate any vcxproj because it identifies that this project was already generated (unfortunately for the wrong architecture)."
+    },
+    {
+      "sha": "1724cbe7b6f8c4dcd113aaecc517fa2d79a8384a",
+      "author": "Ricardo González",
+      "date": "2019-08-09T19:10:13Z",
+      "message": "Merge pull request #10 from dirk-thomas/patch-1\n\ndeclare missing dependency on git"
+    },
+    {
+      "sha": "8ebf2ff2a1a32a09d7f39956d5ccb87e77a3459e",
+      "author": "Dirk Thomas",
+      "date": "2019-08-09T18:10:07Z",
+      "message": "declare missing dependency on git"
+    },
+    {
+      "sha": "bbc010bd3dbbbaa27c318bf3755183d9045673a1",
+      "author": "Ricardo González",
+      "date": "2019-08-09T15:13:09Z",
+      "message": "Merge pull request #9 from mikaelarguedas/nonexisting_rosdepkey\n\ncomment out nonexisting rosdep key"
+    },
+    {
+      "sha": "e70f9f1d677554f0bb9fdfce48c9879513e4a9ca",
+      "author": "Mikael Arguedas",
+      "date": "2019-08-07T22:58:47Z",
+      "message": "comment out nonexisting rosdep key\n\nSigned-off-by: Mikael Arguedas <mikael.arguedas@gmail.com>"
+    },
+    {
+      "sha": "bb42a308773de271c8462efbd2df8a667b3e7fac",
+      "author": "MiguelCompany",
+      "date": "2019-08-02T10:22:08Z",
+      "message": "Fixed error with cmake 3.5.1 (#8)"
+    },
+    {
+      "sha": "456b0c27a4b4167f94bf9f55ad2c4d60673f04d9",
+      "author": "Ricardo González Moreno",
+      "date": "2019-08-02T10:18:43Z",
+      "message": "Fixed error with cmake 3.5.1"
+    },
+    {
+      "sha": "cb668c62d2550e79d73bdae62dc1215755e953a7",
+      "author": "Álvaro Molinillo",
+      "date": "2019-08-01T06:01:06Z",
+      "message": "Refs #5961. Undo changes. Only compile in static mode. (#7)"
+    },
+    {
+      "sha": "1d4753e6f3c3a49ddf5e28c273ce48ce09436b7c",
+      "author": "Álvaro Molinillo",
+      "date": "2019-07-31T13:31:22Z",
+      "message": "Refs #5961. Fix. It is necessary to pass BUILD_SHARED_LIB to internal (#6)\n\nproject."
+    },
+    {
+      "sha": "a81253c3d671f6ff3541a45ac8b1736fc5294b2f",
+      "author": "Álvaro Molinillo",
+      "date": "2019-07-31T12:29:45Z",
+      "message": "Patch to change install directories if a variable is set [6154] (#5)\n\n* Refs #5961. Apply patch over original repo CMakeLists.txt to change\r\ninstall directories. Only if INSTALLER_PLATFORM is set.\r\nAlso added cmake config file to redirect to the correct platfom cmake\r\nconfig file when creating the installer.\r\n\r\n* Refs #5961. Apply patch over original repo src/CMakeLists.txt to change\r\nthe name of the generated library depending on it is static or dynamic.\r\nIf it is static the library name will have the \"lib\" prefix.\r\n\r\n* Refs #5961. Use BUILD_SHARED_LIBS variable as suggested.\r\n\r\n*  Refs #5961. Remove vs2013 platform as suggested."
+    },
+    {
+      "sha": "9b19d75cbe24007ccb5414760e51c1c2d6c954a3",
+      "author": "MiguelCompany",
+      "date": "2019-07-29T12:49:30Z",
+      "message": "Avoid recompilation (#3)"
+    },
+    {
+      "sha": "7bac75f1bd4c965fdba4ec3462ef288500b4c2d7",
+      "author": "Ricardo González Moreno",
+      "date": "2019-07-19T08:53:32Z",
+      "message": "Avoid recompilation."
+    },
+    {
+      "sha": "490c3b6b17f22def38be70b4361219752b838fa0",
+      "author": "MiguelCompany",
+      "date": "2019-07-12T11:06:51Z",
+      "message": "0.2.0 (#2)\n\n* Refs #5634. Using foonathan/memory master branch.\r\n\r\n* Refs #5634. Bump version to 0.2.0"
+    },
+    {
+      "sha": "a1e50adf07a5f6b93f848d50bdcebe2790ab35de",
+      "author": "Ricardo González",
+      "date": "2019-04-30T14:50:35Z",
+      "message": "v0.1.0\n\nRelease 0.1.0 [5236]"
+    },
+    {
+      "sha": "484eb220eb66a8be8cc19a0caaaf88f2b69343d3",
+      "author": "Miguel Company",
+      "date": "2019-04-30T13:17:26Z",
+      "message": "Refs #5228. Not building again if package is found."
+    },
+    {
+      "sha": "12fa53d6771c5fb915bb60b0a3ec2a9cd84b6e4f",
+      "author": "MiguelCompany",
+      "date": "2019-04-30T07:14:56Z",
+      "message": "Refs #5228. External dir shortened (win max_path)"
+    },
+    {
+      "sha": "d42cd5fb87339fe0c2c61b7180b8aa49b7885a22",
+      "author": "Miguel Company",
+      "date": "2019-04-29T12:57:17Z",
+      "message": "Refs #5228. Bump version to 0.1.0."
+    },
+    {
+      "sha": "3d721675f9a2d1df0ccc7a99e0f7ee28c7e84a1f",
+      "author": "Miguel Company",
+      "date": "2019-04-29T10:23:46Z",
+      "message": "Refs #5228. Fixing linker problems on Windows."
+    },
+    {
+      "sha": "b5d0b49eafbf2e603d350cf5dd7de674940eb4b7",
+      "author": "Miguel Company",
+      "date": "2019-04-29T09:46:14Z",
+      "message": "Refs #5228. Added patch to fix warnings on MSVS 2015."
+    },
+    {
+      "sha": "eaff5d9af32f9e81b33a3d911e129bc62e3e041a",
+      "author": "Miguel Company",
+      "date": "2019-04-29T09:23:51Z",
+      "message": "Refs #5228. Added BUILD_SHARED_LIBS defaulted to ON."
+    },
+    {
+      "sha": "7f63c12b0ce82576cda39f21e25ecf65683de5cb",
+      "author": "Miguel Company",
+      "date": "2019-04-29T08:33:34Z",
+      "message": "Refs #5228. Initial version working on Windows."
+    },
+    {
+      "sha": "c36a35156f06b0e8f5d3d579366494b7120ed4e7",
+      "author": "Ricardo González",
+      "date": "2019-04-29T08:10:11Z",
+      "message": "Initial commit"
+    }
+  ]
+}

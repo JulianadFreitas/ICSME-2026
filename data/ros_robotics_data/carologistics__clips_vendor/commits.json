@@ -1,0 +1,246 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-07T05:48:32Z",
+    "source": "github_rest",
+    "endpoint": "/repos/{owner}/{repo}/commits",
+    "owner": "carologistics",
+    "repo": "clips_vendor",
+    "per_page": 100
+  },
+  "data": [
+    {
+      "sha": "ae135b3d340a1d470f327b131324f9eec8f39512",
+      "author": "Tim Wendt",
+      "date": "2024-11-24T17:33:32Z",
+      "message": "Merge pull request #7 from carologistics/tviehmann/debug_release_build_error\n\nfix release errors due to diff against \"\""
+    },
+    {
+      "sha": "92f6f15a621e60c491b7c8d564c64cb7c72ebda4",
+      "author": "Tarik Viehmann",
+      "date": "2024-11-24T17:03:01Z",
+      "message": "buildsys: fix flags"
+    },
+    {
+      "sha": "e3ca07c63ee833c1197c169709a0d51842715ef8",
+      "author": "Tarik Viehmann",
+      "date": "2024-11-24T10:34:47Z",
+      "message": "patch: fix cosmetic typo in core_cast_c.patch.in"
+    },
+    {
+      "sha": "3a3bea57a3045202713bc1acf06eb553103854c3",
+      "author": "Tarik Viehmann",
+      "date": "2024-11-23T10:34:00Z",
+      "message": "CMakeLists: dont use \"\" as diff target for the patch, it fails on buildfarm\n\nThe main problem was that the buildsys dir does have the CLIPS_SOURCE\nsub dir (as that would mean every revision change moves all patch files\nin the git repp).\n\nInstead, construct a matching directory in the build dir before\npatching."
+    },
+    {
+      "sha": "a21d89f29d22922000ee6d53bd25d9b273e3903a",
+      "author": "Tarik Viehmann",
+      "date": "2024-11-21T22:37:32Z",
+      "message": "6.4.3"
+    },
+    {
+      "sha": "9c5bff6743b77b0a9095a784d0fbec169e3d678a",
+      "author": "Tarik Viehmann",
+      "date": "2024-11-21T22:32:52Z",
+      "message": "add CHANGELOG for release"
+    },
+    {
+      "sha": "578e454db0d25f1ac6a20bb6b9e49a646227135f",
+      "author": "Tim Wendt",
+      "date": "2024-11-21T14:11:55Z",
+      "message": "Merge pull request #6 from carologistics/tviehmann/store-zip\n\nCMakeLists: fetch zip from github"
+    },
+    {
+      "sha": "5c5dcba6f418d2c76278550fd78bb9ca07bc9af5",
+      "author": "Tarik Viehmann",
+      "date": "2024-11-21T11:49:50Z",
+      "message": "CMakeLists: fetch zip from github\n\nSoruceforge snapshots are created on-demand and downloading through\nCMake will fail if the snapshot is not existing already.\nthese snapshots are also not persistent and are deleted regularly.\nHence downloading directly from sourceforge is not working reliably.\nTo prevent the issue just store the snapshot on github.\n\nWe could instead pull the changes from the latest available download,\nbut this has no clear revision attached to it and is also not kept\nup-to-date."
+    },
+    {
+      "sha": "bfed26cb3b712d5a46dd1613cdd288bbd1471a34",
+      "author": "Tim Wendt",
+      "date": "2024-11-19T17:13:44Z",
+      "message": "Merge pull request #5 from carologistics/tviehmann/patch-compile-warning\n\nbuildsys: patch missing char *cast"
+    },
+    {
+      "sha": "c24f66ade854f5b6c9bb79cf0004fd8a7ace4a84",
+      "author": "Tarik Viehmann",
+      "date": "2024-11-19T16:38:23Z",
+      "message": "buildsys: patch missing char *cast"
+    },
+    {
+      "sha": "54c0e02f2d98ea3c4da85876e5160abbee759384",
+      "author": "Tim Wendt",
+      "date": "2024-11-15T09:51:30Z",
+      "message": "Merge pull request #4 from carologistics/tviehmann/zip-based-source-fetch\n\nfetch source from zip instead of svn to avoid weird svn locking issues."
+    },
+    {
+      "sha": "43a31cc38757e74be5649c6bbc0786dac3c0d309",
+      "author": "Tarik Viehmann",
+      "date": "2024-11-15T09:21:57Z",
+      "message": "package.xml: depend on unzip instead of subversion"
+    },
+    {
+      "sha": "b64dfbdebfc848270f5ad4e1ead7fd58b5fe5e04",
+      "author": "Tarik Viehmann",
+      "date": "2024-11-15T09:18:40Z",
+      "message": "project: switch from svn to source zip\n\nAn attempt to fix:\nhttps://github.com/ros2-gbp/ros2-gbp-github-org/issues/651#issuecomment-2477703986"
+    },
+    {
+      "sha": "5f7e7c61b9ba1a26d8e1688a6ee90a58f948ad40",
+      "author": "Tim Wendt",
+      "date": "2024-11-14T23:30:25Z",
+      "message": "Merge pull request #3 from carologistics/tviehmann/idempotent_patch\n\nCMakLists: reverse patch if source dir exists"
+    },
+    {
+      "sha": "4b305b2dd02a949f4905836d92966c6c652ea7e5",
+      "author": "Tarik Viehmann",
+      "date": "2024-11-14T23:03:07Z",
+      "message": "CMakLists: reverse patch if source dir exists"
+    },
+    {
+      "sha": "562595fbff02b2a78febe029f35cdedb30828625",
+      "author": "Tim Wendt",
+      "date": "2024-11-14T21:47:39Z",
+      "message": "Merge pull request #2 from carologistics/tviehmann/add-svn-dep\n\nactually add correct svn dependency"
+    },
+    {
+      "sha": "9339d6245cc7dca0fe468adceef309f473e7ba79",
+      "author": "Tarik Viehmann",
+      "date": "2024-11-14T21:41:26Z",
+      "message": "cmakelists: remove unused required testing deps"
+    },
+    {
+      "sha": "1e2b68ca078213d6d1cc6e54ef81389648df4781",
+      "author": "Tarik Viehmann",
+      "date": "2024-11-14T11:23:01Z",
+      "message": "package.xml: this was the wrong svn package"
+    },
+    {
+      "sha": "d9642846e728a5412d240aba43e6d3b92bc38707",
+      "author": "Tarik Viehmann",
+      "date": "2024-11-14T11:08:24Z",
+      "message": "package.xml: it appears that python-svn is used not system svn"
+    },
+    {
+      "sha": "9e08ee1259f81f923f5f953b1e224be546d8720c",
+      "author": "Tarik Viehmann",
+      "date": "2024-11-14T10:26:17Z",
+      "message": "Merge pull request #1 from carologistics/tviehmann/add-svn-dep\n\npackage.xml: add missing svn dependency"
+    },
+    {
+      "sha": "dc1d5e42c6ea7265420e99d3ca4ce5e495427bb1",
+      "author": "Tarik Viehmann",
+      "date": "2024-11-14T10:10:08Z",
+      "message": "package.xml: add missing svn dependency\n\nI thought that would already be covered by ament_vendor_package, guess i\nwas wrong?"
+    },
+    {
+      "sha": "29a831ca44d7fa43736dfe01a06fd9030f0f3b91",
+      "author": "Tarik Viehmann",
+      "date": "2024-11-14T09:16:46Z",
+      "message": "package.xml: add Tim as second maintainer to prepare release"
+    },
+    {
+      "sha": "edd029d04e7753589e082aa40f240df58732abfa",
+      "author": "Tarik Viehmann",
+      "date": "2024-11-13T22:11:41Z",
+      "message": "license: clear up distinction between source and vendor package license\n\nAs per the discussion of https://github.com/ros/rosdistro/pull/43450.\nAlso, update the version to reflect the added license.txt, see:\nhttps://sourceforge.net/p/clipsrules/discussion/776945/thread/f3176d3efe/#e913"
+    },
+    {
+      "sha": "d851dfee907d12ad456a50868fb35140c2402d7c",
+      "author": "Tarik Viehmann",
+      "date": "2024-11-11T08:43:39Z",
+      "message": "readme: improve documentation on optional args"
+    },
+    {
+      "sha": "a577fd7a946095974d2a76ae8b6a89e13e05f11a",
+      "author": "Tarik Viehmann",
+      "date": "2024-11-11T07:57:37Z",
+      "message": "license: correct license and add license file"
+    },
+    {
+      "sha": "69021ade0502de014f7a0bd65ba1a24e5a939f96",
+      "author": "Tarik Viehmann",
+      "date": "2024-11-11T07:57:17Z",
+      "message": "buildsys: suppress more warnings"
+    },
+    {
+      "sha": "a7a9ae9ac26586adabe0903e7557dfc0c5efeb2d",
+      "author": "Tarik Viehmann",
+      "date": "2024-11-11T07:29:30Z",
+      "message": "buildsys: patch properly automatically"
+    },
+    {
+      "sha": "f0ddd7485cb7f58fbbcdaac79cd4a9cdba53ad87",
+      "author": "Tarik Viehmann",
+      "date": "2024-11-10T12:45:26Z",
+      "message": "cmake_vendor: clean up and make java dependency optional"
+    },
+    {
+      "sha": "898f9070068b6f5162f80904eab25e9c71a696ae",
+      "author": "Tarik Viehmann",
+      "date": "2024-09-02T14:22:11Z",
+      "message": "package: update deps"
+    },
+    {
+      "sha": "59440991cc5c609e50cfc60ce91e3ea773074586",
+      "author": "Tarik Viehmann",
+      "date": "2024-08-26T22:21:03Z",
+      "message": "patches: correct clips project version"
+    },
+    {
+      "sha": "9ae78d549065902f1fbceb16b1a5f62daee75d30",
+      "author": "Tarik Viehmann",
+      "date": "2024-08-26T22:02:16Z",
+      "message": "readme: improve"
+    },
+    {
+      "sha": "e9cdc05131e1367264b0dcd41512bb3d582bff1d",
+      "author": "Tarik Viehmann",
+      "date": "2024-08-26T21:29:23Z",
+      "message": "patches: set clips include dir to topdir\n\nThat way it is more explicit when including clips.h:\nwith #include <clips/clips.h>\nor   #include <clips_ns/clips.h>\ninstead of just\n<clips.h>"
+    },
+    {
+      "sha": "5e82505a33ace583418877d068e515e88c225e56",
+      "author": "Tarik Viehmann",
+      "date": "2024-08-26T19:33:05Z",
+      "message": "tmp"
+    },
+    {
+      "sha": "86e73fd0f97385fcfc113da176e2275a636d21b6",
+      "author": "Tarik Viehmann",
+      "date": "2024-08-18T13:31:01Z",
+      "message": "project: fix VCS version for stability\n\nAs there are no tags available to pin point a precise version, just use\nthe current latest tag for now"
+    },
+    {
+      "sha": "941bd2c5036cdeadb30c2cca1f6b73bd1673e9c6",
+      "author": "Tarik Viehmann",
+      "date": "2024-08-18T13:15:38Z",
+      "message": "patches: compile libclips with c++ and offer separate libclips_c for c"
+    },
+    {
+      "sha": "d53f45daa4955f5dc24a93a9ddf447073e7ae1b3",
+      "author": "Tarik Viehmann",
+      "date": "2024-08-18T01:58:22Z",
+      "message": "project: only checkout the targeted branch to speed up build time"
+    },
+    {
+      "sha": "f8d5fc804db18a0281afc20d844df78383a87400",
+      "author": "Tarik Viehmann",
+      "date": "2024-08-18T01:39:36Z",
+      "message": "project: fix patch to exclude useless local changes"
+    },
+    {
+      "sha": "319f6cc6be044761e069eb724077418d5e764d4f",
+      "author": "Tarik Viehmann",
+      "date": "2024-08-18T01:37:44Z",
+      "message": "readme: add first simple readme"
+    },
+    {
+      "sha": "add5fac3c47aa0859a1af773c42104b2a77e6209",
+      "author": "Tarik Viehmann",
+      "date": "2024-08-18T01:26:36Z",
+      "message": "project: add initial commit for a clips vendor package using cmake\n\nThe idea is to use the svn source and patch it to a cmake buildsys which\nthen can be seamlessly used with ament_vendor().\nThe original buildsys is just plain make with in-source builds and\nwithout proper shared libraries.\nHence quite a bit of work is required to modernize the clips buildsys.\n\nCurrently this build uses the svn directly, but does not fix any commit\nversion, which should be fixed to specific releases in the future."
+    }
+  ]
+}

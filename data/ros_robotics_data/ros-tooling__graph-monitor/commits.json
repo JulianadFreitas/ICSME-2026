@@ -1,0 +1,300 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-07T00:34:33Z",
+    "source": "github_rest",
+    "endpoint": "/repos/{owner}/{repo}/commits",
+    "owner": "ros-tooling",
+    "repo": "graph-monitor",
+    "per_page": 100
+  },
+  "data": [
+    {
+      "sha": "dfe98148f1dc4e006b1cd622462c98a614fd752a",
+      "author": "shrujan",
+      "date": "2025-11-25T17:37:01Z",
+      "message": "Add documentation skeleton for all released packages (#44)\n\n* Add documentation files and configuration for Sphinx and Doxygen for rosgraph package\n\nSigned-off-by: shrujan <shrujanus@gmail.com>"
+    },
+    {
+      "sha": "54a16c9d8fb6dbecf3d6e548a621a48b9e98bfc4",
+      "author": "Emerson Knapp",
+      "date": "2025-11-12T21:13:48Z",
+      "message": "Update READMEs (#43)\n\n* Update READMEs with better release status table, updated information, notes on similar projects\n\nSigned-off-by: Emerson Knapp <emerson.b.knapp@gmail.com>\n\n* Revert unrelated change\n\nSigned-off-by: Emerson Knapp <emerson.b.knapp@gmail.com>\n\n---------\n\nSigned-off-by: Emerson Knapp <emerson.b.knapp@gmail.com>"
+    },
+    {
+      "sha": "df2fe23ec7c4402c56e10f5dd1030cae82772018",
+      "author": "Emerson Knapp",
+      "date": "2025-11-03T19:44:12Z",
+      "message": "Use ros_environment to detect distro instead of ament_cmake version (#39)\n\n* Use ros_environment to detect distro instead of ament_cmake version\n\nSigned-off-by: Emerson Knapp <emerson.b.knapp@gmail.com>"
+    },
+    {
+      "sha": "15f8795051bc3a7c9ef758eb776305e9995c3011",
+      "author": "Emerson Knapp",
+      "date": "2025-10-22T08:40:17Z",
+      "message": "0.2.3"
+    },
+    {
+      "sha": "44d793f1ab79e07fd2a3e04662aa2c7a4ab7a9fe",
+      "author": "Emerson Knapp",
+      "date": "2025-10-22T08:39:30Z",
+      "message": "Update CHANGELOG"
+    },
+    {
+      "sha": "3128580993fe7474a1081df47a14f84bfd087935",
+      "author": "Emerson Knapp",
+      "date": "2025-10-22T08:27:02Z",
+      "message": "Fix circular dependency (#38)\n\nHere's the situation (`<depend>` where not specified) : \n`rosgraph_monitor_msgs` -> (test_depend) `rclcpp` -> `rcl` -> `rmw_implementation` -> (group) `rmw_implementation_packages` -> (member) `rmw_stats_shim` -> `rosgraph_monitor_msgs`\n\nBreaking the cycle in two places:\n1. Remove `rmw_stats_shim` from `rmw_implementation_packages` group. It doesn't have to be there, it can be referred to explicitly where needed\n2. Move the `rclcpp` test for QoS constants to `rosgraph_monitor_test`, so that the msgs package doesn't depend on it. It's a heavy dependency for a msgs package. While the release builds _REALLY_ shouldn't be pulling in test dependencies, that's the way it is and this structure simplifies things. The test package isn't even released."
+    },
+    {
+      "sha": "f43718b3d7b3ac8489a6ede343cf8faaabefe992",
+      "author": "Emerson Knapp",
+      "date": "2025-10-16T18:50:29Z",
+      "message": "0.2.2"
+    },
+    {
+      "sha": "1b718e059472507397a44272127f8ac80a50499c",
+      "author": "Emerson Knapp",
+      "date": "2025-10-16T18:50:15Z",
+      "message": "Update CHANGELOG"
+    },
+    {
+      "sha": "99760615a8161c51bfaea2a4c90cc10afeceb985",
+      "author": "Emerson Knapp",
+      "date": "2025-10-15T23:18:52Z",
+      "message": "Run package CI as matrix to catch more dependency spec issues (#36)\n\nAnd fix them! Much more ready for buildfarm\n\nSigned-off-by: Emerson Knapp <emerson.b.knapp@gmail.com>"
+    },
+    {
+      "sha": "b6d9c17c392a82c2c0dc0ffb541e232eb5e3f8ac",
+      "author": "Emerson Knapp",
+      "date": "2025-10-15T09:02:46Z",
+      "message": "Disable history depth test because of fastdds"
+    },
+    {
+      "sha": "778fa4311255130dddf21f82ea2b996b9f9f445b",
+      "author": "Emerson Knapp",
+      "date": "2025-10-15T08:47:19Z",
+      "message": "Add a little CMake messaging about the ROS distro to make it clearer during buildfarm build"
+    },
+    {
+      "sha": "9b852152220933183f7288db4b86a7dab01d654d",
+      "author": "Emerson Knapp",
+      "date": "2025-10-15T08:05:22Z",
+      "message": "Add repo-level jobs to release status matrix"
+    },
+    {
+      "sha": "4ecf133d97000ab9bd0900347d4f1b95fbe90434",
+      "author": "Emerson Knapp",
+      "date": "2025-10-15T07:26:37Z",
+      "message": "Add release status matrix to README"
+    },
+    {
+      "sha": "77d031bc9769732587d9270ae8c94e81bda8680b",
+      "author": "Emerson Knapp",
+      "date": "2025-10-15T07:00:45Z",
+      "message": "0.2.1"
+    },
+    {
+      "sha": "81a2e94c8985f8bbd833c63844aa66ed7fa84f9a",
+      "author": "Emerson Knapp",
+      "date": "2025-10-15T07:00:06Z",
+      "message": "Update changelogs"
+    },
+    {
+      "sha": "d9212cb5c97d056f2d04bf01579abbf1c7359d3b",
+      "author": "Emerson Knapp",
+      "date": "2025-10-15T06:58:47Z",
+      "message": "Fix dependency spec in package xmls, for buildfarm fixing (#35)\n\nSigned-off-by: Emerson Knapp <emerson.b.knapp@gmail.com>"
+    },
+    {
+      "sha": "a72cb4060da31c7a4c6cd6f92e4d73ca11bea75e",
+      "author": "Emerson Knapp",
+      "date": "2025-08-07T23:00:03Z",
+      "message": "0.2.0"
+    },
+    {
+      "sha": "572ff13990982de156ec0b1792dbcfeca4621b6d",
+      "author": "Troy Gibb",
+      "date": "2025-08-07T20:43:31Z",
+      "message": "Align rosgraph_monitor_test version (#33)\n\nSigned-off-by: Troy Gibb <troy.gibb@gmail.com>"
+    },
+    {
+      "sha": "43a2990dff6939102eecf26eb4cc7315539508a8",
+      "author": "Troy Gibb",
+      "date": "2025-08-07T17:39:57Z",
+      "message": "Update changelogs in preperation for release (#32)\n\nSigned-off-by: Troy Gibb <troy.gibb@gmail.com>"
+    },
+    {
+      "sha": "632c3785a6ca4b038bf2a8f370d9c56101846c6b",
+      "author": "Troy Gibb",
+      "date": "2025-07-31T16:21:41Z",
+      "message": "Query Node Parameters (#26)\n\n* Graph monitor asynchronously queries parameter list for each tracked node, to know parameter names in graph representation\n\nCloses #20\n\nSigned-off-by: Troy Gibb <troy.gibb@gmail.com>"
+    },
+    {
+      "sha": "695c79f120ff243023e252d2bb0116e7f6e0abcb",
+      "author": "Troy Gibb",
+      "date": "2025-07-24T19:13:10Z",
+      "message": "Implement pubsub attributes on rosgraph (#23)\n\n* Implement pubsub attributes on rosgraph\n\nSigned-off-by: Troy Gibb <troy.gibb@gmail.com>\n\n* Initial pass at cleanup\n\nSigned-off-by: Troy Gibb <troy.gibb@gmail.com>\n\n* Cleanup qos profile mapping\n\nSigned-off-by: Troy Gibb <troy.gibb@gmail.com>\n\n* Cleanup qos profile enums\n\nSigned-off-by: Troy Gibb <troy.gibb@gmail.com>\n\n* Fix uncrustify\n\nSigned-off-by: Troy Gibb <troy.gibb@gmail.com>\n\n* Update github actions to include _test\n\nSigned-off-by: Troy Gibb <troy.gibb@gmail.com>\n\n* Further cleanup\n\nSigned-off-by: Troy Gibb <troy.gibb@gmail.com>\n\n* Uncrustify\n\nSigned-off-by: Troy Gibb <troy.gibb@gmail.com>\n\n* Fix flake8 issues\n\nSigned-off-by: Troy Gibb <troy.gibb@gmail.com>\n\n* Fix flake8\n\nSigned-off-by: Troy Gibb <troy.gibb@gmail.com>\n\n* Refactor out message formatting\n\nSigned-off-by: Troy Gibb <troy.gibb@gmail.com>\n\n* Add qos guard test\n\nSigned-off-by: Troy Gibb <troy.gibb@gmail.com>\n\n* Fix lint\n\nSigned-off-by: Troy Gibb <troy.gibb@gmail.com>\n\n* Undo accidental autoformatting\n\nSigned-off-by: Troy Gibb <troy.gibb@gmail.com>\n\n* Undo accidental autoformatting (pass 2)\n\nSigned-off-by: Troy Gibb <troy.gibb@gmail.com>\n\n* Undo accidental autoformatting (pass 3)\n\nSigned-off-by: Troy Gibb <troy.gibb@gmail.com>\n\n* Undo accidental autoformatting (pass 4)\n\nSigned-off-by: Troy Gibb <troy.gibb@gmail.com>\n\n* Refactor downstream tracking info to_msg\n\nSigned-off-by: Troy Gibb <troy.gibb@gmail.com>\n\n* Fix uncrustify\n\nSigned-off-by: Troy Gibb <troy.gibb@gmail.com>\n\n* Cleanup based on feedback\n\nSigned-off-by: Troy Gibb <troy.gibb@gmail.com>\n\n* Remove erroneous class method and fix uuid node naming and fix flake8\n\nSigned-off-by: Troy Gibb <troy.gibb@gmail.com>\n\n* Fix pep257 docstring errors\n\nSigned-off-by: Troy Gibb <troy.gibb@gmail.com>\n\n* Fix pep257 docstrings\n\nSigned-off-by: Troy Gibb <troy.gibb@gmail.com>\n\n* Update rosgraph_monitor_test/package.xml\n\nCo-authored-by: Emerson Knapp <537409+emersonknapp@users.noreply.github.com>\nSigned-off-by: Troy Gibb <troy.gibb@gmail.com>\n\n* Fix copyright notices and enum constants\n\nSigned-off-by: Troy Gibb <troy.gibb@gmail.com>\n\n---------\n\nSigned-off-by: Troy Gibb <troy.gibb@gmail.com>\nCo-authored-by: Emerson Knapp <537409+emersonknapp@users.noreply.github.com>"
+    },
+    {
+      "sha": "90bba90770a9248f38eca15b68785f0974a434de",
+      "author": "Troy Gibb",
+      "date": "2025-07-17T23:44:53Z",
+      "message": "Publish node info under /rosgraph (#20)\n\n* Publish node info under /rosgraph\n\nSigned-off-by: Troy Gibb <troy.gibb@gmail.com>\n\n* Fix lint\n\nSigned-off-by: Troy Gibb <troy.gibb@gmail.com>\n\n* Fix flake8 linting issues\n\nSigned-off-by: Troy Gibb <troy.gibb@gmail.com>\n\n* Fix flake8 linting issues\n\nSigned-off-by: Troy Gibb <troy.gibb@gmail.com>\n\n* Fix flake8 linting issues... again\n\nSigned-off-by: Troy Gibb <troy.gibb@gmail.com>\n\n* Respond to feedback\n\nSigned-off-by: Troy Gibb <troy.gibb@gmail.com>\n\n* Update launch file testing strategy\n\nSigned-off-by: Troy Gibb <troy.gibb@gmail.com>\n\n* Shorthand qos\n\nSigned-off-by: Troy Gibb <troy.gibb@gmail.com>\n\n* Fix lint\n\nSigned-off-by: Troy Gibb <troy.gibb@gmail.com>\n\n* Fix lints\n\nSigned-off-by: Troy Gibb <troy.gibb@gmail.com>\n\n---------\n\nSigned-off-by: Troy Gibb <troy.gibb@gmail.com>"
+    },
+    {
+      "sha": "68b70879d14b48e6dfcf69ecd13ab5cc957aa583",
+      "author": "Emerson Knapp",
+      "date": "2025-07-17T18:51:57Z",
+      "message": "Add useful set of precommit formatters and checks that enhance the ament linting (#21)\n\n* Add useful set of precommit formatters and checks that enhance the ament linting\n\nSigned-off-by: Emerson Knapp <emerson.b.knapp@gmail.com>"
+    },
+    {
+      "sha": "faff065c91c55ac49f9e4af1bd379232421f7d3c",
+      "author": "Emerson Knapp",
+      "date": "2025-07-17T07:16:42Z",
+      "message": "Use DiagnosticAggregator instead of custom Analyzer (#16)\n\n- Removes GraphAnalyzer\n- Restructures published diagnostics, to be one per check, rather than one per entity - this matches the expectations of - the diagnostic aggregator\n- Fix up tests to match new diagnostic structure\n- Provide a launchfile and a configuration for a diagnostic_aggregator aggregator_node that does a sensible base aggregator setup\n- Migrate mandatory and ignore frequency checks to the monitor, instead of the Analyzer\n- Update README to explain the new usage pattern, including a driveby update to add a better overview of the package\n\nSigned-off-by: Emerson Knapp <emerson.b.knapp@gmail.com>"
+    },
+    {
+      "sha": "1ac7fd87c1126bca0e04bfaa87ea22f0c1fddcc3",
+      "author": "Emerson Knapp",
+      "date": "2025-07-17T06:57:54Z",
+      "message": "Test the rmw_stats_shim topic_statistics in the CI build (#18)\n\n* Test the rmw_stats_shim topic_statistics in the CI build\n* Add <functional> for std::bind\n\nSigned-off-by: Emerson Knapp <emerson.b.knapp@gmail.com>"
+    },
+    {
+      "sha": "1b5933a2d74463e00a06db67527afee29de39ea7",
+      "author": "Emerson Knapp",
+      "date": "2025-07-17T02:00:00Z",
+      "message": "Update package maintainers  (#19)\n\n* Update package maintainers and add some author attributions to package.xml\n\nSigned-off-by: Emerson Knapp <emerson.b.knapp@gmail.com>"
+    },
+    {
+      "sha": "2004467207b95744e224e97315ef995e3e1bb7ed",
+      "author": "Emerson Knapp",
+      "date": "2025-07-12T20:06:41Z",
+      "message": "Use new ParamListener usercallback to skip the additional OnSetParametersCallback logic (#13)\n\nSigned-off-by: Emerson Knapp <emerson.b.knapp@gmail.com>"
+    },
+    {
+      "sha": "b758585bf26f99a8b830821c5592e9faf8b0a967",
+      "author": "Emerson Knapp",
+      "date": "2025-05-12T22:46:54Z",
+      "message": "0.1.2"
+    },
+    {
+      "sha": "3107a3246f43f2ca854a5fa7389899254f2c1f80",
+      "author": "Emerson Knapp",
+      "date": "2025-05-12T22:43:39Z",
+      "message": "Update changelogs"
+    },
+    {
+      "sha": "9a46c5a317b34a0c34c491d66fc46682435fd377",
+      "author": "Emerson Knapp",
+      "date": "2025-05-12T22:41:45Z",
+      "message": "Kilted CI (#6)\n\n* Minor fixes for Kilted support + add CI\n\nSigned-off-by: Emerson Knapp <emerson.b.knapp@gmail.com>"
+    },
+    {
+      "sha": "748c21a46f04e47d3cf821bcfb54b0a858367072",
+      "author": "Emerson Knapp",
+      "date": "2025-04-09T23:06:04Z",
+      "message": "0.1.1\n\nSigned-off-by: Emerson Knapp <emerson.b.knapp@gmail.com>"
+    },
+    {
+      "sha": "f0327b9da18721fc285b51a6cf50271ed0b67dc8",
+      "author": "Emerson Knapp",
+      "date": "2025-04-09T23:04:51Z",
+      "message": "Update changelogs\n\nSigned-off-by: Emerson Knapp <emerson.b.knapp@gmail.com>"
+    },
+    {
+      "sha": "9b70e18f80d0b76d105a1fe23a1c3fb4723194b7",
+      "author": "Emerson Knapp",
+      "date": "2025-04-09T22:26:24Z",
+      "message": "Add LICENSE file\n\nSigned-off-by: Emerson Knapp <emerson.b.knapp@gmail.com>"
+    },
+    {
+      "sha": "f32a5a8557f9c1f61558e3701dd850378254e8a7",
+      "author": "Emerson Knapp",
+      "date": "2025-04-09T21:56:45Z",
+      "message": "Remove telegraf bridge and update some language\n\nSigned-off-by: Emerson Knapp <emerson.b.knapp@gmail.com>"
+    },
+    {
+      "sha": "2719510594c03ae992c3c809f511074be83f36cb",
+      "author": "Emerson Knapp",
+      "date": "2025-03-21T16:57:06Z",
+      "message": "Add sample application to readme (#15)"
+    },
+    {
+      "sha": "91ffa29d41ddce5dc2ebdeee525992bd32daf6dd",
+      "author": "Emerson Knapp",
+      "date": "2025-03-21T16:52:14Z",
+      "message": "Add roscon talk link to readme (#14)"
+    },
+    {
+      "sha": "a4f5af16c27fc97779acdcbb6fbfa1b0844572ce",
+      "author": "Emerson Knapp",
+      "date": "2025-02-18T20:09:25Z",
+      "message": "RAII initialization of RosgraphMonitor (#12)\n\nSince the GraphMonitor was initialized with an empty configuration, it could catch incorrect health conditions that were not cleared when a new config was subsequently set.\r\n\r\nInstead allow passing a fully configured GraphMonitorConfiguration to get rid of that startup race condition.\r\n\r\nDoes not fully fix #7 but mitigates it at startup.\r\n\r\n* Disables topic statistics checkin test when RMW_IMPLEMENTATION_WRAPPER not provided - rosgraph_monitor should still be somewhat useful when there aren't stats\r\n\r\n---------\r\n\r\nCo-authored-by: Troy Gibb <troy.gibb@gmail.com>\r\nCo-authored-by: Joshua Whitley <josh.w@aionrobotics.com>"
+    },
+    {
+      "sha": "89a460a51958c8e1317b1fc729f661dfa2ae0214",
+      "author": "Emerson Knapp",
+      "date": "2025-02-13T20:39:24Z",
+      "message": "Fix build issues with latest generate_parameter_library (#11)\n\nSigned-off-by: Emerson Knapp <emerson.b.knapp@gmail.com>"
+    },
+    {
+      "sha": "b35ac7c6ea050353dfb1507fd0d61def7d4875e7",
+      "author": "Emerson Knapp",
+      "date": "2024-11-26T06:54:49Z",
+      "message": "Add Action CI - and support Jazzy, Rolling builds (#1)\n\n* Add github action workflow for build, test, and lint. For Humble, Jazzy, and Rolling. Fix build where needed.\r\n\r\nSigned-off-by: Emerson Knapp <emerson.b.knapp@gmail.com>"
+    },
+    {
+      "sha": "974ce202474452a823d7a9b3e73723722c9138d3",
+      "author": "Emerson Knapp",
+      "date": "2024-10-23T13:06:22Z",
+      "message": "Add all the READMEs\n\nSigned-off-by: Emerson Knapp <emerson.b.knapp@gmail.com>"
+    },
+    {
+      "sha": "1d4068af01bbc373cc752764be492f8bc9ad4e7b",
+      "author": "Emerson Knapp",
+      "date": "2024-10-22T14:53:35Z",
+      "message": "Fix graphanalyzer prefix to actually evaluate\n\nSigned-off-by: Emerson Knapp <emerson.b.knapp@gmail.com>"
+    },
+    {
+      "sha": "31673976a268e02271f95cbc3117e8687c0bbd65",
+      "author": "Emerson Knapp",
+      "date": "2024-10-22T00:23:54Z",
+      "message": "Add the graph analyzer\n\nSigned-off-by: Emerson Knapp <emerson.b.knapp@gmail.com>"
+    },
+    {
+      "sha": "091541d36b0b63cce0f804ddb2b99dea50ed2b3b",
+      "author": "Emerson Knapp",
+      "date": "2024-10-21T23:27:46Z",
+      "message": "Catch connection error in telegraf bridge\n\nSigned-off-by: Emerson Knapp <emerson.b.knapp@gmail.com>"
+    },
+    {
+      "sha": "cd2a261cc0de6c5ff70909afc9e6422de0356538",
+      "author": "Emerson Knapp",
+      "date": "2024-10-21T18:44:45Z",
+      "message": "Add missing dependency\n\nSigned-off-by: Emerson Knapp <emerson.b.knapp@gmail.com>"
+    },
+    {
+      "sha": "164d81c76cb83c1073b11c055b41d051ef8e3625",
+      "author": "Emerson Knapp",
+      "date": "2024-10-21T17:55:02Z",
+      "message": "Telegraf bridge builds\n\nSigned-off-by: Emerson Knapp <emerson.b.knapp@gmail.com>"
+    },
+    {
+      "sha": "e336c1d019dc77a0ba94a4b9deec63385513e595",
+      "author": "Emerson Knapp",
+      "date": "2024-10-21T13:33:13Z",
+      "message": "Graph monitor node building\n\nSigned-off-by: Emerson Knapp <emerson.b.knapp@gmail.com>"
+    },
+    {
+      "sha": "f5da12e60b9e3175c3bb7c8e0a96dd1979f1816c",
+      "author": "Emerson Knapp",
+      "date": "2024-10-21T12:52:49Z",
+      "message": "rosgraph_monitor building\n\nSigned-off-by: Emerson Knapp <emerson.b.knapp@gmail.com>"
+    },
+    {
+      "sha": "3ae98538dfa50b4734f665b01511d85fde6dee7d",
+      "author": "Emerson Knapp",
+      "date": "2024-10-21T10:56:31Z",
+      "message": "rosgraph_monitor_msgs and rmw_stats_shim building\n\nSigned-off-by: Emerson Knapp <emerson.b.knapp@gmail.com>"
+    }
+  ]
+}

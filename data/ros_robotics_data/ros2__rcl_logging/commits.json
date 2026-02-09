@@ -1,0 +1,930 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-07T01:20:53Z",
+    "source": "github_rest",
+    "endpoint": "/repos/{owner}/{repo}/commits",
+    "owner": "ros2",
+    "repo": "rcl_logging",
+    "per_page": 100
+  },
+  "data": [
+    {
+      "sha": "b2b037274c99649097504cd022a7fb5f58155af6",
+      "author": "Barry Xu",
+      "date": "2026-01-28T02:23:33Z",
+      "message": "Topic release rcl logging implementation (#138)\n\n* Changelog\n\nSigned-off-by: Barry Xu <barry.xu@sony.com>\n\n* 3.4.0\n\nSigned-off-by: Barry Xu <barry.xu@sony.com>\n\n---------\n\nSigned-off-by: Barry Xu <barry.xu@sony.com>"
+    },
+    {
+      "sha": "35c8d591887a8295be999cd64e88ac5bdb62eda6",
+      "author": "Tomoya Fujita",
+      "date": "2026-01-19T06:26:04Z",
+      "message": "update rcl_logging_implementation architecture diagram. (#137)\n\nSigned-off-by: Tomoya Fujita <Tomoya.Fujita@sony.com>"
+    },
+    {
+      "sha": "00227a560b5332217854ef96db3524710390f71e",
+      "author": "Tomoya Fujita",
+      "date": "2026-01-16T23:32:27Z",
+      "message": "rcl logging implementation (#135)\n\n* 1st draft bring-up for rcl_logging_implementation package.\n\nSigned-off-by: Tomoya Fujita <Tomoya.Fujita@sony.com>\n\n* add test_logging_implementation to check dynamic loading.\n\nSigned-off-by: Tomoya Fujita <Tomoya.Fujita@sony.com>\n\n* address Copilot review comments.\n\nSigned-off-by: Tomoya Fujita <Tomoya.Fujita@sony.com>\n\n* fix: correct visibility macro for DLL export in CMakeLists.txt\n\nSigned-off-by: Barry Xu <barry.xu@sony.com>\n\n* add visibility control with RCL_LOGGING_IMPLEMENTATION_DEFAULT_VISIBILITY.\n\nSigned-off-by: Tomoya Fujita <Tomoya.Fujita@sony.com>\n\n* load the all symbols at the initialization.\n\nSigned-off-by: Tomoya Fujita <Tomoya.Fujita@sony.com>\n\n* Use goto pattern to eliminate the cleanup duplication.\n\nSigned-off-by: Tomoya Fujita <Tomoya.Fujita@sony.com>\n\n* Add basic design doc of rmw_logging_implementation.\n\nSigned-off-by: Tomoya Fujita <Tomoya.Fujita@sony.com>\n\n* use RCPPUTILS_SCOPE_EXIT instead of goto statement.\n\nSigned-off-by: Tomoya Fujita <Tomoya.Fujita@sony.com>\n\n* logging visibility macro was incorrect.\n\nSigned-off-by: Tomoya Fujita <Tomoya.Fujita@sony.com>\n\n* logging symbols stay until the peocess actually exits.\n\nSigned-off-by: Tomoya Fujita <Tomoya.Fujita@sony.com>\n\n---------\n\nSigned-off-by: Tomoya Fujita <Tomoya.Fujita@sony.com>\nSigned-off-by: Barry Xu <barry.xu@sony.com>\nCo-authored-by: Barry Xu <barry.xu@sony.com>"
+    },
+    {
+      "sha": "7764ebe2a5c6fdcf6365c7ca2ef7341cbc0521ec",
+      "author": "Alejandro Hernandez Cordero",
+      "date": "2025-11-12T17:02:12Z",
+      "message": "3.3.2"
+    },
+    {
+      "sha": "64b1894925afde5efd6bc0af06b8617b970ba3db",
+      "author": "Alejandro Hernandez Cordero",
+      "date": "2025-11-12T17:02:08Z",
+      "message": "Changelog\n\nSigned-off-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "997e7794a6eebfb48e18e41a6237e0ceb13a5c2a",
+      "author": "mosfet80",
+      "date": "2025-10-20T19:05:42Z",
+      "message": "Fix cmake deprecation (#133)\n\nSigned-off-by: mosfet80 <realeandrea@yahoo.it>"
+    },
+    {
+      "sha": "c8efb84a03dabfb6e3a378f43e6ddf274fa0022c",
+      "author": "Alejandro Hernandez Cordero",
+      "date": "2025-10-17T10:19:35Z",
+      "message": "3.3.1"
+    },
+    {
+      "sha": "2c98628137643cf126567e582768fd0bd4480894",
+      "author": "Alejandro Hernandez Cordero",
+      "date": "2025-10-17T10:19:31Z",
+      "message": "Changelog\n\nSigned-off-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "06814b3a5730d4cdd6db66e529c227febbc1638d",
+      "author": "Chris Lalancette",
+      "date": "2025-08-04T15:48:07Z",
+      "message": "Cleanup rcl_logging_noop dependencies. (#132)\n\nIt shouldn't build_export_depend anything (as nothing\ndownstream should link against it), and all of its\ndependencies can be private.\n\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "2632df5bd77e2414169b5e2d61e6322cb363119b",
+      "author": "Scott K Logan",
+      "date": "2025-04-25T19:52:18Z",
+      "message": "3.3.0"
+    },
+    {
+      "sha": "2d5deed307163d15f9ef2379ee2facd86a643969",
+      "author": "Chris Lalancette",
+      "date": "2024-12-27T20:52:27Z",
+      "message": "Cleanup overwritten warning messages on error. (#128)\n\n* Cleanup overwritten warning messages on error.\r\n\r\nThis just makes the output look nicer in error paths.\r\n\r\n* Update rcl_logging_spdlog/src/rcl_logging_spdlog.cpp\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>\r\nCo-authored-by: Tomoya Fujita <Tomoya.Fujita@sony.com>"
+    },
+    {
+      "sha": "c8d466d9a0aacdb4974515fc249dc5a2327dcf6b",
+      "author": "Chris Lalancette",
+      "date": "2024-11-26T21:11:27Z",
+      "message": "Remove CODEOWNERS and mirror-rolling-to-master. (#127)\n\nThey are both out-of-date and no longer serving their\nintended purpose.\n\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "21c2d19ce28efb91dab764c7bbfc9017f7a06c71",
+      "author": "Chris Lalancette",
+      "date": "2024-10-03T16:09:22Z",
+      "message": "3.2.2"
+    },
+    {
+      "sha": "e5a03695e1cbf85535d5cd780efee47fc854268c",
+      "author": "Chris Lalancette",
+      "date": "2024-10-03T16:09:13Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "0724aeb90f5d4efd23a75b1a97a4429ec6911a60",
+      "author": "Tomoya Fujita",
+      "date": "2024-10-01T21:03:46Z",
+      "message": "rcl_logging_interface is only valid path with build environment. (#122)\n\n* logging impls need to export dependency for 'rcl_logging_interface'.\r\n\r\nSigned-off-by: Tomoya Fujita <Tomoya.Fujita@sony.com>"
+    },
+    {
+      "sha": "4d186fac565caa7dfb2e21b367bec8c074b62835",
+      "author": "Tomoya Fujita",
+      "date": "2024-09-05T08:33:24Z",
+      "message": "README update and some cleanups. (#120)\n\nSigned-off-by: Tomoya Fujita <Tomoya.Fujita@sony.com>"
+    },
+    {
+      "sha": "7529e87a5ea26351690882c26eece7ebd400fdd4",
+      "author": "Chris Lalancette",
+      "date": "2024-07-29T14:55:12Z",
+      "message": "3.2.1"
+    },
+    {
+      "sha": "74c5446118b278c08bea04c479d5bd54407fd3c1",
+      "author": "Chris Lalancette",
+      "date": "2024-07-29T14:55:05Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "c40bd45b3292aff66ffdbdd51739c250ed3fd53b",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2024-07-22T08:31:32Z",
+      "message": "Updated deprecated API (#117)\n\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "ecb3ab62168e873ef78201c8fda65b622b9f2707",
+      "author": "Marco A. Gutierrez",
+      "date": "2024-04-26T16:54:31Z",
+      "message": "3.2.0"
+    },
+    {
+      "sha": "3934e996917564f0e7d32d391f09bc484bd56eeb",
+      "author": "Marco A. Gutierrez",
+      "date": "2024-04-26T16:54:28Z",
+      "message": "Changelog.\n\nSigned-off-by: Marco A. Gutierrez <marcogg@marcogg.com>"
+    },
+    {
+      "sha": "128d88e6e4ad6df97405564afbdffa2ebc167814",
+      "author": "Marco A. Gutierrez",
+      "date": "2024-03-28T08:56:31Z",
+      "message": "3.1.0\n\nSigned-off-by: Marco A. Gutierrez <marcogg@marcogg.com>"
+    },
+    {
+      "sha": "c31a669a07e00bc2629ab9b59f6116a82e3acb1e",
+      "author": "Marco A. Gutierrez",
+      "date": "2024-03-28T08:55:40Z",
+      "message": "Changelog.\n\nSigned-off-by: Marco A. Gutierrez <marcogg@marcogg.com>"
+    },
+    {
+      "sha": "133884beb6d9bd000f82390569e772be9ece3311",
+      "author": "Scott K Logan",
+      "date": "2024-03-07T05:32:56Z",
+      "message": "Check allocator validity in some rcl_logging functions (#116)\n\nIf the allocator is zero-initialized, it may cause a segfault when it is\r\nused later in the functions.\r\n\r\nSigned-off-by: Scott K Logan <logans@cottsay.net>"
+    },
+    {
+      "sha": "17685e01dba9def5bc5d1bc18c18362b45061ae0",
+      "author": "Chris Lalancette",
+      "date": "2024-03-06T21:36:04Z",
+      "message": "Cleanup the tests. (#115)\n\n* Cleanup the tests.\r\n\r\nThere are a few different fixes in here:\r\n\r\n1.  Move away from using \"popen\" to get the list of files\r\nin a directory.  Instead, switch to using the C++ std::filesystem\r\ndirectory iterator and doing the work ourselves, which is portable\r\nand much less error-prone.\r\n2.  Set the ROS_LOG_DIR for all of the tests in here.  This should\r\nmake the test resistant to being run in parallel with other tests.\r\n3.  Consistently use rcpputils::set_env_var, rather than a mix\r\nof rcpputils and rcutils.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "5805b1cf5bd39bc3c8f2b6a06618f29616ba9f5c",
+      "author": "Christophe Bedard",
+      "date": "2024-03-06T17:29:42Z",
+      "message": "Use (void) in declaration of param-less function (#114)\n\nSigned-off-by: Christophe Bedard <christophe.bedard@apex.ai>"
+    },
+    {
+      "sha": "32ef3f657bacce77fdbbede1e8cd069a08c74e6d",
+      "author": "Christophe Bedard",
+      "date": "2024-03-02T00:07:43Z",
+      "message": "Update README (#113)\n\nSigned-off-by: Christophe Bedard <christophe.bedard@apex.ai>"
+    },
+    {
+      "sha": "c45683f028a9220a6cd57999574d77f0a529a53b",
+      "author": "Christophe Bedard",
+      "date": "2024-03-01T01:08:25Z",
+      "message": "Update quality declaration document (#112)\n\nSigned-off-by: Christophe Bedard <christophe.bedard@apex.ai>"
+    },
+    {
+      "sha": "387763249de6cc35519c33e27dbb77ef5992ca75",
+      "author": "Christophe Bedard",
+      "date": "2024-02-29T13:23:18Z",
+      "message": "Re-order rcl_logging_interface include (#111)\n\nSigned-off-by: Christophe Bedard <christophe.bedard@apex.ai>"
+    },
+    {
+      "sha": "658972a26248e2cfc5c0db4d3e6ab341d6cbc6b6",
+      "author": "Chris Lalancette",
+      "date": "2024-01-24T14:10:37Z",
+      "message": "3.0.0"
+    },
+    {
+      "sha": "0d889ed5c877c982307cef4795fc1072e427ffe5",
+      "author": "Chris Lalancette",
+      "date": "2024-01-24T14:10:30Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "fd629cf7e1f155313d697e8bdd7a854ad5ce1b9b",
+      "author": "Tomoya Fujita",
+      "date": "2024-01-02T22:13:10Z",
+      "message": "add file_name_prefix parameter to external log configuration. (#109)\n\n* add file_name_prefix parameter to external log configuration.\r\n\r\nSigned-off-by: Tomoya Fujita <Tomoya.Fujita@sony.com>"
+    },
+    {
+      "sha": "4481fa62142e7fc561b24178fda3f0bbff51b54a",
+      "author": "Chris Lalancette",
+      "date": "2023-12-26T17:20:38Z",
+      "message": "2.7.1"
+    },
+    {
+      "sha": "c85aa7e09dfee2dc224e5759f2e03bf20e3e5f6a",
+      "author": "Chris Lalancette",
+      "date": "2023-12-26T17:20:33Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "1af4e495f6faceafcd72e9c0b80e373fb901d26b",
+      "author": "Kenta Yonekura",
+      "date": "2023-11-08T20:34:15Z",
+      "message": "Migrate to std::filesystem (#104)\n\n* Migrate to std::filesystem\r\n\r\nSigned-off-by: Kenta Yonekura <yoneken@ieee.org>\r\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "014239dd80ab3de2a847af80f23d24da6438ecb7",
+      "author": "Chris Lalancette",
+      "date": "2023-09-07T15:03:05Z",
+      "message": "2.7.0"
+    },
+    {
+      "sha": "dde6730138bb540287a32981c15b9edb4ef57ac4",
+      "author": "Chris Lalancette",
+      "date": "2023-09-07T15:02:53Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "6d776cdc72ce872000ef6301a70a6fd403966b18",
+      "author": "Chris Lalancette",
+      "date": "2023-08-24T12:04:58Z",
+      "message": "Remove the last uses of ament_target_dependencies in this repo. (#102)\n\nWhile we are here, remove unnecessary exports of\r\ndependencies to downstream packages.  With the one\r\nexception of rcl_logging_interface, all of the packages\r\nin here are implementation-only, so they should never\r\nneed to export dependencies downstream.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "e9f237d29cfa9651eb96273e7e1fefb978faa1dc",
+      "author": "Yadunund",
+      "date": "2023-04-27T08:48:35Z",
+      "message": "2.6.0"
+    },
+    {
+      "sha": "2bc49ab7ff557a45d4fa152e2f400e9ad2bb6a68",
+      "author": "Scott K Logan",
+      "date": "2023-04-11T22:31:21Z",
+      "message": "2.5.1"
+    },
+    {
+      "sha": "380006436d192d98d56fe1a8a75936fb274964f2",
+      "author": "Chris Lalancette",
+      "date": "2023-03-09T14:58:13Z",
+      "message": "Mark the benchmark _ as unused. (#99)\n\nThis just makes clang happier.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "cdef749a304f734ba275f8466a4883db6400dc75",
+      "author": "Chris Lalancette",
+      "date": "2023-02-13T21:00:54Z",
+      "message": "2.5.0"
+    },
+    {
+      "sha": "e504194d19c130c1616e15a977398f596aac24b1",
+      "author": "Chris Lalancette",
+      "date": "2023-02-13T21:00:46Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "6612b45b23500f3a798c3b9cc293abb234c70a5a",
+      "author": "Chris Lalancette",
+      "date": "2023-01-31T19:36:44Z",
+      "message": "Update rcl_logging to C++17. (#98)\n\nThe two reasons to do this are:\r\n\r\n1. So that we can compile rcl_logging\r\n   with the clang static analyzer. As of clang++-14\r\n   (what is in Ubuntu 22.04), the default still seems\r\n   to be C++14, so we need to specify C++17 so that new\r\n   things in the rclcpp headers work properly.\r\n2. So we can build with a newer version of gtest which requires this.\r\n\r\nFurther, due to reasons I don't fully understand, I needed to\r\nset CMAKE_CXX_STANDARD_REQUIRED in order for clang to really use\r\nthat version. So set this as well.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "d76b545f881552a6d9b8563c5fd20d73545ddffa",
+      "author": "William Woodall",
+      "date": "2022-11-18T22:30:39Z",
+      "message": "2.4.3"
+    },
+    {
+      "sha": "7aca22f64d85b3df07ae3468630b3084f8af7fad",
+      "author": "William Woodall",
+      "date": "2022-11-18T22:30:16Z",
+      "message": "changelogs\n\nSigned-off-by: William Woodall <william@osrfoundation.org>"
+    },
+    {
+      "sha": "0997e5db650db6c375b1554ba53dbfa0aa423be7",
+      "author": "William Woodall",
+      "date": "2022-11-17T05:59:30Z",
+      "message": "change flushing behavior for spdlog log files, and add env var to use old style (no explicit flushing) (#95)\n\n* change flushing behavior for spdlog log files, and add env var to use old style (no explicit flushing)\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* register logger with spdlog so periodic flush can work\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* update to use make_shared instead of make_unique\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>"
+    },
+    {
+      "sha": "378734efac4bc5340d9ad068776a7a044657476c",
+      "author": "Audrow Nash",
+      "date": "2022-11-16T16:19:21Z",
+      "message": "[rolling] Update maintainers - 2022-11-07 (#96)"
+    },
+    {
+      "sha": "911bbbd62b398c7dd030b5a7bcb69e55c613b119",
+      "author": "Chris Lalancette",
+      "date": "2022-11-02T16:58:05Z",
+      "message": "2.4.2"
+    },
+    {
+      "sha": "b63ebe679dd5629d320909ade23c64c19408ab9f",
+      "author": "Chris Lalancette",
+      "date": "2022-11-02T16:57:58Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "92cba58951c5fec3ced71b11bcf440b89a1c3aad",
+      "author": "Chris Lalancette",
+      "date": "2022-09-26T13:04:52Z",
+      "message": "Disable cppcheck for rcl_logging_spdlog. (#93)\n\nThe comment explains why.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "d3227b9faab6a2ec49620e7694cebe33f4f58ac8",
+      "author": "Chris Lalancette",
+      "date": "2022-09-13T20:32:41Z",
+      "message": "2.4.1"
+    },
+    {
+      "sha": "30288e1ce6a105cef3c047a68b3a7930b5718c42",
+      "author": "Chris Lalancette",
+      "date": "2022-09-13T20:32:34Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "8b31efe346611d67a3f3fa3649a7b29f34f156b3",
+      "author": "Audrow Nash",
+      "date": "2022-06-28T14:20:42Z",
+      "message": "Mirror rolling to master"
+    },
+    {
+      "sha": "220ba6fc20496c902804f7589455477dfd21705c",
+      "author": "Shane Loretz",
+      "date": "2022-06-13T15:56:16Z",
+      "message": "ament_export_dependencies any package with targets we linked against (#89)\n\nSigned-off-by: Shane Loretz <sloretz@openrobotics.org>"
+    },
+    {
+      "sha": "843e62564ee75f12846233d0ed60092f51196887",
+      "author": "Audrow Nash",
+      "date": "2022-04-30T00:39:57Z",
+      "message": "2.4.0\n\nSigned-off-by: Audrow Nash <audrow@hey.com>"
+    },
+    {
+      "sha": "e9e2c3515cf4099a4369a4da1cea257f99384f49",
+      "author": "Chris Lalancette",
+      "date": "2022-03-01T19:28:59Z",
+      "message": "2.3.0"
+    },
+    {
+      "sha": "abf98332ff8e8a385634f78bb1fd4995572fd449",
+      "author": "Chris Lalancette",
+      "date": "2022-03-01T19:28:51Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "f332780e111a6f9921b6cb67af7dbbd6e12ddd2d",
+      "author": "Shane Loretz",
+      "date": "2022-01-21T18:05:18Z",
+      "message": "Install includes to include/${PROJECT_NAME} (#85)\n\nSigned-off-by: Shane Loretz <sloretz@openrobotics.org>"
+    },
+    {
+      "sha": "e0b66658bd5978a8605ba28fdffc235d8cfccb85",
+      "author": "Audrow Nash",
+      "date": "2022-01-15T00:04:32Z",
+      "message": "2.2.1\n\nSigned-off-by: Audrow Nash <audrow@hey.com>"
+    },
+    {
+      "sha": "72f3e6a13c964c70c0d9e1c370273f929f74d7fc",
+      "author": "Jacob Perron",
+      "date": "2022-01-12T22:23:18Z",
+      "message": "Fix include order for cpplint (#84)\n\nRelates to https://github.com/ament/ament_lint/pull/324\r\n\r\nSigned-off-by: Jacob Perron <jacob@openrobotics.org>"
+    },
+    {
+      "sha": "92f164b7b58f99fd71478aebd00064facc24e462",
+      "author": "Audrow Nash",
+      "date": "2021-11-29T18:50:13Z",
+      "message": "Update maintainers to Chris Lalancette (#83)\n\nSigned-off-by: Audrow Nash <audrow@hey.com>"
+    },
+    {
+      "sha": "b1c2e79b519b3af4efb0881e0b12325127cfc94e",
+      "author": "Chris Lalancette",
+      "date": "2021-11-18T22:03:30Z",
+      "message": "2.2.0"
+    },
+    {
+      "sha": "424f8600a74b8c98cc8a8c8ee3106bff2922fc07",
+      "author": "Chris Lalancette",
+      "date": "2021-11-18T22:03:22Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "98d910c56a3f6bec504a828f4a31e5fe40cdce98",
+      "author": "Abrar Rahman Protyasha",
+      "date": "2021-11-11T07:20:21Z",
+      "message": "Fix renamed `rcpputils` header (#81)\n\nSigned-off-by: Abrar Rahman Protyasha <aprotyas@u.rochester.edu>"
+    },
+    {
+      "sha": "1187edb08e3b6f9bc93e849e22a473a9c2b72934",
+      "author": "Michel Hidalgo",
+      "date": "2021-09-16T16:13:48Z",
+      "message": "2.1.3"
+    },
+    {
+      "sha": "f7db0487aaf702630e0e719abdb0375525a934e2",
+      "author": "Michel Hidalgo",
+      "date": "2021-09-16T16:13:35Z",
+      "message": "Changelog.\n\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>"
+    },
+    {
+      "sha": "dffa86f4b8de0e5ec8c16fd8e2c8e0340de9c932",
+      "author": "Michel Hidalgo",
+      "date": "2021-09-16T14:02:24Z",
+      "message": "Add Doxyfile to rcl_logging_interface package. (#80)\n\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>"
+    },
+    {
+      "sha": "7846c05f4a193f334b9b15612d6e9d1c8a00f2a1",
+      "author": "Chris Lalancette",
+      "date": "2021-09-14T19:14:56Z",
+      "message": "Remove rcl_logging_log4cxx. (#78)\n\nWe don't ever use it, and having it around causes a few problems:\r\n\r\n1.  We have an unnecessary, and unneeded dependency on log4cxx in the\r\ncore.\r\n2.  We can't currently build against libc++ with log4cxx.\r\n3.  Log4cxx causes some absolute paths to be in the delivered packages\r\non Windows.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "77b5b2a6c948a6db1986501edc83f12ceadedba3",
+      "author": "Nisala Kalupahana",
+      "date": "2021-05-24T21:31:02Z",
+      "message": "Update CMakeLists.txt to use C++17 (#76)\n\nThe newest version of log4cxx on macOS is now built with C++17 on homebrew (the expected way to install the package, based on the ROS2 installation guide). C++17 adds support for shared_mutex, so log4cxx defaults to using shared_mutex in std instead of boost. C++14, however, doesn't have shared_mutex, so building rcl_logging_log4cxx on macOS with the latest packages now fails because it uses C++14. The easiest way to fix this is to switch this package to build on C++17, which is what I've done here.\r\n\r\nSigned-off-by: nkalupahana <avishkank@gmail.com>"
+    },
+    {
+      "sha": "8d5ad0f9f32c1c3399122e28cf3e70f89ff0bc2f",
+      "author": "Christophe Bedard",
+      "date": "2021-05-04T14:26:51Z",
+      "message": "Update includes after rcutils/get_env.h deprecation (#75)\n\nSigned-off-by: Christophe Bedard <bedard.christophe@gmail.com>"
+    },
+    {
+      "sha": "cea8e915b2a20c383fd8f05dd954e691c20ad123",
+      "author": "Chris Lalancette",
+      "date": "2021-04-06T15:08:55Z",
+      "message": "2.1.2"
+    },
+    {
+      "sha": "0a30a4204b9405dc4297c002fa9e90e3eead167d",
+      "author": "Chris Lalancette",
+      "date": "2021-04-06T15:08:50Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "b56a55864a6ec714baa2a9d23269063a3680b20f",
+      "author": "shonigmann",
+      "date": "2021-04-02T06:35:05Z",
+      "message": "updating quality declaration links (re: ros2/docs.ros2.org#52) (#73)\n\nSigned-off-by: Simon Honigmann <shonigmann@blueorigin.com>\r\n\r\nCo-authored-by: Simon Honigmann <shonigmann@blueorigin.com>"
+    },
+    {
+      "sha": "dd7f8e7100670a94c1c52b88ec41d655789333bf",
+      "author": "Chris Lalancette",
+      "date": "2021-01-25T16:27:31Z",
+      "message": "2.1.1"
+    },
+    {
+      "sha": "49fbd282d25db1bf824b2906f9f8023f711aea29",
+      "author": "Chris Lalancette",
+      "date": "2021-01-25T16:27:23Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "870bb2a3569a8db3efa9d4bef1d70ee888d0b22f",
+      "author": "Ivan Santiago Paunovic",
+      "date": "2021-01-12T17:35:59Z",
+      "message": "Include what you use (#71)\n\nSigned-off-by: Ivan Santiago Paunovic <ivanpauno@ekumenlabs.com>"
+    },
+    {
+      "sha": "a1edc81af3a7ac87fc63ce36bd890e7000dba7b7",
+      "author": "Chris Lalancette",
+      "date": "2020-12-08T16:09:37Z",
+      "message": "2.1.0"
+    },
+    {
+      "sha": "a9f3e3139748c29096aa53d075958b7a2aae149e",
+      "author": "Chris Lalancette",
+      "date": "2020-12-08T16:08:49Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "334236027075c02efc2913f15d99ca580b7ab010",
+      "author": "Stephen Brawner",
+      "date": "2020-11-25T19:58:45Z",
+      "message": "Update QD to QL 1 (#66)\n\nSigned-off-by: Stephen Brawner <brawner@gmail.com>"
+    },
+    {
+      "sha": "352b7a218852f3d7c7998e38d6f27d4da8486c92",
+      "author": "Chris Lalancette",
+      "date": "2020-11-11T18:22:36Z",
+      "message": "Make sure to check return value from external_initialize. (#65)\n\nPointed out by clang static analysis as a dead store.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "4a890bccd471fff0e8ac939838cf104d4a64b9a8",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2020-10-30T08:12:40Z",
+      "message": "updated QD section 3.i and 3ii and spelling error (#63)\n\nSigned-off-by: ahcorde <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "e0f67db05c9579adec02be5546b07362b0dc24f8",
+      "author": "ahcorde",
+      "date": "2020-10-29T08:01:21Z",
+      "message": "rcl_logging_spdlog: Increased QL to 2 in QD\n\nSigned-off-by: ahcorde <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "de0e6d8f3cbe1ee85375a302de7fafd1baea9ee6",
+      "author": "ahcorde",
+      "date": "2020-10-28T08:50:35Z",
+      "message": "Updated spdlog QL in QD\n\nSigned-off-by: ahcorde <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "23841efda69315754cdc7b19b5a95e3e15ac1fe7",
+      "author": "Shane Loretz",
+      "date": "2020-10-21T21:06:37Z",
+      "message": "Make internal dependencies private (#60)\n\n* Make internal dependencies private\r\n\r\nrcpputils, rcutils, and spdlog don't need to be exposed to downstream\r\nusers of this package.\r\n\r\nSigned-off-by: Shane Loretz <sloretz@openrobotics.org>\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* Make internal dependencies private (noop)\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>"
+    },
+    {
+      "sha": "4866a49f157a1fbcba3c78811dcda33c3c61e2b4",
+      "author": "Audrow Nash",
+      "date": "2020-10-20T20:59:20Z",
+      "message": "[rcl_logging_spdlog] Add warnings (#54)\n\n* Add warnings\r\n\r\nSigned-off-by: Audrow Nash <audrow.nash@gmail.com>\r\n\r\n* Make CMake check for C++ compiler rather than C compiler\r\n\r\nSigned-off-by: Audrow Nash <audrow.nash@gmail.com>\r\n\r\nCo-authored-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Update Clang compiler check to look for C++\r\n\r\nSigned-off-by: Audrow Nash <audrow.nash@gmail.com>\r\n\r\nCo-authored-by: Chen Lihui <lihui.chen@sony.com>\r\n\r\nCo-authored-by: Chris Lalancette <clalancette@openrobotics.org>\r\nCo-authored-by: Chen Lihui <lihui.chen@sony.com>"
+    },
+    {
+      "sha": "7eec95485231b55cbb8b44253c79eab7528da815",
+      "author": "Christophe Bedard",
+      "date": "2020-10-20T12:58:57Z",
+      "message": "Use rcutils_expand_user in rcl_logging_get_logging_directory (#59)\n\nSigned-off-by: Christophe Bedard <bedard.christophe@gmail.com>"
+    },
+    {
+      "sha": "e2456ba634223eb64aec197da7923295b468df6b",
+      "author": "Christophe Bedard",
+      "date": "2020-10-13T21:03:47Z",
+      "message": "Allow configuring logging directory through environment variables (#53)\n\nSigned-off-by: Christophe Bedard <bedard.christophe@gmail.com>"
+    },
+    {
+      "sha": "37bb732cd0947ed137253dea0a9612030f44e725",
+      "author": "Chris Lalancette",
+      "date": "2020-10-06T20:54:03Z",
+      "message": "Update the maintainers. (#55)\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "749e5ad831ce0a9ec324b426fa2df24be13d94a4",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2020-09-24T23:49:26Z",
+      "message": "Added benchmark test to rcl_logging_spdlog (#52)\n\nSigned-off-by: Alejandro Hernández Cordero <alejandro@openrobotics.org>"
+    },
+    {
+      "sha": "3f790e881fe32f684650c56e77a2d021f1474f83",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2020-09-17T14:40:48Z",
+      "message": "Used current_path() function from rcpputils (#51)\n\n* Used current_path function from rcpputils\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Removed fs namespace\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "4ecf820a7b09b7626ab20b4cd704338824a8a7c5",
+      "author": "brawner",
+      "date": "2020-08-26T18:47:49Z",
+      "message": "Add fault injection unittest to increase coverage (#49)\n\n* Add fault injection unittest to increase coverage\r\n\r\nSigned-off-by: Stephen Brawner <brawner@gmail.com>\r\n\r\n* Update with recent rcutils changes\r\n\r\nSigned-off-by: Stephen Brawner <brawner@gmail.com>\r\n\r\n* target definitions\r\n\r\nSigned-off-by: Stephen Brawner <brawner@gmail.com>\r\n\r\n* PR Fixup\r\n\r\nSigned-off-by: Stephen Brawner <brawner@gmail.com>"
+    },
+    {
+      "sha": "07463919e1a791d7acf69d70f8f06a51b3115319",
+      "author": "Chris Lalancette",
+      "date": "2020-07-21T18:09:54Z",
+      "message": "2.0.1"
+    },
+    {
+      "sha": "9e13fc2d76f5f8bc1f04d4fb3dbaeff29578c10b",
+      "author": "Chris Lalancette",
+      "date": "2020-07-21T18:09:45Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "68e9a387fbbec53683d821a3ff86efe1a1c52e22",
+      "author": "Jacob Perron",
+      "date": "2020-06-29T17:24:22Z",
+      "message": "Added Doxyfile and fixed related warnings (#42) (#45)\n\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\nCo-authored-by: Alejandro Hernández Cordero <alejandro@openrobotics.org>"
+    },
+    {
+      "sha": "27858fd3ffe84dcb9c2a009d9920b84ee248dda4",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2020-06-26T15:08:01Z",
+      "message": "Bump QD to level 3 and updated QD (#44)\n\n* Bump QD to level 3 and updated QD\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Added feedback\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "104fb7f71bb6dfd5cfd7c1a8af4f5cd0ab6edbdf",
+      "author": "Chris Lalancette",
+      "date": "2020-06-23T18:55:35Z",
+      "message": "Remove unused pytest dependency. (#43)\n\nNeither log4cxx nor the noop backends use the pytest dependency,\r\nso remove it.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "663051a5c1f4648652f22fd72db984465dbf40e1",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2020-06-19T06:44:19Z",
+      "message": "Added Doxyfile and fixed related warnings (#42)\n\nSigned-off-by: ahcorde <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "ef6946557f328a2f9d735d1b77f131606db7e8bd",
+      "author": "Ivan Santiago Paunovic",
+      "date": "2020-06-18T16:18:20Z",
+      "message": "2.0.0"
+    },
+    {
+      "sha": "8f0071f20f5e7e49234b20475733f659088c46ca",
+      "author": "Ivan Santiago Paunovic",
+      "date": "2020-06-18T15:59:36Z",
+      "message": "Changelogs\n\nSigned-off-by: Ivan Santiago Paunovic <ivanpauno@ekumenlabs.com>"
+    },
+    {
+      "sha": "662fbc767120bcbb4fefc183d5ae97ea1877418a",
+      "author": "Chris Lalancette",
+      "date": "2020-06-09T20:16:42Z",
+      "message": "Logging interface (#41)\n\n* Add in a new rcl_logging_interface package.\r\n\r\nThis has just the header files that the implementations need\r\nto provide, and that the callers can call.  Also port log4cxx,\r\nnoop, and spdlog backends to use this new interface.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "c1bfac6c5b3b82cba044093e2b852d1c805e13dd",
+      "author": "Scott K Logan",
+      "date": "2020-06-04T22:37:28Z",
+      "message": "More rcl_logging_spdlog tests (#40)\n\nSigned-off-by: Scott K Logan <logans@cottsay.net>"
+    },
+    {
+      "sha": "b362128be59b8c7f2b9a2306cbb79907939b675b",
+      "author": "Chris Lalancette",
+      "date": "2020-05-22T19:13:30Z",
+      "message": "Add Security Vulnerability Policy pointing to REP-2006.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "095e882f41d302a5f9e29e05646312836ea4a9fd",
+      "author": "Chris Lalancette",
+      "date": "2020-05-22T19:12:32Z",
+      "message": "Rename Quality_Declaration.md -> QUALITY_DECLARATION.md\n\nThis is just to be the same as all othe repositories.  No\nother changes in this commit.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "5913f9a4d31afd451e5ea2209e2064b26be2e978",
+      "author": "Chris Lalancette",
+      "date": "2020-05-26T19:28:13Z",
+      "message": "1.0.0"
+    },
+    {
+      "sha": "ca05aa52c8d561b1fc8776ad50e445cdce928422",
+      "author": "Chris Lalancette",
+      "date": "2020-05-26T19:28:00Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "b439255f0bbdbbcecdeb91e610befae6e4e38f3b",
+      "author": "Scott K Logan",
+      "date": "2020-05-26T18:26:52Z",
+      "message": "Add some preliminary functional tests (#36)\n\nEventually we'll want to create a test to verify that we have spdlog\r\nconfigured correctly and can log data, but right now there aren't any\r\ngood mechanisms to keep us from showering the ~/.ros/log/ directory with\r\nour log files. There also isn't a great way to determine exactly where\r\nthe log ended up.\r\n\r\nI'll follow-up with changes to add more comprehensive testing when those\r\nmechanisms are available."
+    },
+    {
+      "sha": "ba925115781516b195b26a0a2557f8b437866185",
+      "author": "Dirk Thomas",
+      "date": "2020-05-15T21:29:28Z",
+      "message": "warn about unused return value for set_logger_level (#38)\n\nSigned-off-by: Dirk Thomas <dirk-thomas@users.noreply.github.com>"
+    },
+    {
+      "sha": "c005b97e04cbb2b4f88cb54a8a49f827242f1c13",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2020-05-15T13:44:34Z",
+      "message": "Added features to rcl_logging_spdlog (#35)\n\n* Added features\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* added feedback\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Added feedback\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "8ce282501695af7144e761d0fa3bd4ad56d53974",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2020-05-15T12:57:17Z",
+      "message": "Added public API documentation for log4cxx and spdlog (#32)\n\n* Added public API documentation for log4cxx and spdlog\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Added feedback\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "7a4bcba2aac75b32da5f09a4c3c43bc3aef41088",
+      "author": "Jorge Perez",
+      "date": "2020-05-05T13:50:41Z",
+      "message": "Current state Quality Declaration, Contributing and Readme files (#29)\n\n* Add quality declaration v1 to rcl_logging_spdlog\r\n* Reformat to match REP-2004 template\r\n* Update properly README.md files\r\n* Add Contributing.md file\r\n* Add peer review fixes, formating minor issues\r\n* Add missing header for QD\r\n* Fix contributing file path[C\r\n* Address review rcl_logging_spdlog/Quality_Declaration.md\r\n\r\nSigned-off-by: Jorge Perez <jjperez@ekumenlabs.com>\r\nCo-authored-by: Alejandro Hernández Cordero <alejandro@openrobotics.org>"
+    },
+    {
+      "sha": "7732f88913dbba4bc7d5b9529f0bcbef6a07f607",
+      "author": "Jacob Perron",
+      "date": "2020-04-24T22:26:51Z",
+      "message": "0.4.0"
+    },
+    {
+      "sha": "c8c6a829266e4e83135564b6b6d94b8d8a393960",
+      "author": "Dirk Thomas",
+      "date": "2020-04-20T16:33:02Z",
+      "message": "export targets in a addition to include directories / libraries (#31)\n\nSigned-off-by: Dirk Thomas <dirk-thomas@users.noreply.github.com>"
+    },
+    {
+      "sha": "b51497694bcf27cfbda5ee4de36dfe8e7c38b14a",
+      "author": "Dirk Thomas",
+      "date": "2020-04-17T21:11:01Z",
+      "message": "fix CMake warnings about using uninitialized variables (#30)\n\nSigned-off-by: Dirk Thomas <dirk-thomas@users.noreply.github.com>"
+    },
+    {
+      "sha": "2679a215c6db2e7e960027800cee6eafb2c07e54",
+      "author": "Chris Lalancette",
+      "date": "2020-03-12T18:27:15Z",
+      "message": "Make spdlog an exec_depend. (#27)\n\n* Make spdlog an exec_depend.\r\n\r\nNewer spdlog (>= 1.5.0) builds a shared library, so we\r\nneed to add an exec_depend now.  Also add spdlog_vendor and spdlog to ament_export_dependencies.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "b03bdc345e768d3b30bed76bdd0ec0d6708aa3ef",
+      "author": "Dirk Thomas",
+      "date": "2020-02-03T17:06:43Z",
+      "message": "code style only: wrap after open parenthesis if not in one line (#24)\n\nSigned-off-by: Dirk Thomas <dirk-thomas@users.noreply.github.com>"
+    },
+    {
+      "sha": "baeb143a1d264424760774bd6aba96f86974f6da",
+      "author": "Ivan Santiago Paunovic",
+      "date": "2019-12-10T16:38:38Z",
+      "message": "Bypass spdlog singleton registry (#23)\n\nSigned-off-by: Ivan Santiago Paunovic <ivanpauno@ekumenlabs.com>"
+    },
+    {
+      "sha": "3955fc4fc37e46dc397c52cebd3e40732db1157d",
+      "author": "Chris Lalancette",
+      "date": "2019-10-23T22:53:31Z",
+      "message": "0.3.3"
+    },
+    {
+      "sha": "d832ed59efa0a3750fed6a4fac134fa1dab20b86",
+      "author": "Chris Lalancette",
+      "date": "2019-10-23T22:53:21Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "fc3a6f37ada01d21242eb146d1f7715a1f1e6a00",
+      "author": "Jacob Perron",
+      "date": "2019-10-07T16:29:56Z",
+      "message": "Fix Clang warning about possible uninitialized variable (#21)\n\nSigned-off-by: Jacob Perron <jacob@openrobotics.org>"
+    },
+    {
+      "sha": "62f8bb5afe8609fb399e93f4decbe76d6144f2e5",
+      "author": "Chris Lalancette",
+      "date": "2019-10-07T12:33:47Z",
+      "message": "0.3.2"
+    },
+    {
+      "sha": "9151da0ddbbdf91e6a1aae33d739b370c78b6113",
+      "author": "Chris Lalancette",
+      "date": "2019-10-07T12:33:39Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "f91bcf937b0e5cce0d6cf64544336762d018dc63",
+      "author": "Chris Lalancette",
+      "date": "2019-10-07T12:30:38Z",
+      "message": "spdlog is a header-only library, so the exported dep isn't needed. (#19)\n\nRemove it here.  This should allow downstream packages to\r\nbuild properly.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "6faf3588c1ef39f996df4679afab71ca7ec4dd00",
+      "author": "Steven! Ragnarök",
+      "date": "2019-10-04T18:47:20Z",
+      "message": "Enable linters for noop and log4cxx. (#12)\n\nWhile we are in here, fix up a few typos and cleanup the code\r\nto conform to the linting rules.\r\n\r\nSigned-off-by: Steven! Ragnarök <steven@nuclearsandwich.com>\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "ea9cf43e75f212b18ebcfc11b71ffc86da7074d0",
+      "author": "Chris Lalancette",
+      "date": "2019-10-03T20:00:28Z",
+      "message": "0.3.1"
+    },
+    {
+      "sha": "4a9111e9fef842a8970db3c56315fd919481cb0c",
+      "author": "Chris Lalancette",
+      "date": "2019-10-03T19:59:12Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "4a2fbad5ea52a7f8d364af97c70f97cfe4e011c3",
+      "author": "Chris Lalancette",
+      "date": "2019-10-03T19:55:40Z",
+      "message": "Implement a backend logger using spdlog. (#17)\n\n* Implement a backend logger using spdlog.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "96dd4d2f467238283ee8b27e4957b52d4853bc38",
+      "author": "Chris Lalancette",
+      "date": "2019-09-26T12:43:28Z",
+      "message": "0.3.0"
+    },
+    {
+      "sha": "958131e5d8365db09738f5132c74d260a56571db",
+      "author": "Chris Lalancette",
+      "date": "2019-09-26T12:43:12Z",
+      "message": "Changelogs.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "68472f0a1cbf0aed5e3a304200bfdfbdbb0cbaf5",
+      "author": "Mikael Arguedas",
+      "date": "2019-06-25T19:09:18Z",
+      "message": "remove unused 'dependencies' CMake variable (#16)\n\nSigned-off-by: Mikael Arguedas <mikael.arguedas@gmail.com>"
+    },
+    {
+      "sha": "4d2771bf4bd105c8758428fd4a8a2f9ca222ab38",
+      "author": "Mikael Arguedas",
+      "date": "2019-06-25T19:09:03Z",
+      "message": "fix package.xml schema violations (#15)"
+    },
+    {
+      "sha": "6b1880038fed2893557c931a202c16b974637e42",
+      "author": "Michael Carroll",
+      "date": "2019-05-08T23:58:36Z",
+      "message": "0.2.1\n\nSigned-off-by: Michael Carroll <michael@openrobotics.org>"
+    },
+    {
+      "sha": "4b5ae3bd842ce285070c5304465afb355a852cd5",
+      "author": "Steven! Ragnarök",
+      "date": "2019-05-06T20:22:36Z",
+      "message": "Changing the default location for log files to be a local directory instead of /var/log/ros on linux due to permission issues. (#9)\n\nChanging the default location for log files to be a local directory instead of /var/log/ros on linux due to permission issues.\r\n\r\nCo-authored-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "d7378ed431db5dff7831245a647cc6b54d53f7f7",
+      "author": "Nick Burek",
+      "date": "2019-05-06T15:48:35Z",
+      "message": "Removes debugging fprintf"
+    },
+    {
+      "sha": "b5c6eb9eed9672b5724d5343ef49495d396109b0",
+      "author": "Chris Lalancette",
+      "date": "2019-05-03T21:50:42Z",
+      "message": "Review fixes.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "aa2bb6db8394935ab59d48783908ccd53db7f121",
+      "author": "Chris Lalancette",
+      "date": "2019-05-03T19:31:16Z",
+      "message": "Move basename down to rcutils layer.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "945e9661392021d2a43fac77ce77ffef1471794d",
+      "author": "Chris Lalancette",
+      "date": "2019-05-02T23:04:43Z",
+      "message": "Prototype to put things in ~/.ros/log\n\nThis works on Linux, but still needs to be cleaned\nup and tested on macOS/Windows.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "936ab792a5aa3e5aa2f0f66d674debda7386a61b",
+      "author": "burekn",
+      "date": "2019-05-02T15:24:32Z",
+      "message": "Changing the default location for log files to be a local directory instead of /var/log/ros on linux due to permission issues."
+    },
+    {
+      "sha": "2c3d1f1d229775148f1405e463dd8ce0aae0d3f4",
+      "author": "Chris Lalancette",
+      "date": "2019-05-03T01:44:14Z",
+      "message": "Change the API to add an allocator to logging initialize. (#10)\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "220b7e4a13a913a7c40b0db6792144ce500b9f8d",
+      "author": "Rasmus Skovgaard Andersen",
+      "date": "2019-05-01T22:49:45Z",
+      "message": "Added include dir to installation of rcl_logging_log4cxx. (#7)"
+    },
+    {
+      "sha": "801bc5b603bdddb9f65ca3cc27429ca59bf20bb7",
+      "author": "Steven! Ragnarök",
+      "date": "2019-03-10T02:32:48Z",
+      "message": "0.2.0"
+    },
+    {
+      "sha": "efeebc970934ec0f9c7f64d0c175345074fa8ef7",
+      "author": "Nick Burek",
+      "date": "2019-02-26T23:09:26Z",
+      "message": "Enabling the build for rcl_logging_log4cxx (#3)\n\n* Fixes for building and running on MAC with log4cxx from brew.\r\n\r\n* Fixing the case for finding log4cxx library.\r\n\r\n* Fixing the log4cxx string macro on Windows and the cmake find for windows as well.\r\n\r\n* Fixing the lib generation on windows.\r\n\r\n* Cleanup of formatting.\r\n\r\n* Use static library for windows instead of debug mode\r\n\r\n* Fix \"unreferenced local variable\" warning\r\n\r\n* Move C incompatible functions out of extern C block\r\n\r\n* Disable ddl-interface warnings"
+    },
+    {
+      "sha": "86c3b667ed85fd475173301e98350513a9985896",
+      "author": "William Woodall",
+      "date": "2018-12-08T01:17:26Z",
+      "message": "0.1.0"
+    },
+    {
+      "sha": "6c0a2ea10aa421b4b55d65b64d45b978563cb0fa",
+      "author": "William Woodall",
+      "date": "2018-12-08T01:13:12Z",
+      "message": "changelogs\n\nSigned-off-by: William Woodall <william@osrfoundation.org>"
+    },
+    {
+      "sha": "37e51794e7cade84384dc16f7964d7c543239ec2",
+      "author": "William Woodall",
+      "date": "2018-12-08T01:12:21Z",
+      "message": "preparing for first release"
+    },
+    {
+      "sha": "12d03379e6d5a9180edb87d5923849aa6e137e7c",
+      "author": "Nick Burek",
+      "date": "2018-12-06T23:24:15Z",
+      "message": "Renaming everything with an 'rcl_' prefix instead of an 'rc_' prefix to match the change in 'rcl' (#2)"
+    },
+    {
+      "sha": "a240e5f7e0e93ee646d303b985f1eebd3dcdab0c",
+      "author": "burekn",
+      "date": "2018-12-05T20:17:30Z",
+      "message": "Trying to add a hack to unblock the Windows build."
+    },
+    {
+      "sha": "9d04ee89c763b4b4cc635d193b516c52454d2717",
+      "author": "burekn",
+      "date": "2018-12-05T06:15:40Z",
+      "message": "Adding a noop logger ext_lib and adding COLCON_IGNORE to the log4cxx until the windows/mac dependency can be resolved."
+    },
+    {
+      "sha": "d1b3f557d91d5af740fa48e7d67b1a76b64b14e2",
+      "author": "burekn",
+      "date": "2018-11-28T19:33:11Z",
+      "message": "Running automated uncrustify."
+    },
+    {
+      "sha": "761d60616621c38a7250bc208eb2e9fb3ba58743",
+      "author": "burekn",
+      "date": "2018-10-30T18:13:47Z",
+      "message": "Adding a default FileAppender.\n\ncr https://code.amazon.com/reviews/CR-3713961"
+    },
+    {
+      "sha": "614fb976610c1ea0c5c4a8af2224df456cac66d7",
+      "author": "burekn",
+      "date": "2018-10-26T19:55:54Z",
+      "message": "Initial implementation of log4cxx external logging library.\n\ncr https://code.amazon.com/reviews/CR-3684679"
+    },
+    {
+      "sha": "a7728c8b096d67f608062f04b64280836c1ddebf",
+      "author": "burekn",
+      "date": "2018-10-22T22:30:10Z",
+      "message": "Defining the interface for the external logging client.\n\ncr https://code.amazon.com/reviews/CR-3624007"
+    },
+    {
+      "sha": "aa4a8a35afd30cb97ffa9dd35402843c3d26c2a1",
+      "author": "Perforce Administrator",
+      "date": "2018-10-16T16:09:33Z",
+      "message": "commit by Octane"
+    }
+  ]
+}

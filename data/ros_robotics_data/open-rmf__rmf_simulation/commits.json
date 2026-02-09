@@ -1,0 +1,672 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-06T23:32:44Z",
+    "source": "github_rest",
+    "endpoint": "/repos/{owner}/{repo}/commits",
+    "owner": "open-rmf",
+    "repo": "rmf_simulation",
+    "per_page": 100
+  },
+  "data": [
+    {
+      "sha": "9c9462a942552dddcbe07f341ca4da3383bdf0dd",
+      "author": "Luca Della Vedova",
+      "date": "2025-11-17T06:33:37Z",
+      "message": "Prepare 2.6.1 release (#158)\n\n* Update changelog\n\nSigned-off-by: Luca Della Vedova <lucadv@intrinsic.ai>\n\n* 2.6.1\n\nSigned-off-by: Luca Della Vedova <lucadv@intrinsic.ai>\n\n---------\n\nSigned-off-by: Luca Della Vedova <lucadv@intrinsic.ai>"
+    },
+    {
+      "sha": "00e046062e2beeb57e277536d232859b1bed8f62",
+      "author": "Luca Della Vedova",
+      "date": "2025-10-22T14:48:05Z",
+      "message": "Qt5 and Qt6 compatibility (#157)\n\n## Bug fix\n\n### Fixed bug\n\nCloses #155 \n\n### Fix applied\n\nFollows the approach proposed in https://github.com/open-rmf/rmf_simulation/issues/155#issuecomment-3376342767, we can:\n\n* Remove Qt dependencies and just use the Qt version that is brought in by `gz-gui`.\n* Use unversioned functions for CMake.\n* Check at the `qml` level for the Qt version and adapt the class names with a leading underscore for qt >= 6.\n* Remove `LightTuning` altogether since most of its content is now available in upstream Gazebo, it has also been untested for a long time since it's not part of the default plugins but I can try to readd it if there is need for it.\n\nI tested this in a 24.04 distrobox with either rolling or jazzy and it seems to work OK, but happy to get another pair of eyes.\nNote that rolling has a few other issues, https://github.com/open-rmf/rmf_visualization/issues/87 and gazebo failing to run (at least for me) because of an invalid command. I had to run Gazebo manually instead of using the launch file:\n\n```\n$: export GZ_SIM_RESOURCE_PATH=~/rmf_ws/install/rmf_demos_assets/share/rmf_demos_assets/models:~/rmf_ws/install/rmf_demos_maps/share/rmf_demos_maps/maps/hotel/models/\n$: gz sim -r -v 3 /usr/local/google/home/lucadv/noble_ws/install/rmf_demos_maps/share/rmf_demos_maps/maps/hotel/hotel.world -z 100\n```\n---------\n\nSigned-off-by: Luca Della Vedova <lucadv@intrinsic.ai>"
+    },
+    {
+      "sha": "e4d9a36bf876ea5cb344dcb3e1fba6fb3eadaf24",
+      "author": "Grey",
+      "date": "2025-06-18T22:32:17Z",
+      "message": "Fix reverse drive for slotcar (#150)\n\n* Fix reverse drive for slotcar\n\nSigned-off-by: Michael X. Grey <greyxmike@gmail.com>\n\n* Fix logic for choosing between driving toward target vs facing requested direction\n\nSigned-off-by: Michael X. Grey <greyxmike@gmail.com>\n\n---------\n\nSigned-off-by: Michael X. Grey <greyxmike@gmail.com>"
+    },
+    {
+      "sha": "ea8756c8716794ce0826e1ddf870fab014373324",
+      "author": "Luca Della Vedova",
+      "date": "2025-06-16T07:52:35Z",
+      "message": "Add triage github action (#151)\n\nSigned-off-by: Luca Della Vedova <lucadv@intrinsic.ai>"
+    },
+    {
+      "sha": "885400c8bedcee1d0c20f33151db0e00dde4a174",
+      "author": "Luca Della Vedova",
+      "date": "2025-06-13T11:09:47Z",
+      "message": "Migrate to target_link_libraries (#147)\n\nSigned-off-by: Luca Della Vedova <lucadv@intrinsic.ai>"
+    },
+    {
+      "sha": "e161abf65e1a8da3e004f9adad5eda0395941790",
+      "author": "Grey",
+      "date": "2025-06-11T10:24:23Z",
+      "message": "Rotate directly towards the immediate target (#149)\n\nSigned-off-by: Michael X. Grey <greyxmike@gmail.com>\nCo-authored-by: Luca Della Vedova <lucadv@intrinsic.ai>"
+    },
+    {
+      "sha": "452093395881b48a8aa3e69ce7f2ad9ee8a0d39b",
+      "author": "Luca Della Vedova",
+      "date": "2025-06-09T02:51:46Z",
+      "message": "Bump main after kilted release (#148)\n\n* Update changelogs\n\nSigned-off-by: Luca Della Vedova <lucadv@intrinsic.ai>\n\n* 2.6.0\n\nSigned-off-by: Luca Della Vedova <lucadv@intrinsic.ai>\n\n---------\n\nSigned-off-by: Luca Della Vedova <lucadv@intrinsic.ai>"
+    },
+    {
+      "sha": "d67cd69303ab35f78cb0c1189f75cbc7f60f9655",
+      "author": "Luca Della Vedova",
+      "date": "2025-06-02T00:38:07Z",
+      "message": "Use a world plugin for chargers registration (#146)\n\nSigned-off-by: Luca Della Vedova <lucadv@intrinsic.ai>"
+    },
+    {
+      "sha": "38a68c6367dcfa747ea250e50b360ff31624ecb1",
+      "author": "yadunund",
+      "date": "2025-05-10T04:40:40Z",
+      "message": "Bump main to 2.5.0 (#143)\n\nSigned-off-by: Yadunund <yadunund@gmail.com>"
+    },
+    {
+      "sha": "7d70ff18e123b99487485acae1692a7276e380cd",
+      "author": "Grey",
+      "date": "2025-05-05T05:13:43Z",
+      "message": "Recreate vel cmd components each cycle (#141)\n\nSigned-off-by: Michael X. Grey <mxgrey@intrinsic.ai>"
+    },
+    {
+      "sha": "40a2262a0dd7b54985b0df4a04870b5bbe8e22ed",
+      "author": "Luca Della Vedova",
+      "date": "2024-12-23T06:48:27Z",
+      "message": "Remove unused code from slotcar / readonly (#140)\n\nSigned-off-by: Luca Della Vedova <lucadv@intrinsic.ai>"
+    },
+    {
+      "sha": "665020847e6481621612534c608c997e0ae1983b",
+      "author": "Xiyu",
+      "date": "2024-12-19T06:43:32Z",
+      "message": "Port dispenser/ingestor common code to TeleportDispenser and TeleportIngestor (#139)\n\nSigned-off-by: Xiyu Oh <xiyu@openrobotics.org>"
+    },
+    {
+      "sha": "84455245e05b397c9d7925a33aa01602dc317a0d",
+      "author": "Luca Della Vedova",
+      "date": "2024-11-13T02:23:14Z",
+      "message": "Update changelog and bump to 2.4.1 (#138)\n\n* Add changelogs for 2.4.1\r\n\r\nSigned-off-by: Luca Della Vedova <lucadv@intrinsic.ai>\r\n\r\n* 2.4.1\r\n\r\n---------\r\n\r\nSigned-off-by: Luca Della Vedova <lucadv@intrinsic.ai>"
+    },
+    {
+      "sha": "9e0e5b70d67573ae9519c59d1e27d8b380b57f0e",
+      "author": "Luca Della Vedova",
+      "date": "2024-09-25T07:51:57Z",
+      "message": "Add environment hooks for plugins path (#136)\n\nSigned-off-by: Luca Della Vedova <lucadellavr@gmail.com>"
+    },
+    {
+      "sha": "97d120d6dd25cbf901828109e49ef230043ff920",
+      "author": "Addisu Z. Taddese",
+      "date": "2024-09-24T02:56:26Z",
+      "message": "Miscellaneous fixes for Ionic (#134)\n\n* Miscellaneous fixes for Ionic\r\n\r\n* `Pose3::operator+` has been removed. Replaced with `Pose3::operator*`.\r\n  Note that order is reversed\r\n* `ignerr` and similar console logging macros use the `gz` prefix now\r\n* The enum `SphericalCoordinatesType` in the protobuf message `SphericalCoordinates` has a deprecation.\r\nQt5's moc doesn't seem to handle this well. Two solutions:\r\n    * Only include the needed message file header to avoid `SphericalCoordinates`\r\n    * This is not possible for `LightTuning`, so I moved the `Q_OBJECT` classes into a header file\r\n    that does not include any protobuf message headers.\r\n\r\nSigned-off-by: Addisu Z. Taddese <addisu@openrobotics.org>\r\n\r\n* Style\r\n\r\nSigned-off-by: Luca Della Vedova <lucadv@intrinsic.ai>\r\n\r\n---------\r\n\r\nSigned-off-by: Addisu Z. Taddese <addisu@openrobotics.org>\r\nSigned-off-by: Luca Della Vedova <lucadv@intrinsic.ai>\r\nCo-authored-by: Xiyu <ohxiyu@gmail.com>\r\nCo-authored-by: Luca Della Vedova <lucadv@intrinsic.ai>"
+    },
+    {
+      "sha": "0a409cbb17de61ec69edb650f2535fdde9b83210",
+      "author": "Grey",
+      "date": "2024-09-24T01:35:30Z",
+      "message": "Remove undefined behavior from the startup conditions (#132)\n\n* Remove undefined behavior from the startup conditions\r\n\r\nSigned-off-by: Michael X. Grey <mxgrey@intrinsic.ai>\r\n\r\n* Tweak style\r\n\r\nSigned-off-by: Michael X. Grey <mxgrey@intrinsic.ai>\r\n\r\n* Tweak style again\r\n\r\nSigned-off-by: Michael X. Grey <mxgrey@intrinsic.ai>\r\n\r\n---------\r\n\r\nSigned-off-by: Michael X. Grey <mxgrey@intrinsic.ai>"
+    },
+    {
+      "sha": "a39e65825164fbc989d4a99ffdcf8ad4a678b1c3",
+      "author": "Xiyu",
+      "date": "2024-06-26T09:16:25Z",
+      "message": "Enable cart attachment in slotcar (#120)\n\n* Use JointPositionReset for open loop door control\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\n* Uncrustify\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\n* Uncrustify\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\n* WIP interface for attaching and detaching carts in slotcar\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\n* Populate data to find closest dispensable object\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\n* Full prototype of cart deliveries working\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\n* Reject attachment if entity is too far away\r\n\r\nSigned-off-by: Xi Yu Oh <xiyuoh@intrinsic.ai>\r\n\r\n* Use ACTION_COMPLETED mode instead\r\n\r\nSigned-off-by: Xi Yu Oh <xiyuoh@intrinsic.ai>\r\n\r\n* Skip mode setting if current mode is ACTION_COMPLETED\r\n\r\nSigned-off-by: Xi Yu Oh <xiyuoh@intrinsic.ai>\r\n\r\n* Use single RobotMode mode for attaching and detaching cart\r\n\r\nSigned-off-by: Xiyu Oh <xiyu@openrobotics.org>\r\n\r\n* Style\r\n\r\nSigned-off-by: Luca Della Vedova <lucadv@intrinsic.ai>\r\n\r\n* Minor cleanup\r\n\r\nSigned-off-by: Luca Della Vedova <lucadv@intrinsic.ai>\r\n\r\n---------\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\nSigned-off-by: Xi Yu Oh <xiyuoh@intrinsic.ai>\r\nSigned-off-by: Luca Della Vedova <lucadv@intrinsic.ai>\r\nSigned-off-by: Xiyu Oh <xiyu@openrobotics.org>\r\nCo-authored-by: Luca Della Vedova <luca@openrobotics.org>\r\nCo-authored-by: Luca Della Vedova <lucadv@intrinsic.ai>"
+    },
+    {
+      "sha": "ee0c022040e50556c1464d5361e250424033cd10",
+      "author": "Yadu",
+      "date": "2024-06-12T05:12:35Z",
+      "message": "Bump main after jazzy branching (#128)\n\n* Update changelogs\r\n\r\nSigned-off-by: Yadunund <yadunund@intrinsic.ai>\r\n\r\n* 2.4.0\r\n\r\nSigned-off-by: Yadunund <yadunund@intrinsic.ai>\r\n\r\n---------\r\n\r\nSigned-off-by: Yadunund <yadunund@intrinsic.ai>"
+    },
+    {
+      "sha": "1b14ef6e069be63dc9550f2e2a61600a987d60e2",
+      "author": "Yadu",
+      "date": "2024-06-11T17:45:23Z",
+      "message": "Bump main to 2.3.1 (#127)\n\n* Update changelogs\r\n\r\nSigned-off-by: Yadunund <yadunund@intrinsic.ai>\r\n\r\n* 2.3.1\r\n\r\nSigned-off-by: Yadunund <yadunund@intrinsic.ai>\r\n\r\n---------\r\n\r\nSigned-off-by: Yadunund <yadunund@intrinsic.ai>"
+    },
+    {
+      "sha": "b513df9b67910de36ea57be730fb4e175ad885bd",
+      "author": "Luca Della Vedova",
+      "date": "2024-06-06T06:32:18Z",
+      "message": "Fix door drift in simulation (#126)\n\nSigned-off-by: Luca Della Vedova <lucadv@intrinsic.ai>"
+    },
+    {
+      "sha": "1ae8f1f5bf7aa7dd395f97f1b0239af05b5cd58e",
+      "author": "Yadu",
+      "date": "2024-06-02T21:49:27Z",
+      "message": "Bump main to 2.3.0 (#124)\n\n* Update changelogs\r\n\r\nSigned-off-by: Yadunund <yadunund@intrinsic.ai>\r\n\r\n* 2.3.0\r\n\r\nSigned-off-by: Yadunund <yadunund@intrinsic.ai>\r\n\r\n---------\r\n\r\nSigned-off-by: Yadunund <yadunund@intrinsic.ai>"
+    },
+    {
+      "sha": "697d12a51083096d63f433838ca37e112ea5c45e",
+      "author": "Luca Della Vedova",
+      "date": "2024-05-31T17:34:18Z",
+      "message": "Use rolling for style action (#123)\n\nSigned-off-by: Luca Della Vedova <lucadv@intrinsic.ai>"
+    },
+    {
+      "sha": "993d684f29e10e30b485b75bf2deb07407043953",
+      "author": "Luca Della Vedova",
+      "date": "2024-05-30T08:43:30Z",
+      "message": "Port outdated actions to Noble (#122)\n\n* Port outdated actions\r\n\r\nSigned-off-by: Luca Della Vedova <lucadv@intrinsic.ai>\r\n\r\n* Fix style\r\n\r\nSigned-off-by: Luca Della Vedova <lucadv@intrinsic.ai>\r\n\r\n* Remove Jazzy since it is not available yet\r\n\r\nSigned-off-by: Luca Della Vedova <lucadv@intrinsic.ai>\r\n\r\n* Fix action name\r\n\r\nSigned-off-by: Luca Della Vedova <lucadv@intrinsic.ai>\r\n\r\n---------\r\n\r\nSigned-off-by: Luca Della Vedova <lucadv@intrinsic.ai>"
+    },
+    {
+      "sha": "d9e55c6a95a7ed97dd282014921340f4c47953c9",
+      "author": "Luca Della Vedova",
+      "date": "2024-05-29T12:24:52Z",
+      "message": "Refactor plugins in an ECS based way and migrate to Harmonic (#114)\n\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\nSigned-off-by: Arjo Chakravarty <arjoc@google.com>\r\nSigned-off-by: Michael X. Grey <mxgrey@intrinsic.ai>\r\nCo-authored-by: Arjo Chakravarty <arjoc@google.com>\r\nCo-authored-by: Michael X. Grey <mxgrey@intrinsic.ai>"
+    },
+    {
+      "sha": "f71d2d3d2fcc50e10537b995fc91f256668360da",
+      "author": "Teo Koon Peng",
+      "date": "2024-02-01T02:17:02Z",
+      "message": "Explicitly specify all qos depth (#116)"
+    },
+    {
+      "sha": "c985ed08af4958f79cd863944de05ee94c15ca80",
+      "author": "Yadu",
+      "date": "2023-12-20T05:05:40Z",
+      "message": "Bump main to 2.2.2 (#111)\n\n* Update changelogs\r\n\r\nSigned-off-by: Yadunund <yadunund@openrobotics.org>\r\n\r\n* 2.2.2\r\n\r\nSigned-off-by: Yadunund <yadunund@openrobotics.org>\r\n\r\n---------\r\n\r\nSigned-off-by: Yadunund <yadunund@openrobotics.org>"
+    },
+    {
+      "sha": "53dcf3fc9c02cf26207047eb0949a6e3874b1b2f",
+      "author": "Luca Della Vedova",
+      "date": "2023-11-29T03:10:45Z",
+      "message": "Sanitize node names to avoid plugin exceptions (#110)\n\nSigned-off-by: Luca Della Vedova <lucadv@intrinsic.ai>"
+    },
+    {
+      "sha": "4bc0797080826befc5f8e49662151499a73ebe14",
+      "author": "Yadu",
+      "date": "2023-06-30T03:08:23Z",
+      "message": "Bump 2.2.1 (#107)\n\n* Update changelogs\r\n\r\nSigned-off-by: Yadunund <yadunund@openrobotics.org>\r\n\r\n* 2.2.1\r\n\r\n---------\r\n\r\nSigned-off-by: Yadunund <yadunund@openrobotics.org>"
+    },
+    {
+      "sha": "38e0e6dd002834f05d459f4df7bd1540a0a4d119",
+      "author": "Luca Della Vedova",
+      "date": "2023-06-14T03:55:59Z",
+      "message": "Use JointPositionReset for open loop door control (#98)\n\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>"
+    },
+    {
+      "sha": "757305d768b23065bf0980c34d9f10702bfa4d2c",
+      "author": "Yadu",
+      "date": "2023-06-08T07:04:09Z",
+      "message": "Bump 2.2.0 (#104)\n\nSigned-off-by: Yadunund <yadunund@openrobotics.org>"
+    },
+    {
+      "sha": "ddf6739b861293bbc8d489c896911ba0cec1d5c1",
+      "author": "Grey",
+      "date": "2023-06-06T12:30:22Z",
+      "message": "Merge pull request #103 from open-rmf/yadu/2.1.0\n\nBump 2.1.0"
+    },
+    {
+      "sha": "e072aecce55ef1d448e620b0e06090d22aa8bd87",
+      "author": "Yadunund",
+      "date": "2023-06-06T11:22:06Z",
+      "message": "2.1.0"
+    },
+    {
+      "sha": "058b2fba3108cadb931d6b3e6e0f8f26c4187ae7",
+      "author": "Yadunund",
+      "date": "2023-06-06T11:20:53Z",
+      "message": "Update changelogs\n\nSigned-off-by: Yadunund <yadunund@openrobotics.org>"
+    },
+    {
+      "sha": "2a93d550fc445c31e6a7e9a96d6a5a3e56af1226",
+      "author": "Yadu",
+      "date": "2023-05-26T07:55:57Z",
+      "message": "Switch to rst changelogs (#101)\n\nSigned-off-by: Yadunund <yadunund@gmail.com>"
+    },
+    {
+      "sha": "836779aac97d6880800ad88b31e10dc86c53d44d",
+      "author": "Yadu",
+      "date": "2023-05-26T07:36:58Z",
+      "message": "Fix eigen not found when building rpm (#102)\n\nSigned-off-by: Esteban Martinena <orensbruli@gmail.com>\r\n\r\nCo-authored-by: Esteban Martinena <orensbruli@gmail.com>"
+    },
+    {
+      "sha": "9bd994ea28a11b3ed12b2742529095900fc63de8",
+      "author": "Luca Della Vedova",
+      "date": "2023-05-08T06:58:21Z",
+      "message": "Update root level readme (#100)\n\nSigned-off-by: Luca Della Vedova <lucadv@intrinsic.ai>"
+    },
+    {
+      "sha": "aa2249722bdaf4b136a4f359aebb3206b1b06756",
+      "author": "Luca Della Vedova",
+      "date": "2023-05-08T03:05:26Z",
+      "message": "Change asan to use humble (#99)\n\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>"
+    },
+    {
+      "sha": "4bc9de0b20293232ebfae425f6aaa98045922c2e",
+      "author": "Grey",
+      "date": "2023-01-09T17:12:06Z",
+      "message": "Fix library linking (#97)\n\nSigned-off-by: Michael X. Grey <grey@openrobotics.org>"
+    },
+    {
+      "sha": "1279995cbc7b21610acce81de5a28bea45faeadf",
+      "author": "Luca Della Vedova",
+      "date": "2022-11-23T07:33:00Z",
+      "message": "Don't print warning if lift is going to same floor (#89)\n\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>"
+    },
+    {
+      "sha": "bc0cf132e5ea7144374c264590ae735407992958",
+      "author": "Esteban Martinena Guerrero",
+      "date": "2022-11-14T09:23:35Z",
+      "message": "2.0.0 (#91)\n\nVersion update\r\n\r\nSigned-off-by: Esteban Martinena <orensbruli@gmail.com>"
+    },
+    {
+      "sha": "b6300344756ae3cc667a90f7638f0f693a4bf38b",
+      "author": "Luca Della Vedova",
+      "date": "2022-10-03T10:42:06Z",
+      "message": "Update changelog format to markdown (#90)\n\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>"
+    },
+    {
+      "sha": "f60ccf89618104035450c0edc75545ff148a994d",
+      "author": "Esteban Martinena Guerrero",
+      "date": "2022-09-28T09:26:26Z",
+      "message": "[CI] Reusable asan workflow (#87)\n\nSigned-off-by: Esteban Martinena <orensbruli@gmail.com>"
+    },
+    {
+      "sha": "a44c5017f2db95ef909e3a78505ba59a4b6b42cf",
+      "author": "Esteban Martinena Guerrero",
+      "date": "2022-09-22T00:48:36Z",
+      "message": "[CI] Removed push event from workflows (#86)\n\nSigned-off-by: Esteban Martinena <orensbruli@gmail.com>"
+    },
+    {
+      "sha": "83c0dbc68e092b0a984756d2f2e9c3640ae966ba",
+      "author": "Esteban Martinena Guerrero",
+      "date": "2022-09-19T02:48:28Z",
+      "message": "[CI] Reusable CI (#83)\n\nSigned-off-by: Esteban Martinena <orensbruli@gmail.com>"
+    },
+    {
+      "sha": "5b123e6bfee5e6d6b2619d7c36c1a367fc430459",
+      "author": "Grey",
+      "date": "2022-09-13T06:20:54Z",
+      "message": "Fix emergency stop (#82)\n\nSigned-off-by: Michael X. Grey <grey@openrobotics.org>\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\nCo-authored-by: Luca Della Vedova <luca@openrobotics.org>"
+    },
+    {
+      "sha": "f0fac0b8d23bdaa6a05a6d0e90126fe4875bfd9e",
+      "author": "Yadu",
+      "date": "2022-09-13T04:17:51Z",
+      "message": "Migration to Humble (#77)\n\nSigned-off-by: Yadunund <yadunund@gmail.com>\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\nCo-authored-by: Luca Della Vedova <luca@openrobotics.org>"
+    },
+    {
+      "sha": "d9c2a9058cbbc800369c0d6e1818bc0a36eb42fa",
+      "author": "Arjo Chakravarty",
+      "date": "2022-08-26T02:27:04Z",
+      "message": "Fixes #75 by using ignition ecm instead of traversing sdformat parents (#80)\n\n* Fixes #75 by using ignition ecm instead of traversing sdformat parents\r\n\r\nThis PR addresses issue #75. @luca-della-vedova has found an alternative two liner fix in upstream sdformat that would solve our problems. However, to future proof the ignition version of the plugin we should try to use the ecm to retrieve properties instead of relying on sdformat for traversing the joint properties.\r\n\r\nSigned-off-by: Arjo Chakravarty <arjo@openrobotics.org>\r\nCo-authored-by: Luca Della Vedova <luca@openrobotics.org>"
+    },
+    {
+      "sha": "2a16bccd25c1ee9f0f10caf23d2388566999d84b",
+      "author": "Arjo Chakravarty",
+      "date": "2022-08-25T15:42:11Z",
+      "message": "Fixes potential segfault (#79)\n\n* Fixes potential segfault\r\n\r\nThe fix is similar in nature to #78. Just noticed another place where we are not checking for a potential null return value.\r\n\r\nSigned-off-by: Arjo Chakravarty <arjo@openrobotics.org>\r\n\r\n* Fix typo\r\n\r\nSigned-off-by: Yadunund <yadunund@gmail.com>\r\n\r\nSigned-off-by: Arjo Chakravarty <arjo@openrobotics.org>\r\nSigned-off-by: Yadunund <yadunund@gmail.com>\r\nCo-authored-by: Luca Della Vedova <luca@openrobotics.org>\r\nCo-authored-by: Yadunund <yadunund@gmail.com>"
+    },
+    {
+      "sha": "d3e0c0cb119c88c53ad456306cc93d83d1b9a233",
+      "author": "Yadu",
+      "date": "2022-08-25T10:35:30Z",
+      "message": "Fix existing CI (#81)\n\n* Update build\r\n\r\nSigned-off-by: Yadunund <yadunund@gmail.com>\r\n\r\n* Update asan\r\n\r\nSigned-off-by: Yadunund <yadunund@gmail.com>\r\n\r\n* Update asan\r\n\r\nSigned-off-by: Yadunund <yadunund@gmail.com>\r\n\r\n* Cleanup\r\n\r\nSigned-off-by: Yadunund <yadunund@gmail.com>\r\n\r\n* Fix tsan\r\n\r\nSigned-off-by: Yadunund <yadunund@gmail.com>\r\n\r\nSigned-off-by: Yadunund <yadunund@gmail.com>"
+    },
+    {
+      "sha": "98e19e90b469b5d158e6f971e31dd711c549ebcb",
+      "author": "Arjo Chakravarty",
+      "date": "2022-08-22T23:15:44Z",
+      "message": "Fixes a segfault in toggle floor plugin which causes ignition to crash when scene is not ready. (#78)\n\nThis PR fixes a segfault I have been experiencing when loading large worlds. Often the rendering scene is not fully setup causing the` this->scene->NodeByName` to crash. This PR pushes a simple fix to skip over scenarios where the scene has not yet loaded the model.\r\n\r\nSigned-off-by: Arjo Chakravarty <arjo@openrobotics.org>"
+    },
+    {
+      "sha": "bcd186d7c1d8875d71bfedeb43461e02d0c037f2",
+      "author": "Aaron Chong",
+      "date": "2022-06-27T08:37:32Z",
+      "message": "Checking for models with dispensable in names to not be considered an obstacle by slotcar (#74)\n\n* Checking for models with dispensable in names to not be considered an obstacle by slotcar\r\n\r\nSigned-off-by: Aaron Chong <aaronchongth@gmail.com>\r\n\r\n* Add explanation that it will not be checked in the future again\r\n\r\nSigned-off-by: Aaron Chong <aaronchongth@gmail.com>"
+    },
+    {
+      "sha": "23717f10328a6c23eae035bb81e343be079a49da",
+      "author": "Yadu",
+      "date": "2022-06-23T02:53:57Z",
+      "message": "Reduce terminal printouts from slotcar (#73)\n\n* Move certain printouts to debug stream\r\n\r\nSigned-off-by: Yadunund <yadunund@openrobotics.org>\r\n\r\n* Use const reference\r\n\r\nSigned-off-by: Yadunund <yadunund@openrobotics.org>"
+    },
+    {
+      "sha": "4320b0d9e3cecff619d02cb3f55f7461f41f776f",
+      "author": "Luca Della Vedova",
+      "date": "2022-06-23T02:36:44Z",
+      "message": "Update workflows to test in build action (#62)\n\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\nCo-authored-by: Yadu <yadunund@openrobotics.org>"
+    },
+    {
+      "sha": "e0ee7e66a7fa782897e68426411ccedfd5546422",
+      "author": "chianfern",
+      "date": "2022-04-06T05:08:27Z",
+      "message": "Ignition GUI plugin to toggle floor visibility. (#72)\n\n* Ignition plugin to toggle floor visibility.\r\n\r\nSigned-off-by: Tan Chian Fern <chianfern@openrobotics.org>\r\n\r\n* Retrieve gui plugin config if not present.\r\n\r\nSigned-off-by: Tan Chian Fern <chianfern@openrobotics.org>\r\n\r\n* Cleanup\r\n\r\nSigned-off-by: Tan Chian Fern <chianfern@openrobotics.org>\r\n\r\n* Display all floors on plugin reload to match the checked boxes\r\n\r\nSigned-off-by: Tan Chian Fern <chianfern@openrobotics.org>\r\n\r\nCo-authored-by: Morgan Quigley <morgan@osrfoundation.org>"
+    },
+    {
+      "sha": "f943c8cd98a2948573c5824f62f99f7eb8956a54",
+      "author": "Luca Della Vedova",
+      "date": "2022-04-06T05:07:00Z",
+      "message": "Pure pursuit ackermann vehicles controller (#71)\n\n* ackermann steering robots now use seperate equation of motion function\r\n* Follow speed limits for ackermann vehicles\r\n* Implement speed limits for diff drive robots\r\n* Change approach speed to optional\r\n* Remove compute_ds_linear workaround\r\n* Minor cleanups\r\n* Uncrustify\r\n* pursuit controller\r\n* attempt at tuning/debugging diff-drive for pseudo-ackermann\r\n* Use boolean to determine whether to respect limits\r\n* Check for speed limit to be greater than 0\r\n* Style\r\n* update identifier name after merge\r\n* Comment debug statements\r\n* ensure slotcar requested velocity is never above speed limit\r\n* Slotcar pursues a lookahead point on its path. Add display markers for Ignition.\r\n* Add a short lifetime to waypoint markers\r\n* New velocity compute function for Ackermann and differential drive\r\n* Fix slowdown when turning, draw waypoint markers on path request, and cleanup.\r\n* Handle very small displacements in velocity compute function and clear markers.\r\n* Increase close_enough when holding and rotating towards next waypoint to accommodate slight translation due to rotation.\r\n* Cleanup\r\n* Fix slotcar not moving in gz due to very small velocity changes not taking effect.\r\n* Remove unused structure\r\n* Remove debug printout\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\nCo-authored-by: ddengster <ed.fan@osrfoundation.org>\r\nCo-authored-by: Morgan Quigley <morgan@osrfoundation.org>\r\nCo-authored-by: chianfern <chianfern@openrobotics.org>"
+    },
+    {
+      "sha": "35bf411930d81d2b7fcde7d38d4931e1ca59b763",
+      "author": "Luca Della Vedova",
+      "date": "2022-03-08T15:09:27Z",
+      "message": "Upgrade to Ignition Fortress (#70)\n\n* WIP cleanup and migrating to fortress\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\n* Some cleanup and port building plugins\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\n* Update rosdep keys to fortress\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\n* Fix use of uninitialized joint position / velocity\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\n* Fix wrong component during refactoring\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\n* Remove old ign-math conversion functions\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\n* Pose component const correctness\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\n* Fix crash in lift plugin\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>"
+    },
+    {
+      "sha": "83f2dfe7770e20dc93cd0c905667b6be4cf68645",
+      "author": "Yadu",
+      "date": "2022-01-18T17:14:01Z",
+      "message": "Update robot's current level only after the lift has finished moving (#64)\n\n* Report previous level name when robot is transitioning between levels\r\n\r\nSigned-off-by: Yadunund <yadunund@openrobotics.org>\r\n\r\n* Initialize level name\r\n\r\nSigned-off-by: Yadunund <yadunund@openrobotics.org>"
+    },
+    {
+      "sha": "5d0f65a4761a8fff7c775b2d3e5d26a4fb99c10b",
+      "author": "Marco A. Gutiérrez",
+      "date": "2021-11-30T05:57:40Z",
+      "message": "adding changelog info and version to relese fix (#63)\n\nSigned-off-by: Marco A. Gutierrez <marco@openrobotics.org>"
+    },
+    {
+      "sha": "a45969050f13584968c141b675e4386f24846d6a",
+      "author": "Marco A. Gutiérrez",
+      "date": "2021-11-12T15:24:52Z",
+      "message": "making install location package specific (#60)\n\nSigned-off-by: Marco A. Gutierrez <marco@openrobotics.org>"
+    },
+    {
+      "sha": "7e8060869225623d512f145d8b27cb45c0cc9427",
+      "author": "Aaron Chong",
+      "date": "2021-10-27T07:52:57Z",
+      "message": "Fix upload-artifact@v2 paths for multiple packages (#59)\n\n* Fixing artifact uploads with multiple packages\r\n\r\nSigned-off-by: Aaron Chong <aaronchongth@gmail.com>\r\n\r\n* Fixing paths for asan too\r\n\r\nSigned-off-by: Aaron Chong <aaronchongth@gmail.com>"
+    },
+    {
+      "sha": "5746ac7bf1d55f4d726f993269f0d96eee188935",
+      "author": "Charayaphan Nakorn Boon Han",
+      "date": "2021-09-17T07:57:18Z",
+      "message": "Change default lift current mode to AGV (#52)\n\nSigned-off-by: Charayaphan Nakorn Boon Han <charayaphan.nakorn.boon.han@gmail.com>"
+    },
+    {
+      "sha": "b70c6a072194a66347f4673adc61862f04783c34",
+      "author": "Luca Della Vedova",
+      "date": "2021-09-13T07:31:39Z",
+      "message": "Use return value of std::clamp (#51)\n\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>"
+    },
+    {
+      "sha": "2626d0831e857592c1046664482df6ddbda72dfb",
+      "author": "Luca Della Vedova",
+      "date": "2021-09-09T13:07:49Z",
+      "message": "Clamp acos argument to avoid nan results (#50)\n\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>"
+    },
+    {
+      "sha": "eb1eccab95b59cbeeb15880c975ca9cae481ca05",
+      "author": "Luca Della Vedova",
+      "date": "2021-09-09T01:26:47Z",
+      "message": "Finish rename of nonholonomic to ackermann, make ackermann vehicles standardized with RMF stack (#49)\n\n* Nonholonomic vehicles now report their state\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\n* Cleanup and change nonholonomic to ackermann\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\n* Minor cleanup, style\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\n* Address feedback\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\nCo-authored-by: ddengster <liangdeng.fan@gmail.com>"
+    },
+    {
+      "sha": "d683575c828740352e9eff4a1efb9186eac2aaf8",
+      "author": "Luca Della Vedova",
+      "date": "2021-09-07T03:19:23Z",
+      "message": "Fix dependencies for Ignition robot sim package (#45)\n\n* Fix dependencies for Ignition robot sim package\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\n* Update changelog\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\nCo-authored-by: Marco A. Gutiérrez <marco@openrobotics.org>"
+    },
+    {
+      "sha": "0f44ea4c85d81c5e1e80dba78b5f87e9ff276faf",
+      "author": "ddengster",
+      "date": "2021-09-03T10:36:32Z",
+      "message": "change parameter tag from holonomic to steering (#46)\n\n* change holonomic to steering_type\r\n\r\nSigned-off-by: ddengster <ed.fan@osrfoundation.org>\r\n\r\n* uncrustify\r\n\r\nSigned-off-by: ddengster <ed.fan@osrfoundation.org>\r\n\r\n* update changelogs\r\n\r\nSigned-off-by: ddengster <ed.fan@osrfoundation.org>\r\n\r\n* switch to enum\r\n\r\nSigned-off-by: ddengster <ed.fan@osrfoundation.org>\r\n\r\n* enum changes\r\n\r\nSigned-off-by: ddengster <ed.fan@osrfoundation.org>"
+    },
+    {
+      "sha": "3d211fe311980e2130fd23c6db2b7992fa37f74d",
+      "author": "Luca Della Vedova",
+      "date": "2021-09-01T08:58:45Z",
+      "message": "Update changelogs for galactic release (#44)\n\n* Update changelogs for galactic release\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\n* Bump version number to 1.3.0\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>"
+    },
+    {
+      "sha": "77d7caf29aeee60dbb1bfd53af62650d496005da",
+      "author": "chianfern",
+      "date": "2021-09-01T07:41:11Z",
+      "message": "support reversible slotcar (#38)\n\nSigned-off-by: chianfern <chianfern@gmail.com>\r\n\r\nCo-authored-by: Luca Della Vedova <luca@openrobotics.org>"
+    },
+    {
+      "sha": "80b22b90f3260d39865aef32efef0d0eecffc39e",
+      "author": "Luca Della Vedova",
+      "date": "2021-09-01T07:40:51Z",
+      "message": "Change slotcar control to explicitly open loop (#43)\n\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>"
+    },
+    {
+      "sha": "fc7fb26f2afd5b48c90450e5c86ba414aa6c1877",
+      "author": "ddengster",
+      "date": "2021-09-01T03:56:24Z",
+      "message": "Nonholonomic slotcar turning fixes, add turning multiplier offset parameter, rename compute_ds variables (#41)\n\n* fix naming of 'velocities' to displacements\r\n\r\nSigned-off-by: ddengster <ed.fan@osrfoundation.org>\r\n\r\n* add target velocity to velocity computation\r\nredo min_turning_radius computation and add compute_turning_multiplier\r\nremove unneeded variables, renamed variables in compute_ds function\r\n\r\nSigned-off-by: ddengster <ed.fan@osrfoundation.org>\r\n\r\n* fix turning radius computation\r\nadd adjustment for right angled turns\r\nremove unneeded param\r\n\r\nSigned-off-by: ddengster <ed.fan@osrfoundation.org>\r\n\r\n* remove unneeded code\r\nswitch to right angle mul offset variable\r\n\r\nSigned-off-by: ddengster <ed.fan@osrfoundation.org>\r\n\r\n* uncrustify\r\n\r\nSigned-off-by: ddengster <ed.fan@osrfoundation.org>"
+    },
+    {
+      "sha": "ebc4492babc4fb3df226e3ccc01d73b3a2e4e786",
+      "author": "Grey",
+      "date": "2021-08-30T09:01:06Z",
+      "message": "Rename the style check workflow to style (#39)\n\n* Rename the style check workflow to style\r\n\r\nSigned-off-by: Michael X. Grey <grey@openrobotics.org>\r\n\r\n* Use main branch instead of master branch\r\n\r\nSigned-off-by: Michael X. Grey <grey@openrobotics.org>"
+    },
+    {
+      "sha": "7e981e413a1331dd4311f208b3649a84ca3c9efb",
+      "author": "Luca Della Vedova",
+      "date": "2021-08-18T08:54:55Z",
+      "message": "Added rosdep key for ignition-edifice, made it a mandatory dependency (#31)\n\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>"
+    },
+    {
+      "sha": "a80cb6eac5c1af6b76ddee2507eab8affc4dc77c",
+      "author": "ddengster",
+      "date": "2021-08-17T02:50:25Z",
+      "message": "Support nonholonomic movement for slotcar (#33)\n\n* nonholonomic car path following\r\n\r\nSigned-off-by: ddengster <ed.fan@osrfoundation.org>\r\n\r\n* add nonholonomic path request subscriber with mutex locks, plus some cleanup\r\n\r\nSigned-off-by: ddengster <ed.fan@osrfoundation.org>\r\n\r\n* fix issue with subsequent ackmann path requests\r\nattempted fix on turning for straight line ackmann paths\r\nmore cleanup\r\n\r\nSigned-off-by: ddengster <ed.fan@osrfoundation.org>\r\n\r\n* uncrustify\r\n\r\nSigned-off-by: ddengster <ed.fan@osrfoundation.org>\r\n\r\n* change back to private, add is_holonomic function\r\n\r\nSigned-off-by: ddengster <ed.fan@osrfoundation.org>\r\n\r\n* compile fix\r\n\r\nSigned-off-by: ddengster <ed.fan@osrfoundation.org>\r\n\r\n* some cleanup\r\n\r\nSigned-off-by: ddengster <ed.fan@osrfoundation.org>\r\n\r\n* style\r\n\r\nSigned-off-by: ddengster <ed.fan@osrfoundation.org>\r\n\r\n* undo divide by dt\r\nremove snap_world_pose code\r\n\r\nSigned-off-by: ddengster <ed.fan@osrfoundation.org>\r\n\r\n* add min_turning_radius tag\r\naccount for robot names in ackmann_path_request\r\nremove unneeded world pose condition\r\n\r\nSigned-off-by: ddengster <ed.fan@osrfoundation.org>\r\n\r\n* lots of code removal\r\nadd condition for ackmann_path_request subscription\r\n\r\nSigned-off-by: ddengster <ed.fan@osrfoundation.org>\r\n\r\n* add comments\r\n\r\nSigned-off-by: ddengster <ed.fan@osrfoundation.org>\r\n\r\n* style\r\n\r\nSigned-off-by: ddengster <ed.fan@osrfoundation.org>\r\n\r\n* update function params\r\n\r\nSigned-off-by: ddengster <ed.fan@osrfoundation.org>\r\n\r\n* update again\r\n\r\nSigned-off-by: ddengster <ed.fan@osrfoundation.org>\r\n\r\nCo-authored-by: Luca Della Vedova <luca@openrobotics.org>"
+    },
+    {
+      "sha": "0455e7aeece9e5eabecc8f0c4e00b8dd8c648d7d",
+      "author": "Arjo Chakravarty",
+      "date": "2021-08-12T09:55:25Z",
+      "message": "Build against galactic to make sure that we don't break stuff (#32)\n\n* Build against galactic to make sure that we don't\r\n\r\nSigned-off-by: Arjo Chakravarty <arjo@openrobotics.org>\r\n\r\n* oops... Forget to set the ros_distribution according to the matrix\r\n\r\nSigned-off-by: Arjo Chakravarty <arjo@openrobotics.org>"
+    },
+    {
+      "sha": "76fc23148baae5dc13a9c606804b24453b8f0194",
+      "author": "Luca Della Vedova",
+      "date": "2021-08-12T03:20:40Z",
+      "message": "Skip updating ignition plugins when simulation is paused (#34)\n\n* Skip updating ignition plugins when simulation is paused\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\n* Style\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>"
+    },
+    {
+      "sha": "a81991f15beb6f77fa2b8157dc46f271a682aeb9",
+      "author": "Marco A. Gutiérrez",
+      "date": "2021-07-14T08:04:05Z",
+      "message": "adding license to source repo (#30)\n\nSigned-off-by: Marco A. Gutierrez <marco@openrobotics.org>"
+    },
+    {
+      "sha": "b527e9c1238a3f4084fa63521c1dd18241929d2e",
+      "author": "Marco A. Gutiérrez",
+      "date": "2021-07-12T07:40:12Z",
+      "message": "updating for galactic and rolling compatibility (#29)\n\nSigned-off-by: Marco A. Gutierrez <marco@openrobotics.org>"
+    },
+    {
+      "sha": "64bf608a1210cb510d180413973004347514fa07",
+      "author": "Marco A. Gutiérrez",
+      "date": "2021-07-01T04:08:19Z",
+      "message": "fix typo on gazebo_dev dependency (#28)\n\nSigned-off-by: Marco A. Gutierrez <marco@openrobotics.org>"
+    },
+    {
+      "sha": "80fd55c2b097af393e8b2fb8e88c01ac39eef37a",
+      "author": "Marco A. Gutiérrez",
+      "date": "2021-07-01T03:43:28Z",
+      "message": "Fix/dependencies (#26)\n\n* fixes on dependencies: cmake, package and QL\r\n\r\nSigned-off-by: Marco A. Gutierrez <marco@openrobotics.org>\r\n\r\n* adding maintainer for buildfarm notifications\r\n\r\nSigned-off-by: Marco A. Gutierrez <marco@openrobotics.org>\r\n\r\nCo-authored-by: Geoffrey Biggs <gbiggs@killbots.net>"
+    },
+    {
+      "sha": "706c1473fba9163ee1bcb0cbfc7e9b8326ff3cbb",
+      "author": "Teo Koon Peng",
+      "date": "2021-06-28T04:38:46Z",
+      "message": "fix compile error on qt > 5.14 (#27)\n\nSigned-off-by: Teo Koon Peng <koonpeng@openrobotics.org>"
+    },
+    {
+      "sha": "3bb8cd258e51203300f18cc87a2b40a0a0222787",
+      "author": "Arjo Chakravarty",
+      "date": "2021-06-10T23:50:20Z",
+      "message": "Add support for ASAN address sanitizer (#24)\n\n* Add support for ASAN address sanitizer\r\n\r\nSigned-off-by: Arjo Chakravarty <arjo@openrobotics.org>\r\n\r\n* Make it weekly instead.\r\n\r\nSigned-off-by: Arjo Chakravarty <arjo@openrobotics.org>\r\n\r\n* Update to container tooling version\r\n\r\nSigned-off-by: Arjo Chakravarty <arjo@openrobotics.org>\r\n\r\n* Changes and corrections to support ROS 2 Galactic (#23)\r\n\r\nSigned-off-by: Geoffrey Biggs <gbiggs@killbots.net>\r\n\r\nCo-authored-by: Marco A. Gutiérrez <marco@openrobotics.org>\r\nSigned-off-by: Arjo Chakravarty <arjo@openrobotics.org>\r\n\r\n* Update asan.yaml\r\n\r\nSigned-off-by: Arjo Chakravarty <arjo@openrobotics.org>\r\n\r\n* Changes for galactic (#25)\r\n\r\nSigned-off-by: Yadunund <yadunund@openrobotics.org>\r\nSigned-off-by: Arjo Chakravarty <arjo@openrobotics.org>\r\n\r\nCo-authored-by: Geoffrey Biggs <gbiggs@killbots.net>\r\nCo-authored-by: Marco A. Gutiérrez <marco@openrobotics.org>\r\nCo-authored-by: Yadu <yadunund@openrobotics.org>"
+    },
+    {
+      "sha": "a66644ad9f20b4b71d4c7998221377ae685c693b",
+      "author": "Yadu",
+      "date": "2021-06-09T23:08:10Z",
+      "message": "Changes for galactic (#25)\n\nSigned-off-by: Yadunund <yadunund@openrobotics.org>"
+    },
+    {
+      "sha": "fb0f90ffdf950758987104eb07e092e19282b59e",
+      "author": "Geoffrey Biggs",
+      "date": "2021-06-04T07:41:40Z",
+      "message": "Changes and corrections to support ROS 2 Galactic (#23)\n\nSigned-off-by: Geoffrey Biggs <gbiggs@killbots.net>\r\n\r\nCo-authored-by: Marco A. Gutiérrez <marco@openrobotics.org>"
+    },
+    {
+      "sha": "e7117377b5e61c7492980abd0118045582ae0a37",
+      "author": "Marco A. Gutiérrez",
+      "date": "2021-06-01T11:14:33Z",
+      "message": "Removing unnecessary qt5 dependency from CMakeLists (#22)\n\nSigned-off-by: Marco A. Gutierrez <marco@openrobotics.org>"
+    },
+    {
+      "sha": "d4c237de387b6e00525d6465a99ef5e528145161",
+      "author": "Marco A. Gutiérrez",
+      "date": "2021-06-01T08:02:53Z",
+      "message": "Make menge mandatory and fix building_sim dependencies (#19)\n\n* make menge mandatory and fix dependencies\r\n\r\nSigned-off-by: Marco A. Gutierrez <marco@openrobotics.org>\r\n\r\n* Remove unnecessary dependencies\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\n* fixing dependencies and quality declaration (#20)\r\n\r\nSigned-off-by: Marco A. Gutierrez <marco@openrobotics.org>\r\n\r\n* Update setup-ros workflow version\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\n* Remove qt5 from building_sim_common\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\nCo-authored-by: Luca Della Vedova <luca@openrobotics.org>"
+    },
+    {
+      "sha": "5a0fee5ece947b25777d8a0b0433e453a334591c",
+      "author": "Aaron Chong",
+      "date": "2021-05-21T04:12:18Z",
+      "message": "Start using ros-tooling for build and test workflow, added coverage, tsan (#14)\n\n* Using ros-tooling action ci, added coverage and tsan\r\n\r\nSigned-off-by: Aaron Chong <aaronchongth@gmail.com>\r\n\r\n* Fix broken pipe error\r\n\r\nSigned-off-by: Aaron Chong <aaronchongth@gmail.com>\r\n\r\n* Using newline to separate packages\r\n\r\nSigned-off-by: Aaron Chong <aaronchongth@gmail.com>\r\n\r\n* Reverted to using basic coverage-gcc workflow, added tsan workflow\r\n\r\nSigned-off-by: Aaron Chong <aaronchongth@gmail.com>\r\n\r\n* Renamed job to tsan, added clang environment variables\r\n\r\nSigned-off-by: Aaron Chong <aaronchongth@gmail.com>\r\n\r\n* Adding upload_artifact step in tsan workflow\r\n\r\nSigned-off-by: Aaron Chong <aaronchongth@gmail.com>\r\n\r\n* Fixed copy of non-trivial type, using c_str() instead of std::string\r\n\r\nSigned-off-by: Aaron Chong <aaronchongth@gmail.com>\r\n\r\n* Fixed unused template keywords due to API not templated\r\n\r\nSigned-off-by: Aaron Chong <aaronchongth@gmail.com>\r\n\r\n* Adding codecov.yml file\r\n\r\nSigned-off-by: Aaron Chong <aaronchongth@gmail.com>\r\n\r\n* Removed tsan workflow on push\r\n\r\nSigned-off-by: Aaron Chong <aaronchongth@gmail.com>\r\n\r\n* Added cron job for both build and tsan, fixed upload artifact targets\r\n\r\nSigned-off-by: Aaron Chong <aaronchongth@gmail.com>"
+    },
+    {
+      "sha": "7492d424a1b7c2940b685917c1cbd2bfb73e0070",
+      "author": "Geoffrey Biggs",
+      "date": "2021-05-19T06:58:48Z",
+      "message": "Initialise documentation (#13)\n\nSigned-off-by: Geoffrey Biggs <gbiggs@killbots.net>\r\nSigned-off-by: Michael X. Grey <grey@openrobotics.org>\r\nCo-authored-by: Grey <grey@openrobotics.org>"
+    },
+    {
+      "sha": "5126aab6789304513fb96fb7c5a56bad2932afcc",
+      "author": "Geoffrey Biggs",
+      "date": "2021-05-07T02:56:00Z",
+      "message": "Add quality declaration documents (#1)\n\nCo-authored-by: Michael X. Grey <grey@openrobotics.org>\r\nCo-authored-by: Luca Della Vedova <luca@openrobotics.org>\r\nSigned-off-by: Geoffrey Biggs <gbiggs@killbots.net>\r\nSigned-off-by: Michael X. Grey <grey@openrobotics.org>\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>"
+    },
+    {
+      "sha": "95bcd9b91f9338aec8f833b37f5d460eaca4af34",
+      "author": "Yadu",
+      "date": "2021-05-05T07:30:26Z",
+      "message": "Do not drain battery when robot is in the vicinity of the carger (#18)\n\nSigned-off-by: Yadunund <yadunund@openrobotics.org>"
+    },
+    {
+      "sha": "7c801ef053064d946186a78e3759f745633d43cb",
+      "author": "Yadu",
+      "date": "2021-05-05T07:29:07Z",
+      "message": "Skip RobotState if level_name is empty (#16)\n\nSigned-off-by: Yadunund <yadunund@openrobotics.org>"
+    },
+    {
+      "sha": "e32249d5c60680709dc00e95da89dbcd0bd2e268",
+      "author": "Yadu",
+      "date": "2021-04-13T03:44:32Z",
+      "message": "Log as debug (#12)\n\nSigned-off-by: Yadunund <yadunund@openrobotics.org>\r\n\r\nCo-authored-by: Luca Della Vedova <luca@openrobotics.org>"
+    },
+    {
+      "sha": "f543104c7a33c871888510f439b902ec1f8fab5a",
+      "author": "Luca Della Vedova",
+      "date": "2021-04-09T09:26:55Z",
+      "message": "Crowd step size fix for large physics step sizes (#10)\n\n* Crowd step size fix for large physics step sizes\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\n* Update at every step in Ignition\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\n* Addres compile warnings\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>"
+    },
+    {
+      "sha": "cd33ed7d0b107905809d2fc60bf9be0ad61606eb",
+      "author": "Luca Della Vedova",
+      "date": "2021-04-08T01:24:41Z",
+      "message": "Add build and style actions (#11)\n\n* Add build and style actions\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\n* Fix workspace path\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\n* Add dependency, fix code style\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>"
+    },
+    {
+      "sha": "3ff97966d379e86d706ae65c424e8fff267112ef",
+      "author": "Luca Della Vedova",
+      "date": "2021-04-06T06:08:06Z",
+      "message": "Update to Ignition Edifice (#8)\n\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>"
+    },
+    {
+      "sha": "5bae14df9d05ecf6f931bd66cb9cb5c123ed199a",
+      "author": "Geoffrey Biggs",
+      "date": "2021-04-05T04:57:44Z",
+      "message": "Slotcar plugin package move and utils cleanup (#5)\n\n* Move slotcar to rmf_robot_sim_*\r\n\r\nSigned-off-by: Geoffrey Biggs <gbiggs@killbots.net>\r\n\r\n* Fix namespace usage\r\n\r\nSigned-off-by: Geoffrey Biggs <gbiggs@killbots.net>\r\n\r\n* Refactor and cleanup utils (#6)\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\nCo-authored-by: Luca Della Vedova <luca@openrobotics.org>"
+    },
+    {
+      "sha": "6fe97895371789eb870c32db2934fbcb69f5b4c5",
+      "author": "Charayaphan Nakorn Boon Han",
+      "date": "2021-03-29T03:59:45Z",
+      "message": "account for renaming to rmf_building_map_tools (#4)\n\nSigned-off-by: Boon Han <charayaphan.nakorn.boon.han@gmail.com>"
+    },
+    {
+      "sha": "d0fbd5731fb1e4ef7fc0602700d0321a91016361",
+      "author": "Charayaphan Nakorn Boon Han",
+      "date": "2021-03-27T13:50:27Z",
+      "message": "account for renaming from building_map_msgs to rmf_building_map_msgs (#3)\n\nSigned-off-by: Boon Han <charayaphan.nakorn.boon.han@gmail.com>"
+    },
+    {
+      "sha": "82221db346c2cd8eefa5ef8d783bd8eaf7566295",
+      "author": "Geoffrey Biggs",
+      "date": "2021-03-26T07:01:30Z",
+      "message": "Correct include directory path\n\nSigned-off-by: Geoffrey Biggs <gbiggs@killbots.net>"
+    },
+    {
+      "sha": "f1ff32041719beb779078a2449e9d95e4c1c8389",
+      "author": "Geoffrey Biggs",
+      "date": "2021-03-26T06:41:47Z",
+      "message": "Move building sim plugins from traffic_editor repository\n\nSigned-off-by: Geoffrey Biggs <gbiggs@killbots.net>"
+    },
+    {
+      "sha": "fcd095bc82d96ef02d0a5b96e0000d1224b04edc",
+      "author": "Geoffrey Biggs",
+      "date": "2021-03-04T09:23:35Z",
+      "message": "Renames (#2)\n\n* Rename rmf_gazebo_plugins to rmf_robot_sim_gazebo_plugins\r\n\r\nSigned-off-by: Geoffrey Biggs <gbiggs@killbots.net>\r\n\r\n* Rename packages\r\n\r\nSigned-off-by: Geoffrey Biggs <gbiggs@killbots.net>"
+    },
+    {
+      "sha": "c6fbf3c7ff866721834792411847f286c40b5699",
+      "author": "Geoffrey Biggs",
+      "date": "2021-02-25T12:34:51Z",
+      "message": "Update README\n\nSigned-off-by: Geoffrey Biggs <gbiggs@killbots.net>"
+    },
+    {
+      "sha": "8a096229ea1c47f446cf81bb0c66eb495c717f65",
+      "author": "Geoffrey Biggs",
+      "date": "2021-02-25T12:34:09Z",
+      "message": "Move directories to root of repository\n\nSigned-off-by: Geoffrey Biggs <gbiggs@killbots.net>"
+    },
+    {
+      "sha": "b6bdb4d8647eb7686ce2740a7d31467e435c4a63",
+      "author": "Marco A. Gutiérrez",
+      "date": "2021-01-06T08:40:13Z",
+      "message": "changelogs update and version bump (#177)\n\nSigned-off-by: Marco A. Gutierrez <marco@openrobotics.org>"
+    },
+    {
+      "sha": "a7cfd13888069ce8489f397d0ff9345e0a193562",
+      "author": "youliang",
+      "date": "2021-01-06T01:42:40Z",
+      "message": "Fix robot getting stuck in dispensing phase for delivery requests (#175)\n\n* fix dispenser and ingestor results\r\n\r\n* fix style\r\n\r\n* update .insert past_id  with .emplace"
+    },
+    {
+      "sha": "48e5359a523beac59e7d02af45541a0a0f6f2cdc",
+      "author": "Marco A. Gutiérrez",
+      "date": "2020-12-18T05:37:01Z",
+      "message": "Fixing cmake issue with library install location (#172)\n\nSigned-off-by: Marco A. Gutierrez <marco@openrobotics.org>"
+    },
+    {
+      "sha": "b45cc80aa6e094fea425874e17ee65a2f8765032",
+      "author": "Rushyendra Maganty",
+      "date": "2020-12-14T10:01:34Z",
+      "message": "Use service request to get slotcar height instead of AABB component (#171)\n\nOptimization to avoid AABB recomputation when slotcar moves"
+    },
+    {
+      "sha": "d80abf7f29ce6eb2b3663a5e726a92d4c9205708",
+      "author": "Rushyendra Maganty",
+      "date": "2020-12-10T02:17:50Z",
+      "message": "Use ign-rendering light API in light tuning plugin (#170)\n\n* Use rendering Light API instead of service requests\r\n\r\nAvoids the need to send remove and create requests in order to update\r\nlights.\r\n\r\n* Remove use of queue of actions of requests for each light\r\n\r\n* Update light pose in real time using rendering api to monitor pose changes"
+    },
+    {
+      "sha": "e570e8d002d552a29d71f1cc271ce0ab66492061",
+      "author": "Rushyendra Maganty",
+      "date": "2020-12-08T06:28:28Z",
+      "message": "Create ignition tuning plugin (#166)\n\n* Create initial Light Tuning Plugin\r\n\r\nMakes use of create and remove services to toggle the rendering of a\r\nsingle light.\r\n\r\n* Use GUI parameters to instantly modify and update light\r\n\r\nAdds functions to parse all light fields and update the light instantly.\r\nIncludes various functions to parse GUI inputs and generate a new light\r\nto replace existing one.\r\n\r\n* Refactor plugin to make use of model-view structure\r\n\r\nUse QAbstractListModel and delegate in QML. Add support for saving\r\nlights and updating or adding multiple lights. Enfore name uniquness.\r\n\r\n* Add spot light capabilities\r\n\r\nParse and update spot light params includng inner and outer angles.\r\nAlso adds comments and search for world name.\r\n\r\n* Add markers to set light pose easily and add sliders for param selection\r\n\r\nUsability improvements to make editing lights easier.\r\n\r\n* Add color picker for diffuse and specular color selection\r\n\r\n* Modify light save function to omit intermediate sdf tags\r\n\r\n* Check for preexisting light names before creation and hide spotlight params\r\n\r\nAlso removes check for REMOVE in queue before adding new action\r\n\r\n* Enable automatic updates of light on parameter changes\r\n\r\nAdds callbacks for all GUI components, and keeps track of\r\nold marker pose to reduce number of updates sent to light. QML\r\nsignals dleiberately chosen to ensure no create/remove requests are\r\nsent too soon after one another."
+    },
+    {
+      "sha": "67d29538d49cfa111d4ef0269539a9ca2e65403c",
+      "author": "Rushyendra Maganty",
+      "date": "2020-12-07T02:53:44Z",
+      "message": "Fix Gazebo crash with both Ignition and Gazebo diff drive plugins in same file (#167)\n\nAdding a slash ensures that dlopen interprets it as a pathname, avoiding\r\ncrashes since dlopen will no longer find the ignition plugin."
+    },
+    {
+      "sha": "2d733c8416907440ed70fe3106cb8916ebe2d479",
+      "author": "Luca Della Vedova",
+      "date": "2020-11-17T09:12:31Z",
+      "message": "Add Ignition simulation plugins and demos (#152)\n\n* add request_lift test script\r\n\r\n* add lift_test\r\n\r\n* add navigation graph in test\r\n\r\n* Add ignition world generation to CMakeLists\r\n\r\n* Added basic launch files for ignition\r\n\r\n* Adapted to latest changes in package naming, added fleet adapter to ign demo\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\n* Added ros_ign_bridge for clock\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\n* Fix build errors\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\n* Fix office_ign demo by removing dispensers\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\n* Added instruction on setting up and running ignition demos\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\n* Remove mercurial from ign dependencies\r\n\r\n* Add warning about ros2 version\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\n* Added changes from master to ign launch\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\n* Improve appearances\r\n\r\n* Collision bitmask PR merged, back to master\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\n* remove mannually created holes for lifts\r\n\r\n* Revert to previous package naming for plugins\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\n* add lift_test_ign launch file\r\n\r\n* Add .gazebo folder to models path\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\n* fix model path and orientation\r\n\r\n* fix nav_graph path\r\n\r\n* Ignition dome version bump\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\n* Create Ignition plugins for TeleportIngestor and TeleportDispenser and refactor with existing Gazebo plugins (#124)\r\n\r\n* Create initial TeleportIngestor and TeleportDispenser Ignition plugins\r\n\r\nNew ignition plugins mimic behavior of the existing Gazebo plugins with\r\nthe same name. Also created empty new rmf_plugins_common package which\r\nwill house code common to both the Ignition and Gazebo plugins.\r\n\r\n* Create modularized TeleportDispenser Ignition and Gazebo plugins\r\n\r\nModify Gazebo plugin to mimic asynchronous control flow of the Ignition\r\nplugin. Refactor both plugins to separate the ROS node and message\r\npassing from the simulation aspects, moving the former to the new\r\nTeleportDispenserCommon class.\r\n\r\nCurrently, the TeleportDispenser state and any publishers/subscribers\r\nare in the TeleportDispenserCommonClass, while any functions to locate\r\nand move objects are located in the respective Ignition/Gazebo plugin\r\nclasses.\r\n\r\n* Create modularized TeleportIngestor Ignition and Gazebo plugins\r\n\r\nModify Gazebo plugin to mimic asynchronous control flow of the Ignition\r\nplugin. Refactor both plugins to separate the ROS node and message\r\npassing from the simulation aspects, moving the former to the new\r\nTeleportIngestorCommon class.\r\n\r\n* Miscellaneous minor enhancements and cleanup\r\n\r\n- Check if ingestor is filled before attempting to ingest item.\r\n- Check if bounding box of ingestor contains item in addition to merely\r\n  checking distance.\r\n- Send failure status for ingesting if request does not succeed.\r\n- Move _non_static_init_model_poses to TeleportIngestorCommon\r\n- Standardize indentation to 2 spaces and remove redundant includes\r\n- Move function definitions out of class\r\n- Remove logger() function\r\n- Simplify plugin names amd change Teleport{Ingestor|Dispenser}Common member object names\r\n- Add comments\r\n\r\n* Use AxisAlignedBox component(s) when dispensing items\r\n\r\nCreates an AxisAlignedBox (AABB) component for item to be dispensed. When\r\ndispensing item, uses the AABB of the robot model to calculate its\r\nsubsequent position. Also adds minor indentation changes for various\r\nfunctions.\r\n\r\n* Update Changelog for rmf_ignition_plugins\r\n\r\nUpdate Changelog description for new package containing Ignition Gazebo\r\nplugins for the rmf demos.\r\n\r\n* Incorporate rmf_ingestor_msgs and enable demos to run with Gazebo >9\r\n\r\nModifies Ignition and Gazebo TeleportIngestor plugins to send receive\r\nmessages defined in rmf_ingestor_msgs. Adds flags to check for Gazebo\r\nversion and create bounding boxes of the appropriate type. Lastly,\r\nmodifies CMakeLists and package.xml files where appropriate to run with\r\nthe latest Gazebo versions.\r\n\r\n* Change indentation and formatting to adhere to style guidelines\r\n\r\nAdjust indentation, line widths and spacing. Remove underscores for public var names in classes.\r\nAdd Ignition plugin paths to Airport and Lift demos.\r\n\r\n* Refactor utils lib and Ingestor/Dispenser code structure improvements\r\n\r\n- Move utils library to rmf_plugins_common package\r\n- Removes `_load_complete` flag where not necessary.\r\n- Upgrades sdformat version form 9 to 10\r\n- Incorporates static() checking when generating robot lists instead of in\r\n    `find_nearest_non_static_model()`\r\n- ingest_from_nearest_robot and dispense_onto_nearest_robot now return boolean\r\n    values instead of void\r\n\r\n* Use generic callback fns for Ingesting/Dispensing\r\n\r\nMoves the bulk of the code in the TeleportIngestor and\r\nTeleportDispensers' on_update() or pre_update() functions into common\r\nfunctions. Passes callback functions to the common function instead to\r\ninject ignition/gazebo-specific code.\r\n\r\n* Ignition Math version bump\r\n\r\nUse ign-math6 instead of ign-math4. Minor style changes to\r\nrequest_lift.py\r\n\r\n* Fix ign-math dependency in rmf_plugins_common\r\n\r\n* Shift simulation_now and response construction into utils\r\n\r\nRefactor TeleportIngestorCommon and TeleportDispenserCommon to move\r\ncommon functions into utils library where possible.\r\n\r\n* Move dispenser refill check and current_state updates to common TeleportDispenserCommon\r\n\r\nMoves the periodic check for refilling the dispenser into the\r\nTeleportDispenserCommon class. Also moves the current_state updates\r\nto the common classes to ensure no publishers or subscribers are\r\nneeded in the individual Ignition or Gazebo plugin classes.\r\n\r\n* Move ingesting and disepnsing control logic to common classes\r\n\r\nCreates a new SimEntity class to hold identifiers for either Ignition or\r\nGazebo simulations. This enables dispense_on_nearest() and\r\ningest_from_nearest_robot() to be moved to the common classes, with\r\ncallbacks injected for simulation specific tasks such as moving objects\r\nor identifying the nearest objects.\r\n\r\n* Modify SimEntity struct field to be dependent on simulator type\r\n\r\nAccessing the entity or name field of a SimEntity object is now\r\ndependent on the Simulator type it is to be used for, which is\r\nimplicitly specified when first initializing a SimEntity object.\r\n\r\n* Fix Dispenser bounding box generation\r\n\r\n- Store the bounding box created in _dispenser_vicinity_box and use that\r\nvalue instead of assigning it to the Dispenser's BoundingBox/AxisAlignedBox\r\nproperty.\r\n- Mention use of new rmf_ingestor_msgs in changelog\r\n\r\n* Convert utils functions to generic versions\r\n\r\nRemove any dependency on Gazebo or sdformat in the sim_utils library by\r\nconverting existing functions to templated versions. Clean up\r\ndependencies in the corresponding CMakeLists file.\r\n\r\n* Convert Pose data to Eigen Isometry values to work with multiple Gazebo versions\r\n\r\nCreate template functions to convert between the Pose data type and\r\nEigen Isometry3d values, and incorporate these into the TeleportIngestor\r\nplugins. Removes the dependency on Ignition Math 6 and enables it to work\r\nwith both Gazebo 11 and 9.\r\n\r\n* Fix Eigen3 Dependencies in CMakeLists file\r\n\r\nAdd Eigen3 as target dependency for TeleporIngestorCommon and move\r\ntemplate functions from utils to TeleportIngestorCommon.\r\n\r\n* Create Ignition Readonly plugin (#134)\r\n\r\n* Create functional Readonly Ignition plugin and replace map placeholders\r\n\r\nNew Readonly Ignition plugin mimics the existing Gazebo readonly\r\nplugin in terms of behavior. robot_placeholder(s) in the Airport\r\nTerminal map have been replaced with the actual robots themselves.\r\n\r\n* Refactor Readonly Gazebo plugin to use ReadonlyCommon class\r\n\r\nMoves all non simulator specific code to the ReadOnlyCommon class for\r\nreuse by other simulator plugins. Refactor the existing Gazebo Readonly\r\nplugin to make use of this common class.\r\n\r\n* Refactor Readonly Ignition plugin to make use of ReadonlyCommon class\r\n\r\nMove non Ignition Gazebo specific code to the common class. Amend\r\nCmakeLists file to remove redundant includes.\r\n\r\n* Fix airport demo launch files\r\n\r\nEdit description for ignition airport demo launch files, and set default\r\ncaddy model plugin name in sdf file to point to the Gazebo plugin.\r\n\r\n* Enable both differential drive plugins to work without needing to recompile\r\n\r\n- Add both diff drive plugins to sdf file. Serves as a workaround to run both\r\nIgnition and Gazebo classic simulations without needing to edit the\r\nCaddy sdf file to modify plugin names.\r\n\r\n- Convert CMake target_link_libraries to ament_target_directories. Remove\r\ncomment markers around caddy in launch file.\r\n\r\n* Remove ignition math dependency and substitute Eigen library\r\n\r\nRemoves use of ignition math in ReadonlyCommon, by replacing it with\r\nequivalent Eigen types and functions. Added minor comments in the Caddy\r\nsdf file describing addition of both plugins, as well as some in the\r\nreadonly plugin.\r\n\r\n* Miscellaneous minor Readonly plugin improvements\r\n\r\n- Pass pose and sim time as arguments to `on_update` function to ensure\r\nthey get computed each time\r\n- Removed unused `update_count` variable\r\n- Added getter/setter for name variable in `ReadonlyCommon` and changed\r\nits access specifier from public to private\r\n- Modified mutex name to be more descriptive\r\n\r\n* Remove _pose and _sim_time local variables from Readonly plugin classes\r\n\r\nInitialize the aforementioned variables in the `on_update()` function\r\ninstead.\r\n\r\n* Add PBR textures to Caddy\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\n* Fix eigen dependency name\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\n* Launch file updates to enable Ignition GUI plugins and fix lift_test demo (#144)\r\n\r\n* Add paths to Ignition GUI plugins\r\n\r\nModify ignition demo launch files to add path to Ignition GUI plugins.\r\n\r\n* Updated docs for release of ignition dome\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\n* Adjust TinyRobot mass to run smoothly using DART on Ignition (#146)\r\n\r\nCurrently, the wheels of the TinyRobot slip when attempting to turn\r\non Ignition with the DART physics engine. This fix modifies the mass\r\nslightly for now, to allow it to run smoothly.\r\n\r\n* Support slotcar movement and delivery with Linear/AngularVelocityCmds on Ignition (#150)\r\n\r\n* Send Ignition transport messages from TeleportIngestor and Dispenser\r\n\r\nRequired for slotcar plugin to know when a payload has been dispensed to/\r\ningested from it.\r\n\r\n* Add Clinic Ignition demo launch file\r\n\r\n* Reset velocity cmds when ingesting object\r\n\r\nMakes TeleportIngestor responsible for all movement of object once it\r\nhas been ingested. Remove debugging statements and modifies some\r\ncomments.\r\n\r\n* Change TeleportIngestor ignition msg type from Uint64 to Entity\r\n\r\nImproves maintainability if the current Entity type were ever to change\r\nin Ignition. Also makes a few code style improvements.\r\n\r\n* Remove test worlds\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\n* Remove additional test files\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\n* Add Ignition installation to github workflow\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\n* Fix CI script\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\n* Cleanup environment variables, add hotel demo\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\n* Merged ignition and gazebo classic launch files\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\n* Remove demo scripts\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\n* Remove installation of deleted scripts\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\n* Commented out caddy in ignition, fixes gazebo crashes\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\nCo-authored-by: Kevinskwk <kevinskwk@gmail.com>\r\nCo-authored-by: Rushyendra Maganty <mrushyendra@yahoo.com.sg>"
+    }
+  ]
+}

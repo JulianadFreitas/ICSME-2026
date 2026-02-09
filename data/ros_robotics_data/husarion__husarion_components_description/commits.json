@@ -1,0 +1,150 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-07T07:03:54Z",
+    "source": "github_rest",
+    "endpoint": "/repos/{owner}/{repo}/commits",
+    "owner": "husarion",
+    "repo": "husarion_components_description",
+    "per_page": 100
+  },
+  "data": [
+    {
+      "sha": "5b92d1ce55d6503896e0a59ac910358c7e516d93",
+      "author": "Dawid Kmak",
+      "date": "2026-01-26T13:13:26Z",
+      "message": "Rails elements (#17)\n\n* add multiple elements to rails\n\n* fix collision\n\n* test different runner\n\n* test container\n\n* try core and manual install\n\n* init rosdep\n\n* simplify and install coveragepy\n\n* clean up\n\n* rename reling to rack"
+    },
+    {
+      "sha": "db86c7fb7efeaacb1143be9ff40e763d0746493b",
+      "author": "Dawid Kmak",
+      "date": "2026-01-15T13:42:51Z",
+      "message": "Fix os0-32 ranges (#16)"
+    },
+    {
+      "sha": "22664df7766272774531597ae16b5f38468b4bd2",
+      "author": "Jakub Delicat",
+      "date": "2025-12-18T06:20:58Z",
+      "message": "Add reling component (#15)"
+    },
+    {
+      "sha": "562fed0149a025163fab177981eca7baf6d7c1da",
+      "author": "rafal.gorecki",
+      "date": "2025-12-12T11:47:46Z",
+      "message": "0.1.0"
+    },
+    {
+      "sha": "dada17e2cb5b7a65fc948a0bb62a2e23ad410d3d",
+      "author": "rafal.gorecki",
+      "date": "2025-12-12T11:47:15Z",
+      "message": "Update changelog"
+    },
+    {
+      "sha": "d387825c8498749ff979f72ed337c8607c88249d",
+      "author": "rafal.gorecki",
+      "date": "2025-12-12T11:46:23Z",
+      "message": "Improve ouster diffrent version simulation"
+    },
+    {
+      "sha": "a28a41ba059e689420a3e9d8552435781ebe286b",
+      "author": "Rafal Gorecki",
+      "date": "2025-12-04T09:16:59Z",
+      "message": "Add tf_prefix arg and fix depthai reference frame for camera (#14)"
+    },
+    {
+      "sha": "e01e2777cb364b08d654209dd71222477693e7ff",
+      "author": "Rafal Gorecki",
+      "date": "2025-11-26T12:26:41Z",
+      "message": "Add meshes (#13)\n\n* Add Ouster mesh\n\n* Add wibotic meshes and fixes\n\n* Make wibotic station more universal (change root_link, edit height of elements)\n\n* Fix pre-commit\n\n* Fix test\n\n* Fix collistion\n\n* apriltag_height -> apriltag_mount_height"
+    },
+    {
+      "sha": "c5ef4d8db6e63f26c4f6b8ae45f78fb1db682d1a",
+      "author": "Jakub Delicat",
+      "date": "2025-11-24T10:59:23Z",
+      "message": "Fixed teltonika antenna link (#12)\n\nSigned-off-by: Jakub Delicat <jakub.delicat@husarion.com>"
+    },
+    {
+      "sha": "3aa05277702e750a6d0f3800879aebb8dfc3f6e4",
+      "author": "Jakub Delicat",
+      "date": "2025-10-29T10:30:58Z",
+      "message": "Replace / with _ in bridge node name (#11)\n\nSigned-off-by: Jakub Delicat <jakub.delicat@husarion.com>"
+    },
+    {
+      "sha": "966e0f00857b90a6322fac8461c2f91d6582473a",
+      "author": "husarafal",
+      "date": "2025-10-09T09:50:33Z",
+      "message": "Fix refactor (#10)\n\n* gz_components.launch default component names\n\n* ...transmitter_link -> ...wibotic_transmitter_link\n\n* remove default component names from ouster and rplidar urdfs\n\n* oak: remove default component name\n\n* fix test errors\n\n* velodyne: remove default component name\n\n* remove oak default name from luxonis_depthai gz bridge launch\n\n* revert oak default name removal\n\n* allow teltonika without name, producing \"gps\" frame without any prefix\n\n* remove unused imports\n\n* fix teltonika urdf gazebo params\n\n* fix teltonika"
+    },
+    {
+      "sha": "98d0899d9a1165a0ec5061d6fba62d2919b5c6af",
+      "author": "husarafal",
+      "date": "2025-09-18T10:19:36Z",
+      "message": "Big clean up +  frame standarization (#9)\n\n* readme: add disclaimer that manipulators are only supported in sim\n\n* readme: add DEVs to sensor table\n\n* code style: align sensor table rows\n\n* fix teltonika URDF crash\n\n* rename unused \"name\" param in kinova to avoid confusion with component names\n\n* urdf: rename namespace arg to robot_namespace\n\n* remove all existing occurences of \"component_name\"; component_name -> component_model_name\n\n* components.urdf: remove default component names\n\n* device_namespace -> component_name\n\n* readme: update xacro params list\n\n* component-specific urdfs: remove default component names\n\n* main urdf: ns -> robot_namespace_value\n\n* macros: rename prefixes:\nns -> robot_namespace_slash\nprefix -> component_name_underscore\ndevice_ns -> component_name_slash\n\n* macros: replace the uses of ${robot_namespace}/ and ${component_name}_ or with / at the end\n\n* kinova: add robot_namespace_slash gz_frame_id prefix\n\n* macros: add default component names\n\n* REVIEWME: standarize frame names\n\n* device_namespace_prefix -> component_name_gz_prefix\n\n* remove ros2_control bug workaround\nhttps://github.com/ros-controls/ros2_control/issues/1506\n\n* replace leftover device_namespace -> component_name\n\n* main urdf: remove robot_namespace_value\n\n* kinova urdf: remove robot_name\n\n* urdfs: set default d435 and astra names to \"camera\"\n\n* Remove extra robotiq_ in name\n\n* urdf default name teltonika -> gps\n\n* revert ouster/velodyne/rplidar/zed reading frame changes\n\n* standarize astra and zed gz sensor names\n\n* fix unit tests\n\n* remove unused imports\n\n* rename teltonika frame"
+    },
+    {
+      "sha": "5ad18c27f53b129a99bf9df513d16fda5a4bca6f",
+      "author": "rafal-gorecki",
+      "date": "2025-09-01T11:33:24Z",
+      "message": "Fix default device_name"
+    },
+    {
+      "sha": "268e6febf4f65ece36a6bb8c6e1aac24028fd8fd",
+      "author": "rafal-gorecki",
+      "date": "2025-08-27T15:26:36Z",
+      "message": "Add missing lidar"
+    },
+    {
+      "sha": "1a77f7b3d9c942b1560dafc823ab0c4a1f125995",
+      "author": "Dawid Kmak",
+      "date": "2025-08-18T15:11:10Z",
+      "message": "Fix ouster visual (#6)"
+    },
+    {
+      "sha": "b20d5850906051c6534589ad2f8edd4273f2a069",
+      "author": "BOOTCFG",
+      "date": "2025-08-06T08:39:34Z",
+      "message": "0.0.2"
+    },
+    {
+      "sha": "ffc571b9fab31d87179957f4929b2f22b6ac83cd",
+      "author": "BOOTCFG",
+      "date": "2025-08-06T08:38:59Z",
+      "message": "Added changelog"
+    },
+    {
+      "sha": "6ab956b95853177f4858e110ecd2a391f85beac1",
+      "author": "Rafal Gorecki",
+      "date": "2025-07-10T08:01:28Z",
+      "message": "Fix origin (#7)\n\n* Revert zed collision\n\n* Fix origin\n\n* Fix offset z -> x\n\n* comment\n\n* Update urdf/stereolabs_zed.urdf.xacro\n\n* Apply suggestions from code review\n\n* Apply suggestions from code review\n\n* Remove stereolabs materials"
+    },
+    {
+      "sha": "3495ff0933cabc1437d85b152af4ffc2c77ef866",
+      "author": "Rafal Gorecki",
+      "date": "2025-06-26T11:04:20Z",
+      "message": "Zed add CAM05 and update ZED urdf (#5)\n\n* Zed add CAM05 and update ZED urdf\n\n* pre-commit\n\n* Fix test"
+    },
+    {
+      "sha": "a46871980289a845c0b6defaba5161e3b505daa8",
+      "author": "Dawid Kmak",
+      "date": "2025-06-11T10:04:15Z",
+      "message": "fix rplidar visual (#4)"
+    },
+    {
+      "sha": "0a828de00e2ab59cfd7bc397b8af021c60d52ba5",
+      "author": "Dawid Kmak",
+      "date": "2025-06-10T10:43:47Z",
+      "message": "Add visuals (#2)\n\n* add NOTICE.md file\n\n* add simple visuals\n\n* add backport action\n\n* unify files\n\n* use realsense2_description meshes"
+    },
+    {
+      "sha": "de57d4ce172bba51360f00f3c3c63203b1ba9440",
+      "author": "Dawid Kmak",
+      "date": "2025-06-09T09:56:01Z",
+      "message": "Move code from ros_components_description (#1)\n\n* Move code from ros_components_description\n\n* rename file\n\n* add workflows"
+    },
+    {
+      "sha": "79d60e41eb061adce1cc3376d339f615853b3945",
+      "author": "Dominik Nowak",
+      "date": "2025-05-19T11:04:27Z",
+      "message": "Initial commit"
+    }
+  ]
+}

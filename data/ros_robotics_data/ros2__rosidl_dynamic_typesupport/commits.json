@@ -1,0 +1,198 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-08T02:03:22Z",
+    "source": "github_rest",
+    "endpoint": "/repos/{owner}/{repo}/commits",
+    "owner": "ros2",
+    "repo": "rosidl_dynamic_typesupport",
+    "per_page": 100
+  },
+  "data": [
+    {
+      "sha": "a368a2b91cd147f6df11ddbca4242cd52cd3a6f8",
+      "author": "Chris Lalancette",
+      "date": "2025-11-04T18:27:53Z",
+      "message": "Don't automatically enable verbose makefiles. (#17)\n\nThat is a decision that the user should make with\ntheir MAKEFLAGS.\n\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "7f3466266dd11baf29d3b2d82ee22c93104d7675",
+      "author": "Scott K Logan",
+      "date": "2025-04-24T20:05:32Z",
+      "message": "0.4.0"
+    },
+    {
+      "sha": "9de4742020d772c420ebda0c0cb33d561deae7d9",
+      "author": "Scott K Logan",
+      "date": "2025-04-18T21:27:14Z",
+      "message": "0.3.1"
+    },
+    {
+      "sha": "8137e76a962155693c82923d029824edb55800e6",
+      "author": "Michael Carroll",
+      "date": "2025-03-21T14:34:46Z",
+      "message": "Switch to ament_cmake_ros_core package (#15)\n\nSigned-off-by: Scott K Logan <logans@cottsay.net>"
+    },
+    {
+      "sha": "71d56c76dc44f651600119ac55c1ea8d00b5cd44",
+      "author": "mosfet80",
+      "date": "2025-02-05T18:53:21Z",
+      "message": "Update CMakeLists.txt (#14)\n\nrclutils require cmake version 3.20 \r\n\r\nhttps://github.com/ros2/rcutils/blob/rolling/CMakeLists.txt\r\n\r\nSigned-off-by: mosfet80 <realeandrea@yahoo.it>"
+    },
+    {
+      "sha": "12c6d82bbf9599fc95e6bf0944981fee21a3175f",
+      "author": "Chris Lalancette",
+      "date": "2024-11-20T14:50:59Z",
+      "message": "0.3.0"
+    },
+    {
+      "sha": "c7c93240e9417a96ba8aa2cfa9f5b772ea9e39ec",
+      "author": "Chris Lalancette",
+      "date": "2024-11-20T14:50:54Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "d971a885732336114640b594aca0614cdf776079",
+      "author": "Chris Lalancette",
+      "date": "2024-11-19T12:21:05Z",
+      "message": "Drop support for long double/float128. (#12)\n\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "96d1cb662b1b69409d80383ed20a41cc92267aa1",
+      "author": "Marco A. Gutierrez",
+      "date": "2024-04-26T19:56:40Z",
+      "message": "0.2.0"
+    },
+    {
+      "sha": "0d10260f25405467773f9b28dd874b42ef57974e",
+      "author": "Marco A. Gutierrez",
+      "date": "2024-04-26T19:56:37Z",
+      "message": "Changelog.\n\nSigned-off-by: Marco A. Gutierrez <marcogg@marcogg.com>"
+    },
+    {
+      "sha": "cb8c54d12c678daa70410bb0626ed8626f561e45",
+      "author": "Chris Lalancette",
+      "date": "2023-09-07T14:37:57Z",
+      "message": "0.1.2"
+    },
+    {
+      "sha": "6211a60b72b82501338c78ddcd059d44b5de4631",
+      "author": "Chris Lalancette",
+      "date": "2023-09-07T14:37:50Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "917e7646e4ff22f9c61d220f4fbc43bfe7bb2322",
+      "author": "G.A. vd. Hoorn",
+      "date": "2023-08-29T23:41:02Z",
+      "message": "uchar: fix conditional include/typedef (#10)\n\nFix incorrect check: if `__has_include(..)` was supported, but `uchar.h` did not exist, `char16_t` never got `typedef`ed.\r\n\r\nIt needs to be `typedef`ed in (at least) two cases:\r\n\r\n1. `uchar.h` does not exist, and\r\n2. `__has_include(..)` is not supported\r\n\r\nIn case of the former, the type is most likely missing. In case of the latter, `uchar.h` could exist, but existence can't be checked.\r\n\r\nNote: checking for `__has_include(..)` support and use of the macro in a combined conditional is non-portable according to the documentation, hence the split."
+    },
+    {
+      "sha": "88e2d7dd2e357283ffbaf3184786281bbca4af4b",
+      "author": "G.A. vd. Hoorn",
+      "date": "2023-08-28T19:15:35Z",
+      "message": "uchar: use __has_include(..) on separate line (#8)\n\nOlder compilers/preprocessors don't always support/implement short-circuit conditional evaluation, leading to attempts to evaluate `__has_include(..)` while `if defined(__has_include)` was actually `false`.\r\n\r\nSplit the conditional into two separate checks to avoid this."
+    },
+    {
+      "sha": "78256691ef87d7f62f9bb34b706cea164be95865",
+      "author": "Chris Lalancette",
+      "date": "2023-08-21T21:56:09Z",
+      "message": "Refactor the handling of nested types. (#7)\n\nWhile building this with clang static analysis, it was\r\ncomplaining that the 'ret' value in the nested type\r\nhandling was being ignored, which is correct.  But while\r\nreviewing the code, I realized that it would be much easier\r\nto read, and hence to review for these kinds of violations,\r\nif this was split into a separate function.  So I've gone\r\nahead and done that here, and then fixed the bug that\r\ncaused us to ignore the return value.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "a149a7d482972c6a550d5d46e47bf54e0a3054a6",
+      "author": "Chris Lalancette",
+      "date": "2023-07-11T19:04:25Z",
+      "message": "0.1.1"
+    },
+    {
+      "sha": "a69a2cff0fb999056b7b6fe3a09957fe7314fc88",
+      "author": "Chris Lalancette",
+      "date": "2023-07-11T19:04:21Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "0ab482732076ca9418e2cd9c0bca7b650d395c37",
+      "author": "Antonio Cuadros",
+      "date": "2023-07-11T00:36:16Z",
+      "message": "Add C++ version check to char16 definition (#3)\n\n* Add C++ version condition to char16 definition\r\n\r\nSigned-off-by: acuadros95 <acuadros1995@gmail.com>"
+    },
+    {
+      "sha": "d3a9bfddc7f9d98588e0e470225f5080436aa3dc",
+      "author": "Yadunund",
+      "date": "2023-04-28T10:40:38Z",
+      "message": "0.1.0"
+    },
+    {
+      "sha": "47fe49390ab5d7000de23c6f416dc88fdacd8d76",
+      "author": "Chris Lalancette",
+      "date": "2023-04-12T12:43:48Z",
+      "message": "0.0.3"
+    },
+    {
+      "sha": "a5d24c503fa728f89b8db6223718d5e9e68ad978",
+      "author": "Chris Lalancette",
+      "date": "2023-04-12T12:43:41Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "b07cc6d1930769503d47121244017244f8731cbc",
+      "author": "Chris Lalancette",
+      "date": "2023-04-12T12:09:55Z",
+      "message": "Fix up the exports for rosidl_dynamic_typesupport. (#5)\n\nIn particular, it should not export a dependency on\r\nament_cmake_ros to downstream, but it *should* export\r\na dependency on rcutils.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "c6f793a62f024af9e61f97ef9b3e8e890d525b32",
+      "author": "Chris Lalancette",
+      "date": "2023-04-11T17:17:14Z",
+      "message": "0.0.2"
+    },
+    {
+      "sha": "839bff9b4a3072a37c69cd0484367ad3e690fc4b",
+      "author": "Chris Lalancette",
+      "date": "2023-04-11T17:16:44Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "8861cdc22094fc470d21243fba754f43b6f9c8ca",
+      "author": "methylDragon",
+      "date": "2023-04-11T06:02:23Z",
+      "message": "Merge pull request #2 from ros2/runtime_interface_reflection_allocators\n\nDynamic Subscription (BONUS: Allocators): rosidl_dynamic_typesupport"
+    },
+    {
+      "sha": "efcac65ae56d63c04bdb4cd0c7d77a982e1f43a8",
+      "author": "methylDragon",
+      "date": "2023-04-10T19:54:17Z",
+      "message": "Check if allocator is valid\n\nSigned-off-by: methylDragon <methylDragon@gmail.com>"
+    },
+    {
+      "sha": "769318079dfcfae3e2852bfb51b7eddca43f1558",
+      "author": "methylDragon",
+      "date": "2023-04-10T06:03:53Z",
+      "message": "Refactor dynamic type support structs to use allocators and refs\n\nSigned-off-by: methylDragon <methylDragon@gmail.com>"
+    },
+    {
+      "sha": "7d0d91be965dfa8d29524636624ec9abd81efacf",
+      "author": "methylDragon",
+      "date": "2023-04-10T05:36:14Z",
+      "message": "Refactor serialization support to use allocators and refs\n\nSigned-off-by: methylDragon <methylDragon@gmail.com>"
+    },
+    {
+      "sha": "69d251860e2048f8164e1fca9a3033c76ae13305",
+      "author": "methylDragon",
+      "date": "2023-04-09T13:02:42Z",
+      "message": "Refactor dynamic message type support impl to use allocators\n\nSigned-off-by: methylDragon <methylDragon@gmail.com>"
+    },
+    {
+      "sha": "de367f3ac4067bf0f21512277391394441e0da6c",
+      "author": "methylDragon",
+      "date": "2023-04-08T18:58:08Z",
+      "message": "Runtime Interface Reflection: rosidl_dynamic_typesupport (#1)\n\n* Initial Implementation\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Implement ser and deser, and use type description message\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Migrate to rosidl type description\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Fix const and memory issues\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Implement init type builder from description\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Clean up package\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Add name getters\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Reorder ID arg\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Add support for bounded strings\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Update complex value insertion\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Beautify\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Handle wstring\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Implement serialization support destroy\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Implement methods to add complex member with builders\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Add visibility macros\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Only use general type construction and implement default values\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Beautify\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Use allocators for memory management\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Add fixed string support\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Fix C linkage\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Migrate all void methods to use return types\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Migrate remaining methods to use return types\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Lint\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Fix windows build\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Move dynamic type support struct to rosidl and fix mem issues\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Use \"methods\" instead of interface\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* fix comparison of wrong parameter to null\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* Add uchar header\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Refactor to use ret types for description validity checks\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Use create instead of init\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Remove print functions\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Add identifier function\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Clean up style and README\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n---------\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\nCo-authored-by: William Woodall <william@osrfoundation.org>"
+    },
+    {
+      "sha": "f0d818302f2f5a3f1d105f1efe1a1ab9ac309c9b",
+      "author": "methylDragon",
+      "date": "2023-03-08T23:01:05Z",
+      "message": "Initial commit"
+    }
+  ]
+}

@@ -1,0 +1,486 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-07T21:57:31Z",
+    "source": "github_rest",
+    "endpoint": "/repos/{owner}/{repo}/commits",
+    "owner": "brow1633",
+    "repo": "network_bridge",
+    "per_page": 100
+  },
+  "data": [
+    {
+      "sha": "c7f6df30c17274f38102bdd3d7e00973b1006b06",
+      "author": "Cedric Pradalier",
+      "date": "2025-09-18T07:00:35Z",
+      "message": "Merge pull request #18 from brow1633/reconnect_bug\n\nFixing reconnect bug by reinitializing the reception queue."
+    },
+    {
+      "sha": "0a1f58843972b81cc943f18c493d6b250a19cbd7",
+      "author": "Cedric Pradalier",
+      "date": "2025-09-17T18:38:48Z",
+      "message": "Fixing reconnect bug by reinitializing the reception queue.\nCleaning a bit the TF subscription_manager and forcing the timestamp on\nthe static tf message."
+    },
+    {
+      "sha": "f5345f89af746d379504f32db0bac3225e3013dc",
+      "author": "Cedric Pradalier",
+      "date": "2025-09-16T21:10:20Z",
+      "message": "Merge pull request #17 from brow1633/tf\n\nAdd a specific management of TF topics"
+    },
+    {
+      "sha": "7bb0e02c51ab8b77b97591ac953b15df9ca3535a",
+      "author": "Cedric Pradalier",
+      "date": "2025-09-16T21:04:30Z",
+      "message": "Removed mutex protection in get_data, but kept an explicit flag to\ndefine if the data should be considered valid."
+    },
+    {
+      "sha": "7165509e34b5b4c9a60d3c4856af170e2dc42e34",
+      "author": "Cedric Pradalier",
+      "date": "2025-09-16T12:49:37Z",
+      "message": "Added documentation for the include/exclude mechanism in TF."
+    },
+    {
+      "sha": "ffb990373943dbdb289cf8a0b11b9fdc2a136bc8",
+      "author": "Cedric Pradalier",
+      "date": "2025-09-16T12:42:01Z",
+      "message": "Added a parameter to exclude some TF when transmitting over network\nbridge"
+    },
+    {
+      "sha": "7b0a85e6d7410353abae7a969350d75851d6ce2c",
+      "author": "Cedric Pradalier",
+      "date": "2025-09-16T08:40:07Z",
+      "message": "Improved management of tf_static by virtualizing is_stale. static tf are\nnever stale."
+    },
+    {
+      "sha": "546e57fabfc088e07dcccf81d8ba2c1d177cac89",
+      "author": "Cedric Pradalier",
+      "date": "2025-09-16T06:16:55Z",
+      "message": "Tried deleting the TF subscriber on error."
+    },
+    {
+      "sha": "8aaeedc27c105d56839d148a947462cc0a23a1ca",
+      "author": "Cedric Pradalier",
+      "date": "2025-09-16T06:08:27Z",
+      "message": "Added specific qos for static tf, copied from TransformListener"
+    },
+    {
+      "sha": "30d7a53626a4033a6a04e63e217e6b52d19bdbc7",
+      "author": "Cedric Pradalier",
+      "date": "2025-09-16T05:52:14Z",
+      "message": "Fixed special case of the invalid TF detection"
+    },
+    {
+      "sha": "facad9883b4ef660a3a6cc7a706e8e26a3826f7f",
+      "author": "Cedric Pradalier",
+      "date": "2025-09-16T05:46:14Z",
+      "message": "Added a detection of inconsistent TF tree.\nAdded configuration information in README"
+    },
+    {
+      "sha": "2623f35d4c349461c6281a5147f07d57f3110e27",
+      "author": "Cedric Pradalier",
+      "date": "2025-09-15T21:05:07Z",
+      "message": "Added proper comments to the header file"
+    },
+    {
+      "sha": "3808feacf65386a6f52209334f6817ce3f43eff6",
+      "author": "Cedric Pradalier",
+      "date": "2025-09-15T20:56:17Z",
+      "message": "Fixed segfault on disconnect"
+    },
+    {
+      "sha": "54531d09fe80e651b63d9f4052442edc2422aa8e",
+      "author": "Cedric Pradalier",
+      "date": "2025-09-15T20:36:10Z",
+      "message": "Merge branch 'tf' of github.com:brow1633/network_bridge into tf"
+    },
+    {
+      "sha": "f0cdaea2007a8b59f3eefe53dba73afcdab6e34b",
+      "author": "Cedric Pradalier",
+      "date": "2025-09-15T20:31:34Z",
+      "message": "Server side of subscription manager"
+    },
+    {
+      "sha": "d95ae213f8c6e7b44b56d8c077804a57742c112b",
+      "author": "Cedric Pradalier",
+      "date": "2025-09-15T20:30:54Z",
+      "message": "Server tested version of TF subscriber"
+    },
+    {
+      "sha": "0e42faf88ba7d382c36f7fc140122127608d8c69",
+      "author": "Cedric Pradalier",
+      "date": "2025-09-15T20:29:28Z",
+      "message": "First part of commit to get a specialized management of TFs"
+    },
+    {
+      "sha": "15ebd70dd1e4d9a98222c2f5dff28f156d66ddc7",
+      "author": "Cedric Pradalier",
+      "date": "2025-09-15T18:55:45Z",
+      "message": "Removed useless code in thrift_stream\nImproved byte reading for large message\nRemoved a memory leak in tcp_interface"
+    },
+    {
+      "sha": "1d80a986a69ee0244fc0d88e6441eb97b85aba59",
+      "author": "Ethan Brown",
+      "date": "2025-09-13T19:20:43Z",
+      "message": "Merge pull request #16 from brow1633/add_pre_commit\n\nAdd precommit and run on all files"
+    },
+    {
+      "sha": "9e2b37a606048a5f1d59786c439abbaa400d20bc",
+      "author": "Ethan Brown",
+      "date": "2025-09-12T22:17:43Z",
+      "message": "Add precommit and run on all files"
+    },
+    {
+      "sha": "87a5072a06a435e85a4cb0d00219e62d94aba253",
+      "author": "Ethan Brown",
+      "date": "2025-09-12T21:37:53Z",
+      "message": "Merge pull request #15 from brow1633/unloading_bug\n\nFixed the unloading severe warning by adding a shutdown function in"
+    },
+    {
+      "sha": "d02eeaa9ea74477e82df4b49a59020d507963061",
+      "author": "Cedric Pradalier",
+      "date": "2025-09-12T21:29:33Z",
+      "message": "Merge branch 'unloading_bug' of github.com:brow1633/network_bridge into unloading_bug"
+    },
+    {
+      "sha": "0f88c1f88033b72349191bc595defa05e7bfe531",
+      "author": "Ethan Brown",
+      "date": "2025-09-12T21:27:26Z",
+      "message": "whitespace"
+    },
+    {
+      "sha": "04d2adad3983ae08068731e43dfd5a079216f839",
+      "author": "Cedric Pradalier",
+      "date": "2025-09-12T21:27:22Z",
+      "message": "Another run of uncrustify"
+    },
+    {
+      "sha": "33592892538483acc5dd95310edab8ec6dbfca32",
+      "author": "Ethan Brown",
+      "date": "2025-09-12T21:27:12Z",
+      "message": "fix whitespace"
+    },
+    {
+      "sha": "0067d5cb01264f4cb07d70598e631b0dff530437",
+      "author": "Cedric Pradalier",
+      "date": "2025-09-12T20:48:07Z",
+      "message": "Applied uncrustify to force 2-space indents"
+    },
+    {
+      "sha": "c3bcac6717b5bf1b272c395d7be14a56cad8a829",
+      "author": "Cedric Pradalier",
+      "date": "2025-09-12T20:43:28Z",
+      "message": "Fixed the unloading severe warning by adding a shutdown function in\nnetwork_bridge.\nAdded try-catch in udp_bridge for a clean exit as well."
+    },
+    {
+      "sha": "546449121d4db948cf887d355a534cfe71c4f6a1",
+      "author": "Ethan Brown",
+      "date": "2025-09-12T16:01:34Z",
+      "message": "Merge pull request #14 from brow1633/fix_compilation_kilted"
+    },
+    {
+      "sha": "f95486141e149bef9b43493171cd3c938757719e",
+      "author": "Ethan Brown",
+      "date": "2025-09-12T15:37:51Z",
+      "message": "Fix formatting in CMakeLists.txt for target_link_libraries"
+    },
+    {
+      "sha": "6ead112bc6bd5d7de66e175d74270fce820f31a9",
+      "author": "Cedric Pradalier",
+      "date": "2025-09-12T09:15:33Z",
+      "message": "Fixed compilation on Kilted\nTried to fix class loader unloading warning (Kilted) in\nnetwork_bridge.cpp"
+    },
+    {
+      "sha": "39153e3a5bb662d49cbf054acd6e04bfe16bf2b2",
+      "author": "Ethan Brown",
+      "date": "2025-09-12T01:37:39Z",
+      "message": "Update README with installation instructions\n\nAdded installation instructions for apt and building from source."
+    },
+    {
+      "sha": "3cc91aa6a593e6de815f6e5967b2067d607c4a5b",
+      "author": "Ethan Brown",
+      "date": "2025-09-12T00:42:56Z",
+      "message": "2.0.0"
+    },
+    {
+      "sha": "0dd6c72c253998e65c21d3ec0e9ebdaa16dd7e19",
+      "author": "Ethan Brown",
+      "date": "2025-09-12T00:42:50Z",
+      "message": "Update changelog"
+    },
+    {
+      "sha": "20139e874322bda73e8453c3fa49711e16209429",
+      "author": "Ethan Brown",
+      "date": "2025-09-12T00:30:33Z",
+      "message": "Merge pull request #12 from brow1633/robustify"
+    },
+    {
+      "sha": "08bdf1f149fb113a71d797063119639ba353632e",
+      "author": "Ethan Brown",
+      "date": "2025-09-12T00:26:15Z",
+      "message": "Guard against querying graph after context goes invalid"
+    },
+    {
+      "sha": "96848d02339508185bcea4f52953ca10174f7304",
+      "author": "Ethan Brown",
+      "date": "2025-09-12T00:07:52Z",
+      "message": "make some tests/shutdown more robust"
+    },
+    {
+      "sha": "2b49b4d498da2d775a62d94caaf8e4df7890482f",
+      "author": "Ethan Brown",
+      "date": "2025-09-11T23:26:13Z",
+      "message": "force client to start after server in TCP test (#11)\n\n* force client to start after server\n\n* linting\n\n* no more python linting."
+    },
+    {
+      "sha": "23629ffcbf09c8d91308d666e313b30e789427c4",
+      "author": "Cedric Pradalier",
+      "date": "2025-09-11T22:51:01Z",
+      "message": "Handling of large objects and clean management of reconnections (#7)\n\n* Added queuing mechanism for reception and garanteed transmission\n\n* Added receive queue\n\n* Added proper server reconnect\n\n* Added logger for topic creation\n\n* Fixed client reconnect\n\n* Implemented PR request\n\n---------\n\nCo-authored-by: Cedric Pradalier <cedric.pradalier@georgiatech-metz.fr>\nCo-authored-by: Ethan Brown <97919387+brow1633@users.noreply.github.com>"
+    },
+    {
+      "sha": "b863005abcc3b942c7a394b47daa6c0d74e00a94",
+      "author": "Ethan Brown",
+      "date": "2025-09-11T16:08:32Z",
+      "message": "Merge pull request #9 from brow1633/8-fix-ci\n\nupdate cache version, include kilted, linting"
+    },
+    {
+      "sha": "f457588308d426cc8292ac5c27e0f8afecdbd4f4",
+      "author": "Ethan Brown",
+      "date": "2025-09-11T15:46:51Z",
+      "message": "remove whitepsace"
+    },
+    {
+      "sha": "fefdd23e0cf86d03a3f7132a02c6d22e3eb917e8",
+      "author": "Ethan Brown",
+      "date": "2025-09-11T15:42:00Z",
+      "message": "Merge branch 'main' into 8-fix-ci"
+    },
+    {
+      "sha": "1c967386bf81954ec385e29a2888430df7c9bd28",
+      "author": "Ethan Brown",
+      "date": "2025-09-11T15:38:33Z",
+      "message": "Fix linting error"
+    },
+    {
+      "sha": "d1e2e276b4573d2acff38705ae56e67ee14bc806",
+      "author": "Ethan Brown",
+      "date": "2025-09-11T15:32:10Z",
+      "message": "update cache version, include kilted"
+    },
+    {
+      "sha": "c6fb3ab168036c75bb8594ed8413174d1a756322",
+      "author": "Ethan Brown",
+      "date": "2024-07-11T03:23:12Z",
+      "message": "1.0.2"
+    },
+    {
+      "sha": "1f80c56462f5306e2cb01dd1834174bb3cbbdb0d",
+      "author": "Ethan Brown",
+      "date": "2024-07-11T03:23:08Z",
+      "message": "updated changelog"
+    },
+    {
+      "sha": "342bca15ea95ef0bf2d88f45297c50ed5eda9fcf",
+      "author": "Ethan Brown",
+      "date": "2024-07-11T02:30:26Z",
+      "message": "Move launch_testing_ament_cmake requirement to if testing block"
+    },
+    {
+      "sha": "8778c6434827144ed891d3ce7c628f623f651db0",
+      "author": "Ethan Brown",
+      "date": "2024-07-11T02:04:42Z",
+      "message": "1.0.1"
+    },
+    {
+      "sha": "81b8d1acfaa63dc349610433d024d805e433d07d",
+      "author": "Ethan Brown",
+      "date": "2024-07-11T02:04:36Z",
+      "message": "Added Changelog"
+    },
+    {
+      "sha": "97db6632f4dd7990eb1493417e30ddf111f538a9",
+      "author": "Ethan Brown",
+      "date": "2024-07-11T01:56:49Z",
+      "message": "Merge branch 'main' of github.com:brow1633/tether"
+    },
+    {
+      "sha": "c32db50268f48af64af1c1a57f4c68fde9cd138c",
+      "author": "Ethan Brown",
+      "date": "2024-07-11T01:56:42Z",
+      "message": "Updated package.xml deps"
+    },
+    {
+      "sha": "8f00be38788ee5dc21f66db8e6cbef8a31bd031d",
+      "author": "brow1633",
+      "date": "2024-06-09T13:18:39Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "984f8e3ba58836657fb85baea8fd4fbba1eb5c87",
+      "author": "brow1633",
+      "date": "2024-06-08T22:36:38Z",
+      "message": "Add release to CI, turn off fail fast"
+    },
+    {
+      "sha": "a92caa16e7b77597f3d46449e50f6bc30915a0e0",
+      "author": "brow1633",
+      "date": "2024-06-08T17:32:12Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "b9f4b4a23dc7182ea4972649dea968d3563510b4",
+      "author": "Ethan Brown",
+      "date": "2024-06-08T17:24:20Z",
+      "message": "add pkg-config"
+    },
+    {
+      "sha": "abc32ec3b3687f4cfdf1aade62be95b9363577b2",
+      "author": "Ethan Brown",
+      "date": "2024-06-08T17:18:55Z",
+      "message": "CI"
+    },
+    {
+      "sha": "6f81230f3a131a3053a289e55bc322e740cbfbe4",
+      "author": "Ethan Brown",
+      "date": "2024-06-08T17:18:29Z",
+      "message": "Python linting"
+    },
+    {
+      "sha": "98c16df8687989406cfb36567685e9d232015813",
+      "author": "brow1633",
+      "date": "2024-06-08T17:04:58Z",
+      "message": "Create CI.yml"
+    },
+    {
+      "sha": "7e2cf9a7740b82e436487ac8e73d32a1bde87a6e",
+      "author": "Ethan Brown",
+      "date": "2024-06-08T16:34:29Z",
+      "message": "Add boost system for asio"
+    },
+    {
+      "sha": "95b8433dcd3f4e37b3ef5bdd8e2a37716b5c9297",
+      "author": "Ethan Brown",
+      "date": "2024-06-08T16:23:01Z",
+      "message": "Remove un-needed from package.xml"
+    },
+    {
+      "sha": "cef62d919e5b74a92c343c79ba951d87f8e3a4d3",
+      "author": "Ethan Brown",
+      "date": "2024-06-08T16:22:27Z",
+      "message": "Dependency and CMake Changes"
+    },
+    {
+      "sha": "72347c51f0e06e44e79f7ed1d13de2eedf791647",
+      "author": "Ethan Brown",
+      "date": "2024-06-08T15:55:35Z",
+      "message": "Remove Boost as dependency"
+    },
+    {
+      "sha": "cfe9d9c267cbc762e208ea63d8ef56f2150de40d",
+      "author": "Ethan Brown",
+      "date": "2024-06-08T15:52:13Z",
+      "message": "Added const for jazzy"
+    },
+    {
+      "sha": "e9bd177f58cee67ca60c50b6ae4a01dfc50cc01b",
+      "author": "Ethan Brown",
+      "date": "2024-06-08T15:35:43Z",
+      "message": "Fixed package.xml deps"
+    },
+    {
+      "sha": "38c92ca8437b64ad6ae5e66019f517a5046ef9b5",
+      "author": "Ethan Brown",
+      "date": "2024-06-08T15:03:55Z",
+      "message": "Change package name"
+    },
+    {
+      "sha": "c53a4a665836f5d77b6df52c9452f3fc2bd606ea",
+      "author": "Ethan Brown",
+      "date": "2024-06-08T13:39:29Z",
+      "message": "Use bit_cast instead of reinterpret_cast"
+    },
+    {
+      "sha": "03b8cc5e13659611db25a76c97272fd62dea990f",
+      "author": "Ethan Brown",
+      "date": "2024-06-08T12:27:14Z",
+      "message": "Fix TCP Packet Framing"
+    },
+    {
+      "sha": "4ef97f6566d27d8dc3ef4bed1ad3ffbf5e22a15b",
+      "author": "Ethan Brown",
+      "date": "2024-06-04T22:58:23Z",
+      "message": "linting"
+    },
+    {
+      "sha": "8c4c7ca6bb746a9020da2bb63126ccb0f7641cee",
+      "author": "Ethan Brown",
+      "date": "2024-06-02T21:31:51Z",
+      "message": "Merge branch 'main' of github.com:brow1633/tether"
+    },
+    {
+      "sha": "09458a1afa3528326def027f1c3b3284fb6f9708",
+      "author": "Ethan Brown",
+      "date": "2024-06-02T21:30:35Z",
+      "message": "Updated license"
+    },
+    {
+      "sha": "9560c230423f0c04d5bce184651274fe806f3e69",
+      "author": "brow1633",
+      "date": "2024-05-31T21:46:18Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "a5ffe6847c17cc0ea626580f28589913088f301e",
+      "author": "brow1633",
+      "date": "2024-05-31T16:58:43Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "3f5afb3f11435d182964da25cca7704510bdba71",
+      "author": "brow1633",
+      "date": "2024-05-31T16:54:19Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "ec9eebec7d8216d93bf43ad9269e5bc91651f221",
+      "author": "brow1633",
+      "date": "2024-05-31T16:54:07Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "6f108ef8b6095050e00a4ed7849f4eb1fbb09f46",
+      "author": "brow1633",
+      "date": "2024-05-31T16:48:03Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "b0261b65aba3bc3ccede5eb8e9f80b186e21b4f1",
+      "author": "Ethan Brown",
+      "date": "2024-05-31T16:43:41Z",
+      "message": "Added subscription namespaces, docs"
+    },
+    {
+      "sha": "4299a526097f63889a0b6805d8f9eeed2cfcf52d",
+      "author": "Ethan Brown",
+      "date": "2024-05-31T04:00:30Z",
+      "message": "Added license to one file"
+    },
+    {
+      "sha": "a741b0e301ec272bbfe57ed628b0a9d2377d65db",
+      "author": "Ethan Brown",
+      "date": "2024-05-31T03:46:29Z",
+      "message": "Updated readme"
+    },
+    {
+      "sha": "8ac560cd13147ccb919a545b62fdaae60cb4d6c5",
+      "author": "Ethan Brown",
+      "date": "2024-05-31T03:35:07Z",
+      "message": "init commit"
+    },
+    {
+      "sha": "d5695415d6a404dec5209fec53654c14396482b4",
+      "author": "brow1633",
+      "date": "2024-05-31T03:28:47Z",
+      "message": "Initial commit"
+    }
+  ]
+}

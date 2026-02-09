@@ -1,0 +1,762 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-06T22:18:55Z",
+    "source": "github_rest",
+    "endpoint": "/repos/{owner}/{repo}/commits",
+    "owner": "bosch-engineering",
+    "repo": "off_highway_sensor_drivers",
+    "per_page": 100
+  },
+  "data": [
+    {
+      "sha": "b0e8fe636b9cc04d97390dc1fa8787d1da5bc2e4",
+      "author": "Gabriela-Adriana Lapuste",
+      "date": "2026-01-26T14:43:00Z",
+      "message": "1.2.0"
+    },
+    {
+      "sha": "e8fc35958c197ef840fd045b6d495d5c58987f7c",
+      "author": "Gabriela-Adriana Lapuste",
+      "date": "2026-01-26T14:43:00Z",
+      "message": "Update CHANGELOG"
+    },
+    {
+      "sha": "8dd1f70f83738966188659db894db43ac538effa",
+      "author": "Gabriela Adriana Lapuste",
+      "date": "2025-11-20T20:09:26Z",
+      "message": "Add ROS2 Bosch MM7P10 inertial measurement unit sensor driver\n\nSigned-off-by: Gabriela Adriana Lapuste <gabriela-adriana.lapuste@ro.bosch.com>"
+    },
+    {
+      "sha": "bd3bc89f540f30de7425fc29906b22a752e6cf12",
+      "author": "Gabriela Adriana Lapuste",
+      "date": "2026-01-19T07:13:04Z",
+      "message": "Adapt unit tests to reflect the CPU high load fix\n\nSigned-off-by: Gabriela Adriana Lapuste <gabriela-adriana.lapuste@ro.bosch.com>"
+    },
+    {
+      "sha": "edaa800560a6521c5381f1d17f5c96c6682a52ea",
+      "author": "Gabriela Adriana Lapuste",
+      "date": "2026-01-19T08:38:30Z",
+      "message": "Add force diagnostic update on timeout state transition\n\nSigned-off-by: Gabriela Adriana Lapuste <gabriela-adriana.lapuste@ro.bosch.com>"
+    },
+    {
+      "sha": "24aa3eedfecc18f70db39446e62f788e0485c441",
+      "author": "Marco A. Gutierrez",
+      "date": "2026-01-26T10:00:12Z",
+      "message": "Revert \"Depend on ros_environment where needed (Jazzy version)\" (#31)\n\nRevert \"Depend on ros_environment where needed (Jazzy version) (#28)\"\n\nThis reverts commit 843890591d6db93ea883a83c0cecac298c5dba7f."
+    },
+    {
+      "sha": "77cca6b423f371d657080ce75edfdf16c4c7a3c4",
+      "author": "Marco A. Gutierrez",
+      "date": "2026-01-26T09:50:21Z",
+      "message": "Fix pcl_conversions linking error in ROS buildfarm (#30)\n\nSigned-off-by: Marco A. Gutierrez <marcogg@marcogg.com>"
+    },
+    {
+      "sha": "a67affa79726067ee8e7d51b9d43d8639797b83d",
+      "author": "Ferry Schoenmakers",
+      "date": "2026-01-13T14:12:06Z",
+      "message": "Fix very high CPU usage since it publishes diagnostics on EACH CAN message (#26)"
+    },
+    {
+      "sha": "51a540f7b7327a1593a680dfa9103e8192f22f58",
+      "author": "Michal Sojka",
+      "date": "2026-01-13T12:19:48Z",
+      "message": "Depend on ros_environment where needed (#24)"
+    },
+    {
+      "sha": "e6e3524ccac20815eb15364bcb9ae7b41703a771",
+      "author": "Calin-Vasile Sopterean",
+      "date": "2025-11-12T11:45:25Z",
+      "message": "1.1.0"
+    },
+    {
+      "sha": "5427960e7ef70d4b37d83f67b989e5b071dca8f3",
+      "author": "Calin-Vasile Sopterean",
+      "date": "2025-11-12T11:45:25Z",
+      "message": "Update CHANGELOG"
+    },
+    {
+      "sha": "36fb07082704f04aabd6073a2ae660f86f31adc0",
+      "author": "Calin-Vasile Sopterean",
+      "date": "2025-11-10T15:46:18Z",
+      "message": "Add timeout functionality for uss direct_echos\n\nSigned-off-by: Calin-Vasile Sopterean <fixed-term.Calin-Vasile.Sopterean@ro.bosch.com>"
+    },
+    {
+      "sha": "ccdc011d3901f65d93585004c97081b045978464",
+      "author": "Calin-Vasile Sopterean",
+      "date": "2025-11-04T11:05:55Z",
+      "message": "Fix formatting for linter\n\nSigned-off-by: Calin-Vasile Sopterean <fixed-term.Calin-Vasile.Sopterean@ro.bosch.com>"
+    },
+    {
+      "sha": "f4e986042dc6f5dd464b2aab4eadf5eb9972409e",
+      "author": "Calin-Vasile Sopterean",
+      "date": "2025-11-04T11:05:19Z",
+      "message": "Update dependency declarations for target_link_libraries\n\nSigned-off-by: Calin-Vasile Sopterean <fixed-term.Calin-Vasile.Sopterean@ro.bosch.com>"
+    },
+    {
+      "sha": "0c62ec32ef5105c327a4791b4ca8db2897d608f8",
+      "author": "Jan Vermaete",
+      "date": "2025-10-02T17:21:32Z",
+      "message": "off_highway_can: split license element into two\n\nHaving two license strings into one element does give issues when generating\nthe Yocto/OpenEmbedde bitbake recipes for meta-ros.\n\nsee: https://github.com/ros/meta-ros/commit/72dfb21b8f297d23e8c029edc04baadb17b1d24f\n\nsee:\n  <license> (multiple, but at least one)\n\n  Name of license for this package, e.g. BSD, GPL, LGPL.\n  In order to assist machine readability, only include the license name in this tag.\n  For multiple licenses multiple separate tags must be used.\n  A package will have multiple licenses if different source files have different licenses.\n  Every license occurring in the source files should have a corresponding <license> tag.\n  For any explanatory text about licensing caveats, please use the <description> tag.\n\n  -- https://ros.org/reps/rep-0149.html#license-multiple-but-at-least-one\n\nSigned-off-by: Jan Vermaete <jan.vermaete@gmail.com>"
+    },
+    {
+      "sha": "cb7ef4a07ad60e747ad8bea2e0da0e621a95dc19",
+      "author": "Calin-Vasile Sopterean",
+      "date": "2025-10-23T08:48:55Z",
+      "message": "Add unit tests for timeout\n\nSigned-off-by: Calin-Vasile Sopterean <fixed-term.Calin-Vasile.Sopterean@ro.bosch.com>"
+    },
+    {
+      "sha": "ad0ba3967bca793e569a524563c31f437bae46b2",
+      "author": "Calin-Vasile Sopterean",
+      "date": "2025-10-23T08:20:35Z",
+      "message": "Fix incorrect timeout toggling\n\nSigned-off-by: Calin-Vasile Sopterean <fixed-term.Calin-Vasile.Sopterean@ro.bosch.com>"
+    },
+    {
+      "sha": "9c613350e4f2e13784186ba676666bdfafe83728",
+      "author": "Ferry Schoenmakers",
+      "date": "2025-06-10T09:29:30Z",
+      "message": "Draw conclusion in the watchdog, not in the diagnostics callback\n\nSigned-off-by: Ferry Schoenmakers <ferry.schoenmakers@nobleo.nl>"
+    },
+    {
+      "sha": "cfe0a350e4f7aea56a01ddc089818e0af16e5714",
+      "author": "Ferry Schoenmakers",
+      "date": "2025-06-10T09:08:51Z",
+      "message": "Fix issue 20, don't publish sensor data when there is a sensor timeout\n\nSigned-off-by: Ferry Schoenmakers <ferry.schoenmakers@nobleo.nl>"
+    },
+    {
+      "sha": "668f9b4a34ab79be295420c740d5461456dfc96b",
+      "author": "Calin-Vasile Sopterean",
+      "date": "2025-09-22T12:32:37Z",
+      "message": "Remove PCL libraries from ohw_premium_radar\n\nSigned-off-by: Calin-Vasile Sopterean <fixed-term.Calin-Vasile.Sopterean@ro.bosch.com>"
+    },
+    {
+      "sha": "23dffc4fc12d1a6802e5f52d2021787079744a12",
+      "author": "Calin-Vasile Sopterean",
+      "date": "2025-09-23T11:14:19Z",
+      "message": "Add PCL deprecation warning for pcl_radar_point_type.hpp\n\nSigned-off-by: Calin-Vasile Sopterean <fixed-term.Calin-Vasile.Sopterean@ro.bosch.com>"
+    },
+    {
+      "sha": "784209a718aec21fb617183a966901656930bb04",
+      "author": "Calin-Vasile Sopterean",
+      "date": "2025-09-23T12:59:41Z",
+      "message": "Remove ament deprecation warning from remaining packages\n\nSigned-off-by: Calin-Vasile Sopterean <fixed-term.Calin-Vasile.Sopterean@ro.bosch.com>"
+    },
+    {
+      "sha": "343927d8e5494adb87392b29a975d4ad8f9dcdb0",
+      "author": "Tim Clephas",
+      "date": "2025-06-12T06:03:09Z",
+      "message": "ament_target_dependencies is deprecated for Kilted and Rolling\n\nThis syntax should work as of ROS 2 Foxy already\n\nSigned-off-by: Tim Clephas <tim.clephas@nobleo.nl>"
+    },
+    {
+      "sha": "ec191841ee0f6e085366f886f742d00f2f564c4b",
+      "author": "Calin-Vasile Sopterean",
+      "date": "2025-08-18T09:55:38Z",
+      "message": "Add pcl_point_xxx.hpp deprecation warning\n\nSigned-off-by: Calin-Vasile Sopterean <fixed-term.Calin-Vasile.Sopterean@ro.bosch.com>"
+    },
+    {
+      "sha": "9dfc99dc5d668c8641ef2517e3f97c964d88ede8",
+      "author": "Gabriela Adriana Lapuste",
+      "date": "2025-09-03T09:58:49Z",
+      "message": "Update README\n\nSigned-off-by: Gabriela Adriana Lapuste <gabriela-adriana.lapuste@ro.bosch.com>"
+    },
+    {
+      "sha": "4b7b188c31190902cc6aa641c6613247b7718819",
+      "author": "Calin-Vasile Sopterean",
+      "date": "2025-07-23T06:18:02Z",
+      "message": "Add unit tests for Measurement Program PDU\n\nSigned-off-by: Calin-Vasile Sopterean <fixed-term.Calin-Vasile.Sopterean@ro.bosch.com>"
+    },
+    {
+      "sha": "97660142931b1ef204c40e2ac58e9ea63b4ca9c9",
+      "author": "Calin-Vasile Sopterean",
+      "date": "2025-07-22T07:38:06Z",
+      "message": "Add unit tests for Ego Vehicle Input PDU\n\nSigned-off-by: Calin-Vasile Sopterean <fixed-term.Calin-Vasile.Sopterean@ro.bosch.com>"
+    },
+    {
+      "sha": "6cdb594eca8496faa7f38f06879641ef6222df5a",
+      "author": "Calin-Vasile Sopterean",
+      "date": "2025-08-06T11:27:36Z",
+      "message": "Add unit tests for Location Atrributes PDU\n\nSigned-off-by: Calin-Vasile Sopterean <fixed-term.Calin-Vasile.Sopterean@ro.bosch.com>"
+    },
+    {
+      "sha": "944ec0fa98ec8c28b4f5bb3f357cc8f48ab9f548",
+      "author": "Calin-Vasile Sopterean",
+      "date": "2025-08-06T11:27:36Z",
+      "message": "Add unit test for Location Data PDU\n\nSigned-off-by: Calin-Vasile Sopterean <fixed-term.Calin-Vasile.Sopterean@ro.bosch.com>"
+    },
+    {
+      "sha": "f5d1af70879773dc449683098bf3d96e944b08fb",
+      "author": "Sarah Huber",
+      "date": "2025-08-06T11:27:36Z",
+      "message": "Add unit test for Sensor State Information PDU\n\nSigned-off-by: Sarah Huber <sarah.huber@de.bosch.com>"
+    },
+    {
+      "sha": "c1da5595cfe9ba051033255826e01b66951aaf20",
+      "author": "Gabriela-Adriana Lapuste",
+      "date": "2025-07-01T09:54:04Z",
+      "message": "1.0.0"
+    },
+    {
+      "sha": "e5be1ebe28458739e769303432d49bdacc10f52b",
+      "author": "Gabriela-Adriana Lapuste",
+      "date": "2025-07-01T09:54:04Z",
+      "message": "Update CHANGELOG"
+    },
+    {
+      "sha": "29b3840ae332cf9c51397c47938e7726c75dd868",
+      "author": "Sarah Huber",
+      "date": "2025-06-13T10:57:35Z",
+      "message": "Adapt expected frequencies of diagnostic messages\n\nSigned-off-by: Sarah Huber <sarah.huber@de.bosch.com>"
+    },
+    {
+      "sha": "2bf52ca7b3ab3d19a6ec9801e416a1e6be6b1844",
+      "author": "Sarah Huber",
+      "date": "2025-06-13T10:57:35Z",
+      "message": "Adapt documentation of sensor state information\n\nSigned-off-by: Sarah Huber <sarah.huber@de.bosch.com>"
+    },
+    {
+      "sha": "504f4674a47bdb3d8a7bd1d3dccc22ca9afcdbd3",
+      "author": "Sarah Huber",
+      "date": "2025-06-13T10:57:35Z",
+      "message": "Adapt documentation of measurement program\n\nSigned-off-by: Sarah Huber <sarah.huber@de.bosch.com>"
+    },
+    {
+      "sha": "d855e06974f0db47bda18ad85b88669d256feedb",
+      "author": "Sarah Huber",
+      "date": "2025-06-13T10:57:35Z",
+      "message": "Remove measurement cycle synchronization PDU\n\nMeasurement cycle synchronization will be handled via diagnosis in series sensor.\n\nSigned-off-by: Sarah Huber <sarah.huber@de.bosch.com>"
+    },
+    {
+      "sha": "f2d17193b2a70c5a20a0242783087be3ae6dcc45",
+      "author": "Sarah Huber",
+      "date": "2025-06-13T10:57:35Z",
+      "message": "Remove sensor DTC  information PDU\n\nSigned-off-by: Sarah Huber <sarah.huber@de.bosch.com>"
+    },
+    {
+      "sha": "d30784dd91355336a3cab658e367822873e771f1",
+      "author": "Sarah Huber",
+      "date": "2025-06-13T10:57:35Z",
+      "message": "Remove sensor feedback PDU\n\nSigned-off-by: Sarah Huber <sarah.huber@de.bosch.com>"
+    },
+    {
+      "sha": "210665761e6e4d7c107e4e858cec8c52b0cfcb47",
+      "author": "Sarah Huber",
+      "date": "2025-06-13T10:57:35Z",
+      "message": "Remove sensor mode request PDU\n\nSigned-off-by: Sarah Huber <sarah.huber@de.bosch.com>"
+    },
+    {
+      "sha": "9ad8ccca97276877330dcb14b1e7f13b0074957a",
+      "author": "Calin-Vasile Sopterean",
+      "date": "2025-06-06T11:16:54Z",
+      "message": "Fix PduId check for get_pdu_type\n\nSigned-off-by: Calin-Vasile Sopterean <fixed-term.Calin-Vasile.Sopterean@ro.bosch.com>"
+    },
+    {
+      "sha": "c4ccdcff6add0174774f21c307b399dd7a039afa",
+      "author": "Tim Clephas",
+      "date": "2025-05-20T08:41:13Z",
+      "message": "fix: tf2 uses hpp headers in rolling (and is backported)\n\nSigned-off-by: Tim Clephas <tim.clephas@nobleo.nl>"
+    },
+    {
+      "sha": "523852f0059fd41aca39e9c131bf9b369b956efb",
+      "author": "Calin-Vasile Sopterean",
+      "date": "2025-06-05T14:06:48Z",
+      "message": "Move PCL dependencies\n\nSigned-off-by: Calin-Vasile Sopterean <fixed-term.Calin-Vasile.Sopterean@ro.bosch.com>"
+    },
+    {
+      "sha": "ee2671e0d0f1213b62a3159c17ae338fb4ecc5cf",
+      "author": "Gabriela Adriana Lapuste",
+      "date": "2025-05-19T08:48:08Z",
+      "message": "Update README\n\nSigned-off-by: Gabriela Adriana Lapuste <gabriela-adriana.lapuste@ro.bosch.com>"
+    },
+    {
+      "sha": "dc9b3c5e9f35464a2266b3ff38974fbba238788b",
+      "author": "Sarah Huber",
+      "date": "2025-05-12T08:02:42Z",
+      "message": "Disable publishing of diagnosis for sensor feedback PDU\n\nPDU is not implemented yet in sensor software but will be available again in a future release.\n\nSigned-off-by: Sarah Huber <sarah.huber@de.bosch.com>"
+    },
+    {
+      "sha": "8c86b35ad7b2b78eac9c044631e06b0c1d14e374",
+      "author": "Sarah Huber",
+      "date": "2025-05-12T07:54:59Z",
+      "message": "Fix review findings\n\nSigned-off-by: Sarah Huber <sarah.huber@de.bosch.com>"
+    },
+    {
+      "sha": "25188e60ae25c0027a588e105f763a7c48835ae2",
+      "author": "Sarah Huber",
+      "date": "2025-05-05T15:16:49Z",
+      "message": "Adapt diagnostic messages\n\nSigned-off-by: Sarah Huber <sarah.huber@de.bosch.com>"
+    },
+    {
+      "sha": "23fdd00a4861107f99275df34958c86038de7e5e",
+      "author": "Sarah Huber",
+      "date": "2025-04-28T11:55:52Z",
+      "message": "Switch to custom message for sensor mounting position\n\nThis removes the dependency to tf2.\n\nSigned-off-by: Sarah Huber <sarah.huber@de.bosch.com>"
+    },
+    {
+      "sha": "dcca711b7362c505c82278e66ee86ff4ed11aa70",
+      "author": "Sarah Huber",
+      "date": "2025-04-28T11:55:52Z",
+      "message": "Remove Sensor Broadcast message\n\nSigned-off-by: Sarah Huber <sarah.huber@de.bosch.com>"
+    },
+    {
+      "sha": "e8320af98ef9a6ec368c3fbcb43e04ee3383e85f",
+      "author": "Sarah Huber",
+      "date": "2025-04-28T11:55:52Z",
+      "message": "Remove signal range checks as this should be done in sensor and / or application software\n\nSigned-off-by: Sarah Huber <sarah.huber@de.bosch.com>"
+    },
+    {
+      "sha": "29df87237801a9ea423298abbbfa0ce13916be47",
+      "author": "Sarah Huber",
+      "date": "2025-04-28T11:55:52Z",
+      "message": "Set IP addresses in default configuration to default values of series sensor\n\nSigned-off-by: Sarah Huber <sarah.huber@de.bosch.com>"
+    },
+    {
+      "sha": "4bd63f66f9feb767f0d9162e368ec8f985d33f92",
+      "author": "Robin Petereit",
+      "date": "2025-04-28T11:55:52Z",
+      "message": "Replace PCL point struct with message modifier and iterator\n\nSigned-off-by: Robin Petereit <robin.petereit@de.bosch.com>"
+    },
+    {
+      "sha": "8c29cdeedf4a8d34180fea8000302d8a0ecf5892",
+      "author": "Sarah Huber",
+      "date": "2025-04-28T11:55:52Z",
+      "message": "Implement LGP interface changes for series sensor\n\n- Add sensor coating information (blindness)\n- Add additional misalignment indicator\n- Strip down sensor state information\n\nSigned-off-by: Sarah Huber <sarah.huber@de.bosch.com>"
+    },
+    {
+      "sha": "677ab6ca2fcbd9ccccb517f2bd3b14a477b18af9",
+      "author": "Sarah Huber",
+      "date": "2025-04-28T11:55:52Z",
+      "message": "Add partial unit tests for sensor state information and blindness indicators\n\nSigned-off-by: Sarah Huber <sarah.huber@de.bosch.com>"
+    },
+    {
+      "sha": "24748170e08563a532dc48e90fce1397ac51e8b4",
+      "author": "Sarah Huber",
+      "date": "2025-04-28T11:55:52Z",
+      "message": "Add premium radar driver for series sensor\n\nSigned-off-by: Sarah Huber <sarah.huber@de.bosch.com>"
+    },
+    {
+      "sha": "e5100ae203a75fd0668b0e3c875d4f1b743e223e",
+      "author": "Robin Petereit",
+      "date": "2025-04-16T12:52:00Z",
+      "message": "Use lround and explicit cast\n\nSigned-off-by: Robin Petereit <robin.petereit@de.bosch.com>"
+    },
+    {
+      "sha": "d64fc0e82add2a3094057f3aa7e05ce1af90a05a",
+      "author": "Robin Petereit",
+      "date": "2025-04-16T12:51:17Z",
+      "message": "Fix integer inputs for round test\n\nSigned-off-by: Robin Petereit <robin.petereit@de.bosch.com>"
+    },
+    {
+      "sha": "7eb85730d51ab843ef27a5499cdce868658a1595",
+      "author": "Gabriela Adriana Lapuste",
+      "date": "2025-05-13T10:04:00Z",
+      "message": "Format\n\nSigned-off-by: Gabriela Adriana Lapuste <gabriela-adriana.lapuste@ro.bosch.com>"
+    },
+    {
+      "sha": "d26b8a6b5a72d4df7138021f578b976d53e5d057",
+      "author": "Gabriela Adriana Lapuste",
+      "date": "2025-05-13T10:02:39Z",
+      "message": "README update\n\nSigned-off-by: Gabriela Adriana Lapuste <gabriela-adriana.lapuste@ro.bosch.com>"
+    },
+    {
+      "sha": "34bb11f3e9c6fa61548e4b5801d3f295315a9479",
+      "author": "Robin Petereit",
+      "date": "2025-03-24T08:41:17Z",
+      "message": "0.8.0"
+    },
+    {
+      "sha": "5c032b3a57135b11cd8954739f4983878a9d81e3",
+      "author": "Robin Petereit",
+      "date": "2025-03-24T08:41:16Z",
+      "message": "Update CHANGELOG"
+    },
+    {
+      "sha": "508d6b77b08c7b820f08fbec4ad9fd8ec8e1ff5b",
+      "author": "Robin Petereit",
+      "date": "2025-03-19T13:00:04Z",
+      "message": "Move test to emphasize external FOSS\n\nSigned-off-by: Robin Petereit <robin.petereit@de.bosch.com>"
+    },
+    {
+      "sha": "ea72f885d610feaee27e49e086c57420687d887f",
+      "author": "Calin-Vasile Sopterean",
+      "date": "2025-03-05T10:38:55Z",
+      "message": "Add tests for encoding by round\n\nSigned-off-by: Calin-Vasile Sopterean <fixed-term.Calin-Vasile.Sopterean@ro.bosch.com>"
+    },
+    {
+      "sha": "672d2e86fccf34d468916eb721227eb85b892e02",
+      "author": "Robin Petereit",
+      "date": "2025-02-05T14:28:44Z",
+      "message": "Replace truncation of physical value with round outside of FOSS\n\nMinimizes the floating point error such that half\noffset of resolution in tests is not needed\nanymore.\n\nSigned-off-by: Robin Petereit <robin.petereit@de.bosch.com>"
+    },
+    {
+      "sha": "71e409891a2f64366f022761031b3149fb68bcdf",
+      "author": "Robin Petereit",
+      "date": "2025-03-24T08:08:01Z",
+      "message": "Fix path for checkout\n\nSigned-off-by: Robin Petereit <robin.petereit@de.bosch.com>"
+    },
+    {
+      "sha": "57886478c0104bff8cc9e980c627738dfe8fc56e",
+      "author": "Jacopo Zecchi",
+      "date": "2025-03-24T08:17:39Z",
+      "message": "Checkout compatible pcl_ros version (#14)\n\nUpdate README.md\n\nCompatible pcl_ros versione with off_highway_sensor_drivers_examples\n\nSigned-off-by: Jacopo Zecchi <jacopo.zecchi@gmail.com>"
+    },
+    {
+      "sha": "35de81aab81431ca0680e1abad52503d9eb1377f",
+      "author": "Tim Clephas",
+      "date": "2025-02-04T11:41:35Z",
+      "message": "`rosidl_default_generators` is technically a `<buildtool_depend>` (#13)\n\nrosidl_default_generators is technically a buildtool_depend\r\n\r\nSigned-off-by: Tim Clephas <tim.clephas@nobleo.nl>"
+    },
+    {
+      "sha": "c4f2379cd93281400698e85d9a6ce6e35ac7f213",
+      "author": "Tim Clephas",
+      "date": "2025-01-24T11:19:25Z",
+      "message": "Do not force warnings as errors for General Purpose Radar (#12)\n\nFixup of #11.\r\n\r\nSigned-off-by: Tim Clephas <tim.clephas@nobleo.nl>"
+    },
+    {
+      "sha": "e609d23a4caa3df61315082e434989ba1ea6c8f0",
+      "author": "Robin Petereit",
+      "date": "2024-12-04T14:17:19Z",
+      "message": "0.7.0"
+    },
+    {
+      "sha": "ae21d21e012a38d026b82dc3eafdc42dc5f27301",
+      "author": "Robin Petereit",
+      "date": "2024-12-04T14:17:18Z",
+      "message": "Update CHANGELOG"
+    },
+    {
+      "sha": "db0d91d59ec8bc0bec74af6bf543c4666f16872b",
+      "author": "Robin Petereit",
+      "date": "2024-11-25T13:34:35Z",
+      "message": "Update docs for CAN FD\n\nSigned-off-by: Robin Petereit <robin.petereit@de.bosch.com>"
+    },
+    {
+      "sha": "e02c13a47371df757c6f0cf88bba30832ebe7707",
+      "author": "Robin Petereit",
+      "date": "2024-11-25T13:21:43Z",
+      "message": "Check matching lengths in decoding\n\nSigned-off-by: Robin Petereit <robin.petereit@de.bosch.com>"
+    },
+    {
+      "sha": "66997df2faf0059cab5e44a77e6c026530cd9dbd",
+      "author": "Robin Petereit",
+      "date": "2024-11-22T08:34:35Z",
+      "message": "Allow start bits in CAN FD range\n\nSigned-off-by: Robin Petereit <robin.petereit@de.bosch.com>"
+    },
+    {
+      "sha": "e101b011d033c7390b5a4bbcb83ad6ad1f57f1f3",
+      "author": "Robin Petereit",
+      "date": "2024-11-25T07:46:55Z",
+      "message": "Make CRC and message counter optional\n\nSigned-off-by: Robin Petereit <robin.petereit@de.bosch.com>"
+    },
+    {
+      "sha": "da41ee28a70be83b36614993f966f98697e93b56",
+      "author": "Robin Petereit",
+      "date": "2024-11-25T10:28:14Z",
+      "message": "Enable processing of CAN FD frames\n\nSigned-off-by: Robin Petereit <robin.petereit@de.bosch.com>"
+    },
+    {
+      "sha": "31bc24b0ee89b6a4236140dac135e12f61d3ab72",
+      "author": "Robin Petereit",
+      "date": "2024-11-21T09:21:26Z",
+      "message": "Remove unused definitions\n\nSigned-off-by: Robin Petereit <robin.petereit@de.bosch.com>"
+    },
+    {
+      "sha": "6d7df791a8ad45688fb9258b7bd165f42e9e3b8e",
+      "author": "Robin Petereit",
+      "date": "2024-11-05T08:27:28Z",
+      "message": "Add object type SNA and filter such objects\n\nSigned-off-by: Robin Petereit <robin.petereit@de.bosch.com>"
+    },
+    {
+      "sha": "04c17429fc09a624d281eba0e71dd0d4102a2a68",
+      "author": "Robin Petereit",
+      "date": "2024-11-04T14:55:03Z",
+      "message": "Register GPR component\n\nSigned-off-by: Robin Petereit <robin.petereit@de.bosch.com>"
+    },
+    {
+      "sha": "0d3066e58a639fddc839ce2fe3eea7d9266ca394",
+      "author": "Robin Petereit",
+      "date": "2024-05-29T07:18:10Z",
+      "message": "Fix renaming typo\n\nSigned-off-by: Robin Petereit <robin.petereit@de.bosch.com>"
+    },
+    {
+      "sha": "eb93aec142d7cf275be7c1f4c7d7b1c79a38cbbb",
+      "author": "Tim Clephas",
+      "date": "2024-11-04T15:48:05Z",
+      "message": "Do not force warnings as errors to fix rolling (#11)\n\nSigned-off-by: Tim Clephas <tim.clephas@nobleo.nl>"
+    },
+    {
+      "sha": "5c60e258c9d7d65e9e052240b091f9369b2e2077",
+      "author": "Sarah Huber",
+      "date": "2024-07-09T08:38:47Z",
+      "message": "0.6.3"
+    },
+    {
+      "sha": "34d531e31fc9fb4dcd45860f3cd54e6edee7cda5",
+      "author": "Sarah Huber",
+      "date": "2024-07-09T08:38:46Z",
+      "message": "Update CHANGELOG"
+    },
+    {
+      "sha": "51056b8e640f8a1e8a963a0d0a9ebc899d564502",
+      "author": "Ramon Wijnands",
+      "date": "2024-07-01T13:18:38Z",
+      "message": "Add missing dependency on PCL headers (#9)\n\nWhen I try to build this package on jazzy with rosdep, the PCL headers\r\nare missing. This package uses `find_package(PCL)` and includes it in\r\nthe headers. Therefore I think it would be best to add it to the\r\n`build_depend` and `build_export_depend` tags of the `package.xml`\r\nfiles.\r\n\r\nIn the buildfarm this is technically not needed because the PCL headers\r\nare a `build_export_depend` of `pcl_conversions`, but rosdep ignores\r\nthis dependency so it misses the PCL headers.\r\n\r\nSigned-off-by: Ramon Wijnands <ramon.wijnands@nobleo.nl>"
+    },
+    {
+      "sha": "1efde4de5c30ba79f8becd57f5bdc7c248a8da46",
+      "author": "Sarah Huber",
+      "date": "2024-06-13T14:42:41Z",
+      "message": "0.6.2"
+    },
+    {
+      "sha": "332cf5b9d354681355e638134887a287bdd5200c",
+      "author": "Sarah Huber",
+      "date": "2024-06-13T14:42:41Z",
+      "message": "Update CHANGELOG"
+    },
+    {
+      "sha": "59f02e49d0f3ff282e5bccf32e94447f7055732b",
+      "author": "Maximilian Hilger",
+      "date": "2024-06-13T14:37:28Z",
+      "message": "Fix azimuth and elevation angle variances of premium radar (#8)\n\nSigned-off-by: Maximilian Hilger <maximilian.hilger@oru.se>"
+    },
+    {
+      "sha": "6caf12d602959747295c483b8c676f5d888c1542",
+      "author": "Robin Petereit",
+      "date": "2024-06-04T10:38:02Z",
+      "message": "0.6.1"
+    },
+    {
+      "sha": "68f7be00d5af3bc9b543389223e5d8af87f300ad",
+      "author": "Robin Petereit",
+      "date": "2024-06-04T10:38:01Z",
+      "message": "Update CHANGELOG"
+    },
+    {
+      "sha": "65c479bf8f4de00fccb11d9851f8402c0a26c12c",
+      "author": "Tim Clephas",
+      "date": "2024-06-04T10:21:08Z",
+      "message": "Fix missing dependency that was find_packaged (#7)\n\n* Fix missing dependency that was find_packaged\r\n\r\nSigned-off-by: Tim Clephas <tim.clephas@nobleo.nl>\r\n\r\n* Use ament_lint_common\r\n\r\nSigned-off-by: Tim Clephas <tim.clephas@nobleo.nl>\r\n\r\n---------\r\n\r\nSigned-off-by: Tim Clephas <tim.clephas@nobleo.nl>"
+    },
+    {
+      "sha": "b017db0cca6c7225327bcb34470696d286969df7",
+      "author": "Sarah Huber",
+      "date": "2024-05-14T10:21:22Z",
+      "message": "0.6.0"
+    },
+    {
+      "sha": "741aeab3e027c29e0fa94e9c139062d51540e485",
+      "author": "Sarah Huber",
+      "date": "2024-05-14T10:21:21Z",
+      "message": "Update CHANGELOG"
+    },
+    {
+      "sha": "1acd97e7fb200ce6fb44c620e120352004a9951f",
+      "author": "Sarah Huber",
+      "date": "2024-05-14T08:23:45Z",
+      "message": "Restructure README of examples package\n\nSigned-off-by: Sarah Huber <sarah.huber@de.bosch.com>"
+    },
+    {
+      "sha": "d7da7ccffa9a7b91feb68d2532bb4b953077fdc0",
+      "author": "Robin Petereit",
+      "date": "2024-05-06T07:55:48Z",
+      "message": "Use single container for driver and filter\n\nSigned-off-by: Robin Petereit <robin.petereit@de.bosch.com>"
+    },
+    {
+      "sha": "3bb569c5054e2929ca8c3e398e835b9f565ecb63",
+      "author": "Robin Petereit",
+      "date": "2024-04-25T07:20:55Z",
+      "message": "Rename premium radar driver to sample\n\nCurrently, the delivered Radar Off-Highway Premium and its firmware are just samples.\n\nSeparate package will be created for series firmware.\n\nSigned-off-by: Robin Petereit <robin.petereit@de.bosch.com>"
+    },
+    {
+      "sha": "8e616f4b49d7fb2f8ee4a090734f18e61e530ccf",
+      "author": "Sarah Huber",
+      "date": "2024-05-02T08:19:37Z",
+      "message": "Switch from deprecated signature to const shared_ptr reference while still supporting efficient intra-process communication\n\nSee https://github.com/ros2/rclcpp/pull/1598.\n\nSigned-off-by: Sarah Huber <sarah.huber@de.bosch.com>"
+    },
+    {
+      "sha": "379272218b07bb632b398e93dab2902180e5afc5",
+      "author": "Sarah Huber",
+      "date": "2024-05-02T08:19:37Z",
+      "message": "Add example component to demonstrate extraction of velocity\n\nSigned-off-by: Sarah Huber <sarah.huber@de.bosch.com>"
+    },
+    {
+      "sha": "8f331b25ef2e925bacdb4d5bfabaf5d0910f1f7a",
+      "author": "Sarah Huber",
+      "date": "2024-04-29T09:07:03Z",
+      "message": "Interpret azimuth and elevation angle of premium radar locations as cone coordinates\n\nSigned-off-by: Sarah Huber <sarah.huber@de.bosch.com>"
+    },
+    {
+      "sha": "d5afe7a123ec3d5733309ab3d3a4db1994689741",
+      "author": "Robin Petereit",
+      "date": "2024-04-25T08:44:31Z",
+      "message": "Update executable names for premium radar in launch\n\nSigned-off-by: Robin Petereit <robin.petereit@de.bosch.com>"
+    },
+    {
+      "sha": "0e0889d3daf0c12fc4a659f829cd2372206f5682",
+      "author": "Robin Petereit",
+      "date": "2024-04-18T13:49:27Z",
+      "message": "Add mapping to TCI\n\nSigned-off-by: Robin Petereit <robin.petereit@de.bosch.com>"
+    },
+    {
+      "sha": "e4339344fdcf83461fc19b78e6f1e76e50240c4b",
+      "author": "Robin Petereit",
+      "date": "2024-04-22T07:05:47Z",
+      "message": "Fix readme order\n\nSigned-off-by: Robin Petereit <robin.petereit@de.bosch.com>"
+    },
+    {
+      "sha": "9fa8ab43c50f4685a30ef140a2a309b34d582887",
+      "author": "Robin Petereit",
+      "date": "2024-04-17T14:10:23Z",
+      "message": "Convert premium radar from node to component\n\nSigned-off-by: Robin Petereit <robin.petereit@de.bosch.com>"
+    },
+    {
+      "sha": "1f997203f9c87c0d2af8356775d5ac83002c22de",
+      "author": "Robin Petereit",
+      "date": "2024-04-17T13:45:19Z",
+      "message": "Convert general purpose radar from node to component\n\nSigned-off-by: Robin Petereit <robin.petereit@de.bosch.com>"
+    },
+    {
+      "sha": "1ecfd0ab2359c9913931867f8739474c310213dc",
+      "author": "Robin Petereit",
+      "date": "2024-04-17T13:45:04Z",
+      "message": "Convert radar driver from node to component\n\nSigned-off-by: Robin Petereit <robin.petereit@de.bosch.com>"
+    },
+    {
+      "sha": "48c32c4e2c915d83c9a6cbecbd007c706285ec53",
+      "author": "Sarah Huber",
+      "date": "2024-04-10T12:49:12Z",
+      "message": "Convert USS driver from node to component\n\nSigned-off-by: Sarah Huber <sarah.huber@de.bosch.com>"
+    },
+    {
+      "sha": "e555b8b31c698b28da7b0fbf1ccfa1ee39678904",
+      "author": "Robin Petereit",
+      "date": "2024-04-16T15:53:54Z",
+      "message": "Remove redundant normal in pcl\n\nSigned-off-by: Robin Petereit <robin.petereit@de.bosch.com>"
+    },
+    {
+      "sha": "bdb51a31c5038104b73bb428a71ce654265b0e0f",
+      "author": "Robin Petereit",
+      "date": "2024-04-16T15:37:08Z",
+      "message": "Add launch argument for parameters and unify launch file names\n\nSigned-off-by: Robin Petereit <robin.petereit@de.bosch.com>"
+    },
+    {
+      "sha": "fd18f651b06222e93a2bba7ef6e20965c8185219",
+      "author": "Robin Petereit",
+      "date": "2024-03-27T14:16:57Z",
+      "message": "0.5.1"
+    },
+    {
+      "sha": "632f98f421dcd141c6572f98d50be683e40f9afc",
+      "author": "Robin Petereit",
+      "date": "2024-03-27T14:16:56Z",
+      "message": "Update CHANGELOG"
+    },
+    {
+      "sha": "7557156db0b8fcfa12dfe53db71150289f640f2d",
+      "author": "Robin Petereit",
+      "date": "2024-03-25T12:48:35Z",
+      "message": "Include what you use\n\nSigned-off-by: Robin Petereit <robin.petereit@de.bosch.com>"
+    },
+    {
+      "sha": "6970c7d53977afe7100134a2cf5ee9bbad3d3010",
+      "author": "Robin Petereit",
+      "date": "2024-03-25T12:47:39Z",
+      "message": "Align Clang FP contraction to GCC for passing tests\n\nSigned-off-by: Robin Petereit <robin.petereit@de.bosch.com>"
+    },
+    {
+      "sha": "6577905491ffefdbac0b2000d3925c730e9e00f4",
+      "author": "Ramon Wijnands",
+      "date": "2024-02-21T15:10:33Z",
+      "message": "Remove unused variable\n\nSigned-off-by: Ramon Wijnands <ramon.wijnands@nobleo.nl>"
+    },
+    {
+      "sha": "4a9c5fb368fcd7b1705a4cd7e870df5d28d02fa1",
+      "author": "Ramon Wijnands",
+      "date": "2024-02-21T15:10:23Z",
+      "message": "Properly include rclcpp/executors.hpp when using spin_some\n\nSigned-off-by: Ramon Wijnands <ramon.wijnands@nobleo.nl>"
+    },
+    {
+      "sha": "1d20d743f67f009fd79a081ee917ab49a19c9e4a",
+      "author": "Robin Petereit",
+      "date": "2024-03-22T10:19:49Z",
+      "message": "Disable irrelevant warnings for Clang\n\nAnonymous structs are used in PCL for type punning:\nhttps://github.com/PointCloudLibrary/pcl/issues/2303\n\nSubobject braces are not needed:\nhttps://bugs.llvm.org/show_bug.cgi?id=21629\nhttps://gcc.gnu.org/bugzilla/show_bug.cgi?id=25137\n\nSigned-off-by: Robin Petereit <robin.petereit@de.bosch.com>"
+    },
+    {
+      "sha": "2187210577dbea4d1980acc723331389f978c6bc",
+      "author": "Robin Petereit",
+      "date": "2024-03-22T10:34:50Z",
+      "message": "Remove unnecessary self assignment\n\nSigned-off-by: Robin Petereit <robin.petereit@de.bosch.com>"
+    },
+    {
+      "sha": "fcbde1d5e32e220b9ca693d55bf527b3c291116e",
+      "author": "Robin Petereit",
+      "date": "2024-03-22T10:33:53Z",
+      "message": "Clarify operation order\n\nSigned-off-by: Robin Petereit <robin.petereit@de.bosch.com>"
+    },
+    {
+      "sha": "6fb1b8de7fe29d2afeb76b80242850890db9b555",
+      "author": "Robin Petereit",
+      "date": "2024-03-22T10:33:31Z",
+      "message": "Remove C style cast\n\nSigned-off-by: Robin Petereit <robin.petereit@de.bosch.com>"
+    },
+    {
+      "sha": "9cad0882cf20af7d6f510259cdaa288256fa1f85",
+      "author": "Robin Petereit",
+      "date": "2024-03-22T10:32:59Z",
+      "message": "Use explicit initialization\n\nSigned-off-by: Robin Petereit <robin.petereit@de.bosch.com>"
+    },
+    {
+      "sha": "ec63e1124d0a8797dafb9efc287e588b13c6b680",
+      "author": "Robin Petereit",
+      "date": "2024-03-22T10:32:17Z",
+      "message": "Remove unused variables\n\nSigned-off-by: Robin Petereit <robin.petereit@de.bosch.com>"
+    },
+    {
+      "sha": "632ee7f19fe3ffff3c1e955104060d86a6d667db",
+      "author": "Robin Petereit",
+      "date": "2024-03-22T10:31:05Z",
+      "message": "Add virtual destructor for base class\n\nSigned-off-by: Robin Petereit <robin.petereit@de.bosch.com>"
+    },
+    {
+      "sha": "bb363ab3894f652b9246c164f348296d53e3265d",
+      "author": "Sarah Huber",
+      "date": "2024-02-16T12:50:50Z",
+      "message": "0.5.0\n\nSigned-off-by: Sarah Huber <sarah.huber@de.bosch.com>"
+    },
+    {
+      "sha": "51c268b2830c400f277a36fe21fba1ca2dd6e4a4",
+      "author": "Sarah Huber",
+      "date": "2024-01-03T13:26:46Z",
+      "message": "0.4.0\n\nSigned-off-by: Sarah Huber <sarah.huber@de.bosch.com>"
+    },
+    {
+      "sha": "0a1fd5847c8d3bf2aa3e7d2506377f365a5c2226",
+      "author": "Robin Petereit",
+      "date": "2023-11-30T16:45:46Z",
+      "message": "0.3.0\n\nSigned-off-by: Robin Petereit <robin.petereit@de.bosch.com>"
+    },
+    {
+      "sha": "26dc61cd75afc733bfd40a5b32b3fefe97c139fb",
+      "author": "Robin Petereit",
+      "date": "2023-07-21T12:23:56Z",
+      "message": "Port unit tests, fix warnings and switch to ros2_socketcan topic names\n\nSigned-off-by: Robin Petereit <robin.petereit@de.bosch.com>"
+    },
+    {
+      "sha": "987cb1fd9cfc3a87d3afb8cf4a795bd0c504955f",
+      "author": "diwo-marcus-huenerbein",
+      "date": "2023-08-02T06:51:05Z",
+      "message": "Port to ROS 2 (#1)\n\nSigned-off-by: Marcus Huenerbein <marcus.huenerbein@digital-workbench.de>"
+    },
+    {
+      "sha": "74ad48446f91020e499cfd826f354e7883896cbe",
+      "author": "Robin Petereit",
+      "date": "2023-07-04T12:07:03Z",
+      "message": "Add contributor agreement\n\nSigned-off-by: Robin Petereit <robin.petereit@de.bosch.com>"
+    },
+    {
+      "sha": "8c02aedf721fb6f2d7b35a63f74d889c2b2378ab",
+      "author": "Petereit Robin (BEG/ESD7)",
+      "date": "2022-12-09T10:26:18Z",
+      "message": "0.1.0\n\nSigned-off-by: Robin Petereit <robin.petereit@de.bosch.com>"
+    }
+  ]
+}

@@ -1,0 +1,294 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-07T22:42:01Z",
+    "source": "github_rest",
+    "endpoint": "/repos/{owner}/{repo}/commits",
+    "owner": "clearpathrobotics",
+    "repo": "ptz_action_server",
+    "per_page": 100
+  },
+  "data": [
+    {
+      "sha": "a90e27254c556ed59757ccb6efd1264af6858d78",
+      "author": "Chris Iverach-Brereton",
+      "date": "2024-05-15T18:05:33Z",
+      "message": "Increase position tolerance to 2 degrees"
+    },
+    {
+      "sha": "f717c4298c8c5a890b0b7ae707831453af019af1",
+      "author": "Chris Iverach-Brereton",
+      "date": "2024-01-09T14:50:19Z",
+      "message": "0.1.9"
+    },
+    {
+      "sha": "0f6deb524ec6dd4a7cf98dda72b8276ae6d643f5",
+      "author": "Chris Iverach-Brereton",
+      "date": "2024-01-09T14:49:58Z",
+      "message": "Changes"
+    },
+    {
+      "sha": "cffd346b794c3227f2430afa7f95b9f852d5e41f",
+      "author": "Chris Iverach-Brereton",
+      "date": "2024-01-09T14:49:22Z",
+      "message": "Fix a bug in translating the zoom level from the logical to hardware range"
+    },
+    {
+      "sha": "435b85ea69ddbc82229e267c8d53b656ed22c706",
+      "author": "Chris Iverach-Brereton",
+      "date": "2024-01-08T21:42:47Z",
+      "message": "0.1.8"
+    },
+    {
+      "sha": "ca411913d35071a45df6452abcb0b67fe0bdfbdb",
+      "author": "Chris Iverach-Brereton",
+      "date": "2024-01-08T21:42:37Z",
+      "message": "Changes"
+    },
+    {
+      "sha": "3a5dab8a5390168fc82c2913ca68426dc39d702f",
+      "author": "Chris Iverach-Brereton",
+      "date": "2024-01-08T21:41:49Z",
+      "message": "Apply the logical -> physical zoom scaling when sending the absolute zoom level to the Axis driver. Remove an unnecessary debug print"
+    },
+    {
+      "sha": "282d9097d48ca46c2fb29a90c156553a9a8fb583",
+      "author": "Chris Iverach-Brereton",
+      "date": "2023-11-22T16:30:46Z",
+      "message": "0.1.7"
+    },
+    {
+      "sha": "5cf293ba457519a2fb75ee63d16d60657eae345d",
+      "author": "Chris Iverach-Brereton",
+      "date": "2023-11-22T16:30:32Z",
+      "message": "Changes"
+    },
+    {
+      "sha": "ef3f12d8000317496ac7766fdb920f62fb397935",
+      "author": "Chris Iverach-Brereton",
+      "date": "2023-11-22T16:30:03Z",
+      "message": "Fix the dependencies for the Flir PTU action server"
+    },
+    {
+      "sha": "01fe89ce2d807d809ac6bcbf6639953889ffb2f9",
+      "author": "Chris Iverach-Brereton",
+      "date": "2023-11-15T16:13:36Z",
+      "message": "0.1.6"
+    },
+    {
+      "sha": "1dbd20c23ea179edd1e0aa1885f38f5a8cbd4714",
+      "author": "Chris Iverach-Brereton",
+      "date": "2023-11-15T16:13:17Z",
+      "message": "Changes"
+    },
+    {
+      "sha": "278c5b15eeb3ae3b253a10ef17942a81b82dc93b",
+      "author": "Chris Iverach-Brereton",
+      "date": "2023-11-15T15:20:38Z",
+      "message": "Major overhaul to add new control modes (#4)\n\n* Rename PtzPosition.msg to PtzState.msg, add support for velocity control. Rename .../move_ptz action to .../position, add .../velocity to Axis camera to allow velocity control\r\n\r\n* Add support for move_ptz/position_abs and move_ptz/position_rel actions\r\n\r\n* Update the readme\r\n\r\n* Add support for absolute & relative positions for the flir PTU\r\n\r\n* Move the axis server's actions into the move_ptz namespace, add position_abs and position_rel\r\n\r\n* Update the limits config files, readme for the axis action server\r\n\r\n* Keep all nodes called \"ptz_action_server_node\" for all nodes by default to make searching params easier\r\n\r\n* Make the ROS parameters consistent across all implementations. Add limits file for the simulation node\r\n\r\n* Publish the sign of the direction of travel in velocity control feedback. Check if the camera has reached end-of-travel and signal the end of the velocity control action if this occurs\r\n\r\n* Debug the new action servers on actual hardware\r\n\r\n* Add the first-pass at supporting pan/tilt angles relative to an external frame. Not yet supported by the Flir PTU\r\n\r\n* Ignore pitch offsets, print a warning if the pitch or roll is greater than 5 degrees\r\n\r\n* Create a temporary vector frame we can use to calculate the necessary pan/tilt angles, rather than ignoring the tilt. This should allow the camera to operate correctly even on hills. Temporary frame has a UUID in the name so it shouldn't conflict with other frames in the robot\r\n\r\n* Modify the axis & simulation packages to use positive pan = clockwise instead of anticlockwise. Add a new action to pan/tilt/zoom to a specific frame\r\n\r\n* Fix message dependencies\r\n\r\n* Implement the new action to point the camera _at_ a specific frame, instead of just parallel with its X axis\r\n\r\n* Two copy & paste errors in the axis action server"
+    },
+    {
+      "sha": "675ed05515effab3c7ee064183b8f9b31f34383d",
+      "author": "Chris Iverach-Brereton",
+      "date": "2023-10-19T21:21:22Z",
+      "message": "0.1.5"
+    },
+    {
+      "sha": "012fb9bac79724b7ac381364993b6d7cf70e3c57",
+      "author": "Chris Iverach-Brereton",
+      "date": "2023-10-19T21:21:03Z",
+      "message": "Changes"
+    },
+    {
+      "sha": "0067d11f58e71f8afb9d1a00fc4541d03cb73852",
+      "author": "Chris Iverach-Brereton",
+      "date": "2023-10-19T21:17:44Z",
+      "message": "Changes"
+    },
+    {
+      "sha": "a8a78e47b4ef78076ec0d18d0b88148eb26ce844",
+      "author": "Chris Iverach-Brereton",
+      "date": "2023-10-19T21:17:07Z",
+      "message": "Remove the catkin ignore file"
+    },
+    {
+      "sha": "70117c02467749d2538d53d114bf2324843e00fe",
+      "author": "jmastrangelo-cpr",
+      "date": "2023-09-14T13:49:46Z",
+      "message": "Merge pull request #3 from clearpathrobotics/ONAV-1687\n\nrename file and add environment variables to set ptz limits"
+    },
+    {
+      "sha": "90c71cb2feb561d64ebd8a1265ac33b7e1af1727",
+      "author": "José Mastrangelo",
+      "date": "2023-09-14T13:49:07Z",
+      "message": "fix endline"
+    },
+    {
+      "sha": "6fbf63e92a7d4309ede9e70c29e95a3cec70d2fe",
+      "author": "José Mastrangelo",
+      "date": "2023-09-14T13:47:43Z",
+      "message": "restore limits_dome.yaml file as an example."
+    },
+    {
+      "sha": "ba012b8f970ed570222d08be0e0a1bd86820f24a",
+      "author": "Chris Iverach-Brereton",
+      "date": "2023-09-13T19:17:04Z",
+      "message": "Set the is_moving flag _after_ we send the command to the camera hardware, just to prevent possible issues with feedback kicking out early"
+    },
+    {
+      "sha": "43a57278290abc04fd92e17be7f436e5b961fcea",
+      "author": "Chris Iverach-Brereton",
+      "date": "2023-09-13T18:51:55Z",
+      "message": "Add an additional check to make sure the camera hasn't stopped moving. Make setting self.is_moving atomic with a setter function and a lock"
+    },
+    {
+      "sha": "d9d5d30b3cc9ef70ba0173a65bd43a8dd1b4a717",
+      "author": "Chris Iverach-Brereton",
+      "date": "2023-09-13T18:24:29Z",
+      "message": "Add a new config file for dome cameras mounted upside-down"
+    },
+    {
+      "sha": "869f5d37c1c1cddd8cbc9333d4928f4b141efea0",
+      "author": "Chris Iverach-Brereton",
+      "date": "2023-09-13T18:06:53Z",
+      "message": "`self.ptz_state.pan` and `.tilt` are already in radians; don't covnert them again"
+    },
+    {
+      "sha": "214a2b9362e6864adbd7978a8a1fb1afba7effb9",
+      "author": "José Mastrangelo",
+      "date": "2023-09-13T17:50:20Z",
+      "message": "rename file and add environment variables to set ptz limits"
+    },
+    {
+      "sha": "d844688cdf7cd2283e6bb1dee5a96bcf7009c583",
+      "author": "Chris Iverach-Brereton",
+      "date": "2023-08-18T19:12:18Z",
+      "message": "0.1.4"
+    },
+    {
+      "sha": "520e9c723cafa46e66d9d2d445bea9394efa8d7c",
+      "author": "Chris Iverach-Brereton",
+      "date": "2023-08-18T19:12:01Z",
+      "message": "Update changelogs ahead of release"
+    },
+    {
+      "sha": "4e4efd0bcb5db36a45e179df2f52d36b386ce4c3",
+      "author": "Chris Iverach-Brereton",
+      "date": "2023-08-18T19:11:13Z",
+      "message": "Publish axis camera joint states (#2)\n\n* Add the ability to publish the Axis camera's joint state\r\n\r\n* Fix a broken import\r\n\r\n* Move the joint state publication to a background thread, increase the pub rate to 10Hz"
+    },
+    {
+      "sha": "1616d6d745b782d2044fe94c51352c5f44e34b19",
+      "author": "Chris Iverach-Brereton",
+      "date": "2023-08-04T16:51:58Z",
+      "message": "0.1.3"
+    },
+    {
+      "sha": "275310e9f854f26341cb82a48949936f090a41c7",
+      "author": "Chris Iverach-Brereton",
+      "date": "2023-08-04T16:51:39Z",
+      "message": "Update changelogs ahead of release"
+    },
+    {
+      "sha": "e5f8895aa9e2fd64a8a3e28c859d4bdd2e31a868",
+      "author": "Chris Iverach-Brereton",
+      "date": "2023-08-04T16:47:35Z",
+      "message": "Add a check to make sure the PID controllers haven't disconnected, update the version, make the camera namespace an argument"
+    },
+    {
+      "sha": "324b5d4688a4f31eefce9b1c6f7992dfa3cceefd",
+      "author": "Chris Iverach-Brereton",
+      "date": "2023-08-04T16:23:44Z",
+      "message": "Add the simulated PTZ action server package for Gazebo support"
+    },
+    {
+      "sha": "56d0b7262db92ade6cfa2210bd1f1f2dad746c84",
+      "author": "Chris Iverach-Brereton",
+      "date": "2023-05-05T15:15:45Z",
+      "message": "0.1.2"
+    },
+    {
+      "sha": "0296c46e828f74aeb3d8b52916f201a5df89dd54",
+      "author": "Chris Iverach-Brereton",
+      "date": "2023-05-05T15:15:28Z",
+      "message": "Update changelogs ahead of release"
+    },
+    {
+      "sha": "cf663141a47dd35b1e01b51d7143862a97c183d2",
+      "author": "Chris Iverach-Brereton",
+      "date": "2023-05-05T15:14:07Z",
+      "message": "Merge pull request #1 from clearpathrobotics/resend-command\n\nRe-send the axis command if the camera isn't moving after 5s"
+    },
+    {
+      "sha": "78df1af0c4002f78a77363fd8988f176208bfe39",
+      "author": "Chris Iverach-Brereton",
+      "date": "2023-05-04T15:22:55Z",
+      "message": "Re-send the axis command if the camera isn't moving after 5s"
+    },
+    {
+      "sha": "46c493c395fadc60e21310bdbda8926ed18523b6",
+      "author": "Chris Iverach-Brereton",
+      "date": "2023-04-25T15:15:59Z",
+      "message": "Add some additional logging, handle camera disconnections better"
+    },
+    {
+      "sha": "688537721fa64d2f2dcc7596364eb11c445392d4",
+      "author": "Chris Iverach-Brereton",
+      "date": "2023-04-24T19:22:37Z",
+      "message": "Abort the action in-progress if the Axis camera stops publishing state messages"
+    },
+    {
+      "sha": "856f8e33c49bdc1283810457754e78528f36c55e",
+      "author": "Chris Iverach-Brereton",
+      "date": "2023-04-17T12:40:32Z",
+      "message": "Use format strings instead of .format"
+    },
+    {
+      "sha": "a3b3f05be0dfe6a8b64a4f61947ba9c4911ffa36",
+      "author": "Chris Iverach-Brereton",
+      "date": "2023-04-11T19:08:25Z",
+      "message": "0.1.1"
+    },
+    {
+      "sha": "b86563cb0c380ff48cbe8b2a13d27562c04cf761",
+      "author": "Chris Iverach-Brereton",
+      "date": "2023-04-11T19:08:04Z",
+      "message": "Update changelogs ahead of release"
+    },
+    {
+      "sha": "11bcc130f62d8aff9b4a9aac6ead40d75ff62baa",
+      "author": "Chris Iverach-Brereton",
+      "date": "2023-04-11T19:07:19Z",
+      "message": "Add limits files for the standard dome camera & Q62 series. Add a new launch argument to specify the limits file"
+    },
+    {
+      "sha": "c21d1358a25028e52fbfc63bc43d81b07fcf44c3",
+      "author": "Chris Iverach-Brereton",
+      "date": "2023-03-27T18:49:45Z",
+      "message": "0.1.0"
+    },
+    {
+      "sha": "6fbfc1e629c37a0c136c5827a746190ffd04cf20",
+      "author": "Chris Iverach-Brereton",
+      "date": "2023-03-27T18:49:28Z",
+      "message": "Add the changelogs"
+    },
+    {
+      "sha": "7f870d1afbe6dab2a2f03fda9a07aef2f7e33a6b",
+      "author": "Chris Iverach-Brereton",
+      "date": "2023-03-27T18:46:09Z",
+      "message": "Remove the Pelco-D action server; we don't plan on using that camera anymore and don't want to support it as an open-source driver"
+    },
+    {
+      "sha": "9377301df6a301037fad1ecc56e3163c9ca75613",
+      "author": "Chris Iverach-Brereton",
+      "date": "2023-03-27T18:38:34Z",
+      "message": "Copy the old ptz_control packages, but renamed to better follow ROS naming conventions"
+    },
+    {
+      "sha": "3b0bc7ee1c2808a045e2a8516a4ff96baa7424ea",
+      "author": "Chris Iverach-Brereton",
+      "date": "2023-03-27T18:29:55Z",
+      "message": "Initial commit"
+    }
+  ]
+}

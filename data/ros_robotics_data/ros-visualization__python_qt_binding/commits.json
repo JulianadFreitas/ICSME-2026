@@ -1,0 +1,1368 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-07T22:52:43Z",
+    "source": "github_rest",
+    "endpoint": "/repos/{owner}/{repo}/commits",
+    "owner": "ros-visualization",
+    "repo": "python_qt_binding",
+    "per_page": 100
+  },
+  "data": [
+    {
+      "sha": "20bcb5f7bf314f225dd9f5295de0e72ecca8bae2",
+      "author": "Alejandro Hernandez Cordero",
+      "date": "2025-10-08T13:57:11Z",
+      "message": "2.4.1"
+    },
+    {
+      "sha": "65847a99e728fee8f1448ebce8d0d69ef1879170",
+      "author": "Alejandro Hernandez Cordero",
+      "date": "2025-10-08T13:57:07Z",
+      "message": "Changelog\n\nSigned-off-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "7a013569b355b4b4e04c138dedb075ce4b7bcab1",
+      "author": "mosfet80",
+      "date": "2025-10-06T08:00:58Z",
+      "message": "fix setuptools deprecation (#151)\n\nSigned-off-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>\nCo-authored-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "19eee00ecc5bb7e7e943175f04404c9087a3c864",
+      "author": "mosfet80",
+      "date": "2025-10-03T07:57:08Z",
+      "message": "fix cmake deprecation (#150)\n\ncmake version < then 3.10 is deprecated"
+    },
+    {
+      "sha": "9b7fc175ff9891fe649f307a02aaf18230c98e67",
+      "author": "Scott K Logan",
+      "date": "2025-04-28T21:22:51Z",
+      "message": "2.4.0"
+    },
+    {
+      "sha": "454aadef8e7832ca2e2194e1d154615482a91958",
+      "author": "Chris Lalancette",
+      "date": "2024-12-02T19:35:10Z",
+      "message": "Remove the mirror-rolling-to-main workflow. (#145)\n\nWe no longer need to keep the main branch up-to-date,\r\nso drop the workflow.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "f6b4d9a9d57e543d6ca3b3386d2c1e30096de9c7",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2024-12-02T17:05:44Z",
+      "message": "Remove CODEOWNERS (#144)\n\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "d68d3d4221dd4dcbb0d37046a1dac3a6742f49e3",
+      "author": "Chris Lalancette",
+      "date": "2024-06-25T18:02:08Z",
+      "message": "2.3.1"
+    },
+    {
+      "sha": "6855bd41dbdab95cad6301cf76eacbb283fba4ae",
+      "author": "Chris Lalancette",
+      "date": "2024-06-25T18:02:03Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "9cae8fd524fa2e9388bfde0c383fc21944b09990",
+      "author": "Chris Lalancette",
+      "date": "2024-06-24T11:34:48Z",
+      "message": "Skip running the tests on Windows Debug. (#142)\n\n* Skip running the tests on Windows Debug.\r\n\r\nWhen we run CI on Windows Debug, Python expects to be\r\nable to find compiled libraries with an extra _d in their\r\nfilename that contains the debugging ABI.\r\n\r\nHowever, we don't currently have a debug library available\r\nfor PyQt5, and thus when running under Windows Debug,\r\nthe tests cannot succeed.  While we could build a debug\r\nlibrary for PyQt5, that is actually a massive undertaking.\r\nInstead, just skip these tests when we are on Windows Debug.\r\nWhile that loses us a bit of coverage, it won't matter much;\r\nwe are still testing this on Windows (Release) and on Linux.\r\n\r\nThe way in which this patch determines that this is a Windows\r\nDebug interpreter is a little chintzy.  It just uses the fact\r\nthat the binary is named python_d.exe to discover that.\r\nI couldn't find another way to tell if this was a debug\r\ninterpreter, but I am open to other ideas.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>\r\n\r\n* Update to using importlib.machinery.\r\n\r\nThanks to Shane for figuring out this way to tell\r\nif we are in a debug interpreter.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "1fbfb441b86dfc9df252fb7e4a7c0d736a5d1cbe",
+      "author": "Marco A. Gutierrez",
+      "date": "2024-04-26T12:01:01Z",
+      "message": "2.3.0"
+    },
+    {
+      "sha": "2fcd33d82b5610c7573c6f72bcd3fc3ec5b735cc",
+      "author": "Marco A. Gutierrez",
+      "date": "2024-04-26T12:00:58Z",
+      "message": "Changelog.\n\nSigned-off-by: Marco A. Gutierrez <marcogg@marcogg.com>"
+    },
+    {
+      "sha": "4fe5bceb353f5dfcef4f78f9266c0983521bd7ac",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2024-04-25T12:25:54Z",
+      "message": "Only suppress Python warnings on new enough CMake (#139)\n\n* Older CMake doesn't have the policy, so skip it there.\r\n\r\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "e6b881ee5028e601a2f8aa844ec12b770831d38f",
+      "author": "Chris Lalancette",
+      "date": "2024-04-24T19:18:31Z",
+      "message": "Suppress warning from Shiboken2. (#137)\n\nThe comment has more information on why we are doing this.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "480c8d2756f5be376733eb2c8a9b0a162199a651",
+      "author": "Marco A. Gutierrez",
+      "date": "2024-03-28T10:05:01Z",
+      "message": "2.2.0\n\nSigned-off-by: Marco A. Gutierrez <marcogg@marcogg.com>"
+    },
+    {
+      "sha": "29ea65c5c6712fe3dade9fcfb841e49a9d2806e2",
+      "author": "Marco A. Gutierrez",
+      "date": "2024-03-28T10:04:22Z",
+      "message": "Changelog.\n\nSigned-off-by: Marco A. Gutierrez <marcogg@marcogg.com>"
+    },
+    {
+      "sha": "ef7b38b2b78bd3392900f08269119640877945d4",
+      "author": "Christophe Bedard",
+      "date": "2024-02-23T20:46:56Z",
+      "message": "Switch to C++17 for SIP and Shiboken (#135)\n\nSigned-off-by: Christophe Bedard <christophe.bedard@apex.ai>"
+    },
+    {
+      "sha": "5408ecf63cfbeb0dbc11393b2c34df9c05b21f70",
+      "author": "Chris Lalancette",
+      "date": "2024-02-20T16:35:30Z",
+      "message": "Set hints to find the python version we actually want. (#134)\n\nThe comment in the commit explains the reasoning behind it.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "180f42738aca63d17561338b2b11056c08a48bc9",
+      "author": "Chris Lalancette",
+      "date": "2024-02-07T14:20:17Z",
+      "message": "2.1.1"
+    },
+    {
+      "sha": "03ccb56d200ef92922d3ddac8c925ef6b956e5f2",
+      "author": "Chris Lalancette",
+      "date": "2024-02-07T14:20:10Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "e0f21d1cf19e9581406e83069fc462548c73647a",
+      "author": "Chris Lalancette",
+      "date": "2024-01-26T15:54:08Z",
+      "message": "Remove unnecessary parentheses around assert. (#133)\n\nThis makes newer flake8 happy.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "d13f31fa4cfcb35730c71969d9664b809d3a8668",
+      "author": "Chris Lalancette",
+      "date": "2024-01-24T14:39:55Z",
+      "message": "2.1.0"
+    },
+    {
+      "sha": "9752e01ffe8d4ec3c4d07b6674ce6d4fe826705d",
+      "author": "Chris Lalancette",
+      "date": "2024-01-24T14:39:49Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "01070af2d4cd47a1e90e91d4e162ea7b761ee905",
+      "author": "Chris Lalancette",
+      "date": "2024-01-08T00:23:17Z",
+      "message": "Switch to FindPython3 in the shiboken_helper.cmake. (#132)\n\nWhile we are in here, remove some of the old code that\r\ndeals with older versions of CMake that we no longer\r\nhave to worry about.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "150477ff8f71b7090a174ad831e29dbdcef45f0f",
+      "author": "Chris Lalancette",
+      "date": "2023-12-26T18:03:10Z",
+      "message": "2.0.0"
+    },
+    {
+      "sha": "2ef9d95e87c7fe6564f757490332e35302b12f9d",
+      "author": "Chris Lalancette",
+      "date": "2023-12-26T18:03:01Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "ee4d43bcdb0c5c5d40f81dea3de6185298ab34a7",
+      "author": "Chris Lalancette",
+      "date": "2023-12-08T17:46:47Z",
+      "message": "Cleanup of the sip_configure.py file. (#131)\n\nThis is to do 2 main things:\r\n\r\n1.  Move away from distutils.find_executable, which is deprecated.\r\n2.  Take a bunch of error handling out of an exception handler.\r\n    This just makes the code easier to follow if another exception\r\n    occurs.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "e78372fd63eda527c9fad5fcdab8ca31eb3f36d2",
+      "author": "Chris Lalancette",
+      "date": "2023-12-07T18:37:13Z",
+      "message": "Update the SIP support so we can deal with a broken RHEL-9. (#129)\n\nThere is more information in the patch.  With this in place,\r\nwe can use SIP to build rqt_gui_cpp plugins for RHEL-9.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "6c8f9e3d7a7a06d3b315f90a92fd13764c43b623",
+      "author": "Chris Lalancette",
+      "date": "2023-04-28T16:46:16Z",
+      "message": "1.3.0"
+    },
+    {
+      "sha": "5bd7233d50799a1c802d867ad46c20eb232e35c5",
+      "author": "Chris Lalancette",
+      "date": "2023-04-28T16:45:53Z",
+      "message": "Changelog\n\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "ae0c68db584a88b56cffc1485d1dd8b776729602",
+      "author": "Chris Lalancette",
+      "date": "2023-04-11T14:37:49Z",
+      "message": "1.2.3"
+    },
+    {
+      "sha": "0b4e832cff75e43c351f199877c8c45ec50b6fbe",
+      "author": "Chris Lalancette",
+      "date": "2023-04-11T14:37:43Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "ade88c56e27bcb74732e8bd8475fbda00d722355",
+      "author": "Michael Carroll",
+      "date": "2023-03-03T14:40:26Z",
+      "message": "Fix to allow ninja to use make for generators (#123)\n\nSigned-off-by: Michael Carroll <mjcarroll@intrinsic.ai>\r\nCo-authored-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "1e2994c122572912793004de65ab14711c827099",
+      "author": "Cristóbal Arroyo",
+      "date": "2023-03-02T14:31:38Z",
+      "message": "Fix flake8 linter regression (#125)\n\nSigned-off-by: Crola1702 <cristobal.arroyo@ekumenlabs.com>"
+    },
+    {
+      "sha": "d8fc6179f0dbb87f464aa18f69588da4b58f1daf",
+      "author": "Michael Carroll",
+      "date": "2023-03-01T19:31:27Z",
+      "message": "Revert \"Add windows support for pyside helper (#116)\" (#124)\n\nThis reverts commit 0a7f68ec8cb219233c9a640ca8517af73510949d."
+    },
+    {
+      "sha": "0a7f68ec8cb219233c9a640ca8517af73510949d",
+      "author": "Christoph Hellmann Santos",
+      "date": "2023-03-01T15:40:21Z",
+      "message": "Add windows support for pyside helper (#116)"
+    },
+    {
+      "sha": "cacbd7b31645218a6a786318d6d380fd02fa2832",
+      "author": "Rhys Mainwaring",
+      "date": "2023-03-01T15:04:41Z",
+      "message": "Remove pyqt from default binding order for macOS (#118)\n\n- Suppress debug messages\r\n- Remove pyqt from default binding order\r\n\r\nSigned-off-by: Rhys Mainwaring <rhys.mainwaring@me.com>"
+    },
+    {
+      "sha": "fab9b3efcc33aa08b0e8815ce1a37081b0a417e4",
+      "author": "Chris Lalancette",
+      "date": "2023-02-24T20:07:35Z",
+      "message": "1.2.2"
+    },
+    {
+      "sha": "75bc2dfe2bb10344bebc4b003914fa6e8bf61efe",
+      "author": "Chris Lalancette",
+      "date": "2023-02-24T20:07:30Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "77aafb5237fe57865213cd924daba8d7b4079569",
+      "author": "Scott K Logan",
+      "date": "2023-02-23T23:53:55Z",
+      "message": "Demote missing SIP message from WARNING to STATUS (#122)\n\nIt's becoming increasingly normal to use Shiboken instead of SIP, so it\r\nshouldn't be a warning when it isn't found.\r\n\r\nSigned-off-by: Scott K Logan <logans@cottsay.net>"
+    },
+    {
+      "sha": "bb9375d6005a263b848479f64cb1fbe383fe71f0",
+      "author": "Chris Lalancette",
+      "date": "2023-02-14T16:26:54Z",
+      "message": "1.2.1"
+    },
+    {
+      "sha": "899a9a057d1b7faed5a118753ac4c2c36263ec09",
+      "author": "Chris Lalancette",
+      "date": "2023-02-14T16:26:47Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "db96c09268474bc0142cca94f59ed4e68cb86a5e",
+      "author": "Audrow Nash",
+      "date": "2022-11-28T19:46:12Z",
+      "message": "[rolling] Update maintainers - 2022-11-07 (#120)\n\n* Add Shane Loretz to CODEOWNERs file\r\n\r\n* Update maintainers to Shane Loretz\r\n\r\nSigned-off-by: Audrow Nash <audrow@openrobotics.org>"
+    },
+    {
+      "sha": "0fe281cf56b7f1f43966ecd0cc91a9aba23464a6",
+      "author": "Audrow Nash",
+      "date": "2022-06-28T14:15:51Z",
+      "message": "Mirror rolling to main"
+    },
+    {
+      "sha": "12607245533bd917441bb98120cca80d5f00a067",
+      "author": "Audrow Nash",
+      "date": "2022-05-11T00:17:55Z",
+      "message": "1.2.0\n\nSigned-off-by: Audrow Nash <audrow@hey.com>"
+    },
+    {
+      "sha": "89492df890f390d956b7f829811f29ccc7f1cd87",
+      "author": "Scott K Logan",
+      "date": "2021-12-07T01:03:52Z",
+      "message": "1.1.1 (#112)"
+    },
+    {
+      "sha": "dbf553b69f47d5c9a4c50783c61ddb21a43ea2e1",
+      "author": "Homalozoa X",
+      "date": "2021-11-29T15:25:11Z",
+      "message": "[Fix] Replace PythonInterp to Python3 COMPONENTS (#108)\n\n1. Replace PythonInterp & PythonLibs to COMPONENTS\r\n2. Replace PYTHON_INCLUDE_DIRS to Python3_INCLUDE_DIRS\r\n3. Replace PYTHON_EXECUTABLE to Python3_EXECUTABLE\r\n\r\nSigned-off-by: Homalozoa <nx.tardis@gmail.com>"
+    },
+    {
+      "sha": "6b5d12e7c39ef74f2b0a0cd9b2e405e3c568068b",
+      "author": "Ben Wolsieffer",
+      "date": "2021-11-19T15:32:26Z",
+      "message": "Use PyQt5 module path to find SIP bindings (ROS 2) (#106)\n\n* Use PyQt5 module path to find SIP bindings (#105)\r\n\r\n`sipconfig._pkg_config['default_mod_dir']` is currently used to find the PyQt5 SIP bindings, but this location is determined by where SIP is installed, which may not be the same as where PyQt5 is installed. A real world example of this is in Nix, where each package is installed to a separate isolated directory. Instead, we can use `PyQt5.__path__[0]`, which will always point to the location of the PyQt5 module.\r\n\r\nCo-authored-by: Akash Patel <17132214+acxz@users.noreply.github.com>"
+    },
+    {
+      "sha": "1d94d42c1efedf7a0a524d59f4f32c0710f8b64f",
+      "author": "Chris Lalancette",
+      "date": "2021-11-02T14:44:06Z",
+      "message": "1.1.0"
+    },
+    {
+      "sha": "12722627b958917c8e90334956d444dc4691ae3d",
+      "author": "Chris Lalancette",
+      "date": "2021-11-02T14:43:56Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "2d31825034a41b1125b3ece24ce42689ce6cef72",
+      "author": "Shane Loretz",
+      "date": "2021-08-06T19:17:32Z",
+      "message": "Make FindPythonInterp dependency explicit (#107)\n\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>"
+    },
+    {
+      "sha": "4fb33fef80bdde73170920c53d1db189f8f45f1c",
+      "author": "Shane Loretz",
+      "date": "2021-04-22T18:02:36Z",
+      "message": "Add note about galactic branch (#104)\n\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>"
+    },
+    {
+      "sha": "fd4d50b6e2b65e329039fba033cae406d8e3ad1a",
+      "author": "Shane Loretz",
+      "date": "2021-03-22T17:35:01Z",
+      "message": "fuerte-devel is too new for ROS Electric (#101)"
+    },
+    {
+      "sha": "bbb28edaffb272091ccef48d0a137d4bcab1e592",
+      "author": "Shane Loretz",
+      "date": "2021-03-19T00:34:25Z",
+      "message": "1.0.7\n\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>"
+    },
+    {
+      "sha": "cc3a0917d9a64379ae8bc2946558a33d7a918868",
+      "author": "Shane Loretz",
+      "date": "2021-03-19T00:27:00Z",
+      "message": "Add repo README (#100)\n\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>"
+    },
+    {
+      "sha": "0af15bad975f1829e36b2eaa3ee23457aa2b2588",
+      "author": "Scott K Logan",
+      "date": "2021-02-12T13:06:32Z",
+      "message": "Shorten some excessively long lines of CMake (#99)\n\nThe line length enforcement in ament_lint_cmake has been broken for some\r\ntime, but will be fixed by ament/ament_lint#236. This change brings this\r\npackage into compliance with a 120 column limit.\r\n\r\nSigned-off-by: Scott K Logan <logans@cottsay.net>"
+    },
+    {
+      "sha": "7ff71b0bfd201cc1dbc328bcec42254dd55b523f",
+      "author": "Chris Lalancette",
+      "date": "2021-01-25T15:26:37Z",
+      "message": "1.0.6"
+    },
+    {
+      "sha": "bf24cb7926fa2ec953fce3240e7407a622560f2d",
+      "author": "Chris Lalancette",
+      "date": "2021-01-25T15:26:05Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "3fc729cd55cb531368e11522826643ac89adacf1",
+      "author": "Shane Loretz",
+      "date": "2020-10-29T16:54:57Z",
+      "message": "Update maintainers (#96) (#98)\n\nPrevious: @dirk-thomas\r\nNew: @claireyywang, @sloretz\r\n\r\nSigned-off-by: Shane Loretz <sloretz@openrobotics.org>"
+    },
+    {
+      "sha": "361dee952bbda33c79cd4e366ae56b0ce4ca81bb",
+      "author": "Chris Lalancette",
+      "date": "2020-06-19T14:55:26Z",
+      "message": "Add pytest.ini so local tests don't display warning (#93)\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "8a7ce6f45f36bf4e9da25ecd8c1013f5d9cc2460",
+      "author": "Jacob Perron",
+      "date": "2020-05-27T03:22:32Z",
+      "message": "1.0.5"
+    },
+    {
+      "sha": "f36c414effa4466d03aa9d008ca1eb4ff5ea0c2e",
+      "author": "Dirk Thomas",
+      "date": "2020-05-26T22:23:56Z",
+      "message": "allow a list of INCLUDE_PATH (#92)\n\nSigned-off-by: Dirk Thomas <dirk-thomas@users.noreply.github.com>"
+    },
+    {
+      "sha": "7b140ec3fe785240598f9e7451fac2b007a281e3",
+      "author": "Robert Haschke",
+      "date": "2020-05-26T22:21:01Z",
+      "message": "Use magic $(MAKE) variable to suppress build warning (#91)\n\nAccording to the gnu make documentation, a subprocess make should use\r\nthe $(MAKE) variable or +make to tell the parent make process that\r\nthe child is actually a make process as well.\r\n\r\nThis is required to suppress the warning\r\n`warning: jobserver unavailable: using -j1. Add `+' to parent make rule.`"
+    },
+    {
+      "sha": "5ae703a9f858d332a41b3fcc96062e226978beb5",
+      "author": "Anton Matosov",
+      "date": "2020-05-26T22:17:39Z",
+      "message": "Fix linking with non framework builds of qt (e.g. from conda-forge) (#84)\n\n* Fix linking with non framework builds of qt (e.g. from conda-forge)\r\n\r\n* add blank line to fix flake8\r\n\r\n* use single quotes\r\n\r\nCo-authored-by: Dirk Thomas <dirk-thomas@users.noreply.github.com>"
+    },
+    {
+      "sha": "b1c2d040588ff9824a85a04301bf80e319ec1bb5",
+      "author": "Jacob Perron",
+      "date": "2020-05-06T00:51:33Z",
+      "message": "1.0.4"
+    },
+    {
+      "sha": "493de1fec9f8c398c97d5d4ac4fed5557e483b17",
+      "author": "Dirk Thomas",
+      "date": "2020-03-02T18:54:22Z",
+      "message": "remove obsolete function used for backward compatibility (#88)"
+    },
+    {
+      "sha": "65e58a70aa4c702f53ca673e0d459468464748f1",
+      "author": "Dirk Thomas",
+      "date": "2020-03-02T18:54:13Z",
+      "message": "disable Shiboken with CMake < 3.14 (#87)"
+    },
+    {
+      "sha": "e96dc0e55a6282ecd57486f74f467694f3993cba",
+      "author": "Dirk Thomas",
+      "date": "2020-03-02T17:43:22Z",
+      "message": "fix case of CMake function (#86)"
+    },
+    {
+      "sha": "3967af6463e8a44b1e4626aec6956ef209b4c7ec",
+      "author": "Dirk Thomas",
+      "date": "2020-02-28T23:40:21Z",
+      "message": "restore QUIET which was reverted in #79"
+    },
+    {
+      "sha": "ff3ef8c76b1051af82aef5a9fc96837d5117f3bf",
+      "author": "Hermann von Kleist",
+      "date": "2020-02-28T23:38:17Z",
+      "message": "Use PySide2 and Shiboken2 targets for variables (#79)\n\n* Inserted blank lines to improve readability\n\n* Set PYSIDE_LIBRARY and PYSIDE_INCLUDE_DIR for Pyside >= 5.12\n\n* Set SHIBOKEN_LIBRARY and SHIBOKEN_INCLUDE_DIR for newer shiboken version\n\n* Moved location where SHIBOKEN_BINARY is set, added message output\n\n* shiboken_helper.cmake: Print PYSIDE_INCLUDE_DIR and SHIBOKEN_INCLUDE_DIR\n\n* shiboken_helper.cmake: Refactor find_package for Shiboken and PySide\n\n* shiboken_helper.cmake: Include current directory, enable pyside ext.\n\n* shiboken_helper.cmake: Fixed compilation on Kinetic/Xenial\n\n* remove unnecessary whitespace changes\n\n* reorder some lines\n\n* condition can check the variable name\n\n* remove conditionally for very old shiboken versions\n\n* add CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES to shiboken invocation\n\nCo-authored-by: Dirk Thomas <dirk-thomas@users.noreply.github.com>"
+    },
+    {
+      "sha": "4ea84276fca25ef625e71bf1541716b17de10c71",
+      "author": "Dirk Thomas",
+      "date": "2019-11-13T01:46:19Z",
+      "message": "1.0.3"
+    },
+    {
+      "sha": "8d1468c113428cb30573690445397263e498c485",
+      "author": "Dirk Thomas",
+      "date": "2019-11-13T01:46:09Z",
+      "message": "update changelog"
+    },
+    {
+      "sha": "e6830ca8825080f72a18e077acf17dca3717ea91",
+      "author": "Dirk Thomas",
+      "date": "2019-10-24T16:39:14Z",
+      "message": "fix linter"
+    },
+    {
+      "sha": "fa9114875dad2ab2fee6af34d8ab431cdf86c084",
+      "author": "Simon Dierl",
+      "date": "2019-10-24T15:58:01Z",
+      "message": "check if Shiboken2Config.cmake defines a target instead of a variable, fixes #69 (#77)"
+    },
+    {
+      "sha": "a64b4929b3b5620c9785e9505c19e4e00a66c813",
+      "author": "Dirk Thomas",
+      "date": "2019-09-30T21:34:15Z",
+      "message": "1.0.2"
+    },
+    {
+      "sha": "3737e3e82ff79cb12077617ce4e7e577bcfc151e",
+      "author": "Dirk Thomas",
+      "date": "2019-09-30T21:31:46Z",
+      "message": "update changelog"
+    },
+    {
+      "sha": "e68e565efa1ee43b1aa908f9ae51764acacd3db4",
+      "author": "Dirk Thomas",
+      "date": "2019-09-30T18:45:05Z",
+      "message": "Merge pull request #74 from ros-visualization/dirk-thomas/sync-with-ros1\n\nsync changes from ROS 1 to ROS 2"
+    },
+    {
+      "sha": "426f44059f54779d2a30812cf3ba65bf0fb73ccf",
+      "author": "Hans Gaiser",
+      "date": "2019-07-29T22:17:39Z",
+      "message": "Replace Qt variable in generated Makefile. (#64)\n\n* Replace Qt variable in generated Makefile.\r\n\r\n* use single quotes"
+    },
+    {
+      "sha": "3bfc459daa7a8c774decd8cacca1d2ebbbf2fa0f",
+      "author": "Hans Gaiser",
+      "date": "2019-01-02T21:56:59Z",
+      "message": "Don't add -l prefix if it already exists. (#59)"
+    },
+    {
+      "sha": "da0d50772af8605f2c785d1e67c3d9dec8dea67d",
+      "author": "Scott K Logan",
+      "date": "2019-08-16T18:35:43Z",
+      "message": "If present, use the sipconfig suggested sip program (#70)\n\nThe value of `SIP_EXECUTABLE` is not used in the sip invocation within `sip_configure.py`. Instead, the `sip_bin` configuration is loaded from the `sipconfig` Python module.\r\n\r\nInstead of assuming that the sip executable is called `sip` in the CMake which detects whether the sip binding generator is present, try to find the executable in the same way that `sip_configure.py` will.\r\n\r\nSigned-off-by: Scott K Logan <logans@cottsay.net>"
+    },
+    {
+      "sha": "3ac03a486bc28e4dfc1ea44a8782c5ba2b367b68",
+      "author": "Dirk Thomas",
+      "date": "2019-07-29T22:25:39Z",
+      "message": "Replace Qt variable in generated Makefile. (#64) (#67)\n\n* Replace Qt variable in generated Makefile.\r\n\r\n* use single quotes"
+    },
+    {
+      "sha": "c2d826b52277504951bdfe7f2ff32cefc9b661ad",
+      "author": "Daniel Wang",
+      "date": "2019-07-23T22:43:36Z",
+      "message": "fixing trivial accidental string concatenation (#66)\n\nSigned-off-by: Daniel Wang <daniel.wang@canonical.com>"
+    },
+    {
+      "sha": "8c12af6f2e377b1bc17781795abfbbac86a350ae",
+      "author": "Dirk Thomas",
+      "date": "2018-12-11T19:03:47Z",
+      "message": "1.0.1"
+    },
+    {
+      "sha": "958a232bb037acf0504f05673337fd262e979895",
+      "author": "Dirk Thomas",
+      "date": "2018-12-11T19:03:24Z",
+      "message": "update changelog"
+    },
+    {
+      "sha": "07e9167452833133b71123ad2aa6a0dfffb891eb",
+      "author": "Dirk Thomas",
+      "date": "2018-12-11T19:02:49Z",
+      "message": "no warnings for unavailable PySide/Shiboken (#58)"
+    },
+    {
+      "sha": "a9f840c6f10d9b3bcd3aa6fe1d224cfa642ed5d3",
+      "author": "Dirk Thomas",
+      "date": "2018-12-11T00:53:21Z",
+      "message": "1.0.0"
+    },
+    {
+      "sha": "45ca947534df91bf5377f349788afb3ed2712080",
+      "author": "Dirk Thomas",
+      "date": "2018-12-11T00:53:01Z",
+      "message": "update CHANGELOG"
+    },
+    {
+      "sha": "8290c7aa4428007fabda7a0a365abd1e04de3aca",
+      "author": "brawner",
+      "date": "2018-12-10T23:43:29Z",
+      "message": "Check's for Homebrew's PyQt5 install path (#57)"
+    },
+    {
+      "sha": "2de8452f67f207338d9a218aee7aa017cb30a4b4",
+      "author": "brawner",
+      "date": "2018-12-03T22:47:17Z",
+      "message": "Porting to Windows (#56)\n\n* Porting to Windows\r\n\r\n* Update sip_helper.cmake\r\n\r\n* Update sip_configure.py\r\n\r\n* Update sip_configure.py\r\n\r\n* sip_configure.py"
+    },
+    {
+      "sha": "0539c9e29acf49d6fe6bcaad087fc84a44ce0729",
+      "author": "brawner",
+      "date": "2018-11-20T21:03:15Z",
+      "message": "Merge pull request #55 from ros-visualization/lint_fix\n\nFixing auto lint tests and making one flake8 change"
+    },
+    {
+      "sha": "273685362d29a00d6b9455047ebea5f49ee15b16",
+      "author": "Stephen",
+      "date": "2018-11-20T19:43:49Z",
+      "message": "Fixing auto lint tests and making one flake8 change"
+    },
+    {
+      "sha": "a6cba30ed2c0e69e0bd5e0712281e6bb76081e01",
+      "author": "brawner",
+      "date": "2018-11-02T21:24:03Z",
+      "message": "Modifying sip_configure (#54)"
+    },
+    {
+      "sha": "a527d32d65b0128b52a1d9b4425bc1a109c3b183",
+      "author": "brawner",
+      "date": "2018-10-26T00:07:24Z",
+      "message": "Ros2 port (#52)\n\n* Modifying files for ros2\r\n\r\n* Moving .cmake.em to .cmake\r\n\r\n* Removing QtBindingHelper\r\n\r\n* autopep8\r\n\r\n* Adding tests\r\n\r\n* autopep8 (#51)\r\n\r\n* autopep8\r\n\r\n* wrap\r\n\r\n* autopep8 fixup\r\n\r\n* Adding tests\r\n\r\n* Reverting copyright\r\n\r\n* Updating package.xml\r\n\r\n* Cleaning up\r\n\r\n* Updating package.xml\r\n\r\n* Cmakelists\r\n\r\n* package.xml\r\n\r\n* tests working again\r\n\r\n* package.xml\r\n\r\n* package.xml\r\n\r\n* package.xml\r\n\r\n* package.xml\r\n\r\n* package.xml\r\n\r\n* package.xml\r\n\r\n* package.xml\r\n\r\n* package.xml\r\n\r\n* cmakelists\r\n\r\n* Updating cmake files to work with qt_gui_cpp\r\n\r\n* Building and installing\r\n\r\n* Reverting to original imports\r\n\r\n* Pass flake8\r\n\r\n* Removing install\r\n\r\n* Moving python files back to src\r\n\r\n* Addressing pull request\r\n\r\n* Addressing pull request comments\r\n\r\n* Cleaning up\r\n\r\n* one import per line\r\n\r\n* Addressing pull request comments\r\n\r\n* comment case only"
+    },
+    {
+      "sha": "49031b313269ff7f2bc5dd6e2bbc1438a68e1c5d",
+      "author": "Mike Lautman",
+      "date": "2018-10-19T23:34:10Z",
+      "message": "autopep8 (#51)\n\n* autopep8\n\n* wrap\n\n* autopep8 fixup"
+    },
+    {
+      "sha": "3d3efad93a344c2f5bfcf9ceda324e9ffbf128bd",
+      "author": "Jochen Sprickerhof",
+      "date": "2018-09-07T16:28:45Z",
+      "message": "Remove :: from shiboken include path (#48)\n\nThe Variable QT_INCLUDE_DIR_WITH_COLONS is iteratively generated\r\nstarting with an empty string and adding :${dir}. This always results in\r\na colon as the first symbol. When combining it with the INCLUDE_PATH\r\nadding a second colon results in :: in the string. The shiboken command\r\nline utility currently has a bug generating an invalid command out of\r\nthis (-I without a string). This seems to have been fixed in the\r\ndevelopment version already. Still this double colon ins superfluous so\r\nlet's remove it."
+    },
+    {
+      "sha": "e1f0ef9a9543122d7857c5502e7e1ac263856c28",
+      "author": "Dirk Thomas",
+      "date": "2018-08-03T16:31:23Z",
+      "message": "0.3.4"
+    },
+    {
+      "sha": "1d9a81913dc8e7c6b4071acebfb8811431481060",
+      "author": "Dirk Thomas",
+      "date": "2018-08-03T16:31:10Z",
+      "message": "update changelog"
+    },
+    {
+      "sha": "04cb54a3782bf7188a87963e20920d80d6fbc50a",
+      "author": "Alexander Rössler",
+      "date": "2018-03-30T21:30:55Z",
+      "message": "add support for Qt5 modules (#45)\n\n* add support for Qt5 modules\r\n\r\n* remove Qt4.x only modules"
+    },
+    {
+      "sha": "138b57df42724465105c972e3135098a995a040e",
+      "author": "Dirk Thomas",
+      "date": "2017-10-25T17:47:38Z",
+      "message": "0.3.3"
+    },
+    {
+      "sha": "388a109edea7d12537965b59499b0d25477908b5",
+      "author": "Dirk Thomas",
+      "date": "2017-10-25T17:47:31Z",
+      "message": "update changelog"
+    },
+    {
+      "sha": "742929388bb6c63477db475dd5c8acba9c05c035",
+      "author": "Dirk Thomas",
+      "date": "2017-10-23T18:02:16Z",
+      "message": "Merge pull request #43 from riebl/kinetic-devel\n\nprefer qmake-qt5 over qmake"
+    },
+    {
+      "sha": "633993813ea58469cb3f40d5ee4940c6213f6092",
+      "author": "Raphael Riebl",
+      "date": "2017-10-20T20:15:49Z",
+      "message": "prefer qmake-qt5 over qmake"
+    },
+    {
+      "sha": "c36afe8515c5424501f106fe6303cc84ec11e4df",
+      "author": "Dirk Thomas",
+      "date": "2017-01-23T18:44:33Z",
+      "message": "0.3.2"
+    },
+    {
+      "sha": "c41b1f87407a4776bb0d52371197261943e05808",
+      "author": "Dirk Thomas",
+      "date": "2017-01-23T18:44:07Z",
+      "message": "update changelog"
+    },
+    {
+      "sha": "1847630ad075a7b34db891f09f96492c5752b7cb",
+      "author": "Ruben Smits",
+      "date": "2016-12-28T13:59:46Z",
+      "message": "Fix compiling with qt5\n\nqt5 needs c++11, so sip generated bindings that depend on qt need to be build with c++11 as well"
+    },
+    {
+      "sha": "f5b61afc590d4005acac02edebe6114572cf2469",
+      "author": "Ruben Smits",
+      "date": "2016-12-27T11:58:02Z",
+      "message": "Fixes failing framework detection on OSX\n\nApparently the framework detection on OSX does not work properly if installed in a non standard location like /usr/local/Cellar/... As Homebrew by default installs Qt5 modules as frameworks this probably does not harm."
+    },
+    {
+      "sha": "621fc06a28370189537b8cc88eb03c7434be61e3",
+      "author": "Dirk Thomas",
+      "date": "2016-04-21T21:38:11Z",
+      "message": "0.3.1"
+    },
+    {
+      "sha": "25c2f1e32bfb53c96589f6cb2d174347d6f0c4d0",
+      "author": "Dirk Thomas",
+      "date": "2016-04-21T21:38:02Z",
+      "message": "update changelog"
+    },
+    {
+      "sha": "854efa53c6032e37267e2b43f90a7fb4fcf30a55",
+      "author": "Dirk Thomas",
+      "date": "2016-04-21T21:36:30Z",
+      "message": "Merge pull request #37 from ros-visualization/more_qt5\n\nmore Qt 5 related changes"
+    },
+    {
+      "sha": "e10cd84cb5b595e6f73a490c12d516d4f5b12422",
+      "author": "Dirk Thomas",
+      "date": "2016-04-20T20:23:47Z",
+      "message": "update name of qt web module"
+    },
+    {
+      "sha": "8f06aab34c043b8f73437ca9eaec99894b378f8a",
+      "author": "Dirk Thomas",
+      "date": "2016-04-01T21:11:05Z",
+      "message": "0.3.0"
+    },
+    {
+      "sha": "99d90930f6e19c9b20aab22a385e6cbc5e84ca0f",
+      "author": "Dirk Thomas",
+      "date": "2016-04-01T21:10:57Z",
+      "message": "update changelog"
+    },
+    {
+      "sha": "248b925b421c6f4634af9e0193d3919506b646f1",
+      "author": "Dirk Thomas",
+      "date": "2016-04-01T21:08:48Z",
+      "message": "Merge pull request #30 from ros-visualization/qt5\n\nswitch to Qt5"
+    },
+    {
+      "sha": "45008f23befafed127205f6c833ff2b7b29ccbc0",
+      "author": "Dirk Thomas",
+      "date": "2016-03-31T23:22:53Z",
+      "message": "force finding the Python 2 version Shiboken2 and PySide2"
+    },
+    {
+      "sha": "0f3c408ffc5cf07b34ab73373ea17ccc3c3a067e",
+      "author": "Dirk Thomas",
+      "date": "2016-03-30T23:57:51Z",
+      "message": "fix check if sip is available"
+    },
+    {
+      "sha": "53759f1295809c0b58a0981e2e26774d89de1fc4",
+      "author": "Dirk Thomas",
+      "date": "2016-02-26T20:38:04Z",
+      "message": "switch to Qt5"
+    },
+    {
+      "sha": "bfaba73f643ef9785f16c18469efad6152c9f3ea",
+      "author": "Dirk Thomas",
+      "date": "2016-03-29T19:37:43Z",
+      "message": "print full stacktrace"
+    },
+    {
+      "sha": "2882fa45e26bdaecc1ec71012a58fc71a744d02e",
+      "author": "Dirk Thomas",
+      "date": "2016-03-18T00:33:56Z",
+      "message": "0.2.18"
+    },
+    {
+      "sha": "5788252f2bc35c7b13eb4c2fed1da7fa5ac9c1c5",
+      "author": "Dirk Thomas",
+      "date": "2016-03-18T00:33:49Z",
+      "message": "update changelog"
+    },
+    {
+      "sha": "697fe38e303b9e8cac5d81ea90cdc07e4984cb98",
+      "author": "Dirk Thomas",
+      "date": "2016-03-18T00:31:31Z",
+      "message": "Merge pull request #27 from jspricke/fix_license\n\nRemove LGPL and GPL from licenses, all code is BSD"
+    },
+    {
+      "sha": "88b0da08f1f474d82654545e49d7b8d174abb6e4",
+      "author": "Jochen Sprickerhof",
+      "date": "2016-01-10T10:06:25Z",
+      "message": "Remove LGPL and GPL from licenses, all code is BSD"
+    },
+    {
+      "sha": "5f04d320b60197d7189ce3d5fb3b011fec0799ee",
+      "author": "Dirk Thomas",
+      "date": "2015-09-19T20:20:59Z",
+      "message": "0.2.17"
+    },
+    {
+      "sha": "c35d716bfbf7fa5e89d4ece284908924e4d7c63b",
+      "author": "Dirk Thomas",
+      "date": "2015-09-19T20:17:38Z",
+      "message": "update changelog"
+    },
+    {
+      "sha": "829d75e9ea96920bf03940cec3c85cec0b5c3a57",
+      "author": "Dirk Thomas",
+      "date": "2015-06-09T19:11:06Z",
+      "message": "Merge pull request #25 from ros-visualization/import_builtins\n\nchange import order of builtins to work when the 'future' package is installed in Python 2"
+    },
+    {
+      "sha": "e6dd00c76cd01743d988fdc2d808192f0048853e",
+      "author": "Dirk Thomas",
+      "date": "2015-06-09T18:08:28Z",
+      "message": "change import order of builtins to work when the 'future' package is installed in Python 2 (fix #24)"
+    },
+    {
+      "sha": "c96c580a418052c5e5ba578d48d178b9a608f8c7",
+      "author": "Dirk Thomas",
+      "date": "2015-05-05T00:39:29Z",
+      "message": "0.2.16"
+    },
+    {
+      "sha": "accb3a0c504b92e8b0b283deec532e44f6f16515",
+      "author": "Dirk Thomas",
+      "date": "2015-05-05T00:39:20Z",
+      "message": "update changelog"
+    },
+    {
+      "sha": "f7668bbbe8249629973fcbc8b4a1b329f951ad17",
+      "author": "Dirk Thomas",
+      "date": "2015-05-05T00:38:24Z",
+      "message": "Merge pull request #23 from ros-visualization/qmake_version\n\nuse qmake with QT_SELECT since qmake-qt4 is not available on all platforms"
+    },
+    {
+      "sha": "315b3b107eae29a8a909ed6b90becb972fafa75f",
+      "author": "Dirk Thomas",
+      "date": "2015-05-04T20:02:45Z",
+      "message": "use qmake with QT_SELECT since qmake-qt4 is not available on all platforms (fix #22)"
+    },
+    {
+      "sha": "044dcb11116d5f2f700797f46819789dbb07eb3f",
+      "author": "Dirk Thomas",
+      "date": "2015-04-23T18:10:56Z",
+      "message": "0.2.15"
+    },
+    {
+      "sha": "832d8309113091d5c4b69bdfe36a609f8a92e0c3",
+      "author": "Dirk Thomas",
+      "date": "2015-04-23T18:10:50Z",
+      "message": "update changelog"
+    },
+    {
+      "sha": "dda816814692ff615bf021e3bc92755e82212214",
+      "author": "Dirk Thomas",
+      "date": "2015-04-23T18:07:56Z",
+      "message": "Merge pull request #21 from ros-visualization/pyqtconfig\n\nsupport PyQt4.11 and higher when built with configure-ng.py"
+    },
+    {
+      "sha": "92f404ef8112448ac0a0ed04b031b348ff192b69",
+      "author": "Dirk Thomas",
+      "date": "2015-04-23T01:10:02Z",
+      "message": "support PyQt4.11 and higher when built with configure-ng.py"
+    },
+    {
+      "sha": "9912a6dbde43f75b8fc877e082469e9d6bf625e6",
+      "author": "Dirk Thomas",
+      "date": "2014-09-19T14:30:33Z",
+      "message": "Merge pull request #16 from Nodd/py3\n\n__builtin__ became builtins in python3"
+    },
+    {
+      "sha": "aaf9be1ca78a02c82258015e07a362170c5a31c0",
+      "author": "Joseph Martinot-Lagarde",
+      "date": "2014-09-19T09:04:03Z",
+      "message": "__builtin__ became builtins in python3"
+    },
+    {
+      "sha": "f529a487a67d9d68ffeb5550e9a6af9201a88932",
+      "author": "Dirk Thomas",
+      "date": "2014-08-20T21:19:24Z",
+      "message": "update upload information"
+    },
+    {
+      "sha": "444fb70e6c4373742a2d81dbf4143bd0561de6c4",
+      "author": "Dirk Thomas",
+      "date": "2014-08-18T17:41:06Z",
+      "message": "ignore egg-info folder (fix #14)"
+    },
+    {
+      "sha": "6c0dea20f39742ebc4f077a9e9b5e960de3638e8",
+      "author": "Dirk Thomas",
+      "date": "2014-07-11T06:14:54Z",
+      "message": "0.2.14"
+    },
+    {
+      "sha": "df500a2f9423940e0434a0acf15e201add8fa765",
+      "author": "Dirk Thomas",
+      "date": "2014-07-11T06:14:46Z",
+      "message": "update changelog"
+    },
+    {
+      "sha": "dfce230170d0a4b032c650cf2396370c6ca6a12e",
+      "author": "Dirk Thomas",
+      "date": "2014-07-02T17:29:21Z",
+      "message": "Merge pull request #12 from NikolausDemmel/patch-1\n\nUpdate sip_helper to use python header dirs"
+    },
+    {
+      "sha": "fe5efd063f5b23f5733f95ef5fb08120f816aacd",
+      "author": "Nikolaus Demmel",
+      "date": "2014-07-02T12:58:27Z",
+      "message": "Add Python_ADDITIONAL_VERSIONS and ask for specific version of PythonInterp."
+    },
+    {
+      "sha": "08ebbbbde3d46fcfe5708df930485dea2b025c4c",
+      "author": "Nikolaus Demmel",
+      "date": "2014-07-01T18:07:09Z",
+      "message": "Update sip_helper to use python header dirs\n\nThis fixes https://github.com/ros-visualization/qt_gui_core/pull/46 and https://github.com/ros-visualization/rviz/pull/788; needed at least on OS X, likely some other platforms as well."
+    },
+    {
+      "sha": "29304e07dc4b73acdc06b16c8845d509fea5d1ee",
+      "author": "Dirk Thomas",
+      "date": "2014-06-30T17:55:07Z",
+      "message": "Merge pull request #11 from ros-visualization/cmake3\n\nfix finding specific version of PythonLibs with CMake 3"
+    },
+    {
+      "sha": "98e182ade8bdecd62363aa678b0ccea1ed5120ca",
+      "author": "Dirk Thomas",
+      "date": "2014-06-30T17:47:53Z",
+      "message": "fix finding specific version of PythonLibs with CMake 3"
+    },
+    {
+      "sha": "92eda2fde44a039068dd9d7f44c2947a09e98f11",
+      "author": "Dirk Thomas",
+      "date": "2014-05-07T22:20:12Z",
+      "message": "0.2.13"
+    },
+    {
+      "sha": "4e4e035a23dd65ffd13c0cbe9bd93d231a6db963",
+      "author": "Dirk Thomas",
+      "date": "2014-05-07T22:20:03Z",
+      "message": "update changelog"
+    },
+    {
+      "sha": "a9ad269dab174052007fe10973cb60bb57a0d20c",
+      "author": "Dirk Thomas",
+      "date": "2014-03-14T21:37:14Z",
+      "message": "fix sip arguments when path contains spaces"
+    },
+    {
+      "sha": "c149d2f0b38b16eed3c6135599d6d3be95c9e174",
+      "author": "Dirk Thomas",
+      "date": "2014-01-08T23:43:59Z",
+      "message": "\"0.2.12\""
+    },
+    {
+      "sha": "5dfb09688e7eb686c85f5dde76343b3c448db38f",
+      "author": "Dirk Thomas",
+      "date": "2014-01-08T23:43:50Z",
+      "message": "update changelog"
+    },
+    {
+      "sha": "4dfa3e4729ef983a31bef6b5805f27bc0c5b22e1",
+      "author": "Dirk Thomas",
+      "date": "2014-01-08T21:26:01Z",
+      "message": "python code style only"
+    },
+    {
+      "sha": "5724ffb0e7b00474f0a14b49fdac9be6bd1887a9",
+      "author": "Dirk Thomas",
+      "date": "2014-01-08T21:25:02Z",
+      "message": "python 3 compatibility"
+    },
+    {
+      "sha": "b66c9545c350f47493e020132e8169171a534e57",
+      "author": "Dirk Thomas",
+      "date": "2014-01-08T20:07:21Z",
+      "message": "add heuristic to set python suffix for shiboken, use specific python version catkin has decided on"
+    },
+    {
+      "sha": "219bb5954deaf64cc8c85a492e55d370aa1d6f4c",
+      "author": "Dirk Thomas",
+      "date": "2013-11-01T21:53:20Z",
+      "message": "fix sip bindings when paths contain spaces (fix #9)"
+    },
+    {
+      "sha": "599e45285fa152a93e3ff7ac9e2afd8cd4695434",
+      "author": "Dirk Thomas",
+      "date": "2013-08-22T01:37:48Z",
+      "message": "0.2.11"
+    },
+    {
+      "sha": "eb0198649992eafb8ab2b47205d10eabf3ee1278",
+      "author": "Dirk Thomas",
+      "date": "2013-08-22T01:37:41Z",
+      "message": "update changelog"
+    },
+    {
+      "sha": "1941cfbd968f0481241667500d382ffe10fe12d7",
+      "author": "Dirk Thomas",
+      "date": "2013-08-07T00:33:23Z",
+      "message": "Merge pull request #5 from ros-visualization/standalone\n\nvarious updates for making it standalone"
+    },
+    {
+      "sha": "0a2e678b141c2802b0b83b562bfd8d075a0535f7",
+      "author": "Dirk Thomas",
+      "date": "2013-08-02T22:55:53Z",
+      "message": "prefer setuptools to enable features like 'develop'"
+    },
+    {
+      "sha": "4b430c664584e6665e522f33d57772b6c105964e",
+      "author": "Dirk Thomas",
+      "date": "2013-08-02T22:53:48Z",
+      "message": "add MANIFEST template and Makefile to publish to PyPI"
+    },
+    {
+      "sha": "8f5f3af73ca13ab20c5e70a83575a279f761b1b4",
+      "author": "Dirk Thomas",
+      "date": "2013-08-02T22:22:10Z",
+      "message": "update setup.py to also work without catkin_pkg"
+    },
+    {
+      "sha": "a6ef1264c12e91360df3d5cf00160216a9528b86",
+      "author": "Dirk Thomas",
+      "date": "2013-08-01T00:46:29Z",
+      "message": "update Python, allow overriding binding order"
+    },
+    {
+      "sha": "cd6550521880508539a324b5529af3616b202cf8",
+      "author": "Dirk Thomas",
+      "date": "2013-07-31T23:58:04Z",
+      "message": "refactor cmake"
+    },
+    {
+      "sha": "524023bd5939b1d6927c86112c494c001ac217fb",
+      "author": "Dirk Thomas",
+      "date": "2013-06-07T17:33:56Z",
+      "message": "update maintainer email"
+    },
+    {
+      "sha": "ab2d245ff07939ab0bbffcc2a9364b4b58e4d464",
+      "author": "Dirk Thomas",
+      "date": "2013-06-06T19:48:38Z",
+      "message": "0.2.10"
+    },
+    {
+      "sha": "5a913133c340605ab7a4f7efe8747fa2babf4f96",
+      "author": "Dirk Thomas",
+      "date": "2013-06-06T19:48:28Z",
+      "message": "tag changelog"
+    },
+    {
+      "sha": "3af037456c7f8d7af02f69d0c8dcf4e0aaf8f002",
+      "author": "Dirk Thomas",
+      "date": "2013-06-06T01:20:57Z",
+      "message": "add changelog"
+    },
+    {
+      "sha": "7e8d7cc225a3dd391317cca3fcc2adacf6b08cd8",
+      "author": "Dirk Thomas",
+      "date": "2013-06-06T01:17:57Z",
+      "message": "refactor loadUi to a global documentable function (#2)"
+    },
+    {
+      "sha": "93b6c7f8538e98f4f031cbbf98e14d56bc128d21",
+      "author": "Dirk Thomas",
+      "date": "2013-06-04T18:51:08Z",
+      "message": "undo 94c6451f171815b1c57070683d08e225ec2f048b"
+    },
+    {
+      "sha": "09cdf60cf6926d5203d94bc72a99cd09632efd77",
+      "author": "Isaac Saito",
+      "date": "2013-04-19T16:00:36Z",
+      "message": "0.2.9"
+    },
+    {
+      "sha": "c6f069e5f67148199c4418f17ffac6090e80053d",
+      "author": "Isaac Saito",
+      "date": "2013-03-15T18:34:35Z",
+      "message": "Doc minor update"
+    },
+    {
+      "sha": "192c13893f93dc5fb18f695794884f77afc3b2b1",
+      "author": "Isaac Saito",
+      "date": "2013-03-15T18:18:38Z",
+      "message": "Doc added for both loadUi methods."
+    },
+    {
+      "sha": "d2b6c88e0d91ceb1db9e5366d83e51516c6edb96",
+      "author": "Isaac Saito",
+      "date": "2013-03-15T18:07:21Z",
+      "message": "Minor refactoring (if statement optimized)"
+    },
+    {
+      "sha": "94c6451f171815b1c57070683d08e225ec2f048b",
+      "author": "Isaac Saito",
+      "date": "2013-03-03T03:18:04Z",
+      "message": "maintainer added."
+    },
+    {
+      "sha": "574b20839865b726d2251850860a16a14fe944f1",
+      "author": "Dirk Thomas",
+      "date": "2013-01-13T20:28:57Z",
+      "message": "0.2.8"
+    },
+    {
+      "sha": "a35e8ee45ee8170479dac1cf4a5ad4854fbcc92d",
+      "author": "Dirk Thomas",
+      "date": "2013-01-13T07:23:56Z",
+      "message": "use DEVELSPACE instead of obsolete BUILDSPACE"
+    },
+    {
+      "sha": "b0e3733700facbfd3a273730d270fbebbc99d9bd",
+      "author": "Dirk Thomas",
+      "date": "2012-12-22T02:45:54Z",
+      "message": "0.2.7"
+    },
+    {
+      "sha": "04c0cc31705f54bac15f863af43486cb07efaf2a",
+      "author": "Aaron Blasdel",
+      "date": "2012-12-21T21:25:59Z",
+      "message": "added missing license header"
+    },
+    {
+      "sha": "79218240262e23f9bc185494d8392d2ddf928e0f",
+      "author": "Aaron Blasdel",
+      "date": "2012-12-21T18:01:09Z",
+      "message": "file missing license header"
+    },
+    {
+      "sha": "bb5c4e9c8b3e62ca302b30885ccd32422867ac27",
+      "author": "Dirk Thomas",
+      "date": "2012-12-14T21:45:56Z",
+      "message": "modified catkin to be buildtool depend"
+    },
+    {
+      "sha": "473f7761cc3001c245e9ded93bcebbde6ceca08b",
+      "author": "Dirk Thomas",
+      "date": "2012-12-07T23:11:29Z",
+      "message": "update setup() to use generate_distutils_setup"
+    },
+    {
+      "sha": "aa2f31838debbde8e11a37cac2da09d10f4e7dbc",
+      "author": "Dirk Thomas",
+      "date": "2012-12-07T01:29:39Z",
+      "message": "0.2.6"
+    },
+    {
+      "sha": "fd222f71866e0c566d44b96fb795ca9c42f1ea8b",
+      "author": "Dirk Thomas",
+      "date": "2012-12-06T23:19:08Z",
+      "message": "use PYTHON_EXECUTABLE instead of hard-coded name (fix #1)"
+    },
+    {
+      "sha": "08b63f49e0e59eb982935d41a8c77dfd626b758a",
+      "author": "Dirk Thomas",
+      "date": "2012-12-04T21:11:21Z",
+      "message": "0.2.5"
+    },
+    {
+      "sha": "8079ce8f474db6cbea7bb5c4ce6d55039675e49c",
+      "author": "Dirk Thomas",
+      "date": "2012-12-04T21:10:56Z",
+      "message": "remove obsolete imports"
+    },
+    {
+      "sha": "48a2f2f224152b7f6cd7cb5e5562af93a5c43f3a",
+      "author": "Dirk Thomas",
+      "date": "2012-11-14T06:15:36Z",
+      "message": "0.2.4"
+    },
+    {
+      "sha": "398175cd20679efeec51e21d3ed37f962eededca",
+      "author": "Dirk Thomas",
+      "date": "2012-11-14T06:10:55Z",
+      "message": "updated to latest catkin, some changes to keep it working"
+    },
+    {
+      "sha": "5421f874f98e2b7a05d935e0f88707572c111fb1",
+      "author": "Dave Hershberger",
+      "date": "2012-10-15T17:45:08Z",
+      "message": "0.2.3"
+    },
+    {
+      "sha": "b3d7f24bcdb5e21726b3fff56be2d1a16c924574",
+      "author": "Dave Hershberger",
+      "date": "2012-10-13T00:03:01Z",
+      "message": "Added python_qt_binding-extras.cmake.in to provide a DIR variable findable with find_package() in cmake.  This removes the need for a gross hack in users of this package."
+    },
+    {
+      "sha": "60db8f2d31acf009d1bbab3b809b951f5cc511ca",
+      "author": "Dave Hershberger",
+      "date": "2012-10-12T22:44:43Z",
+      "message": "removed deprecated attribute 'brief' from description."
+    },
+    {
+      "sha": "9d9ac1d523bada59014ac8b6cf4bea95991fb5da",
+      "author": "Dave Hershberger",
+      "date": "2012-10-12T22:42:05Z",
+      "message": "package.xml: added missing dependencies and soon-to-be-important rosbuild export line."
+    },
+    {
+      "sha": "1bcdaf0931476abdae5a1448c85bb2f046d6567f",
+      "author": "Vincent Rabaud",
+      "date": "2012-10-12T18:08:38Z",
+      "message": "0.2.2"
+    },
+    {
+      "sha": "3ca2818b534e28ebb36791d44d38464284fdf433",
+      "author": "Vincent Rabaud",
+      "date": "2012-10-12T18:08:09Z",
+      "message": "comply to the new catkin API"
+    },
+    {
+      "sha": "0c59bbe24a6f0255f486c7a86bcd0b8c6f196ecf",
+      "author": "Vincent Rabaud",
+      "date": "2012-09-19T08:15:57Z",
+      "message": "0.2.1"
+    },
+    {
+      "sha": "e53ff08b1fe0a953bd987add4501acd80a1db4dd",
+      "author": "Vincent Rabaud",
+      "date": "2012-09-19T08:15:41Z",
+      "message": "fix the bad name of the project ..."
+    },
+    {
+      "sha": "8781685c274b53b0fda9b589d228c209cda41bdc",
+      "author": "Dirk Thomas",
+      "date": "2012-09-18T19:48:15Z",
+      "message": "minor tweaks"
+    },
+    {
+      "sha": "59fe864a422876a0e275be899daba7133c2e2dd1",
+      "author": "Vincent Rabaud",
+      "date": "2012-09-18T19:34:30Z",
+      "message": "add email"
+    },
+    {
+      "sha": "cb3ccafa4599462a9b86926967a346fe976e8e82",
+      "author": "Vincent Rabaud",
+      "date": "2012-09-18T19:26:34Z",
+      "message": "catkinize the stack"
+    },
+    {
+      "sha": "dc4b2897824b9d888782d88e90ba603243c5cbe1",
+      "author": "Dirk Thomas",
+      "date": "2012-09-18T18:22:57Z",
+      "message": "0.1.8"
+    },
+    {
+      "sha": "cd76a31abd321889adfec0c49baaab9341b984a0",
+      "author": "Dirk Thomas",
+      "date": "2012-09-18T18:16:53Z",
+      "message": "renamed internal binding helper, added deprecation warning for old usage"
+    },
+    {
+      "sha": "f488699083a8470f05395043515193fc9ef649c9",
+      "author": "Dorian Scholz",
+      "date": "2012-09-16T10:31:37Z",
+      "message": "removed warning about failed optional imports"
+    },
+    {
+      "sha": "282639a68809652fb345bee83d6aec0d04bf97d2",
+      "author": "Dorian Scholz",
+      "date": "2012-09-15T11:01:59Z",
+      "message": "moved qt modules into namespace of python_qt_binding package for shorter\nimport lines"
+    },
+    {
+      "sha": "b8da1b3c3c1b38a61ae15e71074b460fb1cb022a",
+      "author": "Dorian Scholz",
+      "date": "2012-09-14T12:48:24Z",
+      "message": "registered qt modules as submodules of QtBindingHelper to allow for\nimports like this: from QtBindingHelper.QtCore import QObject"
+    },
+    {
+      "sha": "1038c4eb46c7aba325e27ffd20b4c804cc8f49fe",
+      "author": "Dirk Thomas",
+      "date": "2012-08-02T21:00:13Z",
+      "message": "0.1.7"
+    },
+    {
+      "sha": "96f37aee96060b9f2d92fba4a14bc5cd7fd1a629",
+      "author": "Dirk Thomas",
+      "date": "2012-08-02T20:59:25Z",
+      "message": "fixed NameError for pyqt when Qwt is not installed"
+    },
+    {
+      "sha": "dca840bfa729ac45bc370ca83d576f9a5530b6cd",
+      "author": "Dirk Thomas",
+      "date": "2012-07-25T03:14:20Z",
+      "message": "0.1.6"
+    },
+    {
+      "sha": "d7797e3ec4cc44503cc7b499c3c4fffd865d2192",
+      "author": "Dirk Thomas",
+      "date": "2012-07-25T03:13:32Z",
+      "message": "added all Qt modules when available"
+    },
+    {
+      "sha": "b572e261d7926b434b2fcb63cc50a2f0a837f6eb",
+      "author": "Dirk Thomas",
+      "date": "2012-07-04T06:25:57Z",
+      "message": "0.1.5"
+    },
+    {
+      "sha": "4e3e1155b5f3bd4979477e69eed7fc4c2d2fe5f0",
+      "author": "Dirk Thomas",
+      "date": "2012-07-04T06:25:27Z",
+      "message": "fixed shiboken compile test"
+    },
+    {
+      "sha": "860a19785572205c819b4dc68c647bed0ceb3db7",
+      "author": "Dirk Thomas",
+      "date": "2012-07-04T06:23:49Z",
+      "message": "undoing last two commits"
+    },
+    {
+      "sha": "14fb57c667ba0840480d3f6bb8ab8529e93c6fab",
+      "author": "Dirk Thomas",
+      "date": "2012-07-04T06:16:56Z",
+      "message": "0.1.5"
+    },
+    {
+      "sha": "53f48fce5e76d783d1d7ced475a9093fcfc93034",
+      "author": "Dirk Thomas",
+      "date": "2012-07-04T06:16:04Z",
+      "message": "fixed shiboken compile test"
+    },
+    {
+      "sha": "3b93636f51ead5d8e150b7e81af5d3d1d7dcb15c",
+      "author": "Dirk Thomas",
+      "date": "2012-06-13T03:18:42Z",
+      "message": "0.1.4"
+    },
+    {
+      "sha": "3610febff0cb5834824b1fce6cf5e1dd56eefd35",
+      "author": "Dirk Thomas",
+      "date": "2012-06-13T03:09:44Z",
+      "message": "added cmake macro to check shiboken support by test-compiling code"
+    },
+    {
+      "sha": "bc44597a460c2a1d8f5d92049826cdb8b46d537b",
+      "author": "Dirk Thomas",
+      "date": "2012-05-27T22:02:26Z",
+      "message": "improved error message when PyQt4 has been imported before (#5455)"
+    },
+    {
+      "sha": "896badc31a5ef1e4e46d22f117f0bb9eadeac29b",
+      "author": "Dorian Scholz",
+      "date": "2012-05-10T16:10:59Z",
+      "message": "updated shiboken_helper.cmake to work with shiboken > 1.1.0 which brings its own generator binary"
+    },
+    {
+      "sha": "c45e70ec12b26e1c8a0428c90e1ccb9e7b80e4c0",
+      "author": "Dirk Thomas",
+      "date": "2012-05-07T23:18:01Z",
+      "message": "improved error message when all qt bindings fail (fixed #5431)"
+    },
+    {
+      "sha": "ac16534c52270f0f631d40a72211502e8e80cf3e",
+      "author": "Ken Conley",
+      "date": "2012-04-07T14:39:42Z",
+      "message": "ros rosdep dependency, 0.1.3"
+    },
+    {
+      "sha": "6d7543847098fb25d7ee5785b8412ecdc8271dc0",
+      "author": "Dave Hershberger",
+      "date": "2012-04-06T22:19:01Z",
+      "message": "fixed sip_helper.cmake for older cmake (before 2.8.3)"
+    },
+    {
+      "sha": "0217516dfa86fae13ce5e9836337325b00577bac",
+      "author": "Dirk Thomas",
+      "date": "2012-03-29T23:41:41Z",
+      "message": "refactored cmake for sip, added optional dependencies, updated description"
+    },
+    {
+      "sha": "62a7cf75ad47af6fc07fb22bf2d932a7b443245a",
+      "author": "Dave Hershberger",
+      "date": "2012-03-14T20:44:17Z",
+      "message": "python_qt_binding 0.1.1"
+    },
+    {
+      "sha": "08372d97bf81716dc3484f12aa6b6c6dcba81c1b",
+      "author": "Dirk Thomas",
+      "date": "2012-03-06T04:06:37Z",
+      "message": "added feedback to helpers if shiboken/sip is available"
+    },
+    {
+      "sha": "56a8c60e8f45f5c6a811d90fb6cf0fade5f0f40d",
+      "author": "Dirk Thomas",
+      "date": "2012-02-23T19:18:30Z",
+      "message": "create lib directory for SIP binding if not existing"
+    },
+    {
+      "sha": "aee33b4ebb134a7d8d58a37d632f745cd8850045",
+      "author": "Ken Conley",
+      "date": "2012-02-20T21:21:22Z",
+      "message": "removing rosdep.yaml"
+    },
+    {
+      "sha": "c81c8b0e24b51fca6d0fd146a2d891fbe70c28a1",
+      "author": "Dirk Thomas",
+      "date": "2012-01-21T01:25:07Z",
+      "message": "added additional helper for building bindings"
+    },
+    {
+      "sha": "4cd171954628974e7171a09245ef399798d4e0ac",
+      "author": "Dave Hershberger",
+      "date": "2012-01-19T21:47:58Z",
+      "message": "added .gitignore"
+    },
+    {
+      "sha": "df5289eed253edbbf3eaa6b1654c16311333f5b5",
+      "author": "Dave Hershberger",
+      "date": "2012-01-19T21:45:03Z",
+      "message": "python_qt_binding: fixed os.environment setting for QT_API environment variable."
+    },
+    {
+      "sha": "5128538610b7587d2f8c3be8fe1b46b122712354",
+      "author": "Dave Hershberger",
+      "date": "2012-01-18T22:14:43Z",
+      "message": "python_qt_binding: first stab at contents of this stack-package.  Not expected to do much yet."
+    }
+  ]
+}

@@ -1,0 +1,2406 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-06T22:11:32Z",
+    "source": "github_rest",
+    "endpoint": "/repos/{owner}/{repo}/commits",
+    "owner": "ros-drivers",
+    "repo": "phidgets_drivers",
+    "per_page": 100
+  },
+  "data": [
+    {
+      "sha": "785f8ce3da9db1c627de8cf1e846733dd05e6dfe",
+      "author": "Chris Lalancette",
+      "date": "2025-07-11T11:49:49Z",
+      "message": "Remove unnecessary linking to component_manager. (#194)\n\nThese libraries are components themselves, and never\nneed any parts of component_manager.  So just remove\nthis dependency.\n\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "74186903bef5a70c520d329f247584e021208908",
+      "author": "Martin Günther",
+      "date": "2025-05-30T16:42:02Z",
+      "message": "2.4.0"
+    },
+    {
+      "sha": "fbc8cd7afd9935a40d6795f2a0ee3f7ede6cac27",
+      "author": "Martin Günther",
+      "date": "2025-05-30T16:39:07Z",
+      "message": "Update changelogs"
+    },
+    {
+      "sha": "1fe05b18d37dd1d9ee46eedaa0e8f5400b710b1b",
+      "author": "Martin Günther",
+      "date": "2025-05-30T08:27:26Z",
+      "message": "Merge pull request #191 from mintar/remove-ament-target-dependencies\n\n[kilted] Update deprecated call to ament_target_dependencies"
+    },
+    {
+      "sha": "7fd0e6478152883718b9e1390e5421a333ed05a4",
+      "author": "Martin Günther",
+      "date": "2025-05-26T12:56:03Z",
+      "message": "Update to C++ standard 17\n\nEverything from Humble onwards targets C++17."
+    },
+    {
+      "sha": "b382ab6e2611d0b44293f7e2de302cb3e5e4c440",
+      "author": "Martin Günther",
+      "date": "2025-05-25T10:39:56Z",
+      "message": "[kilted] Update deprecated call to ament_target_dependencies\n\nament_target_dependencies is deprecated in kilted and removed in rolling\n(as of this month). This commit builds in jazzy/kilted/rolling."
+    },
+    {
+      "sha": "6b0a6c74f596fff4d44eb58df147e4c13198589f",
+      "author": "Martin Günther",
+      "date": "2025-05-25T17:52:13Z",
+      "message": "phidgets_api: Switch to modern CMake target-based dependency handling\n\nThis is required so that dependent packages can properly find the\nheaders etc. using\n\n    target_link_libraries(<library name> PUBLIC\n      phidgets_api::phidgets_api\n    )\n\nProperly exporting all targets here is required so that the other\npackages can replace ament_target_dependencies (which is deprecated\nsince Kilted) with target_link_libraries.\n\n* Replace include_directories with target_include_directories\n* Replace ament_target_dependencies with target_link_libraries\n* Properly export targets"
+    },
+    {
+      "sha": "9de2e45a179884da2a1b793e7931f840e849c9a7",
+      "author": "Martin Günther",
+      "date": "2025-05-26T13:28:41Z",
+      "message": "phidgets_api: Reformat CMakeLists for better readability\n\nThe only non-whitespace change here is the addition of SHARED to\nadd_library, but that is cosmetic as well because it is the default. I\njust find it nicer to state explicitly."
+    },
+    {
+      "sha": "522ccbcad30bc8ee128487201dd656b80e913b1a",
+      "author": "Martin Günther",
+      "date": "2025-05-23T19:22:23Z",
+      "message": "libphidget22: Fix CMake warning (DOWNLOAD_EXTRACT_TIMESTAMP)\n\nThis builds from jazzy onwards, but fails to build on humble, so don't\nmerge it there."
+    },
+    {
+      "sha": "72c826ce82175a618d6de1e5cd032ea4e9be37ef",
+      "author": "Martin Günther",
+      "date": "2025-05-26T12:40:27Z",
+      "message": "CI: Drop humble from rosdistro matrix (#192)\n\nHumble doesn't support the planned changes to the CMakeLists (#191), so\nwe have to split off the jazzy/kilted/rolling branches from humble here."
+    },
+    {
+      "sha": "259f8be5b3c7b4d465cfbbdc9d80b2b8b1543ea8",
+      "author": "Martin Günther",
+      "date": "2025-05-25T18:12:11Z",
+      "message": "CI: Add kilted to rosdistro matrix (#190)\n\nThe Docker images for Kilted are available since the Kilted release this week."
+    },
+    {
+      "sha": "59f332ced4911857638128816d2744b2f1d7e9ca",
+      "author": "Martin Günther",
+      "date": "2025-05-19T11:42:42Z",
+      "message": "2.3.4"
+    },
+    {
+      "sha": "b89ca311f851ea8ddb425203423f80f939cfb2e6",
+      "author": "Martin Günther",
+      "date": "2025-05-19T11:42:35Z",
+      "message": "Update changelogs"
+    },
+    {
+      "sha": "fdc77024ecd16f108db34ff30ad4803b44a0469c",
+      "author": "Martin Günther",
+      "date": "2025-05-15T14:49:58Z",
+      "message": "Upgrade to CMake 3.8, add file depend (#189)\n\n* libphidget22: Add missing dependency on \"file\"\n\nThis fixes the following error:\n\n    /home/ws/build/libphidget22/libphidget22-src/configure: line 7329: /usr/bin/file: No such file or directory\n\n* Upgrade to CMake 3.8\n\nThis fixes the following warning in libphidget22:\n\n      The DOWNLOAD_EXTRACT_TIMESTAMP option was not given and policy CMP0135 is\n      not set.  The policy's OLD behavior will be used.  When using a URL\n      download, the timestamps of extracted files should preferably be that of\n      the time of extraction, otherwise code that depends on the extracted\n      contents might not be rebuilt if the URL changes.  The OLD behavior\n      preserves the timestamps from the archive instead, but this is usually not\n      what you want.  Update your project to the NEW behavior or specify the\n      DOWNLOAD_EXTRACT_TIMESTAMP option with a value of true to avoid this\n      robustness issue."
+    },
+    {
+      "sha": "0fd53ea3ebb86f1d02639e473e61c2608efb2ed0",
+      "author": "Cedric Pradalier",
+      "date": "2025-05-08T18:18:13Z",
+      "message": "Add zeroing service to high_speed_encoders (#188)\n\n---------\n\nCo-authored-by: Martin Günther <martin.guenther@dfki.de>"
+    },
+    {
+      "sha": "254d8a264ca015fb4c0358cfc828f28c03190c0c",
+      "author": "Cedric Pradalier",
+      "date": "2025-05-08T15:39:27Z",
+      "message": "Add stepper motor package for ROS2 (STC1005) (#186)\n\n* Validated on real hardware with STC1005\n* Closes #185.\n\n---------\n\nCo-authored-by: Martin Günther <martin.guenther@dfki.de>"
+    },
+    {
+      "sha": "29eecb9fb99c31d6ef4140e0be1766f64244c23b",
+      "author": "Martin Günther",
+      "date": "2025-05-07T11:18:00Z",
+      "message": "CI: Update test matrix (drop iron, add jazzy) (#187)\n\nDropping `iron` because it's end-of-life (so the rosdep keys don't resolve any more), and adding `jazzy`."
+    },
+    {
+      "sha": "b0096aae0530b07108a091474ec6b6004c00dc49",
+      "author": "Martin Günther",
+      "date": "2024-05-02T15:04:32Z",
+      "message": "CI: Add tmate debugging (#181)\n\nThis commit adds the option of running the GitHub workflow manually\r\n(workflow_dispatch) and optionally enable tmate for SSH debugging."
+    },
+    {
+      "sha": "67f5956405f0ac8510e73261357d276c90900d61",
+      "author": "Martin Günther",
+      "date": "2024-04-26T17:23:24Z",
+      "message": "CI: Update to actions/checkout@v4 (#180)\n\nThis fixes the following warning:\r\n\r\n    Node.js 16 actions are deprecated. Please update the following actions to use Node.js 20: actions/checkout@v3. For more information see: https://github.blog/changelog/2023-09-22-github-actions-transitioning-from-node-16-to-node-20/."
+    },
+    {
+      "sha": "1e1345dece816f76d72c6ac38a473947e0f155c0",
+      "author": "Martin Günther",
+      "date": "2024-04-26T17:22:43Z",
+      "message": "CI: Use pre-commit from apt repositories instead of pip (#177)\n\npre-commit is available as an APT package starting with Ubuntu 22.04.\r\n\r\nThis commit avoids the following error:\r\n\r\n    WARNING: The directory '/github/home/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.\r\n    error: externally-managed-environment\r\n\r\n    x This environment is externally managed\r\n    --> To install Python packages system-wide, try apt install\r\n        python3-xyz, where xyz is the package you are trying to\r\n        install.\r\n\r\n        If you wish to install a non-Debian-packaged Python package,\r\n        create a virtual environment using python3 -m venv path/to/venv.\r\n        Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make\r\n        sure you have python3-full installed.\r\n\r\n        If you wish to install a non-Debian packaged Python application,\r\n        it may be easiest to use pipx install xyz, which will manage a\r\n        virtual environment for you. Make sure you have pipx installed.\r\n\r\n        See /usr/share/doc/python3.12/README.venv for more information.\r\n\r\n    note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.\r\n    hint: See PEP 668 for the detailed specification."
+    },
+    {
+      "sha": "f0c93be528666c59b12a3831caea427abd998586",
+      "author": "Martin Günther",
+      "date": "2024-03-13T16:47:01Z",
+      "message": "2.3.3"
+    },
+    {
+      "sha": "12f6d011bc5beb908e1bdaf647545ccad51ebd1e",
+      "author": "Martin Günther",
+      "date": "2024-03-13T16:46:14Z",
+      "message": "Update changelogs"
+    },
+    {
+      "sha": "8e4dcf7a3b798b3a0f038c7fd1c6cd2db7e0bac2",
+      "author": "Martin Günther",
+      "date": "2024-03-13T16:44:30Z",
+      "message": "Update to libphidget22 1.19 (#176)\n\nThis version of libphidget22 compiles without warnings, so we don't need the patch file any more."
+    },
+    {
+      "sha": "6a6b81ea9ab46a751f05ab70205035c36b969274",
+      "author": "Martin Günther",
+      "date": "2024-03-11T12:04:23Z",
+      "message": "Add support for VINT networkhub (#172)\n\nThis is a port of #127 to ROS2.\r\n\r\nCloses #135."
+    },
+    {
+      "sha": "1f5b7dc03cdf6e7b7361e62509c7abf2eae1ada0",
+      "author": "Martin Günther",
+      "date": "2023-12-06T14:27:27Z",
+      "message": "Add iron to github actions (#171)"
+    },
+    {
+      "sha": "1a94384ff1810124921f499e360a768dce408397",
+      "author": "Martin Günther",
+      "date": "2023-11-27T18:44:25Z",
+      "message": "2.3.2"
+    },
+    {
+      "sha": "5ad73f7e6ba2454c640997d434e317b4a44f8f4b",
+      "author": "Martin Günther",
+      "date": "2023-11-27T18:44:13Z",
+      "message": "Update changelogs"
+    },
+    {
+      "sha": "9d91fe27ca82ffb4db90ebdaf785f84cefc5d659",
+      "author": "Martin Günther",
+      "date": "2023-11-27T13:47:14Z",
+      "message": "Only set magnetometer gain if param is set (#169)\n\nThis is required because the function\r\n`PhidgetSpatial_setAlgorithmMagnetometerGain` is present in the Phidgets\r\nSpatial MOT0109 API (https://www.phidgets.com/?prodid=1204#Tab_API), but\r\nwas removed in the MOT0110 API\r\n(https://www.phidgets.com/?prodid=1205#Tab_API). This caused an\r\nexception to be thrown on the MOT0110\r\n(https://github.com/ros-drivers/phidgets_drivers/pull/168#issuecomment-1823622125).\r\n\r\nThis commit allows not setting the parameter on the MOT0110 and onwards,\r\nthereby avoiding the function call and the exception."
+    },
+    {
+      "sha": "75309209d5fd875e9361c8166cd22fde4cdbdbdb",
+      "author": "Martin Günther",
+      "date": "2023-11-17T17:28:49Z",
+      "message": "Merge pull request #168 from mintar/port-pr153-ros2\n\nPort PR #153 (add support for onboard orientation estimation) to ROS2"
+    },
+    {
+      "sha": "4a56420e8a2ce48da38e82f2036baf52c661fb41",
+      "author": "Malte kl. Piening",
+      "date": "2022-11-16T12:52:16Z",
+      "message": "added new parameters for spatial precision MOT0109 onwards"
+    },
+    {
+      "sha": "2ee1544904de3368cfeb871aa4e8adc931050284",
+      "author": "Malte kl. Piening",
+      "date": "2022-11-16T08:46:12Z",
+      "message": "Ignoring timestamp of spatial algorithm timestamp"
+    },
+    {
+      "sha": "5b73078758b1c180bdab354c297ede2366cbee0a",
+      "author": "Malte kl. Piening",
+      "date": "2022-11-16T08:40:11Z",
+      "message": "added support for phidget spatial onboard orientation estimation"
+    },
+    {
+      "sha": "6974eafd1315a7c958f1970ca44b26a622bdd14c",
+      "author": "Martin Günther",
+      "date": "2023-03-03T09:10:43Z",
+      "message": "2.3.1"
+    },
+    {
+      "sha": "f5f2f23a6231d024df4ba27610ff55ee9e5c9ee8",
+      "author": "Martin Günther",
+      "date": "2023-03-03T09:09:48Z",
+      "message": "Update changelogs"
+    },
+    {
+      "sha": "cf06384b17100e067d206c4a1dcd34696ad7df70",
+      "author": "Chris Lalancette",
+      "date": "2023-03-01T16:59:54Z",
+      "message": "Update to libphidget22 1.13. (#160)\n\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "fa29c846120eb95355e17a3e9af20ba65fc241d5",
+      "author": "Jose Luis Blanco-Claraco",
+      "date": "2022-12-23T08:53:28Z",
+      "message": "BUGFIX: Z-channel index was not observed in reported positions (#158)\n\n* fix doxygen format and ensure initial values\r\n* BUGFIX: Encoder index was not used"
+    },
+    {
+      "sha": "c5c7e7fef21006edcba0792872298b822bc622f5",
+      "author": "Martin Günther",
+      "date": "2022-12-22T17:06:03Z",
+      "message": "BUGFIX: Wrong speed conversion factor (#157)\n\nThe current code assumed time intervals from the Phisgets API was microseconds, but it's actually milliseconds. Reported speeds are all wrong by a factor of 1e3.\r\n\r\nCo-authored-by: Jose Luis Blanco-Claraco <joseluisblancoc@gmail.com>"
+    },
+    {
+      "sha": "acf156abba265a2020665c0e12d7176b3c2e6a46",
+      "author": "Chris Lalancette",
+      "date": "2022-06-20T15:34:45Z",
+      "message": "Add in humble to the test matrix. (#149)\n\nThat way we will test incoming PRs on both Rolling and Humble.\r\nWe'll maintain this situation until we run into a situation\r\nwhere Rolling and Humble need to diverge.  This commit\r\nshould be fast-forwarded onto the humble branch.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "30a68ba8010d910b3f0031fb32eb4a401af4bb12",
+      "author": "Alexis Fetet",
+      "date": "2022-06-01T12:53:43Z",
+      "message": "adding support for analog outputs for ROS2 (#145)\n\n* support for analog output\r\n\r\nCo-authored-by: Alexis <alexis.fetet@capacites.fr>\r\nCo-authored-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "8dda1d7c21186460b38fc026eea79c976a516916",
+      "author": "Chris Lalancette",
+      "date": "2022-04-13T18:41:10Z",
+      "message": "2.3.0"
+    },
+    {
+      "sha": "2a2ba1e11f463502bdcf5415ec6f0783b302dd23",
+      "author": "Chris Lalancette",
+      "date": "2022-04-13T18:41:02Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "3c081a89352441e82ba0126be12b3612256d8d00",
+      "author": "Chris Lalancette",
+      "date": "2022-04-13T18:26:05Z",
+      "message": "Switch to only building for Rolling. (#140)\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "9b679fa5ad2d91832de163398d239ffa74dceaea",
+      "author": "Chris Lalancette",
+      "date": "2022-04-13T17:04:55Z",
+      "message": "Update to libphidgets 20220203 (#138)\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "75a85ee1baeee38d9864150fe89399614ef0362f",
+      "author": "Martin Günther",
+      "date": "2022-04-11T12:14:49Z",
+      "message": "Merge pull request #132 from mintar/feat-pre-commit-ros2\n\n[galactic] Add pre-commit, move from travis to GitHub actions, fix style"
+    },
+    {
+      "sha": "2a655517bd0af4050028e4c1e8478a7332e77631",
+      "author": "Martin Günther",
+      "date": "2022-04-08T18:59:11Z",
+      "message": "CI: Switch from clang-format-10 to clang-format\n\nclang-format-10 is not available on Ubuntu 22.04 (ROS2 Rolling)."
+    },
+    {
+      "sha": "c470661fecf1ae6c6cc16bd65316aab5cbdb75d3",
+      "author": "Martin Günther",
+      "date": "2022-04-07T15:48:16Z",
+      "message": "Replace defunct travis with github actions"
+    },
+    {
+      "sha": "f6b688fced4bb7f9961c5aaaede8b1b70b273e2a",
+      "author": "Martin Günther",
+      "date": "2022-04-07T15:54:05Z",
+      "message": "README: Add pre-commit documentation"
+    },
+    {
+      "sha": "4297592a141d16252af554a07c04761a8708d477",
+      "author": "Martin Günther",
+      "date": "2022-04-06T15:02:40Z",
+      "message": "Replace clang-check-style.py with pre-commit"
+    },
+    {
+      "sha": "d87a06c65961d66092b842d25ac3e7a8455c7bb2",
+      "author": "Martin Günther",
+      "date": "2022-04-06T14:29:50Z",
+      "message": "Fix trailing whitespace"
+    },
+    {
+      "sha": "19a2c5f0350a3fa5f808438a80e1bd350fa285a7",
+      "author": "Martin Günther",
+      "date": "2022-04-06T14:10:13Z",
+      "message": "Fix clang-format\n\nNow everything passes the clang-check-style.py again."
+    },
+    {
+      "sha": "8ff0d7c7325fdcc30f53c8f59470e74123ca0f7f",
+      "author": "Martin Günther",
+      "date": "2022-03-22T15:08:05Z",
+      "message": "BUGFIX: duplicated values for all encoders (#126)\n\nCo-authored-by: Jose Luis Blanco-Claraco <joseluisblancoc@gmail.com>"
+    },
+    {
+      "sha": "122cf145f9e62fba12d452d42d140672423e054f",
+      "author": "Martin Günther",
+      "date": "2022-02-17T14:24:03Z",
+      "message": "2.2.2"
+    },
+    {
+      "sha": "8b6da840d0916d8f1cb8b5e2611f46127f8cb614",
+      "author": "Martin Günther",
+      "date": "2022-02-17T14:23:44Z",
+      "message": "Update changelogs"
+    },
+    {
+      "sha": "350af4c4d8717b49b2213099cd82bd88470d7d46",
+      "author": "Martin Günther",
+      "date": "2022-02-17T14:04:14Z",
+      "message": "Merge pull request #120 from mintar/fix-reattachment-galactic\n\nspatial: Fix behavior after USB reattachment"
+    },
+    {
+      "sha": "2edf21df21c6383159eb5eaf0ca4eb5b850c5b90",
+      "author": "Martin Günther",
+      "date": "2022-02-16T11:32:10Z",
+      "message": "spatial: Fix behavior after USB reattachment\n\nThe Phidged Spatial never recovered after detaching and reattaching to\nthe USB port. This commit fixes that.\n\nThe cause of the failure was the following:\n\n* After reattachment, the device time stamp restarts from 0. This caused\nour driver to throw the following error messages:\n\n        [ WARN]: Time went backwards [...]! Not publishing message.\n\n* However, the data interval is also reset to the default of 256 ms. If\nthe parameter data_interval_ms is set to something else, this caused the\narriving data to always be outside the acceptable window for\nsynchronization. Therefore, synchronization never happened, and the\ndriver never resumed publishing messages.\n\nThis commit fixes the bug by setting the appropriate data interval after\neach reattachment and forcing a resynchronization immediately."
+    },
+    {
+      "sha": "8c35881aead675a0d9de960e9befaeb3a51541cc",
+      "author": "Martin Günther",
+      "date": "2022-02-16T10:08:25Z",
+      "message": "spatial: Add attach + detach handlers"
+    },
+    {
+      "sha": "5a3792a28a5225b7584dd3fd447aa86cb3ea487e",
+      "author": "Martin Günther",
+      "date": "2022-02-16T09:44:00Z",
+      "message": "Fix some clang-tidy warnings\n\n* removed unused includes\n* use std::move instead of copying\n* use auto when initializing with a cast"
+    },
+    {
+      "sha": "948cb18a9773b0819680f9848b992f58b952593c",
+      "author": "Martin Günther",
+      "date": "2022-02-16T15:39:54Z",
+      "message": "spatial: Fix publishing of invalid mag readings (#117)\n\nAt high data rates (e.g., the default of 250 Hz), the magnetometer\r\nreadings for every second message are invalid. The libphidget library\r\nmarks these values with PUNK_DBL (== 1e300). Because we multiply with\r\n1e-4, this lead to the output at the end of this message.\r\n\r\nThe sensor_msgs/MagneticField message specifies that unreported readings\r\nshould be marked with \"NaN\". That is what this commit does.\r\n\r\nNote that we do want to keep publishing these messages to enable a\r\ndownstream node (e.g., imu_filter_madgwick) to use a TimeSynchronizer to\r\nsynchronize between MagneticField and Imu messages.\r\n\r\nThis bug was introduced in eaa6fa95; this commit restores the behavior\r\nto the one before that commit.\r\n\r\n----------------------------------------------------------------------\r\n\r\nExample output before this commit:\r\n\r\n    header:\r\n      seq: 1999\r\n      stamp:\r\n        secs: 1644940759\r\n        nsecs: 317582657\r\n      frame_id: \"imu_link\"\r\n    magnetic_field:\r\n      x: 4.8177e-05\r\n      y: -2.5149e-05\r\n      z: 1.1514000000000002e-05\r\n    magnetic_field_covariance: [1.2100000000000002e-14, 0.0, 0.0, 0.0, 1.2100000000000002e-14, 0.0, 0.0, 0.0, 1.2100000000000002e-14]\r\n    ---\r\n    header:\r\n      seq: 2000\r\n      stamp:\r\n        secs: 1644940759\r\n        nsecs: 321582657\r\n      frame_id: \"imu_link\"\r\n    magnetic_field:\r\n      x: 1.0000000000000002e+296\r\n      y: 1.0000000000000002e+296\r\n      z: 1.0000000000000002e+296\r\n    magnetic_field_covariance: [1.2100000000000002e-14, 0.0, 0.0, 0.0, 1.2100000000000002e-14, 0.0, 0.0, 0.0, 1.2100000000000002e-14]\r\n    ---\r\n    header:\r\n      seq: 2001\r\n      stamp:\r\n        secs: 1644940759\r\n        nsecs: 325582657\r\n      frame_id: \"imu_link\"\r\n    magnetic_field:\r\n      x: 4.8177e-05\r\n      y: -2.5149e-05\r\n      z: 1.1211e-05\r\n    magnetic_field_covariance: [1.2100000000000002e-14, 0.0, 0.0, 0.0, 1.2100000000000002e-14, 0.0, 0.0, 0.0, 1.2100000000000002e-14]\r\n    ---\r\n    ^Cheader:\r\n      seq: 2002\r\n      stamp:\r\n        secs: 1644940759\r\n        nsecs: 329582657\r\n      frame_id: \"imu_link\"\r\n    magnetic_field:\r\n      x: 1.0000000000000002e+296\r\n      y: 1.0000000000000002e+296\r\n      z: 1.0000000000000002e+296\r\n    magnetic_field_covariance: [1.2100000000000002e-14, 0.0, 0.0, 0.0, 1.2100000000000002e-14, 0.0, 0.0, 0.0, 1.2100000000000002e-14]"
+    },
+    {
+      "sha": "6075bd58a52735f4fdce5efb0e8b2f647b69426a",
+      "author": "Martin Günther",
+      "date": "2022-02-12T09:34:32Z",
+      "message": "Avoid EOL normalization in patch files (#115)\n\nThis should avoid problems like #77 and #113 in the future."
+    },
+    {
+      "sha": "30604f5776b115fd1143a6fcc35ca801b14fd109",
+      "author": "Martin Günther",
+      "date": "2022-02-11T14:22:20Z",
+      "message": "Remove outdated patch file (#112)"
+    },
+    {
+      "sha": "ed10693afe1f2ec5c07d8dea23be4148ae1db611",
+      "author": "Martin Günther",
+      "date": "2021-10-22T12:46:16Z",
+      "message": "Update to libphidget22-1.7.20210816 (#108)\n\nThis is required to support new devices such as the MOT0109.\r\n\r\nFixes #99, fixes #105.\r\n\r\nThis is a forward-port of #106 to ROS2."
+    },
+    {
+      "sha": "b53c95397b033c51f7aaf437e682e83df3b82d62",
+      "author": "Martin Günther",
+      "date": "2021-09-29T15:34:30Z",
+      "message": "Fix typo in error message (#104)"
+    },
+    {
+      "sha": "4c853f21c31f16e9ce375f978aa537db975e8ca0",
+      "author": "Chris Lalancette",
+      "date": "2021-09-08T12:16:37Z",
+      "message": "Make sure libphidget22 library can be found. (#97) (#100)\n\nIn Foxy and later, we need to provide the .dsv hook so that\r\nthe library can be found.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "aa59415df21ae24782d2d52251da232dc94b28f8",
+      "author": "Chris Lalancette",
+      "date": "2021-08-03T12:15:23Z",
+      "message": "2.2.1"
+    },
+    {
+      "sha": "2765d879afdcd33e00fad482036e0df6f50c9baf",
+      "author": "Chris Lalancette",
+      "date": "2021-08-03T12:15:11Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "3a151b53d49b1658c79c003418e56068c105786b",
+      "author": "Chris Lalancette",
+      "date": "2021-08-03T12:10:27Z",
+      "message": "Make the magnetometer corrections optional again. (#95)\n\nPreviously, I had made the code do the following:\r\n\r\nthis->declare_parameter<double>(\"cc_mag_field\")\r\n\r\nwhich gets rid of a deprecation warning on Galactic.  Unfortunately,\r\nthis also makes the parameter required.  Instead, we can do\r\nthe following, which keeps the parameter optional but also\r\ngets rid of the deprecation warning:\r\n\r\nthis->declare_parameter(\"cc_mag_field\", rclcpp::PARAMETER_DOUBLE)\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "0a4e583e9d60c5c748e098837d11afafb8171ce5",
+      "author": "Chris Lalancette",
+      "date": "2021-05-27T12:31:36Z",
+      "message": "Update the ROS 2 readme files. (#93)\n\nThis adds more information about running the nodes.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "fee902d43405a34bbf484f1a8b5533ef64ac302c",
+      "author": "Chris Lalancette",
+      "date": "2021-05-25T12:28:39Z",
+      "message": "Update to the latest libphidgets 1.6 library. (#91)\n\nThere's a new 1.7 version available, but I didn't want to\r\nmake that big a leap right now.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "b4b9df84769cd2c3c2851f73e5168aba3a8c1a5c",
+      "author": "Chris Lalancette",
+      "date": "2021-05-20T21:23:29Z",
+      "message": "2.2.0"
+    },
+    {
+      "sha": "d7d01f7a0a2a2126a4a4d055a7ecffdd143925e7",
+      "author": "Chris Lalancette",
+      "date": "2021-05-20T21:23:11Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "a68e8f1b3204c3d663a73d3ca01fe74864de1a90",
+      "author": "Chris Lalancette",
+      "date": "2021-05-11T15:00:23Z",
+      "message": "Make sure to declare the type while declaring the parameter. (#89)\n\nAs of Galactic, it is required by default to declare the type\r\nof the parameter.  This PR fixes it so that we declare the type.\r\nNote that this is not backwards compatible with Foxy, so we'll\r\nhave to make a new branch to target Galactic.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "be30bb9e69374ce698bc7d64f220844f4bb372cc",
+      "author": "Chris Lalancette",
+      "date": "2021-03-30T18:44:37Z",
+      "message": "Switch over to the rolling branch for CI. (#90)\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "788e60c280d0ec7cddd0d4bdd8fad9b62e639ff3",
+      "author": "Chris Lalancette",
+      "date": "2021-03-29T13:35:50Z",
+      "message": "2.1.0"
+    },
+    {
+      "sha": "68985990e4ff6e5e3881b19b44b93b91b35f8beb",
+      "author": "Chris Lalancette",
+      "date": "2021-03-29T13:35:38Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "1244f5d00b6bbe9e99427fd9f0a13de08303a01a",
+      "author": "Scott K Logan",
+      "date": "2021-03-27T10:10:13Z",
+      "message": "Compile libphidget22 with -fPIC (#88)\n\nThis seems to be unnecessary on some platforms, but for greater\r\ncompatibility, it's best to specify it explicitly."
+    },
+    {
+      "sha": "8263373b2e224a278f9a0be211491dc118a76ea3",
+      "author": "Michael Grupp",
+      "date": "2021-03-09T16:38:59Z",
+      "message": "Don't publish messages that jumped back in time. (#86)\n\nROS2 port of https://github.com/ros-drivers/phidgets_drivers/pull/85"
+    },
+    {
+      "sha": "131ee3b1a38c0a49f05ccc2086057496e1a63156",
+      "author": "Martin Günther",
+      "date": "2021-03-08T12:54:32Z",
+      "message": "Log synchronization window details at DEBUG level (#84)\n\nThe message is logged in quick succession at the callback rate until\r\nsynchronization succeeds.\r\nThis can lead to a lot of warning messages even though the\r\nsynchronization succeeds quickly.\r\n\r\nThe message is confusing for users that don't know the code context\r\n(which is very well explained in the comments by the way).\r\n\r\nGiven that the message is logging an internal detail, I propose to\r\nchange the level to DEBUG.\r\n\r\nCo-authored-by: Michael Grupp <grupp@magazino.eu>"
+    },
+    {
+      "sha": "a84492408c874130feba1610a7b9a09a09ed865a",
+      "author": "Martin Günther",
+      "date": "2020-06-15T12:51:45Z",
+      "message": "Update Travis CI + Dockerfile to Foxy (#78)"
+    },
+    {
+      "sha": "a7079d87e1a91479846bfa74171abc06ab582a27",
+      "author": "Martin Günther",
+      "date": "2020-06-03T13:13:34Z",
+      "message": "clang-format: Don't sort includes (#76)\n\nThis is required because the default ordering changed between clang 6 (Ubuntu 18.04) and clang 10 (Ubuntu 20.04), and our includes are sorted the way clang 6 preferred. Without this commit, clang-check-style.py will report lots of style differences when run on Ubuntu 20.04."
+    },
+    {
+      "sha": "0aaaba64d0fb36f18f26f9b5677ff4a77559ae1b",
+      "author": "Chris Lalancette",
+      "date": "2020-06-02T16:35:33Z",
+      "message": "Get rid of deprecation warnings in Foxy. (#75)\n\nFoxy deprecated some of the names we use in the launch files.\r\nSwitch to the new supported names here.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "94ae2578f7c07d96da682b07670b7e31ba72425f",
+      "author": "Chris Lalancette",
+      "date": "2020-06-02T14:11:25Z",
+      "message": "Switch header guards to _HPP SUFFIX.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "019ba8f89c775e98df270312c57ea824f412652c",
+      "author": "Chris Lalancette",
+      "date": "2020-06-02T14:09:36Z",
+      "message": "Remove unnecessary cstddef.\n\nNewer libphidget22 already includes it as necessary.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "65a71a27747f0433c30294befcd248a8a1d59a3d",
+      "author": "Chris Lalancette",
+      "date": "2020-06-02T13:41:33Z",
+      "message": "Update to libphidget22 from 2020.\n\nWe also fix some warnings.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "8e924bff3698ad790f1f6f2af20638822a23d8d7",
+      "author": "Chris Lalancette",
+      "date": "2020-06-02T12:49:25Z",
+      "message": "Add rosdep to the Dockerfile for Dashing. (#72)\n\n* Add rosdep to the Dockerfile for Dashing.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "bd74da1b515eaa07a2a4f25f3fb91871ada9e1c8",
+      "author": "Chris Lalancette",
+      "date": "2020-06-01T15:11:34Z",
+      "message": "2.0.2"
+    },
+    {
+      "sha": "c7c9dccab7479cec3984e6280f916f6007049cfc",
+      "author": "Chris Lalancette",
+      "date": "2020-06-01T15:11:22Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "e87cc88829160f074ac378e7f85be4df75282be1",
+      "author": "Chris Lalancette",
+      "date": "2019-12-19T18:00:06Z",
+      "message": "Release build fixes (#67)\n\n* Switch to uint32_t for return of get*Count().\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Switch to larger on-stack strings for creating topic names.\r\n\r\nThis avoids warnings about format truncation when building\r\nin release mode.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Make sure to initialize all magnetometer config values.\r\n\r\nThis isn't strictly necessary, but is cheap and quiets a\r\ngcc warning when building in release mode.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "542cde297dcbce1c62151c6a2472d81c4afc6b39",
+      "author": "Chris Lalancette",
+      "date": "2019-12-18T13:09:12Z",
+      "message": "Use '=default' for default destructors. (#66)\n\nPointed out by clang-tidy.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "d764268d08927bdea26c2c2284d9e4b299a5252e",
+      "author": "Chris Lalancette",
+      "date": "2019-12-05T14:46:32Z",
+      "message": "2.0.1"
+    },
+    {
+      "sha": "98eca345dd09deec5e9a0fb6231e12a51e1c1427",
+      "author": "Chris Lalancette",
+      "date": "2019-12-05T14:46:20Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "c9add4de85b90c8bbbd384cb7b998659f1f08120",
+      "author": "Chris Lalancette",
+      "date": "2019-12-05T14:44:01Z",
+      "message": "Switch the buildtoo_depend to ament_cmake_ros. (#65)\n\nThis matches what we search for in the CMakeLists.txt,\r\nand should fix build problems on the buildfarm.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "41e8f9a494b9b67e9b88582c6a760a1c51d06de8",
+      "author": "Chris Lalancette",
+      "date": "2019-12-05T13:49:27Z",
+      "message": "2.0.0"
+    },
+    {
+      "sha": "2a4bade07ea182d103e89e8748d4e520c6c26669",
+      "author": "Chris Lalancette",
+      "date": "2019-12-05T13:40:51Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "c0947df1ea59f88f2390d3e57f0dfdbcbc968667",
+      "author": "Chris Lalancette",
+      "date": "2019-11-12T15:25:06Z",
+      "message": "Include file cleanup.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "d45786e9ff8015f9702170076856308910036fb6",
+      "author": "Chris Lalancette",
+      "date": "2019-11-12T15:24:47Z",
+      "message": "Make sure exceptions get caught by reference.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "bc790604aaf90ffdd1601f6e5cc20defa3984a10",
+      "author": "Chris Lalancette",
+      "date": "2019-11-12T15:24:20Z",
+      "message": "Remove unnecessary base-class initialization.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "f5da55b5cf4d46ae3addd46bdfdf2593d3912dd0",
+      "author": "Chris Lalancette",
+      "date": "2019-11-12T15:24:08Z",
+      "message": "Get rid of C-style casts.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "d5f381b5ee1eccf1a85eec1d94d33fc3668a68b7",
+      "author": "Chris Lalancette",
+      "date": "2019-11-12T15:23:42Z",
+      "message": "Make sure what() method is marked as override.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "a93f7005c62ec497e5da7d99974771b26b4fb188",
+      "author": "Chris Lalancette",
+      "date": "2019-11-12T15:23:28Z",
+      "message": "Rename method parameter name to match implementation.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "077fde8e17e1ce8e81f737202759c78c92f217d9",
+      "author": "Chris Lalancette",
+      "date": "2019-11-12T15:23:06Z",
+      "message": "Make sure to include cstddef for libphidget22.h include.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "b6e9f1546f97057868c18ba4ef7bf136af8193f6",
+      "author": "Chris Lalancette",
+      "date": "2019-11-12T15:22:33Z",
+      "message": "Switch from NULL to nullptr.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "ba974858f962f712d47601402ae5d75c895a248c",
+      "author": "Chris Lalancette",
+      "date": "2019-11-12T15:21:33Z",
+      "message": "Make sure to initialize class member variables.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "4a6838ed3314e2b0f3069640e1ddbd25d75550a0",
+      "author": "Chris Lalancette",
+      "date": "2019-10-21T21:10:45Z",
+      "message": "Update READMEs to use \"Published Topics\" and \"Subscribed Topics\". (#59)\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "da5771ebe4705f01ef334b372c926c51162ac03f",
+      "author": "Peter Polidoro",
+      "date": "2019-10-18T18:28:40Z",
+      "message": "Add developing documentation to README"
+    },
+    {
+      "sha": "10c1ca6ab712398c6c398b85a175ae20ae3e442e",
+      "author": "Chris Lalancette",
+      "date": "2019-10-02T12:06:22Z",
+      "message": "Make sure hpp files get clang-ified.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "9b1115ac5e85857328c9767e9ad4d91b1c25e673",
+      "author": "Peter Polidoro",
+      "date": "2019-10-01T19:37:10Z",
+      "message": "Reformat using clang"
+    },
+    {
+      "sha": "3f51f878268f117c2c4bca5e31339857f85ff49d",
+      "author": "Chris Lalancette",
+      "date": "2019-09-26T14:35:05Z",
+      "message": "Update the top-level README.\n\nThis is information about how to identify and work with Phidgets.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "8785d49dd4ecba7ead924ea975de24847f6c4cef",
+      "author": "Chris Lalancette",
+      "date": "2019-09-26T14:34:41Z",
+      "message": "Add in parameters to the IK launch file.\n\nThese are all of the default parameters, but serves as a useful\nexample for how to specify them.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "35ea86c8613ac30851752ac0db4f2aa9260f1bbf",
+      "author": "Chris Lalancette",
+      "date": "2019-09-26T14:34:25Z",
+      "message": "Change launch output to \"both\" so it logs as well.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "8ea537570737b435f40166da5e8ffb40e0836fa7",
+      "author": "Chris Lalancette",
+      "date": "2019-09-23T22:11:03Z",
+      "message": "Make publish_rate a double.\n\nThat way we can do fractional rates like 0.5.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "a64b37abb20e570e235ef87e95acc73ae3e42402",
+      "author": "Chris Lalancette",
+      "date": "2019-09-23T20:42:29Z",
+      "message": "Add in gain and offset for the analog devices.\n\nParticularly when using some of the current sensors, they\nvery specifically are VoltageInput devices, but need a\ngain and an offset to do the correct thing.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "be0975735573457391c1efa9efe0b082a8e2f4fa",
+      "author": "Chris Lalancette",
+      "date": "2019-09-23T20:08:15Z",
+      "message": "Make sure to set the VoltageRange to AUTO at the beginning.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "82cae19857e142155d914dd0885418cb31cc49e8",
+      "author": "Chris Lalancette",
+      "date": "2019-09-23T20:07:43Z",
+      "message": "Stop multiplying by ticks in the callback.\n\nWe are now relying on the device to report voltage to us,\nso just report the voltage back.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "45a655e6e48c4d1215b3c63d569f890c26ff5be3",
+      "author": "Chris Lalancette",
+      "date": "2019-09-23T20:06:44Z",
+      "message": "Remove fetching of analog sensor value at startup.\n\nIf we are using non-hub port devices, this isn't always\npossible.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "2e18370a91e6d7b2fe476f6ed84e90c61e29a1da",
+      "author": "Peter Polidoro",
+      "date": "2019-09-26T14:39:58Z",
+      "message": "Only publish motor_back_emf if supported by DC Motor device (#53)\n\n* Only publish motor_back_emf if supported by DC Motor device\r\n\r\nOnly publish motor_back_emf if supported by DC Motor device\r\n\r\n* Pull request changes for motor_back_emf commit\r\n\r\n* A few more cleanups.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "e8050699f3163c600a580f3445341710d3399fed",
+      "author": "Chris Lalancette",
+      "date": "2019-09-23T15:35:27Z",
+      "message": "Print out the serial number when connecting.\n\nThat way it is easier to configure the devices later to be\nexactly what you want.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "44db0746598d8ae899b68607bf4a28394a2e7141",
+      "author": "Chris Lalancette",
+      "date": "2019-09-23T14:25:57Z",
+      "message": "Update documentation to mention device dependent fields.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "a5e836fd2513f54380a13b865985c47f826b22c4",
+      "author": "Chris Lalancette",
+      "date": "2019-09-23T14:25:32Z",
+      "message": "Fix silly allocation bug in analog inputs.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "a0bb80e9df6ef40d5bdc4ecf6d651018da7fa2c1",
+      "author": "Chris Lalancette",
+      "date": "2019-09-11T11:53:55Z",
+      "message": "Update FIXME comments for sleep.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "9cfca95b171ef316127a2680af4e88570b0290c2",
+      "author": "Chris Lalancette",
+      "date": "2019-09-10T15:54:28Z",
+      "message": "Add missing quote at the end of the Dockerfile RUN.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "4b89a3841a1e1ab4223b22147c466af803d1d962",
+      "author": "Chris Lalancette",
+      "date": "2019-09-10T15:01:31Z",
+      "message": "Fixup travis.yml for Dashing.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "029b785aada491350009dda17a18ac7f11fac610",
+      "author": "Chris Lalancette",
+      "date": "2019-09-10T14:25:25Z",
+      "message": "Update the README for ROS 2.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "1d05cfa296812a27d489363c9be559717c8dcca8",
+      "author": "Chris Lalancette",
+      "date": "2019-09-10T14:17:48Z",
+      "message": "Port Dockerfile to dashing.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "235eed8ee83b47432278478afa5e23f553835c65",
+      "author": "Chris Lalancette",
+      "date": "2019-09-10T14:08:56Z",
+      "message": "Port phidgets_drivers to ROS 2.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "1b7b077bd599b8b349103fac22e653e3b1938c2d",
+      "author": "Chris Lalancette",
+      "date": "2019-09-10T13:42:02Z",
+      "message": "Port IK to ROS 2.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "ef1ba6d183e0221a9b79810c54ddab03ce2a070f",
+      "author": "Chris Lalancette",
+      "date": "2019-09-09T19:21:37Z",
+      "message": "Port high speed encoder to ROS 2.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "52acdc240d201c52b31ca9bda81f61c8d3a533b9",
+      "author": "Chris Lalancette",
+      "date": "2019-09-09T19:03:06Z",
+      "message": "Port motors to ROS 2.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "83614f0403e4a21c16fb1bf145dad2d3a518f334",
+      "author": "Chris Lalancette",
+      "date": "2019-09-09T16:40:49Z",
+      "message": "Port temperature to ROS 2.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "cb335fe48e8bf89120a54aa54a325b0ea9f7cb28",
+      "author": "Chris Lalancette",
+      "date": "2019-09-09T16:13:52Z",
+      "message": "Port digital outputs to ROS 2.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "2d26f1df750e5f1436593700facaf560460a3e08",
+      "author": "Chris Lalancette",
+      "date": "2019-09-09T15:31:50Z",
+      "message": "Port digital inputs to ROS 2.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "740ac039e1d73a64b6558a96a2f338353ad52830",
+      "author": "Chris Lalancette",
+      "date": "2019-09-09T14:58:08Z",
+      "message": "Port analog inputs to ROS 2.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "54597fc4048fc68e5e55ca1d33ce7e20cf6570e2",
+      "author": "Chris Lalancette",
+      "date": "2019-09-09T14:18:21Z",
+      "message": "Port spatial to ROS 2.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "3286d2ce9fb41537ecf95baeafe841865a828d06",
+      "author": "Chris Lalancette",
+      "date": "2019-09-09T13:45:18Z",
+      "message": "Port magnetometer to ROS 2.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "ec03a8e1e14da9b4bc2bd7c2e8aac2e432209a45",
+      "author": "Chris Lalancette",
+      "date": "2019-09-06T20:49:29Z",
+      "message": "Port gyroscope to ROS 2.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "93d162250ed8d7f58b981c8f036da56cc50fae31",
+      "author": "Chris Lalancette",
+      "date": "2019-09-05T19:58:39Z",
+      "message": "Port accelerometer to ROS 2.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "25063d7ae3019b52e7120b31830d63bb7ccec9cb",
+      "author": "Chris Lalancette",
+      "date": "2019-09-09T14:52:04Z",
+      "message": "Port phidgets_msgs to ROS 2.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "71aba0c47c03379b2dca389bb080c1f0d8665c75",
+      "author": "Chris Lalancette",
+      "date": "2019-09-05T19:30:52Z",
+      "message": "Port phidgets_api to ament.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "4f319dc238a501e1c18e90e42c08d3df0bedf522",
+      "author": "Chris Lalancette",
+      "date": "2019-09-05T15:31:45Z",
+      "message": "Port libphidget22 vendor package to ament.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "2db15abf2c374ef93dfdcb191f599c51da82ac96",
+      "author": "Chris Lalancette",
+      "date": "2019-09-09T13:49:48Z",
+      "message": "Ignore all packages for ROS 2 port.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "004906cc5d187cd9cd81cf27ddbe5b7afe8648fd",
+      "author": "Martin Günther",
+      "date": "2019-09-05T14:32:54Z",
+      "message": "Fix wrong defaults for standard deviations (#48)\n\nThe old parameter defaults were wrong:\r\n\r\n| parameter                 | old default                       | new default                        |\r\n|---------------------------|-----------------------------------|------------------------------------|\r\n| angular_velocity_stdev    | 0.000349056 rad/s (= 0.02 deg/s)  | 0.001658 rad/s    (= 0.095deg/s)   |\r\n| linear_acceleration_stdev | 0.002943 m/s^2 (= 0.0003 g)       | 0.002745862 m/s^2 (= 0.00028 g)    |\r\n| magnetic_field_stdev      | 0.001658 rad/s (= 0.095deg/s)     | 1.1e-7 T          (= 1.1 mG)       |\r\n\r\nNotes: T = Tesla, mG = milligauss\r\n\r\nThis is a forward-port of #46 to noetic.\r\n\r\nSpecifications come from the PhidgetSpatial Precision 3/3/3 1044_0 data sheet: https://www.phidgets.com/?&prodid=32"
+    },
+    {
+      "sha": "4a130c93c714ffd05e2c968ad479df0c669ad5ac",
+      "author": "Martin Günther",
+      "date": "2019-09-05T14:32:17Z",
+      "message": "Improve the IMU calibration service (#47)\n\n* Change misleading IMU calibration log message.\r\n* Block 2 seconds in IMU calibration handler.\r\n* Make is_calibrated topic latched\r\n\r\nForward-port of #41. Fixes #42."
+    },
+    {
+      "sha": "323e0da74e9125db3296e690db709f3da84de98a",
+      "author": "Martin Günther",
+      "date": "2019-09-05T14:27:59Z",
+      "message": "Update maintainers in package.xml"
+    },
+    {
+      "sha": "43f4169dbb1939a2b2be93439b5956d2bc943447",
+      "author": "Martin Günther",
+      "date": "2019-09-05T13:31:47Z",
+      "message": "Merge pull request #39 from clalancette/add-libphidget22\n\nSwitch to libphidget22"
+    },
+    {
+      "sha": "9d6ec1a6f9dc064481516e09946f5c180fd95bfc",
+      "author": "Chris Lalancette",
+      "date": "2019-08-26T20:39:13Z",
+      "message": "Resynchronize the times at periodic intervals.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "f7ec82bcd0ba165b269ed4fda0dab6fae5735ba3",
+      "author": "Chris Lalancette",
+      "date": "2019-08-16T13:36:51Z",
+      "message": "Fix phidgets_ik dependencies.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "920eb7f79e8618983f07133923a5216eff77b927",
+      "author": "Chris Lalancette",
+      "date": "2019-08-16T13:16:59Z",
+      "message": "Add in a migration guide.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "46ef717cd1c623139afb845ab465e2e4699cc2db",
+      "author": "Chris Lalancette",
+      "date": "2019-08-16T12:39:20Z",
+      "message": "Rewrite IK as just a launch file.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "e5d100d72d38d9af8073b0485a17b99e6d7b6fa5",
+      "author": "Chris Lalancette",
+      "date": "2019-08-16T11:51:15Z",
+      "message": "Add launch files for all drivers.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "7caecc8868f18718cc003bf76116779fd41dbddd",
+      "author": "Chris Lalancette",
+      "date": "2019-08-16T11:37:19Z",
+      "message": "Fix small typos in README and LICENSE files.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "e74ee8d2aa2ec99215658f97e07bc29f99e27fe5",
+      "author": "Chris Lalancette",
+      "date": "2019-08-15T20:41:17Z",
+      "message": "Add in try/catch blocks for connecting.\n\nIf an error occurs, we catch it, print it, then re-throw it.\nThis allows us to show a better error when using nodelets.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "dfdc7e637023e4886235c9f91de66a8c8d6dcadd",
+      "author": "Chris Lalancette",
+      "date": "2019-08-15T18:32:21Z",
+      "message": "Fixes from review.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "a45039bf133caf7208a95b323780caaf21442b1e",
+      "author": "Chris Lalancette",
+      "date": "2019-08-14T21:39:01Z",
+      "message": "Documentation updates to README.md\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "0f04cab7a86ff29ad75ab0acfbaace66c8e3527e",
+      "author": "Chris Lalancette",
+      "date": "2019-08-15T14:52:55Z",
+      "message": "Implement data interval setting for analog inputs.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "fdfdefbdb972fe9cfb078c5821aacfbf9c444936",
+      "author": "Chris Lalancette",
+      "date": "2019-08-14T19:19:54Z",
+      "message": "Set the publish_rate to 0 by default.\n\nThis means we will only publish on changes.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "8db1c25a250448522a3be273f8f65acd016a7234",
+      "author": "Chris Lalancette",
+      "date": "2019-08-14T18:57:07Z",
+      "message": "Add in the license files and add to the headers.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "4fe3fa2d0586f1f091949088b0efa78a1a0c7fbf",
+      "author": "Chris Lalancette",
+      "date": "2019-08-14T18:40:17Z",
+      "message": "Remove nodes in favor of nodelets.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "227fba2ba3e60c5a55b5e70985471e0a14bff7bd",
+      "author": "Chris Lalancette",
+      "date": "2019-08-06T17:23:42Z",
+      "message": "Fix a small typo.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "dde29c7bdd73f817a5629409098682f0db52d032",
+      "author": "Chris Lalancette",
+      "date": "2019-08-06T16:47:00Z",
+      "message": "Patch warnings in libphidget22.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "9cd0e73a4ca838ae261d424d0718ea0a668e0984",
+      "author": "Chris Lalancette",
+      "date": "2019-08-06T15:40:43Z",
+      "message": "Fix up libphidget22 package.xml dependencies.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "5ce74747f6c13eb818077cd847b5557e375dba1e",
+      "author": "Chris Lalancette",
+      "date": "2019-08-06T15:28:57Z",
+      "message": "Finish removing launch file from phidgets_spatial.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "b7a16fcfd886ceee0019b6db99fbc19dfc6aa432",
+      "author": "Chris Lalancette",
+      "date": "2019-07-29T21:53:22Z",
+      "message": "Completely remove libphidget21.\n\nNothing else depends on it.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "b4ffbf2d559bbde425e1bc676ef4c3614890546e",
+      "author": "Chris Lalancette",
+      "date": "2019-07-29T21:24:59Z",
+      "message": "Rewrite Motor Phidget to use libphidget22.\n\nAlso implement a new motor node.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "5643fc587b27799005329e78dd23ccdaa0a438fb",
+      "author": "Chris Lalancette",
+      "date": "2019-07-29T18:22:02Z",
+      "message": "Rewrite High Speed Encoder to use libphidget22.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "85126112d1c774abcba208ab17847afcd88db0a6",
+      "author": "Chris Lalancette",
+      "date": "2019-07-29T18:09:52Z",
+      "message": "Rewrite IR to use libphidget22.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "eaa6fa95b79d764d916bd15b0756a15e0af643a9",
+      "author": "Chris Lalancette",
+      "date": "2019-07-29T15:10:01Z",
+      "message": "Rewrite IMU using libphidget22.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "acb4e97a442b0e4df71862059a40bb0a71f51180",
+      "author": "Chris Lalancette",
+      "date": "2019-07-26T20:52:41Z",
+      "message": "Add support for Phidgets Magnetometer sensors.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "3673345495ee4ab788ac185b6de8208497bd5201",
+      "author": "Chris Lalancette",
+      "date": "2019-07-26T20:16:25Z",
+      "message": "Add support for Phidgets Gyroscope sensors.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "1c3fc367a6cf5d2b8aa1b39e44b59b94816700b0",
+      "author": "Chris Lalancette",
+      "date": "2019-07-26T18:45:30Z",
+      "message": "Add support for Phidgets Accelerometer sensors.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "5adb8d6c3b06ade1bad0675b96bbe1611642ea74",
+      "author": "Chris Lalancette",
+      "date": "2019-07-26T16:42:15Z",
+      "message": "Add in support for Phidgets Temperature sensors.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "ca73ebd130854c378e0d4e9e56b70697ca714f40",
+      "author": "Chris Lalancette",
+      "date": "2019-07-26T17:51:56Z",
+      "message": "Rewrite phidgets_ik on top of libphidget22 classes.\n\nThis should be equivalent functionality, but allows the use\nof VINT devices now.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "1bd2397d1031f32fa6318decd82c6cba58bbdf69",
+      "author": "Chris Lalancette",
+      "date": "2019-07-22T20:56:24Z",
+      "message": "Add in support for Phidgets Analog inputs.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "6ebc7f789aef1a01df1da9aa5fa8b0446efffdfd",
+      "author": "Chris Lalancette",
+      "date": "2019-07-22T16:59:07Z",
+      "message": "Add in support for Phidgets Digital Inputs.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "0a99c75013baa3c131977f8a020a0dd139dc7785",
+      "author": "Chris Lalancette",
+      "date": "2019-07-17T17:43:24Z",
+      "message": "Add in support for Phidgets Digital Outputs.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "68c30af5e3b485caa3c18194bbd8cc906f979632",
+      "author": "Chris Lalancette",
+      "date": "2019-07-26T16:46:30Z",
+      "message": "Add in libphidget22 helper functions.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "eceb2dd40b8ec3e443dc77233a35728329fc53c8",
+      "author": "Chris Lalancette",
+      "date": "2019-07-17T14:36:46Z",
+      "message": "Rename Phidget class to Phidget21 class.\n\nAlso rename the files, etc.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "e607357efc1d4f76d5576b74d4c78561e63f2792",
+      "author": "Chris Lalancette",
+      "date": "2019-07-12T19:48:36Z",
+      "message": "Add in libphidget22 package.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "55465e91ea6c02a81c42b6e38b2498e909b0bc28",
+      "author": "Chris Lalancette",
+      "date": "2019-07-24T17:31:18Z",
+      "message": "Switch to C++14.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "f1537d304db03becc8d742bb8d0a5410d9619ef0",
+      "author": "Chris Lalancette",
+      "date": "2019-07-26T19:03:04Z",
+      "message": "Remove unused std_msgs dependency from Phidgets High Speed Encoder.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "37b79e32381adc1015cafcbff65d52472a2caac9",
+      "author": "Martin Günther",
+      "date": "2019-08-06T10:26:29Z",
+      "message": "Merge pull request #36 from clalancette/phidget-cleanup2\n\nExisting phidget cleanup"
+    },
+    {
+      "sha": "6ca6afac9ef67d9886882bfb513f18283744359e",
+      "author": "Chris Lalancette",
+      "date": "2019-07-23T19:56:20Z",
+      "message": "Add a script to check the clang style.\n\nAlso kick off the script during the Melodic Dockerfile.  Note\nthat we do not do the same in the Kinetic one since the version\nof clang-format is very different there and gives different\nresults.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "351a2b26d7d93cb12b4824b324958a3c3f83368e",
+      "author": "Chris Lalancette",
+      "date": "2019-07-23T19:28:11Z",
+      "message": "Run clang-format on the whole codebase.\n\nAlso install a .clang-format file.  I've tried to approximate\nthe style that was already there, but there are necessarily\na lot of changes in here.  However, there is no functional\nchange, just formatting.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "7e8bf5d701cf3a5ae4e7bf939311f09fe7858f5d",
+      "author": "Chris Lalancette",
+      "date": "2019-07-23T17:23:49Z",
+      "message": "Switch to C++14 everywhere.\n\nThis is needed to compile on older platforms like Kinetic.  While\nwe are here, add in -Wextra and fix up the few places where this\nshowed an error.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "eedc18b2777c1259febbd2a5d0ad84c7224eb837",
+      "author": "Chris Lalancette",
+      "date": "2019-07-17T14:08:29Z",
+      "message": "Split custom messages into their own package.\n\nWe'll need this shortly to share the messages, and it is a\ncleaner design anyway.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "12088a6b854fa2a947a3af432191bcfc9a1f6d3f",
+      "author": "Chris Lalancette",
+      "date": "2019-07-15T19:58:30Z",
+      "message": "Remove unused indexHandler from Encoder class.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "f14ea15a31e6afea47282d64e3c545865efb794f",
+      "author": "Chris Lalancette",
+      "date": "2019-07-15T18:37:26Z",
+      "message": "Add in a nodelet version of the interfaceKit.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "ad4028d8606a7dbc7b3c9be522f648165a181aa7",
+      "author": "Chris Lalancette",
+      "date": "2019-07-15T18:22:01Z",
+      "message": "Rewrite the high speed encoder node.\n\nThis splits it into a piece of code that can be used both in\na node or a nodelet.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "9b0b16ef7de9a33548d01a501a7e1e3815a93189",
+      "author": "Chris Lalancette",
+      "date": "2019-07-15T15:12:15Z",
+      "message": "Change API from separate open/waitForAttachment to openAndWaitForAttachment.\n\nNone of the current users need it to be split, and this will make\nit easier to port to libphidgets22.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "ed0cb75b482f702fcf7bc4ffd2b62fe786a85e9e",
+      "author": "Chris Lalancette",
+      "date": "2019-07-15T14:43:33Z",
+      "message": "Small cleanups throughout the code.\n\nMostly to make more things private and to mark overridden\nmethods as such.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "211092188e7b829e10614abd7e261de353091648",
+      "author": "Chris Lalancette",
+      "date": "2019-07-12T20:03:16Z",
+      "message": "Push libphidgets API calls down to phidgets_api.\n\nThis just ensures there is no leakage of the CPhidgets API\nin the layers above phidgets_api.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "85164db99b8c1366dfefd02ec43ce4a414112ddf",
+      "author": "Chris Lalancette",
+      "date": "2019-07-12T18:02:47Z",
+      "message": "IMU: small fixes found by turning on compiler warnings.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "caf66bcbcc1f80f26e7d628e23e0b88d68b22cfa",
+      "author": "Chris Lalancette",
+      "date": "2019-07-02T13:45:19Z",
+      "message": "Quiet down the to-be-overridden callbacks.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "346700407ed8d6410259cdfb50e0cc707fabdd29",
+      "author": "Chris Lalancette",
+      "date": "2019-07-02T13:45:02Z",
+      "message": "Consistently use nullptr instead of 0.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "679a9c990c0b16ccf30322d1cc5e8b3bae3af5d8",
+      "author": "Chris Lalancette",
+      "date": "2019-07-02T13:34:03Z",
+      "message": "Make the phidget_api destructors virtual.\n\nSince they are meant to be subclassed, make sure the\ndestructors are virtual so they will be called appropriately\nthrough a base class pointer.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "a59cb71d469b61ed8b3048d09baa3da2890663ed",
+      "author": "Chris Lalancette",
+      "date": "2019-06-28T15:19:09Z",
+      "message": "Completely remove boost from the project.\n\nIt's not really necessary, and it will make porting to ROS 2\na bit easier.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "8af76f9d3f72c615a0cab3db3067b9286e03ed16",
+      "author": "Chris Lalancette",
+      "date": "2019-06-28T14:49:35Z",
+      "message": "Style cleanup.\n\nThis commit makes the style in the whole project the same.  There\nare no functional changes in here.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "7602e2c807bf7ae2fdb0d001f1a01f6400bab8c6",
+      "author": "Chris Lalancette",
+      "date": "2019-07-17T13:59:36Z",
+      "message": "Remove unused tf dependency from phidgets_imu.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "0146b81bb8a0b6945b24d26a4b7a72f50f15d4bd",
+      "author": "Chris Lalancette",
+      "date": "2019-07-17T13:49:12Z",
+      "message": "Remove unused dependencies from phidgets_ik.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "a9bd0f5d49466593887a0d5871ab1cbe536b1f15",
+      "author": "Chris Lalancette",
+      "date": "2019-07-17T13:45:36Z",
+      "message": "Move libusb dependency into the libphidget21 package.xml.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "c64d6ab1cfa80fd4408eb2f04da1e347cb6cdcea",
+      "author": "Chris Lalancette",
+      "date": "2019-07-17T13:23:00Z",
+      "message": "Add in phidgets_ik to the phidgets_drivers metapackage.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "8bde30ae536abff234f1597e20c895f442ebe6e3",
+      "author": "Chris Lalancette",
+      "date": "2019-06-28T14:42:40Z",
+      "message": "Switch to package format 2.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "bf3147628f8303219e264c0e8254868d77fb946c",
+      "author": "Chris Lalancette",
+      "date": "2019-06-28T14:37:50Z",
+      "message": "Cleanup spacing in all of the CMakeLists.txt\n\nNo functional change.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "6cb75fa329cfe67f233c62f1f51a7e0bef7cd10d",
+      "author": "Martin Günther",
+      "date": "2019-06-28T13:00:15Z",
+      "message": "0.7.9"
+    },
+    {
+      "sha": "c57212216a9df82d745d7548632d1c5d41739002",
+      "author": "Martin Günther",
+      "date": "2019-06-28T12:59:59Z",
+      "message": "Update changelogs"
+    },
+    {
+      "sha": "937ac38f2a2d9de9e177a3b8255f970ae4147f2b",
+      "author": "tim-fan",
+      "date": "2019-06-28T12:57:53Z",
+      "message": "Update libphidget to version 2.1.9.20190409 (#34)"
+    },
+    {
+      "sha": "106c3feff2373cda3bbbc607a6daa1275823d90d",
+      "author": "Kai Hermann",
+      "date": "2019-06-25T16:36:48Z",
+      "message": "Add missing OnInputChange handler (#33)"
+    },
+    {
+      "sha": "1d4dc23088dca3296e68ca9db606e12bd90ae036",
+      "author": "Martin Günther",
+      "date": "2019-05-06T14:39:36Z",
+      "message": "0.7.8"
+    },
+    {
+      "sha": "c215e25a4ae62f6fbc8814e8a5ddcba3f07c6cbb",
+      "author": "Martin Günther",
+      "date": "2019-05-06T14:39:23Z",
+      "message": "Update changelogs"
+    },
+    {
+      "sha": "97c89c66d9ceceaf80e24a9bab426ac0f9cc432b",
+      "author": "Martin Günther",
+      "date": "2019-05-06T14:28:55Z",
+      "message": "travis CI: Switch to Docker"
+    },
+    {
+      "sha": "782f6bde2334cf1ad8e709c2022f2f21a2935a0e",
+      "author": "Martin Günther",
+      "date": "2019-01-09T11:37:29Z",
+      "message": "Install udev rules on binary package installation"
+    },
+    {
+      "sha": "04cba59812789eb0aecf668c170f3c25ba47b354",
+      "author": "Charles Brian Quinn",
+      "date": "2018-12-29T08:14:24Z",
+      "message": "phidgets_high_speed_encoder: fix missing tick2rad values (#30)"
+    },
+    {
+      "sha": "b002cccba4a272382574c89d9a83903f43a56d4f",
+      "author": "Martin Günther",
+      "date": "2018-09-18T15:56:51Z",
+      "message": "0.7.7"
+    },
+    {
+      "sha": "2d23383dc390d91343fae882bacc2965d192199a",
+      "author": "Martin Günther",
+      "date": "2018-09-18T15:56:35Z",
+      "message": "Update changelogs"
+    },
+    {
+      "sha": "58ceec82bc18f89dc4e31078a2c458485166ca7a",
+      "author": "Jochen Sprickerhof",
+      "date": "2018-09-18T13:08:43Z",
+      "message": "Add parameter use_imu_time (default true) (#27)\n\nSetting use_imu_time to false will disable the imu time calibration and\r\nalways use the Host time, i.e. ros::Time::now()."
+    },
+    {
+      "sha": "3f3534c1e593ffe293fbb602d858f6041dbdc0d6",
+      "author": "Martin Günther",
+      "date": "2018-08-09T09:40:15Z",
+      "message": "0.7.6"
+    },
+    {
+      "sha": "ac5df59e4e315dfbe89eb0919567c178e2b854f3",
+      "author": "Martin Günther",
+      "date": "2018-08-09T09:13:58Z",
+      "message": "Update changelogs"
+    },
+    {
+      "sha": "da95265383feafe34740e0ab2e5ce1095c1338e3",
+      "author": "Martin Günther",
+      "date": "2018-08-09T09:33:48Z",
+      "message": "libphidget21: Disable warning in CFLAGS\n\nThis disables the following warning on melodic (which we cannot do anything about):\n\n    cphidget.c: In function 'CPhidget_getDeviceName':\n    cphidget.c:614:45: warning: '%s' directive output may be truncated writing up to 63 bytes into a region of size 30 [-Wformat-truncation=]\n        snprintf(phid->firmwareUpgradeName, 30, \"%s %s\", phid->usbProduct, phid->deviceDef->pdd_name);\n                                                 ^~"
+    },
+    {
+      "sha": "5429b481bb34136ba236de07de65238dd52fb423",
+      "author": "Martin Günther",
+      "date": "2018-08-07T10:34:28Z",
+      "message": "phidgets_imu: Remove unused member variables"
+    },
+    {
+      "sha": "a5523f3418453c83096ed892c58e01f7650d8efa",
+      "author": "Michael Grupp",
+      "date": "2018-08-01T13:57:53Z",
+      "message": "phidgets_imu: Ensure strictly ordered timestamps (#26)\n\nFixes #17."
+    },
+    {
+      "sha": "11ce4a33681425d0e73c6eb48251ed6c2c97d96f",
+      "author": "Martin Günther",
+      "date": "2018-07-27T12:17:40Z",
+      "message": "CI: Fix \"xz compressed control.tar files not supported\""
+    },
+    {
+      "sha": "93a60996eebb4d77ad97b86c13762bca8744d53a",
+      "author": "Martin Günther",
+      "date": "2018-01-31T15:18:16Z",
+      "message": "0.7.5"
+    },
+    {
+      "sha": "be640fd025ff1db518db9cce094993abaa1a2677",
+      "author": "Martin Günther",
+      "date": "2018-01-31T15:16:44Z",
+      "message": "Update changelogs"
+    },
+    {
+      "sha": "91d82117c230d671ab534aa06d48c2400c71b0aa",
+      "author": "Martin Günther",
+      "date": "2018-01-31T13:06:14Z",
+      "message": ".travis.yml: Go back to \"catkin run_tests\"\n\n\"catkin run_tests\" prints the full output, which \"catkin test\" doesn't.\nThe previous commit message was wrong: \"catkin run_tests\" actually runs\nall tests, but it always returns 0. Adding catkin_test_results fixes\nthis."
+    },
+    {
+      "sha": "c6fe7036f10c92c0ad8c650c3bcdf1eb13716eaa",
+      "author": "Martin Günther",
+      "date": "2018-01-31T10:46:58Z",
+      "message": ".travis.yml: catkin run_tests -> catkin test\n\ncatkin run_tests didn't run all tests, for example roslaunch_add_file_check."
+    },
+    {
+      "sha": "595666d751df923454341df919f215cbca1fd0be",
+      "author": "Martin Günther",
+      "date": "2018-01-26T10:41:59Z",
+      "message": "phidgets_imu: Add roslaunch_add_file_check"
+    },
+    {
+      "sha": "1e8cef59e35b544d7ab352586fc5a8c8d9942d7f",
+      "author": "Martin Günther",
+      "date": "2018-01-26T10:43:15Z",
+      "message": "phidgets_imu: Add diagnostic_aggregator dependency"
+    },
+    {
+      "sha": "565f3c43a674c95f93685f1aec51ca185deffd96",
+      "author": "Martin Günther",
+      "date": "2018-01-26T10:41:22Z",
+      "message": "phidgets_imu: Add missing install rule for config"
+    },
+    {
+      "sha": "08c51647281f4370877c2e56a8b0053e11a46f91",
+      "author": "Martin Günther",
+      "date": "2018-01-25T09:09:53Z",
+      "message": "Improve comments in SetDigitalOutput.srv"
+    },
+    {
+      "sha": "f61f96f5feb8b9ff8a3a3f1b7d0e01f54ef52ca1",
+      "author": "Dorian Goepp",
+      "date": "2018-01-25T09:06:21Z",
+      "message": "Move from one service per output to a single one (#24)\n\nTested with the 0/0/4 Phidgets InterfaceKit.\r\nMistakenly, the same service was advertised as many times as there are outputs. This was fixed.\r\nCloses #23."
+    },
+    {
+      "sha": "e33ca4f4f2c36100e3b49afb42ebad4c3acfc143",
+      "author": "Martin Günther",
+      "date": "2018-01-18T09:54:25Z",
+      "message": "Merge pull request #22 from resibots/ik_services\n\nAdd service to set IK output state"
+    },
+    {
+      "sha": "f5ea03d90c6ca0340acb80fa173bb2d79e954e83",
+      "author": "Dorian Goepp",
+      "date": "2018-01-18T07:53:26Z",
+      "message": "Change topics' and services' names"
+    },
+    {
+      "sha": "9964027c8c22b7d696e979e0ef564d49e1ccf25d",
+      "author": "Dorian Goepp",
+      "date": "2018-01-17T15:36:17Z",
+      "message": "Add service to set IK output state"
+    },
+    {
+      "sha": "61c7b82d9ab26fd6c0df9c097026291a3c5f3cb7",
+      "author": "Martin Günther",
+      "date": "2018-01-17T10:15:05Z",
+      "message": "Merge branch 'phidgets_ik' into kinetic (#20)"
+    },
+    {
+      "sha": "426995cbd0af7056278a705d1f89ddc4dd99c02d",
+      "author": "Martin Günther",
+      "date": "2018-01-17T10:12:38Z",
+      "message": "phidgets_ik: Use boost::shared_ptr for out_subs_\n\nThis fixes a memory leak: out_subs_ was never deleted. Unfortunately, we\ncan't add a destructor to delete it because a destructor would hide a\nnon-virtual destructor from the Phidgets base class."
+    },
+    {
+      "sha": "9a986fc9e7fd86891a02e721e098e12b63840c31",
+      "author": "Martin Günther",
+      "date": "2018-01-17T09:56:10Z",
+      "message": "phidgets_ik: Reduce console output"
+    },
+    {
+      "sha": "ef5b1d57cc2fd4be157807e834ed377770b1d734",
+      "author": "Martin Günther",
+      "date": "2018-01-17T09:41:24Z",
+      "message": "phidgets_ik: Fix warnings"
+    },
+    {
+      "sha": "44ecfbf0d8401cd5c90ae772205f477b1e00e27a",
+      "author": "Martin Günther",
+      "date": "2018-01-17T09:23:16Z",
+      "message": "phidgets_api: Fix warnings"
+    },
+    {
+      "sha": "2c9064160f628353d49e4d6584cfbad213a2abc9",
+      "author": "Martin Günther",
+      "date": "2018-01-17T08:54:21Z",
+      "message": "phidgets_ik: Remove unused include"
+    },
+    {
+      "sha": "8ead9c01a1ae9b182ab057eac678212c0d607c03",
+      "author": "Martin Günther",
+      "date": "2018-01-17T08:43:49Z",
+      "message": "phidgets_ik: Rename class output_setter -> OutputSetter\n\n... in accordance with the ROS C++ style guide."
+    },
+    {
+      "sha": "58fefc9fde4d57076b2c3ebace76c5e7dfc970ab",
+      "author": "russel",
+      "date": "2017-11-16T00:04:12Z",
+      "message": "Rescale AnalogInputs values to be in Volts"
+    },
+    {
+      "sha": "647d63a8804df61ac4ab1cd1195651afa3ef48ad",
+      "author": "russel",
+      "date": "2017-11-16T00:03:32Z",
+      "message": "Change topic names\n\ninput->DigitalInput\noutput->DigitalOutput\nsensor->AnalogInput"
+    },
+    {
+      "sha": "b1b907a1d96bd78631209e97e0c1c7b7dfa2e8b8",
+      "author": "russel",
+      "date": "2017-11-15T19:46:35Z",
+      "message": "Update documentation"
+    },
+    {
+      "sha": "c1404d85e861e60bad29e2f2af03e85e19b6d004",
+      "author": "russel",
+      "date": "2017-11-15T19:25:53Z",
+      "message": "Fix compile warning that was probably a bug"
+    },
+    {
+      "sha": "15fe12726b8ec30329862ec7257f77d75e57d2c9",
+      "author": "russel",
+      "date": "2017-11-15T19:25:08Z",
+      "message": "Clean exit from phidget_ik_node"
+    },
+    {
+      "sha": "d457ef7e96a831362571f6f80fb215f7b16de3f4",
+      "author": "russel",
+      "date": "2017-11-15T19:24:45Z",
+      "message": "Report serial number while waiting"
+    },
+    {
+      "sha": "32ac54f24546903a49134a1ef5a5b99386468d9a",
+      "author": "russel",
+      "date": "2017-11-15T19:24:28Z",
+      "message": "Remove trailing whitespace"
+    },
+    {
+      "sha": "310c649f884075f8967818e306cd0e4f38a8f38f",
+      "author": "russel",
+      "date": "2017-11-15T17:39:00Z",
+      "message": "Squashed commit of the following\n\nThese commits are copied from\nhttps://github.com/jsarrett/usma_phidgets\nAn attempt was made to up-stream the changes from there, but he never got a\nresponse. I squashed all the commits and applied the resulting patch to this\nrepo.\n\ncommit 581479e258da50948ba137e84ac9f74beeb8d809\nAuthor: James Sarrett <jsarrett@gmail.com>\nDate:   Fri Feb 10 13:05:36 2017 -0800\n\nadd paramter to open a specifc phidget serial number to PhidgetIK\n\ncommit 8f1c76c422840cb190f2fa440717ba12b4633c5c\nAuthor: James Sarrett <jsarrett@gmail.com>\nDate:   Fri Feb 10 10:27:18 2017 -0800\n\ncreate topics to set output states\n\ncommit cf27bab6a15ec3bc161b215695fc500f6395bd03\nAuthor: James Sarrett <jsarrett@gmail.com>\nDate:   Fri Feb 10 09:34:36 2017 -0800\n\nuse std::vector instead of fixed size array for inputs and sensors\n\ncommit 2b8fa829d9b12d9a2da837c77d4608b514c529fe\nAuthor: James Sarrett <jsarrett@gmail.com>\nDate:   Fri Feb 10 03:46:19 2017 -0800\n\ndon't publish unless the publisher is setup\n\ncommit fd92d7a2c83649f641c3925790efe1db3cc7ec61\nAuthor: James Sarrett <jsarrett@gmail.com>\nDate:   Fri Feb 10 03:21:34 2017 -0800\n\nBROKEN, but the right idea.  need ot keep reference ot publisher instead of copy.\n\ncommit bdf13af2703e8f5ce533a401d22ff441c33fcbc0\nAuthor: James Sarrett <jsarrett@gmail.com>\nDate:   Fri Feb 10 00:04:47 2017 -0800\n\ncopy phidgets_ir note and modify it to open an InterfaceKit"
+    },
+    {
+      "sha": "5aecfad1116914fd78a08262551be90cb449801a",
+      "author": "Mikael Arguedas",
+      "date": "2017-10-27T08:31:58Z",
+      "message": "update to use non deprecated pluginlib macro (#19)"
+    },
+    {
+      "sha": "8b22628743a143cede8125fe7842304116573785",
+      "author": "Martin Günther",
+      "date": "2017-10-04T13:46:41Z",
+      "message": "0.7.4"
+    },
+    {
+      "sha": "26385eb98b21fefe0082ee2ea995c276cf8d2b9c",
+      "author": "Martin Günther",
+      "date": "2017-10-04T13:46:09Z",
+      "message": "Update changelogs"
+    },
+    {
+      "sha": "73949597f5fc7f365a1748dfd93e9526c2e39492",
+      "author": "Martin Günther",
+      "date": "2017-10-04T13:37:40Z",
+      "message": "Merge pull request #15 from jlblancoc/kinetic\n\nAdd Phidgets high-speed encoder ROS node."
+    },
+    {
+      "sha": "8c46114ca4e1591b788ffdb703447702647f0300",
+      "author": "Martin Günther",
+      "date": "2017-10-04T12:58:12Z",
+      "message": "Update README"
+    },
+    {
+      "sha": "13d302e8b81b84c76e5b6a6c373803aca362d8a2",
+      "author": "Jose Luis Blanco-Claraco",
+      "date": "2017-10-02T12:04:51Z",
+      "message": "msg: \"effort\" should be empty if not used"
+    },
+    {
+      "sha": "57107281049f1b378b9153c92499e0e3abbbacae",
+      "author": "Jose Luis Blanco Claraco",
+      "date": "2017-09-30T23:51:52Z",
+      "message": "Port to use JointState msgs"
+    },
+    {
+      "sha": "db5040b8dcc67fc1260abfb2dfdca680626aa90d",
+      "author": "Jose Luis Blanco Claraco",
+      "date": "2017-08-20T14:48:31Z",
+      "message": "enable and fix -Wall warnings"
+    },
+    {
+      "sha": "3938c23dabe834f207b4a233878817ece604e1b8",
+      "author": "Jose Luis Blanco Claraco",
+      "date": "2017-08-20T14:45:46Z",
+      "message": "Rewrite encoder node to use phidgets::Encoder"
+    },
+    {
+      "sha": "8c2bcd65813567a30ea3f1a43478c0f7349c2755",
+      "author": "Jose Luis Blanco Claraco",
+      "date": "2017-08-20T14:45:28Z",
+      "message": "typo and doxygen docs"
+    },
+    {
+      "sha": "41005655c9718a2d2ca42d43e12bec7806d9e735",
+      "author": "Jose Luis Blanco-Claraco",
+      "date": "2017-08-18T23:07:01Z",
+      "message": "add phidgets_high_speed_encoder to metapackage"
+    },
+    {
+      "sha": "2197cbde4f467fae028176bfeaa62c2f90a27bf1",
+      "author": "Jose Luis Blanco Claraco",
+      "date": "2017-08-09T22:19:21Z",
+      "message": "fix catkin build deps"
+    },
+    {
+      "sha": "babeab0a2a00aee6e4aa91cb7d882b9e702df20f",
+      "author": "Jose Luis Blanco-Claraco",
+      "date": "2017-08-09T10:33:20Z",
+      "message": "Fix instantaneous speed must be reset to zero"
+    },
+    {
+      "sha": "8bbb82c3b702f74c61ce68edb10b3d82a7a7541e",
+      "author": "Jose Luis Blanco-Claraco",
+      "date": "2017-08-09T10:29:39Z",
+      "message": "Fix typo in ROS_INFO()"
+    },
+    {
+      "sha": "494bed2271b0e9cef720e63e4371586d8caae48c",
+      "author": "Jose Luis Blanco Claraco",
+      "date": "2017-08-07T23:37:24Z",
+      "message": "Improvements to high-speed encoder node:\n\n* Publish one topic per encoder channel.\n* On-the-fly determination of number of encoder channels.\n* Two topic message types:\n  * (a) Tick count + instantaneous speed.\n  * (b) decimated, smooth velocity.\n* Publication at a programmable rate, independent of arrival of encoder ticks."
+    },
+    {
+      "sha": "3c40e87c3d704d548d48b052f817cbc56ba12b35",
+      "author": "Geoff Viola",
+      "date": "2016-11-24T00:52:24Z",
+      "message": "initial attempts at addressing code review"
+    },
+    {
+      "sha": "d868b46fe89b642223993d18109101b9a93d8a2a",
+      "author": "Geoff Viola",
+      "date": "2016-06-08T18:08:43Z",
+      "message": "using ROS installed phidgets API"
+    },
+    {
+      "sha": "04085f8fcedeb8f1bd997e05dc4c6a8765562faa",
+      "author": "Geoff Viola",
+      "date": "2016-05-27T17:01:47Z",
+      "message": "reformatted and added print at startup"
+    },
+    {
+      "sha": "3505b7d310d9cc82259584e7114165f164f8cfd6",
+      "author": "Geoff Viola",
+      "date": "2016-05-26T23:17:11Z",
+      "message": "populate the header"
+    },
+    {
+      "sha": "a4c2f149f7e0b34e8041d1bd5c897e554e9b7e51",
+      "author": "Geoff Viola",
+      "date": "2016-05-25T20:10:36Z",
+      "message": "renamed node with phidgets_"
+    },
+    {
+      "sha": "ccbe3534b677605e95e71a3572651df3cac330a7",
+      "author": "Geoff Viola",
+      "date": "2016-05-25T16:46:31Z",
+      "message": "removed frequency customization"
+    },
+    {
+      "sha": "9e5a52d71cd76f7a1c1441e0f60f91eddc9b1c01",
+      "author": "Geoff Viola",
+      "date": "2016-05-24T21:15:43Z",
+      "message": "cleaned up message generation stuff and bogus installation"
+    },
+    {
+      "sha": "0eae17c4f602efefd07fe4892b0c42eef24c36f0",
+      "author": "Geoff Viola",
+      "date": "2016-05-24T17:54:52Z",
+      "message": "deleted unnecessary print CMakeLists"
+    },
+    {
+      "sha": "217b9a8f8c726030cb40500cc3dbfecab61a6f33",
+      "author": "Geoff Viola",
+      "date": "2016-05-24T17:31:19Z",
+      "message": "added new phidgets_high_speed_encoder package"
+    },
+    {
+      "sha": "fd1901ed5f8afcdb125ac0a31f627e9ec65c0ed7",
+      "author": "Martin Günther",
+      "date": "2017-08-14T09:04:27Z",
+      "message": ".travis.yml: Add fix for travis-ci/travis-ci#8048\n\nDue to a change in Travis, the default Debian python path is now\nignored. This commit works around that issue by setting the PYTHONPATH\nexplicitly."
+    },
+    {
+      "sha": "65cfe4782c8d643ac0ab797e6d94a50048e1f734",
+      "author": "Martin Günther",
+      "date": "2017-07-26T19:29:29Z",
+      "message": "Update README\n\nFixes #14."
+    },
+    {
+      "sha": "e5cd2ccce73d75d8335f0459134b40a6be162e4c",
+      "author": "Martin Günther",
+      "date": "2017-06-30T13:11:21Z",
+      "message": "0.7.3"
+    },
+    {
+      "sha": "c7d52d3175c35e0ac46e9978c4ce9d78b6ece416",
+      "author": "Martin Günther",
+      "date": "2017-06-30T13:09:22Z",
+      "message": "Update changelogs"
+    },
+    {
+      "sha": "6ce29160b6c0d8a98325dbbc9e5208c25eac9527",
+      "author": "imitschke",
+      "date": "2017-06-29T19:59:04Z",
+      "message": "fixed broken url to phidgets library (#12)"
+    },
+    {
+      "sha": "8b0312ad2815043adbb9cb7c73e3d6b3e4fa87e2",
+      "author": "Martin Günther",
+      "date": "2017-06-02T08:14:49Z",
+      "message": "0.7.2"
+    },
+    {
+      "sha": "570f9c2801d91558a8bd1ed9400136bdca2479fd",
+      "author": "Martin Günther",
+      "date": "2017-06-02T08:14:18Z",
+      "message": "Update changelogs"
+    },
+    {
+      "sha": "229d26ff5e941df1141a072bf4e71e51808dbc24",
+      "author": "Martin Günther",
+      "date": "2017-05-24T13:08:50Z",
+      "message": "phidgets_imu: Add use_magnetic_field_msg to launch\n\nThis is required in Jade: Since Jade, phidgets_imu publishes\nMagneticField messages, but imu_filter_madgwick still subscribes by\ndefault to Vector3Stamped messages. When running as nodelets, this can\nproduce a silent error.\n\nIn Kinetic, this is optional: imu_filter_madgwick now defaults to\nMagneticField.\n\nFrom Lunar on, it should be removed, because the use_magnetic_field_msg\nparam was removed from imu_filter_madgwick."
+    },
+    {
+      "sha": "2993a03d145d11dc5b5e2b267560b2f8e8196016",
+      "author": "Martin Günther",
+      "date": "2017-05-24T13:07:56Z",
+      "message": "phidgets_imu: Add launch file for single nodes"
+    },
+    {
+      "sha": "ead8ebed967957fef01438ec0eaeea082f0c306a",
+      "author": "Martin Günther",
+      "date": "2017-05-22T08:53:24Z",
+      "message": "0.7.1"
+    },
+    {
+      "sha": "c9a0fe9aaa23ef581ef0df8edcc3c53d3bf23fdf",
+      "author": "Martin Günther",
+      "date": "2017-05-22T08:52:45Z",
+      "message": "Update changelogs"
+    },
+    {
+      "sha": "2c198f304883fe80d3dd1e438f10368c7d9030f0",
+      "author": "Johan M. von Behren",
+      "date": "2017-04-26T15:37:36Z",
+      "message": "phidgets_imu: add optional serial number parameter (#7)"
+    },
+    {
+      "sha": "3b36370229d4e36d3b4118d7072ab5fbfa5c86f8",
+      "author": "Martin Günther",
+      "date": "2017-05-18T16:10:38Z",
+      "message": "libphidget21: Update CFLAGS\n\nActually use the CFLAGS from 31ba59e instead of 48008f3."
+    },
+    {
+      "sha": "cbf43011f828afc2a9b93ed91f411aa2a6a62eb9",
+      "author": "Martin Günther",
+      "date": "2017-05-18T15:09:21Z",
+      "message": "Set event handlers for motor + encoder APIs"
+    },
+    {
+      "sha": "a36fb7f0daf27219a83387c43b134cebb7dca3b9",
+      "author": "Zach Anderson",
+      "date": "2017-02-21T02:12:39Z",
+      "message": "Added basic motor api"
+    },
+    {
+      "sha": "f1ca55414d6251d4a3ab092e219fbb3a2191554b",
+      "author": "Zach Anderson",
+      "date": "2017-02-21T00:16:47Z",
+      "message": "Added basic encoder board api"
+    },
+    {
+      "sha": "48008f353cb13173faa83c81db7c67eec74fb8f7",
+      "author": "Martin Günther",
+      "date": "2017-05-12T13:53:07Z",
+      "message": "libphidget21: disable warnings from upstream lib\n\nWe can't do anything about the upstream bugs, and this caused the build\nto become \"unstable\" on the Kinetic build farm."
+    },
+    {
+      "sha": "edd1c4d22b7b3ec3496796fe068fea1a8d7b2d84",
+      "author": "Martin Günther",
+      "date": "2017-05-11T15:52:40Z",
+      "message": "Migrate libphidget21 to catkin-native wrapping\n\nSee ipa320/cob_extern#82 and ipa320/cob_extern#84."
+    },
+    {
+      "sha": "fbec626625fac52397bf0d770ce927576de844f9",
+      "author": "Martin Günther",
+      "date": "2017-05-11T09:29:56Z",
+      "message": "phidgets_imu: Add imu_filter_madgwick dependency\n\nCloses #9."
+    },
+    {
+      "sha": "31ba59ea34bd0a31ffbe8b942016c63c424f1b51",
+      "author": "Martin Günther",
+      "date": "2017-02-19T10:40:11Z",
+      "message": "libphidget21: Suppress warnings from downloaded tarball"
+    },
+    {
+      "sha": "6df2bfe972630fc8db38bb93e90c25636b27202d",
+      "author": "Martin Günther",
+      "date": "2017-02-19T10:38:12Z",
+      "message": "libphidget21: Update package.xml meta info"
+    },
+    {
+      "sha": "74fc2ae06987fe72bc212cfca2932b0a0648c660",
+      "author": "Martin Günther",
+      "date": "2017-02-17T16:40:27Z",
+      "message": "0.7.0"
+    },
+    {
+      "sha": "155f9b535ff3c7f67285a33b7af4954a233e5124",
+      "author": "Martin Günther",
+      "date": "2017-02-17T16:24:09Z",
+      "message": "Update changelogs"
+    },
+    {
+      "sha": "e1ed13517536e5a353f8954ddc1736b568cb78d6",
+      "author": "Martin Günther",
+      "date": "2017-02-17T15:53:14Z",
+      "message": "Remove phidgets_ir package\n\nIt was a stub anyway. If somebody has such a device and cares to expose\nthe data via ROS topics, this can be revived."
+    },
+    {
+      "sha": "658e9d3721bfd83e7100aeb18ca965046f1dbfdf",
+      "author": "Martin Günther",
+      "date": "2017-02-17T15:48:25Z",
+      "message": "Publish MagneticField instead of Vector3Stamped"
+    },
+    {
+      "sha": "656ec9f47562babc79ec48379bc472e028fe8494",
+      "author": "Martin Guenther",
+      "date": "2016-07-14T12:37:50Z",
+      "message": "Report mag data in Tesla, not Gauss\n\nThis is to conform with sensor_msgs/MagneticField, which requires the\ndata to be in Tesla."
+    },
+    {
+      "sha": "f31bf35a98cdd13a1e4cc049cdc514de3a581e71",
+      "author": "Martin Guenther",
+      "date": "2016-11-24T10:22:24Z",
+      "message": "Add catkin_EXPORTED_TARGETS everywhere"
+    },
+    {
+      "sha": "9914bfaa7200787006338ffdd586474c807220c9",
+      "author": "Martin Guenther",
+      "date": "2016-11-24T10:22:10Z",
+      "message": "Add libphidget21 dependency to metapackage"
+    },
+    {
+      "sha": "c447e9f46b8b28187db2cbe7eb7a61a0a1f59ca3",
+      "author": "Martin Guenther",
+      "date": "2016-11-24T09:59:47Z",
+      "message": "Rename libphidgets => libphidget21"
+    },
+    {
+      "sha": "72cdfb20f35cb6bd23e07dbc2651feb4d032bdc6",
+      "author": "Martin Guenther",
+      "date": "2016-11-24T09:56:37Z",
+      "message": "Copy libphidget21 from cob_extern"
+    },
+    {
+      "sha": "708354f3d9e4de574c1df4c7e91b9f8487487664",
+      "author": "Martin Günther",
+      "date": "2017-02-17T11:39:32Z",
+      "message": ".travis.yml: Switch to Jade"
+    },
+    {
+      "sha": "033f5b0e23bb47438c5c56b9b7ce2dcd2f6605c2",
+      "author": "Martin Günther",
+      "date": "2017-02-17T11:11:00Z",
+      "message": "0.2.3"
+    },
+    {
+      "sha": "0da62eb97aba3789031e62060d47a3eb6faa90c5",
+      "author": "Martin Günther",
+      "date": "2017-02-17T11:09:52Z",
+      "message": "Update changelogs"
+    },
+    {
+      "sha": "fbfe840f9b88551bae3f38df8e63f124a581a598",
+      "author": "Martin Günther",
+      "date": "2015-11-16T16:39:46Z",
+      "message": "Add .travis.yml"
+    },
+    {
+      "sha": "7b46f9162f4986235d789d1cccbd2377e39d0279",
+      "author": "Martin Guenther",
+      "date": "2016-09-06T15:31:02Z",
+      "message": "Add diagnostics launch file"
+    },
+    {
+      "sha": "c8b311f7412b211e84917bd93366e0ab4d190d12",
+      "author": "Martin Günther",
+      "date": "2017-02-17T10:41:37Z",
+      "message": "Update package.xml meta info"
+    },
+    {
+      "sha": "2f17d5344c335305a979e7fbebc805b3e256b208",
+      "author": "Murilo FM",
+      "date": "2016-11-21T08:38:03Z",
+      "message": "Merge pull request #27 from mintar/reattachment\n\nSet data rate after reattachment"
+    },
+    {
+      "sha": "c7a35872286224175608eaa58ac63abce3649e19",
+      "author": "Martin Guenther",
+      "date": "2016-09-06T15:26:08Z",
+      "message": "Set data rate after reattachment\n\nThis fixes a bug where after disconnecting and reconnecting the USB\ncable, the data rate would be set to the default of 125 Hz (= period of\n8ms). By moving the setDataRate call to the attachHandler, the data rate\nis correctly set after each reattachment."
+    },
+    {
+      "sha": "809f1bded2d0a3c3f08dab406a240a32bef4dd66",
+      "author": "Murilo FM",
+      "date": "2016-11-20T17:45:26Z",
+      "message": "Merge pull request #24 from akrobotics/imu-diag\n\nAdd IMU diagnostics (related to #20)"
+    },
+    {
+      "sha": "ce5d4195b5956f9d196b8ddbe42080287c59a770",
+      "author": "Mani Monajjemi",
+      "date": "2016-07-14T21:31:40Z",
+      "message": "Major refactoring of diagnostics (#20)\n\n- Remove all diagnostics logic from phidget_api\n- Add diagnostics to phidgets_imu\n  - Connect/disconnect/error states are propogated from callbacks\n  - Periodic updates for diagnostics through processImuData()\n  - Add Frequency and Timestamp (drift) diagnostics for imu/data_raw\n  topic"
+    },
+    {
+      "sha": "337ef119c19469e4b1e71143502a7e20baa7787b",
+      "author": "Keshav Iyengar",
+      "date": "2015-11-16T16:51:19Z",
+      "message": "Fixes for diagnostics pull request #20.\n\n* Added \"/\" for closing tags in package.xml\n* Moved lines to non-static function as required."
+    },
+    {
+      "sha": "8ab34d5d444fcd8b42bf06b715608f0f8a73cf10",
+      "author": "kkiyenga",
+      "date": "2015-06-14T21:43:37Z",
+      "message": "Added first commit for diagnostics for the phidgets. Only imu is\ncomplete."
+    },
+    {
+      "sha": "bed081632b99672bfaebfb3da4f6ed320d294982",
+      "author": "Murilo FM",
+      "date": "2015-11-14T10:42:27Z",
+      "message": "Merge pull request #22 from mintar/fix-21\n\nUpdate README (specific ROS versions)"
+    },
+    {
+      "sha": "cbd1448e25976e04e3469532d3836e82a909d19f",
+      "author": "Martin Günther",
+      "date": "2015-11-04T10:16:01Z",
+      "message": "Update README (specific ROS versions)\n\nFixes #21."
+    },
+    {
+      "sha": "3b23c112c46da713b06b5604527abda84a8f70ac",
+      "author": "Murilo FM",
+      "date": "2015-03-23T14:46:00Z",
+      "message": "0.2.2"
+    },
+    {
+      "sha": "15638bada9cf6b67cf7dede2632b9735dbcd1eda",
+      "author": "Murilo FM",
+      "date": "2015-03-23T14:39:55Z",
+      "message": "Updated changelogs for release"
+    },
+    {
+      "sha": "8d25dfbe56a42961da3e95227c6845d2f9dfc283",
+      "author": "Murilo FM",
+      "date": "2015-03-23T14:31:43Z",
+      "message": "Merge pull request #18 from ccny-ros-pkg/libphidgets\n\nMerge libphidgets branch into indigo"
+    },
+    {
+      "sha": "c2364ab27020a58fd2c95fa284838e28697a8897",
+      "author": "Murilo FM",
+      "date": "2015-03-20T15:46:37Z",
+      "message": "Merge pull request #17 from mintar/orientation_covar\n\nset orientation_covariance[0] to -1"
+    },
+    {
+      "sha": "9b36b71fdd2aa39c4fd1d89ed9395b40c857689b",
+      "author": "Martin Günther",
+      "date": "2015-01-28T11:20:03Z",
+      "message": "set orientation_covariance[0] to -1\n\nfrom Imu.msg:\n\n> If you have no estimate for one of the data elements (e.g. your IMU doesn't produce an orientation\n> estimate), please set element 0 of the associated covariance matrix to -1."
+    },
+    {
+      "sha": "bc05b720683df2fa4c9e0401370143f4b71ef003",
+      "author": "Murilo FM",
+      "date": "2015-01-18T15:58:49Z",
+      "message": "phidgets_imu: fixed issue #9"
+    },
+    {
+      "sha": "acc3fdf20cb9afba2b413ee60c192fe9852ebf88",
+      "author": "Murilo FM",
+      "date": "2015-01-18T15:50:04Z",
+      "message": "phidgets_api: updated build/installation rules to use 3rd party libphdigets ROS package"
+    },
+    {
+      "sha": "303e6bb4ee55e3dd733fdaad3f76623b897cd7b1",
+      "author": "Murilo FM",
+      "date": "2015-01-18T15:49:09Z",
+      "message": "phidgets_api: updated package details"
+    },
+    {
+      "sha": "628d7ca94f257e432f7610ac302821a731698a18",
+      "author": "Murilo FM",
+      "date": "2015-01-18T15:48:06Z",
+      "message": "phidgets_api: added copy of udev rule to package and updated path in script"
+    },
+    {
+      "sha": "539c7423f7ef34ae555d58ad171cf70f87477f92",
+      "author": "Murilo FM",
+      "date": "2015-01-18T15:46:40Z",
+      "message": "phidgets_api: updated path to libphidgets header file"
+    },
+    {
+      "sha": "ee8b0e68d0649c86d8d9a210b67f205c2d0d1509",
+      "author": "Murilo FM",
+      "date": "2015-01-18T15:46:01Z",
+      "message": "phidgets_api: emoved license and header file of phidgets library"
+    },
+    {
+      "sha": "84674d51ef2176fd490fa352f0eb9b890e0eb1ff",
+      "author": "Murilo FM",
+      "date": "2015-01-15T17:44:28Z",
+      "message": "0.2.1"
+    },
+    {
+      "sha": "1e6bee407944f7aeecbb43673611a2e4fba63273",
+      "author": "Murilo FM",
+      "date": "2015-01-15T17:42:16Z",
+      "message": "Added changelongs in preparation for release"
+    },
+    {
+      "sha": "95bb3015dc32700de0c9f271f4e5c6940eb4eda8",
+      "author": "Murilo FM",
+      "date": "2015-01-15T17:38:55Z",
+      "message": "Fixed typo in maintainer name"
+    },
+    {
+      "sha": "b21d9b5ad967a323270e93c82c6d952dfb949763",
+      "author": "Murilo FM",
+      "date": "2014-12-12T14:18:29Z",
+      "message": "Merge pull request #15 from mintar/add_boost_depends\n\nadd boost depends to CMakeLists"
+    },
+    {
+      "sha": "2094255d51d96cf6209151af28bcbc1e09ed33e6",
+      "author": "Murilo FM",
+      "date": "2014-12-12T14:16:24Z",
+      "message": "Merge pull request #14 from mintar/compass_corr_logging\n\nimprove error output when setting compass corr params"
+    },
+    {
+      "sha": "658929e29587041ce80120c491e6c5d4d340d1a8",
+      "author": "Martin Günther",
+      "date": "2014-12-11T14:03:13Z",
+      "message": "add boost depends to CMakeLists\n\nAll non-catkin things that we expose in our headers should be added to\nthe DEPENDS, so that packages which depend on our package will also\nautomatically link against it.\n\nAlso see: http://answers.ros.org/question/58498/what-is-the-purpose-of-catkin_depends/\\#58593"
+    },
+    {
+      "sha": "c664e43a50e0ca6733f75bd54fe9845bb415e881",
+      "author": "Martin Günther",
+      "date": "2014-12-10T09:24:33Z",
+      "message": "improve error output when setting compass corr params\n\nThe previous implementation didn't catch a number of error codes\n(EPHIDGET_INVALIDARG, EPHIDGET_NOTATTACHED, EPHIDGET_UNEXPECTED), and\nthe new one is more elegant and consistent with the previous code anyway."
+    },
+    {
+      "sha": "86008e45d38bc1cd5ca8b23e2210706c52de437f",
+      "author": "Murilo FM",
+      "date": "2014-12-04T17:20:37Z",
+      "message": "Merge pull request #13 from mintar/libusb\n\nphidgets_api: add libusb dependency"
+    },
+    {
+      "sha": "e114164eb507bf251d7b75add3442644d50ef2dd",
+      "author": "Martin Günther",
+      "date": "2014-12-04T14:25:30Z",
+      "message": "phidgets_api: add libusb dependency\n\nThis caused Jenkins CI tests to fail."
+    },
+    {
+      "sha": "0c648a93798bdff379fdd2bfd95195d4aaf8df23",
+      "author": "Murilo FM",
+      "date": "2014-12-04T13:18:39Z",
+      "message": "Merge pull request #12 from mintar/compass_correction\n\nSet compass correction params on the device"
+    },
+    {
+      "sha": "4a9c460863133c042f51645b6a18c6b0aa4550ae",
+      "author": "Martin Günther",
+      "date": "2014-12-04T10:31:12Z",
+      "message": "Set compass correction params on the device\n\nTested with a Phidget Spatial 3/3/3 1044."
+    },
+    {
+      "sha": "bc516d10d0a3cd5ed8b8072f425f84def50405f7",
+      "author": "Murilo FM",
+      "date": "2014-03-13T17:28:35Z",
+      "message": "Merge pull request #10 from ccny-ros-pkg/hydro\n\nHydro - latest changes"
+    },
+    {
+      "sha": "5dd9536ce411b7e8ba8fe08f2d01c34e6cca8217",
+      "author": "Murilo FM",
+      "date": "2014-03-13T17:23:57Z",
+      "message": "Merge pull request #7 from uos/fix_cmakelists\n\nfix a couple of errors in the CMakeLists"
+    },
+    {
+      "sha": "0bce5ef2a8a83d8cdfa44862a9978190fa595b72",
+      "author": "Martin Günther",
+      "date": "2014-03-12T12:42:07Z",
+      "message": "phidgets_imu: install phidgets_imu_nodelet.xml"
+    },
+    {
+      "sha": "bf50eb2d712cea389cc9eed92ce16195201b8391",
+      "author": "Martin Günther",
+      "date": "2014-03-12T12:41:51Z",
+      "message": "phidgets_api: fix case in CMakeLists"
+    },
+    {
+      "sha": "085062779130b8844190480a23dd938c1443a931",
+      "author": "Murilo F. M",
+      "date": "2013-10-18T12:42:22Z",
+      "message": "Updated README.md with instructions for Groovy and Hydro"
+    },
+    {
+      "sha": "eee5a28ec34702fc37ec1ebdcb8b9e9f33258bcd",
+      "author": "Murilo F. M.",
+      "date": "2013-10-18T12:26:05Z",
+      "message": "Merge pull request #6 from uos/catkinize\n\nCatkinised phidgets_drivers metapackage (take 2)"
+    },
+    {
+      "sha": "54b3a69e065302f7f12683c064a11b3f01e0f5e3",
+      "author": "Martin Günther",
+      "date": "2013-10-18T10:01:15Z",
+      "message": "README.md: fix repository path"
+    },
+    {
+      "sha": "f5f16d943891031c482f1e5b15f59f79a0224d68",
+      "author": "Murilo F. M",
+      "date": "2013-10-07T13:59:16Z",
+      "message": "phidgets_api: added GNU LGPLv3 copy (phidget21.h)"
+    },
+    {
+      "sha": "8842b76ccde07b93043334124960eb09cca6ede2",
+      "author": "Murilo F. M",
+      "date": "2013-10-07T13:58:25Z",
+      "message": "phidgets_api: updated license and author information"
+    },
+    {
+      "sha": "8adc5cf92014453a57f5309a8ede873d03346556",
+      "author": "Murilo F. M",
+      "date": "2013-10-07T13:56:49Z",
+      "message": "phidgets_imu: not exporting nodelet as library anymore"
+    },
+    {
+      "sha": "b00c56f5c355f90d285c48bce5ceceb359b8be56",
+      "author": "Murilo F. M",
+      "date": "2013-10-05T22:56:47Z",
+      "message": "phidgets_drivers: updated README.md"
+    },
+    {
+      "sha": "6d74f809a55a312d10b5ba43db0a4642d35ce84a",
+      "author": "Murilo F. M",
+      "date": "2013-10-05T22:47:17Z",
+      "message": "phidgets_api: added script to setup udev rules for Phidgets devices"
+    },
+    {
+      "sha": "eee2bd303a8a2a71699cc4811764258bf2d96ce7",
+      "author": "Murilo F. M",
+      "date": "2013-10-05T22:46:19Z",
+      "message": "phidgets_api: added libphidget21 dependency as cmake external project"
+    },
+    {
+      "sha": "ffa1ad5e26501094c3d2a6624aec700756dfc5d4",
+      "author": "Murilo F. M",
+      "date": "2013-10-05T22:45:17Z",
+      "message": "phidgets_api: updated path to libphidget header file"
+    },
+    {
+      "sha": "9efc1ad61bdec1c68895549b70c3ac77bfc1dcc3",
+      "author": "Murilo F. M",
+      "date": "2013-10-05T22:44:28Z",
+      "message": "phidgets_api: added libphidget header file to package"
+    },
+    {
+      "sha": "b8309b579f2cb383b143930cc339176260d08663",
+      "author": "Murilo F. M",
+      "date": "2013-10-05T22:42:49Z",
+      "message": "phidgets_api: removed phidgets_c_api dependency"
+    },
+    {
+      "sha": "21194cdb49c66aec2b9bb63fe3564f20dd343351",
+      "author": "Murilo F. M",
+      "date": "2013-10-05T22:41:49Z",
+      "message": "phidgets_drivers: removed phidgets_c_api dependency"
+    },
+    {
+      "sha": "0b079663dd799da7896052c11328b6ff280c6da0",
+      "author": "Murilo F. M",
+      "date": "2013-10-05T22:34:29Z",
+      "message": "phidgets_c_api: deleted package (will be downloaded as external project in phidgets_api)"
+    },
+    {
+      "sha": "e71c82e88226b8fca22468025fbf8f6ceaa3d1a4",
+      "author": "Murilo F. M",
+      "date": "2013-10-04T14:23:56Z",
+      "message": "phidgets_c_api: updated to latest libphidget 2.1.8.20130723"
+    },
+    {
+      "sha": "c5c8e0dbc88c06758b4cb8c9d40199fd210394cf",
+      "author": "Murilo F. M",
+      "date": "2013-10-04T13:04:17Z",
+      "message": "phidgets_drivers v0.2.0: catkin metapackage for ROS Groovy"
+    },
+    {
+      "sha": "9533d06c748590f69004b5c5690b5c933d2abcb5",
+      "author": "Murilo F. M",
+      "date": "2013-10-04T13:00:47Z",
+      "message": "phidgets_c_api: added header to package (from downloaded lib)"
+    },
+    {
+      "sha": "9d281cf81503316b5c86876b0631ffd4659d1b6f",
+      "author": "Murilo F. M",
+      "date": "2013-10-04T13:00:11Z",
+      "message": "phidgets_c_api: added dependency of imported lib to external project"
+    },
+    {
+      "sha": "3b2cddf80b0415b20c31036ffb1e45cde847606c",
+      "author": "Murilo F. M",
+      "date": "2013-10-04T12:15:35Z",
+      "message": "Updated version, maintainer and author information"
+    },
+    {
+      "sha": "3dc5217c341ca52cb7e9a644177c165caafc6b9a",
+      "author": "Murilo F. M",
+      "date": "2013-10-03T16:21:56Z",
+      "message": "phidgets_imu: added install rule to launch files"
+    },
+    {
+      "sha": "5324f45b01804ea50f8d692d9b3a6dbcf65137cc",
+      "author": "Murilo F. M",
+      "date": "2013-10-03T16:21:16Z",
+      "message": "phidgets_imu: removed unnecessary dependency"
+    },
+    {
+      "sha": "d06e95254295976c15b95f5756d1f69c14100bba",
+      "author": "Murilo F. M",
+      "date": "2013-10-03T16:20:47Z",
+      "message": "phidgets_ir: added dependency to phidgets_api package"
+    },
+    {
+      "sha": "88a41761b23d29902b64be742e35ce8ddfa5a4dc",
+      "author": "Murilo F. M",
+      "date": "2013-10-03T15:54:13Z",
+      "message": "Deleted comments within files of all packages"
+    },
+    {
+      "sha": "7b80cfbd1b2df8d4a3a6a94fa3b298773f7f36f6",
+      "author": "Murilo F. M",
+      "date": "2013-10-03T15:51:38Z",
+      "message": "phidgets_c_api: updated license and author information"
+    },
+    {
+      "sha": "9beae5291f6428e7dbdc183cfbd3c63118e18aeb",
+      "author": "Murilo F. M",
+      "date": "2013-10-03T15:23:45Z",
+      "message": "phidgets_drivers: converted stack into metapackage"
+    },
+    {
+      "sha": "4a353845b48f6bb0dce3822f2ffd94d181af1430",
+      "author": "Murilo F. M",
+      "date": "2013-10-03T15:20:29Z",
+      "message": "Updated README information to reflect catkinisation"
+    },
+    {
+      "sha": "76fd8f937134820dc09c07b86dd30b3031621cef",
+      "author": "Murilo F. M",
+      "date": "2013-10-03T15:18:07Z",
+      "message": "phidgets_c_api: fixed path to Phidgets udev rules file"
+    },
+    {
+      "sha": "0fbe295a295f257de2d4e3e922f1d54ce1eaa1e8",
+      "author": "Murilo F. M",
+      "date": "2013-10-03T15:08:45Z",
+      "message": "Catkinised packages"
+    },
+    {
+      "sha": "829868a3658fb8efa034ea3347e23b899f5e510d",
+      "author": "Murilo F. M",
+      "date": "2013-06-23T03:06:38Z",
+      "message": "Fixed path to udev rule"
+    },
+    {
+      "sha": "ee9962ec55bcd7b64f39d273e35da2725e78aa7a",
+      "author": "Murilo F. M",
+      "date": "2013-06-23T02:51:04Z",
+      "message": "Updated to latest version of libphidget (2.1.8.20130618)"
+    },
+    {
+      "sha": "4f9cde1b7209a9ce77324ecbdb33e0931e3901ef",
+      "author": "Murilo F. M.",
+      "date": "2013-10-03T14:45:40Z",
+      "message": "Merge pull request #3 from ccny-ros-pkg/master\n\nMerge branch 'master' into fuerte"
+    },
+    {
+      "sha": "632f27377e505a7c96c28fe9789cd26d0d5fffdb",
+      "author": "Murilo F. M.",
+      "date": "2013-10-03T14:17:09Z",
+      "message": "Merge pull request #1 from uos/fix_imu_time_lag\n\nfix IMU time lag"
+    },
+    {
+      "sha": "dd74d6651a0af179421677b8acb529c34d49d7be",
+      "author": "Murilo F. M.",
+      "date": "2013-10-01T13:11:51Z",
+      "message": "Merge pull request #2 from uos/update_errmsg\n\nadd some hints to error message"
+    },
+    {
+      "sha": "ec907ddf408c751e09f32ccfc04239196381720d",
+      "author": "Martin Günther",
+      "date": "2013-07-16T15:10:34Z",
+      "message": "add some hints to error message\n\nI just spent 30 minutes trying to figure out why the IMU works on one\ncomputer and doesn't on another one. Felt a little foolish when I found\nout that the udev rules weren't installed; maybe providing some more\ninfo in the error message helps others."
+    },
+    {
+      "sha": "71754385eb99ce474b8547e8970a2874f20be359",
+      "author": "Martin Günther",
+      "date": "2013-07-08T14:05:04Z",
+      "message": "use ros::Time::now() if time lag exceeds threshold"
+    },
+    {
+      "sha": "92085b36997243a5a6690e6b537cba50d68b7365",
+      "author": "Martin Günther",
+      "date": "2013-02-08T16:30:33Z",
+      "message": "added warning if IMU time lags behind ROS time"
+    },
+    {
+      "sha": "fb43a36a374fd9a1da100d5212974b58d11665b5",
+      "author": "Ivan Dryanovski",
+      "date": "2012-09-09T02:55:17Z",
+      "message": "renamed rate parameter to period"
+    },
+    {
+      "sha": "9384fbf630c3a0e317ffc96a6121a6db73d8da20",
+      "author": "Ivan Dryanovski",
+      "date": "2012-09-02T21:53:57Z",
+      "message": "Merge branch 'master' of github.com:ccny-ros-pkg/phidgets_drivers"
+    },
+    {
+      "sha": "07188764a4cc4076caf383c4a5a4856c32556f67",
+      "author": "Ivan Dryanovski",
+      "date": "2012-09-02T21:53:47Z",
+      "message": "updated manifest of phidgets IR"
+    },
+    {
+      "sha": "7cdc5cebcbe202104704d5b912f72359228a4a49",
+      "author": "CCNY Robotics Lab",
+      "date": "2012-09-02T21:40:57Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "425a6cc922ff0f8b0079c36f49d0e7b9200c2cab",
+      "author": "CCNY Robotics Lab",
+      "date": "2012-09-02T21:28:38Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "8250ca12790183a82868300cbb09e72106633bf5",
+      "author": "CCNY Robotics Lab",
+      "date": "2012-09-02T21:27:44Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "b8b24e8644bdbe67e030a80325f02ff8527f4ee3",
+      "author": "Ivan Dryanovski",
+      "date": "2012-09-02T21:17:03Z",
+      "message": "changed readme name"
+    },
+    {
+      "sha": "1ffae0194649d7c67bc2d22150c128c42aafcb23",
+      "author": "Ivan Dryanovski",
+      "date": "2012-08-01T20:00:00Z",
+      "message": "added timestamp in imu data"
+    },
+    {
+      "sha": "6e505ab8d10485a172c21072e12c368de56c9ee9",
+      "author": "Ivan Dryanovski",
+      "date": "2012-07-12T15:10:04Z",
+      "message": "updated readme"
+    },
+    {
+      "sha": "0afcb94e42a2da244644e860fa7ef1368e56ddb3",
+      "author": "Ivan Dryanovski",
+      "date": "2012-07-12T15:09:19Z",
+      "message": "updated readme"
+    },
+    {
+      "sha": "4f287c545d3afaef5ee8464a09a564a5fae31177",
+      "author": "Ivan Dryanovski",
+      "date": "2012-07-12T15:08:26Z",
+      "message": "updated readme"
+    },
+    {
+      "sha": "b083683586714b5516296f3dbac45e7ac40cae04",
+      "author": "Ivan Dryanovski",
+      "date": "2012-07-12T15:07:42Z",
+      "message": "updated readme"
+    },
+    {
+      "sha": "f69343509d68cf8774c3b44bad4fc14a166fa9a0",
+      "author": "Ivan Dryanovski",
+      "date": "2012-07-12T15:00:33Z",
+      "message": "fixed cmakelists by including lib to compile on electric"
+    },
+    {
+      "sha": "65c30782288ebbfaa4f6c44082685dde247766fe",
+      "author": "Ivan Dryanovski",
+      "date": "2012-07-12T14:46:47Z",
+      "message": "adding missing imu_ros h file"
+    },
+    {
+      "sha": "b6035a1080bec809ab8d446739a40b6fb32728dd",
+      "author": "Ivan Dryanovski",
+      "date": "2012-07-12T14:46:10Z",
+      "message": "adding missing imu_ros cpp file"
+    },
+    {
+      "sha": "3188c90cd8cbb4382fee48bf89d6bf7fe8d72714",
+      "author": "Ivan Dryanovski",
+      "date": "2012-07-12T14:34:14Z",
+      "message": "added missing cmakelists"
+    },
+    {
+      "sha": "16715e2a8501a844634be34491c7c67283c9b06d",
+      "author": "Ivan Dryanovski",
+      "date": "2012-07-11T17:38:04Z",
+      "message": "adding files to phidget_c_api package"
+    },
+    {
+      "sha": "3fd01f5663ee34b654e6c8a30f59b82622ecb64d",
+      "author": "Ivan Dryanovski",
+      "date": "2012-07-11T17:35:54Z",
+      "message": "added api, imu and ir"
+    },
+    {
+      "sha": "293315cec8630eb28c1fa4c37b1afaa3cbc04dd9",
+      "author": "Ivan Dryanovski",
+      "date": "2012-07-10T14:08:08Z",
+      "message": "removed github readme"
+    },
+    {
+      "sha": "8bf7a4206071fcb526d4af903f0e7b19eebca29d",
+      "author": "Ivan Dryanovski",
+      "date": "2012-07-10T14:07:11Z",
+      "message": "Merge branch 'master' of github.com:ccny-ros-pkg/phidgets_drivers"
+    },
+    {
+      "sha": "de2ca441853ea1f84075d8f2e5f07f3136e26a99",
+      "author": "CCNY Robotics Lab",
+      "date": "2012-07-10T13:43:22Z",
+      "message": "Initial commit"
+    },
+    {
+      "sha": "7e28c8e0aeb1f60255c46b85ae835bece24a88e4",
+      "author": "Ivan Dryanovski",
+      "date": "2012-07-10T13:41:20Z",
+      "message": "removed deps directory"
+    },
+    {
+      "sha": "ab9eb55737708d3939b0e283869583778f33e40a",
+      "author": "Ivan Dryanovski",
+      "date": "2012-07-10T13:40:37Z",
+      "message": "initial commit"
+    }
+  ]
+}

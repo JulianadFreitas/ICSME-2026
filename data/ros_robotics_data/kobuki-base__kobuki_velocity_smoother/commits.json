@@ -1,0 +1,192 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-07T07:17:51Z",
+    "source": "github_rest",
+    "endpoint": "/repos/{owner}/{repo}/commits",
+    "owner": "kobuki-base",
+    "repo": "kobuki_velocity_smoother",
+    "per_page": 100
+  },
+  "data": [
+    {
+      "sha": "728dd45ff827a9aa31af9d128d6a0e14f5114d80",
+      "author": "Chris Lalancette",
+      "date": "2022-10-01T12:25:42Z",
+      "message": "0.15.0\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "913d03e9c996982eaaaa11360414eb6f27a42cd9",
+      "author": "Chris Lalancette",
+      "date": "2022-09-26T16:56:08Z",
+      "message": "Rename the package to kobuki_velocity_smoother. (#20)\n\nThis is to disambiguate it from other velocity smoother\r\npackages that exist in the ROS ecosystem.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "7626e2c4214c1712ebfd2a52247f79f9a853eca3",
+      "author": "Chris Lalancette",
+      "date": "2022-09-24T15:50:31Z",
+      "message": "Make a few more style fixes for older cpplint. (#18)\n\nThis should make the style work for both older and newer\r\ncpplint.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "4aa6db2436fe27d269faead281f26b6d4c24cd9f",
+      "author": "Chris Lalancette",
+      "date": "2022-09-24T15:30:15Z",
+      "message": "Update the README.md (#17)\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "85cb5153cfe69aaabbe756cd5ec3a97136a1dbe2",
+      "author": "Chris Lalancette",
+      "date": "2022-09-23T19:00:32Z",
+      "message": "Don't install test artifacts. (#16)\n\nThis was a vestige from earlier when we couldn't figure out\r\nhow to do this nicely.  We now have better examples, so don't\r\ninstall these test artifacts into the released product.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "cef7cceb513452830512d9fd8362d791c3e5ffe5",
+      "author": "Chris Lalancette",
+      "date": "2022-09-23T18:38:54Z",
+      "message": "Minor cleanup of the includes.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "0227e0232752acefa8e8c6225d0c4e131144cb63",
+      "author": "Chris Lalancette",
+      "date": "2022-09-23T18:35:15Z",
+      "message": "Remove the internal accel_lim_w variable.\n\nWe can just get the variable as needed from the node parameter\ndatabase.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "ccd90543a7054e4cc8fa12e57be2180c1134b566",
+      "author": "Chris Lalancette",
+      "date": "2022-09-23T18:30:09Z",
+      "message": "Remove internal accel_lim_v.\n\nInstead, get the value directly from the node parameter database.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "2c1dd6fb8ed36521e71e1f878b462eb67065adab",
+      "author": "Chris Lalancette",
+      "date": "2022-09-23T18:28:01Z",
+      "message": "Remove decel_factor internal variable.\n\nJust get it from the node parameter database when necessary.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "e0f2b7878592d778acda78aaceccbcae074a3bc6",
+      "author": "Chris Lalancette",
+      "date": "2022-09-23T18:26:07Z",
+      "message": "Remove internal decel_lim_w variable.\n\nCompute it as necessary, which should be fast.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "bca91e98cab418cfee7c7f90fb06abbb9ba13a56",
+      "author": "Chris Lalancette",
+      "date": "2022-09-23T18:25:02Z",
+      "message": "Remove internal decel_lim_v variable.\n\nJust calculate it on the fly, which should be cheap.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "b6044642025720eda4c4d9ba563ca6a1f014faa0",
+      "author": "Chris Lalancette",
+      "date": "2022-09-23T18:21:18Z",
+      "message": "Remove speed_lim_w internal variable.\n\nGet it from the node parameter database instead.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "49e283718dbb43d12fbca383e7faf5c08146dbe4",
+      "author": "Chris Lalancette",
+      "date": "2022-09-23T18:19:55Z",
+      "message": "Remove speed_lim_v internal variable.\n\nGet it from the node parameter database instead.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "88eea0c7eb6896e65fdcfd52faeba32b35a2221d",
+      "author": "Chris Lalancette",
+      "date": "2022-09-23T18:15:01Z",
+      "message": "Remove the quiet internal variable.\n\nWe are already storing it in the parameter database in the node,\nso just get it from there.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "f4f91b01cac845a3e05591d2d90d60be1a4dfe33",
+      "author": "Chris Lalancette",
+      "date": "2022-09-23T18:14:12Z",
+      "message": "Make sure to allow other parameters in the list.\n\nThat's because the node object might be used for more than\none thing, so we should only look at parameters that we\ncare about.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "d311ad3ee6203e8088c0d72bebc611d709482c10",
+      "author": "Chris Lalancette",
+      "date": "2022-09-23T18:05:50Z",
+      "message": "Enable the style checkers, and fix the style to conform. (#14)\n\nNo functional change.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "82500aff3ef4d1ba29f47b6a739580b0b1e1b69d",
+      "author": "Chris Lalancette",
+      "date": "2022-09-23T17:16:36Z",
+      "message": "Fix the tests to work with modern ROS 2. (#13)\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "2032883ae3d70cae7ae415b2105e5f99073f6334",
+      "author": "Chris Lalancette",
+      "date": "2022-01-28T13:50:01Z",
+      "message": "Small fix to the velocity smoother. (#12)\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "5ba998978e324fd0417ea75483d1f5559820459d",
+      "author": "Chris Lalancette",
+      "date": "2020-03-26T17:05:02Z",
+      "message": "Fix the test so it works with 'colcon test' (#11)\n\n* Remove trailing whitespace.\r\n\r\n* Cleanup test.\r\n\r\nThis should make it a bit more suitable for \"standalone\"\r\ntesting.\r\n\r\n* Make velocity_smoother test work with 'colcon test'.\r\n\r\nIt seems that 'colcon test' has a different execution path\r\nthan 'ros2 test', so we can't rely on the launch_ros_node\r\nbeing available.  Make sure to create our own node, and then\r\nuse that for the subscriptions.  This also necessitated a\r\nchange in how the checking loop was done.\r\n\r\n* [test] comment elaborating test breakout conditions explicitly\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\nCo-authored-by: Daniel Stonier <d.stonier@gmail.com>"
+    },
+    {
+      "sha": "2c474208e2801fc035f892e75f60b57ef8e46e72",
+      "author": "Daniel Stonier",
+      "date": "2020-01-27T02:46:44Z",
+      "message": "0.14.0"
+    },
+    {
+      "sha": "a0485a0053a0e1a95e11d6bb18db43a47204a2a0",
+      "author": "Daniel Stonier",
+      "date": "2020-01-27T02:44:59Z",
+      "message": "[docs] readme, minor cleanup and parameter/topic name refactor (#8)\n\nModified a few of the parameter names and topics to make them less confusing. The rest is a copy and slight rewording of the tutorial from the old [ROS1 wiki](http://wiki.ros.org/yocs_velocity_smoother)."
+    },
+    {
+      "sha": "c27e31f3c81029bbaf3001e9e72be60c7323c50b",
+      "author": "Daniel Stonier",
+      "date": "2020-01-27T01:43:06Z",
+      "message": "[tests] translational smoothing (#7)"
+    },
+    {
+      "sha": "5c9e2cba6b95298465bb70ed79ce50d088de87f2",
+      "author": "Chris Lalancette",
+      "date": "2020-01-23T03:05:22Z",
+      "message": "Install the parameter update callback. (#6)\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "520a1c5036776d3d9de31b95ab65ff7e50df78be",
+      "author": "Daniel Stonier",
+      "date": "2020-01-20T17:56:31Z",
+      "message": "[infra] bugfix ros2 index link"
+    },
+    {
+      "sha": "e4b2733fd5d380929180bae56ae4c47829954c7c",
+      "author": "Daniel Stonier",
+      "date": "2020-01-20T17:34:11Z",
+      "message": "[infra] updated license links (#3)"
+    },
+    {
+      "sha": "fad1fbee03ebddbdcc62c0a70107961b322e0253",
+      "author": "Daniel Stonier",
+      "date": "2020-01-20T17:19:08Z",
+      "message": "[infra] eclipse settings"
+    },
+    {
+      "sha": "ca81e17b34fc5024eeae00b2dd240f3acfd84986",
+      "author": "Daniel Stonier",
+      "date": "2020-01-20T16:57:51Z",
+      "message": "[changelog] bugfix title underline too short"
+    },
+    {
+      "sha": "706f6aa224169b92e0b946eae46f6930321d24e5",
+      "author": "Daniel Stonier",
+      "date": "2020-01-20T16:51:15Z",
+      "message": "0.13.0"
+    },
+    {
+      "sha": "f111233aa6d548ae04e2193fb4b044e82556208c",
+      "author": "Chris Lalancette",
+      "date": "2020-01-20T16:37:17Z",
+      "message": "Port velocity smoother to ROS 2. (#1)\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "81b794634fb48326c7217773ff3a1eef50ca0095",
+      "author": "Chris Lalancette",
+      "date": "2020-01-17T01:42:44Z",
+      "message": "Initial copy of velocity_smoother.\n\nDirect copy of the code from:\nhttps://github.com/yujinrobot/yujin_ocs/tree/17337e5a2d0a0f3711c55e272e656eb59174d657/yocs_velocity_smoother\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    }
+  ]
+}

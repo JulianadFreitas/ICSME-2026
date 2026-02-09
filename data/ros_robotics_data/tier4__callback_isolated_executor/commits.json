@@ -1,0 +1,948 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-07T00:04:46Z",
+    "source": "github_rest",
+    "endpoint": "/repos/{owner}/{repo}/commits",
+    "owner": "tier4",
+    "repo": "callback_isolated_executor",
+    "per_page": 100
+  },
+  "data": [
+    {
+      "sha": "b61c37f57997079f0c4ecad2970520cbd3e6c999",
+      "author": "atsushi yano",
+      "date": "2026-02-02T19:29:47Z",
+      "message": "Merge pull request #32 from tier4/fix/remove-sleep-from-publish-callback-group-info\n\nRemove unnecessary sleep from publish_callback_group_info"
+    },
+    {
+      "sha": "26ead09bc31a0dda791411d91366a873ef26ea86",
+      "author": "atsushi421",
+      "date": "2026-02-02T19:23:34Z",
+      "message": "Remove unnecessary sleep from publish_callback_group_info\n\nThe 500ms sleep after publishing callback group info was unnecessary\nand caused delays. Removing it improves performance."
+    },
+    {
+      "sha": "cbce5f31601e12fe0801003b7496587dff8a360c",
+      "author": "Takahiro Ishikawa-Aso",
+      "date": "2026-01-27T20:30:25Z",
+      "message": "Merge pull request #27 from tier4/feat/component-container-reentrant-support\n\nfeat: add reentrant callback group support to component_container_callback_isolated"
+    },
+    {
+      "sha": "7af57d3ffe8b8221061a20f4899ce502c6645e22",
+      "author": "atsushi yano",
+      "date": "2026-01-25T10:17:36Z",
+      "message": "Merge pull request #29 from tier4/docs/add-adoption-notes\n\ndocs: add notes on adoption section to README"
+    },
+    {
+      "sha": "89c23343fe8823980bbb44b02e032a995b05deb6",
+      "author": "atsushi421",
+      "date": "2026-01-25T10:16:26Z",
+      "message": "fix"
+    },
+    {
+      "sha": "bcad3b91c59522eeafdf3d3c9ea8f04da59b9187",
+      "author": "atsushi421",
+      "date": "2026-01-25T10:13:18Z",
+      "message": "Add notes on adoption section to README\n\nDocument potential concurrency issues when migrating from\nSingleThreadedExecutor and considerations for real-time\nscheduling policies (SCHED_FIFO, SCHED_DEADLINE)."
+    },
+    {
+      "sha": "e45460df4e488155e6baabd006fe633b16ff1cc1",
+      "author": "atsushi421",
+      "date": "2026-01-25T08:49:47Z",
+      "message": "Merge remote-tracking branch 'origin' into feat/component-container-reentrant-support"
+    },
+    {
+      "sha": "62518b849b2102ddec3b49bfbcffbe0f4b2758fc",
+      "author": "atsushi yano",
+      "date": "2026-01-25T08:49:31Z",
+      "message": "Merge pull request #28 from tier4/atsushi421-patch-1\n\nAdd .vscode/ to .gitignore"
+    },
+    {
+      "sha": "cddee2ce057c95ded10cf65abe0ccc6c46a5a249",
+      "author": "atsushi yano",
+      "date": "2026-01-25T08:48:58Z",
+      "message": "Add .vscode/ to .gitignore"
+    },
+    {
+      "sha": "1af8d6f5df4f1dc9b02055771f542682a363ec2c",
+      "author": "atsushi421",
+      "date": "2026-01-25T08:47:29Z",
+      "message": "feat: add reentrant callback group support to component_container_callback_isolated\n\nAdd support for reentrant callback groups in ComponentManagerCallbackIsolated,\nmatching the functionality already present in CallbackIsolatedExecutor (PR #21).\n\n- Use MultiThreadedExecutorInternal for reentrant callback groups with\n  configurable parallelism (default 4 threads)\n- Use SingleThreadedExecutor for mutually exclusive callback groups\n- Unify ExecutorWrapper to use std::shared_ptr<rclcpp::Executor> instead of\n  separate executor types\n- Update CMakeLists.txt to include multi_threaded_executor_internal.cpp and\n  required include directories"
+    },
+    {
+      "sha": "5205625d40ec3a129142255b9b117540557254a3",
+      "author": "atsushi yano",
+      "date": "2026-01-25T08:19:23Z",
+      "message": "Merge pull request #21 from tier4/reentrant-parallelism\n\nfeat: reentrant callback group"
+    },
+    {
+      "sha": "8877093bb787bb78db34cac7c53f962ef1648845",
+      "author": "Takahiro Ishikawa-Aso",
+      "date": "2026-01-24T05:59:42Z",
+      "message": "Merge branch 'main' into reentrant-parallelism"
+    },
+    {
+      "sha": "20e951019bf586891f50659ffc55566ad72cd54f",
+      "author": "Takahiro Ishikawa-Aso",
+      "date": "2026-01-24T05:43:09Z",
+      "message": "Merge pull request #22 from tier4/refactor/isolated-thread-context\n\nfeat(cie_thread_configurator): spawn_cie_thread for non-ros2 thread"
+    },
+    {
+      "sha": "f02a6bcd3e435c139ede11456b27e9f31091539a",
+      "author": "Takahiro Ishikawa-Aso",
+      "date": "2026-01-24T05:37:55Z",
+      "message": "Merge pull request #24 from tier4/fix/skip-non-auto-added-callback-groups\n\nfix: skip callback groups not automatically added to executor"
+    },
+    {
+      "sha": "ed3473bac6f39ba65b3cbd3b28023d3576f84529",
+      "author": "Takahiro Ishikawa-Aso",
+      "date": "2026-01-24T05:33:59Z",
+      "message": "Update callback_isolated_executor/src/multi_threaded_executor_internal.cpp\n\nCo-authored-by: atsushi yano <55824710+atsushi421@users.noreply.github.com>"
+    },
+    {
+      "sha": "625f07ff68fac953e4edadb283fb11db5ac7c174",
+      "author": "atsushi yano",
+      "date": "2026-01-19T19:26:29Z",
+      "message": "Merge branch 'main' into fix/skip-non-auto-added-callback-groups"
+    },
+    {
+      "sha": "eb0e5eed52ef9a9d0b6c395dc4d1846ce7736014",
+      "author": "atsushi yano",
+      "date": "2026-01-19T10:07:15Z",
+      "message": "Merge branch 'main' into reentrant-parallelism"
+    },
+    {
+      "sha": "74ec37d1a232c4f49b894c2a1384473268ead5c7",
+      "author": "atsushi yano",
+      "date": "2026-01-19T10:06:22Z",
+      "message": "Merge branch 'main' into refactor/isolated-thread-context"
+    },
+    {
+      "sha": "b645bbcc64d93a7ed81c6a3b88a7878a3116f69e",
+      "author": "atsushi yano",
+      "date": "2026-01-19T10:06:12Z",
+      "message": "Merge pull request #25 from tier4/ci/add-merge-install-option\n\nci: add parallel-workers and merge-install options to colcon build"
+    },
+    {
+      "sha": "583b796c03a713185d7238c3816919dcafb1d327",
+      "author": "atsushi421",
+      "date": "2026-01-19T10:05:28Z",
+      "message": "ci: add parallel-workers and merge-install options to colcon build"
+    },
+    {
+      "sha": "34bdcbac507bd9ae9bd33221281f88b0b01fe183",
+      "author": "atsushi421",
+      "date": "2026-01-19T10:03:37Z",
+      "message": "ci: add parallel-workers and merge-install options to colcon build\n\nImprove CI stability by limiting parallel workers and using merge-install."
+    },
+    {
+      "sha": "62c3a32dffa0b90d3c4ad07aacb067c69e6286ef",
+      "author": "atsushi yano",
+      "date": "2026-01-19T09:53:56Z",
+      "message": "Merge pull request #23 from tier4/fix-package-xml\n\nfix dependency missing"
+    },
+    {
+      "sha": "201ccdbcdc1baad28d165c3ee9508b1ad4844f37",
+      "author": "atsushi421",
+      "date": "2026-01-19T01:30:17Z",
+      "message": "rename"
+    },
+    {
+      "sha": "27fedcc1721adeda34c3ba75fae02ba45bb8c819",
+      "author": "atsushi421",
+      "date": "2026-01-17T18:49:45Z",
+      "message": "fix: skip callback groups not automatically added to executor\n\nAdd check for automatically_add_to_executor_with_node() to avoid\nprocessing callback groups that should not be managed by the executor."
+    },
+    {
+      "sha": "0a710b9f4e1f23f10ce1f8b2f01f64e5445c3e4a",
+      "author": "sykwer",
+      "date": "2026-01-16T21:52:06Z",
+      "message": "fix\n\nSigned-off-by: sykwer <sykwer@gmail.com>"
+    },
+    {
+      "sha": "49609c6a8f22025e4ea80ba0e89e66458b3c7439",
+      "author": "Takahiro Ishikawa-Aso",
+      "date": "2026-01-16T08:09:30Z",
+      "message": "Update cie_sample_application/include/cie_sample_application/reentrant_node.hpp\n\nCo-authored-by: Copilot <175728472+Copilot@users.noreply.github.com>"
+    },
+    {
+      "sha": "240849c36505b77f29f731c77bde69f7e370a568",
+      "author": "Takahiro Ishikawa-Aso",
+      "date": "2026-01-16T08:07:57Z",
+      "message": "Update cie_sample_application/include/cie_sample_application/reentrant_node.hpp\n\nCo-authored-by: Copilot <175728472+Copilot@users.noreply.github.com>"
+    },
+    {
+      "sha": "cc54e9d3c3db73c6b5ee64b6499455db87357bc7",
+      "author": "sykwer",
+      "date": "2025-12-29T11:16:59Z",
+      "message": "fix dependency missing\n\nSigned-off-by: sykwer <sykwer@gmail.com>"
+    },
+    {
+      "sha": "562fdea0dc07d39623988df46ab572c5aa67c854",
+      "author": "atsushi421",
+      "date": "2025-12-24T18:21:29Z",
+      "message": "fix: for backward compatibility"
+    },
+    {
+      "sha": "5777eb1213b91f9ca86a3fbd580cbcc472e56952",
+      "author": "atsushi421",
+      "date": "2025-12-24T10:02:15Z",
+      "message": "docs: update README"
+    },
+    {
+      "sha": "6942e4b23ff4872447c25e515397379ce711612c",
+      "author": "atsushi421",
+      "date": "2025-12-24T09:55:37Z",
+      "message": "feat: NonRosThreadInfo"
+    },
+    {
+      "sha": "9570c1b040ef701470174b4dd8b340cf44d70f95",
+      "author": "atsushi421",
+      "date": "2025-12-24T04:38:13Z",
+      "message": "fix"
+    },
+    {
+      "sha": "c30409d2ee49509b369c6e927ac73b932e499771",
+      "author": "atsushi421",
+      "date": "2025-12-24T04:36:21Z",
+      "message": "fix"
+    },
+    {
+      "sha": "f2af6000d8788fa7cd7456d6f2ac5e25ccff0018",
+      "author": "atsushi421",
+      "date": "2025-12-24T04:12:36Z",
+      "message": "fix"
+    },
+    {
+      "sha": "515d996e435dc46b5ad565793fd02ec4eb31f30b",
+      "author": "atsushi421",
+      "date": "2025-12-24T04:10:39Z",
+      "message": "fix"
+    },
+    {
+      "sha": "95d6cbbe6828de11a9774d848c32ee9c18927ab3",
+      "author": "atsushi421",
+      "date": "2025-12-24T04:08:49Z",
+      "message": "test: add sample_non_ros_process"
+    },
+    {
+      "sha": "37d33872fe21bd36459024888bddd65f587b318c",
+      "author": "atsushi421",
+      "date": "2025-12-24T03:49:17Z",
+      "message": "refactor(cie_thread_configurator): simplify spawn_cie_thread with isolated rclcpp context\n\nRemove node dependency from spawn_cie_thread function and create an isolated\nrclcpp context within each spawned thread. This change allows threads to be\nspawned without requiring the caller to manage ROS node dependencies, while\nmaintaining callback group registration capabilities through autonomous context\ninitialization and shutdown.\n\nThe implementation:\n- Initializes a dedicated rclcpp Context with auto logging disabled\n- Creates a temporary node for publishing callback group information\n- Properly shuts down the context after publishing\n- Executes the user-provided function with forwarded arguments\n- Simplifies the API by removing node parameter requirements\n\nUpdate sample application to demonstrate usage with a non-ROS worker thread\nthat leverages the simplified spawn_cie_thread API."
+    },
+    {
+      "sha": "16eca5ae9a2d9f8c4815f7945e5b3a4b4b2f01eb",
+      "author": "sykwer",
+      "date": "2025-12-22T10:14:51Z",
+      "message": "fix\n\nSigned-off-by: sykwer <sykwer@gmail.com>"
+    },
+    {
+      "sha": "43e22079c27a144179f3888d6981358b8f1cf27c",
+      "author": "sykwer",
+      "date": "2025-12-22T09:46:00Z",
+      "message": "fix\n\nSigned-off-by: sykwer <sykwer@gmail.com>"
+    },
+    {
+      "sha": "f747b3cf0574c97aa237df86ccb0c8cbd233f2af",
+      "author": "sykwer",
+      "date": "2025-12-22T09:19:36Z",
+      "message": "fix\n\nSigned-off-by: sykwer <sykwer@gmail.com>"
+    },
+    {
+      "sha": "f6b48668ff0bedde0eb13619f58a5a48c6d7d78a",
+      "author": "sykwer",
+      "date": "2025-12-22T09:15:59Z",
+      "message": "deal with reentrant\n\nSigned-off-by: sykwer <sykwer@gmail.com>"
+    },
+    {
+      "sha": "09e6a4c0f2eecf74489c971656b1c8bb40842961",
+      "author": "Takahiro Ishikawa-Aso",
+      "date": "2025-11-12T08:22:05Z",
+      "message": "Merge pull request #20 from tier4/expt-yano\n\nfix: dirty"
+    },
+    {
+      "sha": "83132c19611135edd70813c29058931919f8402c",
+      "author": "atsushi421",
+      "date": "2025-11-12T01:12:21Z",
+      "message": "fix"
+    },
+    {
+      "sha": "0c064140b7eb154ba4de7c4052a23f1137dc0901",
+      "author": "atsushi421",
+      "date": "2025-11-11T03:52:44Z",
+      "message": "fix: dirty"
+    },
+    {
+      "sha": "d9a29f2d5063339e83f6116b682fd7432f746944",
+      "author": "atsushi yano",
+      "date": "2025-11-09T15:04:35Z",
+      "message": "Merge pull request #19 from tier4/update_readme\n\ndocs: update README"
+    },
+    {
+      "sha": "2ae0bea1e074f73c35ceddcee54fe56055081559",
+      "author": "atsushi421",
+      "date": "2025-11-09T14:59:53Z",
+      "message": "docs: update README"
+    },
+    {
+      "sha": "87955de8feb83333ff6fa318d0128f96e36eba39",
+      "author": "atsushi yano",
+      "date": "2025-11-09T13:50:23Z",
+      "message": "Merge pull request #14 from tier4/validation_hardware\n\nfeat: validation of hardware information"
+    },
+    {
+      "sha": "bf4426810a9f3552b086aac62382b66921e1b4f6",
+      "author": "atsushi yano",
+      "date": "2025-11-09T13:49:52Z",
+      "message": "Merge pull request #17 from tier4/fix/skip-deadline-prompt-when-no-config\n\nfix: skip deadline prompt when no deadline configs exist"
+    },
+    {
+      "sha": "75e94f33afd6531870a3d171998c9ec9f567ecfd",
+      "author": "atsushi yano",
+      "date": "2025-11-09T13:49:18Z",
+      "message": "Merge pull request #16 from tier4/fix_bug\n\nfix: probability of use-after-free"
+    },
+    {
+      "sha": "e71ef83b6678b0151751f26eb454abb5f36f062b",
+      "author": "atsushi yano",
+      "date": "2025-11-09T13:48:50Z",
+      "message": "Merge pull request #15 from tier4/remove_waitable_str\n\nfix: remove redundant `@Waitable`  from callback_group_id"
+    },
+    {
+      "sha": "a5f69a49003d21e64cf76d793f65e2a16ccb5b91",
+      "author": "atsushi421",
+      "date": "2025-11-06T08:55:57Z",
+      "message": "fix"
+    },
+    {
+      "sha": "00367e895f2b5f131d70f9f397a594cdf0e8fe75",
+      "author": "atsushi421",
+      "date": "2025-11-06T02:16:40Z",
+      "message": "fix: skip deadline prompt when no deadline configs exist"
+    },
+    {
+      "sha": "1346b85cc63048ab7e930da46f3db75f07fad5a5",
+      "author": "atsushi421",
+      "date": "2025-11-04T23:13:44Z",
+      "message": "fix: probability of use-after-free\n\nSigned-off-by: atsushi421 <atsushi.yano.2@tier4.jp>"
+    },
+    {
+      "sha": "8258ce41e891ece303e8291ff09fc122204e957f",
+      "author": "atsushi421",
+      "date": "2025-10-23T20:03:00Z",
+      "message": "fix: remove redundant  from callback_group_id\n\nSigned-off-by: atsushi421 <atsushi.yano.2@tier4.jp>"
+    },
+    {
+      "sha": "37fce24beb565a914722202c5e27ab1b1a4f3a9d",
+      "author": "atsushi421",
+      "date": "2025-10-23T08:08:54Z",
+      "message": "fix"
+    },
+    {
+      "sha": "be28816f0037c09ca08492c3ab88f7e1862bcfd6",
+      "author": "atsushi421",
+      "date": "2025-10-23T08:05:23Z",
+      "message": "refactor"
+    },
+    {
+      "sha": "6503d68c59526b0f2a6a7610b0063ea176ceb9cb",
+      "author": "atsushi421",
+      "date": "2025-10-23T07:57:12Z",
+      "message": "refactor"
+    },
+    {
+      "sha": "74b06df42a0b6982c035f60c28276eaf6fd19cf9",
+      "author": "atsushi421",
+      "date": "2025-10-23T07:46:09Z",
+      "message": "fix"
+    },
+    {
+      "sha": "08e79ec26fc3031ea1712258f552ec48542dedc9",
+      "author": "atsushi421",
+      "date": "2025-10-23T07:33:33Z",
+      "message": "feat: validation of hardware information\n\nSigned-off-by: atsushi421 <atsushi.yano.2@tier4.jp>"
+    },
+    {
+      "sha": "1df3b2b4761b43ddfdd3ac7f1262c556a86898f7",
+      "author": "Takahiro Ishikawa-Aso",
+      "date": "2025-09-29T22:48:29Z",
+      "message": "Merge pull request #13 from tier4/cie-extends-executor\n\nfix: CIE extends rclcpp::Executor"
+    },
+    {
+      "sha": "8abcb37e1766066ba5529c8abc783f97022eef83",
+      "author": "sykwer",
+      "date": "2025-09-29T22:11:09Z",
+      "message": "fix\n\nSigned-off-by: sykwer <sykwer@gmail.com>"
+    },
+    {
+      "sha": "064661f232d0bd4b6c90c459c99040661c92b5a7",
+      "author": "sykwer",
+      "date": "2025-09-29T22:06:27Z",
+      "message": "fix: CIE extends rclcpp::Executor\n\nSigned-off-by: sykwer <sykwer@gmail.com>"
+    },
+    {
+      "sha": "461daa3639281446c8a4c9c048b895a798d64f16",
+      "author": "Takahiro Ishikawa-Aso",
+      "date": "2025-09-29T17:44:13Z",
+      "message": "Merge pull request #12 from tier4/sykwer-patch-1\n\nUpdate README.md"
+    },
+    {
+      "sha": "08649a0fb8a166234066fc604103d69d9ce89558",
+      "author": "Takahiro Ishikawa-Aso",
+      "date": "2025-09-29T17:42:40Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "a3b0336ecef566dd8703061d7b1385b7b859d5e8",
+      "author": "Takahiro Ishikawa-Aso",
+      "date": "2025-09-29T17:30:39Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "a997217e5995738d40f71970151fa830c3d8cc44",
+      "author": "Takahiro Ishikawa-Aso",
+      "date": "2025-09-29T17:28:46Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "311a35d7281544edebfb38d2d6efd9eccba691e9",
+      "author": "Takahiro Ishikawa-Aso",
+      "date": "2025-09-24T17:44:50Z",
+      "message": "Merge pull request #11 from Koichi98/patch-1\n\nUpdate README.md"
+    },
+    {
+      "sha": "6bc3c2357f61da954e59c1d084adf9c19a5ed661",
+      "author": "Koichi Imai",
+      "date": "2025-09-19T05:31:06Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "82634276858978be73e4871f78ee8d1c0a6087a7",
+      "author": "Takahiro Ishikawa-Aso",
+      "date": "2025-09-16T09:04:39Z",
+      "message": "Merge pull request #10 from tier4/fix-pacakge-xml\n\nFix package.xml in each package"
+    },
+    {
+      "sha": "aee1cc2ae209c612acd377f66ef6388a6e6dc49f",
+      "author": "Takahiro Ishikawa-Aso",
+      "date": "2025-09-16T09:00:08Z",
+      "message": "fix package.xml in each package\n\nSigned-off-by: Takahiro Ishikawa-Aso <sykwer@gmail.com>"
+    },
+    {
+      "sha": "4c5afc2c03d33b68b747a745b2cdd6f696e8fcb5",
+      "author": "Takahiro Ishikawa-Aso",
+      "date": "2025-09-09T05:40:51Z",
+      "message": "Merge pull request #9 from tier4/sykwer-patch-1\n\nUpdate README.md"
+    },
+    {
+      "sha": "5ded4fbc39db7c1a1eb778fe28f123617f333a39",
+      "author": "Takahiro Ishikawa-Aso",
+      "date": "2025-09-09T05:39:41Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "472fe4f72a17b15b7bb5608562874bfd813f974f",
+      "author": "Takahiro Ishikawa-Aso",
+      "date": "2025-08-25T21:31:56Z",
+      "message": "Merge pull request #8 from tier4/sykwer-patch-1\n\nUpdate README.md"
+    },
+    {
+      "sha": "0d80cbb0598be99c0e8e7d800b31112fb8ccd147",
+      "author": "Takahiro Ishikawa-Aso",
+      "date": "2025-08-25T21:31:17Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "b28cbd33248ca1f9263c785e8c42dcac720f5e60",
+      "author": "Takahiro Ishikawa-Aso",
+      "date": "2025-07-07T09:40:12Z",
+      "message": "Merge pull request #7 from tier4/fix-filename\n\nfix file name"
+    },
+    {
+      "sha": "47c776f99f656cdaff09d7c4fd95d725189b74d2",
+      "author": "sykwer",
+      "date": "2025-07-07T06:26:31Z",
+      "message": "fix file name\n\nSigned-off-by: sykwer <sykwer@gmail.com>"
+    },
+    {
+      "sha": "647e453e83ece96149d742f6828ac48b9ca5acf7",
+      "author": "Takahiro Ishikawa-Aso",
+      "date": "2025-06-30T19:13:14Z",
+      "message": "Merge pull request #5 from tier4/build_and_test\n\ntest: add build and test workflow"
+    },
+    {
+      "sha": "55b1c15c221b0692157fdfce00a0aae0d57dd27d",
+      "author": "atsushi421",
+      "date": "2025-06-30T19:04:32Z",
+      "message": "fix"
+    },
+    {
+      "sha": "e3f7ba5e047ceb8d4bdbfb9d41529fc2f1031f87",
+      "author": "atsushi421",
+      "date": "2025-06-30T18:58:12Z",
+      "message": "fix"
+    },
+    {
+      "sha": "0125de5fc2efd354ef2ccd5b497bc0e80aa968a1",
+      "author": "atsushi421",
+      "date": "2025-06-30T18:47:48Z",
+      "message": "dummy"
+    },
+    {
+      "sha": "aa0858fc3892e271d6d88ebb2d6e3d88100bb56e",
+      "author": "atsushi421",
+      "date": "2025-06-30T18:44:40Z",
+      "message": "test: add build and test workflow\n\nSigned-off-by: atsushi421 <atsushi.yano.2@tier4.jp>"
+    },
+    {
+      "sha": "286329db177c903943c9fd734339fad97ed6a0a8",
+      "author": "Takahiro Ishikawa-Aso",
+      "date": "2025-06-30T17:55:53Z",
+      "message": "Merge pull request #4 from tier4/add_workflows\n\nstyle: apply clang-format & add pre-commit workflow"
+    },
+    {
+      "sha": "ba6bde717ba02ae47a5215fe50e63d82cc9a6cee",
+      "author": "atsushi421",
+      "date": "2025-06-30T16:20:58Z",
+      "message": "fix"
+    },
+    {
+      "sha": "af92b5cbcc35c0d0be103eaf6c181251aa8dfdd1",
+      "author": "atsushi421",
+      "date": "2025-06-30T16:18:54Z",
+      "message": "chore: add pre-commit"
+    },
+    {
+      "sha": "1a61ccfe637c306cef13e23b0fbf14c362c4f352",
+      "author": "atsushi421",
+      "date": "2025-06-30T16:18:04Z",
+      "message": "Merge remote-tracking branch 'origin' into add_workflows"
+    },
+    {
+      "sha": "a1cd8ce2d4657e42cab25546d2fefdc41cd05b98",
+      "author": "atsushi yano",
+      "date": "2025-06-30T16:17:29Z",
+      "message": "Merge pull request #3 from tier4/auto_assign\n\nchore: add auto-assign"
+    },
+    {
+      "sha": "53fa8aab065c072921a7c18c8406a4b26e7ee77a",
+      "author": "atsushi421",
+      "date": "2025-06-30T16:17:04Z",
+      "message": "chore: add auto-assign"
+    },
+    {
+      "sha": "a649905e75dea0fc45311cddb7c7be81739cf1fb",
+      "author": "atsushi421",
+      "date": "2025-06-30T16:12:39Z",
+      "message": "Merge remote-tracking branch 'origin' into add_workflows"
+    },
+    {
+      "sha": "055cf09d08c76c9eabe27f22085646d2ba9c6416",
+      "author": "atsushi yano",
+      "date": "2025-06-30T16:10:49Z",
+      "message": "Merge pull request #2 from tier4/pr_template\n\nchore: add PR template"
+    },
+    {
+      "sha": "3d8e5abbd2bd0690068f52a65b89287a256380ff",
+      "author": "atsushi421",
+      "date": "2025-06-30T16:10:16Z",
+      "message": "chore: add PR template\n\nSigned-off-by: atsushi421 <atsushi.yano.2@tier4.jp>"
+    },
+    {
+      "sha": "a5b88051853db62c7e3fcd16c5c4768c3c7e6c90",
+      "author": "atsushi421",
+      "date": "2025-06-30T16:07:56Z",
+      "message": "style: apply clang-format"
+    },
+    {
+      "sha": "7aa2f105a3c9542b1395530788700e9d8cd2a70a",
+      "author": "atsushi yano",
+      "date": "2025-06-30T15:03:06Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "bd6efd38555d8d123935093ff73f5d6163e70493",
+      "author": "atsushi yano",
+      "date": "2025-06-30T15:02:04Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "fd58c4819c5004eb8027340ef209dd20fff8a40b",
+      "author": "Takahiro Ishikawa-Aso",
+      "date": "2025-06-20T06:39:29Z",
+      "message": "Merge pull request #1 from tier4/update-readme\n\nUpdate README.md"
+    },
+    {
+      "sha": "e75032befa9c52b73f7e0dbf30d2633dde85788c",
+      "author": "Takahiro Ishikawa-Aso",
+      "date": "2025-06-20T06:39:17Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "ae9410bbb0c668671af2eddb0d43425c3d2eacce",
+      "author": "Takahiro Ishikawa-Aso",
+      "date": "2025-06-20T03:44:20Z",
+      "message": "change executor name (#15)\n\nSigned-off-by: sykwer <sykwer@gmail.com>"
+    },
+    {
+      "sha": "0235d2b1d5720096efe86b466aa30af364fbef33",
+      "author": "Takahiro Ishikawa-Aso",
+      "date": "2025-06-20T03:36:37Z",
+      "message": "change include dir (#14)\n\nSigned-off-by: sykwer <sykwer@gmail.com>"
+    },
+    {
+      "sha": "0d79d7ce01dfef25e2b541ad93fe9574f5873e08",
+      "author": "Takahiro Ishikawa-Aso",
+      "date": "2025-06-20T02:25:58Z",
+      "message": "change package name (#13)\n\n* change package name\n\nSigned-off-by: sykwer <sykwer@gmail.com>\n\n* change dir name\n\nSigned-off-by: sykwer <sykwer@gmail.com>\n\n* change package name\n\nSigned-off-by: sykwer <sykwer@gmail.com>\n\n* rename dir\n\nSigned-off-by: sykwer <sykwer@gmail.com>\n\n* change package name\n\nSigned-off-by: sykwer <sykwer@gmail.com>\n\n* rename dir\n\nSigned-off-by: sykwer <sykwer@gmail.com>\n\n* change package name\n\nSigned-off-by: sykwer <sykwer@gmail.com>\n\n* rename dir\n\nSigned-off-by: sykwer <sykwer@gmail.com>\n\n---------\n\nSigned-off-by: sykwer <sykwer@gmail.com>"
+    },
+    {
+      "sha": "dd20bf3ae919dde6f3938988a293fedbfcaccac2",
+      "author": "Takahiro Ishikawa-Aso",
+      "date": "2025-06-18T10:45:18Z",
+      "message": "Update README.md (#12)"
+    },
+    {
+      "sha": "3835ea2ae80abd5b212f26379bb79f2233d3ac51",
+      "author": "Takahiro Ishikawa-Aso",
+      "date": "2025-06-18T07:49:33Z",
+      "message": "fix readme (#11)\n\nSigned-off-by: sykwer <sykwer@gmail.com>"
+    },
+    {
+      "sha": "0a29c57510e1dde80d97772869f435eebaef63ff",
+      "author": "Takahiro Ishikawa-Aso",
+      "date": "2025-06-18T07:47:26Z",
+      "message": "revert (#10)\n\n* revert README\n\nSigned-off-by: sykwer <sykwer@gmail.com>\n\n* revert\n\nSigned-off-by: sykwer <sykwer@gmail.com>\n\n* revert\n\nSigned-off-by: sykwer <sykwer@gmail.com>\n\n---------\n\nSigned-off-by: sykwer <sykwer@gmail.com>"
+    },
+    {
+      "sha": "89652625ad3b693ec1010a49b624f6aedfc37ba1",
+      "author": "Takahiro Ishikawa-Aso",
+      "date": "2025-06-18T05:29:01Z",
+      "message": "fix duplicated node name listed (#9)\n\nSigned-off-by: sykwer <sykwer@gmail.com>"
+    },
+    {
+      "sha": "f1df8bf6b0273f4ac30625c679cdaa520eac0541",
+      "author": "Takahiro Ishikawa-Aso",
+      "date": "2025-06-17T05:47:03Z",
+      "message": "fix app launch (#8)\n\nSigned-off-by: sykwer <sykwer@gmail.com>"
+    },
+    {
+      "sha": "38b7a11b27e276672c0dcf0c93539dc76fa648db",
+      "author": "Ching-Hao Liu",
+      "date": "2025-01-07T06:01:26Z",
+      "message": "Revert \"Add log for value of unapplied_num_\"\n\nThis reverts commit 4e77598798baf481340ceda76581fc662810dd2d."
+    },
+    {
+      "sha": "4e77598798baf481340ceda76581fc662810dd2d",
+      "author": "Ching-Hao Liu",
+      "date": "2025-01-07T05:54:55Z",
+      "message": "Add log for value of unapplied_num_"
+    },
+    {
+      "sha": "816382ed4cb30fcff9f39805359cb126ae774718",
+      "author": "Chih-Hung Tseng",
+      "date": "2024-08-18T01:21:44Z",
+      "message": "Add missing namespace brace (#6)\n\n* Add missing namespace brace\r\n\r\nAdd missing namespace brace and return statement to make the build process succesful.\r\n\r\n* Explicitly shut down the node\r\n\r\n---------\r\n\r\nCo-authored-by: chtseng <chtseng@itri.org.tw>"
+    },
+    {
+      "sha": "c42d26efe7e9f38bf1f33e627e1752816012f0c9",
+      "author": "reddy428",
+      "date": "2024-06-24T08:00:53Z",
+      "message": "readme"
+    },
+    {
+      "sha": "02a270f5b7d352c48f1971a4b2e6ae01d08196d7",
+      "author": "reddy428",
+      "date": "2024-06-24T07:42:49Z",
+      "message": "addNewExecutors"
+    },
+    {
+      "sha": "88a039f76217ded9296052a59bb8bc0aaa2bcaff",
+      "author": "reddy428",
+      "date": "2024-05-31T09:00:51Z",
+      "message": "add cmake function"
+    },
+    {
+      "sha": "187af74112847527d35525bcec6c2c29660cee78",
+      "author": "reddy428",
+      "date": "2024-05-31T08:50:25Z",
+      "message": "add cmake function"
+    },
+    {
+      "sha": "038dd021230500bfced6acf64f69acfa00e3c1d7",
+      "author": "sykwer",
+      "date": "2024-05-17T03:01:57Z",
+      "message": "Revert \"add cmake function\"\n\nThis reverts commit 512fd65bff0b61204e577240cbe56223364e85ce."
+    },
+    {
+      "sha": "512fd65bff0b61204e577240cbe56223364e85ce",
+      "author": "reddy428",
+      "date": "2024-05-17T02:48:24Z",
+      "message": "add cmake function"
+    },
+    {
+      "sha": "3aba04444917c2c5a7ae6ab17a9332b9b45883db",
+      "author": "Takahiro Ishikawa",
+      "date": "2024-05-15T03:13:15Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "bf1800a129d9d7913e3264790b686ec3cf37a14b",
+      "author": "Takahiro Ishikawa",
+      "date": "2024-05-15T02:55:09Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "405be7859a90d91f90955fe6ada7da7eea7d61e7",
+      "author": "Takahiro Ishikawa",
+      "date": "2024-05-14T08:02:37Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "bca0783d2a19b32d1ae80acda61f802aa14cef0f",
+      "author": "Takahiro Ishikawa",
+      "date": "2024-05-14T07:53:08Z",
+      "message": "Update package.xml"
+    },
+    {
+      "sha": "9246315fa9359fc0bb48df7057523473f2b423b1",
+      "author": "sykwer",
+      "date": "2024-05-13T02:39:49Z",
+      "message": "delete unnecessary readme"
+    },
+    {
+      "sha": "201451c4bd412177824b68b378ec00789da63c52",
+      "author": "Takahiro Ishikawa",
+      "date": "2024-05-13T02:38:34Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "6fdc7343acff098618c2364d7baccf1f7d8c4bdd",
+      "author": "Takahiro Ishikawa",
+      "date": "2024-05-13T02:35:34Z",
+      "message": "Create README.md"
+    },
+    {
+      "sha": "9dc7f57158a77340c2c90adf1830da0aa9e7ae3e",
+      "author": "sykwer",
+      "date": "2024-05-13T02:21:44Z",
+      "message": "mv launch files"
+    },
+    {
+      "sha": "e165692b856f735d707d0af61e6439962ab9a579",
+      "author": "sykwer",
+      "date": "2024-05-12T20:51:38Z",
+      "message": "add sample node package"
+    },
+    {
+      "sha": "9a4a5f380c2270d5523d0e6f13db17ba3d9a8626",
+      "author": "Takahiro Ishikawa",
+      "date": "2024-05-12T12:45:05Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "d6d33be9536ea6c454d551e92a9d08273641f246",
+      "author": "Takahiro Ishikawa",
+      "date": "2024-05-12T04:16:42Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "c6a3ddc946c87f728576929a49c459f0c57e0a86",
+      "author": "Takahiro Ishikawa",
+      "date": "2024-05-10T09:53:42Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "3513b2e1cd0a3c1b20a19e6bf34a8c023280c04a",
+      "author": "Takahiro Ishikawa",
+      "date": "2024-05-10T09:51:47Z",
+      "message": "Create README.md"
+    },
+    {
+      "sha": "8ee6e84ab06a1f0f47cf428f0efab962c10c6c36",
+      "author": "Takahiro Ishikawa",
+      "date": "2024-05-10T02:43:03Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "0fdf55fcd22082a0fe286a675d78796071ed0af3",
+      "author": "sykwer",
+      "date": "2024-04-30T20:28:11Z",
+      "message": "tweak"
+    },
+    {
+      "sha": "5444675c858f52eab9f31aca50e2d822ac130053",
+      "author": "sykwer",
+      "date": "2024-04-25T13:50:40Z",
+      "message": "fix yaml format"
+    },
+    {
+      "sha": "5e8531b781e225c3d305f2bad354437d59dc804e",
+      "author": "sykwer",
+      "date": "2024-04-25T13:49:45Z",
+      "message": "add gitignore"
+    },
+    {
+      "sha": "0f615bf76f567d8cf6373c26ad0b2bcc8ea8fa6b",
+      "author": "Takahiro Ishikawa",
+      "date": "2024-04-23T07:23:10Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "a5195402dbd20d3c96b85fd90948a56c136414aa",
+      "author": "Takahiro Ishikawa",
+      "date": "2024-04-23T07:20:16Z",
+      "message": "Create README.md"
+    },
+    {
+      "sha": "45dce5c1866f5844824b35f701d91feda89cbc8b",
+      "author": "sykwer",
+      "date": "2024-04-23T05:41:29Z",
+      "message": "Add ComponentContainer and Executor package"
+    },
+    {
+      "sha": "36bd9fa57ce6272809352f4f5b385b8e547e63ed",
+      "author": "sykwer",
+      "date": "2024-04-22T09:29:20Z",
+      "message": "delayed apply sched deadline"
+    },
+    {
+      "sha": "f87e7a4b94c5221f1b4b0f6e67db7acca460fc97",
+      "author": "atsushi yano",
+      "date": "2024-01-15T07:34:00Z",
+      "message": "fix: bug (#3)"
+    },
+    {
+      "sha": "e410b70a3baa7baf55cab6875c159af37b495851",
+      "author": "atsushi yano",
+      "date": "2024-01-13T09:02:18Z",
+      "message": "fix: minor issues (#2)\n\n* feat: SCHED_DEADLINE policy\r\n\r\n* feat: set_affinity_by_cgroup\r\n\r\n* fix\r\n\r\n* style\r\n\r\n* fix: make priority field optional in SCHED_DEADLINE\r\n\r\n* fix: messages\r\n\r\n* fix: change qos to keep_all()"
+    },
+    {
+      "sha": "0bfc18d8fcafbd9ee7d35796bd104ee18e0f9835",
+      "author": "atsushi yano",
+      "date": "2024-01-03T09:48:44Z",
+      "message": "feat: support SCHED_DEADLINE (#1)\n\n* feat: SCHED_DEADLINE policy\r\n\r\n* feat: set_affinity_by_cgroup\r\n\r\n* fix\r\n\r\n* style"
+    },
+    {
+      "sha": "d5bb5f5b891975b95a33384c78c936b0bcc43503",
+      "author": "sykwer",
+      "date": "2023-12-25T01:53:50Z",
+      "message": "infinite sub queue size"
+    },
+    {
+      "sha": "122af84df6bbbf8c4282c77f6fa00ff8be9cf43a",
+      "author": "Takahiro Ishikawa",
+      "date": "2023-10-13T00:46:20Z",
+      "message": "add func"
+    },
+    {
+      "sha": "236b44c12d7cd15a0eed96e97cc665cbbc24e25a",
+      "author": "Takahiro Ishikawa",
+      "date": "2023-09-20T11:04:02Z",
+      "message": "tweak"
+    },
+    {
+      "sha": "732330302a24a89a693f3472f7f52a9d0e2bda44",
+      "author": "Takahiro Ishikawa",
+      "date": "2023-09-19T06:53:02Z",
+      "message": "impl PrerunNode"
+    },
+    {
+      "sha": "b6e3d5e8f8d126317b5a3363db1fc1b5e6871269",
+      "author": "Takahiro Ishikawa",
+      "date": "2023-09-19T06:14:42Z",
+      "message": "add skelton for PrerunNode"
+    },
+    {
+      "sha": "0826c5b60bf9595cdc03d32c1c6d59c65f80667e",
+      "author": "Takahiro Ishikawa",
+      "date": "2023-09-19T05:35:42Z",
+      "message": "rename"
+    },
+    {
+      "sha": "9b4df653f0638185032bf03fed9114392074a7b2",
+      "author": "Takahiro Ishikawa",
+      "date": "2023-09-19T05:33:10Z",
+      "message": "divide files"
+    },
+    {
+      "sha": "29c634df104964f90aa9acdc886dcfd2ff1922e4",
+      "author": "Takahiro Ishikawa",
+      "date": "2023-09-19T05:22:19Z",
+      "message": "tweak"
+    },
+    {
+      "sha": "c0fd4e6f642b5ea36f8485227bfdacc32f7604e1",
+      "author": "Takahiro Ishikawa",
+      "date": "2023-09-19T03:50:23Z",
+      "message": "add skelton for prerun mode"
+    },
+    {
+      "sha": "3510e96b64a8fa99a86e9fd2f8adebf031fd2325",
+      "author": "Takahiro Ishikawa",
+      "date": "2023-09-19T02:13:51Z",
+      "message": "issue syscalls"
+    },
+    {
+      "sha": "c847b1a98aa6f128f367d5de5f5da57f096a06b9",
+      "author": "Takahiro Ishikawa",
+      "date": "2023-09-18T07:34:06Z",
+      "message": "shutdown when all config applied"
+    },
+    {
+      "sha": "7df0e4d7cf728c9ea355fc0331320aab0532b0c4",
+      "author": "Takahiro Ishikawa",
+      "date": "2023-09-18T06:16:40Z",
+      "message": "impl subscription callback"
+    },
+    {
+      "sha": "d06fcb51fc3b06509c7107d551c7dc4ea0383ee4",
+      "author": "Takahiro Ishikawa",
+      "date": "2023-09-18T05:05:12Z",
+      "message": "load yaml config data onto node"
+    },
+    {
+      "sha": "4f37b958138c9cf8d00bc3a61a45430e0dcabbd7",
+      "author": "Takahiro Ishikawa",
+      "date": "2023-09-15T01:37:33Z",
+      "message": "read yaml config file"
+    },
+    {
+      "sha": "7c7f78e1fcf60551724189ed53eac5d1844d360f",
+      "author": "Takahiro Ishikawa",
+      "date": "2023-09-15T01:03:57Z",
+      "message": "add server node"
+    },
+    {
+      "sha": "14d66cea5dbbd6350c8314f06c429be07db63358",
+      "author": "Takahiro Ishikawa",
+      "date": "2023-09-15T00:34:13Z",
+      "message": "add publish function"
+    },
+    {
+      "sha": "18abd0503747046d23d12397e29f0efec6489a4a",
+      "author": "Takahiro Ishikawa",
+      "date": "2023-09-14T23:08:05Z",
+      "message": "tweak"
+    },
+    {
+      "sha": "59617c2c6bbebd253635c812c1b62747a01f070b",
+      "author": "Takahiro Ishikawa",
+      "date": "2023-09-14T22:42:36Z",
+      "message": "Create LICENSE"
+    },
+    {
+      "sha": "0aafadde982daee184ba862a18eafef37dbd91b2",
+      "author": "Takahiro Ishikawa",
+      "date": "2023-09-14T22:39:06Z",
+      "message": "add ros2_thread_configurator"
+    },
+    {
+      "sha": "b102097d3462e1d7f1420c8a4609c85a0e11034d",
+      "author": "Takahiro Ishikawa",
+      "date": "2023-09-14T15:51:34Z",
+      "message": "add a message type of central role"
+    }
+  ]
+}

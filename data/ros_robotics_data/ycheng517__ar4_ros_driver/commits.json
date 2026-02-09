@@ -1,0 +1,888 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-07T00:46:33Z",
+    "source": "github_rest",
+    "endpoint": "/repos/{owner}/{repo}/commits",
+    "owner": "ycheng517",
+    "repo": "ar4_ros_driver",
+    "per_page": 100
+  },
+  "data": [
+    {
+      "sha": "74be8ad300ddf17c1d65602586acb7a01f7ff449",
+      "author": "Yifei Cheng",
+      "date": "2026-01-03T15:47:12Z",
+      "message": "add warning about DIP switch settings pre vs post ARCS V6.1 (#64)"
+    },
+    {
+      "sha": "e11ee9062f84bb6165b4924b4bd69bb1b9c51436",
+      "author": "se1exin",
+      "date": "2026-01-03T15:21:14Z",
+      "message": "Add support for the different ACS712 models (5A, 20A, 30A) in gripper current sensing (#62)"
+    },
+    {
+      "sha": "1029c6c6a52de4ef8a64b11f76a059b843f8dc94",
+      "author": "Yifei Cheng",
+      "date": "2025-09-06T18:52:51Z",
+      "message": "Update README with installation instructions"
+    },
+    {
+      "sha": "5d26c05e2a58012ad7387d94d7a68c566c9a3616",
+      "author": "Yifei Cheng",
+      "date": "2025-06-09T02:01:57Z",
+      "message": "extend controller timeout in case each joint calibrated separately"
+    },
+    {
+      "sha": "6f574d2d6ffd30690f0217b62e3751afcd9bcc4b",
+      "author": "Yifei Cheng",
+      "date": "2025-06-08T23:39:16Z",
+      "message": "optionally launch moveit_servo"
+    },
+    {
+      "sha": "0639baab29642c47f8b46938843c45382c637cf6",
+      "author": "Yifei Cheng",
+      "date": "2025-06-08T23:37:59Z",
+      "message": "remove unnecessary casting"
+    },
+    {
+      "sha": "cb3f7bc7ac234276cf6dee9c0161a369a33563c3",
+      "author": "Yifei Cheng",
+      "date": "2025-05-14T00:57:12Z",
+      "message": "fix typo"
+    },
+    {
+      "sha": "934fa4faffc4204d203affd043534678ff50d36f",
+      "author": "Yifei Cheng",
+      "date": "2025-05-12T02:32:19Z",
+      "message": "clean up arduino sketch, 0.5 J5 calibration speed"
+    },
+    {
+      "sha": "b6b14f1b376a3a56c5bb3cfe3504a58758758fec",
+      "author": "Yifei Cheng",
+      "date": "2025-05-11T22:19:25Z",
+      "message": "Gripper Overcurrent Protection (#49)\n\n* gripper current sensing\n\n* normalized gripper position\n\n* cant normalize, make open/close same scale as AR gripper\n\n* finetuning\n\n* move thermal protection to separate file\n\n* rename thermal to over current\n\n* fully support overcurrent option\n\n* make min/max servo angle configurable\n\n* use ar4 servo gripper defaults\n\n* polish\n\n* don't read current if overcurrent protection disabled\n\n* clean up and tuning\n\n* add docs, final polish\n\n* final polish\n\n* mention in main readme\n\n* minor polish"
+    },
+    {
+      "sha": "9d55b0e1c979c753c4da7a5df4f44dd109cdcf4d",
+      "author": "Yifei Cheng",
+      "date": "2025-04-27T18:46:38Z",
+      "message": "typo in gripper firmware"
+    },
+    {
+      "sha": "303e9661803ae9e0042f83e0dda97fcceb3aef39",
+      "author": "sniegs",
+      "date": "2025-04-06T02:28:33Z",
+      "message": "feature/adjustable calib sequence (#47)\n\n* Initial comment for testing\n\n* added (UNTESTED) doCalibrationRoutineSequence\n\n* Initial funcional push. Works uncertainly and only in this sequence, changing it the other way might break the robot\n\n* potential fix for moving irrelevant joints back to 'original position'\n\n* functional calibration sequence feature\n\n* update for consistency with upstream\n\n* read calib_sequence from driver.yaml\n\n* cleaning\n\n* added safety check for correct calib_sequence length + cleaning\n\n* reduce delays between calibration motions\n\n* removed redundant print statement, moved calib_seq reading into if statement\n\n* explanation about calibration sequence\n\n* added inputMsg variable for clarity\n\n* wrapped doCalibrationRoutine in doCalibrationRoutineSequence + some cleaning\n\n* minor cleanup\n\n---------\n\nCo-authored-by: Yifei Cheng <ycheng517@gmail.com>"
+    },
+    {
+      "sha": "bd91713ec113ae1487942f066f66a3d3637fda7b",
+      "author": "Yifei Cheng",
+      "date": "2025-03-23T14:52:44Z",
+      "message": "make gripper open position positive and not negative (#48)"
+    },
+    {
+      "sha": "de54b7ffe102f88da7aa08f28b4173002340aab4",
+      "author": "Yifei Cheng",
+      "date": "2025-03-08T19:34:30Z",
+      "message": "reduce spurious e-stops"
+    },
+    {
+      "sha": "ab57436b9f50a0fe61ce73aff9e0f7352599e612",
+      "author": "Yifei Cheng",
+      "date": "2025-03-08T18:37:05Z",
+      "message": "remove unnecessary pilz capabilities in launch file"
+    },
+    {
+      "sha": "cafd34f499417ed5643d63f1dbf90a4064de964b",
+      "author": "Yifei Cheng",
+      "date": "2025-02-25T03:41:29Z",
+      "message": "warn instead of error out when homing fails in calibration (#45)"
+    },
+    {
+      "sha": "c85508eca5f33ca13e41166c91e8a5862ed880bf",
+      "author": "Yifei Cheng",
+      "date": "2025-02-19T22:55:27Z",
+      "message": "mention new projects in Readme (#43)\n\n* update readme, mention new projects\n\n* remove notices\n\n* fix table\n\n* Update README.md"
+    },
+    {
+      "sha": "61523485b1fc9184d3501a663849134e2ef6af2c",
+      "author": "Yifei Cheng",
+      "date": "2025-02-19T14:37:04Z",
+      "message": "Support namespace (#42)\n\n* support setting namespace in other repos\n\n* default namespace value, better gazebo camera angle\n\n* update camera pose"
+    },
+    {
+      "sha": "0965f8b68398dd5d02a4564052e69cd3e9d9873d",
+      "author": "Yifei Cheng",
+      "date": "2025-02-17T02:23:21Z",
+      "message": "make `tf_prefix` work without manual modifications (#41)\n\n* working tf_prefix in demo.launch.py\n\n* working in gazebo\n\n* rename prefix to tf_prefix\n\n* clean up\n\n* clean up"
+    },
+    {
+      "sha": "bf3f77362beba40f6af78ea9f22bc4538f1dc67e",
+      "author": "Yifei Cheng",
+      "date": "2025-02-17T15:12:29Z",
+      "message": "yapf formatting"
+    },
+    {
+      "sha": "c4db251d67d14fe0628b5c9a9143c7b02e95b440",
+      "author": "sniegs",
+      "date": "2025-01-30T13:56:21Z",
+      "message": "Adding tf_prefix to .urdf, .srdf and launch files to humble branch (#37)\n\n* Adding tf_prefix to .urdf, .srdf and launch files\n\n* adding option to prepend gripper links with tf_prefix\n\n* dynamic driver controllers.yaml, updates to demo.launch & driver.launch for using it. added config folder for gazebo with separate controllers.yaml and updated gazebo.launch\n\n* remove commented code, light clean up\n\n---------\n\nCo-authored-by: Yifei Cheng <ycheng517@gmail.com>"
+    },
+    {
+      "sha": "ded16e5f51a5cd2958e365aa2f05e3d631c0be3c",
+      "author": "Yifei Cheng",
+      "date": "2025-01-30T13:58:13Z",
+      "message": "remove mentioning of iron branch"
+    },
+    {
+      "sha": "e7b54b7082d62f876f0b7894a716c73f6f756136",
+      "author": "Yifei Cheng",
+      "date": "2025-01-21T03:37:23Z",
+      "message": "Update README.md to mention humble branch"
+    },
+    {
+      "sha": "8f202f132f672825acf9b54883c41ec49f4e59f7",
+      "author": "Yifei Cheng",
+      "date": "2025-01-21T01:30:56Z",
+      "message": "fix vscode settings"
+    },
+    {
+      "sha": "23e22e9e7c3e0d8d15390bfeb6190558801436d5",
+      "author": "Yifei Cheng",
+      "date": "2025-01-21T01:27:38Z",
+      "message": "update vscode settings to jazzy"
+    },
+    {
+      "sha": "433e16b6be634bfbb317590d78e9e0a29a5a6506",
+      "author": "Yifei Cheng",
+      "date": "2025-01-20T01:47:01Z",
+      "message": "allow_nonzero_velocity_at_trajectory_end to allow servoing"
+    },
+    {
+      "sha": "82e972654d2ff04de1a84dd562f8b80b48b62464",
+      "author": "Yifei Cheng",
+      "date": "2024-12-30T01:19:37Z",
+      "message": "rviz_config_file takes absolute path (#32)"
+    },
+    {
+      "sha": "f43d7d325b5ec4d929f93423b81f143fa25ec6cc",
+      "author": "Yifei Cheng",
+      "date": "2024-12-29T23:17:39Z",
+      "message": "Update README.md to add bounce2 install instructions"
+    },
+    {
+      "sha": "1e7f41bf9ba6d17e1ff53dee695c7b70466f5ed5",
+      "author": "Yifei Cheng",
+      "date": "2024-12-22T16:32:47Z",
+      "message": "Update README.md to install Jazzy and Ubuntu 24.04"
+    },
+    {
+      "sha": "b9e7e4f5539daf818c2ed127d9f4430825c8cbf0",
+      "author": "Yifei Cheng",
+      "date": "2024-12-20T13:29:50Z",
+      "message": "Rename packages to be more specific to Annin Robotics AR4 (#31)\n\n* rename all files\n\n* move files\n\n* rename launch files\n\n* rename a few more files\n\n* gazebo fixes"
+    },
+    {
+      "sha": "a79636dda5b004daf33ba8dbb5f4704f78203c24",
+      "author": "Yifei Cheng",
+      "date": "2024-12-04T17:14:41Z",
+      "message": "fix ROS iron branch name"
+    },
+    {
+      "sha": "59363c3cbf321704290342a902c90dc8ec57d76c",
+      "author": "Yifei Cheng",
+      "date": "2024-12-03T13:32:01Z",
+      "message": "update versions to 3.0"
+    },
+    {
+      "sha": "634ad3544013cf3c100eba481a01a1e7ff2d6474",
+      "author": "Yifei Cheng",
+      "date": "2024-12-03T13:30:13Z",
+      "message": "Upgrade ROS version to Jazzy (#29)\n\n* WIP jazzy support\n\n* WIP switch to modern gazebo\n\n* better gazebo scene, fix some issues\n\n* working in simulation except for gripper\n\n* working gripper\n\n* update deps and rocker command\n\n* update README"
+    },
+    {
+      "sha": "155cea5545de996c09f06521828597a889504e33",
+      "author": "Yifei Cheng",
+      "date": "2024-12-02T00:22:40Z",
+      "message": "improve calibration consistency, pass robot description new way (#30)"
+    },
+    {
+      "sha": "7f42062d0703029513076465bb836b58c17c7d53",
+      "author": "Yifei Cheng",
+      "date": "2024-11-30T17:14:30Z",
+      "message": "Use Velocity-based Position Control and Bounce2 switches by default, add PILZ planner (#28)\n\n* pilz motion planner\n\n* velocity control\n\n* upgrade verions to 2.0\n\n* make estop work with velocity control\n\n* clean up"
+    },
+    {
+      "sha": "1bdf7e0b2fd0af7e5f49f623c6bbe61f9db2a7c6",
+      "author": "Abhijit Majumdar",
+      "date": "2024-11-30T15:31:33Z",
+      "message": "Added support for Estop (#27)\n\n* Added support for Estop\n\n- Disables motors from updating step when Estop is pressed\n- Adds a new function on teensy source to reset Estop from the host and discard any old command\n- MT request returns ES response to the teensy_driver, which caches the estop state\n- Hardware interface resets the estop on activation\n- Hardware interface disables the interface with an error if estop is set during a write operation\n- A reset estop script added as part of ar_hardware_interface package\n- don't re-calibrate after estop reset\n\n---------\n\nCo-authored-by: Abhijit Majumdar <abhijit.g.majumdar.com>\nCo-authored-by: Yifei Cheng <ycheng517@gmail.com>"
+    },
+    {
+      "sha": "eb87c547b92b525268faf3495a6102822e4e948d",
+      "author": "Yifei Cheng",
+      "date": "2024-11-14T23:45:42Z",
+      "message": "change default AR model to MK3 in readme"
+    },
+    {
+      "sha": "a34412b85a73b1b135e38137688aede9b180e7b1",
+      "author": "Yifei Cheng",
+      "date": "2024-11-14T23:44:14Z",
+      "message": "change default model to MK3 (#26)"
+    },
+    {
+      "sha": "88f25dfb60adc04a73783f16638a4b87ed9fb3a2",
+      "author": "sniegs",
+      "date": "2024-11-14T23:41:17Z",
+      "message": "Updated README.md to correctly represent ar_moveit.launch.py (#25)"
+    },
+    {
+      "sha": "7adac71cc0618f37931e14cf7dc31b3d9337b8df",
+      "author": "Yifei Cheng",
+      "date": "2024-11-10T00:18:50Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "04c952251d157071350b10ce8df2a89627bec6d6",
+      "author": "Yifei Cheng",
+      "date": "2024-11-09T17:55:28Z",
+      "message": "use rocker for docker"
+    },
+    {
+      "sha": "019d1b066f79e08312baf70739e4ab5858c0036a",
+      "author": "Yifei Cheng",
+      "date": "2024-11-09T17:25:00Z",
+      "message": "use ompl group in demo.launch.py, remove mongodb warehouse"
+    },
+    {
+      "sha": "2b715ec4d1c3f33a0ddea81674ee5862351288b7",
+      "author": "Yifei Cheng",
+      "date": "2024-11-09T17:10:17Z",
+      "message": "use ompl group in ar_moveit.launch.py"
+    },
+    {
+      "sha": "67e2377935988a3d187c302c4ff6c06bbb178461",
+      "author": "Yifei Cheng",
+      "date": "2024-11-05T00:31:52Z",
+      "message": "use robot parameters for every joint limit"
+    },
+    {
+      "sha": "ba3ef7b932e9d2eab455fac78ef766bb4ccb8768",
+      "author": "Yifei Cheng",
+      "date": "2024-10-06T21:07:45Z",
+      "message": "unify rest encoder positions in firmware"
+    },
+    {
+      "sha": "5cff9c5953ee869d460d79a31d66de9fa19a2c1b",
+      "author": "Yifei Cheng",
+      "date": "2024-10-04T20:46:21Z",
+      "message": "update camera namespace"
+    },
+    {
+      "sha": "72258215b5b6d3d242ee134b13f6e7907e4ed7e7",
+      "author": "Yifei Cheng",
+      "date": "2024-09-30T01:28:08Z",
+      "message": "Unified arduino sketch that works all models (#24)\n\n* unified firmware across all versions of AR4\r\n\r\n* switch to 1 firmware file for all versions of robot\r\n\r\n* undo vscode settings change\r\n\r\n* bug fixes"
+    },
+    {
+      "sha": "cbd5ef4b0914bb656a27ac53ff7b962b47f2505b",
+      "author": "Yifei Cheng",
+      "date": "2024-09-28T18:47:20Z",
+      "message": "impprove reliability of calibration"
+    },
+    {
+      "sha": "af32c80a91f23ba464622ea17968b8121364a52e",
+      "author": "Yifei Cheng",
+      "date": "2024-09-28T16:56:41Z",
+      "message": "migrate hand-eye calibration to ar4_hand_eye_calibration (#23)"
+    },
+    {
+      "sha": "82dc9acaa63d3410cae5ef3ba069cfaffe168e68",
+      "author": "Yifei Cheng",
+      "date": "2024-09-28T15:48:36Z",
+      "message": "publish_robot_description and publish_robot_description_semantic"
+    },
+    {
+      "sha": "00e76ea4da147b60a48e853c630ada4ddfb235af",
+      "author": "Yifei Cheng",
+      "date": "2024-09-28T15:40:09Z",
+      "message": "calibration can return error and timeout (#22)\n\n* make calibration time out after a while\r\n\r\n* fix compile errors\r\n\r\n* RES field in calibration response\r\n\r\n* mimic changes to MK2 and MK3 firmware\r\n\r\n* clean up"
+    },
+    {
+      "sha": "6ab7338db3b6f6e5767718252892f50cfdec438e",
+      "author": "Yifei Cheng",
+      "date": "2024-09-23T12:30:58Z",
+      "message": "fix typo"
+    },
+    {
+      "sha": "799dc994c1f54cfdaee946e2a8d1999de90f9afa",
+      "author": "Yifei Cheng",
+      "date": "2024-09-23T01:19:55Z",
+      "message": "Update README.md\n\nMK3 has been tested"
+    },
+    {
+      "sha": "41325e60ce4891343df573f20133e7ffaf5d783f",
+      "author": "Yifei Cheng",
+      "date": "2024-09-23T01:16:11Z",
+      "message": "read j4 and j6 limits from config in ar.ros2_control.xacro (#20)"
+    },
+    {
+      "sha": "daf9a969a9e100e70d6c07b977e1349d4140c2d8",
+      "author": "Yifei Cheng",
+      "date": "2024-08-14T15:36:14Z",
+      "message": "fix Semantic description is not specified for the same robot as the URDF"
+    },
+    {
+      "sha": "9dc2a5f6fed5f8c562075b3f369e938911561a5b",
+      "author": "Yifei Cheng",
+      "date": "2024-08-12T14:22:17Z",
+      "message": "fix MK3 calibration accuracy (#16)"
+    },
+    {
+      "sha": "f83959f824fd62243cb6ab597596f69fdc06d53b",
+      "author": "Yifei Cheng",
+      "date": "2024-06-22T21:18:14Z",
+      "message": "fix gripper alignment and change its color (#12)"
+    },
+    {
+      "sha": "b3d1b266f81d77a1a3167f76c4dd8beca78801de",
+      "author": "Yifei Cheng",
+      "date": "2024-06-22T20:44:00Z",
+      "message": "Support AR4 MK3 (#11)\n\n* support MK3\r\n\r\n* update all xacro and launch files\r\n\r\n* update last launch file\r\n\r\n* update README\r\n\r\n* rename firmware\r\n\r\n* support different joint_offsets for ar4 vs mk3"
+    },
+    {
+      "sha": "e0e2f9396de9f4a22ca47f0604e85b4a512f8125",
+      "author": "Yifei Cheng",
+      "date": "2024-06-16T15:53:57Z",
+      "message": "more accurate kinematics"
+    },
+    {
+      "sha": "b39a6476ed25dfe542b72164362abbf974c905e0",
+      "author": "Yifei Cheng",
+      "date": "2024-06-09T13:53:42Z",
+      "message": "hopefully more accurate kinematics"
+    },
+    {
+      "sha": "7af068fe951ebd2a4f224c33f06218d766767ee2",
+      "author": "Yifei Cheng",
+      "date": "2024-05-31T12:22:21Z",
+      "message": "increase velocity limit of J5 and J6"
+    },
+    {
+      "sha": "e2e674d9de72d3a0b699b7cd39b89cbc25908d03",
+      "author": "Yifei Cheng",
+      "date": "2024-05-31T12:22:21Z",
+      "message": "increase velocity limit of J5 and J6"
+    },
+    {
+      "sha": "451cd73bcc3b207d38dd33af2f1dc323085ebd62",
+      "author": "Yifei Cheng",
+      "date": "2024-05-29T01:37:11Z",
+      "message": "add python3-transforms3d dependency"
+    },
+    {
+      "sha": "b3695f0a1d2b31d42fd7408e27dce31d198642d5",
+      "author": "Yifei Cheng",
+      "date": "2024-05-13T13:00:05Z",
+      "message": "introduce ee_link, calibration uses camera_color_frame"
+    },
+    {
+      "sha": "4450dd2978698308e63576167ed5070bccb880bd",
+      "author": "Yifei Cheng",
+      "date": "2024-05-03T11:21:26Z",
+      "message": "always do vcs import, add joint limit file to fake_ar"
+    },
+    {
+      "sha": "882c1163029fd859e0faa4072e6f6de8622eb2e9",
+      "author": "Jacob",
+      "date": "2024-04-27T12:11:47Z",
+      "message": "Add joint_offsets to ar_gazebo file (#6)"
+    },
+    {
+      "sha": "2e4470dc6b4d021109267d90de7c691aa55dcb96",
+      "author": "Yifei Cheng",
+      "date": "2024-04-26T01:48:17Z",
+      "message": "tune upright and gripper open positions"
+    },
+    {
+      "sha": "309841b4a2fa066454cbc1bb91a160a6d4daffd6",
+      "author": "Yifei Cheng",
+      "date": "2024-04-26T01:26:07Z",
+      "message": "read joint offsets from file"
+    },
+    {
+      "sha": "86a80f9d9f31bf97fc722d214453e06778da376a",
+      "author": "Yifei Cheng",
+      "date": "2024-04-24T21:01:18Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "c1076417c991d52baa4e92413733e0a864854150",
+      "author": "Yifei Cheng",
+      "date": "2024-04-24T13:29:16Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "e36a5b06f5c0315fb86865c84fb58a0a4f388c4f",
+      "author": "Yifei Cheng",
+      "date": "2024-04-24T13:28:19Z",
+      "message": "Hand eye calibration (#4)\n\n* add hand eye calibration launch file\r\n\r\n* add calibration aruco publisher script\r\n\r\n* begin moving things to ar_hand_eye_calibration\r\n\r\n* update dockerfile and add tf_transformations\r\n\r\n* remove arm launching from calibration launch\r\n\r\n* wip calibration validation\r\n\r\n* improve performance\r\n\r\n* reorganize launch files, camera in rviz\r\n\r\n* rename ar_hand_eye_calibration to ar_hand_eye\r\n\r\n* add readme\r\n\r\n* fix kinematics\r\n\r\n* update README"
+    },
+    {
+      "sha": "ce4df03efbddac1d1571838a68a3fc92ed08c426",
+      "author": "Yifei Cheng",
+      "date": "2024-04-15T11:53:01Z",
+      "message": "no log spamming"
+    },
+    {
+      "sha": "91f07081c64fff0bc2f1175ad8fac22d0335e7d1",
+      "author": "Yifei Cheng",
+      "date": "2024-04-15T11:52:46Z",
+      "message": "dont spawn gripper controller if include_gripper:=False"
+    },
+    {
+      "sha": "de761b1954506996d9f08a6ce815fa24f2a04460",
+      "author": "Yifei Cheng",
+      "date": "2024-04-10T11:55:19Z",
+      "message": "add gripper_controllers dependency"
+    },
+    {
+      "sha": "3802dc3fecbdee09c648a3f32ad1dd979858e3da",
+      "author": "Yifei Cheng",
+      "date": "2024-04-05T13:07:59Z",
+      "message": "include gripper control demo video"
+    },
+    {
+      "sha": "afa275d88743ab12010c1a3793dc4a19f3026223",
+      "author": "Yifei Cheng",
+      "date": "2024-04-05T13:06:52Z",
+      "message": "include gripper control demo video"
+    },
+    {
+      "sha": "6ade19c67cda8ffa69b1d4d681a01de58e1bab67",
+      "author": "Yifei Cheng",
+      "date": "2024-04-05T02:11:57Z",
+      "message": "Merge pull request #1 from ycheng517/ar_gripper\n\nSupport the AR4 servo gripper"
+    },
+    {
+      "sha": "12b710cdcc6345bcbeb273b0d412d21e2efbf4d7",
+      "author": "Yifei Cheng",
+      "date": "2024-04-05T02:09:36Z",
+      "message": "update README with gripper support"
+    },
+    {
+      "sha": "dc3f1397f750789d0135fff755905f867a121527",
+      "author": "Yifei Cheng",
+      "date": "2024-04-05T01:40:29Z",
+      "message": "gripper support for gazebo"
+    },
+    {
+      "sha": "9b2f3304655145eb0a4189a38b07dbc1456144fd",
+      "author": "Yifei Cheng",
+      "date": "2024-04-04T13:56:52Z",
+      "message": "bug fixes"
+    },
+    {
+      "sha": "646c917640baee12e771e885d7b27439d066cf41",
+      "author": "Yifei Cheng",
+      "date": "2024-04-04T02:28:33Z",
+      "message": "make gripper optional"
+    },
+    {
+      "sha": "96740fadfffe84e6c21b333f3398dfc1bbafb12f",
+      "author": "Yifei Cheng",
+      "date": "2024-04-03T13:27:04Z",
+      "message": "error handling, better way for linear to angular pos"
+    },
+    {
+      "sha": "ab983215258fb37da795aaac72054e29bb945d9f",
+      "author": "Yifei Cheng",
+      "date": "2024-04-03T02:38:24Z",
+      "message": "working simulation and hardware grippers"
+    },
+    {
+      "sha": "4062654ef171df92016d457649ab5e1062a6b304",
+      "author": "Yifei Cheng",
+      "date": "2024-04-03T02:06:58Z",
+      "message": "ar_hardware.launch.py working"
+    },
+    {
+      "sha": "3b054022510d62565707c0b3a6ce2057e4dc86bb",
+      "author": "Yifei Cheng",
+      "date": "2024-04-03T01:46:19Z",
+      "message": "rename stuff"
+    },
+    {
+      "sha": "c8d26e76a05404243d5417f0523f4a728ced23dc",
+      "author": "Yifei Cheng",
+      "date": "2024-04-02T12:41:37Z",
+      "message": "gripper hardware interface"
+    },
+    {
+      "sha": "d2a1502e86e107c5bbfda30554b63150e87a21e1",
+      "author": "Yifei Cheng",
+      "date": "2024-04-02T02:11:54Z",
+      "message": "working arduino driver test program"
+    },
+    {
+      "sha": "5f959cd5245f40995e7d8e1cad9a43e1f2b9687f",
+      "author": "Yifei Cheng",
+      "date": "2024-03-29T23:01:24Z",
+      "message": "working simulated gripper"
+    },
+    {
+      "sha": "89b5dbd7a77af15aa15a525bea96f6de8057f33e",
+      "author": "Yifei Cheng",
+      "date": "2024-03-29T22:10:01Z",
+      "message": "debug planning failure"
+    },
+    {
+      "sha": "dd7e5a9c4477f2e520ed00fa0f329ac710d4e540",
+      "author": "Yifei Cheng",
+      "date": "2024-03-29T20:23:55Z",
+      "message": "begin adding ar gripper"
+    },
+    {
+      "sha": "76848b188a81ce78a383db2a27edcd528cf3f4a6",
+      "author": "Yifei Cheng",
+      "date": "2024-02-22T04:50:03Z",
+      "message": "update upright preset position"
+    },
+    {
+      "sha": "69ded24f428e0bf9dca0f3aeeaa1f92382b83fe5",
+      "author": "Yifei Cheng",
+      "date": "2024-02-22T04:41:38Z",
+      "message": "remove ar_control"
+    },
+    {
+      "sha": "091bb766b60ea21d448dd851d2942fbbece733be",
+      "author": "Yifei Cheng",
+      "date": "2024-02-16T02:49:55Z",
+      "message": "combine ar_hardware_driver with ar_hardware_interface"
+    },
+    {
+      "sha": "2cf449a6ca438ae057d5feaeca752a386f741855",
+      "author": "Yifei Cheng",
+      "date": "2024-02-15T03:41:10Z",
+      "message": "MK4 firmware"
+    },
+    {
+      "sha": "5ed7f994863885d4714773973f2d8c0003af820c",
+      "author": "Yifei Cheng",
+      "date": "2024-02-14T13:36:07Z",
+      "message": "working gazebo simulation"
+    },
+    {
+      "sha": "8962e6a97f5cc7c9d20571e8fd757ffaa12708d8",
+      "author": "Yifei Cheng",
+      "date": "2024-02-08T14:03:23Z",
+      "message": "add stow pos, video link, tune controller params"
+    },
+    {
+      "sha": "765ed5e9d2ff2063e3b7efab0972b13d48d5fa84",
+      "author": "Yifei Cheng",
+      "date": "2024-02-05T11:44:43Z",
+      "message": "add docker setup"
+    },
+    {
+      "sha": "27e9e305ceae8c9545941bbe84a076a2fd041f8a",
+      "author": "Yifei Cheng",
+      "date": "2024-02-05T11:04:09Z",
+      "message": "ar4 ros driver"
+    },
+    {
+      "sha": "5297919f2a8967baeed4f93c0a7a2fc527e8a1b1",
+      "author": "Yifei Cheng",
+      "date": "2024-02-05T11:03:43Z",
+      "message": "rename AR"
+    },
+    {
+      "sha": "3b834f93032935ddba0b43e7d3247c3d718a03f6",
+      "author": "Yifei Cheng",
+      "date": "2024-02-05T10:46:04Z",
+      "message": "rename files"
+    },
+    {
+      "sha": "f28d8e8f486486f17842e1d3771a781c4b125f39",
+      "author": "Yifei Cheng",
+      "date": "2024-02-05T10:40:31Z",
+      "message": "make colcon build work"
+    },
+    {
+      "sha": "4d598d6311a5417a5b3cd114f9ec82dac9515abd",
+      "author": "Yifei Cheng",
+      "date": "2024-02-05T09:53:31Z",
+      "message": "working demo launch"
+    },
+    {
+      "sha": "7c6269130ebc572232948f1d653ce77321253d24",
+      "author": "Yifei Cheng",
+      "date": "2024-02-05T08:40:29Z",
+      "message": "add launch arguments"
+    },
+    {
+      "sha": "d8bbc14a7da80f8fd0a3787188064b78d6e074dc",
+      "author": "Yifei Cheng",
+      "date": "2024-02-05T07:57:53Z",
+      "message": "pass joint position between firmware and driver"
+    },
+    {
+      "sha": "fddb5165afc661b0b893d6a664655ed51eba1f66",
+      "author": "Yifei Cheng",
+      "date": "2024-02-05T03:34:50Z",
+      "message": "update README and utilize system info"
+    },
+    {
+      "sha": "61a4a0c6b4e65b529f08f372351c1ccc4c7b131e",
+      "author": "Yifei Cheng",
+      "date": "2024-02-05T01:42:01Z",
+      "message": "a bit of clean up"
+    },
+    {
+      "sha": "5c531ef07f7f5dd36b809d67f37a0ee1eb413c6d",
+      "author": "Yifei Cheng",
+      "date": "2024-02-05T01:33:11Z",
+      "message": "working movement in rviz"
+    },
+    {
+      "sha": "450d2dfdca0f0c14d8bbb3d3f360f99ef726607a",
+      "author": "Yifei Cheng",
+      "date": "2024-02-03T22:41:37Z",
+      "message": "robot showing in rviz and accepting plans"
+    },
+    {
+      "sha": "11052a2f187ca44fd3efa3ea069c8d13f4988504",
+      "author": "Yifei Cheng",
+      "date": "2024-02-03T21:54:49Z",
+      "message": "ar_moveit.launch.py launching but robot doesn't appear"
+    },
+    {
+      "sha": "f434df83ba524f0863d9131054985c770cc848ca",
+      "author": "Yifei Cheng",
+      "date": "2024-02-03T20:37:48Z",
+      "message": "ar_moveit_config building"
+    },
+    {
+      "sha": "d2606636f71d3793bb1ba893d3eafa85a163e4d1",
+      "author": "Yifei Cheng",
+      "date": "2024-02-02T13:49:17Z",
+      "message": "ar4_hardware_bringup launching"
+    },
+    {
+      "sha": "6aee5e2e74e1c5a16f35edcaa80219c7a034ca4b",
+      "author": "Yifei Cheng",
+      "date": "2024-02-02T13:36:49Z",
+      "message": "remove ar_ros2_control_node"
+    },
+    {
+      "sha": "38cf433d3286c4168e99e35f5d10b838f11bb30d",
+      "author": "Yifei Cheng",
+      "date": "2024-02-02T13:17:22Z",
+      "message": "fix a couple of warnings"
+    },
+    {
+      "sha": "0cdf2ee1a31541ef9e9f32d73882c4e440ba102f",
+      "author": "Yifei Cheng",
+      "date": "2024-02-02T03:16:05Z",
+      "message": "launch files launches but controller_manager can't be found"
+    },
+    {
+      "sha": "17f2a4827bd2432a91e006cd9584743c5c9ad95e",
+      "author": "Yifei Cheng",
+      "date": "2024-02-01T13:40:28Z",
+      "message": "WIP xacro for ros2_control"
+    },
+    {
+      "sha": "371c57a968d52b77e09817c662170c46c3bd4646",
+      "author": "Yifei Cheng",
+      "date": "2024-01-30T13:48:45Z",
+      "message": "ar_hardware_interface launch file launching"
+    },
+    {
+      "sha": "fe78786dded67a7312dff3db546cf8372fbb0bd4",
+      "author": "Yifei Cheng",
+      "date": "2024-01-30T03:41:33Z",
+      "message": "ar_hardware_interface compiles"
+    },
+    {
+      "sha": "ca299d23ec8e6380f73cb351378551d9b4805032",
+      "author": "Yifei Cheng",
+      "date": "2024-01-27T23:33:04Z",
+      "message": "WIP upgrading ar_hardware_interface to ros2"
+    },
+    {
+      "sha": "c22ce63d4ba25363e01ecd88f1dcc70930345f59",
+      "author": "Yifei Cheng",
+      "date": "2024-01-27T18:35:36Z",
+      "message": "ar_description ar_hardware_driver and building"
+    },
+    {
+      "sha": "5107b71422c68e8d193423c3dd804cef556dbe42",
+      "author": "Yifei Cheng",
+      "date": "2024-01-27T18:21:38Z",
+      "message": "rename ar_hardware_drivers to ar_hardware_driver"
+    },
+    {
+      "sha": "9c3ab87894ee18810d4e5eece861da1a36d1430a",
+      "author": "Yifei Cheng",
+      "date": "2024-01-27T18:20:30Z",
+      "message": "migrate ar_hardware_driver to ros 2"
+    },
+    {
+      "sha": "d0279f2f49be2fa86ad5792bdddaf07d380570e0",
+      "author": "Yifei Cheng",
+      "date": "2024-01-27T17:04:50Z",
+      "message": "rename all ar3_XXX files to ar_XXX files"
+    },
+    {
+      "sha": "413371eb944e181f543fa509ef0f74b0f93c394d",
+      "author": "Yifei Cheng",
+      "date": "2024-01-27T16:58:50Z",
+      "message": "rename ar3_control to ar_control"
+    },
+    {
+      "sha": "baf39bb6b079972a0a3166a9a5bd3fa324df802b",
+      "author": "Yifei Cheng",
+      "date": "2024-01-27T16:44:39Z",
+      "message": "Merge branch 'main' of github.com:ycheng517/ar3_core"
+    },
+    {
+      "sha": "d83f4d3bfa61f9918e5cedc35497db89b29c07b4",
+      "author": "Yifei Cheng",
+      "date": "2024-01-27T16:43:37Z",
+      "message": "don't bother with AR4 meshes for now"
+    },
+    {
+      "sha": "b32ce0e1eb594767dbec68a62ba0fb21671dc6d6",
+      "author": "Yifei Cheng",
+      "date": "2024-01-26T13:46:41Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "cca27a4c903c3cded2574700d064d31fde9d1d2d",
+      "author": "Yifei Cheng",
+      "date": "2024-01-26T13:42:47Z",
+      "message": "move ar3 meshes and add ar4 meshes"
+    },
+    {
+      "sha": "186c45edb5b06aecc03439a78ec5094518b84a10",
+      "author": "Yifei Cheng",
+      "date": "2024-01-26T03:25:44Z",
+      "message": "rename references to ar_description"
+    },
+    {
+      "sha": "d629723efe39812bd9c72eddd5eebbec87f73526",
+      "author": "Yifei Cheng",
+      "date": "2024-01-26T03:13:46Z",
+      "message": "rename ar3_description to ar_description"
+    },
+    {
+      "sha": "f8eb92d5c5236180896cf0d87904e42196c04d6d",
+      "author": "Yifei Cheng",
+      "date": "2024-01-20T16:57:35Z",
+      "message": "firmware clean up"
+    },
+    {
+      "sha": "126d204e61656ff7556badfe2add1a8edc9b5f9d",
+      "author": "Yifei Cheng",
+      "date": "2024-01-19T14:52:00Z",
+      "message": "move ros firmware into separate file"
+    },
+    {
+      "sha": "1456284bab8e85bc45f87ef497742d60cdc182f8",
+      "author": "Yifei Cheng",
+      "date": "2024-01-19T13:42:05Z",
+      "message": "fix bugs involving speed and acceleration"
+    },
+    {
+      "sha": "a6d0016e73ad06bdf28b68a8f60aaff191c5e643",
+      "author": "Yifei Cheng",
+      "date": "2024-01-18T14:14:04Z",
+      "message": "working movement in RVIZ but slow"
+    },
+    {
+      "sha": "bbf0337da8f8ee40c4247de609a5e1e1684f3de5",
+      "author": "Yifei Cheng",
+      "date": "2024-01-18T03:39:30Z",
+      "message": "able to move axes other than J1 in rviz"
+    },
+    {
+      "sha": "35e381279f07f8565a55de6b09036e88c5e69f3a",
+      "author": "Yifei Cheng",
+      "date": "2024-01-17T14:41:29Z",
+      "message": "working calibration"
+    },
+    {
+      "sha": "512da8a403af3ecdf0fc0bdd46dddfc7fe1ef762",
+      "author": "Yifei Cheng",
+      "date": "2024-01-15T03:50:40Z",
+      "message": "wip - calibration motors"
+    },
+    {
+      "sha": "6e2c8662ec6b0c607af930918874b2bdfdc5a805",
+      "author": "Yifei Cheng",
+      "date": "2024-01-13T23:41:51Z",
+      "message": "tune parameters"
+    },
+    {
+      "sha": "baef598676e4f7659c6e3abf45a5e2767e57cd54",
+      "author": "Yifei Cheng",
+      "date": "2024-01-08T03:20:34Z",
+      "message": "apply ros-compatible firmware onto AR4"
+    },
+    {
+      "sha": "b79910a413ce1f4b92fc428c059a7b6c6cd8b9cd",
+      "author": "Yifei Cheng",
+      "date": "2024-01-08T02:23:49Z",
+      "message": "add official AR3 and AR4 sketches"
+    },
+    {
+      "sha": "cd43fed1cc67341dc8b1e0aaf8cea10e0e5634d8",
+      "author": "Dexter",
+      "date": "2021-08-19T05:12:34Z",
+      "message": "Added log message for Teensy initialisation"
+    },
+    {
+      "sha": "3b3f5b7f64b98d7492132f1900b30ed4ae0bd546",
+      "author": "Dexter",
+      "date": "2021-03-20T01:25:51Z",
+      "message": "Fixed c string for ros logging"
+    },
+    {
+      "sha": "66ab67cbd097325f8c652aa49111cfe4758c38b2",
+      "author": "Dexter",
+      "date": "2021-03-20T01:12:07Z",
+      "message": "Updated README with dialout access for ubuntu"
+    },
+    {
+      "sha": "c8b2169d4392875d2bd44e1601be897dc7374341",
+      "author": "Dexter",
+      "date": "2021-03-20T00:59:12Z",
+      "message": "Fixed hardware launch file name"
+    },
+    {
+      "sha": "36d06a0309406306f05090f478aeb7b66ffcbed9",
+      "author": "Dexter",
+      "date": "2021-02-11T15:38:24Z",
+      "message": "Changes to calibration and limit switches\n\nAdded limit switch NC/NO option and modified limit switch check, removed second pass of calibration"
+    },
+    {
+      "sha": "4afa3f69d353db35cda4f5a7f5a4812a05ca3c6e",
+      "author": "Dexter",
+      "date": "2021-01-30T14:53:15Z",
+      "message": "Added link to hardware mods"
+    },
+    {
+      "sha": "05fd484e658d8838c8521b2c2cb00a81ab5c91d9",
+      "author": "Dexter",
+      "date": "2021-01-30T14:46:15Z",
+      "message": "Baseline implementation"
+    },
+    {
+      "sha": "abfe0e52265dded7d2359952600a17a9ab93e0de",
+      "author": "Dexter Ong",
+      "date": "2021-01-30T12:26:58Z",
+      "message": "Initial commit"
+    }
+  ]
+}

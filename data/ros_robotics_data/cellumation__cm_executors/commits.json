@@ -1,0 +1,282 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-08T01:32:56Z",
+    "source": "github_rest",
+    "endpoint": "/repos/{owner}/{repo}/commits",
+    "owner": "cellumation",
+    "repo": "cm_executors",
+    "per_page": 100
+  },
+  "data": [
+    {
+      "sha": "788726223b9f7abb3be5bd7f911424f83a9c8a5b",
+      "author": "Janosch Machowinski",
+      "date": "2025-12-17T10:16:35Z",
+      "message": "Fix typo in known bugs section of README"
+    },
+    {
+      "sha": "50fc45fd6e5d5ff55e7b1e0342f5617b65f97730",
+      "author": "Janosch Machowinski",
+      "date": "2025-12-17T10:30:47Z",
+      "message": "chore: style fixes"
+    },
+    {
+      "sha": "444934c58ecaf3ce6c0d82efdb3de549e9a616cf",
+      "author": "Skyler Medeiros",
+      "date": "2025-12-17T10:05:41Z",
+      "message": "scope clock access inside pred_mutex (#6)\n\nSigned-off-by: Skyler Medeiros <skye.galaxy@proton.me>"
+    },
+    {
+      "sha": "9df4e2fb44cbe637f3b126de74b262aa6fd7466a",
+      "author": "Janosch Machowinski",
+      "date": "2025-12-14T12:05:53Z",
+      "message": "fix: Fixed data race in shutdown callback"
+    },
+    {
+      "sha": "e5474e5c486210e53039d5cc1a81e22deaec7033",
+      "author": "Janosch Machowinski",
+      "date": "2025-12-14T11:28:31Z",
+      "message": "fix: Fix for deadlock on shutdown\n\nThis fix moves the polling of the data for a waitable from the\nevent callback from the RMW, to the execution callback of the\nworker thread. This fixes a potential deadlock with fastDDS, as for\nsome reason the take_data_by_entity_id can block forever with fastDDS."
+    },
+    {
+      "sha": "63018d1701b3e3b965d5cead1f87173bebd0f813",
+      "author": "Janosch Machowinski",
+      "date": "2025-09-16T17:46:47Z",
+      "message": "fix: Fixed memory violation in case of shutdown callback."
+    },
+    {
+      "sha": "a4f8fdcfbe961d00ada7ac83660fa138ceb56920",
+      "author": "Janosch Machowinski",
+      "date": "2025-08-13T09:21:18Z",
+      "message": "0.9.1"
+    },
+    {
+      "sha": "fc5b6e7f0c98914a6f6dcfbee1f572008032e9c5",
+      "author": "Janosch Machowinski",
+      "date": "2025-08-13T09:21:11Z",
+      "message": "chore: Added changelog"
+    },
+    {
+      "sha": "b4148b90928dde6b11ed9f3ad3d0a1a751390b06",
+      "author": "Janosch Machowinski",
+      "date": "2025-08-13T09:20:06Z",
+      "message": "chore: Set version to 0.9.0"
+    },
+    {
+      "sha": "bebdfde90378fd1708396f3927b023625d3ad9d7",
+      "author": "Janosch Machowinski",
+      "date": "2025-07-11T11:38:37Z",
+      "message": "feat: Added build and test action\n\n* Action test2\n\n* fix runs_on\n\n* use correct actionv ersion"
+    },
+    {
+      "sha": "f2aa10e8e244d94ddbeae41679603b42de568958",
+      "author": "Janosch Machowinski",
+      "date": "2025-07-11T11:27:28Z",
+      "message": "Test CI Build action"
+    },
+    {
+      "sha": "3f2118680e188fc4feba7feff3094595cb114578",
+      "author": "Janosch Machowinski",
+      "date": "2025-07-11T10:02:37Z",
+      "message": "chore: make cpplint happy"
+    },
+    {
+      "sha": "aa89ad3a7156957ced6cc8bb31d4cd034b49419f",
+      "author": "Janosch Machowinski",
+      "date": "2025-07-11T09:24:04Z",
+      "message": "chore: uncrustify"
+    },
+    {
+      "sha": "47693a94a5ffcbe3218a2afcb5f11bd0b5452e29",
+      "author": "Janosch Machowinski",
+      "date": "2025-07-11T09:20:41Z",
+      "message": "fix: made ament_copyright happy"
+    },
+    {
+      "sha": "62229b9f3df2f616d5f641046c996913e63b1b19",
+      "author": "Janosch Machowinski",
+      "date": "2025-07-07T14:53:42Z",
+      "message": "fix(TimerQueue): Use specialized ClockConditionalVariable\n\nThis fixes issues, were other calls to rclcpp::Clock::cancel_sleep_or_wait\nwould wake up the timers manager. This also increases the performance,\nas the expensive registration of the shutdown callback on every sleep\nwas moved to initialization / destruction of the TimerQueue."
+    },
+    {
+      "sha": "2e7bc334358b57025b2187fedcee76f1ead4c703",
+      "author": "Janosch Machowinski",
+      "date": "2025-07-04T13:14:43Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "5ae9f93176298789a0af8d67f90ad5a796dd0594",
+      "author": "Janosch Machowinski",
+      "date": "2025-07-04T13:02:10Z",
+      "message": "Create README.md"
+    },
+    {
+      "sha": "15c30332d1ee324954737f354facf6e955ebf055",
+      "author": "Janosch Machowinski",
+      "date": "2025-06-27T11:58:01Z",
+      "message": "chore added license\n\nSigned-off-by: Janosch Machowinski <J.Machowinski@cellumation.com>"
+    },
+    {
+      "sha": "253f3a13a396f8b0ae046a48c8aea304ba191d69",
+      "author": "Janosch Machowinski",
+      "date": "2025-04-24T07:19:04Z",
+      "message": "fix: missing-test-msgs-dep\n\nFix missing test dependency"
+    },
+    {
+      "sha": "6387321422d55950ca6008ba38fdcbfda5246647",
+      "author": "Ryan Friedman",
+      "date": "2025-04-23T21:36:41Z",
+      "message": "Fix missing test dependency\n\nSigned-off-by: Ryan Friedman <ryan.friedman@avinc.com>"
+    },
+    {
+      "sha": "79437ad1624dd57c40176bc932f023fc660c01f2",
+      "author": "Janosch Machowinski",
+      "date": "2024-11-08T14:07:22Z",
+      "message": "fix: Clear timer reset callbacks, before deleting object involved in callback"
+    },
+    {
+      "sha": "0a4a49474e9c89cd09e2b76125b0f34ac7f76912",
+      "author": "Janosch Machowinski",
+      "date": "2024-11-05T14:52:21Z",
+      "message": "fix: Added missing mutex protection in sync_callback_groups"
+    },
+    {
+      "sha": "4c8517cf92d8fab340aabbf577ebc96bfe66ff22",
+      "author": "Janosch Machowinski",
+      "date": "2024-09-30T12:32:09Z",
+      "message": "fix: clear registered events on shutdown"
+    },
+    {
+      "sha": "8cd9329aeaf45cbef5c4bb34b34b26317805da51",
+      "author": "Janosch Machowinski",
+      "date": "2024-09-30T11:44:24Z",
+      "message": "fix: Fixed invalid memory access on shutdown"
+    },
+    {
+      "sha": "2184e5340dc75eeffd3dab2d21aa5c179c1f9674",
+      "author": "Janosch Machowinski",
+      "date": "2024-09-30T10:02:54Z",
+      "message": "fix: Compile lib as shared"
+    },
+    {
+      "sha": "6f68122ff5c28c8e6bd8926713f8b6944478ae5f",
+      "author": "Janosch Machowinski",
+      "date": "2024-09-27T17:01:11Z",
+      "message": "fix: Don't add timer multiple times to running queue if reset was called"
+    },
+    {
+      "sha": "a651df4a24af233ae1093508eee8fc7c80c3f838",
+      "author": "Janosch Machowinski",
+      "date": "2024-09-27T15:19:42Z",
+      "message": "fix: Handle exceptions in all threads"
+    },
+    {
+      "sha": "59d321a671f3577afb696ddbcaa7a079a8aef01d",
+      "author": "Janosch Machowinski",
+      "date": "2024-09-27T15:16:07Z",
+      "message": "feat: Added spin() with exception handler function"
+    },
+    {
+      "sha": "b298ccc6393febecf8206231deb5ab98feef9c55",
+      "author": "Janosch Machowinski",
+      "date": "2024-09-27T14:21:36Z",
+      "message": "chore: Removed outdated benchmark tests"
+    },
+    {
+      "sha": "b200728b93fcb085be7b6e042f421d55dd537ebb",
+      "author": "Janosch Machowinski",
+      "date": "2024-09-27T14:21:12Z",
+      "message": "refactor: cleaned up CMakeLists.txt"
+    },
+    {
+      "sha": "497e2f3e5b03d101aeaaf3f3bba64f84f94eb4d4",
+      "author": "Janosch Machowinski",
+      "date": "2024-09-27T13:49:47Z",
+      "message": "refactor: Cleaned up RegisteredEntityCache"
+    },
+    {
+      "sha": "0cb8a56ef08c098f49000b11d0b38a971df4cce1",
+      "author": "Janosch Machowinski",
+      "date": "2024-09-27T13:42:00Z",
+      "message": "fix: remove rcl polling thread"
+    },
+    {
+      "sha": "7759f81a51a1bf30b8de99268ed0eae39866307c",
+      "author": "Janosch Machowinski",
+      "date": "2024-09-27T09:50:08Z",
+      "message": "fix: Don't wait on timer before before assiciated clock is ready"
+    },
+    {
+      "sha": "f53686811937bb07b621516369d0022216268669",
+      "author": "Janosch Machowinski",
+      "date": "2024-09-27T09:47:19Z",
+      "message": "feat: Don't expose internal data structures\n\nThis allows us to change the executor, without breaking ABI / API"
+    },
+    {
+      "sha": "d8e57e650d9266487d26cd4296aad34a9f664329",
+      "author": "Janosch Machowinski",
+      "date": "2024-09-27T09:46:30Z",
+      "message": "fix: Don't start timer queue thread before initializing the class"
+    },
+    {
+      "sha": "3c8daa1a0aaca4acebe84fbafa6def77c8cb3cac",
+      "author": "Janosch Machowinski",
+      "date": "2024-09-25T10:04:20Z",
+      "message": "feat: Added PriorityScheduler"
+    },
+    {
+      "sha": "02fb034e9e0692092317b27dd1aa06debbc4d983",
+      "author": "Janosch Machowinski",
+      "date": "2024-09-25T10:03:54Z",
+      "message": "chore: Remove log spam and outdated code"
+    },
+    {
+      "sha": "a1c4f9452c002106a3d2e9a3ccdae18449eaee91",
+      "author": "Janosch Machowinski",
+      "date": "2024-09-25T10:03:18Z",
+      "message": "fix(EventsCBGExecutor): Poll rcl layer for 'hidden' guard conditions"
+    },
+    {
+      "sha": "bfd038cdb4509441502964db9b4bb3e6a084741d",
+      "author": "Janosch Machowinski",
+      "date": "2024-09-25T10:01:50Z",
+      "message": "fix(TimerManager): Use clock of registered timer for sleep\n\nThis fixes the bug, that ROS_TIME timers were not switched to\nros time as it is not attached to a time source."
+    },
+    {
+      "sha": "84c0667066a853d680bc029a65929e2f925b623c",
+      "author": "Janosch Machowinski",
+      "date": "2024-09-19T15:44:29Z",
+      "message": "fix: Don't call 'call' on timer twice"
+    },
+    {
+      "sha": "7d965e3128a58171aea3dfd6d81abac1b86dfe82",
+      "author": "Janosch Machowinski",
+      "date": "2024-09-18T15:02:40Z",
+      "message": "refactor: Major refactoring"
+    },
+    {
+      "sha": "817c1d7755555afb59ea5e19ed329ad2344be18f",
+      "author": "Janosch Machowinski",
+      "date": "2024-09-12T09:50:00Z",
+      "message": "fix: implemented behaviour of spin_some of base executor"
+    },
+    {
+      "sha": "95a5e383730fdec1ac06f9b555ec8d40b565fcd1",
+      "author": "Janosch Machowinski",
+      "date": "2024-09-12T09:49:07Z",
+      "message": "fix: Replaced by queue event id with global event id"
+    },
+    {
+      "sha": "65d5aea3eaaeed09744bf3a5e4ab0405439a9280",
+      "author": "Janosch Machowinski",
+      "date": "2024-09-12T09:48:16Z",
+      "message": "fix: Made it compile"
+    },
+    {
+      "sha": "3426d47c5639ac97bc42eb985af3cfa11b0a4029",
+      "author": "Janosch Machowinski",
+      "date": "2024-09-11T14:25:05Z",
+      "message": "Initial import from rclcpp"
+    }
+  ]
+}

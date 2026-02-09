@@ -1,0 +1,2016 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-07T23:52:51Z",
+    "source": "github_rest",
+    "endpoint": "/repos/{owner}/{repo}/commits",
+    "owner": "ros-visualization",
+    "repo": "rqt_plot",
+    "per_page": 100
+  },
+  "data": [
+    {
+      "sha": "5886de34c904b3d68271e6012b7d07145aaa9bad",
+      "author": "Chris Lalancette",
+      "date": "2025-07-30T11:58:53Z",
+      "message": "1.7.3"
+    },
+    {
+      "sha": "e7e66f2c425f9cd9d3496dd84f2bec8624ff2bff",
+      "author": "Chris Lalancette",
+      "date": "2025-07-30T11:58:47Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "839ff5b7434f7a8342a085d2bf7182a00d38f040",
+      "author": "mosfet80",
+      "date": "2025-07-21T13:16:32Z",
+      "message": "fix setuptools deprecations (#123)"
+    },
+    {
+      "sha": "48c147a2d65cd44667f666f1a284a4590595152f",
+      "author": "Chris Lalancette",
+      "date": "2025-07-01T16:29:03Z",
+      "message": "1.7.2"
+    },
+    {
+      "sha": "457db8a4523f1b63523ae973d3da7a918a574f79",
+      "author": "Chris Lalancette",
+      "date": "2025-07-01T16:28:58Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "365f7a829a06681d571767348015f2ccdc2530d0",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2025-05-14T19:44:14Z",
+      "message": "Added missing test dependency (#118)\n\nSigned-off-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "39692d5722ab5609cd842158449bc127dbde8d14",
+      "author": "Alejandro Hernandez Cordero",
+      "date": "2025-05-12T08:07:35Z",
+      "message": "1.7.1"
+    },
+    {
+      "sha": "ea30b0d55209cc740456a66ce424ef0d67fce11e",
+      "author": "Alejandro Hernandez Cordero",
+      "date": "2025-05-12T08:07:30Z",
+      "message": "Changelog\n\nSigned-off-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "b63bfd84f02f2b46e3b7dead0f08f2c81b911b52",
+      "author": "Martin Pecka",
+      "date": "2025-05-09T13:37:03Z",
+      "message": "Fix for displaying constant curves (#114)\n\nSigned-off-by: Martin Pecka <peckama2@fel.cvut.cz>"
+    },
+    {
+      "sha": "15f62ba464a77cf640ebca114bd2c0e6e0eaff4e",
+      "author": "Scott K Logan",
+      "date": "2025-04-28T21:44:23Z",
+      "message": "1.7.0"
+    },
+    {
+      "sha": "1ade5e7be2961a537753b5c004a1438d1d25252b",
+      "author": "Alejandro Hernandez Cordero",
+      "date": "2025-02-13T10:06:01Z",
+      "message": "1.6.2"
+    },
+    {
+      "sha": "09329edb573b9cb7f7f8275bdadd4f51bf7cfca5",
+      "author": "Alejandro Hernandez Cordero",
+      "date": "2025-02-13T10:05:57Z",
+      "message": "Changelog\n\nSigned-off-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "f443a3a4776f953b1f0776ed829f167084f297fe",
+      "author": "Christophe Bedard",
+      "date": "2025-02-12T13:46:56Z",
+      "message": "Add unit tests for topic name validation & field expansion (#108)\n\nThis adds unit tests for `rqt_plot.plot_widget.get_plot_fields()`, which\nvalidates the topic name entered by the user and provides a list of\nfields/sub-fields to plot.\n\nI thought it was simpler to call `get_plot_fields()` as-is in the tests\nand to just ignore the line length linter errors.\n\nSigned-off-by: Christophe Bedard <christophe.bedard@apex.ai>\nCo-authored-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "50b8d13c247d870e1051a752c33758866d5710ce",
+      "author": "Christophe Bedard",
+      "date": "2025-02-12T12:20:55Z",
+      "message": "Fix double slash when plotting all sub-fields with trailing slash (#107)\n\nIf topic `/topic` exists, entering `/topic` in the _Topic_ field will\nresult in a \"no field specified in topic name '/topic'\" validation,\nsince it expects a field. Entering `/topic/` (with a trailing slash)`\nwill plot all fields that are \"plottable,\" i.e., primitive\n(`BasicType`). I think this makes sense, but then we try to plot fields\nwith double slashes.\n\nSigned-off-by: Christophe Bedard <christophe.bedard@apex.ai>"
+    },
+    {
+      "sha": "cc961ff3d6c932903d0343a84bc99446ea5d463f",
+      "author": "Christophe Bedard",
+      "date": "2025-02-11T14:35:20Z",
+      "message": "Fix listing of nested basic type fields (#101)\n\nFrom #71, it seems like field names were expected to start with a `_`\ncharacter, so `n_field[1:]` was meant to get rid of it to get the actual\nfield name. However, there is no leading `_` character. A similar issue\nwas fixed in #90.\n\nThis was resulting in the first character being removed from the\n(sub-/nested) field names, resulting in most of them being invalid:\n\n```\nPlotWidget.update_plot(): error in rosplot: Invalid topic spec [/topic/basic_types_value/ool_value]: 'BasicTypes' object has no attribute 'ool_value'\nPlotWidget.update_plot(): error in rosplot: Invalid topic spec [/topic/basic_types_value/yte_value]: 'BasicTypes' object has no attribute 'yte_value'\nPlotWidget.update_plot(): error in rosplot: Invalid topic spec [/topic/basic_types_value/har_value]: 'BasicTypes' object has no attribute 'har_value'\nPlotWidget.update_plot(): error in rosplot: Invalid topic spec [/topic/basic_types_value/loat32_value]: 'BasicTypes' object has no attribute 'loat32_value'\nPlotWidget.update_plot(): error in rosplot: Invalid topic spec [/topic/basic_types_value/loat64_value]: 'BasicTypes' object has no attribute 'loat64_value'\nPlotWidget.update_plot(): error in rosplot: Invalid topic spec [/topic/basic_types_value/nt8_value]: 'BasicTypes' object has no attribute 'nt8_value'\nPlotWidget.update_plot(): error in rosplot: Invalid topic spec [/topic/basic_types_value/nt16_value]: 'BasicTypes' object has no attribute 'nt16_value'\nPlotWidget.update_plot(): error in rosplot: Invalid topic spec [/topic/basic_types_value/nt32_value]: 'BasicTypes' object has no attribute 'nt32_value'\nPlotWidget.update_plot(): error in rosplot: Invalid topic spec [/topic/basic_types_value/nt64_value]: 'BasicTypes' object has no attribute 'nt64_value'\n```\n\nNote that the `uint*` fields were turned into `int*`, so they are still\nvalid.\n\nTo validate:\n\n```\n$ ros2 topic pub /topic test_msgs/msg/Nested\n```\n\nThen run `rqt`, open the `rqt_plot` plugin, enter\n`/topic/basic_types_value`, and press enter or click the + button.\nChange the values of the nested fields in the message being published.\n\n----\n\nNote: it seems like the byte value\n(`/topic/basic_types_value/byte_value`) cannot be displayed for\nprobably-unrelated reasons:\n\n```\nTraceback (most recent call last):\n  File \"/home/christophe.bedard/ros2_ws/build/rqt_gui_py/src/rqt_gui_py/rclpy_spinner.py\", line 48, in run\n    executor.spin_once(timeout_sec=1.0)\n  File \"/home/christophe.bedard/ros2_ws/install/rclpy/lib/python3.10/site-packages/rclpy/executors.py\", line 939, in spin_once\n    self._spin_once_impl(timeout_sec)\n  File \"/home/christophe.bedard/ros2_ws/install/rclpy/lib/python3.10/site-packages/rclpy/executors.py\", line 936, in _spin_once_impl\n    future.result()  # raise any exceptions\n  File \"/home/christophe.bedard/ros2_ws/install/rclpy/lib/python3.10/site-packages/rclpy/task.py\", line 101, in result\n    raise exception\n  File \"/home/christophe.bedard/ros2_ws/install/rclpy/lib/python3.10/site-packages/rclpy/task.py\", line 253, in __call__\n    handler.send(None)\n  File \"/home/christophe.bedard/ros2_ws/install/rclpy/lib/python3.10/site-packages/rclpy/executors.py\", line 541, in handler\n    await call_coroutine()\n  File \"/home/christophe.bedard/ros2_ws/install/rclpy/lib/python3.10/site-packages/rclpy/executors.py\", line 429, in _execute\n    await await_or_execute(sub.callback, *msg_tuple)\n  File \"/home/christophe.bedard/ros2_ws/install/rclpy/lib/python3.10/site-packages/rclpy/executors.py\", line 112, in await_or_execute\n    return callback(*args)\n  File \"/home/christophe.bedard/ros2_ws/build/rqt_plot/src/rqt_plot/rosplot.py\", line 155, in _ros_cb\n    self.buff_y.append(self._get_data(msg))\n  File \"/home/christophe.bedard/ros2_ws/build/rqt_plot/src/rqt_plot/rosplot.py\", line 196, in _get_data\n    return float(val)\nValueError: could not convert string to float: b'\\x00'\n```\n\nThis fix makes this issue pop up because the field name is now valid. To\nget around this, click on the - button, and select\n`/topic/basic_types_value/byte_value` to remove it from the plot. To get\nthe plot values to update again, close (X button in upper right-hand\ncorner) and re-open `rqt`.\n\nSigned-off-by: Christophe Bedard <christophe.bedard@apex.ai>"
+    },
+    {
+      "sha": "6a60d2a16bc307c81c309f819070aee52d67d745",
+      "author": "Christophe Bedard",
+      "date": "2025-02-11T14:32:52Z",
+      "message": "Fix f-string and add single quote around field name (#100)\n\nThis is more consistent with the other messages.\n\nSigned-off-by: Christophe Bedard <christophe.bedard@apex.ai>"
+    },
+    {
+      "sha": "8c2ffcf37b4e1ab07d5c9f537ad61a175044996a",
+      "author": "Alejandro Hernandez Cordero",
+      "date": "2025-02-11T12:02:12Z",
+      "message": "1.6.1"
+    },
+    {
+      "sha": "47c6b42254226b5b85cc66b03f9db4f8d6a794b9",
+      "author": "Alejandro Hernandez Cordero",
+      "date": "2025-02-11T12:02:08Z",
+      "message": "Changelog\n\nSigned-off-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "2662c21b82a9758af7dd288dfeb0c6caf3b87cf4",
+      "author": "Christophe Bedard",
+      "date": "2025-02-11T11:15:43Z",
+      "message": "Add single quotes around topic in validation msg for consistency (#99)\n\nThis is more consistent with the other messages below.\n\nSigned-off-by: Christophe Bedard <christophe.bedard@apex.ai>"
+    },
+    {
+      "sha": "262826e84be01780f75e6a49a416141b19b8d743",
+      "author": "Chris Lalancette",
+      "date": "2024-12-20T16:35:08Z",
+      "message": "1.6.0"
+    },
+    {
+      "sha": "47315572bcc3ae72983c0a55b727fe2937e15f43",
+      "author": "Chris Lalancette",
+      "date": "2024-12-20T16:35:00Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "01e3e7c36c03b915b53fc1e53009adc5f09cc3ce",
+      "author": "Chris Lalancette",
+      "date": "2024-12-19T20:28:45Z",
+      "message": "Add in the rest of the standard ament_python tests. (#98)\n\nThis just ensures this package is up to our standards.\n\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "842cd61ba59a5240b730791de567ad489d2e2900",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2024-12-02T17:02:16Z",
+      "message": "Remove CODEOWNERS (#96)\n\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "d1707e141b4294ed27386e1518dd1854ed4b1217",
+      "author": "Marco A. Gutierrez",
+      "date": "2024-04-26T12:36:30Z",
+      "message": "1.5.0"
+    },
+    {
+      "sha": "4164463e3791f7227b09a7ed12eff9be88a97f6a",
+      "author": "Marco A. Gutierrez",
+      "date": "2024-04-26T12:36:26Z",
+      "message": "Changelog.\n\nSigned-off-by: Marco A. Gutierrez <marcogg@marcogg.com>"
+    },
+    {
+      "sha": "d6f778c478edc32a24a93eb3e1672dc6480c5152",
+      "author": "Chris Lalancette",
+      "date": "2024-03-28T15:01:51Z",
+      "message": "1.4.0"
+    },
+    {
+      "sha": "e7bb761d2373c0b289bc18a40a2087a4bb0fc38c",
+      "author": "Chris Lalancette",
+      "date": "2024-03-28T15:01:31Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "aa3ec1914d3f510055e6e87968c63fbe85cd064a",
+      "author": "Chris Lalancette",
+      "date": "2024-03-27T12:51:31Z",
+      "message": "Add in copyright tests to rqt_bag. (#95)\n\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "7e46bc5395320b23aa7a3c9b45cfa81237f5b22f",
+      "author": "Chris Lalancette",
+      "date": "2024-03-25T21:35:42Z",
+      "message": "Add a test dependency on pytest. (#94)\n\nWhile there aren't currently tests defined here, this\r\nsets it up so that it is ready for pytest tests.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "e658b1c431894486c63feafa1247b1b32bbbf278",
+      "author": "Chris Lalancette",
+      "date": "2024-02-12T19:07:36Z",
+      "message": "Revert \"Add in a pytest dependency for running tests. (#92)\" (#93)\n\nThis reverts commit 6b54799914644a251c5e19868e51dcabc8de7d81.\r\n\r\nThe main reason to do this is that on Windows Debug, we don't\r\ncurrently have a Debug wheel for PyQt. Thus these tests always\r\nfail on that platform. While the \"correct\" solution is to build\r\na Windows Debug PyQt wheel, that is a decidedly difficult\r\nundertaking. Since we don't have tests to speak of in these\r\npackages, avoid the problem for now by just going back to what\r\nwe were doing before, i.e. using unittest for the tests."
+    },
+    {
+      "sha": "cf4bd0f36fc7d593a59e099e35de82d857f907ff",
+      "author": "Chris Lalancette",
+      "date": "2024-02-07T14:26:05Z",
+      "message": "1.3.2"
+    },
+    {
+      "sha": "9fc32f68b22a96fde8804e4b22397ef15513f2de",
+      "author": "Chris Lalancette",
+      "date": "2024-02-07T14:25:58Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "6b54799914644a251c5e19868e51dcabc8de7d81",
+      "author": "Chris Lalancette",
+      "date": "2024-02-07T01:25:16Z",
+      "message": "Add in a pytest dependency for running tests. (#92)\n\nWhile there aren't currently any tests defined, this\r\nsets it up so that they are prepared to use pytest in the future.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "027fac59148dd7e70c621d5e181eb17e7cd75711",
+      "author": "Yadunund",
+      "date": "2023-05-11T09:20:18Z",
+      "message": "1.3.1"
+    },
+    {
+      "sha": "23ec3b402b3869be5b4fb2188b618c70df9ef6c3",
+      "author": "Yadunund",
+      "date": "2023-05-11T09:19:48Z",
+      "message": "Changelog\n\nSigned-off-by: Yadunund <yadunund@openrobotics.org>"
+    },
+    {
+      "sha": "0a30fbc07c048bdd10898a46311cbdb4fe355ca4",
+      "author": "Yadu",
+      "date": "2023-05-04T14:19:45Z",
+      "message": "Fix expected key (#90)\n\nSigned-off-by: Yadunund <yadunund@openrobotics.org>"
+    },
+    {
+      "sha": "b5b3e393cba5753d6b4e0dc7d5a969293cb5709b",
+      "author": "Chris Lalancette",
+      "date": "2023-04-28T15:53:04Z",
+      "message": "1.3.0"
+    },
+    {
+      "sha": "63967a97c701f09f49cf243f30818fbc1879a2c9",
+      "author": "Chris Lalancette",
+      "date": "2023-04-28T15:52:59Z",
+      "message": "Changelog\n\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "99f3be1ea1a5b6b253b4d5b7b6ee937c0f3cabda",
+      "author": "Chris Lalancette",
+      "date": "2023-04-11T14:46:31Z",
+      "message": "1.2.2"
+    },
+    {
+      "sha": "fc6ab710811171e6fb1206edb0afb5c977902d82",
+      "author": "Chris Lalancette",
+      "date": "2023-04-11T14:46:25Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "7693fbb4299d3a2644b6a6567a71b4c684852f33",
+      "author": "Eloy Briceno",
+      "date": "2023-04-04T16:50:59Z",
+      "message": "Changes the use of __slots__ for the field and field type getter (#87)\n\n* Changes the use of __slots__ for the field and field type getter\r\n\r\nSigned-off-by: Voldivh <eloyabmfcv@gmail.com>"
+    },
+    {
+      "sha": "726c375389ed2b91313742008a5cf04bd0e155b7",
+      "author": "Chris Lalancette",
+      "date": "2023-02-14T16:18:21Z",
+      "message": "1.2.1"
+    },
+    {
+      "sha": "33c4271f53594e91e2f6521ecdc5a9d3dafed832",
+      "author": "Chris Lalancette",
+      "date": "2023-02-14T16:18:15Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "0918e23c83b2d1b9928888f03895d183efc3f14b",
+      "author": "Audrow Nash",
+      "date": "2022-11-17T14:18:30Z",
+      "message": "[rolling] Update maintainers - 2022-11-07 (#83)"
+    },
+    {
+      "sha": "00d91f012d16002217c159ee3ce53b03c9149479",
+      "author": "Jacob Perron",
+      "date": "2022-09-13T18:35:26Z",
+      "message": "Revert \"Mirror rolling to foxy-devel\" (#82)\n\nThis reverts commit fdc897fc1d0dfd352fba8a87aebfa362c83a7fec."
+    },
+    {
+      "sha": "fdc897fc1d0dfd352fba8a87aebfa362c83a7fec",
+      "author": "Audrow Nash",
+      "date": "2022-06-28T14:16:24Z",
+      "message": "Mirror rolling to foxy-devel"
+    },
+    {
+      "sha": "db90a5ff90bdb13e10eedcd1e4b5cbd7642fb66e",
+      "author": "Audrow Nash",
+      "date": "2022-05-11T00:36:22Z",
+      "message": "1.2.0\n\nSigned-off-by: Audrow Nash <audrow@hey.com>"
+    },
+    {
+      "sha": "e68d1f723f4f48821963df11c0cc6147636cbcb6",
+      "author": "Michael Jeronimo",
+      "date": "2022-04-18T21:04:49Z",
+      "message": "Fix fixed-size Array visualization (#81)\n\n* Fix fixed-size Array visualization\r\n\r\nDon't assume that has_maximum_size means that a maximum_size field\r\nexists on the object. In the case of an Array object, has_maximum_size\r\nis True, but there is no 'maximum_size' field, only 'size'.\r\n\r\nFixes: #77\r\n\r\nSigned-off-by: Michael Jeronimo <michael.jeronimo@openrobotics.org>\r\n\r\n* Update src/rqt_plot/plot_widget.py\r\n\r\nCo-authored-by: Chris Lalancette <clalancette@gmail.com>\r\n\r\nCo-authored-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "d2e7329fd49cf72aa12ff7348dc2df2b93bb9fcb",
+      "author": "Jacob Perron",
+      "date": "2022-01-14T18:04:16Z",
+      "message": "1.1.1"
+    },
+    {
+      "sha": "20f19282b46eed0ca65635bcf94f5f2caad8a5a2",
+      "author": "Mabel Zhang",
+      "date": "2021-11-13T01:41:16Z",
+      "message": "Merge pull request #49 from sloretz/topics_by_whole_tokens\n\nCompare topics by whole tokens"
+    },
+    {
+      "sha": "f2d5caeba99bd1c8bf4f53405ea57cc4716a6ed2",
+      "author": "Jacob Perron",
+      "date": "2021-08-31T22:56:09Z",
+      "message": "1.1.0"
+    },
+    {
+      "sha": "716691e17ee9eeef7a6f231c3ca4905330f1e28d",
+      "author": "Gonzo",
+      "date": "2021-08-17T20:02:10Z",
+      "message": "Added qos autodetect (#76)\n\n* Added qos autodetect\r\n\r\nSigned-off-by: Gonzalo de Pedro <gonzalo@depedro.com.ar>\r\n\r\n* Changes based on review\r\n\r\nSigned-off-by: Gonzalo de Pedro <gonzalo@depedro.com.ar>\r\n\r\n* add get_message import\r\n\r\nSigned-off-by: Gonzalo de Pedro <gonzalo@depedro.com.ar>"
+    },
+    {
+      "sha": "b7c60ab3582b49b71b427db5903b81b0a5461a10",
+      "author": "Chris Lalancette",
+      "date": "2021-06-25T12:40:15Z",
+      "message": "Fix modern setuptools warning about dashes instead of underscores. (#74)\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "58d628a57e1c90f010f0f28d0218863f6537c72e",
+      "author": "Chris Lalancette",
+      "date": "2021-05-26T18:51:02Z",
+      "message": "Fix matplotlib exception on Windows. (#73)\n\nOn Windows, when we make the rqt_plot window very small, it\r\ncauses matplotlib to throw an exception like:\r\n\r\nnumpy.linalg.LinAlgError: Singular matrix\r\n\r\nThe trouble seems to be that the matplotlib resize event is\r\ntrying to invert a zero-sized matrix (I think), so it is\r\ngiving numpy fits.  If one of the dimensions of the windows\r\nis 0, just skip trying to apply a tight_layout to it.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "3f170c77f793f867b178d204e593292532b9997f",
+      "author": "Chris Lalancette",
+      "date": "2021-04-27T14:57:17Z",
+      "message": "1.0.10"
+    },
+    {
+      "sha": "38b53f2ff8ed6dd3a04db3c0733f7d54420c5861",
+      "author": "Chris Lalancette",
+      "date": "2021-04-27T14:57:06Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "50434976e6ed23d859a53fd3687677ec72554cc2",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2021-04-19T18:25:37Z",
+      "message": "Changed the build type to ament_python and fixed package to run with ros2 run (#58)\n\nSigned-off-by: ahcorde <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "f04ae083e0d502f561b0592fd933573ce1d84fdb",
+      "author": "Ivan Santiago Paunovic",
+      "date": "2021-03-05T18:18:09Z",
+      "message": "1.0.9"
+    },
+    {
+      "sha": "b95b479bd73c894ca041f456930357d779765e67",
+      "author": "Ivan Santiago Paunovic",
+      "date": "2021-03-05T18:15:39Z",
+      "message": "Update chengelog\n\nSigned-off-by: Ivan Santiago Paunovic <ivanpauno@ekumenlabs.com>"
+    },
+    {
+      "sha": "9c56eabdb696ed1875599d2e3b975aa5000498a9",
+      "author": "Ivan Santiago Paunovic",
+      "date": "2021-03-05T17:41:10Z",
+      "message": "Fix plots of array items (#71)\n\nSigned-off-by: Ivan Santiago Paunovic <ivanpauno@ekumenlabs.com>"
+    },
+    {
+      "sha": "531dc762f188465f0553e9a114f3d6d989d79a95",
+      "author": "Mabel Zhang",
+      "date": "2020-10-16T22:59:44Z",
+      "message": "Merge pull request #66 from ros-visualization/update_maintainers_crystal\n\n[Crystal] Update maintainers"
+    },
+    {
+      "sha": "0f5c29ccf933f5750c839fd479144c3e3843e7f9",
+      "author": "Mabel Zhang",
+      "date": "2020-10-16T19:58:00Z",
+      "message": "add author back\n\nSigned-off-by: Mabel Zhang <mabel@openrobotics.org>"
+    },
+    {
+      "sha": "47587c2973d18b6020160943328988e314b5016f",
+      "author": "Mabel Zhang",
+      "date": "2020-10-15T23:52:35Z",
+      "message": "update maintainers\n\nSigned-off-by: Mabel Zhang <mabel@openrobotics.org>"
+    },
+    {
+      "sha": "536da8c22fa6c5d44ea755ddcad1febf41dd3ffd",
+      "author": "Jacob Perron",
+      "date": "2020-06-03T06:25:52Z",
+      "message": "1.0.8"
+    },
+    {
+      "sha": "e33182b68827897d5cd959fa75a0735f2ef32718",
+      "author": "Nikos Koukis",
+      "date": "2020-04-03T18:33:15Z",
+      "message": "Fix #35 - \"bottom cannot be >= top\" matplotlib error (#52)\n\n* Fix #35 - \"bottom cannot be >= top\" matplotlib error\r\n\r\nMatplotlib emits errors like the following under specific canvas\r\nlayouts:\r\n\r\n```console\r\nTraceback (most recent call last):\r\n  File \"/opt/ros/kinetic/lib/python2.7/dist-packages/rqt_plot/data_plot/mat_data_plot.py\", line 107, in resizeEvent\r\n    self.figure.tight_layout()\r\n  File \"/usr/lib/python2.7/dist-packages/matplotlib/figure.py\", line 1756, in tight_layout\r\n    self.subplots_adjust(**kwargs)\r\n  File \"/usr/lib/python2.7/dist-packages/matplotlib/figure.py\", line 1612, in subplots_adjust\r\n    self.subplotpars.update(*args, **kwargs)\r\n  File \"/usr/lib/python2.7/dist-packages/matplotlib/figure.py\", line 230, in update\r\n    raise ValueError('bottom cannot be >= top')\r\nValueError: bottom cannot be >= top\r\n```\r\n\r\nCurrent patch catches and suppresses that exception.\r\n\r\nReferences:\r\n- https://github.com/matplotlib/matplotlib/pull/10915\r\n- https://github.com/ros-visualization/rqt_plot/issues/35\r\n\r\n* renamed to `safe_tight_layout`, inverted logic to avoid duplicating the call\r\n\r\nCo-authored-by: Dirk Thomas <dirk-thomas@users.noreply.github.com>"
+    },
+    {
+      "sha": "5af1f84f3cd6b03e7c40aec4aa2173f2714b158f",
+      "author": "Shane Loretz",
+      "date": "2020-02-26T18:29:48Z",
+      "message": "Compare topics by whole tokens\n\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>"
+    },
+    {
+      "sha": "986a95854601f2f1774a5d14c5de22a37f7e64ba",
+      "author": "Dirk Thomas",
+      "date": "2019-10-03T20:01:06Z",
+      "message": "1.0.7"
+    },
+    {
+      "sha": "8397776785b086365fea73c884d1b59eab7b0f8f",
+      "author": "Dirk Thomas",
+      "date": "2019-10-03T20:00:59Z",
+      "message": "update changelog"
+    },
+    {
+      "sha": "386d71d7beda6d7b3038e80e7388c08aa39b6973",
+      "author": "Dirk Thomas",
+      "date": "2019-09-09T23:07:44Z",
+      "message": "fix KeyError when curves are removed concurrently (#37)"
+    },
+    {
+      "sha": "784da83bcf1ca8531891aa249e9d89b346132193",
+      "author": "Dirk Thomas",
+      "date": "2019-06-10T18:05:00Z",
+      "message": "1.0.6"
+    },
+    {
+      "sha": "50e4d5c5d99654cdb3d419d18fa6e3829f26c26a",
+      "author": "Dirk Thomas",
+      "date": "2019-06-10T18:04:19Z",
+      "message": "update changelog"
+    },
+    {
+      "sha": "2c86ecf7497bda98c75eeb38dedc1e4422b2798e",
+      "author": "Dirk Thomas",
+      "date": "2019-06-10T17:58:35Z",
+      "message": "remove unused code (#33)"
+    },
+    {
+      "sha": "da244308ea2cf394395abe5e71832b12cf3e8905",
+      "author": "Dirk Thomas",
+      "date": "2019-05-29T23:57:09Z",
+      "message": "1.0.5"
+    },
+    {
+      "sha": "e6e97777bd5eade0974351044349f3a4763cbfc5",
+      "author": "Dirk Thomas",
+      "date": "2019-05-29T18:07:36Z",
+      "message": "explicitly pass qos profile (#32)"
+    },
+    {
+      "sha": "0de7187ff4c1edad2eee0fca0b23be268fda1ea8",
+      "author": "Dirk Thomas",
+      "date": "2019-05-20T22:16:31Z",
+      "message": "1.0.4"
+    },
+    {
+      "sha": "17decf1451a5e97c4259b6c07450998ebce0affa",
+      "author": "Clyde McQueen",
+      "date": "2019-05-15T17:45:00Z",
+      "message": "Python 3 fixes (#30)"
+    },
+    {
+      "sha": "7e0e7270595d4861411e824c534dfea06b20ec0f",
+      "author": "Dirk Thomas",
+      "date": "2019-05-09T23:32:54Z",
+      "message": "1.0.3"
+    },
+    {
+      "sha": "fea992aabe07355427fc70ff0e18d2ac99d4e4f2",
+      "author": "brawner",
+      "date": "2019-01-07T22:11:12Z",
+      "message": "Merge pull request #22 from ros-visualization/complex_field_types\n\nAdd support for complex message types"
+    },
+    {
+      "sha": "15090eb8847d12c22d088cdc7125323539ff3351",
+      "author": "Stephen",
+      "date": "2019-01-03T01:26:45Z",
+      "message": "Add support for complex message types"
+    },
+    {
+      "sha": "183cfdaed87110ba583c2cd8cfcfe47fe39dcf73",
+      "author": "Mike Lautman",
+      "date": "2018-12-13T21:10:47Z",
+      "message": "1.0.2"
+    },
+    {
+      "sha": "8c50889243766a9406b47f70981d86ee4c98c1cb",
+      "author": "Mike Lautman",
+      "date": "2018-12-13T21:10:32Z",
+      "message": "updating changelog"
+    },
+    {
+      "sha": "d5eb59998d88f4ff049ce4a2299aed6eeed825e1",
+      "author": "Mike Lautman",
+      "date": "2018-12-13T21:09:05Z",
+      "message": "fixing resolve_topic_name method (#19)"
+    },
+    {
+      "sha": "3de2f4141a36e2d6174a035e6a2270b3dc930a63",
+      "author": "Mike Lautman",
+      "date": "2018-12-12T20:58:42Z",
+      "message": "1.0.1"
+    },
+    {
+      "sha": "44d1c16f20580815f7fcec9c387d771e83760854",
+      "author": "Mike Lautman",
+      "date": "2018-12-12T20:58:32Z",
+      "message": "updating changelog"
+    },
+    {
+      "sha": "da31ff39e9327d43b3de98232c6a812f5ecabee4",
+      "author": "Mike Lautman",
+      "date": "2018-12-12T20:57:48Z",
+      "message": "removing missing dep (#18)"
+    },
+    {
+      "sha": "905dabecb7b49c143d54bb76291c5eef3df3c570",
+      "author": "Mike Lautman",
+      "date": "2018-12-12T06:43:17Z",
+      "message": "1.0.0"
+    },
+    {
+      "sha": "23376159484fbe5b31928a8088655726c32cfa46",
+      "author": "Mike Lautman",
+      "date": "2018-12-12T06:41:05Z",
+      "message": "updating changelog"
+    },
+    {
+      "sha": "d91396fab6db85b41a2e6e4aa219ed3a9f2ccaaa",
+      "author": "Stephen",
+      "date": "2018-12-06T00:13:17Z",
+      "message": "Porting to ros2 (#17)"
+    },
+    {
+      "sha": "6e210c797bc148802d7e82e77156cc05b8b20e30",
+      "author": "Mike Lautman",
+      "date": "2018-10-20T03:39:49Z",
+      "message": "autopep8 (#15)"
+    },
+    {
+      "sha": "1971bc4f52a8970d510c93efa215ce7222f00ad5",
+      "author": "Kei Okada",
+      "date": "2018-07-31T15:16:42Z",
+      "message": "pyqtgraph < 0.10 fail to run (#13)"
+    },
+    {
+      "sha": "549bbcb0b14252ee91dfdab38735bc08f19c7a24",
+      "author": "Dirk Thomas",
+      "date": "2017-04-24T22:44:15Z",
+      "message": "0.4.8"
+    },
+    {
+      "sha": "97f7989578a0bb5d927e8f0b01aa3f7e6704af55",
+      "author": "Dirk Thomas",
+      "date": "2017-04-24T22:44:10Z",
+      "message": "update changelog"
+    },
+    {
+      "sha": "d63c85d29c178c2d88b915c73ec439c4569d11e0",
+      "author": "Dirk Thomas",
+      "date": "2017-04-24T21:38:26Z",
+      "message": "update urls, add myself as maintainer"
+    },
+    {
+      "sha": "6a045f6129fbffa6b91777e5241b62e0d0b1c0a1",
+      "author": "Dirk Thomas",
+      "date": "2017-04-24T18:34:24Z",
+      "message": "move package to root of repo"
+    },
+    {
+      "sha": "6153fd235a47ddc10d1495a5bf7b9bcf3caa2cc4",
+      "author": "Dirk Thomas",
+      "date": "2017-04-24T16:38:38Z",
+      "message": "Merge pull request #433 from contradict/scroll_area\n\n[rqt_image_view] Add a scroll area"
+    },
+    {
+      "sha": "9b4cfc7ee44fc2ca562bb645ffb15a3734b471c6",
+      "author": "Dirk Thomas",
+      "date": "2017-03-02T15:59:40Z",
+      "message": "0.4.7"
+    },
+    {
+      "sha": "e39fa980f00a5e4fd6d9f5cb5fff8b89de542a3d",
+      "author": "Dirk Thomas",
+      "date": "2017-03-02T15:59:32Z",
+      "message": "update changelogs"
+    },
+    {
+      "sha": "2b19e3ce60fe0031661978b289e1cd7abf264185",
+      "author": "Dirk Thomas",
+      "date": "2017-02-27T19:05:37Z",
+      "message": "0.4.6"
+    },
+    {
+      "sha": "bb1c2e48988589f86caba5caa334368f9ba80297",
+      "author": "Dirk Thomas",
+      "date": "2017-02-27T19:05:28Z",
+      "message": "update changelogs"
+    },
+    {
+      "sha": "b71a19231e28fd8ffd4b7d725492a80d3f6a91ba",
+      "author": "Dirk Thomas",
+      "date": "2017-02-22T15:33:19Z",
+      "message": "Merge pull request #434 from ros-visualization/fix_buffer_length\n\nfix buffer length"
+    },
+    {
+      "sha": "7b2f64e76093af03044f1267fdb5e9caeb609f73",
+      "author": "David V. Lu!!",
+      "date": "2017-02-14T18:40:52Z",
+      "message": "rqt_plot: Plot bool fields (#427)\n\n* Plot bool fields\r\n\r\n* Update returned messages with boolean str"
+    },
+    {
+      "sha": "c94f2ce9e2211229b01627ac8abe2b2e0a2d0194",
+      "author": "Dirk Thomas",
+      "date": "2017-02-03T16:18:05Z",
+      "message": "0.4.5"
+    },
+    {
+      "sha": "534c7f49bb7448cbfa2b071cbae29d3a32ff0af8",
+      "author": "Dirk Thomas",
+      "date": "2017-02-03T16:17:49Z",
+      "message": "update changelogs"
+    },
+    {
+      "sha": "543b89e669a6d02da59830a211ecc807a265544b",
+      "author": "Dirk Thomas",
+      "date": "2017-01-24T23:33:19Z",
+      "message": "0.4.4"
+    },
+    {
+      "sha": "f9fc8d425d2a4eb7c0e4c80d53df674d701b7389",
+      "author": "Dirk Thomas",
+      "date": "2017-01-24T23:33:07Z",
+      "message": "update changelogs"
+    },
+    {
+      "sha": "3185bda0e25d75c47598364f550fd7309d872538",
+      "author": "David V. Lu",
+      "date": "2017-01-06T15:50:03Z",
+      "message": "Plot bools"
+    },
+    {
+      "sha": "eae93e85d2f0c27aacdf1eb64235216d79eb9090",
+      "author": "Dirk Thomas",
+      "date": "2017-01-24T22:31:36Z",
+      "message": "Merge pull request #419 from arne48/master\n\nCatching unhandled IOError exceptions if connection to rosmaster gets lost"
+    },
+    {
+      "sha": "96a9b970546eb635f33b1b7f4a22dfd26c3b7445",
+      "author": "Dirk Thomas",
+      "date": "2017-01-24T21:49:48Z",
+      "message": "Merge pull request #421 from ros-visualization/python3_compatible_syntax\n\nuse Python 3 compatible syntax"
+    },
+    {
+      "sha": "8ab5bf1b7646c57a7105d9055c8910c90cf9a67e",
+      "author": "Dirk Thomas",
+      "date": "2017-01-24T20:26:18Z",
+      "message": "use Python 3 compatible syntax"
+    },
+    {
+      "sha": "77026db2c29707c552b30659d7e258d37343aafc",
+      "author": "Dirk Thomas",
+      "date": "2017-01-09T13:36:46Z",
+      "message": "Merge pull request #415 from ros-visualization/reenable_with_newer_pyqtgraph\n\nreenable PyQtGraph when version >= 0.10"
+    },
+    {
+      "sha": "cd44f3723aaa724088b65312b99f5eecd662edd1",
+      "author": "Dirk Thomas",
+      "date": "2016-12-20T17:16:49Z",
+      "message": "reenable PyQtGraph when version >= 0.10"
+    },
+    {
+      "sha": "008ea2da47c011428077d168bd8eea2fdbb2ba16",
+      "author": "Dirk Thomas",
+      "date": "2016-12-20T17:00:43Z",
+      "message": "Merge pull request #406 from jacquelinekay/rqt_reconfigure_save_load\n\nAdd 'save' and 'load' buttons to rqt_reconfigure"
+    },
+    {
+      "sha": "ffe453084e1f3396446125c1b36245d6d0f6e0d7",
+      "author": "Dirk Thomas",
+      "date": "2016-12-20T16:56:16Z",
+      "message": "Merge pull request #385 from samuelba/feature/smooth-transformation\n\nrqt_image_view: use smooth transformation for image scaling"
+    },
+    {
+      "sha": "eb043d9990a1a4d875040eeadf012081ef18f37f",
+      "author": "Dirk Thomas",
+      "date": "2016-11-02T17:47:19Z",
+      "message": "0.4.3"
+    },
+    {
+      "sha": "21321885296c1b4f9f82aa98865db2a341f8287c",
+      "author": "Dirk Thomas",
+      "date": "2016-11-02T17:47:03Z",
+      "message": "update changelogs"
+    },
+    {
+      "sha": "8154a730c5b0b6540e607ff8c6fb7562f469070c",
+      "author": "Dirk Thomas",
+      "date": "2016-09-19T17:25:35Z",
+      "message": "0.4.2"
+    },
+    {
+      "sha": "554432580bbdeb9b8d87c48ab85654e667da102d",
+      "author": "Dirk Thomas",
+      "date": "2016-09-19T17:25:27Z",
+      "message": "update changelogs"
+    },
+    {
+      "sha": "fb03d43bcd72f297cb8159505339d053dc625318",
+      "author": "Dirk Thomas",
+      "date": "2016-09-09T19:17:29Z",
+      "message": "rqt_plot: add keyword arg to make sort optional"
+    },
+    {
+      "sha": "21c0a0bb322d6fb6ea86a4d41ca1bd693a597fa3",
+      "author": "Dirk Thomas",
+      "date": "2016-09-08T22:29:03Z",
+      "message": "Merge pull request #382 from trainman419/bag_plot_lock\n\nLock bag when reading for plotting"
+    },
+    {
+      "sha": "a81601af6b19754af1823ba85dbaf601344e044a",
+      "author": "Dirk Thomas",
+      "date": "2016-09-08T22:20:10Z",
+      "message": "Merge pull request #391 from ros-visualization/image_view_select_existing_topic\n\nrqt_image_view: select existing topic"
+    },
+    {
+      "sha": "2f67124f98304d7958ead9bd5d7ae5ef25b9d429",
+      "author": "Dirk Thomas",
+      "date": "2016-09-06T16:39:46Z",
+      "message": "Merge pull request #399 from ros-visualization/disable_pyqtgraph_qt5\n\ndisable PyQtGraph backend when Qt 5 is being used"
+    },
+    {
+      "sha": "b8cb057acc9babbb4a3a80fecafc62c466db1ca9",
+      "author": "Dirk Thomas",
+      "date": "2016-09-06T16:37:33Z",
+      "message": "disable PyQtGraph backend when Qt 5 is being used"
+    },
+    {
+      "sha": "6b7911782393def849459a0e79afca000c06fa9f",
+      "author": "Dirk Thomas",
+      "date": "2016-08-08T16:06:39Z",
+      "message": "rqt_plot: add missing dependency on numpy (#396)"
+    },
+    {
+      "sha": "8812ee2d50616253fc31d4973a8d3af905f91df4",
+      "author": "Dirk Thomas",
+      "date": "2016-05-16T20:13:42Z",
+      "message": "0.4.1"
+    },
+    {
+      "sha": "40e00846bce628f951af2573bb8cd05ce907d67a",
+      "author": "Dirk Thomas",
+      "date": "2016-05-16T20:13:30Z",
+      "message": "update changelogs"
+    },
+    {
+      "sha": "5acd655b6abf755c36f8d6a8a617663e29556579",
+      "author": "Dirk Thomas",
+      "date": "2016-05-12T19:21:14Z",
+      "message": "fix mouse wheel delta in Qt 5 (#376)"
+    },
+    {
+      "sha": "8c83e79409f291d2178f79149e7ab8b10110dfcd",
+      "author": "Aaron Blasdel",
+      "date": "2016-04-27T22:53:19Z",
+      "message": "Merge pull request #368 from v-lopez/master\n\nrqt_image_view: Adding the possibility to publish mouse events."
+    },
+    {
+      "sha": "114549181863b8aa791063098eee11be5d697344",
+      "author": "Dirk Thomas",
+      "date": "2016-04-27T22:07:15Z",
+      "message": "0.4.0"
+    },
+    {
+      "sha": "cdea0e67b8aa8c6621467ab93c3283d428445fd1",
+      "author": "Dirk Thomas",
+      "date": "2016-04-27T22:07:09Z",
+      "message": "update changelogs"
+    },
+    {
+      "sha": "efc70c38ea8b79b01bd580f796b7ca8671ecd5f9",
+      "author": "Dirk Thomas",
+      "date": "2016-04-27T21:57:11Z",
+      "message": "Merge pull request #359 from ros-visualization/qt5\n\nadditionally support Qt5"
+    },
+    {
+      "sha": "8b1352cc0461e269972489ddb80e62deb2c67954",
+      "author": "Dirk Thomas",
+      "date": "2016-04-21T21:35:05Z",
+      "message": "update version check for matplotlib backend"
+    },
+    {
+      "sha": "1079e90ed9a99eb60e63825bb45e14268bbc109c",
+      "author": "Dirk Thomas",
+      "date": "2016-04-20T00:24:10Z",
+      "message": "use appropriate matplotlib version and api"
+    },
+    {
+      "sha": "8b4fd60b96290a664d8dbe80ebd54fa611f0c08f",
+      "author": "Dirk Thomas",
+      "date": "2016-04-19T01:00:15Z",
+      "message": "many more imports"
+    },
+    {
+      "sha": "e89ee006bd935469c969ae3f3d0e6c6961bc05a9",
+      "author": "Dirk Thomas",
+      "date": "2016-04-11T19:17:56Z",
+      "message": "use new package to encapsule exact version of qwt dependency"
+    },
+    {
+      "sha": "3dfb175c71f30b2310c9ff40c4524c93edcfe7af",
+      "author": "Dirk Thomas",
+      "date": "2016-02-26T20:40:09Z",
+      "message": "additionally support Qt5"
+    },
+    {
+      "sha": "e9f6f1d56ed2315f08ba1026558c8c9516539e25",
+      "author": "Aaron Blasdel",
+      "date": "2016-04-14T20:50:27Z",
+      "message": "Merge pull request #362 from reinzor/master\n\nPass y from scene to map_y_to_topic function"
+    },
+    {
+      "sha": "29925d03e92fee65d54348e4c451b7d35c41bc45",
+      "author": "Dirk Thomas",
+      "date": "2016-03-30T20:56:27Z",
+      "message": "Merge pull request #358 from ros-visualization/pr343\n\ncheck alternative matplotplot 1.5 module name"
+    },
+    {
+      "sha": "ddbd4e4515203deca120eb834458308075eacea4",
+      "author": "Dirk Thomas",
+      "date": "2016-03-30T20:54:44Z",
+      "message": "check alternative matplotplot 1.5 module name"
+    },
+    {
+      "sha": "51694af8ef4f323c45181e0d2212326a7f7ca0b4",
+      "author": "Aaron Blasdel",
+      "date": "2016-03-09T01:25:01Z",
+      "message": "0.3.13"
+    },
+    {
+      "sha": "d2445b58c7f721900a8734e1592792eef180d538",
+      "author": "Aaron Blasdel",
+      "date": "2016-03-09T01:23:59Z",
+      "message": "update changelogs"
+    },
+    {
+      "sha": "4e76dcbb15ce51fbc4a86a074dbf709fb5e24d35",
+      "author": "Aaron Blasdel",
+      "date": "2015-11-17T01:01:22Z",
+      "message": "Merge pull request #344 from jspricke/missing_include\n\nAdd missing include"
+    },
+    {
+      "sha": "96d740b972259362471c9ff0360db681a7d90e0f",
+      "author": "Jochen Sprickerhof",
+      "date": "2015-11-11T21:01:43Z",
+      "message": "Add missing include"
+    },
+    {
+      "sha": "f84ce1a2e2948537f6c462bbd06e7e547fdc9c8a",
+      "author": "Dirk Thomas",
+      "date": "2015-09-14T22:26:11Z",
+      "message": "Merge pull request #338 from vrabaud/master\n\nuse proper icon names for add/remove"
+    },
+    {
+      "sha": "974095f49e32deb1a72283ff50d7a7360d80b04e",
+      "author": "Vincent Rabaud",
+      "date": "2015-09-14T09:08:28Z",
+      "message": "use proper icon names for add/remove\nas detailed in http://standards.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html"
+    },
+    {
+      "sha": "ddf5d7a3cf35fb194f5c411b8c328cc15e21e154",
+      "author": "Aaron Blasdel",
+      "date": "2015-07-24T20:51:28Z",
+      "message": "0.3.12"
+    },
+    {
+      "sha": "c9054992be6434d80e85acb5e444cabc49ca6a3e",
+      "author": "Aaron Blasdel",
+      "date": "2015-07-10T15:55:17Z",
+      "message": "Merge pull request #326 from ros-visualization/image_view_save_image\n\n[rqt_image_view] add button to save current image to file"
+    },
+    {
+      "sha": "d597aa1fe6c603722e6977d90c788752caa124ef",
+      "author": "Scott K Logan",
+      "date": "2015-07-10T03:47:18Z",
+      "message": "Merge pull request #319 from cottsay/refresh_button\n\nrqt_reconfigure: add refresh button"
+    },
+    {
+      "sha": "c743a76f311531807077067d46c2ea4ac581a84c",
+      "author": "Aaron Blasdel",
+      "date": "2015-07-08T15:57:21Z",
+      "message": "Merge pull request #313 from suryaambrose/groovy-devel\n\nrqt_bag : Addition of a step-by-step play"
+    },
+    {
+      "sha": "d0f7046d319d711cd23b471bf415b26c52bdcf6d",
+      "author": "Dirk Thomas",
+      "date": "2015-04-30T18:06:45Z",
+      "message": "0.3.11"
+    },
+    {
+      "sha": "e99ae0a3965798cf22f036193e87d4e9663455e7",
+      "author": "Dirk Thomas",
+      "date": "2015-04-30T18:06:33Z",
+      "message": "update changelogs"
+    },
+    {
+      "sha": "7356e5073b4c45fe95aa1b43f715a4f9aa24f979",
+      "author": "Aaron Blasdel",
+      "date": "2015-03-04T23:44:50Z",
+      "message": "Merge pull request #292 from trainman419/feature_234\n\nrqt_plot: Save and restore axes settings. Fixes #234"
+    },
+    {
+      "sha": "9b8d4215755063ac4bce9a83d9268925744b3bd6",
+      "author": "trainman419",
+      "date": "2014-11-24T15:48:36Z",
+      "message": "Save and restore axes settings. Fixes #234"
+    },
+    {
+      "sha": "48746ef3a95bfcf477505ccd916222dd42590d8f",
+      "author": "Dirk Thomas",
+      "date": "2015-02-17T06:24:03Z",
+      "message": "Merge pull request #301 from trainman419/feature_301\n\nrqt_plot: remove warning/debug message when backend not found"
+    },
+    {
+      "sha": "d65f5438203588aefadbe85d958ced5073d72c3d",
+      "author": "trainman419",
+      "date": "2015-02-17T05:34:10Z",
+      "message": "Remove warning when backend not found. Fixes #301"
+    },
+    {
+      "sha": "369673e5e38e23e7d18098815abf1c3b3413e199",
+      "author": "Aaron Blasdel",
+      "date": "2015-01-16T22:58:54Z",
+      "message": "Merge pull request #299 from mickael9/patch-1\n\nFix version clash when PyQt5 is installed"
+    },
+    {
+      "sha": "c124b013c6def03df7453d3990a27b2c2798ad24",
+      "author": "Mickaël",
+      "date": "2015-01-11T19:14:35Z",
+      "message": "Fix version clash when PyQt5 is installed\n\nWhen PyQt5 is installed, matplotlib uses the Qt5 backend by default, so we need to force the usage of the Qt4 backend."
+    },
+    {
+      "sha": "50e05c9ebb7011791b02d5ccc3163c1c6fd5a34b",
+      "author": "Dirk Thomas",
+      "date": "2014-10-01T21:37:36Z",
+      "message": "0.3.10"
+    },
+    {
+      "sha": "7335cc8034f3c258cec20239f31b9cbc1747bcaa",
+      "author": "Dirk Thomas",
+      "date": "2014-10-01T21:37:23Z",
+      "message": "update changelogs"
+    },
+    {
+      "sha": "e74948709348cb819dc75757e7347a77c1e07cf5",
+      "author": "Aaron Blasdel",
+      "date": "2014-09-23T23:34:04Z",
+      "message": "Merge pull request #280 from trainman419/close_bag_plugin\n\nrqt_bag: Refactor popup management and close callbacks"
+    },
+    {
+      "sha": "0fdb8f123154b55f9609bd4c0ef2c3fd1abb3694",
+      "author": "Aaron Blasdel",
+      "date": "2014-09-23T23:24:34Z",
+      "message": "Merge pull request #279 from trainman419/fix_bag_topic_type\n\nrqt_bag: Fix topic type retrieval for multiple bag files"
+    },
+    {
+      "sha": "f0188ba3502f7c01e94edfbdcb098b4ba7aab4b8",
+      "author": "Dirk Thomas",
+      "date": "2014-08-22T17:58:50Z",
+      "message": "Merge pull request #273 from mrdanbrooks/rqt_graph_standalone_fix\n\nchange package name to full plugin name in scripts"
+    },
+    {
+      "sha": "78d805c0d669409b1f2c75a429ce43c1498180ae",
+      "author": "dan brooks",
+      "date": "2014-08-19T00:00:57Z",
+      "message": "updates package names to full plugin names for scripts"
+    },
+    {
+      "sha": "cfd93176a16239607ff1bfcf3d5a59afc1426bf3",
+      "author": "Aaron Blasdel",
+      "date": "2014-08-20T18:25:27Z",
+      "message": "Merge pull request #272 from ros-visualization/revert-270-rqt_graph_standalone_fix\n\nRevert \"changes partial name to full name to avoid future naming conflic..."
+    },
+    {
+      "sha": "1fd18609cadf10b9f02258a0335cc43d1a6af747",
+      "author": "Aaron Blasdel",
+      "date": "2014-08-20T18:25:12Z",
+      "message": "Revert \"changes partial name to full name to avoid future naming conflicts\""
+    },
+    {
+      "sha": "f25e6375598271e0d1801663641c29902767b8de",
+      "author": "Aaron Blasdel",
+      "date": "2014-08-20T18:11:51Z",
+      "message": "Merge pull request #270 from mrdanbrooks/rqt_graph_standalone_fix\n\nchanges partial name to full name to avoid future naming conflicts"
+    },
+    {
+      "sha": "e90e09e7c166babe414104c5fe214f01921e24b1",
+      "author": "dan brooks",
+      "date": "2014-08-19T20:25:31Z",
+      "message": "Merge remote-tracking branch 'other/groovy-devel' into rqt_graph_standalone_fix\n\nConflicts:\n\trqt_top/scripts/rqt_top"
+    },
+    {
+      "sha": "3e053a410d17e5702faad522d9930a5f26f63b3e",
+      "author": "dan brooks",
+      "date": "2014-08-19T00:00:57Z",
+      "message": "updates plugin scripts to use full name to avoid future naming collisions"
+    },
+    {
+      "sha": "ea7c4c89b92d0a8334d68e96902f9d92bcdc051a",
+      "author": "Dirk Thomas",
+      "date": "2014-08-18T18:36:12Z",
+      "message": "0.3.9"
+    },
+    {
+      "sha": "c9d607518b34b70146d6d2e8b63eec1efa80da25",
+      "author": "Dirk Thomas",
+      "date": "2014-08-18T18:36:02Z",
+      "message": "update changelogs"
+    },
+    {
+      "sha": "ed85aaba905af3ad170811e6df37aa874da15113",
+      "author": "Aaron Blasdel",
+      "date": "2014-08-11T17:44:31Z",
+      "message": "Merge pull request #262 from trainman419/fix_261\n\nHandle variable-sized arrays. Fixes #261"
+    },
+    {
+      "sha": "f0733f05406b22768fe977d1b3fb82755f5691ad",
+      "author": "trainman419",
+      "date": "2014-07-29T00:02:13Z",
+      "message": "Handle variable-sized arrays. Fixes #261"
+    },
+    {
+      "sha": "94ad2a4cfa982d7ae5e3544a6ebb18a07d7ad1ba",
+      "author": "Dirk Thomas",
+      "date": "2014-07-15T17:11:45Z",
+      "message": "0.3.8"
+    },
+    {
+      "sha": "daea132633fb3460d719ace30883680bba96b1cf",
+      "author": "Dirk Thomas",
+      "date": "2014-07-15T17:11:31Z",
+      "message": "update changelogs"
+    },
+    {
+      "sha": "a53020b6fd87baf8853d3324cb7621be08f530a0",
+      "author": "Dirk Thomas",
+      "date": "2014-07-15T17:08:29Z",
+      "message": "Merge pull request #257 from adwilson10/fix_setup\n\nAdd directories to setup.py, CMakeLists.txt"
+    },
+    {
+      "sha": "3a564a792609c9e8352a14ec65890d7fe75366d1",
+      "author": "Andy Wilson",
+      "date": "2014-07-15T05:19:16Z",
+      "message": "add directories to setup.py, CMakeLists.txt"
+    },
+    {
+      "sha": "9c3622eefaa06b24852a8611823f0b46e930afeb",
+      "author": "Dirk Thomas",
+      "date": "2014-07-11T07:09:29Z",
+      "message": "0.3.7"
+    },
+    {
+      "sha": "2075b41d3557b57dee3b7e21ecfd07a28f38a87f",
+      "author": "Dirk Thomas",
+      "date": "2014-07-11T06:59:40Z",
+      "message": "update changelogs"
+    },
+    {
+      "sha": "c564f0f34cdc5ccd5738d104affe417bdf5b9682",
+      "author": "Dirk Thomas",
+      "date": "2014-07-07T17:36:31Z",
+      "message": "Merge pull request #254 from cottsay/groovy-devel\n\nExport architecture_independent flag in package.xml"
+    },
+    {
+      "sha": "c8f20d5f3a1e4876f43c440a90fac46b52368661",
+      "author": "Scott K Logan",
+      "date": "2014-07-03T19:25:42Z",
+      "message": "Export architecture_independent flag in package.xml"
+    },
+    {
+      "sha": "17556cad2e853a3949ef8f68650a9e3f16e47244",
+      "author": "Aaron Blasdel",
+      "date": "2014-07-03T15:15:17Z",
+      "message": "Merge pull request #247 from adwilson10/groovy-devel\n\nAdd plot markers option to plotting backends"
+    },
+    {
+      "sha": "1d0860f4b6d2b7577591fe431e45fd9c32b2cdbf",
+      "author": "Andy Wilson",
+      "date": "2014-06-12T18:42:47Z",
+      "message": "Added markers option to plotting backend, fixed curve colors on backend switch"
+    },
+    {
+      "sha": "3ab86d87c7b952bc90c95417168028c34f3fa4e4",
+      "author": "Scott K Logan",
+      "date": "2014-07-02T18:11:11Z",
+      "message": "Merge pull request #251 from cottsay/context_menus\n\nrqt_reconfigure: Add context menus for common operations"
+    },
+    {
+      "sha": "b0b4524b950e84ca1f2c620363640b7250f2ae22",
+      "author": "Aaron Blasdel",
+      "date": "2014-06-27T16:10:01Z",
+      "message": "Merge pull request #245 from trainman419/clear_topics\n\nSwitch button usage per #231"
+    },
+    {
+      "sha": "bac75073ad5dc6b9261e0609677b7890cae37ae5",
+      "author": "Aaron Blasdel",
+      "date": "2014-06-16T21:10:56Z",
+      "message": "Merge pull request #246 from trainman419/plot_all_numeric\n\nMake more things plottable"
+    },
+    {
+      "sha": "84b188dba606e6832c4ba06767644724521fd8e2",
+      "author": "Dirk Thomas",
+      "date": "2014-06-16T20:22:56Z",
+      "message": "Merge pull request #248 from bricerebsamen/patch-1\n\nimported qDebug in data_plot/__init__.py"
+    },
+    {
+      "sha": "0eac7688dd8edae7282f7cf06bed9856102df567",
+      "author": "brice rebsamen",
+      "date": "2014-06-13T18:52:46Z",
+      "message": "imported qDebug in data_plot/__init__.py"
+    },
+    {
+      "sha": "266abd3e33fabbb518336c0833b51d4a4e34e87f",
+      "author": "trainman419",
+      "date": "2014-06-03T23:08:55Z",
+      "message": "Make more things plottable\n\nThis extends the notion of what is plottable to include arrays and\nsimple message types, in addition to individual fields in messages"
+    },
+    {
+      "sha": "1d8786eaf37921d2479f3b20f4263e2882072a4a",
+      "author": "Aaron Blasdel",
+      "date": "2014-06-10T21:06:58Z",
+      "message": "Merge pull request #239 from trainman419/rqt_bag_plot\n\nImplement a rqt_bag plotting plugin"
+    },
+    {
+      "sha": "a53581b729dab963b1e6489682c7e1fd7b5865b4",
+      "author": "trainman419",
+      "date": "2014-06-04T18:08:13Z",
+      "message": "Switch button usage per #231"
+    },
+    {
+      "sha": "158e63e0a7bab8032df846654dc8b0a0ddc24837",
+      "author": "trainman419",
+      "date": "2014-06-05T18:36:42Z",
+      "message": "Clean up and address minor issues"
+    },
+    {
+      "sha": "01a6bb4208bfce168227e50b703ba159cbdde10d",
+      "author": "trainman419",
+      "date": "2014-06-03T23:07:01Z",
+      "message": "Fix startup error on plotting"
+    },
+    {
+      "sha": "f154bbe2cafecf28c9dc2eb67a8a526bfeb5d7dd",
+      "author": "trainman419",
+      "date": "2014-06-03T06:04:31Z",
+      "message": "Clean up print statements in qwtplot"
+    },
+    {
+      "sha": "5a8526bf11fbddfd992b9032e537ed6cccd40dc6",
+      "author": "trainman419",
+      "date": "2014-06-03T05:21:27Z",
+      "message": "Do add_curve and redraw with signals"
+    },
+    {
+      "sha": "b9bd5d5cb8c56247e4d59c5afd001568340d1c23",
+      "author": "trainman419",
+      "date": "2014-06-03T04:58:32Z",
+      "message": "Add TODO about pyqtgraph limit setting"
+    },
+    {
+      "sha": "adf65806b7706eb6d02abace68571029451e48de",
+      "author": "trainman419",
+      "date": "2014-06-03T04:17:44Z",
+      "message": "DataPlot emits a limits_changed event"
+    },
+    {
+      "sha": "6957051603ee00b7e505bd6b110ddab3fcd5c91b",
+      "author": "trainman419",
+      "date": "2014-06-03T03:38:43Z",
+      "message": "Fix limits bug in matplot"
+    },
+    {
+      "sha": "96861a074df544c1a9b37189c9616d880c9448ef",
+      "author": "trainman419",
+      "date": "2014-06-03T03:28:18Z",
+      "message": "Strip data store out of individual plots"
+    },
+    {
+      "sha": "782489f45aab6851116c1ec8a9418712c25017e3",
+      "author": "trainman419",
+      "date": "2014-05-31T08:10:59Z",
+      "message": "Fix bug in clear_values"
+    },
+    {
+      "sha": "cb5a0ce8ee435ebe2db8fb4220f5abeb7b552c6b",
+      "author": "trainman419",
+      "date": "2014-05-31T06:38:01Z",
+      "message": "Update maintainer status"
+    },
+    {
+      "sha": "1cab515bc912f661f88f45a7647a41ef4d7586af",
+      "author": "trainman419",
+      "date": "2014-05-30T23:14:00Z",
+      "message": "Preserve limits when switching backends"
+    },
+    {
+      "sha": "449ccda69f9152f45e86bb696805ff2c7eb82233",
+      "author": "trainman419",
+      "date": "2014-05-30T22:49:23Z",
+      "message": "Fix pyqtgraph get limits"
+    },
+    {
+      "sha": "74219d7810e4aff8b86f113115adb384687a4c78",
+      "author": "trainman419",
+      "date": "2014-05-30T22:21:46Z",
+      "message": "More work on autoscaling"
+    },
+    {
+      "sha": "ccfee1bf250a576a6d84e7deb14de3a13f33bcc6",
+      "author": "trainman419",
+      "date": "2014-05-30T20:07:35Z",
+      "message": "Actually use new limits methods"
+    },
+    {
+      "sha": "32304df5552b0c1a7ba4da455be971508d8cb89b",
+      "author": "trainman419",
+      "date": "2014-05-30T00:25:44Z",
+      "message": "Make vline persist if a curve is removed"
+    },
+    {
+      "sha": "0bb61be755880dc4c49a62870e0fd9b83934977f",
+      "author": "trainman419",
+      "date": "2014-05-30T00:18:20Z",
+      "message": "Unify autoscaling and autoscrolling"
+    },
+    {
+      "sha": "0f3377e0cdb2aa2a32f52b902105c7a3945629cc",
+      "author": "trainman419",
+      "date": "2014-05-29T00:34:31Z",
+      "message": "Add vline and limits to matplot and pyqtgraph"
+    },
+    {
+      "sha": "dcfe3bdb9645b203fafd7b24406cd2421e9a0a80",
+      "author": "trainman419",
+      "date": "2014-05-28T22:57:45Z",
+      "message": "bag plot mostly not working with rqt_plot backend"
+    },
+    {
+      "sha": "3a5870e2a5bcbe224210c680c38ea8831a6dfb1d",
+      "author": "trainman419",
+      "date": "2014-05-28T15:55:19Z",
+      "message": "Initialize plot widget on startup"
+    },
+    {
+      "sha": "80b175ccfd0cdc5eebe8e5729900b0ad578453fe",
+      "author": "Aaron Blasdel",
+      "date": "2014-06-09T18:24:00Z",
+      "message": "Merge pull request #236 from trainman419/py_common_plot\n\nDocument rqt_plot backend as public API"
+    },
+    {
+      "sha": "640e10afacdec2cfa4b5bd70eb80c2a426e58881",
+      "author": "Dirk Thomas",
+      "date": "2014-06-02T23:05:59Z",
+      "message": "0.3.6"
+    },
+    {
+      "sha": "1b62cf50e786b3eddb027b91674e0e6b0b6a6cc2",
+      "author": "Dirk Thomas",
+      "date": "2014-06-02T23:03:35Z",
+      "message": "update changelogs"
+    },
+    {
+      "sha": "9a0ca55a53295119471d9cd1c42ddeb2c487f374",
+      "author": "trainman419",
+      "date": "2014-05-30T20:14:26Z",
+      "message": "Remove comment per discussion in #236"
+    },
+    {
+      "sha": "bb8ad03f6f664349fd31b1f43f3651640b4238ed",
+      "author": "trainman419",
+      "date": "2014-05-27T20:02:39Z",
+      "message": "Implement clear_values"
+    },
+    {
+      "sha": "7682a62fbcd470a85c8857bbe50203f31750c2fe",
+      "author": "trainman419",
+      "date": "2014-05-27T19:31:02Z",
+      "message": "Add docstrings"
+    },
+    {
+      "sha": "f2e75ec58244edfb7bb16a65f7584db797567d75",
+      "author": "Aaron Blasdel",
+      "date": "2014-05-29T16:37:57Z",
+      "message": "Merge pull request #233 from trainman419/plot_subscribed_topics\n\nSubscribe to any known topic"
+    },
+    {
+      "sha": "5dd40adf470986069a4edb69f67341d0e0e8c4ab",
+      "author": "Austin",
+      "date": "2014-05-25T22:50:27Z",
+      "message": "Subscribe to any known topic\n\nFix _get_topic_type so that it can get the type of a topic that is subscribed to, even if it isn't published yet."
+    },
+    {
+      "sha": "54de8dce1cacf051433af7ad773f6b9903a84e5a",
+      "author": "trainman419",
+      "date": "2014-05-27T17:46:17Z",
+      "message": "Redraw after loading new data"
+    },
+    {
+      "sha": "6cdfb16360ad45e61a090b2458e2dcd26fb74555",
+      "author": "trainman419",
+      "date": "2014-05-27T17:15:48Z",
+      "message": "Make DataPlot a proxy for its plot widget"
+    },
+    {
+      "sha": "7d3a36b7a6c37ec52dbed18355da662db0c0020c",
+      "author": "trainman419",
+      "date": "2014-05-23T23:35:31Z",
+      "message": "Refactor graph backends into wrapper"
+    },
+    {
+      "sha": "cad33542167a603cb135c694e7a9820b9dc857cb",
+      "author": "Scott K Logan",
+      "date": "2014-05-21T19:55:34Z",
+      "message": "Merge pull request #228 from jbohren-forks/groovy-devel\n\nrqt_reconfigure: Removing unnecessary margins\r\n\r\nThis makes rqt_reconfigure usable on small screens"
+    },
+    {
+      "sha": "001bf69164227f041343e5e89f6c363918f69a34",
+      "author": "Dirk Thomas",
+      "date": "2014-05-07T22:46:23Z",
+      "message": "0.3.5"
+    },
+    {
+      "sha": "8a5daa7351bd96e1fcf22c3acb4e515dbf0f53ce",
+      "author": "Dirk Thomas",
+      "date": "2014-05-07T22:46:12Z",
+      "message": "update changelogs"
+    },
+    {
+      "sha": "a31e2e0076eb331b55f26c70fb45d22991397331",
+      "author": "Dirk Thomas",
+      "date": "2014-05-07T22:32:59Z",
+      "message": "Merge pull request #214 from cottsay/rqt-reconfigure-cla\n\nrqt_reconfigure can't take arguments to start of a parameter anymore"
+    },
+    {
+      "sha": "6da2f2e66d7701622f7d9e2547e099b4ee22fb82",
+      "author": "Dirk Thomas",
+      "date": "2014-05-02T22:39:26Z",
+      "message": "Merge pull request #223 from forrestv/zero_abs_padding\n\nrqt_plot: decreased required minimum padding to 0"
+    },
+    {
+      "sha": "e2223887425faa3dce9bf8dd4a0f90914377f0ed",
+      "author": "Forrest Voight",
+      "date": "2014-04-28T18:41:32Z",
+      "message": "rqt_plot: don't have required minimum padding\n\nWith a fixed absolute minimum padding, rqt_plot is useless for plotting\narbitrarily small values. (For example, trying to plot a magnetic field\nmeasured in teslas, usually having a magnitude of about 1e-4.)"
+    },
+    {
+      "sha": "f2787d04b79adf37b71f35a5dfcb610d60a0f475",
+      "author": "Forrest Voight",
+      "date": "2014-04-28T18:40:45Z",
+      "message": "rqt_plot: don't add more padding for each additional curve"
+    },
+    {
+      "sha": "5e56700967097b0227ad1d7052d2323f2786d56f",
+      "author": "Dirk Thomas",
+      "date": "2014-04-01T17:18:23Z",
+      "message": "Merge pull request #220 from scpeters/catkin_enable_testing\n\nUse CATKIN_ENABLE_TESTING to optionally configure tests"
+    },
+    {
+      "sha": "e44d7db78f1a2e00d210026bfc6cacb6f5c70fbb",
+      "author": "Dorian Scholz",
+      "date": "2014-04-01T15:49:56Z",
+      "message": "rqt_plot: redraw plot only on new data to reduce cpu load, especially with matplot (fixes #219)"
+    },
+    {
+      "sha": "d7805ecd46221ebaff6eedd638c85942e14fa69b",
+      "author": "Dirk Thomas",
+      "date": "2014-01-28T17:20:02Z",
+      "message": "0.3.4"
+    },
+    {
+      "sha": "558eb43180cdedafd7fdbf22e9654dcd7d1259ce",
+      "author": "Dirk Thomas",
+      "date": "2014-01-28T17:19:45Z",
+      "message": "update changelogs"
+    },
+    {
+      "sha": "04284c7428ef0fcd6d8ade8e8e98db3e14a3ae3a",
+      "author": "Dirk Thomas",
+      "date": "2014-01-21T19:11:07Z",
+      "message": "Merge pull request #204 from hugoe/groovy-devel\n\nrqt_bag: publish clock time from bag"
+    },
+    {
+      "sha": "a25a99c2de246c440d2a27e483400fb5bc6f208b",
+      "author": "Dirk Thomas",
+      "date": "2014-01-08T23:54:19Z",
+      "message": "\"0.3.3\""
+    },
+    {
+      "sha": "36259dfc35c10f94307c9ba389bd62df3d874468",
+      "author": "Dirk Thomas",
+      "date": "2014-01-08T23:54:10Z",
+      "message": "update changelogs"
+    },
+    {
+      "sha": "0c2d543f843421b36521ccce816376c6d384394f",
+      "author": "Dirk Thomas",
+      "date": "2013-11-27T20:59:28Z",
+      "message": "add groups for rqt plugins, renamed some plugins (#167)"
+    },
+    {
+      "sha": "0c2c8f12a7f4a11169c222ef411683fc1cb9b070",
+      "author": "Dorian Scholz",
+      "date": "2013-11-18T14:40:07Z",
+      "message": "rqt_plot: added checkbox to toggle automatic scrolling of plot with data"
+    },
+    {
+      "sha": "b66ebf0921f4e317c2097ef868a70313d79c6db1",
+      "author": "Dorian Scholz",
+      "date": "2013-11-04T14:20:09Z",
+      "message": "rqt_plot: added simple legend for pyqtgraph backend"
+    },
+    {
+      "sha": "815e81abefb5628b2ee8f28ccb29c48ff88a9ded",
+      "author": "Dirk Thomas",
+      "date": "2013-10-14T21:35:40Z",
+      "message": "0.3.2"
+    },
+    {
+      "sha": "39c14a7799640391d28bdefba3e018d2509317dc",
+      "author": "Dirk Thomas",
+      "date": "2013-10-14T21:35:27Z",
+      "message": "update changelogs"
+    },
+    {
+      "sha": "beda86803bdf6a6aa5ea4a4135e33943e0f497e1",
+      "author": "Dirk Thomas",
+      "date": "2013-10-10T00:35:46Z",
+      "message": "0.3.1"
+    },
+    {
+      "sha": "7288b3479c297cc81364593c6d68a82955e27ea8",
+      "author": "Dirk Thomas",
+      "date": "2013-10-10T00:35:38Z",
+      "message": "update changelogs"
+    },
+    {
+      "sha": "032bc057ae3f3c9c67fcb680bb9288e203aa0885",
+      "author": "Dirk Thomas",
+      "date": "2013-08-29T04:06:57Z",
+      "message": "0.3.0"
+    },
+    {
+      "sha": "9b63cdc6eca9e63319e5df99f851b7b96ea35da0",
+      "author": "Dirk Thomas",
+      "date": "2013-08-29T04:06:27Z",
+      "message": "update changelogs"
+    },
+    {
+      "sha": "222685a0fe26e9b7035f11f8623abb7d63e0e191",
+      "author": "Dirk Thomas",
+      "date": "2013-08-20T00:26:10Z",
+      "message": "add excplicit icon size for numerous plugins (ros-visualization/rqt#83)"
+    },
+    {
+      "sha": "4777f5225eda37aba6c2fcc5c91b33c61822fc2a",
+      "author": "Dirk Thomas",
+      "date": "2013-08-16T02:23:41Z",
+      "message": "Merge pull request #128 from ablasdel/bag_issues\n\nFixes for rqt_bag"
+    },
+    {
+      "sha": "825e42e12879d994b5a342c8e298d133cb4c4318",
+      "author": "Dirk Thomas",
+      "date": "2013-08-16T00:59:00Z",
+      "message": "Merge pull request #131 from ablasdel/logger_levels\n\nFixes #117 embed Logger levels plugin in the config"
+    },
+    {
+      "sha": "c14bb977d79900a14c25e14d5340ce28f4f03363",
+      "author": "Aaron Blasdel",
+      "date": "2013-08-16T00:24:49Z",
+      "message": "Merge pull request #142 from ros-visualization/rqt_console_clear_all\n\nfix rqt_console clear button to remove all messages (fix #141)"
+    },
+    {
+      "sha": "b9779a44de3d26b27f6b9e20870a3f856174d8f6",
+      "author": "Aaron Blasdel",
+      "date": "2013-08-16T00:13:08Z",
+      "message": "Merge pull request #139 from ros-visualization/order_by_row\n\nfix rqt_console sorting to use row index to decide order between equal values (fix #124)"
+    },
+    {
+      "sha": "28f67b4327f754a1ac022230afd7747459328757",
+      "author": "Dirk Thomas",
+      "date": "2013-08-16T00:03:29Z",
+      "message": "Merge pull request #140 from ablasdel/hydro-devel\n\nfixes #138: save message limit"
+    },
+    {
+      "sha": "eafb29c2d2e612235325c1827e0ab55f498524b8",
+      "author": "Dirk Thomas",
+      "date": "2013-08-16T00:02:29Z",
+      "message": "Merge pull request #136 from ablasdel/issue_125\n\nfixes #125: pause button no longer saves state"
+    },
+    {
+      "sha": "5dcc1206d10fe11885a5524bd1d8407508976291",
+      "author": "Aaron Blasdel",
+      "date": "2013-08-15T23:11:03Z",
+      "message": "Merge pull request #137 from ablasdel/issue_110\n\nfixes #110: no waiting on unpublished topics"
+    },
+    {
+      "sha": "8cdb2e9fb8373939bbf362d5ad577aebdbce7756",
+      "author": "Aaron Blasdel",
+      "date": "2013-08-15T21:58:13Z",
+      "message": "fixes #110: no waiting on unpublished topics"
+    },
+    {
+      "sha": "ab8dd61109eb6dcc5b7c9d6843e19a7a68496b86",
+      "author": "Isaac Saito",
+      "date": "2013-07-15T04:56:03Z",
+      "message": "Merge branch 'hydro-devel' into groovy-devel"
+    },
+    {
+      "sha": "c67b954ac28a8057e8790c72620d7693b90654ad",
+      "author": "Isaac Saito",
+      "date": "2013-07-10T05:42:59Z",
+      "message": "Merge branch 'hydro-devel' into groovy-devel"
+    },
+    {
+      "sha": "3b08eceb1514cb3571a7fd18ced5a27b57f3f0a2",
+      "author": "Isaac Saito",
+      "date": "2013-07-10T05:13:34Z",
+      "message": "0.2.17"
+    },
+    {
+      "sha": "eca5c970aad2767ff37d3988f1d2507f4e7416c7",
+      "author": "Isaac Saito",
+      "date": "2013-07-03T18:41:22Z",
+      "message": "Correct CHANGELOG.rst by catkin_tag_changelog.\n\nReflect comments to CHANGELOG.rst\n\nAdd release date into hydro in CHANGELOG.rst"
+    },
+    {
+      "sha": "8bf5682f55a8399cd10f62c44753afe229b4bbf4",
+      "author": "Isaac Saito",
+      "date": "2013-07-01T17:02:20Z",
+      "message": "Adding CHANGELOG.rst"
+    },
+    {
+      "sha": "8516b96fc4f48fd56f9bf97c8fb00202921d6738",
+      "author": "Isaac Saito",
+      "date": "2013-04-09T20:33:27Z",
+      "message": "0.2.16"
+    },
+    {
+      "sha": "7b37811245d264be19cc71100161fe6680fb3a86",
+      "author": "Isaac Saito",
+      "date": "2013-04-09T07:02:32Z",
+      "message": "0.2.15"
+    },
+    {
+      "sha": "4ac10656c7c19142250577c033db2452179f1bf2",
+      "author": "Isaac Saito",
+      "date": "2013-04-08T21:17:30Z",
+      "message": "Merge branch 'groovy-devel' of https://github.com/ros-visualization/rqt_common_plugins into groovy-devel"
+    },
+    {
+      "sha": "3483cf9b2591d55c1ed41e54b577af9c00f47dea",
+      "author": "Isaac Saito",
+      "date": "2013-04-08T21:07:35Z",
+      "message": "Merge pull request #64 from kalectro/groovy-devel\n\nWorks good on my env. Thanks!"
+    },
+    {
+      "sha": "85492818f6872f591bdb79c02898cdb6da08d54d",
+      "author": "Dorian Scholz\\n",
+      "date": "2013-04-08T15:15:46Z",
+      "message": "rqt_plot removed annoying debug messages"
+    },
+    {
+      "sha": "c9c838594d3576817f9980026983addf50cfe400",
+      "author": "Isaac Saito",
+      "date": "2013-03-14T23:55:34Z",
+      "message": "maintainer added to many pkgs"
+    },
+    {
+      "sha": "b3e68d9b194db279107c1b02bd2d5bf398be8787",
+      "author": "Isaac Saito",
+      "date": "2013-03-14T21:59:26Z",
+      "message": "0.2.14"
+    },
+    {
+      "sha": "d8d179f153b469c1f811103d4445bcf614a5099d",
+      "author": "Isaac Saito",
+      "date": "2013-03-12T05:14:57Z",
+      "message": "0.2.13"
+    },
+    {
+      "sha": "17cc1d826eda216333568792979b55d6b8bf5ab9",
+      "author": "Isaac Saito",
+      "date": "2013-03-11T20:56:41Z",
+      "message": "0.2.12"
+    },
+    {
+      "sha": "acda6beb88272b94d9b7519d360eac743acb380b",
+      "author": "Isaac Saito",
+      "date": "2013-03-08T19:45:50Z",
+      "message": "0.2.11"
+    },
+    {
+      "sha": "2709bf2419ca0ff182939e1d9957b15e8d561c1a",
+      "author": "Aaron Blasdel",
+      "date": "2013-01-22T22:26:44Z",
+      "message": "0.2.10"
+    },
+    {
+      "sha": "d20fc413b5b4a8a04044141181c01102cb0ff87e",
+      "author": "Isaac Saito",
+      "date": "2013-01-20T10:09:18Z",
+      "message": "Merge branch 'groovy-devel' of https://github.com/ros-visualization/rqt_common_plugins into groovy-devel"
+    },
+    {
+      "sha": "9b496c185287a987ffd38b688d5590a190db4670",
+      "author": "Dirk Thomas",
+      "date": "2013-01-17T23:19:30Z",
+      "message": "0.2.9"
+    },
+    {
+      "sha": "77fe9e64ea386c41208e3a7c38f36544363517da",
+      "author": "Isaac Saito",
+      "date": "2013-01-12T22:27:22Z",
+      "message": "Merge branch 'groovy-devel' of https://github.com/ros-visualization/rqt_common_plugins into groovy-devel"
+    },
+    {
+      "sha": "ecf6477f9757e93f2138f195c38b97ef6c64808b",
+      "author": "Dirk Thomas",
+      "date": "2013-01-11T23:08:52Z",
+      "message": "0.2.8"
+    },
+    {
+      "sha": "adc16168767705b2159bd7f66deaf40586ba664e",
+      "author": "Isaac Saito",
+      "date": "2013-01-11T09:48:53Z",
+      "message": "Merge branch 'groovy-devel' of https://github.com/ros-visualization/rqt_common_plugins into groovy-devel"
+    },
+    {
+      "sha": "e57cafc570b15f9c33cc10d70ba425777920ebc8",
+      "author": "Dirk Thomas",
+      "date": "2013-01-11T01:32:12Z",
+      "message": "update rqt_plot to expose command line arguments to rqt_plot script"
+    },
+    {
+      "sha": "6d1e8c31d6ec06e01ee11c0a15afa689179a18a0",
+      "author": "Isaac Saito",
+      "date": "2013-01-03T01:20:33Z",
+      "message": "Merge branch 'groovy-devel' of https://github.com/ros-visualization/rqt_common_plugins into groovy-devel"
+    },
+    {
+      "sha": "41cda7637cf13a04079110dca2e70821a0829e5b",
+      "author": "Dirk Thomas",
+      "date": "2012-12-31T19:26:24Z",
+      "message": "update repo urls"
+    },
+    {
+      "sha": "87819942d78101ff94290513fae750d403ff3be3",
+      "author": "Dirk Thomas",
+      "date": "2012-12-24T21:28:30Z",
+      "message": "0.2.7"
+    },
+    {
+      "sha": "11c464b80c73ee3f1c7c8c9e7970309ecf7cc18e",
+      "author": "Dirk Thomas",
+      "date": "2012-12-24T21:23:07Z",
+      "message": "update mat plot, remove usage of collections and numpy, calculate y range once when adding data instead of on draw (ros-visualization/rqt#48)"
+    },
+    {
+      "sha": "dbd1640d395f60d9cb0f2d51f32421aa2846f9c8",
+      "author": "Dirk Thomas",
+      "date": "2012-12-24T01:28:18Z",
+      "message": "automatically adjust margins for matplot on resize"
+    },
+    {
+      "sha": "533b622af94c084eb9fb691b388615832c36eb3c",
+      "author": "Dirk Thomas",
+      "date": "2012-12-23T09:56:39Z",
+      "message": "0.2.6"
+    },
+    {
+      "sha": "e53b715036046ba4b0729720037304a976982676",
+      "author": "Dirk Thomas",
+      "date": "2012-12-22T03:11:45Z",
+      "message": "0.2.5"
+    },
+    {
+      "sha": "32959f9913b2556e1f97eb405876059b819c8fa6",
+      "author": "Aaron Blasdel",
+      "date": "2012-12-22T02:57:11Z",
+      "message": "pep8 style changes"
+    },
+    {
+      "sha": "81bf863acd97b647bbde3fbaf56973567a320cde",
+      "author": "Aaron Blasdel",
+      "date": "2012-12-21T17:54:54Z",
+      "message": "Merge branch 'groovy-devel' of github.com:ros-visualization/rqt into groovy-devel"
+    },
+    {
+      "sha": "c3e5f6ff92db55c8bd389537f0dec8363042c518",
+      "author": "Dirk Thomas",
+      "date": "2012-12-21T09:13:03Z",
+      "message": "0.2.4"
+    },
+    {
+      "sha": "7791855ef2ff0ba0e137970299fb64b9a992f373",
+      "author": "Dirk Thomas",
+      "date": "2012-12-21T08:24:46Z",
+      "message": "0.2.3"
+    },
+    {
+      "sha": "59090497c71b2b4c561ed2713271091a32192dcb",
+      "author": "Dirk Thomas",
+      "date": "2012-12-21T02:29:19Z",
+      "message": "0.2.2"
+    },
+    {
+      "sha": "9a6e430ff3c49748a949597b51fff212b15d1d49",
+      "author": "Dirk Thomas",
+      "date": "2012-12-21T01:47:36Z",
+      "message": "0.2.1"
+    },
+    {
+      "sha": "3ae7aa05bc31ef2eacc6fa62f77fb1718a5d92a6",
+      "author": "Dirk Thomas",
+      "date": "2012-12-21T01:39:05Z",
+      "message": "0.2.0"
+    },
+    {
+      "sha": "444574747202abd59844ac92649cd411f8d74413",
+      "author": "Aaron Blasdel",
+      "date": "2012-12-20T17:18:33Z",
+      "message": "catkinize shell scripts and removed load_manifest calls"
+    },
+    {
+      "sha": "74daf61bc15fc2cd327cf27d671dc5316f347104",
+      "author": "Dirk Thomas",
+      "date": "2012-12-20T04:12:55Z",
+      "message": "Merge pull request #61 from ros-visualization/catkinize\n\ncatkinizing"
+    },
+    {
+      "sha": "09e6a61ab3394e18a9627ff094bf45c442a2cff8",
+      "author": "Aaron Blasdel",
+      "date": "2012-12-18T00:38:25Z",
+      "message": "catkinizing\n\ncatkinize: remaining uncatkinized packages\n\ncatkinize: removed rqt stack\n\ncatkinize: removing Makefiles\n\ncatkinize: added version tags\n\ncatkinize: fixed version numbers\n\ncatkinize: added setup.py files\n\ncatkinize: added setup.py files\n\ncatkinize: fixed cmake lists\n\ncatkinize: removed rosdeps\n\ncatkinize: building\n\ncatkinize: added setup.py files\n\ncatkinize: move plugin.xmls\n\ncatkinize: add qt_gui depend\n\ncatkinize: added repositories\n\nfix deps\n\nadd .gitignore\n\nfix export tag in rqt_gui_py\n\nadd missing target_link_libraries\n\ncatkinize: rqt_msg, rqt_bag, rqt_console, rqt_bag_plugins now work in install space\n\ncatkinize: all python plugins run from their scripts in install space\n\nrqt_nav_view: Removed extra plugin install rule.\n\ndisable graying out unavailable python plugins\n\ncatkinize: c++ plugins working, rosruning working in install/build spaces\n\ncatkinize: removed rosmake style .gitignore files\n\ncatkinize: fixed the \"s\"\n\nadd missing inc dirs"
+    },
+    {
+      "sha": "fd0f5b1ff266acf13697560f4d8b6e429e9e1b22",
+      "author": "William Woodall",
+      "date": "2012-12-17T18:02:25Z",
+      "message": "Merge pull request #59 from ros-visualization/origin/groovy-devel\n\nOrigin/groovy devel"
+    },
+    {
+      "sha": "f26e358b4de0f0d4ae3c54055fa0d07c4c72b563",
+      "author": "Dorian Scholz",
+      "date": "2012-12-17T14:34:20Z",
+      "message": "rqt_plot: changed mat_data_plot autoscaling to maybe prevent #48"
+    },
+    {
+      "sha": "bdc10b53d5337800b0c68d92303cbd7a3545cfb2",
+      "author": "Aaron Blasdel",
+      "date": "2012-12-14T17:23:17Z",
+      "message": "rqt_plot: added save/restore functionality for when rqt_plot is reloaded and/or launched with no arguments"
+    },
+    {
+      "sha": "9247cb716afb8b79fefab450fb5730c59b48805e",
+      "author": "Isaac Saito",
+      "date": "2012-12-08T23:57:06Z",
+      "message": "Merge branch 'master' of https://github.com/ros-visualization/rqt"
+    },
+    {
+      "sha": "0f7fe9fd9bb7f4d35453ac08913ac820f1f2724d",
+      "author": "Dirk Thomas",
+      "date": "2012-12-07T23:20:20Z",
+      "message": "style and cleanup only"
+    },
+    {
+      "sha": "345e6ae0f48e9fbe669f35ba6591645701d16512",
+      "author": "Aaron Blasdel",
+      "date": "2012-12-06T03:19:10Z",
+      "message": "rqt: conversion of scripts to new qt_gui standalone package argument system"
+    },
+    {
+      "sha": "733c92bd052ccf8383ab01d89901a898ad8b7ddc",
+      "author": "Aaron Blasdel",
+      "date": "2012-12-06T01:51:03Z",
+      "message": "rqt_plot: style changes"
+    },
+    {
+      "sha": "f4768c8179e6e22d8e993cc396b7e6b49ea248f2",
+      "author": "Aaron Blasdel",
+      "date": "2012-12-05T21:58:04Z",
+      "message": "rqt_plot: added some command line args that function similar to old rxplot"
+    },
+    {
+      "sha": "484c633bd1975fe1c6a709641b75fc7e0c04bf5a",
+      "author": "Aaron Blasdel",
+      "date": "2012-12-05T20:36:01Z",
+      "message": "rqt: fix for standalone scripts to allow for standalone arguments"
+    },
+    {
+      "sha": "e1ef68d11564ab0fa1bed30fbe9ace2b15405ed7",
+      "author": "Aaron Blasdel",
+      "date": "2012-12-03T21:36:10Z",
+      "message": "rqt: script overhaul for running plugins in standalone mode"
+    },
+    {
+      "sha": "c225ce37ba5051c4906997ba0f6fea7f6ced4b34",
+      "author": "Dirk Thomas",
+      "date": "2012-11-30T22:09:43Z",
+      "message": "more code style"
+    },
+    {
+      "sha": "3c7ca84582e8f7294be6ef7166788d6565f2c242",
+      "author": "Dirk Thomas",
+      "date": "2012-11-30T22:01:48Z",
+      "message": "improve handling when no plot types are available (#38)"
+    },
+    {
+      "sha": "ca20b56e12bd85af8e11d4f3a53ec07b3dccb3bb",
+      "author": "Dorian Scholz",
+      "date": "2012-11-29T17:34:03Z",
+      "message": "rqt_plot/publisher: fixed handling of hierarchical array structures"
+    },
+    {
+      "sha": "d5edda1ba4b5678981be861feca0ad7031bad745",
+      "author": "Dorian Scholz",
+      "date": "2012-11-23T16:17:39Z",
+      "message": "rqt_plot: updated plugin description"
+    },
+    {
+      "sha": "0fba4bbafe52d48178223e171d946a66bf0f98f5",
+      "author": "Aaron Blasdel",
+      "date": "2012-11-10T00:43:43Z",
+      "message": "Merge branch 'master' of https://github.com/ros-visualization/rqt"
+    },
+    {
+      "sha": "0bbc11578dd6cda61b1f354600c3167051770793",
+      "author": "Dorian Scholz",
+      "date": "2012-11-10T00:10:10Z",
+      "message": "rqt_plot: added check for PySide version > 1.1.0 when using MatPlotLib\nbackend"
+    },
+    {
+      "sha": "98e003f47b1e714090a55494e2a179de69bd3cd7",
+      "author": "Dorian Scholz",
+      "date": "2012-11-09T08:38:30Z",
+      "message": "rqt_plot: updated plot type selection and added debug output to help\nfinding the cause for issue #6"
+    },
+    {
+      "sha": "e5de442b80415f39f7b70cc2aa9a540505aad04f",
+      "author": "Isaac Saito",
+      "date": "2012-11-09T02:08:04Z",
+      "message": "Merge branch 'master' of https://github.com/ros-visualization/rqt"
+    },
+    {
+      "sha": "faad831018d498cea85ba219a7074899cee00f68",
+      "author": "Aaron Blasdel",
+      "date": "2012-11-09T01:46:12Z",
+      "message": "Merge branch 'master' of https://github.com/ros-visualization/rqt"
+    },
+    {
+      "sha": "b8b587f50fa451af82540a5b964c531e5ea86b0a",
+      "author": "Aaron Blasdel",
+      "date": "2012-11-09T01:45:43Z",
+      "message": "rqt_various: added or fixed support for appending iteration numbers (%d) to the titles to easily identify multiple plugin instances"
+    },
+    {
+      "sha": "9521d2dbce9186c9f36d9dccda52122a539d44ef",
+      "author": "Aaron Blasdel",
+      "date": "2012-09-18T22:37:21Z",
+      "message": "Merge branch 'master' of https://kforge.ros.org/visualization/rqt"
+    },
+    {
+      "sha": "4f27f66268ddcf1a3cd34612e087e47be11132e6",
+      "author": "Dorian Scholz",
+      "date": "2012-09-15T11:04:47Z",
+      "message": "changed import style for Qt modules to use python_qt_binding directly"
+    },
+    {
+      "sha": "1984f0a3be772f81f1e3d9365311acd3a511e1ac",
+      "author": "Dorian Scholz",
+      "date": "2012-09-14T16:49:06Z",
+      "message": "rqt_plot: removed obsolete line"
+    },
+    {
+      "sha": "c593eefefd96218a1b8c28362a4cf4fe191c5190",
+      "author": "Dorian Scholz",
+      "date": "2012-09-14T16:42:57Z",
+      "message": "Merge remote-tracking branch 'origin/master'\n\nConflicts:\n\trqt_bag/src/rqt_bag/bag_timeline.py\n\trqt_bag/src/rqt_bag/bag_widget.py\n\trqt_bag_plugins/src/rqt_bag_plugins/image_view.py"
+    },
+    {
+      "sha": "0529f0ed36f0bf959ab7e005b39c60251176a334",
+      "author": "Dorian Scholz",
+      "date": "2012-09-14T16:28:35Z",
+      "message": "rqt_plot: added pyqtgraph backend"
+    },
+    {
+      "sha": "2284affa6cc434192f81832ad78f661d4c6f08cd",
+      "author": "Dorian Scholz",
+      "date": "2012-09-14T14:02:35Z",
+      "message": "adapted qt imports to new qt_binding_helper"
+    },
+    {
+      "sha": "3cc57005216d0900711a019f09f82b984fce7d85",
+      "author": "Dorian Scholz",
+      "date": "2012-08-31T08:53:46Z",
+      "message": "Merge remote-tracking branch 'origin/master'"
+    },
+    {
+      "sha": "c2ed4561ae8f7f8491d5865e2c6387dc72f4de51",
+      "author": "Dorian Scholz",
+      "date": "2012-08-31T08:52:01Z",
+      "message": "rqt_plot: removed dependency on rxtools"
+    },
+    {
+      "sha": "6eb5dd1ba682f3b867eaeb4c1f9ab71beeb183e0",
+      "author": "Aaron Blasdel",
+      "date": "2012-08-29T21:13:45Z",
+      "message": "Merge branch 'master' of https://kforge.ros.org/visualization/rqt"
+    },
+    {
+      "sha": "a6c64dcfb4ea6d38aef6344c76fb93314157dcf8",
+      "author": "Dorian Scholz",
+      "date": "2012-08-29T14:56:49Z",
+      "message": "rqt_plot: fixed matplot legend, reduced idle cpu use"
+    },
+    {
+      "sha": "525259f85b946b6c2ea3943d2d6664a1d2138b75",
+      "author": "Aaron Blasdel",
+      "date": "2012-08-28T05:35:32Z",
+      "message": "rqt_plot: Removed unused Import from file that doesnt exist"
+    },
+    {
+      "sha": "b2d7d6ef4764c698694d2cb6d59640af096297da",
+      "author": "Dorian Scholz",
+      "date": "2012-08-27T17:26:44Z",
+      "message": "rqt_plot: merged with rqt_matplot and improved usability"
+    },
+    {
+      "sha": "1028aef33a662ffbb8d35145619ba589e1d94762",
+      "author": "Dorian Scholz",
+      "date": "2012-08-06T19:23:53Z",
+      "message": "updated dependencies to match new rosdeps"
+    },
+    {
+      "sha": "e9984fb0cdbde4d06595bf04e220a81bbff89774",
+      "author": "Dirk Thomas",
+      "date": "2012-07-18T02:41:54Z",
+      "message": "removed qt_gui_core, moved rqt to root"
+    },
+    {
+      "sha": "2e610dc5abcb750dd43bf96d48396722c9a3f67e",
+      "author": "Dorian Scholz",
+      "date": "2012-07-08T19:26:12Z",
+      "message": "fixed matplot when using arrays, merged some code from matplot and plot"
+    },
+    {
+      "sha": "8adb9408eb998045e26eb125309f501193c4b97b",
+      "author": "Dirk Thomas",
+      "date": "2012-07-06T22:42:43Z",
+      "message": "modified print/qDebug/qWarning outputs to be more consistent"
+    },
+    {
+      "sha": "61e7a28250b66037577e6d19277d45e9e3587606",
+      "author": "Dirk Thomas",
+      "date": "2012-06-24T23:21:54Z",
+      "message": "refactored rest of rqt plugins to inherit from rqt_gui_py Plugin instead of QWidget"
+    },
+    {
+      "sha": "dde31800155e52b9fed21c0b1c2ee869c6faafb1",
+      "author": "Dirk Thomas",
+      "date": "2012-06-24T22:39:43Z",
+      "message": "code formatting according to pep8"
+    },
+    {
+      "sha": "59779f995564fb749b493462ed9b1e5c0406b520",
+      "author": "Dirk Thomas",
+      "date": "2012-06-11T22:20:57Z",
+      "message": "replaced argument names for save/restore settings of a plugin"
+    },
+    {
+      "sha": "c81efa3d307b8be58d3990fbedc4930b5d390d40",
+      "author": "Dirk Thomas",
+      "date": "2012-06-10T22:47:01Z",
+      "message": "modified tag name in qtgui plugin manifest"
+    },
+    {
+      "sha": "e940e2b323d408412edb7f7209ef5264cc76857a",
+      "author": "Dirk Thomas",
+      "date": "2012-06-10T22:41:40Z",
+      "message": "modified semantic of plugin manifest, renamed file names according to PEP 8, refactored relative imports according to PEP 328"
+    },
+    {
+      "sha": "d56dfa75d880dd71654224e04daa06170766ab61",
+      "author": "Dirk Thomas",
+      "date": "2012-06-05T22:21:35Z",
+      "message": "major renaming and refactoring of all packages"
+    },
+    {
+      "sha": "7e6f7b55248a1d63e994070542301a29bda340f8",
+      "author": "Dirk Thomas",
+      "date": "2012-05-31T05:50:36Z",
+      "message": "renamed packages and moved into separate stacks (refactoring not yet completed)"
+    },
+    {
+      "sha": "6f6f9208f1e88e67f66c2e5f6b119f82a84e9ae2",
+      "author": "Dirk Thomas",
+      "date": "2011-10-01T10:16:18Z",
+      "message": "added yet empty ros_gui stack"
+    }
+  ]
+}

@@ -1,0 +1,546 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-06T23:36:18Z",
+    "source": "github_rest",
+    "endpoint": "/repos/{owner}/{repo}/commits",
+    "owner": "ros2",
+    "repo": "ament_cmake_ros",
+    "per_page": 100
+  },
+  "data": [
+    {
+      "sha": "1ebf5450912a971d70638a0713a2c18b649a4d1d",
+      "author": "Alejandro Hernandez Cordero",
+      "date": "2025-12-09T10:32:00Z",
+      "message": "0.15.6"
+    },
+    {
+      "sha": "1935bf297b439a2117d6178ab52718bc6c0f3c70",
+      "author": "Alejandro Hernandez Cordero",
+      "date": "2025-12-09T10:31:54Z",
+      "message": "Changelog\n\nSigned-off-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "d346c033c7214739b03cf86bb8295fc893de43f3",
+      "author": "Scott K Logan",
+      "date": "2025-12-04T14:49:30Z",
+      "message": "Drop dependency group dependency on test fixtures (#60)\n\nAt the moment, all providers of test fixtures have implemented the\nfixture in the same package which provides the RMW itself, meaning that\nwe don't need to use a dependency to ensure that the plugin is present\nwhen the RMW is tested.\n\nHaving the dependency here means that all packages which implement a\nplugin are upstream of this package, which inflates the dependency tree\nin an undesirable way.\n\nSigned-off-by: Scott K Logan <logans@cottsay.net>"
+    },
+    {
+      "sha": "943dbfed433c47fb2319a131fc0372eb900910fe",
+      "author": "Alejandro Hernandez Cordero",
+      "date": "2025-11-28T17:19:30Z",
+      "message": "0.15.5"
+    },
+    {
+      "sha": "0de1173ebdc8cce904fb4780d8abde91567f815a",
+      "author": "Alejandro Hernandez Cordero",
+      "date": "2025-11-28T17:19:25Z",
+      "message": "Changelog\n\nSigned-off-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "fae83ee2422a3a12bc216c320210790f9d634e2a",
+      "author": "Scott K Logan",
+      "date": "2025-11-14T16:07:20Z",
+      "message": "Restore ROS_DOMAIN_ID after isolation is finished (#58)\n\nRather than clearing the ROS_DOMAIN_ID environment variable after we\nstop RMW communication isolation, set it back to whatever it was before\nisolation was started.\n\nSigned-off-by: Scott K Logan <logans@cottsay.net>\nCo-authored-by: Jorge J. Perez <j.j.perez13@hotmail.com>"
+    },
+    {
+      "sha": "3158152989578108db29b8179d43a9263243eeab",
+      "author": "Scott K Logan",
+      "date": "2025-10-31T05:42:28Z",
+      "message": "0.15.4"
+    },
+    {
+      "sha": "2d1fe183b6d48d6e4e2a2b6d615335dae600c323",
+      "author": "William Woodall",
+      "date": "2025-10-23T14:12:52Z",
+      "message": "default to c++17 due to use of newer methods on std::map (#55)\n\nSigned-off-by: William Woodall <wjwwood@intrinsic.ai>"
+    },
+    {
+      "sha": "ac3b732cb1899153fcf3deeaa17974f1784c7bdc",
+      "author": "Scott K Logan",
+      "date": "2025-10-22T02:30:19Z",
+      "message": "Add missing dependency from rmw_test_fixture to rmw (#53)\n\nFollow-up to 1e9364de4e2b63f1fabcc6421e4ff8cff7fefb3c\n\nSigned-off-by: Scott K Logan <logans@cottsay.net>"
+    },
+    {
+      "sha": "f3d2f4b40d2f424f53cec78901c4f2f3a3692190",
+      "author": "Alejandro Hernandez Cordero",
+      "date": "2025-10-17T09:14:26Z",
+      "message": "0.15.3"
+    },
+    {
+      "sha": "5e77124099989de77aab4101e4ed9cbbf1e8c6d4",
+      "author": "Alejandro Hernandez Cordero",
+      "date": "2025-10-17T09:14:21Z",
+      "message": "Changelog\n\nSigned-off-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "1e9364de4e2b63f1fabcc6421e4ff8cff7fefb3c",
+      "author": "Matt Condino",
+      "date": "2025-10-01T09:49:42Z",
+      "message": "add find_package call (#50)\n\nSigned-off-by: mwcondino <mwcondino@gmail.com>"
+    },
+    {
+      "sha": "232937e03dd816d042dc75dc872827342cb3d931",
+      "author": "Chris Lalancette",
+      "date": "2025-07-29T21:42:14Z",
+      "message": "0.15.2"
+    },
+    {
+      "sha": "4388b5f8747570ee6ee76b72739f4d23d1800a9d",
+      "author": "Chris Lalancette",
+      "date": "2025-07-29T21:42:09Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "abc917cfa8335cceda82db36eebfffa1ded54bf0",
+      "author": "mosfet80",
+      "date": "2025-07-21T13:15:53Z",
+      "message": "fix setuptools deprecations (#49)\n\nSigned-off-by: mosfet80 <10235105+mosfet80@users.noreply.github.com>"
+    },
+    {
+      "sha": "130f9e064108acfbd19f327885c95c13f8c2c936",
+      "author": "mosfet80",
+      "date": "2025-07-18T07:46:36Z",
+      "message": "fix cmake deprecation (#47)\n\ncmake version < then 3.10 is deprecated\n\nSigned-off-by: Mos <realeandrea@yahoo.it>"
+    },
+    {
+      "sha": "3009543775aa483595ef488d9dbefa28d181b520",
+      "author": "Scott K Logan",
+      "date": "2025-06-30T22:36:27Z",
+      "message": "0.15.1"
+    },
+    {
+      "sha": "5050c5fe963fa250f4e0826363def7797a3ff2e5",
+      "author": "Scott K Logan",
+      "date": "2025-06-27T20:29:45Z",
+      "message": "On start-after-stop, re-check RMW_IMPLEMENTATION for changes (#46)\n\nThe previous behavior was to load the appropriate RMW isolation fixture\nwhich corresponds to the RMW_IMPLEMENTATION set during the first call to\nrmw_test_isolation_start. After a call to rmw_test_isolation_stop, this\nchange re-evaluates RMW_IMPLEMENTATION on subsequent calls to\nrmw_test_isolation_start and may load a different fixture if the\nunderlying implementation has changed.\n\nSigned-off-by: Scott K Logan <logans@cottsay.net>"
+    },
+    {
+      "sha": "fd58cc608677e63acb95924664f6d4b0297e0931",
+      "author": "Scott K Logan",
+      "date": "2025-06-25T14:05:27Z",
+      "message": "Choose random domain IDs during default RMW isolation (#39)\n\nPrevious behavior is to choose the ROS_DOMAIN_ID based on the current\nprocess ID. While this is sufficient for most applications, it will\nalways attempt to use the same ID when restarted within the same\nprocess.\n\nThis change switches to a simple LCG for choosing a pseudo-random ID\neach time the fixture is run, and uses the process ID as a seed.\n\nSigned-off-by: Scott K Logan <logans@cottsay.net>"
+    },
+    {
+      "sha": "3eaf3a3fc27de6127fde26487fd9329f5c949812",
+      "author": "Scott K Logan",
+      "date": "2025-06-25T02:18:03Z",
+      "message": "Ignore SIGINT *after* child process has been spawned (#45)\n\nIf the child process doesn't configure a SIGINT handler, it's behavior\nshould remain the same as before - the process should terminate. If we\nset SIG_IGN for SIGINT before spawning the subprocess, the child process\nseems to inherit the behavior, which we clearly don't want.\n\nSigned-off-by: Scott K Logan <logans@cottsay.net>"
+    },
+    {
+      "sha": "484543e73d2063ecca3dcff09a23332ecf46f18a",
+      "author": "Scott K Logan",
+      "date": "2025-06-24T18:18:13Z",
+      "message": "Add some smoke tests for rmw_test_fixture_implementation (#42)\n\nSigned-off-by: Scott K Logan <logans@cottsay.net>"
+    },
+    {
+      "sha": "de21410d72cf2b757d3568d4f18bb601a9f9e97d",
+      "author": "Scott K Logan",
+      "date": "2025-06-23T08:14:59Z",
+      "message": "Copy all environment variables explicitly (#43)\n\nSigned-off-by: Scott K Logan <logans@cottsay.net>"
+    },
+    {
+      "sha": "1fa14ddd69dc1eb4b164d4ed5622442dcc118059",
+      "author": "Tanishq Chaudhary",
+      "date": "2025-04-24T20:54:52Z",
+      "message": "Split the generator expression for each library (#36)\n\nSigned-off-by: Tanishq Chaudhary <tanishqchaudhary101010@gmail.com>"
+    },
+    {
+      "sha": "bb55c2c5c0f8a77a75099bddfddf6c00c9856449",
+      "author": "Scott K Logan",
+      "date": "2025-04-24T18:52:28Z",
+      "message": "0.15.0"
+    },
+    {
+      "sha": "544524b4f3c7fb0f6f7166ba04173bdf22a446d3",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2025-04-22T08:44:04Z",
+      "message": "Removed clang warnings (#34)\n\nSigned-off-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "ac36cdb074de807719e8b18afeeedc0220a4b016",
+      "author": "Scott K Logan",
+      "date": "2025-04-18T23:29:37Z",
+      "message": "0.14.3"
+    },
+    {
+      "sha": "67b5346b94cfb44616f71ecb9a442c08ec0d2905",
+      "author": "Scott K Logan",
+      "date": "2025-04-18T23:28:52Z",
+      "message": "Add missing build_export_depend on ament_cmake_libraries (#37)\n\nThis is an exported dependency from using\nament_cmake_export_dependencies.\n\nSigned-off-by: Scott K Logan <logans@cottsay.net>"
+    },
+    {
+      "sha": "9213cc546765465fa25cc6d3b46ab6196eccdb8f",
+      "author": "Scott K Logan",
+      "date": "2025-04-18T18:15:36Z",
+      "message": "0.14.2"
+    },
+    {
+      "sha": "2d33dd42d4b8cb8c7a8167f05c350af50eeae6aa",
+      "author": "Scott K Logan",
+      "date": "2025-04-15T07:17:54Z",
+      "message": "Don't set ROS_AUTOMATIC_DISCOVERY_RANGE in rmw_test_fixture (#33)\n\nThere seems to be a bug somewhere that makes this setting misbehave\nsporadically on Windows builds. Until we can get to the bottom of that,\nwe'll need to drop it.\n\nSigned-off-by: Scott K Logan <logans@cottsay.net>"
+    },
+    {
+      "sha": "51a4f46f847eeb1cf543f26ab6fa86760e323f64",
+      "author": "Scott K Logan",
+      "date": "2025-04-15T03:32:57Z",
+      "message": "Fix rmw_test_fixture DLL import on Windows (#32)\n\nSigned-off-by: Scott K Logan <logans@cottsay.net>"
+    },
+    {
+      "sha": "b7542126db715d965417ff32daef6e8ee1861790",
+      "author": "Scott K Logan",
+      "date": "2025-04-14T23:55:26Z",
+      "message": "Fix range for rmw_test_fixture_default port locking (#31)\n\nThis is an off-by-one error in the port locking range that can result in\na collision with domain_coordinator or colcon-ros-domain-id-coordinator.\nThe intent was to avoid using ROS_DOMAIN_ID=0. While we indeed avoid\nthat, the code wasn't locking the same port as the other mechanisms for\na given domain ID.\n\nIt should be 32768+ID, where because 0 is never used for testing, we\nstart allocation at 32769.\n\nI also shrunk the top end to avoid some Linux-specific parts of that\nrange that we shouldn't be using. There are around 100 available ports\nin this range.\n\nSigned-off-by: Scott K Logan <logans@cottsay.net>"
+    },
+    {
+      "sha": "251c10215817d9b179727bbdab2e51e041da3257",
+      "author": "Scott K Logan",
+      "date": "2025-04-14T15:48:36Z",
+      "message": "Stop loading RMW to load the test fixture (#30)\n\nThis change mirrors part of the RMW selection algorithm implemented in\nrmw_implementation so that we can avoid actually loading the RMW just to\nfigure out what it's called.\n\nThe main reason we don't want to rely on the loaded RMW is that a\ntesting process may change the RMW_IMPLEMENTATION variable after\nstarting up with intent to invoke a subprocess that needs to be\nisolated. We should assume that future communication will happen based\non the current environment variables, not the state when the process\nstarted.\n\nSigned-off-by: Scott K Logan <logans@cottsay.net>"
+    },
+    {
+      "sha": "aa8eb729a86197255c66c919f947f67df5f76560",
+      "author": "Scott K Logan",
+      "date": "2025-04-14T15:35:20Z",
+      "message": "Add ament_add_ros_isolated_{gmock,gtest}_test macros (#29)\n\nAdditional wrapper macros to complement the existing ones. The ones\nending in _test like this do not implicitly create the executable, which\nmust be created separately by ament_add_{gmock,gtest}_executable. That\nmacro doesn't need an isolated counterpart.\n\nSigned-off-by: Scott K Logan <logans@cottsay.net>"
+    },
+    {
+      "sha": "f42fbd7e0fb811d2df68b2f75b697efc1e30f929",
+      "author": "Scott K Logan",
+      "date": "2025-04-11T20:00:47Z",
+      "message": "Switch from 'domain_coordinator' to 'rmw_test_fixture' (#28)\n\nWe should probably revisit the ament_cmake_test API at some point rather\nthan messing with the raw command line arguments like this, though it's\nworth noting that ament_cmake_test does the same sort of thing before it\nparses the arguments anyway.\n\nSigned-off-by: Scott K Logan <logans@cottsay.net>"
+    },
+    {
+      "sha": "788aa2b1e8aafc499620c51808b9c5a112619894",
+      "author": "Scott K Logan",
+      "date": "2025-04-09T20:27:43Z",
+      "message": "Add ament_add_ros_isolated_test function (#27)\n\nSigned-off-by: Scott K Logan <logans@cottsay.net>"
+    },
+    {
+      "sha": "55981de6c924e930db386bfa277d74061465e6ab",
+      "author": "Scott K Logan",
+      "date": "2025-04-02T21:10:57Z",
+      "message": "0.14.1"
+    },
+    {
+      "sha": "4eca455b6a6d8a3fbc98a7a8721d9a1767bd66e5",
+      "author": "Scott K Logan",
+      "date": "2025-04-02T19:35:04Z",
+      "message": "Add 'default' rmw_test_fixture based on domain_coordinator (#26)\n\nSigned-off-by: Scott K Logan <logans@cottsay.net>"
+    },
+    {
+      "sha": "196ca1f809a2235e891b79dc0aa57614f6eb9c66",
+      "author": "Scott K Logan",
+      "date": "2025-04-01T18:17:26Z",
+      "message": "Install run_rmw_isolated executable to lib subdirectory (#25)\n\nTypical users won't ever need this executable, so there's no reason to\npollute their default search path with it. We'll still be able to find\nthe executable with `ros2 run rmw_test_fixture_implementation\nrun_rmw_isolated`, and it will also be provided as a CMake target for\npackages like `ament_cmake_ros` to reliably find it.\n\nSigned-off-by: Scott K Logan <logans@cottsay.net>"
+    },
+    {
+      "sha": "1a43e23b2e9a5f5417a5aef8d78cfffdc4f748b9",
+      "author": "Scott K Logan",
+      "date": "2025-04-01T06:22:20Z",
+      "message": "Ignore Ctrl-C in run_rmw_isolated on Windows (#24)\n\nLike Linux, we want to ignore the signal in the wrapper process and let\nit propagate to the child process. Note that we explicitly handle the\nsignal and do nothing rather than pass NULL to the function call. The\nlatter would propagate to the subprocess, which we don't want to happen.\n\nSigned-off-by: Scott K Logan <logans@cottsay.net>"
+    },
+    {
+      "sha": "5a1fe8aad9af94a71bea24e24c74ea4ea9303ef6",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2025-04-01T06:21:51Z",
+      "message": "Resolve windows warnings in rmw_test_fixture (#22)\n\nSigned-off-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "65828bdd7139802b0d86e039d39c454bfa3f77eb",
+      "author": "Tomoya Fujita",
+      "date": "2025-03-31T20:41:04Z",
+      "message": "remove .github/ISSUE_TEMPLATE.md (old version of templates) (#23)\n\nSigned-off-by: Tomoya Fujita <Tomoya.Fujita@sony.com>"
+    },
+    {
+      "sha": "99f34254b2bd684e357e759b3312f8b68032e8b5",
+      "author": "Scott K Logan",
+      "date": "2025-03-29T17:53:12Z",
+      "message": "Add rmw_test_fixture for supporting RMW-isolated testing (#21)\n\n* Add rmw_test_fixture for supporting RMW-isolated testing\n\nSigned-off-by: Scott K Logan <logans@cottsay.net>\n\n* Address PR feedback\n\nSigned-off-by: Scott K Logan <logans@cottsay.net>\n\n* Windows compatibility fixes\n\nSigned-off-by: Scott K Logan <logans@cottsay.net>\n\n---------\n\nSigned-off-by: Scott K Logan <logans@cottsay.net>"
+    },
+    {
+      "sha": "ad53d362ba3935bb6192a8de5022c8b9c7b77ee0",
+      "author": "Yadunund",
+      "date": "2025-03-19T20:43:49Z",
+      "message": "0.14.0"
+    },
+    {
+      "sha": "f49dcdcea2053f2fdb42ac9f5be27e63ea3aa87f",
+      "author": "Yadunund",
+      "date": "2025-03-19T20:43:36Z",
+      "message": "Update changelogs\n\nSigned-off-by: Yadunund <yadunund@gmail.com>"
+    },
+    {
+      "sha": "a08d837aab31369fec31bfef82db51165bc4ef97",
+      "author": "Scott K Logan",
+      "date": "2025-03-18T19:16:07Z",
+      "message": "Split generic parts of ament_cmake_ros into _core package (#20)\n\nIn an effort to increase the utility of the test isolation in\nament_cmake_ros, I'd like to take additional dependencies which are\ncurrently downstream of ament_cmake_ros. These packages only depend on\nament_cmake_ros for some basic CMake configuration, so this change\nextracts that configuration into a new *_core package (aligning with\nament_cmake_core).\n\nThere should be no change in behavior for packages which currently\ndepend on ament_cmake_ros. Dependees which don't require the testing\nmacros from ament_cmake_ros will now have the option to switch to the\nnew ament_cmake_ros_core package.\n\nSigned-off-by: Scott K Logan <logans@cottsay.net>"
+    },
+    {
+      "sha": "21748df4b59b1fd149d42c664e092fde4e9179f4",
+      "author": "Chris Lalancette",
+      "date": "2024-11-27T09:15:21Z",
+      "message": "Remove CODEOWNERS and mirror-rolling-to-master workflow. (#18)\n\nThey are both outdated and both no longer serving their\nintended purpose.\n\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "3e7d57bd05a4863ac4617970c995a93b0f1787a2",
+      "author": "Chris Lalancette",
+      "date": "2024-11-20T16:35:12Z",
+      "message": "0.13.1"
+    },
+    {
+      "sha": "e72dee93eec0cf1efa671c6e009d74d7a8b547b6",
+      "author": "Chris Lalancette",
+      "date": "2024-11-20T16:35:07Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "7253d758b2779f556282f689772c4055eaf94019",
+      "author": "Chris Lalancette",
+      "date": "2024-11-01T17:52:48Z",
+      "message": "Add test_xmllint to domain_coordinator. (#17)\n\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "2fc2c6baada47130ff3c2fbc5265a9ec782d3332",
+      "author": "Marco A. Gutierrez",
+      "date": "2024-04-26T14:46:19Z",
+      "message": "0.13.0"
+    },
+    {
+      "sha": "10007a5280fd35a3732bad0988cae7ea63a03e27",
+      "author": "Marco A. Gutierrez",
+      "date": "2024-04-26T14:46:16Z",
+      "message": "Changelog.\n\nSigned-off-by: Marco A. Gutierrez <marcogg@marcogg.com>"
+    },
+    {
+      "sha": "15f835d0e31354c4ac958a32b5f1caa4246596a5",
+      "author": "Yadunund",
+      "date": "2023-04-27T00:57:16Z",
+      "message": "0.12.0"
+    },
+    {
+      "sha": "53d09d9c0ac672f6666982da8af8ca2f1e394bf4",
+      "author": "Yadunund",
+      "date": "2023-04-27T00:57:12Z",
+      "message": "Update changelogs in preparation of minor bump\n\nSigned-off-by: Yadunund <yadunund@openrobotics.org>"
+    },
+    {
+      "sha": "ede6248e1f36aaef85eb4eac23c782a134ef2bff",
+      "author": "Chris Lalancette",
+      "date": "2023-02-13T21:38:08Z",
+      "message": "0.11.2"
+    },
+    {
+      "sha": "2057449739daf076547720db634b28a6f58a0191",
+      "author": "Chris Lalancette",
+      "date": "2023-02-13T21:38:02Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "134b6b8f7775d6b72bf6fc95d09bc884f521c1f8",
+      "author": "Audrow Nash",
+      "date": "2022-11-16T19:41:50Z",
+      "message": "[rolling] Update maintainers - 2022-11-07 (#16)"
+    },
+    {
+      "sha": "f4a2bcde898b7c076beefb410989294a92ee76c3",
+      "author": "Chris Lalancette",
+      "date": "2022-09-13T21:35:36Z",
+      "message": "0.11.1"
+    },
+    {
+      "sha": "5472c76db83a79f0d9e639a45882da9206bd43fe",
+      "author": "Chris Lalancette",
+      "date": "2022-09-13T21:35:31Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "3dcf062187223efba18a10a30faff209da0bfc52",
+      "author": "Audrow Nash",
+      "date": "2022-06-28T14:17:48Z",
+      "message": "Mirror rolling to master"
+    },
+    {
+      "sha": "bbbc6ec4dea550f12d68863c558eb7f54be151e4",
+      "author": "methylDragon",
+      "date": "2022-05-06T17:45:57Z",
+      "message": "Update maintainers (#15)\n\nSigned-off-by: methylDragon <methylDragon@gmail.com>"
+    },
+    {
+      "sha": "c0171edd760e1ed3341f25d16d87d06bea6a1adf",
+      "author": "Audrow Nash",
+      "date": "2022-04-30T00:01:10Z",
+      "message": "0.11.0\n\nSigned-off-by: Audrow Nash <audrow@hey.com>"
+    },
+    {
+      "sha": "60572fa1bec50b9e6fbe64e1b23640d21c15e9d0",
+      "author": "Jacob Perron",
+      "date": "2022-01-13T21:37:44Z",
+      "message": "0.10.0"
+    },
+    {
+      "sha": "add4d35a981fadef6ffc7f5180bcb19a84acc08d",
+      "author": "Audrow Nash",
+      "date": "2021-11-21T18:09:13Z",
+      "message": "Update maintainers to Michel Hidalgo (#13)\n\nSigned-off-by: Audrow Nash <audrow@hey.com>"
+    },
+    {
+      "sha": "b8ee10cb6876220e6bff6475cb9f5284f4ff0d5e",
+      "author": "Timo Röhling",
+      "date": "2021-10-14T17:13:24Z",
+      "message": "Refactor domain_coordinator API to use a context manager (#12)\n\n* Refactor domain_coordinator API to use a context manager\r\n\r\nThe domain_coordinator refactored to expose a single context manager\r\nwhich returns a unique ROS_DOMAIN_ID that is valid until the context\r\ngoes out of scope.\r\n\r\nThe function has been deliberately renamed to force fatal errors if\r\nthe call site was not updated to use a \"with\" context.\r\n\r\nFixes #9\r\n\r\nSigned-off-by: Timo Röhling <timo.roehling@fkie.fraunhofer.de>"
+    },
+    {
+      "sha": "7b6b599c3fc8023806db2a97b344e8610902adac",
+      "author": "Chris Lalancette",
+      "date": "2021-05-12T12:40:41Z",
+      "message": "0.9.2"
+    },
+    {
+      "sha": "5b87fc3903afbc7a5b956edbc90ee99c1a32af1f",
+      "author": "Chris Lalancette",
+      "date": "2021-05-12T12:40:14Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "edfb3adf52694fddd4e47970bc7e600cf6176081",
+      "author": "Chris Lalancette",
+      "date": "2021-01-25T18:16:45Z",
+      "message": "0.9.1"
+    },
+    {
+      "sha": "2a4eb8332422bb75b4f552b973068c35ef5be5b8",
+      "author": "Michel Hidalgo",
+      "date": "2020-10-08T19:22:36Z",
+      "message": "Update package maintainers. (#11)\n\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>"
+    },
+    {
+      "sha": "c90564064abb561ab43d2c9fa830413976ce79a6",
+      "author": "Chris Lalancette",
+      "date": "2020-06-23T13:36:03Z",
+      "message": "Add pytest.ini to suppress warning output locally. (#8)\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "bcf94994adf196d43ccb26fb1ac398b13f733908",
+      "author": "Jacob Perron",
+      "date": "2020-04-18T00:42:56Z",
+      "message": "0.9.0"
+    },
+    {
+      "sha": "11f529042ae843dabc4a35611faaf163bed447b3",
+      "author": "Dirk Thomas",
+      "date": "2020-03-25T00:55:35Z",
+      "message": "more verbose test_flake8 error messages (same as ros2/launch_ros#135)\n\nSigned-off-by: Dirk Thomas <dirk-thomas@users.noreply.github.com>"
+    },
+    {
+      "sha": "3f421a0bafa8de0caae1ae2baefc5b982bf4f81a",
+      "author": "Gaël Écorchard",
+      "date": "2019-11-02T05:16:02Z",
+      "message": "Add .gitignore (#7)\n\nSigned-off-by: Gaël Écorchard <gael.ecorchard@cvut.cz>"
+    },
+    {
+      "sha": "e7c18f52a32e42f8847e65661d0521e5c29238c4",
+      "author": "Michael Carroll",
+      "date": "2019-09-24T17:00:33Z",
+      "message": "0.8.0\n\nSigned-off-by: Michael Carroll <michael@openrobotics.org>"
+    },
+    {
+      "sha": "2b9a71d1b8d089f597744ce52c729d6bf64fac80",
+      "author": "ivanpauno",
+      "date": "2019-09-11T20:04:45Z",
+      "message": "Install manifest and package marker (#6)\n\nSigned-off-by: ivanpauno <ivanpauno@ekumenlabs.com>"
+    },
+    {
+      "sha": "ea3bde35648a352e60e4a6d6da204afa6f8332da",
+      "author": "Peter Baughman",
+      "date": "2019-06-13T23:43:05Z",
+      "message": "Add isolated gmock test (#4)\n\n* Add isolated version of ament_add_gmock\r\n\r\nSigned-off-by: Pete Baughman <pete.baughman@apex.ai>\r\n\r\n* Prevent add_ros_isolated_*_tests from interfering with domain_coordinator self-test\r\n\r\nSigned-off-by: Pete Baughman <pete.baughman@apex.ai>\r\n\r\n* Move isolated test functions to ament_cmake_ros\r\n\r\nSigned-off-by: Pete Baughman <pete.baughman@apex.ai>\r\n\r\n* Move ament_cmake_ros_isolated_gmock into ament_cmake_ros too\r\n\r\nSigned-off-by: Pete Baughman <pete.baughman@apex.ai>\r\n\r\n* Remove files that got left behind when isolated_gmock moved to ament_cmake_ros\r\n\r\nSigned-off-by: Pete Baughman <pete.baughman@apex.ai>\r\n\r\n* Fix lint errors\r\n\r\nSigned-off-by: Pete Baughman <pete.baughman@apex.ai>\r\n\r\n* Fix python flake8\r\n\r\nSigned-off-by: Pete Baughman <pete.baughman@apex.ai>"
+    },
+    {
+      "sha": "d699ccfe4e1ec2f1eb234651f5cbe6190a27c709",
+      "author": "Peter Baughman",
+      "date": "2019-06-07T23:16:52Z",
+      "message": "Add ament_add_pytest_isolated and ament_add_gtest_isolated (#3)\n\n* ament_cmake_ros add cmake test functions with isolation\r\n\r\n  - Add a domain_coordinator package containing the functionality from launch_testing and\r\n    a run_test_isolated.py script that can be used by the isolated cmake test functions instead\r\n    of the default run_test.py\r\n  - Add ament_cmake_gtest_isolated to run gtests with ROS_DOMAIN_ID isolation\r\n  - Add ament_cmake_pytest_isolated to run pytests with ROS_DOMAIN_ID isolation\r\n\r\nSigned-off-by: Pete Baughman <pete.baughman@apex.ai>\r\n\r\n* ament_cmake_ros Add doc strings for cmake test functions\r\n\r\nSigned-off-by: Pete Baughman <pete.baughman@apex.ai>\r\n\r\n* ament_cmake_test_isolated shuffle run_test_isolated into its own package\r\n\r\n  - Make domain_coordinator an ament_python package\r\n  - remove run_test_isolated.py from domain_coordinator\r\n  - Add a new cmake package that provides run_test_isolated.py\r\n\r\nSigned-off-by: Pete Baughman <pete.baughman@apex.ai>\r\n\r\n* Address PR comments\r\n\r\n  - Fix copyright date from 2017->2019\r\n  - Simplify dependencies of isolated test packages\r\n  - Put more information in domain_coordinator setup.py\r\n\r\nSigned-off-by: Pete Baughman <pete.baughman@apex.ai>\r\n\r\n* Add missing fields in setup.py\r\n\r\nSigned-off-by: Pete Baughman <pete.baughman@apex.ai>\r\n\r\n* Rename ament_cmake_*_isolated to ament_cmake_ros_isolated_*\r\n\r\n  - Give a better name so this doesn't seem like the same thing as build isolated vs build merge install\r\n  - Add the explanation of how ROS_DOMAIN_ID is selected in the cmake function documentation\r\n\r\nSigned-off-by: Pete Baughman <pete.baughman@apex.ai>"
+    },
+    {
+      "sha": "070c7265354dc11ab04faac3b5ec7bb175b9e5d6",
+      "author": "Steven! Ragnarök",
+      "date": "2019-04-11T19:26:01Z",
+      "message": "0.7.0"
+    },
+    {
+      "sha": "05d9d3b9e8c0e51f55a25f54d7299013fc6e5b83",
+      "author": "Dirk Thomas",
+      "date": "2019-03-20T15:34:40Z",
+      "message": "add section about DCO to CONTRIBUTING.md"
+    },
+    {
+      "sha": "012ff0c460cb0455dc76569b23aaad92037d9fc2",
+      "author": "Dirk Thomas",
+      "date": "2018-06-18T19:55:11Z",
+      "message": "0.5.0"
+    },
+    {
+      "sha": "1e8bae0323cdc2074ad446557522d2babb036679",
+      "author": "Mikael Arguedas",
+      "date": "2018-02-27T05:53:50Z",
+      "message": "advise to ask questions on ROS answers"
+    },
+    {
+      "sha": "85f37bee18a7e139e62a84909b5677dc44281387",
+      "author": "Mikael Arguedas",
+      "date": "2017-12-09T01:42:58Z",
+      "message": "0.4.0"
+    },
+    {
+      "sha": "efe7732205f1c16f35805037bfb62ecc4aef7589",
+      "author": "dhood",
+      "date": "2017-11-22T01:23:15Z",
+      "message": "Add definition of ROS_PACKAGE_NAME (#2)\n\n* Specify ROS_PACKAGE_NAME definition for use in logging macros\r\n\r\n* remove license of generated extras file\r\n\r\n* Revert \"remove license of generated extras file\"\r\n\r\nThis reverts commit 57ffcb8497e371dc247ce4e3b30ccb904c3d0827.\r\n\r\n* Fix comment on file source\r\n\r\n* Get package name from package.xml\r\n\r\n* Revert \"Get package name from package.xml\"\r\n\r\nThis reverts commit 244cfc1dc255c9634dbfb80377cd2a8110d9a30b."
+    },
+    {
+      "sha": "de7f13a4dfcdaaed73275be0b9703b5ea077a803",
+      "author": "Dirk Thomas",
+      "date": "2017-09-13T22:07:07Z",
+      "message": "0.0.3"
+    },
+    {
+      "sha": "0f9d939bd0fc3b64f9315d3a544a1b23193f3077",
+      "author": "Mikael Arguedas",
+      "date": "2017-08-10T23:02:00Z",
+      "message": "add issue template"
+    },
+    {
+      "sha": "0e8f0152717159bfac572745cbd143f326cbee35",
+      "author": "Dirk Thomas",
+      "date": "2017-06-30T22:11:46Z",
+      "message": "0.0.2"
+    },
+    {
+      "sha": "597c16149e6b82be3816ffba755fa05169b50dc8",
+      "author": "Dirk Thomas",
+      "date": "2017-03-22T17:13:48Z",
+      "message": "Merge pull request #1 from esteve/patch-1\n\nExport ament_cmake"
+    },
+    {
+      "sha": "8cf878bd9b2ef21b7bccbf4ed95e0719485104b6",
+      "author": "Esteve Fernandez",
+      "date": "2017-03-22T17:07:38Z",
+      "message": "Export ament_cmake\n\nThis export the `ament_cmake` package to address https://github.com/ros2/rmw_fastrtps/pull/87#issuecomment-288464040"
+    },
+    {
+      "sha": "975a5bc678d6127442b7a1225e4c547d60f52e35",
+      "author": "Dirk Thomas",
+      "date": "2017-01-03T18:10:36Z",
+      "message": "add ament_cmake_ros providing the option BUILD_SHARED_LIBS defaulting to ON"
+    },
+    {
+      "sha": "2819373c089f1874eebf0e3be572df1f409ef501",
+      "author": "Dirk Thomas",
+      "date": "2017-01-03T17:55:25Z",
+      "message": "add LICENSE and CONTRIBUTING.md"
+    }
+  ]
+}

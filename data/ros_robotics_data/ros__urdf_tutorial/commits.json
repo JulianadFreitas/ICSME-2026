@@ -1,0 +1,594 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-08T01:11:03Z",
+    "source": "github_rest",
+    "endpoint": "/repos/{owner}/{repo}/commits",
+    "owner": "ros",
+    "repo": "urdf_tutorial",
+    "per_page": 100
+  },
+  "data": [
+    {
+      "sha": "527d3564fe292b32bccc325ace42dbe034df88f5",
+      "author": "David V. Lu!!",
+      "date": "2026-01-26T18:47:09Z",
+      "message": "Sync pre-commit setup with ROS 1 branch (#84)"
+    },
+    {
+      "sha": "ac6c14fc00aa6f785e33b7cf6eaefed9c83816be",
+      "author": "Chris Lalancette",
+      "date": "2024-01-04T16:27:36Z",
+      "message": "Fix a typo in launch that prevents it from working. (#69)\n\nIn particular, the default value for the model needs\r\nto be a substitution, not a string.  Otherwise trying\r\nto launch fails with a xacro failure.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "7e1f59a22a0a2f0c1f5f79bab49dae2cee1640f6",
+      "author": "David V. Lu",
+      "date": "2023-09-29T15:53:35Z",
+      "message": "1.1.0"
+    },
+    {
+      "sha": "a9ad40cd1407d3ecd9835076d35403f976452508",
+      "author": "David V. Lu",
+      "date": "2023-09-29T15:53:08Z",
+      "message": "Changelog"
+    },
+    {
+      "sha": "a7949cd412ee8de9749ecf4078de560cb2180a1b",
+      "author": "David V. Lu!!",
+      "date": "2023-09-19T13:59:05Z",
+      "message": "Precommit configuration (#64)"
+    },
+    {
+      "sha": "54d5e66c1651c71d248422a226e3f3f8fca059ec",
+      "author": "David V. Lu!!",
+      "date": "2023-08-31T00:40:58Z",
+      "message": "Use urdf_launch package (#65)"
+    },
+    {
+      "sha": "9d2907d2f0390b81c56bb799b1b826ecacabac4c",
+      "author": "David V. Lu!!",
+      "date": "2023-08-30T02:25:49Z",
+      "message": "Add gazebo export to package.xml and tidy up package.xml (#63)\n\n* Add gazebo export to package.xml and tidy up package.xml\r\n\r\n* Be more specific with license\r\n\r\n* Clean up rviz"
+    },
+    {
+      "sha": "d19800467bd64aecce668fc293fda654a5b898d5",
+      "author": "Andreas Bihlmaier",
+      "date": "2022-05-27T18:17:23Z",
+      "message": "More reasonable inertia values. (#58)\n\nTo cite the URDF tutorial on physical properties (http://docs.ros.org/en/galactic/Tutorials/URDF/Adding-Physical-and-Collision-Properties-to-a-URDF-Model.html):\r\n\"If unsure what to put, a matrix with ixx/iyy/izz=1e-3 or smaller is often a reasonable default for a mid-sized link (it corresponds to a box of 0.1 m side length with a mass of 0.6 kg). The identity matrix is a particularly bad choice, since it is often much too high (it corresponds to a box of 0.1 m side length with a mass of 600 kg!).\"\r\nFor pedagogic reasons, the urdf_tutorial examples should not do the opposite of this."
+    },
+    {
+      "sha": "ed431fd7667d8b8d1e321867bf9597d9d8e1b171",
+      "author": "mergify[bot]",
+      "date": "2022-05-27T17:18:54Z",
+      "message": "upgrade dae files (#60) (#61)\n\n* upgrade dae files\r\n\r\n* Remove Pi constant\r\n\r\n(cherry picked from commit faa44cc37919ece61663a01da860446097ef84f3)\r\n\r\nCo-authored-by: yamachaso <55785032+yamachaso@users.noreply.github.com>"
+    },
+    {
+      "sha": "f8a1bf7f01c61bdbfc9a1cd25f7dda3843af0a0d",
+      "author": "Chris Lalancette",
+      "date": "2021-12-07T19:28:09Z",
+      "message": "Add in a LICENSE file. (#57)\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "52c5449f6284fc18086703fb083613adad94503a",
+      "author": "Chris Lalancette",
+      "date": "2021-12-06T20:04:39Z",
+      "message": "1.0.0"
+    },
+    {
+      "sha": "4a30c1cdb98b180ca1518f70a82594c236ac8dbf",
+      "author": "Chris Lalancette",
+      "date": "2021-12-06T20:04:21Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "edc5fe6dbc0691aad1aa7caeab8b3526adc987f0",
+      "author": "Arturs Elksnis",
+      "date": "2021-11-30T19:09:15Z",
+      "message": "Fixing a problem that failed the startup of launch file of this package on my ROS2 Galactic installation (#53)\n\n* Fixing a problem that failed the startup of this launch file on my ROS2 Galactic installation.\r\n\r\nCo-authored-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "09a5289c6cd7a6222a5538bcf77a09a73e251f76",
+      "author": "David V. Lu!!",
+      "date": "2021-10-14T14:51:54Z",
+      "message": "Rebasing Commits from ROS 1 Branch (#51)\n\n* Remove extraneous <origin> tags from 05-visual and 06-flexible example URDFs (#47)\r\n* Redo screenshots, clean up rviz config, add README, general cleanup (#48)\r\n* Point at docs.ros.org\r\n\r\nSigned-off-by: David V. Lu <davidvlu@gmail.com> \r\nCo-authored-by: Jacob Bandes-Storch <jacob@bandes-stor.ch>"
+    },
+    {
+      "sha": "c39655ea477f7103cb8992485d98aa40fe67744f",
+      "author": "David V. Lu!!",
+      "date": "2021-10-07T21:09:24Z",
+      "message": "Updated launch file (#50)\n\nSigned-off-by: David V. Lu <davidvlu@gmail.com>"
+    },
+    {
+      "sha": "5c878526a4fac9955af0c248e8e107046c43bfd9",
+      "author": "Leo Stanislas",
+      "date": "2021-05-26T19:51:57Z",
+      "message": "Updated rviz to rviz2 in package.xml (#49)"
+    },
+    {
+      "sha": "70d69c15491c279760efff18e25a6e163df6be03",
+      "author": "Kuni Natsuki",
+      "date": "2020-06-30T20:20:25Z",
+      "message": "Port over to ROS2 foxy (#45)"
+    },
+    {
+      "sha": "21a6ecdff0146ad93852cf32e8f494439fd99065",
+      "author": "David V. Lu",
+      "date": "2020-05-13T18:41:04Z",
+      "message": "0.5.0"
+    },
+    {
+      "sha": "5c8b64e25da4649ce4a7fe30f600b71c24c7d036",
+      "author": "Shane Loretz",
+      "date": "2020-05-13T18:30:48Z",
+      "message": "Bump CMake version to avoid CMP0048 (#43)\n\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>"
+    },
+    {
+      "sha": "2cad5a4f60552d8e65e1b4ee2f492ac5c737308e",
+      "author": "Shih-Wei Guo",
+      "date": "2020-03-31T19:24:35Z",
+      "message": "add joint_state_publisher_gui (#40)\n\nCo-authored-by: Tony Guo <tonyguo@gyro.com.tw>"
+    },
+    {
+      "sha": "fa02b7ac6e749afc398382db87bce0a79ddd8ea7",
+      "author": "bgatten",
+      "date": "2020-03-12T01:07:33Z",
+      "message": "Update display.launch (#39)\n\nLine 11:After running the launch file in terminal, it recommends using type=\"robot_state_publisher\" since \"state_publisher\" is deprecated. \r\n--in order is also now the default."
+    },
+    {
+      "sha": "dadba7524ba0d20ecd6d23095f49843c3f8e8d1b",
+      "author": "Yutaka Kondo",
+      "date": "2018-06-15T20:40:58Z",
+      "message": "Fix display.launch to solve xacro warning (#36)\n\n* Call xacro instead of xacro.py\r\n\r\n* Add --inorder option to xacro"
+    },
+    {
+      "sha": "041b6ae4a7a0a3203778dfada5657adc9b335015",
+      "author": "David V. Lu",
+      "date": "2018-05-09T17:12:17Z",
+      "message": "0.4.0"
+    },
+    {
+      "sha": "bd83696232efc2fabcf2d536a24548802dc15f20",
+      "author": "Chris Lalancette",
+      "date": "2018-03-02T18:18:04Z",
+      "message": "While we are at it, flatten the directory hierarchy. (#34)\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "3c068fc166d662d1459610a56dc955f3bf22f7fe",
+      "author": "David V. Lu",
+      "date": "2017-07-02T20:07:37Z",
+      "message": "Fix launch test"
+    },
+    {
+      "sha": "6835e4e1f8aeb35b099d92e51a324ef349567133",
+      "author": "David V. Lu",
+      "date": "2017-07-02T19:46:20Z",
+      "message": "0.3.0"
+    },
+    {
+      "sha": "08b7d636e9f22f0fcb8d9a3bad739cffc1c5a2c8",
+      "author": "David V. Lu",
+      "date": "2017-07-02T19:42:33Z",
+      "message": "Remove r2d2.xacro"
+    },
+    {
+      "sha": "b63b65cdb59c96ad4c22a24fbf8c46b323d194f8",
+      "author": "David V. Lu!!",
+      "date": "2017-07-02T19:08:30Z",
+      "message": "Split Control Tutorials (#31)\n\n* Saved Splits\r\n\r\n* Publish Joints\r\n\r\n* 10\r\n\r\n* Gripper\r\n\r\n* Diff drive"
+    },
+    {
+      "sha": "532e14c6fda8337a5647975b9f6c8bd0c07e16e3",
+      "author": "David V. Lu!!",
+      "date": "2017-05-18T17:24:47Z",
+      "message": "Install Fixes (#30)"
+    },
+    {
+      "sha": "52bacc727a5112e35d29629d9a51de06dfb858b6",
+      "author": "David V. Lu!!",
+      "date": "2017-05-18T16:57:49Z",
+      "message": "Check if testing is enabled (#29)\n\n* Check if testing is enabled\r\n\r\n* Move roslaunch dep"
+    },
+    {
+      "sha": "7d8d2face565739a527d04a66100475df96c7b57",
+      "author": "David V. Lu!!",
+      "date": "2017-05-17T01:41:51Z",
+      "message": "Split Gazebo Features to New Package urdf_tutorial2 (#28)\n\n* Move everything to subfolder\r\n\r\n* New Package\r\n\r\n* Rename to urdf_sim_tutorial"
+    },
+    {
+      "sha": "d8b75026e90d973ef4b0170c606c6350bca28a76",
+      "author": "David V. Lu",
+      "date": "2017-04-29T22:08:32Z",
+      "message": "More cleanup"
+    },
+    {
+      "sha": "c0c30a0a9de52f8ed49043e18245075b7c2669d1",
+      "author": "David V. Lu",
+      "date": "2017-04-29T19:02:09Z",
+      "message": "Minor cleanup"
+    },
+    {
+      "sha": "88b2928ecf59813c3cc6f0b6850ec1f5b8c82f38",
+      "author": "David V. Lu",
+      "date": "2017-04-29T02:03:56Z",
+      "message": "0.2.5"
+    },
+    {
+      "sha": "9ac4292f9065da93614baf80814d78b4bf47e5b5",
+      "author": "David V. Lu",
+      "date": "2017-04-29T02:03:39Z",
+      "message": "Change log"
+    },
+    {
+      "sha": "3ece8ce8498aa83d523d94aea1480504d240804d",
+      "author": "David V. Lu",
+      "date": "2017-04-29T01:58:35Z",
+      "message": "Add email address to author tag"
+    },
+    {
+      "sha": "233a0e563c4cf536469f2fb32b36960351d7580a",
+      "author": "David V. Lu",
+      "date": "2017-04-29T01:58:11Z",
+      "message": "Install meshes"
+    },
+    {
+      "sha": "edaca97c09dd6cb26ac23e25fd6f39001280a031",
+      "author": "David V. Lu",
+      "date": "2017-04-29T01:50:48Z",
+      "message": "Leading zeros"
+    },
+    {
+      "sha": "f441bcb9924a636a0d3a10d55510607907699a2c",
+      "author": "David V. Lu",
+      "date": "2017-04-29T01:49:34Z",
+      "message": "Turn the legs right round baby right round"
+    },
+    {
+      "sha": "2d2e420cc7cf3679eddf7b22f216f6493830a09b",
+      "author": "David V. Lu",
+      "date": "2017-04-29T01:48:47Z",
+      "message": "Remove extra elements from static visual model"
+    },
+    {
+      "sha": "78320442175d574fd92cee546d29122a15465d40",
+      "author": "David V. Lu",
+      "date": "2017-04-29T00:38:38Z",
+      "message": "Remove dependency on pr2_description. Fixes #23."
+    },
+    {
+      "sha": "1f62f9f117481faf52b3f539f7dd62f83c766a36",
+      "author": "David V. Lu",
+      "date": "2017-03-28T21:02:10Z",
+      "message": "Add missing line"
+    },
+    {
+      "sha": "fdc6a71cffdb6a1ae7f168b287828878102d40d9",
+      "author": "David V. Lu",
+      "date": "2016-11-11T20:41:44Z",
+      "message": "Closes #22"
+    },
+    {
+      "sha": "d35c4f46938117c5f2e1b048b60ef44045351b5c",
+      "author": "David V. Lu!!",
+      "date": "2016-06-14T21:40:56Z",
+      "message": "Create README.md"
+    },
+    {
+      "sha": "3debf13fc13fa06df68d59d23253e5b4488e4028",
+      "author": "Felix Duvallet",
+      "date": "2016-06-03T14:13:36Z",
+      "message": "Adds missing dependency on gazebo_ros_control. (#20)"
+    },
+    {
+      "sha": "2e31fc5763ae6b89f3dda35c3033759bac3e8807",
+      "author": "David V. Lu!!",
+      "date": "2015-07-24T23:55:04Z",
+      "message": "Merge pull request #17 from tkruse/patch-1\n\nadd roslaunch to build dependencies, since it is required in cmakelist"
+    },
+    {
+      "sha": "18603d89f093b141994176e48d6cf450aed53396",
+      "author": "Thibault Kruse",
+      "date": "2015-07-24T14:29:43Z",
+      "message": "add roslaunch to build dependencies, since it is required in cmakelists.txt"
+    },
+    {
+      "sha": "f2db517470448e76ff3e7b541a54aedc01ab2a6a",
+      "author": "David V. Lu!!",
+      "date": "2015-06-29T15:22:24Z",
+      "message": "Merge pull request #14 from clearpathrobotics/ros-control-tutorials\n\nRos control tutorials"
+    },
+    {
+      "sha": "7e93d633ca739bc4e59c708b8c4fecf007851395",
+      "author": "Paul Bovbel",
+      "date": "2015-06-29T13:18:43Z",
+      "message": "Add robot steering to launch"
+    },
+    {
+      "sha": "4818abcda63fe8fcd653bf65937fb8efee98f54a",
+      "author": "Paul Bovbel",
+      "date": "2015-06-29T13:18:34Z",
+      "message": "Fix indent"
+    },
+    {
+      "sha": "81a7d7205a29ebeff46500effd164d6425b23087",
+      "author": "Paul Bovbel",
+      "date": "2015-06-08T21:11:40Z",
+      "message": "Fixup dependencies"
+    },
+    {
+      "sha": "4b343d6b2b4e85237917eb8ee76803ef5999c6c2",
+      "author": "Paul Bovbel",
+      "date": "2015-06-08T21:03:11Z",
+      "message": "Update final r2d2.xacro implementation with roscontrol version"
+    },
+    {
+      "sha": "1697f8c712c9c57b07faadcfa74169f5246177cb",
+      "author": "David V. Lu",
+      "date": "2015-04-24T15:07:09Z",
+      "message": "0.2.4"
+    },
+    {
+      "sha": "9b18ee982c0f8c2645a3aa86e4f13c2c3014ce09",
+      "author": "David V. Lu",
+      "date": "2015-04-24T15:06:54Z",
+      "message": "CHANGELOG"
+    },
+    {
+      "sha": "958fac2f7b06882774655e1c3b58d1d814fabcf8",
+      "author": "David V. Lu",
+      "date": "2015-04-24T15:03:38Z",
+      "message": "Drop Ioan@willow from maintainer list"
+    },
+    {
+      "sha": "aba89ed13716ae1b830c188348e829bce5c65dd7",
+      "author": "Paul Bovbel",
+      "date": "2015-04-06T15:14:37Z",
+      "message": "Add wheel separation param"
+    },
+    {
+      "sha": "9d38b7b4da3e00bdbd17148676a86be61849293d",
+      "author": "Paul Bovbel",
+      "date": "2015-04-02T11:49:56Z",
+      "message": "Fix hard tabs; Change robot orientation to x-forward; Add ros_control interfaces and config"
+    },
+    {
+      "sha": "64812f29ecbce60e56d39d03911705d1d273e6b2",
+      "author": "David Lu!!",
+      "date": "2015-03-17T16:36:24Z",
+      "message": "Merge pull request #11 from 130s/add/arg_rvizconfig\n\nSure why not."
+    },
+    {
+      "sha": "44e36597686d8837b6770eaeae9e967caa403248",
+      "author": "Isaac IY Saito",
+      "date": "2015-03-11T04:23:10Z",
+      "message": "Add .rviz as an arg"
+    },
+    {
+      "sha": "b88d687cbfb7e51e7bb11697cbf7852e178d1f90",
+      "author": "Ioan A Sucan",
+      "date": "2014-12-31T16:47:51Z",
+      "message": "Merge pull request #10 from k-okada/fix_gazebo_launch\n\nfix gazebo.launch for indigo, update to new package name"
+    },
+    {
+      "sha": "192249a5db85ea01abe7dce05c143c042b711f24",
+      "author": "Kei Okada",
+      "date": "2014-12-31T14:22:53Z",
+      "message": "fix gazebo.launch for indigo, update to new package name"
+    },
+    {
+      "sha": "52698bb0af43dd42e5b80ea76cd7a47a34d5ad61",
+      "author": "David Lu!!",
+      "date": "2014-07-16T16:44:22Z",
+      "message": "Add run depends and additional maintainer to package.xml"
+    },
+    {
+      "sha": "7795ef8c0527eb17bd559c105c3e2f0154bdc789",
+      "author": "Ioan Sucan",
+      "date": "2014-01-09T17:22:54Z",
+      "message": "\"0.2.3\""
+    },
+    {
+      "sha": "56e7fa536d2245638b684b794b8ed41f216c4b83",
+      "author": "Ioan Sucan",
+      "date": "2014-01-09T17:22:45Z",
+      "message": "update changelog"
+    },
+    {
+      "sha": "766363b5512fac94e7e65d131d70143b12a491c6",
+      "author": "Ioan A Sucan",
+      "date": "2014-01-09T16:04:05Z",
+      "message": "Merge pull request #7 from gavanderhoorn/issue6_source_vs_devel_vs_install\n\nFix issue #6: No robot model when using display.launch (again)"
+    },
+    {
+      "sha": "15d5a0869418038a267de3553c5db76e1848cd87",
+      "author": "gavanderhoorn",
+      "date": "2014-01-05T16:46:31Z",
+      "message": "Update install rules to work with new layout. Fix #6."
+    },
+    {
+      "sha": "2bbb57748374879c7112354a0c34a180078042d7",
+      "author": "gavanderhoorn",
+      "date": "2014-01-05T16:45:47Z",
+      "message": "Update launch files to work with new file layout."
+    },
+    {
+      "sha": "e868b267cfd559d698772ea75e33eb61b9e19cf0",
+      "author": "gavanderhoorn",
+      "date": "2014-01-05T16:41:26Z",
+      "message": "Setup new directory structure and move files around."
+    },
+    {
+      "sha": "23b3709036a8e1768c9d0c8e75ef38f0eb2f43e6",
+      "author": "Ioan Sucan",
+      "date": "2013-12-16T17:10:12Z",
+      "message": "\"0.2.2\""
+    },
+    {
+      "sha": "451aa7e6f44e2cb0f58ca56687fb8b134e1f3974",
+      "author": "Ioan Sucan",
+      "date": "2013-12-16T17:09:57Z",
+      "message": "add changelog"
+    },
+    {
+      "sha": "8e0df6bc39a9044bfd944b201aa3f5796c155c86",
+      "author": "isucan",
+      "date": "2013-12-13T17:04:25Z",
+      "message": "Merge pull request #5 from gavanderhoorn/issue4_missing_robot_model_display\n\nFix issue #4: missing RobotModel display"
+    },
+    {
+      "sha": "3f5d7c3bccf06cab5c066e62b8d3716ff8e76ab1",
+      "author": "gavanderhoorn",
+      "date": "2013-12-13T08:05:14Z",
+      "message": "Make roslaunch stop all nodes on RViz exit."
+    },
+    {
+      "sha": "4a4334088994af68e0b2dd3540514ceb57cf57b6",
+      "author": "gavanderhoorn",
+      "date": "2013-12-13T08:00:05Z",
+      "message": "Update path to RViz config in display.launch. Fix #4.\n\nSeems xacrodisplay.launch was already fixed, but somehow display.launch was not updated. See #3."
+    },
+    {
+      "sha": "ed3ff2c995d18621dd8a17c7737b1adb53213ab9",
+      "author": "Ioan Sucan",
+      "date": "2013-06-18T15:04:00Z",
+      "message": "fix #3"
+    },
+    {
+      "sha": "4e6b8b24efa66375d40c2abba7d05fe75f5f5d23",
+      "author": "Ioan Sucan",
+      "date": "2013-05-28T11:04:48Z",
+      "message": "0.2.1"
+    },
+    {
+      "sha": "74830f8a71abfb275e61cd32af0fdb28a58e6c4d",
+      "author": "Ioan Sucan",
+      "date": "2013-05-28T11:04:42Z",
+      "message": "update package name and install location for compatibility with previous build system"
+    },
+    {
+      "sha": "c0154b5fc2119db3d018e5484ed693934fe405bf",
+      "author": "Ioan Sucan",
+      "date": "2013-05-28T10:47:07Z",
+      "message": "catkinizing package"
+    },
+    {
+      "sha": "35dc6c4556843572f9c1f9290c928a4e044ccecb",
+      "author": "isucan",
+      "date": "2013-05-21T08:02:30Z",
+      "message": "Merge pull request #1 from ros-industrial/master\n\nRviz config file update"
+    },
+    {
+      "sha": "2f8f327078f0c4e3906e957283ad362e87bbd21e",
+      "author": "Shaun Edwards",
+      "date": "2013-05-21T02:15:38Z",
+      "message": "Ported rviz config file to new groovy format.  Updated launch files to use new config file"
+    },
+    {
+      "sha": "d93b9c345885701f96324ff71aa0f9bf58a9c308",
+      "author": "Wim Meeussen",
+      "date": "2011-06-01T21:41:46Z",
+      "message": "Added tag unstable for changeset bd8da58ba34e"
+    },
+    {
+      "sha": "e2116278964e8e9359f5d05bff4b8646a7e6dd5c",
+      "author": "Wim Meeussen",
+      "date": "2011-06-01T21:41:38Z",
+      "message": "Added tag robot_model_tutorials-0.1.2 for changeset 6ac373f839e0"
+    },
+    {
+      "sha": "03821f2e0563096eb542c5c2d60c337f9f0a3667",
+      "author": "Wim Meeussen",
+      "date": "2011-06-01T21:40:17Z",
+      "message": "getting ready for 0.1.2 release"
+    },
+    {
+      "sha": "94600c2c29175365a8aed617be56097ab8f96384",
+      "author": "Wim Meeussen",
+      "date": "2011-05-27T21:35:33Z",
+      "message": "Added tag unstable for changeset dcec5b1f8ed8"
+    },
+    {
+      "sha": "f75f842c2bd02898ffcb0add1fc09e372a8d8206",
+      "author": "Wim Meeussen",
+      "date": "2011-05-27T21:35:03Z",
+      "message": "Added tag robot_model_tutorials-0.1.1 for changeset e023b0707337"
+    },
+    {
+      "sha": "627c6ec38c051f901cdec0a25b3f73157e91de1c",
+      "author": "Wim Meeussen",
+      "date": "2011-05-27T20:01:22Z",
+      "message": "getting ready for 0.1.1 release"
+    },
+    {
+      "sha": "d4cb5a0ff96fc8679f55761364be436e49b38758",
+      "author": "Wim Meeussen",
+      "date": "2011-05-24T16:27:20Z",
+      "message": "Automated merge with https://kforge.ros.org/robotmodel/tutorials"
+    },
+    {
+      "sha": "a26d0a2fe7019042a2fa09fd320b069572ffdec9",
+      "author": "Wim Meeussen",
+      "date": "2011-05-24T16:27:08Z",
+      "message": "update stack dependencies"
+    },
+    {
+      "sha": "11696024f29dcc0218ecfdbd06fca7adf5fba822",
+      "author": "Wim Meeussen",
+      "date": "2011-05-24T16:25:41Z",
+      "message": "Added tag unstable for changeset b22bbf7d7850"
+    },
+    {
+      "sha": "c7830cb953094727c47f2b60679eb84e29ce5cb8",
+      "author": "Wim Meeussen",
+      "date": "2011-05-24T16:25:33Z",
+      "message": "Added tag robot_model_tutorials-0.1.0 for changeset a0b3b46efc95"
+    },
+    {
+      "sha": "f942743ea5a0753c303b1d7863cf625048b32331",
+      "author": "Wim Meeussen",
+      "date": "2011-02-28T23:02:49Z",
+      "message": "initial copy"
+    },
+    {
+      "sha": "a3c35dc515d42108d6455ac18dff8c8c6798d5be",
+      "author": "probablydavid",
+      "date": "2011-02-21T23:26:39Z",
+      "message": "Updated meta-data, JointStatePublisher with merging ability"
+    },
+    {
+      "sha": "d66f558a6ed94b1e20c7fea6d8cc167fd7ec2c15",
+      "author": "probablydavid",
+      "date": "2010-11-18T17:07:23Z",
+      "message": "Cleaning up some manifests"
+    },
+    {
+      "sha": "3fcad795c8126581731b0955cd3c4c71fff114a3",
+      "author": "probablydavid",
+      "date": "2010-11-15T22:38:37Z",
+      "message": "URDF Tutorial"
+    },
+    {
+      "sha": "a348db7dc9cb87cdc826197aeef52b57ec77bfdf",
+      "author": "probablydavid",
+      "date": "2010-11-03T20:05:26Z",
+      "message": "Bug Fix 3101648"
+    },
+    {
+      "sha": "0135a03811cbff8a2548283b1547e9ca11f4247a",
+      "author": "probablydavid",
+      "date": "2010-10-04T19:29:51Z",
+      "message": "Joint Controller renamed and reworked as Joint_state_publisher"
+    },
+    {
+      "sha": "3d7b63d180eeba25c330b92f64a75931de38ad65",
+      "author": "probablydavid",
+      "date": "2010-08-19T22:12:16Z",
+      "message": "Screenshot for Joint controller"
+    },
+    {
+      "sha": "a331a40d1779929602050955e6a106741f794eb7",
+      "author": "probablydavid",
+      "date": "2010-08-19T21:10:56Z",
+      "message": "Initial URDF Tools Package"
+    }
+  ]
+}

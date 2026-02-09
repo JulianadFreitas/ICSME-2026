@@ -1,0 +1,852 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-08T01:13:40Z",
+    "source": "github_rest",
+    "endpoint": "/repos/{owner}/{repo}/commits",
+    "owner": "ros",
+    "repo": "urdf_parser_py",
+    "per_page": 100
+  },
+  "data": [
+    {
+      "sha": "a0e5291577f1431fa6daafb236ffea34267cf704",
+      "author": "mosfet80",
+      "date": "2025-12-18T14:02:09Z",
+      "message": "fix setuptools deprecations (#93)\n\nfix setuptools deprecations.\r\nRemove old definition.\r\nNew definition is already defined in row ~27 :license= 'BSD'"
+    },
+    {
+      "sha": "492223ce830cafc4dc2dcd98b82bb0eb91511118",
+      "author": "Silvio Traversaro",
+      "date": "2024-11-11T14:41:14Z",
+      "message": "Fix name of BSD PyPI classifier (#88)"
+    },
+    {
+      "sha": "7ca2810717eca40426b126296c06aaae5604fd7f",
+      "author": "Chris Lalancette",
+      "date": "2023-12-01T19:12:37Z",
+      "message": "Fix UTF8 reading. (#83)\n\nDo this by opening files in binary mode, which will allow\r\nthe XML parser to convert to UTF-8 if it is specified.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "9c8ab87a9c7457bd9e9851ff86c78ada161c9e7e",
+      "author": "Chris Lalancette",
+      "date": "2023-05-01T21:10:28Z",
+      "message": "1.2.1"
+    },
+    {
+      "sha": "ed3587e41f69f21e9716f29dda5ce32d3bebf605",
+      "author": "Chris Lalancette",
+      "date": "2023-05-01T21:10:20Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "41dadc6a35805766d1f5d63121f163471ee9d379",
+      "author": "Scott K Logan",
+      "date": "2023-05-01T21:09:20Z",
+      "message": "Switch to unittest.mock (#78)\n\nThe mock package has been integrated into unittest since Python 3.3,\r\nwhich includes all supported distributions of ROS 2.\r\n\r\nSigned-off-by: Scott K Logan <logans@cottsay.net>"
+    },
+    {
+      "sha": "9516dbb19cd2c216ab57215b813c24f0ba5c0fd6",
+      "author": "Silvio Traversaro",
+      "date": "2023-01-26T13:41:15Z",
+      "message": "Add BSD LICENSE file (#77)\n\nSigned-off-by: Silvio Traversaro <silvio@traversaro.it>"
+    },
+    {
+      "sha": "94ff6d224f96dd789f915c37d87b0d72f2b4f6fb",
+      "author": "Audrow Nash",
+      "date": "2022-11-28T19:46:34Z",
+      "message": "Update Maintainers (#76)\n\n* Add Chris Lalancette to CODEOWNERs file\r\n\r\n* Update maintainers to Chris Lalancette\r\n\r\nSigned-off-by: Audrow Nash <audrow@openrobotics.org>"
+    },
+    {
+      "sha": "a761315753b6934e596696cb1ccf336ae2153ce7",
+      "author": "Shane Loretz",
+      "date": "2022-03-30T18:40:28Z",
+      "message": "1.2.0\n\nSigned-off-by: Shane Loretz <sloretz@openrobotics.org>"
+    },
+    {
+      "sha": "642eb0705a73982bae1878ea7176ee9d1228456a",
+      "author": "Chris Lalancette",
+      "date": "2022-01-27T16:25:57Z",
+      "message": "Fix the binary install location. (#74)\n\nThe previous one was wrong.  With this fix in place,\r\n'ros2 run urdfdom_py display_urdf' now works.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "db5971c1cc2e1f3eec01df48da664f85ff2f53cb",
+      "author": "Chris Lalancette",
+      "date": "2022-01-27T13:27:17Z",
+      "message": "Get Iterable from collections.abc. (#73)\n\n* Get Iterable from collections.abc.\r\n\r\nGetting Iterable from collections was deprecated in Python 3.9\r\nand removed in 3.10.\r\n\r\n* Use underscores for setup.cfg keys.\r\n\r\nUsing dashes is deprecated.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "b34f90853f90a9aa61f01d6a242201db215ed661",
+      "author": "Chris Lalancette",
+      "date": "2021-03-15T14:56:13Z",
+      "message": "1.1.0"
+    },
+    {
+      "sha": "b2a43cb1199d2c3c357888acb317cfa8163006b0",
+      "author": "Chris Lalancette",
+      "date": "2021-03-15T14:56:01Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "ab9e736cd5a8dab864cb99c6cc86104b9e6a5896",
+      "author": "Scott K Logan",
+      "date": "2020-07-29T18:11:38Z",
+      "message": "Use a Python entry point for 'display_urdf' (#64)\n\nThis will make the script work on Windows, and will ensure that the\ncorrect Python interpreter is always used.\n\nSigned-off-by: Scott K Logan <logans@cottsay.net>"
+    },
+    {
+      "sha": "4aef60c81a359e74ddf75601c9f334090b8f4f93",
+      "author": "Scott K Logan",
+      "date": "2020-07-29T18:13:31Z",
+      "message": "Move the 'display_urdf' script into the Python module (#64)\n\nThe change following this one will modify the script to use a Python\nentry point.\n\nSigned-off-by: Scott K Logan <logans@cottsay.net>"
+    },
+    {
+      "sha": "4cd7b309d7b6443eba3630c48eb6c4fa90e62bc1",
+      "author": "Scott K Logan",
+      "date": "2020-07-29T18:12:13Z",
+      "message": "Make 'file' argument to display_urdf required (#64)\n\nThe underlying operation, fetching the URDF from the parameter server,\nis no longer supported in ROS 2.\n\nSigned-off-by: Scott K Logan <logans@cottsay.net>"
+    },
+    {
+      "sha": "b44187f0bfd96aa15d17988fb79582b5e6a56eac",
+      "author": "Chris Lalancette",
+      "date": "2020-07-13T12:15:31Z",
+      "message": "Make sure to add the version when creating a new URDF. (#62)\n\nIt turns out that when I added the version stuff, I completely\r\nforgot about creating a new URDF.  This PR fixes it so that\r\nwe can successfully round-trip through the URDF parser, and\r\nadds tests to ensure the same.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "a47a778ac566ec84dafd8f4752950b5cbfcff430",
+      "author": "Chris Lalancette",
+      "date": "2020-06-12T18:33:46Z",
+      "message": "Remove the from_parameter_server method from urdf.py for ROS 2. (#63)\n\nThis can't possibly work on ROS 2, so just remove it.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "753327b0faeafb505dbd7f9b795defb2c66f2b83",
+      "author": "Chris Lalancette",
+      "date": "2020-06-12T16:03:17Z",
+      "message": "Silence pytest warnings when running locally. (#61)\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "dc5ebf9930712da82f2f85c9d9d78c4c24e62c17",
+      "author": "Chris Lalancette",
+      "date": "2020-03-10T01:12:30Z",
+      "message": "1.0.0"
+    },
+    {
+      "sha": "d55f999ebb21f09811b735c7415aaef86ada4d4e",
+      "author": "Chris Lalancette",
+      "date": "2020-03-10T01:11:07Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "8f8a28eb5cadc438009de2398287ceb0c17bf93d",
+      "author": "Chris Lalancette",
+      "date": "2020-03-10T01:07:03Z",
+      "message": "Add in support for the version tag. (#52) (#54)\n\n* Add in support for the version tag.\r\n\r\nCherry-picked from the melodic-devel branch commit\r\nc0a75a2dd40c4b7a4fffdfe9776f9ec229609232\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "04be1571e5e97592c084744e5927e331d922a9bb",
+      "author": "Henning Kayser",
+      "date": "2020-01-06T15:39:18Z",
+      "message": "ROS 2 Port (reopened) (#53)\n\n* Port package.xml and setup.py to ROS 2\r\n\r\n* Remove CMakeLists.txt according to ROS 2 port instructions\r\n\r\n* 1.0.0\r\n\r\nCo-authored-by: Víctor Mayoral Vilches <v.mayoralv@gmail.com>"
+    },
+    {
+      "sha": "b213e6e5846800b4873be349d605b906e78d681e",
+      "author": "Shane Loretz",
+      "date": "2019-10-23T01:17:29Z",
+      "message": "0.4.1\n\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>"
+    },
+    {
+      "sha": "87b2913d5b5cc06178569191e33b5fded2675b13",
+      "author": "Chris Lalancette",
+      "date": "2019-09-23T12:56:51Z",
+      "message": "Fixes to make this work with Python 3.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "53d561e8f4c174ba9d34ec1de9eca8f55b8a91e0",
+      "author": "Markus Grimm",
+      "date": "2019-03-26T21:18:40Z",
+      "message": "Changes for Python 3\n\nGnerated with 2to3"
+    },
+    {
+      "sha": "29ca3b3a5f14131302c1e1df3a4303193eb3c76b",
+      "author": "Timon Engelke",
+      "date": "2018-11-24T15:29:59Z",
+      "message": "Add python 3 support"
+    },
+    {
+      "sha": "8450e01d18e81b0f8b20c69b7eb57d4fa09e3538",
+      "author": "Eric Cousineau",
+      "date": "2018-11-20T22:06:34Z",
+      "message": "test: Remove old example test (#37)\n\nThis is now covered by `test_urdf`."
+    },
+    {
+      "sha": "54e4155d937281dd66a10998c1d7f9f37117b969",
+      "author": "Chris Lalancette",
+      "date": "2018-02-21T21:06:20Z",
+      "message": "0.4.0"
+    },
+    {
+      "sha": "ad31a9f5fe4611c0b1bd090742c1f85d0c8168dd",
+      "author": "Chris Lalancette",
+      "date": "2018-02-21T21:05:50Z",
+      "message": "changelog"
+    },
+    {
+      "sha": "44d82bd2d6b8325d632a86ab185c83908bbfd0ce",
+      "author": "Shane Loretz",
+      "date": "2018-02-16T21:36:03Z",
+      "message": "Add Link.visual and Link.collision properties (#28)\n\nProperties are for backwards compatibility. They access the first\r\nelement of Link.visuals and Link.collisions"
+    },
+    {
+      "sha": "4a4451fb8428fe7d4c01fd0d0fd04d27a850c246",
+      "author": "Shane Loretz",
+      "date": "2018-02-14T22:37:55Z",
+      "message": "Add tests for mutli-visual and multi-collision"
+    },
+    {
+      "sha": "548630013258ba721ce921aa2344c81574b427d2",
+      "author": "Chris Paxton",
+      "date": "2017-12-19T15:16:12Z",
+      "message": "inertials --> inertial"
+    },
+    {
+      "sha": "9fb239b47cfbaa734253081b259c940935d56634",
+      "author": "Chris Paxton",
+      "date": "2017-12-06T19:13:40Z",
+      "message": "remove commented out code"
+    },
+    {
+      "sha": "eaea61f89f9e7380ab1ff5715d4b41d105cfbb73",
+      "author": "Chris Paxton",
+      "date": "2017-12-06T18:07:37Z",
+      "message": "links and collisions load properly as aggregates"
+    },
+    {
+      "sha": "a011dc1c451ef119d0bfaecf3360591204770f61",
+      "author": "Eric Cousineau",
+      "date": "2018-02-14T21:23:55Z",
+      "message": "Add XPath information when a parse error is encountered"
+    },
+    {
+      "sha": "31474b9baaf7c3845b40e5a9aa87d5900a2282c3",
+      "author": "Chris Lalancette",
+      "date": "2017-07-26T17:35:59Z",
+      "message": "Remove travis support. (#22)\n\nWe don't need it since we have buildfarm support.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@osrfoundation.org>"
+    },
+    {
+      "sha": "d6b0a17a5d988fed55a3ce1f2d210753e19b49c6",
+      "author": "Chris Lalancette",
+      "date": "2017-07-26T17:24:37Z",
+      "message": "Reformat python code to pep8 standard (#21)\n\nclalancette also did some additional work here to bring it\r\nall the way up to standard."
+    },
+    {
+      "sha": "c2fb84d1da16c9e3115400f45e00821e0304031b",
+      "author": "Will Baker",
+      "date": "2017-07-12T14:30:11Z",
+      "message": "Update core.py to allow passing addHeader arg to to_xml_string function (#19)"
+    },
+    {
+      "sha": "fa0360e171a4bfccdef191ed5898829c3d3e32e0",
+      "author": "eugene-katsevman",
+      "date": "2017-04-25T16:36:10Z",
+      "message": "new pull request for default values in urdf (#17)\n\nfixed comparison order of operations in check_valid()"
+    },
+    {
+      "sha": "e89416440ee313672bcfd5d4eef0dc9674b44fe0",
+      "author": "eugene-katsevman",
+      "date": "2017-04-25T15:59:01Z",
+      "message": "fixed defaults for xyz/rpy, fixed set_default for Param, added unit tests (#16)\n\nfixed defaults for xyz/rpy, fixed set_default for Param, added unittest for xyz/rpy"
+    },
+    {
+      "sha": "06dd28aceb4205b49bf833d0613e4e23c1ee796b",
+      "author": "Shane Loretz",
+      "date": "2017-03-29T14:46:51Z",
+      "message": "Make unit test run with `catkin_make run_tests` (#15)\n\n* Make unit test run with `catkin_make run_tests`\r\n* Updated package.xml to format 2"
+    },
+    {
+      "sha": "c63f7fd4292dd0f1050e0a0ad8e5ced9df3948bb",
+      "author": "Shane Loretz",
+      "date": "2017-02-10T23:25:25Z",
+      "message": "0.3.3"
+    },
+    {
+      "sha": "190952045d97cfe685449d90d1725072ea1c649f",
+      "author": "Shane Loretz",
+      "date": "2017-02-10T23:22:53Z",
+      "message": "changelog"
+    },
+    {
+      "sha": "8d32d650b7fecae303f7e00b7f76eaf59012a1a8",
+      "author": "Chris Lalancette",
+      "date": "2017-02-08T23:44:44Z",
+      "message": "Make Chris and Shane the maintainers\n\nSigned-off-by: Chris Lalancette <clalancette@osrfoundation.org>"
+    },
+    {
+      "sha": "9ff0a59ee7a1afc61cddd50636a73a54ff4fdf42",
+      "author": "Chris Lalancette",
+      "date": "2017-02-08T23:16:14Z",
+      "message": "Add python-lxml to the travis build.\n\nSigned-off-by: Chris Lalancette <clalancette@osrfoundation.org>"
+    },
+    {
+      "sha": "01deecc1bc012234fb871257aa2430a1edd5e6cb",
+      "author": "Isaac I.Y. Saito",
+      "date": "2016-08-25T18:40:56Z",
+      "message": "Revert line break (https://github.com/ros/urdfdom/pull/77) now that more generic solution (https://github.com/ros/urdf_parser_py/pull/4) is merged. (#5)"
+    },
+    {
+      "sha": "bee49b9339e18c07a61cc4e9dad086d141589694",
+      "author": "Isaac I.Y. Saito",
+      "date": "2016-08-25T00:31:17Z",
+      "message": "Not breaking line makes it harder to read when errors repeatedly occur. (#4)"
+    },
+    {
+      "sha": "340f7aa9da1c83a4414b7e4d7f0d89f73897df10",
+      "author": "Jackie Kay",
+      "date": "2016-03-22T20:03:06Z",
+      "message": "0.3.2"
+    },
+    {
+      "sha": "dd1d46f97fe64fe46fc7ea0370449719ca84a8c0",
+      "author": "Jackie Kay",
+      "date": "2016-02-23T01:51:00Z",
+      "message": "Merge pull request #2 from ros/move_gbp_setup\n\nModify CMake and setup based on downstream release package"
+    },
+    {
+      "sha": "cae358c946b16a30288882e3528ef092ed2fed36",
+      "author": "Jackie Kay",
+      "date": "2016-02-23T00:47:59Z",
+      "message": "Modify CMakeLists.txt, setup.py, and Travis based on downstream release package"
+    },
+    {
+      "sha": "fd4fa0423ab29918b7d1423fd381775a7141c56d",
+      "author": "Jackie Kay",
+      "date": "2016-02-22T19:35:45Z",
+      "message": "0.3.1"
+    },
+    {
+      "sha": "824278e02fd48eaaba26d3872c287190eece151d",
+      "author": "Jackie Kay",
+      "date": "2016-02-22T19:32:53Z",
+      "message": "generate new changelog"
+    },
+    {
+      "sha": "a8987ba2a0c2a66bd782f109cd2e0f54eaa404b3",
+      "author": "Jackie Kay",
+      "date": "2016-02-22T18:35:20Z",
+      "message": "Add travis"
+    },
+    {
+      "sha": "ada5ee1c999b63ae501a06599735e09e55a2d6f2",
+      "author": "Jackie Kay",
+      "date": "2016-02-22T18:28:34Z",
+      "message": "Add package.xml for ROS release"
+    },
+    {
+      "sha": "bd3eb084ed8b04e28faac293dac9dd6b2cda6067",
+      "author": "Jackie Kay",
+      "date": "2016-02-22T17:52:02Z",
+      "message": "Tweak CMakeLists to reflect migration from urdfdom"
+    },
+    {
+      "sha": "5371bf1770df528fd60b4a27a3511f580da85d4e",
+      "author": "Silvio Traversaro",
+      "date": "2016-02-05T10:05:53Z",
+      "message": "[urdf_parser_py] Add missing newline"
+    },
+    {
+      "sha": "42c44f673d400876d91011ecf270650fd769cca3",
+      "author": "Tamaki Nishino",
+      "date": "2015-12-13T04:54:38Z",
+      "message": "color and texture in link material are optional"
+    },
+    {
+      "sha": "e0a05c729fc76d8bf02fe32e5b36a85b5151bcc5",
+      "author": "Robert Haschke",
+      "date": "2015-10-30T16:07:02Z",
+      "message": "fixed transmission parser to match specification\n\nhttp://wiki.ros.org/urdf/XML/Transmission#A.3Ctransmission.3E_Elements\n\nproper unittest for urdf_parser_py\n\n- added transmission parsing tests"
+    },
+    {
+      "sha": "48069a2f9c9a93a6a49871bf5093956bb6f2fadd",
+      "author": "Ioan A Sucan",
+      "date": "2015-10-12T19:16:33Z",
+      "message": "Merge pull request #59 from goretkin/goretkin-optional-calibration\n\njoint calibration is optional"
+    },
+    {
+      "sha": "e9623ce55eef9501fc9c8c908cb6d79d1fb38c64",
+      "author": "VahidAminZ",
+      "date": "2015-08-21T15:55:44Z",
+      "message": "made hardware interface optional in both transmission actuator and joint"
+    },
+    {
+      "sha": "9615fef066e2fad707bae7b650a7e1eac553859e",
+      "author": "Gustavo Goretkin",
+      "date": "2015-03-11T03:47:45Z",
+      "message": "joint calibration is optional\n\naccording to http://wiki.ros.org/urdf/XML/joint"
+    },
+    {
+      "sha": "717ee124a52ddf09accd267052f0c2ae4bf99f79",
+      "author": "Kei Okada",
+      "date": "2014-09-03T11:55:48Z",
+      "message": "set limit(upper/lower), safety_controller(soft_upper/lower_limit, k_position) is optional"
+    },
+    {
+      "sha": "b54204c567c3aa45d04e305cb223eccbed968184",
+      "author": "Silvio Traversaro",
+      "date": "2014-08-15T17:08:32Z",
+      "message": "urdf_parser_py.xml_reflection : python 3 compatibility \n\nSubstitute 'Exception, e' with `Exception as e`. This ensure compatibility with Python 3 and Python 2.6,2.7 . \r\nCheck https://docs.python.org/3/howto/pyporting.html#capturing-the-currently-raised-exception for more info."
+    },
+    {
+      "sha": "763ab7206b2b631f5dd8ff584b007e719229d4b2",
+      "author": "eacousineau",
+      "date": "2014-01-19T02:04:26Z",
+      "message": "urdf_parser_py: Confirmed that both new transmissions are parseable in the same robot.\n\ttest: Added in specific test for tranmsissions. Have it print the type.\n\t@todo: Make this a unittest."
+    },
+    {
+      "sha": "73cba2a25a7f25829532f62cf78a4dcf42129025",
+      "author": "eacousineau",
+      "date": "2014-01-19T01:41:04Z",
+      "message": "urdf_parser_py: Added attribute preservation for xmlr.RawType (i.e., <gazebo reference=\"...\"/>)"
+    },
+    {
+      "sha": "37135fe6739d1edc21e892e8107ba5c32f11c1a3",
+      "author": "eacousineau",
+      "date": "2014-01-19T01:31:12Z",
+      "message": "urdf_parser_py: Parsing new transmission format works. Need to add in test for old PR2 transmission types.\n\ttest/calvin: Added in generated Calvin URDF provided by v4hn\n\ttest/romeo: Reformatted to match Calvin test"
+    },
+    {
+      "sha": "7391dee7ebb1cdec1bc13be2bc12e6d73492c9bc",
+      "author": "eacousineau",
+      "date": "2014-01-11T23:33:38Z",
+      "message": "urdf_parser_py.urdf: Adding duck-typed parsing for ros_control and PR2 transmissions."
+    },
+    {
+      "sha": "723bb40d4fa92d27de68eaa58c1963bd1dee6c0a",
+      "author": "Séverin Lemaignan",
+      "date": "2013-12-17T21:43:40Z",
+      "message": "[urdf_parser_py] Python3 compatibility"
+    },
+    {
+      "sha": "8780cd18173437dad0a02548c66febdcc8012380",
+      "author": "Vincent Rabaud",
+      "date": "2013-09-09T10:08:13Z",
+      "message": "add xml_reflection to the install rule"
+    },
+    {
+      "sha": "4bae8c2d6b1b3a62fa25556015b26470dec8226a",
+      "author": "Ioan Sucan",
+      "date": "2013-09-07T08:18:21Z",
+      "message": "use install-layout deb"
+    },
+    {
+      "sha": "39027104bd04d5d0f8b5df8455a77a17fc749890",
+      "author": "isucan",
+      "date": "2013-09-01T08:53:07Z",
+      "message": "install urdf_python_py with plain cmake"
+    },
+    {
+      "sha": "d7d8840de6194ea18a45308aad86a2fcdda7dc22",
+      "author": "eacousineau",
+      "date": "2013-08-31T18:55:31Z",
+      "message": "xml_reflection: Moved into urdf_parser_py"
+    },
+    {
+      "sha": "9ba06c052c1e61633871821e4520195d3226a4d7",
+      "author": "eacousineau",
+      "date": "2013-08-31T16:28:39Z",
+      "message": "urdf_parser_py, xml_reflection: Removed catkin build stuff"
+    },
+    {
+      "sha": "123554fc00d3e3f07fb24a08107f5ebe5c0cba50",
+      "author": "eacousineau",
+      "date": "2013-08-31T15:51:23Z",
+      "message": "urdf_parser_py, xml_reflection: Remove runtime dependencies on rospy, roslib.\n\tWill remove catkin from setup.py, along with CMakeLists.txt files"
+    },
+    {
+      "sha": "ae52e8b696b06603e5306f7b119831c901025325",
+      "author": "eacousineau",
+      "date": "2013-08-31T05:53:31Z",
+      "message": "README.md: Moving into urdf_parser_py"
+    },
+    {
+      "sha": "406c13d371ef66a490d2bd3331d72b5ce773703b",
+      "author": "eacousineau",
+      "date": "2013-07-25T19:43:59Z",
+      "message": "urdf/Transmission: Uncommented line. Need to figure out how to make transmission types more flexible (for usage with ros_control)"
+    },
+    {
+      "sha": "0ec9e68bf2cf9f0541506389d29441468998553c",
+      "author": "eacousineau",
+      "date": "2013-07-16T04:21:19Z",
+      "message": "urdf: Commented out transmissions -- need to address more generalized plugins (see ros_control packages)"
+    },
+    {
+      "sha": "767dc4f3a4ba6dfda8c079f9962606f3d19a26e9",
+      "author": "eacousineau",
+      "date": "2013-07-25T19:31:14Z",
+      "message": "urdf: Made sure that geometry children constraint does not count comments\nRemoved *.pyc files\n\nConflicts:\n\t.gitignore"
+    },
+    {
+      "sha": "3544f82f53b72ca7c60eb1f063c7bbccd59c0cf3",
+      "author": "eacousineau",
+      "date": "2013-07-15T00:27:02Z",
+      "message": "Added in some compatibility methods / accessors for calibration stack"
+    },
+    {
+      "sha": "139560b79b0c8d7816fed82996245ace81c1ee33",
+      "author": "eacousineau",
+      "date": "2013-07-15T00:26:34Z",
+      "message": "CMakeLists.txt: Reflected path change {examples => scripts}/display_urdf\npackage.xml's: Removed python export path (does not apply)"
+    },
+    {
+      "sha": "6e0135f170a7b4666ff9abe6cb1651874e2d420d",
+      "author": "eacousineau",
+      "date": "2013-07-11T13:49:10Z",
+      "message": "test: Reorganized.\n\tTODO Make actual unit test?"
+    },
+    {
+      "sha": "e94b73dbf52e9f1f34554b1c68a2515e9642f8ca",
+      "author": "eacousineau",
+      "date": "2013-07-11T07:37:01Z",
+      "message": "xml_reflection: Refactoring into catkin package. Trying to figure out how to manage source setup.sh for development..."
+    },
+    {
+      "sha": "88f15e2ba75c815fd99ca6d300426ef3d1a53d7a",
+      "author": "eacousineau",
+      "date": "2013-07-11T07:05:24Z",
+      "message": "urdf: Changed ordering of tags to match that of romeo.urdf\ntest: Added in romeo test (fuerte branch)"
+    },
+    {
+      "sha": "45b47c92d3666ac4769af8e377a2680aaf8a984d",
+      "author": "eacousineau",
+      "date": "2013-07-11T06:46:51Z",
+      "message": "Corrected wrong import for xml_reflection.basics module"
+    },
+    {
+      "sha": "87eb47d1664168cc4f4aff3c2eebaefac4bb3855",
+      "author": "eacousineau",
+      "date": "2013-04-11T15:09:33Z",
+      "message": "Added in test for pelican_urdf"
+    },
+    {
+      "sha": "1fc6d169f8abfb21e2dfbcbeca07f9861a66bdfb",
+      "author": "eacousineau",
+      "date": "2013-04-11T14:25:10Z",
+      "message": "xml_reflection: Made separate package, moved out of urdf_parser_py"
+    },
+    {
+      "sha": "4486f8d65772e34100a7e6794500b8c2c79cdb40",
+      "author": "eacousineau",
+      "date": "2013-04-10T00:23:20Z",
+      "message": "urdf.Transmission: Needed to add tag"
+    },
+    {
+      "sha": "adea583276a1aaa875811df8ddac45480689bbf7",
+      "author": "eacousineau",
+      "date": "2013-04-10T00:13:12Z",
+      "message": "urdf.Transmission: Small bufix for type"
+    },
+    {
+      "sha": "37a4b99f29861d19b44aa045a1792182a2b107af",
+      "author": "eacousineau",
+      "date": "2013-03-21T17:42:47Z",
+      "message": "urdf: Changed Mesh.scale attribute to not be required (thanks to Carlos De La Guardia)"
+    },
+    {
+      "sha": "749423bb966d68f769a46dd2f9b9f7831a100fe1",
+      "author": "eacousineau",
+      "date": "2013-03-21T17:39:00Z",
+      "message": "Refactored variable names to match PEP 8 - http://www.python.org/dev/peps/pep-0008/#introduction"
+    },
+    {
+      "sha": "a17b19919acf2e0cfa29fbff65eb4e3ce08ef28c",
+      "author": "eacousineau",
+      "date": "2013-03-21T17:34:28Z",
+      "message": "Finished refactoring. Instance methods: to_xml => write_xml, load_xml => read_xml. Class methods: from_{xml,string}"
+    },
+    {
+      "sha": "ad164e25ebdfc7dbed00b92f2cc6c2484750c2f6",
+      "author": "eacousineau",
+      "date": "2013-03-21T17:22:16Z",
+      "message": "Renamed to_xml to dump_xml, but that is inconsistent with pyyaml. Will rename to {read,write}_xml for clarity."
+    },
+    {
+      "sha": "6599667c05b692ef45befefe1617c103c83c6e6a",
+      "author": "eacousineau",
+      "date": "2013-03-21T17:19:21Z",
+      "message": "Fixed bug in Robot.add_joint() (thanks to Carlos De La Guardia). Fixed some SDF stuff"
+    },
+    {
+      "sha": "eba3bd3fece1f8687d58208403a02510fd41908b",
+      "author": "Eric Cousineau",
+      "date": "2013-03-14T05:36:04Z",
+      "message": "Starting to develop SDF stuff"
+    },
+    {
+      "sha": "d2b8c5d18b9a0e531b0779f9b064c45920cefcc6",
+      "author": "Eric Cousineau",
+      "date": "2013-03-14T04:45:40Z",
+      "message": "Touched up some namespace stuff a little, fixed example script."
+    },
+    {
+      "sha": "e1b98707ee75978655597fd98c08858cd50d2920",
+      "author": "Eric Cousineau",
+      "date": "2013-03-14T04:17:56Z",
+      "message": "Updated API, added back in static from_xml and generalized it. Updated example file."
+    },
+    {
+      "sha": "3243b7536bd8d851a5aefa5fdcee63f1e3154290",
+      "author": "Eric Cousineau",
+      "date": "2013-03-14T03:44:37Z",
+      "message": "Going to separate out xml and python variables"
+    },
+    {
+      "sha": "5c029f4129f97a5efaf0c094d9f46fbe2aa26acb",
+      "author": "Eric Cousineau",
+      "date": "2013-03-14T03:05:29Z",
+      "message": "Starting to do some baic refactoring"
+    },
+    {
+      "sha": "b1cf0eb843fa0752c3b3c5e0e72934dc22420b77",
+      "author": "Eric Cousineau",
+      "date": "2013-03-11T04:23:18Z",
+      "message": "Have Gazebo stuff working a little better. Yaml dumps work as well"
+    },
+    {
+      "sha": "b86845927f2afeca98b1717f9db2c384e1b81163",
+      "author": "Eric Cousineau",
+      "date": "2013-03-11T04:15:19Z",
+      "message": "Added in Gazebo tags, but it looks ugly... Need to just extra all children and insert those normally"
+    },
+    {
+      "sha": "78177f6b537f0b14aad5da93f5cf2cff16724ee7",
+      "author": "Eric Cousineau",
+      "date": "2013-03-11T03:57:11Z",
+      "message": "Did that refactoring stuff"
+    },
+    {
+      "sha": "34c88352916b8dc3df578acb94bcd65e6a3b9c45",
+      "author": "Eric Cousineau",
+      "date": "2013-03-11T02:36:50Z",
+      "message": "Refactoring loading design"
+    },
+    {
+      "sha": "c423d0f53fdbee732e79f1a4f08039b615a04935",
+      "author": "Eric Cousineau",
+      "date": "2013-03-11T02:09:39Z",
+      "message": "Realizing that maybe I should make a factory-type object for aggregate types"
+    },
+    {
+      "sha": "3dc46dde9c8c61f5318299511cd899555d1fafc9",
+      "author": "Eric Cousineau",
+      "date": "2013-03-11T01:10:38Z",
+      "message": "Changing to accomadate aggregate types"
+    },
+    {
+      "sha": "db02fafa2bda8dcd94a1bac9da4bbfb879d39676",
+      "author": "Eric Cousineau",
+      "date": "2013-03-11T00:11:51Z",
+      "message": "Added in check_valid() for warnings / assertions"
+    },
+    {
+      "sha": "d1ac031debd9227f2103b15c3366368da04327b1",
+      "author": "Eric Cousineau",
+      "date": "2013-03-10T23:51:44Z",
+      "message": "Things are updated now. Might run slower, but meh"
+    },
+    {
+      "sha": "e78ffe12ac28ed687a89de9ea133495e27078b31",
+      "author": "Eric Cousineau",
+      "date": "2013-03-10T23:07:37Z",
+      "message": "Can at least run urdf.py"
+    },
+    {
+      "sha": "fc2dc724f21ff4d5d29198cf1c5d9fca3c587944",
+      "author": "Eric Cousineau",
+      "date": "2013-03-10T22:40:15Z",
+      "message": "Things coming together code wise, but have not yet tested. Need to"
+    },
+    {
+      "sha": "0e69788624a20aa9a002fd905737f534a73ea0d8",
+      "author": "Eric Cousineau",
+      "date": "2013-03-10T21:37:27Z",
+      "message": "Have basic reflection setup, continuing on"
+    },
+    {
+      "sha": "361582ac60eae960ad7ca96bce731fbd4d6b44df",
+      "author": "Eric Cousineau",
+      "date": "2013-03-10T21:06:34Z",
+      "message": "Modifying reflection setup"
+    },
+    {
+      "sha": "a413f8fe3bff1a5a987dd1a7804fb5cb895cddce",
+      "author": "Eric Cousineau",
+      "date": "2013-03-10T18:52:06Z",
+      "message": "There's a problem if an element is supposed to be unique and there's multiple instances of it, it will be overwritten by later occurences. In what seems to be the policy of the urdfdom parser, it uses the first instance, whereas this implementation uses the last instance."
+    },
+    {
+      "sha": "47c46a578998710b4d15345f879479dfcf948d74",
+      "author": "eacousineau",
+      "date": "2013-02-16T08:15:59Z",
+      "message": "Tried to add in Gazebo stuff"
+    },
+    {
+      "sha": "aa46b43a50972d3227a91d90349b5074d3f17071",
+      "author": "eacousineau",
+      "date": "2013-02-16T07:59:55Z",
+      "message": "Trying a few more complicated things"
+    },
+    {
+      "sha": "1c7ca889287c5141fafd91dff34b8856c469e995",
+      "author": "eacousineau",
+      "date": "2013-02-16T07:43:59Z",
+      "message": "Seems to be working now"
+    },
+    {
+      "sha": "2fed8a76a67607b900e96c35cecd2cf3aa2d1111",
+      "author": "eacousineau",
+      "date": "2013-02-16T06:54:53Z",
+      "message": "More reworking"
+    },
+    {
+      "sha": "4b7bc333536e901a16440f5dee6cfaa381165331",
+      "author": "eacousineau",
+      "date": "2013-02-16T05:28:21Z",
+      "message": "Trying out a couple of methods"
+    },
+    {
+      "sha": "e96a6f6c2a402a7db879a427c98aa3c8b1892c2c",
+      "author": "eacousineau",
+      "date": "2013-02-16T05:21:51Z",
+      "message": "Doing some more rework"
+    },
+    {
+      "sha": "472a2f015fc9f19a1a2b495a5b2f3957a0a3b34a",
+      "author": "eacousineau",
+      "date": "2013-02-16T04:41:11Z",
+      "message": "Adding transition, but want to set value easily... Going to try etree"
+    },
+    {
+      "sha": "21077b020a244382147ceaccd320b91ca397341f",
+      "author": "eacousineau",
+      "date": "2013-02-16T04:22:17Z",
+      "message": "Messing around with the yaml stuff"
+    },
+    {
+      "sha": "28af41e35f23cc10350f977d0d747a2c0797640a",
+      "author": "eacousineau",
+      "date": "2013-02-16T02:39:47Z",
+      "message": "Bugfixed color stuff"
+    },
+    {
+      "sha": "34ffcbbfbf99d65831725dbd9b34ea6ebc3a434a",
+      "author": "Doug Sievers",
+      "date": "2013-07-07T06:08:00Z",
+      "message": "Update version to 0.3.0"
+    },
+    {
+      "sha": "c001b8d5929d7a68454b706bccca896d82352654",
+      "author": "Doug Sievers",
+      "date": "2013-07-06T05:00:21Z",
+      "message": "Add setup.py, remove comments"
+    },
+    {
+      "sha": "1278cd36d5f2a79853e53eca310ddb57ec013b33",
+      "author": "Doug Sievers",
+      "date": "2013-07-06T04:13:33Z",
+      "message": "Catkinize package"
+    },
+    {
+      "sha": "c0183ac51435815923a9a8aab17698ae29230338",
+      "author": "Antonio El Khoury",
+      "date": "2013-01-09T12:53:11Z",
+      "message": "Fix inertia matrix constructor.\n\n  * ixy was set to iyy by mistake.\n  * Reported by Joseph Salini."
+    },
+    {
+      "sha": "94f4d1f4566d459ae3f669ceadfdbab05bdaf92b",
+      "author": "Antonio El Khoury",
+      "date": "2012-08-28T14:15:21Z",
+      "message": "Do not strip trailing zeros in float display.\n\n * Stripping trailing zeros causes the removal of exponents if value\n   is expressed in scientific notation (e.g. 1.2e-10 -> 1.2e-1)."
+    },
+    {
+      "sha": "8f94037e945a963eb5a16faa2d942a81eaf87ebb",
+      "author": "Antonio El Khoury",
+      "date": "2012-08-20T13:35:25Z",
+      "message": "Fix float display while writing xml document.\n\n * The older method caused a loss of float precision when writing urdf\n   file."
+    },
+    {
+      "sha": "b2ccb4c2a2e88cbab5744a6ed0df4dd9f784d8e2",
+      "author": "Kelsey Hawkins",
+      "date": "2012-07-06T21:08:06Z",
+      "message": "Added verbose flag to parsing methods.  If false, the parser will not throw warnings if\nit encounters unknown elements."
+    },
+    {
+      "sha": "a525d3fbfbd943fb3f2f7fe975e3947f9460705d",
+      "author": "Kelsey Hawkins",
+      "date": "2012-07-05T21:58:58Z",
+      "message": "Changed Joint names to strings (was causing a bug), added get_root which detects the link which is top in the tree (URDF's should guarantee a unique root/tree structure), and added an option to get_chain which allows one to not include fixed joints in the chain."
+    },
+    {
+      "sha": "bb7eaee5adf05fb1db6104acde20ba123856f37d",
+      "author": "Antonio El Khoury",
+      "date": "2012-06-25T11:03:57Z",
+      "message": "Load link inertial origin when parsing URDF."
+    },
+    {
+      "sha": "68a1458435fc80d99aa85375d8c20472fd768019",
+      "author": "Thomas Moulard",
+      "date": "2012-03-29T14:23:36Z",
+      "message": "Do not display XML output in display_urdf."
+    },
+    {
+      "sha": "83091fa89de946ebdde4a1bf7aa2d05b7218b02b",
+      "author": "Thomas Moulard",
+      "date": "2012-03-29T14:23:10Z",
+      "message": "Add tree structure pretty printing."
+    },
+    {
+      "sha": "14a7b98d22c0106568bd964dfb531deaf968ed3e",
+      "author": "Thomas Moulard",
+      "date": "2012-03-29T13:43:42Z",
+      "message": "Allow the user to choose from which parameter the model is loaded."
+    },
+    {
+      "sha": "a597334e7f453381c406604f68a1f9b0e57c095c",
+      "author": "Thomas Moulard",
+      "date": "2012-03-29T13:42:12Z",
+      "message": "Enhance naming following Kelsey Hawkins's suggestions.\n\n- make load/parse methods static\n- rename load into load_xml_file, parse into parse_xml_string\n- rename loadFromParameterServer into load_from_paremeter_server"
+    },
+    {
+      "sha": "b9249e210e89bd68a6a8fb5c0aefad17f607bc4f",
+      "author": "Thomas Moulard",
+      "date": "2012-03-29T13:01:43Z",
+      "message": "Ignore compiled Python files."
+    },
+    {
+      "sha": "f6dbb82d10030993d383e3af584ddf20efe013c9",
+      "author": "Thomas Moulard",
+      "date": "2012-03-29T13:01:13Z",
+      "message": "Support model loading from the parameter server. Make test generic."
+    },
+    {
+      "sha": "9599acbad2bfc2b70edc9963339caf23f8636683",
+      "author": "Thomas Moulard",
+      "date": "2012-03-29T12:54:57Z",
+      "message": "Update manifest.xml to use epydoc."
+    },
+    {
+      "sha": "5d15216562ecfa395d860efa86d4854bf16d43ee",
+      "author": "Thomas Moulard",
+      "date": "2012-03-29T12:49:31Z",
+      "message": "Update manifest.xml."
+    },
+    {
+      "sha": "ca7453d9fb86c2cc4f16fd83ecd9945a517fd386",
+      "author": "Thomas Moulard",
+      "date": "2012-03-29T12:45:31Z",
+      "message": "Replace urdf_python by urdf_parser_py everywhere."
+    },
+    {
+      "sha": "7d81f5c746537a96157b52a15ab33c2b55f80506",
+      "author": "Thomas Moulard",
+      "date": "2012-03-29T12:31:13Z",
+      "message": "Remove unwanted packages."
+    }
+  ]
+}

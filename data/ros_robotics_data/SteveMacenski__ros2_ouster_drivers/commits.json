@@ -1,0 +1,540 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-07T02:13:27Z",
+    "source": "github_rest",
+    "endpoint": "/repos/{owner}/{repo}/commits",
+    "owner": "SteveMacenski",
+    "repo": "ros2_ouster_drivers",
+    "per_page": 100
+  },
+  "data": [
+    {
+      "sha": "19c2523025e3e55a2fa803581e4e830e467a9d47",
+      "author": "Steve Macenski",
+      "date": "2024-06-18T23:29:34Z",
+      "message": "Add remark on new driver to readme (#145)"
+    },
+    {
+      "sha": "2ed3f10eaa7a3914ad083b71b125d0da29b8e019",
+      "author": "Paul Auerbach",
+      "date": "2024-05-29T16:38:23Z",
+      "message": "Fixed compile issue with newer version of jsoncpp (#144)\n\nCo-authored-by: Paul Auerbach <paul.auerbach@barkhauseninstitut.org>"
+    },
+    {
+      "sha": "c0f5a174b846eecf680ceda31eb5861bd784a467",
+      "author": "Steve Macenski",
+      "date": "2024-02-17T18:41:50Z",
+      "message": "Bumping to 0.5.1 for rolling sync (#142)"
+    },
+    {
+      "sha": "157b312800f4474fc0e5b0bbccae03b648995787",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2024-02-08T16:52:46Z",
+      "message": "Removed deprecated headers from geometry2 (#141)\n\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "5425ed023d3c1c5293a9af90d2ae81c5df889334",
+      "author": "阿基米东",
+      "date": "2023-04-07T02:00:34Z",
+      "message": "docs: update README.md (highlighting code blocks) (#135)"
+    },
+    {
+      "sha": "16c9ff21495aec900703646f6d735af5e00244f8",
+      "author": "stevemacenski",
+      "date": "2023-02-10T23:10:39Z",
+      "message": "bumping rolling to 0.5.0 for release"
+    },
+    {
+      "sha": "b619a88c7a4deb94196afb07fa28ad368f08fe06",
+      "author": "Jon",
+      "date": "2023-01-02T19:27:34Z",
+      "message": "[bug fix] remove redundant _range_image.resize (#124)\n\nbug fix according to https://github.com/ros-drivers/ros2_ouster_drivers/issues/123"
+    },
+    {
+      "sha": "d59df70a6e58e646fd305cb913fa8c802fc6588c",
+      "author": "Vinny Ruia",
+      "date": "2022-11-28T19:31:44Z",
+      "message": "Fix for firmware 2.4 (#118)\n\n* changing all instances of udp_ip to udp_dest\r\n\r\n* change instances of auto_start_flag to operating_mode for firmware 2.4\r\n\r\n* updating README\r\n\r\n* Update README.md\r\n\r\nCo-authored-by: Steve Macenski <stevenmacenski@gmail.com>\r\n\r\n* adjusting log info for driver firmware compatability\r\n\r\nCo-authored-by: Steve Macenski <stevenmacenski@gmail.com>"
+    },
+    {
+      "sha": "cdd778696dbe560699c96345aead75c5282dd93c",
+      "author": "JoséLMV",
+      "date": "2022-10-03T16:29:14Z",
+      "message": "Added default value for IPs (#114)\n\nCo-authored-by: JoseLMV <jlmvalbuena@sdle.es>"
+    },
+    {
+      "sha": "d3cd586e2548f9989b68ebc33b03a5d99b816ea8",
+      "author": "Bernardo Taveira",
+      "date": "2022-07-11T18:47:44Z",
+      "message": "fix tf2_geometry_msgs include not found (#107)"
+    },
+    {
+      "sha": "41a43e29efa298aef146a2e0f336769111f5284d",
+      "author": "Mirko K",
+      "date": "2022-07-08T19:10:33Z",
+      "message": "Buffered packet processing (#97)\n\n* Simplify lidar scan assembly code\r\n\r\nAs double-buffering is used for the scan assemnly (in contrast to the ouster example)\r\nwe can simply zero out our buffer for the new frame. We then no longer need to\r\nspecial-case zeroing-out missing packets.\r\n\r\n* Initialize FullRotationAccumulator with batchReady == false\r\n\r\n* Implement buffered packet processing\r\n\r\nThis commit splits the processing of lidar data into two seperate\r\nthreads. Previously, the code receiving sensor data from the wire\r\nwas blocked by the lidar or imu processors, causing dataloss on\r\nslower systems (Issue #96).\r\n\r\n* Modifies sensor interface so receiving functions get passed a\r\n  pointer to a buffer to write their data to\r\n* Implements ringbuffers for lidar and imu data in ouster_driver\r\n* Splits processing into two seperate threads:\r\n  * receiveData receives from the wire and fills ringbuffers\r\n  * processData takes packets from the queue, assembles the lidar\r\n    scan and runs the processors\r\n* Threads are implemented as pure threads instead of ros timers,\r\n  as timing inconsistencies for the receiver thread were also\r\n  leading to data loss\r\n\r\n* Revert \"Simplify lidar scan assembly code\"\r\n\r\nThis reverts commit 581b35f14ef098041f03131deb18094ea92b98df.\r\nThis modification to the client code is not necessary for the\r\nbuffered packet processing, and conflicts with changes since\r\nmade in the ouster_examples repository.\r\n\r\n* Lock against race on [lidar|imu]_packet_head\r\n\r\nMoves the modification of the head indices to before the mutex\r\nunlock. This is only necessary for the warning about buffer\r\noverruns to work correctly. We don't need to lock against the\r\nactual data in the buffer.\r\n\r\n* Move ringbuffer code to it's own header\r\n\r\n* Fix linting issues\r\n\r\nCo-authored-by: Mirko Kugelmeier <mirko.kugelmeier@rwth-aachen.de>"
+    },
+    {
+      "sha": "370269b38a5a46ca16e2ba6bd3457b03a2c33a9c",
+      "author": "Simon Waterer",
+      "date": "2022-06-22T18:22:50Z",
+      "message": "Filter out all-zero points in the pointcloud processor (#79)\n\n* Filter out all-zero points in the pointcloud processor\r\n\r\n* Apply suggested changes\r\n\r\n* Add `pointcloud_filter_zero_points` parameter to Readme\r\n\r\n* Update README.md\r\n\r\nCo-authored-by: Simon Waterer <simon.waterer@roboticsplus.co.nz>\r\nCo-authored-by: Steve Macenski <stevenmacenski@gmail.com>"
+    },
+    {
+      "sha": "fb7402851b313ec5e03c13934ce59d4db06ef009",
+      "author": "Steve Macenski",
+      "date": "2022-05-03T20:31:17Z",
+      "message": "bumping for rolling release update (#100)"
+    },
+    {
+      "sha": "2d36cbd7ceac9dfa1bea206439a10d4b0ca731cb",
+      "author": "Chris Lalancette",
+      "date": "2022-04-13T19:46:40Z",
+      "message": "Fix up warnings and errors from latest Rolling releases. (#99)\n\n* Fix up warnings and errors from latest Rolling releases.\r\n\r\nThis cleans up two problems:\r\n\r\n1.  rclcpp no longer accepts bare \"declare_parameters\" without\r\na type, so add an empty string by default.\r\n2.  The tf2_geometry_msgs headers all should now use the .hpp\r\nsuffix, so fix that as well.\r\n\r\nThis should allow this package to build without warnings on the\r\nbuildfarm.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Feedback from review.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "239cd0948bded0aa1a294fa8011662b523e1db40",
+      "author": "Bernardo Taveira",
+      "date": "2022-01-27T04:50:30Z",
+      "message": "fix crash indexing for laser scan creation (#92)\n\n* fix crash indexing for laser scan creation\r\n\r\n* Another solution\r\n\r\n* Add comment explaining fix"
+    },
+    {
+      "sha": "593dc2bbde252e14658b1ae405f536fab0dd9ffa",
+      "author": "MattSYoung",
+      "date": "2021-08-04T17:32:29Z",
+      "message": "Adding a Tins-based driver implementation (#77)\n\n* Ported optional-lite source files\r\n\r\n* Added new functions to types.h/cpp\r\n\r\n* Function changes lidar.h/cpp\r\n\r\n* Added and changed functions in client.h/cpp\r\n\r\n* Bug fix from ouster_example/#246\r\n\r\n* Added signal_multiplier parameter to client and types files\r\n\r\n* Updated changelog\r\n\r\n* Updated changelog\r\n\r\n* Updated changelog with a more detailed list of changes\r\n\r\n* Updated readme with FW version\r\n\r\n* Created outline of SensorTins class\r\n\r\n* Completed non-libtins related parts of SensorTins\r\n\r\n* Added core Libtins elements and dependency\r\n\r\n* Finished first design of SensorTins\r\n\r\n* Implemented the ability to switch between default and Tins sensor objects\r\n\r\n* Added an example metadata file\r\n\r\n* Tweaks and fixes to get SensorTins working\r\n\r\n* Improved the documentation around the metadata file, and added code to ensure the Sensor driver implementation writes to it.\r\n\r\n* Readme and changelog updates\r\n\r\n* Updated readme with commands for running the driver in Tins mode\r\n\r\n* Changed the implementation of SensorTins to more closely match Steves vision for how the user changes between driver types\r\n\r\n* Commented out some erroneously committed debugging code\r\n\r\n* Changed driver stucture to use different sets of launch and main files for the DefaultDriver and TinsDriver\r\n\r\n* Updated changelog and readme\r\n\r\n* Changed metadata filepath to be relative rather than absolute\r\n\r\n* Added an IP source filter to the Tins sniffer to avoid the sniffer being flooded with irrelevant packets\r\n\r\n* Updated readme with FW version\r\n\r\n* Added verbosity settings to launch files\r\n\r\n* Moved parameter getting to the sensor implementation from the driver implementation\r\n\r\n* Shifted parameter declaration to sensor::onConfigure functions and made sensor config files separate\r\n\r\n* Fixed bug caused by a missing parameter declaration\r\n\r\n* Added debug output to notify the user of how many packets were accumulated into the published point cloud\r\n\r\n* Added debug code to show the packet retrieval time\r\n\r\n* Minor tweaks to verbosity and metadata\r\n\r\n* Updated copyright header to reflect original author\r\n\r\n* Updated readme and param files\r\n\r\n* Updated changelog and removed some debugging code\r\n\r\n* Updated readme, reverted default IP values, removed unneccesary newline\r\n\r\n* Added missing package.xml dependency and reverted Tins driver verbosity back to INFO by default\r\n\r\n* Moved common sensor parameters back to Driver onCOnfigure\r\n\r\n* Renamed default driver class and files names\r\n\r\n* Changed the getMetadata service to save data to a file when specified\r\n\r\n* Bug fixes for default driver launch file and metadata filepath printing\r\n\r\n* Updated changelog\r\n\r\n* Updated changelog again because nested lists don't seem to work with .rst files\r\n\r\n* Updated the changelog again to fix formatting\r\n\r\n* Added example metadata files and removed old ones\r\n\r\n* Updated readme and GetMetadata service\r\n\r\n* Moved sniffer to a unique pointer from raw pointer. Also updated metadata filepath processing\r\n\r\n* Updated CMakeLists file to remove unnecessary libtins include line\r\n\r\n* Put LiDAR and computer IP getting back inside a try/catch block\r\n\r\n* First pass from the ROS2 linter\r\n\r\n* Final changes from ament_uncrustify and ament_cpplint\r\n\r\n* Added caveats to explain that the ipv6 discovery only works with the default driver\r\n\r\n* Changelog and readme updates\r\n\r\n* Shifted INFO outputs that are sensor specific to the configure function for those sensor implementations"
+    },
+    {
+      "sha": "261fb3f6715715501bad2b8bbd8ed60764dfd65f",
+      "author": "RFRIEDM-Trimble",
+      "date": "2021-07-28T21:24:06Z",
+      "message": "Add automatic destination of computer IP (#73)\n\n* Update README with IPv6 notes to simplify configuration\r\n* Synced with upstream ouster_example\r\n\r\nSigned-off-by: Ryan Friedman <ryan_friedman@trimble.com>"
+    },
+    {
+      "sha": "37229ea07932af38d9a689a04cab24841d492915",
+      "author": "MattSYoung",
+      "date": "2021-07-01T22:25:27Z",
+      "message": "Port FW 2.0 and 2.1 changes from ouster_examples (#76)\n\n* Ported optional-lite source files\r\n\r\n* Added new functions to types.h/cpp\r\n\r\n* Function changes lidar.h/cpp\r\n\r\n* Added and changed functions in client.h/cpp\r\n\r\n* Bug fix from ouster_example/#246\r\n\r\n* Added signal_multiplier parameter to client and types files\r\n\r\n* Updated changelog\r\n\r\n* Updated changelog\r\n\r\n* Updated changelog with a more detailed list of changes\r\n\r\n* Updated readme with FW version"
+    },
+    {
+      "sha": "28eccc46f57e6bdb2938ea098c549b692221c6fa",
+      "author": "RFRIEDM_Trimble",
+      "date": "2021-06-03T15:36:18Z",
+      "message": "Set CMake built type to be Release by default (#71)\n\nSigned-off-by: Ryan Friedman <ryan_friedman@trimble.com>"
+    },
+    {
+      "sha": "e379108778c7a2ff22fdd9c04ac5170d86487ff8",
+      "author": "Steve Macenski",
+      "date": "2021-05-20T20:14:31Z",
+      "message": "incrementing drivers to 0.3.0 for release"
+    },
+    {
+      "sha": "616891c434aba58c6e1ad0a175c929fc11cf8789",
+      "author": "MaxandreOgeret",
+      "date": "2021-05-04T17:54:03Z",
+      "message": "Firmware 2.0 compatibility (#67)\n\n* initial commit firmware 2.0 compatibility\r\n\r\n* now use ros2 ouster metadata\r\n\r\n* added lidar_scan + brought pf to pc processor\r\n\r\n* added point.h from client + finished pointcloud processor.\r\n\r\n* solved \"bad alloc error\" when an OusterDriverException was thrown\r\n\r\n* removed packet format pointer + driver packet buffer now class variable + added metadata defaults\r\n\r\n* simplified pc processor & pc2 conversion for testing purposes\r\n\r\n* handled case with imu data + lidar data, pcl processor working\r\n\r\n* imu processor now working\r\n\r\n* image processor now working\r\n\r\n* scan processor now working + cleaning unused files\r\n\r\n* image processor now uses scan instead of cloud\r\n\r\n* removed notion of sensor model as f2.0 is universal\r\n\r\n* todos and code review\r\n\r\n* removed const for packetformat in the processors as it would prevent to access its accessors\r\n\r\n* use ros time now works, made data const in processors\r\n\r\n* use smart pointers in processors\r\n\r\n* processor factories now use smart pointers. Added EOL at the end of conf yaml file\r\n\r\n* uncrustified\r\n\r\n* scan angle increment now positive\r\n\r\n* better access for TF eigen mat\r\n\r\n* removed useless cloud conversion in scan processor\r\n\r\n* added full rotation accumulator + decrustified\r\n\r\n* removed useless handler function in accumulator and processors\r\n\r\n* Corrected bug where REFLECTIVITY was put in place of RANGE in the Point.\r\n\r\n* added frame_id for ambient_image+intensity_image. Added log about fw requirements. Added readme line about fw requirements\r\n\r\nCo-authored-by: ogeret <maxandre.ogeret@ut.ee>\r\nCo-authored-by: ogeret <>"
+    },
+    {
+      "sha": "2a2a7db5aebe17ea05b6ad6e04047ad5cfc0f0ad",
+      "author": "Chris Lalancette",
+      "date": "2020-11-30T15:36:45Z",
+      "message": "Switch from \"catkin\" -> \"colcon\" (#62)\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "5f2435dd9443ead4e2ea51786b398e1d8bbf0d65",
+      "author": "Scott K Logan",
+      "date": "2020-07-28T01:56:50Z",
+      "message": "Fix jsoncpp include/link interface (#57)\n\nIt appears that Ubuntu happens to put the jsoncpp headers at\r\n`jsoncpp/json/json.h`, but it doesn't appear that is necessarily common\r\npractice. By correcting the CMake interface for jsoncpp, the\r\n`/usr/include/jsoncpp` directory is added to the compiler's include\r\ndirectory search path, allowing the header reference to be changed to\r\nthe correct path, `json/json.h`.\r\n\r\nIn particular, Fedora places the jsoncpp header at\r\n`/usr/include/json/json.h`."
+    },
+    {
+      "sha": "24d3481e62be4228dc9598be4bc58f04119201f8",
+      "author": "Tom Panzarella",
+      "date": "2020-06-27T17:23:51Z",
+      "message": "Increases data processing loop rate from 1280 Hz to 2560 Hz (#56)\n\n* Increased the rate from 1280 Hz to 2560 Hz controlling how often incoming data are polled for processing\r\n\r\n* Increased the rate from 1280 Hz to 2560 Hz controlling how often incoming data are polled for processing"
+    },
+    {
+      "sha": "33dfafa92d223593d8d5021e30d8827c43482c31",
+      "author": "Steve Macenski",
+      "date": "2020-06-15T23:27:23Z",
+      "message": "adding .local options and braodcast (#54)"
+    },
+    {
+      "sha": "3815513ff8e901c07bea9535bbe75ae3b80117ec",
+      "author": "Tom Panzarella",
+      "date": "2020-06-15T19:12:52Z",
+      "message": "Reorganizes in-memory data layout of point cloud (#53)\n\n* Reorganizes in-memory data layout of point cloud to be consistent with the LiDAR and in row-major order\r\n\r\n* Some cleanup per code review in #53"
+    },
+    {
+      "sha": "a3f5f3a49275ed765c7733d78e3afb7a4cd49504",
+      "author": "Tom Panzarella",
+      "date": "2020-06-08T20:12:20Z",
+      "message": "Merge pull request #51 from Box-Robotics/box-foxy-launch-deprecations\n\nFixed deprecations in launch file"
+    },
+    {
+      "sha": "200b699b68a1de471bf38ee98e80a85bca110fbf",
+      "author": "Tom Panzarella",
+      "date": "2020-06-08T19:54:21Z",
+      "message": "Fixed deprecations in launch file"
+    },
+    {
+      "sha": "b8f3a1936ef3f0686aff44aa66ef12a5b066ebd5",
+      "author": "Tom Panzarella",
+      "date": "2020-06-05T19:55:23Z",
+      "message": "Formatting fixes to be compatible with Foxy linters (#50)"
+    },
+    {
+      "sha": "6ba96b3d6b753cd51c58a0fa67da558907bb01db",
+      "author": "stevemacenski",
+      "date": "2020-05-29T18:44:40Z",
+      "message": "bumping foxy to 0.2.0"
+    },
+    {
+      "sha": "c7764ba69318d8cfd31c452959e851b36dac8850",
+      "author": "Tom Panzarella",
+      "date": "2020-05-27T20:17:35Z",
+      "message": "Fixes table rendering in README due to literal pipe chars (#49)\n\n* Fixes table rendering in README due to literal pipe chars\r\n\r\n* Attempt to get description of os1_proc_mask to a single line"
+    },
+    {
+      "sha": "666bb89005ddf9653b65a8e0b178dc16dbfba452",
+      "author": "Tom Panzarella",
+      "date": "2020-05-27T19:23:02Z",
+      "message": "Merge pull request #46 from tpanzarella/tp-data-proc-masking\n\nProvides a simple way to selectively turn on/off data processors"
+    },
+    {
+      "sha": "0d1b17b50c9e194ac793a8eac00dd041b155c84b",
+      "author": "Tom Panzarella",
+      "date": "2020-05-27T11:21:01Z",
+      "message": "Doc fixes and conformance to camelCase"
+    },
+    {
+      "sha": "47d53f683d24a75d0a3d27afcc79277b48e34028",
+      "author": "Tom Panzarella",
+      "date": "2020-05-22T20:39:12Z",
+      "message": "Provides a simply way to selectively turn on/off data processors"
+    },
+    {
+      "sha": "ed188b388e09c9fab54aed21855ba04fcf6c3c08",
+      "author": "Tom Panzarella",
+      "date": "2020-05-01T22:55:37Z",
+      "message": "Improving jitter through the driver and middleware stack for data processors (#41)\n\n* Reduced jitter in the pointcloud_processor publisher\r\n\r\nThe driver now gives up ownership of the PointCloud message in the\r\npointcloud_processor at publish time to allow for middleware optimizations to\r\ninclude the elimination of unnecessary copies. Several tests on my machine show\r\norder of magnitude jitter improvements through the driver + middleware stack\r\nboth out-of-process and while running as a component to sub-millisecond\r\nlevels.\r\n\r\n* Updated scan_processor to release ownership of scan_msg at publish time.\r\n\r\n* Fixed some linter issues"
+    },
+    {
+      "sha": "f82e4dc90becbdf0a5392c3ae4b17f92c7e2ad33",
+      "author": "Steve Macenski",
+      "date": "2020-04-22T20:54:32Z",
+      "message": "Adding example for component manager to readme (#38)\n\n* Adding example for component manager\r\n\r\n* adding parameters"
+    },
+    {
+      "sha": "cf4536ce2755f1b9f245eb80e29e90937eabf2ff",
+      "author": "Dan Rose",
+      "date": "2020-04-21T04:44:26Z",
+      "message": "Make OusterDriver a class, not a class template (#30)\n\n* Make OusterDriver a class, not a class template\r\n\r\nFixes the build under Clang\r\nSupersedes #27\r\n\r\n* Code review\r\n\r\n1. Created a concrete OS1Driver class compatible with RCLCPP_COMPONENTS_REGISTER_NODE\r\n2. Uncrustify\r\n3. Remove driver_types.hpp and add some missing headers to ouster_driver.cpp. Note the accidental dependence on processor_factories.hpp which should probably be refactored.\r\n\r\n* Code review comments\r\n\r\n1. Fix order of fields in OS1 Sensor so default destructor destroys things in the right order, also make fields protected so subclasses can control order of destruction\r\n2. Register OS1Driver as a component\r\n3. Revert using ::make_unique with a node, which causes undefined behavior when shared (because it inherits from std::enable_shared_from_this)\r\n\r\n* Revert unnecessary changes to OS1_sensor\r\n\r\nThese belong in another PR\r\n\r\n* register nodes in cmakelists\r\n\r\n* Restore strange include order"
+    },
+    {
+      "sha": "bcd032a49957beca5217ee10d53306a1d7b11df3",
+      "author": "Tom Panzarella",
+      "date": "2020-04-13T19:56:26Z",
+      "message": "Support for accessing and mutating the timestamp mode on the LiDAR (#36)\n\n* Support for accessing and mutating the timestamp mode on the LiDAR\r\n\r\nThe on-LiDAR `timestamp_mode` can now be set in the config file. Additionally,\r\nits state is fedback in the `GetMetadata` service.\r\n\r\nI HIL-tested these changes via visual inspection and everything seems to\r\nbe working correctly. I see that in #10 there is a plan add some\r\nautomated testing. I think this is a *very good* idea. I'll add some comments\r\nto that issue shortly.\r\n\r\nCloses: #34\r\n\r\n* Adds TIME_FROM_ROS_RECEPTION as valid timestamp_mode\r\n\r\n* When using TIME_FROM_ROS_RECEPTION all data processors that process a given\r\nLiDAR scan will get the same ROS timestamp so they can be time correlated.\r\n\r\n* Made log message less alarming"
+    },
+    {
+      "sha": "6ba0cd219fd1410bb948c935a2007cdb8542e526",
+      "author": "Steve Macenski",
+      "date": "2020-04-10T18:56:53Z",
+      "message": "Removing shameless self promotion for youtube (#35)"
+    },
+    {
+      "sha": "f3bc817f21212c357815e3d0b468ddbe345ffb40",
+      "author": "Dan Rose",
+      "date": "2020-04-03T00:47:16Z",
+      "message": "Stylistic changes (#29)\n\n* Conform better to PCL library Point Struct style\r\n\r\nalso suppress some warnings like\r\n```\r\n/home/dan/Documents/ros_ouster_ws/src/ros2_ouster_drivers/ros2_ouster/include/ros2_ouster/point_os.hpp:66:52: warning: 'uint16_t' is deprecated: use std::uint16_t instead of pcl::uint16_t [-Wdeprecated-declarations]\r\n```\r\n\r\n* Add virtual destructor\r\n\r\nFix clang -Wdelete-abstract-non-virtual-dtor warning\r\n\r\n```\r\n/opt/ros/master/src/SteveMacenski/ros2_ouster_drivers/ros2_ouster/src/ouster_driver.cpp:161:5: warning: delete called on 'ros2_ouster::DataProcessorInterface' that is abstract but has non-virtual destructor [-Wdelete-abstract-non-virtual-dtor]\r\n    delete it->second;\r\n    ^\r\n/opt/ros/master/src/SteveMacenski/ros2_ouster_drivers/ros2_ouster/src/ouster_driver.cpp:161:5: warning: delete called on 'ros2_ouster::DataProcessorInterface' that is abstract but has non-virtual destructor [-Wdelete-abstract-non-virtual-dtor]\r\n/opt/ros/master/src/SteveMacenski/ros2_ouster_drivers/ros2_ouster/include/ros2_ouster/driver_types.hpp:28:29: note: in instantiation of member function 'ros2_ouster::OusterDriver<OS1::OS1Sensor>::onShutdown' requested here\r\ntemplate class ros2_ouster::OusterDriver<OS1::OS1Sensor>;\r\n```\r\n\r\n* Switch typedef to using\r\n\r\n* Fix -Wswitch warning\r\n\r\n* suppress uncrustify for code it does poorly on"
+    },
+    {
+      "sha": "00cbaf52eb8f5be91de1e1792b26e03b2bfea054",
+      "author": "Dan Rose",
+      "date": "2020-04-02T23:56:01Z",
+      "message": "Add doc depend on doxygen (#28)\n\ndoesn't do anything right now but serve as user documentation"
+    },
+    {
+      "sha": "a46852099c7f9fdb99b9916fe84524bb82b943c5",
+      "author": "Tom Panzarella",
+      "date": "2020-03-13T22:07:03Z",
+      "message": "Runtime selectable QoS to allow for recording sensor data with rosbag2 (#26)\n\n* Rule-of-Zero on DataProcessorInterface\r\n\r\n* Added runtime-selectable QoS support to allow for recording sensor data via\r\nrosbag2 in Eloquent.\r\n\r\nApparently, as of this writing, rosbag2 cannot record topic data whose QoS has\r\na reliability level of anything but `RELIABLE`. See:\r\nhttps://github.com/ros2/rosbag2/issues/125. The `rmw_qos_profile_sensor_data`\r\n(which we are using in this project *a priori*) employs `BEST_EFFORT`\r\nreliability. I've added a new parameter\r\n`use_system_default_qos_for_sensor_data` to the node and parameter file. By\r\ndefault this is set to `False` which maintains the original behavior of this\r\npackage. However, if set to `True`, rather than `rmw_qos_profile_sensor_data`\r\nwe use ``rmw_qos_profile_default` as our QoS profile for the sensor\r\ntopics. This (supposedly) most closely mimics ROS (classic) behavior but more\r\nimportantly, allows rosbag2 to record data from these topics. Hopefully this\r\nissue with rosbag2 gets addressed by Foxy and we can deprecate this\r\nfeature. But for now, not having the ability to record data for offline\r\nanalysis is very limiting and we need something like this in this driver\r\npackage.\r\n\r\n* Style fix\r\n\r\n* more style fixes\r\n\r\n* Resolved comments from Steve on PR #26\r\n\r\n* Lowered log level from WARN to INFO when using system defaults QoS"
+    },
+    {
+      "sha": "3e60bb4ba179a5036a118456ac5d5ffaa07bcec2",
+      "author": "Steve Macenski",
+      "date": "2020-03-12T19:06:32Z",
+      "message": "Merge pull request #25 from tpanzarella/tp-compiler-warnings\n\nCompiler warnings and Rule of Zero on SensorInterface"
+    },
+    {
+      "sha": "d83d1a8a2bca69804ac7bd1e18dd6fffc79ea4ab",
+      "author": "Tom Panzarella",
+      "date": "2020-03-12T18:14:05Z",
+      "message": "Another style fix. Sorry."
+    },
+    {
+      "sha": "258c5f666ba76e0e8e0bd1f28906d88bc27ecbcb",
+      "author": "Tom Panzarella",
+      "date": "2020-03-12T18:11:00Z",
+      "message": "Uncrustified -- looks like a style regression on the PR?"
+    },
+    {
+      "sha": "9f9b01d97f8d2901498e3e2cd43e1225db5af590",
+      "author": "Tom Panzarella",
+      "date": "2020-03-12T17:42:13Z",
+      "message": "Implemented Rule-of-Zero on SensorInterface\n\nSince `ros2_ouster::SensorInterface` is a base class and intended to be derived\nfrom, we need a virtual dtor. To that end, to be in compliance with the\nRule-of-Zero we need to provide explicit implementations for \"the other four\"\nspecial functions (those related to copy and move semantics). Also note, we\nwant to avoid \"slicing\" (in the future ... maybe) so we `delete` the copy\noperations rather than `default` them.\n\nSee: https://en.cppreference.com/w/cpp/language/rule_of_three\n(including the referenced CPP Core Guidlines it links to in the \"Rule of\nZero\" section)"
+    },
+    {
+      "sha": "b8690cffe7cb216cad2048660b0f5087df357220",
+      "author": "Tom Panzarella",
+      "date": "2020-03-12T17:05:54Z",
+      "message": "Fixed compiler warnings\n\nThere were two causes of compiler warnings:\n\n1. Removed the default (noop) operations in `sensor_interface.hpp`. The\n   compiler did not like that these implementations were not returning the\n   declared return type. I think the intent here was to have an ABT and so I\n   declared these functions as pure virtual.\n\n2. In `OS1_sensor.cpp` there was a control flow path that would not provide a\n   return value. I explicitly returned `nullptr` if none of the case statements\n   match which should never happen (famous last words)."
+    },
+    {
+      "sha": "930a7976f35bc031535fc13d932b6d117b614956",
+      "author": "Steven Macenski",
+      "date": "2020-01-14T03:33:42Z",
+      "message": "Merge pull request #24 from SteveMacenski/flakelint3\n\nflake8 linting"
+    },
+    {
+      "sha": "669a44b69034569bb3c5665f34034092949a7b5c",
+      "author": "stevemacenski",
+      "date": "2020-01-14T03:28:26Z",
+      "message": "linter for copyrights"
+    },
+    {
+      "sha": "e166ea2f5965610e2a6b14567ad269c89bbcea76",
+      "author": "stevemacenski",
+      "date": "2020-01-14T03:21:15Z",
+      "message": "flake8 linting"
+    },
+    {
+      "sha": "4c3918d7fcfff7809e8ced32c3df1c241d34523b",
+      "author": "stevemacenski",
+      "date": "2020-01-13T03:12:59Z",
+      "message": "bump 0.0.1 -> 0.1.0"
+    },
+    {
+      "sha": "fb69756506069e5a403658b70a76ea5ecbb43afd",
+      "author": "stevemacenski",
+      "date": "2020-01-13T03:12:06Z",
+      "message": "remove ouster_msgs Packet header"
+    },
+    {
+      "sha": "990a4536b9265a218b2303ba0854bbe383b675ab",
+      "author": "Steven Macenski",
+      "date": "2020-01-04T04:25:01Z",
+      "message": "Merge pull request #22 from SteveMacenski/scan_processor\n\nScan processor"
+    },
+    {
+      "sha": "b6426193828b5e5be1c45f787122a0f6cb99af5d",
+      "author": "stevemacenski",
+      "date": "2020-01-04T04:24:41Z",
+      "message": "adding scan processors"
+    },
+    {
+      "sha": "a594e2c8599b84134907ec4d15560b1820a057cd",
+      "author": "stevemacenski",
+      "date": "2020-01-04T04:15:40Z",
+      "message": "add table of information about the outputs"
+    },
+    {
+      "sha": "ff638c73b94a9587552083a4af56032832da1545",
+      "author": "stevemacenski",
+      "date": "2020-01-04T03:59:02Z",
+      "message": "scan processor working"
+    },
+    {
+      "sha": "2591b4a1ce004db8b139d697edda40b315f6715a",
+      "author": "stevemacenski",
+      "date": "2020-01-04T03:53:58Z",
+      "message": "starting scan processor"
+    },
+    {
+      "sha": "fb383764845bfad3cfa97b0ba7b54f096f29c24c",
+      "author": "Steven Macenski",
+      "date": "2020-01-04T03:01:51Z",
+      "message": "Merge pull request #21 from SteveMacenski/image_encoding\n\nImage encoding Fix"
+    },
+    {
+      "sha": "8658bdc2366a17a1b7841794bd339de926524726",
+      "author": "stevemacenski",
+      "date": "2020-01-04T03:01:12Z",
+      "message": "working offsets"
+    },
+    {
+      "sha": "cd9ff818a9ada85c960f29e9a0af917ede29a198",
+      "author": "stevemacenski",
+      "date": "2020-01-04T02:48:41Z",
+      "message": "steps towards fixing the image encoding"
+    },
+    {
+      "sha": "fad370d0bae0b887982224787bb6c08a06d62b11",
+      "author": "stevemacenski",
+      "date": "2020-01-03T05:29:58Z",
+      "message": "scaling image encoding"
+    },
+    {
+      "sha": "92c2760a6c3449edccbbfbee62cfdd45f7acc37e",
+      "author": "stevemacenski",
+      "date": "2020-01-03T05:22:01Z",
+      "message": "fixing publisher encoding issues to stably give data out"
+    },
+    {
+      "sha": "2384d76de4f61a9db2e5d43f35062bee4fdcd8d7",
+      "author": "stevemacenski",
+      "date": "2020-01-03T01:11:46Z",
+      "message": "linting changes for processor debug"
+    },
+    {
+      "sha": "bc263ebb34a11c7b163b9856b99b77197cd34c4e",
+      "author": "stevemacenski",
+      "date": "2020-01-03T00:58:04Z",
+      "message": "simplify the polling logic"
+    },
+    {
+      "sha": "d2d2bda80ca6ddce6acbb19e6bdbf79da09e1c3d",
+      "author": "stevemacenski",
+      "date": "2020-01-03T00:54:45Z",
+      "message": "fix some interfaces"
+    },
+    {
+      "sha": "41eca2be15d626c474effc549a2ffd22ddfbd0ec",
+      "author": "stevemacenski",
+      "date": "2020-01-02T22:30:26Z",
+      "message": "create full new section for networking and setup"
+    },
+    {
+      "sha": "75541d478beb430abc3d43a4163a1a4a352b121e",
+      "author": "stevemacenski",
+      "date": "2020-01-02T22:30:00Z",
+      "message": "Merge branch 'master' of github.com:SteveMacenski/ros2_ouster"
+    },
+    {
+      "sha": "8fadf91f6322927700fb7499fbf56649bbe72be5",
+      "author": "stevemacenski",
+      "date": "2020-01-02T22:29:28Z",
+      "message": "adding networking instructions to readme"
+    },
+    {
+      "sha": "f615a466ebf0f86b65e475fe41b176aff9557b58",
+      "author": "Steven Macenski",
+      "date": "2020-01-02T08:13:55Z",
+      "message": "Merge pull request #17 from SteveMacenski/add-license-1\n\nCreate LICENSE"
+    },
+    {
+      "sha": "41c07e1fc5b6c4d87318c881899add42bc228aed",
+      "author": "Steven Macenski",
+      "date": "2020-01-02T08:13:46Z",
+      "message": "Create LICENSE"
+    },
+    {
+      "sha": "1e1dfcb20c50ac275bae6ea1ec02ceacc4b01089",
+      "author": "stevemacenski",
+      "date": "2020-01-02T06:55:28Z",
+      "message": "index correctly for the information image"
+    },
+    {
+      "sha": "f607fa1d759f5df3f94bec389b29b5aae583cc23",
+      "author": "stevemacenski",
+      "date": "2020-01-02T05:56:54Z",
+      "message": "only publish information if someone's listening"
+    },
+    {
+      "sha": "83f4531b46443ce9edf2a772d8c3688ddbc2ad49",
+      "author": "stevemacenski",
+      "date": "2020-01-02T05:44:27Z",
+      "message": "add reflectivity image to API docs"
+    },
+    {
+      "sha": "5a52470a33f1004113a52785b3735b9595e062f1",
+      "author": "stevemacenski",
+      "date": "2020-01-02T05:41:18Z",
+      "message": "finish main function capabilities to process data"
+    },
+    {
+      "sha": "6a65f2a6809a473778bcc1ac2608309ed5611a3e",
+      "author": "stevemacenski",
+      "date": "2020-01-02T05:40:57Z",
+      "message": "adding new dependences on PCL"
+    },
+    {
+      "sha": "aa771970d8303df951ece1cf6bdc69a64f831da5",
+      "author": "stevemacenski",
+      "date": "2020-01-02T05:40:36Z",
+      "message": "adding table of youtube videos"
+    },
+    {
+      "sha": "8a38268cba810634554d7a348c78350cce672dd2",
+      "author": "stevemacenski",
+      "date": "2020-01-02T04:12:33Z",
+      "message": "adding table to readme"
+    },
+    {
+      "sha": "a5c26050f84f8aa3e2b1c2b46508344ed65c43f1",
+      "author": "stevemacenski",
+      "date": "2020-01-02T03:40:01Z",
+      "message": "working documentation generation"
+    },
+    {
+      "sha": "84e34e10a31b0a3bc0d45a9f7f7fb0ddccc9065d",
+      "author": "stevemacenski",
+      "date": "2019-12-31T02:40:12Z",
+      "message": "lifecycle bringup and exception throwing"
+    },
+    {
+      "sha": "3d29a78924a3b4c24883c6faf847f07a26abfe2f",
+      "author": "stevemacenski",
+      "date": "2019-12-31T00:12:47Z",
+      "message": "template the sensor type to allow for easier expansion with new sensor implementations"
+    },
+    {
+      "sha": "f26322ba9df63c730fe1cfceee50b65f13d335ed",
+      "author": "stevemacenski",
+      "date": "2019-12-30T23:05:31Z",
+      "message": "linting entire codebase"
+    },
+    {
+      "sha": "e584109f8bda01fe3d4e9eed2ef1dc38612725cb",
+      "author": "stevemacenski",
+      "date": "2019-12-30T00:58:58Z",
+      "message": "register as componenet"
+    },
+    {
+      "sha": "1f45ee1aebc0cf8638def190659ac9493d74c724",
+      "author": "stevemacenski",
+      "date": "2019-12-30T00:55:07Z",
+      "message": "new launch file with overridable configuration files"
+    },
+    {
+      "sha": "1551c1ae141f3b8832cacc1c1194dfcde5a168e2",
+      "author": "stevemacenski",
+      "date": "2019-12-30T00:39:04Z",
+      "message": "launch file and fully configured params file"
+    },
+    {
+      "sha": "35a026f20e6df48c5694244fbb2b00115cc421f8",
+      "author": "stevemacenski",
+      "date": "2019-12-29T23:55:11Z",
+      "message": "broadcasting static imu and laser sensor transforms"
+    },
+    {
+      "sha": "b201509a81c133bfc6d2c0ea6c4264d83a0b60bf",
+      "author": "stevemacenski",
+      "date": "2019-12-29T23:22:13Z",
+      "message": "creating base-level readme"
+    },
+    {
+      "sha": "dfe476b5f080ec14571718f0a7a661640f0a9d70",
+      "author": "stevemacenski",
+      "date": "2019-12-29T23:18:53Z",
+      "message": "rename ros2_ouster_drivers to ros2_ouster"
+    },
+    {
+      "sha": "fec4d7bc1a43454ffebbb7e8ed32f8686a38312d",
+      "author": "stevemacenski",
+      "date": "2019-12-29T05:14:25Z",
+      "message": "temp push"
+    }
+  ]
+}

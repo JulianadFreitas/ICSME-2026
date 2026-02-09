@@ -1,0 +1,1092 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-07T01:28:43Z",
+    "source": "github_rest",
+    "endpoint": "/repos/{owner}/{repo}/commits",
+    "owner": "ros-controls",
+    "repo": "mujoco_ros2_control",
+    "per_page": 100
+  },
+  "data": [
+    {
+      "sha": "a515ad5849732c0633326d7b6d70c7a7bdc833c1",
+      "author": "Erik Holum",
+      "date": "2026-02-06T14:20:25Z",
+      "message": "Containerize pixi in CI (#99)\n\n* Containerize pixi ci\n\n* Remove sourcing from test steps\n\n* Remove the test pixi fix\n\n* Minor tweak to docs"
+    },
+    {
+      "sha": "e8f5767103deb80a3195117e7ed84a52503d0f89",
+      "author": "Erik Holum",
+      "date": "2026-02-05T14:34:49Z",
+      "message": "Adjust pixi CI job and bump versions (#96)\n\n* Bump pixi verions and test CI\n\n* Pixi might do odd things with the environment\n\n* TEMP: Comment out docker builds for now\n\n* Debugging statements...\n\n* Is colcon test doing something dumb?\n\n* Remove colcon test\n\n* Back to test\n\n* Remove cache and check versions in CI\n\n* Try running everything in a shell\n\n* Good lord just set the path on the tests themselves\n\n* Back to basics\n\n* Explicit python dependency\n\n* More revert\n\n* Ok, pixi installs into site-packages, apparently...\n\n* Re-enable docker builds\n\n* Add comment"
+    },
+    {
+      "sha": "915bfbd5e3be068adfe6f8a31e29206df1f5155e",
+      "author": "Sai Kishor Kothakota",
+      "date": "2026-02-04T17:40:49Z",
+      "message": "Add ResetWorld service to reset to a specific defined keyframe (#95)"
+    },
+    {
+      "sha": "86f98beb9e3dc1ffb6df630179b8eaedbdbe32c8",
+      "author": "Sergi de las Muelas",
+      "date": "2026-02-03T18:08:19Z",
+      "message": "fixed initial_keyframe param typo (#94)"
+    },
+    {
+      "sha": "59c7693dd727e0c2c57e46cd323dcd735d4f5e4a",
+      "author": "dependabot[bot]",
+      "date": "2026-02-03T12:12:12Z",
+      "message": "Bump prefix-dev/setup-pixi from 0.9.3 to 0.9.4 (#92)"
+    },
+    {
+      "sha": "2d13742cc0aad92f4b5b9333c2ef221011feb8f4",
+      "author": "Sai Kishor Kothakota",
+      "date": "2026-01-29T16:51:38Z",
+      "message": "Re-enable rolling workflow (#91)\n\n---------\n\nCo-authored-by: Erik Holum <erik.holum@nasa.gov>"
+    },
+    {
+      "sha": "86d17e40dd2c48b5f4bd9916c76cf1c9c94244a3",
+      "author": "Sai Kishor Kothakota",
+      "date": "2026-01-29T15:45:44Z",
+      "message": "Separate tests to mujoco_ros2_control_tests package (#90)\n\n---------\n\nCo-authored-by: Erik Holum <erik.holum@nasa.gov>"
+    },
+    {
+      "sha": "ba231ad8424a236e6da01557f68f8ea38ef2bb10",
+      "author": "Sai Kishor Kothakota",
+      "date": "2026-01-29T15:34:58Z",
+      "message": "Support for starting from a specific declared keyframe  (#89)"
+    },
+    {
+      "sha": "667ad6cda634204965b45092d3ffdcdee77f2bb1",
+      "author": "Sai Kishor Kothakota",
+      "date": "2026-01-26T19:51:17Z",
+      "message": "Add `reset_world` service functionality (#88)\n\n---------\n\nCo-authored-by: Nathan Dunkelberger <nathan.b.dunkelberger@nasa.gov>"
+    },
+    {
+      "sha": "b455c7d5bd5a791b45c0cc5ed069df6ecc89ec80",
+      "author": "Sai Kishor Kothakota",
+      "date": "2026-01-23T14:20:45Z",
+      "message": "Fix the issue with the PIDs applying to wrong variable (#87)"
+    },
+    {
+      "sha": "1d55de7ff9d7d45031e63e753714daa0cf78a573",
+      "author": "Sai Kishor Kothakota",
+      "date": "2026-01-22T20:21:11Z",
+      "message": "Move the main contents of mujoco_ros2_control to subfolder (#76)\n\n---------\n\nCo-authored-by: Erik Holum <erik.holum@nasa.gov>\nCo-authored-by: Nathan Dunkelberger <nathan.b.dunkelberger@nasa.gov>"
+    },
+    {
+      "sha": "b27429629cedc8444ddd4095f69d215afeb52ae7",
+      "author": "Erik Holum",
+      "date": "2026-01-22T16:31:37Z",
+      "message": "Add markdown link check, disable rolling, and minor tag improvements (#83)\n\n* Add markdown link checks to format ci\n\n* Force local context\n\n* Use docker metadata action instead of silly sed for tag\n\n* Temp disable rolling CI"
+    },
+    {
+      "sha": "29a5a3347619e994b7bcb809489a55f906a731b1",
+      "author": "Erik Holum",
+      "date": "2026-01-22T08:05:22Z",
+      "message": "Fixing pixi install from recent updates (#81)"
+    },
+    {
+      "sha": "929d2767366d49d34a98d29ead18adb2e3b24e9c",
+      "author": "Sai Kishor Kothakota",
+      "date": "2026-01-21T23:02:27Z",
+      "message": "Set parameters per controller instead of central parameters (#85)"
+    },
+    {
+      "sha": "0557fd490e36724a77963c1c74dcc88f97c24f6b",
+      "author": "Nathan Dunkelberger",
+      "date": "2026-01-21T22:39:23Z",
+      "message": "Explicit check that joint name exists\n\n* check that joint name exists before comparison\n\n* switch to explicit check and fatal error\n\n* switch to print all joints that don't have names\n\n* switching to print count\n\n* remove stray comment\n\n---------\n\nCo-authored-by: Sai Kishor Kothakota <sai.kishor@pal-robotics.com>"
+    },
+    {
+      "sha": "3a0bfc2e59982d5fb890d68d3b4d4e0507d09ae6",
+      "author": "Sai Kishor Kothakota",
+      "date": "2026-01-21T21:21:36Z",
+      "message": "Fix the clock publish rate based on the mj_step (#80)\n\n---------\n\nCo-authored-by: Erik Holum <erik.holum@nasa.gov>\nCo-authored-by: Nathan Dunkelberger <nathan.b.dunkelberger@nasa.gov>"
+    },
+    {
+      "sha": "839e07ec31bab5406d5da0004a0dd1486b2c4482",
+      "author": "Sergi de las Muelas",
+      "date": "2026-01-21T16:54:45Z",
+      "message": "Fix mjcf output file path creation and material glossiness bug (#73)"
+    },
+    {
+      "sha": "fe4b2820eede7faa462fe39f25cd694e8ba930e3",
+      "author": "Sai Kishor Kothakota",
+      "date": "2026-01-21T15:39:01Z",
+      "message": "Use ros2_control_cmake compile options (#78)"
+    },
+    {
+      "sha": "00de2a4fd3fbe07a9cf2e3ece7d710b6083ac6b6",
+      "author": "Christoph Fröhlich",
+      "date": "2026-01-16T23:51:10Z",
+      "message": "Add pre-release workflow (#49)\n\n---------\n\nCo-authored-by: Sai Kishor Kothakota <sai.kishor@pal-robotics.com>"
+    },
+    {
+      "sha": "11314d187944fb236c12ad8bd9f3b22d357c7c1a",
+      "author": "Sai Kishor Kothakota",
+      "date": "2026-01-16T23:22:40Z",
+      "message": "Fix invalid initial state + filter out ball joints  (#77)"
+    },
+    {
+      "sha": "0e8f45f3232e79b4f06afe976b7656d2c5b06ec1",
+      "author": "Sai Kishor Kothakota",
+      "date": "2026-01-16T23:05:54Z",
+      "message": "Publish the floating base state of the free joint attached to the robot (#75)"
+    },
+    {
+      "sha": "154cdb79b2cfa4c61c94a8ab9b9e8cddaa736c9e",
+      "author": "Sai Kishor Kothakota",
+      "date": "2026-01-15T22:18:54Z",
+      "message": "Reorder the destructor + catch exception of sleep_until (#66)\n\n---------\n\nCo-authored-by: Julia Jia <juliajster@gmail.com>"
+    },
+    {
+      "sha": "d35876ad8ebe62496eec50fe9c7be94c7f033ac4",
+      "author": "Sai Kishor Kothakota",
+      "date": "2026-01-15T16:35:57Z",
+      "message": "Handle passive joints properly and update the state information (#67)\n\n---------\n\nCo-authored-by: Erik Holum <erik.holum@nasa.gov>"
+    },
+    {
+      "sha": "89c9613c412fba30c192963707ea2feb52db691c",
+      "author": "Sergi de las Muelas",
+      "date": "2026-01-14T16:47:02Z",
+      "message": "Don't check actuator command state for state only joints (#65)\n\n---------\n\nCo-authored-by: sergiacosta <sergi.acosta@pal-robotics.com>\nCo-authored-by: Sai Kishor Kothakota <sai.kishor@pal-robotics.com>\nCo-authored-by: Sai Kishor Kothakota <saisastra3@gmail.com>"
+    },
+    {
+      "sha": "af2ee95a692f87e7fffbd2ab4fffbe55f3072042",
+      "author": "Sai Kishor Kothakota",
+      "date": "2026-01-14T16:25:12Z",
+      "message": "Added prismatic gripper to the test robot to validate tendons functionality (#64)\n\n---------\n\nCo-authored-by: Erik Holum <erik.holum@nasa.gov>\nCo-authored-by: Nathan Dunkelberger <nathan.b.dunkelberger@nasa.gov>"
+    },
+    {
+      "sha": "4c029510a61e33629be04493d7b48b10c8d0a311",
+      "author": "Nathan Dunkelberger",
+      "date": "2026-01-13T22:50:54Z",
+      "message": "Main compiles on Humble (#58)\n\n* version works on humble, untested on others yet\n\n* adding back in build instructions in dockerfile\n\n* removing commented unnecessary controller_manager_parameters link\n\n* adding comment for extra hardware interface strings\n\n* revert some auto formatting to match main\n\n* Use version header from hardware_interface instead\n\n* enable CI for the humble builds\n\n* Use expression properly\n\n* Add pre-commit fixes\n\n* other minor fixes\n\n* fix for hardware_interface helpers\n\n* fix get gains\n\n* fix add_items method\n\n* cleanup\n\n* fixing actuator name and joint name lookup\n\n* fixing command mode switch back to old matching method\n\n* accept also if it matches the actuator joint name\n\n* add missing update of the ctrl in the set_initial_pose method\n\n---------\n\nCo-authored-by: Sai Kishor Kothakota <sai.kishor@pal-robotics.com>"
+    },
+    {
+      "sha": "50c21b6679ad6385b41f5d0c5a363f58078312da",
+      "author": "Sai Kishor Kothakota",
+      "date": "2026-01-12T20:13:28Z",
+      "message": "[Transmissions] Add support for transmissions to be able to integrate and test them (#56)\n\n---------\n\nCo-authored-by: Ortisa Poci <ortisa.poci@pal-robotics.com>"
+    },
+    {
+      "sha": "4ac69f1d7976f86144892eb6022dfb2e707e31aa",
+      "author": "Sai Kishor Kothakota",
+      "date": "2026-01-12T18:43:24Z",
+      "message": "Setup virtualenv to handle Pip dependencies of make_mjcf_from_robot_description.py (#52)"
+    },
+    {
+      "sha": "9c0156c946063153567ce4705e4e4019fff4a8d3",
+      "author": "dependabot[bot]",
+      "date": "2026-01-12T07:09:47Z",
+      "message": "Bump actions/setup-python from 5 to 6 (#63)"
+    },
+    {
+      "sha": "2b0c4632e48115860afd455faf607c86a4b33a9e",
+      "author": "Sai Kishor Kothakota",
+      "date": "2026-01-09T23:03:05Z",
+      "message": "Parmeterize mujoco robot description topic (#41)"
+    },
+    {
+      "sha": "d4933352a296737d5cbfb998edb09c68b1d50837",
+      "author": "dependabot[bot]",
+      "date": "2026-01-09T22:57:50Z",
+      "message": "Bump docker/build-push-action from 5 to 6 (#60)\n\nBumps [docker/build-push-action](https://github.com/docker/build-push-action) from 5 to 6.\n- [Release notes](https://github.com/docker/build-push-action/releases)\n- [Commits](https://github.com/docker/build-push-action/compare/v5...v6)\n\n---\nupdated-dependencies:\n- dependency-name: docker/build-push-action\n  dependency-version: '6'\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>"
+    },
+    {
+      "sha": "37bfe7ae880b919b8519893f60d18958cbf2e313",
+      "author": "dependabot[bot]",
+      "date": "2026-01-09T22:57:07Z",
+      "message": "Bump actions/cache from 4 to 5 (#62)\n\nBumps [actions/cache](https://github.com/actions/cache) from 4 to 5.\n- [Release notes](https://github.com/actions/cache/releases)\n- [Changelog](https://github.com/actions/cache/blob/main/RELEASES.md)\n- [Commits](https://github.com/actions/cache/compare/v4...v5)\n\n---\nupdated-dependencies:\n- dependency-name: actions/cache\n  dependency-version: '5'\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>"
+    },
+    {
+      "sha": "204592e736909ac27458c6f74d85a8290e0dd32e",
+      "author": "dependabot[bot]",
+      "date": "2026-01-09T22:56:27Z",
+      "message": "Bump actions/checkout from 4 to 6 (#61)\n\nBumps [actions/checkout](https://github.com/actions/checkout) from 4 to 6.\n- [Release notes](https://github.com/actions/checkout/releases)\n- [Changelog](https://github.com/actions/checkout/blob/main/CHANGELOG.md)\n- [Commits](https://github.com/actions/checkout/compare/v4...v6)\n\n---\nupdated-dependencies:\n- dependency-name: actions/checkout\n  dependency-version: '6'\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>"
+    },
+    {
+      "sha": "bb07321cc5a24c84b8a6acba3be49cd944ee04e9",
+      "author": "dependabot[bot]",
+      "date": "2026-01-09T22:53:26Z",
+      "message": "Bump prefix-dev/setup-pixi from 0.8.14 to 0.9.3 (#59)\n\nBumps [prefix-dev/setup-pixi](https://github.com/prefix-dev/setup-pixi) from 0.8.14 to 0.9.3.\n- [Release notes](https://github.com/prefix-dev/setup-pixi/releases)\n- [Commits](https://github.com/prefix-dev/setup-pixi/compare/v0.8.14...v0.9.3)\n\n---\nupdated-dependencies:\n- dependency-name: prefix-dev/setup-pixi\n  dependency-version: 0.9.3\n  dependency-type: direct:production\n  update-type: version-update:semver-minor\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>"
+    },
+    {
+      "sha": "31aed39630713a9fee93155de544664e87392e22",
+      "author": "Christoph Fröhlich",
+      "date": "2026-01-09T19:52:27Z",
+      "message": "Add dependabot config (#48)\n\n* Add dependabot config\n\n* Fix pre-commit"
+    },
+    {
+      "sha": "82fe57147c316f5d88cfc70dcaf5a203806988b0",
+      "author": "Sai Kishor Kothakota",
+      "date": "2026-01-09T15:48:54Z",
+      "message": "Move the URL to work with Humble cmake version (#57)"
+    },
+    {
+      "sha": "5a41751e00f31d11df66932539e506b4d6066041",
+      "author": "Sai Kishor Kothakota",
+      "date": "2025-12-29T16:38:07Z",
+      "message": "Fix trailing and leading whitespaces in the path + improve checks (#55)"
+    },
+    {
+      "sha": "c57c056d99c0a064a5fa1f4f271a79556e59ff1f",
+      "author": "Christoph Fröhlich",
+      "date": "2025-12-21T18:18:09Z",
+      "message": "Call wait_for_topics.shutdown() (#47)"
+    },
+    {
+      "sha": "d81dc226427205b1c09c2456f583767048f574b5",
+      "author": "Erik Holum",
+      "date": "2025-12-21T18:10:37Z",
+      "message": "Add step to sanitize tag name for docker builds (#51)"
+    },
+    {
+      "sha": "d81dba5c2fbcb975fad997a85cd645a853672db0",
+      "author": "Sai Kishor Kothakota",
+      "date": "2025-12-21T17:39:27Z",
+      "message": "Bump MuJoCo library version to 3.4.0 (#46)"
+    },
+    {
+      "sha": "e32de3283fca852bd0548afe514b7f918fabc524",
+      "author": "Erik Holum",
+      "date": "2025-12-20T18:32:19Z",
+      "message": "Add caching and timeouts for CI builds (#45)\n\nCo-authored-by: Erik Holum <erik.holum@nasa.gov>"
+    },
+    {
+      "sha": "9f5816cd9f07eccb19fb48304a3303b7c947b302",
+      "author": "Erik Holum",
+      "date": "2025-12-20T18:22:04Z",
+      "message": "Move development documentation off of front page (#44)"
+    },
+    {
+      "sha": "8ad1ca019cb9208130646047eb70810a4a4fcd59",
+      "author": "Christoph Fröhlich",
+      "date": "2025-12-20T18:10:56Z",
+      "message": "Rename README header (#42)"
+    },
+    {
+      "sha": "ae2cef2af82277b3dd36dc0cbe753c59883860ff",
+      "author": "Sai Kishor Kothakota",
+      "date": "2025-12-20T16:45:36Z",
+      "message": "Add MJCF model generation tests (#39)\n\n* Add first version of changes needed for testing\n\n* parameterize URDF to work with use_mjcf_from_topic argument\n\n* minor touchups\n\n* add test case for the TestMJCFGenerationFromURDF\n\n* add tests for the new test cases on MJCF generation\n\n* fix pre-commit\n\n* fix masses in URDF to be similar to MJCF existing files\n\n* Update dependencies to pixi\n\n* more updates\n\n* Add obj2mjcf as pypi dependency\n\n* add mujoco to pypi installation dependency\n\n* Remove collada and scipy rosdep install rules\n\n* Update test/src/robot_launch_test.py\n\nCo-authored-by: Erik Holum <erik.holum@nasa.gov>\n\n---------\n\nCo-authored-by: Erik Holum <erik.holum@nasa.gov>"
+    },
+    {
+      "sha": "cd7b22f5c75a7f38bfe0ad635eb9b70fa6bd341a",
+      "author": "Erik Holum",
+      "date": "2025-12-20T14:52:20Z",
+      "message": "Update pixi.lock File (#37)\n\n* Update pixi deps\n\n* More updates\n\n* other minor updates from `pixi update` command\n\n---------\n\nCo-authored-by: Sai Kishor Kothakota <sai.kishor@pal-robotics.com>"
+    },
+    {
+      "sha": "5ddd04233f264587a676d88835ae332416919208",
+      "author": "Yassine Cherni",
+      "date": "2025-12-19T06:57:30Z",
+      "message": "Fix broken links in the TOOLS.md (#38)"
+    },
+    {
+      "sha": "7bbe4c4bb336fecc91b3a112083fa12cfa64d06b",
+      "author": "Sai Kishor Kothakota",
+      "date": "2025-12-18T23:48:58Z",
+      "message": "Rename package to `mujoco_ros2_control` (#36)\n\n* rename package to mujoco_ros2_control\n\n* Apply suggestions from code review\n\nCo-authored-by: Sai Kishor Kothakota <saisastra3@gmail.com>\n\n* Update ci.yaml\n\n---------\n\nCo-authored-by: Erik Holum <erik.holum@nasa.gov>"
+    },
+    {
+      "sha": "01e34c4864d9c1cf24bb929f48fcb345e4b631f6",
+      "author": "Sai Kishor Kothakota",
+      "date": "2025-12-18T19:33:49Z",
+      "message": "Use trimesh instead of bpy (#35)\n\n---------\n\nCo-authored-by: Nathan Dunkelberger <nathan.b.dunkelberger@nasa.gov>"
+    },
+    {
+      "sha": "3c19c9b59fade522ac3ee60011f2b6e458c1928c",
+      "author": "Ortisa",
+      "date": "2025-12-18T16:13:29Z",
+      "message": "[Feature] MJCF generation from URDF at runtime (#18)\n\n---------\n\nCo-authored-by: Sai Kishor Kothakota <sai.kishor@pal-robotics.com>\nCo-authored-by: Sai Kishor Kothakota <saisastra3@gmail.com>\nCo-authored-by: Erik Holum <erik.holum@nasa.gov>"
+    },
+    {
+      "sha": "9528d196d266fe0577259f4905535c216ab03ecf",
+      "author": "Sai Kishor Kothakota",
+      "date": "2025-12-16T15:14:10Z",
+      "message": "Add tests to test the new usecases (#32)"
+    },
+    {
+      "sha": "2af5911d77d53ef9f5ae41e460424ad79f36b45f",
+      "author": "Sai Kishor Kothakota",
+      "date": "2025-12-16T14:01:14Z",
+      "message": "Parameterize suffixes of the sensors defined in MJCF (#34)"
+    },
+    {
+      "sha": "92fa27a065cfd7799305ca54136bc22188ca5a19",
+      "author": "Sai Kishor Kothakota",
+      "date": "2025-12-15T19:19:24Z",
+      "message": "Support torque and force command and state interfaces (#29)\n\n---------\n\nCo-authored-by: Erik Holum <erik.holum@nasa.gov>"
+    },
+    {
+      "sha": "1ad9b2986f7000f473befb33259495a20130ada7",
+      "author": "Sai Kishor Kothakota",
+      "date": "2025-12-15T18:14:59Z",
+      "message": "Use realtime publisher for publishing the clock (#26)\n\nCo-authored-by: Erik Holum <erik.holum@nasa.gov>"
+    },
+    {
+      "sha": "f10ab437c0a907a823ccc182ee4a16cc075074c5",
+      "author": "Sai Kishor Kothakota",
+      "date": "2025-12-15T17:52:29Z",
+      "message": "Reuse the logger with get_logger method (#28)"
+    },
+    {
+      "sha": "8eab79ae2b3f1846c39e6940de69ad5a758cfb3f",
+      "author": "Sai Kishor Kothakota",
+      "date": "2025-12-10T16:44:24Z",
+      "message": "Disable camera publishing if GLFW fails to initialize (#25)\n\nSigned-off-by: Paul Gesel <pgesel@theaiinstitute.com>\nCo-authored-by: Paul Gesel <pgesel@theaiinstitute.com>"
+    },
+    {
+      "sha": "1ff34f98b62b70dcd287288f355868906f4c9909",
+      "author": "Sai Kishor Kothakota",
+      "date": "2025-12-09T21:07:16Z",
+      "message": "Set simulation window to max window size (#19)"
+    },
+    {
+      "sha": "55498ed7f75c3072ba03e5153649fd9df281ff2c",
+      "author": "Sai Kishor Kothakota",
+      "date": "2025-12-08T21:14:38Z",
+      "message": "Add support for headless mode (#21)\n\n---------\n\nCo-authored-by: Erik Holum <erik.holum@nasa.gov>"
+    },
+    {
+      "sha": "040657beef0f55e46dc20845129ccddb8f1c7a70",
+      "author": "Erik Holum",
+      "date": "2025-12-04T14:48:35Z",
+      "message": "Consolidate test URDF and launch files (#17)\n\n* Consolidate the URDFs for PID and non-PID control\n\n* Update README\n\n* Remove the test PID\n\n* Pre-commit fixes\n\n* Update test/launch/test_robot.launch.py\n\nCo-authored-by: Sai Kishor Kothakota <sai.kishor@pal-robotics.com>\n\n* Format fixes\n\n---------\n\nCo-authored-by: Sai Kishor Kothakota <sai.kishor@pal-robotics.com>"
+    },
+    {
+      "sha": "dfcac08494d10815a5baac153a60de94ca430486",
+      "author": "Louis LE LAY",
+      "date": "2025-12-03T21:33:14Z",
+      "message": "Hides UI panels by default (#12)\n\n* hides ui panels\n\n* formats\n\n* updates readme with shortcut tips\n\n* Update README.md\n\nCo-authored-by: Erik Holum <erik.holum@nasa.gov>\n\n* Update README.md\n\nCo-authored-by: Erik Holum <erik.holum@nasa.gov>\n\n* Update src/mujoco_system_interface.cpp\n\n---------\n\nCo-authored-by: Erik Holum <erik.holum@nasa.gov>\nCo-authored-by: Sai Kishor Kothakota <sai.kishor@pal-robotics.com>"
+    },
+    {
+      "sha": "fb9d346e4a02aeeb0d515b12c38b2d13fca5e388",
+      "author": "Sai Kishor Kothakota",
+      "date": "2025-12-03T17:06:01Z",
+      "message": "Support for different control modes with mujoco by defining PIDs (#5)\n\n---------\n\nCo-authored-by: Ortisa Poci <ortisa.poci@studenti.unipd.it>"
+    },
+    {
+      "sha": "e31d73adbad293c1cabf759bfc18873dd7b1bd0e",
+      "author": "Erik Holum",
+      "date": "2025-12-02T13:05:35Z",
+      "message": "Ensure the FetchContent mujoco library is available during runtime (#14)"
+    },
+    {
+      "sha": "3180acdee6f91c462729697c552f1f46eb092b8a",
+      "author": "Nathan Dunkelberger",
+      "date": "2025-12-01T16:28:20Z",
+      "message": "Add taskbar icon (#10)\n\n* adding ros2 control taskbar icon on startup\n\n* fixing stash messages in commit"
+    },
+    {
+      "sha": "2bfa22a8539dbbf0e4f374393505468f6c6314a0",
+      "author": "Erik Holum",
+      "date": "2025-11-24T22:09:57Z",
+      "message": "Merge pull request #39 from pgesel-rai/external-access-to-mj-state (#7)\n\nExternal access to MuJoCo model and data"
+    },
+    {
+      "sha": "6d6323bb5aed000cd9dc6ad54aadf3287c216bbc",
+      "author": "Sai Kishor Kothakota",
+      "date": "2025-11-24T22:09:28Z",
+      "message": "[Jazzy] Added capability to provide a key frame as starting configuration (#4)\n\n* first implementation with updated documentation\n\n* Correctly state that it will be pos, vel, and ctrl\n\nCo-authored-by: Erik Holum <erik.holum@nasa.gov>\n\n* fix typo - missing is\n\nCo-authored-by: Erik Holum <erik.holum@nasa.gov>\n\n* switch to copy instead of naive for loop\n\n---------\n\nCo-authored-by: Nathan Dunkelberger <nathan.b.dunkelberger@nasa.gov>\nCo-authored-by: Nathan Dunkelberger <138718889+ndunkelb-nasa@users.noreply.github.com>\nCo-authored-by: Erik Holum <erik.holum@nasa.gov>"
+    },
+    {
+      "sha": "544186198c927518be38060db5f414c29b4bb2b6",
+      "author": "Sai Kishor Kothakota",
+      "date": "2025-11-24T22:01:30Z",
+      "message": "switch to managing as array instead of pointer arithmetic (#2)\n\nCo-authored-by: Nathan Dunkelberger <138718889+ndunkelb-nasa@users.noreply.github.com>\nCo-authored-by: Erik Holum <erik.holum@nasa.gov>"
+    },
+    {
+      "sha": "1d0b913f09461f8172aab9e1d0d72c0f39e9a07b",
+      "author": "Sai Kishor Kothakota",
+      "date": "2025-11-24T21:56:52Z",
+      "message": "[Jazzy] Ensure the cameras context will support the maximum camera resolutions (#1)\n\n* switch to managing as array instead of pointer arithmetic\n\nCo-authored-by: Erik Holum <erik.holum@nasa.gov>\n\n* Bump the test camera's image res\n\n* Ensure the camera's rendering context will support the maximum camera resolutions\n\n---------\n\nCo-authored-by: Nathan Dunkelberger <138718889+ndunkelb-nasa@users.noreply.github.com>\nCo-authored-by: Erik Holum <erik.holum@nasa.gov>"
+    },
+    {
+      "sha": "ddecf93269058444211b7830a95eac0182a35c9a",
+      "author": "Sai Kishor Kothakota",
+      "date": "2025-11-24T21:48:26Z",
+      "message": "[Jazzy] Fixing the free joint conversion to include mass and inertial properties on root body (#3)\n\n* updating argument description\n\n* raise exception if no virtual joint was found\n\n* adding check to see if root is world\n\n* fixing the free joint conversion to include mass and inertial properties for the root body\n\n---------\n\nCo-authored-by: Nathan Dunkelberger <nathan.b.dunkelberger@nasa.gov>"
+    },
+    {
+      "sha": "aec5adb35f383548eb6c1cd3560215f51b630da9",
+      "author": "Erik Holum",
+      "date": "2025-11-19T20:28:02Z",
+      "message": "Merge pull request #36 from pal-robotics-forks/update/system_interface/API\n\nUpdate to new `on_init` API"
+    },
+    {
+      "sha": "99d2116ae17727cff483baad38c41fd57cdc54a6",
+      "author": "Sai Kishor Kothakota",
+      "date": "2025-11-18T18:07:12Z",
+      "message": "Update to new on_init API"
+    },
+    {
+      "sha": "7b2f73c268c0bb923db091e88c8c1bfb270185b4",
+      "author": "Erik Holum",
+      "date": "2025-10-22T13:26:58Z",
+      "message": "Merge pull request #25 from NASA-JSC-Robotics/pixi-workflow\n\nAdd a Pixi Workflow"
+    },
+    {
+      "sha": "e3e21519f4c35cce400694d96a72182519d4bd68",
+      "author": "Erik Holum",
+      "date": "2025-10-15T19:16:17Z",
+      "message": "Fix typo in CI"
+    },
+    {
+      "sha": "7715c5e3481df57f9fa36954cf7131b50a90a3ba",
+      "author": "Erik Holum",
+      "date": "2025-10-15T19:10:34Z",
+      "message": "Move the MUJOCO_DIR out of the way"
+    },
+    {
+      "sha": "3ea3b155cacf457fcddcce972a6478231505df12",
+      "author": "Erik Holum",
+      "date": "2025-10-15T19:01:45Z",
+      "message": "Add pixi CI"
+    },
+    {
+      "sha": "9f414a9f113b60d5065cf658d7393db2bec5ba84",
+      "author": "Erik Holum",
+      "date": "2025-10-15T18:58:16Z",
+      "message": "Add colcon defaults"
+    },
+    {
+      "sha": "ecea2ab9237f650d04a9fa5541e804471c5fd770",
+      "author": "Erik Holum",
+      "date": "2025-10-15T18:58:08Z",
+      "message": "Update README"
+    },
+    {
+      "sha": "2a59389a6bd999645740cfe3eb6a08715c8fd357",
+      "author": "Erik Holum",
+      "date": "2025-10-15T18:57:34Z",
+      "message": "Use FetchContent for mujoco as a super fallback"
+    },
+    {
+      "sha": "7b33086023096bb4c33b7ddb6b26090667687b8c",
+      "author": "Erik Holum",
+      "date": "2025-10-15T18:56:48Z",
+      "message": "Adding pixi environment"
+    },
+    {
+      "sha": "428c34bc8ee896890eedbb26b6d6c6185550322c",
+      "author": "Erik Holum",
+      "date": "2025-10-14T19:37:03Z",
+      "message": "Support ROS 2 Jazzy (#20)\n\n* Replace the build/run scripts with a compose workflow\n\n* Tweak docker ignore\n\n* Update README instructions\n\n* Matrix build\n\n* Copy in the ros2_control_node as is\n\n* Move clock waiting to the control loop itself to avoid blocking\n\n* Ignore the ros2_control_node in pre-commit\n\n* Cleanup CI\n\n* try scoped locks\n\n* Remove deprecated ament stuff\n\n* Fix build for noble\n\n* No more remapping\n\n* Make control i/o lock free by doubling up buffers\n\n* To jazzy and beyond\n\n* Update README\n\n* Additional build deps and build with dbg symbols\n\n* Add comment with link to upstream PR\n\n* Replace manual installs with ros deps\n\n* Add TODO for the converter tool\n\n* Add README note about the upstream\n\n* Give up on graphics support and leave it to the people"
+    },
+    {
+      "sha": "3cb50de6c935619c98f58bfd7ed71b4f62df15ff",
+      "author": "Erik Holum",
+      "date": "2025-10-07T13:23:14Z",
+      "message": "Merge pull request #19 from pgesel-rai/pr-fix-some-bugs\n\nFix to enable tendon actuators"
+    },
+    {
+      "sha": "f200f5f26547bea599276d61105b74775fc8a352",
+      "author": "Paul Gesel",
+      "date": "2025-10-06T20:48:12Z",
+      "message": "Fix indexing bug with actuators\n\nSigned-off-by: Paul Gesel <pgesel@theaiinstitute.com>"
+    },
+    {
+      "sha": "beaf2a29290d98d27815f923f11edcef5784523e",
+      "author": "Nathan Dunkelberger",
+      "date": "2025-10-06T19:37:25Z",
+      "message": "Merge pull request #18 from NASA-JSC-Robotics/fix-lidar-data-addresses\n\nusing sensor_adr instead of sensor number for lidar data"
+    },
+    {
+      "sha": "0290a5d8ed3094a68e64438cfcd9fddc96ce861d",
+      "author": "Nathan Dunkelberger",
+      "date": "2025-10-06T18:23:29Z",
+      "message": "using sensor_adr instead of sensor number for lidar data"
+    },
+    {
+      "sha": "fb07b867e3e81c116f2bf718fec5078207a813f6",
+      "author": "Erik Holum",
+      "date": "2025-10-02T17:27:11Z",
+      "message": "Merge pull request #16 from NASA-JSC-Robotics/build-fix\n\nBuild and Functional Fixes"
+    },
+    {
+      "sha": "5723c9fc52dad9fac50134d0c278ae5c29eb426b",
+      "author": "Erik Holum",
+      "date": "2025-10-02T17:13:12Z",
+      "message": "Ensure ctrl is enabled as soon as the physics simulation starts"
+    },
+    {
+      "sha": "c1eba3a60004b615009a1b49cb9e084adf5da0a0",
+      "author": "Erik Holum",
+      "date": "2025-10-02T16:59:21Z",
+      "message": "Do not control joints without actuators even if ros2_control tells you to"
+    },
+    {
+      "sha": "1ace891f5d35b9111bd59da38274679327891be4",
+      "author": "Erik Holum",
+      "date": "2025-10-02T15:44:46Z",
+      "message": "Remove dependency on joint_limits"
+    },
+    {
+      "sha": "24f7b26ce61c3ef940f9a86d0897849c9d2a9738",
+      "author": "Erik Holum",
+      "date": "2025-10-02T15:35:20Z",
+      "message": "Merge pull request #12 from NASA-JSC-Robotics/effort-control-fixes\n\nUpdates to support certain effort controlled robots"
+    },
+    {
+      "sha": "89cc724b28b0ee326e6297fcf3938e5ff5e8a8b4",
+      "author": "Erik Holum",
+      "date": "2025-09-15T19:19:46Z",
+      "message": "Update README"
+    },
+    {
+      "sha": "4de4c3d08f0897492abfa9f7e2cefc949a1cb492",
+      "author": "Erik Holum",
+      "date": "2025-08-28T18:10:51Z",
+      "message": "Fix up ctrl and effort state indexes"
+    },
+    {
+      "sha": "2f91768f67128900175d5a04b99b5c741edecbf4",
+      "author": "Erik Holum",
+      "date": "2025-08-28T12:39:58Z",
+      "message": "Remove unused things"
+    },
+    {
+      "sha": "fe17b15e80c6671eea0066402dd993221480f473",
+      "author": "Erik Holum",
+      "date": "2025-08-28T12:36:17Z",
+      "message": "Only one control mode can be active at a time and maintain state"
+    },
+    {
+      "sha": "1e63e9734de57461b56ea66bedb33e7c6609e662",
+      "author": "Erik Holum",
+      "date": "2025-08-27T20:51:01Z",
+      "message": "Fix effort commands"
+    },
+    {
+      "sha": "9635cfdf62e0a785ce10edf15c71611186817d56",
+      "author": "Erik Holum",
+      "date": "2025-08-27T16:48:01Z",
+      "message": "Add state interfaces for IMU covariance values"
+    },
+    {
+      "sha": "8e22ff28a53d2867c6e3c674d7280323824bafe1",
+      "author": "Erik Holum",
+      "date": "2025-08-26T19:43:39Z",
+      "message": "Initial support for Lidar sensors (#6)\n\n* Updating test resources\n\n* Initial setup of LiDAR sensors\n\n* Parsing lidar data from config\n\n* Publish lidar messages\n\n* Update lidar example and get publish rates\n\n* Minor cleanup\n\n* Update rviz config\n\n* Move the rangefinder\n\n* Update documentation\n\n* Only copy sensordata rather than all data\n\n* Add a comment\n\n* Transforms on the range\n\n* Update test rviz config\n\n* Add lidar conversion support and update the example robot\n\n* Update src/mujoco_system_interface.cpp\n\nCo-authored-by: Nathan Dunkelberger <138718889+ndunkelb-nasa@users.noreply.github.com>\n\n* Name the image\n\n* Add .gitignore\n\n* Add rviz to the test deps\n\n* Use a lidar tag and do all the frame conversion in the script\n\n* Pull min and max angle from ros2 control xacro, don't assume min_angle is always 0\n\n* Turn off rangefinder rendering in cameras\n\n* Apply suggestions from code review\n\n* Pre-commit fixes\n\n* Add a node about lidar scan time\n\n* Update class comment\n\n* Set a default ROS_DOMAIN_ID just in case\n\n---------\n\nCo-authored-by: Nathan Dunkelberger <138718889+ndunkelb-nasa@users.noreply.github.com>"
+    },
+    {
+      "sha": "4218a3b54c0111ad66b553645e65e6b8d983e398",
+      "author": "Nathan Dunkelberger",
+      "date": "2025-08-20T18:02:25Z",
+      "message": "adding test dependencies (#10)"
+    },
+    {
+      "sha": "29c7f9102636bda6b5e186831134ee41a839472f",
+      "author": "Nathan Dunkelberger",
+      "date": "2025-08-20T13:15:12Z",
+      "message": "adding converter dependencies to dockerfile (#9)"
+    },
+    {
+      "sha": "ef9b047b7723c7d36639b3359bb5255078a73b74",
+      "author": "Erik Holum",
+      "date": "2025-08-18T21:52:11Z",
+      "message": "Add CI for GitHub (#2)\n\n* Use variables for CI\n\n* Add github workflow\n\n* Make jobs concurrent"
+    },
+    {
+      "sha": "5ef982cb857dff0c5894534c1620fab6d5e8845e",
+      "author": "Erik Holum",
+      "date": "2025-08-18T15:35:09Z",
+      "message": "Merge branch 'humble-feature/speed-up' into 'humble-devel'\n\nCleanup camera logic and enable faster than realtime simulation\n\nCloses #13 and #10\n\nSee merge request imetro/mujoco-ros2-simulation!14"
+    },
+    {
+      "sha": "81beedc6da86c5ef08dee16a26d32751ca1cb684",
+      "author": "Erik Holum",
+      "date": "2025-08-18T15:35:08Z",
+      "message": "Cleanup camera logic and enable faster than realtime simulation"
+    },
+    {
+      "sha": "5aa0c93bf027475ee75ca64df08d092fe13b7674",
+      "author": "Erik Holum",
+      "date": "2025-08-11T15:16:30Z",
+      "message": "Merge branch 'humble-feature/mujoco-inputs-optional' into 'humble-devel'\n\nmake mujoco inputs optional\n\nSee merge request imetro/mujoco-ros2-simulation!16"
+    },
+    {
+      "sha": "7c5fdac7e6a39907816307ffc148461008701702",
+      "author": "Nikki Hart",
+      "date": "2025-08-01T15:17:35Z",
+      "message": "make mujoco inputs optional"
+    },
+    {
+      "sha": "1ac2740735fd33d13996d199c77cb72859c4fe1b",
+      "author": "Erik Holum",
+      "date": "2025-07-29T16:57:50Z",
+      "message": "Merge branch 'humble-feature/catch-missing-tags' into 'humble-devel'\n\nallow for processed_inputs and raw_inputs tags to be missing\n\nSee merge request imetro/mujoco-ros2-simulation!13"
+    },
+    {
+      "sha": "05514312cebcc35887dff1412f9d839aa6fd99f0",
+      "author": "Nikki Hart",
+      "date": "2025-07-29T16:10:57Z",
+      "message": "allow for processed_inputs and raw_inputs tags to be missing"
+    },
+    {
+      "sha": "30b1c2d5f76fbdb11b4b8c181e58e72db2ffe999",
+      "author": "Erik Holum",
+      "date": "2025-07-28T18:27:51Z",
+      "message": "Merge branch 'humble-feature/custom-joint-attributes' into 'humble-devel'\n\nCustom Element Attributes from Inputs\n\nSee merge request imetro/mujoco-ros2-simulation!12"
+    },
+    {
+      "sha": "a00c285f246f8cc46260cf90a6abfaa3fefc7652",
+      "author": "Dunkelberger, Nathan 805283205",
+      "date": "2025-07-28T18:27:51Z",
+      "message": "Custom Element Attributes from Inputs"
+    },
+    {
+      "sha": "8c6e1558a11ae1e31120ab11cd2fcea44fef6fda",
+      "author": "Erik Holum",
+      "date": "2025-07-24T19:08:26Z",
+      "message": "Merge branch 'humble-feature/camera-improvements' into 'humble-devel'\n\nParameterize camera topic names\n\nCloses #8\n\nSee merge request imetro/mujoco-ros2-simulation!11"
+    },
+    {
+      "sha": "16263d5f78118789819ebdbd281ec6c43ce16630",
+      "author": "Erik Holum",
+      "date": "2025-07-22T14:54:53Z",
+      "message": "No need to wrap cameras in a separate tag"
+    },
+    {
+      "sha": "17c09651b55fdd2733c30a86fbe53069af34bd39",
+      "author": "Erik Holum",
+      "date": "2025-07-22T14:17:24Z",
+      "message": "More GitLab CI fixes"
+    },
+    {
+      "sha": "a2dbcc79a0854819ae945c69ad58850d6f2a133e",
+      "author": "Erik Holum",
+      "date": "2025-07-21T23:26:16Z",
+      "message": "Adding a few more comments to the script"
+    },
+    {
+      "sha": "0c0b4d1ae8f0027e2428fb3fdbc6c2004622100f",
+      "author": "Erik Holum",
+      "date": "2025-07-21T23:21:15Z",
+      "message": "Remove extra constants"
+    },
+    {
+      "sha": "8c36f5fcf67b7bdc8a69870aeaa91b1e47a624a9",
+      "author": "Erik Holum",
+      "date": "2025-07-21T23:16:42Z",
+      "message": "Fix typo in docs"
+    },
+    {
+      "sha": "448358d9230cd8aa0de5b49865c6fe9afa6c0ed8",
+      "author": "Erik Holum",
+      "date": "2025-07-21T22:56:56Z",
+      "message": "Minor test fixes"
+    },
+    {
+      "sha": "799985bd8a03e025f44bec6c2e5e782a6349066b",
+      "author": "Erik Holum",
+      "date": "2025-07-21T22:50:54Z",
+      "message": "Cleanup mujoco inputs parsing and processing, move test resources out of the way"
+    },
+    {
+      "sha": "08c8ed42be3f6ddd84b6ed6094ea11685ce41109",
+      "author": "Erik Holum",
+      "date": "2025-07-21T19:17:39Z",
+      "message": "Adjust test resource inputs to match"
+    },
+    {
+      "sha": "11cc8d69edba2fcf43598a8b184d18319f6ccfb5",
+      "author": "Erik Holum",
+      "date": "2025-07-21T19:17:17Z",
+      "message": "Parse camera information out of the mujoco inputs, clean things up"
+    },
+    {
+      "sha": "8e3f63a47a3c7c83e26dd1f51148d915e6158f15",
+      "author": "Erik Holum",
+      "date": "2025-07-21T17:36:50Z",
+      "message": "Add CI dependency for image preservation"
+    },
+    {
+      "sha": "84ca9bd4e62463603f6c03085ff7badce20365f2",
+      "author": "Erik Holum",
+      "date": "2025-07-21T16:59:06Z",
+      "message": "Remove camera tags in test for now"
+    },
+    {
+      "sha": "2c58858cbdb6c166c824dbf0daff123e934897bd",
+      "author": "Erik Holum",
+      "date": "2025-07-18T19:05:08Z",
+      "message": "Update README camera instructions"
+    },
+    {
+      "sha": "dfbbb3af8c14d71e04d8db3f6eb06ba4bc0b33aa",
+      "author": "Erik Holum",
+      "date": "2025-07-18T18:28:30Z",
+      "message": "Update camera naming conventions in script and test example"
+    },
+    {
+      "sha": "9a2e317b5206c143afc5e9a3b8c735cb7b959263",
+      "author": "Erik Holum",
+      "date": "2025-07-18T18:07:58Z",
+      "message": "Register cameras from hardware_info, and allow passing in parameters"
+    },
+    {
+      "sha": "0cf87bc3a82e660538659180e4565f32598c273e",
+      "author": "Erik Holum",
+      "date": "2025-07-21T15:58:42Z",
+      "message": "Merge branch 'humble-feature/docker-workflow' into 'humble-devel'\n\nAdd a standalone docker workflow for isolated development and testing\n\nCloses #4\n\nSee merge request imetro/mujoco-ros2-simulation!10"
+    },
+    {
+      "sha": "a76688de5160ea8ccbc807918f3b09620d3570ae",
+      "author": "Erik Holum",
+      "date": "2025-07-21T15:42:11Z",
+      "message": "Load apparently does not guarantee availability of test images"
+    },
+    {
+      "sha": "3464cdd531d94da74baf6b412541a22b8354ceac",
+      "author": "Erik Holum",
+      "date": "2025-07-21T15:00:57Z",
+      "message": "Run CI with dind"
+    },
+    {
+      "sha": "dbae6276c21d063c217299919962ed6b37ec9bcc",
+      "author": "Erik Holum",
+      "date": "2025-07-21T14:41:25Z",
+      "message": "Use pip installable shellcheck"
+    },
+    {
+      "sha": "541cd87d76a90b2b41ebdd3e31bd5c849f7846ac",
+      "author": "Erik Holum",
+      "date": "2025-07-18T15:25:15Z",
+      "message": "Add CI workflow to build and test"
+    },
+    {
+      "sha": "3017703670d5efe41e6e61a0662e4b49e6f9e751",
+      "author": "Erik Holum",
+      "date": "2025-07-18T15:15:29Z",
+      "message": "Build on jazzy"
+    },
+    {
+      "sha": "e8c1b410c910b6fb9e6188bdac99a4e5d3b1e2b4",
+      "author": "Erik Holum",
+      "date": "2025-07-18T15:15:12Z",
+      "message": "Update tests, pull from robot_description"
+    },
+    {
+      "sha": "5e591aa6a813c6c9ca78fd32309bc1e32d499f51",
+      "author": "Erik Holum",
+      "date": "2025-07-18T14:32:55Z",
+      "message": "Add Docker workflow for local development and testing"
+    },
+    {
+      "sha": "43904ae527e10335c407323d244eb7d50d2f5708",
+      "author": "Erik Holum",
+      "date": "2025-07-15T15:08:21Z",
+      "message": "Merge branch 'humble-feature/valkyrie-integration' into 'humble-devel'\n\nFixes from Valkyrie Integration\n\nSee merge request imetro/mujoco-ros2-simulation!9"
+    },
+    {
+      "sha": "f1de1cb6fca30c8416d2a5fc6ce73994bdeeca29",
+      "author": "Erik Holum",
+      "date": "2025-07-15T15:07:35Z",
+      "message": "Pre-commit fixes"
+    },
+    {
+      "sha": "945ef407c42c8a7968fec3832a580944040284ba",
+      "author": "Misha Savchenko",
+      "date": "2025-07-14T12:41:02Z",
+      "message": "Skip the sensor loop if the mujoco type is not found"
+    },
+    {
+      "sha": "448e9e14a1d5a1d043973f2b1af2cedb5bd18e2a",
+      "author": "Misha Savchenko",
+      "date": "2025-07-11T18:34:44Z",
+      "message": "Include glfw3 in rosdep"
+    },
+    {
+      "sha": "7b62ec083f5439d9ba725ca855f55871e62ad943",
+      "author": "Erik Holum",
+      "date": "2025-07-10T19:26:10Z",
+      "message": "Merge branch 'humble-feature/merge-tools' into 'humble-devel'\n\nAdd the URDF conversion tool to this repo directly\n\nSee merge request imetro/mujoco-ros2-simulation!8"
+    },
+    {
+      "sha": "44afa7a4d7b2916d3f523b35d90c78a63734fab2",
+      "author": "Erik Holum",
+      "date": "2025-07-10T19:21:30Z",
+      "message": "Minor cleanup and refs"
+    },
+    {
+      "sha": "cc691023a44cba6f0b88df38ba7773147e7a60b5",
+      "author": "Nathan Dunkelberger",
+      "date": "2025-07-10T19:11:10Z",
+      "message": "updating to get stls and objs to the correct relative filepath"
+    },
+    {
+      "sha": "ca390c2ba9306ea01a141173bfb797cb89348877",
+      "author": "Erik Holum",
+      "date": "2025-07-10T18:34:43Z",
+      "message": "Spelling errors"
+    },
+    {
+      "sha": "ebec3dfc28aa809890a2f66f87edebf6eddd79c3",
+      "author": "Erik Holum",
+      "date": "2025-07-10T18:30:34Z",
+      "message": "One more fix"
+    },
+    {
+      "sha": "d505388cf646eeed44b94d5fdbfa64e2dcf5a5c0",
+      "author": "Erik Holum",
+      "date": "2025-07-10T17:04:27Z",
+      "message": "Adding docs, and updating default resources to be runnable"
+    },
+    {
+      "sha": "2b913312ca55847758702e2478ac5991999346a6",
+      "author": "Erik Holum",
+      "date": "2025-07-10T16:51:28Z",
+      "message": "Apply format standards"
+    },
+    {
+      "sha": "859711212c5f2c178bb50f48de3cd3e32b0d55d7",
+      "author": "Erik Holum",
+      "date": "2025-07-10T16:43:53Z",
+      "message": "Install python helper scripts"
+    },
+    {
+      "sha": "24362c12cfdddcdcfc2debd9f6d5cd80a0340a64",
+      "author": "Erik Holum",
+      "date": "2025-06-25T17:01:25Z",
+      "message": "Merge branch 'humble-feature/sensor-names' into 'humble-devel'\n\nParameterize sensor names and types, update readme, and tests\n\nSee merge request imetro/mujoco-ros2-simulation!7"
+    },
+    {
+      "sha": "8915a61ebe031759d435d8a62e849b84a14f4f07",
+      "author": "Erik Holum",
+      "date": "2025-06-23T19:02:58Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "47fa18ea6e806a80e1b5902943d5a0bd676bd3cf",
+      "author": "Erik Holum",
+      "date": "2025-06-23T16:06:05Z",
+      "message": "Add a test launch file for convenience"
+    },
+    {
+      "sha": "d8e9633cb34e484a15db5ddd651a5faf6483aba2",
+      "author": "Erik Holum",
+      "date": "2025-06-23T15:50:15Z",
+      "message": "Add basic unit test"
+    },
+    {
+      "sha": "74bb7282d73fea562974cc302971884fede2d915",
+      "author": "Erik Holum",
+      "date": "2025-06-23T15:49:45Z",
+      "message": "Fix segfault for non-init interfaces"
+    },
+    {
+      "sha": "a6c1316cf40382ea8ffd41a48653b6c9a4890681",
+      "author": "Erik Holum",
+      "date": "2025-06-20T19:16:26Z",
+      "message": "Update README with more instruction"
+    },
+    {
+      "sha": "df895036af4697084d91066255a774146d0afdda",
+      "author": "Erik Holum",
+      "date": "2025-06-20T18:23:16Z",
+      "message": "Cleanup compiler warnings and fix issue with source install"
+    },
+    {
+      "sha": "36cff085aabce9e476dd313e5d57089954fcd241",
+      "author": "Erik Holum",
+      "date": "2025-06-20T18:22:58Z",
+      "message": "Update comment"
+    },
+    {
+      "sha": "a4e3aad27ff8e39b652300c6ac0a0037542dcc42",
+      "author": "Erik Holum",
+      "date": "2025-06-20T15:43:29Z",
+      "message": "Parameterize sensor names and types"
+    },
+    {
+      "sha": "d98e838047547fba5ed1803f9a248287b4aa4643",
+      "author": "Erik Holum",
+      "date": "2025-06-12T21:16:10Z",
+      "message": "Merge branch 'humble-feature/fix-executor' into 'humble-devel'\n\nFix executor spinning in init\n\nSee merge request imetro/mujoco-ros2-simulation!6"
+    },
+    {
+      "sha": "6de73e4ecf132340aec633adc1efaa6af2d089b0",
+      "author": "Erik Holum",
+      "date": "2025-06-12T21:14:12Z",
+      "message": "Fix executor spinning"
+    },
+    {
+      "sha": "50caf68ac50417fa6469c9464c905655dd4b47b1",
+      "author": "Erik Holum",
+      "date": "2025-06-10T17:31:33Z",
+      "message": "Merge branch 'humble-feature/remove-ament-tests' into 'humble-devel'\n\nRemove the standard ament test deps\n\nSee merge request imetro/mujoco-ros2-simulation!5"
+    },
+    {
+      "sha": "ec9495aaa6a16deb99be0dce9bd79fb121e7d02a",
+      "author": "Erik Holum",
+      "date": "2025-06-10T17:29:15Z",
+      "message": "Remove the standard ament test deps"
+    },
+    {
+      "sha": "5b1c498f2b2a1b2f06cbed9a55b84ceadc2777e9",
+      "author": "Erik Holum",
+      "date": "2025-06-10T17:27:05Z",
+      "message": "Merge branch 'humble-feature/fix-lodepng' into 'humble-devel'\n\nCompile lodepng lib with pic\n\nSee merge request imetro/mujoco-ros2-simulation!4"
+    },
+    {
+      "sha": "06030370a27a5f2f6ae7e83fa0cf562faa2cebb0",
+      "author": "Erik Holum",
+      "date": "2025-06-10T17:11:33Z",
+      "message": "Compile lodepng lib with pic"
+    },
+    {
+      "sha": "0d014abcf07a67b91b1eddd96c71bbfbbc3d3dd3",
+      "author": "Erik Holum",
+      "date": "2025-06-10T16:20:19Z",
+      "message": "Merge branch 'humble-feature/make-ros-node' into 'humble-devel'\n\nAdd a ROS node and publish time and camera images\n\nSee merge request eholum/mujoco-ros2-simulation!3"
+    },
+    {
+      "sha": "2f76c8b346a4569605f3bb862b500531ae1ea0d0",
+      "author": "Erik Holum",
+      "date": "2025-06-10T16:16:43Z",
+      "message": "Add support for publishing camera images"
+    },
+    {
+      "sha": "89513e73557893d41bc02648ef3e24e3b8c009aa",
+      "author": "Erik Holum",
+      "date": "2025-06-10T14:01:04Z",
+      "message": "Copy over camera data"
+    },
+    {
+      "sha": "d6b9da39a9a2faba06b3d3a35cf0abf911c49a57",
+      "author": "Erik Holum",
+      "date": "2025-06-10T14:00:27Z",
+      "message": "Add license update package info"
+    },
+    {
+      "sha": "baffc534c7ec1cc2beaeb7028815e7566a98a787",
+      "author": "Erik Holum",
+      "date": "2025-06-10T13:53:46Z",
+      "message": "Update comment strings with more instructions"
+    },
+    {
+      "sha": "018b19d5e0196128d8a9947ecab9a2cc4c670d31",
+      "author": "Erik Holum",
+      "date": "2025-06-09T22:51:13Z",
+      "message": "Add a node and clock publisher to the hardware interface"
+    },
+    {
+      "sha": "7d25bc0b2b450e57247ef9f4fce79a4cb4b700a8",
+      "author": "Erik Holum",
+      "date": "2025-06-09T21:54:47Z",
+      "message": "Keep map of hw information, use it to return command/state interfaces"
+    },
+    {
+      "sha": "317e55ef3a1b95d4152188a87def1c67524622a7",
+      "author": "Erik Holum",
+      "date": "2025-06-09T14:49:52Z",
+      "message": "Fix broken build"
+    },
+    {
+      "sha": "fcbcedc951bf7455701722791c677916f5d6951d",
+      "author": "Erik Holum",
+      "date": "2025-06-06T19:16:00Z",
+      "message": "Update LICENSE"
+    },
+    {
+      "sha": "08e4078457d7d33f08a0419ca7554d2e03f00997",
+      "author": "Erik Holum",
+      "date": "2025-06-05T15:06:58Z",
+      "message": "Merge branch 'humble-feature/ros2-controlify-it' into 'humble-devel'\n\nWrapping the simulation interface in a ros2_control plugin framework\n\nSee merge request eholum/mujoco-ros2-simulation!1"
+    },
+    {
+      "sha": "a9d3cee028b7b171032281e8a0045d198dc9b6eb",
+      "author": "Erik Holum",
+      "date": "2025-06-05T15:00:59Z",
+      "message": "Add CI"
+    },
+    {
+      "sha": "6d05eaeaf715fda966d67456258012b2906d4949",
+      "author": "Erik Holum",
+      "date": "2025-06-05T14:59:22Z",
+      "message": "Add license and README"
+    },
+    {
+      "sha": "86e13272c3b4d8d8fa7bbaa5116b12e3b8c55647",
+      "author": "Erik Holum",
+      "date": "2025-06-05T14:49:57Z",
+      "message": "Remove model reloading"
+    },
+    {
+      "sha": "f814e93fe45c7b7c31b83046275265d086eb9c8e",
+      "author": "Erik Holum",
+      "date": "2025-06-05T14:41:22Z",
+      "message": "Copyright and compiler warning"
+    },
+    {
+      "sha": "02539648426457df3c741a5463773f54725f09d5",
+      "author": "Erik Holum",
+      "date": "2025-06-05T14:36:48Z",
+      "message": "Merge registration and read/writes"
+    },
+    {
+      "sha": "42052cc68031f8bab361ec3d9b215226d593d691",
+      "author": "Erik Holum",
+      "date": "2025-06-05T13:10:50Z",
+      "message": "Add format standards, pre-commit, and apply fixes"
+    },
+    {
+      "sha": "d7b3b6d822779b63e241fe8d7a2967cbe8fc6441",
+      "author": "Erik Holum",
+      "date": "2025-06-05T13:09:45Z",
+      "message": "Remove launch dir"
+    },
+    {
+      "sha": "336cb4bce8fced08ae41f6b7c4f14b24bb6943bf",
+      "author": "Erik Holum",
+      "date": "2025-06-05T13:01:01Z",
+      "message": "Read and write commands"
+    },
+    {
+      "sha": "feec18fdb145e99a13d16989be27fbef84653616",
+      "author": "Erik Holum",
+      "date": "2025-06-04T18:24:17Z",
+      "message": "Add simulation launching to the ros2 hw system"
+    },
+    {
+      "sha": "5599de5572917e5e5a44578f6d8815a15ad06675",
+      "author": "Erik Holum",
+      "date": "2025-06-04T13:52:31Z",
+      "message": "Theoretically start the simulation for the ros2 control hw interface"
+    },
+    {
+      "sha": "a40fe76a16c7331a0324787a9b584b20139904c2",
+      "author": "Erik Holum",
+      "date": "2025-06-03T21:32:30Z",
+      "message": "Start wrapping the simulation interface in a ros2_control plugin framework"
+    },
+    {
+      "sha": "f5a3348b412fa700e0efef086fbca20eedf582a0",
+      "author": "Erik Holum",
+      "date": "2025-06-03T15:49:39Z",
+      "message": "Remove platform specifics"
+    },
+    {
+      "sha": "34de6e5f368e0db0bd4a1fdc9f0ab6e2772e7fb7",
+      "author": "Nathan Dunkelberger",
+      "date": "2025-05-30T17:22:19Z",
+      "message": "adding launch file and passing model as argument"
+    },
+    {
+      "sha": "53015eae576c8b3298cab73b14daa508092d11ef",
+      "author": "Nathan Dunkelberger",
+      "date": "2025-05-30T16:23:29Z",
+      "message": "first working iteration with ros run"
+    },
+    {
+      "sha": "f6cac3af77c847a3103b8795e20fd18aa24aa24c",
+      "author": "Erik Holum",
+      "date": "2025-05-23T18:20:08Z",
+      "message": "Copy source and headers from simualte at 3.3.2"
+    }
+  ]
+}

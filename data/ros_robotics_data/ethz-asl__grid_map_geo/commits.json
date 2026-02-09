@@ -1,0 +1,456 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-07T01:58:35Z",
+    "source": "github_rest",
+    "endpoint": "/repos/{owner}/{repo}/commits",
+    "owner": "ethz-asl",
+    "repo": "grid_map_geo",
+    "per_page": 100
+  },
+  "data": [
+    {
+      "sha": "9d9979e9c2300601a6c9c9b477f3cef369e70ffe",
+      "author": "Jaeyoung Lim",
+      "date": "2026-01-13T21:44:27Z",
+      "message": "[Backport] ESPG to EPSG rename, and enable use of non-CH1903 geotiffs… (#68)\n\n* [Backport] ESPG to EPSG rename, and enable use of non-CH1903 geotiffs (#67)\n\n* Add UTM 32N\n\n* Add offset layer\n\n* Fix format"
+    },
+    {
+      "sha": "077898208fee7d5c2a10df2122e2a5188b525e12",
+      "author": "Ryan",
+      "date": "2024-11-29T16:59:54Z",
+      "message": "Add geo_map_msgs for custom messages (#62) (#65)\n\n* Add geo_map_msgs for custom messages (#62)\r\n\r\n* Encapsulate grid_map_geo package\r\n* Add gridmap geo messages\r\n* Ported to ROS 2\r\n\r\n* Remove dummy include folder\r\n\r\nSigned-off-by: Ryan Friedman <25047695+Ryanf55@users.noreply.github.com>\r\n\r\n* Make CI build all packages and handle moved tests\r\n\r\nSigned-off-by: Ryan Friedman <25047695+Ryanf55@users.noreply.github.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Ryan Friedman <25047695+Ryanf55@users.noreply.github.com>\r\nCo-authored-by: Jaeyoung Lim <jalim@ethz.ch>"
+    },
+    {
+      "sha": "89d1b86ac405a059dbf378760797edd0e913e187",
+      "author": "Ryan",
+      "date": "2024-11-29T06:11:32Z",
+      "message": "Remove unused variable (#64)\n\nCo-authored-by: Jaeyoung-Lim <jalim@ethz.ch>"
+    },
+    {
+      "sha": "02189d61cdc30c384e59a76ba1d044e002c39ba9",
+      "author": "Ryan",
+      "date": "2024-02-01T17:26:45Z",
+      "message": "Add patch for yamlcpp link problems (#60)\n\n* yamlcpp isn't exported correctly upstream\r\n* This is a temporary patch\r\n\r\nSigned-off-by: Ryan Friedman <ryanfriedman5410+github@gmail.com>"
+    },
+    {
+      "sha": "3fd920673903726f8020c3f4608e0d061aeb0f15",
+      "author": "Ryan",
+      "date": "2024-01-28T20:40:32Z",
+      "message": "Hide GDAL from public interface, fix export (#59)\n\n* Enforce export in CI\r\n* Hide implementation details of GDAL in implementation\r\n* Switch to build-scope includes\r\n* Install headers per latest ament recommendations to allow package: https://docs.ros.org/en/humble/How-To-Guides/Ament-CMake-Documentation.html#adding-targets\r\n* This is crucial before realeasing as a library\r\n* Remove unused yaml dependency\r\n* Add all missing libraries in ament_export_dependencies\r\n* Fix a few typos in comments\r\n* Add badges for all jobs but point them to the default ros2 branch\r\n  rather than any branch\r\n* Fix style check not running on ros2 branch\r\n\r\nSigned-off-by: Ryan Friedman <ryanfriedman5410+github@gmail.com>"
+    },
+    {
+      "sha": "92dbada651cfdf786d0b497d7b6218be2021285f",
+      "author": "enesavcu",
+      "date": "2024-01-20T17:22:05Z",
+      "message": "write docker setup at readme (#57)\n\n* write docker setup at readme\r\n\r\nCo-authored-by: Ryan <ryanfriedman5410+github@gmail.com>"
+    },
+    {
+      "sha": "23141e417522cfb23a79bf1c9e84208a9d43a884",
+      "author": "Ryan",
+      "date": "2024-01-20T16:39:16Z",
+      "message": "Merge pull request #56 from MichaelRazum/ros2\n\nSwitch to pathlib #54"
+    },
+    {
+      "sha": "b0080bcb8fdda956cec34fe73fbbe636e19a17fe",
+      "author": "mira",
+      "date": "2024-01-20T08:41:50Z",
+      "message": "Switch to pathlib"
+    },
+    {
+      "sha": "7155cb46f47def1afb2a51b3e3cddef1a2e6bdcf",
+      "author": "Ryan",
+      "date": "2024-01-20T07:33:12Z",
+      "message": "Use available clang-format version for Ubuntu 22 (#45)\n\n* Clean up build/test workflow with ROS workspace\r\n\r\n* Use rosdep for all deps\r\n* Name things better\r\n* Stop hard-coding the ros distro\r\n\r\nSigned-off-by: Ryan Friedman <ryanfriedman5410+github@gmail.com>\r\n\r\n* Update style check to work on Ubuntu 22\r\n\r\n* And add missing dependency on clang-format\r\n\r\nSigned-off-by: Ryan Friedman <ryanfriedman5410+github@gmail.com>\r\n\r\n* Run formatter\r\n\r\n* This commit should be hidden in git blame\r\n\r\nSigned-off-by: Ryan Friedman <ryanfriedman5410+github@gmail.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Ryan Friedman <ryanfriedman5410+github@gmail.com>"
+    },
+    {
+      "sha": "22bfe8df7cfc37231e0511e15ee1137b44473e7c",
+      "author": "Ryan",
+      "date": "2024-01-20T06:18:54Z",
+      "message": "Merge pull request #53 from avcuenes/ros2\n\nadd dockerfile and makefile"
+    },
+    {
+      "sha": "ae21ad9271f50c50415f8b1dfff108b1941718ce",
+      "author": "enesavcu",
+      "date": "2024-01-20T06:06:06Z",
+      "message": "Merge pull request #1 from Ryanf55/multistage-docker-and-cache-fixing\n\nAdd multistage, fix cache, add rviz dep"
+    },
+    {
+      "sha": "732e49be513a3779855f597c2f76aec2f3fdd27d",
+      "author": "Ryan Friedman",
+      "date": "2024-01-20T04:59:16Z",
+      "message": "Add dockerignore\n\nSigned-off-by: Ryan Friedman <ryanfriedman5410+github@gmail.com>"
+    },
+    {
+      "sha": "2d14e52de6aa093b0eca7917a2e214d68d6bfeff",
+      "author": "Ryan",
+      "date": "2024-01-20T04:28:29Z",
+      "message": "Merge pull request #55 from Ryanf55/remove-buggy-pages-deploy\n\nRemove pages deployment"
+    },
+    {
+      "sha": "630558db4812ea4d97fc5f99574e7c600ef05d64",
+      "author": "Ryan Friedman",
+      "date": "2024-01-20T03:52:20Z",
+      "message": "Remove pages deployment\n\n* Too many bugs, just a distraction from the real work at hand\n\nSigned-off-by: Ryan Friedman <ryanfriedman5410+github@gmail.com>"
+    },
+    {
+      "sha": "712186bcc3773f6c9ac3565ebd971ba928cf4410",
+      "author": "Ryan",
+      "date": "2024-01-20T03:49:02Z",
+      "message": "Merge pull request #52 from Ryanf55/bugfix/51-gh-pages-permissions\n\nCI: Split docs workflows and add write permissions for pages deployment"
+    },
+    {
+      "sha": "e250038601daba0d9cbd8877a95bb0a4c9a4225f",
+      "author": "Ryan Friedman",
+      "date": "2024-01-20T02:39:32Z",
+      "message": "Add multistage, fix cache, add rviz dep\n\n* This complets the requests for the PR\n* Bind mounts on the build reduce cache busting\n* Add default bash shell\n* Added parameters for the build type and ROS distro to use\n\nSigned-off-by: Ryan Friedman <ryanfriedman5410+github@gmail.com>"
+    },
+    {
+      "sha": "5412dfe2cee2b6cdb15ae18f82ae59828e265bc4",
+      "author": "avcuenes",
+      "date": "2024-01-19T12:41:20Z",
+      "message": "delete unnecessary installation and change workspace name"
+    },
+    {
+      "sha": "45d1967e9a90b06b3449802bcc2364c50a40f395",
+      "author": "avcuenes",
+      "date": "2024-01-19T06:42:18Z",
+      "message": "Merge branch 'ros2' of github.com:avcuenes/grid_map_geo into ros2"
+    },
+    {
+      "sha": "2b676efa265e07ce3dd7c8e0468ee296be520a7f",
+      "author": "avcuenes",
+      "date": "2024-01-19T06:42:02Z",
+      "message": "add new line"
+    },
+    {
+      "sha": "558dd430cc8eea158d54fe4acd941aee04625386",
+      "author": "enesavcu",
+      "date": "2024-01-19T04:40:33Z",
+      "message": "Update Dockerfile change workspace name again\n\nCo-authored-by: Ryan <ryanfriedman5410+github@gmail.com>"
+    },
+    {
+      "sha": "64ef3cf7dfb20531da742616e6a24841abce454c",
+      "author": "enesavcu",
+      "date": "2024-01-19T04:40:17Z",
+      "message": "Update Dockerfile delete ROS_DISTRO\n\nCo-authored-by: Ryan <ryanfriedman5410+github@gmail.com>"
+    },
+    {
+      "sha": "43d09789856050cc9b4f3618efa84b2a59ad001f",
+      "author": "enesavcu",
+      "date": "2024-01-19T04:39:57Z",
+      "message": "Update Dockerfile change workspace name\n\nCo-authored-by: Ryan <ryanfriedman5410+github@gmail.com>"
+    },
+    {
+      "sha": "93339b8a66e1a7f0471f80bc07f4430a53fb584f",
+      "author": "avcuenes",
+      "date": "2024-01-18T20:02:10Z",
+      "message": "add dockerfile and makefile"
+    },
+    {
+      "sha": "44cccb0da5f075f7593703e331cb5bedc8ca0c19",
+      "author": "Ryan",
+      "date": "2024-01-18T17:14:25Z",
+      "message": "Merge branch 'ros2' into bugfix/51-gh-pages-permissions"
+    },
+    {
+      "sha": "58f60525c3c53a93eb1a446e3012469df990f668",
+      "author": "Jaeyoung Lim",
+      "date": "2024-01-18T15:46:14Z",
+      "message": "[Backport] Align multiple DEMs with TF (#34) (#36)\n\n* [Backport] Align multiple DEMs with TF (#34)"
+    },
+    {
+      "sha": "48230502073699c99645c9644b9b0320a438040f",
+      "author": "Ryan Friedman",
+      "date": "2024-01-18T04:51:03Z",
+      "message": "Upgrade checkout action to latest\n\n* And remove tokens since the repo is now public\n\nSigned-off-by: Ryan Friedman <ryanfriedman5410+github@gmail.com>"
+    },
+    {
+      "sha": "967c31bfc6aef4e286bf6cabe9e0e8296c36b02a",
+      "author": "Ryan Friedman",
+      "date": "2024-01-18T04:46:05Z",
+      "message": "Add write perms to deploy\n\n*\nhttps://github.com/peaceiris/actions-gh-pages?tab=readme-ov-file#%EF%B8%8F-first-deployment-with-github_token\n\nSigned-off-by: Ryan Friedman <ryanfriedman5410+github@gmail.com>"
+    },
+    {
+      "sha": "d7aa3c24a5d9f2d23f446d7c94c860e1b34d2eae",
+      "author": "Ryan Friedman",
+      "date": "2024-01-18T04:44:11Z",
+      "message": "Change to two separate workflows\n\n* Build runs like normal without the deploy\n* Deploy only runs on the ros2 branch\n* Reused workflows: https://docs.github.com/en/actions/using-workflows/reusing-workflows\n\nSigned-off-by: Ryan Friedman <ryanfriedman5410+github@gmail.com>"
+    },
+    {
+      "sha": "d5ee932e5b4de7747dc569fb80cf938d353a84ac",
+      "author": "Ryan Friedman",
+      "date": "2024-01-18T04:37:50Z",
+      "message": "Add write permissions for pages workflow\n\nSigned-off-by: Ryan Friedman <ryanfriedman5410+github@gmail.com>"
+    },
+    {
+      "sha": "c8e6f97f3964f86869d3ca3de033b2a715adea2a",
+      "author": "Ryan Friedman",
+      "date": "2024-01-17T06:48:07Z",
+      "message": "Add README to docs\n\nSigned-off-by: Ryan Friedman <ryanfriedman5410+github@gmail.com>"
+    },
+    {
+      "sha": "7aba7813808037be630133d02b4966dc62682cc1",
+      "author": "Ryan Friedman",
+      "date": "2024-01-17T06:34:13Z",
+      "message": "Ignore generated docs\n\nSigned-off-by: Ryan Friedman <ryanfriedman5410+github@gmail.com>"
+    },
+    {
+      "sha": "d4b94650af3c7d0dbc1715d0cb03efb6851f6ae4",
+      "author": "Ryan Friedman",
+      "date": "2024-01-17T06:20:41Z",
+      "message": "Add Doxygen\n\n* Add basic Doxyfile\n* Add CI to build doxygen docs\n* Add publish\n\nSigned-off-by: Ryan Friedman <ryanfriedman5410+github@gmail.com>"
+    },
+    {
+      "sha": "88d5ea2ef7afcfc288712e732cd8dc5adccb49f5",
+      "author": "Ryan",
+      "date": "2024-01-17T20:32:20Z",
+      "message": "Switch from bind to lambda for timer callback (#43)\n\nSigned-off-by: Ryan Friedman <ryanfriedman5410+github@gmail.com>"
+    },
+    {
+      "sha": "d33b962650f458ba90eb33078d462f16f720ae1e",
+      "author": "Ryan",
+      "date": "2024-01-17T10:17:21Z",
+      "message": "Add missing timestamp for grid_map message (#46)\n\nSigned-off-by: Ryan Friedman <ryanfriedman5410+github@gmail.com>"
+    },
+    {
+      "sha": "aaffb5c93aca179144bafda53c653cfafc360e17",
+      "author": "Ryan",
+      "date": "2024-01-17T10:16:53Z",
+      "message": "Use GDALDatasetUniquePtr (#44)\n\n* The raw pointer was never deleted and was a memory leak\r\n\r\nSigned-off-by: Ryan Friedman <ryanfriedman5410+github@gmail.com>"
+    },
+    {
+      "sha": "14cfed1237950ace6614287a019516b11df552cb",
+      "author": "Ryan",
+      "date": "2024-01-17T10:14:07Z",
+      "message": "Hide GDAL includes (#42)\n\nSigned-off-by: Ryan Friedman <ryanfriedman5410+github@gmail.com>"
+    },
+    {
+      "sha": "ea71232b66acbe50adc00e20c94ceb7919ac1b8b",
+      "author": "Ryan",
+      "date": "2024-01-17T10:12:41Z",
+      "message": "Use std::array over raw array for transforms (#48)\n\nSigned-off-by: Ryan Friedman <ryanfriedman5410+github@gmail.com>"
+    },
+    {
+      "sha": "9674fdb651a242c8cfa7fffc0f5e5278be17a58a",
+      "author": "Ryan",
+      "date": "2024-01-17T08:24:05Z",
+      "message": "Validate projection is valid (#47)\n\n* Without validation, later code may be invalid\r\n\r\nSigned-off-by: Ryan Friedman <ryanfriedman5410+github@gmail.com>"
+    },
+    {
+      "sha": "04b2560377c57058d1acc48b7a69f9a162fac3ca",
+      "author": "Ryan",
+      "date": "2024-01-15T08:42:06Z",
+      "message": "Install resource folder and use correct topic (#40)\n\n* Resource folder needs to be installed, and will be empty for people\r\n  who don't have sargans.tif\r\n* RVIZ was subscribed to the wrong topic because not all map_publisher\r\n  nodes were launched with a namespace\r\n\r\nSigned-off-by: Ryan Friedman <ryanfriedman5410+github@gmail.com>"
+    },
+    {
+      "sha": "341aaa57f90ff472b60c4a348fae7ee297cc0311",
+      "author": "Ryan",
+      "date": "2024-01-14T18:07:34Z",
+      "message": "Add missing rviz plugin dep (#39)\n\nSigned-off-by: Ryan Friedman <ryanfriedman5410+github@gmail.com>"
+    },
+    {
+      "sha": "21675ac5bbc542f825264e4caa3e4f191321d918",
+      "author": "Ryan",
+      "date": "2024-01-14T06:47:16Z",
+      "message": "Support launching with no color when not configured (#41)\n\nSigned-off-by: Ryan Friedman <ryanfriedman5410+github@gmail.com>"
+    },
+    {
+      "sha": "684e62ca5022b065c48218506c6e015a4adc111c",
+      "author": "Jaeyoung Lim",
+      "date": "2024-01-11T20:45:49Z",
+      "message": "Fix path to rviz config (#37)"
+    },
+    {
+      "sha": "e339e1d73cbdfd064133545ddf4cd1c309d7f389",
+      "author": "Jaeyoung Lim",
+      "date": "2023-12-02T20:50:02Z",
+      "message": "Add ROS2 build test (#33)\n\n* Add ROS2 build test\r\n\r\n\r\n\r\n\r\nFix format\r\n\r\n\r\nRemove wstool \r\n\r\n\r\n\r\n\r\nRun with bash\r\n\r\n* Address review comments"
+    },
+    {
+      "sha": "019657400064f71d32ab7c1d20351c38b05c5502",
+      "author": "Jaeyoung Lim",
+      "date": "2023-11-29T08:05:50Z",
+      "message": "Add normal computation (#30)\n\nThis commit adds a normal computation and ports it to ros2 branch"
+    },
+    {
+      "sha": "ef21a5dacb62c801ef5222e76b79fd473e72e84c",
+      "author": "Rhys Mainwaring",
+      "date": "2023-11-13T21:13:02Z",
+      "message": "ros2: update rviz config (#27)\n\nSigned-off-by: Rhys Mainwaring <rhys.mainwaring@me.com>"
+    },
+    {
+      "sha": "5827450ef3f3a7e668e13457f76ad8cc8f5f88ec",
+      "author": "Rhys Mainwaring",
+      "date": "2023-11-08T10:28:23Z",
+      "message": "ros2: remove commented code from test cmake file\n\nSigned-off-by: Rhys Mainwaring <rhys.mainwaring@me.com>"
+    },
+    {
+      "sha": "19f59ae3e1506cdc7e6f214a9dce2a0c6c8479fb",
+      "author": "Rhys Mainwaring",
+      "date": "2023-11-08T10:24:36Z",
+      "message": "ros2: use recommended ament install destinations\n\nSigned-off-by: Rhys Mainwaring <rhys.mainwaring@me.com>"
+    },
+    {
+      "sha": "47cbef7b4206dff68d48e2dc53a19255e4a4c7fa",
+      "author": "Rhys Mainwaring",
+      "date": "2023-11-08T10:08:26Z",
+      "message": "ros2: change ament_target_dependencies from SYSTEM to PUBLIC\n\nSigned-off-by: Rhys Mainwaring <rhys.mainwaring@me.com>"
+    },
+    {
+      "sha": "47746fa0e418cdf666e914293329d7a75154e226",
+      "author": "Ryan Friedman",
+      "date": "2023-10-22T00:25:40Z",
+      "message": "ros2: updates to cmake and launch files to support build on macOS\n\nPort to ROS 2\n\nSigned-off-by: Ryan Friedman <ryanfriedman5410+github@gmail.com>\n\nGet launch file running aside from resources\n\n* Update docs\n* Remove ROS1 cruft\n\nSigned-off-by: Ryan Friedman <ryanfriedman5410+github@gmail.com>\n\n- update gdal include path if __APPLE__\n- consolidate cmake files and install executable\n- update rviz to rviz2 in launch file\n- add arguments and rename python launch file\n- link directory workaround for yaml-cpp on aarch64.\n- update launch files to use correct param name for tif_color_path.\n- CMakeLists.txt improvements.\n- remove target_include_directories for test_tif_loader.\n- add dependency on yaml_cpp_vendor.\n- restore namespace to tif_loader node in launch file.\n- exclude executable from target exports and fix header install directory.\n\nSigned-off-by: Rhys Mainwaring <rhys.mainwaring@me.com>\n\nCo-authored-by: Ryan Friedman <ryanfriedman5410+github@gmail.com>\nCo-authored-by: Rhys Mainwaring <rhys.mainwaring@me.com>"
+    },
+    {
+      "sha": "6eea0ef0c0f3fe14b8bed83257c80a1744f27f8f",
+      "author": "Ryan",
+      "date": "2023-10-30T01:17:31Z",
+      "message": "Port to humble (#24)\n\n* Port to ROS 2\r\n\r\nSigned-off-by: Ryan Friedman <ryanfriedman5410+github@gmail.com>\r\n\r\n* Get launch file running aside from resources\r\n\r\n* Update docs\r\n* Remove ROS1 cruft\r\n\r\nSigned-off-by: Ryan Friedman <ryanfriedman5410+github@gmail.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Ryan Friedman <ryanfriedman5410+github@gmail.com>"
+    },
+    {
+      "sha": "dfb064d688d3f815419866a449688481b847e92c",
+      "author": "Jaeyoung Lim",
+      "date": "2023-10-11T02:57:46Z",
+      "message": "Port grid_map_geo to ROS2\n\nThis commit ports the package into ROS2.\n\nTested on ROS Humble"
+    },
+    {
+      "sha": "64161b8d30b083f362052411e2ca0d6f494bfac3",
+      "author": "JaeyoungLim",
+      "date": "2023-02-25T08:52:15Z",
+      "message": "Always place dem at center of the map (#21)\n\n* Always place dem at center of the map\r\n\r\n\r\n\r\n\r\nF\r\n\r\n\r\nDo not align altitude\r\n\r\n\r\nF\r\n\r\n* remove local origins"
+    },
+    {
+      "sha": "cd568e9ddcc682406cef395cc11bbc35aa4cb137",
+      "author": "JaeyoungLim",
+      "date": "2023-02-15T18:49:01Z",
+      "message": "Add getter for global origin of map (#20)\n\n* Add getter for global origin of map\r\n\r\nThis commit adds a getter for the global origin of the map\r\n\r\n* Fix format"
+    },
+    {
+      "sha": "81465dba3523285d7ac0cd79cfaea8415222f515",
+      "author": "Jaeyoung Lim",
+      "date": "2023-01-28T21:11:21Z",
+      "message": "Fix format"
+    },
+    {
+      "sha": "0ccebf4418412f37211707d544c84e8be468c043",
+      "author": "JaeyoungLim",
+      "date": "2023-01-28T20:32:54Z",
+      "message": "Cleanup distance computations (#19)"
+    },
+    {
+      "sha": "ee75e28fec48badf0aa075f3fd4e7020193b34eb",
+      "author": "JaeyoungLim",
+      "date": "2023-01-28T16:02:53Z",
+      "message": "Set map from an external source (#18)\n\nFix format"
+    },
+    {
+      "sha": "85a57fcd5eb0a6e6bcee06366cd1932ba9e7eeea",
+      "author": "JaeyoungLim",
+      "date": "2023-01-28T16:01:49Z",
+      "message": "Fix distance surface computations (#17)\n\nThis commit corrects the distance surface computation"
+    },
+    {
+      "sha": "4d006571bdd5a1186603a7dd18aecbb7cdb4830d",
+      "author": "JaeyoungLim",
+      "date": "2022-12-20T21:55:04Z",
+      "message": "link gdal to the grid_map_geo library (#15)"
+    },
+    {
+      "sha": "40413c6abfb93c3361d43873dc19869c6904d1b9",
+      "author": "JaeyoungLim",
+      "date": "2022-12-20T21:17:49Z",
+      "message": "Update readme thumbnail"
+    },
+    {
+      "sha": "73e6faeba5418c2d14ac28128e3d97e16a8d75e9",
+      "author": "JaeyoungLim",
+      "date": "2022-12-20T21:15:21Z",
+      "message": "Fix color channels (#14)"
+    },
+    {
+      "sha": "95e74351432d2946d43febdf20032d094f6166db",
+      "author": "JaeyoungLim",
+      "date": "2022-11-28T08:30:19Z",
+      "message": "Add layer from rasterized tif files (#13)\n\nThis commit adds a method to load a layer directly from tif files"
+    },
+    {
+      "sha": "c7950ff434701847c06ed4c1434cdd4221363638",
+      "author": "JaeyoungLim",
+      "date": "2022-11-26T09:06:45Z",
+      "message": "Fix horizontal distance transform (#12)"
+    },
+    {
+      "sha": "d3abb5f6cfe70d1a801a25ce5338eeb39aaa0ea8",
+      "author": "JaeyoungLim",
+      "date": "2022-11-01T09:54:49Z",
+      "message": "Extend distance transform and add horizontal distance transforms (#11)\n\n* Extend distance transform\r\n\r\n* Add horizontal distance transforms"
+    },
+    {
+      "sha": "0451686c8b8807343ef82af8d2d0db498f172551",
+      "author": "JaeyoungLim",
+      "date": "2022-10-01T13:49:33Z",
+      "message": "Add layer with offset from elevation (#10)\n\nThis commit adds a offset layer adding method"
+    },
+    {
+      "sha": "0dd53a5f5bc56acbcc00604ed0af9c4af4676b19",
+      "author": "JaeyoungLim",
+      "date": "2022-09-30T14:14:10Z",
+      "message": "Add explicit inline transforms (#9)"
+    },
+    {
+      "sha": "a9d2e8d4d26c086287275760b9aeba1cc9b9ffdd",
+      "author": "JaeyoungLim",
+      "date": "2022-09-21T23:17:00Z",
+      "message": "Adding documentation and cleaning up GridMapGeo class (#8)\n\n* Generalize distance transform API\r\n\r\n* Cleanup class and document methods\r\n\r\nThis commit documents the methods and cleans up the class\r\n\r\n* Remove calculation of max_elevation when loading geotiff\r\n\r\n* Update readme\r\n\r\n* Fix tests"
+    },
+    {
+      "sha": "52025cee8bdbd09a15942596b406a39f7aebe4c0",
+      "author": "JaeyoungLim",
+      "date": "2022-08-08T11:26:51Z",
+      "message": "Remove color path from launchfile (#7)\n\n* Remove color path from launchfile\r\n\r\n* Remove distance transform when loading dem"
+    },
+    {
+      "sha": "4a14be7084111f822cd6ae852981dfe0d829b570",
+      "author": "JaeyoungLim",
+      "date": "2022-08-08T08:06:04Z",
+      "message": "Add unit tests for grid_map_geo (#3)\n\n* Add unit tests for grid_map_geo\r\n\r\n* Disable tests for elevation"
+    },
+    {
+      "sha": "3d294dd430fa517f899b33d271254d82fc42fb73",
+      "author": "Jaeyoung Lim",
+      "date": "2022-08-08T07:56:42Z",
+      "message": "Fix Readme.txt\n\nFix instructions for using a launchfile"
+    },
+    {
+      "sha": "7f83418adc8cfc70becc6c2073d3a72bd94be26f",
+      "author": "JaeyoungLim",
+      "date": "2022-08-08T07:55:42Z",
+      "message": "Add gridmap loader for tif files (#4)\n\n* Add gridmap loader for tif files\r\n\r\nThis commit adds a test node to read and publish tif files\r\n\r\n* Fix CI"
+    },
+    {
+      "sha": "aa558465873422d49095c87624e45e6360033f5a",
+      "author": "Jaeyoung Lim",
+      "date": "2022-07-10T14:03:14Z",
+      "message": "Add build tests with github actions\n\nThis commit adds build tests using github actions\nAdd build status badges\n\n\nAdd dependencies"
+    },
+    {
+      "sha": "21d48d888c8772411a7c069e2148097cf2eba337",
+      "author": "Jaeyoung Lim",
+      "date": "2022-07-10T13:46:46Z",
+      "message": "Use protected member functions for better inheritance"
+    },
+    {
+      "sha": "232a3beea3e9a90df5ce5cfd729a1e8e92771558",
+      "author": "Jaeyoung Lim",
+      "date": "2022-07-05T14:28:12Z",
+      "message": "Add gridmap geo\n\nThis commit adds the grid_map geo as a sepearate package"
+    },
+    {
+      "sha": "bdf63835344ea158569ce85a03fb2f3749b4f496",
+      "author": "JaeyoungLim",
+      "date": "2022-04-23T11:34:57Z",
+      "message": "Initial commit"
+    }
+  ]
+}

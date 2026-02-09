@@ -1,0 +1,654 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-07T01:20:15Z",
+    "source": "github_rest",
+    "endpoint": "/repos/{owner}/{repo}/commits",
+    "owner": "rt-net",
+    "repo": "raspimouse_sim",
+    "per_page": 100
+  },
+  "data": [
+    {
+      "sha": "9614484b571d2212a5c1cb93aa176435a154016d",
+      "author": "YusukeKato",
+      "date": "2026-02-05T10:20:46Z",
+      "message": "launchファイルのリファクタリング (#85)\n\n* コントローラはNodeで起動。Nodeの引数の順序を整理。ruffで自動整形\n\n* 手動でもCIを実行できるように設定\n\n* Revert \"手動でもCIを実行できるように設定\"\n\nThis reverts commit 9d9cb1463766a67308e56f17807cf7a925ed2b92."
+    },
+    {
+      "sha": "8367ca81eafb37b6720ce5b1527d548321c2e4fa",
+      "author": "Kazushi Kurasawa",
+      "date": "2026-02-05T10:19:18Z",
+      "message": "README更新 (#86)\n\n* init commit\n\n* パッケージ説明追加と目次の修正\n\n* エスケープシーケンス修正\n\n* Gazeboパッケージの説明修正\n\n* raspimoujse_gazeboにREADMEの一部を移植\n\n* 目次の過剰なリンクを削除\n\n* 一時的なREADMEを削除\n\n* 英語版のREADMEを整備\n\n* READMEのフォーマット不備を修正\n\n* READMEのtypoや表現の修正\n\n* ドキュメンの表現やtypoの修正\n\n* raspimouse_gazeboへのREADMEリンクを追加\n\n* 注釈の位置を変更\n\n* Revert \"注釈の位置を変更\"\n\nThis reverts commit e009e431719c89f445012a30d8a660d460895107.\n\n* 目次からパッケージとサンプルの小項目を削除\n\n* 「実行し」と「実行すると」の表現が混在していたので、「実行し」に統一\n\n* Update raspimouse_gazebo/README.md\n\nCo-authored-by: YusukeKato <YusukeKato@users.noreply.github.com>\n\n* 「表示します」の表現に統一\n\n* 「床に書かれた黒いライン」で冗長な「床に書かれた」を削除しました。\n\n* RaspimouseをRaspberry Pi Mouseという表現に変更\n\nCo-authored-by: YusukeKato <YusukeKato@users.noreply.github.com>\n\n* 英語版のREADMEに、SLAM & Nabigatgionの概要説明を追加\n\n* Update raspimouse_gazebo/README.md\n\nCo-authored-by: YusukeKato <YusukeKato@users.noreply.github.com>\n\n* Update raspimouse_gazebo/README.en.md\n\nCo-authored-by: Kuwamai <kuwagata@rt-net.jp>\n\n* サンプルごとに区切りとサンプル一覧へのバック機能追加\n\n* How to Use Examplesの一覧名を修正\n\n* リポジトリトップのREADMEにあるサンプルリストに対し、サンプルのリストであることを明示\n\n---------\n\nCo-authored-by: YusukeKato <YusukeKato@users.noreply.github.com>\nCo-authored-by: Kuwamai <kuwagata@rt-net.jp>"
+    },
+    {
+      "sha": "789dd4d8fceea5d67ac313c316410140afced849",
+      "author": "Kazushi Kurasawa",
+      "date": "2024-11-29T07:49:48Z",
+      "message": "Update changelog and version (#84)"
+    },
+    {
+      "sha": "9e97ae481fcf3f5f89c59ceb16b635c63028c337",
+      "author": "Kazushi Kurasawa",
+      "date": "2024-11-29T06:59:30Z",
+      "message": "ドキュメント内のコマンドを修正 (#83)\n\n* Fixed commands\r\n\r\n* Update README.en.md\r\n\r\nCo-authored-by: YusukeKato <YusukeKato@users.noreply.github.com>\r\n\r\n* Update README.md\r\n\r\nCo-authored-by: YusukeKato <YusukeKato@users.noreply.github.com>\r\n\r\n---------\r\n\r\nCo-authored-by: YusukeKato <YusukeKato@users.noreply.github.com>"
+    },
+    {
+      "sha": "1d8709e951d0f1846dd6fdcb5f16951a72ddda41",
+      "author": "Kazushi Kurasawa",
+      "date": "2024-11-26T01:50:40Z",
+      "message": "Fixed version and Add author (#82)"
+    },
+    {
+      "sha": "84ad21b39c4fd3d7e873885be2c0350e30634444",
+      "author": "Kazushi Kurasawa",
+      "date": "2024-11-26T01:05:07Z",
+      "message": "Update version and CHANGELOG (#81)"
+    },
+    {
+      "sha": "e3c8283638daeaf947155a60eb4103489e6db497",
+      "author": "Kazushi Kurasawa",
+      "date": "2024-11-25T06:23:29Z",
+      "message": "ROS 2 Jazzy対応 (#80)\n\n* update 1 launch file to migrate from Ignition to Gazebo\r\n\r\n* update APIs in \"empty_world.sdf\" to migrate from Ignition to Gazebo\r\n\r\n* update APIs in \"color_objects_world.sdf\" to migrate from Ignition to Gazebo\r\n\r\n* fix: missed updates in \"color_objects_world.sdf\" for migration from Ignition to Gazebo\r\n\r\n* update APIs in \"line_follower_field1.sdf\" to migrate from Ignition to Gazebo\r\n\r\n* update \"ROS_DISTRO\" in \"industrial_ci.yml\" to migrate from Humble to Juzzy\r\n\r\n* update APIs in \"lakehouse.sdf\" to migrate from Ignition to Gazebo\r\n\r\n* replace \"ignition-gui\" to \"gz-gui\" in \"gui.config\" to from Ignition to Gazebo\r\n\r\n* Update README files for Jazzy\r\n\r\n* Add Author\r\n\r\n* Change CI syntax\r\n\r\n* Add CI settings with rosinstall\r\n\r\n* Add supplements\r\n\r\n* Add \"$\" for commands\r\n\r\n* Add note for other distoributions\r\n\r\n* Add notes for samples\r\n\r\n* Fix link\r\n\r\n* Adapted Jazzy code style\r\n\r\n* Updated Copyright years\r\n\r\n* Add Author\r\n\r\n* Fix Indent and replace .h with .hpp for visibility_control\r\n\r\n* Removed the '$' symbol at the beginning of the command.\r\n\r\n* Replaced the branch name in the command from 'ros2' to 'jazzy'"
+    },
+    {
+      "sha": "73b465e0d8c5248a9af203e24f4b2ecb5b2a9249",
+      "author": "YusukeKato",
+      "date": "2024-03-05T10:09:08Z",
+      "message": "2.1.0リリースのためにCHANGELOG.rstとpackage.xmlを更新 (#78)\n\n* リリースのためにCHANGELOG.rstを更新\r\n\r\n* 2.1.0"
+    },
+    {
+      "sha": "90fd4309fb67bd82ef03a198e6e9af8429b73adf",
+      "author": "YusukeKato",
+      "date": "2024-02-22T09:47:08Z",
+      "message": "シミュレータ環境でSLAMとNavigationを実行 (#77)\n\n* LakeHouseのモデルをワールドに配置\r\n\r\n* bridgeにscanトピックを追加\r\n\r\n* センサのプラグインを追加\r\n\r\n* READMEにカメラライントレースとSLAM&Navigationの実行方法を追記\r\n\r\n* lakehouseワールドに30cmの黒いキューブを複数配置\r\n\r\n* READMEに画像を追加\r\n\r\n* 不足していた依存関係を追加\r\n\r\n* コピペできるようにコマンドを修正\r\n\r\nCo-authored-by: Shota Aoki <s.aoki@rt-net.jp>\r\n\r\n* 引数mapの説明を修正\r\n\r\nCo-authored-by: Shota Aoki <s.aoki@rt-net.jp>\r\n\r\n* Copyrightの文面を修正\r\n\r\nCo-authored-by: Shota Aoki <s.aoki@rt-net.jp>\r\n\r\n* 英語版READMEのコマンドもコピペできるように修正\r\n\r\n---------\r\n\r\nCo-authored-by: Shota Aoki <s.aoki@rt-net.jp>"
+    },
+    {
+      "sha": "ef26922d09ac3433a8b7d0300c451e04f0cb0b3f",
+      "author": "YusukeKato",
+      "date": "2023-12-06T09:30:20Z",
+      "message": "コントローラのパラメータを調整してオドメトリのズレを修正 (#76)"
+    },
+    {
+      "sha": "825e683b50fc88c96645e2ede26e95b0336eb0b1",
+      "author": "YusukeKato",
+      "date": "2023-11-21T08:53:28Z",
+      "message": "camera_downwardがtrueのときRGBカメラが斜め下を向くように変更 (#75)\n\n* camera_downwardがtrueのときRGBカメラが斜め下を向くように変更\r\n\r\n* camera_downwardの説明を修正\r\n\r\nCo-authored-by: Shota Aoki <s.aoki@rt-net.jp>\r\n\r\n---------\r\n\r\nCo-authored-by: Shota Aoki <s.aoki@rt-net.jp>"
+    },
+    {
+      "sha": "78b5a5159770f8304c972a3b0eed93cbd63fff77",
+      "author": "YusukeKato",
+      "date": "2023-11-17T02:11:15Z",
+      "message": "ライントレース用のコースを作成 (#74)\n\n* ライントレース用のコースを作成\r\n\r\n* コースを地面より0.01浮かせる\r\n\r\n* 動作周期を修正\r\n\r\nCo-authored-by: Shota Aoki <s.aoki@rt-net.jp>\r\n\r\n* ラズパイマウスの初期位置を指定する引数を追加\r\n\r\n* ラズパイマウスの初期位置をlaunchファイルから指定できるように変更\r\n\r\n* モデル作成者の名前を変更\r\n\r\n* blenderのモデルの作成者を変更\r\n\r\n* コースモデルの大きさを修正\r\n\r\n* コースモデルのスケールを修正\r\n\r\n* コースモデルの作成者名を変更\r\n\r\n* パネルの寸法が分かる名称に変更\r\n\r\n* ワールド名を柔軟なものに変更\r\n\r\n* 線の幅を4cmに変更\r\n\r\n* READMEにモデル一覧を追加\r\n\r\n---------\r\n\r\nCo-authored-by: Shota Aoki <s.aoki@rt-net.jp>"
+    },
+    {
+      "sha": "1c9901b5bad4548409d44ff6378b3a4f704295f7",
+      "author": "YusukeKato",
+      "date": "2023-11-07T08:38:53Z",
+      "message": "2.0.0リリースのためにCHANGELOG.rstとpackage.xmlを更新 (#73)\n\n* リリースのためにCHANGELOG.rstを更新\r\n\r\n* 2.0.0\r\n\r\n* CHANGELOG.rstを修正"
+    },
+    {
+      "sha": "df4d1448329b4cbead8b6429f201ed998f654b94",
+      "author": "YusukeKato",
+      "date": "2023-11-06T02:27:48Z",
+      "message": "READMEをROS 2の情報に更新 (#72)\n\n* READMEの文章をROS 2版に修正\r\n\r\n* READMEに画像を追加\r\n\r\n* クイックスタートの説明を修正\r\n\r\nCo-authored-by: Shota Aoki <s.aoki@rt-net.jp>\r\n\r\n* 英語版READMEのQuickStartの説明を修正\r\n\r\n---------\r\n\r\nCo-authored-by: Shota Aoki <s.aoki@rt-net.jp>"
+    },
+    {
+      "sha": "4f01f6d2ca6838ea715a09116680d3e0746d3e78",
+      "author": "YusukeKato",
+      "date": "2023-10-27T02:16:42Z",
+      "message": "Gazebo上で画像トピックを配信できるようにbridgeを設定 (#71)\n\n* 画像トピックを配信\r\n\r\n* sdfの変更を削除\r\n\r\n* 画像トピックの名前を変更\r\n\r\n* RVizで画像トピックを表示"
+    },
+    {
+      "sha": "1f14c7f2ced64928364917f902d4f6ff60db533d",
+      "author": "YusukeKato",
+      "date": "2023-10-25T04:28:42Z",
+      "message": "カメラサンプル用のcolor_objects_worldを作成 (#70)\n\n* RGBカメラのモデルを搭載したラズパイマウスを表示\r\n\r\n* 空のワールドに赤青緑黄の箱を配置\r\n\r\n* cubeのmodelファイルを作成\r\n\r\n* launchファイルにworld_name引数を追加\r\n\r\n* world_name引数を正常に使用できるように修正\r\n\r\n* color_objects.launch.pyからemptyworld.launch.pyを実行するように変更\r\n\r\n* cubeのmodelのauthorを変更"
+    },
+    {
+      "sha": "4249b47252119d8ac5f9a4626df9baf31fbba9db",
+      "author": "YusukeKato",
+      "date": "2023-10-16T01:27:47Z",
+      "message": "シミュレータ環境に擬似的なラズパイマウスノードを追加 (#69)\n\n* 擬似的なラズパイマウスノードに必要なファイルを用意\r\n\r\n* 擬似的なラズパイマウスノードの起動に成功\r\n\r\n* 依存関係にstr_srvsを追加\r\n\r\n* ラズパイマウスノードの名前を変更\r\n\r\n* 状態遷移のログの文章を修正\r\n\r\n* lifecycle_node_manager.cppを削除\r\n\r\n* std_srvsを追加\r\n\r\nCo-authored-by: Shota Aoki <s.aoki@rt-net.jp>\r\n\r\n* lifecycle_msgsを追加\r\n\r\n* 表示するトピックをodomに変更\r\n\r\n---------\r\n\r\nCo-authored-by: Shota Aoki <s.aoki@rt-net.jp>"
+    },
+    {
+      "sha": "415f7b3fba56f525185a0899a2caf95e6f602e20",
+      "author": "YusukeKato",
+      "date": "2023-10-05T04:09:51Z",
+      "message": "controller managerノードにプラグインを追加するように変更 (#68)\n\n* パラメータファイルを追加\r\n\r\n* controller_managerを使用するように変更\r\n\r\n* ラズパイマウスのパラメータを初期値に戻す\r\n\r\n* RViz上にロボットモデルとオドメトリを表示するように設定"
+    },
+    {
+      "sha": "c7862f3ba3c542d7229086dbeef64f082f704c6e",
+      "author": "YusukeKato",
+      "date": "2023-09-22T06:37:02Z",
+      "message": "robot_description_lodarを使用するように変更 (#67)"
+    },
+    {
+      "sha": "81eff12526fb38e7da97f70c8a25c21616a10130",
+      "author": "YusukeKato",
+      "date": "2023-09-11T08:20:41Z",
+      "message": "ROS 2 Humble環境のraspimouse_with_emptyworld.launch.pyを実装 (#66)\n\n* Humble環境でビルドが通るように各ディレクトリを整理\r\n\r\n* Gazebo上の空のワールドにラズパイマウスを配置できる\r\n\r\n* CIの情報を修正\r\n\r\n* gazeboパッケージの依存関係を修正\r\n\r\n* CIのテストが通るようにpackage.xmlを修正&ライセンス文を追加\r\n\r\n* .ci.rosinstallファイルを削除\r\n\r\n* CIの設定を変更\r\n\r\n* fuel.ignitionroboticsをfuel.gazebosimに変更"
+    },
+    {
+      "sha": "1517a63d185362df70c917ba168c7fbc0e56594a",
+      "author": "YusukeKato",
+      "date": "2023-08-22T07:59:28Z",
+      "message": "noetic対応のために情報を更新 (#65)"
+    },
+    {
+      "sha": "1cfa485525bce2756153da3af75b700fdbd815ac",
+      "author": "Daisuke Sato",
+      "date": "2022-03-22T01:28:46Z",
+      "message": "Update README (#63)\n\nDrop kinetic support\r\nFix typo"
+    },
+    {
+      "sha": "2ad4d35cb0be9e1909d62b9aef18fdde09146c9b",
+      "author": "Shota Aoki",
+      "date": "2021-10-12T10:38:59Z",
+      "message": "Fix CMakeLists.txt to support both python2 and 3 (#62)"
+    },
+    {
+      "sha": "3b63a4b750366382143f8e1823a66c4a495e9f72",
+      "author": "Daisuke Sato",
+      "date": "2021-09-28T07:42:26Z",
+      "message": "Add urg on/off option and lidar frame rename option (#57)\n\n* Add xacro option arg to every launch to support lidar option\r\n\r\n* Fix default value\r\n\r\n* Support lidar_frame rename option\r\n\r\n* Remove unused arg\r\n\r\n* Add arg for backward compatibility"
+    },
+    {
+      "sha": "84ba0128ed137a0c23a1aea005b7cd23a8b96a25",
+      "author": "Shuhei Kozasa",
+      "date": "2021-09-22T08:45:41Z",
+      "message": "Add LaserScan topic to RViz configuration file (#59)"
+    },
+    {
+      "sha": "3fecf379b74b79b3d00b821bfd33b880e6c69663",
+      "author": "Daisuke Sato",
+      "date": "2020-12-08T02:46:30Z",
+      "message": "Add keyboard teleop lauch (#56)"
+    },
+    {
+      "sha": "6bf7d2d58bd1d6d8f3e2d0afa8b25923c82b1738",
+      "author": "Daisuke Sato",
+      "date": "2020-11-10T04:34:23Z",
+      "message": "Update README (#54)\n\n* Update README\r\n\r\n* Update README\r\n\r\n* Add URL\r\n\r\n* Update README\r\n\r\n* Update Acknowledgements\r\n\r\n* Update installation"
+    },
+    {
+      "sha": "3e004f1ea89fae22dee34a96e41522dd02c3e3fa",
+      "author": "Daisuke Sato",
+      "date": "2020-11-09T04:51:05Z",
+      "message": "Update namespace to fix odom tf error (#55)\n\n* Update namespace to fix odom tf error\r\n\r\n* Remove duplicates\r\n\r\n* Define robot_namespace for xacro manually"
+    },
+    {
+      "sha": "7ca2943816094a5e89e0916e323dea92fe9fec80",
+      "author": "Daisuke Sato",
+      "date": "2020-10-23T08:06:24Z",
+      "message": "Use DiffDriveController defined in xacro to simplify raspimouse_gazebo (#53)\n\n* Fix diff_drive_controller settings\r\n\r\ndetails: #21\r\n\r\n* Remove image files from repository\r\n\r\n* Use DiffDriveController defined in xacro\r\n\r\n* Use xacro instead of xacro.py\r\n\r\n* Remove external package from meta package config\r\n\r\n* Fix namespace error\r\n\r\n* Set no lidar on samplemaze\r\n\r\n* Refactor device file simulation\r\n\r\n* Fix source package not found\r\n\r\n* Add teleop launch\r\n\r\n* Fix merge error\r\n\r\nac1585f1878a98fd546b26e3f58f10a5739ea9ab\r\n\r\n* Fix typo\r\n\r\n* Remove not-used script\r\n\r\n* Update README\r\n\r\n* Support sum_all, sum_forward\r\n\r\n* Fix package.xml\r\n\r\n* Fix package.xml"
+    },
+    {
+      "sha": "ae1c9ddc7543a944ba11923f0401e7e99c7839fa",
+      "author": "Daisuke Sato",
+      "date": "2020-10-19T02:45:17Z",
+      "message": "Remove image files from repository (#52)"
+    },
+    {
+      "sha": "2acb10e5a9210108f58871c624d8bef5eab25d3e",
+      "author": "Daisuke Sato",
+      "date": "2020-10-19T02:41:29Z",
+      "message": "Disable shadows by default (#51)"
+    },
+    {
+      "sha": "d77fe5b125adbbfbca266d37fa66eb2b5c4326ea",
+      "author": "Shota Aoki",
+      "date": "2020-06-24T05:03:32Z",
+      "message": "Change default value of rtswitch0,1,2 (#49)"
+    },
+    {
+      "sha": "cf08c3d8517357d95f55867162b602b3101952e9",
+      "author": "Daisuke Sato",
+      "date": "2020-06-05T00:55:26Z",
+      "message": "Refactor XML format files (#43)"
+    },
+    {
+      "sha": "de8cb1fa6719fa13f07b50293adfce1d1b9f6d62",
+      "author": "Daisuke Sato",
+      "date": "2020-06-03T02:00:54Z",
+      "message": "Add an office-like Gazebo world sample (#46)\n\n* Add raspimouse with willowgarage launch\r\n\r\n* Use local .world file to enable using modified settings\r\n\r\nThis .world file is optional.\r\nGazebo can load .wolrd file from /usr/share/gazebo-*/world/.\r\n\r\n* Fix model path\r\n\r\n* Add use_devfile option, added by PR #34\r\n\r\n* Update initial camera position\r\n\r\nCo-authored-by: yukixx6 <s1526707DA@s.chibakoudai.jp>"
+    },
+    {
+      "sha": "87c77692b600e4f95c6657ae25d60619e25364d6",
+      "author": "Daisuke Sato",
+      "date": "2020-06-03T01:45:55Z",
+      "message": "Replace deprecated xacro parser (#45)\n\nrelated issue: https://github.com/rt-net/raspimouse_sim/issues/18"
+    },
+    {
+      "sha": "a8d2ba5bdb11a248f46c708fe62b172c91316800",
+      "author": "Daisuke Sato",
+      "date": "2020-06-03T01:29:59Z",
+      "message": "Add Gazebo model download script (#47)\n\n* Add Gazebo model download script\r\n\r\n* Add download_gazebo_models.sh to installation step\r\n\r\n* Refactor"
+    },
+    {
+      "sha": "6aa60f3859f6ccd4fd12192a17620b767ddf8829",
+      "author": "Daisuke Sato",
+      "date": "2020-05-25T04:00:47Z",
+      "message": "Remove raspimouse_description which is moved to another repository (#42)\n\n* Remove description package which is moved to another repository\r\n\r\n* Update installation step for separate package\r\n\r\n* Update CI for description package"
+    },
+    {
+      "sha": "625b342be388141619e46364b43b60be04df8391",
+      "author": "Daisuke Sato",
+      "date": "2020-05-21T01:38:52Z",
+      "message": "Migrate package.xml to Format 2 (#41)\n\n* Migrate package.xml to Format 2\r\n\r\n* Fix package.xml format error\r\n\r\n* Fix package.xml format\r\n\r\nmetapackage can contain only buildtool_depend and exec_depend\r\n\r\n* Add deps used in launch files\r\n\r\n* Revert update for deprecated package\r\n\r\n* Add deps used in scripts"
+    },
+    {
+      "sha": "7f001794bd6e39454467840cd88bd54495c4a789",
+      "author": "Daisuke Sato",
+      "date": "2020-04-21T06:21:46Z",
+      "message": "ci: Migrate to GitHub Actions (#39)\n\n* ci: Migrate to GitHub Actions\r\n\r\n* ci: Fix typo\r\n\r\n* ci: Fix error handling\r\n\r\nhttps://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idcontinue-on-error\r\n\r\n* ci: Fix continue-on-error condition"
+    },
+    {
+      "sha": "7c74f5ec2eecafc329386eecd1c178a51781e9b7",
+      "author": "Shota Aoki",
+      "date": "2020-02-20T07:07:42Z",
+      "message": "Add use_devfile argumet to launch files to make virtual device file optional (#34)\n\n* Add use_devfile argument to launch simulator without virtual files\r\n\r\n* Add use_devfile argument to gasstand.launch\r\n\r\n* Add use_devfile argument and fix some description to launch nodes"
+    },
+    {
+      "sha": "dd513b44e62540e46d81f66a717a88ee8227832a",
+      "author": "Shota Aoki",
+      "date": "2020-02-20T05:29:07Z",
+      "message": "fix raspimouse_with_empetyworld.launch to load robot descrption (#35)"
+    },
+    {
+      "sha": "1de8bbadea45664b83b74e7075b40e451ea200ba",
+      "author": "Daisuke Sato",
+      "date": "2020-02-20T05:24:27Z",
+      "message": "パッケージの説明を更新 (#31)\n\n* Update description\r\n\r\n* Sort status badges\r\n\r\n* Update Japanese docs"
+    },
+    {
+      "sha": "6115fac1ebc05c35d79d0aab94c4fe858b028e77",
+      "author": "Shota Aoki",
+      "date": "2020-02-20T04:48:45Z",
+      "message": "Add an index to each wall model name for fixing #26 (#32)"
+    },
+    {
+      "sha": "d2c44b287237f1d0a3deb7e8e73b31bf67a947c9",
+      "author": "Shota Aoki",
+      "date": "2020-02-17T01:02:14Z",
+      "message": "Merge pull request #33 from rt-net/update_travis_to_bionic\n\nupdate travis.yml for master & melodic branch"
+    },
+    {
+      "sha": "a464fe47714423ac5e27fb4fa3ba46a6aa825a9a",
+      "author": "ShotaAk",
+      "date": "2020-02-14T05:04:20Z",
+      "message": "update travis.yml for melodic branch"
+    },
+    {
+      "sha": "eedb23ee3d8f0ac25ffa4754880c1487317c057d",
+      "author": "Tiryoh",
+      "date": "2018-06-04T12:02:06Z",
+      "message": "Update README"
+    },
+    {
+      "sha": "c2c03fc6bf5c168b9dda5cc61c684765f04b11a5",
+      "author": "Tiryoh",
+      "date": "2018-05-22T11:04:55Z",
+      "message": "Refactor package.xml"
+    },
+    {
+      "sha": "17a9d5297c6e4c2d096c716bc86010ce483af6dc",
+      "author": "Tiryoh",
+      "date": "2018-04-25T15:02:01Z",
+      "message": "Merge branch 'indigo-devel' into kinetic-devel"
+    },
+    {
+      "sha": "053b094da0fdad6f79b530110fa8fd7e84494740",
+      "author": "Tiryoh",
+      "date": "2018-04-25T15:00:59Z",
+      "message": "Fix typo"
+    },
+    {
+      "sha": "c4efa628dbc1df7268583747959c456edd3e8cc7",
+      "author": "Tiryoh",
+      "date": "2018-04-25T09:29:38Z",
+      "message": "Merge branch 'indigo-devel' into kinetic-devel"
+    },
+    {
+      "sha": "ee8e47c6fb13e6f36d45be79843e76fdf8aaadc8",
+      "author": "Tiryoh",
+      "date": "2018-04-25T09:03:12Z",
+      "message": "Fix \"variable referenced before assignment\" error"
+    },
+    {
+      "sha": "025c40eec5ec60dcc13054641a2c6b23c29ee414",
+      "author": "Tiryoh",
+      "date": "2018-04-24T16:18:33Z",
+      "message": "Merge branch 'indigo-devel' into kinetic-devel"
+    },
+    {
+      "sha": "91680fab2933be351ab2c175aee825de4a5282bf",
+      "author": "Tiryoh",
+      "date": "2018-04-24T16:07:00Z",
+      "message": "Update to be independent of raspimouse_ros #7"
+    },
+    {
+      "sha": "31c83bb008685b39e3bb00ea81385afc3f7605aa",
+      "author": "Tiryoh",
+      "date": "2018-04-24T16:06:20Z",
+      "message": "Update gitignore"
+    },
+    {
+      "sha": "5c000a6613a7959097522b7b76ab954119c304ad",
+      "author": "Tiryoh",
+      "date": "2018-04-24T11:57:21Z",
+      "message": "Add comment to python script"
+    },
+    {
+      "sha": "738bc82472ea27f253d273c5b29586e60a880e95",
+      "author": "Tiryoh",
+      "date": "2018-04-24T11:57:21Z",
+      "message": "Add comment to python script"
+    },
+    {
+      "sha": "b4a3cd13adf2d18b18acc09cb94abd4ecd548424",
+      "author": "Tiryoh",
+      "date": "2018-04-24T08:56:39Z",
+      "message": "Update README"
+    },
+    {
+      "sha": "51b9c04aaa7df9f7b4e7ec2a7e19ea37a2b2a2e8",
+      "author": "Tiryoh",
+      "date": "2018-04-24T08:55:04Z",
+      "message": "Update README"
+    },
+    {
+      "sha": "ab61276a9e17dc09175f718347d3025324d3b901",
+      "author": "Daisuke Sato",
+      "date": "2018-04-23T08:14:40Z",
+      "message": "Merge pull request #16 from Tiryoh/hotfix\n\nFix lightsensor scan error (scan topic empty)"
+    },
+    {
+      "sha": "0e75192507d3d1e10cd361627937235404883fca",
+      "author": "Daisuke Sato",
+      "date": "2018-04-23T08:06:01Z",
+      "message": "Merge pull request #15 from Tiryoh/spike\n\nRefactor package"
+    },
+    {
+      "sha": "18112a3461d722a9b45125caab2a49987b477327",
+      "author": "Tiryoh",
+      "date": "2018-04-23T07:09:27Z",
+      "message": "Fix lightsensor scan error (scan topic empty)\n\nhttps://github.com/rt-net/raspimouse_sim/issues/5"
+    },
+    {
+      "sha": "cf4597b2ba96d69143aa285e5f03bfbde28a76ad",
+      "author": "Tiryoh",
+      "date": "2018-04-23T06:33:41Z",
+      "message": "Refactor package"
+    },
+    {
+      "sha": "b68c4e5067b6b2db354a2fe7d62a7db33f7d384e",
+      "author": "Tiryoh",
+      "date": "2018-03-21T04:03:31Z",
+      "message": "Update dependencies in package.xml\n\nhttps://github.com/ryuichiueda/raspimouse_sim_installer/commit/efc6795c72e2a632fbad5fa26e31f2250904f35a#diff-95ed54bd44e1f2d0531683c0b1a94849R26"
+    },
+    {
+      "sha": "091e460180212eede7518f0f145fee0c9c27815d",
+      "author": "Daisuke Sato",
+      "date": "2018-04-20T13:04:20Z",
+      "message": "Merge pull request #14 from yukixx6/spike\n\nFixed bug #14"
+    },
+    {
+      "sha": "6774e8070648a605824d81f450bfec845feadab6",
+      "author": "yukixx6",
+      "date": "2018-04-20T09:34:16Z",
+      "message": "Fixed bug"
+    },
+    {
+      "sha": "04046c44297b3ced0d7488afa8fe0335921dd04b",
+      "author": "Daisuke Sato",
+      "date": "2018-04-16T10:03:40Z",
+      "message": "Merge pull request #13 from yukixx6/spike\n\nFixed bug #12"
+    },
+    {
+      "sha": "d525d1fb0e4e50d6039be488f021481b2c92b02f",
+      "author": "Daisuke Sato",
+      "date": "2018-04-16T09:59:40Z",
+      "message": "Merge branch 'indigo-devel' into spike"
+    },
+    {
+      "sha": "224d8f4c6a64b2c1db79dad3a9f112ca3b5e7ba4",
+      "author": "yukixx6",
+      "date": "2018-04-16T09:53:15Z",
+      "message": "Fixed bug"
+    },
+    {
+      "sha": "8bd41a27eb1e8458400a44682d55a0737296d1c0",
+      "author": "Tiryoh",
+      "date": "2018-03-21T10:37:24Z",
+      "message": "Merge pull request #10 from yukixx6/spike"
+    },
+    {
+      "sha": "0bbff29acbfc4437eedbcc343abe7395f9adbd62",
+      "author": "yukixx6",
+      "date": "2018-02-27T13:28:02Z",
+      "message": "Fix failing sound_module"
+    },
+    {
+      "sha": "272fbad367c7ddbb53a285c19d65cce3299f48bd",
+      "author": "Daisuke Sato",
+      "date": "2018-01-30T06:29:32Z",
+      "message": "Merge pull request #11 from Tiryoh/spike\n\nFix file name and variable name"
+    },
+    {
+      "sha": "70a3b29c73db68c49500472a6a602486407485ee",
+      "author": "Tiryoh",
+      "date": "2017-11-08T09:21:01Z",
+      "message": "Fix 'model.config file is missing' error\n\nAdd model.config"
+    },
+    {
+      "sha": "33a6f9971becf548a41e2b5c6ee7f605d2ba5fe7",
+      "author": "Tiryoh",
+      "date": "2017-11-08T09:18:56Z",
+      "message": "Fix variable name"
+    },
+    {
+      "sha": "e3d82ec2edfaca175f0ce613e6dce9423dfbf6ee",
+      "author": "Tiryoh",
+      "date": "2017-11-08T09:16:04Z",
+      "message": "Correct typo"
+    },
+    {
+      "sha": "a8bf818162aee76add54f18783d6838e0c14aa45",
+      "author": "yukixx6",
+      "date": "2018-01-16T05:43:12Z",
+      "message": "Add quickstart"
+    },
+    {
+      "sha": "d369d347ad8efc665c649b4c33e78c53a74fb283",
+      "author": "yukixx6",
+      "date": "2018-01-16T05:26:00Z",
+      "message": "Enable motorswitch"
+    },
+    {
+      "sha": "3a2ea5c0d7df88e79494156fe7cb8eace5bdca6f",
+      "author": "Daisuke Sato",
+      "date": "2017-11-22T11:28:53Z",
+      "message": "Merge pull request #9 from yukixx6/spike\n\nAdd virtual_motors #3"
+    },
+    {
+      "sha": "1000c5cd8855cc9d04d6fa5d7d7f8d320c5d6289",
+      "author": "yukixx6",
+      "date": "2017-11-22T11:03:51Z",
+      "message": "Add virtual_motors"
+    },
+    {
+      "sha": "aa90d8d032a2ffa51fa5f756322fdad6d1e1386c",
+      "author": "Daisuke Sato",
+      "date": "2017-11-22T10:11:06Z",
+      "message": "Merge pull request #8 from Tiryoh/spike\n\nsupport device file of lightsensors #3, #6"
+    },
+    {
+      "sha": "b98b5f10faafede473a568f611e9bf71c2be6546",
+      "author": "Tiryoh",
+      "date": "2017-11-22T08:48:27Z",
+      "message": "Simpify README"
+    },
+    {
+      "sha": "1e81b481207adaf01c4e8a276c46367794d05b6a",
+      "author": "Tiryoh",
+      "date": "2017-08-14T16:50:12Z",
+      "message": "Fix TravisCI boot error"
+    },
+    {
+      "sha": "f01dfb75719a415bec9c108172ffa0c3c8b060ec",
+      "author": "Tiryoh",
+      "date": "2017-08-14T16:45:57Z",
+      "message": "Update robot namespace\n\nAll nodes depends on gazebo are now in /raspimouse_on_gazebo"
+    },
+    {
+      "sha": "c16a0a3463f49bf8d7a366f63a40f7e857fc0be3",
+      "author": "Tiryoh",
+      "date": "2017-08-14T10:18:23Z",
+      "message": "Update lightsensor topic name"
+    },
+    {
+      "sha": "0e925dfc8adfe18b317b6a1b978f564042c3cfbe",
+      "author": "Tiryoh",
+      "date": "2017-08-13T17:25:53Z",
+      "message": "Add lightsensor device-file"
+    },
+    {
+      "sha": "0bfb31feeb171ab0c81c050ecca0f09900e4574f",
+      "author": "Tiryoh",
+      "date": "2017-08-13T17:15:07Z",
+      "message": "Refactoring to reduce warning"
+    },
+    {
+      "sha": "7e10d6361c4813896ecbbf93d5db78f60c62bad0",
+      "author": "Tiryoh",
+      "date": "2017-08-10T10:38:22Z",
+      "message": "Add link to Wiki"
+    },
+    {
+      "sha": "404a184913cda0aaf6728f51d0517e6e003666d6",
+      "author": "Tiryoh",
+      "date": "2017-07-30T06:04:09Z",
+      "message": "Add TravisCI badge to README"
+    },
+    {
+      "sha": "6b5bc465fde861ab1310684963b1b2847177b022",
+      "author": "Tiryoh",
+      "date": "2017-07-28T13:05:11Z",
+      "message": "Add raspimouse install test to TravisCI settings"
+    },
+    {
+      "sha": "26929909a95771f1a93e77ace50cfbb5013540af",
+      "author": "Tiryoh",
+      "date": "2017-07-21T14:20:10Z",
+      "message": "Fix TravisCI error"
+    },
+    {
+      "sha": "767745c32e7a2f13b76f0ad5d6ab49bf7497b4ae",
+      "author": "Tiryoh",
+      "date": "2017-07-21T13:25:37Z",
+      "message": "Update TravisCI settings"
+    },
+    {
+      "sha": "09061841837c442f3143601a80751801f8bc57d8",
+      "author": "Tiryoh",
+      "date": "2017-07-21T13:04:11Z",
+      "message": "Update Japanese README"
+    },
+    {
+      "sha": "a7c02b8f99899f37964f318434a32477f4f37b88",
+      "author": "Tiryoh",
+      "date": "2017-07-21T12:59:50Z",
+      "message": "Add Link to Japanese README"
+    },
+    {
+      "sha": "31b137bfc33e7c7743fc38603d96cfee2fc5b5d1",
+      "author": "Tiryoh",
+      "date": "2017-06-21T12:36:48Z",
+      "message": "Modify simple install command"
+    },
+    {
+      "sha": "4f96c1db88a296ca254d9476540c0db6258fb516",
+      "author": "Tiryoh",
+      "date": "2017-06-21T05:07:04Z",
+      "message": "Add Japanese README"
+    },
+    {
+      "sha": "b0999de6920175f3386e3e21b27db21f20388cc2",
+      "author": "Tiryoh",
+      "date": "2017-06-21T04:56:45Z",
+      "message": "Add simple install command"
+    },
+    {
+      "sha": "aa6cf0ab2aa7a1a14f043f9ac6392523db1fb04a",
+      "author": "Tiryoh",
+      "date": "2016-12-26T08:45:01Z",
+      "message": "Add Screenshots to README"
+    },
+    {
+      "sha": "339ca6c66ba42be70cdc93cb7590e40eec32cdc7",
+      "author": "Tiryoh",
+      "date": "2016-12-26T08:44:35Z",
+      "message": "Update launch files"
+    },
+    {
+      "sha": "1aff57b6560d01d43a33fa3b357759086638c85d",
+      "author": "Tiryoh",
+      "date": "2016-12-26T08:44:02Z",
+      "message": "Add URG URDF models"
+    },
+    {
+      "sha": "d23a83c6eb27397153a46e9825f938fc0dafdcc8",
+      "author": "Tiryoh",
+      "date": "2016-12-22T16:54:04Z",
+      "message": "Update raspimouse_control build dependencies"
+    },
+    {
+      "sha": "c2a45338a68f60d34aab4a62c10a57b7bb94def8",
+      "author": "Tiryoh",
+      "date": "2016-12-22T16:53:45Z",
+      "message": "\u0010Support new version raspimouse_ros(8643a05)"
+    },
+    {
+      "sha": "7529b19142e93bc5f558fecbc7bd843b73d7d3f6",
+      "author": "shotahirama",
+      "date": "2016-12-22T16:52:34Z",
+      "message": "Fix tf error\n\noriginal message:\nadd base_frame_id in controller.yaml"
+    },
+    {
+      "sha": "6e5c016e7513d7641bb92f2c6345d634b9285bd6",
+      "author": "Tiryoh",
+      "date": "2016-12-22T16:41:10Z",
+      "message": "Update README"
+    },
+    {
+      "sha": "cc12da3a041a924ba760fc4aa2ae992ee2104ddb",
+      "author": "Tiryoh",
+      "date": "2016-12-22T16:40:31Z",
+      "message": "Add ROS metapackage settings"
+    },
+    {
+      "sha": "cc7fb7b8023d1ba2d3b092c190e45adee958982a",
+      "author": "Tiryoh",
+      "date": "2016-12-22T16:39:25Z",
+      "message": "Add travis setting file"
+    },
+    {
+      "sha": "b0369df9d1210ca414808e7d9431f8dfe0f1421e",
+      "author": "Tiryoh",
+      "date": "2016-12-22T16:38:12Z",
+      "message": "Remove submodule \"raspimouse_ros\""
+    },
+    {
+      "sha": "612de3a38549a774078dd32b7662c6d5fca2c496",
+      "author": "Tiryoh",
+      "date": "2016-09-14T12:12:22Z",
+      "message": "Update file path of urdf model"
+    },
+    {
+      "sha": "24b27950a553646126c70fffce7637f67dbfb291",
+      "author": "Tiryoh",
+      "date": "2016-09-12T07:08:39Z",
+      "message": "Initial commit"
+    }
+  ]
+}

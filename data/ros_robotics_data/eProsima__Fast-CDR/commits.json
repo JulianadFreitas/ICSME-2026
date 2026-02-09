@@ -1,0 +1,3342 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-08T01:34:43Z",
+    "source": "github_rest",
+    "endpoint": "/repos/{owner}/{repo}/commits",
+    "owner": "eProsima",
+    "repo": "Fast-CDR",
+    "per_page": 100
+  },
+  "data": [
+    {
+      "sha": "446a361f9c0bc59cdb9e905b627df657ba80bb61",
+      "author": "Emilio Cuesta Fernandez",
+      "date": "2026-01-27T08:18:37Z",
+      "message": "Bump version 2.3.5 (#301)\n\nSigned-off-by: Emilio Cuesta <emiliocuesta@eprosima.com>"
+    },
+    {
+      "sha": "1ca99ead99ddea027db3037bd982c59f08e9066b",
+      "author": "Federico Pellegrin",
+      "date": "2026-01-19T11:29:20Z",
+      "message": "Build: use GNUInstallDirs CMake module to create directory paths (#300)\n\n* Build: use GNUInstallDirs CMake module to create directory paths\n\nInstead of defining manually certain install paths, use the standard (since 3.0)\nCMake module GNUInstallDirs to derive them. This is cross-platform and offers\nan automatic integration on distributions customizations (ie. when certain\ndistribution system-wide define a specific place where to install stuff).\n\nSee also: https://cmake.org/cmake/help/v3.0/module/GNUInstallDirs.html\n\nThe goal is to make the build more modern and software easy to deploy in\nany distribution.\n\nSigned-off-by: Federico Pellegrin <fede@evolware.org>\n\n* Improve code with suggestions from code review\n\nCo-authored-by: Ricardo González <correoricky@gmail.com>\nSigned-off-by: Federico Pellegrin <fede@evolware.org>\n\n---------\n\nSigned-off-by: Federico Pellegrin <fede@evolware.org>\nCo-authored-by: Ricardo González <correoricky@gmail.com>"
+    },
+    {
+      "sha": "b0e48f16edc36c0d24a9b47df637b41fdcccdd06",
+      "author": "Miguel Company",
+      "date": "2025-12-12T09:23:54Z",
+      "message": "Improvements in CI workflows (#297)\n\n* Refs #23085. Improve codeql workflow.\n\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>\n\n* Refs #23085. Update mac CI to macos 15.\n\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>\n\n* Refs #23085. Nightly ubuntu CI for 1.0.x in ubuntu 22.\n\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>\n\n---------\n\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>"
+    },
+    {
+      "sha": "88eb2ab7a3aee8b68213b21d60d009ff1752a3a3",
+      "author": "Chris Lalancette",
+      "date": "2025-11-14T08:35:20Z",
+      "message": "Change colcon.pkg dependencies to be test-dependencies (#293)\n\nThe dependencies on ament_cmake, ament_cmake_gtest, and\ngoogletest-distribution are only needed when building\nfor tests, so we should only inject them as test dependencies.\n\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "7af127a6eb86e32ef056af13ba39da0b8cfc1251",
+      "author": "Ricardo González",
+      "date": "2025-11-03T10:37:21Z",
+      "message": "Bump version 2.3.4 (#292)\n\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>"
+    },
+    {
+      "sha": "9beec7e6934b020e5de39f97a244d6e4f28cb6ce",
+      "author": "Miguel Company",
+      "date": "2025-10-31T09:14:23Z",
+      "message": "Build with warnings as errors (#289)\n\n* Refs #23858. Build with warnings as errors.\n\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>\n\n* Refs #23858. Add option for MSVC\n\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>\n\n* Refs #23858. Fix warning.\n\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>\n\n* Refs #23858. Move to CI\n\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\n\n* Apply suggestion\n\nCo-authored-by: Miguel Company <miguelcompany@eprosima.com>\nSigned-off-by: Ricardo González <correoricky@gmail.com>\n\n---------\n\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\nSigned-off-by: Ricardo González <correoricky@gmail.com>\nCo-authored-by: Ricardo González Moreno <ricardo@richiware.dev>"
+    },
+    {
+      "sha": "c88e2ea474ea23eceed488d15a6ac8295a745762",
+      "author": "Ricardo González",
+      "date": "2025-10-30T09:43:10Z",
+      "message": "Remove manually change of \"/Zi\" MSVC option (#288)\n\nSigned-off-by: Ricardo González <ricardo@richiware.dev>"
+    },
+    {
+      "sha": "486ce90ef5352d23867bafee5b937f931464f4b1",
+      "author": "Ricardo González",
+      "date": "2025-10-24T09:04:32Z",
+      "message": "XCDRv1: support extra bytes in optional types (#285)\n\n* Refs #23838. Regression test\n\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\n\n* Refs #23838. Fix\n\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\n\n* Refs #23838. Apply suggestions\n\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\n\n---------\n\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>"
+    },
+    {
+      "sha": "3f3da53679d281258eb25693c9073c9ccbbf9dc9",
+      "author": "juanlofer-eprosima",
+      "date": "2025-10-17T11:02:25Z",
+      "message": "Prepare for v2.3.3 (#284)\n\n* Refs #23098. Bump version in package.xml\n\nSigned-off-by: Juan Lopez Fernandez <juanlopez@eprosima.com>\n\n* Refs #23098. Bump version in CMakeLists.txt\n\nSigned-off-by: Juan Lopez Fernandez <juanlopez@eprosima.com>\n\n* Refs #23098. Update release support table\n\nSigned-off-by: Juan Lopez Fernandez <juanlopez@eprosima.com>\n\n---------\n\nSigned-off-by: Juan Lopez Fernandez <juanlopez@eprosima.com>"
+    },
+    {
+      "sha": "276d7f5dbad69d4c13f14f4cb0c5627ed55d41b1",
+      "author": "Miguel Company",
+      "date": "2025-10-15T07:25:21Z",
+      "message": "First align then save `last_data_size_` (#282)\n\n* Refs #23821. First align then save `last_data_size_`.\n\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>\n\n* Refs #23821. Uncrustify.\n\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>\n\n---------\n\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>"
+    },
+    {
+      "sha": "19e59ebd3ebdf4b79d99e9e0a487572f63325e2d",
+      "author": "Miguel Company",
+      "date": "2025-09-30T11:04:37Z",
+      "message": "Prepare for v2.3.2 (#281)\n\n* Refs #23520. Bump version in package.xml.\n\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>\n\n* Refs #23520. Bump version in CMakeLists.txt\n\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>\n\n* Refs #23520. Update release support table.\n\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>\n\n---------\n\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>"
+    },
+    {
+      "sha": "eef98288a6c79becba2d74532e5fea0f06b7dfed",
+      "author": "Ricardo González",
+      "date": "2025-09-25T08:46:01Z",
+      "message": "Remove unused cmake file (#280)\n\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>"
+    },
+    {
+      "sha": "3525c3ddce1e108f5f97a576768b3bd9f1955fb5",
+      "author": "Ricardo González",
+      "date": "2025-09-23T12:17:50Z",
+      "message": "Avoid installing static library PDB with ccache (#279)\n\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>"
+    },
+    {
+      "sha": "9a751578cb14714253c73293831bd54998521096",
+      "author": "Miguel Company",
+      "date": "2025-09-17T07:15:09Z",
+      "message": "Prepare for v2.3.1 (#278)\n\n* Refs #23520. Bump version in package.xml\n\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>\n\n* Refs #23520. Bump version in CMakeLists.txt\n\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>\n\n* Refs #23520. Update release support table.\n\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>\n\n---------\n\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>"
+    },
+    {
+      "sha": "f00d560586883a5fdb925b8f5bac864dc12df86c",
+      "author": "Jesús Pérez",
+      "date": "2025-09-11T08:42:14Z",
+      "message": "Fix mutable size-three optional serialization (#253)\n\n* Refs #23684: Add regression test\n\nSigned-off-by: Jesus Perez <jesusperez@eprosima.com>\n\n* Refs #23684: Fix mutable size-three optional serialization\n\nSigned-off-by: Jesus Perez <jesusperez@eprosima.com>\n\n* Refs #23684: Uncrustify\n\nSigned-off-by: Jesus Perez <jesusperez@eprosima.com>\n\n---------\n\nSigned-off-by: Jesus Perez <jesusperez@eprosima.com>"
+    },
+    {
+      "sha": "60c176d716ba11118d2261ab4ef93029ce76fcde",
+      "author": "Jesús Pérez",
+      "date": "2025-09-10T07:22:08Z",
+      "message": "Fix default fixed-string length bug (#275)\n\n* Refs #23683: Add regression unit test\n\nSigned-off-by: Jesus Perez <jesusperez@eprosima.com>\n\n* Refs #23683: Add regression top test\n\nSigned-off-by: Jesus Perez <jesusperez@eprosima.com>\n\n* Refs #23683: Fix implementation\n\nSigned-off-by: Jesus Perez <jesusperez@eprosima.com>\n\n---------\n\nSigned-off-by: Jesus Perez <jesusperez@eprosima.com>"
+    },
+    {
+      "sha": "eac23fb221f21b154e52331a060c84eb7615a5db",
+      "author": "Raul Sanchez-Mateos Lizano",
+      "date": "2025-06-26T09:10:09Z",
+      "message": "Remove deprecated windows-2019 runner (#270)\n\n* Remove deprecated windows-2019 runner\n\nSigned-off-by: Raul Sanchez-Mateos <raul@eprosima.com>\n\n* Upgrade Visual Studio toolset from v141 to v143\n\nSigned-off-by: Raul Sanchez-Mateos <raul@eprosima.com>\n\n* Upgrade missing vs-toolset config\n\nSigned-off-by: Raul Sanchez-Mateos <raul@eprosima.com>\n\n---------\n\nSigned-off-by: Raul Sanchez-Mateos <raul@eprosima.com>"
+    },
+    {
+      "sha": "531e9312c5ef88d6f7b51b45a40337a5b178fd82",
+      "author": "Mario Domínguez López",
+      "date": "2025-06-11T12:55:59Z",
+      "message": "Update `RELEASE_SUPPORT` after `3.1.x` and `2.10.x` EOLs (#268)\n\nSigned-off-by: Mario Dominguez <mariodominguez@eprosima.com>"
+    },
+    {
+      "sha": "0d97440090b5655f19b23042794310747a08c254",
+      "author": "Carlos Ferreira González",
+      "date": "2025-05-13T13:59:05Z",
+      "message": "Add 3.2 to Release Support (#267)\n\n* Refs #21427: Add 3.2 to Release Support\n\nSigned-off-by: cferreiragonz <carlosferreira@eprosima.com>\n\n* Refs #21427: Add subtitle\n\nSigned-off-by: cferreiragonz <carlosferreira@eprosima.com>\n\n---------\n\nSigned-off-by: cferreiragonz <carlosferreira@eprosima.com>"
+    },
+    {
+      "sha": "36c28c4e5f638c1436c5e709d00ba9b68d358372",
+      "author": "Mario Domínguez López",
+      "date": "2025-03-19T08:40:20Z",
+      "message": "Make `optional` copy/move constructors actuate only if the storage is engaged (#264)\n\n* Refs #22876: Add test\n\nSigned-off-by: Mario Dominguez <mariodominguez@eprosima.com>\n\n* Refs #22876: Make optionals copy/move constructors actuate only if the storage is engaged.\n\nSigned-off-by: Mario Dominguez <mariodominguez@eprosima.com>\n\n---------\n\nSigned-off-by: Mario Dominguez <mariodominguez@eprosima.com>"
+    },
+    {
+      "sha": "2008b805fb60b0a606f045e6be29580b8a17faa5",
+      "author": "Carlos Espinoza Curto",
+      "date": "2025-03-05T10:55:45Z",
+      "message": "Fix symbol visibility for exception classes (#262)\n\n* Refs #22802: Export exception classes and remove inheritance from std::exception\n\nSigned-off-by: Carlosespicur <carlosespicur@proton.me>\n\n* Refs #22802: Update versions.md\n\nSigned-off-by: Carlosespicur <carlosespicur@proton.me>\n\n---------\n\nSigned-off-by: Carlosespicur <carlosespicur@proton.me>"
+    },
+    {
+      "sha": "50a5d01d1a912ada459d76112cdba4b12430ba73",
+      "author": "Carlos Espinoza Curto",
+      "date": "2025-03-05T09:14:00Z",
+      "message": "Branch-out 2.3.x (#263)\n\n* Refs #22881: Branch-out 2.3.x\n\nSigned-off-by: Carlosespicur <carlosespicur@proton.me>\n\n* Refs #22881: Update pull request template\n\nSigned-off-by: Carlosespicur <carlosespicur@proton.me>\n\n* Refs #22881: Bump version\n\nSigned-off-by: Carlosespicur <carlosespicur@proton.me>\n\n* Merge backport lines into one\n\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>\n\n---------\n\nSigned-off-by: Carlosespicur <carlosespicur@proton.me>\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>\nCo-authored-by: Miguel Company <miguelcompany@eprosima.com>"
+    },
+    {
+      "sha": "09350511563ffc0901fd91ce85c7f37587f424b5",
+      "author": "Raul Sanchez-Mateos Lizano",
+      "date": "2025-02-12T15:03:32Z",
+      "message": "Update README (#261)\n\nSigned-off-by: Raul Sanchez-Mateos <raul@eprosima.com>"
+    },
+    {
+      "sha": "9149259a1eb54a9b1104a9f622f89b00a66b6011",
+      "author": "Miguel Company",
+      "date": "2024-12-17T14:03:33Z",
+      "message": "Bump version to 2.2.6 (#258)\n\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>"
+    },
+    {
+      "sha": "d7940c2736b1336b58d385cc76030a9e2172b0c8",
+      "author": "Miguel Company",
+      "date": "2024-12-17T10:24:44Z",
+      "message": "Remove EOL versions from PR template and nightly jobs (#256)\n\n* Refs #22103. Remove EOL versions from PR template backports.\r\n\r\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>\r\n\r\n* Refs #22103. Remove EOL versions from nightly jobs.\r\n\r\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>"
+    },
+    {
+      "sha": "5b8025b2009cd83477a95e3037f275adac6a626b",
+      "author": "SamuelH91",
+      "date": "2024-12-17T08:58:00Z",
+      "message": "Use assign for deserialize instead of temporary std::string (#241)\n\nSigned-off-by: Samuel Hyyppä <samuel.hyyppa@sandvik.com>\r\nCo-authored-by: Samuel Hyyppä <samuel.hyyppa@sandvik.com>"
+    },
+    {
+      "sha": "abf6c9a52ccf6ad054578d07c5dd1a99121a9cec",
+      "author": "Mario Domínguez López",
+      "date": "2024-12-17T08:28:12Z",
+      "message": "Allow to run CI on external contributions (#254)\n\nSigned-off-by: Mario Dominguez <mariodominguez@eprosima.com>"
+    },
+    {
+      "sha": "750a77e5e795a95250271c2e4f8ff7da32475a57",
+      "author": "Jesús Poderoso",
+      "date": "2024-12-13T10:58:57Z",
+      "message": "Add EOL versions in RELEASE_SUPPORT.md (#248)\n\n* Refs #22175: Add EOL versions in RELEASE_SUPPORT.md\r\n\r\nSigned-off-by: eProsima <jesuspoderoso@eprosima.com>\r\n\r\n* Refs #22175: Add latest supported versions\r\n\r\nSigned-off-by: eProsima <jesuspoderoso@eprosima.com>\r\n\r\n---------\r\n\r\nSigned-off-by: eProsima <jesuspoderoso@eprosima.com>"
+    },
+    {
+      "sha": "0cb11a4d7ae79f0fbd646e2ed9115bef415a51f4",
+      "author": "Mario Domínguez López",
+      "date": "2024-11-29T10:58:40Z",
+      "message": "Fix cmake generator evaluation (#251)\n\nSigned-off-by: Mario Dominguez <mariodominguez@eprosima.com>"
+    },
+    {
+      "sha": "691ba7a65518eed3e0a1a13bb8e0820962873136",
+      "author": "Raul Sanchez-Mateos Lizano",
+      "date": "2024-11-27T11:25:12Z",
+      "message": "Fix windows default version and vs-toolset default input in CI (#250)\n\n* Fix windows default version and vs-toolset\n\nSigned-off-by: Raul Sanchez-Mateos <raul@eprosima.com>\n\n* Update default windows version and update toolset description\n\nSigned-off-by: Raul Sanchez-Mateos <raul@eprosima.com>\n\n* Update missing default windows version\n\nSigned-off-by: Raul Sanchez-Mateos <raul@eprosima.com>\n\n* Set windows version back to 2019\n\nSigned-off-by: Raul Sanchez-Mateos <raul@eprosima.com>\n\n---------\n\nSigned-off-by: Raul Sanchez-Mateos <raul@eprosima.com>"
+    },
+    {
+      "sha": "5f8080d8674b4ea5ace04bba0d2e1a929ec2d59f",
+      "author": "wrightsg",
+      "date": "2024-11-27T10:14:58Z",
+      "message": "Fix C2512 compile error with Visual Studio 2015 (#234)\n\nCo-authored-by: Simon Wright <wrightsgdev@gmail.com>"
+    },
+    {
+      "sha": "bfa51aab88c3533887d81c618ec641dae242dc09",
+      "author": "Miguel Company",
+      "date": "2024-11-27T09:21:01Z",
+      "message": "Serialize single null-character for empty strings (#249)\n\n* Refs #22284. Add regression test.\r\n\r\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>\r\n\r\n* Refs #22284. Fix issue.\r\n\r\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>"
+    },
+    {
+      "sha": "ae920520a9d7c7c3facba2445045d8a2d0b268ba",
+      "author": "Felix F Xu",
+      "date": "2024-11-11T14:17:48Z",
+      "message": "Fix: function definition is marked dllimport (#210)\n\n* Fix: function definition is marked dllimport\r\n\r\n* Update src/cpp/Cdr.cpp\r\n\r\nCo-authored-by: Jesús Poderoso <120394830+JesusPoderoso@users.noreply.github.com>\r\n\r\n* Update src/cpp/Cdr.cpp\r\n\r\nCo-authored-by: Jesús Poderoso <120394830+JesusPoderoso@users.noreply.github.com>\r\n\r\n---------\r\n\r\nCo-authored-by: Jesús Poderoso <120394830+JesusPoderoso@users.noreply.github.com>"
+    },
+    {
+      "sha": "5cc8c55d967d88aff67a0e35ee82a4576362842d",
+      "author": "Miguel Company",
+      "date": "2024-11-08T09:06:12Z",
+      "message": "Fail when trying to serialize `std::string` with null characters on its content (#245)\n\n* Refs #21362. Add test.\r\n\r\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>\r\n\r\n* Refs #21362. Fix Cdr behavior.\r\n\r\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>\r\n\r\n* Refs #21362. Fix FastCDR behavior.\r\n\r\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>\r\n\r\n* Refs #21362. Fix dll export.\r\n\r\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>\r\n\r\n* Refs #21362. Leave implementation in header.\r\n\r\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>\r\n\r\n* Refs #21362. Apply suggestion.\r\n\r\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>\r\n\r\nCo-authored-by: Mario Domínguez López <116071334+Mario-DL@users.noreply.github.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>\r\nCo-authored-by: Mario Domínguez López <116071334+Mario-DL@users.noreply.github.com>"
+    },
+    {
+      "sha": "f4d99fe4f37829c1620b24c57028bf78aef3add1",
+      "author": "Ricardo González",
+      "date": "2024-11-05T07:57:21Z",
+      "message": "Support setting and encoding options with least significant bits set with possible padding (#244)\n\n* Refs #22039. Support serializing options\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #22039. Add test\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n---------\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>"
+    },
+    {
+      "sha": "b7110b40dc4ae390a9da3acdafe4b329962babad",
+      "author": "Jesús Poderoso",
+      "date": "2024-10-15T15:04:30Z",
+      "message": "Update commercial support section in project README (#243)\n\nSigned-off-by: eProsima <jesuspoderoso@eprosima.com>"
+    },
+    {
+      "sha": "68326c5bb8a44a58dfec7e0811edcbbb9f4c9233",
+      "author": "Jesús Poderoso",
+      "date": "2024-10-10T14:09:58Z",
+      "message": "Fix supported branches in PR template backports section (#242)\n\nSigned-off-by: eProsima <jesuspoderoso@eprosima.com>"
+    },
+    {
+      "sha": "2f90c7bbccc1318fad21cf48dbc87eaf934d3590",
+      "author": "Jesús Poderoso",
+      "date": "2024-10-09T06:41:47Z",
+      "message": "Bump version to v2.2.5 (#239)\n\nSigned-off-by: eProsima <jesuspoderoso@eprosima.com>"
+    },
+    {
+      "sha": "5d445eec3d081a1c1b302dc6b1f8f05914bb540b",
+      "author": "Ricardo González",
+      "date": "2024-10-04T09:26:19Z",
+      "message": "CdrSizeCalculator adds 4 bytes extra in a fixed string member of mutable structure in XCDRv2 (#238)\n\n* Refs #21794. Add regression test\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #21794. Fix\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n---------\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>"
+    },
+    {
+      "sha": "101a15669543dc0458b1090fafa11934935a175f",
+      "author": "Ricardo González",
+      "date": "2024-10-04T09:24:19Z",
+      "message": "Fix encoding/decoding when inner structure has different extensibility (#237)\n\n* Refs #21782. Regression test\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #21782. Fix\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #21782. Fix in CdrSizeCalculator\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #21782. Add more tests\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n---------\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>"
+    },
+    {
+      "sha": "0ad4f980e9a818265edd1afc93a5bb796f46db53",
+      "author": "Jesús Poderoso",
+      "date": "2024-09-10T10:34:40Z",
+      "message": "Bump version to v2.2.4 (#235)\n\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>"
+    },
+    {
+      "sha": "371fba8fe57ab78db73615fe70b425dc7d6b80e3",
+      "author": "Mario Domínguez López",
+      "date": "2024-09-10T05:24:13Z",
+      "message": "Bugfix: clear map before deserializing with string as values in XCRv1 (#233)\n\n* Refs #21443: Add regression test\r\n\r\nSigned-off-by: Mario Dominguez <mariodominguez@eprosima.com>\r\n\r\n* Refs #21443: Add fix\r\n\r\nSigned-off-by: Mario Dominguez <mariodominguez@eprosima.com>\r\n\r\n* Refs #21556: Apply Ricardo's suggestion\r\n\r\nSigned-off-by: Mario Dominguez <mariodominguez@eprosima.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Mario Dominguez <mariodominguez@eprosima.com>"
+    },
+    {
+      "sha": "e17fdc426eb878c963cf3b9002709bc407643fbf",
+      "author": "Raul Sanchez-Mateos Lizano",
+      "date": "2024-07-29T13:57:31Z",
+      "message": "Bump version to 2.2.3 (#231)\n\nSigned-off-by: Raul Sanchez-Mateos <raul@eprosima.com>"
+    },
+    {
+      "sha": "cbc6c2444723d45c0733ad0e8b34e1fbb98fb3b1",
+      "author": "Jesús Poderoso",
+      "date": "2024-07-24T05:29:26Z",
+      "message": "Fix windows CI: Avoid usage of removed action (#228)\n\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>"
+    },
+    {
+      "sha": "00d7f2d0564372270f4705a484273a60805e7042",
+      "author": "Jesús Poderoso",
+      "date": "2024-07-15T13:22:30Z",
+      "message": "Set 2.1.x (Fast DDS 2.13.x) as EOL (#224)\n\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>"
+    },
+    {
+      "sha": "872c324b6f3baf6b1ea17e6583137ba3cd702110",
+      "author": "Jesús Poderoso",
+      "date": "2024-07-12T08:00:03Z",
+      "message": "Remove 2.1.x branch from nightly jobs (#223)\n\n* Refs #21309: Remove 2.1.x branch from nightly jobs\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>\r\n\r\n* Refs #21309: Apply Edu' suggestion\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>\r\n\r\n---------\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>"
+    },
+    {
+      "sha": "624080a107ea5ca637231b6916bdb765beea5c19",
+      "author": "Eduardo Ponz Segrelles",
+      "date": "2024-07-12T06:27:23Z",
+      "message": "Run CodeQL on macOS-13 instead of 11 (#220)\n\n* Refs #21286: Run CodeQL on macOS-13 instead of 11\r\n\r\nSigned-off-by: eduponz <eduardoponz@eprosima.com>\r\n\r\n* Refs #21286: Remove 1.1.x from the backport list, as it is attached to 2.6.x\r\n\r\nSigned-off-by: eduponz <eduardoponz@eprosima.com>\r\n\r\n* Refs #21286: Use CodeQL action v3\r\n\r\nSigned-off-by: eduponz <eduardoponz@eprosima.com>\r\n\r\n---------\r\n\r\nSigned-off-by: eduponz <eduardoponz@eprosima.com>"
+    },
+    {
+      "sha": "203725d86441b1effe927d3d0cd9449dfd07952a",
+      "author": "Jesús Poderoso",
+      "date": "2024-07-11T14:24:37Z",
+      "message": "Improve CI workflows in master (#216)\n\n* Refs #21286: Add Ubuntu CI\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>\r\n\r\n* Refs #21286: Add Windows CI\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>\r\n\r\n* Refs #21286: Add MacOS CI\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>\r\n\r\n* Refs #21286: Remove previous job\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>\r\n\r\n* Refs #21286: Update PR template\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>\r\n\r\n* Refs #21286: Add missing dependency\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>\r\n\r\n* Refs #21286: Fix colcon test warning\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>\r\n\r\n* Refs #21286: Add RELEASE_SUPPORT.md\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>\r\n\r\n* Refs #21286: Apply rev suggestions\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>\r\n\r\n* Refs #21286: Fix labels\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>\r\n\r\n* Refs #21286: Try to fix windows CI\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>\r\n\r\n* Refs #21286: Include GitHub CI badges in readme\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>\r\n\r\n---------\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>"
+    },
+    {
+      "sha": "0aa63eb104fdca2749add976451129daf2c63ed2",
+      "author": "Mario Domínguez López",
+      "date": "2024-07-10T08:15:49Z",
+      "message": "Update references to Fast DDS (#215)\n\n* Refs #21323: Update references to Fast RTPS\r\n\r\nSigned-off-by: Mario Dominguez <mariodominguez@eprosima.com>\r\n\r\n* Refs #21323: Rename to FASTCDR\r\n\r\nSigned-off-by: Mario Dominguez <mariodominguez@eprosima.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Mario Dominguez <mariodominguez@eprosima.com>"
+    },
+    {
+      "sha": "88d524b1ac400ec1c05ef05bffa1c2f24de291f6",
+      "author": "Jesús Poderoso",
+      "date": "2024-07-09T08:28:11Z",
+      "message": "Add PR template  (#203)\n\n* Refs #20414: Add PR template\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>\r\n\r\n* Refs #20414: Apply rev suggestions\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>\r\n\r\n* Refs #20414: Apply rev suggestions (2)\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>\r\n\r\n---------\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>"
+    },
+    {
+      "sha": "24d9e72f3aa8aab91d2e5e6422f2b5ce90490cb6",
+      "author": "Eduardo Ponz Segrelles",
+      "date": "2024-06-21T06:16:08Z",
+      "message": "Bump version to 2.2.2 (#212)\n\nSigned-off-by: eduponz <eduardoponz@eprosima.com>"
+    },
+    {
+      "sha": "f889eee5880f521931214a1f8aa11efcd003b421",
+      "author": "Eduardo Ponz Segrelles",
+      "date": "2024-05-14T06:22:36Z",
+      "message": "Extend mirror workflow to also mirror in major branches (#208)\n\n* Refs #20893: Extend mirror workflow to also mirror in major branches\r\n\r\nSigned-off-by: eduponz <eduardoponz@eprosima.com>\r\n\r\n* Refs #20893: Apply Miguel's suggestion\r\n\r\nSigned-off-by: eduponz <eduardoponz@eprosima.com>\r\n\r\n---------\r\n\r\nSigned-off-by: eduponz <eduardoponz@eprosima.com>"
+    },
+    {
+      "sha": "75b2be7d6ee208e635a3451c46dc075e5d1c97e3",
+      "author": "Chris Lalancette",
+      "date": "2024-03-29T10:45:11Z",
+      "message": "Fix a compile warning with g++ 13.2.0. (#207)\n\n* Fix a compile warning with g++ 13.2.0.\r\n\r\nWhen building the tests with g++ 13.2.0, it complains\r\nthat the EXPECT_LONG_DOUBLE_EQ macro has no effect.\r\nThat ends up being true; because it is just a x == y,\r\nwith no EXPECT statement around it, it actually does\r\nnothing.\r\n\r\nHere, I just remove this macro because it is unnecessary;\r\nwe can just do EXPECT_TRUE(x == y) and get the same effect\r\nwith less code.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>\r\n\r\n* Revert \"Fix a compile warning with g++ 13.2.0.\"\r\n\r\nThis reverts commit 28b32def439aa891aceda784f786100f6a59c280.\r\n\r\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>\r\n\r\n* Refactor EXPECT_LONG_DOUBLE_EQ.\r\n\r\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>\r\n\r\n* Make expectations be checked.\r\n\r\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>\r\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>\r\nCo-authored-by: Miguel Company <miguelcompany@eprosima.com>"
+    },
+    {
+      "sha": "f44cbf67c10dc3438e9dd96ded8d1b28c9abc075",
+      "author": "Miguel Company",
+      "date": "2024-03-26T13:59:31Z",
+      "message": "Change version in package.xml format (#206)\n\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>"
+    },
+    {
+      "sha": "444f0a10c9e87dc97bad6e8648d79651123a3471",
+      "author": "Miguel Company",
+      "date": "2024-03-26T11:34:23Z",
+      "message": "Bump version to v2.2.1 (#205)\n\n* Refs #20693. Bump version in CMakeLists.txt\r\n\r\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>\r\n\r\n* Refs #20693. Bump version in package.xml\r\n\r\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>"
+    },
+    {
+      "sha": "5a1dd450f8d247d096b870d402c48e20cf21bd1b",
+      "author": "Eduardo Ponz Segrelles",
+      "date": "2024-03-25T21:38:47Z",
+      "message": "Do not build test if CMake < 3.22 (#204)\n\nSigned-off-by: EduPonz <eduardoponz@eprosima.com>"
+    },
+    {
+      "sha": "d3dd1d149a9f262a99906678bdf0ecfbda54317f",
+      "author": "Eduardo Ponz Segrelles",
+      "date": "2024-02-23T07:21:10Z",
+      "message": "Bump version to 2.2.0 (#201)\n\nSigned-off-by: EduPonz <eduardoponz@eprosima.com>"
+    },
+    {
+      "sha": "e1cef73258a9e69fe78302db3792a2c90cee6d4e",
+      "author": "Eduardo Ponz Segrelles",
+      "date": "2024-02-22T17:35:08Z",
+      "message": "Add support for building tests within an ament context (#200)\n\n* Refs #20328: Add package.xml and colcon.pkg compatible with ROS 2 CI\r\n\r\nSigned-off-by: EduPonz <eduardoponz@eprosima.com>\r\n\r\n* Refs #20328: Add macro to find gtest both in and outside ament context\r\n\r\nSigned-off-by: EduPonz <eduardoponz@eprosima.com>\r\n\r\n* Refs #20328: Use new macro to find gtest\r\n\r\nSigned-off-by: EduPonz <eduardoponz@eprosima.com>\r\n\r\n* Refs #20328: Apply suggestions\r\n\r\nSigned-off-by: EduPonz <eduardoponz@eprosima.com>\r\n\r\n* Refs #20328: Fix typo\r\n\r\nSigned-off-by: EduPonz <eduardoponz@eprosima.com>\r\n\r\n---------\r\n\r\nSigned-off-by: EduPonz <eduardoponz@eprosima.com>"
+    },
+    {
+      "sha": "fe726a8490f1e24b94988cd7252ac98b704142c7",
+      "author": "Mario Domínguez López",
+      "date": "2024-02-21T12:46:56Z",
+      "message": "Add doxygen_modules.h header file (#194)\n\nSigned-off-by: Mario Dominguez <mariodominguez@eprosima.com>"
+    },
+    {
+      "sha": "3b94bdb4c710497c1e11de5bae40ede0d5f2e183",
+      "author": "hanwuwei521@sina.com",
+      "date": "2024-02-21T10:07:27Z",
+      "message": "Fix wchar deserialize error when swaping the bytes (#186)\n\n* Regression test for #185 in SimpleTest\r\n\r\nSigned-off-by: weihanwu <weihanwu@lixiang.com>\r\n\r\n* Fix wchar deserialize error when swaping the bytes\r\n\r\nSigned-off-by: weihanwu <weihanwu@lixiang.com>\r\nCo-authored-by: maxin <maxin@lixiang.com>\r\n\r\n* Apply suggestion\r\n\r\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>\r\n\r\nCo-authored-by: Ricardo González <correoricky@gmail.com>\r\n\r\n---------\r\n\r\nSigned-off-by: weihanwu <weihanwu@lixiang.com>\r\nCo-authored-by: maxin <maxin@lixiang.com>\r\nCo-authored-by: Miguel Company <miguelcompany@eprosima.com>\r\nCo-authored-by: Ricardo González <correoricky@gmail.com>"
+    },
+    {
+      "sha": "5d8f8dc3b693acf98d6d334320ccf4c494facd08",
+      "author": "Ricardo González",
+      "date": "2024-02-20T13:08:50Z",
+      "message": "Fix std::vector<bool> as array (#199)"
+    },
+    {
+      "sha": "835500b3722347b3bacfcd565d0f16f1e684387f",
+      "author": "Eduardo Ponz Segrelles",
+      "date": "2024-02-20T07:23:41Z",
+      "message": "Add macOS to gihub actions testing (#197)\n\n* Refs #20091: Add macOS to gihub actions testing\r\n\r\nSigned-off-by: EduPonz <eduardoponz@eprosima.com>\r\n\r\n* Refs #20091: Fix python version\r\n\r\nSigned-off-by: EduPonz <eduardoponz@eprosima.com>\r\n\r\n* Refs #20091: Build Gtest in macos\r\n\r\nSigned-off-by: EduPonz <eduardoponz@eprosima.com>\r\n\r\n* Refs #20091: Cleanup workflow\r\n\r\nSigned-off-by: EduPonz <eduardoponz@eprosima.com>\r\n\r\n* Refs #20091: Add colcon.meta for googletest\r\n\r\nSigned-off-by: EduPonz <eduardoponz@eprosima.com>\r\n\r\n* Refs #20091: Set eProsima-CI actions to v0\r\n\r\nSigned-off-by: EduPonz <eduardoponz@eprosima.com>\r\n\r\n---------\r\n\r\nSigned-off-by: EduPonz <eduardoponz@eprosima.com>"
+    },
+    {
+      "sha": "7417ff130534226120a97bb7f4214f189e26b12f",
+      "author": "Ricardo González",
+      "date": "2024-02-14T15:30:22Z",
+      "message": "Support serializing a std::vector as an array. (#192)\n\n* Refs #17138. Support serializing a std::vector as an array.\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #17138. Temporally solution\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #17138. Add more funcionality\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #17138. Add tests\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #17138. Apply suggestions\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n---------\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>"
+    },
+    {
+      "sha": "c045c23bdd7084204dad2f6d8b7972e9df0a75d1",
+      "author": "Eduardo Ponz Segrelles",
+      "date": "2024-02-14T06:04:01Z",
+      "message": "Migrate to eProsima-CI (#195)\n\n* Refs #20423: Migrate to eProsima-CI and add Windows 2019 run\r\n\r\nSigned-off-by: EduPonz <eduardoponz@eprosima.com>\r\n\r\n* Refs #20423: Require CMake 3.22 for testing\r\n\r\nSigned-off-by: EduPonz <eduardoponz@eprosima.com>\r\n\r\n* Refs #20423: Add a test summary step\r\n\r\nSigned-off-by: EduPonz <eduardoponz@eprosima.com>\r\n\r\n* Refs #20423: Set v0 version for eProsima-CI actions\r\n\r\nSigned-off-by: EduPonz <eduardoponz@eprosima.com>\r\n\r\n---------\r\n\r\nSigned-off-by: EduPonz <eduardoponz@eprosima.com>"
+    },
+    {
+      "sha": "3c6195aefd11d46395caf7d8b29019b5ef5aaefd",
+      "author": "Ricardo González",
+      "date": "2024-01-24T09:02:22Z",
+      "message": "Fix warning on windows (#191)\n\n* Fix warning on windows\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Apply suggestion\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n---------\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>"
+    },
+    {
+      "sha": "36da5a4484a3029176da881d93f7c4252f0b5e79",
+      "author": "Jesús Poderoso",
+      "date": "2024-01-10T06:54:53Z",
+      "message": "Bump version to 2.1.3 (#188)\n\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>"
+    },
+    {
+      "sha": "f33f08e1b750d74c058420e4cc169af148a63be7",
+      "author": "Jesús Poderoso",
+      "date": "2024-01-10T06:47:56Z",
+      "message": "Downgrade cmake version (#187)\n\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>"
+    },
+    {
+      "sha": "71d2cc24cfd29cf941b24cf800e6e3ae220e4c83",
+      "author": "Eduardo Ponz Segrelles",
+      "date": "2023-12-19T13:43:40Z",
+      "message": "Bump version to 2.1.2 (#184)\n\nSigned-off-by: EduPonz <eduardoponz@eprosima.com>"
+    },
+    {
+      "sha": "439b9e1e0d6953fe95d060bfdb51e035dc64b5c8",
+      "author": "Raul Sanchez-Mateos Lizano",
+      "date": "2023-12-19T13:43:22Z",
+      "message": "Suppress conversion warnings when compiling with old gcc versions (#183)\n\n* Suppress conversion warnings when compiling with old gcc versions\r\n\r\nSigned-off-by: Raul Sanchez-Mateos <raul@eprosima.com>\r\n\r\n* Uncrustify\r\n\r\nSigned-off-by: Raul Sanchez-Mateos <raul@eprosima.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Raul Sanchez-Mateos <raul@eprosima.com>"
+    },
+    {
+      "sha": "0425a699e5aaa1e1e3849bd36c603909eadf22f7",
+      "author": "Jesús Poderoso",
+      "date": "2023-12-14T08:58:28Z",
+      "message": "Bump version to 2.1.1 (#181)\n\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>"
+    },
+    {
+      "sha": "381592a2d57cd66c02af1f20b34eb88adbcc3be0",
+      "author": "Ricardo González",
+      "date": "2023-11-29T12:59:07Z",
+      "message": "Fix decoding when an appendable structure contains a mutable structure (#180)\n\n* Refs #20044. Regression test\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #20044. Fix\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #20044. Apply suggestion\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n---------\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>"
+    },
+    {
+      "sha": "aa637f9c0eae77ec41bb9c91b57b10836faba9be",
+      "author": "Eduardo Ponz Segrelles",
+      "date": "2023-11-14T09:39:20Z",
+      "message": "Bump version to 2.1.0 (#177)\n\n* Refs #19902: Bump version to 2.1.0\r\n\r\nSigned-off-by: EduPonz <eduardoponz@eprosima.com>\r\n\r\n* Refs #19902: Add mirror workflow\r\n\r\nSigned-off-by: EduPonz <eduardoponz@eprosima.com>\r\n\r\n---------\r\n\r\nSigned-off-by: EduPonz <eduardoponz@eprosima.com>"
+    },
+    {
+      "sha": "cc994b0843bcc351f4a8a05470983a75581ff7f7",
+      "author": "Ricardo González",
+      "date": "2023-11-13T13:27:49Z",
+      "message": "Fix warning on VS2017 (#176)\n\n* Refs #19760. Fix warning on VS2017\r\n\r\nSigned-off-by: Ricardo González <correoricky@gmail.com>\r\n\r\n* Refs #19760. Fix gcc\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n---------\r\n\r\nSigned-off-by: Ricardo González <correoricky@gmail.com>\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>"
+    },
+    {
+      "sha": "c271e9ef4f00509b9eba1e5124e3cee982fd210b",
+      "author": "Ricardo González",
+      "date": "2023-11-03T09:02:41Z",
+      "message": "Fix missing header (#175)\n\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>"
+    },
+    {
+      "sha": "a9135ecd01362154aab3ccf861889f1b0c0db015",
+      "author": "Utkan Kılıç",
+      "date": "2023-10-25T05:33:08Z",
+      "message": "Fix for non CWG 1270 revision compliant compilers (#173)\n\nSigned-off-by: Utkan Kılıç utkankilic@gmail.com\r\n\r\nSigned-off-by: utkan.kilic <utkan.kilic@togg.com.tr>\r\nCo-authored-by: utkan.kilic <utkan.kilic@togg.com.tr>"
+    },
+    {
+      "sha": "92021a89512308fa520073a706f7d48e22a60d74",
+      "author": "Ricardo González",
+      "date": "2023-10-24T12:20:41Z",
+      "message": "Support of external members (#170)\n\n* Refs #19697. External template and api tests\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #19697. Encode/decode external\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #19697. Apply suggestions\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n---------\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>"
+    },
+    {
+      "sha": "7112895eeca53dd47c67eed7c6f78d322185ee38",
+      "author": "Ricardo González",
+      "date": "2023-10-17T12:33:46Z",
+      "message": "Separate optional header in two (#169)\n\nSigned-off-by: Ricardo González <correoricky@gmail.com>"
+    },
+    {
+      "sha": "5df69f23d0c757c0fadcfc0016046bd8cd06a4f0",
+      "author": "Ricardo González",
+      "date": "2023-09-21T07:04:19Z",
+      "message": "Fix cmake minimum version (#165)\n\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>"
+    },
+    {
+      "sha": "8c784382d7c7d65847a2a66362c02d821effb23e",
+      "author": "José Luis Bueno López",
+      "date": "2023-09-08T11:10:59Z",
+      "message": "Fix Fast CDR API reference PDF generation (#161)\n\nSigned-off-by: JLBuenoLopez-eProsima <joseluisbueno@eprosima.com>"
+    },
+    {
+      "sha": "2886524ef652c63c436b77618e21235dae4e635f",
+      "author": "José Luis Bueno López",
+      "date": "2023-09-07T13:43:50Z",
+      "message": "Update documentation link (#160)\n\nSigned-off-by: JLBuenoLopez-eProsima <joseluisbueno@eprosima.com>"
+    },
+    {
+      "sha": "37d84c8d1f05977539f8c3cd99b709e230d0ce68",
+      "author": "Ricardo González",
+      "date": "2023-09-07T12:49:13Z",
+      "message": "Support XCDRv1 and XCDRv2 (#156)\n\n* Refs #18687. Adding EncodingAlgorithmFlag\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Fix tests\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. First test for optional PLAIN_CDR2\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. First test for optional PLAIN_CDR and PL_CDR\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. First test for xcdrv1 members.\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Fix MemberLongHeader for v1: removed flags\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Add CdrVersion\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. First tests with xcdrv2\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Add optional class\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Fix c++11\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Fix contructor for non-trivial classes\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Fixes\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Fix assign value\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Fix integration with fastddsgen\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Move fixed_string here\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Add tests\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Finish test for primitive types\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. First tests with alignment\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Add support of sequences of maps\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Finish tests for primitive types\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Improve management of recursive inner MemberId\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Extra check in two tests\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Add operator != to optional\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Starting to bring size calculation here\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Brought size calculation here\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Add support enums and fixes\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Improve tests and starting mutables\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. More test\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Support of NEXTINT + DHEADER\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Update optional tests to support serialize_type\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Remove old api functions\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Little improve\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. More tests\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. More tests for appendable and mutables\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Support string wstring in xcdr2\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Added tests for enum\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Support for arrays\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Support for sequences\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Remove extensibility for collections and add maps\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Fix after rebasing\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Fix warnings on windows\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Fix more warnings\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Fix more warnings\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Fix more warnings\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Fix execution of tests on Windows\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Upgrade CMake version to 3.22\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Fix execution of test in directories with spaces\r\n\r\nSigned-off-by: Ricardo González <correoricky@gmail.com>\r\n\r\n* Refs #18687. Fix warning\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Fix compilation error with VS2017\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Fix test with wchar in Windows\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Fix compilation warnings with VS2017\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Fix compilation warnings with VS2017\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Fix compilation warnings with VS2017\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Fix compilation warnings with VS2017\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Add BadOptionalAccessException\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. optional documented\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Fix not pushed exception\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Improve doxygen for new features.\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Fix compilation error on windows\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Bump version 2.0.0\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Autoselect of cdr version\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Move the calculate_serialized_size to extern\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Use extern serialize/deserialize and fix bug found in review.\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Add support for std::bitset\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Added empty functions for raw cdr\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Fix errors\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Fix using multi-arrays\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Added tests for fixed_size_string\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Fix recursive containers\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Remove duplicated code\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Applying style\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Remove old code\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Add missing header licenses\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Apply suggestions.\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Apply suggestions.\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Apply suggestions.\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Apply suggestions.\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Apply suggestions.\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Apply suggestions.\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Apply suggestions.\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Apply suggestions.\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Add regression test\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Fix bug detected in revision\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Fix wchar_t\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Add bitset to calculator and fix wchar_t\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Fix compilation error on Windows\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. BUILD_TESTING OFF by default\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Activate tests on github action\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Remove EPROSIMA_BUILD\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Change Cdr_DllAPI\r\n\r\nSigned-off-by: Ricardo González <correoricky@gmail.com>\r\n\r\n* Refs #18687. More Cdr_DllAPI\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Reordering for windows\r\n\r\nSigned-off-by: Ricardo González <correoricky@gmail.com>\r\n\r\n* Refs #18687. Fix windows linkage\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Fix on windows\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Fix on windows\r\n\r\nSigned-off-by: Ricardo González <correoricky@gmail.com>\r\n\r\n* Refs #18687. Fix on VS 2017\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Apply suggestions\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Apply suggestions\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Apply suggestions\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Apply suggestions\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Forgot a file\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Fix in sequences\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Apply suggestions\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Add info of tests\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Add tests for calculator\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Add doxygen for fixed_string\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Add doxygen for CdrSizeCalculator\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Fix doxygen\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Fix in repos file\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Apply suggestions\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Apply suggestions\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Don't POP after PUSH(origin=0)\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Apply suggestions\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Add versions.md file\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Apply suggestions\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Apply suggestions\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Apply suggestions\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Apply suggestions\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Apply suggestions\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Fix compilation on Windows.\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Fix test on Mac.\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Apply suugestions\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Apply suugestions\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Apply suggestions\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Apply suggestions\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n---------\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\nSigned-off-by: Ricardo González <correoricky@gmail.com>"
+    },
+    {
+      "sha": "79034525e9a7a421ebe5cf2afb3d85d8b6723683",
+      "author": "José Luis Bueno López",
+      "date": "2023-09-05T13:39:57Z",
+      "message": "Bump to Fast CDR v1.1.1 (#159)\n\nSigned-off-by: JLBuenoLopez-eProsima <joseluisbueno@eprosima.com>"
+    },
+    {
+      "sha": "50a1c8e47c8f252b0e6817f8dae987afd5bfba63",
+      "author": "Eduardo Ponz Segrelles",
+      "date": "2023-09-05T10:40:45Z",
+      "message": "Run CI for both master and 1.0.x branches (#158)\n\nSigned-off-by: Eduardo Ponz <eduardoponz@eprosima.com>"
+    },
+    {
+      "sha": "2f655844f80b6c038e81d3a1d055265469eef00d",
+      "author": "cgcarras",
+      "date": "2023-06-28T10:20:00Z",
+      "message": "Adapt serialize bool (#155)"
+    },
+    {
+      "sha": "d9bce9cf1d1b362a20c480c0c9c667d8dc1aa555",
+      "author": "Ricardo González",
+      "date": "2023-06-15T08:47:40Z",
+      "message": "Add support of sequences of maps (#152)\n\n* Refs #18687. Add support of sequences of maps\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n* Refs #18687. Add doxygen\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\n---------\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>"
+    },
+    {
+      "sha": "b50069b74ea1d8941f813172f4f027dc9247d7d4",
+      "author": "Miguel Company",
+      "date": "2023-06-15T08:45:00Z",
+      "message": "Allow user to override stream operators (#153)\n\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>"
+    },
+    {
+      "sha": "2e55b30a8495eb39621ccdfd90e53598664fd012",
+      "author": "Eduardo Ponz Segrelles",
+      "date": "2023-06-12T06:35:51Z",
+      "message": "Fix doxygen (#151)\n\nSigned-off-by: Eduardo Ponz <eduardoponz@eprosima.com>"
+    },
+    {
+      "sha": "9c5ef2a09aa0ed2467a250f128b1c30e6f28bdcf",
+      "author": "Eduardo Ponz Segrelles",
+      "date": "2023-06-08T13:40:57Z",
+      "message": "Bump version to v1.1.0 (#150)\n\n* Refs #18858: Bump version to v1.1.0\r\n\r\nSigned-off-by: Eduardo Ponz <eduardoponz@eprosima.com>\r\n\r\n* Refs #18858: Update platform support\r\n\r\nSigned-off-by: Eduardo Ponz <eduardoponz@eprosima.com>\r\n\r\n* Refs #18858: Address #103\r\n\r\nSigned-off-by: Eduardo Ponz <eduardoponz@eprosima.com>\r\n\r\n* Refs #18858: Apply suggestions\r\n\r\nSigned-off-by: Eduardo Ponz <eduardoponz@eprosima.com>\r\n\r\n* Refs #18858: Apply suggestions\r\n\r\nSigned-off-by: Eduardo Ponz <eduardoponz@eprosima.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Eduardo Ponz <eduardoponz@eprosima.com>"
+    },
+    {
+      "sha": "f3ac49016334b137e4933b7fc1b76f93fc2b2681",
+      "author": "MiguelBarro",
+      "date": "2023-06-08T09:59:27Z",
+      "message": "Upgrading CMake c++ standard management (#122)\n\n* Refs 14101. Upgrade to Focal version.\r\n\r\nSigned-off-by: Miguel Barro <miguelbarro@eprosima.com>\r\n\r\n* Refs 14101. Upgrade our standard selection method\r\n\r\nSigned-off-by: Miguel Barro <miguelbarro@eprosima.com>\r\n\r\n* Refs 14101. Full support for constexpr\r\n\r\nSigned-off-by: Miguel Barro <miguelbarro@eprosima.com>\r\n\r\n* Refs 14101. Deprecate TestBigEndian as adviced by CMake\r\n\r\nSigned-off-by: Miguel Barro <miguelbarro@eprosima.com>\r\n\r\n* Refs 14101. fixing c++11 flag mistype\r\n\r\nSigned-off-by: Miguel Barro <miguelbarro@eprosima.com>\r\n\r\n* Refs 14101. Setting global variables instead of local ones\r\n\r\nSigned-off-by: Miguel Barro <miguelbarro@eprosima.com>\r\n\r\n* Refs 14101. Fixes on fallback mechanism\r\n\r\nSigned-off-by: Miguel Barro <miguelbarro@eprosima.com>\r\n\r\n* Refs 14101. Keep Fast-CDR C++ only.\r\n\r\nSigned-off-by: Miguel Barro <miguelbarro@eprosima.com>\r\n\r\n* Refs 14101. Test CXX_FORCE variable.\r\n\r\nSigned-off-by: Miguel Barro <miguelbarro@eprosima.com>\r\n\r\n* Refs 14101. Allow test parallelization\r\n\r\nSigned-off-by: Miguel Barro <miguelbarro@eprosima.com>\r\n\r\n* Refs 14101. gcc/clang don't fail but output a warning. Make the script fail on warning\r\n\r\nSigned-off-by: Miguel Barro <miguelbarro@eprosima.com>\r\n\r\n* Refs 14101. Linter pass.\r\n\r\nSigned-off-by: Miguel Barro <miguelbarro@eprosima.com>\r\n\r\n* Refs 14101. Avoid setting CMAKE_CXX_STANDARD as cache variable.\r\n\r\nSigned-off-by: Miguel Barro <miguelbarro@eprosima.com>\r\n\r\n* Refs 14101. Addressing reviewer's comments: header licenses\r\n\r\nSigned-off-by: Miguel Barro <miguelbarro@eprosima.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Miguel Barro <miguelbarro@eprosima.com>"
+    },
+    {
+      "sha": "c69dff2d908011ac0fd76dffdf35f6c56bf36059",
+      "author": "Miguel Company",
+      "date": "2023-05-16T06:19:13Z",
+      "message": "Improve CodeQL action (#147)\n\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>"
+    },
+    {
+      "sha": "6024f839798efe8db93a23ed20c4917818bb6b05",
+      "author": "Christopher Wecht",
+      "date": "2023-04-27T18:29:38Z",
+      "message": "Use std::string::assign instead of constructor + move assignment (#145)\n\noperator\r\n\r\nSigned-off-by: Christopher Wecht <cwecht@mailbox.org>"
+    },
+    {
+      "sha": "5d782877435b569e0ed38541f362e212c9123dd4",
+      "author": "José Luis Bueno López",
+      "date": "2023-03-22T06:29:48Z",
+      "message": "Bump version to v1.0.27 (#143)\n\nSigned-off-by: JLBuenoLopez-eProsima <joseluisbueno@eprosima.com>"
+    },
+    {
+      "sha": "9de1a08fc3a4c607c45fb2b5a092aad4b6906a47",
+      "author": "Mario Domínguez López",
+      "date": "2023-03-17T15:48:10Z",
+      "message": "Linux CI on Github Actions (#141)\n\n* Refs #17508: Added Github Action Skeleton\r\n\r\nSigned-off-by: Mario Dominguez <mariodominguez@eprosima.com>\r\n\r\n* Refs #17508: Added More steps and both Ubuntu platforms\r\n\r\nSigned-off-by: Mario Dominguez <mariodominguez@eprosima.com>\r\n\r\n* Refs #17508: Use eProsima CI actions for installing Python Dependencies\r\n\r\nSigned-off-by: Mario Dominguez <mariodominguez@eprosima.com>\r\n\r\n* Refs #17508: Minor var name change\r\n\r\nSigned-off-by: Mario Dominguez <mariodominguez@eprosima.com>\r\n\r\n* Refs #17508: Revision changes\r\n\r\nSigned-off-by: Mario Dominguez <mariodominguez@eprosima.com>\r\n\r\n* Refs #17508: Use test/ branch\r\n\r\nSigned-off-by: Mario Dominguez <mariodominguez@eprosima.com>\r\n\r\n* Refs #17508: Use main branch\r\n\r\nSigned-off-by: Mario Dominguez <mariodominguez@eprosima.com>\r\n\r\n* Refs #17508: Added BUILD_TESTS flag\r\n\r\nSigned-off-by: Mario Dominguez <mariodominguez@eprosima.com>\r\n\r\n* Refs #17508: Added temporal step for GTest backwards compatibility with Ubuntu20.04 as apt package was not installing correct FindGTest.cmake\r\n\r\nSigned-off-by: Mario Dominguez <mariodominguez@eprosima.com>\r\n\r\n* Refs #17508: Return error on failed tests and avoid souble step installation of GTest\r\n\r\nSigned-off-by: Mario Dominguez <mariodominguez@eprosima.com>\r\n\r\n* Refs #17508: Added step to upload test-results\r\n\r\nSigned-off-by: Mario Dominguez <mariodominguez@eprosima.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Mario Dominguez <mariodominguez@eprosima.com>"
+    },
+    {
+      "sha": "46bb474111a8b3a05f57724798e4b5bba9cbcf40",
+      "author": "José Luis Bueno López",
+      "date": "2023-03-17T06:12:58Z",
+      "message": "Fix Doxygen deprecation warnings in Ubuntu 22.04 (#142)\n\nSigned-off-by: JLBuenoLopez-eProsima <joseluisbueno@eprosima.com>"
+    },
+    {
+      "sha": "a794ed021054e231409062275e23514e50575a5a",
+      "author": "Ricardo González",
+      "date": "2023-03-08T10:19:46Z",
+      "message": "Avoid auto linkage if user uses cmake (#131)\n\n* Refs #16246. Avoid auto linkage if user uses cmake\r\n\r\nSigned-off-by: Ricardo González <correoricky@gmail.com>\r\n\r\n* Refs #16246. Joining properties\r\n\r\nSigned-off-by: Ricardo González <correoricky@gmail.com>\r\n\r\n* Refs #16246. Revert generator expressions usage\r\n\r\nSigned-off-by: Ricardo González <correoricky@gmail.com>\r\n\r\n* Refs #16246. Joining properties\r\n\r\nSigned-off-by: Ricardo González <correoricky@gmail.com>\r\n\r\n* Refs #16246. Fix usage of cmake generator expression\r\n\r\nSigned-off-by: Ricardo González <correoricky@gmail.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Ricardo González <correoricky@gmail.com>"
+    },
+    {
+      "sha": "327ecb289a1c45fb1d05a2e6a93576352ca3f7c0",
+      "author": "Ricardo González",
+      "date": "2023-03-08T07:03:40Z",
+      "message": "Improve target loading (#132)\n\nSigned-off-by: Ricardo González <correoricky@gmail.com>"
+    },
+    {
+      "sha": "5658b8395ee7bfebc2bf0f8df92a8613233e1d5b",
+      "author": "Miguel Company",
+      "date": "2023-01-05T10:35:02Z",
+      "message": "Fix build with -std=c++20 (#138)\n\n* ENG-1265: Fix build with -std=c++20\r\n\r\nSigned-off-by: Damien Bardon <damien.bardon@figure.ai>\r\n\r\n* Uncrustify.\r\n\r\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>\r\n\r\nSigned-off-by: Damien Bardon <damien.bardon@figure.ai>\r\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>\r\nCo-authored-by: Damien Bardon <damien.bardon@figure.ai>"
+    },
+    {
+      "sha": "e3ba6cfabc3b9b671d9177b57f47c16fc9c9509d",
+      "author": "Raul Sanchez-Mateos Lizano",
+      "date": "2023-01-05T09:22:56Z",
+      "message": "Updgrade CodeQL github action (#137)\n\nSigned-off-by: RaulSanchez <raul@eprosima.com>\r\n\r\nSigned-off-by: RaulSanchez <raul@eprosima.com>"
+    },
+    {
+      "sha": "5682635900338488a8b3d11c9b2058dae556c152",
+      "author": "Ricardo González",
+      "date": "2022-12-19T06:46:32Z",
+      "message": "Support ccache on windows (#135)\n\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>\r\n\r\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>"
+    },
+    {
+      "sha": "6184f25f24cbb3a4abac886669d3c966818b1ccb",
+      "author": "José Luis Bueno López",
+      "date": "2022-12-12T11:00:33Z",
+      "message": "Bump version to v1.0.26 (#134)\n\nSigned-off-by: JLBuenoLopez-eProsima <joseluisbueno@eprosima.com>\r\n\r\nSigned-off-by: JLBuenoLopez-eProsima <joseluisbueno@eprosima.com>"
+    },
+    {
+      "sha": "3cc23572351bb08c7027383dab9cf256a5d657f3",
+      "author": "Ricardo González",
+      "date": "2022-12-09T10:29:45Z",
+      "message": "Increase cmake minimum required (#133)\n\nSigned-off-by: Ricardo González <correoricky@gmail.com>\r\n\r\nSigned-off-by: Ricardo González <correoricky@gmail.com>"
+    },
+    {
+      "sha": "d6069f345be2e5b34534815a82c3ecfaecb37406",
+      "author": "Eduardo Ponz Segrelles",
+      "date": "2022-09-29T06:55:14Z",
+      "message": "Bump version to v1.0.25 (#129)\n\nSigned-off-by: Eduardo Ponz <eduardoponz@eprosima.com>"
+    },
+    {
+      "sha": "55813f2a083f55a425dc12f3d3b70c4759529d80",
+      "author": "José Luis Bueno López",
+      "date": "2022-09-21T07:15:01Z",
+      "message": "Fix broken link to Fast CDR documentation (#127)\n\nSigned-off-by: JLBuenoLopez-eProsima <joseluisbueno@eprosima.com>\r\n\r\nSigned-off-by: JLBuenoLopez-eProsima <joseluisbueno@eprosima.com>"
+    },
+    {
+      "sha": "fe5226398fc7a0321902563081abdbdab099a9d3",
+      "author": "wjswjq",
+      "date": "2022-09-02T14:43:28Z",
+      "message": "Fix SerializeArray error when swaping the bytes (#126)\n\n* Fix SerializeArray error when swaping the bytes\r\n\r\nSigned-off-by: wangjinqian <wangjinqian@lixiang.com>\r\n\r\n* Enable both big-endian and little-endian unitest\r\n\r\nSigned-off-by: wangjinqian <wangjinqian@lixiang.com>\r\n\r\n* Fix wstring serialize error when swaping the bytes\r\n\r\nSigned-off-by: wangjinqian <wangjinqian@lixiang.com>\r\n\r\nSigned-off-by: wangjinqian <wangjinqian@lixiang.com>\r\nCo-authored-by: wangjinqian <wangjinqian@lixiang.com>"
+    },
+    {
+      "sha": "da2987299ee3104bb0393cf0afc8aad6fb848dc1",
+      "author": "José Luis Bueno López",
+      "date": "2022-03-15T11:53:38Z",
+      "message": "Bump version to 1.0.24 (#121)"
+    },
+    {
+      "sha": "0b5efc087877804ec3075ef2310d4aadda39e88b",
+      "author": "Shane Loretz",
+      "date": "2022-03-08T07:45:12Z",
+      "message": "Make $<INSTALL_INTERFACE... use INCLUDE_INSTALL_DIR, and install headers to include/${PROJECT_NAME} (#120)\n\n* Make $<INSTALL_INTERFACE... use INCLUDE_INSTALL_DIR\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* Install headers to include/${PROJECT_NAME}\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* Add missing trailing slash\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* Add option APPEND_PROJECT_NAME_TO_INCLUDEDIR\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* Misc Fixes\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* Unset _include_dir when finished with it\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>"
+    },
+    {
+      "sha": "d39e820330fb56c9926138d903994cae9946bdcf",
+      "author": "Miguel Company",
+      "date": "2021-12-21T15:02:58Z",
+      "message": "Bump version to 1.0.23 (#118)\n\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>"
+    },
+    {
+      "sha": "f09f2013672fb31d592e1505aa3e0aa895ad6559",
+      "author": "Ricardo González",
+      "date": "2021-11-29T07:59:35Z",
+      "message": "Fix wrong cmake variable name (#117)\n\nSigned-off-by: Ricardo González <ricardo@richiware.dev>"
+    },
+    {
+      "sha": "f986b0122ddc2d4476ba86c13852597900c03bc0",
+      "author": "Miguel Company",
+      "date": "2021-09-17T11:34:25Z",
+      "message": "Bump version to 1.0.22 (#115)\n\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>"
+    },
+    {
+      "sha": "e8b71ac650a9c4431bd4e10d3bb4924e6c6f4739",
+      "author": "tparys",
+      "date": "2021-09-14T07:28:16Z",
+      "message": "Deallocate arrays with proper destructor (#114)\n\n* Deallocate arrays with proper destructor\r\n\r\nSigned-off-by: Timothy Parys <tparys@gmail.com>\r\n\r\n* Replace correct line in deallocator update.\r\n\r\nSigned-off-by: Timothy Parys <tparys@gmail.com>"
+    },
+    {
+      "sha": "bcd74e07ea068f2e45a85adb6cc6b2d2cb601ee9",
+      "author": "Ricardo González",
+      "date": "2021-07-12T10:08:07Z",
+      "message": "Add new support for googletest (#110)\n\nSigned-off-by: Ricardo González Moreno <ricardo@richiware.dev>"
+    },
+    {
+      "sha": "cff6ea98f66d5fd4d53541e183676257a42a6c23",
+      "author": "Miguel Company",
+      "date": "2021-05-18T08:11:58Z",
+      "message": "Bump version to 1.0.21 (#108)\n\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>"
+    },
+    {
+      "sha": "f773acf2cf702dc1d1bfc0a8b01eab7183db910e",
+      "author": "MiguelBarro",
+      "date": "2021-05-18T05:28:19Z",
+      "message": "Upgrade installer to support cmake linking statically or dynamically to Fast-DDS (#107)\n\n* [11561] Add a FASTDDS_STATIC CMake variable to link statically to the binary deployment\r\n\r\n* [11561] Addressing reviewer's comments"
+    },
+    {
+      "sha": "e194e448de307cb447074f6c43ef1ad8276a3c79",
+      "author": "MiguelBarro",
+      "date": "2021-05-13T07:37:41Z",
+      "message": "[11498] updating scripts for CMake 3.17 (#106)\n\n* [11498] updating scripts to CMake upgrade\r\n\r\n* [11489] update package scripts for VS2019\r\n\r\n* [11489] correcting CMake syntax\r\n\r\n* [11489] completely qualify symbols file"
+    },
+    {
+      "sha": "53a0b8cae0b9083db69821be0edb97c944755591",
+      "author": "Miguel Company",
+      "date": "2021-02-22T07:50:10Z",
+      "message": "Bump version to 1.0.20 (#105)\n\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>"
+    },
+    {
+      "sha": "4bf0cfa26c4c48cc008463e2a1a9db3ae8897e02",
+      "author": "Miguel Company",
+      "date": "2021-02-15T10:06:00Z",
+      "message": "Validity checks on read_encapsulation [10576] (#104)\n\n* Refs 10547. Add test to check DDS encapsulation.\r\n\r\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>\r\n\r\n* Refs 10547. Add test to check Corba encapsulation.\r\n\r\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>\r\n\r\n* Refs 10547. Perform checks on Cdr::read_encapsulation.\r\n\r\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>\r\n\r\n* Refs 10576. Fix warning on aarch64.\r\n\r\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>"
+    },
+    {
+      "sha": "14f8934bb48e3557ca053ed540de1a3120c1e705",
+      "author": "Miguel Company",
+      "date": "2021-01-29T08:41:32Z",
+      "message": "Bump version to 1.0.19 (#102)\n\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>"
+    },
+    {
+      "sha": "3e875b4c1ed63b50f2f4d3bda66524cb3505d221",
+      "author": "Timo Röhling",
+      "date": "2021-01-29T06:08:47Z",
+      "message": "Prevent unexpected length_error exception (#101)\n\nOn some architectures, std::vector<bool> has a max_size() below 2^32-1,\r\nso the early resize() call will throw a length_error exception before\r\nthe deserialization code has a chance to throw the\r\nNotEnoughMemoryException. This patch moves the resize() operation after\r\nthe length check, so the correct exception is thrown consistently.\r\n\r\nSigned-off-by: Timo Röhling <timo@gaussglocke.de>"
+    },
+    {
+      "sha": "b02d6d0d42b2fd4798897ba2e246d2a71b4d6722",
+      "author": "Miguel Company",
+      "date": "2021-01-27T14:52:48Z",
+      "message": "1.0.18 (#100)\n\n* Refs 10394. Bump version to 1.0.18.\r\n\r\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>\r\n\r\n* Refs 10394. Add note on CodeQL static analysis.\r\n\r\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>"
+    },
+    {
+      "sha": "3107acc450f3fbf69ea817b0eb95441546af8595",
+      "author": "Miguel Company",
+      "date": "2021-01-26T09:25:20Z",
+      "message": "Check sequence lengths when deserializing [10336] (#98)\n\n* Refs 10331. Tests refactor including check for wrong sequence length.\r\n\r\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>\r\n\r\n* Refs 10331. Check sequence length on deserialization.\r\n\r\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>\r\n\r\n* Refs 10331. Uncrustify.\r\n\r\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>"
+    },
+    {
+      "sha": "7afdcc06da2dbb9c9f18cf4ecc220784d8992a6f",
+      "author": "Miguel Company",
+      "date": "2021-01-26T07:40:15Z",
+      "message": "Avoid unsafe castings to wchar_t*. (#99)\n\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>"
+    },
+    {
+      "sha": "f1c66e88ed25bc1f27b8465d7f9f6b22e62da7e3",
+      "author": "Miguel Company",
+      "date": "2020-12-04T12:57:37Z",
+      "message": "Setting up CodeQL github action (#97)\n\n* Create codeql-analysis.yml\r\n\r\n* Update codeql-analysis.yml\r\n\r\n* Update codeql-analysis.yml\r\n\r\n* Update codeql-analysis.yml\r\n\r\n* Update codeql-analysis.yml\r\n\r\n* Update codeql-analysis.yml"
+    },
+    {
+      "sha": "ba790607798573e931770aefb0321709ac777470",
+      "author": "Miguel Company",
+      "date": "2020-12-04T09:26:53Z",
+      "message": "Bump version to 1.0.17 (#96)\n\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>"
+    },
+    {
+      "sha": "8a70c0c35c54497fe99abeb8185ac6f09ce42435",
+      "author": "Timo Röhling",
+      "date": "2020-12-03T15:01:39Z",
+      "message": "Improve long double serialization (#91)\n\nThe \"long double\" type is not very portable, as it can have different\r\nsizes on different architectures. While there is some ad-hoc fix for\r\nWindows and ARM, the code is not really portable nor works\r\ncross-architecturally.\r\n\r\nThis patch adds a check for the actual size of long double and tries to\r\nconvert to the __float128 type for serialization if long double is\r\nshorter than 16 bytes. If __float128 is not available and long double\r\nhas 8 bytes, the previous fallback is implemented, which puts a regular\r\nzero-padded double into the field.\r\n\r\nUnlike the old code, the new serialization logic works on x86 and\r\ncertain PowerPC architectures, where long double has 12 bytes. The code\r\ncould be improved further by a proper, manually coded conversion between\r\ndouble precision and quadruple precision if __float128 is not available\r\n(the \"Windows\" case).\r\n\r\nSigned-off-by: Timo Röhling <timo@gaussglocke.de>"
+    },
+    {
+      "sha": "abe993f962671cc807cccafc2ea1efede01d26f2",
+      "author": "Chris Lalancette",
+      "date": "2020-12-03T06:15:39Z",
+      "message": "Update the CMake minimum required to 2.8.12. (#95)\n\nThis is to remove a warning that happens on modern CMake\r\n(> 3.19), and shouldn't really cause too many compatibility\r\nproblems.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "2690cb0c5345373f9f6727746c77944b326a69c8",
+      "author": "Eduardo Ponz Segrelles",
+      "date": "2020-11-30T15:09:35Z",
+      "message": "Upgrade to QL1 (#94)\n\nSigned-off-by: EduPonz <eduardoponz@eprosima.com>"
+    },
+    {
+      "sha": "06f398faf5e3e58163dc469341799d1501c4e884",
+      "author": "Timo Röhling",
+      "date": "2020-11-27T08:56:36Z",
+      "message": "Fix invalid memory access during array deserialization (#90)\n\nThe deserializeArray() functions for various data types did not write to\r\nthe array but to the location of the array pointer instead.\r\n\r\nSigned-off-by: Timo Röhling <timo@gaussglocke.de>"
+    },
+    {
+      "sha": "9a2fb91b05d174a0076e64a9f10ff807d952fd33",
+      "author": "MiguelBarro",
+      "date": "2020-11-27T08:51:37Z",
+      "message": "Update windows installation paths to the new installercop settings (#93)"
+    },
+    {
+      "sha": "aff6cfa997b023cbfaa45c6d6e7e9e4ee150e6dc",
+      "author": "Eduardo Ponz Segrelles",
+      "date": "2020-11-26T10:31:14Z",
+      "message": "Code coverage policy (#92)\n\n* Refs #10027: Add code-coverage policy\r\n\r\nSigned-off-by: EduPonz <eduardoponz@eprosima.com>\r\n\r\n* Refs #10027: Correct typos\r\n\r\nSigned-off-by: EduPonz <eduardoponz@eprosima.com>"
+    },
+    {
+      "sha": "e3906cc6520a1de4f842d3afdd03b78206ad33af",
+      "author": "José Luis Bueno López",
+      "date": "2020-09-28T06:50:59Z",
+      "message": "Add Quality Declaration (#85)\n\n* Refs #9332: Add Quality Declaration and update README\r\n\r\nSigned-off-by: JLBuenoLopez-eProsima <joseluisbueno@eprosima.com>\r\n\r\n* Refs #9332: Update QL\r\n\r\nSigned-off-by: JLBuenoLopez-eProsima <joseluisbueno@eprosima.com>\r\n\r\n* Refs #9390: correct Linux-aarch64 badges\r\n\r\nSigned-off-by: JLBuenoLopez-eProsima <joseluisbueno@eprosima.com>\r\n\r\n* Apply suggestions from code review\r\n\r\nSigned-off-by: JLBuenoLopez-eProsima <joseluisbueno@eprosima.com>\r\n\r\nCo-authored-by: Miguel Company <miguelcompany@eprosima.com>\r\n\r\nCo-authored-by: Miguel Company <miguelcompany@eprosima.com>"
+    },
+    {
+      "sha": "95c9f4eecab5923da6058b84fec9fff35c37167a",
+      "author": "José Luis Bueno López",
+      "date": "2020-09-25T11:44:21Z",
+      "message": "Add PLATFORM_SUPPORT document (#84)\n\nSigned-off-by: JLBuenoLopez-eProsima <joseluisbueno@eprosima.com>"
+    },
+    {
+      "sha": "9bfd0397d8834c81dc41eadf895a4a6e582c95af",
+      "author": "Ignacio Montesino Valle",
+      "date": "2020-09-22T11:17:45Z",
+      "message": "Uncrustify source files (#83)\n\n* Refs #9332: modified ifdef so uncrustify can detect it\r\n\r\nSigned-off-by: imontesino <monte.igna@gmail.com>\r\n\r\n* Refs #9332: Uncrustified source code files\r\n\r\nSigned-off-by: imontesino <monte.igna@gmail.com>\r\n\r\n* Refs #9332: Uncrustify\r\n\r\nSigned-off-by: imontesino <monte.igna@gmail.com>"
+    },
+    {
+      "sha": "b57dd66fea6a2a3bdaed222419e7ff084b4eb332",
+      "author": "Miguel Company",
+      "date": "2020-09-22T09:35:32Z",
+      "message": "Not requiring DCO from members (#82)\n\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>"
+    },
+    {
+      "sha": "76b473a7be8f3ae9fe5b45d600942337a7956d32",
+      "author": "José Luis Bueno López",
+      "date": "2020-09-22T09:30:59Z",
+      "message": "Generate doxygen documentation (#80)\n\n* Refs #9372: Generate doxygen docs\r\n\r\nSigned-off-by: JLBuenoLopez-eProsima <joseluisbueno@eprosima.com>\r\n\r\n* Refs #9372: update hyperlink to all-docs\r\n\r\nSigned-off-by: JLBuenoLopez-eProsima <joseluisbueno@eprosima.com>\r\n\r\n* Update CMakeLists.txt\r\n\r\nCo-authored-by: Miguel Company <miguelcompany@eprosima.com>\r\n\r\n* Refs #9378: introduce endianness parameter\r\n\r\nSigned-off-by: JLBuenoLopez-eProsima <joseluisbueno@eprosima.com>\r\n\r\nCo-authored-by: Miguel Company <miguelcompany@eprosima.com>"
+    },
+    {
+      "sha": "f4d07004cda885afa67b2cfde0956c007a37d0d8",
+      "author": "José Luis Bueno López",
+      "date": "2020-09-22T09:06:55Z",
+      "message": "Add versioning policy declaration (#81)\n\nSigned-off-by: JLBuenoLopez-eProsima <joseluisbueno@eprosima.com>"
+    },
+    {
+      "sha": "065d49248bd4afbae670836ee1f1c718b9760dde",
+      "author": "Eduardo Ponz Segrelles",
+      "date": "2020-09-01T14:09:18Z",
+      "message": "Bump version to 1.0.15 (#78)\n\nSigned-off-by: EduPonz <eduardoponz@eprosima.com>"
+    },
+    {
+      "sha": "721b99ea1df5b65e6be912dd4e4e0e2f43995f25",
+      "author": "Eduardo Ponz Segrelles",
+      "date": "2020-09-01T13:40:05Z",
+      "message": "Merge pull request #77 from eProsima/bugfrix/endianness_macro\n\nSet and check endianness with FASTCDR_IS_BIG_ENDIAN_TARGET"
+    },
+    {
+      "sha": "82a2a4eb50c09727749a7302db3fe3e3c2b8374d",
+      "author": "EduPonz",
+      "date": "2020-09-01T07:36:27Z",
+      "message": "Refs #8991: Set and check endianness with FASTCDR_IS_BIG_ENDIAN_TARGET instead of defining __BIG_ENDIAN__\n\nSigned-off-by: EduPonz <eduardoponz@eprosima.com>"
+    },
+    {
+      "sha": "c5668b933b2077b760a121bc5aeb993880cfab0a",
+      "author": "Alberto Soragna",
+      "date": "2020-06-10T14:58:26Z",
+      "message": "add override keyword where needed (#75)\n\nSigned-off-by: Soragna, Alberto <alberto.soragna@gmail.com>"
+    },
+    {
+      "sha": "3fafb36dc4c34c0925c648a7cbc42682f462f969",
+      "author": "Miguel Company",
+      "date": "2020-05-26T10:58:06Z",
+      "message": "1.0.14 (#74)\n\n* Bump version to 1.0.14\r\n\r\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>\r\n\r\n* Add note on DCO to contributing.md\r\n\r\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>"
+    },
+    {
+      "sha": "84d697d5eb82b2fdaedb17c05e184f1152b5047c",
+      "author": "Andrei Kholodnyi",
+      "date": "2020-05-08T08:40:48Z",
+      "message": "add __VXWORKS__ (#73)"
+    },
+    {
+      "sha": "9060988889285647ae3c4102ac9cf6143ef87c67",
+      "author": "Luis Gasco",
+      "date": "2020-04-27T06:45:46Z",
+      "message": "Fixes issue 8262 (#72)"
+    },
+    {
+      "sha": "4bd4e3c81a26ddce329f4d6d3089e162de7f7d06",
+      "author": "dodsonmg",
+      "date": "2020-04-15T07:38:43Z",
+      "message": "add preprocessing guards for __FreeBSD__ alongside __APPLE__ (#71)"
+    },
+    {
+      "sha": "174f6ff1d3a227c5c900a4587ee32fa888267f5e",
+      "author": "Miguel Company",
+      "date": "2020-03-27T11:56:40Z",
+      "message": "Bump version to 1.0.13 (#70)"
+    },
+    {
+      "sha": "9f5b455e299b0582ba806d122a8cddbff99fa5cc",
+      "author": "geoffviola",
+      "date": "2020-03-27T09:12:42Z",
+      "message": "fastbuffer memcpy and long double ptr fix (#67)"
+    },
+    {
+      "sha": "84962690c0cd5d06c7a77fd9b51287c7c8f62060",
+      "author": "Miguel Company",
+      "date": "2020-02-17T13:10:50Z",
+      "message": "Custom exceptions made allocation free and noexcept. (#68)"
+    },
+    {
+      "sha": "59b77c24e3bb6fdbf7330964e0acea54a87d3969",
+      "author": "Miguel Company",
+      "date": "2020-01-15T10:16:17Z",
+      "message": "Bump version to 1.0.12 (#66)"
+    },
+    {
+      "sha": "86e36e899420ec1e31e22b13c7f5c4dbae2efd24",
+      "author": "Hans Fredrik Nordhaug",
+      "date": "2019-12-19T13:28:06Z",
+      "message": "Install config files in correct location (#51)\n\n* Install config files in correct location\r\n\r\nAccording to https://cmake.org/cmake/help/latest/command/find_package.html#search-procedure the config files should be *not* placed under /usr/share (which is what DATA_INSTALL_DIR gives you). Putting it one location under /usr/share makes it impossible to install for multiple libs (or archs).\r\n\r\nThe provided patch is only tested under Linux and might need extension to work under Windows. (See link abode for Windows search path.)\r\n\r\n* Changing to lib/cmake/${projectname}\r\n\r\nCo-Authored-By: Ricardo González <correoricky@gmail.com>\r\n\r\n* Updated Windows packaging cmake template with new config directory."
+    },
+    {
+      "sha": "4fc79bf70f29f88b22724d860a33836683628c20",
+      "author": "Hans Fredrik Nordhaug",
+      "date": "2019-12-12T11:13:57Z",
+      "message": "Add LIB_SUFFIX support to Cmake build files (#50)\n\nFix installation directory for libraries for systems that use LIB_SUFFIX"
+    },
+    {
+      "sha": "b1fcd892be4e6ca87fe199111b66058dddd95445",
+      "author": "geoffviola",
+      "date": "2019-12-12T11:11:52Z",
+      "message": "prevent memcpy with nullptr (#63)"
+    },
+    {
+      "sha": "cc27c2490b694e97ca1bbcc169172fd63209bb90",
+      "author": "Luis Gasco",
+      "date": "2019-08-27T10:58:38Z",
+      "message": "Refs #6203 Remove FastRTPSGen code. (#61)"
+    },
+    {
+      "sha": "0f148fcdcbdd019214ef32632f035544c9645378",
+      "author": "Luis Gasco",
+      "date": "2019-08-06T10:52:18Z",
+      "message": "Refs #6180 Resize sequences on deserialize. (#59)"
+    },
+    {
+      "sha": "ef572fae51067895a91b2b6dde121d4979dd30d9",
+      "author": "Álvaro Molinillo",
+      "date": "2019-07-31T10:48:12Z",
+      "message": "Change cmake config directory if INSTALLER_PLATFORM is set [6155 ] (#58)\n\n* Refs #5961. Change cmake config dir if INSTALLER_PLATFORM is set\r\n\r\n* Refs #5961. Remove vs2013 platform as suggested."
+    },
+    {
+      "sha": "cb513de0b5f6c562593cb80beee41257591411a7",
+      "author": "Ricardo González",
+      "date": "2019-07-05T08:58:42Z",
+      "message": "Refs #5874.  Fixed error with installer script and static libraries. (#57)"
+    },
+    {
+      "sha": "649b9a0e763f8a4cfdd41238b1495c58b7ea6660",
+      "author": "MiguelCompany",
+      "date": "2019-06-18T13:25:02Z",
+      "message": "v1.0.10 (#54)"
+    },
+    {
+      "sha": "b89492defea233fd17a44a1acb4f41c34a236789",
+      "author": "Miguel Company",
+      "date": "2019-06-18T12:53:26Z",
+      "message": "Refs #5691. Bump version to 1.0.10"
+    },
+    {
+      "sha": "79523c11b6b5ff410945d05c481ccd486831e0a7",
+      "author": "MiguelCompany",
+      "date": "2019-06-10T13:29:03Z",
+      "message": "Fix warnings and tests for 32-bit ARM (#53)"
+    },
+    {
+      "sha": "a1f642aacca4fbb7a7b824fef455e30bc25b214b",
+      "author": "Emerson Knapp",
+      "date": "2019-06-07T21:26:16Z",
+      "message": "Remove last alternative preprocessor operator"
+    },
+    {
+      "sha": "df268eeb30932d01d5ab52003c957ed1a38c5da8",
+      "author": "Emerson Knapp",
+      "date": "2019-06-07T21:14:59Z",
+      "message": "The windows preprocessor doesn't like the alternative operators"
+    },
+    {
+      "sha": "a6884385818b9528e1d7a39989ee5375e4e019a7",
+      "author": "Emerson Knapp",
+      "date": "2019-06-07T20:56:14Z",
+      "message": "Fix size_t conversion\n\nSigned-off-by: Emerson Knapp <eknapp@amazon.com>"
+    },
+    {
+      "sha": "d0a77b92be5d0a209b960801aa13ebf4089dc1d1",
+      "author": "Emerson Knapp",
+      "date": "2019-06-07T20:54:35Z",
+      "message": "Cleanup\n\nSigned-off-by: Emerson Knapp <eknapp@amazon.com>"
+    },
+    {
+      "sha": "ba189e2b71accf960e8bfb91aeb46385725a0c49",
+      "author": "Emerson Knapp",
+      "date": "2019-06-07T20:49:39Z",
+      "message": "WIP closer\n\nSigned-off-by: Emerson Knapp <eknapp@amazon.com>"
+    },
+    {
+      "sha": "db0c8237a0d0d6da10cba1ed98cb64d6e7307432",
+      "author": "Emerson Knapp",
+      "date": "2019-06-07T20:36:44Z",
+      "message": "WIP reducing impact of change\n\nSigned-off-by: Emerson Knapp <eknapp@amazon.com>"
+    },
+    {
+      "sha": "66f439964e9d112ba2413ff8dfe60dcaa3a43861",
+      "author": "Emerson Knapp",
+      "date": "2019-06-06T23:23:43Z",
+      "message": "Don't mark build as 32bit when on WIN64\n\nSigned-off-by: Emerson Knapp <eknapp@amazon.com>"
+    },
+    {
+      "sha": "76f569bc41d6a8171ea64131b0767da6c253e967",
+      "author": "Emerson Knapp",
+      "date": "2019-06-06T01:37:30Z",
+      "message": "Always explicitly cast size_t on Windows\n\nSigned-off-by: Emerson Knapp <eknapp@amazon.com>"
+    },
+    {
+      "sha": "f734b023ab4f499b42558291f6b62c93ed6eeec6",
+      "author": "Emerson Knapp",
+      "date": "2019-06-05T21:37:53Z",
+      "message": "Use inline function to centralize to single line\n\nSigned-off-by: Emerson Knapp <eknapp@amazon.com>"
+    },
+    {
+      "sha": "82b1949853942c52f4fe88a5cff926c6ecd19cb1",
+      "author": "Emerson Knapp",
+      "date": "2019-06-05T21:02:24Z",
+      "message": "Continue to force 32 bit values where serialization expects them, make no-op cast for 32 bit build\n\nSigned-off-by: Emerson Knapp <eknapp@amazon.com>"
+    },
+    {
+      "sha": "82bf1e328dddf9aa9d324a8f74efb5a8f9b786c4",
+      "author": "Emerson Knapp",
+      "date": "2019-06-05T01:05:25Z",
+      "message": "Remove warnings and make correct for 32-bit\n\nSigned-off-by: Emerson Knapp <eknapp@amazon.com>"
+    },
+    {
+      "sha": "906c966c426f85d503baca9c2e46bead7b633dff",
+      "author": "MiguelCompany",
+      "date": "2019-05-27T06:09:12Z",
+      "message": "Avoid const decl from included files being declared twice (#49)"
+    },
+    {
+      "sha": "4f61be9eb9df2e1102f6d8518097569695b60a97",
+      "author": "LuisGasco",
+      "date": "2019-05-20T09:20:49Z",
+      "message": "Refs #5433 Avoid const decl from included files being declared twice."
+    },
+    {
+      "sha": "3e85b3b5f9c7cc113677e98d81a5f4240b07779c",
+      "author": "Ricardo González",
+      "date": "2019-04-30T06:24:53Z",
+      "message": "Merge pull request #48 from eProsima/release/1.0.9\n\nRelease 1.0.9 [5241]"
+    },
+    {
+      "sha": "665d5b44ba7bbf39739d9feffc7efad69ea92e58",
+      "author": "MiguelCompany",
+      "date": "2019-04-30T05:51:45Z",
+      "message": "Refs #5241. Bump version to 1.0.9"
+    },
+    {
+      "sha": "81063e3ee7a6fc100dad1724c81c636f31a503de",
+      "author": "Ricardo González Moreno",
+      "date": "2019-04-30T05:45:49Z",
+      "message": "Merge remote-tracking branch 'origin/master' into develop"
+    },
+    {
+      "sha": "ba94e149b4a5e61f0618065a3fcf5f48b57e775f",
+      "author": "MiguelCompany",
+      "date": "2019-04-05T08:25:40Z",
+      "message": "Fix cmake message (#47)"
+    },
+    {
+      "sha": "193001af834c85f35f9a6e23905ca264b86fdacd",
+      "author": "MiguelCompany",
+      "date": "2019-04-04T08:25:09Z",
+      "message": "Fix warning on Windows (#46)\n\nRefs #4975 Fix warning on Windows [5043]"
+    },
+    {
+      "sha": "8f0631e5c7cd142e54f8cad1d07d131a7eaf29a3",
+      "author": "Luis Enrique Muñoz Martín",
+      "date": "2019-04-04T06:43:16Z",
+      "message": "Fix cmake message"
+    },
+    {
+      "sha": "ba572165e0613761a3d5dc28e956ed1ce54c162f",
+      "author": "LuisGasco",
+      "date": "2019-04-02T14:10:16Z",
+      "message": "Refs #4975 Fix warning on Windows"
+    },
+    {
+      "sha": "a2f86b2e10a07072a7e5bc51fc12685e60ee6eb9",
+      "author": "Luis Gasco",
+      "date": "2019-03-30T15:14:59Z",
+      "message": "Feature/idl 4.2 [4973] (#45)\n\n* Refs #4715 Struct inheritance support.\r\n\r\n* Refs #4713 Added bitmask support\r\n\r\n* Refs #4713 Added bitset support.\r\n\r\n* Refs #4714 Added bitset inheritance.\r\n\r\n* Refs #4716 Annotations to TypeObject\r\n\r\n* Refs #4825 Adapted to new coding style.\r\n\r\n* Refs #4716 (WIP) Applying annotations behaviour\r\n\r\n* Refs #4716 Apply annotations behaviour\r\n\r\n* Refs #4942 WIP Added tests for enum, alias, maps...\r\n\r\n* Refs #4942 Added tests for enum, alias, maps, and forward decl.\r\n\r\n* Refs #4942 Added module managment to TypeObject generated files.\r\n\r\n* Refs #4942 Some fixes and needed annotations.\r\n\r\n* Refs #4942 Fixed bitmask default value (isn't the first member!).\r\n\r\n* Refs #4973 Bitset fixes\r\n\r\n* Refs #4972 Serialization of bitset field by field similary to an struct.\r\n\r\n* Refs #4973 Apply suggestions from code review\r\n\r\nCo-Authored-By: LuisGP <lgasco@gmail.com>\r\n\r\n* Refs #4973 Removed unused commented method."
+    },
+    {
+      "sha": "ae56c2f1cfe980cb309d7fe98d0589c73e32bf04",
+      "author": "Anand",
+      "date": "2019-01-29T12:04:49Z",
+      "message": "support for QNX (#33)\n\ncompiler ID for QNX is QCC"
+    },
+    {
+      "sha": "6744fc07e450aa106cc161bf254fc504f1b588f1",
+      "author": "Luis Gasco",
+      "date": "2019-01-23T07:44:30Z",
+      "message": "Merge pull request #42 from eProsima/hotfix/seqenums\n\nFixed generated code for sequence of enums. [4419]"
+    },
+    {
+      "sha": "c41ffeaad849bfb39e044794975e5915d30460c2",
+      "author": "Ricardo González Moreno",
+      "date": "2019-01-22T15:32:42Z",
+      "message": "Refs #4418. Fixed generated code for sequence of enums."
+    },
+    {
+      "sha": "b395f44e896c8621ec754d91bcb9c561de41d9d6",
+      "author": "MiguelCompany",
+      "date": "2018-11-29T13:40:48Z",
+      "message": "Fixes when creating installer from other products (#34)"
+    },
+    {
+      "sha": "f9e485ece48b5c0aa90f7458c110de26ef99ec1d",
+      "author": "Ricardo González Moreno",
+      "date": "2018-11-29T09:26:12Z",
+      "message": "Refs #3541. Fixed error generation installer."
+    },
+    {
+      "sha": "b634585d57bd2f871df03e57254fdf256cfabb28",
+      "author": "Ricardo González Moreno",
+      "date": "2018-11-29T09:24:15Z",
+      "message": "Refs #3541. Fixed error creating installer for a topper product."
+    },
+    {
+      "sha": "b4e09ba2a77e5a8d6730df4ff1736e2626f5fdc5",
+      "author": "Luis Gasco",
+      "date": "2018-11-08T14:37:50Z",
+      "message": "Merge pull request #32 from eProsima/hotfix/dynamic-types-idl-generator\n\nCherry picking orphaned commit"
+    },
+    {
+      "sha": "dc5394b2b760e3528a62041eb3a95996a188b143",
+      "author": "Luis Gasco",
+      "date": "2018-10-15T14:06:53Z",
+      "message": "Refs #3267 Merge of dynamic types"
+    },
+    {
+      "sha": "94df724208ef5c325f865a7394050054863561cc",
+      "author": "Ricardo González",
+      "date": "2018-11-06T11:35:09Z",
+      "message": "Merge pull request #30 from eProsima/release/1.0.8\n\nRelease 1.0.8"
+    },
+    {
+      "sha": "caf5e93fbef34d8b2c38b3c51ac1b7050b1c3962",
+      "author": "Miguel Company",
+      "date": "2018-11-06T11:08:37Z",
+      "message": "Refs #3751. Added inline doc on FastCdr.h new methods."
+    },
+    {
+      "sha": "ef1fbe471b003d389e230dd0356ff41c6b6e9099",
+      "author": "Miguel Company",
+      "date": "2018-11-06T10:32:46Z",
+      "message": "Refs #3738. Serialization methods for char* restored."
+    },
+    {
+      "sha": "5cf7c3ae24a49923cd4499b46be6e43f7726d256",
+      "author": "Miguel Company",
+      "date": "2018-11-06T10:27:12Z",
+      "message": "Refs #3751. Added inline doc on Cdr.h new methods."
+    },
+    {
+      "sha": "012609332984a3d46c64212f6ae16a608d2a01bb",
+      "author": "Miguel Company",
+      "date": "2018-11-06T08:59:04Z",
+      "message": "Refs #3735. Bump version to 1.0.8"
+    },
+    {
+      "sha": "1d3c47497f8dfc48802143824b342549990cf7fa",
+      "author": "Julián Bermúdez Ortega",
+      "date": "2018-10-25T11:01:39Z",
+      "message": "Modified CMake soversion. (#29)"
+    },
+    {
+      "sha": "3a99f4cd02b136756cee6bf7ef2650c809369f1f",
+      "author": "Luis",
+      "date": "2018-09-25T06:04:11Z",
+      "message": "Feature/dynamic types (#23)\n\n* Refs #3078 TypeObject stringtemplates.\r\n\r\n* Refs #3078 Generated methods are now public.\r\n\r\n* Refs #3078 Added basic and plain types support.\r\n\r\n* Refs #3078 Several fixes\r\n\r\n* Refs #3156 Added maps support and fixed issue with possible duplicated name on serialization.\r\n\r\n* Refs #3154 Added tryCreateTypeIdentifier method that receives a string with the type name and tries to return its TypeIdentifier.\r\n\r\n* Refs #3082 Added method to register IDL types to TypeObjectFactory.\r\n\r\n* Refs #3082 DynamicHelloWorld and some fixes.\r\n\r\n* Refs #3154 Fixed warning.\r\n\r\n* Refs #3085. Update the serialization of wchar to work with 16 bits\r\n\r\n* Refs #3187 Some fixes\r\n\r\n* Refs #3187 Fixing more issues.\r\n\r\n* Refs #3187 Bug fixing\r\n\r\n* Refs #3085. Adapt wchar to uint32 after checking that linux & MacOS work like that\r\n\r\n* Refs #3085. Adapt WSTRINGs to work with uint32_t\r\n\r\n* Refs #3187 Fixed warning in generated code.\r\n\r\n* Refs #3187 Fixed possible registration twice.\r\n\r\n* Refs #3187 Matching fixes\r\n\r\n* Refs #3187 Fix issue with long double\r\n\r\n* Refs #3202 Refactorization\r\n\r\n* Refs #3203 Fixed malformed array name and memory leak\r\n\r\n* Refs #3197 Bug fixing\r\n\r\n* Refs #3197 Fixed generating inner types as minimal\r\n\r\n* Refs #3197 Fixed not being reported as complete\r\n\r\n* Refs #3197 Fixed aliases and complex types on plain types.\r\n\r\n* Refs #3198 Conversions fixes (wstring size miscalculated)\r\n\r\n* Refs #3216 WChar size fixed to 4 bytes instead of using sizeof (WIN32 compatibility)\r\n\r\n* Refs #3216 Long double size to 128\r\n\r\n* Refs #3077. Update long double and wstring serialization to avoid the issues working between Windows and Linux\r\n\r\n* Refs #3216 Fixed unreachable code warnings\r\n\r\n* Refs #3216 Fixed long double size\r\n\r\n* Refs #3077. Fix WString serialization\r\n\r\n* Refs #3216 Added size to maps\r\n\r\n* Refs #3221 Fix alignment for long double\r\n\r\n* Refs #3221 throw in new line and between brackets\r\n\r\n* Refs #3077. Fix serialization of long doubles to unity Windows (8Bytes) with the rest of platforms(16Bytes)\r\n\r\n* Refs #3227 Fixed problems with serialization size with maps and erased '\\0' in wstrings.\r\n\r\n* Refs #3228 Update WSTRING serialization removing the '/0' because of the standard\r\n\r\n* Refs #3263 Fixed IDL included files on TypeObject.\r\n\r\n* Refs #3263 Added argument to generate type object files, and adapted TypesSource to react to it.\r\n\r\n* Refs #3274 Fixed gcc8 warnings and conversion error.\r\n\r\n* Refs #3267 Fixed error (due to merge?)\r\n\r\n* Refs #3200 Added bitset support.\r\n\r\n* Refs #3371 Requested changes in GitHub\r\n\r\n# Conflicts:\r\n#\tinclude/fastcdr/Cdr.h\r\n#\tsrc/cpp/Cdr.cpp\r\n\r\n* Refs #3371 Requested changes in GitHub and implementation of missing functions in FastCdr. Added test cases.\r\n\r\n* Added CMake script for internal CI.\r\n\r\n* Added valgrind.supp file.\r\n\r\n* Refs #3371 Error serializing long double arrays.\r\n\r\n* Refs #3262 Fixed bug with WString and Long Double in Windows\r\n\r\n* Refs #3263 Fixed memory leak when reading a wstring\r\n\r\n* Refs #3263 Fixed memory out of range when serializating and deserializating long double arrays.\r\n\r\n* Fixed compilation warnings on windows\r\n\r\n* Refs #3263 Fixed Memory leak on complete tests.\r\n\r\n* Refs #3263 Using c++ new instead of calloc.\r\n\r\n* Refs #3263 Fixed compilation error on Windows."
+    },
+    {
+      "sha": "1df42bbd1ea86a9c99bb8fa72104f19872235986",
+      "author": "Ricardo González Moreno",
+      "date": "2018-08-27T10:22:22Z",
+      "message": "Fixed compilation warnings on OSX."
+    },
+    {
+      "sha": "0ea20e44392e6a4ddc0bcf374cb7ed2a4d71d2d3",
+      "author": "Ricardo González Moreno",
+      "date": "2018-08-27T10:10:47Z",
+      "message": "Merge commit '939058c124503632e83f9087afb8cd59d6fd674c' into hotfix/#3284"
+    },
+    {
+      "sha": "939058c124503632e83f9087afb8cd59d6fd674c",
+      "author": "Ricardo González Moreno",
+      "date": "2018-08-27T10:07:35Z",
+      "message": "Squashed 'cmake/common/' changes from 0612519..9e7f35b\n\n9e7f35b Merge branch 'hotfix/enable_languages' into 'master'\nc4a3de2 Merge commit '5e926c428a5c97c9458cf69b0ba48db9ef2b23ab' into hotfix/enable_languages\n562d44a Fixed error in cmake script with CXX language.\na7a12f3 Merge branch 'feature/common_compile_opts' into 'master'\ndd2546f Hardening the warnings.\n3f8331a Merge commit '1e27bfc7d3f03d0e0fd6a6f88a1f0a6cfba61377' as 'cmake/common'\nd91ddbd Removing wrong cmake/common.\na4f9b91 Merge branch 'feature/common_compile_opts' into 'master'\n268fe23 Fixing compilation errors on Windows.\n4a0f1b4 Add size function. Added some const modifier.\ne29e223 Refs #3243. Fixed error with CMake 3.5\nc8b3675 Refs #3243. Increasing warnings level and fixing new warnings.\ndf48e52 Removed some inline modifiers\nc77a49f indent\n4f659ab Removed unused images.\nd3a5b4a Removed old files.\n890b118 Ref #3185. Improves sequences tests.\naacc7b2 Ref #3185. Fixes PX4 warnings due to aligment conversion issues. Removes inline methods and change sequence API. Adds missing bracers. Adapts tests to new api.\n2c57da5 Cleans unused makefiles\n02cd30d Ref #3185. Fixes endianness checks issues when no endinanness check is done\n17e21e6 Merge branch 'feature/vs2017' into 'master'\n7547975 Updated cmake/common\n1a597d2 Refactoring on cmake files\n04623b5 Fix bug in align_to function.\n3dcb096 Added micro buffer remaining length function.\nd9d655d Added micro buffer length function utility.\nc8951b7 Refs #2884. Changed config.h.in\nacf934a Refs #2886. Change cmake configuration endian behavior.\n2d929b3 Merge branch 'master' into develop\n987e799 Refs #2883. Setup subtree for cmake macros.\n2047be9 Adds C99 requirement.\n0061c9a Refs #2870. Fixed shared libs bugs on Windows.\n70ad72b Refs #2870. Fixed Windows warning.\n12a1ea1 Refs #2866. Fixed Windows bugs.\n766474a Refs #2866. Moved gtest.cmake to project folder.\ncedc95c Refs #2866. Added merger request advices.\n4a795f7 Refs #2866. Removed string templates.\n6d4361c Refs #2854. Fixed Windows CMake bugs.\n4a14375 Refs #2838. Changed CMake tests architecture.\n004cfbd Refs #2838. Checked installation on Linux.\n4b40d88 Refs #2838. Checked installation on Windows.\nf339b30 Refs #2838. Remodeled CMake.\n69fa53b Refs #2832. Changed versioning in CMake.\n78d34ed Refs #2801. Changed templates to avoid warning on Windows.\nb0a2bfd Refs #2801. Compiling without warning on Windows.\n4c02033 Refs #2810. Changed autogenerated header.\ncf29fa8 Refs #2773. Changed header string template.\n7b0bea6 Fix endianness bug.\nae461d6 Added init and reset function with offset.\ne756e38 Refs #2785. Remove jump functionality.\nb058623 Refs #2773. Modified string templates for MicroRTPSGen.\n54aded8 Refs #2773. Added get_alignment functionality.\n60d140f Minor change at reset buffer.\n104096c Refs #2785. Added sizeof functions. Removed old examples. Added new example.\nd96bad7 Added new init_micro_buffer function for endian\n1c23671 Refs #2662. Changes for accept merge request\ndca24be Refs #2662. Fix bug with the itetator position in arrays. All tests for sequences\n92d2eba 2662 Added sequence functions.\n01bc8b7 Refs #2662. Change api\n84f0685 Refs #2662. Added funcionality (without test)\n1c4c101 Refs #2583. Change examples and README format to markdown\nfdb15a2 Refs #2583. Change tests.\n13c2574 Refs #2583. Removed resize funcionality\nad1b9e2 Merge branch 'feature/windows' into 'develop'\n1e1f10a Refs #2287. Fixed CMake Linux error.\nf91f259 Refs #2287. Fixed Windows test linking error.\nfebd3ab Refs #2287. Fixed Windows compilation errors.\n45e8c6a Refs:#2429, #2430. Adds returns and error flag. Adds tests.\n9efc81d Merge branch 'develop' into feature/micrortpsgen\n910c920 Refs #2391. Added new deallocate function to header and modified deserialization function.\n5d95295 Merge branch 'develop' of git.sambaserver.eprosima.com:fastcdr/nanocdr into develop\nf3d78a1 Uses cmake old policy for version numbers\n309c5ce Refs #2393. Adds missing line on deserialization\nc3eef39 Refs #2383. Added client.h to header file.\nfbecfae Refs #2381. .stg cleanning for c types\nf401638 Refs #2381. Avoid double \\nin auto generated lines\n9767808 Refs #2381. Adds simple IDL C types\n6e65c09 Refs #2381. Added C Bacics Types.\nedcddfc Refs #2381. Change stg file from FastCdrCommon.stg to MicroCdrCommon.stg\n922ea32 Creates branch for micrortpsgen related code\ncf0fd98 Refs #2375. Adds licenses\nafc70df Removes extern warning\na4a754f Refs 2362. Extern Endianness check result\ne56a5cb Fixes Nuttx compilation. Fixeds endianness detection\n04cc754 [fix bug]: serialization arrays with units with bytes 2,4,8 count their size bad\ne41b726 [fix bug]: alignment after arrays doesnt work\nfda82f0 MACHINNE_ENDIANNESS definition is public now\ne65c0db fix deserialize limit buffer bug\n69f059f fix bug at array with elements higher than a byte\n014b4ca fix endianness bug\n5fe50b9 sequences removed\n213736f fix endianness setup\nbbe0322 removed some code comments\nd8a95f6 added MicroState\n1a34ba0 minor changes\nbdacfaf Remove examples/performance_cmp_versions\n4a91c2a add to .gitignore\n3986ff6 Actualizacion de README.rst\n06ba6bd Release version 2.0.0\n3e57dab Release version 2.0.0\ne92a78e add basics tests\nb19d6a8 performance test. dynamic buffers. doc\n8005b76 New API (definition and implementation) done (no tested).\n334ad53 initial structure for the new changes\n2ea6a1c initial structure for the new changes\n4872048 Merge pull request #5 from dagar/pr-cmake_typo\n54c5fec cmake fix message typo\n50776f4 Merge pull request #4 from PeterDuerr/fix-memory-leaks\n9b7fb94 Fix memory leaks indicated by cppcheck\n74b2ed4 Code style: indirection operator attached to types\n7cd4143 Code style: statement should be inside braces\n98fd2cd Fixing code style\n240a3cb Merge pull request #2 from dagar/pr-clang-tidy\n8084fc6 readability add braces\nf219395 Refs #1960. Added new interface for static user buffers and its reuse\n5cc9dcb Refs #1960. Add bool and bool array support\nbbca0a2 Refs #1960. Added extern 'C' to correct linkage in C++ projects\n9eb3045 Refs #1960. Some changes to work with PX4 Firmware\n7b2942c Refs #1960. Avoid double compilation for PX4/Firmware\nfdad641 Refs #1960. Some changes\ndf2bf30 Merge pull request #1 from JavierIH/feature/refactor_micro\ne3555ac Refs #1960. replaced nano for micro\n313ddf3 Refs #1960. fix cmakelists and added options for testing\n2f8cec8 Refs #1960. Adding PX4 support\n74454c5 Refs #1960. added changes to compile on stm32\n6820b69 add table with nanoCDR implemented types\ned3ab92 Add readme with minimal examples code\nf9baf1a fix typos on some comments\n16f1c6e Update documentation\nc7224cc No memory leaks\n5784178 repair memory leak\n1b1159a Refs 1885 Buffer de lectura\n0bc96f2 Refs 1885 Aligned and Non Aligned buffer\nce51288 Refs 1885 nanoBuffer - nanoCDR\nbbf3551 Refs 1885 Alignment on write\n4aa2738 Refs 1885 long to int64_t\nea64d07 Refs 1885 Multithread\n6c2cd6b Refs 1885 Change Unsigned long to uint64_t\n0a4dc42 Refs 1885 Change Int to int32_t\na608976 Refs 1875 Images to document\nacc383d Warnings StaticTest\nb73ab41 FAST to NANO\n29ef95b Compile Windows\n1eba3e9 Casting size_t to unisgned int\n65e1b61 Casting size_t to unisgned int\n492c43b Windows packaging\nf237bc7 Test endianness\nd996bd5 String Array and String Sequence\n24325a9 GTest dynamic\n4b6648f GTest dynamic and static\n0b2d51c GTest static and dynamic\nbb4d1fb CMake conf\nb7a0de1 Document\nbdd7e5c Initial commit\n\ngit-subtree-dir: cmake/common\ngit-subtree-split: 9e7f35b10b011618c60ebc103970dda6ca22d636"
+    },
+    {
+      "sha": "d998f853376bce42f15f10e565fca6d5e1839bdd",
+      "author": "Ricardo González Moreno",
+      "date": "2018-07-27T05:39:33Z",
+      "message": "Refs #3243. Fixed error with CMake 3.5"
+    },
+    {
+      "sha": "da3a85633b3ad553cc11ec141ada514316f9ddaf",
+      "author": "Ricardo González Moreno",
+      "date": "2018-07-26T13:08:50Z",
+      "message": "Refs #3243. Fixing warnings in generated code."
+    },
+    {
+      "sha": "63202c16739dc527f8ba7456847bb8dcb7ddab5b",
+      "author": "Ricardo González Moreno",
+      "date": "2018-07-26T07:13:56Z",
+      "message": "Refs #3243. Increasing warnings level and fixing new warnings."
+    },
+    {
+      "sha": "15f46e820780bd92eaa2d10675b744b67a9ad70e",
+      "author": "Ricardo González Moreno",
+      "date": "2018-07-25T09:23:11Z",
+      "message": "Refs #3240. Fixed error generating unions."
+    },
+    {
+      "sha": "0b23a3507d3e0bdd32fa820f42979bec4e5780b0",
+      "author": "Ricardo González Moreno",
+      "date": "2018-07-05T06:26:11Z",
+      "message": "Removed -D for definitions"
+    },
+    {
+      "sha": "102202a49a893a632b0f59cbf7df91bea80ede3e",
+      "author": "Ricardo González",
+      "date": "2018-07-04T13:42:46Z",
+      "message": "Updated cmake/common"
+    },
+    {
+      "sha": "28c7bc77feeb45a05a37a6848b9940f022f773f2",
+      "author": "Ricardo González",
+      "date": "2018-07-04T13:36:40Z",
+      "message": "Squashed 'cmake/common/' changes from 852b05a..0612519\n\n0612519 Merge branch 'feature/epro-lib-options' into 'master'\nc67faa5 Updating rpcdds to fastrtps 1.6.0\n0b1b776 Merge branch 'feature/update_gtest' into 'master'\ne7a8cf7 Added old behaviour with dependencies in gtest\nbcb1c9c add thirdparty directory to CMAKE_REFIX_PATH only if THIRDPARTY option is specified\nd43a987 Refs #3010. Fixing windows installer.\nf7b5146 Updates for NDK 17.\n2a493f5 Refs #3009. Fixing errors creating linux installer\n9016127 Merge branch 'feature/add_compile_options' into 'master'\ne45b50e Fixed indentation\n5779cf2 Merge remote-tracking branch 'github/master'\nc58f2b0 Merge branch 'feature/automatic' into 'master'\nb81bf3d Added constructors.\n\ngit-subtree-dir: cmake/common\ngit-subtree-split: 061251985af04e8a0ec01fff868fae7154bbcabd"
+    },
+    {
+      "sha": "e251dea51850d4254fb11708ae5e17293ebb4781",
+      "author": "Ricardo González",
+      "date": "2018-07-04T08:37:34Z",
+      "message": "Refactoring on cmake files"
+    },
+    {
+      "sha": "c690b15e6670de46104ebacad7a2cb067b996c6c",
+      "author": "Ricardo González Moreno",
+      "date": "2018-06-22T09:23:49Z",
+      "message": "Refs #3003. Fixed generation of multiple enums."
+    },
+    {
+      "sha": "2d05def3475d4419f61a09b1f603892f3d2f831c",
+      "author": "Ricardo González Moreno",
+      "date": "2018-06-20T08:49:43Z",
+      "message": "Refs #3010. Fixing windows installer."
+    },
+    {
+      "sha": "fbed79e854769a28d58280ada630bfb98f546a01",
+      "author": "Ricardo González Moreno",
+      "date": "2018-06-14T07:37:08Z",
+      "message": "Fixed error in test CMakeList.txt"
+    },
+    {
+      "sha": "e1c127684fee72ebff88398acbcf096f710a7061",
+      "author": "Ricardo González Moreno",
+      "date": "2018-06-12T11:20:12Z",
+      "message": "Refs #3031. Fixing error with CMake 3.5"
+    },
+    {
+      "sha": "5a1b6bce69a8be2ed4be74b14657986420c2699b",
+      "author": "Ricardo González Moreno",
+      "date": "2018-06-12T10:11:33Z",
+      "message": "Refs #3009. Fixing errors in linux installer"
+    },
+    {
+      "sha": "e591fdcc3f3b247eb740df27153f3f816584287b",
+      "author": "Ricardo González Moreno",
+      "date": "2018-06-12T08:10:08Z",
+      "message": "Fixed indentation"
+    },
+    {
+      "sha": "42d1fc809f2eb0a999451d2f7d3823ffdd577ddc",
+      "author": "Ricardo González Moreno",
+      "date": "2018-06-12T07:30:03Z",
+      "message": "Merge remote-tracking branch 'github/master'"
+    },
+    {
+      "sha": "8b6b7f4d212eac9fe518fc7404ffc2e74022aa0c",
+      "author": "Ricardo González Moreno",
+      "date": "2018-06-11T14:34:26Z",
+      "message": "Refs #3003. Fixed generation for array of enum"
+    },
+    {
+      "sha": "9261c8463aaabf0080ee99f15235acaad5d41caf",
+      "author": "Ricardo González Moreno",
+      "date": "2018-06-08T08:11:47Z",
+      "message": "Added constructors.\n\nRefs #3004. Added tests\n\nRefs #3004. Improvent in add_gtest\n\nRefs #3004. Added move constructors"
+    },
+    {
+      "sha": "7c53137e6a5c376c437157791bf51dfe6b422f33",
+      "author": "Ricardo González Moreno",
+      "date": "2018-06-08T09:58:28Z",
+      "message": "Refs #3005. Moved license file"
+    },
+    {
+      "sha": "119c4aab926bd4d02cba12251e7b76906596500e",
+      "author": "Miguel Company",
+      "date": "2018-06-07T09:51:52Z",
+      "message": "Refs #2983. Module name used on header guards of generated code."
+    },
+    {
+      "sha": "43786bce1a62dace0ad7005097d90376427683ed",
+      "author": "Ricardo González Moreno",
+      "date": "2018-06-08T06:41:23Z",
+      "message": "Remove old files after add subtree"
+    },
+    {
+      "sha": "19533c5d145ef3c0b959fead0f26cc576ec88c66",
+      "author": "Ricardo González Moreno",
+      "date": "2018-06-08T07:53:02Z",
+      "message": "Squashed 'cmake/common/' content from commit 852b05a\n\ngit-subtree-dir: cmake/common\ngit-subtree-split: 852b05af50d343565bde4e0ffbd079318d607388"
+    },
+    {
+      "sha": "dab777ed5c713246621cfd8d34081d62ee39d67a",
+      "author": "Ricardo González Moreno",
+      "date": "2018-06-08T07:53:02Z",
+      "message": "Merge commit '19533c5d145ef3c0b959fead0f26cc576ec88c66' as 'cmake/common'"
+    },
+    {
+      "sha": "d7a234c1722e717ea9c29f734cd3a96402788be8",
+      "author": "Ricardo González Moreno",
+      "date": "2018-06-08T06:30:55Z",
+      "message": "Adding top-level structure"
+    },
+    {
+      "sha": "7ffb6c9af8b77bda6a76a62886e0cf821296ec70",
+      "author": "Ricardo González Moreno",
+      "date": "2018-06-07T13:45:24Z",
+      "message": "Refs #3006. Added type int8_t."
+    },
+    {
+      "sha": "2c101be43a8717f8eeb577d294e37c29e8edbb76",
+      "author": "Miguel Company",
+      "date": "2018-06-06T13:29:55Z",
+      "message": "Refs #2998. Fixing errors on JDK9"
+    },
+    {
+      "sha": "a3e2286f1e6164c3ca9f1f0a3a8425034af4acff",
+      "author": "Ricardo González",
+      "date": "2018-05-21T06:33:49Z",
+      "message": "Merge pull request #14 from clalancette/fix-std-flag\n\nChange the --std=c++11 flag to -std=c++11."
+    },
+    {
+      "sha": "e986a9e4a2c96e3a8bcebaa72085f006d1e613ed",
+      "author": "Ricardo González",
+      "date": "2018-05-21T06:33:26Z",
+      "message": "Merge pull request #16 from Karsten1987/expose_cdr\n\nreserve function to reserve initial space for raw buffer"
+    },
+    {
+      "sha": "0e102a027a4b2bf48848d1d8300e3602fdb3d9a4",
+      "author": "Karsten Knese",
+      "date": "2018-04-18T23:03:49Z",
+      "message": "reserve function to reserver initial space for raw buffer"
+    },
+    {
+      "sha": "581bc96df4ecd93d769bdd399fea027afde09df9",
+      "author": "Ricardo González Moreno",
+      "date": "2018-03-19T09:43:26Z",
+      "message": "Refs #2717. Fixed error with zero length arrays at the end"
+    },
+    {
+      "sha": "68cb3dbe44c98356e154c008b687ac3e7522d863",
+      "author": "Chris Lalancette",
+      "date": "2017-10-24T13:29:18Z",
+      "message": "Change the --std=c++11 flag to -std=c++11.\n\nWhile gcc accepts either, clang only accepts -std=c++11.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "8d1489780cd58947e5f7104b84641f680224cdea",
+      "author": "Ricardo González Moreno",
+      "date": "2017-10-04T10:00:09Z",
+      "message": "Refs #2286. Support for MACOSX_RPATH"
+    },
+    {
+      "sha": "0860e7c9054aae80d8d8c1cee6a1dd6ce3ae4f27",
+      "author": "Ricardo González",
+      "date": "2017-07-31T06:49:23Z",
+      "message": "Merge pull request #11 from dirk-thomas/patch-1\n\nfix spelling of CMake variable in message"
+    },
+    {
+      "sha": "113041d0e780bb7f898a9d0ad08800ae6ef83e20",
+      "author": "Ricardo González Moreno",
+      "date": "2017-07-18T11:48:36Z",
+      "message": "Refs #2157. VS2013 doesn't have constexpr"
+    },
+    {
+      "sha": "aa8c785cadee6339d74f269b7e2f368757169e8f",
+      "author": "Ricardo González Moreno",
+      "date": "2017-07-18T06:24:40Z",
+      "message": "Refs #2157. Fixed long double alignment"
+    },
+    {
+      "sha": "baa15104d80a1c02a0e2760343cfca36cb95076a",
+      "author": "Ricardo González Moreno",
+      "date": "2017-07-17T14:16:26Z",
+      "message": "Refs #2120. Fixed java source generation"
+    },
+    {
+      "sha": "fdf85b8f8a916f9c6bc1ec26c3e16fea9e77e35d",
+      "author": "Ricardo González Moreno",
+      "date": "2017-07-17T12:09:52Z",
+      "message": "Refs #2116. Not using gtest to check long double."
+    },
+    {
+      "sha": "a8c85dd32cf860347fdf7b2707e2efec85c723a2",
+      "author": "Ricardo González Moreno",
+      "date": "2017-07-17T11:57:38Z",
+      "message": "Refs #2116. Added long double"
+    },
+    {
+      "sha": "afc617165e814aa37112258f42257343ff2301ea",
+      "author": "Dirk Thomas",
+      "date": "2017-06-23T00:00:18Z",
+      "message": "fix spelling of CMake variable in message"
+    },
+    {
+      "sha": "affa48d511a36351ef24d40029db1e8217be86b1",
+      "author": "Ricardo González Moreno",
+      "date": "2017-06-08T08:55:03Z",
+      "message": "Refs #2080. Removed limitation"
+    },
+    {
+      "sha": "0a10e1b9292db87d4b2b797033ce1aa099b73abf",
+      "author": "JavierIH",
+      "date": "2017-06-08T06:15:39Z",
+      "message": "avoid installing pdb file in VS2013"
+    },
+    {
+      "sha": "3370de2c77bb55422268d7074c5981b8839f11d2",
+      "author": "Javier Isabel",
+      "date": "2017-06-06T10:17:17Z",
+      "message": "Refs #2068. fix pdb installation"
+    },
+    {
+      "sha": "7c9db8ff8c02c58f4ae8e37f7ef39b57c9e94cc2",
+      "author": "JavierIH",
+      "date": "2017-05-09T11:51:05Z",
+      "message": "Merge branch 'master' of https://github.com/eProsima/Fast-CDR"
+    },
+    {
+      "sha": "8927b314627367bd7bce345b9666b4083eb434bb",
+      "author": "JavierIH",
+      "date": "2017-05-09T11:49:38Z",
+      "message": "Refs #2024. fix syntax error for cmake version <3.0"
+    },
+    {
+      "sha": "af9734b48229737af01508a346d9f001b7cbdb23",
+      "author": "Ricardo González",
+      "date": "2017-05-03T12:00:08Z",
+      "message": "Merge pull request #10 from wjwwood/no_afxres_h\n\nuse windows.h not afxres.h"
+    },
+    {
+      "sha": "d9919bb973a534443ece541e4a75d4f170dc2d20",
+      "author": "William Woodall",
+      "date": "2017-04-29T00:04:52Z",
+      "message": "use windows.h not afxres.h"
+    },
+    {
+      "sha": "009b3fa36ca8d3929f230065eed948ce89bb286e",
+      "author": "Ricardo González Moreno",
+      "date": "2017-04-19T07:25:21Z",
+      "message": "Merge remote-tracking branch 'github/master'"
+    },
+    {
+      "sha": "522c06ee05f7f826f01466b6d7b7ba248604fc3f",
+      "author": "Ricardo González",
+      "date": "2017-04-19T07:20:51Z",
+      "message": "Merge pull request #9 from rojkov/soversion\n\nIndicate ABI compatibility with soversion"
+    },
+    {
+      "sha": "533f8d83d07cbdc59499f2aa9d4e5ea73dd7bbf3",
+      "author": "Ricardo González Moreno",
+      "date": "2017-03-21T13:38:26Z",
+      "message": "Bump version 1.0.7"
+    },
+    {
+      "sha": "0bc21f5ed0b868a83192c3927733bebea5df07d4",
+      "author": "Ricardo González Moreno",
+      "date": "2017-03-01T12:44:11Z",
+      "message": "Refs #1966. Add alignment reset on encapsulation"
+    },
+    {
+      "sha": "87391f3b70b9ba3e7c1ed6d03aa0ac9ed4187705",
+      "author": "Dmitry Rozhkov",
+      "date": "2017-02-10T07:56:30Z",
+      "message": "Indicate ABI compatibility with soversion\n\nThe currently built binary for *nix systems doesn't indicate\nits ABI version. This causes QA checks in some build systems\n(e.g. OpenEmbedded) report an issue.\n\nThis patch adds soversion to the library.\n\nSigned-off-by: Dmitry Rozhkov <dmitry.rozhkov@linux.intel.com>"
+    },
+    {
+      "sha": "56778bdc1f5506cee341d580bd785792ae5fee20",
+      "author": "Ricardo González Moreno",
+      "date": "2017-01-27T07:22:52Z",
+      "message": "Using BUILD_SHARED_LIBS option"
+    },
+    {
+      "sha": "15e9e84385317a24c9e74e0278ef72eac7b08bb6",
+      "author": "richiprosima",
+      "date": "2017-01-26T07:20:04Z",
+      "message": "Merge pull request #8 from esteve/honor-build-shared-libs\n\nControl shared/static linking via EPROSIMA_HONOR_BUILD_SHARED_LIBS and BUILD_SHARED_LIBS"
+    },
+    {
+      "sha": "af3db7f0caed2e0f9d9f4923b89728b9b7beb6ca",
+      "author": "Esteve Fernandez",
+      "date": "2016-10-31T17:57:06Z",
+      "message": "Disable tests"
+    },
+    {
+      "sha": "9225f76e60dcf9b3ee1ce4be5f2502826d4fad65",
+      "author": "Esteve Fernandez",
+      "date": "2016-10-06T15:46:20Z",
+      "message": "Control shared/static linking via EPROSIMA_HONOR_BUILD_SHARED_LIBS and BUILD_SHARED_LIBS"
+    },
+    {
+      "sha": "8653f20bd3028621cc6b2f06fb6e0477d5f120fc",
+      "author": "Ricardo González Moreno",
+      "date": "2016-09-08T14:48:37Z",
+      "message": "Fixed error generating code"
+    },
+    {
+      "sha": "c3d5604c22ced402c4032dcb95ef189f8e1949fa",
+      "author": "Ricardo González Moreno",
+      "date": "2016-07-08T10:09:34Z",
+      "message": "Refs #1737. Fixed union string template"
+    },
+    {
+      "sha": "07a34514779d020ae4cf8f337d2372cc408baf3c",
+      "author": "Ricardo González Moreno",
+      "date": "2016-07-08T10:06:41Z",
+      "message": "Refs #1737. Fixed union string template"
+    },
+    {
+      "sha": "be97705a59692b50212de44d15dc1576d6320495",
+      "author": "Ricardo González Moreno",
+      "date": "2016-07-08T10:03:49Z",
+      "message": "Refs #1737. Fixed union string template"
+    },
+    {
+      "sha": "f391b785b93666ad096f164cbf107995c623c6d4",
+      "author": "Ricardo González Moreno",
+      "date": "2016-07-08T09:45:03Z",
+      "message": "Refs #1737. Fixed bug in string template"
+    },
+    {
+      "sha": "f8ccd63b23b6c41f98883c41e3624a4e1215f3bb",
+      "author": "Ricardo González Moreno",
+      "date": "2016-07-08T09:36:38Z",
+      "message": "Refs #1737. Removed duplicated string template"
+    },
+    {
+      "sha": "32bad089ae16b6172ed9dcdd3196854ad9985fc3",
+      "author": "Ricardo González Moreno",
+      "date": "2016-07-08T09:02:24Z",
+      "message": "Refs 1737. Added generation of function getCdrSerializedSize"
+    },
+    {
+      "sha": "b00a4c21842185b2b725d75cabaa92024561301f",
+      "author": "Ricardo González Moreno",
+      "date": "2016-06-22T14:26:48Z",
+      "message": "Forget bump version 1.0.6"
+    },
+    {
+      "sha": "bdc54b5fc3bb1229248daa87da0a87cca113f7d8",
+      "author": "Ricardo González Moreno",
+      "date": "2016-06-15T08:11:25Z",
+      "message": "License header in java files"
+    },
+    {
+      "sha": "26afd6879428dff7a47d9ead5eac753d29c91e96",
+      "author": "richiprosima",
+      "date": "2016-06-15T06:10:11Z",
+      "message": "Merge pull request #6 from dirk-thomas/fix_alignment_on_empty_dynamic_sequences\n\nfix alignment on empty dynamic sequences"
+    },
+    {
+      "sha": "30a588bae56005459f4f561471a1acfb938e9ba2",
+      "author": "richiprosima",
+      "date": "2016-06-15T06:09:25Z",
+      "message": "Merge pull request #5 from jacquelinekay/error_messages\n\nBetter error messages for exceptions"
+    },
+    {
+      "sha": "6024411a44c710f073d41ebb86c27959658dbb10",
+      "author": "richiprosima",
+      "date": "2016-06-15T06:09:14Z",
+      "message": "Merge pull request #4 from codebot/patch-1\n\nfix typo in CMAKE_CXX_FLAGS on Windows"
+    },
+    {
+      "sha": "64dfd63c430439f6de25bf9dc9060c002ed0648f",
+      "author": "Ricardo González Moreno",
+      "date": "2016-06-14T14:37:47Z",
+      "message": "Change to Apache License 2.0"
+    },
+    {
+      "sha": "cab0374165744d04a712cf6f981532bf1afc53b6",
+      "author": "Dirk Thomas",
+      "date": "2016-06-06T17:32:55Z",
+      "message": "fix alignment on empty dynamic sequences"
+    },
+    {
+      "sha": "24c9b1a4805fe8a39d8a4893d015bec588da6fe2",
+      "author": "Jackie Kay",
+      "date": "2016-06-06T15:37:15Z",
+      "message": "Better error messages for exceptions"
+    },
+    {
+      "sha": "a5b7fbd750048efe8252d483fa4c58421e121d1a",
+      "author": "Ricardo González Moreno",
+      "date": "2016-05-25T05:36:54Z",
+      "message": "Copy constructors are public now"
+    },
+    {
+      "sha": "f6d937dd545bc75fdd01318e1cfa2e9595169c7a",
+      "author": "Ricardo González Moreno",
+      "date": "2016-05-19T13:09:37Z",
+      "message": "Update check_gtest"
+    },
+    {
+      "sha": "ca408693ec221c32140930a1e389f9ff8c866e5d",
+      "author": "Ricardo González Moreno",
+      "date": "2016-05-19T13:06:29Z",
+      "message": "Updated check_gtest"
+    },
+    {
+      "sha": "d81c59d41f89d88f70189a482653db53ae1d1a28",
+      "author": "Ricardo González Moreno",
+      "date": "2016-05-12T13:37:26Z",
+      "message": "Bump version 1.0.5"
+    },
+    {
+      "sha": "73408a8a19c44a4fa91fb96671b9fa12a1196bbf",
+      "author": "Ricardo González Moreno",
+      "date": "2016-05-12T13:34:27Z",
+      "message": "Updated license"
+    },
+    {
+      "sha": "bf4dcc76ce3131cc804577981e83166b71be10bd",
+      "author": "Ricardo González Moreno",
+      "date": "2016-05-11T13:57:21Z",
+      "message": "Fixed error in cmake"
+    },
+    {
+      "sha": "a9df6514243b08ff9651e3fb498f3c90eeb04b64",
+      "author": "Ricardo González Moreno",
+      "date": "2016-05-11T13:35:34Z",
+      "message": "Update cmake on windows"
+    },
+    {
+      "sha": "c8dbaedcf722cfb410e0184799a1e5ec58f63ce8",
+      "author": "Ricardo González Moreno",
+      "date": "2016-05-11T11:48:50Z",
+      "message": "Refs #1597. Changes in cmake script on Windows"
+    },
+    {
+      "sha": "d88aa40995e7f780af4bd289b6669e670e9aee94",
+      "author": "Morgan Quigley",
+      "date": "2016-03-14T19:55:39Z",
+      "message": "fix typo in CMAKE_CXX_FLAGS on Windows"
+    },
+    {
+      "sha": "d418e2004b53545261ebf84868831ebc95e7747a",
+      "author": "Ricardo González Moreno",
+      "date": "2016-03-02T15:04:28Z",
+      "message": "Little change"
+    },
+    {
+      "sha": "c14253e2cef449c8e43b3dd162213b4f18c28e17",
+      "author": "Ricardo González Moreno",
+      "date": "2016-03-02T14:24:40Z",
+      "message": "Added renaming relwithdebinfo library"
+    },
+    {
+      "sha": "8186e05664618f613c0af17d231b4672f6127bce",
+      "author": "Ricardo González Moreno",
+      "date": "2016-03-02T10:53:43Z",
+      "message": "Refs #1525. Fixed error in NSIS script"
+    },
+    {
+      "sha": "496d80303932a83d3c2f410064e1d0886116d03e",
+      "author": "Ricardo González Moreno",
+      "date": "2016-03-02T09:55:48Z",
+      "message": "Refs 1525. Added VS2015 support"
+    },
+    {
+      "sha": "da08697d9ad9748a3f2eef29f1d3d7873ac825e9",
+      "author": "Ricardo González Moreno",
+      "date": "2016-02-22T15:30:31Z",
+      "message": "Fixed error in VS"
+    },
+    {
+      "sha": "0e1487c38dfca4f70d3c18ec8b67cf54b24852cd",
+      "author": "Ricardo González Moreno",
+      "date": "2016-02-22T15:06:10Z",
+      "message": "Bump version 1.0.4\n\nAdded function to retrieve endianness."
+    },
+    {
+      "sha": "57ae25ac9b34898df62fc1caab033644b28ffbd4",
+      "author": "Ricardo González Moreno",
+      "date": "2016-02-19T10:59:44Z",
+      "message": "Changes in cmake scripts"
+    },
+    {
+      "sha": "29edb84e3ca42ae7a3d128cd971df71c0289e28a",
+      "author": "Ricardo González Moreno",
+      "date": "2016-02-16T11:52:37Z",
+      "message": "Little change in checking c++11"
+    },
+    {
+      "sha": "f0d0c74fe79a86bd657cd3f570d15fa57d841f7b",
+      "author": "Ricardo González Moreno",
+      "date": "2016-02-02T15:51:44Z",
+      "message": "Change in cmake script"
+    },
+    {
+      "sha": "8e1ce9937826eaa929286e00e1f69205fbe8e550",
+      "author": "Ricardo González Moreno",
+      "date": "2016-01-05T15:18:42Z",
+      "message": "Added more info in cmake target file"
+    },
+    {
+      "sha": "37deda2bbd5631191113a972c7de09ce29ba0b89",
+      "author": "Ricardo González Moreno",
+      "date": "2016-01-04T15:35:24Z",
+      "message": "Fixed error in test cmake scripts"
+    },
+    {
+      "sha": "f0ee16fb59b63dba612aff9422cd0c29790d4b11",
+      "author": "Ricardo González Moreno",
+      "date": "2015-12-29T15:28:15Z",
+      "message": "Added info in DLL libraries"
+    },
+    {
+      "sha": "39871280b7acaeb72e27a0147fc4d41e6268cb4b",
+      "author": "Ricardo González Moreno",
+      "date": "2015-12-29T11:48:30Z",
+      "message": "Changes in output directories"
+    },
+    {
+      "sha": "9a30fd4d5985b127d2f8d11096ec68760126380b",
+      "author": "richiprosima",
+      "date": "2015-12-17T13:35:47Z",
+      "message": "Merge pull request #3 from dirk-thomas/fix_clang_warnings\n\nfix clang warnings"
+    },
+    {
+      "sha": "68fb9a18ae1da68a2d7b758f461a5c9fb02f22e5",
+      "author": "Dirk Thomas",
+      "date": "2015-12-16T20:36:46Z",
+      "message": "initialize variables"
+    },
+    {
+      "sha": "0aeb7402d9eee459f8593bed32f7e04f9f9cdced",
+      "author": "Dirk Thomas",
+      "date": "2015-12-16T20:36:23Z",
+      "message": "fix bug in move operator of Exception"
+    },
+    {
+      "sha": "faaf2bc855207ad2d74c4d9404124ee6d6a90886",
+      "author": "Ricardo González Moreno",
+      "date": "2015-11-11T15:24:53Z",
+      "message": "Refs #1325. Change install location for dll"
+    },
+    {
+      "sha": "09c7dd70fd3d69745d640cc118eda45991ca3fa0",
+      "author": "Ricardo González Moreno",
+      "date": "2015-10-15T11:14:01Z",
+      "message": "Little change"
+    },
+    {
+      "sha": "f7ba2829ecdd7c8d02224060357ca85a9bcd6bf3",
+      "author": "Ricardo González Moreno",
+      "date": "2015-10-15T10:53:18Z",
+      "message": "Refs #1321. Fixed bugs"
+    },
+    {
+      "sha": "8138db483c584f37b7212d1a6cd228cb007511e8",
+      "author": "Ricardo González Moreno",
+      "date": "2015-10-09T11:23:21Z",
+      "message": "Little change"
+    },
+    {
+      "sha": "3d13f94411e2cd30361a106369863b136fbfe04a",
+      "author": "Ricardo González Moreno",
+      "date": "2015-10-09T11:06:22Z",
+      "message": "New installation in CMake"
+    },
+    {
+      "sha": "51c3618f65b53bff2aa356712a9a31b0693b17c4",
+      "author": "Ricardo González Moreno",
+      "date": "2015-10-07T10:58:03Z",
+      "message": "Merge branch 'develop' of git.sambaserver.eprosima.com:fastcdr/fastcdr into develop"
+    },
+    {
+      "sha": "fa5de602c2b01501dbf96d3e08d2f244853ee629",
+      "author": "Ricardo González Moreno",
+      "date": "2015-10-07T10:57:46Z",
+      "message": "Added types in java generation"
+    },
+    {
+      "sha": "99e9255f968b7487995783f8aa93e9488aa5bb4c",
+      "author": "Ricardo González Moreno",
+      "date": "2015-10-06T09:12:32Z",
+      "message": "Different lib install dir depending EPROSIMA_BULD"
+    },
+    {
+      "sha": "c3166d1ceb6e27d48b9e4d040275ce63e61d9d38",
+      "author": "Ricardo González Moreno",
+      "date": "2015-10-06T07:04:06Z",
+      "message": "Detect VS2015"
+    },
+    {
+      "sha": "d199893d7b78c537bf4a38e0815829d583140d9a",
+      "author": "Ricardo González Moreno",
+      "date": "2015-09-25T08:19:59Z",
+      "message": "Dynamic library target exports necessary definition"
+    },
+    {
+      "sha": "79348cba84d6415f403817734658ab4d48c22e7c",
+      "author": "Ricardo Gonzalez",
+      "date": "2015-09-21T10:15:35Z",
+      "message": "Fixed compilation on MacOS"
+    },
+    {
+      "sha": "207561e76feb7386aac171f613934fe2e2565268",
+      "author": "Ricardo González Moreno",
+      "date": "2015-09-16T07:32:00Z",
+      "message": "Bump version 1.0.3"
+    },
+    {
+      "sha": "1bca301bc5afc30d59ac3e864b872b732645e703",
+      "author": "Ricardo González Moreno",
+      "date": "2015-09-16T07:31:28Z",
+      "message": "Merge branch 'develop'"
+    },
+    {
+      "sha": "1db98402c1f4fab902ba7739271152fd3cf62145",
+      "author": "Ricardo González Moreno",
+      "date": "2015-09-16T07:31:14Z",
+      "message": "Fixed serialization of empty strings"
+    },
+    {
+      "sha": "452a581d4e461b8f1e50bd4b134b8388117209cb",
+      "author": "Ricardo González Moreno",
+      "date": "2015-09-08T11:29:13Z",
+      "message": "Merge branch 'develop'"
+    },
+    {
+      "sha": "72e86c2a6d638804b23f06b6774775a1f6554a56",
+      "author": "Ricardo González Moreno",
+      "date": "2015-09-08T11:28:29Z",
+      "message": "Added README.md"
+    },
+    {
+      "sha": "b6a721487b9852eb3a7052c009ad982c9f0fe17c",
+      "author": "Ricardo González Moreno",
+      "date": "2015-09-07T15:43:15Z",
+      "message": "Merge branch 'develop'"
+    },
+    {
+      "sha": "a8c7631f0b6fc0b28508d1129c518e33ee89b727",
+      "author": "Ricardo González Moreno",
+      "date": "2015-09-07T15:42:59Z",
+      "message": "Fixed error compilation on Linux"
+    },
+    {
+      "sha": "776e4feb2c32b8d672acfae06bfd39d9f705e6b3",
+      "author": "Ricardo González Moreno",
+      "date": "2015-09-07T15:36:54Z",
+      "message": "Fixed compilation error on VS2010"
+    },
+    {
+      "sha": "e799b438d29c59131974b9bc8ae9953689273abf",
+      "author": "Ricardo González Moreno",
+      "date": "2015-09-02T09:35:43Z",
+      "message": "Bump new version 1.0.2"
+    },
+    {
+      "sha": "4ced972990237413bca1af84ff9eb02d4f682a78",
+      "author": "Ricardo González Moreno",
+      "date": "2015-09-02T09:34:55Z",
+      "message": "Merge branch 'develop'"
+    },
+    {
+      "sha": "b78e8db927a17cf1d9cfbdaa965503cc7a02f527",
+      "author": "Ricardo González Moreno",
+      "date": "2015-08-27T06:48:17Z",
+      "message": "Fixed compilation errors on Linux"
+    },
+    {
+      "sha": "5e64eaf7da11ed086ec69b939aca502ee6751eae",
+      "author": "Ricardo González Moreno",
+      "date": "2015-08-27T06:32:12Z",
+      "message": "Fixed compilation warnings on Windows"
+    },
+    {
+      "sha": "fbde9022cefaa10884e2c95199a74e9865c3081a",
+      "author": "Ricardo González Moreno",
+      "date": "2015-08-26T07:20:53Z",
+      "message": "Added warning level"
+    },
+    {
+      "sha": "604465abf33fe6052aadee540325d01a84b44b0e",
+      "author": "Ricardo González Moreno",
+      "date": "2015-08-24T13:31:11Z",
+      "message": "Fixed compilation but in Windows testing"
+    },
+    {
+      "sha": "8c266639efaa92733066c4f68788d5a3b449649a",
+      "author": "Ricardo González Moreno",
+      "date": "2015-08-24T13:25:07Z",
+      "message": "Fixed compilation but in Windows testing"
+    },
+    {
+      "sha": "39def025f4816d9f5f51b9ad7b6764de952a1b58",
+      "author": "Ricardo González Moreno",
+      "date": "2015-08-07T09:26:02Z",
+      "message": "Refs #1220. Fixed memory leaks in tests"
+    },
+    {
+      "sha": "3e99cfb4ba9aaaf266c7397d8dfa396d2d27d34b",
+      "author": "Ricardo González Moreno",
+      "date": "2015-08-07T07:03:02Z",
+      "message": "Refs #1219. Fixed error in debug"
+    },
+    {
+      "sha": "d1e9f402f224d62c62c7b740c3f1866d2e8336fa",
+      "author": "Ricardo González Moreno",
+      "date": "2015-08-05T13:38:23Z",
+      "message": "Updated tests"
+    },
+    {
+      "sha": "6024e33a558ef6d191c9988c9cb761e3b99591d0",
+      "author": "Ricardo González Moreno",
+      "date": "2015-08-04T13:50:41Z",
+      "message": "Fixed error installing licenses"
+    },
+    {
+      "sha": "aed6ba35c3e1d022336255d3bd80a95627c55495",
+      "author": "Ricardo González Moreno",
+      "date": "2015-08-04T13:43:38Z",
+      "message": "Merge branch 'develop'"
+    },
+    {
+      "sha": "02f1ad6a6ca4fba104afcd76175db79fb58c3202",
+      "author": "Ricardo González Moreno",
+      "date": "2015-08-04T13:42:59Z",
+      "message": "Fixed error installing licenses"
+    },
+    {
+      "sha": "ed98570533cf1e6a7e4950636850254e9ef2a138",
+      "author": "Ricardo González Moreno",
+      "date": "2015-08-04T13:15:22Z",
+      "message": "Merge branch 'develop'"
+    },
+    {
+      "sha": "a94722246a2109fbe2d63405916962c149f94756",
+      "author": "Ricardo González Moreno",
+      "date": "2015-08-04T13:15:03Z",
+      "message": "Fixed error installing licenses"
+    },
+    {
+      "sha": "252de3a5ccc2163d65ffc21666bb5a1d0cf86475",
+      "author": "Ricardo González Moreno",
+      "date": "2015-08-04T06:47:57Z",
+      "message": "Merge branch 'develop'"
+    },
+    {
+      "sha": "4ff5686aefa3dda8c8495bbbe02f3552c46e63b9",
+      "author": "Ricardo González Moreno",
+      "date": "2015-08-04T06:40:07Z",
+      "message": "Added m4 script"
+    },
+    {
+      "sha": "fb8f1d136e6e557e17c362c003a41b13e525ab45",
+      "author": "Ricardo González Moreno",
+      "date": "2015-08-03T14:24:53Z",
+      "message": "Merge branch 'develop'"
+    },
+    {
+      "sha": "83af87522104bfe7f9ae9ea80c45a69cb1990c9a",
+      "author": "Ricardo González Moreno",
+      "date": "2015-08-03T14:18:02Z",
+      "message": "Added std0x detection"
+    },
+    {
+      "sha": "77ba02688ecc656ad8b4423d78d7332cbc3d80f0",
+      "author": "Ricardo González Moreno",
+      "date": "2015-07-31T06:06:50Z",
+      "message": "Little change in cmake scripts"
+    },
+    {
+      "sha": "2728d0701490b449ad54b6486769aca3ee5843b7",
+      "author": "Ricardo González Moreno",
+      "date": "2015-07-30T13:08:17Z",
+      "message": "Support CMake 2.8.11"
+    },
+    {
+      "sha": "f97630c50cb2ad9cfe2259bf2696aed3916a472c",
+      "author": "Ricardo González Moreno",
+      "date": "2015-07-30T12:27:46Z",
+      "message": "Fixed error in cmake script"
+    },
+    {
+      "sha": "d1ceefa4ce0bda013694a3de6ee25f797a87b89e",
+      "author": "Ricardo González Moreno",
+      "date": "2015-07-30T10:50:40Z",
+      "message": "Change includes in source"
+    },
+    {
+      "sha": "9a7128ac41e33e4f563c4e69b4b99193e6abb4cb",
+      "author": "Ricardo González Moreno",
+      "date": "2015-07-28T13:25:57Z",
+      "message": "Merging all github master branch"
+    },
+    {
+      "sha": "e045f907006b41ae92c8246ca7de96ecef4bbb7d",
+      "author": "Ricardo González Moreno",
+      "date": "2015-07-28T12:51:30Z",
+      "message": "CMake support"
+    },
+    {
+      "sha": "50eb526eb6c3d86a4aaaf9bd22c20db37b08ef32",
+      "author": "Ricardo González Moreno",
+      "date": "2015-07-28T12:46:48Z",
+      "message": "CMake support"
+    },
+    {
+      "sha": "03ad187c9ac23c3acdb6cec7365cc37c3aa970c1",
+      "author": "Ricardo González Moreno",
+      "date": "2015-07-28T12:42:19Z",
+      "message": "CMake support"
+    },
+    {
+      "sha": "e29d1a51f61e26efc41595f652bb4e42929e6ff0",
+      "author": "Ricardo González Moreno",
+      "date": "2015-07-28T12:39:34Z",
+      "message": "CMake support"
+    },
+    {
+      "sha": "99a6b07d33b73f47ca34e364a9b0efe05f34c669",
+      "author": "Ricardo González Moreno",
+      "date": "2015-07-28T11:21:02Z",
+      "message": "CMake support"
+    },
+    {
+      "sha": "16347cc98fc572296bff007096a9e2ca43e6f1ba",
+      "author": "Ricardo González Moreno",
+      "date": "2015-07-28T11:15:32Z",
+      "message": "CMake support"
+    },
+    {
+      "sha": "0344a763ed6a0ec949fe6f34c7d6f92b84d7bf8f",
+      "author": "Ricardo González Moreno",
+      "date": "2015-07-28T10:33:50Z",
+      "message": "CMake support"
+    },
+    {
+      "sha": "0fd1435ffe4d1e42c30b3ec3c7dc13c2ffce3128",
+      "author": "Ricardo González Moreno",
+      "date": "2015-07-28T08:59:34Z",
+      "message": "CMake support"
+    },
+    {
+      "sha": "dc3416330f73132d1356a28f784aa3669bd802b1",
+      "author": "Ricardo González Moreno",
+      "date": "2015-07-28T08:43:15Z",
+      "message": "CMake support"
+    },
+    {
+      "sha": "8ed27293d9934e3945f0a81167f4a30efbe36ee6",
+      "author": "Ricardo González Moreno",
+      "date": "2015-07-28T08:24:58Z",
+      "message": "CMake support"
+    },
+    {
+      "sha": "e9eafedef8f3c51d3051ee8fcd8b34233c1ebda3",
+      "author": "Ricardo González Moreno",
+      "date": "2015-07-28T07:50:30Z",
+      "message": "CMake support"
+    },
+    {
+      "sha": "744f1db64fc6765e7d3e8429c3468599a2c7a2d7",
+      "author": "Ricardo González Moreno",
+      "date": "2015-07-27T10:48:43Z",
+      "message": "CMake support"
+    },
+    {
+      "sha": "5ee591e7011bee6108404ff25d04fc70c84a0d46",
+      "author": "Ricardo González Moreno",
+      "date": "2015-07-27T06:45:43Z",
+      "message": "CMake support"
+    },
+    {
+      "sha": "8c29bc256535d972c6e32ad4e11e9a0a6ad628ec",
+      "author": "Ricardo González Moreno",
+      "date": "2015-07-27T06:16:53Z",
+      "message": "CMake support"
+    },
+    {
+      "sha": "88577aec14472b9835a4e2ca408eeef98706094d",
+      "author": "Ricardo González Moreno",
+      "date": "2015-07-27T05:35:21Z",
+      "message": "CMake support"
+    },
+    {
+      "sha": "1ed0c440bacdd1ab5f9881b65702047a09cea35f",
+      "author": "Ricardo González Moreno",
+      "date": "2015-07-24T10:15:14Z",
+      "message": "CMake support"
+    },
+    {
+      "sha": "c5eff1c003922dddd52f5feaaf2e6d2a7104d068",
+      "author": "Ricardo González Moreno",
+      "date": "2015-07-24T08:29:21Z",
+      "message": "CMake support"
+    },
+    {
+      "sha": "218b05271a93e81eac845071efd2198fc81cca8d",
+      "author": "Ricardo González Moreno",
+      "date": "2015-07-23T10:28:37Z",
+      "message": "CMake support"
+    },
+    {
+      "sha": "a4437349114db874775cdee69e383c664d5b2cc0",
+      "author": "Ricardo González Moreno",
+      "date": "2015-07-23T09:25:39Z",
+      "message": "CMake support"
+    },
+    {
+      "sha": "caa23d01bd9266d26635998ef12fcb4894c3ff03",
+      "author": "Ricardo González Moreno",
+      "date": "2015-07-23T09:22:12Z",
+      "message": "CMake support"
+    },
+    {
+      "sha": "824457eaff215d011808932291b17e8227ea3604",
+      "author": "Ricardo González Moreno",
+      "date": "2015-07-23T08:59:07Z",
+      "message": "CMake support"
+    },
+    {
+      "sha": "a38343cfc92ff9362796c2b8f61d9bd315830cfe",
+      "author": "Ricardo González Moreno",
+      "date": "2015-07-23T08:50:50Z",
+      "message": "CMake support"
+    },
+    {
+      "sha": "e9ccf3d933a2df86e3fb46f31ad7850270ad210d",
+      "author": "Ricardo González Moreno",
+      "date": "2015-07-23T08:43:53Z",
+      "message": "CMake support"
+    },
+    {
+      "sha": "7ef640c7928a5571b1deb11a06855e01fc859c58",
+      "author": "Ricardo González Moreno",
+      "date": "2015-07-22T15:14:16Z",
+      "message": "CMake support"
+    },
+    {
+      "sha": "b280ec4d7cbc34d6be3850192f357fadd14518fb",
+      "author": "Ricardo González Moreno",
+      "date": "2015-07-22T13:43:03Z",
+      "message": "CMake support"
+    },
+    {
+      "sha": "86a0d4957ad22b29de6d1f5be052112879d1d2fc",
+      "author": "Ricardo González Moreno",
+      "date": "2015-07-22T12:59:54Z",
+      "message": "CMake support"
+    },
+    {
+      "sha": "34eaa78ab05b4c4ac928efd7d41845ef2d8984b4",
+      "author": "Ricardo González Moreno",
+      "date": "2015-07-21T13:04:20Z",
+      "message": "CMake support2"
+    },
+    {
+      "sha": "b2a197d6627c6a763e838eed0ad6d26e762f489b",
+      "author": "Ricardo González Moreno",
+      "date": "2015-07-21T12:58:10Z",
+      "message": "CMake support"
+    },
+    {
+      "sha": "4c751159e17a984c7be2681130ca65dffc33b43b",
+      "author": "Ricardo González Moreno",
+      "date": "2015-07-20T15:12:14Z",
+      "message": "CMake support2"
+    },
+    {
+      "sha": "8cfaf848dbbaf09fd10f6ac2ac246f79cd6003a4",
+      "author": "Ricardo González Moreno",
+      "date": "2015-07-20T10:22:00Z",
+      "message": "CMake support"
+    },
+    {
+      "sha": "833f7a5118c58fd51ebd832de86d609d08e39afe",
+      "author": "Ricardo González Moreno",
+      "date": "2015-07-17T11:08:19Z",
+      "message": "CMake support"
+    },
+    {
+      "sha": "0d66db751dfeec494c27865ab560c5fa3a1a63ca",
+      "author": "Ricardo González Moreno",
+      "date": "2015-07-17T10:53:06Z",
+      "message": "CMake support"
+    },
+    {
+      "sha": "9a4e738c57f7227886babc96af6fa93736e73848",
+      "author": "Ricardo González Moreno",
+      "date": "2015-07-17T10:20:08Z",
+      "message": "CMake support"
+    },
+    {
+      "sha": "b81332f636a34e5c11b0328111eff6e831bc27c9",
+      "author": "Ricardo González Moreno",
+      "date": "2015-07-17T10:11:54Z",
+      "message": "CMake support"
+    },
+    {
+      "sha": "e7e61c2e283a9bb41fdbbfc283807a15847dbbbe",
+      "author": "Ricardo González Moreno",
+      "date": "2015-07-17T09:53:09Z",
+      "message": "CMake support"
+    },
+    {
+      "sha": "c339fc5613edd658cd85e3a59a55a457a366d3c7",
+      "author": "Ricardo González Moreno",
+      "date": "2015-07-17T09:28:06Z",
+      "message": "CMake support"
+    },
+    {
+      "sha": "506c11c482bfefc0c10fbc23e2cab6f46075438a",
+      "author": "Ricardo González Moreno",
+      "date": "2015-07-17T08:51:46Z",
+      "message": "CMake support"
+    },
+    {
+      "sha": "947a6c2555538004614ad9cb90dd30172e4dcd86",
+      "author": "Ricardo González Moreno",
+      "date": "2015-07-13T09:55:17Z",
+      "message": "CMake support"
+    },
+    {
+      "sha": "218d437027804ab2b46b86d506ed7707a3c049a3",
+      "author": "Ricardo González Moreno",
+      "date": "2015-07-11T12:35:28Z",
+      "message": "CMake support"
+    },
+    {
+      "sha": "9bd8aa661ed6d7eba6aa593d65648ecccaa49930",
+      "author": "Ricardo González Moreno",
+      "date": "2015-07-11T00:10:56Z",
+      "message": "CMake support"
+    },
+    {
+      "sha": "6639c4fceaba9eebbd04f234c47dddbcca904ea0",
+      "author": "Ricardo González Moreno",
+      "date": "2015-07-10T17:06:10Z",
+      "message": "Removed thirdparties"
+    },
+    {
+      "sha": "9dbceb165ca50dfb64bd2c50f216fb4e059598f9",
+      "author": "Ricardo González Moreno",
+      "date": "2015-07-10T09:45:18Z",
+      "message": "CMake support"
+    },
+    {
+      "sha": "69317f2046e694bcfe7bcbeffb78ebabac7dd6b6",
+      "author": "Ricardo González Moreno",
+      "date": "2015-07-10T09:15:28Z",
+      "message": "CMake support"
+    },
+    {
+      "sha": "f7de083ebab4f5ebd400ec3ca792d6e5e37aad8b",
+      "author": "Ricardo González Moreno",
+      "date": "2015-07-03T07:09:16Z",
+      "message": "First attempt of Linux installer"
+    },
+    {
+      "sha": "56b7c2f7e66d15660bcd7d296f9a88fdfa2384b0",
+      "author": "Ricardo González Moreno",
+      "date": "2015-06-29T14:58:19Z",
+      "message": "Adding CMake"
+    },
+    {
+      "sha": "829d583fedf04ec511e831059b561551ffbcd1ea",
+      "author": "Ricardo González Moreno",
+      "date": "2015-04-14T12:05:25Z",
+      "message": "Refs #912. Fixed bug generating java types"
+    },
+    {
+      "sha": "410c978b592daaca7ee77d0086755f519c0d90f3",
+      "author": "Ricardo González Moreno",
+      "date": "2015-04-14T10:31:00Z",
+      "message": "Refs #912. Little changes2"
+    },
+    {
+      "sha": "66d10158b8531585dcb7d545614db2a0aec6749d",
+      "author": "Ricardo González Moreno",
+      "date": "2015-04-14T10:17:26Z",
+      "message": "Refs #912. FastCDR only generates code with its BadParam exceptin"
+    },
+    {
+      "sha": "803d9a50b9e88f53c71f102c6fd13956aeb134ec",
+      "author": "Ricardo González Moreno",
+      "date": "2015-04-13T09:33:29Z",
+      "message": "Refs #912. Removed function for Context interface"
+    },
+    {
+      "sha": "66290ab4b618d0746d15b742374e2535aadd14de",
+      "author": "Ricardo González Moreno",
+      "date": "2015-04-13T08:20:47Z",
+      "message": "Refs #912. Modified Java type generator"
+    },
+    {
+      "sha": "2cead32fc3969a001e8befa5f2878350b88712e9",
+      "author": "Ricardo González Moreno",
+      "date": "2015-04-10T12:14:43Z",
+      "message": "Refs #912. Update for mor JNI support"
+    },
+    {
+      "sha": "816687b1947768c9ac78a40e153f42d22a223487",
+      "author": "Ricardo González Moreno",
+      "date": "2015-03-17T14:27:32Z",
+      "message": "Refs #729. Added equals function in Java types"
+    },
+    {
+      "sha": "d9ca989bc5cfb4d61752c07a4a8993f50ac637c3",
+      "author": "Ricardo González Moreno",
+      "date": "2015-03-15T15:10:35Z",
+      "message": "Added access to CDR internal buffer"
+    },
+    {
+      "sha": "4b26f5646a275cd1a8854092730656db176753d0",
+      "author": "Ricardo González Moreno",
+      "date": "2015-03-10T15:27:07Z",
+      "message": "Refs #729. Fixed bug generating Java types after last fixing"
+    },
+    {
+      "sha": "ca5ad15f89e06f6a2865d319bcb3635addb5cded",
+      "author": "Ricardo González Moreno",
+      "date": "2015-03-10T15:18:41Z",
+      "message": "Refs #729. Fixed bug using string type as primitive"
+    },
+    {
+      "sha": "92fa2613b37ce141f4949ebd1a89e84f4cac57f2",
+      "author": "Ricardo González Moreno",
+      "date": "2015-03-09T15:39:46Z",
+      "message": "Refs #729. Fixed bug initializating Java types."
+    },
+    {
+      "sha": "5dd18b4ac3648e775cbc09c172796761a1a0106d",
+      "author": "Ricardo González Moreno",
+      "date": "2015-03-09T14:54:17Z",
+      "message": "Change in Java generated types"
+    },
+    {
+      "sha": "31e6cd5784b668d58d87cda9d75999f6615f4d24",
+      "author": "Ricardo González Moreno",
+      "date": "2015-03-09T09:09:34Z",
+      "message": "Refs 729. Fixing bug loading JNI dll"
+    },
+    {
+      "sha": "137c0b390f0e5b1d975e3b54e32d44a6653ede28",
+      "author": "Ricardo González Moreno",
+      "date": "2015-03-05T17:30:56Z",
+      "message": "Fixed license"
+    },
+    {
+      "sha": "41004ddd82f6dd4815f9efde8213407b480b2159",
+      "author": "Ricardo González Moreno",
+      "date": "2015-02-20T09:53:39Z",
+      "message": "Refs 731. Finished JNI in linux"
+    },
+    {
+      "sha": "0b4a5176e715a1495a0ed880b19129e3b5454105",
+      "author": "Ricardo González Moreno",
+      "date": "2015-02-18T16:32:11Z",
+      "message": "First support for Java types"
+    },
+    {
+      "sha": "53b94225b945ce24ef0872ca8000f06b35d8dc3a",
+      "author": "Ricardo González Moreno",
+      "date": "2015-02-17T15:48:40Z",
+      "message": "Refs #731. FastRPC authentication branch update"
+    },
+    {
+      "sha": "8ddd90130d6dfb01ea2a4d1cb402be9ca34d8f6d",
+      "author": "Ricardo González Moreno",
+      "date": "2015-01-30T08:38:39Z",
+      "message": "Refs #720. Fixed compilation bug in Windows"
+    },
+    {
+      "sha": "56b4c5cf2d037b6aeddf3366840368d7fc0d7ccb",
+      "author": "Ricardo González Moreno",
+      "date": "2015-01-30T07:21:03Z",
+      "message": "Refs #720. Fixed bug with booleans."
+    },
+    {
+      "sha": "db1e425628000623d383d40758aa80ea25487205",
+      "author": "Ricardo González Moreno",
+      "date": "2015-01-29T10:44:31Z",
+      "message": "Refs 720. Fixed unions generation"
+    },
+    {
+      "sha": "dd2c288246b7592987534f74a52d364237f2d5f9",
+      "author": "Ricardo González Moreno",
+      "date": "2015-01-27T16:17:30Z",
+      "message": "Refs #720. Added parents to ST rules"
+    },
+    {
+      "sha": "56d0cf5367671f519b52a7ec7b88727b7f5fd030",
+      "author": "Gonzalo Rodriguez",
+      "date": "2015-01-27T11:42:29Z",
+      "message": "Fixed serialization code exception, removed string"
+    },
+    {
+      "sha": "c7a04ad9118632a7e428654c5ba20995dba4b0d3",
+      "author": "Ricardo González Moreno",
+      "date": "2014-12-24T14:47:37Z",
+      "message": "Refs #697. Added extension mechanism."
+    },
+    {
+      "sha": "03d3ce05f4d55e9e847c9713f0ea2edc3854703b",
+      "author": "Ricardo González Moreno",
+      "date": "2014-12-02T13:46:34Z",
+      "message": "Merge branch 'goto_branch' into develop"
+    },
+    {
+      "sha": "5f7801d4838d104b5155b36bb0799bf145b2e4f2",
+      "author": "Gonzalo Rodriguez",
+      "date": "2014-12-02T08:54:50Z",
+      "message": "Added compilation and copy scripts"
+    },
+    {
+      "sha": "7964034ed52e1b66e26c143a9885803c1b81c059",
+      "author": "Gonzalo Rodriguez",
+      "date": "2014-12-02T08:39:42Z",
+      "message": "Added script to launch compilation directly"
+    },
+    {
+      "sha": "fa05ea589f18b21a595931989c875d53641b1220",
+      "author": "Ricardo González Moreno",
+      "date": "2014-12-01T15:18:48Z",
+      "message": "Refs #599. Removed warnings on Visual Studio."
+    },
+    {
+      "sha": "e1cf903d99dc0d3c1c336499db9e09dcdd2412a5",
+      "author": "Ruben Rubio",
+      "date": "2014-12-01T14:36:47Z",
+      "message": "STG now uses TYPE_SOURCE preproc directive"
+    },
+    {
+      "sha": "7eb14cc441c8e8f28de341f1baf635e3098c09a5",
+      "author": "Ricardo González Moreno",
+      "date": "2014-11-28T13:16:31Z",
+      "message": "Refs #599. Added pragma for disable warning."
+    },
+    {
+      "sha": "08b5201243890c944b4983d13a0d64d468f6db08",
+      "author": "Ricardo González Moreno",
+      "date": "2014-11-28T10:54:27Z",
+      "message": "Refs #599. Add suggestes changes on linux installation."
+    },
+    {
+      "sha": "caf49082c263ebe4e97e5c83cc4dd2366ff3c39a",
+      "author": "Ricardo González Moreno",
+      "date": "2014-11-27T15:47:29Z",
+      "message": "Refs #599. Fixed bug using ST in RPCDDS."
+    },
+    {
+      "sha": "edd4476c8e7ac19f6df265432c878471ca64c28b",
+      "author": "Ricardo González Moreno",
+      "date": "2014-11-26T14:50:33Z",
+      "message": "Change submodule URL from ssh to https"
+    },
+    {
+      "sha": "0700cb3e14358489a7a8a548cfeb28a3baf169d4",
+      "author": "Ricardo González Moreno",
+      "date": "2014-11-26T13:15:34Z",
+      "message": "Update submodule to fetch git hub repos."
+    },
+    {
+      "sha": "50d9d866e82272d6532c8944f8d1eed30a93364d",
+      "author": "Ricardo González Moreno",
+      "date": "2014-11-26T13:07:58Z",
+      "message": "Updated to last version of thirdparties."
+    },
+    {
+      "sha": "a9a38c6f124ebbfcf78cee8c19e1d226cd6e448f",
+      "author": "Ricardo González Moreno",
+      "date": "2014-11-20T15:39:59Z",
+      "message": "Merge remote-tracking branch 'origin/develop' into goto_branch"
+    },
+    {
+      "sha": "9582d05202b96960b3002013fc00fc561aed8f33",
+      "author": "Ricardo González Moreno",
+      "date": "2014-11-20T15:31:05Z",
+      "message": "Convert .stg file to LF ending."
+    },
+    {
+      "sha": "e083d553dff23d2464a2a2f823035a7f7ed5bd06",
+      "author": "Ricardo González Moreno",
+      "date": "2014-11-18T10:08:05Z",
+      "message": "Refs #675. Updated to VS2013."
+    },
+    {
+      "sha": "15191d633fe4c42076b4aea25fd81e2ae58f2543",
+      "author": "Ricardo González Moreno",
+      "date": "2014-11-13T08:47:34Z",
+      "message": "Removed old header from installation."
+    },
+    {
+      "sha": "a1b6b95f099bd7fad6ec2796aab3b07a920e4a28",
+      "author": "Ricardo González Moreno",
+      "date": "2014-11-13T08:11:18Z",
+      "message": "Fixed bug deserializing strings"
+    },
+    {
+      "sha": "d831b4f1076e758390a5a13b8f1dc780a8250705",
+      "author": "Ricardo González Moreno",
+      "date": "2014-11-12T17:36:11Z",
+      "message": "Fixed error deserializing strings with new API."
+    },
+    {
+      "sha": "4a4d2e58f3de5743fa8a51cadbc82b9c8f98d2ab",
+      "author": "Ricardo González Moreno",
+      "date": "2014-11-12T15:45:53Z",
+      "message": "Fixed error using static libraries."
+    },
+    {
+      "sha": "b6df1117117d7ae054c1f5fa229fe4a66aee0714",
+      "author": "Ricardo González Moreno",
+      "date": "2014-11-12T14:47:59Z",
+      "message": "API without STL elements."
+    },
+    {
+      "sha": "30221accfa7fb14cfc61706b0fee9851129a2296",
+      "author": "Ricardo González Moreno",
+      "date": "2014-11-03T09:19:55Z",
+      "message": "Fixed packaging error."
+    },
+    {
+      "sha": "9e726e481b72725d82a4b9977bb886937f9d09a1",
+      "author": "Ricardo González Moreno",
+      "date": "2014-10-24T11:00:30Z",
+      "message": "Forgot to include some stringtemplate rules."
+    },
+    {
+      "sha": "562ec8b89a16e76cee91f81f00d3adab46771afd",
+      "author": "Ricardo González Moreno",
+      "date": "2014-10-21T07:20:50Z",
+      "message": "Refs #628. Updated VS solution."
+    },
+    {
+      "sha": "51bcc703ab68a198a4d53a8ffa388bb977442407",
+      "author": "Ricardo González Moreno",
+      "date": "2014-10-17T09:41:57Z",
+      "message": "Refs #628. Update submodule eprosima-common-code."
+    },
+    {
+      "sha": "39b02c2d808a86e26d8c2ede822619f535acdd5b",
+      "author": "Ricardo González Moreno",
+      "date": "2014-10-17T09:33:43Z",
+      "message": "Refs #628. Updated to apply new export macro."
+    },
+    {
+      "sha": "84d69283e8ea4921d1f1c13df95c8b99c59ebcdc",
+      "author": "Ricardo González Moreno",
+      "date": "2014-10-17T07:42:52Z",
+      "message": "Refs #628. Removed warnings."
+    },
+    {
+      "sha": "4d7cafb31b35961409e710f765e93df8c0b638f8",
+      "author": "Ricardo González Moreno",
+      "date": "2014-10-16T15:13:36Z",
+      "message": "Refs #599. First update for inheritance."
+    },
+    {
+      "sha": "d190651cd7ce35dbe1d591b88792cee87d72cd37",
+      "author": "Ricardo González Moreno",
+      "date": "2014-10-15T13:50:59Z",
+      "message": "Refs #599. More generic idl parser."
+    },
+    {
+      "sha": "7f56d5f263087e20a4435c3f46322be3da0da9d1",
+      "author": "Ricardo González Moreno",
+      "date": "2014-10-10T11:52:04Z",
+      "message": "Refs #599. Updated fastcdr. Fixed error."
+    },
+    {
+      "sha": "6970208b21bbf53fce1388470524e7cbc0af00b0",
+      "author": "Ricardo González Moreno",
+      "date": "2014-09-26T10:55:02Z",
+      "message": "Added generic serialize funcion in FastCdr."
+    },
+    {
+      "sha": "e0848a7cd4e418d014bfd7a33889fba10443d15f",
+      "author": "Ricardo González Moreno",
+      "date": "2014-09-23T06:53:59Z",
+      "message": "Bump version 0.2.3"
+    },
+    {
+      "sha": "d6485b16e7b655b070f8bea2d9a132d69db9b4b7",
+      "author": "Ricardo González Moreno",
+      "date": "2014-09-22T15:21:32Z",
+      "message": "Fixed errors."
+    },
+    {
+      "sha": "661304ed2646d9116aa80f42109e74647f05194b",
+      "author": "Ricardo González Moreno",
+      "date": "2014-09-19T06:37:22Z",
+      "message": "Updated .gitignore file."
+    },
+    {
+      "sha": "2e75d4ac4fc15ca143367521b2b6378cba889a75",
+      "author": "Ricardo González Moreno",
+      "date": "2014-09-18T08:51:57Z",
+      "message": "Updated thirdparty submodules."
+    },
+    {
+      "sha": "97c12b9c6b6565d83ad93320d3a4417b8870873a",
+      "author": "Ricardo González Moreno",
+      "date": "2014-09-18T08:18:18Z",
+      "message": "Updated submodule support on Windows."
+    },
+    {
+      "sha": "b3a84cb735c7cb83a971a9aaa34adf3cae1866b5",
+      "author": "Ricardo González Moreno",
+      "date": "2014-09-18T07:27:53Z",
+      "message": "Updated thirdparty submodules support."
+    },
+    {
+      "sha": "f496294f71a89eaf79be6fdecb70af9d06bd1527",
+      "author": "Ricardo González Moreno",
+      "date": "2014-09-17T14:56:39Z",
+      "message": "Updated the submodules."
+    },
+    {
+      "sha": "4d2a204242dd58667dbd0d83fddb277f4f2064f2",
+      "author": "Ricardo González Moreno",
+      "date": "2014-09-17T12:44:56Z",
+      "message": "Added new dev-env submodule."
+    },
+    {
+      "sha": "a86d6d10841c596d53f8655626b3f0874ba71988",
+      "author": "Ricardo González Moreno",
+      "date": "2014-09-17T12:37:47Z",
+      "message": "Forget remove directory"
+    },
+    {
+      "sha": "4291a2f04729d30ed88ee662f11487e2670a2ed5",
+      "author": "Ricardo González Moreno",
+      "date": "2014-09-17T12:35:28Z",
+      "message": "Remove global eProsima submodule"
+    },
+    {
+      "sha": "59186cbc678b82c4445131e3673e6e194a2aaabb",
+      "author": "rubenrumu",
+      "date": "2014-09-12T06:45:00Z",
+      "message": "Updated submodules"
+    },
+    {
+      "sha": "87b11f15c3185f12ec22027b9c496f3cd917d002",
+      "author": "rubenrumu",
+      "date": "2014-09-10T06:41:01Z",
+      "message": "Submodules finished for this project"
+    },
+    {
+      "sha": "749ea07380602530cb1c65494590883df6da18d0",
+      "author": "Ruben Rubio",
+      "date": "2014-09-09T13:42:33Z",
+      "message": "EPROSIMADIR reference deleted."
+    },
+    {
+      "sha": "5620980133752519b36b483ac558aacb5b7ff1bc",
+      "author": "Ruben Rubio",
+      "date": "2014-09-09T13:30:43Z",
+      "message": "eProsima project added as a submodule.\nEPROSIMADIR references deleted from the project."
+    },
+    {
+      "sha": "2b27901513a916d843f9653a920fe04eab0fbef9",
+      "author": "Ricardo Gonzalez",
+      "date": "2014-07-31T13:01:53Z",
+      "message": "Fixed bugs.\n\nString serialization includes the \\0 character."
+    },
+    {
+      "sha": "dd513d6be9daee8b2410f034d402290f71ff01f3",
+      "author": "Ricardo Gonzalez",
+      "date": "2014-07-18T10:52:27Z",
+      "message": "Changed version: v0.2.2"
+    },
+    {
+      "sha": "c59e3b8a3defee595b6f557f6c2e6f82c7ef5ab0",
+      "author": "Ricardo Gonzalez",
+      "date": "2014-04-30T11:02:12Z",
+      "message": "Remove all checks in linux installer."
+    },
+    {
+      "sha": "6ec2d0d4681e6b478039014ee6fb25f1b15eb4fe",
+      "author": "Ricardo Gonzalez",
+      "date": "2014-04-30T10:02:57Z",
+      "message": "Updated linux installer."
+    },
+    {
+      "sha": "00a749387529a10a8d4c6b0b31e6ca831159eceb",
+      "author": "Ricardo Gonzalez",
+      "date": "2014-04-24T10:21:14Z",
+      "message": "Fixed error with wchar_t type in windows."
+    },
+    {
+      "sha": "00ae6321d186614791d04c6caec8aea1bf8d1f02",
+      "author": "Ricardo González",
+      "date": "2014-04-08T08:33:29Z",
+      "message": "Namespace redefined."
+    },
+    {
+      "sha": "d5d9c8d5c4fe47d6d480da088684d56e45d9b8e6",
+      "author": "Ricardo Gonzalez",
+      "date": "2014-04-02T14:07:03Z",
+      "message": "Update FastCdr like Cdr before."
+    },
+    {
+      "sha": "9ddf793d5aff44e0c31e953a5bbfb3825659d453",
+      "author": "Ricardo González",
+      "date": "2014-03-18T14:54:29Z",
+      "message": "Changes to support fastrpc."
+    },
+    {
+      "sha": "26388656ae6bb72aa4c70be7a01b2f16a335c858",
+      "author": "Ricardo Gonzalez",
+      "date": "2014-02-26T11:30:49Z",
+      "message": "New functionality for fastrpc.\n\nInclude a bug fixing."
+    },
+    {
+      "sha": "ffc06260604d7f1bca942b98014453c8b42a819f",
+      "author": "Ricardo González",
+      "date": "2014-02-14T07:58:21Z",
+      "message": "Added static function to calculate alignment."
+    },
+    {
+      "sha": "be6d12a77afc79b676361dad80eea0f9bae787f3",
+      "author": "Ricardo Gonzalez",
+      "date": "2014-02-05T08:31:35Z",
+      "message": "Merge branch 'hotfix_337' into develop"
+    },
+    {
+      "sha": "62224ffea2fe6fede43a910acbf4f1dd419d1bb4",
+      "author": "Ricardo Gonzalez",
+      "date": "2014-02-05T08:30:47Z",
+      "message": "Fixed bug #337"
+    },
+    {
+      "sha": "78c13668f0f750474124990595981273cf75c75b",
+      "author": "Ricardo Gonzalez",
+      "date": "2014-02-03T10:13:19Z",
+      "message": "Fixed compilation warnings in unit tests."
+    },
+    {
+      "sha": "ed8bfd6cbf18fd81d84db6afc698da003a0ec0be",
+      "author": "Ricardo Gonzalez",
+      "date": "2014-02-03T09:34:55Z",
+      "message": "Merge branch 'hotfix_336' into develop"
+    },
+    {
+      "sha": "5e2037fe430db270d1ff273313ba1e503064f238",
+      "author": "Ricardo Gonzalez",
+      "date": "2014-02-03T09:26:29Z",
+      "message": "New release 0.2.1"
+    },
+    {
+      "sha": "d52588e52f76973a198881dceca5521397e766bc",
+      "author": "Ricardo Gonzalez",
+      "date": "2014-02-03T09:22:47Z",
+      "message": "Fixed error 336"
+    },
+    {
+      "sha": "baade8729c4cc9cb20c3de1cf48e9fed38ab6574",
+      "author": "Ricardo Gonzalez",
+      "date": "2014-01-21T15:28:31Z",
+      "message": "Fixed memory leak.\n\nFastBuffer destructor didn't free the internal buffer."
+    },
+    {
+      "sha": "15a204041eb7be2d4772042cbae4a39d79e4df13",
+      "author": "Ricardo Gonzalez",
+      "date": "2014-01-20T11:49:59Z",
+      "message": "Update .gitignore file."
+    },
+    {
+      "sha": "d32418ee36997c47ab432874835c4a7d5e5b5c64",
+      "author": "Ricardo Gonzalez",
+      "date": "2014-01-17T12:35:12Z",
+      "message": "Update .gitignore file."
+    },
+    {
+      "sha": "ba35716f6dff0107483a44e4988d596c52e91de8",
+      "author": "Ricardo Gonzalez",
+      "date": "2014-01-17T10:20:53Z",
+      "message": "Update .gitattributes file."
+    },
+    {
+      "sha": "0528dcfeded8dce0bff3fa4c5143d6497b02dc9d",
+      "author": "Ricardo Gonzalez",
+      "date": "2014-01-17T10:20:26Z",
+      "message": "Update .gitattributes file."
+    },
+    {
+      "sha": "89bbc4b96a050edc39baf92e6f16a99bad11c60b",
+      "author": "Ricardo Gonzalez",
+      "date": "2014-01-17T10:19:10Z",
+      "message": "Update .gitattributes"
+    },
+    {
+      "sha": "d877dd9db7f8ddb2061f2f321258d3fe0cb48f58",
+      "author": "Ricardo Gonzalez",
+      "date": "2014-01-17T09:57:09Z",
+      "message": "Add .gitattributes file."
+    },
+    {
+      "sha": "2e5f21cd26a744635936625ca09706ae3861cb92",
+      "author": "Ricardo Gonzalez",
+      "date": "2014-01-14T09:56:33Z",
+      "message": "Add .gitignore file."
+    },
+    {
+      "sha": "530a5453efa7251476711a27eba0e091e4d20cad",
+      "author": "Ricardo Gonzalez",
+      "date": "2014-01-10T09:30:33Z",
+      "message": "Added license header in source files"
+    },
+    {
+      "sha": "aec8b48023645dd0a78de527382d50f523c42c25",
+      "author": "Rafael Lara",
+      "date": "2013-12-10T11:18:38Z",
+      "message": ""
+    },
+    {
+      "sha": "be4ad2eef2b8f2ae6075e36d1d9163bca49c7c00",
+      "author": "Rafael Lara",
+      "date": "2013-12-10T11:12:53Z",
+      "message": "- Fixed param doc"
+    },
+    {
+      "sha": "b5a5c2914d42a001f2b0405ef53da2b47fa0f3b6",
+      "author": "Ruben Rubio",
+      "date": "2013-12-10T08:13:53Z",
+      "message": "Updated doxygen comments."
+    },
+    {
+      "sha": "52f9755534fb5c7615a49a422af35f9200c7a787",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-11-21T15:00:36Z",
+      "message": "Updated documentation in script"
+    },
+    {
+      "sha": "ec97532a9939eb435128a1eb5d932d809cad6460",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-11-21T11:14:48Z",
+      "message": "Last changes."
+    },
+    {
+      "sha": "d9dfe3096f51b349306b456c60ce68b1cc637e6f",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-11-21T09:01:36Z",
+      "message": ""
+    },
+    {
+      "sha": "451bf0b8d0e5e54e47d30c3d6e620a5f97c9d167",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-11-20T17:59:06Z",
+      "message": "Little change."
+    },
+    {
+      "sha": "f5da9f50668cfade9dfe0b3fa084e2fbb4530b98",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-11-20T17:39:49Z",
+      "message": "More changes."
+    },
+    {
+      "sha": "b4fbc4a637fc6c74aaf574b96088c91370cf9ffa",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-11-20T10:48:39Z",
+      "message": "Fixed bug after renaming in Windows."
+    },
+    {
+      "sha": "ab9b999d18fc6a9fac04bc241301e021205d8bbd",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-11-20T10:44:31Z",
+      "message": "Fixed bug after renaming."
+    },
+    {
+      "sha": "5b94dd8dbb97055b45f54d254b2c0d5c402ce30f",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-11-20T10:40:55Z",
+      "message": "Project renamed to FastCDR"
+    },
+    {
+      "sha": "b74576d4a2257925e66c1cf3a3ae37a012eb6405",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-11-20T09:09:33Z",
+      "message": "Added packaging script for Linux."
+    },
+    {
+      "sha": "bfe1731e34a52d95f5473b05404e8c323a1f11a2",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-11-20T08:31:14Z",
+      "message": "First release of autoconf files."
+    },
+    {
+      "sha": "3a037f28623420b678c137b076c527172b267d52",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-11-19T10:53:38Z",
+      "message": "Updated window files after change."
+    },
+    {
+      "sha": "2b5b26a16d8570073972c96ce37a6c011bc25026",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-11-19T10:49:16Z",
+      "message": "Now the include files are in the directory \"cdr\" instead of \"cpp\"."
+    },
+    {
+      "sha": "fb2ae590a7ff9f0d0b0f0d0342cf08b4bd34fce8",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-11-15T10:48:31Z",
+      "message": "Update doxygen documentation."
+    },
+    {
+      "sha": "f8b61331ebadf6b637722710ef8c947e0263a650",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-11-15T10:37:12Z",
+      "message": "Changed namespace name from eProsima to eprosima."
+    },
+    {
+      "sha": "0907bda2a3441255d5894e513706be244ab2e612",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-10-16T14:05:30Z",
+      "message": "Added function to serialize raw sequences of basic types."
+    },
+    {
+      "sha": "e5911fa14f58b5d7c41cb1f5de74d440045d2ee6",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-10-09T09:37:16Z",
+      "message": "\nFixed bugs:\n\n- serialization function to raw strings.\n- When jump, the FastBuffer doesn't resize."
+    },
+    {
+      "sha": "0130eefa3505c78d9738572512fe43da2c490d69",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-10-08T15:40:29Z",
+      "message": "Added serialization to C strings."
+    },
+    {
+      "sha": "962dbd85156f2a2b7b565c651d3a27dcc888ad37",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-09-26T11:09:04Z",
+      "message": "Fixed bug setting state in Cdr and FastCdr"
+    },
+    {
+      "sha": "bd7e8216254bd497372987d7ad9005e3f54bfa13",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-08-30T10:49:57Z",
+      "message": "\nLittle change in license header."
+    },
+    {
+      "sha": "54917b6e86bf07db605ddf54a4127bcb2301402a",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-08-30T10:42:41Z",
+      "message": "- Changed exceptions to be compatible with CentOS 6.4\n- Added license header to include files."
+    },
+    {
+      "sha": "b25bdec990e633ef08fb7a3a785dc225fac0ae6c",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-08-30T07:26:41Z",
+      "message": "Now CDR uses std=c++0x"
+    },
+    {
+      "sha": "18aa61c25c1c973e339058ebd146961d9dd2aa0a",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-08-22T08:54:55Z",
+      "message": "Makefile create links in EPROSIMA_LIBRARY_PATH and fixed bug in tests makefiles"
+    },
+    {
+      "sha": "9d9f7e28754a50d7034c324347736c41fd0aea1f",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-08-22T08:41:58Z",
+      "message": "Rolling back to revision 2180"
+    },
+    {
+      "sha": "0b9864c7e309d725f4d6c0469bbed4d007fd3541",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-08-21T15:35:16Z",
+      "message": "- Fixed bug with iterators. Now pointer are used instead of references."
+    },
+    {
+      "sha": "b41f9bafe051262b60c3711e145a63cd87830f11",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-08-21T12:35:27Z",
+      "message": "- Fixing bug with iterators."
+    },
+    {
+      "sha": "0fa9d51d2f06960ff3cbbbb34f4e9bd86cf195db",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-08-20T06:54:25Z",
+      "message": "- Finished unique interface."
+    },
+    {
+      "sha": "6ccf1f1b9c2d247dfa0b0cd5e3f149e2664b132e",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-08-09T09:58:26Z",
+      "message": "- Second update to Marshalling API."
+    },
+    {
+      "sha": "df62fdf7722067880a57e3e4f8f83c7b47d63d9b",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-08-08T09:42:21Z",
+      "message": "- First update to Marshalling API."
+    },
+    {
+      "sha": "05dd1f6ef277c0759bbb00255e4583e6bac3e659",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-07-15T15:54:34Z",
+      "message": "- Makefile create link to static library too."
+    },
+    {
+      "sha": "27221ca4c736d8072a351fda483c00bc3bcd99a2",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-07-12T08:55:55Z",
+      "message": "- Removed some old defines from visual studio project."
+    },
+    {
+      "sha": "0dd794ef4c761050c2ca517b4abde8e59315ff72",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-07-10T16:30:18Z",
+      "message": "- Automatic execution of tests."
+    },
+    {
+      "sha": "b24cbb0f5bec60baaab027927b21cf68c123866f",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-07-10T15:29:00Z",
+      "message": "- Renamed getVersionFromSourceFile to getVersionFromCPP."
+    },
+    {
+      "sha": "04a35b310f3ec48330a65b8e07d1624823ef75ad",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-07-10T14:56:31Z",
+      "message": "- Now the libraries are generated with the version in Linux."
+    },
+    {
+      "sha": "9457e54a69b6c2de198d60df82954f147866a1d3",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-07-08T15:45:43Z",
+      "message": "- Added auto link in windows."
+    },
+    {
+      "sha": "872e5a8c8d28bf4173be207806e45a28aebb6a13",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-06-27T11:19:06Z",
+      "message": "- New defines to export for dll libraries.\n- Test project run the tests in the postbuild."
+    },
+    {
+      "sha": "d98d55a37863fcbb046e233f8815665e9360082f",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-06-27T09:50:14Z",
+      "message": "- Increased the speed of FastCdr with inline functions."
+    },
+    {
+      "sha": "f50c95b65f1ee2b1328f6bf6dfdacac5ad1ad9cd",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-06-26T09:58:51Z",
+      "message": "- Update doxygen information.\n- Update doxygen generation files."
+    },
+    {
+      "sha": "daced54fc5ae336d7d86370d33dc48df743eb241",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-06-24T11:56:31Z",
+      "message": "Makefile create other necessary directories"
+    },
+    {
+      "sha": "f278d23ddfbd00f12ee102f1eb4137156b837e5e",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-06-21T10:09:27Z",
+      "message": "- Fix bug: Static libraries in X64 were created for i86."
+    },
+    {
+      "sha": "01c6a30b34f7ae36c04812572e6becc417487460",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-06-21T09:14:18Z",
+      "message": "Added as include dir the eprosima directory in makefile"
+    },
+    {
+      "sha": "8649c97d505d204b5bfb5fb5bd6101e186bfd59a",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-06-20T10:16:44Z",
+      "message": "- Added version to CDR library."
+    },
+    {
+      "sha": "f17899c4ea16d171782323fcc2f1587df968830c",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-06-18T08:28:55Z",
+      "message": "Fixed bug serializing/deserializing arrays and sequences of char"
+    },
+    {
+      "sha": "5110fc8a88c17699d17a41752956c4cb4f0f37ce",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-06-18T08:09:26Z",
+      "message": "Fixed bug serializing/deserializing arrays and sequences"
+    },
+    {
+      "sha": "ab7055c4cac647dec88c46ca452190501ff14033",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-06-17T14:16:38Z",
+      "message": "Fixed bug setting an state in CDR serialization"
+    },
+    {
+      "sha": "4500c5ba1de013785cc9a05c9161d4107b1b132d",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-06-07T11:57:18Z",
+      "message": "- Fixed bug #49"
+    },
+    {
+      "sha": "de0e99282dedc961ea70136ca8c6164bda029eea",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-06-03T14:42:40Z",
+      "message": "Update compile error in Linux"
+    },
+    {
+      "sha": "44339532466d190c59f55c30dd0a4f6e3645ef84",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-06-03T14:38:47Z",
+      "message": "- Update API of CDR library."
+    },
+    {
+      "sha": "a2a88a00c0572203773d2c5dcb5eb9eb695f98ff",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-06-03T12:53:59Z",
+      "message": "Updated API for CDR library"
+    },
+    {
+      "sha": "e3d38ca66be58ce5f492e4bb7896d73c5f2061ff",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-05-29T16:51:04Z",
+      "message": "- First changes in class FastBuffer and its iterator."
+    },
+    {
+      "sha": "5a8f8201193afe31b33e668b4e4fae9580b9b5da",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-05-29T07:52:23Z",
+      "message": "- New class FastCdr that encapsulates the modified CDR serialization."
+    },
+    {
+      "sha": "e50b15506d3f96d1e918f9b0c523e7109c2aa2d9",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-04-29T09:10:18Z",
+      "message": "Added symlink to eProsima code directory (removed INCLUDE in makefile)."
+    },
+    {
+      "sha": "191d8dac97f98868114ac67f8f97c97810e708e8",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-04-25T09:36:18Z",
+      "message": "Updated doxygen documentation"
+    },
+    {
+      "sha": "a1db555dd3d5719cd80bd8715e3f8a4305663563",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-04-25T09:21:47Z",
+      "message": "- Added new logo for doxygen documentation."
+    },
+    {
+      "sha": "3de0a5d8097f629591046906c6a451d9cee28f31",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-04-25T08:06:32Z",
+      "message": "- Added fast functions."
+    },
+    {
+      "sha": "4264fa13c8ce98a64ed2a411b86625069b6aee49",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-04-19T12:07:49Z",
+      "message": "- Changed doxygen documentation in source code."
+    },
+    {
+      "sha": "ac1e1531889f1377b12c12999e9f38ade84f9f9d",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-04-19T11:25:06Z",
+      "message": "Little change in the Makefile"
+    },
+    {
+      "sha": "4a753a62090282e2a1d043b48081a871385f41ea",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-04-19T11:09:22Z",
+      "message": "- Added exceptions."
+    },
+    {
+      "sha": "6d35de9c0c249211efd81fed22ff9e3b7298aec6",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-04-18T10:18:19Z",
+      "message": "- Dynamically allocation of the internal stream in CDRBuffer."
+    },
+    {
+      "sha": "df0b3e5594ba323064e83cd6a399ec928f7fa36b",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-04-17T15:32:49Z",
+      "message": "- Fixed bad name of the license file."
+    },
+    {
+      "sha": "39719f1dcca5203b7a30c9faa3384d97fbaa25b9",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-04-17T15:22:34Z",
+      "message": "- Added new function serializeSequence."
+    },
+    {
+      "sha": "cdca70ee14bc576b19d2b45d9fc59e0a5303cb4a",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-04-17T09:39:20Z",
+      "message": "Fixed compilation error with ptrdiff_t"
+    },
+    {
+      "sha": "655115cab70483fad1e632bfcfa413e0cc8bed22",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-04-17T09:35:55Z",
+      "message": "Fixed compilation error with non-constant arrays"
+    },
+    {
+      "sha": "d5ad8009254835ecb6c20ebcdb8597a2385f9b37",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-04-17T07:48:15Z",
+      "message": "Tests run in Linux"
+    },
+    {
+      "sha": "f18456fd2b5ef8c2530e616240bc5385f70f7026",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-04-16T15:08:53Z",
+      "message": "- Added User_CString abstract data type."
+    },
+    {
+      "sha": "6648be1cf3918827b41d2fab407650068300cb1e",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-04-09T10:50:18Z",
+      "message": "- Added license."
+    },
+    {
+      "sha": "fa2f204d7ec0ebd4d74e7af98d258df3c5c1acf4",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-04-08T15:01:23Z",
+      "message": "- Forgotten to add the user manual."
+    },
+    {
+      "sha": "1b680ae77d949996d9cbba81505f127bb4bf543a",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-04-05T12:00:37Z",
+      "message": "Change makefile in Linux"
+    },
+    {
+      "sha": "4de3c68d5880c5da4274e60dbe3a0df6d844b759",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-04-05T11:34:54Z",
+      "message": ""
+    },
+    {
+      "sha": "083fb44b20d800f992aeaadf2b04fae0b9ee5833",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-04-02T09:41:10Z",
+      "message": "- Corrected doxygen documentation."
+    },
+    {
+      "sha": "0107b1232d54052bf117f98877d314f54ebaa2a5",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-04-02T09:31:29Z",
+      "message": "- Finished the doxygen documentation."
+    },
+    {
+      "sha": "96cd7e410452d93fb812df51d68805a416d9daf6",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-04-02T08:22:40Z",
+      "message": "- Updating doxygen documentation."
+    },
+    {
+      "sha": "46c5f25775762619b4de7791de72dcb8cd918d6e",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-03-27T10:47:45Z",
+      "message": "- Last changes after the performance test versus protobuf."
+    },
+    {
+      "sha": "570957bd60569c32944579d55f1e69689bd1f838",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-03-13T16:28:24Z",
+      "message": "- Serialization finished."
+    },
+    {
+      "sha": "89bc8018bc4aa15d6dd239333cdae2b32ffb2489",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-03-04T10:13:57Z",
+      "message": "- Script to automatize the compilation in Windows."
+    },
+    {
+      "sha": "5008fa3dfe3e9291f8ce0f549c6e97dff819dc7e",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-02-26T13:34:16Z",
+      "message": "- Finish RTPSdump (x64 and i86) in Windows."
+    },
+    {
+      "sha": "38d5e96d76173b2c35b4503a107a3e5a35fdd450",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-02-25T07:55:04Z",
+      "message": "Updating project in Linux"
+    },
+    {
+      "sha": "3567e2484154a7e9c25856f8808138f339ea46da",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-02-25T07:47:52Z",
+      "message": "Updating project in Linux"
+    },
+    {
+      "sha": "801177f91ca0c1c13db7af1423d64b71d0a4138a",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-02-22T12:45:46Z",
+      "message": "- Update with arrays and sequences."
+    },
+    {
+      "sha": "8b0e075ea621a3a4c494ba8ed15c1f0814294899",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-02-20T14:12:03Z",
+      "message": "- Testing arrays."
+    },
+    {
+      "sha": "c50ac8faa3a92d869a41790b4a6e86053be6665c",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-02-19T07:48:24Z",
+      "message": "- New changes."
+    },
+    {
+      "sha": "debcef1df30902e0a0cefda4f3585b08c0031d15",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-02-13T10:36:40Z",
+      "message": "- Updated C++ cdr library."
+    },
+    {
+      "sha": "35737b058db64cc144541ed9d6aec71788ef0765",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-02-08T12:47:18Z",
+      "message": "- First upload of project CDR"
+    },
+    {
+      "sha": "48da60a642f7235941e02692c3f2433f76e497ed",
+      "author": "Ricardo Gonzalez",
+      "date": "2013-02-08T12:45:10Z",
+      "message": ""
+    }
+  ]
+}

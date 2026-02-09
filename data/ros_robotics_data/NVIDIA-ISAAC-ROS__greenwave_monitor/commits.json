@@ -1,0 +1,126 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-07T01:57:55Z",
+    "source": "github_rest",
+    "endpoint": "/repos/{owner}/{repo}/commits",
+    "owner": "NVIDIA-ISAAC-ROS",
+    "repo": "greenwave_monitor",
+    "per_page": 100
+  },
+  "data": [
+    {
+      "sha": "64e5ad5d7cd03f96c9c81326a130b34a67cbec35",
+      "author": "bmchalenv",
+      "date": "2026-01-28T17:53:32Z",
+      "message": "Fix README smoke tests in CI (#26)\n\nSmoke tests for the README in CI always return true. Failures are currently not being caught because of this. Updated the smoke tests to run the TUI applications and their demo modes. Updated the hz.launch.py test to measure topics we publish in the background so it doesn't error."
+    },
+    {
+      "sha": "022fedf0da8949aa78e88ef811ee40150fc5dc3c",
+      "author": "bmchalenv",
+      "date": "2026-01-28T17:52:55Z",
+      "message": "Add pre-commit for better linting (#25)\n\nAdds a pre-commit config that uses uncrustify and flake8 just like ament. ament isn't used directly since I wanted formatting to occur outside of a ROS environment when making small fixes. Also has other tools like whitespace, newline, copyright, yaml checks, code spelling, shell script formatting, and commit sign off checking.\n\nUseful for fixing most issues with linting before it is pushed. Automatically reformats your commits, fixes copyright year issues, etc."
+    },
+    {
+      "sha": "67fb81075a912f5542fe5ff3bcac227372409b67",
+      "author": "bmchalenv",
+      "date": "2026-01-14T23:25:51Z",
+      "message": "Use parameter yaml on startup for configuring greenwave monitor + rename to greenwave diagnostics (#22)\n\nAdd support for ROS parameter YAML on startup and rename message diagnostics to greenwave diagnostics to match parameter yaml group name. Look at the example.yaml if you want to see how it is integrated.\n\nFixes a few bugs/makes the system robust also. Specifically #16 ."
+    },
+    {
+      "sha": "984432ad82ca0dfaea0f13a6feda46bf1edeef4f",
+      "author": "bmchalenv",
+      "date": "2025-12-30T21:35:52Z",
+      "message": "Add --hide-unmonitored flag to ncurses frontend (#20)\n\nAdd a --hide-unmonitored flag to the ncurses frontend. This makes it possible for the user to start greenwave monitor with only the topics that are being monitored visible.\n\nTests were also added to verify the argument parsing is functional with the frontend.\n\nSigned-off-by: Blake McHale <bmchale@nvidia.com>"
+    },
+    {
+      "sha": "0f35afb724133f9a0a241555c7bca78bbac16f15",
+      "author": "Sean Gillen",
+      "date": "2025-10-20T21:09:21Z",
+      "message": "Relax test tolerances to avoid flaky tests in buildfarm.  (#17)"
+    },
+    {
+      "sha": "ad9e322f35ed63c08e37fcbedafd44d0deaa7880",
+      "author": "Sean Gillen",
+      "date": "2025-10-20T20:23:06Z",
+      "message": "Enable ROS testing CI on all PRs (#15)"
+    },
+    {
+      "sha": "0aea55a035940585680c2a38b4a90a20ce62d599",
+      "author": "Sean Gillen",
+      "date": "2025-10-20T19:21:57Z",
+      "message": "Make r2s_gw an optional dependency  (#13)\n\nr2s_gw requires a version of textual that the ubuntu noble Debians don't have, which makes getting into ros2 build farm annoying, so just make it it's own repo that is optional, and use curses UI as the primary.\n\nMove r2s_gw into seperate repo, r2s_gw depends on greenwave_monitor, but no dependencies in the other direction."
+    },
+    {
+      "sha": "f013b8eeb0f1d37fb13ac9e60655313ba30730eb",
+      "author": "Sean Gillen",
+      "date": "2025-10-15T05:47:42Z",
+      "message": "Fix mixing ament_cmake_auto rosdep, update CI to use base images rather than ros-core images"
+    },
+    {
+      "sha": "bc8462265cff4ea4343849384168d2756bef80cd",
+      "author": "Sean Gillen",
+      "date": "2025-10-13T21:37:02Z",
+      "message": "replace large latency values with N/A, add latency note to README (#11)\n\n* add N/A when latency is nonsense\n\n* minor fixup to make types in messaage_diagnostics consistent\n\n* update readme and update tests"
+    },
+    {
+      "sha": "c17aefaf963580cdbf753eb1c256e0511529222d",
+      "author": "Sean Gillen",
+      "date": "2025-10-09T17:02:57Z",
+      "message": "Update package.xml to add authors tag (#9)"
+    },
+    {
+      "sha": "8db488e7f710f938fafe454dadff8b1acde9877e",
+      "author": "Sean Gillen",
+      "date": "2025-10-08T18:36:11Z",
+      "message": "Create Contributing.md (#8)"
+    },
+    {
+      "sha": "6b41bad075da007a75c97dba7204977ec7d0467c",
+      "author": "Sean Gillen",
+      "date": "2025-10-03T16:48:07Z",
+      "message": "Change logic for UI adaptor to still work with NITROS (#7)"
+    },
+    {
+      "sha": "6fefc75baf6da255f665f24dab86a5800a3837bd",
+      "author": "Sean Gillen",
+      "date": "2025-10-03T14:19:55Z",
+      "message": "Add license from upstream r2s (#6)"
+    },
+    {
+      "sha": "3176cd26458f07a3df0b2737e2f90287b7c27bb7",
+      "author": "Sean Gillen",
+      "date": "2025-10-03T00:31:40Z",
+      "message": "Fixup headers, maintainers, README, lint, before public release (#5)"
+    },
+    {
+      "sha": "d9a74a84a459e85f88c1a758c7e767a2f6e34f3b",
+      "author": "Sean Gillen",
+      "date": "2025-10-02T21:02:54Z",
+      "message": "Update README (#4)\n\nUpdate README to simplify things.\nAdd smoke checks to CI for the use cases outlined in the README."
+    },
+    {
+      "sha": "726c07095046d29b7b0a5ae07d6e6da0a7b1af79",
+      "author": "Sean Gillen",
+      "date": "2025-10-02T17:34:32Z",
+      "message": "Add nccurses based frontend (#3)\n\nAdds a simple curses based frontend, less featureful, but more performant with large number of topics than r2s_gw"
+    },
+    {
+      "sha": "f05a2698361fc263fc3f20dc86a6efd1e69794f9",
+      "author": "Sean Gillen",
+      "date": "2025-10-01T15:38:28Z",
+      "message": "Migrate gitlab workflows to Github actions\n\nAdd new github workflows\nAlso just check in r2s_gw directly rather than as a submodule, because permissions are a pain."
+    },
+    {
+      "sha": "8cce75837059a37c6f58f12cd314df4de5d42250",
+      "author": "Sean Gillen",
+      "date": "2025-09-24T18:24:02Z",
+      "message": "test github CI"
+    },
+    {
+      "sha": "bace6d8b6705dc1667e84a1252744f6e0b291cb1",
+      "author": "Sean Gillen",
+      "date": "2025-09-24T03:17:27Z",
+      "message": "Initial Commit"
+    }
+  ]
+}

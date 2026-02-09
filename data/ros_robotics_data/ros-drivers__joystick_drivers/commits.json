@@ -1,0 +1,3252 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-06T23:29:33Z",
+    "source": "github_rest",
+    "endpoint": "/repos/{owner}/{repo}/commits",
+    "owner": "ros-drivers",
+    "repo": "joystick_drivers",
+    "per_page": 100
+  },
+  "data": [
+    {
+      "sha": "881f3a5474044b79324a2117fe52a5db2106e4e0",
+      "author": "Joshua Whitley",
+      "date": "2024-12-04T18:23:50Z",
+      "message": "Update workflows and badges (#291)"
+    },
+    {
+      "sha": "8ecb0366c879a6e7102db7bcf092a3d70ec8fd40",
+      "author": "Joshua Whitley",
+      "date": "2024-12-04T17:53:06Z",
+      "message": "Update badge on ros2 branch."
+    },
+    {
+      "sha": "3fbbdd01d393b9c1edbeeb53df2ab93660daaa53",
+      "author": "HopeCollector",
+      "date": "2024-01-04T03:28:05Z",
+      "message": "update readme about install dependencies (#277)"
+    },
+    {
+      "sha": "038a12722bac3983d7fee462ad074a8f18c7bd5f",
+      "author": "Chris Lalancette",
+      "date": "2023-10-31T00:57:42Z",
+      "message": "3.3.0"
+    },
+    {
+      "sha": "b65236585da9322d6bec9cf244e2ff69252a0b09",
+      "author": "Chris Lalancette",
+      "date": "2023-10-31T00:57:28Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "a5adee5e1e997269e38feebef7ca888b23d69a73",
+      "author": "Johannes Meyer",
+      "date": "2023-10-23T16:27:19Z",
+      "message": "Fix compatibility with SDL versions below 2.0.18 (#273)\n\nSDL_GameControllerHasRumble() was introduced in SDL 2.0.18 only (https://github.com/libsdl-org/SDL/pull/4943).\r\n\r\nSigned-off-by: Johannes Meyer <johannes@intermodalics.eu>"
+    },
+    {
+      "sha": "f2ffeec1044e7c8b73036384053eced8be16bb19",
+      "author": "Patrick Roncagliolo",
+      "date": "2023-10-12T21:25:10Z",
+      "message": "Upgrade to SDL2.0.20 (#270)\n\n* Upgrade to SDL2.0.20\r\n\r\nSigned-off-by: Patrick Roncagliolo <ronca.pat@gmail.com>"
+    },
+    {
+      "sha": "0ad088e6647d8a1e4698a5e62778aa85f8a39675",
+      "author": "Chris Lalancette",
+      "date": "2023-10-10T17:48:54Z",
+      "message": "3.2.0"
+    },
+    {
+      "sha": "18523f002b93bb44f1521a14c65f2c68708ddc72",
+      "author": "Chris Lalancette",
+      "date": "2023-10-10T17:48:43Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "64522c7050d01607472c1c626c65cfcd249b8899",
+      "author": "Chris Lalancette",
+      "date": "2023-10-10T17:38:57Z",
+      "message": "Remove ament target deps for the new game_controller node. (#272)\n\nJust use standard target_link_libraries, which allows\r\nus to hide some of the dependencies from downstream.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "b0bc9d7faace869767f1121174838fea831b2ab7",
+      "author": "Roderick Taylor",
+      "date": "2023-09-18T16:54:21Z",
+      "message": "Use the SDL2 Game Controller API (#258)\n\n* Use the SDL2 Game Controller API\r\n\r\nSigned-off-by: Rod Taylor <Rod.Taylor@csiro.au>\r\n\r\n* CMakeLists.txt for game_controller.\r\n\r\nSigned-off-by: Rod Taylor <Rod.Taylor@csiro.au>\r\n\r\n* Add xbox wirelss controller udev rule file.\r\n\r\nSigned-off-by: Rod <Rod.Taylor@csiro.au>\r\n\r\n---------\r\n\r\nSigned-off-by: Rod Taylor <Rod.Taylor@csiro.au>\r\nSigned-off-by: Rod <Rod.Taylor@csiro.au>"
+    },
+    {
+      "sha": "e3c3388a4def1be5b4b42e32a98f6b0fb1cbdc55",
+      "author": "Chris Lalancette",
+      "date": "2023-09-14T18:13:21Z",
+      "message": "Update github workflow to use setup-ros 0.7. (#265)\n\n* Update github workflow to use setup-ros 0.7.\r\n\r\n* Also add in humble Github workflow.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "be48a0d3420bb6d7c164ce3b6e6e862fcf852a38",
+      "author": "Chris Lalancette",
+      "date": "2023-09-14T17:55:12Z",
+      "message": "Remove the last use of ament_target_dependencies. (#264)\n\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "e086fb629f7ff8773ed08044eaeb196bac3ff99e",
+      "author": "Marco Boneberger",
+      "date": "2023-09-14T16:23:59Z",
+      "message": "fix autorepeat not being triggered when inside deadzone (#261)\n\nwhen the joystick is moved there is an SDL_Event, but when inside the deadzone the position of the joystick will not be updated. In this case should_publish remains false. However, before this commit we would not trigger the autorepeat functionality in this case.\r\n\r\nNow we trigger the autorepeat functionality everytime where we didnt update the joystick (due to deadzone) or when there was no SDL_Event."
+    },
+    {
+      "sha": "1bc08a5c867ab04df4856dbc773e0f3f5ec63f65",
+      "author": "Borong Yuan",
+      "date": "2023-09-14T15:59:01Z",
+      "message": "add option to use TwistStamped (#251)\n\nSigned-off-by: Borong Yuan <yuanborong@hotmail.com>"
+    },
+    {
+      "sha": "1b65aca3cffd886253bddec64e27ec222e511300",
+      "author": "Chris Lalancette",
+      "date": "2023-09-14T15:42:36Z",
+      "message": "Revert \"Fix dependency issues.\" (#259)\n\nThis reverts commit 11a70ca6c5bdcebec3bfc6d861cb8d715b456581."
+    },
+    {
+      "sha": "f06aece47555d96a2299fc1352154f79c13a7a77",
+      "author": "chriseichmann",
+      "date": "2023-09-14T15:35:05Z",
+      "message": "Changed name of executable in launch files to match installed node (#230)\n\nSigned-off-by: Christian Eichmann <eichmann@fzi.de>"
+    },
+    {
+      "sha": "d65467c44583519d3c369c3069509e87a0378ee9",
+      "author": "Joshua Whitley",
+      "date": "2023-06-21T22:40:10Z",
+      "message": "Linter fix."
+    },
+    {
+      "sha": "11a70ca6c5bdcebec3bfc6d861cb8d715b456581",
+      "author": "Joshua Whitley",
+      "date": "2023-06-21T22:26:06Z",
+      "message": "Fix dependency issues."
+    },
+    {
+      "sha": "9b9f42ffb1bd76e8c6928e975d87f118516667eb",
+      "author": "Joshua Whitley",
+      "date": "2023-06-21T18:59:47Z",
+      "message": "Update CI to build for rolling and latest release on ros2 branch."
+    },
+    {
+      "sha": "8fff1f74b0a9ca09d20b8d318180120c70e8d0a1",
+      "author": "Tony Najjar",
+      "date": "2023-06-16T19:57:17Z",
+      "message": "fix high CPU usage (#247)\n\nCo-authored-by: Testing <testing@pixel-robotics.eu>"
+    },
+    {
+      "sha": "25c894cfa7eb0302f13060062d132b33d6ec4d6d",
+      "author": "Stefan Scherzinger",
+      "date": "2023-01-07T16:21:54Z",
+      "message": "Fix publishing of spacenav button values (#243)\n\n* Fix publishing of spacenav button values\r\n\r\nWe now always publish the two default button states, in which\r\n0 = not pressed\r\n1 = pressed.\r\n\r\nAdditional buttons emerge and stay in that list upon being pressed for\r\nthe first time.  This supports more advanced spacenav devices with a\r\nyet unknown number of buttons.\r\n\r\nFixes #223\r\n\r\n* Fix format\r\n\r\n* Switch back to shared memory transport\r\n\r\nWe now only keep the buttons' memory as class member."
+    },
+    {
+      "sha": "f4bdd5627b109eae418d512ba3b7517b4ffeb8ab",
+      "author": "Stefan Scherzinger",
+      "date": "2022-12-04T21:18:33Z",
+      "message": "Fix from-source build with missing dependencies (#242)\n\nUsing a variable for dependencies is cleaner for linking and\r\nexport.\r\n\r\nFixes this build error:\r\n```bash\r\n--- stderr: spacenav\r\nCMake Error at CMakeLists.txt:22 (add_library):\r\n  Target \"spacenav\" links to target \"rclcpp_components::component\" but the\r\n  target was not found.  Perhaps a find_package() call is missing for an\r\n  IMPORTED target, or an ALIAS target is missing?\r\n\r\n```"
+    },
+    {
+      "sha": "a89bc46e68e5b5f88f0acbcc3d76f5cbc440a652",
+      "author": "Chris Lalancette",
+      "date": "2022-05-03T15:18:52Z",
+      "message": "Remove trailing whitespace from .msg files. (#237)\n\nThis makes it so that newer versions of uncrustify won't complain.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "8f27d12f8fe3f078994057c0f56e5f1b274b39ec",
+      "author": "chriseichmann",
+      "date": "2022-02-14T22:57:19Z",
+      "message": "Installing libspacenav.so to lib/ for spacenav_node execution via ros2 run (#229)\n\nFixed #221\r\n\r\nSigned-off-by: Christian Eichmann <eichmann@fzi.de>"
+    },
+    {
+      "sha": "af108f32f8508e2195fdcd322832bdca160fff5b",
+      "author": "Chris Lalancette",
+      "date": "2022-01-28T21:13:13Z",
+      "message": "3.1.0"
+    },
+    {
+      "sha": "32e642708febe218aceabeb95fa88853b2f8c10e",
+      "author": "Chris Lalancette",
+      "date": "2022-01-28T21:13:02Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "6e67b78c45d397efc9fd18340d4f1ef412b5a28a",
+      "author": "Shane Loretz",
+      "date": "2022-01-28T21:12:11Z",
+      "message": "Install includes to include/ and misc CMake fixes (#225)\n\n* Install includes to include/ and misc CMake fixes\r\n\r\nMake sure to really declare and find all dependencies.\r\n\r\nCo-authored-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "6bb401d4d73dcb48b184fe54ef43844f839570e0",
+      "author": "Chris Lalancette",
+      "date": "2022-01-28T17:43:07Z",
+      "message": "Style fixes for newer cpplint.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "446843567f648a1d41304152269e96b975a098b1",
+      "author": "Chris Lalancette",
+      "date": "2022-01-28T16:45:45Z",
+      "message": "Fix GitHub actions CI by updating to rolling, action-ros v0.2\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "331308444c394a635e9cafa0901e7d3737fc54b0",
+      "author": "Chris Lalancette",
+      "date": "2022-01-28T16:33:32Z",
+      "message": "3.0.1"
+    },
+    {
+      "sha": "edb680783d0051b49616c7574064e550030ee450",
+      "author": "Chris Lalancette",
+      "date": "2022-01-28T16:33:24Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "fd391501f8eb1f2824f3f8cb0e230ff7858f09bc",
+      "author": "Tiger Sachse",
+      "date": "2021-09-04T14:57:15Z",
+      "message": "Override device_id when device_name is provided. (#199) (#211)"
+    },
+    {
+      "sha": "3fd02f456c920761e90f833464a9a8b45c566e2a",
+      "author": "Chris Lalancette",
+      "date": "2021-04-12T15:40:41Z",
+      "message": "Update SDL2 vendored library to 2.0.14. (#202)\n\nThis should get rid of some warnings when building on Windows.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "2ccffbb6f232caca50587a112f3239bce08187c6",
+      "author": "Chris Lalancette",
+      "date": "2021-04-12T02:10:42Z",
+      "message": "Make sure to ament_target_dependencies on rclcpp_components (#209)\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "51cf601001a047d243f0d8ba5bc66ba23a089e5a",
+      "author": "Chris Lalancette",
+      "date": "2021-04-12T02:09:13Z",
+      "message": "Switch action-ros-ci to 0.2.0. (#210)\n\n* Switch action-ros-ci to 0.2.0.\r\n\r\nI think this should fix the failing action-ros-ci CI tests.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* More fixes.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* More fixes.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "54cbf22ca90a2234ec9263b4275cc0a4958f1ccd",
+      "author": "Chris Lalancette",
+      "date": "2021-03-12T19:17:12Z",
+      "message": "3.0.0"
+    },
+    {
+      "sha": "bad7a9d30eaa345d00edc4b5a8e260b4b864386f",
+      "author": "Chris Lalancette",
+      "date": "2021-03-12T19:14:48Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "6bb8e6a6e5dff6ece58cc729ce3ba9df3cb996e5",
+      "author": "Chris Lalancette",
+      "date": "2021-03-12T19:15:26Z",
+      "message": "Update wiimote versions to match the rest of the package.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "0bff20a3687976df2a4c65d9ef11eceb557369e0",
+      "author": "Nils Schulte",
+      "date": "2021-02-24T21:28:21Z",
+      "message": "spacenav node changed for ros2 (#194)\n\n* spacenav node changed for ros2\r\n\r\nCo-authored-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "b8d4c136521f1052e996ed1750fdecc462df8091",
+      "author": "Scott K Logan",
+      "date": "2021-02-17T01:29:16Z",
+      "message": "Use INTERFACE_LINK_OPTIONS in sdl2_vendor (#195)\n\n* Use INTERFACE_LINK_OPTIONS in sdl2_vendor\r\n\r\nThe SDL2_LIBRARIES value populated by sdl2-config.cmake doesn't actually\r\ncontain the path to the SDL2 library, but rather the linker options\r\nnecessary to link against SDL2. On Ubuntu, this appears to be `-lSDL2`.\r\nOn RHEL, this is `-L/usr/lib64 -lSDL2`.\r\n\r\nThe OBJECT_LOCATION property creates a Makefile target that the imported\r\nlibrary depends on. On Ubuntu, this utilizes a little-known feature of\r\nGNU make where a target that starts with `-l` triggers a search on the\r\nVPATH for a library to satisfy the target.\r\n\r\nThere are two problems here:\r\n1. When SDL2_LIBRARIES contains more than just the `-lSDL2` linker\r\n   option, the aforementioned VPATH search doesn't work correctly.\r\n2. The VPATH search may not be able to find libSDL2.so if it isn't in a\r\n   standard location, and the current approach doesn't make any effort\r\n   to modify the VPATH in the presence of a `-L` option.\r\n\r\nI'm not sure if the `-l` behavior was known when this change was\r\nimplemented, or if we just got lucky that this worked out on Ubuntu.\r\n\r\nIn any case, switching to INTERFACE_LINK_OPTIONS is a more appropriate\r\nway to use the stuff in the SDL2_LIBRARIES value. Unfortunately, a\r\nSHARED target requires a backing object, so I had to switch it to an\r\nINTERFACE target to make this work. I'm not entirely sure what secondary\r\neffects that might have, but it appears to work in all cases that I\r\ntested.\r\n\r\nSigned-off-by: Scott K Logan <logans@cottsay.net>"
+    },
+    {
+      "sha": "92b5a03003ea92b163b9964ab7a28bbc0bb86e83",
+      "author": "Chris Lalancette",
+      "date": "2021-02-16T21:59:10Z",
+      "message": "Fix a warning while building wiimote_controller.cpp (#201)\n\ngcc is warning that there are too many arguments for the\r\nprintf-like RCLCPP_INFO, and it is correct.  Fix that here.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "2a72d3f35b1f570ad3902e3809818e05af7a955b",
+      "author": "Scott K Logan",
+      "date": "2021-02-16T21:20:54Z",
+      "message": "Fix SDL2 include path (#196)\n\nThe CMake functionality provided by SDL2 specifies that the include\r\ndirectory is the `SDL2` directory itself, not the parent directory\r\nthereof. On some systems, we're getting lucky because the SDL2 directory\r\nresides in a common include directory like `/usr/include`, so the\r\ninclude directory given by the SDL2 CMake functionality isn't used. Of\r\ncourse, on systems where this is not the case, the compiler fails to\r\nfind the headers.\r\n\r\nSigned-off-by: Scott K Logan <logans@cottsay.net>"
+    },
+    {
+      "sha": "d8d8b02a083e6f237c6d64d4ef277f9bf47fef63",
+      "author": "Kurt Wilson",
+      "date": "2021-02-16T19:55:32Z",
+      "message": "fix compile error caused by missing include (#197)\n\n* fix compile error caused by missing include\r\n\r\n`stat_vector_3d.cpp` uses `std::runtime_error`, which is included in `stdexcept`"
+    },
+    {
+      "sha": "7560198e5253781763e87194b2f071552b7669e2",
+      "author": "aaronaaronson98",
+      "date": "2020-11-27T19:05:12Z",
+      "message": "Update joy_linux_node.cpp (#189)\n\nSwitch logger to warning for non-severe diagnostic reporting"
+    },
+    {
+      "sha": "d8b7494a3a0f74a36170a2456a431a71f873952d",
+      "author": "Vitaliy Bondar",
+      "date": "2020-08-11T19:52:25Z",
+      "message": "Reenable diagnostics (#181)\n\nCo-authored-by: Бондарь Виталий Александрович <bondar@elins.ru>"
+    },
+    {
+      "sha": "3d088987cb546a14d2c1912ffcd17904b1f893b5",
+      "author": "Joshua Whitley",
+      "date": "2020-07-17T00:28:27Z",
+      "message": "CI: Trying to fix foxy build."
+    },
+    {
+      "sha": "eff96498a622bb2fa020bc31cd042d9316ec609c",
+      "author": "Joshua Whitley",
+      "date": "2020-07-17T00:23:35Z",
+      "message": "CI: Adding Github Actions file using actions-ros-ci."
+    },
+    {
+      "sha": "e10859a7bef87a21ec5c106a6db88f347b7bf7f9",
+      "author": "Joshua Whitley",
+      "date": "2020-07-17T00:22:23Z",
+      "message": "CI: Removing CircleCI config file."
+    },
+    {
+      "sha": "d2ee107154a667c5c74d1d8be4c2d53714229a4e",
+      "author": "Kuni Natsuki",
+      "date": "2020-07-07T06:18:22Z",
+      "message": "Port over Wiimote to ROS2 Foxy (#175)\n\n* Port over Wiimote to ROS2 Foxy\r\n\r\n* update PR based on feedbacks"
+    },
+    {
+      "sha": "e8e7f9ca48e6f8e3866c9d935128834c82fa58f4",
+      "author": "Chris Lalancette",
+      "date": "2020-05-13T20:36:42Z",
+      "message": "2.4.1"
+    },
+    {
+      "sha": "94e1a128c68311b6d358829263a6b58011731106",
+      "author": "Chris Lalancette",
+      "date": "2020-05-13T20:36:28Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "5cd8b145ae6f01b58d13ecb056ff7c0a104a51cb",
+      "author": "Chris Lalancette",
+      "date": "2020-05-13T20:23:43Z",
+      "message": "Small fixes for uncrustify on Foxy. (#171)\n\n* Small fixes for uncrustify on Foxy.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Add in foxy to circleci.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* One more fix.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "d537a8c94bdcc91fc6cc7a89a99f585bd4c24947",
+      "author": "Chris Lalancette",
+      "date": "2020-05-12T14:45:52Z",
+      "message": "2.4.0"
+    },
+    {
+      "sha": "2676ab41bfcdc8c00923a996d27cfbe25f396995",
+      "author": "Chris Lalancette",
+      "date": "2020-05-12T14:43:29Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "b06152133f1203adb8afabd80ba706534db5fee1",
+      "author": "Chris Lalancette",
+      "date": "2020-05-12T14:44:43Z",
+      "message": "Fix package.xml version for sdl2_vendor.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "4ba71a63987b0034faa634f21020f8765d770607",
+      "author": "Chris Lalancette",
+      "date": "2020-04-10T01:02:00Z",
+      "message": "Cross platform joystick support for ROS 2 (#157)\n\n* Rename joy package -> joy_linux.\r\n\r\nAlso rename the node and the executable.  This is in anticipation\r\nof a cross-platform joy node coming up.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Port joy_linux to ROS2.\r\n\r\nThis is an initial port of the joystick drivers to ROS 2.\r\n\r\n* Add ament linting to joy_linux.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Add an SDL-based cross-platform joystick node.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Add in an SDL2 vendor library.\r\n\r\nWe'll need this for the SDL2-based joystick driver.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Port circleci to ROS 2.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Add simple utility to enumerate available joysticks.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\nCo-authored-by: Mikael Arguedas <mikael@osrfoundation.org>"
+    },
+    {
+      "sha": "eadddd809fb581524fbbc90fd56068a3b685f319",
+      "author": "Chris Lalancette",
+      "date": "2020-04-05T20:20:55Z",
+      "message": "Make sure to import struct where it is used. (#162)\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "c46a99713491aed9a68b1edcafccc8bd306e3fb2",
+      "author": "Joshua Whitley",
+      "date": "2020-04-05T17:02:00Z",
+      "message": "roslint and Generic Clean-Up (#161)\n\n* Adding C++11 compilation flag.\r\n\r\n* Cleaning up CMakeLists.txt and package.xml files. Adding roslint.\r\n\r\n* Fixing linting errors in joy.\r\n\r\n* Fixing linting errors in spacenav_node.\r\n\r\n* Fixing roslint errors in ps3joy.\r\n\r\n* Fixing roslint errors in wiimote.\r\n\r\n* Adding basic gitignore.\r\n\r\n* Removing unused pstat and stats files in wiimote.\r\n\r\n* Updating CMakeLists.txt required version to 3.5.\r\n\r\n* Using cross-platform C++11 setting.\r\n\r\n* /usr/bin/python -> /usr/bin/env python"
+    },
+    {
+      "sha": "0cf426dbc718e050a23b0f3e593d1bf472d7b33c",
+      "author": "Joshua Whitley",
+      "date": "2020-04-03T18:08:52Z",
+      "message": "Merge pull request #158 from clalancette/ros1-cleanups\n\nROS1 joy cleanups"
+    },
+    {
+      "sha": "3e05736e3cc53af7ebdb18b7901b0c883f37752f",
+      "author": "Chris Lalancette",
+      "date": "2020-03-31T18:23:08Z",
+      "message": "Greatly simplify the sticky_buttons support.\n\nIt was done in a very complicated way before, but the idea is\nactually simple; on a button press, toggle the value, on a button\nrelease, do nothing.  This changes it to implement that logic.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "14b473f21f883cce30126388831eee511e2ff7f2",
+      "author": "Chris Lalancette",
+      "date": "2020-03-31T18:22:57Z",
+      "message": "Small fixes to rumble support.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "ecdb1375d088677c5a722f40039b1f11449c8afc",
+      "author": "Chris Lalancette",
+      "date": "2020-03-31T13:36:32Z",
+      "message": "Use C++ style casts.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "ad0f40cfab446977ab874ebe629397a95dacc52a",
+      "author": "Chris Lalancette",
+      "date": "2020-03-31T13:32:35Z",
+      "message": "Use empty instead of length.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "9a1d4da19e191345f7c3b76ad00b4be3cb521689",
+      "author": "Chris Lalancette",
+      "date": "2020-03-31T13:31:51Z",
+      "message": "joy_def_ff -> joy_dev_ff\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "e92f8f23e1d8c65b33fa23f7c92ae0e041be4d76",
+      "author": "Chris Lalancette",
+      "date": "2020-03-31T13:31:25Z",
+      "message": "Cleanup header includes.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "b685291fcf1b157325f11e3938458715d30de5f3",
+      "author": "Chris Lalancette",
+      "date": "2020-03-31T13:24:42Z",
+      "message": "Use size_t appropriately.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "e132cacd9377407a8923b74ba9454895f7e52e9e",
+      "author": "Chris Lalancette",
+      "date": "2020-03-31T13:21:55Z",
+      "message": "NULL -> nullptr everywhere.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "6695798b656b935ba6fd604cdd370a726abb5a51",
+      "author": "Chris Lalancette",
+      "date": "2020-03-31T13:13:55Z",
+      "message": "Style cleanup in joy_node.cpp.\n\nNo functional changes.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "6ade57bf8d598dc6ba45590d368ceb7c62e243e7",
+      "author": "Joshua Whitley",
+      "date": "2020-01-19T05:03:47Z",
+      "message": "Adding CI status badge to README."
+    },
+    {
+      "sha": "9fbe2b0300f5aee59d6f23e91ba5748ebeaacbea",
+      "author": "Joshua Whitley",
+      "date": "2020-01-19T05:01:24Z",
+      "message": "CI: Removing Travis."
+    },
+    {
+      "sha": "4ae9e929d8ace783d6f23109d3665b9fc4c9dbcd",
+      "author": "Joshua Whitley",
+      "date": "2020-01-19T04:53:47Z",
+      "message": "CI: Adding *working* CircleCI config."
+    },
+    {
+      "sha": "31c51f0fbe0a6aa948fe398371360601d474b332",
+      "author": "Joshua Whitley",
+      "date": "2020-01-19T04:48:02Z",
+      "message": "CI: Adding CircleCI config."
+    },
+    {
+      "sha": "dd5a220edff61870cb22382bc3d2e0b21b76552b",
+      "author": "Joshua Whitley",
+      "date": "2019-12-03T23:29:01Z",
+      "message": "Merge pull request #154 from zchen24/master\n\nMinor: moved default to right indent level"
+    },
+    {
+      "sha": "1d8d9791430e4fcf485a9b10f658336f0b1649a1",
+      "author": "Zihan Chen",
+      "date": "2019-12-03T23:12:21Z",
+      "message": "Minor: moved default to right indent level"
+    },
+    {
+      "sha": "5c7436be963b858fa1f546a564146805636f4c35",
+      "author": "Joshua Whitley",
+      "date": "2019-06-24T15:45:19Z",
+      "message": "1.13.0"
+    },
+    {
+      "sha": "1a9921b0724abc77a88d4a94f4e89a05612f0d77",
+      "author": "Joshua Whitley",
+      "date": "2019-06-24T15:45:04Z",
+      "message": "Updating changelogs for next release."
+    },
+    {
+      "sha": "5c771060c4dad2d5d7d387411b0387000bbd38a1",
+      "author": "Joshua Whitley",
+      "date": "2019-06-24T15:42:25Z",
+      "message": "CI: Dropping EOL version builds."
+    },
+    {
+      "sha": "cdba3fbcd030a880d82261b98dc1ce2261ce664a",
+      "author": "Joshua Whitley",
+      "date": "2018-11-15T22:18:25Z",
+      "message": "Merge pull request #135 from ros-drivers/maint/ci_add_melodic_build\n\nMaint/ci add melodic build"
+    },
+    {
+      "sha": "447f832923b236f0238f8b2fd778097016d4996e",
+      "author": "Joshua Whitley",
+      "date": "2018-11-15T21:39:00Z",
+      "message": "CI: Removing PRERELEASE tests.\n\nSince this is available on the ROS build farm, prerelease testing\nis essentially done every time a new release is created and merged\nin ros/rosdistro, prior to being merged to production. If something\nfails there, we'll know it and be able to fix it before the release\nmerge happens. This cuts the build time dramatically and, IMO, isn't\nnecessary."
+    },
+    {
+      "sha": "ba20db80ddea2bc2368b117fa19d95f844f39b15",
+      "author": "Joshua Whitley",
+      "date": "2018-11-15T21:24:09Z",
+      "message": "CI: Building Indigo and Lunar only against release repo."
+    },
+    {
+      "sha": "3a2e3de84048026ad64de091b9e6a48e8648eb72",
+      "author": "Joshua Whitley",
+      "date": "2018-11-15T21:21:33Z",
+      "message": "CI: Testing with robot image to try to speed up build."
+    },
+    {
+      "sha": "42fb25beb78235870822b52d4fdca5e7fbeb568e",
+      "author": "Joshua Whitley",
+      "date": "2018-11-15T21:19:19Z",
+      "message": "CI: Initial testing of Melodic build."
+    },
+    {
+      "sha": "1a0bcb1917346a9c64f148e5d9c21dfba90cc17f",
+      "author": "Joshua Whitley",
+      "date": "2018-11-15T21:14:26Z",
+      "message": "Merge pull request #120 from furushchev/remap\n\nadd joy_remap and its sample"
+    },
+    {
+      "sha": "80b0b9cbd9ff7708814f3319e3a989fc2d58b75f",
+      "author": "Joshua Whitley",
+      "date": "2018-11-15T21:07:27Z",
+      "message": "Merge pull request #132 from mistoll/clean_exit\n\nreturn instead of shutdown"
+    },
+    {
+      "sha": "c902acda9b6b7a20827a6edcbddf6a7f89bd51c4",
+      "author": "Michael Stoll",
+      "date": "2018-10-26T16:45:36Z",
+      "message": "return instead of shutdown"
+    },
+    {
+      "sha": "6145c2fc56fbc8cbbe229ac2c5904e537b82b028",
+      "author": "Joshua Whitley",
+      "date": "2018-08-24T18:08:17Z",
+      "message": "Merge pull request #128 from ros-drivers/fix/tab_errors\n\nCleaning up Python indentation."
+    },
+    {
+      "sha": "a5d276dbc5e1121729c4d3f05740de3bdecae04f",
+      "author": "Joshua Whitley",
+      "date": "2018-08-24T17:02:01Z",
+      "message": "Cleaning up Python indentation."
+    },
+    {
+      "sha": "4b2fb4154bc30b62376de3b004b52b1cdf41ab70",
+      "author": "Joshua Whitley",
+      "date": "2018-08-24T16:38:46Z",
+      "message": "Merge pull request #125 from mistoll/check_connection\n\nCheck if wiimote is still connected."
+    },
+    {
+      "sha": "3b6a64a318768eb461467623d5a538e58d3578a4",
+      "author": "Joshua Whitley",
+      "date": "2018-08-24T16:34:36Z",
+      "message": "Merge pull request #111 from matt-attack/indigo-devel\n\nAdd Basic Force Feedback Support"
+    },
+    {
+      "sha": "f3284a6fa2438af2b5c2a705699c4393c5231800",
+      "author": "Furushchev",
+      "date": "2018-08-23T00:49:47Z",
+      "message": "joy_remap.py: safe eval of remapping"
+    },
+    {
+      "sha": "58f50dd3c56be7fa15b6bdce0f971ce2f3757cf1",
+      "author": "Michael Stoll",
+      "date": "2018-08-22T08:25:45Z",
+      "message": "Check if wiimote is still connected."
+    },
+    {
+      "sha": "c3a912039e8537092fa9876f484b3ce040467a80",
+      "author": "Joshua Whitley",
+      "date": "2018-08-21T18:24:00Z",
+      "message": "Merge pull request #123 from cclauss/modernize-python2-code\n\nModernize Python 2 code to get ready for Python 3"
+    },
+    {
+      "sha": "6f9c44a6b87621ae44dc93e00973315ab2512c73",
+      "author": "Joshua Whitley",
+      "date": "2018-08-21T18:19:36Z",
+      "message": "Merge pull request #126 from clalancette/minor-formatting\n\nPut brackets around ROS_* macros."
+    },
+    {
+      "sha": "a9e916e069a5621e39e684f850df855ddcae9845",
+      "author": "Chris Lalancette",
+      "date": "2018-08-07T16:25:15Z",
+      "message": "Put brackets around ROS_* macros.\n\nIn some circumstances they may be defined to empty, so we need\nto have brackets to ensure that they are syntactically valid.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "e2ab008dde6536838c729819ca78dba85a0ebb1b",
+      "author": "Joshua Whitley",
+      "date": "2018-07-17T00:03:51Z",
+      "message": "Merge pull request #122 from lbucklandAS/fix-publish-timestamp\n\nAdd timestamp to all joy messages"
+    },
+    {
+      "sha": "6d1a0ddce35f5f3ffac295689f4a809ec784c1b2",
+      "author": "Lucas Buckland",
+      "date": "2018-07-16T18:17:43Z",
+      "message": "Re-add extra timestamp updates\n\nPrior to this commit we had removed the extra timestamp updates in the code. This resulted in some situations where timestamps wouldn't get updated. Thus in this commit we fix this issue."
+    },
+    {
+      "sha": "60da28195d54722ea588a080529d9a26dfbdb065",
+      "author": "cclauss",
+      "date": "2018-07-12T21:25:26Z",
+      "message": "Update stats.py"
+    },
+    {
+      "sha": "dd8eceb6ad29affd17a50cdb897fa2b095515def",
+      "author": "cclauss",
+      "date": "2018-07-12T21:23:43Z",
+      "message": "Update WIIMote.py"
+    },
+    {
+      "sha": "c945763822f6f68e428e38cda875d72705751402",
+      "author": "cclauss",
+      "date": "2018-07-12T21:22:44Z",
+      "message": "Tab indentation is no fun at all!!"
+    },
+    {
+      "sha": "0c25ab3cb3ed0669a14fdaf45d0e6159b392bbc1",
+      "author": "cclauss",
+      "date": "2018-07-12T21:13:07Z",
+      "message": "Modernize Python 2 code to get ready for Python 3"
+    },
+    {
+      "sha": "8cb2cbebafefd34a2a126aa12790912d65c590d5",
+      "author": "Lucas Buckland",
+      "date": "2018-07-11T23:13:13Z",
+      "message": "Add timestamp to all joy messages\nPrior to this commit there were some joy messages getting published that were not getting timestamps. This commit adds functionality so that all messages are published with timestamps."
+    },
+    {
+      "sha": "74d47872fdacb1b04bf91058a668d87d64cae430",
+      "author": "Matthew",
+      "date": "2018-06-12T14:41:17Z",
+      "message": "Merge branch 'master' into indigo-devel"
+    },
+    {
+      "sha": "493e5ad31c69dcdcd9af87845826152298f9828d",
+      "author": "Joshua Whitley",
+      "date": "2018-06-11T22:40:09Z",
+      "message": "1.12.0"
+    },
+    {
+      "sha": "958e119799dff5674a1c5b4316f41a31fd7faa56",
+      "author": "Joshua Whitley",
+      "date": "2018-06-11T22:39:43Z",
+      "message": "Updating changelogs for 1.12 release."
+    },
+    {
+      "sha": "93c8c2739d9981345e6ba622e994cc16af362670",
+      "author": "Joshua Whitley",
+      "date": "2018-06-11T18:28:16Z",
+      "message": "Merge pull request #121 from ros-drivers/maint/testing_faster_travis\n\nTesting new Docker base images for CI to speed up builds."
+    },
+    {
+      "sha": "8f55e8fb079d114469ef55e6ac5eac2d8c270152",
+      "author": "Joshua Whitley",
+      "date": "2018-06-11T18:14:17Z",
+      "message": "Merge pull request #117 from naoki-mizuno/autorepeat-update-timestamp\n\nUpdate timestamp when using autorepeat_rate"
+    },
+    {
+      "sha": "cfee7857a126bc3bf3516a9a5e9ad0b9ac696a74",
+      "author": "Joshua Whitley",
+      "date": "2018-06-11T17:52:46Z",
+      "message": "Testing new Docker base images for CI to speed up builds."
+    },
+    {
+      "sha": "091884ac65b7c43712feb38e865f26f2e107fc95",
+      "author": "Joshua Whitley",
+      "date": "2018-06-11T17:35:18Z",
+      "message": "Missed some spaces that caused allowed_failures to not work correctly."
+    },
+    {
+      "sha": "05c5bbd4b12c5dd5ff63551da0b4d9663177b1da",
+      "author": "Joshua Whitley",
+      "date": "2018-06-11T17:31:02Z",
+      "message": "Cleaning up and updating Travis."
+    },
+    {
+      "sha": "e6508a15287f1358a67e982adc48844b74b4cdbb",
+      "author": "Furushchev",
+      "date": "2018-05-22T09:43:51Z",
+      "message": "add joy_remap and its sample"
+    },
+    {
+      "sha": "af61ab770c3fd05f389549f2836d5bdbd42e068c",
+      "author": "Naoki Mizuno",
+      "date": "2018-04-14T18:48:55Z",
+      "message": "Update timestamp when using autorepeat_rate\n\nFixes #96."
+    },
+    {
+      "sha": "00f710b9fac369b827eb8db47954c0ff99f39352",
+      "author": "Naoki Mizuno",
+      "date": "2018-04-14T18:20:18Z",
+      "message": "Clean up whitespaces"
+    },
+    {
+      "sha": "ab7ccb6980092a5db67c52606a76b79ea046a918",
+      "author": "Matthew Bries",
+      "date": "2017-08-15T14:07:08Z",
+      "message": "Fix indentation"
+    },
+    {
+      "sha": "80ae53f5d7d2a3583d7b87fa820f0e353a98973e",
+      "author": "Matthew Bries",
+      "date": "2017-08-15T14:06:01Z",
+      "message": "Cleanup and fix indentation"
+    },
+    {
+      "sha": "da55940bedd3b0cb7c3ac4cb4d05baaf585f1ae2",
+      "author": "Matthew Bries",
+      "date": "2017-08-02T20:20:37Z",
+      "message": "Change error messages and set ps3 as default controller"
+    },
+    {
+      "sha": "83963db133dcc6039d6a8647ca3e11cdf68024f3",
+      "author": "Matthew Bries",
+      "date": "2017-08-02T15:57:25Z",
+      "message": "Better handle device loss\n\nAllow for loss and redetection of device with force feedback"
+    },
+    {
+      "sha": "65b4139aad9e7b17a0bde0ad5755a935c6d3027b",
+      "author": "Matthew Bries",
+      "date": "2017-08-01T22:15:40Z",
+      "message": "Add basic force feedback over usb\n\nAddresses #89"
+    },
+    {
+      "sha": "a62f7813cecfc82d43dd61be6c6145818396360f",
+      "author": "Jonathan Bohren",
+      "date": "2017-07-07T15:21:16Z",
+      "message": "Merge pull request #110 from honeybee-robotics-forks/indigo-devel\n\nAdding additional documentation to ps3joy"
+    },
+    {
+      "sha": "ad87812d12c38a5eb469f5af4b91035fb93563ba",
+      "author": "Jonathan Bohren",
+      "date": "2017-07-07T15:20:37Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "87386b10b29fe732df88f81d3c47d87e3560b437",
+      "author": "Jonathan Bohren",
+      "date": "2017-07-07T15:19:51Z",
+      "message": "Merge pull request #17 from alab288/indigo-devel\n\nAdded and updated files for ps3joy"
+    },
+    {
+      "sha": "12ad2b54c4de0f5eb3da203b7e1d6cc1e721f679",
+      "author": "Jonathan Bohren",
+      "date": "2017-07-07T15:17:50Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "dd92fbb7a7466118101c93cf3ed52297878b22b4",
+      "author": "Jonathan Bohren",
+      "date": "2017-07-06T21:12:20Z",
+      "message": "Merge pull request #108 from hdino/indigo-devel\n\nAdded dev_name parameter to select joystick by name"
+    },
+    {
+      "sha": "8ab945feb2381930fc1fb85c6018af5158092973",
+      "author": "alab288",
+      "date": "2017-07-06T14:43:05Z",
+      "message": "Command line Options moved to README.md"
+    },
+    {
+      "sha": "ee7877fb2c549fc2d9b67d4bab4656dd7224f7b8",
+      "author": "Dino Hüllmann",
+      "date": "2017-07-06T12:15:54Z",
+      "message": "Changed layout of README.md"
+    },
+    {
+      "sha": "c7e5fa27b49af29219ebff7a5bcf121e0cf25b77",
+      "author": "Dino Hüllmann",
+      "date": "2017-07-06T12:12:33Z",
+      "message": "Added Readme for joy package with description of new device name parameter"
+    },
+    {
+      "sha": "86c116a42f3e577ca71c299e743b5b89907e697e",
+      "author": "alab288",
+      "date": "2017-07-05T14:08:33Z",
+      "message": "Added and updated files for ps3joy"
+    },
+    {
+      "sha": "963ff1110276260970cda75f00dbaf3927bee562",
+      "author": "Jonathan Bohren",
+      "date": "2017-07-05T14:05:01Z",
+      "message": "Merge pull request #109 from honeybee-robotics-forks/indigo-devel\n\nAdding tested spacenav scaling"
+    },
+    {
+      "sha": "9f98de690a874c4ab3f16d87a9bf55ae14032c35",
+      "author": "Jonathan Bohren",
+      "date": "2017-07-05T14:03:59Z",
+      "message": "Merge pull request #15 from jprod123/spacenav\n\nSpacenav changes"
+    },
+    {
+      "sha": "a4b56e4bce9bdf57a6498e37d901e7724be53ace",
+      "author": "Dino Hüllmann",
+      "date": "2017-07-04T14:16:24Z",
+      "message": "Added dev_name parameter to select joystick by name"
+    },
+    {
+      "sha": "1087ecb29a6473aee383c345d99a0225a3229412",
+      "author": "jprod123",
+      "date": "2017-07-03T20:41:15Z",
+      "message": "Updated README"
+    },
+    {
+      "sha": "8e907a6b12524b73cb649c73bb71deba50ad365c",
+      "author": "jprod123",
+      "date": "2017-07-03T19:26:09Z",
+      "message": "Added README"
+    },
+    {
+      "sha": "44a1c5f622995e04d50bc3a72b12aa8d881f1ace",
+      "author": "jprod123",
+      "date": "2017-07-03T19:23:32Z",
+      "message": "Merge remote-tracking branch 'space/indigo-devel' into spacenav"
+    },
+    {
+      "sha": "a920f9711e5a4bc7376c0d97c77d9855274e4390",
+      "author": "Jonathan Bohren",
+      "date": "2017-07-03T19:23:12Z",
+      "message": "Merge pull request #14 from ros-drivers/indigo-devel\n\nSyncing from upstream."
+    },
+    {
+      "sha": "40275ec6d545bf859357ada05207a6a5ba7d2488",
+      "author": "Jonathan Bohren",
+      "date": "2017-07-03T13:59:35Z",
+      "message": "Merge pull request #107 from honeybee-robotics-forks/indigo-devel\n\nNumerous outstanding PRs."
+    },
+    {
+      "sha": "feb962dd49596e29714e7e11f3479188883af345",
+      "author": "Jonathan Bohren",
+      "date": "2017-07-03T13:37:45Z",
+      "message": "Merge pull request #9 from jprod123/patch-2\n\nFixed issue when nunchuk wasn't connected"
+    },
+    {
+      "sha": "70fe8922cf9ee72459a30f917e24aac18c09a772",
+      "author": "Jonathan Bohren",
+      "date": "2017-06-30T16:24:13Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "20a1ee5ccfb9840109e29c6d5c8c81f1199b3abf",
+      "author": "Jonathan Bohren",
+      "date": "2017-06-30T16:23:48Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "b7b34f01cde15208fe4cd59412af478c81224545",
+      "author": "Jonathan Bohren",
+      "date": "2017-06-30T16:22:40Z",
+      "message": "Rename wiimote/TELEOP.md to wiimote/doc/tutorials/teleop.md"
+    },
+    {
+      "sha": "cb94fc12b67195e4568652e1dbd7b535cc21f71a",
+      "author": "Jonathan Bohren",
+      "date": "2017-06-30T16:21:59Z",
+      "message": "Rename wiimote/testing_proceedures.md to wiimote/doc/testing.md"
+    },
+    {
+      "sha": "ee4e000e68aff7d3c0751da5a371e09a4c84293e",
+      "author": "Jonathan Bohren",
+      "date": "2017-06-30T16:21:02Z",
+      "message": "Merge pull request #12 from jprod123/patch-4\n\nAdded testing proceedures for wiimote"
+    },
+    {
+      "sha": "5ef1bbf8f3ba4c83422cce59cd58199748d1e223",
+      "author": "Jonathan Bohren",
+      "date": "2017-06-30T16:20:17Z",
+      "message": "Merge pull request #11 from jprod123/patch-3\n\nResolves div-by-zero error race condition on startup."
+    },
+    {
+      "sha": "bf1410823bed9d448334b4e9ec40a376559965a9",
+      "author": "jprod123",
+      "date": "2017-06-30T15:48:46Z",
+      "message": "Added testing proceedures for wiimote\n\nAdded documentation on the wiimote package and how to use it."
+    },
+    {
+      "sha": "ae401a1d37ea0f0769dcf019f449e8c4b134865f",
+      "author": "jprod123",
+      "date": "2017-06-30T15:02:42Z",
+      "message": "Avoids the divide by zero warning\n\nAdds a check to ensure the calibration values don't cause a divide by zero error"
+    },
+    {
+      "sha": "30fc13eff014a33d75e2d390e4f5bb44ec6e60e4",
+      "author": "Jonathan Bohren",
+      "date": "2017-06-30T13:25:06Z",
+      "message": "Merge pull request #10 from alab288/patch-4\n\nUpdate testing.md"
+    },
+    {
+      "sha": "c16a28b60acc3a6b3603b26fa664cb6217f0ff82",
+      "author": "Alenso Labady",
+      "date": "2017-06-29T19:57:33Z",
+      "message": "Update testing.md"
+    },
+    {
+      "sha": "95bdcaa31c28793163353ed15b83c847c0d5350b",
+      "author": "jprod123",
+      "date": "2017-06-29T19:40:52Z",
+      "message": "Fixed issue when nunchuk wasn't connected\n\nFixed issue where script would try to get calibration data from the nunchuk without checking if a nunchuk is connected"
+    },
+    {
+      "sha": "ce6575dea0d26931f7d0406c9662c84bd97a3c75",
+      "author": "Jonathan Bohren",
+      "date": "2017-06-29T15:49:08Z",
+      "message": "Create bluetooth_devices.md"
+    },
+    {
+      "sha": "141d971eb724520c5d9064d26f48a1160d69882b",
+      "author": "Jonathan Bohren",
+      "date": "2017-06-29T15:47:30Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "7a0710da288e0fd94d0ef93c9ced61190db600c0",
+      "author": "Jonathan Bohren",
+      "date": "2017-06-29T15:42:15Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "a8ea43a9983dfabc4a08a7598bfc0b48b35a1c4c",
+      "author": "Jonathan Bohren",
+      "date": "2017-06-29T15:40:38Z",
+      "message": "Rename ps3joy/testing.md to ps3joy/doc/testing.md"
+    },
+    {
+      "sha": "6d76fdd02e3d36d504e0010d5b4422e5a81bc9ce",
+      "author": "Jonathan Bohren",
+      "date": "2017-06-29T15:40:08Z",
+      "message": "Rename procedure_test.md to testing.md"
+    },
+    {
+      "sha": "1c71a6fb799159dbd0085a1797471e0e679c1397",
+      "author": "Jonathan Bohren",
+      "date": "2017-06-29T15:39:44Z",
+      "message": "Merge pull request #8 from alab288/patch-3\n\nCreated testing guide for ps3joy."
+    },
+    {
+      "sha": "bbe93e8e607d4833615d057626f481ed011b3a73",
+      "author": "Alenso Labady",
+      "date": "2017-06-29T15:18:27Z",
+      "message": "Create procedure_test.md"
+    },
+    {
+      "sha": "9194e5149e49c2e61a2e8aa99c05a76059a2989e",
+      "author": "Jonathan Bohren",
+      "date": "2017-06-28T21:40:32Z",
+      "message": "Delete mainpage.dox"
+    },
+    {
+      "sha": "519c1e3b0d111441be833872b306d4a6c1c97842",
+      "author": "Jonathan Bohren",
+      "date": "2017-06-28T21:29:12Z",
+      "message": "Delete procedure_test.md"
+    },
+    {
+      "sha": "b28b09e03fd79dfefc6ab78d914fb9bbeef22390",
+      "author": "Jonathan Bohren",
+      "date": "2017-06-28T21:28:48Z",
+      "message": "Delete procedure_test.md"
+    },
+    {
+      "sha": "0e914cdaca8e163fe61337d2fe16aaa11e495cd6",
+      "author": "Alenso Labady",
+      "date": "2017-06-28T21:23:28Z",
+      "message": "Created ps3joy test procedures"
+    },
+    {
+      "sha": "9fe64643f335c62cb082a583e2c2a06b38ed8120",
+      "author": "Alenso Labady",
+      "date": "2017-06-28T19:07:51Z",
+      "message": "Create procedure_test.md\n\nA testing guide on the ps3 joystick with ps3joy."
+    },
+    {
+      "sha": "e53568d710b2cd1e4f34408e0f5e57c946b5603e",
+      "author": "Jonathan Bohren",
+      "date": "2017-06-28T14:19:45Z",
+      "message": "Delete mainpage.dox"
+    },
+    {
+      "sha": "256fad9bcc734719a94bb1fc7a39389a532ec1d1",
+      "author": "Jonathan Bohren",
+      "date": "2017-06-28T14:19:33Z",
+      "message": "Delete mainpage.dox"
+    },
+    {
+      "sha": "d8190324a75976094a6661014ba2853f555a225c",
+      "author": "Alenso Labady",
+      "date": "2017-06-27T21:01:14Z",
+      "message": "Updated the README.md\n\ncleaned up the format and syntax"
+    },
+    {
+      "sha": "73a9753c089caa1f7bcbd74cfdc0aa86c981178b",
+      "author": "Alenso Labady",
+      "date": "2017-06-27T20:21:21Z",
+      "message": "Rename README to README.md"
+    },
+    {
+      "sha": "30f87e2457a30e04453382f9dd69e6054ae0ca42",
+      "author": "alab288",
+      "date": "2017-06-26T20:12:53Z",
+      "message": "root notice reinstalled\n\nRefined root notice"
+    },
+    {
+      "sha": "ac93c748368bf60a6af3bd6f0c85fe392365c0a9",
+      "author": "Felix Kolbe",
+      "date": "2014-03-14T14:56:43Z",
+      "message": "Let ps3joy_node not quit on inactivity-timeout.\n\nI don't know why this was in there, now reconnecting the controller after\ninactivity-timeout works fine just like with the normal ps3joy.py"
+    },
+    {
+      "sha": "7f121b612b29a1879ac4d19209596905978a9009",
+      "author": "Felix Kolbe",
+      "date": "2014-01-14T14:23:31Z",
+      "message": "Refine diagnostics message usage in ps3joy_node"
+    },
+    {
+      "sha": "d43d1716723e1bf6e84d7ea465164b286eb83444",
+      "author": "Felix Kolbe",
+      "date": "2014-01-14T11:45:01Z",
+      "message": "Improve ps3joy_node with rospy.init_node and .is_shutdown\n\nReplace unused self.shutdown with rospy.is_shutdown()\n\nCall rospy.init_node with anonymous=False because the hardware cannot be accessed multiple times concurrently"
+    },
+    {
+      "sha": "6251b910daeb4f297eedee2e670cd97eca373154",
+      "author": "Felix Kolbe",
+      "date": "2014-01-14T11:40:13Z",
+      "message": "Remove quit on failed root level check, part one of issue #53"
+    },
+    {
+      "sha": "00ed9cbee83a089e3172fa1c05901256da6262f3",
+      "author": "alab288",
+      "date": "2017-06-12T18:00:36Z",
+      "message": "Create README\n\nInformation about the bluez package bluez-5.37 was added. \r\nInformation about restarting bluez was also added."
+    },
+    {
+      "sha": "a4266c8502221ecc60bfee00c72bac9744a15102",
+      "author": "Isaac I.Y. Saito",
+      "date": "2017-06-27T18:34:17Z",
+      "message": "[CI] Allow failures for ROS Jade, which will be EoLed by the time this PR will be reviewed."
+    },
+    {
+      "sha": "f39946c6842b08f31959873588418cc93378cf49",
+      "author": "Isaac I.Y. Saito",
+      "date": "2017-06-27T18:33:11Z",
+      "message": "[CI] Add ROS Lunar."
+    },
+    {
+      "sha": "9ceda9dc9f482aac165fc400341ee876279431bc",
+      "author": "psimona",
+      "date": "2017-06-23T15:43:14Z",
+      "message": "Added sticky buttons\n\nFixed indentation\n\nAdded CI config\n\nAdded sticky buttons\n\nChanged messaging to better reflect what the script is doing\n\nAdded wiimote testing script\n\nChanged package xml to format 2\n\nFixed Indentation\n\nFixed indentation\n\nCleaned up code block\n\nEditted argc check block\n\nRemoved unnesesary comment\n\nFormatted conditional block\n\nFixed small errors\n\nAdded comments decribing variables\n\nRemoved blank line\n\nFixed formatting issues\n\nAdd CI config.\n\nAdd CI config."
+    },
+    {
+      "sha": "4c75da953911f89f3f24014025118027614518de",
+      "author": "Miklos Marton",
+      "date": "2017-04-30T22:23:09Z",
+      "message": "Fixed issue when the joystick data did not got send until changed.\n\nMade the fix to error 91 an optional behavior"
+    },
+    {
+      "sha": "1541c6462b285862b45d3dcdad515b3603bd8d72",
+      "author": "jprod123",
+      "date": "2017-06-23T18:45:47Z",
+      "message": "Changed package xml to format 2"
+    },
+    {
+      "sha": "8a133fde345d103bb9c4518770d3dde8897ffafc",
+      "author": "jprod123",
+      "date": "2017-06-23T16:17:28Z",
+      "message": "Added wiimote testing script"
+    },
+    {
+      "sha": "b2b7b680d9a0523de8ec537ffdbc9a90cfadba56",
+      "author": "jprod123",
+      "date": "2017-06-23T15:58:57Z",
+      "message": "Changed messaging to better reflect what the script is doing\n\nFixed minor string error\n\nChanged tabs to spaces"
+    },
+    {
+      "sha": "5aa87943b94f176e42fd031528cadec1aaa5407b",
+      "author": "Jonathan Bohren",
+      "date": "2017-06-27T19:37:54Z",
+      "message": "Merge pull request #95 from 130s/i/add_ci\n\nAdd CI config."
+    },
+    {
+      "sha": "3755dd288fca0f51cc4867782a96a6a915668a58",
+      "author": "Isaac I.Y. Saito",
+      "date": "2017-06-27T18:34:17Z",
+      "message": "[CI] Allow failures for ROS Jade, which will be EoLed by the time this PR will be reviewed."
+    },
+    {
+      "sha": "9a740dbd4d7b0495fc531d1df3ce0df5a6244a99",
+      "author": "Isaac I.Y. Saito",
+      "date": "2017-06-27T18:33:11Z",
+      "message": "[CI] Add ROS Lunar."
+    },
+    {
+      "sha": "89857ccf8e9f4932363b768986d52ccdd14a3017",
+      "author": "Isaac I.Y. Saito",
+      "date": "2017-02-11T01:55:03Z",
+      "message": "Add CI config."
+    },
+    {
+      "sha": "a1106abdb2f432dc71b4a4e1f230736e2b6fd192",
+      "author": "Isaac I.Y. Saito",
+      "date": "2017-06-22T19:42:41Z",
+      "message": "Added CI config"
+    },
+    {
+      "sha": "2deae9d94fbf72781a53f9e09dbec83115d0f867",
+      "author": "Matt Vollrath",
+      "date": "2017-06-22T18:29:56Z",
+      "message": "Add pairing params to wiimote_node\n\n* bluetooth_addr\n* pair_timeout"
+    },
+    {
+      "sha": "eb8aea8b515fa211e6a220191860b8804976469c",
+      "author": "Mark D Horn",
+      "date": "2017-02-11T20:27:20Z",
+      "message": "1.11.0"
+    },
+    {
+      "sha": "34099148778ad2ba56549f8c41c2af746f825789",
+      "author": "Mark Horn",
+      "date": "2017-02-11T01:46:14Z",
+      "message": "Merge pull request #94 from mdhorn/warning-cleanup\n\nUpdate dependencies to remove warnings"
+    },
+    {
+      "sha": "2549999ca1948fd10d52c7a93c97ebebfe29043a",
+      "author": "Mark D Horn",
+      "date": "2017-02-10T20:14:58Z",
+      "message": "Update dependencies to remove warnings"
+    },
+    {
+      "sha": "9e8572c90cd41ace5c58774f07b7c8b1ec18d082",
+      "author": "Mark D Horn",
+      "date": "2017-01-20T02:54:58Z",
+      "message": "Add missing package build requirement for roslint"
+    },
+    {
+      "sha": "374986439779e093a3957fbae058754ea8a3c071",
+      "author": "Mark D Horn",
+      "date": "2017-01-20T02:38:32Z",
+      "message": "1.11.0"
+    },
+    {
+      "sha": "f1faffc0f32a31c9a58f4f9e2201fd0918370df3",
+      "author": "Mark D Horn",
+      "date": "2017-01-20T02:35:08Z",
+      "message": "Updated CHANGELOGs"
+    },
+    {
+      "sha": "8deca8e65e0e91f63b86f94c768085d064be34e0",
+      "author": "Mark Horn",
+      "date": "2017-01-20T02:26:19Z",
+      "message": "Merge pull request #88 from mdhorn/add_sample_teleop\n\nSample Teleop Implementation for Wiimote"
+    },
+    {
+      "sha": "c74d2dbe7bdd1c2edcacd8b89a95c577026daf1b",
+      "author": "Mark D Horn",
+      "date": "2016-02-02T23:50:40Z",
+      "message": "Sample Teleop Implementation for Wiimote\n\nThis sample ROS Node subscribes to the wiimote topics\n  /wiimote/nunchuk, /wiimote/state\nAnd publishes command velocity used for motion\n  /cmd_vel\n\nEither the four way D-pad of the Wiimote or the Joystick of the Nunchuk\ncan be used for controlling the values published for `/cmd_vel`.\n\nSee the TELEOP.md for full usage information."
+    },
+    {
+      "sha": "cd645f4b1b1919a3ca8951f7284a82ed6bae42b1",
+      "author": "Mark Horn",
+      "date": "2017-01-20T02:22:54Z",
+      "message": "Merge pull request #87 from mdhorn/cpp_implementation\n\nC++ Implementation of Wiimote Controller Node"
+    },
+    {
+      "sha": "5beb57be3160b80c330b4657f01f03756bf8d999",
+      "author": "Mark Horn",
+      "date": "2017-01-20T02:22:03Z",
+      "message": "Merge pull request #86 from mdhorn/queue_size\n\nAdd queue_size to remove ROS Warning"
+    },
+    {
+      "sha": "3429560fcd120e6676874c8b7435b0bffe42ad04",
+      "author": "Mark Horn",
+      "date": "2017-01-20T02:21:41Z",
+      "message": "Merge pull request #75 from marynelv/indigo-devel\n\njoy/Cmakelists won't compile for osx"
+    },
+    {
+      "sha": "fde7a7768482a92cd50488594e1281049378d643",
+      "author": "Mark D Horn",
+      "date": "2016-02-01T22:03:05Z",
+      "message": "C++ Implementation of Wiimote Controller Node\n\nRewrite of the Wiimote node in C++ using the existing Python node\nas the requirements. The C++ implementation was design with focus\non reduced resource consumption.\n\nUsing C++ cut the memory consumption by 50-60%, and the reduced the\nnumber of cpu-clock cycles used 20x-30x depending upon the use case.\n\nDifferences from Python implementation:\n- Both \"/wiimote/nunchuk\" and \"/wiimote/classic\" topics are only\n  published if the Nunchuk or Classic Controller are connected to\n  the wiimote respectively.\n- Wiimote data is only polled from the controller if the data is\n  required to publish for a topic which has at least one subscriber.\n\nEnabled ROS lint"
+    },
+    {
+      "sha": "7920ba5a71ea89979b86e1a823487adef5e607d3",
+      "author": "Mark D Horn",
+      "date": "2016-02-01T18:01:25Z",
+      "message": "Add queue_size to remove ROS Warning\n\nAs of Indigo not passing the keyword argument queue_size will result\nin a warning being printed to the console.\n\nhttp://wiki.ros.org/rospy/Overview/Publishers%20and%20Subscribers#queue_size_Omitted"
+    },
+    {
+      "sha": "122c97a32d87f5853cb7153b75e7f4c7b590ed26",
+      "author": "Marynel Vazquez",
+      "date": "2015-07-13T01:07:26Z",
+      "message": "fixed joy/Cmakelists for osx"
+    },
+    {
+      "sha": "9ac74e4520893ef52ab166e214a7dbd68df65599",
+      "author": "Michael Ferguson",
+      "date": "2015-05-24T20:19:00Z",
+      "message": "1.10.1"
+    },
+    {
+      "sha": "3e7624091d0be29901e789b65984eda3e9fe9de6",
+      "author": "Michael Ferguson",
+      "date": "2015-05-24T20:18:18Z",
+      "message": "update changelog"
+    },
+    {
+      "sha": "45867fd79a3179ee11080b93ef51248478737b6f",
+      "author": "Gaël Ecorchard",
+      "date": "2015-02-06T15:08:03Z",
+      "message": "spacenav_node: reduce the number of scale params"
+    },
+    {
+      "sha": "3f962674abcbe3c0b1505b5a8814dac0b23f7481",
+      "author": "Gaël Ecorchard",
+      "date": "2015-02-05T14:07:06Z",
+      "message": "spacenav_node: add a scale parameter to each axis\n\nDo not apply the scale to the joy topic."
+    },
+    {
+      "sha": "f8d67e37a476059c748d007a3a2d2a5c4c0c5293",
+      "author": "Jonathan Bohren",
+      "date": "2015-02-05T13:42:59Z",
+      "message": "Merge pull request #71 from galou/full_scale_parameter\n\n[spacenav_node] Add full_scale parameter and apply to offset"
+    },
+    {
+      "sha": "4a9959291c36b2d5ba1b90cebb9633c8ddd35f58",
+      "author": "Gaël Ecorchard",
+      "date": "2014-11-20T11:09:31Z",
+      "message": "Add full_scale parameter and apply to offset"
+    },
+    {
+      "sha": "db487c65d9aa84782179de587bebc8f4ee571ecc",
+      "author": "Jonathan Bohren",
+      "date": "2014-07-01T21:18:58Z",
+      "message": "Merge pull request #66 from cottsay/indigo-devel\n\nRemove stray architechture_independent flags"
+    },
+    {
+      "sha": "c782d53a6a2f4295019f1724f6144f147d766cf3",
+      "author": "Michael Ferguson",
+      "date": "2014-06-27T06:50:47Z",
+      "message": "1.10.0"
+    },
+    {
+      "sha": "14ea10f05df04a9a7174ebfa614da5bc9543c4b3",
+      "author": "Michael Ferguson",
+      "date": "2014-06-27T06:50:02Z",
+      "message": "add changelogs"
+    },
+    {
+      "sha": "ce96372bc49b67033113e08edeb977fcab7914e6",
+      "author": "Scott K Logan",
+      "date": "2014-04-28T06:41:36Z",
+      "message": "Remove stray architechture_independent flags\n\nThis flag should be used for packages which do not contain\narchitecture-specific files. Compiled binaries are such a file, and\nthese packages contain them."
+    },
+    {
+      "sha": "6aee5d9aa879a0e89eeec9589780dda41b88471f",
+      "author": "Jonathan Bohren",
+      "date": "2014-04-17T21:56:36Z",
+      "message": "Merge remote-tracking branch 'felix/patch-1' into indigo-devel"
+    },
+    {
+      "sha": "c3097b5af23da81c2a0418a80e2fec145708a207",
+      "author": "Jonathan Bohren",
+      "date": "2014-04-17T21:52:08Z",
+      "message": "Merge remote-tracking branch 'dawonn/groovy-devel' into indigo-devel"
+    },
+    {
+      "sha": "b8a8d72960468700bc0e46858160c8fa2b9cc86d",
+      "author": "Felix Kolbe",
+      "date": "2014-01-15T09:52:27Z",
+      "message": "Update ps3joy/package.xml URLs with github user ros to ros-drivers\n\nFor branch joystick_drivers-1.9 (groovy)\r\n(older distros don't seem to show issue links"
+    },
+    {
+      "sha": "7c20bf863448d81bf1e2a6781ac582f3f46aa325",
+      "author": "Jonathan Bohren",
+      "date": "2013-04-30T01:01:18Z",
+      "message": "1.9.10"
+    },
+    {
+      "sha": "40fc2e8ebfbc9672b658f23c7e22031b8f8a4ac0",
+      "author": "Jonathan Bohren",
+      "date": "2013-04-30T00:59:42Z",
+      "message": "Updating for new metapackage spec"
+    },
+    {
+      "sha": "7b598e8557c92ef038441887d8835856769a29d9",
+      "author": "Jonathan Bohren",
+      "date": "2013-04-30T00:57:07Z",
+      "message": "missing init.py"
+    },
+    {
+      "sha": "6abc0c8b8899b8be3f2e9fcb7715eecd8413d917",
+      "author": "Jonathan Bohren",
+      "date": "2013-03-14T02:20:25Z",
+      "message": "bumping version to 1.9.9"
+    },
+    {
+      "sha": "ecb59ff4d92758187a318a70fef2d3d92221074b",
+      "author": "Jonathan Bohren",
+      "date": "2013-03-14T01:46:57Z",
+      "message": "fixing installation of wiimote scripts"
+    },
+    {
+      "sha": "551fb001616e14aedb2d499dbaab111ae4807bcd",
+      "author": "dawonn",
+      "date": "2013-02-28T16:03:21Z",
+      "message": "Prompt for sudo password when required\n\nTested on U12.10 ROS-G"
+    },
+    {
+      "sha": "68a0d9f213dd22cdef5e209c70fdc577a0f076ad",
+      "author": "Jonathan Bohren",
+      "date": "2013-02-03T19:37:15Z",
+      "message": "Bumping version to 1.9.8"
+    },
+    {
+      "sha": "e6a49d117f4e440296ecc6d32d541f28bacda02c",
+      "author": "Jonathan Bohren",
+      "date": "2013-02-03T19:35:27Z",
+      "message": "Updating wimote setup for new catkin api"
+    },
+    {
+      "sha": "bf917d5d73c56cabf438f588c3c0456302cbd053",
+      "author": "Jonathan Bohren",
+      "date": "2013-02-03T19:25:51Z",
+      "message": "Updating wimote setup for new catkin api"
+    },
+    {
+      "sha": "ca52b39fb49a8676fc743374ee32785a6cc05767",
+      "author": "Jonathan Bohren",
+      "date": "2013-01-22T22:40:01Z",
+      "message": "Bumping version to 1.9.7"
+    },
+    {
+      "sha": "b462e02f6578b42cb314fdf15ce75e5d16a0d5c4",
+      "author": "Jonathan Bohren",
+      "date": "2013-01-22T22:16:21Z",
+      "message": "Merge branch 'groovy-devel' of github.com:ros-drivers/joystick_drivers into groovy-devel"
+    },
+    {
+      "sha": "59f10dc9cb1057587f18194050da818b3aedfddb",
+      "author": "Jonathan Bohren",
+      "date": "2013-01-22T22:13:43Z",
+      "message": "Removing redundant test_depends tags from package.xml files"
+    },
+    {
+      "sha": "b58e6ff35a80ccae3397e6a6b64c338ded11add8",
+      "author": "Dirk Thomas",
+      "date": "2012-12-21T01:31:09Z",
+      "message": "1.9.6"
+    },
+    {
+      "sha": "5c0ebdf32188078a0acc8e3e771b38c47417a198",
+      "author": "Dirk Thomas",
+      "date": "2012-12-21T01:18:08Z",
+      "message": "add missing install of ps3joy scripts"
+    },
+    {
+      "sha": "8494793068fc5e3b6c1e8d3555ad4d454caf53b7",
+      "author": "mirzashah",
+      "date": "2012-12-14T22:41:40Z",
+      "message": "1.9.5"
+    },
+    {
+      "sha": "005fa9ee10a215c1de385fb31ac96724ef817e88",
+      "author": "mirzashah",
+      "date": "2012-12-14T22:39:10Z",
+      "message": "Added in <buildtool_depend>catkin</buildtool_depend> requirement for package.xml files"
+    },
+    {
+      "sha": "3c82bbfcccb4dab02d6dbe3f834d4b2544f47c5e",
+      "author": "Jonathan Bohren",
+      "date": "2012-11-06T19:56:57Z",
+      "message": "bumping verision to 1.9.4"
+    },
+    {
+      "sha": "7dab1bbd4cf1969fc561aa81c9742119067a8283",
+      "author": "Jonathan Bohren",
+      "date": "2012-11-06T19:05:02Z",
+      "message": "fixing install targets"
+    },
+    {
+      "sha": "2179759ff7294e043d3b0792a7d0e986cce49083",
+      "author": "Jonathan Bohren",
+      "date": "2012-11-06T18:48:05Z",
+      "message": "adding install targets, organizing some files"
+    },
+    {
+      "sha": "d4167d0b1b863c095908c1a302df94c02e1efe92",
+      "author": "Vincent Rabaud",
+      "date": "2012-11-06T19:00:38Z",
+      "message": "fix the bad folder for wiimote"
+    },
+    {
+      "sha": "f48b3caa9792cc3cb0eb8451b2cb115b29b87970",
+      "author": "Vincent Rabaud",
+      "date": "2012-11-05T07:46:31Z",
+      "message": "1.9.3"
+    },
+    {
+      "sha": "8a1b4562470ea92008fd080b3938a30576d3800d",
+      "author": "Vincent Rabaud",
+      "date": "2012-11-05T07:45:30Z",
+      "message": "remove the libraries that are non-existent"
+    },
+    {
+      "sha": "9343f3bb26bb99a6a5bfcdc6e37c30ddd56881ea",
+      "author": "Jonathan Bohren",
+      "date": "2012-11-05T02:49:23Z",
+      "message": "Removing licsenses of dependencies, modifying language of description"
+    },
+    {
+      "sha": "4bd1cf8d6a794d25b6187fa47fc56c32d4448493",
+      "author": "Jonathan Bohren",
+      "date": "2012-11-04T17:08:09Z",
+      "message": "Merge branch 'groovy-devel' of github.com:ros-drivers/joystick_drivers into groovy-devel"
+    },
+    {
+      "sha": "7c7b6464f2dd4ea1cf25e71ac85609d5b2daaeab",
+      "author": "Vincent Rabaud",
+      "date": "2012-11-04T16:53:47Z",
+      "message": "1.9.2"
+    },
+    {
+      "sha": "69eb557e7a94caf47cf143e66f8d506588d17c75",
+      "author": "Vincent Rabaud",
+      "date": "2012-11-04T16:53:18Z",
+      "message": "use catkin_pkg for parsing the package.xml"
+    },
+    {
+      "sha": "abf16991b93adba3780b9b5da5b066d2e0e3c0bd",
+      "author": "Jonathan Bohren",
+      "date": "2012-11-04T14:39:50Z",
+      "message": "Merge branch 'groovy-devel' of github.com:ros-drivers/joystick_drivers into groovy-devel"
+    },
+    {
+      "sha": "813e0c559c33f013dcb724e5d3b0c61f6616dc84",
+      "author": "Jonathan Bohren",
+      "date": "2012-11-04T14:36:49Z",
+      "message": "fixing rosdep name in CMakeLists.txt"
+    },
+    {
+      "sha": "df82924bb60dbe232490d3bd4957b9176a8fcf7a",
+      "author": "Vincent Rabaud",
+      "date": "2012-11-04T08:56:40Z",
+      "message": "1.9.1"
+    },
+    {
+      "sha": "bd86a57c1466aa9393ab7806427f65526eb6df57",
+      "author": "Vincent Rabaud",
+      "date": "2012-11-04T08:56:05Z",
+      "message": "fix a few compile errors"
+    },
+    {
+      "sha": "50e368e79784e0494f8ae327c8f77dcb4744c076",
+      "author": "Jonathan Bohren",
+      "date": "2012-11-04T01:35:36Z",
+      "message": "Adding joystick_drivers metapackage"
+    },
+    {
+      "sha": "12c29f85db6df1665688bf978debadaed8282589",
+      "author": "Jonathan Bohren",
+      "date": "2012-10-31T18:43:25Z",
+      "message": "Updating to add python wiimote lib to CMakeLists via setup.py and removing roslib call from wiimote_node"
+    },
+    {
+      "sha": "358079b38c3f237ba780f9c16845b53547a9c84c",
+      "author": "Jonathan Bohren",
+      "date": "2012-10-31T18:16:40Z",
+      "message": "removing old makefile"
+    },
+    {
+      "sha": "c0bbec4da1486345f94c25721067f1a5ca571204",
+      "author": "Jonathan Bohren",
+      "date": "2012-10-31T04:06:39Z",
+      "message": "fixing CMakeLists"
+    },
+    {
+      "sha": "ce3858c6205a3233c4534d42830016d63d139a2e",
+      "author": "Jonathan Bohren",
+      "date": "2012-10-31T03:49:15Z",
+      "message": "adding CMake code to generate messages"
+    },
+    {
+      "sha": "6cb9b403cbdba183dedaeaac9cb8f29f26cd2e70",
+      "author": "Jonathan Bohren",
+      "date": "2012-10-31T03:33:53Z",
+      "message": "removing rosbuild stack files"
+    },
+    {
+      "sha": "f8c73f2b6ba853987d14486d921891332c224f55",
+      "author": "Jonathan Bohren",
+      "date": "2012-10-31T03:33:22Z",
+      "message": "migrating to catkin"
+    },
+    {
+      "sha": "31e6725d525190b7ca4a6aa3b3265b328a3c68af",
+      "author": "Jonathan Bohren",
+      "date": "2012-10-31T03:20:54Z",
+      "message": "removing this now that all targeted distros hav spacenav in the debs"
+    },
+    {
+      "sha": "94f9d1cd1db4175543028255497014a7f8f144df",
+      "author": "Jonathan Bohren",
+      "date": "2012-10-31T03:20:34Z",
+      "message": "updating websites"
+    },
+    {
+      "sha": "e5d9a26c3b37f7fbb6b1da9571c85415f604eb19",
+      "author": "Jonathan Bohren",
+      "date": "2012-10-31T03:20:07Z",
+      "message": "adding proper vars to executables"
+    },
+    {
+      "sha": "9f3f43523da9e78d57db60961bc247e9394f1c70",
+      "author": "Jonathan Bohren",
+      "date": "2012-10-31T03:14:55Z",
+      "message": "migrating to catkin"
+    },
+    {
+      "sha": "a8618d945b3b684ee37fb3631cb653c0bf60dbc8",
+      "author": "Jonathan Bohren",
+      "date": "2012-10-31T02:33:54Z",
+      "message": "fixing use of rosdeps in cmakelists, disregard the warnings"
+    },
+    {
+      "sha": "fcca05b353293a43bb4c25e6ebdb2f7ccc9780fa",
+      "author": "Jonathan Bohren",
+      "date": "2012-10-31T01:56:59Z",
+      "message": "cmake typo"
+    },
+    {
+      "sha": "27f272cc627d576b1bdbfdd4b26f463c535f0f9e",
+      "author": "Jonathan Bohren",
+      "date": "2012-10-31T01:55:57Z",
+      "message": "removing deprecated script from 2009"
+    },
+    {
+      "sha": "150ac4293d3dee1543149e7a78570e07ff72a1be",
+      "author": "Jonathan Bohren",
+      "date": "2012-10-31T01:55:07Z",
+      "message": "cleaning up cmakelists"
+    },
+    {
+      "sha": "ff733bef01819b57ad8969248bb0157a4f06a767",
+      "author": "Jonathan Bohren",
+      "date": "2012-10-31T01:54:46Z",
+      "message": "migrating to catkin"
+    },
+    {
+      "sha": "348c37a5869d8c6caa689a42192a44ef2ce62ed0",
+      "author": "Jonathan Bohren",
+      "date": "2012-10-31T01:46:25Z",
+      "message": "bumping version for catkin"
+    },
+    {
+      "sha": "3c35360bc7823b0520bb0767ce2dd0bbd3340e66",
+      "author": "Jonathan Bohren",
+      "date": "2012-10-31T01:40:36Z",
+      "message": "removing soft deprecation scripts from 2009"
+    },
+    {
+      "sha": "f0ac473dd8bb476eb3adbd095afe42ba9f864a04",
+      "author": "Jonathan Bohren",
+      "date": "2012-10-31T01:40:11Z",
+      "message": "adding maintainer email"
+    },
+    {
+      "sha": "57619de50c9687d6c9f3fecf9e8382bdee845f52",
+      "author": "Jonathan Bohren",
+      "date": "2012-10-31T01:35:47Z",
+      "message": "Migrating joy to catkin"
+    },
+    {
+      "sha": "f015c8d261be231cca38698cc8042c83495f4bef",
+      "author": "Jonathan Bohren",
+      "date": "2012-10-26T18:00:00Z",
+      "message": "updating maintainer"
+    },
+    {
+      "sha": "91744f60718c65fa7a097f8f395b9fb3b74914bb",
+      "author": "Jonathan Bohren",
+      "date": "2012-10-26T16:16:16Z",
+      "message": "Merge branch 'master' into joystick_drivers-1.8"
+    },
+    {
+      "sha": "b8e7d4f536b42d0d37936c329663d8fdb1531b3f",
+      "author": "Jonathan Bohren",
+      "date": "2012-10-26T16:15:15Z",
+      "message": "fixed"
+    },
+    {
+      "sha": "49d124bb975beb7b3d9b5acad1bb5fc76a4d63ec",
+      "author": "Jonathan Bohren",
+      "date": "2012-10-26T16:14:01Z",
+      "message": "hudson debugging..."
+    },
+    {
+      "sha": "f3132acd3ed2a47ed1a04b9278f6c40e30e0d255",
+      "author": "Jonathan Bohren",
+      "date": "2012-10-26T16:09:48Z",
+      "message": "trying to get hudson to work"
+    },
+    {
+      "sha": "c4940fbf5429dd0b94ea088b9acf00d9e2163849",
+      "author": "Jonathan Bohren",
+      "date": "2012-10-26T15:50:17Z",
+      "message": "removing this entirely"
+    },
+    {
+      "sha": "105f9a2e8561fbd672a0d98f44f501b9209fc3ec",
+      "author": "Jonathan Bohren",
+      "date": "2012-10-26T15:32:54Z",
+      "message": "removing system-dep cmake stuff"
+    },
+    {
+      "sha": "e955149f78fbfa4b332bfa62e9b54c1c1d0c6995",
+      "author": "Jonathan Bohren",
+      "date": "2012-10-26T15:20:20Z",
+      "message": "updating spacenav version and file download, re-adding dep"
+    },
+    {
+      "sha": "9855a6702c60688d66c9a246c2d6c1bf205f091b",
+      "author": "Jonathan Bohren",
+      "date": "2012-10-24T22:04:31Z",
+      "message": "Merge branch 'joystick_drivers-1.8' of bitbucket.org:ros_joystick_drivers/joystick_drivers"
+    },
+    {
+      "sha": "76ef52eac823b4c8b827f93b4db160769ed77255",
+      "author": "Jonathan Bohren",
+      "date": "2012-10-24T22:02:09Z",
+      "message": "Merge branch 'master' of bitbucket.org:ros_joystick_drivers/joystick_drivers into joystick_drivers-1.8"
+    },
+    {
+      "sha": "e9531b92ccbc9c6012361f0139913f94b630ced7",
+      "author": "Jonathan Bohren",
+      "date": "2012-10-24T21:57:12Z",
+      "message": "bumping version"
+    },
+    {
+      "sha": "38c011680278ff024a94e54c4b0e890d197b932e",
+      "author": "Chad Rockey",
+      "date": "2012-09-17T18:01:00Z",
+      "message": "Continuous output of accelerometer values."
+    },
+    {
+      "sha": "2149719fd2be23a922087203f140a69759672031",
+      "author": "Jonathan Bohren",
+      "date": "2012-08-10T13:46:38Z",
+      "message": "modifications to launchfiles to bring up anonymously"
+    },
+    {
+      "sha": "ce6cdc63a82bca155e16cffb9801acf4dddf0ad5",
+      "author": "Jonathan Bohren",
+      "date": "2012-08-09T15:50:37Z",
+      "message": "smarter deadband behavior in spacenav_node"
+    },
+    {
+      "sha": "2bcb2d6c9cd8eae6b336b13b1d45656e6701e57c",
+      "author": "mwise",
+      "date": "2012-03-16T03:54:09Z",
+      "message": "preparing for release\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@39065 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "ab0723cb648e3ee77eaba73b7305d3df3a118be5",
+      "author": "mwise",
+      "date": "2012-03-16T03:52:05Z",
+      "message": "moving the node to _node\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@39064 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "1d2d9f550d5a9e35d2389e7cfbf774f327a9e791",
+      "author": "mwise",
+      "date": "2012-03-16T03:43:17Z",
+      "message": "adding patch from chad\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@39063 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "d26193aebf35ddbc41a5a43f9082c60995502e2f",
+      "author": "vrabaud",
+      "date": "2012-03-14T23:41:04Z",
+      "message": "fix the libusb dependency for ps3joy\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@39048 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "16d9cbdbafd99cc7fd5d4c06fddc43f2063c1153",
+      "author": "vrabaud",
+      "date": "2012-03-14T23:31:19Z",
+      "message": "comply to the new rosdep for fuerte\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@39047 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "edbbcf3132261c08538df39da68db94a7e000e62",
+      "author": "mwise",
+      "date": "2012-01-07T00:19:44Z",
+      "message": "extra line broke node\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@38438 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "03a25dc607ca0bf5f979f6367197b1f0abbdd1f6",
+      "author": "mwise",
+      "date": "2012-01-06T23:16:12Z",
+      "message": "removing joy.h from joy\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@38436 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "bac0e4d3dc19e95cd3efc789f0948f611c4d7101",
+      "author": "mwise",
+      "date": "2012-01-06T22:47:42Z",
+      "message": "adding patch for classic controller\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@38432 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "cf29eaa491d6805aaf7a9abc5fd0b1e370a1751d",
+      "author": "mwise",
+      "date": "2012-01-06T22:44:55Z",
+      "message": "current ubuntu spacenavd deps are broken cannot go to deps\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@38431 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "6ee27c2e36ccdcc71e01e450731e77404000d64f",
+      "author": "mwise",
+      "date": "2012-01-04T23:30:50Z",
+      "message": "switching to using cwiid dep\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@38398 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "6599634cfc6501581e06d94387e2aa71395bfa1e",
+      "author": "mwise",
+      "date": "2011-12-29T23:01:49Z",
+      "message": "bumping revision to 1.7.0 for fuerte devel and to fix oneric build\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@38384 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "ae90be063a86d3c06b5f04883406002b5e2051b8",
+      "author": "vrabaud",
+      "date": "2011-10-23T22:23:06Z",
+      "message": "fix compilation on Oneiric\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@38086 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "ffa8dca20bbf4b11a757eaacd99fb72df1cba2e9",
+      "author": "mwise",
+      "date": "2011-08-29T19:13:29Z",
+      "message": "fixing check for master bug\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@37859 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "d62a7a20977bd382d414ad88c8e7378668cf033d",
+      "author": "mwise",
+      "date": "2011-08-22T22:05:25Z",
+      "message": "preparing for release\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@37830 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "1b07af3c51efd75edd6f9a14fdb2bf900805f690",
+      "author": "mwise",
+      "date": "2011-08-22T21:21:48Z",
+      "message": "adding quit when roscore is killed\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@37829 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "e42714afb688396e31c47286bf07f243457d8f1f",
+      "author": "mwise",
+      "date": "2011-08-02T08:02:11Z",
+      "message": "updating manifest\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@37693 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "edb6c677aaae2a1f9f5a31a9ee9d85f0867aa7d5",
+      "author": "mwise",
+      "date": "2011-07-12T10:40:20Z",
+      "message": "removing test because of bug in rosbagmigration causing test to fail\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@37469 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "cc721dcd81d2f256a93a6744ebb7a50831b4fc3d",
+      "author": "mwise",
+      "date": "2011-07-12T10:23:54Z",
+      "message": "preparing for release\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@37466 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "9e9e9cd3755f9ed447940570a9d5feb2d7940426",
+      "author": "mwise",
+      "date": "2011-07-12T10:18:48Z",
+      "message": "updating dox\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@37465 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "d879994e10d4c603f8f010dbbb30fc818a47adf7",
+      "author": "kwc",
+      "date": "2011-07-12T00:53:44Z",
+      "message": "adding depend on common_rosdeps and fixing version number\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@37443 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "de0201df7c000ab30e57576b85879da11b4232fe",
+      "author": "mwise",
+      "date": "2011-07-06T21:25:14Z",
+      "message": "fixing when to set new_msg true\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@37420 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "0553c673c184495133db7f30f922c2b9f0b8be20",
+      "author": "mwise",
+      "date": "2011-07-06T20:48:37Z",
+      "message": "adding rumble and led function to ps3joy.py\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@37418 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "69f66b266870ace24cb24e3b504087f1578eeebb",
+      "author": "mwise",
+      "date": "2011-06-30T00:58:06Z",
+      "message": "adding set rumble and led feature\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@37369 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "f5ae21fe4cbcfcfa96ed6692852aa03c19c62589",
+      "author": "mwise",
+      "date": "2011-06-24T01:04:42Z",
+      "message": "updating diagnostics warning\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@37322 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "4120f44565a148e2162af21a9157e63d8a092e11",
+      "author": "mwise",
+      "date": "2011-06-23T22:04:47Z",
+      "message": "cleaning up diagnsotics\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@37300 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "5493915e2832b373026f2cf64a2580c8c5fe5c4e",
+      "author": "mwise",
+      "date": "2011-06-23T21:56:10Z",
+      "message": "adding the diagnostics yaml\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@37299 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "ef605d281189483ee1f5d4a4da179581794d79d0",
+      "author": "mwise",
+      "date": "2011-06-23T21:54:04Z",
+      "message": "adding diagnostics for battery status, charging, and connection\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@37298 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "9c8331bf51b15a33ca5f072fc8083fb8520f290f",
+      "author": "mwise",
+      "date": "2011-06-22T19:14:46Z",
+      "message": "adding joy migration test\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@37288 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "256505fd4824831ffda7c5674b1d23ffa08162ce",
+      "author": "mwise",
+      "date": "2011-06-22T18:15:02Z",
+      "message": "empty\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@37286 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "36ba9314b15c7d8156f99695445ac9da81d8ae3e",
+      "author": "mwise",
+      "date": "2011-06-22T03:38:02Z",
+      "message": "fixing broken dependancies\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@37280 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "cded753890e06bf46ebb212b78c8db159c95af7e",
+      "author": "mwise",
+      "date": "2011-06-22T03:28:21Z",
+      "message": "empty commit\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@37279 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "18a0a41a5d0b27ef8f959552d1ae726cf6cf7c60",
+      "author": "mwise",
+      "date": "2011-06-22T02:16:09Z",
+      "message": "rolling back header to joy.msg and moving joy.msg to sensor_msgs\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@37278 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "17a5fce3c659b7ff54b408bae91d410c029f598d",
+      "author": "mwise",
+      "date": "2011-06-21T23:15:59Z",
+      "message": "removing extra dependancies\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@37276 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "0868cfffa75621a3809fd28118716f2a8d71461f",
+      "author": "mwise",
+      "date": "2011-06-13T21:53:01Z",
+      "message": "put the migration rules in the wrong place\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@37177 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "a3e8e50d6342e558436f5068712a980bcf744672",
+      "author": "mwise",
+      "date": "2011-06-13T21:32:19Z",
+      "message": "adding migration rules\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@37176 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "f3e1c65df580af4234cbecb13a2adbb2d37a3a9c",
+      "author": "mwise",
+      "date": "2011-06-09T19:42:26Z",
+      "message": "getting ready for release\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@37148 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "7529c310c134afde1d0542f5ffc6abb9a7479300",
+      "author": "mwise",
+      "date": "2011-06-09T00:00:33Z",
+      "message": "reduced CPU usage from 114% to 9%\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@37137 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "42c05e263df2113dffa080432431258cc0651c09",
+      "author": "mwise",
+      "date": "2011-06-07T23:38:01Z",
+      "message": "adding header to joy msg and updating all the joy nodes to publish a timestamp\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@37128 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "fc0e13fbeab243644155a239548b880db6b133b8",
+      "author": "mwise",
+      "date": "2011-03-31T22:48:30Z",
+      "message": "stack.xml update\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@36510 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "bfb595c150b3fcc555bb11abf1ab5bfd93189002",
+      "author": "mwise",
+      "date": "2011-03-31T19:10:50Z",
+      "message": "updating revision for release\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@36509 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "8fcd4f1c75e2ee83472cde8a454eaa33cea39310",
+      "author": "mwise",
+      "date": "2011-03-31T19:03:37Z",
+      "message": "removing rospy.rospy calls\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@36508 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "89c4e8db74abf78974937186ffc9f6c3c4306067",
+      "author": "mquigley",
+      "date": "2011-03-13T07:36:42Z",
+      "message": "fix the joystick rosdep for arch\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@36390 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "8b0d1d44791a7962858505266f1ecae7a68a4169",
+      "author": "mwise",
+      "date": "2011-01-25T23:49:39Z",
+      "message": "joystick drivers 1.4.0\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@35500 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "5a414b71813b2b0da440ea0236f177edfce3b649",
+      "author": "mwise",
+      "date": "2011-01-25T21:10:51Z",
+      "message": "removed deprecated get_*_size() call\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@35485 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "c53984501980f97b95fe7a1501f7d65a347e4920",
+      "author": "mwise",
+      "date": "2011-01-25T20:52:25Z",
+      "message": "changing to be consistent with rest of stack\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@35484 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "6db4dff710aec8efb1b08dd5fe4a68776ddb276a",
+      "author": "mwise",
+      "date": "2011-01-25T20:20:18Z",
+      "message": "changing status to doc reviewed\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@35481 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "bf573f866246e1c9c657f97d038b86b560f50d88",
+      "author": "mwise",
+      "date": "2011-01-25T20:18:45Z",
+      "message": "changing status in manifest to Doc Reviewed\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@35480 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "5e1b76bd0eefbda7c9f2ba203c6456dc211a57d7",
+      "author": "mwise",
+      "date": "2011-01-25T20:18:21Z",
+      "message": "fixing spelling mistake\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@35479 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "d8d46762b59c940a8d06283f0127081bf4d4c07c",
+      "author": "mwise",
+      "date": "2011-01-25T20:17:04Z",
+      "message": "changing topic back to joy from wiijoy\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@35478 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "c89184c753eb78fdad2c5d1839cc538b612c3706",
+      "author": "mwise",
+      "date": "2011-01-25T02:38:21Z",
+      "message": "removing joystick_remapper package; ua-ros-pkg will continue supporting it in the future\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@35438 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "d334365261db4c30735559b0fc826cf0f574869c",
+      "author": "mwise",
+      "date": "2011-01-25T02:35:09Z",
+      "message": "deleting msg export in manifest\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@35437 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "5f56779c24e01e0691ceeb3d6058acee6560c3c5",
+      "author": "mwise",
+      "date": "2011-01-25T02:23:58Z",
+      "message": "updating maintainer\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@35436 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "ff0c0f441261a5a5e3618201551608c499e7901f",
+      "author": "paepcke",
+      "date": "2011-01-14T20:12:05Z",
+      "message": "Applied patch for Wiimote Classic; updated documentation; added handling for some race conditions during shutdown that printed unhappy msgs. Added exception catch and msg to ignore two Nunchuk related error msgs during startup when neither Nunchuk nor MotionPlus are plugged in.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@35254 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "fd91cb7abaadcb70e673c0257a882f7dee677107",
+      "author": "blaise",
+      "date": "2010-12-03T17:07:16Z",
+      "message": "Releasing joystick_drivers 1.2.2.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@34496 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "f593c7fe97e8e6013b9d3be29f795b47222ef5bb",
+      "author": "paepcke",
+      "date": "2010-12-02T19:20:32Z",
+      "message": "Added initialization of /imu/is_calibrated latch\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@34480 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "ae7a3b2e5867af4766fc62f9a058b3cbe1228bde",
+      "author": "paepcke",
+      "date": "2010-11-29T00:58:17Z",
+      "message": "Added David Lu's patches (Nunchuk)\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@34294 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "1a465fe53bc9ee2f02f0e35993b8c50f02e4365c",
+      "author": "blaise",
+      "date": "2010-10-28T20:31:03Z",
+      "message": "Redoing 1.2.1 release. Maverick update was bad.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@33559 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "623119621e6e5d623ab79c9ef1f64bf3555e71ee",
+      "author": "blaise",
+      "date": "2010-10-28T20:04:58Z",
+      "message": "Updating to 1.2.1. Added Maverick rosdep for bluez.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@33551 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "d52a6114037d791d42fcdf95a390d11b560db33f",
+      "author": "blaise",
+      "date": "2010-07-23T15:19:19Z",
+      "message": "Updating to 1.2.0\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@31175 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "218b6a7762faa4bbc2495d8a93f4c02016bb5851",
+      "author": "blaise",
+      "date": "2010-06-22T16:32:40Z",
+      "message": "Updating to 1.1.2\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@30364 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "c4b14e05f1590228422896d626ebd0c319cc28a9",
+      "author": "blaise",
+      "date": "2010-06-22T06:00:43Z",
+      "message": "Now spacenav pulls from pr.willowgarage.com instead of the upstream repo.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@30362 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "50a35aa130fce10ae2d82406e7eef686c28c6521",
+      "author": "gerkey",
+      "date": "2010-05-19T20:25:26Z",
+      "message": "Added Ubuntu platform tags to manifest\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@29655 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "cbc39d82dbbca193b9ef33fb0b1b52ddcb5bbffe",
+      "author": "blaise",
+      "date": "2010-05-05T22:28:25Z",
+      "message": "Updating to 1.1.1\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@29341 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "d0c0e0d343460e6e760e17a45e071cb2eac24048",
+      "author": "blaise",
+      "date": "2010-05-05T22:26:47Z",
+      "message": "Added a message to the user when the output is redirected.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@29340 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "fbbeac6a7dc9f35e04844e97e73f7a04005ada95",
+      "author": "blaise",
+      "date": "2010-05-05T22:18:09Z",
+      "message": "Now retries to bind to socket until it succeeds, instead of giving up. Added a small sleep after bringing down bluetooth to ensure that the socket is ready to be bound. Added a --no-disable-bluetoothd option, as it is possible to configure bluetoothd to coexist with ps3joy. Added a --redirect-output option to make it easier to log the output from ps3joy. Now checks that hci0 is in PSCAN mode every 5 seconds. Replaced use of select with use of settimeout when listening on the L2CAP sockets. Removed an erroneous double close of one of the sockets in certain error cases.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@29339 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "2c017b3ab735039b99b58b0c7dae35c04e6c9c8c",
+      "author": "blaise",
+      "date": "2010-04-30T19:20:05Z",
+      "message": "Fixed rondep to rosdep in manifest.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@29275 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "22534c2179f887a8c4f635692e5269eca0667908",
+      "author": "mquigley",
+      "date": "2010-04-26T19:49:33Z",
+      "message": "add ubuntu lucid rosdep for bluez\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@29100 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "2e3dcbbd759c5bf2b97ad0779cdea7a3a19462d8",
+      "author": "blaise",
+      "date": "2010-04-20T22:32:58Z",
+      "message": "Added gtk2 as a dependency in response to #2620.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@28901 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "fb9ee598e620b76824ec8a284e8d091a6a4ada03",
+      "author": "blaise",
+      "date": "2010-04-16T16:37:09Z",
+      "message": "Updating to 1.1.0\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@28835 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "261c63d08f6c46f5f48f4cbaaaa9de7f5a694954",
+      "author": "blaise",
+      "date": "2010-04-16T04:45:42Z",
+      "message": "Changed rospy/Clock to time in wiimote/State message.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@28824 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "b12ad521b282366a88baf61897d87bf35cdec852",
+      "author": "paepcke",
+      "date": "2010-04-15T20:47:59Z",
+      "message": "Changed use of Time.msg to Clock.msg. Incorporated Nunchuk patch.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@28787 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "5ad74d0e61ef08a2e3083fd760bd990cdc25de3b",
+      "author": "blaise",
+      "date": "2010-04-08T15:56:15Z",
+      "message": "sixpair now has a return code of 1 when the joystick is not plugged in as requested by #3967.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@28649 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "03dbf63977e3c6d948873d5415639921699f7503",
+      "author": "blaise",
+      "date": "2010-04-06T17:13:34Z",
+      "message": "Added rosdep entries for gentoo from #3959.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@28584 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "232ce42eda8e3b28bbf09fa2a22d2dde8082c1db",
+      "author": "blaise",
+      "date": "2010-03-03T16:57:07Z",
+      "message": "Updated fedora dependencies based on patch sent by Michael Gregg <mgregg at michaelgregg dot com>\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@28041 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "f2ed7e59798804087b5ea99c3cc608fe9cdd0d01",
+      "author": "blaise",
+      "date": "2010-02-05T00:47:03Z",
+      "message": "updated 1.0.1\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@27662 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "7956eb211e76f56681ac59c3f6ce71d181587b70",
+      "author": "blaise",
+      "date": "2010-02-01T21:16:49Z",
+      "message": "Added call to setHardwareID to get rid of warning.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@27602 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "e5723dac2e3933a449942b1467766acc5e2d74d0",
+      "author": "blaise",
+      "date": "2010-02-01T20:10:39Z",
+      "message": "Made the Karmic error message point to the web page where there will be a solution soon.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@27601 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "aad64ad08a8456ec2fc6edc9268fd2fc8c318974",
+      "author": "blaise",
+      "date": "2010-02-01T20:08:44Z",
+      "message": "Added an inactivity timeout for the ps3 joystick. (To save batteries.)\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@27600 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "419ad5d4a80a34366070f5c682b7e4f5b27cb11d",
+      "author": "kwc",
+      "date": "2010-01-16T03:58:14Z",
+      "message": "preparing joystick_drivers 1.0.0\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@27268 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "58f9c74fb9303d8d024c2ff0d2a4e39dc874536a",
+      "author": "blaise",
+      "date": "2010-01-15T01:38:24Z",
+      "message": "updating to release 0.9.5\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@27169 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "014c57bd25a3cf37d5eafc34366f656ac62b1370",
+      "author": "paepcke",
+      "date": "2010-01-13T17:22:15Z",
+      "message": "Fixed calibration error when no MotionPlus is plugged in.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@27073 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "d6f13ccebda3fe3ed664f9f3d2d0fd8392f55c20",
+      "author": "paepcke",
+      "date": "2010-01-13T15:34:26Z",
+      "message": "Modified header to conform to wiimote doc review feedback.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@27072 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "d5718b6d08cf7cf7d44e4a49eab51691cd2ee3de",
+      "author": "blaise",
+      "date": "2010-01-12T16:56:39Z",
+      "message": "Added doxymaker external tage.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@26972 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "df8bf47197076127ec9a5639becfcab0ea047ced",
+      "author": "blaise",
+      "date": "2010-01-12T16:55:52Z",
+      "message": "Added doxymaker external tag.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@26971 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "f25573604633fc742be19f7b52261d9624f8d956",
+      "author": "blaise",
+      "date": "2010-01-12T16:53:35Z",
+      "message": "Updated manifest description.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@26970 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "1258805ab9de4dc5cf733809086b09624c6f6620",
+      "author": "gerkey",
+      "date": "2010-01-12T16:13:23Z",
+      "message": "Fixed syntax in manifest\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@26968 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "42fbe881cd68d8f9968e0a5cad62e38d704dfe4c",
+      "author": "gerkey",
+      "date": "2010-01-12T16:09:42Z",
+      "message": "Switched cwiid from svn checkout to tarball download.\n\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@26967 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "82cc893cb9a506273799dc0df71b91c764ea4734",
+      "author": "blaise",
+      "date": "2010-01-12T07:47:58Z",
+      "message": "Removed useless stuff from doxygen.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@26959 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "882a8625033faaf4b8f93c8a4079a957c7affb60",
+      "author": "blaise",
+      "date": "2010-01-12T07:28:51Z",
+      "message": "Played around with package description wording.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@26958 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "c8498e3ed628eebc8bca35aad4865d3e612454a5",
+      "author": "blaise",
+      "date": "2010-01-12T07:07:33Z",
+      "message": "Removed no-longer-used IR_source_info.msg\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@26957 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "02268bc8ce8a17879c2f56f719d5e2ea83c6e587",
+      "author": "paepcke",
+      "date": "2010-01-12T04:03:02Z",
+      "message": "Updated ledTester.py and rumbleTester.py to work with the latest release.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@26945 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "e1b38b5e7afd6c5b91d46a4ec9ea3fc74c891319",
+      "author": "paepcke",
+      "date": "2010-01-12T02:46:08Z",
+      "message": "Topic name changes to conform to API review. Addition of robust, on-demand calibration.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@26937 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "39d87045dfebf64b5a591f03980792c30cbf1741",
+      "author": "paepcke",
+      "date": "2010-01-12T02:29:00Z",
+      "message": "Renamed Wiimote.msg to State.msg, and IR_source_info.msg to IrSourceInfo.msg\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@26936 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "0c5838b4af927a264ec866c9beb5122da5798297",
+      "author": "gerkey",
+      "date": "2010-01-09T02:59:27Z",
+      "message": "bumped version\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@26789 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "9d38c6e9add5797ebbd77c86fb6c78e06533929a",
+      "author": "gerkey",
+      "date": "2010-01-09T02:58:54Z",
+      "message": "Added missing rosdeps\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@26788 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "cad653cd2b1b5f7bbfd9389978129c7d0bff6d63",
+      "author": "blaise",
+      "date": "2010-01-08T23:33:53Z",
+      "message": "Added IR_source_info.msg that had been forgotten.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@26764 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "5d8f5c1d1b1b533faa50abf18bf1d6a597ff0f4b",
+      "author": "blaise",
+      "date": "2010-01-08T22:31:40Z",
+      "message": "updating to release 0.9.3\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@26737 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "8db90c1656ca2158f2bcc5de1d2386e1859616c3",
+      "author": "blaise",
+      "date": "2010-01-08T21:27:19Z",
+      "message": "Renamed imu_data to imu.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@26729 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "cd5050d0bb58c059e556d6ce491f798a0dd7721e",
+      "author": "blaise",
+      "date": "2010-01-08T21:07:32Z",
+      "message": "Got rid of obsolete version of diagnostic_updater::Updator constructor.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@26727 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "17db1485fca5957b9e82d09a94cb5ade97406878",
+      "author": "paepcke",
+      "date": "2010-01-08T03:20:09Z",
+      "message": "Added calibration message documentation\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@26679 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "4de2b3a05873eb67db1c5d4586da5f8116fdeb81",
+      "author": "paepcke",
+      "date": "2010-01-07T21:31:56Z",
+      "message": "More calibration work.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@26624 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "afcdbc5dcfd140e3ebc050cbbeb843575f101e13",
+      "author": "paepcke",
+      "date": "2010-01-07T19:00:19Z",
+      "message": "Changes based on API review.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@26604 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "1c76ea0ee7a97dc8d8737b11e436283886993f84",
+      "author": "blaise",
+      "date": "2010-01-07T01:02:09Z",
+      "message": "Made Error binding to socket error message more suggestive as suggested by ros-pkg#3269.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@26582 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "daf285bc36f7c0f05b87892d3f7ebc7b9a4008f6",
+      "author": "blaise",
+      "date": "2010-01-05T22:32:23Z",
+      "message": "Added libx11-dev dependency for spacenav as per #3486.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@26540 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "f9c5b490a6ef35f39b01ec0d02dbaed608c07a8e",
+      "author": "blaise",
+      "date": "2010-01-05T22:16:26Z",
+      "message": "Added rpath exports to spacenav as requested by #3480.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@26539 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "13170821f0a3a5a2cbe0e467d2e2018a490ab6d6",
+      "author": "blaise",
+      "date": "2010-01-05T22:13:36Z",
+      "message": "Added message exports to wiimote.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@26538 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "046ace85389bb6fc06d1b2be2c92b1007cfd6e99",
+      "author": "blaise",
+      "date": "2010-01-05T17:26:46Z",
+      "message": "Changed unspecified mapping to a warning from an error as requested by #3426.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@26529 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "a411ce2265c4334e9db570e5515cda6e5858bb24",
+      "author": "tfoote",
+      "date": "2009-12-22T18:14:41Z",
+      "message": "converting rosdep ubuntu versions to strings\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@26410 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "7f5b0cd749c3b36ec3f25deece7935aa108546fe",
+      "author": "blaise",
+      "date": "2009-12-11T21:45:30Z",
+      "message": "Added libbluetooth-dev rosdep to cwiid\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@26187 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "57b35725a9c1bc85eca17a2af0690106dd353d33",
+      "author": "blaise",
+      "date": "2009-12-11T21:30:57Z",
+      "message": "Added libbluetooth-dev into joystick_drivers rosdep.yaml.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@26186 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "225716f166f91e66782e9c36d7d89d22c35ed4c9",
+      "author": "gerkey",
+      "date": "2009-12-10T22:40:42Z",
+      "message": "Corrected license statement\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@26163 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "709abe2d15154938eb79d975bc827a36ce68d2a2",
+      "author": "gerkey",
+      "date": "2009-12-08T18:39:47Z",
+      "message": "separated revision from -r\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@26099 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "0ef9df7bb3c931ebc88973feec5c4c422610d03c",
+      "author": "gerkey",
+      "date": "2009-12-08T18:35:41Z",
+      "message": "Added path to supply rpath to build of Python module\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@26098 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "a6c4a1f73ceb44d259790205c14d1e18079badcc",
+      "author": "gerkey",
+      "date": "2009-12-08T05:52:30Z",
+      "message": "Removed spurious export\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@26084 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "e181affb08b5e5110d6074901387fa5789743b7b",
+      "author": "gerkey",
+      "date": "2009-12-08T05:50:41Z",
+      "message": "Added cwiid package\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@26083 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "6e9fea9abaabf35019b8dc72c77eefd23ad88831",
+      "author": "blaise",
+      "date": "2009-12-07T06:12:48Z",
+      "message": "Changed wiimote license to GPL because we are importing cwiid which is GPL. \n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@26067 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "d2426c9d0afdde35ecf2b02e5607951e96023eb8",
+      "author": "wheeler",
+      "date": "2009-12-01T01:15:47Z",
+      "message": "Remove use of deprecated rosbuild macros\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@25974 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "e77de31cf167bc5f6bcaaceaedc8fcc9c156685e",
+      "author": "paepcke",
+      "date": "2009-11-24T02:20:10Z",
+      "message": "Changed to conform to API review requests.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@25846 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "f66ee37c5019cab51f71786799ee9dc43eb09030",
+      "author": "tfoote",
+      "date": "2009-11-18T22:04:05Z",
+      "message": "adding rosdeps for fedora and rhel https://code.ros.org/trac/ros/ticket/1996\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@25734 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "e8fb6ca3d23eac2543c7b7982e50b728227f4dd9",
+      "author": "blaise",
+      "date": "2009-11-17T22:58:37Z",
+      "message": "Took out debug message that was accidentally left in.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@25703 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "8f61531b4ec467696397c788192c59d60e3be7ee",
+      "author": "blaise",
+      "date": "2009-11-17T17:53:33Z",
+      "message": "updating to release 0.9.2\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@25684 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "160f18ed47e6c03f65f3dcf95d22da7c5ad6c996",
+      "author": "paepcke",
+      "date": "2009-11-10T00:55:28Z",
+      "message": "Changed order of buttons array. Organized LED/Rumbe testers.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@25556 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "945e198432e17741cec6580e49750fef852d778a",
+      "author": "paepcke",
+      "date": "2009-11-09T23:48:41Z",
+      "message": "Referred reader to package API.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@25555 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "455ce28c063b32ba49b91d54038aa67ae4b1fc7b",
+      "author": "blaise",
+      "date": "2009-11-06T21:44:03Z",
+      "message": "Took startup delay back out of ps3joy because joy now handles JS_EVENT_INIT properly. Analog button output now has a zero value of zero instead of being at one extreme of the range. This way defaulting to zero is always the safe thing.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@25535 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "368e248fc1be9977d600a26ecfbb51d10cccd4a9",
+      "author": "blaise",
+      "date": "2009-11-06T21:42:36Z",
+      "message": "joy_node now ignores axis values in JS_EVENT_INIT because they are bogus anyways.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@25534 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "17115bd2da1084a208fc6ab0dbd84f763a1a4a9b",
+      "author": "blaise",
+      "date": "2009-11-06T20:44:03Z",
+      "message": "Updated ps3joy.py so that axes aren't railed at startup. But because of kernel bugs this isn't a complete fix.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@25528 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "8b3304ccf3e570cc6d53aa6968a9955456e3ebc4",
+      "author": "paepcke",
+      "date": "2009-11-06T05:39:16Z",
+      "message": "Added buttons info.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@25510 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "6c350c9a5e4b4619e41ae1b440ea623cbb188192",
+      "author": "kwc",
+      "date": "2009-10-22T18:40:11Z",
+      "message": "patch for 8.10 bluez from Sabrina Kliegl\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@25300 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "5174b0492f6e207b34b2734192cbb1f011d89e50",
+      "author": "cmeyers",
+      "date": "2009-10-14T02:06:25Z",
+      "message": "Added bluez to ubuntu 9.10\n\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@25158 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "3e719bded21d8e39162c626840990697cf64ada5",
+      "author": "blaisegassend",
+      "date": "2009-10-09T09:03:55Z",
+      "message": "updating to release 0.9.1\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@25101 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "6b8846b953df8873d1d2807e0ed4e54c10ac862b",
+      "author": "paepcke",
+      "date": "2009-10-08T23:27:32Z",
+      "message": "Added pydoc documentation to wiimote_node.py. Need some in WIIMote.py as well.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@25072 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "795ffcdb6a07a7c3595cdf33acfab39292f58ea7",
+      "author": "paepcke",
+      "date": "2009-10-06T01:46:41Z",
+      "message": "Added haptic and LED feedback.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24907 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "676a3c720b9e965a2cf0919aa124e4c96333aef4",
+      "author": "blaisegassend",
+      "date": "2009-10-03T00:58:34Z",
+      "message": "Corrected incorrect ubuntu versions for bluez in rosdep.yaml\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24825 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "983358469396fd05bc3b585cb9d7a99b038e51d0",
+      "author": "blaisegassend",
+      "date": "2009-10-02T21:23:58Z",
+      "message": "updated bluetooth dependency for hardy\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24805 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "c179b47b8a7a65060d147ed07f8a74d83ac43fe9",
+      "author": "blaisegassend",
+      "date": "2009-10-02T10:01:22Z",
+      "message": "updating to release 0.9.0\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24797 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "2e56601bb16d8d89d98b419548dd3b640c964fd9",
+      "author": "blaisegassend",
+      "date": "2009-10-02T10:00:16Z",
+      "message": "updating to release 0.9.0\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24796 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "1fade1221d35f57eaf3e620773404ec053d75502",
+      "author": "blaisegassend",
+      "date": "2009-10-02T09:54:42Z",
+      "message": "Updated review status\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24795 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "906df1f3e52398a33038083bb0b31dbfbfff6d81",
+      "author": "blaisegassend",
+      "date": "2009-10-01T04:48:20Z",
+      "message": "Fixed typo in manifest\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24772 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "a4d50326b58049004163a3b4d81092c7f416ae0a",
+      "author": "blaisegassend",
+      "date": "2009-09-30T21:56:53Z",
+      "message": "Improved the manifest\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24733 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "0010d3a707545c10d66f2f2a5550728087d7d135",
+      "author": "blaisegassend",
+      "date": "2009-09-30T21:47:11Z",
+      "message": "Corrected typo in manifest.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24732 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "d6b42faa0c4e694c0e6a2138ac48ec5217a73515",
+      "author": "blaisegassend",
+      "date": "2009-09-30T19:55:03Z",
+      "message": "corrected the manifest description\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24721 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "99dc02357f85ee69e5762abeda1790ddb6f58ec8",
+      "author": "blaisegassend",
+      "date": "2009-09-30T05:16:36Z",
+      "message": "Updated manifest text\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24710 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "14d1ac2af01acbf8eaca322153c4552e69d1d77b",
+      "author": "blaisegassend",
+      "date": "2009-09-30T05:13:11Z",
+      "message": "Updated manifest text\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24709 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "84f0f3d619d4c0f39f9d0bea98bed72647a9bf5a",
+      "author": "blaisegassend",
+      "date": "2009-09-30T05:11:07Z",
+      "message": "Updated manifest text\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24708 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "f885856c6c18212ca6255611d3edddb4fdb11ffa",
+      "author": "blaisegassend",
+      "date": "2009-09-30T05:10:25Z",
+      "message": "Updated manifest text\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24707 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "35e4766ee2b859f349e65962b21c8bf850c859dc",
+      "author": "blaisegassend",
+      "date": "2009-09-30T05:08:47Z",
+      "message": "Updated manifest text\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24706 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "ff23d31553f24346a9205994ef7eb704c1c2d6f7",
+      "author": "blaisegassend",
+      "date": "2009-09-30T05:08:02Z",
+      "message": "Updated manifest text\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24705 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "d44286fc70bd4bc62cc2b8f8d136aa97eab577c5",
+      "author": "blaisegassend",
+      "date": "2009-09-30T04:42:24Z",
+      "message": "Updated manifest text\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24704 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "08c4fc30c1657a0180da4ff4c86c35764b009414",
+      "author": "blaisegassend",
+      "date": "2009-09-30T04:41:33Z",
+      "message": "Updated manifest text\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24703 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "179c108ceba5912580e1e5fc390712084cebd1a0",
+      "author": "paepcke",
+      "date": "2009-09-30T00:33:37Z",
+      "message": "Don't remember what all I did.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24698 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "62372e6c29995f6cfe5b4ceea41117de212804d5",
+      "author": "blaisegassend",
+      "date": "2009-09-29T23:44:19Z",
+      "message": "Capitalized Linux in stack manifest\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24694 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "856a3afdf932b89d675d5d8765b8ef0a133e916c",
+      "author": "paepcke",
+      "date": "2009-09-29T23:22:44Z",
+      "message": "Added rumble pulse control.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24691 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "14b25ce8e35b0ec43a77a7b4498ae065e195e913",
+      "author": "paepcke",
+      "date": "2009-09-29T20:44:03Z",
+      "message": "Added TimedSwitch message for rumble and LED control.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24670 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "7a9a0372a7d1820acba5bd9b8dd904492f0a09a9",
+      "author": "blaisegassend",
+      "date": "2009-09-29T19:13:15Z",
+      "message": "Added empty mainpage for spacenav_node\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24658 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "d7c70d7dcc70a21a29a81dca383d29e0fd12fd9b",
+      "author": "blaisegassend",
+      "date": "2009-09-29T17:31:03Z",
+      "message": "Removed obsolete code API and the copyrighted pictures it was using.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24643 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "e056e5daa431bac58aebff5b689747c304f692ea",
+      "author": "blaisegassend",
+      "date": "2009-09-29T17:19:09Z",
+      "message": "Removed debugging message.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24641 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "286d2070155c49b448e6011c82bbcafe257a6382",
+      "author": "blaisegassend",
+      "date": "2009-09-29T17:18:10Z",
+      "message": "Corrected deadzone scaling in joy_node.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24640 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "586f5c0457d09e34806dabbaf82ceef9869ccee0",
+      "author": "blaisegassend",
+      "date": "2009-09-29T17:17:45Z",
+      "message": "Corrected scaling and deadband on accelerometer and gyro for ps3joy\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24639 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "9fc5e08629c91784cbd60d1499264d9d4c9be2ef",
+      "author": "blaisegassend",
+      "date": "2009-09-29T16:28:16Z",
+      "message": "Corrected scaling on ps3joy accelerometer axes\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24636 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "d8f7b9e30e24787681c9930886a0040fe4fa965c",
+      "author": "paepcke",
+      "date": "2009-09-29T01:30:34Z",
+      "message": "Added first cut of rumble listener.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24623 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "e9a8d7ea90354aea88e2f72c53f264d4ed075c48",
+      "author": "paepcke",
+      "date": "2009-09-28T23:40:00Z",
+      "message": "Added IR sensor reports to wiimote message.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24605 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "9d309c9154949e7ded624fa3e53203202b13c620",
+      "author": "paepcke",
+      "date": "2009-09-28T16:32:02Z",
+      "message": "Added Wiimote comprehensive message sender.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24559 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "4e9a916f80e9cf8bf767d012023b3ed0a830927a",
+      "author": "blaisegassend",
+      "date": "2009-09-25T06:41:29Z",
+      "message": "Added myself as a coauthor for spacenav_node\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24496 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "454c4a8de637c36d8288a31a59149067b49598c0",
+      "author": "blaisegassend",
+      "date": "2009-09-25T06:13:29Z",
+      "message": "Added license information to ps3joysim.py\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24494 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "56fa2b7df486aa598f8bcc189fd93c8f0275ca65",
+      "author": "blaisegassend",
+      "date": "2009-09-25T06:07:37Z",
+      "message": "Removed redundant line from code documentation\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24493 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "fa344f7642f70e6fa0050a0b4b1decfff42b0763",
+      "author": "blaisegassend",
+      "date": "2009-09-25T06:01:34Z",
+      "message": "updated manifest description for spacenav\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24492 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "f4a6cc015bf2cd05577ae7d745d4f0bb9e999810",
+      "author": "paepcke",
+      "date": "2009-09-25T02:11:19Z",
+      "message": "Eliminated race condition that caught gyro with None values. Introduced a 10-sample warmup cycle to get gyro going.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24478 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "59e611f9b0b3607841e8e2a50837a1a880fa5dcc",
+      "author": "paepcke",
+      "date": "2009-09-24T21:43:30Z",
+      "message": "Moved wiimote_node.py from source dir to newly standard nodes directory sibling of src.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24464 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "0ae2ed45e24edeba10510648693f2bc7d0af279c",
+      "author": "paepcke",
+      "date": "2009-09-24T21:13:08Z",
+      "message": "Adjusted to very latest ROS code structure\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24462 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "c434ea6e1aab07d53f08867a063c2869a67365f9",
+      "author": "watts",
+      "date": "2009-09-23T22:31:25Z",
+      "message": "Adding '-1' option to remapper. If an element is -1, it maps to nothing\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24402 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "177c3fa061bcf5d8fe596bf40cfda3ab61aa99c2",
+      "author": "blaisegassend",
+      "date": "2009-09-23T18:42:43Z",
+      "message": "Corrected dependency: diagnostics instead of driver_common\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24378 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "c9c20c3ff78692de823ffb01feea6fcbf17a2318",
+      "author": "blaisegassend",
+      "date": "2009-09-23T17:31:30Z",
+      "message": "updating to release 0.3.0\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24367 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "6ce04feb83f5f36d9cd84aae64e15441c1640f64",
+      "author": "blaisegassend",
+      "date": "2009-09-23T17:25:22Z",
+      "message": "Updated license\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24366 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "98230e3a6636457eb2d6bf46be668602379580d6",
+      "author": "blaisegassend",
+      "date": "2009-09-22T16:37:43Z",
+      "message": "Beautified ps3joy error message when an unsupported bluetooth adapter is used.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24305 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "d0e5ef745e1ae146a8cd5c79e463975ffaeb6e0f",
+      "author": "blaisegassend",
+      "date": "2009-09-22T07:59:26Z",
+      "message": "Made ps3joy bail out fast when the adapter is unsupported. Mentions that Bluetooth 2.0 is needed.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24303 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "0874870866a200edc151472fe790f0a874359f13",
+      "author": "watts",
+      "date": "2009-09-22T03:36:04Z",
+      "message": "API and doc review complete #2772\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24299 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "c1b27448ec16fc49a9885be5a0564fb0b57a59dc",
+      "author": "blaisegassend",
+      "date": "2009-09-22T00:14:19Z",
+      "message": "Added error message when there is an unsupported bluetooth adapter for ps3joy.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24287 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "f818f50b46d652f6c26915c623aae753bbda49af",
+      "author": "mwise",
+      "date": "2009-09-21T21:21:48Z",
+      "message": "fixing my mistake\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24270 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "6e250cebed469bfc2dc72460af3daf3e6ed24d12",
+      "author": "blaisegassend",
+      "date": "2009-09-21T20:22:13Z",
+      "message": "Added proper handling of dead PS3 battery condition.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24268 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "4d355b0d711016b3add59a41ab260b12f208c3ce",
+      "author": "blaisegassend",
+      "date": "2009-09-19T08:49:43Z",
+      "message": "made the spacenav namespace non-absolute\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24243 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "26cad589586f75833e9b13e4feaf6c508de858cf",
+      "author": "blaisegassend",
+      "date": "2009-09-19T08:47:22Z",
+      "message": "Added a way to specify identity mapping is joystick_remapper\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24242 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "6f72427d084775bbde9bd5d333eabf4261758a8f",
+      "author": "blaisegassend",
+      "date": "2009-09-19T08:46:58Z",
+      "message": "Updated manifest description (mentions external documentation)\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24241 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "b098c1f1793e5bf70a61925292d7425e1e90ca68",
+      "author": "blaisegassend",
+      "date": "2009-09-19T08:01:31Z",
+      "message": "Fixed the manifest that I had broken.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24240 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "8abd95ee594a88c4edfade77665132d277209121",
+      "author": "blaisegassend",
+      "date": "2009-09-19T07:51:14Z",
+      "message": "Updated manifest message\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24239 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "cb4db36c3050e6e6a428813063410c68395365de",
+      "author": "blaisegassend",
+      "date": "2009-09-19T07:46:34Z",
+      "message": "Updated package summary in manifest.\n\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24238 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "743603ed7ec34f0d007e82ec10d752d1255ea891",
+      "author": "blaisegassend",
+      "date": "2009-09-19T07:37:02Z",
+      "message": "Added number of subscribers to diagnostics\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24237 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "8b2a732dda6fa2d06688b9e1f8726ac12e97aa38",
+      "author": "mwise",
+      "date": "2009-09-18T01:43:55Z",
+      "message": "change to debug\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24174 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "b5e3afc31f4cfe5cb6bdced3e10fd1a09757a9db",
+      "author": "paepcke",
+      "date": "2009-09-18T00:34:46Z",
+      "message": "\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24159 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "b94d2cab32ead0f7823d43f4821d9686747e0738",
+      "author": "mwise",
+      "date": "2009-09-18T00:06:19Z",
+      "message": "removing node dir\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24155 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "cdeb89ebe6ad74eaf561d3a85718be49bfb8858e",
+      "author": "mwise",
+      "date": "2009-09-18T00:05:36Z",
+      "message": "including joy dep, moving node, and making executable\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24154 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "4d335f497968d9538398609964e516294c59124c",
+      "author": "paepcke",
+      "date": "2009-09-17T23:30:26Z",
+      "message": "Added IMU and Joy broadcasts.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24151 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "46021263d5a26d22d6465c0b39afd47b7798aacb",
+      "author": "blaisegassend",
+      "date": "2009-09-17T23:10:48Z",
+      "message": "Added the ps3_joy_node replacement script.\n\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24149 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "9a98268902491c55b315d92451aae870961f890e",
+      "author": "paepcke",
+      "date": "2009-09-17T20:26:16Z",
+      "message": "Added IMU type messages, and removed messages\nof type wiimote_accel and wiimote_gyro.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24137 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "9889e1aac44dd0982d36a5be507f9d2cfc1ab13c",
+      "author": "paepcke",
+      "date": "2009-09-17T20:21:38Z",
+      "message": "Replaced the separate wiimote_accel.msg and wiimote_gyro.msg\nwith a single IMU message.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24135 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "d748eca581e281fb26d753716ae3a53bc1be4cc3",
+      "author": "blaisegassend",
+      "date": "2009-09-17T16:23:40Z",
+      "message": "Added a joystick_remapper node to remap joystick buttons and axes.\n\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24127 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "07adcaca0a8ab538788642ad8bc71d0939d0fa11",
+      "author": "blaisegassend",
+      "date": "2009-09-17T15:35:02Z",
+      "message": "Replaced socket.create_connection with call to socket() and connect() for python 2.5 support in ps3joysim.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24126 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "aba8751daa7e991bb38af6cd39eb756c91314db0",
+      "author": "mwise",
+      "date": "2009-09-17T00:08:28Z",
+      "message": "updating manifest and doc mainpage\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24111 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "a1b93a0599b8bb364e6988eb338a03236f4dd645",
+      "author": "blaisegassend",
+      "date": "2009-09-16T18:54:09Z",
+      "message": "Added copyright message to ps3joy.py\n\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24091 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "3c60b9871c323622f95011b43c3e94848dcb3aea",
+      "author": "blaisegassend",
+      "date": "2009-09-16T08:13:27Z",
+      "message": "Now joy_node does not preserve axis/button state between device close and open.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24086 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "433482306eaaec2c1e94152b763285e15ec526c5",
+      "author": "blaisegassend",
+      "date": "2009-09-16T08:05:28Z",
+      "message": "Set execute bit on joy deprecation script.\n\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24085 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "c9ab9b404f7ade8b5961ca1a455a9217586ec4c2",
+      "author": "blaisegassend",
+      "date": "2009-09-16T08:03:02Z",
+      "message": "Added diagnostics to joy_node, added bound checking to parameters, made recent changes more robust.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24084 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "d9c1e519d2350fd1f7046861407ac8333fbb7b97",
+      "author": "blaisegassend",
+      "date": "2009-09-16T05:37:55Z",
+      "message": "Applied Dallas's changes to improve the joystick initialization behavior,\nand to add an autorepeat capability.\n\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24083 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "9b9912d36490e7a1f5be13586c8be25ab725a740",
+      "author": "blaisegassend",
+      "date": "2009-09-16T05:36:29Z",
+      "message": "Fixed case typos in ps3joy.py and added some debugging statements to ps3joysim.py\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24082 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "3e2d0020a476120b89063e935109bbe21bc40830",
+      "author": "blaisegassend",
+      "date": "2009-09-16T03:42:27Z",
+      "message": "Killed unnecessary joystick nodes. Fixed up former txjoy, now it is called\njoy_node. Added scripts to continue support for old nodes with a\ndeprecation warning. Renamed Dual Axis into Dual Shock in ps3joy.py error\nmessages. \n\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24081 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "0d2724a8f377e64264e7572c8a8ec2954f4ba785",
+      "author": "watts",
+      "date": "2009-09-16T00:17:56Z",
+      "message": "txjoy now polls for port opening, and detects when joystick is closed\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24080 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "2c512833b07756f05d85920e840045f71f1d1b88",
+      "author": "paepcke",
+      "date": "2009-09-15T02:54:18Z",
+      "message": "Node now publishes Wiimote acceleration and gyro data.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24069 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "7fa18b24a4d4191be4e95ef527aa815c944bfef3",
+      "author": "blaisegassend",
+      "date": "2009-09-12T06:20:14Z",
+      "message": "Put in connection activated and connection deactivated messages\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24055 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "9f94a2ef1e10a6db3f70a0abfd8e863507b8ee9b",
+      "author": "blaisegassend",
+      "date": "2009-09-11T18:27:08Z",
+      "message": "Fixed bug in error message (incorrect variable name)\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24044 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "0a0bf21c44c9d919babce4bb6808873b0763d14d",
+      "author": "blaisegassend",
+      "date": "2009-09-11T08:08:48Z",
+      "message": "Improved manifest description formatting for joy\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24038 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "578bcfa0d727311219bc0cd25412e3a54a995bd8",
+      "author": "paepcke",
+      "date": "2009-09-11T02:35:50Z",
+      "message": "Switched to Trunk. Added nodes and msg directories. This version still does not find \nthe wiimote msg module.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24028 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "dc0f5d97e5814d5d7ac431239400ff9eba665d59",
+      "author": "paepcke",
+      "date": "2009-09-11T00:52:41Z",
+      "message": "Adjusted all for new stack setup. Added wiimote_node. Corrected manifest. \nAdded thread lock option to WIIMote.py.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24018 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "cfc87117a57ccad4d8fa37473348ab40bd2d2d37",
+      "author": "blaisegassend",
+      "date": "2009-09-10T23:21:05Z",
+      "message": "updating to release 0.2.0\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24010 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "2514aa0aa868a80cf5addf4d0926771c64fb7022",
+      "author": "blaisegassend",
+      "date": "2009-09-10T03:27:23Z",
+      "message": "added bluez dependency\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@23984 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "24c383789d3e628d4da0a2766e5ddcd054e39807",
+      "author": "blaisegassend",
+      "date": "2009-09-10T03:19:22Z",
+      "message": "updated ps3_joy_node.cpp to reflect corrected ps3joy.py scaling\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@23983 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "01efd74369bb7f268acf961e678bfde16fc2a0b3",
+      "author": "eitan",
+      "date": "2009-09-10T02:54:52Z",
+      "message": "Commenting out bluez dependency until it is properly added to rosdep.yaml\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@23982 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "2f03c6aa3033513ffdd010ae2409b004b8eee146",
+      "author": "blaisegassend",
+      "date": "2009-09-05T10:14:45Z",
+      "message": "Corrected ps3joy.py so that it outputs full range on analog outputs. Added\nps3joysim.py to simulate a joystick for testing.\n\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@23892 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "735cf7c778cd73bf35d110a8a3338e826ff0ed5f",
+      "author": "kwc",
+      "date": "2009-09-04T23:10:08Z",
+      "message": "migration part 1\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@23884 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "cf030b8f3f16d46c3ba29e17e7e7f7370d1ebb56",
+      "author": "blaisegassend",
+      "date": "2009-09-04T19:59:22Z",
+      "message": "Added an error message if bluez is not installed.\n\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@23858 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "17b5f67f7b6b1ec9a27589372613c19e37bd479f",
+      "author": "blaisegassend",
+      "date": "2009-09-04T19:56:44Z",
+      "message": "Added bluez as sysdep and made error message clearer.\n\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@23857 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "ff7d721fab5be644821638fdba3eea58a997c57e",
+      "author": "gerkey",
+      "date": "2009-09-04T07:38:43Z",
+      "message": "Removed numpy dependency\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@23822 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "77c059bfbf8332cd689fdcb19801dac1683d1535",
+      "author": "paepcke",
+      "date": "2009-09-04T01:16:47Z",
+      "message": "Added numpy dependency\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@23806 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "a9585cfbb450e92486e571d579f42babef7e6f49",
+      "author": "paepcke",
+      "date": "2009-09-03T21:31:32Z",
+      "message": "Uncommented message generation line.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@23789 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "81fec7046a837f00d0b0f18d84419dfbbf6433a8",
+      "author": "paepcke",
+      "date": "2009-09-03T18:44:46Z",
+      "message": "Added draft of published topics and commands. Will change.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@23773 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "5ea52c96b7cd1e54eb3463772973590ee1a43727",
+      "author": "morgan_quigley",
+      "date": "2009-09-03T06:59:48Z",
+      "message": "add local rosdeps for libusb and python-bluez for federated rosdep, so this is buildable by rosdistro\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@23757 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "e9fb2e3b31c664a42a1366f999c7ccc1a2cd6ffa",
+      "author": "wattsk",
+      "date": "2009-09-01T18:45:46Z",
+      "message": "Changing variable names to avoid ambiguity in PS3 node\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@23588 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "8a636397530518508857d3f74d5ee3a5358ebd84",
+      "author": "wattsk",
+      "date": "2009-09-01T18:42:54Z",
+      "message": "Added retry and sleep to open joystick to avoid errors at startup\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@23585 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "b66a9ab5fcaabfe0b51c34007dd66b7965db7094",
+      "author": "paepcke",
+      "date": "2009-09-01T00:51:52Z",
+      "message": "\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@23440 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "0224153835c3a8d1c0bd9030adf5b76d579623cb",
+      "author": "blaisegassend",
+      "date": "2009-08-31T18:05:58Z",
+      "message": "Created the wiimote package\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@23391 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "3a5b585f14d7b1426828cfa603a0358352eef9c6",
+      "author": "gerkey",
+      "date": "2009-08-26T21:12:03Z",
+      "message": "Added build files for distro\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@23027 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "5fe9ace09c86c858de22cd4d3347ec4f08d48d62",
+      "author": "gerkey",
+      "date": "2009-08-26T21:10:52Z",
+      "message": "Added dependency comment\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@23026 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "4b0bd5bea011d883a3d93fa81cc3f05b7cd17862",
+      "author": "sfkwc",
+      "date": "2009-08-26T19:34:14Z",
+      "message": "updated license\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@23007 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "eff48e7d2f7967ac69e7d2f54804905afc5efce4",
+      "author": "sfkwc",
+      "date": "2009-08-26T19:33:13Z",
+      "message": "url\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@23006 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "0ddefa162a5dacd129d966cc550323ab92c26140",
+      "author": "blaisegassend",
+      "date": "2009-08-25T21:17:15Z",
+      "message": "Reorganized the spacenav_node. Got rid of a bug that was causing publishing\nto happen about 50x too often. Got rid of a memory leak. Updated to\nNodeHandle API.\n\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@22893 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "3d4737363ae08b7cd7915c2f18cd9aa0a9397235",
+      "author": "blaisegassend",
+      "date": "2009-08-25T21:15:22Z",
+      "message": "Updated to upstream version 4.0 (r91).\nRemoved \"make install\" for spacenavd to avoid having multiple copies of\nbinaries.\n\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@22892 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "85711d88bcf50d45a423ed8add160ec68ed204c6",
+      "author": "blaisegassend",
+      "date": "2009-08-25T17:37:56Z",
+      "message": "Fixed up exception handling for ps3joy in response to #2457.\n\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@22856 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "69d2446f8e087c752e730a2f9332b44390882605",
+      "author": "blaisegassend",
+      "date": "2009-08-25T17:26:51Z",
+      "message": "Added python-bluez dependency.\n\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@22851 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "41de2681b579d01ea834e83601c70dbc33d1ecfd",
+      "author": "blaisegassend",
+      "date": "2009-08-25T15:56:53Z",
+      "message": "Updated package URLs.\n\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@22834 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "045ab65648b6e7e0bb14cb0fa129997e74a72cd0",
+      "author": "blaisegassend",
+      "date": "2009-08-24T22:44:08Z",
+      "message": "Moved spacenav and spacenav_node into joystick_drivers stack.\n\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@22776 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "89b89689c5147d7b9ed99cbe6b88395f7a5b2bf0",
+      "author": "mmwise",
+      "date": "2009-08-18T02:04:59Z",
+      "message": "changing print statement to be more user friendly\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@22094 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "a7eb5d28c4575b4b49ab3eec7e3e74c8d261c426",
+      "author": "morgan_quigley",
+      "date": "2009-08-17T06:53:02Z",
+      "message": "tweak opencv manifest to rename its rosdeps to more friendly-looking names, rather than copying the debian scheme. update the existing global rosdep.yaml so that 'old' rosdep works. add a bunch of stack rosdep.yaml files to federate rosdep2 across stacks. this partitioning of the rosdeps is just a starting point; I anticipate we'll have to shuffle these (mostly, moving them upstream over time)\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@21991 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "808a9953dc0b34bf68eac6ad5e30d358eb8fbc17",
+      "author": "blaisegassend",
+      "date": "2009-08-12T16:29:23Z",
+      "message": "Added joystick as a rosdep. This makes diagnosis tools like jstest\navailable.\n\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@21658 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "c59c6c36a4a633507573116b32848b15bc829141",
+      "author": "blaisegassend",
+      "date": "2009-08-12T09:47:07Z",
+      "message": "Improved usefulness of error messages, and reduced needless backtraces (on\nCtrl-C, for example)\n\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@21646 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "d6571e3349ba4a69b0108d7f1c5b101641dd9d56",
+      "author": "blaisegassend",
+      "date": "2009-08-12T05:29:53Z",
+      "message": "Exits if not run as root.\n\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@21637 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "443e8ae78f9c1ebacc0c7fa0314f9bd14a7c78b7",
+      "author": "blaisegassend",
+      "date": "2009-08-12T05:28:51Z",
+      "message": "Finished updating driver based on useability test.\n\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@21636 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "a7f97beac6bf21b82f84ba11394fd5c4e87d9b8e",
+      "author": "blaisegassend",
+      "date": "2009-08-12T05:12:47Z",
+      "message": "Applying useability changes to ps3joy: exception handling, no bluetooth\ndetection.\n\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@21635 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "39da6a178365a9c0fde26d2a5530b84ce7cc6c87",
+      "author": "wattsk",
+      "date": "2009-08-10T19:58:30Z",
+      "message": "Moved ps3_joy_node to ps3joy package, updated mainpage\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@21454 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "440006c92bd8d2aab0f354cef675af637d848eee",
+      "author": "sfkwc",
+      "date": "2009-08-09T23:29:03Z",
+      "message": "svn ignores\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@21277 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "55a6fcd1e4ac2a41666c620178ea0976c2112d13",
+      "author": "sfkwc",
+      "date": "2009-08-08T00:44:00Z",
+      "message": "#2256 removing from blacklist now that libusb-dev is in place\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@21103 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "338a09d88d8214aa70127933e9a7d30c4fa0b3ff",
+      "author": "blaisegassend",
+      "date": "2009-08-07T08:54:22Z",
+      "message": "Moved contents of ethercat_drivers to pr2_ethercat_drivers\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@21019 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "674f1274a36056bacb25121fcd62f43d47e45a2c",
+      "author": "sfkwc",
+      "date": "2009-08-07T02:00:11Z",
+      "message": "ps3joy: blacklisting for now #2256\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@20988 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "ee2ffc2abcb69702b8f55f6fe01762fc1c08662f",
+      "author": "sfkwc",
+      "date": "2009-08-07T01:30:35Z",
+      "message": "changed rosdep to libusb instead of libusb-dev #1542\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@20976 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "6a215ce9188be319d5b4d9ca3866b473288f5bb6",
+      "author": "sfkwc",
+      "date": "2009-08-07T01:20:37Z",
+      "message": "ps3joy: broken manifest\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@20972 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "81180393aeac04ef88b5d8a6c685ef7d14b0a561",
+      "author": "blaisegassend",
+      "date": "2009-08-07T00:29:58Z",
+      "message": "Added libusb-dev to manifest.\n\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@20962 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "cccb0d6743b7e9095041287dd625d14f7a9047ae",
+      "author": "blaisegassend",
+      "date": "2009-08-06T18:18:14Z",
+      "message": "Added pairing tools and instructions\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@20914 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "d6a3fe42e24ad768937dd50d346e41e23e050f27",
+      "author": "ehberger",
+      "date": "2009-08-05T18:20:13Z",
+      "message": "Creating stack.xml for stacks that are missing them\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@20799 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "d6d78135a6c447e2273386d6ef2b008945605070",
+      "author": "wattsk",
+      "date": "2009-07-29T19:00:48Z",
+      "message": "Dox update, added Watts as author for PS3 joy\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@20036 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "7e7b4fd18a968793b820e306fcb157e8706fa38f",
+      "author": "wattsk",
+      "date": "2009-07-28T22:45:27Z",
+      "message": "Fixed deadman turning off when run button pressed on joy and ps3_joy\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@19910 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "4ce8710520aa41a7ebd33567f9b71be38d2ece20",
+      "author": "wattsk",
+      "date": "2009-07-28T21:37:36Z",
+      "message": "Joystick driver documentation for Doxygen\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@19900 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "76dc319ab5dfe698b5a12eb4d8d140451a774c06",
+      "author": "wattsk",
+      "date": "2009-07-28T03:02:56Z",
+      "message": "New launch file for PS3 joystick only. Designed to launch separately on PRE\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@19818 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "8023630384adae009335daab87d0ed326196e1ab",
+      "author": "wattsk",
+      "date": "2009-07-28T01:18:00Z",
+      "message": "Made new driver for PS3 joystick and converted joy.cpp to NodeHandle API\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@19788 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "9571bab4cec7577340870ad4e2fc0104a12d6e28",
+      "author": "blaisegassend",
+      "date": "2009-07-27T17:41:59Z",
+      "message": "Robustified a bit more...\n\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@19720 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "4aca5d8f288c39e586bf11abf7e1fde0d2ba6009",
+      "author": "blaisegassend",
+      "date": "2009-07-27T09:21:15Z",
+      "message": "Took out spewing messages.\n\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@19710 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "ecda796aa59d1653b04288cbd129f2310be327b4",
+      "author": "blaisegassend",
+      "date": "2009-07-27T09:16:09Z",
+      "message": "Robustified and simplified the driver. Removed dependence on swiged kernel\nheaders.\n\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@19709 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "2df7ef2a886475d60db3d1118e14ad08b626918e",
+      "author": "blaisegassend",
+      "date": "2009-07-27T08:27:45Z",
+      "message": "Initial checkin.\n\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@19708 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "ced332ab9231bd8e9d74ba807524dea734307b66",
+      "author": "sfkwc",
+      "date": "2009-07-16T02:24:28Z",
+      "message": "svn ignores\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@18951 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "2f36c46144401be3ba9d92536b10ef5fb1598013",
+      "author": "morgan_quigley",
+      "date": "2009-06-24T06:20:10Z",
+      "message": "describe what the files are in the joy package in the manifest\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@17597 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "9b725a5e5e15eadff09b629e3c644f81bf812434",
+      "author": "tfoote",
+      "date": "2009-06-23T22:39:11Z",
+      "message": "creating joystick_drivers stack and populating\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@17568 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    }
+  ]
+}

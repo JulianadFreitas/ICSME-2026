@@ -1,0 +1,4338 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-06T23:57:47Z",
+    "source": "github_rest",
+    "endpoint": "/repos/{owner}/{repo}/commits",
+    "owner": "ros-drivers",
+    "repo": "velodyne",
+    "per_page": 100
+  },
+  "data": [
+    {
+      "sha": "56fc178d2dad4b6d38c6a69aeb2435ff75503e52",
+      "author": "Josh Whitley",
+      "date": "2025-08-28T19:46:46Z",
+      "message": "Only build supported distros"
+    },
+    {
+      "sha": "8e27aa6a7face38df13acf45bafddab5c28cf803",
+      "author": "Josh Whitley",
+      "date": "2025-08-28T03:51:03Z",
+      "message": "Allow workflow to be run manually"
+    },
+    {
+      "sha": "5d563a7272f6ee488b83326408ffcea9f07a5d74",
+      "author": "Josh Whitley",
+      "date": "2025-08-28T03:48:31Z",
+      "message": "Update CI to supported distros"
+    },
+    {
+      "sha": "2ecada9b78fcf66992efb260b55f90f8354170c8",
+      "author": "Mark B. Allan",
+      "date": "2025-08-28T03:44:55Z",
+      "message": "switch to yaml_cpp_vendor to ensure that the version that is used is the same as is used in core ros packages (#564)\n\nCo-authored-by: Mark B. Allan <Mark.B.Allan@nasa.gov>"
+    },
+    {
+      "sha": "0f2a3bb1dde4fa91cbafad8a3f9f89b66c2a1350",
+      "author": "Chris Lalancette",
+      "date": "2024-10-31T16:37:33Z",
+      "message": "2.5.1"
+    },
+    {
+      "sha": "5b50bbc6770cdc1fdad2a99c77ab57a8a4361400",
+      "author": "Chris Lalancette",
+      "date": "2024-10-31T16:37:25Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "68e721c387d0ff6a8374e285c8e36176be3d6bfc",
+      "author": "Chris Lalancette",
+      "date": "2024-10-31T16:36:47Z",
+      "message": "Fix compiling on RHEL-8. (#549)\n\nA workaround is needed for Eigen.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "9ae012c8ca2857628a5b5be985cbce8ebcc2d0bd",
+      "author": "Chris Lalancette",
+      "date": "2024-10-30T18:22:20Z",
+      "message": "2.5.0"
+    },
+    {
+      "sha": "74e8e09771406294860063714f0c96afbb2549ff",
+      "author": "Chris Lalancette",
+      "date": "2024-10-30T18:22:05Z",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "8a66a2e11ea41f3e14120e093cc3a3fce8b48469",
+      "author": "Chris Lalancette",
+      "date": "2024-10-30T18:19:43Z",
+      "message": "feat(config): make parameter 'enabled' dynamic (#548)\n\n* feat(config): make parameter 'enabled' dynamic\r\n\r\nSo that it can be used no run-time for enabling / disabling the driver.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>\r\nCo-authored-by: Rein Appeldoorn <rein.appeldoorn@nobleo.nl>"
+    },
+    {
+      "sha": "8a0a6636ebc8d5cf49f06bc2f153393626e54ff9",
+      "author": "Chris Lalancette",
+      "date": "2024-10-30T18:03:16Z",
+      "message": "Update the github workflow to build on all supported platforms. (#547)\n\n* Update the github workflow to build on all supported platforms.\r\n\r\nAnd to use non-outdated versions of the actions.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "1d9cce9515cc8dd64edbd652746adb25ff7cf030",
+      "author": "Chris Lalancette",
+      "date": "2024-10-30T17:26:31Z",
+      "message": "Clalancette/cmake cleanups (#546)\n\n* Small fixups to velodyne_msgs.\r\n\r\n* Heavily cleanup the velodyne_driver CMakeLists.txt.\r\n\r\nMake it use modern idioms.  This may or may not work with Humble.\r\n\r\n* Cleanup the velodyne_laserscan CMakeLists.txt.\r\n\r\nMake it use modern idioms.\r\n\r\n* Heavily cleanup the CMake for velodyne_pointcloud.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "9c005f5d333ca6ed44ce1e6f08fa7199c519ee6f",
+      "author": "g-kurz",
+      "date": "2024-10-30T15:57:09Z",
+      "message": "Fix exports (#535)\n\n* export includes and dependencies\r\n\r\n* export libraries\r\n\r\n* Fix up exports for velodyne_pointcloud.\r\n\r\nCo-authored-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "9f3104f3c52cd4000afda12fa7ff5032f6aa5cde",
+      "author": "Chris Lalancette",
+      "date": "2024-10-30T15:46:11Z",
+      "message": "Add in the Eigen dependency to velodyne_pointcloud (#545)\n\n* fix(build): add missing `eigen` dependency\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>\r\nCo-authored-by: Ananth Venkatesh <dev.quantum9innovation@gmail.com>"
+    },
+    {
+      "sha": "f8023608a594707945d2c883ba1e8ab401d9263a",
+      "author": "Thomas Emter",
+      "date": "2024-10-30T15:39:02Z",
+      "message": "Add package to compile in Jazzy (#539)\n\n* Add package to compile in Jazzy\r\n\r\nCo-authored-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "04a7ca722eaed13fe902366e0831717e91f9f77a",
+      "author": "Pierrick Koch",
+      "date": "2023-07-20T20:24:03Z",
+      "message": "Feature script add two pt ros2 (#498)\n\n* [velodyne_pointcloud] add_two_pt scripts\r\n\r\nsee issues: #109 #295\r\nand commit: f30d68735c47312aa73d29203ddb16abc01357f4\r\n\r\n* [velodyne_pointcloud] gen_calibration: add two_pt\r\n\r\nsee issues: #109 #295\r\nand commit: f30d68735c47312aa73d29203ddb16abc01357f4\r\n\r\n* [velodyne_pointcloud] add two_pt in params/64e_*\r\n\r\n* [velodyne_pointcloud] update test_calibration\r\n\r\n* Applying linter fixes for ROS2 port\r\n\r\n* Linter fix.\r\n\r\n---------\r\n\r\nCo-authored-by: Joshua Whitley <josh@electrifiedautonomy.com>"
+    },
+    {
+      "sha": "d2304ce2dd04c200e70426873dc89d8f1dd19ae9",
+      "author": "Taiga Takano",
+      "date": "2023-07-20T20:19:21Z",
+      "message": "delete unused valiable (#529)\n\nSigned-off-by: Taiga Takano <ttttghghnb554z@outlook.jp>"
+    },
+    {
+      "sha": "3353568859618d79244b4b6f002e500dd55ab64d",
+      "author": "Mateusz Szczygielski",
+      "date": "2023-06-16T20:02:12Z",
+      "message": "Add vert offset corrections to VLP16 calib file (#518)"
+    },
+    {
+      "sha": "f42e61f0c94e3483ab7c4940c114ded1cb7e7c73",
+      "author": "Joshua Whitley",
+      "date": "2023-06-01T04:30:48Z",
+      "message": "CI: Typo"
+    },
+    {
+      "sha": "83877ab38cf887cdc34e15f11faec8d3e3077809",
+      "author": "Joshua Whitley",
+      "date": "2023-06-01T04:19:46Z",
+      "message": "Add iron CI to ros2 branch (#519)"
+    },
+    {
+      "sha": "09e42ba8c3ba783e743fa2369f61a3a5313411fb",
+      "author": "Joshua Whitley",
+      "date": "2023-05-31T08:21:41Z",
+      "message": "Fix double-include."
+    },
+    {
+      "sha": "d38862a170e46342a1370f7b9b08992d699a4c31",
+      "author": "Daisuke Nishimatsu",
+      "date": "2023-05-29T08:41:00Z",
+      "message": "feat: support vls128 for ros2 (#493)\n\n* Update rolling ci (#512)\r\n\r\nFix Rolling CI and associated linter errors.\r\n\r\n* Add support for the velodyne Alpha Prime (#370)\r\n\r\n* Add support for the velodyne Alpha Prime\r\n\r\n* Change packet rate for the VLS128 according to the times specified in the manual\r\n\r\n* Organize setup functions to avoid code duplication. Add a constant for the model ID of the VLS128.\r\n\r\n* Use the defined constants to calculate the time offset of the points for the VLS128\r\n\r\nCo-authored-by: jugo <juan.gonzalez@unibw.de>\r\n\r\n* Add VLS128 launch and calibration file (#382)\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* vls128: add line only once all four banks are processed (#413)\r\n\r\nSigned-off-by: Sebastian Scherer (CR/AAS3) <sebastian.scherer2@de.bosch.com>\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix: apply uncrustify\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* Fixing incorrect type in velodyne_pointcloud.\r\n\r\n* Fixed non working vls128 fork\r\n\r\n* Added organized cloud compliance and remove some useless code\r\n\r\n* Corrected the azimuth offset calculation and put the declation of variable where there are used\r\n\r\n* Fix linter errors.\r\n\r\n---------\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\nSigned-off-by: Sebastian Scherer (CR/AAS3) <sebastian.scherer2@de.bosch.com>\r\nCo-authored-by: Joshua Whitley <josh@electrifiedautonomy.com>\r\nCo-authored-by: Institute for Autonomous Systems Technology <tas@unibw.de>\r\nCo-authored-by: jugo <juan.gonzalez@unibw.de>\r\nCo-authored-by: Sebastian Scherer <sebastian.scherer2@de.bosch.com>\r\nCo-authored-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\nCo-authored-by: Joshua Whitley <josh.whitley@autoware.org>\r\nCo-authored-by: Mtestor <mucevval@gmail.com>"
+    },
+    {
+      "sha": "9310473d4512c5b724b63985b5552f2312a28df4",
+      "author": "Joshua Whitley",
+      "date": "2023-05-28T13:14:56Z",
+      "message": "Update rolling ci (#512) (#513)\n\nFix Rolling CI and associated linter errors."
+    },
+    {
+      "sha": "96035bbd400381c7336c14cd8fd68786de5d7c56",
+      "author": "Joshua Whitley",
+      "date": "2023-05-27T13:15:10Z",
+      "message": "2.4.0"
+    },
+    {
+      "sha": "d0f4b71cc8ac0418aa6e8d4dc1795d15265ed84d",
+      "author": "Joshua Whitley",
+      "date": "2023-05-27T13:14:33Z",
+      "message": "Update CHANGELOGs for release."
+    },
+    {
+      "sha": "026a4f0d66969e7994cfd6557bb0eb59216b6db1",
+      "author": "Joshua Whitley",
+      "date": "2023-05-27T12:25:30Z",
+      "message": "Disable cut_angle by default. (#497)"
+    },
+    {
+      "sha": "00d793b5d8c760bd616c32789ead317c544807e5",
+      "author": "Daisuke Nishimatsu",
+      "date": "2022-12-08T22:10:49Z",
+      "message": "Add invalid points in organized cloud (#360) (#492)\n\n* Set NaN in ordered point cloud in case of no return\r\n\r\nSigned-off-by: Thomas Nuernberg  <thomas.nuernberg@de.bosch.com>\r\n\r\n* Adapt to current master\r\n\r\nSigned-off-by: Thomas Nuernberg <thomas.nuernberg@de.bosch.com>\r\n\r\n* consider min/max angle and timing_offsets also in organized mode\r\n\r\nSigned-off-by: Scherer Sebastian (CR/AAS3) <sebastian.scherer2@de.bosch.com>\r\n\r\nCo-authored-by: Nuernberg Thomas (CR/AEV4) <thomas.nuernberg@de.bosch.com>\r\n\r\nCo-authored-by: Sebastian Scherer <sebastian.scherer2@de.bosch.com>\r\nCo-authored-by: Nuernberg Thomas (CR/AEV4) <thomas.nuernberg@de.bosch.com>"
+    },
+    {
+      "sha": "65881cfe2e37c3aade4ad90c8a7c8c1a79a436f0",
+      "author": "Daisuke Nishimatsu",
+      "date": "2022-12-08T22:09:31Z",
+      "message": "Fixed row_step=0 when init_width=0 (dense cloud) (#404) (#494)\n\nThe PointCloud2 msg will be then valid: http://docs.ros.org/en/melodic/api/sensor_msgs/html/msg/PointCloud2.html\r\n\r\nReferred issues:\r\n * https://answers.ros.org/question/377470/rtabmap-icp_odometrycpp453callbackcloud-fatal-error/\r\n * http://official-rtab-map-forum.67519.x6.nabble.com/Condition-scan3dMsg-data-size-scan3dMsg-row-step-scan3dMsg-height-not-met-td7852.html\r\n\r\nCo-authored-by: matlabbe <matlabbe@gmail.com>"
+    },
+    {
+      "sha": "76cec0a6dc901416c5d4f8f8916f371e3150f74e",
+      "author": "Daisuke Nishimatsu",
+      "date": "2022-12-04T23:00:03Z",
+      "message": "Unify tf frame parameters between transform and cloud nodes (#344) (#453)\n\n* Unify tf frame parameters between transform and cloud nodes\r\n\r\nAt this point there is no need any more for cloud node because transform node includes all features of cloud node.\r\n\r\n* Reformat code slightly to avoid roslint errors\r\n\r\n* Use boost bind instead of lambdas to add support for kinetic\r\n\r\n* Fix some search and replace errors in comments\r\n\r\n* Add fixed_frame and target_frame params back\r\n\r\n* Use more common ROS terminology instead of 'htm'\r\n\r\n* Undo renaming of publisher and subscriber\r\n\r\n* Just use tf listener when necessary\r\n\r\n* Migrate package to tf2\r\n\r\n* Explicitly store sensor frame in a dedicated variable to make code easier to read\r\n\r\n* Reformat code slightly to avoid roslint errors\r\n\r\n* Avoid unnecessary transforms when sensor_frame == target_frame\r\n\r\n* Fix comments\r\n\r\nCo-authored-by: anre <andreas.reich@unibw.de>\r\n\r\nCo-authored-by: AndreasR30 <andreas-reich@live.de>\r\nCo-authored-by: anre <andreas.reich@unibw.de>"
+    },
+    {
+      "sha": "f149faf8392f6dee0387969bce5b518953c1fcf5",
+      "author": "Gianluca Bardaro",
+      "date": "2022-10-18T15:37:52Z",
+      "message": "using std::round to calculate the scan array size (#459)"
+    },
+    {
+      "sha": "37a2b71d7f2111616931339c850fb5bb23b96313",
+      "author": "Daisuke Nishimatsu",
+      "date": "2022-07-18T00:18:59Z",
+      "message": "fix: modify some tests (#452)\n\n* Fixing new linter errors.\r\n\r\n* Changing command for running tests.\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* remove relative file path\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* remove unnecessary main\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix: restore hdl64e s2 float intensities test\r\n\r\nSigned-off-by: Daisuke Nishimatsu <border_goldenmarket@yahoo.co.jp>\r\n\r\nCo-authored-by: Joshua Whitley <jwhitley@autonomoustuff.com>"
+    },
+    {
+      "sha": "81fbc6e23c576711ae69bb82877e06ffea42f8f6",
+      "author": "Joshua Whitley",
+      "date": "2022-07-08T17:25:04Z",
+      "message": "2.3.0"
+    },
+    {
+      "sha": "f8ba9da2776bc7db0417343227cc32c3473f4198",
+      "author": "Joshua Whitley",
+      "date": "2022-07-08T17:24:36Z",
+      "message": "Updating for new Galactic, Humble, and Rolling Releases."
+    },
+    {
+      "sha": "fdb9b47d46ad1660d6cf8383dcca1e869f06cdae",
+      "author": "Daisuke Nishimatsu",
+      "date": "2022-03-05T07:10:33Z",
+      "message": "Passing fixed_frame and target_frame to Convert object. (#330) (#451)\n\nCo-authored-by: Joshua Whitley <jwhitley@autonomoustuff.com>"
+    },
+    {
+      "sha": "c37c2eab1e668dfd633caaa87d96420a66ea2bf0",
+      "author": "Daisuke Nishimatsu",
+      "date": "2022-03-05T07:08:26Z",
+      "message": "Updating maintainer email address. (#450)\n\n* Updating maintainer email address.\r\n\r\n* chore: update maintainer email address\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\nCo-authored-by: Joshua Whitley <jwhitley@autonomoustuff.com>"
+    },
+    {
+      "sha": "d7f4697ed9cccf93025c398dc36e18e693e0c2f3",
+      "author": "Daisuke Nishimatsu",
+      "date": "2022-02-03T22:35:49Z",
+      "message": "Add per point time field (#440)\n\n* Initial commit to timestamp each point using the timing spec in the manuals\r\n\r\n* Added model param to each of the cloud nodelet starters\r\n\r\n* Minor cleanup. added author tag to rawdata\r\n\r\n* Move timing offsets functionality into class private. Also fix linter errors\r\n\r\n* added #include <vector> for linter\r\n\r\n* fix: suppress compiler warning\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* feat: change XYZIR to XYZIRT\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\nCo-authored-by: Shawn Hanna <shawn@kaarta.com>"
+    },
+    {
+      "sha": "38652b7b0b5ab8685109171336ba553bb997591e",
+      "author": "Stephan Sundermann",
+      "date": "2022-02-03T22:34:47Z",
+      "message": "Link against yaml-cpp (#443)"
+    },
+    {
+      "sha": "8c0e6737963571402e1611cb569b22ae5af15170",
+      "author": "Chris Lalancette",
+      "date": "2022-01-06T15:54:01Z",
+      "message": "Fix small warnings from build and test.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "0c1477a26c58b89e706b79dac7e9e987f64fe691",
+      "author": "Daisuke Nishimatsu",
+      "date": "2022-01-06T15:22:21Z",
+      "message": "fix: use rclcpp logger instead of perror\n\nCo-authored-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "4f58e982bcc52e80ecfb8e477f0a31eebce35d11",
+      "author": "Nagy Dániel Zoltán",
+      "date": "2021-11-11T19:03:07Z",
+      "message": "reuse Velodyne UDP port (#427)"
+    },
+    {
+      "sha": "9cf78f4057e6515e9f4e7133e185a1f70bfb521a",
+      "author": "Daisuke Nishimatsu",
+      "date": "2022-01-05T16:30:32Z",
+      "message": "Increase the max_range of the 32C launch file (#323) (#441)\n\nCo-authored-by: Shawn Hanna <50845122+kaarta-SHanna@users.noreply.github.com>"
+    },
+    {
+      "sha": "defec244b785522a05e0f8bc80c8e12bb02dc51d",
+      "author": "Daisuke Nishimatsu",
+      "date": "2022-01-05T14:57:43Z",
+      "message": "Added config option to timestamp a full scan based on first velo packet instead of last packet (#436)\n\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\nCo-authored-by: Shawn Hanna <shawn@kaarta.com>"
+    },
+    {
+      "sha": "9d493c92ff65570db6759623c77fa6dd8be41251",
+      "author": "Daisuke Nishimatsu",
+      "date": "2022-01-05T14:57:10Z",
+      "message": "fix for #267, transform each packet (#438)\n\n* fix for #267, transform each packet\r\n\r\n* fix: fix scope of access modifiers\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\nCo-authored-by: Sebastian <spuetz@uos.de>"
+    },
+    {
+      "sha": "ce3f03942b0b3905168f9c82eabecfb1b7765199",
+      "author": "Daisuke Nishimatsu",
+      "date": "2022-01-05T13:27:28Z",
+      "message": "Add laserscan support for new PointXYZIR structure (#316) (#439)\n\n* Add laserscan support for new PointXYZIR structure\r\n\r\n* Support PointCloud2 offsets that are multiples of 4\r\n\r\nCo-authored-by: Kevin Hallenbeck <khallenbeck@dataspeedinc.com>"
+    },
+    {
+      "sha": "3c6b0c5ba44b201f95cab004aef30a39fde584bd",
+      "author": "Keane Quigley",
+      "date": "2022-01-04T15:22:15Z",
+      "message": "Replace deprecated argument names in launch (#430)"
+    },
+    {
+      "sha": "8471671b09320fa234766797a2067069884096c3",
+      "author": "Joshua Whitley",
+      "date": "2021-08-23T18:40:03Z",
+      "message": "Updating Github Actions to Galactic"
+    },
+    {
+      "sha": "a87805d0c26c9a41002a0535bf0b53c72aa43027",
+      "author": "Joshua Whitley",
+      "date": "2021-08-23T18:29:55Z",
+      "message": "2.1.1"
+    },
+    {
+      "sha": "629ab46848549867f232b2481c1499a775222a6c",
+      "author": "Joshua Whitley",
+      "date": "2021-08-23T18:29:41Z",
+      "message": "Updating for first Galactic release"
+    },
+    {
+      "sha": "c8e549000ab0fdbed785389bb65778c540cbde53",
+      "author": "Chris Lalancette",
+      "date": "2021-04-12T15:39:54Z",
+      "message": "Minor fixes to string formatting. (#396)\n\nThese changes will allow velodyne to compile without warnings\r\non Rolling (soon to be Galactic).  The changes are also backwards\r\ncompatible to Foxy if we want to backport them.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "9a4d5ee79c7f72584cd01508e256df1cc32ed2e0",
+      "author": "Chris Lalancette",
+      "date": "2021-04-12T13:35:09Z",
+      "message": "Fix action CI. (#398)\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "12ff351cf3b8ef9ee74e7dc50d0097ac373be59f",
+      "author": "Joshua Whitley",
+      "date": "2020-07-18T01:40:21Z",
+      "message": "CI: Trying to fix bug with keyboard-configuration in action-ros-ci."
+    },
+    {
+      "sha": "8b9e7bef6e22369d3e39f1cdcf5af3b0c59ea05b",
+      "author": "Joshua Whitley",
+      "date": "2020-07-18T01:24:48Z",
+      "message": "Updating README with GA badge."
+    },
+    {
+      "sha": "2def81af6e0c660af3c7da418bf60310bd6f5f85",
+      "author": "Joshua Whitley",
+      "date": "2020-07-18T01:24:18Z",
+      "message": "CI: Adding Github Actions for Foxy."
+    },
+    {
+      "sha": "81db4859ff833752fbe60c7f6813af81d7545c65",
+      "author": "Joshua Whitley",
+      "date": "2020-07-18T01:23:13Z",
+      "message": "CI: Removing CircleCI config."
+    },
+    {
+      "sha": "43c78f25ff5b11240fb184f8b098129ba9ebf1b1",
+      "author": "Joshua Whitley",
+      "date": "2020-07-10T17:52:13Z",
+      "message": "2.1.0"
+    },
+    {
+      "sha": "4193e0808ea7a7cb9ead816f33003e14c07811f0",
+      "author": "Joshua Whitley",
+      "date": "2020-07-10T17:52:03Z",
+      "message": "Updating CHANGELOGs for Eloquent and Foxy releases."
+    },
+    {
+      "sha": "fdca5a79051bd3d0067a5bc908c9e6488e43434b",
+      "author": "Joshua Whitley",
+      "date": "2020-07-10T16:34:41Z",
+      "message": "CI: Adding Eloquent build."
+    },
+    {
+      "sha": "e3c83338e7588bf7802d9767fe082c4caccf4475",
+      "author": "Joshua Whitley",
+      "date": "2020-07-09T17:47:50Z",
+      "message": "Fixing Foxy-specific uncrustify errors."
+    },
+    {
+      "sha": "8d8a35690413646370d1f939ab3a518e391ecfd1",
+      "author": "Joshua Whitley",
+      "date": "2020-07-09T17:18:10Z",
+      "message": "Fixing CI bug with keyboard-configuration package."
+    },
+    {
+      "sha": "6cd17b4db04def7cf04e1555fb04568e477c7a75",
+      "author": "Joshua Whitley",
+      "date": "2020-07-09T17:01:55Z",
+      "message": "CI: Targeting Foxy."
+    },
+    {
+      "sha": "8184845f0f18b98f1f537eb1a1f8be64cb6fe493",
+      "author": "Joshua Whitley",
+      "date": "2020-07-10T17:20:02Z",
+      "message": "2.0.0"
+    },
+    {
+      "sha": "57001be8e4c5033be6880c11c5400a431cc34cb3",
+      "author": "Joshua Whitley",
+      "date": "2020-07-10T17:19:22Z",
+      "message": "Updating CHANGELOGs for Dashing release."
+    },
+    {
+      "sha": "59505626b6139ec4b2ce0fd7a497965d12248582",
+      "author": "Chris Lalancette",
+      "date": "2020-02-21T17:05:22Z",
+      "message": "More fixing of dependencies. (#333)\n\n* More fixing of dependencies.\r\n\r\n1.  Ensure that package.xml lists all of the test dependencies\r\nneeded.\r\n2.  Ensure that velodyne_cloud_types depends on rclcpp.\r\n3.  Make sure test_row_step depends on geometry_msgs and\r\nsensor_msgs.  It doesn't have any *direct* dependencies on\r\nthem, but it includes datacontainerbase.hpp which does have\r\ndirect dependencies.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Fixes from review.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "0dc0e9014bd31753f70da1fdb90ade3b93b8ccdf",
+      "author": "Chris Lalancette",
+      "date": "2020-02-18T22:15:47Z",
+      "message": "Fix dependencies in package.xml (#331)\n\nEnsure that we depend on ament_cmake_ros as appropriate.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "ad47b96724ace38bee47537c04edd03512f57ba5",
+      "author": "Joshua Whitley",
+      "date": "2020-02-17T20:20:16Z",
+      "message": "Updating README.md."
+    },
+    {
+      "sha": "ec9adec6a523ab705ee526b06141aa9ad8d43c4f",
+      "author": "Michel Hidalgo",
+      "date": "2019-12-11T19:49:25Z",
+      "message": "Fix ring retrieval from float pointcloud iterator. (#322)\n\n* Fix ring retrieval from float pointcloud iterator.\r\n\r\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>\r\n\r\n* Explain fix in a comment.\r\n\r\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>"
+    },
+    {
+      "sha": "8091dda8fe6fb1869963187ce593d11e5f80062d",
+      "author": "Chris Lalancette",
+      "date": "2019-11-11T13:48:03Z",
+      "message": "Fixes pointed out by clang-tidy (#310)\n\n* Rearrange header includes so clang-tidy is happy.\r\n\r\nThe ament checkers are also happy with this arrangement.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Get rid of unnecessary void arguments on methods.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Properly mark methods as override where appropriate.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Initialize members and stack variables to zero before use.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Mark function implementations in header files 'inline'.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Use more efficient 'empty' method instead of empty string.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Get rid of unnecessary else statements after a continue/return.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Get rid of unnecessary == false use.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Make sure to add a virtual destructor to DataContainerBase.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Use string != comparison instead of 'compare' method.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Rename PointcloudXYZIR parameter name to match implementation.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Get rid of usage of typedef.\r\n\r\nAlso use C++-style reinterpret_cast instead of C-style cast.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Be more explicit about using floats.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Do an explicit lround to do int->float conversion.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Fix the intensity calculation.\r\n\r\nThere are a few problems.  First is that it was doing an\r\ninteger divide, which seems like it would be always 0.  Second,\r\nthe number that was being used was the raw integer, not the\r\ndistance.  Finally, the order of operations meant that it wasn't\r\nactually implementing the algorithm shown in the VLP documentation.\r\nThis commit fixes all of those problems.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Remove the azimuth from addPoint.\r\n\r\nNone of the implementations use it.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Make sure to reset the cloud data to 0 before reusing.\r\n\r\nWe were seeing artifacts in the organize_cloud case that this removes.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Use underscores on pointcloud member variables.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Using std::lround means we don't need to add 0.5 to the result.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Slightly rearrange and simplify range checks.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Add in example launch files for VLP32C.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "d67bbe206350d704f9834ff2e2683bd6c724d7f7",
+      "author": "Chris Lalancette",
+      "date": "2019-11-07T15:41:57Z",
+      "message": "A few more minor style updates. (#308)\n\n- Get rid of the last users of new in the codebase\r\n- Get rid of the users of 'using' in the codebase\r\n- Rename 'calibrationFile' -> 'calibration_file'\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "80777a1b27f6f020325562ea7000079732ae6168",
+      "author": "Chris Lalancette",
+      "date": "2019-11-06T15:13:00Z",
+      "message": "Dashing fixes (#307)\n\n* Use std::make_unique as appropriate.\r\n\r\nThis lets us get rid of calls to 'new', and is the more\r\nmodern way to store unique pointers.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Fix the azimuth calculation.\r\n\r\nThis really puts it back to what it used to be, which seems\r\nto fix a bug where the scans would be intermittent.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Fix a crash during driver startup.\r\n\r\nSince we are doing a std::move of the scan, we can't access\r\nthe stamp afterwards to get the stamp.  Store the stamp before\r\nwe std::move it so we can use it later.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Always recalculate the row_step while setting up the cloud.\r\n\r\nWithout this, the published pointclouds get slower and slower.\r\nJust recalculate the row_step every time, which isn't really\r\nexpensive anyway.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Make sure to call computeTransformation.\r\n\r\nThis has side-effects for the class, so we can't just eliminate\r\nit.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Fix style errors pointed out by flake8.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "cae2820566ec84cd3719692a158ce698326ce8cb",
+      "author": "Joshua Whitley",
+      "date": "2019-11-05T23:57:57Z",
+      "message": "ROS2: Add Linters to velodyne_driver (#301)\n\n* Renaming files to match ROS2 conventions.\r\n\r\n* Cleaning up velodyne_driver and fixing diags.\r\n\r\n* velodyne_driver linting complete.\r\n\r\n* VD: Removing unused namespace."
+    },
+    {
+      "sha": "36c61396970096dcce64ccff6a41eaa7a6e8f5a3",
+      "author": "Joshua Whitley",
+      "date": "2019-11-05T23:48:31Z",
+      "message": "ROS2: Add Linters to velodyne_pointcloud (#304)\n\n* VP: Renaming files.\r\n\r\n* VP: Fixed copyrights.\r\n\r\n* VP: cpplint is satisfied!\r\n\r\n* VP: Converted gen_calibration.py to Python3.\r\n\r\n* Uncrustify fixed!\r\n\r\n* VP: Lint errors clear.\r\n\r\n* VP: Moving organized_cloud and pointcloud to lib and building as library."
+    },
+    {
+      "sha": "19b72fe8a38509b47625b82cb4aefc47b493c169",
+      "author": "Joshua Whitley",
+      "date": "2019-11-05T16:02:32Z",
+      "message": "Adding linters to velodyne_msgs. (#302)"
+    },
+    {
+      "sha": "6037c69a92dfdf41deb4c01d958da6953ab3de9e",
+      "author": "Joshua Whitley",
+      "date": "2019-11-05T16:01:56Z",
+      "message": "ROS2: Add Linters to velodyne_laserscan (#303)\n\n* Adding tests and updating file naming.\r\n\r\n* Fixing copyright and xml issues.\r\n\r\n* Fixing linter stuff on velodyne_laserscan.\r\n\r\n* Fixing typo in conversion."
+    },
+    {
+      "sha": "da00ed11da38896c7fb49280185894a4e611e8cc",
+      "author": "P. J. Reed",
+      "date": "2019-10-30T20:49:48Z",
+      "message": "Check for intra-process subscribers\n\nWhen running as a composed node in a container, the usual\n`get_subscription_count()` method may return 0; it's necessary to also\ncheck `get_intra_process_subscription_count()`.\n\nDistribution Statement A; OPSEC #2893\n\nSigned-off-by: P. J. Reed <preed@swri.org>"
+    },
+    {
+      "sha": "e84f136fdc0132798da8e73fcd2906ecc57a064c",
+      "author": "Chris Lalancette",
+      "date": "2019-10-22T18:06:12Z",
+      "message": "Switch the style on scope-constants to google style.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "d667b6affb4a6a7c0c5a23f994510fc5fb0e7e46",
+      "author": "Chris Lalancette",
+      "date": "2019-10-10T15:45:04Z",
+      "message": "Add in example launch files.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "1896477b106749f7f2f0c417ff9f71d08197e225",
+      "author": "Chris Lalancette",
+      "date": "2019-10-03T19:21:01Z",
+      "message": "Disable copy, move, and assign operators.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "1e2d732127190449cb5750c3c4e45def84a7bf22",
+      "author": "Chris Lalancette",
+      "date": "2019-09-30T20:05:17Z",
+      "message": "Minor fixes.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "d75082861349eef96b5f9488db4c45ca1e411cc5",
+      "author": "Chris Lalancette",
+      "date": "2019-09-30T14:20:20Z",
+      "message": "Build the components so the velodyne can be run as a component.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "2db179135920839006b838f5a8a8bb49488dd202",
+      "author": "Chris Lalancette",
+      "date": "2019-09-30T13:22:21Z",
+      "message": "Add in NodeOptions to node constructors.\n\nThis is to prepare it for componentization.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "396ceca845b7784b37a5a4cbca6315661467c351",
+      "author": "Chris Lalancette",
+      "date": "2019-09-30T13:13:59Z",
+      "message": "Only find the \"common\" component to PCL.\n\nWe only need the common bits, and this silences some warnings\nthat come out of the PCL CMake machinery on Ubuntu Bionic.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "3ab183f24d17f736acbc0e6cb66e8de80b505e5b",
+      "author": "Chris Lalancette",
+      "date": "2019-10-04T20:19:20Z",
+      "message": "Make sure to install the header files for laserscan and pointcloud.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "411479ce004fc5212b795aa1e9f6ccf4b2a1a6ea",
+      "author": "Chris Lalancette",
+      "date": "2019-10-03T18:44:28Z",
+      "message": "Properly setup the row_step.\n\nWe were setting it up too early, so that it was always zero.\nInstead move it (and everything else that doesn't change)\ninto the constructor.  Also add a test to make sure it is\nbeing properly setup.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "11d0ea5d0f112771bf21299f5777dd5064a67233",
+      "author": "Chris Lalancette",
+      "date": "2019-08-01T15:30:31Z",
+      "message": "Switch to RCLCPP_WARN_ONCE.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "273fc7acce6ecbe5c6852c3a8b7dc277812c25f6",
+      "author": "Chris Lalancette",
+      "date": "2019-07-25T19:59:29Z",
+      "message": "Make sure to only print the \"slower generic method\" message once.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "cbef3c591a2ba2c7390c04a6882e442e27e0b99f",
+      "author": "Chris Lalancette",
+      "date": "2019-07-25T19:58:56Z",
+      "message": "Throw an exception for an invalid Velodyne model.\n\nIt's much better to fail early here and let the user know\nthey've done something we don't expect.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "a5d87b5d23052cb16357ea63b480a6be6d43a0ec",
+      "author": "Chris Lalancette",
+      "date": "2019-07-24T14:03:07Z",
+      "message": "Add explicit, final, and override to classes where appropriate.\n\nThis just gives the compiler and reader a few more hints as\nto how the classes are used.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "f5e09cb93b8ed940cac7b40d62e3f9439efbbeb0",
+      "author": "Chris Lalancette",
+      "date": "2019-07-08T19:48:56Z",
+      "message": "Remove organize_cloud, fixed_frame, and target_frame configs.\n\nThe node classes don't need it, so just pass along the values\nto the 'has-a' classes that do.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "3b670ef0a6754595154b0ec8d47060ef450d2aad",
+      "author": "Chris Lalancette",
+      "date": "2019-07-08T19:26:23Z",
+      "message": "Stop storing view_{direction,width} in the Node classes.\n\nThe helper 'has-a' classes need it, but the Node classes\nthemselves don't need to hold onto them.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "aacb9b387d04e62703aa10a76fe8ed4ce3f40090",
+      "author": "Chris Lalancette",
+      "date": "2019-07-08T19:23:27Z",
+      "message": "Stop storing {min,max}_range in the Node classes.\n\nThey don't actually need to know the information; their helper\n'has-a' classes do, but we can just pass along the information\nas we get it.  No need to store it.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "dadd32581e5496e865b422ab891687d9f26a9488",
+      "author": "Chris Lalancette",
+      "date": "2019-07-08T19:15:51Z",
+      "message": "Make DataContainerBase::configure const reference string parameters.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "029746206124484a46654056cf7361b174301399",
+      "author": "Chris Lalancette",
+      "date": "2019-07-08T19:09:12Z",
+      "message": "Switch argument order to always be (min,max)\n\nAt least it is then always consistent.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "edee84ee8d828b7ffc1b89ebd3b0806ea3e2c33b",
+      "author": "Chris Lalancette",
+      "date": "2019-07-08T19:06:14Z",
+      "message": "Remove tmp_{min,max}_angle from stored RawData config.\n\nThey are both only needed as temporaries.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "f50c514eaed56f8e01f51dc2ef66561de2dba456",
+      "author": "Chris Lalancette",
+      "date": "2019-07-08T19:04:33Z",
+      "message": "Remove unused tf_ptr.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "cb4c09b8e86401e9ecc32652b30884975cf4ccc2",
+      "author": "Chris Lalancette",
+      "date": "2019-07-08T19:02:37Z",
+      "message": "Switch container_ptr to a unique_ptr.\n\nThere is no reason for it to be a shared pointer.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "88e1ee3506fbb933da400427f7f421436865a147",
+      "author": "Chris Lalancette",
+      "date": "2019-07-08T19:01:15Z",
+      "message": "container_ptr -> container_ptr_\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "6209598a37c639b262df6a5303b827b0c9e1f1a6",
+      "author": "Chris Lalancette",
+      "date": "2019-07-08T18:58:51Z",
+      "message": "Don't store number of lasers in the Transfrom/Convert node.\n\nThe lower layers already have the information.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "d0c16e176a55e79631a74c5415f1f95b9cc71e4b",
+      "author": "Chris Lalancette",
+      "date": "2019-07-08T18:55:40Z",
+      "message": "Make the RawData class RAII-style.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "62abd157d1799782fc73efe50e02f5fdc48495d4",
+      "author": "Chris Lalancette",
+      "date": "2019-07-08T18:50:44Z",
+      "message": "Make RawData::setup not return the number of lasers.\n\nInstead, get the data directly from a method as necessary.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "4ef082b97c059610a20c3c8e1145840f64144ca7",
+      "author": "Chris Lalancette",
+      "date": "2019-07-08T18:44:50Z",
+      "message": "Remove unused laser_corrections_maps.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "d4177611d888a29972ab179e2283e84c3c823788",
+      "author": "Chris Lalancette",
+      "date": "2019-07-08T18:43:22Z",
+      "message": "Remove the calibration read method.\n\nIt is now redundant, and we can do everything in the constructor\nfor an RAII-style class.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "142e884fd51627d07aef42ee8ef34f107ccd9aa1",
+      "author": "Chris Lalancette",
+      "date": "2019-07-08T18:36:41Z",
+      "message": "Make the Calibration class only have the RAII-style constructor.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "d5c4b5a20364a8a213ab53e15770d655cd5daf63",
+      "author": "Chris Lalancette",
+      "date": "2019-07-08T18:31:34Z",
+      "message": "Remove unnecessary ros_info parameter from Calibration.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "1e112c41d9c7c5a8f388912cbb3e698db775f220",
+      "author": "Chris Lalancette",
+      "date": "2019-07-08T18:29:30Z",
+      "message": "Remove unused calibration write method.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "602b4f50f25b284240e1d688c733141b2c15e3c7",
+      "author": "Chris Lalancette",
+      "date": "2019-07-08T18:16:52Z",
+      "message": "Remove unused setupOffline method.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "229c2de69a3dbb4c8af696fb82dffd2fa0f5e420",
+      "author": "Chris Lalancette",
+      "date": "2019-07-08T18:13:14Z",
+      "message": "Remove calibrationFile from rawdata config.\n\nIt is never used outside of the setup* routines, so don't\nbother storing it.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "41543f6547311be67da231a5ae46037ecaabe524",
+      "author": "Chris Lalancette",
+      "date": "2019-06-28T19:16:34Z",
+      "message": "Switch to using nullptr everywhere.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "ee8a216dff4e40fad83cf8497677abf74d1dcca8",
+      "author": "Chris Lalancette",
+      "date": "2019-06-28T19:11:33Z",
+      "message": "Pass read_once, read_fast, and repeat_delay to InputPCAP constructor.\n\nThis gets rid of get_parameter calls at the InputPCAP layer.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "7f6957f58ce9b3dfe13c904d686c98b632ae5823",
+      "author": "Chris Lalancette",
+      "date": "2019-06-28T19:09:26Z",
+      "message": "Change filename parameter to const reference.\n\nIt should have slightly better performance.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "baf22745485d23b21f9a18047d61bb1f135295c4",
+      "author": "Chris Lalancette",
+      "date": "2019-06-28T19:07:59Z",
+      "message": "Pass the devip string into the Input* constructors.\n\nThat way there are no get_parameters down at the Input layer.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "763f23f05e548fa3cae368e352e5a2fb2b41f9fb",
+      "author": "Chris Lalancette",
+      "date": "2019-06-28T19:04:44Z",
+      "message": "Move gps_time into the InputSocket class.\n\nIt isn't a generic property of Input; it is a specific property\nof InputSocket.  Move it there, and pass the value in during\nthe constructor.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "f2e65bf552f71a1a562d144e83da09f7e866b213",
+      "author": "Chris Lalancette",
+      "date": "2019-06-28T19:02:55Z",
+      "message": "Get rid of default parameters for Input* constructors.\n\nThe users should be very deliberate about what they want the\nclass to do, so get rid of default parameters.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "6789ef3fa7eb96466e44d679ca7bbc8b762e5d71",
+      "author": "Andreas Klintberg",
+      "date": "2019-07-06T05:12:54Z",
+      "message": "fixed timpepoint issue"
+    },
+    {
+      "sha": "29ff7e10fb717eaf56ee59deb37d88f8d75d8b61",
+      "author": "Chris Lalancette",
+      "date": "2019-07-03T15:33:50Z",
+      "message": "Remove dead store from rawdata.cc\n\nclang static analysis pointed out that distance is stored\nto, but never read.  It looks like it is probably the result\nof a bad merge, so just remove the unused variable.  Also\ndo a bit of style cleanup while we are in here.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "82d38c4ca7ca55d44ed8aab6584f5093e5982101",
+      "author": "Chris Lalancette",
+      "date": "2019-06-26T12:14:47Z",
+      "message": "Rename nodes.\n\nAs discussed in https://github.com/ros-drivers/velodyne/pull/251,\nwe should make the default node names a lot more consistent.\nHere, rename the nodes to all be\nvelodyne_{driver,convert,transform,laserscan}_node.  I also\nrenamed the \"cloud_node.cc\" file to be \"convert_node.cc\", so it\nmatches the rest of the code.  Finally, I removed the unused\nnodelets.xml file from velodyne_pointcloud.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "6997a439792139447c25f2a6688a2453056a66dc",
+      "author": "Chris Lalancette",
+      "date": "2019-06-28T15:38:48Z",
+      "message": "Switch organize_cloud to true by default.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "7dbd2ee33bd4f70f16c7e076ca489bd299f9378d",
+      "author": "Chris Lalancette",
+      "date": "2019-06-26T12:44:01Z",
+      "message": "Update the documentation for ROS 2.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "ba10c77fc4d4ba30498b6190d36be71b9b054157",
+      "author": "Chris Lalancette",
+      "date": "2019-06-26T13:15:15Z",
+      "message": "Switch to using the cut angle by default.\n\nThis ensures that we get a full scan rotation, not just\na somewhat variable number of packets.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "54feb7298dcde3f93bbee0f353e17bd83819c416",
+      "author": "Chris Lalancette",
+      "date": "2019-06-28T15:39:21Z",
+      "message": "Remove debugging statements.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "5d948dec80700775689dde828f4adbf551d6b5cf",
+      "author": "Chris Lalancette",
+      "date": "2019-06-26T14:26:02Z",
+      "message": "Fix dead pointers in calibration.cc.\n\nBoth min_intensity and max_intensity create a temporary object,\nand then store a pointer to the object.  The object then goes\nout of scope, and the pointer is dereferenced.  Fix this by\njust not using the temporary at all and instead doing the\nfloat conversion directly, which is less code and more correct.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "08b28667c65a0ca32c241f4a2431bf15ae8587b7",
+      "author": "Joshua Whitley",
+      "date": "2019-06-25T15:51:50Z",
+      "message": "Merge pull request #251 from clalancette/dashing-devel3\n\nROS 2 Dashing port"
+    },
+    {
+      "sha": "6ae01a678fbe5e060042bd2b52732da4af95e2d1",
+      "author": "Chris Lalancette",
+      "date": "2019-06-25T14:34:26Z",
+      "message": "Simplify colcon test.\n\nThis gets rid of an error, and should work fine on its own.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "6b17e46b1e1efcc5ba92d47beff3c6a8d17b39fd",
+      "author": "Chris Lalancette",
+      "date": "2019-06-25T14:28:37Z",
+      "message": "Fix the target frame ID.\n\nThis essentially fixes the problem that is currently on master\nand reported in https://github.com/ros-drivers/velodyne/issues/249.\nHere, we take an empty target frame (the default) to mean that\nwe should use the frame_id incoming from the VelodyneScan;\nany other value (which can be set via a parameter), and we\noverride the frame_id with that.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "beb5f96399ed713f789f0aa7f61e64851372db09",
+      "author": "Chris Lalancette",
+      "date": "2019-06-25T14:07:45Z",
+      "message": "Fix htons problem.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "3eecd1df8a9378f87fb01fa9bf846c4a79896c01",
+      "author": "Chris Lalancette",
+      "date": "2019-06-24T13:54:57Z",
+      "message": "Make sure to install the calibration files.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "88ab6b0802d5e82f85adca3dcf9de7adb0df0994",
+      "author": "Chris Lalancette",
+      "date": "2019-06-17T15:15:40Z",
+      "message": "Port of velodyne_laserscan to ROS 2.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "cd47706f8a57c46477b536e9749f372c7e75f40b",
+      "author": "Chris Lalancette",
+      "date": "2019-06-17T14:00:15Z",
+      "message": "ROS 2 port of velodyne_pointcloud.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "d1e5c35b53a556d8d6ae329b2243c1a35a7fd37a",
+      "author": "Chris Lalancette",
+      "date": "2019-06-17T13:21:14Z",
+      "message": "Enable the velodyne metapackage.\n\nAt the moment, this only enables the velodyne_msgs and the\nvelodyne_driver.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "a3979ad5ce38bf047535a3a631362403bbde01ac",
+      "author": "Joshua Whitley",
+      "date": "2019-04-15T15:55:13Z",
+      "message": "CI: Forgot to source setup.bash again."
+    },
+    {
+      "sha": "813cbf1573c1eb4827d083b139116922ff00aab1",
+      "author": "Joshua Whitley",
+      "date": "2019-04-15T15:51:42Z",
+      "message": "CI: Adding colcon."
+    },
+    {
+      "sha": "d866ce6056a180d2052dcf4aef9c0c19ee9ec555",
+      "author": "Joshua Whitley",
+      "date": "2019-04-15T15:35:14Z",
+      "message": "CI: Testing ROS2 CI."
+    },
+    {
+      "sha": "0d00cc9d034d60dbb994edbe389fbd324cb7d666",
+      "author": "Andreas Klintberg",
+      "date": "2019-04-14T23:08:37Z",
+      "message": "driver working, tests missing. RCL components missing for compostionality\n\nclalancette: updates:\n\n1.  Heavily clean up CMakeLists.txt\n2.  Cleanup package.xml\n3.  Disable diagnostics\n4.  Address warnings\n5.  Use a single clock instance\n6.  Declare parameters for Dashing\n7.  Add \"root scope\" to Unix APIs\n8.  Use a thread for polling so the node is composable"
+    },
+    {
+      "sha": "f21f99ec864a095bf37864bfe01faf70fb19a15b",
+      "author": "Andreas Klintberg",
+      "date": "2019-04-11T06:19:08Z",
+      "message": "custom messages in ROS2"
+    },
+    {
+      "sha": "b50a29592f1a30f6dcbdcaac708560f83686bc04",
+      "author": "Chris Lalancette",
+      "date": "2019-06-14T20:33:32Z",
+      "message": "Add in COLCON_IGNORE for everything to start ROS 2 port.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "85d2df63e91f29034a20ecd00dd5fa112d47fe8d",
+      "author": "Chris Lalancette",
+      "date": "2019-06-14T21:39:54Z",
+      "message": "Add in cmath include for ::rint.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "0003df9a648cd1a7f0ae2efeb47d38fe1b7df9ce",
+      "author": "Chris Lalancette",
+      "date": "2019-06-14T21:39:27Z",
+      "message": "Use the global scope for Unix system calls.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "935b2eefca607e6bd47f041d69475354ed6e070a",
+      "author": "Chris Lalancette",
+      "date": "2019-06-14T21:36:30Z",
+      "message": "Remove unused ring_sequence.h header file.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "26f8e3277fa9ffc6a68feab8b151d129855a254f",
+      "author": "Chris Lalancette",
+      "date": "2019-06-14T20:11:23Z",
+      "message": "Style cleanup.\n\nThis is strictly a style cleanup, making all of the code in\nthe repository have roughly the same style.  There are no\nfunctional changes to the code at all.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "276c19d8baed4ec1be6f94683487c8070636fe31",
+      "author": "Chris Lalancette",
+      "date": "2019-06-14T19:49:48Z",
+      "message": "Delete trailing whitespace.\n\nNo changes to the code.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "698f4f00b41cf2a3d7406de21f2d2edc9d236ac2",
+      "author": "Joshua Whitley",
+      "date": "2019-06-06T16:33:51Z",
+      "message": "CI: Removing Indigo (EOL) CI run."
+    },
+    {
+      "sha": "5d0c326a2e774f70c1b8e4e87225647f58bf0983",
+      "author": "Joshua Whitley",
+      "date": "2019-06-06T16:32:31Z",
+      "message": "Merge pull request #214 from spuetz/feature/opc_nopcl\n\nContainer cleanup and organized pointclouds"
+    },
+    {
+      "sha": "502867f2937b609c190686b1b927d095f2dd4534",
+      "author": "Sebastian",
+      "date": "2019-06-06T13:16:20Z",
+      "message": "Eigen3 precision change from double to float"
+    },
+    {
+      "sha": "b31561e169b7f3b4e26e69b9b66c2d9674998a37",
+      "author": "Sebastian",
+      "date": "2019-06-06T12:32:11Z",
+      "message": "Change eigen3 include dirs cmake variable for backwards compatibility"
+    },
+    {
+      "sha": "f96c8e2d52637b1d688f2d1861b1e5f51f7501c3",
+      "author": "Sebastian",
+      "date": "2019-06-05T14:11:04Z",
+      "message": "restore ROS code style and indentation"
+    },
+    {
+      "sha": "b4ad0ae9b601d1f9fa234a1bbaaa8cbc179e4bcb",
+      "author": "Sebastian",
+      "date": "2019-06-05T12:02:24Z",
+      "message": "merged master into feature/opc_nopcl"
+    },
+    {
+      "sha": "fb53a02d5a011a2858ff192c2dee98200f0147af",
+      "author": "Joshua Whitley",
+      "date": "2019-05-21T23:19:17Z",
+      "message": "Merge pull request #243 from dandedrick/reconfig-enable\n\ndriver: add enabled reconfigure param"
+    },
+    {
+      "sha": "25838c239b3ab039488f079bc43ef2a9d8861893",
+      "author": "Dan Dedrick",
+      "date": "2019-05-20T13:50:23Z",
+      "message": "driver: add enabled reconfigure param\n\nThis will allow polling to be disabled when the device has been disabled\nin some way. Specifically this is interesting when the rpm is set to 0\nwhen not is use. This also adds a mask value for the time_offset so that\nit won't be touched if it wasn't reconfigured."
+    },
+    {
+      "sha": "7ecdf17173a609234df4e61cdd443748ccf7ab8f",
+      "author": "Joshua Whitley",
+      "date": "2019-04-11T21:20:40Z",
+      "message": "Merge pull request #236 from mpitropov/fix_transform_node_frame_bug\n\nset correct output frame"
+    },
+    {
+      "sha": "08455a27ee13d03302c9262ceb4825434991907f",
+      "author": "Matthew Pitropov",
+      "date": "2019-04-11T20:14:42Z",
+      "message": "set correct output frame"
+    },
+    {
+      "sha": "f96233da31e2c25e360a07b0a6d3dcfedfe736a3",
+      "author": "Joshua Whitley",
+      "date": "2019-04-09T18:07:40Z",
+      "message": "Merge pull request #234 from kmhallen/c++11\n\nSet minimum C++ standard to C++11"
+    },
+    {
+      "sha": "a81bac22193bc0da8554e05b620fc7e6c19df83b",
+      "author": "Kevin Hallenbeck",
+      "date": "2019-04-08T22:35:08Z",
+      "message": "Set minimum C++ standard to C++11\n\nThis avoids lowering the standard if it is already C++14"
+    },
+    {
+      "sha": "a623c75ea9c0c850e6f6777065b6dafc04ba561f",
+      "author": "Joshua Whitley",
+      "date": "2019-04-02T15:45:38Z",
+      "message": "Update issue templates\n\nCreate templates for Bug Report and Feature Request"
+    },
+    {
+      "sha": "a923ebdfdef7683b97216a4c36fe23985ce760fd",
+      "author": "Joshua Whitley",
+      "date": "2019-03-29T17:28:51Z",
+      "message": "Merge pull request #231 from ros-drivers/ci/test_better_output\n\nCI: Adding roslint as separate step. Limiting output of catkin build."
+    },
+    {
+      "sha": "f7b9fc6256095672658c8ecee9826b1943626970",
+      "author": "Joshua Whitley",
+      "date": "2019-03-29T16:56:48Z",
+      "message": "CI: Adding roslint as separate step. Limiting output of catkin build.\n\nCI: Trying limit-status-rate 2.\n\nCI: Fixing roslint build command.\n\nCI: Went the wrong direction with limit-status-rate.\n\nCI: Typo."
+    },
+    {
+      "sha": "664aef9802301e93d39fed7af59eec60169c86f4",
+      "author": "Joshua Whitley",
+      "date": "2019-03-28T16:57:56Z",
+      "message": "Merge pull request #227 from ros-drivers/roslint\n\nApplying roslint to velodyne_pointcloud."
+    },
+    {
+      "sha": "237e002c80816725dd6e0b924d164dde8b14f668",
+      "author": "Joshua Whitley",
+      "date": "2019-03-28T16:50:48Z",
+      "message": "Merge branch 'master' into roslint"
+    },
+    {
+      "sha": "51e2dab752ee839d55253163cebff6e0d5dd9b5f",
+      "author": "Joshua Whitley",
+      "date": "2019-03-28T16:48:37Z",
+      "message": "Merge pull request #223 from mpitropov/feat_Add_fixed_frame\n\nAdd fixed frame and use ros message time within transform node"
+    },
+    {
+      "sha": "7f252c4eb5fe445de615b8f2b378f643aedc311f",
+      "author": "Joshua Whitley",
+      "date": "2019-03-28T16:39:32Z",
+      "message": "Adding C++11 flag to all packages."
+    },
+    {
+      "sha": "d7a546b52ee3f3d800acf462cc07d00706f987c2",
+      "author": "Joshua Whitley",
+      "date": "2019-03-28T16:38:36Z",
+      "message": "Adding C++11 flag to fix using alias."
+    },
+    {
+      "sha": "3a54a4d512272d3c728df36fba0953280393b25f",
+      "author": "Matthew Pitropov",
+      "date": "2019-03-28T16:32:35Z",
+      "message": "Made static tf publisher test adhere to REP 105"
+    },
+    {
+      "sha": "ea3b2195a708dd3a487d69dd19b22edadd7bfebf",
+      "author": "Joshua Whitley",
+      "date": "2019-03-28T16:28:43Z",
+      "message": "Merge branch 'master' into roslint"
+    },
+    {
+      "sha": "80303e852a7c16b3cca0d67578b7148e8efec405",
+      "author": "Matthew Pitropov",
+      "date": "2019-03-28T16:26:52Z",
+      "message": "Merge branch 'master' into feat_Add_fixed_frame"
+    },
+    {
+      "sha": "6477f94a21e84e4d8745f95ec9fb50f5e3f7beeb",
+      "author": "Joshua Whitley",
+      "date": "2019-03-28T16:25:09Z",
+      "message": "Changing build badge to CircleCI."
+    },
+    {
+      "sha": "2047d24d55b81759e33f2b828bd98a9c88cd9057",
+      "author": "Joshua Whitley",
+      "date": "2019-03-28T16:18:24Z",
+      "message": "Merge pull request #228 from ros-drivers/ci/circleci_test\n\nCi/circleci test"
+    },
+    {
+      "sha": "f7549321b3584ab34ec3779ff518cbd177386ac5",
+      "author": "Joshua Whitley",
+      "date": "2019-03-28T16:10:28Z",
+      "message": "CI: Setting -j 4 on all workspaces. Done."
+    },
+    {
+      "sha": "1d1238193ea3270de92e8a80a65bb5d9c3006c38",
+      "author": "Joshua Whitley",
+      "date": "2019-03-28T16:04:22Z",
+      "message": "CI: -j 2 is slow but works. Let's try -j 4."
+    },
+    {
+      "sha": "a4ef32bac6263531ef5fd68cffb60be0257aa208",
+      "author": "Matthew Pitropov",
+      "date": "2019-03-28T15:59:41Z",
+      "message": "change more odom to map"
+    },
+    {
+      "sha": "93fa1cfa4a7ab79e0f53c463ee7fba7d12da9242",
+      "author": "Joshua Whitley",
+      "date": "2019-03-28T15:58:16Z",
+      "message": "CI: Attempting run with -j 2."
+    },
+    {
+      "sha": "291853f36c4c3ad98b8a5040b3e69deb3cf189b8",
+      "author": "Matthew Pitropov",
+      "date": "2019-03-28T15:55:59Z",
+      "message": "Revert # changes, remove added param, change target to fixed, change odom to map"
+    },
+    {
+      "sha": "6a0a764929f154e4d4c186f10408de73dea26cc0",
+      "author": "Joshua Whitley",
+      "date": "2019-03-28T15:41:35Z",
+      "message": "CI: Testing the limit with parallelism 3."
+    },
+    {
+      "sha": "007cda1e91b46e3993949acb5e4858b7ff7da900",
+      "author": "Joshua Whitley",
+      "date": "2019-03-28T15:37:26Z",
+      "message": "CI: Attempting parallelism: 2."
+    },
+    {
+      "sha": "9c7ce2c4bf0b4675d1d4f557e48ca7f2da38bf36",
+      "author": "Joshua Whitley",
+      "date": "2019-03-28T15:28:13Z",
+      "message": "CI: That pesky -y."
+    },
+    {
+      "sha": "8efb784f2ba00c8b8b47d22a8986af505784c840",
+      "author": "Joshua Whitley",
+      "date": "2019-03-28T15:26:56Z",
+      "message": "CI: Installing catkin tools."
+    },
+    {
+      "sha": "dea7b5ccb48fac04eb82de76bc8599c54726abbc",
+      "author": "Joshua Whitley",
+      "date": "2019-03-28T15:25:12Z",
+      "message": "CI: Trying to kick off CI."
+    },
+    {
+      "sha": "5ef70c86383fa73862369ab2ac9371232ae9d149",
+      "author": "Joshua Whitley",
+      "date": "2019-03-28T15:23:33Z",
+      "message": "Testing CircleCI because Travis is SO SLOW."
+    },
+    {
+      "sha": "e1467dcf3166d7a23cc0d50e45dbf11d821eb2ae",
+      "author": "Joshua Whitley",
+      "date": "2019-03-28T15:09:30Z",
+      "message": "Fixing silly formatting bug."
+    },
+    {
+      "sha": "440e9fb1f9e10d63f0b15026b0242b6c598c9897",
+      "author": "Joshua Whitley",
+      "date": "2019-03-28T14:42:55Z",
+      "message": "Applying roslint to velodyne_pointcloud."
+    },
+    {
+      "sha": "d696c15a041755ecfd0e8425ba1708dadf42779f",
+      "author": "Joshua Whitley",
+      "date": "2019-03-28T13:58:31Z",
+      "message": "Merge pull request #226 from ros-drivers/roslint\n\nAdding roslint to velodyne_laserscan"
+    },
+    {
+      "sha": "6a769ee5d81d507eb4030b7206d4832d80bdcb48",
+      "author": "Joshua Whitley",
+      "date": "2019-03-28T02:52:44Z",
+      "message": "Fixing renaming bug."
+    },
+    {
+      "sha": "3a11f6b1a82eaf9fef4d9d981bbf4940c6e610f3",
+      "author": "Joshua Whitley",
+      "date": "2019-03-28T02:22:27Z",
+      "message": "Applying roslint to velodyne_laserscan."
+    },
+    {
+      "sha": "764f589c97e164c482de66454a640271a131b74a",
+      "author": "Joshua Whitley",
+      "date": "2019-03-28T01:48:22Z",
+      "message": "Applying roslint to velodyne_laserscan."
+    },
+    {
+      "sha": "87c33ac81dae12b2eebe0007df615c91e196ca7b",
+      "author": "Joshua Whitley",
+      "date": "2019-03-28T01:35:29Z",
+      "message": "Merge pull request #225 from ros-drivers/roslint\n\nAdding roslint to velodyne_driver."
+    },
+    {
+      "sha": "5ef78970231fdcabe3606ce3de383e3475e81314",
+      "author": "Joshua Whitley",
+      "date": "2019-03-28T01:09:34Z",
+      "message": "Finishing roslint on velodyne_driver."
+    },
+    {
+      "sha": "791be14fec926d979d98c594b5fbdad63e08ee88",
+      "author": "Joshua Whitley",
+      "date": "2019-03-28T00:57:33Z",
+      "message": "Adding roslint to velodyne_driver."
+    },
+    {
+      "sha": "cf1c593b5f6f7ab0463a3cf6756e56cd9966bb0e",
+      "author": "Joshua Whitley",
+      "date": "2019-03-27T16:31:28Z",
+      "message": "Merge pull request #224 from mpitropov/feat_add_diagnostics\n\nAdded diagnostic publishing"
+    },
+    {
+      "sha": "35f93ca3acaaf6b8e512b539ccb3e8541f2151ca",
+      "author": "Joshua Whitley",
+      "date": "2019-03-27T16:24:12Z",
+      "message": "Merge pull request #222 from mpitropov/feat_Use_GPS_time\n\nAdd flag to enable using GPS time from within the Velodyne packet instead of ROS time for scan."
+    },
+    {
+      "sha": "82b3d9c4729ca871b7cd0d052da09d07ea701ff4",
+      "author": "Matthew Pitropov",
+      "date": "2019-03-27T15:35:35Z",
+      "message": "Created gps_time param to enable this feature"
+    },
+    {
+      "sha": "d1f563977a8110f0171740f3827bd83c8540d245",
+      "author": "Ian Colwell",
+      "date": "2018-06-20T19:38:23Z",
+      "message": "Added diagnostic publishing"
+    },
+    {
+      "sha": "deedbbd258ebef455c4d5bb22b5c14931b8f3eee",
+      "author": "Matthew Pitropov",
+      "date": "2019-03-26T21:11:57Z",
+      "message": "Add fixed frame"
+    },
+    {
+      "sha": "8a698be1d7beb12a3bc6dd2c3d3c230fc4f57f24",
+      "author": "Matthew Pitropov",
+      "date": "2019-03-26T20:46:10Z",
+      "message": "Added code and test"
+    },
+    {
+      "sha": "39e62ebcbd4a7f2f8e3b331306553e3637a56be5",
+      "author": "Joshua Whitley",
+      "date": "2019-03-18T18:43:34Z",
+      "message": "Merge pull request #220 from nbussas/static\n\nTransform static variable into member"
+    },
+    {
+      "sha": "db0a36057ef0cdfb70fce07c85531cb9f3c05cf5",
+      "author": "Joshua Whitley",
+      "date": "2019-03-18T14:10:28Z",
+      "message": "Merge pull request #221 from geordi/readme\n\nFixed links in README.md"
+    },
+    {
+      "sha": "215d367e5fbb3227f4b42ceae38eb98c4587b898",
+      "author": "Jan Gaura",
+      "date": "2019-03-18T14:03:08Z",
+      "message": "Fixed links in README.md"
+    },
+    {
+      "sha": "b3426867d9749329ff6096e21f9c075d7a119d07",
+      "author": "Nils Hauke Bussas",
+      "date": "2019-03-18T12:29:46Z",
+      "message": "Transform static variable into member"
+    },
+    {
+      "sha": "5e02d34cf8fe178844cb1d764a1cbd543596512f",
+      "author": "Joshua Whitley",
+      "date": "2019-02-18T20:26:18Z",
+      "message": "Merge pull request #216 from ros-drivers/maint/poll_timeout_handling\n\nTesting reporting error instead of stopping node on disconnect."
+    },
+    {
+      "sha": "7dcd5fa9e5b91d3bc36f966c7eaaba0fb4eb50d8",
+      "author": "Joshua Whitley",
+      "date": "2019-02-14T02:33:13Z",
+      "message": "Testing reporting error instead of stopping node on disconnect."
+    },
+    {
+      "sha": "c1e778ae2f04126131f0d15dd7f010ca05d73861",
+      "author": "Sebastian Pütz",
+      "date": "2019-02-12T14:14:11Z",
+      "message": "removed unconfigured and unused build depend"
+    },
+    {
+      "sha": "596bdeb755199b11c3e9229ac8d722d28b81064a",
+      "author": "Sebastian Pütz",
+      "date": "2019-02-12T13:56:17Z",
+      "message": "fix tf listener init"
+    },
+    {
+      "sha": "6d151c16ebc36dee9e094c859c8759ab75d1efc0",
+      "author": "Sebastian Pütz",
+      "date": "2019-02-11T16:30:46Z",
+      "message": "Merge branch 'feature/opc_nopcl' of github.com:spuetz/velodyne into feature/opc_nopcl"
+    },
+    {
+      "sha": "0146ae9130405c1f326b7d50dc2ae3d92d4d0a1a",
+      "author": "Sebastian Pütz",
+      "date": "2019-02-11T16:30:34Z",
+      "message": "remove gdb launch prefix"
+    },
+    {
+      "sha": "62c9aec89da2824d9a6ec63856cb533af25e2f06",
+      "author": "Joshua Whitley",
+      "date": "2019-02-11T15:58:27Z",
+      "message": "Launch files lost execute permissions."
+    },
+    {
+      "sha": "b590d0060cd187d20f9b45aa20d833773382b081",
+      "author": "Joshua Whitley",
+      "date": "2019-02-11T15:41:00Z",
+      "message": "Adding Eigen as rosdep for pointcloud."
+    },
+    {
+      "sha": "5e384726269823f0a7ee8b8e6dc9753d8bcb39e8",
+      "author": "Joshua Whitley",
+      "date": "2019-02-11T15:39:01Z",
+      "message": "Merge remote-tracking branch 'upstream/master' into feature/opc_nopcl"
+    },
+    {
+      "sha": "3c47db6a91fe4091ce9b84ea7487499e0e793aaa",
+      "author": "Sebastian Pütz",
+      "date": "2019-02-09T16:46:06Z",
+      "message": "fix pc2 iter line increment"
+    },
+    {
+      "sha": "7f52b3586a2833b4a48bd2539a862adedb161baf",
+      "author": "Sebastian Pütz",
+      "date": "2019-02-09T16:26:14Z",
+      "message": "fix Eigen include"
+    },
+    {
+      "sha": "2387d76ea760b07fd82521fb3197b4d397297377",
+      "author": "Sebastian Pütz",
+      "date": "2019-02-08T18:00:51Z",
+      "message": "removed pcl to make it more elegant and faster"
+    },
+    {
+      "sha": "899ad3e342bed13793476064933d218e322314c2",
+      "author": "Sebastian Pütz",
+      "date": "2019-02-08T14:15:43Z",
+      "message": "fixed in range min max, and cleaned up the initialization"
+    },
+    {
+      "sha": "f01c8b0d5d58e24002cb3a02588b9532243d0001",
+      "author": "Sebastian Pütz",
+      "date": "2019-02-07T14:07:11Z",
+      "message": "fixed container init, container is re-initialized when reconfigure is called"
+    },
+    {
+      "sha": "16bc0c391fdea3286c76ac3a220d0cbe7e614d86",
+      "author": "Joshua Whitley",
+      "date": "2019-01-28T18:32:47Z",
+      "message": "1.5.2"
+    },
+    {
+      "sha": "16c17f22b0ccf3c138c788fe89ee1a3f10c74256",
+      "author": "Joshua Whitley",
+      "date": "2019-01-28T18:32:37Z",
+      "message": "Updating CHANGELOGs."
+    },
+    {
+      "sha": "52a2dcc3e1568efde76fbcaf34afab3db19946f4",
+      "author": "Joshua Whitley",
+      "date": "2019-01-22T23:39:21Z",
+      "message": "Merge pull request #212 from ros-drivers/maint/vdump_as_root\n\nModifying vdump script for use as root.\r\n\r\nTested by @andersfischernielsen."
+    },
+    {
+      "sha": "73df29f25ced76076606136ebbaed7d8c926fa35",
+      "author": "Joshua Whitley",
+      "date": "2018-12-21T15:57:13Z",
+      "message": "Modifying vdump script for use as root."
+    },
+    {
+      "sha": "badeec0debf3745e974fc4f227e508e6891561d8",
+      "author": "Joshua Whitley",
+      "date": "2018-12-18T21:16:37Z",
+      "message": "Merge pull request #205 from xiesc/master\n\nsupport for 64E-S3"
+    },
+    {
+      "sha": "96986cff7410f03b2776b437f83029be71b22865",
+      "author": "Shichao XIE",
+      "date": "2018-12-18T02:51:11Z",
+      "message": "support for 64E-S3"
+    },
+    {
+      "sha": "44befeafea5712449f449c60a740b4506a4bb678",
+      "author": "xiesc",
+      "date": "2018-12-18T02:23:41Z",
+      "message": "Merge branch 'master' into master"
+    },
+    {
+      "sha": "b7eb53928981df17c7c57c9ffca95cfe37dc7757",
+      "author": "Shichao XIE",
+      "date": "2018-12-18T02:08:03Z",
+      "message": "add support for 64E-S3"
+    },
+    {
+      "sha": "79f6307a6cecf733fde557b48fd42f9dba442d0a",
+      "author": "Joshua Whitley",
+      "date": "2018-12-17T15:34:00Z",
+      "message": "Merge pull request #204 from ros-drivers/revert-200-master\n\nRevert \"add support for 64E_S3\""
+    },
+    {
+      "sha": "6ce2eccd18de3b33a57706d90e3d6568d3edf114",
+      "author": "Joshua Whitley",
+      "date": "2018-12-17T15:29:56Z",
+      "message": "Revert \"add support for 64E_S3\""
+    },
+    {
+      "sha": "7cf49cd144327af467ecd9d49cd01d916ac18889",
+      "author": "Shichao XIE",
+      "date": "2018-12-17T14:40:16Z",
+      "message": "fix a bug"
+    },
+    {
+      "sha": "69385e091d5c164fc7bc0273bda11bcef656403a",
+      "author": "Joshua Whitley",
+      "date": "2018-12-17T13:49:27Z",
+      "message": "Merge pull request #200 from xiesc/master\n\nadd support for 64E_S3"
+    },
+    {
+      "sha": "68e9e3c9626aade4628c5a4c67a5e73813ba261f",
+      "author": "Sebastian Pütz",
+      "date": "2018-12-13T04:03:26Z",
+      "message": "wip organized pc with container, clean up"
+    },
+    {
+      "sha": "c458e15e94b45b90c35aa610b2f5a841cde01c8c",
+      "author": "Joshua Whitley",
+      "date": "2018-12-10T18:00:46Z",
+      "message": "1.5.1"
+    },
+    {
+      "sha": "aea9cd24cd257c633f62de2cbac0504f07a19d9f",
+      "author": "Joshua Whitley",
+      "date": "2018-12-10T18:00:33Z",
+      "message": "Patch release for performance improvements."
+    },
+    {
+      "sha": "28fd7cc502bb164d111ed155efe11fdf398044dc",
+      "author": "Shichao XIE",
+      "date": "2018-12-10T08:16:41Z",
+      "message": "add an example yaml file for S3"
+    },
+    {
+      "sha": "b035febb1e82f18b0c8ad15de12143f69ee9c5b5",
+      "author": "Shichao XIE",
+      "date": "2018-12-06T09:29:20Z",
+      "message": "add support for 64E_S3"
+    },
+    {
+      "sha": "3ba7ffed70187ce215d5eae61441195bc5d33a0f",
+      "author": "Joshua Whitley",
+      "date": "2018-11-15T20:34:24Z",
+      "message": "Merge pull request #194 from ros-drivers/avoid_unnecessary_computation\n\nAvoid unnecessary computation"
+    },
+    {
+      "sha": "aeaf96c89521efd92a568a798c8823690e38be91",
+      "author": "Joshua Whitley",
+      "date": "2018-11-05T20:45:10Z",
+      "message": "Merge branch 'speedup' of https://github.com/Eurecat/velodyne into avoid_unnecessary_computation"
+    },
+    {
+      "sha": "cce21356083a3490fbcb7259bd0ab3993804c354",
+      "author": "Joshua Whitley",
+      "date": "2018-10-19T19:30:49Z",
+      "message": "1.5.0"
+    },
+    {
+      "sha": "72fc452f6de74473acecc524af128de651e2f20d",
+      "author": "Joshua Whitley",
+      "date": "2018-10-19T19:30:36Z",
+      "message": "Updating CHANGELOGs for new release."
+    },
+    {
+      "sha": "9bcd06176898f4794cc18f387511554f90f78cb7",
+      "author": "Joshua Whitley",
+      "date": "2018-10-19T19:03:59Z",
+      "message": "Merge pull request #164 from ros-drivers/maint/vlp_32c_support\n\nAdding VLP-32C support.\r\n\r\nThis was tested by AutonomouStuff and several external users. Though it does not include new information that I've learned (it appears that the distance resolution is different <50m vs >=50m), it is a good start."
+    },
+    {
+      "sha": "d53984ab86c0596fb3dc00af3591f5ce4f7db3db",
+      "author": "Joshua Whitley",
+      "date": "2018-09-24T16:00:13Z",
+      "message": "Merge pull request #187 from moooeeeep/master\n\nFixed sign error in return value of InputSocket::getPacket()"
+    },
+    {
+      "sha": "4dd510e78195584db0576db1d2de250c305eef5c",
+      "author": "Joshua Whitley",
+      "date": "2018-09-24T15:02:42Z",
+      "message": "Merge pull request #189 from kveretennicov/patch-1\n\nFix malformed plugin description XML"
+    },
+    {
+      "sha": "80bb8aafef314f91cc184a08e93690fa6a25a656",
+      "author": "Konstantin Veretennicov",
+      "date": "2018-09-22T20:54:30Z",
+      "message": "Fix malformed plugin description XML\n\nROS pluginlib only recognizes multiple <library> elements if they are under\r\n<class_libraries> XML root. It silently ignores malformed XMLs with multiple\r\n<library> \"root\"s and just reads the first one, due to relaxed way tinyxml2 does\r\nparsing. Though if you do `rosrun nodelet declared_nodelets`, the issue is\r\nreported properly.\r\n\r\nSee also similar issue in https://github.com/ros-perception/perception_pcl/issues/131"
+    },
+    {
+      "sha": "15771a42cf91ffaa946846174c639edf1056b693",
+      "author": "Fabian Maas",
+      "date": "2018-09-20T10:00:04Z",
+      "message": "bugfix: getPacket() function is expected to return negative value on error"
+    },
+    {
+      "sha": "e71a38d36a8f7eea527ac4d136396514ec5cf3df",
+      "author": "Joshua Whitley",
+      "date": "2018-09-19T19:04:25Z",
+      "message": "1.4.0"
+    },
+    {
+      "sha": "c4d0a947d0dfaef2ef62551874d543dfe03dd802",
+      "author": "Joshua Whitley",
+      "date": "2018-09-19T19:03:57Z",
+      "message": "Updating changelogs for new release."
+    },
+    {
+      "sha": "bfb035a4dc54a7940986591d037b64dadd71720d",
+      "author": "Joshua Whitley",
+      "date": "2018-08-30T19:47:29Z",
+      "message": "Merge branch 'master' into maint/vlp_32c_support"
+    },
+    {
+      "sha": "797eead188f16988f738dd4efef394d94b55b683",
+      "author": "Joshua Whitley",
+      "date": "2018-08-20T15:55:21Z",
+      "message": "Merge pull request #178 from sts-thm/bugfix_issue_#174\n\nBugfix issue #174"
+    },
+    {
+      "sha": "6fead991e8cd40fe0919d521f797019d190fbfbb",
+      "author": "Joshua Whitley",
+      "date": "2018-08-17T23:24:36Z",
+      "message": "Merge branch 'master' into maint/vlp_32c_support"
+    },
+    {
+      "sha": "18161252de21489c6a978308803165b8171f3834",
+      "author": "Davide Faconti",
+      "date": "2018-08-09T07:34:37Z",
+      "message": "error fix"
+    },
+    {
+      "sha": "05632833a682c9e712d166d5ea5b9b53a2f2f486",
+      "author": "Davide Faconti",
+      "date": "2018-08-09T07:31:35Z",
+      "message": "Merge branch 'master' into speedup"
+    },
+    {
+      "sha": "029631391701fbf34dc051342142cb4d3edfb613",
+      "author": "Joshua Whitley",
+      "date": "2018-08-03T17:28:44Z",
+      "message": "Merge pull request #177 from C-NR/feature/WrapPointcloudData\n\nFeature/wrap pointcloud data"
+    },
+    {
+      "sha": "ab5248549794d4762bf932fe5dcae415ee570165",
+      "author": "Tobias Athmer",
+      "date": "2018-08-01T08:49:59Z",
+      "message": "Removed debug outputs"
+    },
+    {
+      "sha": "de152345df2aaea49bae9353ca8ac11ef615e344",
+      "author": "Tobias Athmer",
+      "date": "2018-08-01T08:45:20Z",
+      "message": "Changes fixing deadlock for specific cut_angle values."
+    },
+    {
+      "sha": "a67d5cf9db5a389d36353098f93c095cfc3e0910",
+      "author": "CNR",
+      "date": "2018-07-31T11:46:50Z",
+      "message": "moved definition of VPoint and VPointCloud back to namespace rawdata in rawdata.h"
+    },
+    {
+      "sha": "de79cb054011c70716793f930efc5c671ed6a5b2",
+      "author": "CNR",
+      "date": "2018-07-27T14:07:51Z",
+      "message": "put a wrapper around pointcloud data including a generic setter method to enable the use of arbitrary data structures  (pcl pointcloud, depth image, octomaps and so on) to be filled by just using RawData::unpack method with the wrapper object as parameter"
+    },
+    {
+      "sha": "8c34bb720482ba9423f6f5c1c42286f697adbf1c",
+      "author": "CNR",
+      "date": "2018-07-27T09:03:28Z",
+      "message": "Merge branch 'master-origin' into velodyne-master"
+    },
+    {
+      "sha": "8feed85a30026c6be5196ae015e5f115c1624459",
+      "author": "Joshua Whitley",
+      "date": "2018-07-24T18:08:54Z",
+      "message": "Merge pull request #135 from cfneuhaus/bugfix\n\nBugfix: when no device ip is set, we still want to filter by udp port."
+    },
+    {
+      "sha": "ef2345eb0633360c2ab80c231bb65f45866df82e",
+      "author": "Joshua Whitley",
+      "date": "2018-06-11T17:05:33Z",
+      "message": "Last fix for README. For now."
+    },
+    {
+      "sha": "9d02a43ca5765631cf5b6f19c72460a415adb14f",
+      "author": "Joshua Whitley",
+      "date": "2018-06-11T17:02:18Z",
+      "message": "Fixing markdown in README.md."
+    },
+    {
+      "sha": "75de270eb1370dc247769bf06bbd986c149cf55e",
+      "author": "Joshua Whitley",
+      "date": "2018-06-11T16:59:16Z",
+      "message": "Changing README to markdown."
+    },
+    {
+      "sha": "9515c2425f9ec206b2e5586ebe5c4d9c53100572",
+      "author": "Joshua Whitley",
+      "date": "2018-06-11T16:58:52Z",
+      "message": "Adding Travis badge to README."
+    },
+    {
+      "sha": "7c3095e1af58e905b0a7265897ac8d2435995556",
+      "author": "Joshua Whitley",
+      "date": "2018-06-11T16:35:21Z",
+      "message": "Merge pull request #172 from ros-drivers/maint/add_melodic_build\n\nMaint/add melodic build"
+    },
+    {
+      "sha": "291f33e95a7574b27eafed6d77fbe20678d29ffa",
+      "author": "Joshua Whitley",
+      "date": "2018-06-11T15:31:51Z",
+      "message": "Removing outdated build_script.sh."
+    },
+    {
+      "sha": "0417778969380e85690c2aa9f0ca59cbcd5c4444",
+      "author": "Joshua Whitley",
+      "date": "2018-06-11T15:27:29Z",
+      "message": "Updating README."
+    },
+    {
+      "sha": "1ba6fded795202b5a4fc00430bebf35f94cd6066",
+      "author": "Joshua Whitley",
+      "date": "2018-06-11T15:18:17Z",
+      "message": "Adding Melodic to the list of Travis builds."
+    },
+    {
+      "sha": "850948d294d431c9a7fb42399f13f284ad8323f8",
+      "author": "Joshua Whitley",
+      "date": "2018-06-07T14:53:54Z",
+      "message": "Merge pull request #170 from ros-drivers/maint/move_header_files\n\nMoving header files to traditional location inside include folders."
+    },
+    {
+      "sha": "7cc9a9bef1011470468c11c5a92bfad4d5575d61",
+      "author": "Joshua Whitley",
+      "date": "2018-06-06T13:50:06Z",
+      "message": "Moving header files to traditional location inside include folders."
+    },
+    {
+      "sha": "ce99eca168d1514bdb148aaebbad0af5c7064686",
+      "author": "Davide Faconti",
+      "date": "2018-05-12T09:08:24Z",
+      "message": "std::vector<>::reserve is your friend"
+    },
+    {
+      "sha": "799dd49c224589b6e55133cfefe2eceb07187199",
+      "author": "Davide Faconti",
+      "date": "2018-05-12T08:10:01Z",
+      "message": "much better"
+    },
+    {
+      "sha": "851ac4342fb0f863fc7fb4c62aa76d1c19aab94c",
+      "author": "Davide Faconti",
+      "date": "2018-05-12T07:55:18Z",
+      "message": "add static to avoid frequence memory allocation"
+    },
+    {
+      "sha": "9fe6e23282f3c89429167dc6e9f0b2bd08dcadfa",
+      "author": "Davide Faconti",
+      "date": "2018-05-12T07:44:56Z",
+      "message": "fix stupid error"
+    },
+    {
+      "sha": "2463922c721ad9809d0498dbb37c5f573e671d77",
+      "author": "Joshua Whitley",
+      "date": "2018-05-10T16:29:51Z",
+      "message": "Adding distance_resolution to test yaml files."
+    },
+    {
+      "sha": "f59ea36b1e63f0b7de3345ac9d8eb10bcb8fe264",
+      "author": "Davide Faconti",
+      "date": "2018-05-10T15:54:01Z",
+      "message": "improvement added to other unpack()"
+    },
+    {
+      "sha": "bf4b6f912cbeee614d01ab46338b876be89534cf",
+      "author": "Davide Faconti",
+      "date": "2018-03-09T17:25:20Z",
+      "message": "avoid unecesary calculations in unpack"
+    },
+    {
+      "sha": "37cc8374e314e4f06afbcdd48766b870e7379787",
+      "author": "Joshua Whitley",
+      "date": "2018-05-10T15:10:32Z",
+      "message": "Adding VLP-32C support.\n\nBased on work done by @rockcdr. Adds distance_resolution calibration\nvalue to support 0.004m distance resolution for VLP-32C."
+    },
+    {
+      "sha": "9a444bd4f8c008b1b9e9da1c16db2351dfeaa925",
+      "author": "Joshua Whitley",
+      "date": "2018-05-10T14:48:12Z",
+      "message": "Merge pull request #161 from ros-drivers/maint/updating_travis_to_industrial_ci\n\nMaint/updating travis to industrial ci\r\n\r\nThis has been tested through several builds and continues to succeed. Merging."
+    },
+    {
+      "sha": "74945353f0fb53473284581a2a11c44b45b31cbc",
+      "author": "Joshua Whitley",
+      "date": "2018-05-10T14:38:10Z",
+      "message": "Learned that ROS_REPO is preferred. Added Lunar build."
+    },
+    {
+      "sha": "2dab9a1a5fafc9ce60c0d8be5b4487c35191ae4d",
+      "author": "Joshua Whitley",
+      "date": "2018-05-10T14:35:50Z",
+      "message": "Merge branch 'master' into maint/updating_travis_to_industrial_ci"
+    },
+    {
+      "sha": "f06ca46241a3669bf43f48c23316f36ff0c0b29d",
+      "author": "Joshua Whitley",
+      "date": "2018-05-10T14:30:14Z",
+      "message": "Merge pull request #160 from ros-drivers/maint/updating_package_xml_to_v2\n\nUpdated all package.xmls to ver 2. Cleaned up catkin_lint errors.\r\n\r\nWe've tested this one pretty extensively in-house so I'm gonna merge it."
+    },
+    {
+      "sha": "dd56d4c9953254a9ae240c2e219c5137069928a8",
+      "author": "Joshua Whitley",
+      "date": "2018-04-26T19:30:53Z",
+      "message": "Updating .travis.yml after testing. Lowering 64e Hz test threshold.\n\nThis build is almost a full minute faster across both environments,\nuses the \"standardized\" industrial_ci script, and has been updated\nto build in Indigo and Kinetic instead of Indigo and Jade.\n\nHowever, due to the docker-in-docker performance hit, the 64e test\nfailed to acheive the 5Hz publish rate. Lowering the error threshold\nto 3.0Hz fixed this but I'm not sure how everyon feels about\nthis change."
+    },
+    {
+      "sha": "4c4804937505bad83a0b458e1e989470067b4ca6",
+      "author": "Joshua Whitley",
+      "date": "2018-04-26T18:06:37Z",
+      "message": "First test of industrial_ci."
+    },
+    {
+      "sha": "8a6d1c79bdd2ab3dbacaa97e2e804de0457ba958",
+      "author": "Joshua Whitley",
+      "date": "2018-04-26T15:17:53Z",
+      "message": "Updated all package.xmls to ver 2. Cleaned up catkin_lint errors.\n\nAll package.xml files are now compatible with version 2 of the\npackage.xml specification in REP 140. Removed some unnecessary\nexecute permissions on a few files. Fixed a missing test_depend."
+    },
+    {
+      "sha": "e04afa49cd3907316100c6bc40282c818778ac4b",
+      "author": "Joshua Whitley",
+      "date": "2018-04-26T02:41:55Z",
+      "message": "Merge pull request #151 from Axel13fr/feature/No_Communication_Diag_Update\n\nRaise diagnostic when no packets are received"
+    },
+    {
+      "sha": "f0df8141e7ddc7f60b8c51a199b572546da0a92f",
+      "author": "Joshua Whitley",
+      "date": "2018-04-26T02:11:31Z",
+      "message": "Merge branch 'awesomebytes-fix_32c_packet_rate'"
+    },
+    {
+      "sha": "6b4242be73164270aa8553e606eae4b489304d50",
+      "author": "Sammy Pfeiffer",
+      "date": "2018-03-09T08:59:05Z",
+      "message": "Fix packet rate for the Velodyne 32C"
+    },
+    {
+      "sha": "277035cc5875451454c354e22e6c94a61331a517",
+      "author": "axd",
+      "date": "2018-02-26T16:23:48Z",
+      "message": "Conventions: adding name for unused method parameter."
+    },
+    {
+      "sha": "118c9a26db183f2aff342890747f1beb4600e3a9",
+      "author": "axd",
+      "date": "2018-02-21T10:39:18Z",
+      "message": "Added a periodic update of the diagnostics so that when no data is received at all from the Velodyne, a diagnostic information will be published. The previous implementation would publish diagnostics only on packet reception."
+    },
+    {
+      "sha": "e21b5225daeb0b861253349ad0d827d7183f68dc",
+      "author": "Joshua Whitley",
+      "date": "2018-02-16T06:09:48Z",
+      "message": "Merge pull request #146 from stsundermann/patch-2\n\nUse std::abs instead of fabsf"
+    },
+    {
+      "sha": "0e5a20079e7fdefffbc1575a65f507dd39c84efc",
+      "author": "Joshua Whitley",
+      "date": "2018-02-16T06:08:06Z",
+      "message": "Merge pull request #150 from ros-drivers/mikaelarguedas-patch-1\n\nupdate to use non deprecated pluginlib macro"
+    },
+    {
+      "sha": "db6b5ee5ecb241e436ace9229d2b98d03baaa534",
+      "author": "Mikael Arguedas",
+      "date": "2018-02-15T21:26:43Z",
+      "message": "update to use non deprecated pluginlib macro"
+    },
+    {
+      "sha": "560fe12bfb57d7bd75f378f9b32079b62c675716",
+      "author": "Stephan Sundermann",
+      "date": "2018-02-09T09:15:01Z",
+      "message": "Use std::abs instead of fabsf\n\ncfg_.resolution is double but fabsf takes a float which may cause truncation of value."
+    },
+    {
+      "sha": "38e313e933d9d633f6d339a66a5da7ebf8293439",
+      "author": "Joshua Whitley",
+      "date": "2018-01-26T06:05:03Z",
+      "message": "Merge pull request #136 from stsundermann/patch-1\n\nUse std::abs instead of abs"
+    },
+    {
+      "sha": "b311237db0a1ee60d99fb2625f6f144b27fd5d42",
+      "author": "Kyle Rector",
+      "date": "2018-01-05T17:20:09Z",
+      "message": "Adding missing 32C configuration file."
+    },
+    {
+      "sha": "e306deb03c033c0f3d41c27b8b7b4979251eb1fa",
+      "author": "Joshua Whitley",
+      "date": "2018-01-05T14:57:36Z",
+      "message": "Merge pull request #139 from ASDeveloper00/vlp32\n\nAdding support for VLP-32C."
+    },
+    {
+      "sha": "bf8f4d770cbd3937cff390ce673c50fc1f16d00d",
+      "author": "Autonomoustuff Developer",
+      "date": "2018-01-04T22:58:14Z",
+      "message": "removed config file"
+    },
+    {
+      "sha": "29665186a17e329f3e6697d33715ff3e683e15a6",
+      "author": "AutonomouStuff Developer",
+      "date": "2018-01-04T21:17:48Z",
+      "message": "change readme"
+    },
+    {
+      "sha": "6281d2568b9bea9ccba193c557feb621bc36383f",
+      "author": "kennouni",
+      "date": "2018-01-04T13:30:31Z",
+      "message": "initial commit"
+    },
+    {
+      "sha": "67fbaa58d7bc766023e7078089859f41ca8e0d2f",
+      "author": "Joshua Whitley",
+      "date": "2018-01-03T06:17:18Z",
+      "message": "Merge pull request #138 from volkandre/cut_at_specified_angle_feature\n\nCut at specified angle feature"
+    },
+    {
+      "sha": "fe3add74059640169656d751dd4071a83f5269fa",
+      "author": "Andre Volk",
+      "date": "2017-12-29T16:08:18Z",
+      "message": "Updated default cut_angle parameters in launch files after switching from deg to rad."
+    },
+    {
+      "sha": "4323df4e0de4b4bd2a42d1338d547773969d67fa",
+      "author": "Andre Volk",
+      "date": "2017-12-29T15:52:51Z",
+      "message": "cut_angle parameter is now in rad according to REP 103"
+    },
+    {
+      "sha": "d66c72914143edc372060ae9dee4e9f7cd29dc18",
+      "author": "Stephan Sundermann",
+      "date": "2017-12-12T11:03:08Z",
+      "message": "Use std::abs instead of abs\n\nabs is the c version which returns an integer. This is probably not intended here, so use the templated std::abs function."
+    },
+    {
+      "sha": "f2f168cf77fc14594aee3bf589371777417b1dcd",
+      "author": "Andre Volk",
+      "date": "2017-12-04T23:09:16Z",
+      "message": "Fixed timestamp related bug found by @cfneuhaus, which was described here: https://github.com/ros-drivers/velodyne/pull/126#discussion_r154137793"
+    },
+    {
+      "sha": "bb8401b5811ce147936e6b39fb7a2e89193d7d14",
+      "author": "Andre Volk",
+      "date": "2017-12-04T20:57:38Z",
+      "message": "Merge branch 'cut_at_specified_angle_feature' of https://github.com/volkandre/velodyne into cut_at_specified_angle_feature"
+    },
+    {
+      "sha": "4800414a8de69178c85ee75e25b7be7f18dcd5a6",
+      "author": "Andre Volk",
+      "date": "2017-12-04T20:51:59Z",
+      "message": "Updated branch from ros-drivers/master and resolved conflicts."
+    },
+    {
+      "sha": "7fde5de140189deefc7ec4a702dd9efecda84265",
+      "author": "Andre Volk",
+      "date": "2017-12-04T20:51:59Z",
+      "message": "Updated branch from ros-drivers master and resolved conflicts."
+    },
+    {
+      "sha": "559d0eb65806f3619cc039246e08034a447da83a",
+      "author": "Frank Neuhaus",
+      "date": "2017-11-30T16:21:08Z",
+      "message": "bugfix: when no device ip is set, we still want to filter by udp port."
+    },
+    {
+      "sha": "f8c6e8244e60a25b09ec6f2d1debc64c30e9852a",
+      "author": "Joshua Whitley",
+      "date": "2017-11-10T21:10:12Z",
+      "message": "Bumping version."
+    },
+    {
+      "sha": "d17e252fc258368575d2363452bf12e5d4c3c7c7",
+      "author": "Joshua Whitley",
+      "date": "2017-11-10T21:05:09Z",
+      "message": "Testing removing single quotes in changelog."
+    },
+    {
+      "sha": "722b8498589fe58b3934474d7a572eb790f7c1f6",
+      "author": "Joshua Whitley",
+      "date": "2017-11-10T20:58:13Z",
+      "message": "Updating change logs for release."
+    },
+    {
+      "sha": "8e999eb8a2623772ac7d5bb15671acde9b08a1a5",
+      "author": "Joshua Whitley",
+      "date": "2017-11-06T23:22:39Z",
+      "message": "Merge pull request #110 from kmhallen/master\n\nAdded velodyne_laserscan package"
+    },
+    {
+      "sha": "f40555d68bd1efaf3806187f0077596951e5b816",
+      "author": "Micho Radovnikovich",
+      "date": "2017-11-06T20:38:20Z",
+      "message": "Merge remote-tracking branch 'ros-drivers/master'"
+    },
+    {
+      "sha": "78ee54786050fc791f10bbfc23c3819900475d6b",
+      "author": "Joshua Whitley",
+      "date": "2017-11-06T16:33:44Z",
+      "message": "Merge pull request #129 from kmhallen/pluginlib_macro\n\nModern pluginlib macro"
+    },
+    {
+      "sha": "cccc1387ceb42fab97d01034dfd14e1a56da6691",
+      "author": "Kevin Hallenbeck",
+      "date": "2017-11-01T22:12:23Z",
+      "message": "Update to use non deprecated pluginlib macro"
+    },
+    {
+      "sha": "76be2bec35cc29528ae072a407b553b5aaeda435",
+      "author": "Joshua Whitley",
+      "date": "2017-10-18T18:40:37Z",
+      "message": "Merge pull request #127 from swri-robotics/add_vlp16_hires_support\n\nAdd VLP16 Puck Hi-Res config file"
+    },
+    {
+      "sha": "269e83c8d718b0bed4fedbb5ebedf00a8d91d337",
+      "author": "Kevin Hallenbeck",
+      "date": "2017-10-12T02:50:09Z",
+      "message": "Added tests for velodyne_laserscan"
+    },
+    {
+      "sha": "345820eb5cd745bbbe6ae6cb2f5588f2391cddf8",
+      "author": "Kevin Hallenbeck",
+      "date": "2017-10-12T01:44:58Z",
+      "message": "Fixed validating PointCloud2 field types"
+    },
+    {
+      "sha": "d6fce8bd4963002cebb78204dd1689250a3808fb",
+      "author": "Kevin Hallenbeck",
+      "date": "2017-10-12T01:39:24Z",
+      "message": "Package.xml format version 2"
+    },
+    {
+      "sha": "7b7be3c977b77107677cea58f28cdc931518190d",
+      "author": "kmhallen",
+      "date": "2017-09-30T23:11:30Z",
+      "message": "Merge pull request #1 from volkandre/master\n\nFixed bug. Laserscans now cover full 360 degrees."
+    },
+    {
+      "sha": "462c80930a094fd816dfee9c8478eb10d5f2c11f",
+      "author": "Kris Kozak",
+      "date": "2017-09-28T23:24:41Z",
+      "message": "Add VLP16 Puck Hi-Res support"
+    },
+    {
+      "sha": "cb8898d218258bd3622343e4fe69930a7b280af6",
+      "author": "Andre Volk",
+      "date": "2017-09-28T15:22:35Z",
+      "message": "Updated cut_at_specified_angle_feature with latest master version."
+    },
+    {
+      "sha": "00f407e3fb2b487d5c1e42444e804ccc8fc8f4b3",
+      "author": "volkandre",
+      "date": "2017-09-28T13:55:03Z",
+      "message": "Fixed bug. Laserscans now cover full 360 degrees."
+    },
+    {
+      "sha": "3747e937cfc1b2986c0b2e4983bdd0d7e8934079",
+      "author": "Jack O'Quin",
+      "date": "2017-04-19T16:02:14Z",
+      "message": "velodyne_pointcloud: remove incorrect catkin_package() DEPENDS option (#93)\n\nThis eliminates a CMake warning when building on Xenial."
+    },
+    {
+      "sha": "e263b806afad840d0422b9aa7227302d7f088185",
+      "author": "Jack O'Quin",
+      "date": "2016-12-20T15:41:35Z",
+      "message": "Merge pull request #111 from OrebroUniversity/master\n\nAdded an interface to set up raw data processing offline"
+    },
+    {
+      "sha": "e6560cc0841b51aa81b02eaa4e0bb75765b3704c",
+      "author": "Todor Stoyanov",
+      "date": "2016-12-20T14:38:16Z",
+      "message": "Added an interface to set up raw data processing from a locally defined calibration file. This method is useful when processing data offline from a bag file, without starting any ros master"
+    },
+    {
+      "sha": "d678c8798e0e9f0cd301d2eee0bf8e1fbb4d5ef1",
+      "author": "Kevin Hallenbeck",
+      "date": "2016-12-08T00:01:21Z",
+      "message": "Added velodyne_laserscan package and inserted into existing launch files"
+    },
+    {
+      "sha": "ed6e94be662e4591a41de68d5bb8d78df80e9038",
+      "author": "Jack O'Quin",
+      "date": "2016-10-09T16:14:20Z",
+      "message": "test multiple nodelet manager support (#108)"
+    },
+    {
+      "sha": "4d0d71f5cb3a8690f781aaf3efa5370e2e9506e2",
+      "author": "Jack O'Quin",
+      "date": "2016-10-08T20:02:07Z",
+      "message": "add launch args to support multiple devices (#108)"
+    },
+    {
+      "sha": "611df6324cddfd961f833202c01ac9adeb71686b",
+      "author": "Jack O'Quin",
+      "date": "2016-10-06T19:25:24Z",
+      "message": "Merge pull request #101 from teosnare/master\n\nvelodyne_driver/src/lib/input.cc : fix for device_ip filter"
+    },
+    {
+      "sha": "d8b0c2f1bd6e73dacb721efaa0081999460efba4",
+      "author": "Jack O'Quin",
+      "date": "2016-09-20T22:29:31Z",
+      "message": "Merge pull request #105 from fudger/patch-1\n\nRemove unused constants."
+    },
+    {
+      "sha": "34d1dad3ea2fd6a1f30bf2a80441c792e0e7b199",
+      "author": "Jack O'Quin",
+      "date": "2016-08-26T22:39:39Z",
+      "message": "Merge pull request #104 from altrouge/launch_options\n\nAdd more options in launch files."
+    },
+    {
+      "sha": "0b0383290a75bb61330d822dd5d79c728270573c",
+      "author": "Daniel Jartoux",
+      "date": "2016-08-16T13:56:50Z",
+      "message": "Rearranged alphabetically."
+    },
+    {
+      "sha": "e3d7e74c4042eb3a113b9c9060217d56eae47422",
+      "author": "Alexander Schaefer",
+      "date": "2016-08-16T06:47:19Z",
+      "message": "Remove unused constants.\n\nDISTANCE_MAX and DISTANCE_MAX_UNITS are not used anywhere in the code.\r\n\r\nFurthermore, using them would lead to errors as both VLP-64 manuals state that returns above 120 m should not be used. The VLP-32 manual allows 70 m as the maximum valid sensor range."
+    },
+    {
+      "sha": "109a51fe96568995d0ba8d54896ce1ea580612b2",
+      "author": "Jack O'Quin",
+      "date": "2016-08-15T14:29:51Z",
+      "message": "Merge pull request #103 from fudger/patch-1\n\nFix misleading typecasts."
+    },
+    {
+      "sha": "26c24ef3d3d64bc3c07d141cf276582abe7eb831",
+      "author": "Daniel Jartoux",
+      "date": "2016-08-11T15:35:21Z",
+      "message": "Add more options in launch files.\n\n- rpm, device_ip, port, read_once, read_fast, repeat_delay"
+    },
+    {
+      "sha": "3a19dcca856bbe947ac449cc2aa2dc05240237a1",
+      "author": "Alexander Schaefer",
+      "date": "2016-08-11T14:03:42Z",
+      "message": "Fix misleading typecasts.\n\nintensity and VPoint::intensity are both of type float."
+    },
+    {
+      "sha": "2495c8f1526b9b8a3bce41bdda9df02f0b4a08a9",
+      "author": "Matteo Murtas",
+      "date": "2016-08-09T15:40:12Z",
+      "message": "velodyne_driver/src/lib/input.cc : fix for device_ip filter\n\nFix for device_ip filter in InputSocket: initialization of devip_ for correct ip filtering in InputSocket::getPacket."
+    },
+    {
+      "sha": "374e19d81e1fad15931e14f46d5aeaf4ff4eb33e",
+      "author": "Jack O'Quin",
+      "date": "2016-07-05T14:09:35Z",
+      "message": "velodyne_driver: credit @priyankadey for VLP-16 bug fix (#96)"
+    },
+    {
+      "sha": "2095ee37729aae91882d18d50a02a7fa510b6d95",
+      "author": "Jack O'Quin",
+      "date": "2016-07-03T16:45:09Z",
+      "message": "Merge pull request #96 from priyankadey/master\n\nupdated VLP-16 packet rate from user manual."
+    },
+    {
+      "sha": "58040a0f1b45a276f7106707dbfe9c127fd2bd84",
+      "author": "Priyanka Dey",
+      "date": "2016-07-01T03:59:53Z",
+      "message": "updated VLP-16 packet rate from user manual.\nAlso verified with sensor. It reduced overlap in the pointcloud"
+    },
+    {
+      "sha": "f85ab35ab6e9c0e512c0108b9033deaf6a34f72e",
+      "author": "Jack O'Quin",
+      "date": "2016-06-30T02:43:48Z",
+      "message": "update change history"
+    },
+    {
+      "sha": "78fa2275067a3c027bb8931c1dc15634eef86647",
+      "author": "Jack O'Quin",
+      "date": "2016-06-17T22:35:32Z",
+      "message": "update README for Kinetic (#93)"
+    },
+    {
+      "sha": "618a73a31118f04f5ca33f05ac98d0bcc3aa798b",
+      "author": "Jack O'Quin",
+      "date": "2016-06-16T02:17:48Z",
+      "message": "Merge pull request #94 from ros-drivers/pcap_port\n\nvelodyne_driver: use port number for PCAP data (#46, #66)"
+    },
+    {
+      "sha": "075cb7626676e923e4d4fa0c58dcca9918170b69",
+      "author": "Jack O'Quin",
+      "date": "2016-06-16T01:56:28Z",
+      "message": "fix g++ 5.3.1 compile errors (#94)"
+    },
+    {
+      "sha": "f2bfe506b91f77d2fa578a73f1aa5196686baa3e",
+      "author": "Jack O'Quin",
+      "date": "2016-06-16T00:48:00Z",
+      "message": "merge current master (#94)"
+    },
+    {
+      "sha": "288750672eec521f2140bf1cdea23941cd1720e3",
+      "author": "Jack O'Quin",
+      "date": "2016-06-03T01:58:20Z",
+      "message": "Merge pull request #92 from adasta/master\n\nGCC Build Warnings"
+    },
+    {
+      "sha": "252615c8fb733606db21230f2c28e131ea1e953d",
+      "author": "Adam Stambler",
+      "date": "2016-06-02T20:58:10Z",
+      "message": "Modified velodyne_point_cloud/src/lib/rawdata.cc to address warning\nthat last_azimuth_diff variable may be used uninitialized.  Variable\nis now initialized to 0 at creation.\n\nvelodyne/velodyne_pointcloud/src/lib/rawdata.cc:328:57: error: ‘last_azimuth_diff’ may be used uninitialized in this function [-Werror=maybe-uninitialized]\n           azimuth_corrected_f = azimuth + (azimuth_diff * ((dsr*VLP16_DSR_TOFFSET) + (firing*VLP16_FIRING_TOFFSET)) / VLP16_BLOCK_TDURATION);"
+    },
+    {
+      "sha": "00db43dc6eb784d839cd2020220c3ac9cf8286eb",
+      "author": "Adam Stambler",
+      "date": "2016-06-02T20:56:51Z",
+      "message": "Modified  velodyne_pointcloud/src/conversion/colors.cc to remove\naddress build warning for strict-aliasing.\n\nvelodyne/velodyne_pointcloud/src/conversions/colors.cc:84:58:\n error: dereferencing type-punned pointer will break strict-aliasing rules [-Werror=strict-aliasing]\n         p.rgb = *reinterpret_cast<float*>(&rainbow[color]);\n                                                          ^"
+    },
+    {
+      "sha": "b8e8faad0acb1313c5be08a11262765993901859",
+      "author": "Jack O'Quin",
+      "date": "2016-05-25T23:40:29Z",
+      "message": "Merge pull request #91 from chukcha2/master\n\nupdate velodyne_driver package description to include all models"
+    },
+    {
+      "sha": "8ca4f472858b3295242e6bc99009ee623a82d72d",
+      "author": "Ilya",
+      "date": "2016-05-25T22:50:07Z",
+      "message": "update velodyne_driver package description to include all models"
+    },
+    {
+      "sha": "bd05bf4432b726561a906a517e9775680a55b548",
+      "author": "Jack O'Quin",
+      "date": "2016-05-25T21:49:30Z",
+      "message": "Merge pull request #89 from Tones29/feat_dynrec_driver\n\nAdd dynamic latency configuration to velodyne_driver"
+    },
+    {
+      "sha": "ed051a80c16852dff5ec1fa581aa3566aeaef499",
+      "author": "Andreas Wachaja",
+      "date": "2016-04-22T11:54:20Z",
+      "message": "velodyne_driver: Add dynamic_reconfigure and time_offset correction\n\nThe value of time_offset is added to the calculated time stamp in live mode for each packet."
+    },
+    {
+      "sha": "094db6975f41191690e354fe24b201b5a907edd6",
+      "author": "Andreas Wachaja",
+      "date": "2016-04-22T11:51:11Z",
+      "message": "velodyne_driver: Make input destructors virtual"
+    },
+    {
+      "sha": "5e4a52eb8bc4b39364c818ec921c1fd3c3796431",
+      "author": "Andreas Wachaja",
+      "date": "2016-04-20T09:31:21Z",
+      "message": "velodyne_pointcloud: Fix compile warning \"Wrong initialization order\""
+    },
+    {
+      "sha": "893bdcb9468aff545b68ea6c05928c784d57e99d",
+      "author": "Jack O'Quin",
+      "date": "2016-04-12T21:24:34Z",
+      "message": "velodyne_pointcloud: add dynamic reconfig update to change log (#78)"
+    },
+    {
+      "sha": "c434f433fb5140feaee901ab0614e0049e268503",
+      "author": "Jack O'Quin",
+      "date": "2016-04-12T21:18:17Z",
+      "message": "Merge branch 'fudger-reconfigure_transform_node'"
+    },
+    {
+      "sha": "76e5f85537aedb6ab3339a964336cedf8e493dc6",
+      "author": "Jack O'Quin",
+      "date": "2016-04-12T21:14:36Z",
+      "message": "velodyne_pointcloud: use recommended add_dependencies() CMake variable #78"
+    },
+    {
+      "sha": "196f2739cb40a3a9ee597dfee31b182b492d172a",
+      "author": "Jack O'Quin",
+      "date": "2016-04-12T20:44:26Z",
+      "message": "velodyne_pointcloud: fix transform unit tests\n\nUse tf2_ros static_transform_publisher for more consistent timing (#2)"
+    },
+    {
+      "sha": "b344cf02ad4556eccd1fb4dff4bff78849492484",
+      "author": "Jack O'Quin",
+      "date": "2016-04-12T18:59:41Z",
+      "message": "Merge branch 'reconfigure_transform_node' of https://github.com/fudger/velodyne"
+    },
+    {
+      "sha": "14d0241f828700d5c55bd21e5e38afa5c9949b67",
+      "author": "Jack O'Quin",
+      "date": "2016-03-25T16:28:33Z",
+      "message": "prepare change history for coming Indigo release (#59)"
+    },
+    {
+      "sha": "8e581999579af2726790205ffadf2d7259cd09f5",
+      "author": "Jack O'Quin",
+      "date": "2016-03-22T16:49:23Z",
+      "message": "calibration: unit test case improvements (#84)"
+    },
+    {
+      "sha": "9a5d583c1787eb700847ecfc80a17b04986694ee",
+      "author": "Jack O'Quin",
+      "date": "2016-03-21T20:38:34Z",
+      "message": "calibration: read all intensities as float, then convert (#84)"
+    },
+    {
+      "sha": "c3e5178aca169f37bc60e87d02aaa2bbb14e13fa",
+      "author": "Jack O'Quin",
+      "date": "2016-03-21T16:00:27Z",
+      "message": "calibration: add gtest for #84\n\nThis currently fails on 64e_s2.1-sztaki.yaml and on issue_84_float_intensities.yaml."
+    },
+    {
+      "sha": "fbe603a5cb0e74cf75aa78859c08910197b740b4",
+      "author": "Jack O'Quin",
+      "date": "2016-03-20T23:42:49Z",
+      "message": "calibration: make max_intensity and min_intensity optional (#84)\n\nThis fixes a regression in the 32e and VLP-16 calibrations which do not contain\nintensity values. There is still a problem with the 64e_s2.1 calibration."
+    },
+    {
+      "sha": "71d6ec2d6ceb65f872a142e4dd5f29e63868d61b",
+      "author": "Jack O'Quin",
+      "date": "2016-03-19T02:39:13Z",
+      "message": "Merge pull request #76 from pomerlef/master\n\nSign inversion in some equations"
+    },
+    {
+      "sha": "3fc2d209fa7a56a3602886142b37d64100c8fcf2",
+      "author": "Jack O'Quin",
+      "date": "2016-03-12T17:00:50Z",
+      "message": "Merge pull request #82 from ros-drivers/fix_pr_80\n\nFix pr 80; adding travis CI tests."
+    },
+    {
+      "sha": "594d0be6e8b1c29f953ed45007b5c4b2c7a7057a",
+      "author": "William Woodall",
+      "date": "2016-03-12T03:48:17Z",
+      "message": "fix test_results call"
+    },
+    {
+      "sha": "f3f1fdecbe31b15c21561cedb0a885738103c30a",
+      "author": "William Woodall",
+      "date": "2016-03-12T03:35:03Z",
+      "message": "try to fixup travis-ci"
+    },
+    {
+      "sha": "0b82b20fa59f21942a02259286291a76ff077528",
+      "author": "William Woodall",
+      "date": "2016-03-12T02:51:18Z",
+      "message": "fix the yaml-cpp 0.5 code paths"
+    },
+    {
+      "sha": "5b1ecedf8ae70824f9e303f69fa6ce355a9f3ede",
+      "author": "William Woodall",
+      "date": "2016-03-12T03:14:38Z",
+      "message": "make a build failure stop the next steps"
+    },
+    {
+      "sha": "bf1592c222634d6ae6b7e84e2369ed8fe1307c6a",
+      "author": "William Woodall",
+      "date": "2016-03-12T03:04:39Z",
+      "message": "add travis pr testing"
+    },
+    {
+      "sha": "f896e22770fd269d978d3c9516f10650565cbfb9",
+      "author": "Jack O'Quin",
+      "date": "2016-03-12T01:35:30Z",
+      "message": "Merge pull request #80 from ros-drivers/fix_yaml_import\n\nallow floats in min/max_intensity and make horiz_offset_correction optional"
+    },
+    {
+      "sha": "ccb9a0b45df29db0c78321988090f268e93c15bb",
+      "author": "William Woodall",
+      "date": "2016-03-09T03:18:21Z",
+      "message": "allow horiz_offset_correction to be optional with 0 as default"
+    },
+    {
+      "sha": "47df6917bc944a000fe133e86962edf8047d5b47",
+      "author": "William Woodall",
+      "date": "2016-03-09T03:17:46Z",
+      "message": "allow floats instead of ints in min/max_intensity"
+    },
+    {
+      "sha": "f7d0ce489212ed639dee9efac68fa6563eab1f57",
+      "author": "Alexander Schaefer",
+      "date": "2016-02-22T09:20:55Z",
+      "message": "Resolve frame ID name using tf prefix."
+    },
+    {
+      "sha": "95b46918ac8d236f5b3af14e42b278e8bb832ed8",
+      "author": "Alexander Schaefer",
+      "date": "2016-02-22T08:30:37Z",
+      "message": "Improve coding style."
+    },
+    {
+      "sha": "26fface987ee1c25d6c68beb3f947950a619e492",
+      "author": "Alexander Schaefer",
+      "date": "2016-02-19T18:07:41Z",
+      "message": "Set up dynamic reconfiguration for transform_node.\n\nPreviously, transform_node has neither read parameters other than frame_id from the command line nor has it exposed these parameters via dynamic reconfigure. As parameters like max_range and view_width have been initialized to zero, the inconfigurable transform_node has returned an empty point cloud.\n\nNow, transform_node launches an reconfigure server just as cloud_node. In contrast to cloud_node, transform node exposes another parameter for dynamic reconfiguration: frame_id, i.e. the frame of reference the incoming Velodyne points are transformed to."
+    },
+    {
+      "sha": "80a1494215dd1807f8d8315e332005bae3b59dc6",
+      "author": "Alexander Schaefer",
+      "date": "2016-02-19T17:21:11Z",
+      "message": "Add docs to gitignore.\n\nDocumentation tools create this folder that shall not be uploaded to git."
+    },
+    {
+      "sha": "79c8d82e04203368fdadd747ebcbef148dd25df8",
+      "author": "Jack O'Quin",
+      "date": "2016-02-18T21:40:51Z",
+      "message": "Merge pull request #77 from fudger/pretty_print\n\nFix output of calibration data onto console"
+    },
+    {
+      "sha": "285618053eb8788af9cd0a8a1f184f52fbf14af3",
+      "author": "Alexander Schaefer",
+      "date": "2016-02-18T16:25:34Z",
+      "message": "Add a missing space."
+    },
+    {
+      "sha": "acce5e1ffffd8968de73060d5c86e1fc19e42494",
+      "author": "Alexander Schaefer",
+      "date": "2016-02-18T11:09:06Z",
+      "message": "Fix line that always indicates use of model VLP-16."
+    },
+    {
+      "sha": "796d1395318d66a3788309ec41a8ddaab8b4d025",
+      "author": "Alexander Schaefer",
+      "date": "2016-02-17T10:59:40Z",
+      "message": "Align console output of calibration data."
+    },
+    {
+      "sha": "03db2fd3c644ce1fac8d0f216460b1df0304f84c",
+      "author": "Alexander Schaefer",
+      "date": "2016-02-17T10:58:36Z",
+      "message": "Add *.user files to gitignore."
+    },
+    {
+      "sha": "3df086182025c0a2d8e626c509516e0bab9069eb",
+      "author": "pomerlef",
+      "date": "2016-02-11T23:11:49Z",
+      "message": "Merge branch 'master' of https://github.com/ros-drivers/velodyne"
+    },
+    {
+      "sha": "3f6924e732445e7e5e1cfab787b71eb5831e0e17",
+      "author": "pomerlef",
+      "date": "2016-02-11T23:11:21Z",
+      "message": "resolve sign error"
+    },
+    {
+      "sha": "fd36398fbab1b2fce1d1e971f0c717cd72c114d1",
+      "author": "Jack O'Quin",
+      "date": "2016-02-09T15:37:26Z",
+      "message": "Merge pull request #73 from fudger/master\n\nCorrect important data type error for VLP-16"
+    },
+    {
+      "sha": "597aa9123f8141779259a2cd999e5fd1c512db96",
+      "author": "Alexander Schaefer",
+      "date": "2016-02-09T15:04:11Z",
+      "message": "Fix data type error that distorts the point cloud."
+    },
+    {
+      "sha": "0c235c135aa4c72ed8de2538014c99d419e01706",
+      "author": "Alexander Schaefer",
+      "date": "2016-02-08T09:55:41Z",
+      "message": "Fix and add a few comments."
+    },
+    {
+      "sha": "455721b5eb2c122c29580e15ef941a94d4c654dc",
+      "author": "Jack O'Quin",
+      "date": "2015-11-29T16:24:21Z",
+      "message": "Merge pull request #68 from jlblancoc/patch-1\n\nRemove unused variable"
+    },
+    {
+      "sha": "f75228e44aada8203024e994b230e9e6fd627e22",
+      "author": "Jose Luis Blanco-Claraco",
+      "date": "2015-11-29T13:47:31Z",
+      "message": "Remove unused variable\n\nI think that `dsr` was unused. See line 317: \r\n\r\nfor (int dsr=0; ..."
+    },
+    {
+      "sha": "f3b19fdff1309061b82b735f7d5e81df5b8b17e2",
+      "author": "Jack O'Quin",
+      "date": "2015-11-21T02:30:07Z",
+      "message": "velodyne_driver: use port number for PCAP data (#66)"
+    },
+    {
+      "sha": "70a8fae19e8ed6e9ec8c8caa92e5525d8f308f4c",
+      "author": "Jack O'Quin",
+      "date": "2015-11-01T19:54:08Z",
+      "message": "VLP-16: skip badly formatted data packets (#62, #63)"
+    },
+    {
+      "sha": "85228edd84c1f626c020863b77f1dbb4da3f1ea3",
+      "author": "Jack O'Quin",
+      "date": "2015-10-14T21:21:22Z",
+      "message": "restore VLP-16 min_range setting to 0.4 (#60)\n\nNOTE: There is still some other problem keeping that from working."
+    },
+    {
+      "sha": "d65ef885ff3f4fbe20d24be9dd31238b009d8642",
+      "author": "Jack O'Quin",
+      "date": "2015-10-14T20:38:25Z",
+      "message": "permit min_range settings below 0.9 meters (#60)\n\nNo known models are currently known to return closer measurements."
+    },
+    {
+      "sha": "89aa0a6a76e52c947557c6ef40dfda3b5bc74fdb",
+      "author": "Jack O'Quin",
+      "date": "2015-09-22T20:56:52Z",
+      "message": "Merge pull request #39 from zooxco/multivelodyne\n\nsupport for multiple velodynes"
+    },
+    {
+      "sha": "6c0f6b0f38e59cadc66b7822ddffdce74c05770c",
+      "author": "Jack O'Quin",
+      "date": "2015-08-19T14:56:38Z",
+      "message": "Merge branch 'cut_at_specified_angle_feature' of https://github.com/ddillenberger/velodyne"
+    },
+    {
+      "sha": "c05f00e1e255669d0841b49bad971deb9813257a",
+      "author": "Jack O'Quin",
+      "date": "2015-07-23T15:10:03Z",
+      "message": "Merge pull request #55 from lemiant/azimuth_bug_VLP16\n\nFixed azimuth overflow bug."
+    },
+    {
+      "sha": "74b420a08ff544daa53540fd0521cce618238fdc",
+      "author": "Alex Rodrigues",
+      "date": "2015-07-21T00:31:13Z",
+      "message": "Fixed azimuth overflow bug.\nFor interpolated azimuth values between 35999.5 and 36000.0 the nested round(fmod())\nyields a value of 36000 which is invalid and overflows the pre-computed sin/cos arrays,\nsince they only go form 0..35999"
+    },
+    {
+      "sha": "e3e203cb6ad952c73f9bfbdcf84a1778672a9b0f",
+      "author": "Jack O'Quin",
+      "date": "2015-07-04T00:12:10Z",
+      "message": "Merge pull request #51 from kunlileo/master\n\nAdded vertical sin angle correction"
+    },
+    {
+      "sha": "356cfb1afa522bcede549b07ef7101800662537e",
+      "author": "Kun Li",
+      "date": "2015-06-22T15:22:54Z",
+      "message": "Added vertical sin angle correction"
+    },
+    {
+      "sha": "f5424c115f69713c9601ca29f4ac4c1bda0829c2",
+      "author": "Jack O'Quin",
+      "date": "2015-04-22T18:50:02Z",
+      "message": "Merge pull request #47 from prclibo/master\n\nfixed rounding bug in intensity calculation found by songshiyu"
+    },
+    {
+      "sha": "88352fdb718fb77b5216a446ba2b01f7c2919198",
+      "author": "Bo Li",
+      "date": "2015-04-10T07:01:25Z",
+      "message": "fixed rounding bug in intensity calculation found by songshiyu"
+    },
+    {
+      "sha": "b6582521f2ae57c6e6c88473d7f59af66d6ed662",
+      "author": "Jack O'Quin",
+      "date": "2015-04-03T22:21:10Z",
+      "message": "fix some overly long C++ source lines"
+    },
+    {
+      "sha": "c82ce26cfdc812ecd67738ec1237f9d18185a1d8",
+      "author": "Jack O'Quin",
+      "date": "2015-04-02T21:38:07Z",
+      "message": "Merge pull request #44 from SISegwayRmp/master\n\nadding driver and pointcloud support for the VLP16"
+    },
+    {
+      "sha": "7582839ad2143a070bdb3abb5c2556e6acf9ad1a",
+      "author": "phussey",
+      "date": "2015-04-02T21:10:51Z",
+      "message": "missed the space in the file name which caused the build to fail, removed space before extension"
+    },
+    {
+      "sha": "be78702e4fc31d57a7ebefb05b7f3b03f138a2e8",
+      "author": "phussey",
+      "date": "2015-04-02T01:17:27Z",
+      "message": "adding the VLP16 test scripts and updating the CMakeLists to include the test file from http://download.ros.org/data/velodyne/vlp16.pcap"
+    },
+    {
+      "sha": "0235e9f7d8b62caa862d860267afc2bca73d7838",
+      "author": "phussey",
+      "date": "2015-03-30T19:16:05Z",
+      "message": "adding support for the VLP16"
+    },
+    {
+      "sha": "33a8475a5c4cd33f61d96e58c6ace70705f50c98",
+      "author": "Jack O'Quin",
+      "date": "2015-02-03T16:09:14Z",
+      "message": "Merge pull request #43 from prclibo/fix_rawdata\n\nfixed point computation according to the 64e_s2(.1) velodyne manual"
+    },
+    {
+      "sha": "3c4cc1ceeb826842e1107f130afed4c06131f984",
+      "author": "libo24",
+      "date": "2015-02-03T10:55:14Z",
+      "message": "fixed point computation according to the 64e_s2(.1) velodyne manual, with luopei\"s help"
+    },
+    {
+      "sha": "c74dd96ecd2f1574d631cba41d7ef068b72a7105",
+      "author": "Jack O'Quin",
+      "date": "2015-01-26T16:29:34Z",
+      "message": "Merge pull request #41 from prclibo/master\n\nfixed a calibration file parsing bug"
+    },
+    {
+      "sha": "d91b71b778a5c685cd5d5e973570db481f852d39",
+      "author": "Jack O'Quin",
+      "date": "2015-01-26T16:28:58Z",
+      "message": "Merge pull request #42 from prclibo/fix_gen_calibration\n\nfixed gen_calibration min/max intensity type"
+    },
+    {
+      "sha": "fdba8a3365ed79f298d3a46b4c5e091e994381a1",
+      "author": "libo24",
+      "date": "2015-01-26T09:00:32Z",
+      "message": "fixed gen_calibration min/max intensity type"
+    },
+    {
+      "sha": "fc20169be77cb7f649961fb97f91e565fe9ba28a",
+      "author": "libo24",
+      "date": "2015-01-26T08:18:48Z",
+      "message": "fixed a calibration file parsing bug"
+    },
+    {
+      "sha": "d48c203e3bcbca364254bb25a72ab71e30388ba6",
+      "author": "junior",
+      "date": "2015-01-08T04:11:05Z",
+      "message": "parameters to set the udp port"
+    },
+    {
+      "sha": "f366bcaca92e2a84cdb650ff3aaf5346f281f52f",
+      "author": "Brice Rebsamen",
+      "date": "2015-01-08T00:45:45Z",
+      "message": "fixed missing header"
+    },
+    {
+      "sha": "185e78d860cfd97cf263cb39f02a313b7f140370",
+      "author": "Denis Dillenberger",
+      "date": "2014-10-13T15:01:28Z",
+      "message": "cut at specific angle feature"
+    },
+    {
+      "sha": "e1aa46a17d5cc45c0570d057b8b017fb01dc3426",
+      "author": "Denis Dillenberger",
+      "date": "2014-10-11T13:22:10Z",
+      "message": "cleanup debug line"
+    },
+    {
+      "sha": "425f5b27f9e00e7de8e11be05b9606546b47971e",
+      "author": "Denis Dillenberger",
+      "date": "2014-10-10T13:59:33Z",
+      "message": "parameter and code added for working with multiple velodynes"
+    },
+    {
+      "sha": "5463aabb2ab687a73d3b40cd88e5603b199bd282",
+      "author": "Jack O'Quin",
+      "date": "2014-08-20T19:26:18Z",
+      "message": "Fix broken reference to pull request #22"
+    },
+    {
+      "sha": "239699aa240fc9d9162c2e3c2a76860a97156126",
+      "author": "Jack O'Quin",
+      "date": "2014-08-06T15:45:43Z",
+      "message": "README update"
+    },
+    {
+      "sha": "7d3a1e3d7f98f62c2360bdeab2ef829b7c5eed64",
+      "author": "Jack O'Quin",
+      "date": "2014-08-06T15:26:09Z",
+      "message": "velodyne-1.2.0"
+    },
+    {
+      "sha": "32547b0ee6329cbd119d1c31d1cd90f99c5263f1",
+      "author": "Jack O'Quin",
+      "date": "2014-08-06T15:25:03Z",
+      "message": "set change log release to 1.2.0"
+    },
+    {
+      "sha": "e3d5676f8391550def2663a27c67a0d7ec731331",
+      "author": "Jack O'Quin",
+      "date": "2014-08-06T14:45:04Z",
+      "message": "prepare change logs for release"
+    },
+    {
+      "sha": "000bbd70df3590607cf0358b9d8c1aebf5cd7d64",
+      "author": "Jack O'Quin",
+      "date": "2014-08-05T22:24:21Z",
+      "message": "velodyne_pointcloud: remove model-dependent \"constants\" from rawdata.h (#28)"
+    },
+    {
+      "sha": "ccff060e530c3b883adef275d58a37bf78d7f67e",
+      "author": "Jack O'Quin",
+      "date": "2014-08-05T22:19:09Z",
+      "message": "velodyne_pointcloud: change default min_range to 0.9 meters (#25)"
+    },
+    {
+      "sha": "53043fe77822eae02ff329e3db8912df7ae610fb",
+      "author": "Jack O'Quin",
+      "date": "2014-04-24T00:48:06Z",
+      "message": "Merge pull request #27 from bricerebsamen/master\n\nfixed #16 (diagnostic rate for driver)"
+    },
+    {
+      "sha": "da56cd73c261c8b888c89df8db3f437261492ccc",
+      "author": "Brice Rebsamen",
+      "date": "2014-04-24T00:40:56Z",
+      "message": "fixed #16 (diagnostic rate for driver)"
+    },
+    {
+      "sha": "da91bb9aae5371d9a70284629c6b3d9c582b6d5c",
+      "author": "Jack O'Quin",
+      "date": "2014-04-04T13:23:09Z",
+      "message": "Merge pull request #22 from totosolat/master\n\nadding angular limits for the output pointcloud"
+    },
+    {
+      "sha": "a5eea90c3579a5137caece1e4331461735c0684c",
+      "author": "Thomas Solatges",
+      "date": "2014-04-04T13:16:43Z",
+      "message": "missed the modification of one value"
+    },
+    {
+      "sha": "329adfc454c940ca1acba28a225c25f79f9735d5",
+      "author": "Thomas Solatges",
+      "date": "2014-04-04T12:57:51Z",
+      "message": "using pi value from python math library"
+    },
+    {
+      "sha": "00b0c6e30164bb93a708e368909ef689228ac638",
+      "author": "Thomas Solatges",
+      "date": "2014-04-04T07:08:46Z",
+      "message": "changing range for view_direction and removing old parameters in launch files"
+    },
+    {
+      "sha": "b96059496d3a745ee55dd9cd621c5bd7a25b3591",
+      "author": "Thomas Solatges",
+      "date": "2014-04-03T12:19:52Z",
+      "message": "cleaning"
+    },
+    {
+      "sha": "18405572b40d83b43ccfcdf5772637057cce2bd1",
+      "author": "Thomas Solatges",
+      "date": "2014-04-03T12:14:10Z",
+      "message": "changed the parameters definition."
+    },
+    {
+      "sha": "bbb4725f5f2940a4d8aedb7548e3d65b284de184",
+      "author": "Thomas Solatges",
+      "date": "2014-04-03T09:29:53Z",
+      "message": "Merge remote-tracking branch 'ros-drivers/master'"
+    },
+    {
+      "sha": "632350d4a44a9ca82ccd22af3d6d96faddbdc517",
+      "author": "Jack O'Quin",
+      "date": "2014-03-26T15:45:37Z",
+      "message": "Merge pull request #23 from cottsay/master\n\nAdded support for YAML-CPP 0.5+."
+    },
+    {
+      "sha": "0b7a20918f65962f1bf0b4183722589aef239584",
+      "author": "Scott K Logan",
+      "date": "2014-03-24T23:56:41Z",
+      "message": "Added support for YAML-CPP 0.5+.\n\nThe new yaml-cpp API removes the \"node >> outputvar;\" operator, and\nit has a new way of loading documents. There's no version hint in the\nlibrary's headers, so I'm getting the version number from pkg-config.\n\nThis part of the patch is a port of the ones created by @ktossell for\nmap_server and other packages.\n\nThe new yaml-cpp also uses a different method for loading documents."
+    },
+    {
+      "sha": "d26d1ed05e0743a102688f2ee0230118d4351c1f",
+      "author": "Thomas Solatges",
+      "date": "2014-03-07T13:24:57Z",
+      "message": "cleaning"
+    },
+    {
+      "sha": "6a7c70fff00c3935c6983b3f7274778d2ed025b4",
+      "author": "Thomas Solatges",
+      "date": "2014-03-07T09:33:51Z",
+      "message": "implemented and tested dynamic reconfigure of angles an range pramateters"
+    },
+    {
+      "sha": "d6e434e0fb34b5b746002f58a3c927e8442d89c6",
+      "author": "Thomas Solatges",
+      "date": "2014-03-06T08:49:18Z",
+      "message": "Add dynamic_reconfigure feature"
+    },
+    {
+      "sha": "5bc6d89bcb9b1ed08206b6cd8fda00acda1cac16",
+      "author": "Thomas Solatges",
+      "date": "2014-02-20T10:20:39Z",
+      "message": "matching REP-0103 for max_angles and min_angles"
+    },
+    {
+      "sha": "64ad8eb82d7d2a67d2e44e7cd1bc7f320fe937fd",
+      "author": "Thomas Solatges",
+      "date": "2014-02-20T08:59:19Z",
+      "message": "matching velodyne_pointcloud/src/lib/rawdata.cc"
+    },
+    {
+      "sha": "4b5a189b9f77ca540f536ef1f1c93c9647d08fa0",
+      "author": "Thomas Solatges",
+      "date": "2014-02-17T08:10:17Z",
+      "message": "Update rawdata.cc\n\nGive the ability to define min and max angles to publish.\r\nThe driver will publish the points located in the area defined by min_angle and max_angle. The other points are ignored."
+    },
+    {
+      "sha": "a5c35a32f1738e9eb473893c8a139c714e5baff8",
+      "author": "Thomas Solatges",
+      "date": "2014-02-14T14:08:19Z",
+      "message": "Update transform_nodelet.launch"
+    },
+    {
+      "sha": "cceab7bccf54fa09650a331d6cd4185da7c0986f",
+      "author": "Thomas Solatges",
+      "date": "2014-02-14T14:07:19Z",
+      "message": "Update cloud_nodelet.launch"
+    },
+    {
+      "sha": "b3319061c65fdbcdd5c992b23f1f619eb53d73f8",
+      "author": "Thomas Solatges",
+      "date": "2014-02-14T14:05:52Z",
+      "message": "Update rawdata.cc\n\nAdded a condition to ignore all the points which are not in the angle area we want to focus on.\r\nThis can be usefull if you want to cut a part of the output pointcloud."
+    },
+    {
+      "sha": "06d8efcb48b1567d9c78904ebaa5165319d2830f",
+      "author": "Thomas Solatges",
+      "date": "2014-02-14T13:49:49Z",
+      "message": "Update rawdata.h\n\ndefine 2 new configuration parameters: min_angle and max_angle to be used in rawdata.cc"
+    },
+    {
+      "sha": "aa8d72e69ae3e5a8141fc47e6a5dc8191b275645",
+      "author": "Jack O'Quin",
+      "date": "2013-11-05T15:08:44Z",
+      "message": "\"velodyne-1.1.2\""
+    },
+    {
+      "sha": "2ab6f4663146c73dd06eeedb6d2abb379a2f4f9d",
+      "author": "Jack O'Quin",
+      "date": "2013-11-05T15:07:51Z",
+      "message": "set release 1.1.2 date"
+    },
+    {
+      "sha": "252175a686429645b782e66c316d92295317197c",
+      "author": "Jack O'Quin",
+      "date": "2013-11-05T15:01:11Z",
+      "message": "velodyne_pointcloud: install missing gen_calibration.py script (#20)"
+    },
+    {
+      "sha": "07ab9f53a05c602a3c639c2dbc466dba1085f2fa",
+      "author": "Jack O'Quin",
+      "date": "2013-09-29T16:58:59Z",
+      "message": "add unit tests for launch scripts"
+    },
+    {
+      "sha": "b0380b44fcf6b52dfb0db150adc5557e5556a9c3",
+      "author": "Jack O'Quin",
+      "date": "2013-09-29T16:15:45Z",
+      "message": "update change log"
+    },
+    {
+      "sha": "6c3e411101cce60b9901075a8043a4b8a259d9bb",
+      "author": "Jack O'Quin",
+      "date": "2013-09-29T16:09:58Z",
+      "message": "velodyne_driver: install missing vdump script (#17)"
+    },
+    {
+      "sha": "f2f03550cd4d636cdb0daf4be3af01e5b1d94a59",
+      "author": "Jack O'Quin",
+      "date": "2013-09-28T17:51:15Z",
+      "message": "move test data to download.ros.org (fixes #18)"
+    },
+    {
+      "sha": "ff27365c64842afb82d35c8d4d2c65d2edacece2",
+      "author": "Jack O'Quin",
+      "date": "2013-07-30T21:59:20Z",
+      "message": "1.1.1"
+    },
+    {
+      "sha": "ac3f3a78929908cb165a65d0289cfb7522c8b029",
+      "author": "Jack O'Quin",
+      "date": "2013-07-30T21:58:42Z",
+      "message": "tag change log for 1.1.1 release"
+    },
+    {
+      "sha": "6d0c3d96873f696cba33afa440b4f64854f2bbd1",
+      "author": "Jack O'Quin",
+      "date": "2013-07-30T21:55:32Z",
+      "message": "add 64E S2.1 XML config file to velodyne_pointcloud tests directory"
+    },
+    {
+      "sha": "cd26ad1c7705e5f7f07f9370932682de607f4b52",
+      "author": "Jack O'Quin",
+      "date": "2013-07-30T19:32:45Z",
+      "message": "clean up test files, make the names more informative"
+    },
+    {
+      "sha": "727aee1cb7e4a8caf5afd7729a4299bc171e5036",
+      "author": "Jack O'Quin",
+      "date": "2013-07-30T03:21:20Z",
+      "message": "make more test output names unique"
+    },
+    {
+      "sha": "3a257e035a8c68c16b26c39c0cba36622984c503",
+      "author": "Jack O'Quin",
+      "date": "2013-07-30T02:52:31Z",
+      "message": "make test output names unique"
+    },
+    {
+      "sha": "8c71316be10a65ed31fdc7198d93984fe7e69ac1",
+      "author": "Jack O'Quin",
+      "date": "2013-07-30T02:22:28Z",
+      "message": "update change log"
+    },
+    {
+      "sha": "68f5303baabeb7f5da3a4cfddaece0cfcd05fbc8",
+      "author": "Jack O'Quin",
+      "date": "2013-07-30T02:18:26Z",
+      "message": "read S2 test data from pr.willowgarage.com; make that test unconditional"
+    },
+    {
+      "sha": "8953b9de5cc7ca8455b2a7c8e12f19bc5c502c9e",
+      "author": "Jack O'Quin",
+      "date": "2013-07-30T02:11:27Z",
+      "message": "Merge pull request #14 from gabor-meszaros/master\n\nadd additional parameters to launch files"
+    },
+    {
+      "sha": "d21a0798fc87cbe866bb2357eae78b987f9474be",
+      "author": "Gabor Meszaros",
+      "date": "2013-07-29T12:21:00Z",
+      "message": "add additional parameters to launch files"
+    },
+    {
+      "sha": "c33c3eb31bd254ce44ba16615a7c0fa5167ad178",
+      "author": "Jack O'Quin",
+      "date": "2013-07-26T16:02:15Z",
+      "message": "update CHANGELOG; add README"
+    },
+    {
+      "sha": "a351160da1a3e1aaa32048e1223ca870407b1013",
+      "author": "Jack O'Quin",
+      "date": "2013-07-26T14:58:58Z",
+      "message": "Merge pull request #12 from gabor-meszaros/master\n\nadded support for HDL-64E S2.x models"
+    },
+    {
+      "sha": "5b15e7c685098fb1b22c5331ab63eb9197e93a5b",
+      "author": "Gabor Meszaros",
+      "date": "2013-07-26T11:40:09Z",
+      "message": "fixed the overwrote header frame_id bug"
+    },
+    {
+      "sha": "87a00bdde93be318dbe73926e7bd0d4ab784510f",
+      "author": "Gabor Meszaros",
+      "date": "2013-07-26T10:38:02Z",
+      "message": "split HDL-64E S2.x model group into S2 and S2.1. Added tests and calibration file for HDL-64E S2.1"
+    },
+    {
+      "sha": "432f5dd946efdebf3755b41ccfe1b422e2652b53",
+      "author": "Gabor Meszaros",
+      "date": "2013-07-24T10:09:03Z",
+      "message": "added support for HDL-64E S2.x models"
+    },
+    {
+      "sha": "29f98db95d88aa66e90673225c652cda1c4f97c9",
+      "author": "Jack O'Quin",
+      "date": "2013-07-23T02:19:35Z",
+      "message": "format CMake unit test messages with leading --"
+    },
+    {
+      "sha": "023250e542ec115378e258c90289d3ca20be804e",
+      "author": "Jack O'Quin",
+      "date": "2013-07-16T20:17:22Z",
+      "message": "prepare release 1.1.0"
+    },
+    {
+      "sha": "82e696ddd7f2554906d78ff7dd1ef1415372e2fb",
+      "author": "Jack O'Quin",
+      "date": "2013-07-13T19:56:58Z",
+      "message": "fix typo in previous commit (#10)"
+    },
+    {
+      "sha": "4d4ce146578d64160b2fc12bd78c707e816afc35",
+      "author": "Jack O'Quin",
+      "date": "2013-07-13T19:55:10Z",
+      "message": "enable unit tests when CATKIN_ENABLE_TESTING is set (fixes #10)"
+    },
+    {
+      "sha": "8bbb699941087c42dbabe6f1f5e73459b33ba2e5",
+      "author": "Jack O'Quin",
+      "date": "2013-07-13T19:32:27Z",
+      "message": "install some launch and parameter files"
+    },
+    {
+      "sha": "784e5c6d590e605315fb90c2fc350cc20b4e0cae",
+      "author": "Jack O'Quin",
+      "date": "2013-07-13T19:14:32Z",
+      "message": "install nodelet XML plugin files (fixes #9)"
+    },
+    {
+      "sha": "50bdc2eb967447787840572322ee4ed36a8f507f",
+      "author": "Jack O'Quin",
+      "date": "2013-07-13T01:45:19Z",
+      "message": "Merge pull request #8 from wjwwood/pcl-1.7_fixup\n\nFixes for building on OS X and against pcl-1.7"
+    },
+    {
+      "sha": "6b1437f3a618a7cc2369bd2cf3993d7efd94b5ee",
+      "author": "William Woodall",
+      "date": "2013-07-11T23:06:17Z",
+      "message": "pointlcoud: fixes to reflect changes in pcl-1.7\n\npcl_conversions is explicitly not a run_depend nor\na transitive dependency as it is only used in the\ncc files."
+    },
+    {
+      "sha": "3a413b227c3ba157736f7f93f2b606292e821133",
+      "author": "William Woodall",
+      "date": "2013-07-11T23:05:33Z",
+      "message": "pointcloud: [style] exceptions should be passed by reference"
+    },
+    {
+      "sha": "3e7511951e5e7db4243e56fd9dd3473dc30005e4",
+      "author": "William Woodall",
+      "date": "2013-07-11T23:05:07Z",
+      "message": "pointcloud: [style] trailing whitespace"
+    },
+    {
+      "sha": "cf2adaffe91844dbf1f16bf9083848dc0ad27175",
+      "author": "William Woodall",
+      "date": "2013-07-11T23:02:12Z",
+      "message": "driver: fixes a compile error on OS X\n\nI'm not sure why this works on Linux? data is not\na static member of VelodynePacket, it should not\nbe accessed with an instance."
+    },
+    {
+      "sha": "5c76ff665255f923aef49c818baed93632af2af1",
+      "author": "William Woodall",
+      "date": "2013-07-11T23:01:14Z",
+      "message": "driver: add dependency on catkin exported targets"
+    },
+    {
+      "sha": "6f9c33090ec0ae70a386d4a07037c9fa0e2215f8",
+      "author": "Jack O'Quin",
+      "date": "2013-07-10T03:00:46Z",
+      "message": "Add change history for 0.9.2 release"
+    },
+    {
+      "sha": "4a370e10ac24de90b4bb2a91834ff7d1bd4e3fa8",
+      "author": "Jack O'Quin",
+      "date": "2013-06-18T03:16:22Z",
+      "message": "prepare to use roslaunch_add_file_check(), when available (#5)"
+    },
+    {
+      "sha": "4899e38875f673fe24bace4a77e2d29c74e0aedc",
+      "author": "Jack O'Quin",
+      "date": "2013-06-15T15:32:10Z",
+      "message": "update change history for 1.0.1"
+    },
+    {
+      "sha": "ce63a68deeb5bf5272a3fcfb58edc842d73c314e",
+      "author": "Jack O'Quin",
+      "date": "2013-06-15T15:26:50Z",
+      "message": "1.0.1"
+    },
+    {
+      "sha": "8c36c5ecab6178b94adcd493470d0dbdaef59e06",
+      "author": "Jack O'Quin",
+      "date": "2013-06-15T15:18:54Z",
+      "message": "add explicit pluginlib dependency (fixes #4)"
+    },
+    {
+      "sha": "f81c7de406bb68e2545ef9ca695dcb7efc56d6d5",
+      "author": "Jack O'Quin",
+      "date": "2013-06-14T13:42:37Z",
+      "message": "fix syntax error in change log"
+    },
+    {
+      "sha": "5a4a87f0cc14d54ac25a0e535a1537ae4d8b2cc5",
+      "author": "Jack O'Quin",
+      "date": "2013-06-14T04:39:12Z",
+      "message": "prepare 1.0.0 release"
+    },
+    {
+      "sha": "ac1f34be45b3032c90641f7ed0c800e7d3ea0e73",
+      "author": "Jack O'Quin",
+      "date": "2013-06-14T03:24:17Z",
+      "message": "use new catkin_download_test_data() command"
+    },
+    {
+      "sha": "531b1ff7ac2d1129512c05b72664c1fefeabcd1c",
+      "author": "Jack O'Quin",
+      "date": "2013-05-30T14:36:17Z",
+      "message": "disable transform tests until #2 is fixed"
+    },
+    {
+      "sha": "3e21c97aff8ee2cc6393e555f35e8f16a807d8ea",
+      "author": "Jack O'Quin",
+      "date": "2013-05-29T15:50:23Z",
+      "message": "fix header install directories error"
+    },
+    {
+      "sha": "b4c1487724e6efd4bd16e75ed34ff7c29e458ea9",
+      "author": "Jack O'Quin",
+      "date": "2013-05-28T15:32:47Z",
+      "message": "loosen error tolerance for transformed pointcloud Hz tests"
+    },
+    {
+      "sha": "0a7f734839e764557649333fcc4d995798a58198",
+      "author": "Jack O'Quin",
+      "date": "2013-05-28T03:44:26Z",
+      "message": "add unit tests for velodyne_pointclound"
+    },
+    {
+      "sha": "0baab6814cea3d024b661f9fb30d9a107fe47c6c",
+      "author": "Jack O'Quin",
+      "date": "2013-05-23T19:25:47Z",
+      "message": "in velodyne_driver: export catkin dependencies"
+    },
+    {
+      "sha": "0ecf305b5fa42869df161da53bac98d5b566fcae",
+      "author": "Jack O'Quin",
+      "date": "2013-05-23T15:55:09Z",
+      "message": "Add velodyne_driver unit tests.\n\nReduce each test duration from 10 seconds to 5.\nAdd appalling hack to make download_test_data() put the data in /tmp,\nbecause rostest can access it there, but not in the build tree."
+    },
+    {
+      "sha": "a3fb980ed8f65ef392f656904e7ecb0cd26911d1",
+      "author": "Jack O'Quin",
+      "date": "2013-05-22T04:21:20Z",
+      "message": "remove typo character from rostest files"
+    },
+    {
+      "sha": "e6d84488da7118f98233840d54ddcab4971df46b",
+      "author": "Jack O'Quin",
+      "date": "2013-05-22T04:14:22Z",
+      "message": "download test data for velodyne_driver\n\nUnit tests are commented out, because they cannot find the data."
+    },
+    {
+      "sha": "9deafce4f0e36094c7c907b0bccc20513ab396df",
+      "author": "Jack O'Quin",
+      "date": "2013-05-21T14:51:25Z",
+      "message": "use ${PROJECT} for variable name"
+    },
+    {
+      "sha": "287fabc8025607d48aa2c03e7517574d375d2222",
+      "author": "Jack O'Quin",
+      "date": "2013-05-21T14:39:10Z",
+      "message": "add missing angles dependency to velodyne_pointcloud"
+    },
+    {
+      "sha": "d3c45cf11f9b1cea51e6cf67f7e89753c3bf9963",
+      "author": "Jack O'Quin",
+      "date": "2013-05-21T14:24:32Z",
+      "message": "test CMake file is no longer used"
+    },
+    {
+      "sha": "02631a44286140183adaf1b0bf795a8f6ab96cc0",
+      "author": "Jack O'Quin",
+      "date": "2013-05-20T23:36:20Z",
+      "message": "convert velodyne stack to catkin metapackage"
+    },
+    {
+      "sha": "c74f1ac06998f98e63938f68f932fe2cb42f9ec5",
+      "author": "Jack O'Quin",
+      "date": "2013-04-30T03:31:14Z",
+      "message": "preliminary conversion of velodyne_pointcloud to catkin"
+    },
+    {
+      "sha": "27054f5005fdc3a37c89e947db0a6a177b9fb3f4",
+      "author": "Jack O'Quin",
+      "date": "2013-04-16T16:36:15Z",
+      "message": "Update COPYING, delete some obsolete files."
+    },
+    {
+      "sha": "8b3b2accb5b115a8290aba461bee7159df8121f5",
+      "author": "Jack O'Quin",
+      "date": "2013-04-11T00:18:14Z",
+      "message": "convert velodyne_driver to catkin (#1)"
+    },
+    {
+      "sha": "3a2c89453127144bf029a9a329e40fdfada80273",
+      "author": "Jack O'Quin",
+      "date": "2013-04-10T22:54:50Z",
+      "message": "convert velodyne_msgs to catkin (#1); delete obsolete migration rules"
+    },
+    {
+      "sha": "b853819ddb6b6088c60f183cca45b1dec7135e04",
+      "author": "jack.oquin",
+      "date": "2012-06-02T16:19:18Z",
+      "message": "set 0.9.1 version number"
+    },
+    {
+      "sha": "990ad537b24461b5b9f2651438815eb5fa850208",
+      "author": "jack.oquin",
+      "date": "2012-06-02T16:17:44Z",
+      "message": "add 32E unit tests"
+    },
+    {
+      "sha": "56b69006317fbc164d59bb75a6d90a603f9d27e7",
+      "author": "jack.oquin",
+      "date": "2012-05-24T14:56:02Z",
+      "message": "fix for YAML error when min_intensity omitted (ticket #14)"
+    },
+    {
+      "sha": "c6fb7e1aa776f2b8e36d21675bc58b91a0e8c970",
+      "author": "jack.oquin",
+      "date": "2012-04-22T12:55:15Z",
+      "message": "create open_street_map stack in utexas-art"
+    },
+    {
+      "sha": "f9271f08fd8b9a9225e5bde4acfd19ded802ef69",
+      "author": "jack.oquin",
+      "date": "2012-04-14T03:11:13Z",
+      "message": "Only include enabled lasers in generated YAML calibration file.\nLeave out max and min intensities when they are 0 and 255 (defaults)."
+    },
+    {
+      "sha": "4c5309fe499666727c4027bf8633a09f5ad36f19",
+      "author": "jack.oquin",
+      "date": "2012-04-08T23:10:01Z",
+      "message": "Add HDL-32E launch file and rviz VCG similar to those from Ryan Gariepy.\nMove some calibration data into the params directory, and fix the\n  test cases to use them there."
+    },
+    {
+      "sha": "d016fcc336a0c4e49423c966aa3acc0477848644",
+      "author": "jack.oquin",
+      "date": "2012-04-08T20:02:39Z",
+      "message": "eliminate unnecessary socket getPackets() method"
+    },
+    {
+      "sha": "abddf8a383df134adef97f37c6e098361eaa8cdc",
+      "author": "jack.oquin",
+      "date": "2012-04-03T19:17:37Z",
+      "message": "mark API review status"
+    },
+    {
+      "sha": "16aca628019d206f58864c9c9b5bd2bc5478f573",
+      "author": "jack.oquin",
+      "date": "2012-03-31T17:01:01Z",
+      "message": "add bag migration rule for VelodyneScan message"
+    },
+    {
+      "sha": "06a2d3b80f66f5ef9e71652a17bdd02b90775a06",
+      "author": "jack.oquin",
+      "date": "2012-03-28T15:23:47Z",
+      "message": "log laser rings for calibration data"
+    },
+    {
+      "sha": "3b82be49741596f788fcfdd4c3e76bdd626bf5d5",
+      "author": "jack.oquin",
+      "date": "2012-03-27T15:37:00Z",
+      "message": "Delete laser ring sequence header.\nCompute ring sequence dynamically from calibration angles.\n(There is a problem to resolve with laser 15, angle 0.0, on the 32E.)"
+    },
+    {
+      "sha": "ebc1721b96d88c328fdd48d70e474eaf878464de",
+      "author": "jack.oquin",
+      "date": "2012-03-26T22:18:02Z",
+      "message": "remove pitch and roll from calibration data"
+    },
+    {
+      "sha": "2545b178b9203b6c7ddbcda4d56935679d040eb5",
+      "author": "jack.oquin",
+      "date": "2012-03-26T03:39:21Z",
+      "message": "make Input class pure virtual"
+    },
+    {
+      "sha": "15460031906ca4705b3873aa3b5bf80ee30bfc7d",
+      "author": "jack.oquin",
+      "date": "2012-03-25T23:12:32Z",
+      "message": "more cleanup: move Input::vopen() logic to constructor"
+    },
+    {
+      "sha": "df60ae65ae1986e342e935bd98787032edaa2501",
+      "author": "jack.oquin",
+      "date": "2012-03-25T22:35:57Z",
+      "message": "cleanup: remove driver startup() method"
+    },
+    {
+      "sha": "e237506590666edac806529f51c3b9a1b4fd4df1",
+      "author": "jack.oquin",
+      "date": "2012-03-25T22:16:55Z",
+      "message": "more cleanup: remove vclose() and shutdown() methods"
+    },
+    {
+      "sha": "392a3e598b51c91d9edf8fb8e67207b32228ab40",
+      "author": "jack.oquin",
+      "date": "2012-03-25T22:03:42Z",
+      "message": "Begin cleanup of Input classes (to be continued)."
+    },
+    {
+      "sha": "b943f93ce4d2792cb2eb7c0a4650231ddabf70bc",
+      "author": "jack.oquin",
+      "date": "2012-03-25T17:33:36Z",
+      "message": "Change velodyne_driver to handle nodelets, different packet rates.\nAdd ~model parameter (64E or 32E).\nAccept model argument in nodelet_manager launch file\nTighten expected frequency diagnostic tolerances.\nRemove PACKETS_PER_REVOLUTION constant definition from VelodyneScan\n  message (does not change its MD5sum)."
+    },
+    {
+      "sha": "c04fd00f3b6c7f97e3f8c0fd0862f9850d9ce601",
+      "author": "jack.oquin",
+      "date": "2012-03-25T03:17:43Z",
+      "message": "Reverse laser ring order for upper and lower banks.\nAdd node and nodelet to assign colors to laser rings."
+    },
+    {
+      "sha": "65589ac55e0428746de62f684da422e511ff902f",
+      "author": "jack.oquin",
+      "date": "2012-03-24T22:08:41Z",
+      "message": "reverse laser numbers for upper and lower banks"
+    },
+    {
+      "sha": "f361591e7d64f78d7c555ea912e583a120bce359",
+      "author": "jack.oquin",
+      "date": "2012-03-24T19:22:19Z",
+      "message": "add example HDL-32E XML calibration file"
+    },
+    {
+      "sha": "ad8c8d52a2f60609e830d285253f4b4494212c2b",
+      "author": "jack.oquin",
+      "date": "2012-03-21T15:52:28Z",
+      "message": "convert XML (cm, degree) units to YAML (meter, radian) values"
+    },
+    {
+      "sha": "88e56d4282dde1a2a6f051464999fb63a8df9092",
+      "author": "jack.oquin",
+      "date": "2012-03-21T01:55:44Z",
+      "message": "label velodyne tests, since they run too slow on Hudson"
+    },
+    {
+      "sha": "254dbea6fd93b1264f977083b65da7e6beacdfb1",
+      "author": "jack.oquin",
+      "date": "2012-03-20T23:52:53Z",
+      "message": "make two_pt_correction_available, max_intensity, and min_intensity calibration values optional"
+    },
+    {
+      "sha": "dc7c5179c68e29ea69c5fe31347f8e417f243e25",
+      "author": "jack.oquin",
+      "date": "2012-03-20T21:50:22Z",
+      "message": "change calibration[\"lasers\"] to list (from dictionary)"
+    },
+    {
+      "sha": "5c1915b5bb6fa096e4cef1b5bc988afcd90ca0e6",
+      "author": "jack.oquin",
+      "date": "2012-03-20T20:21:09Z",
+      "message": "dump calibration data to YAML file"
+    },
+    {
+      "sha": "d12e5b7691ada383482896c4fbf3407ea25e9a78",
+      "author": "jack.oquin",
+      "date": "2012-03-20T19:52:27Z",
+      "message": "handle wider variation of input data"
+    },
+    {
+      "sha": "61822754c6815ac50f3525fb3343ba63455d9ca2",
+      "author": "jack.oquin",
+      "date": "2012-03-20T18:29:01Z",
+      "message": "parse command line arguments"
+    },
+    {
+      "sha": "081637391ecf5c73cde606b6e445ea8dd20dc4a0",
+      "author": "jack.oquin",
+      "date": "2012-03-20T03:47:35Z",
+      "message": "build calibration dictionary containing all relevant values"
+    },
+    {
+      "sha": "0a2db1347f98e9e918630419d9e4e8d38269ddd9",
+      "author": "jack.oquin",
+      "date": "2012-03-20T03:13:16Z",
+      "message": "add partial Python implementation calibration file generator, with test data"
+    },
+    {
+      "sha": "ed0d6bb1506c9df934e98a2cf6040e141d21803c",
+      "author": "jack.oquin",
+      "date": "2012-03-19T14:34:12Z",
+      "message": "move velodyne_common from trunk to projects branch"
+    },
+    {
+      "sha": "ffb2959bc642bea03566a6c72baf0015a04c6682",
+      "author": "jack.oquin",
+      "date": "2012-03-16T17:14:58Z",
+      "message": "loosen hzerror of unit tests for Hudson"
+    },
+    {
+      "sha": "8d2c2ead427b39e18f73faef9ae86c929618aca5",
+      "author": "jack.oquin",
+      "date": "2012-03-16T14:47:33Z",
+      "message": "remove velodyne_pcl from velodyne stack trunk"
+    },
+    {
+      "sha": "348d23350cdf0274f26040817bb9bd722d758b6b",
+      "author": "piyushk",
+      "date": "2012-03-06T02:41:37Z",
+      "message": "checking in calibration file, with pitch of each laser corrected using velodyne_calibration"
+    },
+    {
+      "sha": "865db2e1ee5b5cbd71b222f7966039e08a7c54c2",
+      "author": "piyushk",
+      "date": "2012-03-05T04:16:08Z",
+      "message": "changed macro name in calibration.h\nadded cached values for sin and cos of pitch and roll in calibration\nrawdata library now accounts for pitch and roll available in calibration file (untested with non-zero values)\nreading a calibration file now exits gracefully on YAML parser error\ncalibration.cc is now compiled into rawdata library"
+    },
+    {
+      "sha": "128684ae6fc67febe18526d4493e65c18f50156d",
+      "author": "jack.oquin",
+      "date": "2012-02-28T14:33:47Z",
+      "message": "delete merge-from point cloud package"
+    },
+    {
+      "sha": "f30d68735c47312aa73d29203ddb16abc01357f4",
+      "author": "jack.oquin",
+      "date": "2012-02-28T14:32:44Z",
+      "message": "merge new interfaces from Piyush\nfix unit test cases\nissue error (not warning) if no calibration file"
+    },
+    {
+      "sha": "073f1246b0b5d5509cf8682b98496fe6eab2f504",
+      "author": "piyushk",
+      "date": "2012-02-28T05:26:26Z",
+      "message": "removed differences in CMakeLists.txt file"
+    },
+    {
+      "sha": "3185380f4b994f994378cda67dce1e325d9873d8",
+      "author": "piyushk",
+      "date": "2012-02-28T05:24:23Z",
+      "message": "temporary copy of velodyne_pointcloud2 before merge"
+    },
+    {
+      "sha": "1a0588c3c3f67c20e4bef3575b523a590f9f5b81",
+      "author": "piyushk",
+      "date": "2012-02-28T05:18:54Z",
+      "message": "yaml version of the angles.config file"
+    },
+    {
+      "sha": "fe83f52f642e76e89d133902c719a882f39faecb",
+      "author": "jack.oquin",
+      "date": "2012-02-26T19:40:35Z",
+      "message": "parameter file for testing velodyne_nodelet_manager diagnostics"
+    },
+    {
+      "sha": "c42de216f4e8411a313f7548c05e847f1484dca5",
+      "author": "jack.oquin",
+      "date": "2012-02-26T00:45:21Z",
+      "message": "add diagnostics to velodyne_driver"
+    },
+    {
+      "sha": "18286c2dd617783de6cff8322a3f8bfd10e4f7de",
+      "author": "jack.oquin",
+      "date": "2012-02-24T19:42:14Z",
+      "message": "rosdep updates for future Fuerte compatibility"
+    },
+    {
+      "sha": "84256ea8b52d9f9ffd49f0d9cad61e9b38d33b4a",
+      "author": "jack.oquin",
+      "date": "2012-02-24T15:08:58Z",
+      "message": "fix boost::signals reference for Fuerte compatibility"
+    },
+    {
+      "sha": "bf7c306c73a54680b691f8d35e6d1d82f01a227b",
+      "author": "jack.oquin",
+      "date": "2012-02-23T19:41:01Z",
+      "message": "update version number"
+    },
+    {
+      "sha": "bdd85d1e590103a13554854eb4132657840676ea",
+      "author": "jack.oquin",
+      "date": "2012-02-23T19:39:17Z",
+      "message": "update velodyne stack dependencies"
+    },
+    {
+      "sha": "30c192bde7f8e07d0f2036ce4ffabd44bef6d65a",
+      "author": "jack.oquin",
+      "date": "2012-02-23T16:55:05Z",
+      "message": "fix shutdown bug in velodyne_driver nodelet"
+    },
+    {
+      "sha": "1f37c8aa9c01635ff1eac31a6bb280fce738255d",
+      "author": "jack.oquin",
+      "date": "2012-02-23T16:13:43Z",
+      "message": "point cloud tests are ported now"
+    },
+    {
+      "sha": "9edd38b3d68e645a1bf264a6b64fb137f188f86b",
+      "author": "jack.oquin",
+      "date": "2012-02-23T05:58:50Z",
+      "message": "add unit test of Velodyne launch files"
+    },
+    {
+      "sha": "37a17a8eda5230c90f978f189f880cea7d24c0f2",
+      "author": "jack.oquin",
+      "date": "2012-02-22T13:25:44Z",
+      "message": "fix bug in driver nodelet unit test"
+    },
+    {
+      "sha": "4bd39895e6f1981326a655915121e7a083397500",
+      "author": "jack.oquin",
+      "date": "2012-02-22T13:16:48Z",
+      "message": "Rename \"/velodyne/packets\" topic to \"/velodyne_packets\".\nRename \"/velodyne/pointcloud2\" topic to \"/velodyne_points\"."
+    },
+    {
+      "sha": "f6be51e7783966e44c2ac42bb5f0b90db18f5b80",
+      "author": "jack.oquin",
+      "date": "2012-02-22T04:47:06Z",
+      "message": "documentation improvements"
+    },
+    {
+      "sha": "abe9c878cf75401f33458f13f1df8b3bade6b3af",
+      "author": "jack.oquin",
+      "date": "2012-02-22T04:00:39Z",
+      "message": "use TF message filter in Transform class"
+    },
+    {
+      "sha": "3de899be912d34cfbb6d6b76054c3976d3c4a1d1",
+      "author": "jack.oquin",
+      "date": "2012-02-22T01:02:33Z",
+      "message": "delete unused polar point definition"
+    },
+    {
+      "sha": "5975506eaa15d5acb8051e8ebd5aea40620296f6",
+      "author": "jack.oquin",
+      "date": "2012-02-21T23:11:15Z",
+      "message": "rename \"transform2\" node and nodelet \"transform\""
+    },
+    {
+      "sha": "4cfafb48fcbbb270240883ed758e8a13cb8b311b",
+      "author": "jack.oquin",
+      "date": "2012-02-21T22:36:41Z",
+      "message": "rename cloud2 node and nodelet cloud"
+    },
+    {
+      "sha": "923ce1e023a0515e8755c43956a2def76e627cd6",
+      "author": "jack.oquin",
+      "date": "2012-02-21T19:45:22Z",
+      "message": "convert transform2 nodelet to new interface; eliminate velodyne_common dependency"
+    },
+    {
+      "sha": "236684d65897e997db0ea87ba21a071c17822166",
+      "author": "jack.oquin",
+      "date": "2012-02-21T19:10:03Z",
+      "message": "fix point cloud transform implementation bugs"
+    },
+    {
+      "sha": "bdfc485c1fcafc12b854476001762a4a0aa31c26",
+      "author": "jack.oquin",
+      "date": "2012-02-21T18:48:36Z",
+      "message": "export velodyne_rawdata library"
+    },
+    {
+      "sha": "1173579bc9eb104e4823caf03c8ff1c3104c4fb7",
+      "author": "jack.oquin",
+      "date": "2012-02-21T17:17:56Z",
+      "message": "change \"angles\" parameter name to \"calibration\""
+    },
+    {
+      "sha": "7a717b01e818090593e06a54d58aeca4d38b766a",
+      "author": "jack.oquin",
+      "date": "2012-02-21T05:02:35Z",
+      "message": "Create transform2_node using Transform class, similar to Convert.\nNot fully working yet."
+    },
+    {
+      "sha": "3d97a389d4ed0e64799da6cdfcfe7517f784ee3a",
+      "author": "jack.oquin",
+      "date": "2012-02-21T03:45:08Z",
+      "message": "code and test case cleanup"
+    },
+    {
+      "sha": "c9ec487ed60cc95035cc0b1755fbd42f25b216ee",
+      "author": "jack.oquin",
+      "date": "2012-02-21T00:10:33Z",
+      "message": "add pcap arg to driver nodelet launch"
+    },
+    {
+      "sha": "fddea1eed6972bea16b488b4024d1c39a656debd",
+      "author": "jack.oquin",
+      "date": "2012-02-20T23:06:07Z",
+      "message": "change cloud2_nodelet to use Convert class (with new RawData interface)"
+    },
+    {
+      "sha": "43b4b9638474742044b7c97c79a72e56ee6d16a8",
+      "author": "jack.oquin",
+      "date": "2012-02-20T21:54:40Z",
+      "message": "add some comments about unpacking raw data"
+    },
+    {
+      "sha": "526fb43a6e190305cf32324d1783b04605991141",
+      "author": "jack.oquin",
+      "date": "2012-02-20T21:44:18Z",
+      "message": "Remove DEPRECATED rawdata classes and methods.\nThere is now only a single RawData class."
+    },
+    {
+      "sha": "b8bb268200114e14b3239b16ac26b3c73391f023",
+      "author": "jack.oquin",
+      "date": "2012-02-20T20:45:01Z",
+      "message": "remove duplicated code fragment"
+    },
+    {
+      "sha": "70931f51578a4d37d30d0b7fdb2b713e88483c79",
+      "author": "jack.oquin",
+      "date": "2012-02-20T20:40:18Z",
+      "message": "add range clipping to raw data unpack() method"
+    },
+    {
+      "sha": "6a6444b2b2e910c687da7c45b59c841a21da2fb1",
+      "author": "jack.oquin",
+      "date": "2012-02-20T18:38:24Z",
+      "message": "fix bug in new unpack() method; run instead of DEPRECATED methods"
+    },
+    {
+      "sha": "e7d99650d7b189ec75843db72c2ab5ac558d200b",
+      "author": "jack.oquin",
+      "date": "2012-02-20T18:32:56Z",
+      "message": "Change ring_sequence namespace from velodyne to velodyne_rawdata.\nCreate new unpack() method that unpacks raw data, applies angles\n  calibration, converts to XYZ, and appends to a point cloud.\n  This only runs when DEPRECATED_RAWDATA is not defined. (It is not\n  completely working yet.)"
+    },
+    {
+      "sha": "3a60a9a351731fa9689782e7c388c3d77088b284",
+      "author": "jack.oquin",
+      "date": "2012-02-19T19:47:06Z",
+      "message": "more of rawdata DEPRECATED"
+    },
+    {
+      "sha": "7aed84786fc474eeb7fd2425dd34a3e02876586f",
+      "author": "jack.oquin",
+      "date": "2012-02-19T18:16:42Z",
+      "message": "mark some more rawdata members DEPRECATED"
+    },
+    {
+      "sha": "1d20f78e675bf13f15ce952f8b1c3f06e027ed83",
+      "author": "jack.oquin",
+      "date": "2012-02-18T19:18:52Z",
+      "message": "mark some rawdata methods as DEPRECATED"
+    },
+    {
+      "sha": "5aeaa8b469c3472dff272b9394bf3fd4b6e8fbd9",
+      "author": "jack.oquin",
+      "date": "2012-02-18T18:25:21Z",
+      "message": "remove some more cruft; change namespace for rawdata symbols"
+    },
+    {
+      "sha": "9e3b0d9c63bcef15515807354694310ae12c5d1b",
+      "author": "jack.oquin",
+      "date": "2012-02-18T17:36:35Z",
+      "message": "revert velodyne/rosdep.yaml change -- fails on Electric"
+    },
+    {
+      "sha": "7f8cc831829dd8796923244e8465558e78354b9d",
+      "author": "jack.oquin",
+      "date": "2012-02-18T16:58:42Z",
+      "message": "define \"angles\" parameter in cloud2 node test"
+    },
+    {
+      "sha": "38468c0d3947776938c466e99ed87099d756af8b",
+      "author": "jack.oquin",
+      "date": "2012-02-18T16:54:02Z",
+      "message": "log error message if \"angles\" parameter undefined"
+    },
+    {
+      "sha": "aebb51c1f2799b11cd181bf20fc0e17d4ffc28f5",
+      "author": "jack.oquin",
+      "date": "2012-02-18T16:37:56Z",
+      "message": "Begin removing unnecessary parts of the RawData interface.\nEliminate getParams(), read them in setup() instead.\nPass private node handle to setup().\nEliminate output file handling for deprecated print() methods.\nProvide conditional compilation in Convert class, for directly\n subscribing to velodyne_msgs/VelodyneScan (unfinished)."
+    },
+    {
+      "sha": "009d819013f3205105dbfc993dc39bec772c8c62",
+      "author": "jack.oquin",
+      "date": "2012-02-18T03:28:25Z",
+      "message": "remove obsolete velodyne_viz package"
+    },
+    {
+      "sha": "9fb8da73ba5fd380bef7a6c2721cf0e918cebc22",
+      "author": "jack.oquin",
+      "date": "2012-02-18T03:21:29Z",
+      "message": "delete unused file left around by mistake"
+    },
+    {
+      "sha": "02415e41143b7c3d694551633fb1c2b9a2eb5c62",
+      "author": "jack.oquin",
+      "date": "2012-02-18T03:04:49Z",
+      "message": "add initial cloud2 node with Convert and RawData classes\n(still evolving towards their final forms)"
+    },
+    {
+      "sha": "c7070d6942ae0c506723d499d300b8654c84d549",
+      "author": "jack.oquin",
+      "date": "2012-02-16T17:10:59Z",
+      "message": "add package managers to rosdep.yaml file"
+    },
+    {
+      "sha": "e79eee26d3aae48b402f3397d79cd81089f316ef",
+      "author": "jack.oquin",
+      "date": "2012-02-15T04:22:07Z",
+      "message": "hack velodyne transform2 nodelet not to wait for tf"
+    },
+    {
+      "sha": "ef5d956ecff2b68765e6d9615ec8a36636ce8faf",
+      "author": "jack.oquin",
+      "date": "2012-02-15T04:00:38Z",
+      "message": "move launch scripts to launch/ subdirectory"
+    },
+    {
+      "sha": "aaf15d3ac7c6a61452fd80a8fe0e13998424fbb2",
+      "author": "jack.oquin",
+      "date": "2012-02-14T23:51:34Z",
+      "message": "remove obsolete dependency on rosbagmigration"
+    },
+    {
+      "sha": "09039f87ca63fc87c496caf073eca0a1b4da45ee",
+      "author": "jack.oquin",
+      "date": "2012-02-14T23:21:41Z",
+      "message": "move velodyne_ringcomp and velodyne_height_map to new velodyne_utils stack"
+    },
+    {
+      "sha": "9af9cc1888c44ea42696f4e7e3c816f21bbfb4d1",
+      "author": "jack.oquin",
+      "date": "2012-02-14T23:20:29Z",
+      "message": "activate some unit tests"
+    },
+    {
+      "sha": "246b61c17c64c17aab872fc094bf7e07c50d6ac0",
+      "author": "jack.oquin",
+      "date": "2012-02-14T03:00:37Z",
+      "message": "copy ring_sequence.h from velodyne_common"
+    },
+    {
+      "sha": "e84f81ccc8f0bad0d3b57cf4e306df379e6f2392",
+      "author": "jack.oquin",
+      "date": "2012-02-14T02:55:40Z",
+      "message": "remove deleted nodelets from XML file"
+    },
+    {
+      "sha": "6e71b146e8b6590f4c2d05f3dedf02a08c839efa",
+      "author": "jack.oquin",
+      "date": "2012-02-14T00:54:43Z",
+      "message": "initial version of new velodyne_pointcloud package"
+    },
+    {
+      "sha": "57a6818d9bf443658dcfeac382ad7ca3ffe141f4",
+      "author": "jack.oquin",
+      "date": "2012-02-13T04:53:08Z",
+      "message": "use VelodyneDriver class in velodyne_node"
+    },
+    {
+      "sha": "7283688539537be1c11e9faaa5bfcea2c56f633e",
+      "author": "jack.oquin",
+      "date": "2012-02-11T20:20:02Z",
+      "message": "make separate driver class, invoke it from nodelet"
+    },
+    {
+      "sha": "977a05350d81feb6a1353602725eb607622a78a1",
+      "author": "jack.oquin",
+      "date": "2012-02-11T15:36:12Z",
+      "message": "minor doxygen cleanup"
+    },
+    {
+      "sha": "ae7b73e5c8536e384f71ecb389a60f7ae582f5fa",
+      "author": "jack.oquin",
+      "date": "2012-02-11T15:27:24Z",
+      "message": "minor driver nodelet cleanup"
+    },
+    {
+      "sha": "cd50d640e9e3004184816e32160f2f094723b11c",
+      "author": "jack.oquin",
+      "date": "2012-02-11T15:08:40Z",
+      "message": "Fix compile errors.\nAdd launch file for nodelet.\nGet unit tests working."
+    },
+    {
+      "sha": "1929e851fafdbca67d7076c634f62d04f53e07e2",
+      "author": "jack.oquin",
+      "date": "2012-02-11T03:39:33Z",
+      "message": "Create minimal velodyne_driver package from parts of velodyne_common."
+    },
+    {
+      "sha": "40f4e8a2da32e66d11dde7d2aed71ce7ec37aebf",
+      "author": "austinrobot",
+      "date": "2011-11-28T19:04:51Z",
+      "message": "make INFO message on every pointcloud a DEBUG message"
+    },
+    {
+      "sha": "e8e5fdfd075ec8e6e30b597f6a12034f4ae0d3a0",
+      "author": "piyushk",
+      "date": "2011-11-03T16:53:00Z",
+      "message": "finished reorganization + splitting up of the nodes + changed velodyne/pcl_points2 topic name to velodyne/pointcloud"
+    },
+    {
+      "sha": "092b1c885cb094f235f43254d0a07ca3cf82438b",
+      "author": "piyushk",
+      "date": "2011-11-03T16:39:25Z",
+      "message": "reorganized the package, and renamed ExamplePublisher to Publisher"
+    },
+    {
+      "sha": "a3f1e141ba957f88ab3ef6c6fb487196e74fc9a0",
+      "author": "jack.oquin",
+      "date": "2011-10-25T02:44:40Z",
+      "message": "promote velodyne_height_map to trunk"
+    },
+    {
+      "sha": "d7b3a22f720bb5a3d12ece5c51cd5b13169a19a1",
+      "author": "austinrobot",
+      "date": "2011-10-24T21:46:42Z",
+      "message": "run transform2 nodelet"
+    },
+    {
+      "sha": "82ed7861b1411db893e775b4dffcbf427c6ea3b4",
+      "author": "piyushk",
+      "date": "2011-10-04T04:59:55Z",
+      "message": "fixed issues in nodelets, equated nodes to match nodelets - there was some issue with using KdTree in the nodelet that I did not have time to debug - so it has been removed"
+    },
+    {
+      "sha": "c1c182b29d8d23a02fd56528f8f6f17b59a3a627",
+      "author": "piyushk",
+      "date": "2011-10-04T04:39:39Z",
+      "message": "created example nodelets for the corresponding nodes"
+    },
+    {
+      "sha": "8e6ba44bbf44b6b3cfb0b5316e87396dfe1cb539",
+      "author": "piyushk",
+      "date": "2011-10-03T19:30:46Z",
+      "message": "some pretty printing + fixed subscriber to do euclidean cluster extraction using PCL"
+    },
+    {
+      "sha": "985645a85bc9d097d1e40afb30a23d53163dc65d",
+      "author": "piyushk",
+      "date": "2011-10-03T17:59:39Z",
+      "message": "fixed bugs in example code"
+    },
+    {
+      "sha": "64f4655f7bb6a4d679b7c9eb3b1202e37d8d648f",
+      "author": "piyushk",
+      "date": "2011-10-03T06:36:08Z",
+      "message": "added a couple of examples using the pcl_ros bridge"
+    },
+    {
+      "sha": "78daafe47282d8d26d0b0f037680e15954cf1352",
+      "author": "jack.oquin",
+      "date": "2011-08-06T12:55:04Z",
+      "message": "add waitForTransform() before transforming point cloud packet"
+    },
+    {
+      "sha": "efeeabf53609979182766ea8cfc40546200a410d",
+      "author": "jack.oquin",
+      "date": "2011-08-04T16:23:21Z",
+      "message": "change convertPoints() to use PointCloud2ConstPtr for input"
+    },
+    {
+      "sha": "be308d06a6d04fde67e98d69474968da2a97c40e",
+      "author": "jack.oquin",
+      "date": "2011-08-03T18:35:32Z",
+      "message": "add nodelet to assign colors to laser rings for visualization"
+    },
+    {
+      "sha": "9bfcf0d02ff87eb5908862610923cc767953da5f",
+      "author": "jack.oquin",
+      "date": "2011-08-03T18:33:44Z",
+      "message": "remove redundant typedefs"
+    },
+    {
+      "sha": "4c376bf141ae5914b7433e80e40f0b8302e3a39f",
+      "author": "jack.oquin",
+      "date": "2011-08-02T21:17:46Z",
+      "message": "add transform2 nodelet unit test"
+    },
+    {
+      "sha": "429829aab54d48003b5defc9266e362402e828ed",
+      "author": "jack.oquin",
+      "date": "2011-08-02T21:11:24Z",
+      "message": "add PCL transform to transform2 nodelet"
+    },
+    {
+      "sha": "bc0a9dadca9457365a5921ef8394f32132e90b82",
+      "author": "jack.oquin",
+      "date": "2011-08-02T03:50:51Z",
+      "message": "check in omitted nodelets.xml update"
+    },
+    {
+      "sha": "7d4fe020640fbe334a87f917338186a09def6a09",
+      "author": "jack.oquin",
+      "date": "2011-08-01T20:13:47Z",
+      "message": "create initial transform2 nodelet from cloud2 nodelet"
+    },
+    {
+      "sha": "197c6b606fe15be91885b03a5c4b88967f1e2e32",
+      "author": "jack.oquin",
+      "date": "2011-08-01T17:20:20Z",
+      "message": "nodelet test now works, remove \"broken\" label"
+    },
+    {
+      "sha": "85ed8786890fe709c70a631358df3bc5ee309938",
+      "author": "jack.oquin",
+      "date": "2011-08-01T16:41:01Z",
+      "message": "set svn:keywords props to Id"
+    },
+    {
+      "sha": "d2157495c894f7d494e53e4ec24064218e936762",
+      "author": "jack.oquin",
+      "date": "2011-08-01T16:38:28Z",
+      "message": "publish PointCloud2 for each scan in nodelet"
+    },
+    {
+      "sha": "6000559bb479dc4f7d0ec3d609be13b3d76c0438",
+      "author": "jack.oquin",
+      "date": "2011-08-01T15:58:56Z",
+      "message": "Prepare cloud2 nodelet for accumulating data for a whole scan (incomplete).\nAdd Velodyne::xyz_scans_t typedef."
+    },
+    {
+      "sha": "ccd8fee0889647d807a9e7b849524f3050e8147b",
+      "author": "jack.oquin",
+      "date": "2011-08-01T14:34:44Z",
+      "message": "set Id property on test files"
+    },
+    {
+      "sha": "4bbc0909816ab6db123642c2b87cbbc56bac4623",
+      "author": "jack.oquin",
+      "date": "2011-08-01T14:31:46Z",
+      "message": "add simple unit tests of node and nodelet publication\nrates -- nodelet currently fails the test"
+    },
+    {
+      "sha": "7dc0125204e3bbbbbf9120e502c3c6f53624ebb5",
+      "author": "jack.oquin",
+      "date": "2011-08-01T14:29:15Z",
+      "message": "remove cerr printing, nodelet now runs"
+    },
+    {
+      "sha": "5fa09646bc1dc8e00498757a7e7363bef63dc6c4",
+      "author": "piyushk",
+      "date": "2011-08-01T00:12:27Z",
+      "message": "fixed nodelets.xml so that nodelet is correctly visible"
+    },
+    {
+      "sha": "8190a400844c0607400a55b6f01bf0be940753c0",
+      "author": "jack.oquin",
+      "date": "2011-07-31T17:32:04Z",
+      "message": "use new point_types header in nodelet, too"
+    },
+    {
+      "sha": "06be591013f455a980ceaac81723b23d5bdb1fbf",
+      "author": "jack.oquin",
+      "date": "2011-07-31T17:04:45Z",
+      "message": "Add exported header file for custom Velodyne point types.\nUse new velodyne::PointXYZIR custom point type in cloud2 node.\nPrint std::cerr message when nodelet methods entered (nothing shows)."
+    },
+    {
+      "sha": "387458c22fe1e3f33d595d3dc292a362dcded3cd",
+      "author": "piyushk",
+      "date": "2011-07-28T21:35:05Z",
+      "message": "fixed issue with custom pcl point type in cloud2_nodelet"
+    },
+    {
+      "sha": "e0bc0d09081671a817d5bf8b260523f40c62a322",
+      "author": "jack.oquin",
+      "date": "2011-07-24T15:50:25Z",
+      "message": "library path correction"
+    },
+    {
+      "sha": "7673f4a78aa50477e1ba9cc9ce2b6e42b4e43bec",
+      "author": "jack.oquin",
+      "date": "2011-07-24T04:31:56Z",
+      "message": "small nodelet improvements"
+    },
+    {
+      "sha": "7292ad65f32e5d16fe881c4b15c9db09eea046bd",
+      "author": "jack.oquin",
+      "date": "2011-07-24T04:13:17Z",
+      "message": "Make Velodyne:: namespace references explicit.\nAccumulate data using PointCloud<PointXYZI> instead of PointCloud2.\nDelete some unnecessary cruft."
+    },
+    {
+      "sha": "f904a26a4659cda929d8627ee3aed6150593b1dd",
+      "author": "jack.oquin",
+      "date": "2011-07-23T17:29:12Z",
+      "message": "comment out enough so nodelet will at least compile"
+    },
+    {
+      "sha": "0737fafe0256f21b32cd3a5b39e6a326b892f251",
+      "author": "jack.oquin",
+      "date": "2011-07-23T17:25:26Z",
+      "message": "reformat comment"
+    },
+    {
+      "sha": "4880067b9f2941e64d1de37a4bd1b14297b222e3",
+      "author": "jack.oquin",
+      "date": "2011-07-23T05:12:45Z",
+      "message": "add nodelets.xml export"
+    },
+    {
+      "sha": "2ff74e3666b30ee339ebaf5165dcd4b52eeda3e5",
+      "author": "jack.oquin",
+      "date": "2011-07-23T05:09:21Z",
+      "message": "experimental stack for PCL output"
+    },
+    {
+      "sha": "7729a7781e4af1e0058c901d64b1be7d8c7755ad",
+      "author": "jack.oquin",
+      "date": "2011-06-15T01:22:00Z",
+      "message": "use WG copy of class.pcap test data; fixes issue #6"
+    },
+    {
+      "sha": "5242b4118ebacec0242df97577d6f510b98d1dc6",
+      "author": "jack.oquin",
+      "date": "2011-06-15T01:12:33Z",
+      "message": "add S2 support to documentation"
+    },
+    {
+      "sha": "68f8fbda1208b7e05fac8130f804ef011dee42a8",
+      "author": "jack.oquin",
+      "date": "2011-06-14T22:11:17Z",
+      "message": "Add HDL-64E S2 calibration support (from Nick Hillier)"
+    },
+    {
+      "sha": "661115cf2493fb74c66f2c50b2a97ec7e4b319d0",
+      "author": "jack.oquin",
+      "date": "2011-03-26T02:10:49Z",
+      "message": "Merge all steering branch changes into trunk, includes:\n\nPilot support for new CarAccel interface.\nPilot error detection improvements.\nNew art_teleop package, with tele-operation scripts.\nSteering driver error recovery improvments.\nNew art_run launch scripts.\nChanges simulator_art to run at 10Hz, workaround for stage bugs at higher frequencies."
+    },
+    {
+      "sha": "8fd70b665bf499666cb10a5c2354096e7e1c1436",
+      "author": "jack.oquin",
+      "date": "2011-02-23T18:50:26Z",
+      "message": "add ros_comm stack dependency"
+    },
+    {
+      "sha": "c8963208d0144d757974b1ce9a7661a092d980f8",
+      "author": "jack.oquin",
+      "date": "2011-02-23T18:27:38Z",
+      "message": "label ringcomp tests with realtime requirements"
+    },
+    {
+      "sha": "79e4f435c733f004c6b37e6be2fa8a1be0cbde6b",
+      "author": "jack.oquin",
+      "date": "2011-02-23T16:31:12Z",
+      "message": "prepare for 0.2.6 release"
+    },
+    {
+      "sha": "5e1bc4a291ad31cebf8c801e48649b30d1e69e55",
+      "author": "jack.oquin",
+      "date": "2011-02-23T16:30:28Z",
+      "message": "label tests with realtime requirements"
+    },
+    {
+      "sha": "c3081fa15fb6e9de7e3636c22fe08b20007dd64e",
+      "author": "jack.oquin",
+      "date": "2011-01-09T13:46:28Z",
+      "message": "remvove deprecated and unneeded link_directories()"
+    },
+    {
+      "sha": "53f3c10ac5541c6de360e4fc3360bd0471c7224e",
+      "author": "jack.oquin",
+      "date": "2010-12-07T04:05:30Z",
+      "message": "add launch for raw scan conversion nodelet manager"
+    },
+    {
+      "sha": "b4de24a227996ac3ed44ba4f9208136dc58bf538",
+      "author": "jack.oquin",
+      "date": "2010-12-07T02:12:14Z",
+      "message": "fix bug in ringcomp test"
+    },
+    {
+      "sha": "d2d778d1cb14b2013c6ad95aea12104260f709e8",
+      "author": "jack.oquin",
+      "date": "2010-12-07T01:28:50Z",
+      "message": "make cloud node work with /velodyne/rawscan again"
+    },
+    {
+      "sha": "eb9ae33a7282e7dfe53aebc7c42ac8bdc7add202",
+      "author": "jack.oquin",
+      "date": "2010-11-24T23:33:21Z",
+      "message": "add launch for playing back RawScan bags\nfix bug in ringcomp.launch file"
+    },
+    {
+      "sha": "d0c2148e6d67be844dabb174fc7413b5311cb326",
+      "author": "jack.oquin",
+      "date": "2010-11-24T19:13:29Z",
+      "message": "Add new nodelet to convert backwards from VelodyneScan to old RawScan message format.\nDelete publication of RawScan from driver nodelet, since the backwards conversion is now available."
+    },
+    {
+      "sha": "2176518ae94ca85f6fe3bf5225c942f51d04b98b",
+      "author": "jack.oquin",
+      "date": "2010-11-24T17:14:54Z",
+      "message": "Add new nodelet to convert old RawScan messages to VelodyneScan."
+    },
+    {
+      "sha": "d09e24221111ab053ba4a1a464454fab073690d6",
+      "author": "jack.oquin",
+      "date": "2010-11-23T15:59:30Z",
+      "message": "preliminary hand-coded migration rule\n(not exported in the manifest)"
+    },
+    {
+      "sha": "61bc55a4b12849e8e90d79e2b5d274ed077b528b",
+      "author": "jack.oquin",
+      "date": "2010-11-21T04:16:48Z",
+      "message": "Start nodelet manager separately from pointcloud nodelet.\nMake visualization launch files depend on basic ones."
+    },
+    {
+      "sha": "c66c699da5a9477d6c4e8275c46aaa0ba650a16b",
+      "author": "jack.oquin",
+      "date": "2010-11-21T04:00:15Z",
+      "message": "Start nodelet manager separately from transform nodelet."
+    },
+    {
+      "sha": "a8c1f87422d5f3e8b46fa32389ab55b45ad32b49",
+      "author": "jack.oquin",
+      "date": "2010-11-21T03:52:26Z",
+      "message": "update comment"
+    },
+    {
+      "sha": "1b590ee5284596121929ebbc6b1da8fabebd77c4",
+      "author": "jack.oquin",
+      "date": "2010-11-21T00:46:44Z",
+      "message": "Add test of multiple ringcomp nodelets running in parallel."
+    },
+    {
+      "sha": "0539e7f8934535d334e81d45399f10aadbd296f9",
+      "author": "jack.oquin",
+      "date": "2010-11-20T23:52:54Z",
+      "message": "Create launch file for ringcomp nodelet in velodye nodelet manager process. \nAdd automated test case for ringcomp nodelet."
+    },
+    {
+      "sha": "0950ecf5faef462891f3fbcd3686f45fbb565fad",
+      "author": "jack.oquin",
+      "date": "2010-11-20T23:27:23Z",
+      "message": "Create a hierarchy of velodyne nodelet launch files for running the\ndriver, pointcloud and transform nodelets in a velodyne nodelet\nmanager process.\nAdd an automated test case for the transform nodelet."
+    },
+    {
+      "sha": "360f55358dcfbd44f3a3629f9b97bec6e2f96469",
+      "author": "jack.oquin",
+      "date": "2010-11-20T04:44:44Z",
+      "message": "update velodyne stack dependencies"
+    },
+    {
+      "sha": "9783052efa010d61f8452f69f7dca344cd99dcfd",
+      "author": "jack.oquin",
+      "date": "2010-11-20T04:03:48Z",
+      "message": "Update velodyne stack version to 0.2.5 for release."
+    },
+    {
+      "sha": "5dbe2b672224551044ea4acd011f99fc6a4e5929",
+      "author": "jack.oquin",
+      "date": "2010-11-20T03:13:07Z",
+      "message": "Add Data::getMsgHeaderFields() method for migrating to unstable\nHandle new interfaces in read and cloud nodes\nMake ringcomp node work on unstable"
+    },
+    {
+      "sha": "71ef2f0e6eff88cc9d6b0838e5bb9ec0029783a9",
+      "author": "jack.oquin",
+      "date": "2010-11-20T01:43:43Z",
+      "message": "Make some changes for Diamondback compatibility.  The Header message\nis moving to std_msgs, and getMsgHeader() will no longer be supported.\nRemove one dependency on getMsgHeader() from print node."
+    },
+    {
+      "sha": "bd204bfeba65a6cf5a410338071631afb92f52ff",
+      "author": "jack.oquin",
+      "date": "2010-11-17T14:01:19Z",
+      "message": "change tf error to a warning"
+    },
+    {
+      "sha": "02723c1ac39d8e2a14ace6457ca0e00f1e99831a",
+      "author": "jack.oquin",
+      "date": "2010-11-17T14:00:53Z",
+      "message": "add launch for multiple nodelet test"
+    },
+    {
+      "sha": "3fa0dd5b92cdc3c0d2449a00299d89b5f456dbe1",
+      "author": "jack.oquin",
+      "date": "2010-11-17T02:24:47Z",
+      "message": "Ringcomp nodelet cleanup.\nLook up input channel names.\nAdd min_obstacle and vel_height parameters.\nAdd launch file for testing with PCAP."
+    },
+    {
+      "sha": "a6ed522e8233b95bc378f354353e8f892f028f92",
+      "author": "jack.oquin",
+      "date": "2010-11-16T22:40:02Z",
+      "message": "Convert ringcomp to a nodelet. Very preliminary, but it runs."
+    },
+    {
+      "sha": "013bb49836c3a14ba18df6aa1be38eeff91ebb72",
+      "author": "jack.oquin",
+      "date": "2010-11-16T21:09:37Z",
+      "message": "Add max_range and min_range parameters.\nOnly transform and publish points within those limits."
+    },
+    {
+      "sha": "1fcaf9374ad28e7d74e113b2b3555c087949456d",
+      "author": "jack.oquin",
+      "date": "2010-11-16T19:34:23Z",
+      "message": "Publish ring number and heading channels in addition to intensity."
+    },
+    {
+      "sha": "7654436d52ff893f291f8bf38655c9f4d5ad24d3",
+      "author": "jack.oquin",
+      "date": "2010-11-16T16:45:16Z",
+      "message": "publish static transforms for PCAP data"
+    },
+    {
+      "sha": "4a5b7b393af88d07b9852e1480c6dd33bafeff12",
+      "author": "jack.oquin",
+      "date": "2010-11-15T04:00:48Z",
+      "message": "remove obsolete Data interface"
+    },
+    {
+      "sha": "8c4994e018381c3c0bc70bccb3801aa2a8af14f9",
+      "author": "jack.oquin",
+      "date": "2010-11-15T02:13:11Z",
+      "message": "Finish transform_nodelet implementation."
+    },
+    {
+      "sha": "6f6339dd10133ae52f08be061037d34a66b5ca40",
+      "author": "jack.oquin",
+      "date": "2010-11-14T17:16:51Z",
+      "message": "Make preliminary sketch of transform_nodelet based on\npointcloud_nodelet. Does not actually transfrom the data yet."
+    },
+    {
+      "sha": "2bad60fb039a5ebd99f8e5cfe39f5c541c1eaff4",
+      "author": "jack.oquin",
+      "date": "2010-11-14T15:47:40Z",
+      "message": "set similar tolerance for node-based hertz test"
+    },
+    {
+      "sha": "8be032f5d1c32ed19919400093a5a3729e59e595",
+      "author": "jack.oquin",
+      "date": "2010-11-14T15:43:37Z",
+      "message": "Improve timing of PCAP simulation. Still not exact (about 9.25Hz), but\ncloser to the device's 10Hz rate. Relax tolerances on the test case,\nto count this as close enough, for now."
+    },
+    {
+      "sha": "e79021c2ffef253bf80176ffff05315bbb179acd",
+      "author": "jack.oquin",
+      "date": "2010-11-13T19:41:40Z",
+      "message": "Modify new Data classes to accept VelodyneScan messages, passing\nsingle timestamped packets to the callback.\nRemove some old Data interfaces from the new version.\nIncrease nodelet driver output buffering.\nModify pointcloud_nodelet to collect complete scans into a single\noutput message, even though the callback receives single packets."
+    },
+    {
+      "sha": "c909f0668f18b7ba2f5e4aa8491e670e1c378a7c",
+      "author": "jack.oquin",
+      "date": "2010-11-12T23:52:41Z",
+      "message": "Divide Data classes into three separate headers and implementations.\nUse namespace \"Velodyne\" to coexist with previous implementation.\nModify pointcloud_nodelet to use the new interfaces."
+    },
+    {
+      "sha": "0e7d73693b687c79a30fe5477bf9658b88300fd7",
+      "author": "jack.oquin",
+      "date": "2010-11-12T14:23:51Z",
+      "message": "Modify driver_nodelet to use new Input::getPacket() method.\nPublish VelodyneScan or RawScan messages, depending on usage.\nExperimental, to see if the driver can still keep up with the device.\nThe read node still works the old way, for comparison."
+    },
+    {
+      "sha": "a4acca11ba51e27fd1be82a2286e005ff68fdaf5",
+      "author": "jack.oquin",
+      "date": "2010-11-12T04:17:35Z",
+      "message": "Remove Input::getParams() method and all its uses."
+    },
+    {
+      "sha": "9f55b248d253522d4a44836af440ca3d7425786f",
+      "author": "jack.oquin",
+      "date": "2010-11-12T03:59:53Z",
+      "message": "Move getParam() code to constructor. That method is now deprecated and\n  does nothing, but not yet removed.\nAdd new getPacket() method, fills in VelodynePacket message."
+    },
+    {
+      "sha": "1ba2c1b897e1f468dd36f4c31fd8a37f9c4ab4c2",
+      "author": "jack.oquin",
+      "date": "2010-11-11T15:44:21Z",
+      "message": "move velodyne_hybrid_3d to sandbox"
+    },
+    {
+      "sha": "9bdee33feea17832fc08a43bac9eca7e32f2845a",
+      "author": "jack.oquin",
+      "date": "2010-11-11T15:33:50Z",
+      "message": "set review status experimental"
+    },
+    {
+      "sha": "d3a79a151444c08c9d865e51045cc4fa847baa86",
+      "author": "jack.oquin",
+      "date": "2010-11-11T14:37:59Z",
+      "message": "comment out bag migration until it is needed"
+    },
+    {
+      "sha": "6bb9a40e415067f226466b4a4e97984d819f4057",
+      "author": "jack.oquin",
+      "date": "2010-11-11T13:37:35Z",
+      "message": "delete old-format RawScan message"
+    },
+    {
+      "sha": "e365ace35cf1218b05cb7552f1db3532063e95f8",
+      "author": "jack.oquin",
+      "date": "2010-11-11T12:53:26Z",
+      "message": "add new Velodyne message types"
+    },
+    {
+      "sha": "9b1731471c00d419d8bdd005ea095ed2ff7ccf31",
+      "author": "jack.oquin",
+      "date": "2010-11-11T12:35:10Z",
+      "message": "add empty bag migration rules file"
+    },
+    {
+      "sha": "3eb5f4a65668b9b56e8cc55c94d94d47b0680663",
+      "author": "jack.oquin",
+      "date": "2010-11-11T12:29:23Z",
+      "message": "Add new Velodyne messages package."
+    },
+    {
+      "sha": "767fe7a60b4d5d61a3b02133f63b897b64f4f1b8",
+      "author": "jack.oquin",
+      "date": "2010-11-11T04:18:21Z",
+      "message": "Add npackets parameter: number of packets published at a time (default 260)."
+    },
+    {
+      "sha": "3eb6d5575b1bc8241d8bd4ab021da7016260ff0f",
+      "author": "jack.oquin",
+      "date": "2010-11-10T18:57:47Z",
+      "message": "add test case for publishing PointCloud from PCAP using nodelets"
+    },
+    {
+      "sha": "5e7f9dab5ada0d7d8ce7f20775badd0f2b12fdb1",
+      "author": "jack.oquin",
+      "date": "2010-11-10T18:42:23Z",
+      "message": "Change new data.h subscribe() method to perform ROS subscribe of the\n  topic while defining the appropriate data type callback."
+    },
+    {
+      "sha": "ef7b970b909e12c83bab6362529530b15355605b",
+      "author": "jack.oquin",
+      "date": "2010-11-10T15:23:39Z",
+      "message": "do not publish PointCloud when no one subscribed"
+    },
+    {
+      "sha": "a6174f2157dc44ff1a42dd38695ad8e7c5f47648",
+      "author": "jack.oquin",
+      "date": "2010-11-10T01:56:12Z",
+      "message": "Run device poll in a separate thread. \nFixes the startup problems and most of the shutdown problems."
+    },
+    {
+      "sha": "8a350c4af48e6f6bc4477a1133767e8b77a3f53d",
+      "author": "jack.oquin",
+      "date": "2010-11-09T04:58:35Z",
+      "message": "Clean up stand-alone point cloud node.\nRemove deprecated launch file.\nMake visualization launch files using nodelets."
+    },
+    {
+      "sha": "67ddbf27669a26d60ef3992dcad8281624ccedb4",
+      "author": "jack.oquin",
+      "date": "2010-11-09T02:52:07Z",
+      "message": "Clean up Data class slightly, add boost callback for DataScan class."
+    },
+    {
+      "sha": "b900b532356251ba5f78fb9c5a014c2c4ee72621",
+      "author": "jack.oquin",
+      "date": "2010-11-08T20:34:53Z",
+      "message": "Fix subscribe bug in pointcloud_nodelet.\nHack boost callback support into processXYZ()\n (Data class needs cleanup after this)."
+    },
+    {
+      "sha": "8eb2a7d7a014d5ef24d7449d2fd4e492665cf003",
+      "author": "jack.oquin",
+      "date": "2010-11-08T19:20:41Z",
+      "message": "Allocate a shared pointer for zero-copy sharing of raw scans with other nodelets."
+    },
+    {
+      "sha": "e88f7c4c13b2a99c4aed30257ec9fba6d6e61ec8",
+      "author": "jack.oquin",
+      "date": "2010-11-08T18:55:05Z",
+      "message": "Add nodelet conversion of Velodyne read driver."
+    },
+    {
+      "sha": "e27728baccfa432db2e4e2beefd0aaf5d57bfd27",
+      "author": "jack.oquin",
+      "date": "2010-11-08T16:40:51Z",
+      "message": "Begin adding experimental nodelet support with separate src subdirectory.\nAdd partial pointcloud_nodelet implementation: able to load, but not run."
+    },
+    {
+      "sha": "c0d113c51ab879d8768cae03c1a2f10c75ead9f6",
+      "author": "jack.oquin",
+      "date": "2010-11-06T16:15:19Z",
+      "message": "Add automated test case of publishing raw packets read from a\n  Velodyne PCAP file."
+    },
+    {
+      "sha": "65203d1b6f707e960c24cb96fa8917ecc0808279",
+      "author": "jack.oquin",
+      "date": "2010-11-06T03:26:08Z",
+      "message": "Group sources into lib and nodes subdirectories.\nFix 64-bit compiler warning."
+    },
+    {
+      "sha": "6a0f0e10dcd7befa469debe611ebb6a8c299e4cd",
+      "author": "austinrobot",
+      "date": "2010-10-11T21:02:30Z",
+      "message": "eliminate 64-bit compiler warning"
+    },
+    {
+      "sha": "4b1e3e21439e83b01dea03e588d9734b8f472d1c",
+      "author": "piyushk",
+      "date": "2010-10-06T16:50:32Z",
+      "message": "missing ros.h include that should have been there"
+    },
+    {
+      "sha": "e98b45d98ed7a7ccf2c4813de526a710646fe366",
+      "author": "jack.oquin",
+      "date": "2010-08-17T22:02:33Z",
+      "message": "update stack dependencies"
+    },
+    {
+      "sha": "50872a69db17a1809c68c84a1e7284a106b25816",
+      "author": "jack.oquin",
+      "date": "2010-08-17T17:00:00Z",
+      "message": "update stack release versions"
+    },
+    {
+      "sha": "349acfa455f2da9ab33076e1704e883cad2093b1",
+      "author": "jack.oquin",
+      "date": "2010-08-17T04:18:45Z",
+      "message": "add cturtle-style link flags for exported libraries"
+    },
+    {
+      "sha": "bfcb5e6929e8200b39d4100cb73ab3351ac37194",
+      "author": "jack.oquin",
+      "date": "2010-08-16T18:17:17Z",
+      "message": "Clean up dependencies for some launch files.  Remove unnecessary\nmonitor.launch (easier to just run rxconsole)."
+    },
+    {
+      "sha": "54e95ef48cfff17bf1d6a9bfe086c4238ac8e454",
+      "author": "jack.oquin",
+      "date": "2010-08-15T05:19:09Z",
+      "message": "Remove export of -I${prefix}/msg/cpp for message headers.\nIt is no longer needed with ROS C-turtle, and roswtf complains."
+    },
+    {
+      "sha": "6fbc60e8f0d1c2974a4a1962ff961c932b521569",
+      "author": "jack.oquin",
+      "date": "2010-07-20T04:11:06Z",
+      "message": "set svn:ignore prop"
+    },
+    {
+      "sha": "0cd25fb2bd6b832bccacc4f4432ccfbcfce8d9ac",
+      "author": "jack.oquin",
+      "date": "2010-05-03T15:08:56Z",
+      "message": "new Velodyne ring_sequence header"
+    },
+    {
+      "sha": "c34ae0c9954b622e4a6112a96e84b1f6f5643866",
+      "author": "michael.quinlan",
+      "date": "2010-03-24T20:30:25Z",
+      "message": "moved velodyne_examples to sandbox"
+    },
+    {
+      "sha": "faa2679180cfb2ecfd4f5df1d9cb1650b0b5fec2",
+      "author": "jack.oquin",
+      "date": "2010-03-10T12:18:11Z",
+      "message": "Remove bin directory from SVN, automatically created by build."
+    },
+    {
+      "sha": "a94a7934a80ab0038d36dca79df6ba40a2aa0da7",
+      "author": "jack.oquin",
+      "date": "2010-03-10T02:28:00Z",
+      "message": "Remove dependency on <art/types.hh>.\nSet svn:ignore properties for stacks."
+    },
+    {
+      "sha": "67911ea760c35203ef9a0437c41b70ce83265c4e",
+      "author": "jack.oquin",
+      "date": "2010-03-07T19:31:21Z",
+      "message": "Use XML mode rather than nXML for launch files.\nDo not automatically start rxconsole in launch files.\nSet SVN props for velodyne_examples packages."
+    },
+    {
+      "sha": "b3a1b6ec4e7aca9fa0827057e3038f1733c2befe",
+      "author": "jack.oquin",
+      "date": "2010-03-07T18:49:59Z",
+      "message": "correct spelling of ROS_NOBUILD files"
+    },
+    {
+      "sha": "a5b319e58193f5de235362e404b778b8b24c9b91",
+      "author": "jack.oquin",
+      "date": "2010-03-02T02:25:36Z",
+      "message": "Uncomment rviz from play.launch file.\nMove all other velodyne_viz launch files to launch subdirectory."
+    },
+    {
+      "sha": "3e3325724b29989107c280efc4ac5ace83501461",
+      "author": "jack.oquin",
+      "date": "2010-03-02T02:06:59Z",
+      "message": "add launch file using rosplay in place of rosbag\n\nrosbag is too new for the version of ROS installed on the UT CS systems"
+    },
+    {
+      "sha": "988469f020729d249d6d8cb4aa3d480e5cb1e00f",
+      "author": "austinrobot",
+      "date": "2010-02-27T15:18:02Z",
+      "message": "Move Velodyne record bag launch file to art_run package, so the\ndependencies work correctly.\nExplicitly set /dev/null port names in pilot_null.launch in\nanticipation of changing the servo device port defaults to the real\ndevice entries."
+    },
+    {
+      "sha": "69fce7e8a46a4cf3d498459140c5f38844d7e935",
+      "author": "jack.oquin",
+      "date": "2010-02-27T01:54:19Z",
+      "message": "update velodyne stack dependencies"
+    },
+    {
+      "sha": "85135560de96d108ccf7083698c95251d195a9ff",
+      "author": "jack.oquin",
+      "date": "2010-02-27T01:24:33Z",
+      "message": "save bag files in current directory"
+    },
+    {
+      "sha": "7682b4791d1f26eab96fff8f5d282acd81f5f9d4",
+      "author": "jack.oquin",
+      "date": "2010-02-26T20:58:02Z",
+      "message": "document bag file write gotcha"
+    },
+    {
+      "sha": "0a843ec20419c9ff776c6c3b1f53b877a05747f1",
+      "author": "jack.oquin",
+      "date": "2010-02-26T20:38:46Z",
+      "message": "Create new velodyne_viz package for 3D visualization.\n\nMove the launch files that depend on rviz to that package, which\nexplicitly depends on it."
+    },
+    {
+      "sha": "92c7a03c9199fe35c4ebc74a0c5faf4904a4839f",
+      "author": "michael.quinlan",
+      "date": "2010-02-17T18:31:21Z",
+      "message": "velodyne examples"
+    },
+    {
+      "sha": "a5d5ac3425a31b40caa9f64fc265aa559a58f609",
+      "author": "austinrobot",
+      "date": "2010-02-11T23:05:59Z",
+      "message": "make launch file for vehicle"
+    },
+    {
+      "sha": "ed4aaf5ad3296c283fe0f52660e88a1ec7833962",
+      "author": "jack.oquin",
+      "date": "2010-01-25T11:39:04Z",
+      "message": "change review status of all utexas-art stacks and packages to experimental"
+    },
+    {
+      "sha": "3fbdba26b50b173d6de16fd5deb86f226fadc226",
+      "author": "jack.oquin",
+      "date": "2010-01-24T14:30:17Z",
+      "message": "more LIDAR capitalization"
+    },
+    {
+      "sha": "6049641fdb14277e8eae83b2bab6b9fc642f7540",
+      "author": "jack.oquin",
+      "date": "2010-01-23T04:48:47Z",
+      "message": "consistently capitalize LIDAR (it is an acronym)"
+    },
+    {
+      "sha": "d019a19ade6c6077b68601ef5ca1871896f7e91b",
+      "author": "jack.oquin",
+      "date": "2010-01-22T15:21:05Z",
+      "message": "reorder velodyne_common package authors"
+    },
+    {
+      "sha": "561ef9e406cd3bd50a3abbfdf58ff886f63f4962",
+      "author": "jack.oquin",
+      "date": "2010-01-21T15:13:13Z",
+      "message": "clean up manifest files for ROS wiki"
+    },
+    {
+      "sha": "c8018eb9b55bd62c1e98f2c81bac890c99c87940",
+      "author": "jack.oquin",
+      "date": "2010-01-19T16:56:31Z",
+      "message": "change home URL to google code"
+    },
+    {
+      "sha": "f5d207b293d128b375370c52ec5853d821c66a85",
+      "author": "jack.oquin",
+      "date": "2010-01-17T03:03:17Z",
+      "message": "add some more ignore props"
+    },
+    {
+      "sha": "3a4d826745b38c61e67c5eb3bd381bb5c6863330",
+      "author": "jack.oquin",
+      "date": "2010-01-17T02:23:24Z",
+      "message": "Set some package directory properties.\nDelete unused include directory."
+    },
+    {
+      "sha": "e39ea2dd0c98e6a53e475472593973ffdf56ee61",
+      "author": "jack.oquin",
+      "date": "2010-01-17T01:54:03Z",
+      "message": "Import source files into google code repository."
+    }
+  ]
+}

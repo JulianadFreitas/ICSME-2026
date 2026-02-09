@@ -1,0 +1,2220 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-06T23:59:27Z",
+    "source": "github_rest",
+    "endpoint": "/repos/{owner}/{repo}/commits",
+    "owner": "alliedvision",
+    "repo": "vimbax_ros2_driver",
+    "per_page": 100
+  },
+  "data": [
+    {
+      "sha": "296bdf68ca180c033e2a8d4a1f08d312cfdb2acd",
+      "author": "Dennis Langenkamp",
+      "date": "2025-11-26T11:54:23Z",
+      "message": "Bump version to 1.0.1\n\nThe version of all packages is set to 1.0.1 as some bugs are fixed, but no further changes were made."
+    },
+    {
+      "sha": "0e29c3be6981f2f9d001c137ade6c9de52c5b512",
+      "author": "Dennis Langenkamp",
+      "date": "2025-11-26T11:12:34Z",
+      "message": "Update README for jazzy"
+    },
+    {
+      "sha": "7c0e31fe806fe7bc09413cbba5435119a40125f5",
+      "author": "Dennis Langenkamp [Allied Vision]",
+      "date": "2025-11-26T11:12:07Z",
+      "message": "Pull request #62: Fix handling of missing features\n\nMerge in HSW_SDK/vimbax_ros2_driver from bugfix/missing-features-not-handelt-correctly to dev\n\n* commit 'd9897346a0963b5a6b1d121a693376eba3fe9b27':\n  Fix handling of missing features"
+    },
+    {
+      "sha": "d9897346a0963b5a6b1d121a693376eba3fe9b27",
+      "author": "Dennis Langenkamp",
+      "date": "2025-11-26T10:24:08Z",
+      "message": "Fix handling of missing features\n\nSome legacy cameras like the Mako do not support all SFNC features. In the \"camera_info_get\" function these missing feature were not handled correctly and the function was always failing, if one feature could not be accessed. This is fixed by checking the return code for VmbErrorNotFound."
+    },
+    {
+      "sha": "e02353bf205f89793bba6b2830ba9f34d8f54232",
+      "author": "Dennis Langenkamp [Allied Vision]",
+      "date": "2025-11-26T08:21:07Z",
+      "message": "Pull request #61: Feature/jazzy support\n\nMerge in HSW_SDK/vimbax_ros2_driver from feature/jazzy-support to dev\n\n* commit 'a45bf0998101aee26df9bbf15b6afbb0ef949a8f':\n  Fixed coding style issues found with \"colcon test\"\n  Replace rmw_qos_profile_services_default with rclcpp::ServicesQoS\n  Replace _Float64 with double"
+    },
+    {
+      "sha": "a45bf0998101aee26df9bbf15b6afbb0ef949a8f",
+      "author": "Dennis Langenkamp",
+      "date": "2025-09-30T11:18:46Z",
+      "message": "Fixed coding style issues found with \"colcon test\"\n\nFixed all coding style / syntax isses found by running \"colcon test\" with ROS2 Jazzy."
+    },
+    {
+      "sha": "91b5cb4d40acd8207e53bdc1c4ee16fc422ca1cc",
+      "author": "Dennis Langenkamp",
+      "date": "2025-09-30T07:25:22Z",
+      "message": "Replace rmw_qos_profile_services_default with rclcpp::ServicesQoS\n\nThe usage of rmw_qos_profile_services_default is deprecated in ROS2 Jazzy. So, it is replaced with the new equivalent rclcpp::ServicesQoS."
+    },
+    {
+      "sha": "1c211766e187d1c92bfd10c608d35f20a0c91615",
+      "author": "Dennis Langenkamp",
+      "date": "2025-09-30T07:22:03Z",
+      "message": "Replace _Float64 with double\n\nWhen building the driver for ROS2 Jazzy on Ubuntu Noble (24.04) the build fails with varoius errors regarding _Float64 type. By replacing all _Float64 with double the issues are fixed and the build is running through."
+    },
+    {
+      "sha": "3b1f3cd9eda33b6e108cefcc30d8318f6f25d537",
+      "author": "Dennis Langenkamp [Allied Vision]",
+      "date": "2024-04-29T10:45:47Z",
+      "message": "Updated known issues in README"
+    },
+    {
+      "sha": "b089eb951fa6ebc5b27d3a244fd531551df155f2",
+      "author": "Dennis Langenkamp",
+      "date": "2024-04-26T06:50:02Z",
+      "message": "Moved Beta disclamer to end of README"
+    },
+    {
+      "sha": "a5591f18c0340ca61b7ba0f30f0ed9d6462f8fec",
+      "author": "Dennis Langenkamp [Allied Vision]",
+      "date": "2024-04-26T06:23:44Z",
+      "message": "Pull request #60: Added information about dds tuning to README\n\nMerge in HSW_SDK/vimbax_ros2_driver from bugfix/include-dds-tuning-in-readme to dev\n\n* commit '7ecd90df8e1391554162abd4119fc7ef0cef2623':\n  Added information about dds tuning to README"
+    },
+    {
+      "sha": "7863aacebe1d353c8583efacb2bc670b0b6e9cca",
+      "author": "Justus Braun [Allied Vision]",
+      "date": "2024-04-25T14:31:57Z",
+      "message": "Pull request #59: Test/ignore old images\n\nMerge in HSW_SDK/vimbax_ros2_driver from test/ignore-old-images to dev\n\n* commit '01b5caf492bba3764ff1701dbedff7e34131cc2c':\n  Fixed pixel format ros time param and applied same logic to autostream test\n  This test now skips images which were taken before the stop stream service was called"
+    },
+    {
+      "sha": "7ecd90df8e1391554162abd4119fc7ef0cef2623",
+      "author": "Dennis Langenkamp",
+      "date": "2024-04-25T13:58:54Z",
+      "message": "Added information about dds tuning to README"
+    },
+    {
+      "sha": "01b5caf492bba3764ff1701dbedff7e34131cc2c",
+      "author": "Justus Braun",
+      "date": "2024-04-25T12:12:41Z",
+      "message": "Fixed pixel format ros time param and applied same logic to autostream\ntest"
+    },
+    {
+      "sha": "e8f106cd6e91ffe0689440e67f459adeb496bcbb",
+      "author": "Justus Braun",
+      "date": "2024-04-25T11:13:34Z",
+      "message": "This test now skips images which were taken before the stop stream service was called"
+    },
+    {
+      "sha": "a92bcd088d6405545a9ea24b7db1df355b5c28e0",
+      "author": "Dennis Langenkamp",
+      "date": "2024-04-25T07:40:26Z",
+      "message": "Adjusted YCbCr information in README."
+    },
+    {
+      "sha": "8b46ba25d432ca4f4948cefc7796ef2b07b4ce25",
+      "author": "Dennis Langenkamp [Allied Vision]",
+      "date": "2024-04-24T13:10:43Z",
+      "message": "Pull request #58: Release preperations\n\nMerge in HSW_SDK/vimbax_ros2_driver from release-preperations to dev\n\n* commit '8e32176d547ebcacf1491a2c4412efc7c33446c3':\n  Fixed flake8 errors\n  Corrected new license texts to cause no ament_copyright issues\n  Changed license to BSD license and added repository level license file\n  Updated README with latest information"
+    },
+    {
+      "sha": "8e32176d547ebcacf1491a2c4412efc7c33446c3",
+      "author": "Dennis Langenkamp",
+      "date": "2024-04-24T10:57:06Z",
+      "message": "Fixed flake8 errors"
+    },
+    {
+      "sha": "c437dd1a7f00cc3220f8b8779ca552e49834179c",
+      "author": "Dennis Langenkamp",
+      "date": "2024-04-24T10:38:28Z",
+      "message": "Corrected new license texts to cause no ament_copyright issues"
+    },
+    {
+      "sha": "84ce56310d1e1784b87195bf73254314873d7c40",
+      "author": "Dennis Langenkamp",
+      "date": "2024-04-24T08:57:02Z",
+      "message": "Changed license to BSD license and added repository level license file"
+    },
+    {
+      "sha": "712253cdb5dcdd7ed9c8c746ca5cc65c7a8ec1c2",
+      "author": "Dennis Langenkamp",
+      "date": "2024-04-24T08:55:48Z",
+      "message": "Updated README with latest information"
+    },
+    {
+      "sha": "88cc13b7bfd38675df361c8190b51fec681ab263",
+      "author": "Dennis Langenkamp [Allied Vision]",
+      "date": "2024-04-24T08:05:45Z",
+      "message": "Pull request #55: Reworked disconnected / reconnect handling\n\nMerge in HSW_SDK/vimbax_ros2_driver from bugfix/UNI-800-ros2-opening-camera-sporadically-fails-for-just-connected-camera to dev\n\n* commit '7bd57c1ffaec9df7018646e459897729f3ef0bef':\n  Reworked disconnected / reconnect handling"
+    },
+    {
+      "sha": "248b2b523c1db3d1d00f7956bba345c320681ef0",
+      "author": "Dennis Langenkamp [Allied Vision]",
+      "date": "2024-04-24T08:05:42Z",
+      "message": "Pull request #56: Load / save settings now also stores / restores the local device and stream feature as defined in the requirement\n\nMerge in HSW_SDK/vimbax_ros2_driver from bugfix/UNI-802-ros2-align-save-settings-with-vimbax-add-local-and-stream-features to dev\n\n* commit '233482b9d2b76bd0021a984d1a485eb8684cf0c7':\n  Load / save settings now also stores / restores the local device and stream feature as defined in the requirement"
+    },
+    {
+      "sha": "084c2b68ae5943042c71cb1e02d843510acb5d12",
+      "author": "Dennis Langenkamp [Allied Vision]",
+      "date": "2024-04-24T08:05:31Z",
+      "message": "Pull request #57: Bugfix/UNI-801 ros2 stream stop frame requeue sporadically fails\n\nMerge in HSW_SDK/vimbax_ros2_driver from bugfix/UNI-801-ros2-stream-stop-frame-requeue-sporadically-fails to dev\n\n* commit '9fbe11110e91ebf4449d144064195f5d78e0ef81':\n  Fixed cpplint / uncrustify errors\n  Updated stream stop order to avoid error message"
+    },
+    {
+      "sha": "233482b9d2b76bd0021a984d1a485eb8684cf0c7",
+      "author": "Dennis Langenkamp",
+      "date": "2024-04-24T06:47:48Z",
+      "message": "Load / save settings now also stores / restores the local device and stream feature as defined in the requirement"
+    },
+    {
+      "sha": "9fbe11110e91ebf4449d144064195f5d78e0ef81",
+      "author": "Dennis Langenkamp",
+      "date": "2024-04-24T06:30:48Z",
+      "message": "Fixed cpplint / uncrustify errors"
+    },
+    {
+      "sha": "7bd57c1ffaec9df7018646e459897729f3ef0bef",
+      "author": "Dennis Langenkamp",
+      "date": "2024-04-24T06:24:56Z",
+      "message": "Reworked disconnected / reconnect handling\n\n- A camera must have been connected once, otherwise the discovery callback just returns.\n- The reconnection is only handle, if currently no camera is connected (the camera shared pointer is null)."
+    },
+    {
+      "sha": "5911eab185132d97188f534802eb60848d176c98",
+      "author": "Hannah Hartmann [Allied Vision]",
+      "date": "2024-04-23T15:52:36Z",
+      "message": "test_pixel_formats.py online editiert mit Bitbucket\n\nadapted YCbCr422_8_CbYCrY pixel format"
+    },
+    {
+      "sha": "8e0acc43b01f5754775f5251ab9c9da72626f9af",
+      "author": "Dennis Langenkamp",
+      "date": "2024-04-23T13:43:13Z",
+      "message": "Updated stream stop order to avoid error message\n\nThe frame processing thread is now stopped before the frames are flush and revoked to ensure, that no frames gets queued when it is already revoked."
+    },
+    {
+      "sha": "3f4d2a00fe57d13f1c8efc0f229a05f4b81c3db3",
+      "author": "Justus Braun [Allied Vision]",
+      "date": "2024-04-23T08:26:26Z",
+      "message": "Pull request #54: Added ignored features and added FeatureName to log msgs\n\nMerge in HSW_SDK/vimbax_ros2_driver from feature/ignore-list-int-features to dev\n\n* commit '62e8631697f0e845cd814c5b8fe07353fc46f52b':\n  Added ignored features and added FeatureName to log msgs"
+    },
+    {
+      "sha": "62e8631697f0e845cd814c5b8fe07353fc46f52b",
+      "author": "Justus Braun",
+      "date": "2024-04-23T08:07:04Z",
+      "message": "Added ignored features and added FeatureName to log msgs"
+    },
+    {
+      "sha": "85f09ff99a5fcbcc6a2e9a52ba3e28ec088d3370",
+      "author": "Dennis Langenkamp [Allied Vision]",
+      "date": "2024-04-22T06:50:01Z",
+      "message": "Pull request #53: Added use_ros_time parameter to select between camera timestamp and ROS timestamp\n\nMerge in HSW_SDK/vimbax_ros2_driver from feature/UNI-789-ros2-use-ros-2-time-in-image-header-timestamp-field to dev\n\n* commit '4ebc19374838c6e9664078752cb1aa3b9f60c1e7':\n  Fixed typos\n  Added use_ros_time parameter to select between camera timestamp and ROS timestamp"
+    },
+    {
+      "sha": "d602993fb21c887c55147e08b0e5ec8dcd267286",
+      "author": "Justus Braun [Allied Vision]",
+      "date": "2024-04-22T06:23:59Z",
+      "message": "Pull request #50: Feature/test improvements\n\nMerge in HSW_SDK/vimbax_ros2_driver from feature/test-improvements to dev\n\n* commit 'bd16cc7373338614e7a2601b82de95c2d93aeb03': (28 commits)\n  Retries failed status service calls\n  Fixed TestNode\n  Unified timeouts\n  Increased timeouts\n  Replaced static sleep with dynamic wait for streaming status\n  Flake8\n  Timeout for service calls can now be set per call\n  Removed now unused function\n  Added private executor to TestNode\n  Added more assertions\n  Added logging for incomplete service call\n  Made unsubscribe save for threaded spin\n  Added generic try catch to spin thread\n  Hopefully fixed pixel format test failure in jenkins\n  Added wait times for node to react to graph changes\n  Fixed format\n  Service calls use timeouts now\n  Test now passes reliably\n  Added thread shutdown on object destruction\n  Now uses random test node name to prevent collisions\n  ..."
+    },
+    {
+      "sha": "4ebc19374838c6e9664078752cb1aa3b9f60c1e7",
+      "author": "Dennis Langenkamp",
+      "date": "2024-04-22T06:14:47Z",
+      "message": "Fixed typos"
+    },
+    {
+      "sha": "9df97f9adce70ba0b491c4ed5a258f0ddd489505",
+      "author": "Dennis Langenkamp",
+      "date": "2024-04-19T13:10:59Z",
+      "message": "Merge remote-tracking branch 'origin/dev' into feature/UNI-789-ros2-use-ros-2-time-in-image-header-timestamp-field"
+    },
+    {
+      "sha": "13cab2b4229e70cc1754387c9e8a0d28df90d687",
+      "author": "Dennis Langenkamp [Allied Vision]",
+      "date": "2024-04-19T10:49:58Z",
+      "message": "Pull request #52: Fixed feature_bool_set service is not working for module features\n\nMerge in HSW_SDK/vimbax_ros2_driver from bugfix/feature-bool-set-module-access-not-working to dev\n\n* commit '55274bc013f54e19d064d9da62662600ba5b00df':\n  Fixed feature_bool_set service is not working for module features"
+    },
+    {
+      "sha": "55274bc013f54e19d064d9da62662600ba5b00df",
+      "author": "Dennis Langenkamp",
+      "date": "2024-04-19T10:21:59Z",
+      "message": "Fixed feature_bool_set service is not working for module features"
+    },
+    {
+      "sha": "2c28ae315fb984d599e6ed5249764c6b920dcfee",
+      "author": "Dennis Langenkamp",
+      "date": "2024-04-19T09:42:00Z",
+      "message": "Added use_ros_time parameter to select between camera timestamp and ROS timestamp"
+    },
+    {
+      "sha": "a4c134d6133668642d51402faa2fe7bb23d34340",
+      "author": "Dennis Langenkamp [Allied Vision]",
+      "date": "2024-04-19T10:12:13Z",
+      "message": "Pull request #51: Fixed 1 missing frames is logged oin stream start with gige cameras\n\nMerge in HSW_SDK/vimbax_ros2_driver from bugfix/UNI-788-ros2-1-frames-missing-logged-when-starting-the-stream-with-gige-camera to dev\n\n* commit 'a389d8a831d58860b2541eeb6a4c03900a3bb0a8':\n  Fixed 1 missing frames is logged oin stream start with gige cameras"
+    },
+    {
+      "sha": "a389d8a831d58860b2541eeb6a4c03900a3bb0a8",
+      "author": "Dennis Langenkamp",
+      "date": "2024-04-19T07:46:08Z",
+      "message": "Fixed 1 missing frames is logged oin stream start with gige cameras"
+    },
+    {
+      "sha": "7d0a9f1a1187c0f0e8ed819a203ea4a4e44e17e5",
+      "author": "Dennis Langenkamp [Allied Vision]",
+      "date": "2024-04-19T07:35:43Z",
+      "message": "Pull request #47: Bugfix/UNI-790 ros2 status service does not take triggerselector into account\n\nMerge in HSW_SDK/vimbax_ros2_driver from bugfix/UNI-790-ros2-status-service-does-not-take-triggerselector-into-account to dev\n\n* commit 'd498542c79a494375f93c129720e44e8e9638a1a':\n  Updated status service description in README\n  Fixed coding style issues\n  The status message contains now the trigger mode and source for all trigger selectors"
+    },
+    {
+      "sha": "f6e77c72126fe413a15ebed1e2779ca9200c46df",
+      "author": "Dennis Langenkamp [Allied Vision]",
+      "date": "2024-04-19T07:35:33Z",
+      "message": "Pull request #48: Added open by ip/mac address implementation in node\n\nMerge in HSW_SDK/vimbax_ros2_driver from bugfix/UNI-791-ros2-camera-selection-by-ip-address-not-possible to dev\n\n* commit '8c593b0f852ff0ad0bc2e4dbcf20f70fe4bcf709':\n  Fixed flake8 errors in launch file\n  Added open by ip/mac address implementation in node"
+    },
+    {
+      "sha": "48809bd2c068ee9f4e11987f7966c54296e9fa1c",
+      "author": "Dennis Langenkamp [Allied Vision]",
+      "date": "2024-04-19T07:35:24Z",
+      "message": "Pull request #49: Fixed packet size not adjusted after gige camera reconnect\n\nMerge in HSW_SDK/vimbax_ros2_driver from bugfix/UNI-786-ros2-packet-size-not-adjusted-after-camera-reconnect to dev\n\n* commit '5b409cfb2d016c345222deb8ca0550d1400258b2':\n  Fixed packet size not adjusted after gige camera reconnect"
+    },
+    {
+      "sha": "bd16cc7373338614e7a2601b82de95c2d93aeb03",
+      "author": "Justus Braun",
+      "date": "2024-04-18T14:09:25Z",
+      "message": "Merged dev"
+    },
+    {
+      "sha": "8c593b0f852ff0ad0bc2e4dbcf20f70fe4bcf709",
+      "author": "Dennis Langenkamp",
+      "date": "2024-04-18T12:25:06Z",
+      "message": "Fixed flake8 errors in launch file"
+    },
+    {
+      "sha": "5b409cfb2d016c345222deb8ca0550d1400258b2",
+      "author": "Dennis Langenkamp",
+      "date": "2024-04-18T12:22:47Z",
+      "message": "Fixed packet size not adjusted after gige camera reconnect\n\nThe problem was that on reconnect the camera was opened in the feature invalidation callback and therefore it was not possible to access the adjust packet size features. This is fixed by starting a new thread which performs the camera open."
+    },
+    {
+      "sha": "d498542c79a494375f93c129720e44e8e9638a1a",
+      "author": "Dennis Langenkamp",
+      "date": "2024-04-18T09:55:13Z",
+      "message": "Updated status service description in README"
+    },
+    {
+      "sha": "0540aced23fa145b1b72c2016320a5e4ad7e3102",
+      "author": "Dennis Langenkamp [Allied Vision]",
+      "date": "2024-04-18T09:49:53Z",
+      "message": "Pull request #46: Bugfix/UNI-787 ros2 node hangs and stops answering service calls does not start streaming\n\nMerge in HSW_SDK/vimbax_ros2_driver from bugfix/UNI-787-ros2-node-hangs-and-stops-answering-service-calls-does-not-start-streaming to dev\n\n* commit 'bb85df50aa74a88e10af04b1e5155f11cdba2d34':\n  Fixed typo\n  Fixed flake8 errors\n  Adjusted node and tests to work with rmw_cyclonedds_cpp\n  Updated getting started and known issues sections with information about the sporadically occurring deadlock in rmw_fastrtps_cpp."
+    },
+    {
+      "sha": "c60c8403dc5ef1def2b06a9e417397428bd7681e",
+      "author": "Dennis Langenkamp",
+      "date": "2024-04-18T09:07:29Z",
+      "message": "Added open by ip/mac address implementation in node\n\n- The node does now contain it's own open by ip/mac address implementation and does no longer rely on the implementation of VmbCameraOpen.\n- Moved some feature access functions into api class."
+    },
+    {
+      "sha": "7a632dc481441824415f43b9e9efb27cf569a938",
+      "author": "Dennis Langenkamp",
+      "date": "2024-04-17T07:51:45Z",
+      "message": "Fixed coding style issues"
+    },
+    {
+      "sha": "2e3741fcf0b748a44b48e696d394f350b4b513a3",
+      "author": "Dennis Langenkamp",
+      "date": "2024-04-17T07:05:58Z",
+      "message": "The status message contains now the trigger mode and source for all trigger selectors"
+    },
+    {
+      "sha": "a94b1df55bf469d210b63e77a266c44325f7a88b",
+      "author": "Justus Braun",
+      "date": "2024-04-17T11:22:43Z",
+      "message": "Merge branch 'dev' into feature/test-improvements"
+    },
+    {
+      "sha": "bb85df50aa74a88e10af04b1e5155f11cdba2d34",
+      "author": "Dennis Langenkamp",
+      "date": "2024-04-17T07:52:17Z",
+      "message": "Fixed typo"
+    },
+    {
+      "sha": "f90a528f43f178f095867249ff8048cd469cb6ae",
+      "author": "Justus Braun [Allied Vision]",
+      "date": "2024-04-17T07:37:23Z",
+      "message": "Pull request #45: Fixed topic name creation in the cpp examples; connection_observer now shuts down gracefully\n\nMerge in HSW_SDK/vimbax_ros2_driver from bugfix/UNI-775-ros2-vimbax_camera_example-event_viewer-just-hangs-in-service-call to dev\n\n* commit '4f10c80218eab7d7e676138b1a92e301b3b90874':\n  Fixed topic name creation in the cpp examples; connection_observer now shuts down gracefully"
+    },
+    {
+      "sha": "283dbca1d9ae1a511a6ed02ff19f9a3cb7534dc0",
+      "author": "Dennis Langenkamp",
+      "date": "2024-04-17T07:07:39Z",
+      "message": "Fixed flake8 errors"
+    },
+    {
+      "sha": "18fa210f656a5108158a2e563a73e486de047438",
+      "author": "Dennis Langenkamp",
+      "date": "2024-04-17T06:32:22Z",
+      "message": "Adjusted node and tests to work with rmw_cyclonedds_cpp\n\n- Adjusted  some tests, because with the new middleware images are often send out before the stream_start service has completed.\n- The node contains a thread for the processing of each image to ensure that no image is send out after stop_stream has been called.\n- The camera class now uses a stream state field instead of is_streaming. The field can have the values Stopped, Starting, Active and Stopping. The streaming field in the VimbaXCamera::Info structure is true if the stream state is starting or active and otherwise false."
+    },
+    {
+      "sha": "dad399d590d40d5dfc5409d039249406d0fc8eff",
+      "author": "Dennis Langenkamp",
+      "date": "2024-04-16T08:42:17Z",
+      "message": "Updated getting started and known issues sections with information about the sporadically occurring deadlock in rmw_fastrtps_cpp."
+    },
+    {
+      "sha": "4f10c80218eab7d7e676138b1a92e301b3b90874",
+      "author": "Justus Braun",
+      "date": "2024-04-11T12:45:24Z",
+      "message": "Fixed topic name creation in the cpp examples; connection_observer now shuts down gracefully"
+    },
+    {
+      "sha": "87654339a239cafa9ceff3b088ad78864a744236",
+      "author": "Justus Braun [Allied Vision]",
+      "date": "2024-04-10T11:21:37Z",
+      "message": "Pull request #44: Added module parametrization to feature tests\n\nMerge in HSW_SDK/vimbax_ros2_driver from feature/UNISDK-4062-Adapt-automated-feature-test to dev\n\n* commit 'a84e76f0894619d3f302dd9489106b94726d8901':\n  Added module parametrization to tests"
+    },
+    {
+      "sha": "a84e76f0894619d3f302dd9489106b94726d8901",
+      "author": "Justus Braun",
+      "date": "2024-04-10T09:14:29Z",
+      "message": "Added module parametrization to tests"
+    },
+    {
+      "sha": "5774172bf0ae2f069a8b1df0843e219008819d91",
+      "author": "Justus Braun [Allied Vision]",
+      "date": "2024-04-10T06:51:50Z",
+      "message": "Pull request #42: UNISDK-4049 bugfix task uni 775 ros2 vimbax camera example event viewer just hangs in service call\n\nMerge in HSW_SDK/vimbax_ros2_driver from UNISDK-4049-bugfix-task-uni-775-ros2-vimbax_camera_example-event_viewer-just-hangs-in-service-call to dev\n\n* commit '6e308301a91abffb34dba534b847427c7c0bddab':\n  Created helper function to build the fqdn topic path\n  Fixed test_asynchronous_grab\n  Added handling of / namespace\n  Flake8\n  Fixed flake errors\n  Updated test to work with the adjusted examples\n  Unified example calling convention"
+    },
+    {
+      "sha": "4bd1f74409805cdb3243cdce76b30ae6a1302eab",
+      "author": "Dennis Langenkamp [Allied Vision]",
+      "date": "2024-04-09T12:31:52Z",
+      "message": "Pull request #43: Feature/distribution preperation\n\nMerge in HSW_SDK/vimbax_ros2_driver from feature/distribution-preperation to dev\n\n* commit '4822afcd2811878b6d824aa63e6f18b460b3f01f':\n  Fixed coding style issues\n  Added missing check for connection_status_service_\n  Fixed coding style issues and crash if VIMBA_X_HOME points to an invalid directory\n  Various changes for final deployment"
+    },
+    {
+      "sha": "33dc6de5bed79a6a2e758e1b30abe022060a663c",
+      "author": "Justus Braun",
+      "date": "2024-04-09T12:26:09Z",
+      "message": "Retries failed status service calls"
+    },
+    {
+      "sha": "6e308301a91abffb34dba534b847427c7c0bddab",
+      "author": "Justus Braun",
+      "date": "2024-04-09T11:26:50Z",
+      "message": "Created helper function to build the fqdn topic path"
+    },
+    {
+      "sha": "4822afcd2811878b6d824aa63e6f18b460b3f01f",
+      "author": "Dennis Langenkamp",
+      "date": "2024-04-09T11:23:52Z",
+      "message": "Merge remote-tracking branch 'origin/feature/distribution-preperation' into feature/distribution-preperation"
+    },
+    {
+      "sha": "402006f852d9d985237630a4028d9406e31d7715",
+      "author": "Dennis Langenkamp",
+      "date": "2024-04-09T11:21:13Z",
+      "message": "Fixed coding style issues"
+    },
+    {
+      "sha": "1814a1083eafe70c95b2ebc4ba65b38b4bef9e41",
+      "author": "Karsten Höpke",
+      "date": "2024-04-09T11:15:33Z",
+      "message": "Added missing check for connection_status_service_"
+    },
+    {
+      "sha": "af432f80867b15488b130b0210331c9c745d611f",
+      "author": "Dennis Langenkamp [Allied Vision]",
+      "date": "2024-04-09T10:58:33Z",
+      "message": "Pull request #41: Fixed events test with real cameras\n\nMerge in HSW_SDK/vimbax_ros2_driver from bugfix/event-test-with-real-cameras to dev\n\n* commit '922b68e0d421f660d89d354476cd8a94acc4e988':\n  Fixed events test with real cameras"
+    },
+    {
+      "sha": "bc4932422c3f168431dcaec8347a9811b197b25d",
+      "author": "Dennis Langenkamp",
+      "date": "2024-04-09T10:31:14Z",
+      "message": "Fixed coding style issues and crash if VIMBA_X_HOME points to an invalid directory"
+    },
+    {
+      "sha": "a3168b948724a5a6db976744467cfd0532678d3c",
+      "author": "Justus Braun",
+      "date": "2024-04-09T10:26:21Z",
+      "message": "Fixed test_asynchronous_grab"
+    },
+    {
+      "sha": "f884d3a4ca424ad59dd4939367a758819d884827",
+      "author": "Dennis Langenkamp",
+      "date": "2024-04-09T09:31:34Z",
+      "message": "Various changes for final deployment\n\n- Moved VmbC headers to \"include/VmbC\" instead of \"include/vmbc_interface\" to fix dependencies errors of \"VmbC.h\".\n-  Fixed crash during shutdown when the VmbC library could not be loaded.\n- The \"VMB_DIR\" cmake variable is no longer added to the include path to avoid header conflicts.\n- The system test are now only executed when the \"VMB_DIR\" variable is set.\n- Added \"launch_pytest\" to package dependencies."
+    },
+    {
+      "sha": "922b68e0d421f660d89d354476cd8a94acc4e988",
+      "author": "Dennis Langenkamp",
+      "date": "2024-04-09T09:07:19Z",
+      "message": "Fixed events test with real cameras\n\nThe events test was failing using real cameras due to changes in the vimbax_camera_events api. The test is now adjusted to match the api changes."
+    },
+    {
+      "sha": "5a17949b7cef88c259b890bee41a1085d081cc1d",
+      "author": "Justus Braun",
+      "date": "2024-04-09T08:59:27Z",
+      "message": "Added handling of / namespace"
+    },
+    {
+      "sha": "e80fe6abc0363374279be7ee1848ab37d5e75cd9",
+      "author": "Justus Braun",
+      "date": "2024-04-09T08:30:06Z",
+      "message": "Merge branch 'dev' into UNISDK-4049-bugfix-task-uni-775-ros2-vimbax_camera_example-event_viewer-just-hangs-in-service-call"
+    },
+    {
+      "sha": "8a7ce7830851482d34010bc9b9aee29126cdd153",
+      "author": "Dennis Langenkamp [Allied Vision]",
+      "date": "2024-04-09T06:25:19Z",
+      "message": "Pull request #36: Changed the return type in the subscribe event service from int32 to Error, reworked event api and examples\n\nMerge in HSW_SDK/vimbax_ros2_driver from bugfix/UNISDK-4057-ros2-change-response-type-for-subscribeevent-unsubscribeevent-from-int32-to-error to dev\n\n* commit '64f4007a0fce7e7c540ec2a0e91c3f7a5ee05a15':\n  Changed the return type in the subscribe event service from int32 to Error, reworked event api and examples"
+    },
+    {
+      "sha": "ef203028752e6c621a5f0c14f9e6e207179cdf54",
+      "author": "Dennis Langenkamp [Allied Vision]",
+      "date": "2024-04-09T06:25:07Z",
+      "message": "Pull request #38: The streaming examples now calculate the dropped frames based on the on_message_lost ros callback and when waiting for a service now a message is printed.\n\nMerge in HSW_SDK/vimbax_ros2_driver from bugfix/UNI-778-ros2-examples-improvements to dev\n\n* commit '756c352b704fd1ef5914f29e87ebd15e8b15bfbf':\n  The streaming examples now calculate the dropped frames based on the on_message_lost ros callback and when waiting for a service now a message is printed."
+    },
+    {
+      "sha": "78fddd2cbed6e88fb9872ed5f567d7f3b2afdc37",
+      "author": "Dennis Langenkamp [Allied Vision]",
+      "date": "2024-04-09T06:24:55Z",
+      "message": "Pull request #39: Feature/UNI-776 ros2 only access to remote device features add access to other module features\n\nMerge in HSW_SDK/vimbax_ros2_driver from feature/UNI-776-ros2-only-access-to-remote-device-features-add-access-to-other-module-features to dev\n\n* commit '8b1203d2e47d8f965fa82eb8ff04ca6f36ee771a':\n  Fixed Flake errors\n  Added GenTL module option to feature examples\n  Added new feature_module parameter to feature service descriptions in README\n  The feature services now support accessing the features from all GenTL module not only the remote device module\n  Fixed adjust packet size is not called automatically for GigE cameras"
+    },
+    {
+      "sha": "a3fcdd3f37634336fa18788efd004d0d52fcd56d",
+      "author": "Dennis Langenkamp [Allied Vision]",
+      "date": "2024-04-09T06:24:44Z",
+      "message": "Pull request #40: Added connected service to query if the camera is connected and matching examples\n\nMerge in HSW_SDK/vimbax_ros2_driver from feature/UNI-780-ros2-have-the-ability-to-query-if-the-camera-is-currently-connected to dev\n\n* commit 'f027e49b6b06dcc86a982c83acb99554735a23f5':\n  Added connected service to query if the camera is connected and matching examples"
+    },
+    {
+      "sha": "f027e49b6b06dcc86a982c83acb99554735a23f5",
+      "author": "Dennis Langenkamp",
+      "date": "2024-04-05T11:08:10Z",
+      "message": "Added connected service to query if the camera is connected and matching examples"
+    },
+    {
+      "sha": "8b1203d2e47d8f965fa82eb8ff04ca6f36ee771a",
+      "author": "Dennis Langenkamp",
+      "date": "2024-04-05T09:17:39Z",
+      "message": "Fixed Flake errors"
+    },
+    {
+      "sha": "756c352b704fd1ef5914f29e87ebd15e8b15bfbf",
+      "author": "Dennis Langenkamp",
+      "date": "2024-04-05T08:57:55Z",
+      "message": "The streaming examples now calculate the dropped frames based on the on_message_lost ros callback and when waiting for a service now a message is printed."
+    },
+    {
+      "sha": "5fbc40dc0023530a40156f38f11d06f645d2e42d",
+      "author": "Justus Braun",
+      "date": "2024-04-04T13:20:37Z",
+      "message": "Fixed TestNode"
+    },
+    {
+      "sha": "d062702ff676b3d3d83d9d2619a3647364beff78",
+      "author": "Justus Braun",
+      "date": "2024-04-04T13:11:25Z",
+      "message": "Unified timeouts"
+    },
+    {
+      "sha": "46d071080d04e39899451e281506719fb08486d5",
+      "author": "Justus Braun",
+      "date": "2024-04-04T12:31:33Z",
+      "message": "Flake8"
+    },
+    {
+      "sha": "626a4478e932ebd3c9b96bc384b2877d7af803f7",
+      "author": "Justus Braun",
+      "date": "2024-04-04T12:27:53Z",
+      "message": "Increased timeouts"
+    },
+    {
+      "sha": "4eb63a8050a6debcbc6ee5c5dee644aedb906fec",
+      "author": "Justus Braun",
+      "date": "2024-04-04T11:47:21Z",
+      "message": "Fixed flake errors"
+    },
+    {
+      "sha": "3b5bfb75ae915009bb7745a0947400648ee1d8cd",
+      "author": "Dennis Langenkamp",
+      "date": "2024-04-04T10:34:37Z",
+      "message": "Added GenTL module option to feature examples"
+    },
+    {
+      "sha": "1ffc1a70243235d8010a380ae3745f4193ad283e",
+      "author": "Justus Braun",
+      "date": "2024-04-04T10:17:13Z",
+      "message": "Replaced static sleep with dynamic wait for streaming status"
+    },
+    {
+      "sha": "c76eb604c8b83453e6b5f0f1741714c19b57ecd9",
+      "author": "Dennis Langenkamp",
+      "date": "2024-04-04T10:16:35Z",
+      "message": "Added new feature_module parameter to feature service descriptions in README"
+    },
+    {
+      "sha": "8132a094b4fbd0dcb3527e92fefbab60a051c457",
+      "author": "Justus Braun",
+      "date": "2024-04-04T09:49:44Z",
+      "message": "Updated test to work with the adjusted examples"
+    },
+    {
+      "sha": "5b921f201b8f3e456d9896aa4dd97488cef832f4",
+      "author": "Justus Braun",
+      "date": "2024-04-04T09:36:38Z",
+      "message": "Unified example calling convention"
+    },
+    {
+      "sha": "b440eb55800706cc1ff20ba7ceb8d55887eb984e",
+      "author": "Dennis Langenkamp",
+      "date": "2024-04-04T08:53:39Z",
+      "message": "The feature services now support accessing the features from all GenTL module not only the remote device module\n\nIn each feature service a feature_module field is added that specifies which GenTL module should be used. It uses an integer id with the following mapping:\n  0 -> Remote Device\n  1 -> System\n  2 -> Interface\n  3 -> Local Device\n  4 -> Stream\nIf an invalid id is passed to any of the services the error VmbErrorBadParameter is returned."
+    },
+    {
+      "sha": "82d7cbdc94a58376a22d1400cb990bf957dafddf",
+      "author": "Justus Braun",
+      "date": "2024-04-03T12:15:32Z",
+      "message": "Flake8"
+    },
+    {
+      "sha": "68ea08d19a3a319fe689804fb671f4897fe7482c",
+      "author": "Justus Braun",
+      "date": "2024-04-03T12:08:35Z",
+      "message": "Timeout for service calls can now be set per call"
+    },
+    {
+      "sha": "f1321cd384064cf4292c7f6106f074ab18a425fe",
+      "author": "Dennis Langenkamp",
+      "date": "2024-04-03T11:39:15Z",
+      "message": "Fixed adjust packet size is not called automatically for GigE cameras\n\nWith the has_feature method it is now possible to check if a feature is present in a specific GenTL module. This extensions is necessary, because the auto adjust packet size feature is a stream not remote device feature and previously has_feature was only working for remote device features. In case of the auto adjust packet size it always returned false and therefore the packet size was never adjusted correctly. To support this functionality the camera class stores now the feature information for each GenTL module in a map."
+    },
+    {
+      "sha": "a0bf8d662d323c48427250947480db0ebd90aa9a",
+      "author": "Justus Braun",
+      "date": "2024-04-03T11:28:17Z",
+      "message": "Removed now unused function"
+    },
+    {
+      "sha": "b49bd1ba5fd79ad0669e5c071ca1ad9aebd3b593",
+      "author": "Justus Braun",
+      "date": "2024-04-03T11:03:57Z",
+      "message": "Added private executor to TestNode"
+    },
+    {
+      "sha": "20218c884be23dacdb4a9c60eb4387edd46c8a65",
+      "author": "Justus Braun",
+      "date": "2024-04-03T10:46:54Z",
+      "message": "Added more assertions"
+    },
+    {
+      "sha": "a8c650823a9509572dcaa8a44d78060fc8551ffb",
+      "author": "Justus Braun",
+      "date": "2024-04-03T10:09:05Z",
+      "message": "Added logging for incomplete service call"
+    },
+    {
+      "sha": "59f2f605157f44c8218be935a0385446d42f2ae9",
+      "author": "Justus Braun",
+      "date": "2024-04-03T09:12:46Z",
+      "message": "Made unsubscribe save for threaded spin"
+    },
+    {
+      "sha": "64f4007a0fce7e7c540ec2a0e91c3f7a5ee05a15",
+      "author": "Dennis Langenkamp",
+      "date": "2024-04-03T08:51:02Z",
+      "message": "Changed the return type in the subscribe event service from int32 to Error, reworked event api and examples\n\nThe subscribe_event function of c++ and python event api now return a future of the subscription handle instead of returning the subscription handle directly. With this changes now it is possible to pass errors (e.g. when the event is not supported by the camera) to the user. This was not possible with the old implementation. The examples are also adjusted to the new api and also handle the subscribe errors.\nAdditionally the c++ event viewer examples is now correctly installed and available in the debian package."
+    },
+    {
+      "sha": "f344c9de27ffb6f05be79ca888a2ecdaba65321c",
+      "author": "Justus Braun",
+      "date": "2024-04-03T08:10:29Z",
+      "message": "Added generic try catch to spin thread"
+    },
+    {
+      "sha": "336435090dd7ec5bef271316c11cbd43c0f1820f",
+      "author": "Justus Braun",
+      "date": "2024-04-03T06:57:26Z",
+      "message": "Hopefully fixed pixel format test failure in jenkins"
+    },
+    {
+      "sha": "fac2bb951e19d7a1705aa216060c49ff6e3bbaa4",
+      "author": "Justus Braun",
+      "date": "2024-04-02T14:48:16Z",
+      "message": "Added wait times for node to react to graph changes"
+    },
+    {
+      "sha": "500f7631852dac451490513a472046ac863b1f8e",
+      "author": "Justus Braun",
+      "date": "2024-04-02T14:13:19Z",
+      "message": "Fixed format"
+    },
+    {
+      "sha": "af9cbf7b1e1c64cb91bdb79f528abd03ed4b3297",
+      "author": "Justus Braun",
+      "date": "2024-04-02T13:50:05Z",
+      "message": "Service calls use timeouts now"
+    },
+    {
+      "sha": "dbf84d21356675d6d242535d63769ec4ea1c18d2",
+      "author": "Justus Braun",
+      "date": "2024-04-02T13:01:03Z",
+      "message": "Test now passes reliably"
+    },
+    {
+      "sha": "256e71d656e12f4f04110e7e77658e287020322a",
+      "author": "Justus Braun",
+      "date": "2024-04-02T12:42:39Z",
+      "message": "Added thread shutdown on object destruction"
+    },
+    {
+      "sha": "e93d230451e9119a1bb5dc83fe8f6cadec1095ad",
+      "author": "Justus Braun",
+      "date": "2024-04-02T12:41:43Z",
+      "message": "Now uses random test node name to prevent collisions"
+    },
+    {
+      "sha": "4248fb711bcbf3737dc6544c59b7ee939e97f4e1",
+      "author": "Justus Braun",
+      "date": "2024-04-02T11:50:41Z",
+      "message": "Changed autostream test to use node drived from TestNode"
+    },
+    {
+      "sha": "f8b3bb70a17bda1d2a0e6e324256aa5c3806b4bc",
+      "author": "Justus Braun",
+      "date": "2024-04-02T10:03:12Z",
+      "message": "Changed PixelFormat test to use a subclass of TestNode"
+    },
+    {
+      "sha": "11d0d2ac11ff1b305f94047137addfed987a67b5",
+      "author": "Justus Braun",
+      "date": "2024-04-02T09:06:44Z",
+      "message": "TestNode now uses timeouts with synchronous service calls"
+    },
+    {
+      "sha": "56693ad0732160fa965c81aff4578e374d491db4",
+      "author": "Dennis Langenkamp [Allied Vision]",
+      "date": "2024-04-02T08:54:00Z",
+      "message": "Pull request #35: Use rclcpp::shutdown instead of throwing an exception to exit the node clean after the initialization has failed.\n\nMerge in HSW_SDK/vimbax_ros2_driver from bugfix/UNI-772-ros2-exception-thrown-if-camera-is-already-opened to dev\n\n* commit '563737fda5cecdd60a1ef2f73b6163ad8b7b7028':\n  Use rclcpp::shutdown instead of throwing an exception to exit the node clean after the initialization has failed."
+    },
+    {
+      "sha": "563737fda5cecdd60a1ef2f73b6163ad8b7b7028",
+      "author": "Dennis Langenkamp",
+      "date": "2024-04-02T07:28:56Z",
+      "message": "Use rclcpp::shutdown instead of throwing an exception to exit the node clean after the initialization has failed."
+    },
+    {
+      "sha": "5d7d3af448c0b8be39bc95b5f0dc1c43b7697cbf",
+      "author": "Justus Braun",
+      "date": "2024-03-28T15:13:34Z",
+      "message": "Created helper function to always call services with a timeout"
+    },
+    {
+      "sha": "6de326a48ddb557d3f496aa6b712000013ac0e9c",
+      "author": "Justus Braun",
+      "date": "2024-03-28T15:04:00Z",
+      "message": "Replaced blocking call to call_async with timeout to prevent tests from\nhanging if the node crashes"
+    },
+    {
+      "sha": "327a0c9a15d1ec0502e284f2a09d9c14069c46fa",
+      "author": "Justus Braun",
+      "date": "2024-03-28T13:49:55Z",
+      "message": "Added missing required formats and use parametrization to generate\nseperate tests per format"
+    },
+    {
+      "sha": "970d53950007c41f067af5704b65854a2341918a",
+      "author": "Justus Braun",
+      "date": "2024-03-28T12:50:21Z",
+      "message": "Fixed test name; Removed unused import"
+    },
+    {
+      "sha": "f2716d3b49e1472ddc29dde825e11f700a630ca0",
+      "author": "Justus Braun",
+      "date": "2024-03-28T12:47:05Z",
+      "message": "Added approx to floating point comparison"
+    },
+    {
+      "sha": "5d83d053a957475c20105b947270637a35eda3bf",
+      "author": "Karsten Höpke [Allied Vision]",
+      "date": "2024-03-27T09:42:01Z",
+      "message": "Pull request #34: Added support for VmbPixelFormatYCbCr422_8 and VmbPixelFormatYCbCr422_8_CbYCrY\n\nMerge in HSW_SDK/vimbax_ros2_driver from bugfix/UNI-777_YCBCR422_8_pixel_format_not_supported to dev\n\n* commit '92412235d4a7d9afd8dcf9f410bc778c378409b6':\n  Added support for VmbPixelFormatYCbCr422_8 and VmbPixelFormatYCbCr422_8_CbYCrY"
+    },
+    {
+      "sha": "92412235d4a7d9afd8dcf9f410bc778c378409b6",
+      "author": "Karsten Höpke",
+      "date": "2024-03-27T09:27:00Z",
+      "message": "Added support for VmbPixelFormatYCbCr422_8 and VmbPixelFormatYCbCr422_8_CbYCrY"
+    },
+    {
+      "sha": "39a7e878b398108abde8c87aadab16c01ea14ac5",
+      "author": "Karsten Höpke [Allied Vision]",
+      "date": "2024-03-27T08:07:27Z",
+      "message": "Pull request #33: Added RCL message for stream start.\n\nMerge in HSW_SDK/vimbax_ros2_driver from bugfix/UNI-774_Stream_start_not_logged to dev\n\n* commit '35eb4398743a98734a051a1eb6264eda66525b0d':\n  Added RCL message for stream start."
+    },
+    {
+      "sha": "35eb4398743a98734a051a1eb6264eda66525b0d",
+      "author": "Karsten Höpke",
+      "date": "2024-03-27T08:06:39Z",
+      "message": "Added RCL message for stream start."
+    },
+    {
+      "sha": "e62bbbe20503c83792691fdab89a7c3913d91d7c",
+      "author": "Justus Braun [Allied Vision]",
+      "date": "2024-03-26T12:10:52Z",
+      "message": "Pull request #32: Feature/add example tests\n\nMerge in HSW_SDK/vimbax_ros2_driver from feature/add-example-tests to dev\n\n* commit '4ee78ae11d95928f3680753f902ca228161ca7b4':\n  Fixed autostream parameter test\n  Flake8 formatting\n  Added node namespace remapping\n  Added test for status_get example\n  Added BayerGR8 test\n  command_run test works with SYMTL now\n  Event viewer test should now work in Jenkins and with real cameras\n  Fixed event_viewer\n  Fixed asynchronous_grab test\n  Added test for event_viewer example\n  Fixed file path\n  Added tests for feature* examples, asynchronous_grab and event_viewer"
+    },
+    {
+      "sha": "4ee78ae11d95928f3680753f902ca228161ca7b4",
+      "author": "Justus Braun",
+      "date": "2024-03-21T12:27:40Z",
+      "message": "Fixed autostream parameter test"
+    },
+    {
+      "sha": "3466768030ab1f479181d529a337af17b33bab27",
+      "author": "Justus Braun",
+      "date": "2024-03-21T11:56:24Z",
+      "message": "Merge branch 'dev' into feature/add-example-tests"
+    },
+    {
+      "sha": "2a9a21cc3e8faa6b2ef79ae62f48ed9d1d17d8fc",
+      "author": "Justus Braun",
+      "date": "2024-03-21T11:42:10Z",
+      "message": "Flake8 formatting"
+    },
+    {
+      "sha": "ae813744723c593b136658397933933eb09b7c79",
+      "author": "Justus Braun",
+      "date": "2024-03-21T11:33:14Z",
+      "message": "Added node namespace remapping"
+    },
+    {
+      "sha": "c30281f56b76baeba149d0bfc9264564b75c0a9b",
+      "author": "Justus Braun",
+      "date": "2024-03-21T08:32:17Z",
+      "message": "Added test for status_get example"
+    },
+    {
+      "sha": "bffe9100e8ff567f1c1aa921ee1655fd9617f10d",
+      "author": "Justus Braun",
+      "date": "2024-03-21T08:11:21Z",
+      "message": "Added BayerGR8 test"
+    },
+    {
+      "sha": "b32d39492f7d48b14317258dc4b46ec827dc39f9",
+      "author": "Justus Braun",
+      "date": "2024-03-21T08:09:50Z",
+      "message": "command_run test works with SYMTL now"
+    },
+    {
+      "sha": "bbba18275bc772ddd5a3d07c00c9b154a4215c45",
+      "author": "Justus Braun",
+      "date": "2024-03-21T08:09:22Z",
+      "message": "Event viewer test should now work in Jenkins and with real cameras"
+    },
+    {
+      "sha": "df6cbdd195f5e3317e29ce5716a7cf9f924cf289",
+      "author": "Dennis Langenkamp [Allied Vision]",
+      "date": "2024-03-21T06:59:36Z",
+      "message": "Pull request #30: Feature/UNISDK-3997 create ros2 documentation\n\nMerge in HSW_SDK/vimbax_ros2_driver from feature/UNISDK-3997-create-ros2-documentation to dev\n\n* commit 'f19e2b574e58bd7500bd49ff4cfacfad5ef34f87':\n  Fix issues in readme\n  Fixed typo\n  Added asynchronous_grab_performance. Fixed typo.\n  Fixed example command line string. Added note about running examples requires a running node.\n  Added NVIDIA installation instructions\n  Fixed typos in README\n  Added troubleshooting info regarding missing camera calibration file error message.\n  Fixed merge error\n  Fixed install command line\n  Fixed issues found in review\n  Added missing examples to list in README\n  Updated getting started and troubleshooting sections of the README\n  Added getting started to README\n  Added documentation for new command_feature_timeout parameter\n  Added section for camera disconnect/reconnect\n  Added beta disclaimer. Added pixl format list. Added Getting started section. Added trouble shooting section.\n  Changes regarding autostart parameter\n  Updated README with information about parameters, automatic stream start and GenICam events\n  Added intial service description to README"
+    },
+    {
+      "sha": "f19e2b574e58bd7500bd49ff4cfacfad5ef34f87",
+      "author": "Dennis Langenkamp",
+      "date": "2024-03-21T06:59:22Z",
+      "message": "Fix issues in readme"
+    },
+    {
+      "sha": "a9fb557f22abeb6cecd25bd0564fc47711d7a125",
+      "author": "Justus Braun",
+      "date": "2024-03-20T15:10:49Z",
+      "message": "Fixed event_viewer"
+    },
+    {
+      "sha": "13b0975c0a4cdb365517ae1243cab931f3266b98",
+      "author": "Justus Braun",
+      "date": "2024-03-20T15:10:37Z",
+      "message": "Fixed asynchronous_grab test"
+    },
+    {
+      "sha": "3a6260999afb8b52be22548a870b9309538767e9",
+      "author": "Justus Braun",
+      "date": "2024-03-20T14:52:13Z",
+      "message": "Merge branch 'dev' into feature/add-example-tests"
+    },
+    {
+      "sha": "129615564ef9946bb23817779aef7513bc840926",
+      "author": "Justus Braun [Allied Vision]",
+      "date": "2024-03-20T14:50:34Z",
+      "message": "Pull request #31: Fixed the asynchronous_grab example\n\nMerge in HSW_SDK/vimbax_ros2_driver from bugfix/asynchronous_grab to dev\n\n* commit 'c2ba7f14fb1b9c60fde2da3ed93a4762be1b8320':\n  Fixed the asynchronous_grab example"
+    },
+    {
+      "sha": "c2ba7f14fb1b9c60fde2da3ed93a4762be1b8320",
+      "author": "Justus Braun",
+      "date": "2024-03-20T14:22:02Z",
+      "message": "Fixed the asynchronous_grab example"
+    },
+    {
+      "sha": "33fb19fd83063c6efa0e1a13e72347b2acbb1c40",
+      "author": "Karsten Höpke",
+      "date": "2024-03-20T13:13:33Z",
+      "message": "Fixed typo"
+    },
+    {
+      "sha": "b389651bec3a87c92a862f1d3cd04ad98d0fc70b",
+      "author": "Karsten Höpke",
+      "date": "2024-03-20T13:12:05Z",
+      "message": "Added asynchronous_grab_performance. Fixed typo."
+    },
+    {
+      "sha": "4193a0a44850f7652918497061ee16ddf18d9e77",
+      "author": "Karsten Höpke",
+      "date": "2024-03-20T13:09:06Z",
+      "message": "Merge branch 'feature/UNISDK-3997-create-ros2-documentation' of ssh://bitbucket.tkhvision.net:7999/hsw_sdk/vimbax_ros2_driver into feature/UNISDK-3997-create-ros2-documentation"
+    },
+    {
+      "sha": "249e34900954e9506ba54f2ad6e16db56b087542",
+      "author": "Karsten Höpke",
+      "date": "2024-03-20T13:04:48Z",
+      "message": "Fixed example command line string. Added note about running examples requires a running node."
+    },
+    {
+      "sha": "eb3b264133981644538baf030899b3564381afc5",
+      "author": "Dennis Langenkamp",
+      "date": "2024-03-20T12:57:38Z",
+      "message": "Added NVIDIA installation instructions"
+    },
+    {
+      "sha": "d132749b0282718edf617df06db1aab8b66ddc5b",
+      "author": "Dennis Langenkamp",
+      "date": "2024-03-20T12:23:56Z",
+      "message": "Fixed typos in README"
+    },
+    {
+      "sha": "e0508caef3468290d567d492abf664bee2e58844",
+      "author": "Justus Braun",
+      "date": "2024-03-20T12:20:20Z",
+      "message": "Added test for event_viewer example"
+    },
+    {
+      "sha": "abac2f0bfde615114b6f956ab51b36d168c294c5",
+      "author": "Justus Braun",
+      "date": "2024-03-19T15:08:39Z",
+      "message": "Fixed file path"
+    },
+    {
+      "sha": "88b5f4e62262fca0ce9ea0b44101e3fdf9b557a3",
+      "author": "Justus Braun",
+      "date": "2024-03-19T15:05:26Z",
+      "message": "Added tests for feature* examples, asynchronous_grab and event_viewer"
+    },
+    {
+      "sha": "e5583f5b963ad4d473dab254a33725d83a4ddd1e",
+      "author": "Karsten Höpke",
+      "date": "2024-03-19T09:24:12Z",
+      "message": "Added troubleshooting info regarding missing camera calibration file error message."
+    },
+    {
+      "sha": "4b1596e9208d2539869486e455dd96e5b9ba5ad1",
+      "author": "Karsten Höpke",
+      "date": "2024-03-19T08:44:57Z",
+      "message": "Fixed merge error"
+    },
+    {
+      "sha": "68ffa9fd21c0a8ff6c4fc98630d39da00afbfda6",
+      "author": "Karsten Höpke",
+      "date": "2024-03-19T08:12:29Z",
+      "message": "Fixed install command line"
+    },
+    {
+      "sha": "954f5ed43b4a020a5d5992653093800e51bfc4b4",
+      "author": "Dennis Langenkamp [Allied Vision]",
+      "date": "2024-03-18T10:13:14Z",
+      "message": "Fixed issues found in review"
+    },
+    {
+      "sha": "3c1dc84ffd64a4439c11d46536e2d985880ee3a1",
+      "author": "Dennis Langenkamp",
+      "date": "2024-03-18T08:08:45Z",
+      "message": "Updated package version 1.0.0"
+    },
+    {
+      "sha": "3624186aa6d20f5a0facab5a86fe8f377c8060c6",
+      "author": "Karsten Höpke [Allied Vision]",
+      "date": "2024-03-18T07:41:22Z",
+      "message": "Pull request #29: Renamed autostart_stream to autostream\n\nMerge in HSW_SDK/vimbax_ros2_driver from bugfix/Rename_autostart_parameter to dev\n\n* commit 'f0c46c55553739b32ce063b2847bc81499527897':\n  Fixed auto stream stop. Fixed cpplint and uncrustity errors\n  Renamed autostart_stream to autostream"
+    },
+    {
+      "sha": "c1fbb6452378d12c11cfd9137eabd1eda18b4db0",
+      "author": "Dennis Langenkamp",
+      "date": "2024-03-18T07:27:38Z",
+      "message": "Added missing examples to list in README"
+    },
+    {
+      "sha": "f0c46c55553739b32ce063b2847bc81499527897",
+      "author": "Karsten Höpke",
+      "date": "2024-03-15T12:48:20Z",
+      "message": "Fixed auto stream stop. Fixed cpplint and uncrustity errors"
+    },
+    {
+      "sha": "22e87c94dfcbfe0cc24f9bd9709d0775c3ceb6a6",
+      "author": "Dennis Langenkamp [Allied Vision]",
+      "date": "2024-03-15T12:09:02Z",
+      "message": "Pull request #28: Added configuratable timeout to command feature run functionality\n\nMerge in HSW_SDK/vimbax_ros2_driver from bugfix/command-feature-timeout to dev\n\n* commit '2b92a507ca7e2bd285cda2f006f59897fe5e5dbb':\n  Fixed style errors and the system tests now always reset the features to the default values.\n  Removed warning if the camera is opend by ip or mac address\n  Added configuratable timeout to command feature run functionality"
+    },
+    {
+      "sha": "1c9f99bc26f5b65d287fb535569eae1ac4b42fdd",
+      "author": "Dennis Langenkamp",
+      "date": "2024-03-15T12:08:06Z",
+      "message": "Updated getting started and troubleshooting sections of the README\n\n- The getting started section now describes the behavior if a camera can't be opened\n- Added \"Finding and listing cameras\" section to troubleshooting\n-  Fixed some typos"
+    },
+    {
+      "sha": "1dd870ea69be3477a124ee2b66e2f3a65235ee66",
+      "author": "Dennis Langenkamp",
+      "date": "2024-03-15T11:57:36Z",
+      "message": "Merge remote-tracking branch 'origin/feature/UNISDK-3997-create-ros2-documentation' into feature/UNISDK-3997-create-ros2-documentation"
+    },
+    {
+      "sha": "623fd05e1e6ec533739250c79ff6ec1aeb1914df",
+      "author": "Dennis Langenkamp",
+      "date": "2024-03-15T11:56:41Z",
+      "message": "Added getting started to README"
+    },
+    {
+      "sha": "7ccace6a48c3acf752354b79f3d0e696c1b51611",
+      "author": "Karsten Höpke",
+      "date": "2024-03-15T11:32:49Z",
+      "message": "Added documentation for new command_feature_timeout parameter"
+    },
+    {
+      "sha": "4a9080e26e2b351b191087914294229e4701ed1c",
+      "author": "Karsten Höpke",
+      "date": "2024-03-15T10:55:07Z",
+      "message": "Added section for camera disconnect/reconnect"
+    },
+    {
+      "sha": "c1b257b5a82a56edce348e10ec4c4e1fd9914f37",
+      "author": "Karsten Höpke",
+      "date": "2024-03-15T10:29:57Z",
+      "message": "Added beta disclaimer. Added pixl format list. Added Getting started section. Added trouble shooting section."
+    },
+    {
+      "sha": "2b92a507ca7e2bd285cda2f006f59897fe5e5dbb",
+      "author": "Dennis Langenkamp",
+      "date": "2024-03-15T10:05:32Z",
+      "message": "Fixed style errors and the system tests now always reset the features to the default values."
+    },
+    {
+      "sha": "e523a0283d784dccfa4fe3558e1e48ff2c75fa23",
+      "author": "Karsten Höpke",
+      "date": "2024-03-15T08:58:17Z",
+      "message": "Changes regarding autostart parameter"
+    },
+    {
+      "sha": "b9c75de87d2db1aab601a0152ac6c81f208c48b5",
+      "author": "Karsten Höpke",
+      "date": "2024-03-15T08:44:01Z",
+      "message": "Renamed autostart_stream to autostream"
+    },
+    {
+      "sha": "d5e4e1abbbb9f82f8b11557bce1b4a7c17efe688",
+      "author": "Dennis Langenkamp",
+      "date": "2024-03-15T07:52:32Z",
+      "message": "Updated README with information about parameters, automatic stream start and GenICam events"
+    },
+    {
+      "sha": "3e7181ae91b17bf5f0bbfd714ad79fe08eda2d37",
+      "author": "Dennis Langenkamp",
+      "date": "2024-03-15T07:18:39Z",
+      "message": "Removed warning if the camera is opend by ip or mac address"
+    },
+    {
+      "sha": "27eb60f132c2a392fdfbe47709596a75cbf68f8f",
+      "author": "Karsten Höpke [Allied Vision]",
+      "date": "2024-03-14T15:03:03Z",
+      "message": "Pull request #27: Feature/UNISDK-3995 add vmbc header\n\nMerge in HSW_SDK/vimbax_ros2_driver from feature/UNISDK-3995_add_vmbc_header to dev\n\n* commit '83ce4d2afb19e0ec9dc03792c38a161fbda95048':\n  Removed accidentaly checked in file\n  Changes for vmbc_interface package\n  Moved VmbC header to a seperate package to prevent cpplinter, ... test from failing.\n  Added VmbC headers to project to make it compilable without VmbC installation"
+    },
+    {
+      "sha": "83ce4d2afb19e0ec9dc03792c38a161fbda95048",
+      "author": "Karsten Höpke",
+      "date": "2024-03-14T14:15:35Z",
+      "message": "Removed accidentaly checked in file"
+    },
+    {
+      "sha": "052a9d391be98853d568d25f3335d23b2a51580e",
+      "author": "Karsten Höpke",
+      "date": "2024-03-14T12:33:12Z",
+      "message": "Merge branch 'dev' into feature/UNISDK-3995_add_vmbc_header"
+    },
+    {
+      "sha": "14998596ff0102f0d95b3f75ce370ab9f780577f",
+      "author": "Karsten Höpke",
+      "date": "2024-03-14T12:16:33Z",
+      "message": "Changes for vmbc_interface package"
+    },
+    {
+      "sha": "21db884ad884794c092d438077d4d298f1471e05",
+      "author": "Dennis Langenkamp",
+      "date": "2024-03-14T11:02:56Z",
+      "message": "Added intial service description to README"
+    },
+    {
+      "sha": "4f7bda1771d99fbb97d455d73bd195d0a23235e0",
+      "author": "Dennis Langenkamp",
+      "date": "2024-03-13T12:57:53Z",
+      "message": "Added configuratable timeout to command feature run functionality\n\nThe timeout for command feature is added, because currently if a command feature does not complete or the waiting for is_done fails the application block infinitely.\nThis commit also contains a fixes a crash during camera reconnect handling."
+    },
+    {
+      "sha": "05a789d4534e2edbfed847c41b7f9264a4233e53",
+      "author": "Dennis Langenkamp [Allied Vision]",
+      "date": "2024-03-13T12:03:20Z",
+      "message": "Pull request #26: Feature/UNISDK-3977 composite launch support rclcpp components\n\nMerge in HSW_SDK/vimbax_ros2_driver from feature/UNISDK-3977-composite-launch-support-rclcpp_components to dev\n\n* commit '8eb5ba33e7e1a18e4dfab463edbfb5ad196dafec':\n  Removed old CMakeList code\n  The vimbax camera is now using rclcpp components again and added performance streaming example"
+    },
+    {
+      "sha": "9f45a52feb479c796f67c9a59dfe158b5eb7a1bc",
+      "author": "Karsten Höpke",
+      "date": "2024-03-13T10:15:19Z",
+      "message": "Moved VmbC header to a seperate package to prevent cpplinter, ... test from failing."
+    },
+    {
+      "sha": "db66e5ed703a163de3c31c9e18cf6ec584177039",
+      "author": "Justus Braun [Allied Vision]",
+      "date": "2024-03-13T08:25:02Z",
+      "message": "Pull request #24: Feature/add autostart test\n\nMerge in HSW_SDK/vimbax_ros2_driver from feature/add-autostart-test to dev\n\n* commit '93b34e9de9530ba927fdcdf73052517b0579c5eb':\n  Flake8 formating\n  Added test case for autostart/stop with multiple subscribers\n  Switched to unique node names\n  First version of autostart test"
+    },
+    {
+      "sha": "93b34e9de9530ba927fdcdf73052517b0579c5eb",
+      "author": "Justus Braun",
+      "date": "2024-03-13T08:13:27Z",
+      "message": "Merge branch 'dev' into feature/add-autostart-test"
+    },
+    {
+      "sha": "8eb5ba33e7e1a18e4dfab463edbfb5ad196dafec",
+      "author": "Dennis Langenkamp",
+      "date": "2024-03-13T07:35:29Z",
+      "message": "Removed old CMakeList code"
+    },
+    {
+      "sha": "34f3d079a4595619caeb5c8dc546c72d9a216f1e",
+      "author": "Dennis Langenkamp",
+      "date": "2024-03-12T14:44:33Z",
+      "message": "The vimbax camera is now using rclcpp components again and added performance streaming example"
+    },
+    {
+      "sha": "0923a3ca83c4687f9921539ca69b7bf0c2c24834",
+      "author": "Karsten Höpke",
+      "date": "2024-03-12T14:06:17Z",
+      "message": "Merge branch 'dev' into feature/UNISDK-3995_add_vmbc_header"
+    },
+    {
+      "sha": "bdc75860f2b06761f5381113b527237412c675ea",
+      "author": "Karsten Höpke [Allied Vision]",
+      "date": "2024-03-12T14:00:50Z",
+      "message": "Pull request #25: feature/UNISDK-3976_disable_streaming_for_unsupported_pixel_formats\n\nMerge in HSW_SDK/vimbax_ros2_driver from feature/UNISDK-3976_disable_streaming_for_unsupported_pixel_formats to dev\n\n* commit 'b2950b707a276df44258f27746f485ef1f4943fe':\n  Added check for valid pixel formats before streaming is started."
+    },
+    {
+      "sha": "e559273af509b8573b59cab7ad31c33e4dd317be",
+      "author": "Karsten Höpke",
+      "date": "2024-03-12T13:48:18Z",
+      "message": "Added VmbC headers to project to make it compilable without VmbC installation"
+    },
+    {
+      "sha": "b2950b707a276df44258f27746f485ef1f4943fe",
+      "author": "Karsten Höpke",
+      "date": "2024-03-12T13:18:36Z",
+      "message": "Merge branch 'dev' into feature/UNISDK-3976_disable_streaming_for_unsupported_pixel_formats"
+    },
+    {
+      "sha": "b5a9f180fb26d54d577e7ef28bd5fea753f428c1",
+      "author": "Karsten Höpke",
+      "date": "2024-03-12T13:17:42Z",
+      "message": "Added check for valid pixel formats before streaming is started."
+    },
+    {
+      "sha": "e5eabb6019328e1ca0c662d7150fa89ac006ceeb",
+      "author": "Dennis Langenkamp [Allied Vision]",
+      "date": "2024-03-12T13:06:19Z",
+      "message": "Pull request #23: Feature/increase ros compatibility\n\nMerge in HSW_SDK/vimbax_ros2_driver from feature/increase-ros-compatibility to dev\n\n* commit '460ba8c9371d8694d002d65c8624560aa5c858eb':\n  Added launch file for camera calibration\n  Fixed test errors\n  Added parameter camera_info_url for loading calibration data from the filesystem\n  WIP: Add camera info manager\n  Adjusted frame_id of image message"
+    },
+    {
+      "sha": "0aac9eb0cef0d2c174a715904c49de08f4b331b9",
+      "author": "Justus Braun",
+      "date": "2024-03-12T11:19:13Z",
+      "message": "Merge branch 'dev' into feature/add-autostart-test"
+    },
+    {
+      "sha": "d4274bdcef2cdab8b4556f2466535f1674b656e4",
+      "author": "Karsten Höpke [Allied Vision]",
+      "date": "2024-03-11T15:11:51Z",
+      "message": "Pull request #22: Feature/general improvements\n\nMerge in HSW_SDK/vimbax_ros2_driver from feature/general_improvements to dev\n\n* commit 'a601b6e428101522f95750bfecbc686e7a647720':\n  Fixed format for some error messages\n  Added check for existence of features GevDeviceIPAddress and GevDeviceMACAddress to prevent error messages in case the camera does not support these features.\n  Fixed error messages in examples scripts\n  Uncrustified\n  Added has_feaure function to VimbaXCamera. Some features are not avaiable for all cameras so we now can check if a feature exists before executing a command e.g.\n  Changed several RCLCPP_INFO messages to RCLCPP_DEBUG to clean up log output\n  Improved error message texts"
+    },
+    {
+      "sha": "a601b6e428101522f95750bfecbc686e7a647720",
+      "author": "Karsten Höpke",
+      "date": "2024-03-11T14:47:30Z",
+      "message": "Merge branch 'dev' into feature/general_improvements"
+    },
+    {
+      "sha": "33f25fe33aa99850afb136713e93795cc3eb7f3d",
+      "author": "Dennis Langenkamp [Allied Vision]",
+      "date": "2024-03-11T14:35:47Z",
+      "message": "Pull request #21: Bugfix/parallel test execution\n\nMerge in HSW_SDK/vimbax_ros2_driver from bugfix/parallel-test-execution to dev\n\n* commit '853dac79ab3f0a39e9c1d2c7d146778126939584':\n  Fixed stream can not be started again after manual stop\n  Fixed coding style errors\n  Reworked automatic stream start\n  Added missing header changes\n  Added mutex to secure stream start/stop\n  For every single test case now unique node names are used\n  Added node list output to tests and tests are now using random node names"
+    },
+    {
+      "sha": "460ba8c9371d8694d002d65c8624560aa5c858eb",
+      "author": "Dennis Langenkamp",
+      "date": "2024-03-08T10:36:31Z",
+      "message": "Added launch file for camera calibration"
+    },
+    {
+      "sha": "5a5f682398da6a68ff68e4404f75010e3e9622ba",
+      "author": "Dennis Langenkamp",
+      "date": "2024-03-08T07:46:22Z",
+      "message": "Fixed test errors"
+    },
+    {
+      "sha": "1cb3149da58fedf050ed4128a8540b2c6d0efb28",
+      "author": "Dennis Langenkamp",
+      "date": "2024-03-04T07:32:01Z",
+      "message": "Added parameter camera_info_url for loading calibration data from the filesystem"
+    },
+    {
+      "sha": "1a3fd2a62305aa7aa85e1449014cb173c225d0c3",
+      "author": "Dennis Langenkamp",
+      "date": "2024-03-01T08:35:39Z",
+      "message": "WIP: Add camera info manager"
+    },
+    {
+      "sha": "473037bf7e7ae6cb11d70503c76e24ab34250047",
+      "author": "Dennis Langenkamp",
+      "date": "2024-02-29T09:59:44Z",
+      "message": "Adjusted frame_id of image message\n\nThe frame_id field in the published image is not intended be the frame number of the received image but a constant value. In the header message definition the frame_id is defined as \"Transform frame with which this data is associated\"."
+    },
+    {
+      "sha": "853dac79ab3f0a39e9c1d2c7d146778126939584",
+      "author": "Dennis Langenkamp",
+      "date": "2024-03-11T10:25:43Z",
+      "message": "Fixed stream can not be started again after manual stop"
+    },
+    {
+      "sha": "89847731fd237b2fb5cfb7c5542dac6dfd67ba7d",
+      "author": "Karsten Höpke",
+      "date": "2024-03-11T08:57:57Z",
+      "message": "Merge branch 'bugfix/parallel-test-execution' into feature/general_improvements"
+    },
+    {
+      "sha": "af8145bd2bec0b1e08e01fef738147f58f42e9fb",
+      "author": "Dennis Langenkamp",
+      "date": "2024-03-11T07:56:43Z",
+      "message": "Fixed coding style errors"
+    },
+    {
+      "sha": "5cac4303717111e4da6045d09a534aae37bfd595",
+      "author": "Dennis Langenkamp",
+      "date": "2024-03-11T07:37:13Z",
+      "message": "Reworked automatic stream start\n\nInstead of waiting for an graph change event, the node is check every 50 ms if the subscriber count of the image topic has changed and than starts or stops the streaming."
+    },
+    {
+      "sha": "c8afdf96a697a7604cb7e4a5355b29c381fddce9",
+      "author": "Justus Braun",
+      "date": "2024-03-08T15:38:10Z",
+      "message": "Flake8 formating"
+    },
+    {
+      "sha": "1add8c2871a24776a2d39dd312cc2b90fb12c4f1",
+      "author": "Justus Braun",
+      "date": "2024-03-08T15:01:49Z",
+      "message": "Added test case for autostart/stop with multiple subscribers"
+    },
+    {
+      "sha": "e89fb615188427db2a1c2b5104e91b3485c3c8bb",
+      "author": "Justus Braun",
+      "date": "2024-03-08T14:23:54Z",
+      "message": "Switched to unique node names"
+    },
+    {
+      "sha": "b79effa02444644a43eac3ea4ac9eaed9483526c",
+      "author": "Karsten Höpke",
+      "date": "2024-03-08T12:40:35Z",
+      "message": "Merge branch 'bugfix/parallel-test-execution' into feature/general_improvements"
+    },
+    {
+      "sha": "46a25f3c09f3e65885ffca60bd49773438318e60",
+      "author": "Justus Braun",
+      "date": "2024-03-08T12:38:08Z",
+      "message": "Merge branch 'bugfix/parallel-test-execution' into feature/add-autostart-test"
+    },
+    {
+      "sha": "533ec1f72caf97048231f962ecf5507266601339",
+      "author": "Dennis Langenkamp",
+      "date": "2024-03-08T12:21:37Z",
+      "message": "Added missing header changes"
+    },
+    {
+      "sha": "841fe7e447563d06831a84bde261d68a30e0d097",
+      "author": "Dennis Langenkamp",
+      "date": "2024-03-08T12:11:47Z",
+      "message": "Added mutex to secure stream start/stop"
+    },
+    {
+      "sha": "1d5a449342ef665d20a15ce41d2d2ad61a87e4ab",
+      "author": "Dennis Langenkamp",
+      "date": "2024-03-08T11:02:54Z",
+      "message": "For every single test case now unique node names are used"
+    },
+    {
+      "sha": "b7ef8c835cd55ec37e070e30e5e703cf8c6b7f50",
+      "author": "Karsten Höpke",
+      "date": "2024-03-08T10:29:40Z",
+      "message": "Merge branch 'bugfix/parallel-test-execution' into feature/general_improvements"
+    },
+    {
+      "sha": "c656cf3d9b8d15988e2bb7e2c67dbc46d6b7a388",
+      "author": "Dennis Langenkamp",
+      "date": "2024-03-08T09:36:06Z",
+      "message": "Added node list output to tests and tests are now using random node names"
+    },
+    {
+      "sha": "0b0e99680680da4eb3ff4f60f22f09dc3c88e50c",
+      "author": "Justus Braun",
+      "date": "2024-03-07T16:27:41Z",
+      "message": "First version of autostart test"
+    },
+    {
+      "sha": "02ef3e2b486b410f14b4340692c7c65498132b52",
+      "author": "Karsten Höpke",
+      "date": "2024-03-07T13:52:27Z",
+      "message": "Merge branch 'dev' into feature/general_improvements"
+    },
+    {
+      "sha": "2346b69270cda62064c2c959556a9dd87277fbd5",
+      "author": "Dennis Langenkamp [Allied Vision]",
+      "date": "2024-03-07T12:59:55Z",
+      "message": "Pull request #19: Bugfix/streaming test errors\n\nMerge in HSW_SDK/vimbax_ros2_driver from bugfix/streaming-test-errors to dev\n\n* commit '23f9dccf2ee1e154d1707772ac3db69976470876':\n  Increased timeouts and fixed flake8 errors\n  Fixed sporadic streaming test error"
+    },
+    {
+      "sha": "63256a9c6ef7e0c58f2eba590ace5bfffeb25e79",
+      "author": "Justus Braun [Allied Vision]",
+      "date": "2024-03-07T12:56:27Z",
+      "message": "Pull request #20: Feature/add pixel format test\n\nMerge in HSW_SDK/vimbax_ros2_driver from feature/add-pixel-format-test to dev\n\n* commit '2d395620621f8f18bec666c8e7a949c005de87ea':\n  test_invalid_pixel_format now expects the proper error code to be returned\n  Fixed pull request comments\n  Format to comply with ament_pep257\n  Format code to match styleguide\n  Created custom Node for the test and use pytest fixture to init and shutdown rcl\n  Added PixelFormat test"
+    },
+    {
+      "sha": "2d395620621f8f18bec666c8e7a949c005de87ea",
+      "author": "Justus Braun",
+      "date": "2024-03-07T12:29:53Z",
+      "message": "test_invalid_pixel_format now expects the proper error code to be returned"
+    },
+    {
+      "sha": "c4d960925e68cf79f6ab42c464f5b7e2b2783952",
+      "author": "Justus Braun",
+      "date": "2024-03-07T12:21:15Z",
+      "message": "Fixed pull request comments"
+    },
+    {
+      "sha": "23f9dccf2ee1e154d1707772ac3db69976470876",
+      "author": "Dennis Langenkamp",
+      "date": "2024-03-07T09:21:52Z",
+      "message": "Increased timeouts and fixed flake8 errors"
+    },
+    {
+      "sha": "4e38271308fdce5b5233cbb03ed93a71cba5b125",
+      "author": "Dennis Langenkamp",
+      "date": "2024-03-07T08:39:51Z",
+      "message": "Fixed sporadic streaming test error"
+    },
+    {
+      "sha": "f9da6fe5f7c507cdd3e0daee5b38a7e3b222e3cb",
+      "author": "Justus Braun",
+      "date": "2024-03-07T08:21:51Z",
+      "message": "Merge branch 'dev' into feature/add-pixel-format-test"
+    },
+    {
+      "sha": "cb4f1cc14fdf6dd2a2c1678c48ab03331d144bfd",
+      "author": "Justus Braun",
+      "date": "2024-03-06T14:40:28Z",
+      "message": "Format to comply with ament_pep257"
+    },
+    {
+      "sha": "a328c5c00d356a124471826aca3a85684469010e",
+      "author": "Justus Braun",
+      "date": "2024-03-06T14:05:12Z",
+      "message": "Format code to match styleguide"
+    },
+    {
+      "sha": "7207f018b77b0b584a9cd4ba71c1eac674d3b613",
+      "author": "Karsten Höpke",
+      "date": "2024-03-06T12:07:17Z",
+      "message": "Merge branch 'dev' into feature/general_improvements"
+    },
+    {
+      "sha": "adba3d67b8af75807d615d773675ff64a7621fc6",
+      "author": "Dennis Langenkamp",
+      "date": "2024-03-06T10:53:47Z",
+      "message": "Fixed flake8 errors"
+    },
+    {
+      "sha": "5637858c732491b0ea874cb02e5cb33288aec72f",
+      "author": "Justus Braun",
+      "date": "2024-03-06T10:42:43Z",
+      "message": "Merge branch 'dev' into feature/add-pixel-format-test"
+    },
+    {
+      "sha": "7a8ae03230721c3592c88ba56c4dd13117d776e1",
+      "author": "Dennis Langenkamp",
+      "date": "2024-03-06T10:19:35Z",
+      "message": "Fixed streaming start/stop test"
+    },
+    {
+      "sha": "a549fa9984df6c77191dfeb036b12b2030c7c881",
+      "author": "Justus Braun",
+      "date": "2024-03-06T09:27:00Z",
+      "message": "Created custom Node for the test and use pytest fixture to init and\nshutdown rcl"
+    },
+    {
+      "sha": "4f3559f314a601d4f1de155c64c715ad37a74547",
+      "author": "Karsten Höpke",
+      "date": "2024-03-06T09:41:56Z",
+      "message": "Merge branch 'dev' into feature/general_improvements"
+    },
+    {
+      "sha": "33f02d41cba8faf9946c0bbbc43ecd5c845cd8d0",
+      "author": "Dennis Langenkamp [Allied Vision]",
+      "date": "2024-03-06T09:35:54Z",
+      "message": "Pull request #18: Feature/UNISDK-3766 implement automatic tests for ros2\n\nMerge in HSW_SDK/vimbax_ros2_driver from feature/UNISDK-3766-implement-automatic-tests-for-ros2 to dev\n\n* commit '4f912a2c5e2e339ac7a2c7acecde3fbd64b58e7c':\n  Added initial verison of load/save settings tests and moved common functions into helper file\n  Fixed coding style issues\n  Moved test fixtures to seperate file conftest.py\n  Added event tests to CMakeLists\n  Moved tear down into test fixtures and cleaned up test code\n  Added events test\n  Adjusted .gitignore\n  Adjusted streaming tests\n  Added initial version of automated system tests"
+    },
+    {
+      "sha": "3484686008f9e224c2ac8cf782fce4fa8c5ca47f",
+      "author": "Karsten Höpke",
+      "date": "2024-03-05T14:42:54Z",
+      "message": "Fixed format for some error messages"
+    },
+    {
+      "sha": "0918ae24c2cb4d85e30720fb4f8132482e80a876",
+      "author": "Karsten Höpke",
+      "date": "2024-03-05T14:35:48Z",
+      "message": "Added check for existence of features GevDeviceIPAddress and GevDeviceMACAddress to prevent error messages in case the camera does not support these features."
+    },
+    {
+      "sha": "a1dc812d48516f4037d897506a1001823a0edbdc",
+      "author": "Karsten Höpke",
+      "date": "2024-03-05T14:11:12Z",
+      "message": "Fixed error messages in examples scripts"
+    },
+    {
+      "sha": "bc1320fedc45057047276937e97075a6095d873a",
+      "author": "Karsten Höpke",
+      "date": "2024-03-05T10:54:37Z",
+      "message": "Uncrustified"
+    },
+    {
+      "sha": "4f912a2c5e2e339ac7a2c7acecde3fbd64b58e7c",
+      "author": "Dennis Langenkamp",
+      "date": "2024-03-05T10:52:37Z",
+      "message": "Added initial verison of load/save settings tests and moved common functions into helper file"
+    },
+    {
+      "sha": "fd6607bbe3c1dd1f508c8a1042d58963b3152cc4",
+      "author": "Karsten Höpke",
+      "date": "2024-03-05T10:07:03Z",
+      "message": "Added has_feaure function to VimbaXCamera. Some features are not avaiable for all cameras so we now can check if a feature exists before executing a command e.g."
+    },
+    {
+      "sha": "3bf0a3d539350f3b60d599437134709e61f4b6a7",
+      "author": "Karsten Höpke",
+      "date": "2024-03-05T09:07:00Z",
+      "message": "Changed several RCLCPP_INFO messages to RCLCPP_DEBUG to clean up log output"
+    },
+    {
+      "sha": "b0e302e22178bd20608ec958a3f2ae7f4ff01b16",
+      "author": "Dennis Langenkamp",
+      "date": "2024-03-05T08:50:23Z",
+      "message": "Fixed coding style issues"
+    },
+    {
+      "sha": "55aa29aa91897609f751d6616d5b03fab3deaa0a",
+      "author": "Karsten Höpke",
+      "date": "2024-03-05T08:47:33Z",
+      "message": "Improved error message texts"
+    },
+    {
+      "sha": "3e8c71e880e34dcc25cce52d9492cab6034d01cc",
+      "author": "Dennis Langenkamp",
+      "date": "2024-03-05T08:44:50Z",
+      "message": "Moved test fixtures to seperate file conftest.py\n\nAll test now also use the same test fixture definition from conftest.py."
+    },
+    {
+      "sha": "c83fe006ddd6822ff67679f1f2679597f547424e",
+      "author": "Dennis Langenkamp",
+      "date": "2024-03-05T08:08:37Z",
+      "message": "Added event tests to CMakeLists"
+    },
+    {
+      "sha": "ea17c02aa2bc480531217eb9a3b9aca20dbdd021",
+      "author": "Dennis Langenkamp",
+      "date": "2024-03-05T07:41:36Z",
+      "message": "Moved tear down into test fixtures and cleaned up test code"
+    },
+    {
+      "sha": "e8a334f316683a5a29c616c73e2970c31309aa47",
+      "author": "Karsten Höpke",
+      "date": "2024-03-05T07:37:28Z",
+      "message": "Fixed flake8 errors"
+    },
+    {
+      "sha": "4824142d1e001147871d7dc09c1950cf94811410",
+      "author": "Dennis Langenkamp",
+      "date": "2024-03-04T14:52:41Z",
+      "message": "Added events test"
+    },
+    {
+      "sha": "f5b3935e53700d39df225cd2daa71432096b2d38",
+      "author": "Karsten Höpke",
+      "date": "2024-03-04T14:42:00Z",
+      "message": "Fixed flake8 errors"
+    },
+    {
+      "sha": "77bfb425e90c28bcb852d6b7007cde9d2a4a3bcf",
+      "author": "Karsten Höpke",
+      "date": "2024-03-04T14:24:25Z",
+      "message": "Fixed flake8 errors"
+    },
+    {
+      "sha": "79dbff94d25403893997c34ace0ecabdb334a8c7",
+      "author": "Karsten Höpke [Allied Vision]",
+      "date": "2024-03-04T14:02:34Z",
+      "message": "Pull request #17: Added list features python example\n\nMerge in HSW_SDK/vimbax_ros2_driver from feature/UNISDK-3763_ros2_examples to dev\n\n* commit 'c1616ac11f893147d315495be354ab090d2646c0':\n  Added list features python example"
+    },
+    {
+      "sha": "cc4c2d146cb16d86ee3142dd7d596363f82e7990",
+      "author": "Karsten Höpke [Allied Vision]",
+      "date": "2024-03-04T13:55:22Z",
+      "message": "Pull request #16: Bugfix/asynchronous grab.py\n\nMerge in HSW_SDK/vimbax_ros2_driver from bugfix/asynchronous_grab.py to dev\n\n* commit '9d8d1e2bd1f4ea8b966c944b6dfa408fdcbcf922':\n  Fixed duplicated code"
+    },
+    {
+      "sha": "24235fc2df7e5a5331681b7a1d65dd2d7089df37",
+      "author": "Karsten Höpke",
+      "date": "2024-03-04T11:38:42Z",
+      "message": "Removed forgotten commented code line"
+    },
+    {
+      "sha": "213ca63278e2f6f53a7715b20bd5fc7821327979",
+      "author": "Karsten Höpke [Allied Vision]",
+      "date": "2024-03-04T11:20:54Z",
+      "message": "Pull request #15: Feature/UNISDK-3769 disconnect reconnect handler\n\nMerge in HSW_SDK/vimbax_ros2_driver from feature/UNISDK-3769_disconnect_reconnect_handler to dev\n\n* commit '3ae16330ef53596d81daf542bacfac9605030a53':\n  Changed str_id type\n  Switched camera_mutex_ to std::shared_mutex. Feature service access is now possible again via multiple callback threads. Improved synchronization of graph_notify lambda.\n  Fixed var name\n  Splitted initialize_services function into multiple functions to meet readability/fn_size linter requirement.\n  Added mutex protection to event handler\n  Changed some event feature names to SFNCFeatures struct.\n  Added mutex to node dtr\n  Fixed compiler warning\n  Fixed failing camera tests\n  Replaced std::atomic<bool> with std::atomic_bool\n  Fixed reconnecting to wrong camera. Replaced unique_Lock with lock_guard.\n  Added mutex for camera object protection. Fixed for cpplint errors.\n  Removed unused request parameters from stream-stop_service, stream_start_service and features_list_get_service\n  Fixed many cpplint + uncrustify errors\n  First version of disconnect/reconnect handler. Stream is automatically restarted if it was running during disconnect."
+    },
+    {
+      "sha": "3ae16330ef53596d81daf542bacfac9605030a53",
+      "author": "Karsten Höpke",
+      "date": "2024-03-04T09:11:31Z",
+      "message": "Changed str_id type"
+    },
+    {
+      "sha": "c1616ac11f893147d315495be354ab090d2646c0",
+      "author": "Karsten Höpke",
+      "date": "2024-03-04T08:49:43Z",
+      "message": "Added list features python example"
+    },
+    {
+      "sha": "9d8d1e2bd1f4ea8b966c944b6dfa408fdcbcf922",
+      "author": "Karsten Höpke",
+      "date": "2024-03-01T07:39:29Z",
+      "message": "Fixed duplicated code"
+    },
+    {
+      "sha": "327b9bb85f9d659b45199a5cda1b991f7001357c",
+      "author": "Justus Braun",
+      "date": "2024-02-29T16:30:50Z",
+      "message": "Added PixelFormat test"
+    },
+    {
+      "sha": "56c6c787de2720eedd7a0fa5a57a872bf6fbf68e",
+      "author": "Karsten Höpke",
+      "date": "2024-02-29T14:14:16Z",
+      "message": "Switched camera_mutex_ to std::shared_mutex. Feature service access is now possible again via multiple callback threads. Improved synchronization of graph_notify lambda."
+    },
+    {
+      "sha": "98826b5f551bec0f3699028d94261f60271872d0",
+      "author": "Dennis Langenkamp",
+      "date": "2024-02-29T09:30:50Z",
+      "message": "Adjusted .gitignore"
+    },
+    {
+      "sha": "3b249aeee9bb4a430c731fe5d202f993944dc502",
+      "author": "Dennis Langenkamp",
+      "date": "2024-02-29T08:58:14Z",
+      "message": "Adjusted streaming tests"
+    },
+    {
+      "sha": "65834b3e7f68236eaa9fcac39110c4b617a106e2",
+      "author": "Karsten Höpke",
+      "date": "2024-02-29T08:12:58Z",
+      "message": "Fixed var name"
+    },
+    {
+      "sha": "242bfe97b8feb3172fe15f196c1f3fce84534ac1",
+      "author": "Karsten Höpke",
+      "date": "2024-02-29T08:06:40Z",
+      "message": "Splitted initialize_services function into multiple functions to meet readability/fn_size linter requirement."
+    },
+    {
+      "sha": "bb6290184e44b22c2bf5e8b646ecf94921ffa5ec",
+      "author": "Dennis Langenkamp",
+      "date": "2024-02-28T14:57:09Z",
+      "message": "Added initial version of automated system tests"
+    },
+    {
+      "sha": "f093a26ce69bfafec11a4e65e8955d53321b6643",
+      "author": "Karsten Höpke",
+      "date": "2024-02-28T13:56:22Z",
+      "message": "Added mutex protection to event handler"
+    },
+    {
+      "sha": "a4ae19ad065599ecc0e92853dd3261d3def30025",
+      "author": "Karsten Höpke",
+      "date": "2024-02-28T13:42:18Z",
+      "message": "Changed some event feature names to SFNCFeatures struct."
+    },
+    {
+      "sha": "397df2103e3385f4ad7a6500b103e5245a31f170",
+      "author": "Karsten Höpke",
+      "date": "2024-02-28T13:37:20Z",
+      "message": "Added mutex to node dtr"
+    },
+    {
+      "sha": "ab789d8669b9f955f3738e19189302ce758dfdd5",
+      "author": "Karsten Höpke",
+      "date": "2024-02-28T13:28:26Z",
+      "message": "Merged with dev. Fixed merging conflicts"
+    },
+    {
+      "sha": "bd454c4646d600802739ac6f92f236881e44fe8a",
+      "author": "Dennis Langenkamp [Allied Vision]",
+      "date": "2024-02-28T11:49:47Z",
+      "message": "Pull request #14: Added error string to services and print error name in log messages\n\nMerge in HSW_SDK/vimbax_ros2_driver from feature/UNISDK-3888-create-error-code-translation-function to dev\n\n* commit 'e8a4cd1e3c239bfd37ed8e4dce9dd6ae136f6029':\n  Fixed issues found in review and adjusted examples\n  Added error string to services and print error name in log messages"
+    },
+    {
+      "sha": "e8a4cd1e3c239bfd37ed8e4dce9dd6ae136f6029",
+      "author": "Dennis Langenkamp",
+      "date": "2024-02-28T11:49:04Z",
+      "message": "Merge branch 'dev' into feature/UNISDK-3888-create-error-code-translation-function"
+    },
+    {
+      "sha": "667919893c176cdc613c78a4291928af8b04fbe4",
+      "author": "Dennis Langenkamp [Allied Vision]",
+      "date": "2024-02-28T11:46:29Z",
+      "message": "Pull request #13: Feature/UNISDK-3764 implement ros2 access for genicam events\n\nMerge in HSW_SDK/vimbax_ros2_driver from feature/UNISDK-3764-implement-ros2-access-for-genicam-events to dev\n\n* commit '028402263d84eaa886fdd12ee140fae4573415a8':\n  Added python event support library including examples and fixed test issues\n  Added initial event and feature invalidation support"
+    },
+    {
+      "sha": "028402263d84eaa886fdd12ee140fae4573415a8",
+      "author": "Dennis Langenkamp",
+      "date": "2024-02-28T11:28:04Z",
+      "message": "Merge remote-tracking branch 'origin/dev' into feature/UNISDK-3764-implement-ros2-access-for-genicam-events"
+    },
+    {
+      "sha": "e7e3be2cde6e0fe1a32a09d07872634ca2e4f665",
+      "author": "Dennis Langenkamp",
+      "date": "2024-02-28T11:26:30Z",
+      "message": "Fixed issues found in review and adjusted examples"
+    },
+    {
+      "sha": "4f78f4162d4ca3bdc78cb2a0cdb6dcc0043c13c3",
+      "author": "Karsten Höpke",
+      "date": "2024-02-28T10:03:46Z",
+      "message": "Fixed compiler warning"
+    },
+    {
+      "sha": "8c6e726b18d5ca82022e338031572b6dad560107",
+      "author": "Karsten Höpke",
+      "date": "2024-02-28T09:17:13Z",
+      "message": "Fixed failing camera tests"
+    },
+    {
+      "sha": "e2434710a1297cc46efae3cc36d1f21430c92f43",
+      "author": "Karsten Höpke",
+      "date": "2024-02-28T09:16:47Z",
+      "message": "Replaced std::atomic<bool> with std::atomic_bool"
+    },
+    {
+      "sha": "70bba4b98bba6a8c1e35b793463c2434021edcb0",
+      "author": "Karsten Höpke",
+      "date": "2024-02-28T07:41:25Z",
+      "message": "Fixed reconnecting to wrong camera. Replaced unique_Lock with lock_guard."
+    },
+    {
+      "sha": "1e4bdb88e3996532c94149e6bd4e49f7d15c7dfe",
+      "author": "Karsten Höpke",
+      "date": "2024-02-27T14:51:10Z",
+      "message": "Added mutex for camera object protection. Fixed for cpplint errors."
+    },
+    {
+      "sha": "6c1b32002f3e6010285559a51cd0c52d7fc14cf2",
+      "author": "Karsten Höpke",
+      "date": "2024-02-27T14:20:21Z",
+      "message": "Removed unused request parameters from stream-stop_service, stream_start_service and features_list_get_service"
+    },
+    {
+      "sha": "8b077234ed226651d219bfafa1af46478e1db750",
+      "author": "Karsten Höpke",
+      "date": "2024-02-27T13:44:35Z",
+      "message": "Fixed many cpplint + uncrustify errors"
+    },
+    {
+      "sha": "0040c7de178308e7f50296432a24d8ab0a102fed",
+      "author": "Karsten Höpke",
+      "date": "2024-02-27T13:13:36Z",
+      "message": "Merged with dev"
+    },
+    {
+      "sha": "90239037f660c28b6154d839a757c2efaa7f5edb",
+      "author": "Karsten Höpke",
+      "date": "2024-02-27T12:54:56Z",
+      "message": "First version of disconnect/reconnect handler. Stream is automatically restarted if it was running during disconnect."
+    },
+    {
+      "sha": "9ebd7d50bb7d7bfceb31e47ec2ff130c188afb3f",
+      "author": "Dennis Langenkamp",
+      "date": "2024-02-26T14:08:06Z",
+      "message": "Added error string to services and print error name in log messages"
+    },
+    {
+      "sha": "2ad0a0c77228f7803bbdcd153e96fb7c8e9fc125",
+      "author": "Karsten Höpke [Allied Vision]",
+      "date": "2024-02-26T06:21:41Z",
+      "message": "Pull request #12: Feature/UNISDK-3886 stream start stop service\n\nMerge in HSW_SDK/vimbax_ros2_driver from feature/UNISDK-3886_stream_start_stop_service to dev\n\n* commit 'dccd85936c11b6edb73bffa62fc45c1857426f43':\n  Changed stream_stopped_by_service_  to std::atomic. Removed static for last_num_subscribers.\n  Changed used stop_stream service function.\n  Fixed cpplint and uncrustify errors\n  Fixed handling for stream_start and stream_stop services. Since we do not get a notification for unsubscribing from the publisher via wait_for_graph_change we use a workaround by storing the number of subscribers. In case we re-subscribe to the publisher and the number of subscribers has increased we re-start the stream. Also introduced a ros parameter to disable autostart streaming.\n  First changes for stream start stop services. WIP."
+    },
+    {
+      "sha": "dccd85936c11b6edb73bffa62fc45c1857426f43",
+      "author": "Karsten Höpke",
+      "date": "2024-02-23T12:46:59Z",
+      "message": "Changed stream_stopped_by_service_  to std::atomic. Removed static for last_num_subscribers."
+    },
+    {
+      "sha": "eeec4ffa0cda7bfe9a1ce61462d365c0ae75b68d",
+      "author": "Dennis Langenkamp",
+      "date": "2024-02-22T15:52:11Z",
+      "message": "Added python event support library including examples and fixed test issues"
+    },
+    {
+      "sha": "9731237a76c80f2c61c3f6213a3b11042cb62cbe",
+      "author": "Dennis Langenkamp",
+      "date": "2024-02-21T15:09:45Z",
+      "message": "Added initial event and feature invalidation support"
+    },
+    {
+      "sha": "011d9575a21a9fe88ba475e738802e3610c24312",
+      "author": "Karsten Höpke",
+      "date": "2024-02-22T14:59:46Z",
+      "message": "Changed used stop_stream service function."
+    },
+    {
+      "sha": "e7132dd380fef7090a13a48d3f4e233a70e93bdc",
+      "author": "Karsten Höpke",
+      "date": "2024-02-22T14:54:42Z",
+      "message": "Fixed cpplint and uncrustify errors"
+    },
+    {
+      "sha": "3de67aa43dea36415951583580600749f10d69d2",
+      "author": "Karsten Höpke",
+      "date": "2024-02-22T14:48:04Z",
+      "message": "Fixed handling for stream_start and stream_stop services. Since we do not get a notification for unsubscribing from the publisher via wait_for_graph_change we use a workaround by storing the number of subscribers. In case we re-subscribe to the publisher and the number of subscribers has increased we re-start the stream. Also introduced a ros parameter to disable autostart streaming."
+    },
+    {
+      "sha": "5b9af6002acee43dcb3256084f43b30af5ee0d8a",
+      "author": "Karsten Höpke [Allied Vision]",
+      "date": "2024-02-22T08:45:54Z",
+      "message": "Pull request #10: Added service for feature_info_query and list get\n\nMerge in HSW_SDK/vimbax_ros2_driver from feature/UNISDK-3885_feature_info_query-service to dev\n\n* commit '4463d5bc8c219faa1b198d147c1d96add2c11727':\n  Added capability to call feature_info_query service with an empty list. This will then query infos for all features.\n  Fixed cpplint + uncrustify errors.\n  Fixed cpplint + uncrustify errors. Cleaned up code.\n  Added features_list_get service.\n  Added service for feature_info_query"
+    },
+    {
+      "sha": "d99877ba34175e6f66759c1936723e84cfb24a07",
+      "author": "Karsten Höpke",
+      "date": "2024-02-22T07:35:40Z",
+      "message": "Merge branch 'feature/UNISDK-3885_feature_info_query-service' into feature/UNISDK-3886_stream_start_stop_service"
+    },
+    {
+      "sha": "4463d5bc8c219faa1b198d147c1d96add2c11727",
+      "author": "Karsten Höpke",
+      "date": "2024-02-22T07:31:56Z",
+      "message": "Added capability to call feature_info_query service with an empty list. This will then query infos for all features."
+    },
+    {
+      "sha": "95801618580c1fd972a2526aad39d837ca1e9982",
+      "author": "Dennis Langenkamp [Allied Vision]",
+      "date": "2024-02-22T07:12:59Z",
+      "message": "Pull request #9: Feature/UNISDK-3851 create ros2 service examples\n\nMerge in HSW_SDK/vimbax_ros2_driver from feature/UNISDK-3851-create-ros2-service-examples to dev\n\n* commit '4577692bc303579e32e79509f35c205d08b2e597':\n  Fixed cpp asynchronous_grab example\n  Fixed typos in python examples\n  Added copyright notices and activated checks\n  Fixed style issues\n  Added initial version of examples"
+    },
+    {
+      "sha": "4577692bc303579e32e79509f35c205d08b2e597",
+      "author": "Dennis Langenkamp",
+      "date": "2024-02-21T15:19:00Z",
+      "message": "Fixed cpp asynchronous_grab example"
+    },
+    {
+      "sha": "1d6a2e79ffecc5945e8d90181d58bc45b4fd3882",
+      "author": "Dennis Langenkamp",
+      "date": "2024-02-21T15:12:53Z",
+      "message": "Fixed typos in python examples"
+    },
+    {
+      "sha": "2128f2e198a666691ffb07e493eb497aae3b99d6",
+      "author": "Karsten Höpke",
+      "date": "2024-02-21T13:11:12Z",
+      "message": "Merge branch 'feature/UNISDK-3959_list_features_service' into feature/UNISDK-3886_stream_start_stop_service"
+    },
+    {
+      "sha": "25383fb52c0fdac331cecb94ee588753f01940fe",
+      "author": "Karsten Höpke",
+      "date": "2024-02-21T13:00:12Z",
+      "message": "Fixed cpplint + uncrustify errors."
+    },
+    {
+      "sha": "bac195d55d523de10c66b85c67a387ee06a08bd1",
+      "author": "Karsten Höpke",
+      "date": "2024-02-21T12:52:04Z",
+      "message": "Merged with feature/UNISDK-3885_feature_info_query-service"
+    },
+    {
+      "sha": "dea32c2ee309a9deeefd7b10b92fe483b8f16f6c",
+      "author": "Karsten Höpke",
+      "date": "2024-02-21T12:39:09Z",
+      "message": "Fixed cpplint + uncrustify errors. Cleaned up code."
+    },
+    {
+      "sha": "6556823754ae09ef7522ca60ffe653a3694f9fdd",
+      "author": "Karsten Höpke",
+      "date": "2024-02-21T12:24:55Z",
+      "message": "First changes for stream start stop services. WIP."
+    },
+    {
+      "sha": "2166fba7c8a877e59f38fc20dfa14b13123b1e21",
+      "author": "Karsten Höpke",
+      "date": "2024-02-21T10:54:13Z",
+      "message": "Added features_list_get service."
+    },
+    {
+      "sha": "c9f3b7ba338e87bc181ff52778fa423b15bd1d56",
+      "author": "Karsten Höpke",
+      "date": "2024-02-21T09:31:24Z",
+      "message": "Added service for feature_info_query"
+    },
+    {
+      "sha": "bfc8293cd2e14439662aa947b68557aec209a3a9",
+      "author": "Dennis Langenkamp",
+      "date": "2024-02-19T13:24:50Z",
+      "message": "Added copyright notices and activated checks"
+    },
+    {
+      "sha": "87614ae26277c572d8650234bbdcd4142ee96321",
+      "author": "Dennis Langenkamp",
+      "date": "2024-02-19T10:19:40Z",
+      "message": "Fixed style issues"
+    },
+    {
+      "sha": "58aeaadf1ade42698779da25e218c1b9156ff324",
+      "author": "Dennis Langenkamp",
+      "date": "2024-02-19T07:53:02Z",
+      "message": "Added initial version of examples"
+    },
+    {
+      "sha": "c4063f9f1c62291605a11d79e0f4349000e998d6",
+      "author": "Dennis Langenkamp [Allied Vision]",
+      "date": "2024-02-19T07:34:59Z",
+      "message": "Pull request #8: Feature/multi threaded executor\n\nMerge in HSW_SDK/vimbax_ros2_driver from feature/multi-threaded-executor to dev\n\n* commit 'a62db5ad7e56a544a5843de54f8d50f316b9e434':\n  Added correct callback group to status service after merge with dev\n  Fixed coding style issues\n  Updated callback group initialization\n  Switch to multi thread executor"
+    },
+    {
+      "sha": "a62db5ad7e56a544a5843de54f8d50f316b9e434",
+      "author": "Dennis Langenkamp",
+      "date": "2024-02-16T09:36:15Z",
+      "message": "Added correct callback group to status service after merge with dev"
+    },
+    {
+      "sha": "874083de27f9c336580fa76534b27e982510ff7c",
+      "author": "Dennis Langenkamp",
+      "date": "2024-02-16T09:32:14Z",
+      "message": "Merge remote-tracking branch 'origin/dev' into feature/multi-threaded-executor"
+    },
+    {
+      "sha": "b374d6d69a6c01232677969322d56e9c6f110ef4",
+      "author": "Dennis Langenkamp [Allied Vision]",
+      "date": "2024-02-16T09:31:33Z",
+      "message": "Pull request #7: Feature/UNISDK-3768 implement status service for ros2\n\nMerge in HSW_SDK/vimbax_ros2_driver from feature/UNISDK-3768-implement-status-service-for-ros2 to dev\n\n* commit 'e0a734c250787780f0626cde078bd0a0b8d1373f':\n  Removed connected field from status service\n  Fixed feature_int_get was not using correct handle\n  Fixed style issues\n  Fixed unit tests and formatting issues\n  Correctly handle buffer alignment\n  Improved gige combability\n  Added first version of status service"
+    },
+    {
+      "sha": "e0a734c250787780f0626cde078bd0a0b8d1373f",
+      "author": "Dennis Langenkamp",
+      "date": "2024-02-16T09:02:24Z",
+      "message": "Removed connected field from status service"
+    },
+    {
+      "sha": "c6a4828770626ab45439647f4bc84f0bc339c0b8",
+      "author": "Dennis Langenkamp",
+      "date": "2024-02-15T14:30:37Z",
+      "message": "Fixed coding style issues"
+    },
+    {
+      "sha": "8b41a48c2487074e4dad40394ebc601f756f802e",
+      "author": "Dennis Langenkamp",
+      "date": "2024-02-15T08:32:25Z",
+      "message": "Updated callback group initialization"
+    },
+    {
+      "sha": "46206333e534b08eb3ba7e0bedf24971418c8ccf",
+      "author": "Dennis Langenkamp",
+      "date": "2024-02-15T07:48:30Z",
+      "message": "Switch to multi thread executor\n\nPreviously simply rclcpp::spin was used to run the node. This is using a single threaded executor in the background. The single thread executor can only handle one service at the time and  if one service takes a bit longer to execute all other service are blocked. Therefore we now switched to a multi threaded executor which can handle multiple service request in parallel."
+    },
+    {
+      "sha": "1d8b7dff44f0aa2a079d802a85d756f5b7d98b32",
+      "author": "Dennis Langenkamp",
+      "date": "2024-02-15T13:46:45Z",
+      "message": "Fixed feature_int_get was not using correct handle"
+    },
+    {
+      "sha": "e227424daa42db2b49ad22e3110c1ded3ce9f1c3",
+      "author": "Dennis Langenkamp",
+      "date": "2024-02-15T13:38:06Z",
+      "message": "Fixed style issues"
+    },
+    {
+      "sha": "392733634cd0874c6212e54aaa52c35c3b2e207e",
+      "author": "Dennis Langenkamp",
+      "date": "2024-02-15T12:16:04Z",
+      "message": "Fixed unit tests and formatting issues"
+    },
+    {
+      "sha": "720e64ba0d7bfd710270d7a4b7a94178078b17b0",
+      "author": "Dennis Langenkamp",
+      "date": "2024-02-15T12:15:32Z",
+      "message": "Correctly handle buffer alignment"
+    },
+    {
+      "sha": "ba697ad16e10ad7e41b7979e629afb71f748b58e",
+      "author": "Dennis Langenkamp",
+      "date": "2024-02-08T12:57:32Z",
+      "message": "Improved gige combability\n\nIP and MAC address are now send as string in the status service and the gige vision packet size adjustedment is now automatically executed when the camera is opened."
+    },
+    {
+      "sha": "6088f497b51c521009f1ee0f5ba45c1e8f07c230",
+      "author": "Dennis Langenkamp",
+      "date": "2024-02-06T07:23:46Z",
+      "message": "Added first version of status service"
+    },
+    {
+      "sha": "35537124ec7dbdf8f952ccd506061e05a6c60412",
+      "author": "Karsten Höpke [Allied Vision]",
+      "date": "2024-02-15T12:15:44Z",
+      "message": "Pull request #6: Feature/UNISDK-3762 implement feature access ros service\n\nMerge in HSW_SDK/vimbax_ros2_driver from feature/UNISDK-3762_implement_feature_access_ros_service to dev\n\n* commit '2feffdf44d96381a831b1f5b97399c44caac4eb1': (22 commits)\n  Fixed typo\n  Added service instance check\n  Fixed line ends\n  Fixed code style issues\n  Fixed line lengths\n  Fixed cpplint errors\n  Changed feature_raw_set prototype to meet ros2 idl byte type\n  Changed raw service files: buffer now uses byte type.\n  Changed enum loop variable to const\n  Changed debug message\n  Improved logging message appearance. Re-enabled auto streamstart.\n  Added services to retrieve type specific information for int, float, string enum and raw features.\n  Added service for feature access get.\n  Added service for raw set/get.\n  Added gitignore\n  Added service for enum set/get/get as int/get as string.\n  Added service for command is_done and command run.\n  Added services for bool get/set.\n  Added services for string get/set.\n  Added service for float set/get. Revised log output.\n  ..."
+    },
+    {
+      "sha": "2feffdf44d96381a831b1f5b97399c44caac4eb1",
+      "author": "Karsten Höpke",
+      "date": "2024-02-15T09:56:34Z",
+      "message": "Fixed typo"
+    },
+    {
+      "sha": "e11ea6aada39e2d7f2b5858a1ad75e3311d80eb1",
+      "author": "Karsten Höpke",
+      "date": "2024-02-15T09:37:32Z",
+      "message": "Added service instance check"
+    },
+    {
+      "sha": "3585f624d6c3d6e354c0efb572d31c85464dfc27",
+      "author": "Karsten Höpke",
+      "date": "2024-02-14T14:29:05Z",
+      "message": "Fixed line ends"
+    },
+    {
+      "sha": "30d1d624453e15668e614a5629d0cc0612d9b2be",
+      "author": "Karsten Höpke",
+      "date": "2024-02-14T14:24:12Z",
+      "message": "Fixed code style issues"
+    },
+    {
+      "sha": "b2b9a9ecec192cd9d31b194fbc9433141d222263",
+      "author": "Karsten Höpke",
+      "date": "2024-02-14T13:11:52Z",
+      "message": "Fixed line lengths"
+    },
+    {
+      "sha": "cd3a88a4b0c7f47b2305d518ebb7cbbf529b38ee",
+      "author": "Karsten Höpke",
+      "date": "2024-02-14T12:48:28Z",
+      "message": "Fixed cpplint errors"
+    },
+    {
+      "sha": "d9b921b5bcc5e8f23787f1e86bd2ccb65b37fd89",
+      "author": "Karsten Höpke",
+      "date": "2024-02-14T10:26:50Z",
+      "message": "Changed feature_raw_set prototype to meet ros2 idl byte type"
+    },
+    {
+      "sha": "bd8ea3834b94f7b682819a19d4851d3a8debf881",
+      "author": "Karsten Höpke",
+      "date": "2024-02-14T10:18:21Z",
+      "message": "Changed raw service files: buffer now uses byte type."
+    },
+    {
+      "sha": "9241f4a3b0ba9588eb2f38ce29397fb3285540b2",
+      "author": "Karsten Höpke",
+      "date": "2024-02-13T12:58:46Z",
+      "message": "Changed enum loop variable to const"
+    },
+    {
+      "sha": "841539fdbcf589e7541ec6fbe4f48a723f2de46b",
+      "author": "Karsten Höpke",
+      "date": "2024-02-12T07:14:25Z",
+      "message": "Changed debug message"
+    },
+    {
+      "sha": "c0a59bfd8b78edcee6fef0d9fcac3895a9bfbd9c",
+      "author": "Karsten Höpke",
+      "date": "2024-02-08T10:26:31Z",
+      "message": "Improved logging message appearance. Re-enabled auto streamstart."
+    },
+    {
+      "sha": "ff708649b705eb0b92b3f6ddac97f699f4e4366b",
+      "author": "Karsten Höpke",
+      "date": "2024-02-08T09:26:21Z",
+      "message": "Merged with dev"
+    },
+    {
+      "sha": "396c44f2f53858bc2c5bedf3b30ba976a2b92e31",
+      "author": "Karsten Höpke",
+      "date": "2024-02-08T07:08:58Z",
+      "message": "Added services to retrieve type specific information for int, float, string enum and raw features."
+    },
+    {
+      "sha": "6d771afeba23792bf6cdff67f5793b447db20412",
+      "author": "Karsten Höpke",
+      "date": "2024-02-07T08:42:22Z",
+      "message": "Added service for feature access get."
+    },
+    {
+      "sha": "345c0740987e7005bf6cb47808764a124c16f34f",
+      "author": "Karsten Höpke",
+      "date": "2024-02-07T07:32:41Z",
+      "message": "Added service for raw set/get."
+    },
+    {
+      "sha": "b7ad3702bae57da435a605306b2ad6374a7f71d6",
+      "author": "Dennis Langenkamp [Allied Vision]",
+      "date": "2024-02-07T07:28:03Z",
+      "message": "Pull request #5: Feature/UNISDK-3765 implement load save settings handler for ros2\n\nMerge in HSW_SDK/vimbax_ros2_driver from feature/UNISDK-3765-implement-load-save-settings-handler-for-ros2 to dev\n\n* commit '9cb03ee9369dc27369e0a4097f619a4888a78a1e':\n  Moved from rclcpp-components to seperate main\n  Added load / save settings unit tests and fixed timestamp calculation\n  Added of load / save settings functionality"
+    },
+    {
+      "sha": "f987e2eba5ddc271746b39929f126dcd18938b72",
+      "author": "Karsten Höpke",
+      "date": "2024-02-06T10:25:30Z",
+      "message": "Added gitignore"
+    },
+    {
+      "sha": "9c122cbcf081062ef725b6cd1a0ce4f47e6c4855",
+      "author": "Karsten Höpke",
+      "date": "2024-02-06T10:23:15Z",
+      "message": "Added service for enum set/get/get as int/get as string."
+    },
+    {
+      "sha": "507996e134d9bf2d37775bfa1fead908f9d9d4c5",
+      "author": "Karsten Höpke",
+      "date": "2024-02-06T08:09:37Z",
+      "message": "Added service for command is_done and command run."
+    },
+    {
+      "sha": "a9338c03ecbd85f0bfa8383a056e41078d0d1e6d",
+      "author": "Karsten Höpke",
+      "date": "2024-02-05T15:43:20Z",
+      "message": "Added services for bool get/set."
+    },
+    {
+      "sha": "2ae5ba2076a6a8323f545bb0df33b4aebaa055ba",
+      "author": "Karsten Höpke",
+      "date": "2024-02-05T15:06:19Z",
+      "message": "Added services for string get/set."
+    },
+    {
+      "sha": "a4bad53f7ee78142490cdc676f2c95e0fe71675a",
+      "author": "Karsten Höpke",
+      "date": "2024-02-05T13:17:24Z",
+      "message": "Added service for float set/get. Revised log output."
+    },
+    {
+      "sha": "a6e9d07043ffe87e1a0495bf1b717109e9480a8b",
+      "author": "Karsten Höpke",
+      "date": "2024-02-05T12:29:51Z",
+      "message": "Implemented int set and get services. Temporariy commented auto stream start for testing."
+    },
+    {
+      "sha": "9cb03ee9369dc27369e0a4097f619a4888a78a1e",
+      "author": "Dennis Langenkamp",
+      "date": "2024-02-05T12:25:28Z",
+      "message": "Moved from rclcpp-components to seperate main"
+    },
+    {
+      "sha": "08d44ad8732f558c31dde1151f04fac69d7a2a5c",
+      "author": "Karsten Höpke",
+      "date": "2024-02-02T11:05:17Z",
+      "message": "First changes for feature services. WIP."
+    },
+    {
+      "sha": "3ebc1ca35f0d26b09b0dfd47cb27370e79cc6733",
+      "author": "Dennis Langenkamp",
+      "date": "2024-02-01T15:11:27Z",
+      "message": "Added load / save settings unit tests and fixed timestamp calculation\n\nThe timestamp is now converted into nanoseconds by using the value from the local device feature \"DeviceTimestampFrequency\"."
+    },
+    {
+      "sha": "f921626fc33783e32a4319fe26bc81e5dd527dcc",
+      "author": "Dennis Langenkamp",
+      "date": "2024-02-01T07:14:28Z",
+      "message": "Added of load / save settings functionality\n\nThe ros2 parameter \"settings_file\" can be used to load a settings file during startup. The service \"~/settings/load\" loads a given settings xml file into the camera and \"~/settings/save\" saves the current camera settings into the  given xml file path.\nAlso the parameter \"buffer_count\" is added, which holds the number of buffers used for streaming. It can be change using the standard parameter services, if the camera is not streaming."
+    },
+    {
+      "sha": "23d9075ac7f9693e98b415130b3c507a012a708e",
+      "author": "Dennis Langenkamp [Allied Vision]",
+      "date": "2024-01-31T14:13:59Z",
+      "message": "Pull request #4: Feature/UNISDK-3761 extend node with streaming capability\n\nMerge in HSW_SDK/vimbax_ros2_driver from feature/UNISDK-3761-extend-node-with-streaming-capability to dev\n\n* commit '39ee56500f920b34f13d593d4fcef4a033a69cd6':\n  Fixed launch file syntax error\n  Fixed crash when no camera can be opened\n  Fixed frame not queued again when incomplete\n  Added frame creation tests\n  Added result class and refactored VimbaXCamera to use it\n  Added streaming implementation and reworked logging"
+    },
+    {
+      "sha": "39ee56500f920b34f13d593d4fcef4a033a69cd6",
+      "author": "Dennis Langenkamp",
+      "date": "2024-01-30T15:08:09Z",
+      "message": "Fixed launch file syntax error"
+    },
+    {
+      "sha": "c5071f80c5e8b24255375748af352dce8053ebea",
+      "author": "Dennis Langenkamp",
+      "date": "2024-01-30T14:58:21Z",
+      "message": "Fixed crash when no camera can be opened"
+    },
+    {
+      "sha": "b35909aaf04e10e82bddb28666a401d17d34cc9f",
+      "author": "Dennis Langenkamp",
+      "date": "2024-01-29T14:57:41Z",
+      "message": "Fixed frame not queued again when incomplete\n\nIf a frame was incomplete it was not queued again. This causes the stream to stop when too many frames were incomplete, because currently no frame is queued."
+    },
+    {
+      "sha": "e6eb6dcb8b07bdb584eb4358af0e0296d6288a68",
+      "author": "Dennis Langenkamp",
+      "date": "2024-01-26T11:30:01Z",
+      "message": "Added frame creation tests"
+    },
+    {
+      "sha": "5a1d0b9f5ce2d137996b4dbe8058a898b9672ade",
+      "author": "Dennis Langenkamp",
+      "date": "2024-01-26T11:29:45Z",
+      "message": "Added result class and refactored VimbaXCamera to use it\n\nThe result class is added to preserve the error code of the VmbC calls, if one fails."
+    },
+    {
+      "sha": "c42ab6d49636853ebf443915d9cefc1ab8081ddd",
+      "author": "Dennis Langenkamp",
+      "date": "2024-01-26T09:38:10Z",
+      "message": "Added streaming implementation and reworked logging\n\nThe vimbax_camera_node is now capable of streaming. The streaming is started automatically, when a subscriber is connected to the image topic (image_raw). It is also stopped again, when no node is subscribed. Added helpers to shift 10 and 12 bit formats left to be correctly aligned for the ROS 2 16 bit formats.\nIt is now possible to get the logger of the current node via the helper::get_logger method. By this all submodules log message are transmitted via the rosout topic."
+    },
+    {
+      "sha": "3ddcd11b89ccd487493eb48a7ba432459b8c0d62",
+      "author": "Dennis Langenkamp [Allied Vision]",
+      "date": "2024-01-25T10:38:18Z",
+      "message": "Pull request #3: Feature/UNISDK-3760 implement ros2 node with basic functionality\n\nMerge in HSW_SDK/vimbax_ros2_driver from feature/UNISDK-3760-implement-ros2-node-with-basic-functionality to dev\n\n* commit '5e2e716f08ca41f0e40416d1dde92f93253c5906':\n  Reworked VimbaXCamera open by id mechanism\n  Added possibility to open the camera by serial number\n  Call VmbCameraClose on deconstruction of VimbaXCamera class\n  Added camera open tests and fixed coding style\n  Initial version of VimbaX Camera Node"
+    },
+    {
+      "sha": "c46cfb1f13a4e0beed6c45b5531a73c5cf5fb383",
+      "author": "Karsten Höpke [Allied Vision]",
+      "date": "2024-01-25T06:37:43Z",
+      "message": "Pull request #2: Feature/launch file\n\nMerge in HSW_SDK/vimbax_ros2_driver from feature/launch_file to dev\n\n* commit '499550bb2afc4c69eb1eb7e8f7b32b3343b385eb':\n  Fixed typo\n  Updated README.md with debug instructions\n  Added launch python file"
+    },
+    {
+      "sha": "499550bb2afc4c69eb1eb7e8f7b32b3343b385eb",
+      "author": "Karsten Höpke",
+      "date": "2024-01-23T14:37:08Z",
+      "message": "Fixed typo"
+    },
+    {
+      "sha": "4d4c438a434b43d99abe118b858829602ea0660b",
+      "author": "Karsten Höpke",
+      "date": "2024-01-23T14:29:10Z",
+      "message": "Updated README.md with debug instructions"
+    },
+    {
+      "sha": "5e2e716f08ca41f0e40416d1dde92f93253c5906",
+      "author": "Dennis Langenkamp",
+      "date": "2024-01-23T13:51:12Z",
+      "message": "Reworked VimbaXCamera open by id mechanism\n\nWhen a camera id is passed to the open function of the VimbaXCamera class, it now checks first if a matching camera can be found in the camera list. If no camera could be found, it falls back to just calling VmbCameraOpen with the given camera id string. The behaviour eliminates that an error message is shown, if the serial number is used for opening the camera."
+    },
+    {
+      "sha": "5c79e5c9569b42d609abf3bddf6c93a6b0dc692a",
+      "author": "Dennis Langenkamp",
+      "date": "2024-01-23T11:01:53Z",
+      "message": "Added possibility to open the camera by serial number\n\nTo open a camera by serial number the VimbaXCamera lists all cameras and then searches in the list for the camera with the matching serial number."
+    },
+    {
+      "sha": "58158a14170d0589aebd0c85266e16e4f25ad0d9",
+      "author": "Karsten Höpke",
+      "date": "2024-01-23T09:29:41Z",
+      "message": "Added launch python file"
+    },
+    {
+      "sha": "82058fc11ca614e3a32590d92603008050ba34f2",
+      "author": "Dennis Langenkamp",
+      "date": "2024-01-23T08:56:11Z",
+      "message": "Call VmbCameraClose on deconstruction of VimbaXCamera class\n\nThe VimbaXCamera class now calls VmbCameraClose when it is deconstructed. It is also now long copyable, because the vmbc camera handle should not be shared."
+    },
+    {
+      "sha": "9bc27530122257de50cf4462ee46a7d663f7b651",
+      "author": "Dennis Langenkamp",
+      "date": "2024-01-23T08:48:40Z",
+      "message": "Added camera open tests and fixed coding style"
+    },
+    {
+      "sha": "6d0fd42900ab34006132a64dd9348685dcbc1d15",
+      "author": "Dennis Langenkamp",
+      "date": "2024-01-22T14:40:51Z",
+      "message": "Initial version of VimbaX Camera Node\n\nAdded initial version of the VimbaX Camera Node.\nThe vimbax_camera package builds now as a shared library and is loaded into the vimbax_camera_node by rclcpp_components."
+    },
+    {
+      "sha": "5868139917c1e24df192a131317f82f97114ec88",
+      "author": "Dennis Langenkamp [Allied Vision]",
+      "date": "2024-01-23T07:16:30Z",
+      "message": "Pull request #1: Feature/UNISDK-3759 create vimbax loader\n\nMerge in HSW_SDK/vimbax_ros2_driver from feature/UNISDK-3759-create-vimbax-loader to dev\n\n* commit '7aa12518c31444b470eec4725bbe27f573686969':\n  Fixed build instructions according to review\n  Fixed some function names\n  Added initial version of README with build instructions and fixed some typos\n  Added TL search path to VmbC loading and added basic integration tests\n  VmbC API loader now automatically calls VmbStartup / VmbShutdown and reworked unit tests\n  Fixed api loader crash when environment variable GENICAM_GENTL64_PATH is n ot set\n  Added cmake variable for specifying the VimbaX installation location\n  Added initial version of VimbaX C API loader."
+    },
+    {
+      "sha": "7aa12518c31444b470eec4725bbe27f573686969",
+      "author": "Dennis Langenkamp",
+      "date": "2024-01-23T07:15:16Z",
+      "message": "Fixed build instructions according to review"
+    },
+    {
+      "sha": "7491048711b9c834f3ceff75acdc645698d2fe9e",
+      "author": "Dennis Langenkamp",
+      "date": "2024-01-22T07:53:39Z",
+      "message": "Fixed some function names"
+    },
+    {
+      "sha": "e6303769ea7ebb0e43241579dd38ea760d1bae9e",
+      "author": "Dennis Langenkamp",
+      "date": "2024-01-22T07:45:23Z",
+      "message": "Added initial version of README with build instructions and fixed some typos"
+    },
+    {
+      "sha": "6808d9722b556574e8d54afd22ccf978d350c1ed",
+      "author": "Dennis Langenkamp",
+      "date": "2024-01-19T13:32:31Z",
+      "message": "Added TL search path to VmbC loading and added basic integration tests\n\nDuring VmbC loading now also the TL search path used by VmbStartup can be specified.\nAdded basic integration tests for VmbC loading."
+    },
+    {
+      "sha": "231858945d17881d5cadcad1171b681ad53bdc9e",
+      "author": "Dennis Langenkamp",
+      "date": "2024-01-19T11:27:22Z",
+      "message": "VmbC API loader now automatically calls VmbStartup / VmbShutdown and reworked unit tests\n\nThe VmbCAPI class now automatically call VmbStartup, when it is loaded, and VmbShutdown, when it is destroyed. VmbCAPI behaves now like a singleton. When get_instance is called the first time the API is loaded and an instance of VmbCAPI is created. All later calls to get_instance will return the same instance independent of the argument libraryLoader. If all instance of VmbCAPI are destroyed, a call get_instance will create a new instance. The VmbCAPI class now also provides all functions of VmbC.\nThe unit test structure is now reworked and simplified. Also, a complete mock for the VmbC API is added, which can be later used for testing."
+    },
+    {
+      "sha": "3cb41535f267cb0f28621b951d3d09517e261470",
+      "author": "Dennis Langenkamp",
+      "date": "2024-01-17T15:41:59Z",
+      "message": "Fixed api loader crash when environment variable GENICAM_GENTL64_PATH is n ot set"
+    },
+    {
+      "sha": "98c342cbfbae0e41cabe244163b20e78b01b3002",
+      "author": "Dennis Langenkamp",
+      "date": "2024-01-17T14:44:18Z",
+      "message": "Added cmake variable for specifying the VimbaX installation location"
+    },
+    {
+      "sha": "0277f75e4ad859aa53e149078e85df83e06dc6ef",
+      "author": "Dennis Langenkamp",
+      "date": "2024-01-17T11:38:33Z",
+      "message": "Added initial version of VimbaX C API loader.\n\nThe dynamic loading of the VmbC library currently only works for linux systems and also not all functions are loaded at the moment."
+    },
+    {
+      "sha": "ca27dedc585bf07c45baee6a9178055af5d4f08d",
+      "author": "Dennis Langenkamp",
+      "date": "2024-01-12T13:46:45Z",
+      "message": "Initial commit"
+    }
+  ]
+}

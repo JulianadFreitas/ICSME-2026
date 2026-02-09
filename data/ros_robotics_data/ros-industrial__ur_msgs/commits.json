@@ -1,0 +1,558 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-08T01:08:10Z",
+    "source": "github_rest",
+    "endpoint": "/repos/{owner}/{repo}/commits",
+    "owner": "ros-industrial",
+    "repo": "ur_msgs",
+    "per_page": 100
+  },
+  "data": [
+    {
+      "sha": "fbf46fb4fd48f4b017fec5d864311a6a84da4e45",
+      "author": "Felix Exner",
+      "date": "2025-07-31T07:20:14Z",
+      "message": "2.3.0"
+    },
+    {
+      "sha": "1989eb1da623c1005583aa5c33111a4fd3f66e33",
+      "author": "Felix Exner",
+      "date": "2025-07-31T07:20:08Z",
+      "message": "Update changelog for upcoming release"
+    },
+    {
+      "sha": "2a4f234f9acb23ea48ba46de9dd6d56233718951",
+      "author": "URJala",
+      "date": "2025-07-30T12:47:22Z",
+      "message": "Trajectory until action definition (#38)"
+    },
+    {
+      "sha": "1c7cbc8659e3bf964fce3d539c7445b39bebba10",
+      "author": "Felix Exner",
+      "date": "2025-03-17T09:23:25Z",
+      "message": "2.2.0"
+    },
+    {
+      "sha": "9675e417961db3f4bb9245b021dfd5c6a456f55d",
+      "author": "Felix Exner",
+      "date": "2025-03-17T09:23:03Z",
+      "message": "Update changelog for upcoming release"
+    },
+    {
+      "sha": "81ccf2679a60e98e159739ff9485d74e46089e11",
+      "author": "URJala",
+      "date": "2025-03-14T12:22:49Z",
+      "message": "Tool contact action (#37)\n\nAdded an action definition for use with the tool contact controller"
+    },
+    {
+      "sha": "27da72cd8b75d624716c6525ef7b056821fd4a57",
+      "author": "Felix Exner",
+      "date": "2024-12-02T09:30:42Z",
+      "message": "2.1.0"
+    },
+    {
+      "sha": "0ca41edceeb6c8ab82fdfb0298ce4e73fc6a1169",
+      "author": "Felix Exner",
+      "date": "2024-12-02T09:29:35Z",
+      "message": "Update changelog for upcoming release"
+    },
+    {
+      "sha": "515991962da465c89bab29a2db96f0ca3500e1c7",
+      "author": "URJala",
+      "date": "2024-11-11T07:57:32Z",
+      "message": "Force mode arguments ros2 (#26)\n\n* Added service to set force mode\r\n\r\n* Use ROS types where it makes sense\r\n\r\nThe wrench is explicitly not stamped, since its geometric interpretation\r\ndiffers depending on the `type` used.\r\n\r\nAlso for the limits a plain 6d vector is used, since its interpretation is\r\neither a velocity or a position boundary.\r\n\r\n* Add damping factor, gain scaling\r\n\r\nAnd make identical to ROS1 version, add default values\r\n\r\n* Changed limits to be generic 6d vector\r\n\r\nAlso added constants for the type parameter and added default values to all the simple values\r\n\r\n* Do not use a stamped wrench\r\n\r\nSince the geometric representation if the wrench is dependong on both,\r\nthe type and the task frame, it doesn't relly make sense to use a\r\nstamped wrench here.\r\n\r\n* Split limits into speed_limit and deviation_limit\r\n\r\nHaving different domains in one field seems like an anti-pattern.\r\n\r\n---------\r\n\r\nCo-authored-by: urmarp <marp@universal-robots.com>\r\nCo-authored-by: Felix Exner <exner@fzi.de>\r\nCo-authored-by: Felix Exner <git@fexner.de>"
+    },
+    {
+      "sha": "350ef077e93032cd256f1db7ce5d26d204074508",
+      "author": "Felix Exner",
+      "date": "2024-10-07T09:09:21Z",
+      "message": "2.0.1"
+    },
+    {
+      "sha": "aef9c448a4872402dece9494cb3caf8650e2fc9c",
+      "author": "Felix Exner",
+      "date": "2024-10-07T09:08:31Z",
+      "message": "Update changelogs for upcoming release"
+    },
+    {
+      "sha": "ab41221f0491106d77118e67540a47baa585de1f",
+      "author": "Felix Exner (fexner)",
+      "date": "2024-10-07T09:03:15Z",
+      "message": "[ROS 2] Update README and ci (#31)\n\n* Update CI and README for ROS Humble\r\n* Fix comment in MasterboardData"
+    },
+    {
+      "sha": "8bc94da1a78341ed5c3c10c102ea3d6fe1aa29c6",
+      "author": "Felix Exner (fexner)",
+      "date": "2024-10-05T07:40:18Z",
+      "message": "Add a service to set an analog output (#30)"
+    },
+    {
+      "sha": "53820cb38ee8020ccfd9466ffec904b98f2b5be6",
+      "author": "URJala",
+      "date": "2024-09-03T11:23:20Z",
+      "message": "Added service for getting the software version of the robot. (#25)"
+    },
+    {
+      "sha": "7a496eded9208f832aac0667e1259a0f3cc3720a",
+      "author": "G.A. vd. Hoorn",
+      "date": "2023-01-27T13:05:55Z",
+      "message": "ci: bump checkout and cache (#23)"
+    },
+    {
+      "sha": "607e50f57f8ad401ac9e8d2f7a286b03981770d1",
+      "author": "Felix Exner",
+      "date": "2022-04-12T09:36:28Z",
+      "message": "2.0.0"
+    },
+    {
+      "sha": "b93602b7b372dcb1fbf1f3a27cc4677b059f0b34",
+      "author": "Felix Exner",
+      "date": "2022-04-08T12:22:26Z",
+      "message": "Update changelog"
+    },
+    {
+      "sha": "3fbb683e574edef550264887b76f2fb23cf8cdf8",
+      "author": "Denis Štogl",
+      "date": "2022-04-08T12:16:05Z",
+      "message": "Porting to ros2 (#12)\n\n* Adapt to ROS2.\r\n* Corrected/updated dependecies\r\n* Added LICENSE and CONTRIBUTING\r\n* Sort package.xml according to schema\r\n* Update Migrate CI to ROS2\r\n* Re-Added rosindex and ros_industrial tags\r\n\r\nCo-authored-by: Lovro <lovro.ivanov@gmail.com>\r\nCo-authored-by: Felix Exner <exner@fzi.de>\r\nCo-authored-by: Denis Štogl <denis@stoglrobotics.de>"
+    },
+    {
+      "sha": "8455fa579497599a22e41388618d70aa62995693",
+      "author": "Felix Exner",
+      "date": "2021-06-24T09:21:10Z",
+      "message": "Document pin mapping in SetIO service (#16)\n\nSquashed commits:\r\n\r\n* Document pin mapping in SetIO service\r\n* Provide constants for all pin mappings\r\n* Label different pin categories explicitly\r\n\r\nCo-authored-by: G.A. vd. Hoorn <g.a.vanderhoorn@tudelft.nl>\r\nCo-authored-by: G.A. vd. Hoorn <g.a.vanderhoorn@tudelft.nl>"
+    },
+    {
+      "sha": "ad0934a5d1ecc3005e272d778d24bfc69160a116",
+      "author": "gavanderhoorn",
+      "date": "2021-05-25T11:56:45Z",
+      "message": "1.3.4"
+    },
+    {
+      "sha": "40346555f09fa2f60000bd79a0ca9bec97bccfa4",
+      "author": "gavanderhoorn",
+      "date": "2021-05-25T11:56:31Z",
+      "message": "Update changelog"
+    },
+    {
+      "sha": "21af774c072fc47efd1f77ab038a7b5bd076100b",
+      "author": "gavanderhoorn",
+      "date": "2021-05-25T11:54:22Z",
+      "message": "Bump CMake version to ignore warning\n\nWith newer versions of CMake."
+    },
+    {
+      "sha": "4b032d90c42948a5e05a27dc3db15d2b1168c8da",
+      "author": "gavanderhoorn",
+      "date": "2021-05-25T11:36:43Z",
+      "message": "1.3.3"
+    },
+    {
+      "sha": "cc4db81da6fcf7614c195ad49c3db15b0eab7ccd",
+      "author": "gavanderhoorn",
+      "date": "2021-05-25T11:33:06Z",
+      "message": "Update changelog"
+    },
+    {
+      "sha": "206c496a3af616fed53a355e581cf15460958db0",
+      "author": "G.A. vd. Hoorn",
+      "date": "2021-05-25T11:20:40Z",
+      "message": "readme: use svg badge for support level"
+    },
+    {
+      "sha": "4134505bb2a101a1a19ed975df79472607000844",
+      "author": "gavanderhoorn",
+      "date": "2021-05-25T11:12:09Z",
+      "message": "Initial GHA config"
+    },
+    {
+      "sha": "39d3b6a17ba5c1213f94b1ecac54c79c4828c817",
+      "author": "gavanderhoorn",
+      "date": "2021-05-25T11:11:59Z",
+      "message": "Remove Travis config"
+    },
+    {
+      "sha": "cec984f35cce1ba8435318a585530cbea0a8fa8c",
+      "author": "Chen Bainian",
+      "date": "2020-11-12T15:15:47Z",
+      "message": "Fix SetPayload srv separater invalid (#10)\n\nSigned-off-by: Chen Bainian <chenbn@artc.a-star.edu.sg>"
+    },
+    {
+      "sha": "fa10e6c96a0148413c296ac298262bd725ae0959",
+      "author": "gavanderhoorn",
+      "date": "2020-10-12T19:58:56Z",
+      "message": "1.3.2"
+    },
+    {
+      "sha": "fdaebbf8b8dec2ea4bca89c447a9a382060302e1",
+      "author": "gavanderhoorn",
+      "date": "2020-10-12T19:58:09Z",
+      "message": "Update changelog."
+    },
+    {
+      "sha": "3a0e181d17e5d38e67cd586ac8500f64e7faea21",
+      "author": "Gaël Écorchard",
+      "date": "2020-10-12T13:48:24Z",
+      "message": "[ur_msgs] Fix domain constants in Analog.msg (#8)\n\nCURRENT and VOLTAGE should be inverted.\r\n\r\nTested with URSoftware 3.8.0.61336.\r\n\r\nSigned-off-by: Gaël Écorchard gael.ecorchard@cvut.cz"
+    },
+    {
+      "sha": "6c82a748d02832ec3fe80435e74111d12cee8fcb",
+      "author": "gavanderhoorn",
+      "date": "2020-06-24T11:26:42Z",
+      "message": "1.3.1"
+    },
+    {
+      "sha": "e78b77a27179acb05340232de1e61d3dcca22dcf",
+      "author": "gavanderhoorn",
+      "date": "2020-06-24T11:26:22Z",
+      "message": "Update changelog."
+    },
+    {
+      "sha": "d92172f00bda72f125ea7aae0cc9c7047f5f2cef",
+      "author": "Felix Exner",
+      "date": "2020-06-24T10:23:23Z",
+      "message": "Change \"payload\" field name to \"mass\" (#5)\n\nSince we extended this service to also contain the cog, IMHO it makes sense\r\nto rename the \"payload\" field to \"mass\" as it is named inside UR's documentation."
+    },
+    {
+      "sha": "ae9812defe2ab8426bec117472290c8894e8b7b6",
+      "author": "G.A. vd. Hoorn",
+      "date": "2020-06-23T14:56:37Z",
+      "message": "travis: add Noetic build (#4)\n\nPreparation for Noetic releases."
+    },
+    {
+      "sha": "4c111fc847d04eba93668f8bc4c358a8a3c9de58",
+      "author": "Felix Exner",
+      "date": "2020-06-23T10:23:35Z",
+      "message": "Added center_of_gravity to SetPayload service (#2)"
+    },
+    {
+      "sha": "7274efbb79cf92eff19d232b94a840daba31ff99",
+      "author": "G.A. vd. Hoorn",
+      "date": "2020-06-22T16:59:28Z",
+      "message": "manifest: mark arch independent. (#1)\n\nAs recommended by REP-140."
+    },
+    {
+      "sha": "42fc302eb58e75528e7df92ae410fcddb4bf4a13",
+      "author": "gavanderhoorn",
+      "date": "2020-06-22T15:49:38Z",
+      "message": "1.3.0"
+    },
+    {
+      "sha": "308268966cb37e76127585991a4885c64fa2347c",
+      "author": "gavanderhoorn",
+      "date": "2020-06-22T15:48:40Z",
+      "message": "Update changelog."
+    },
+    {
+      "sha": "14057092ade750ccf05cdd40a2d681543a3e4017",
+      "author": "gavanderhoorn",
+      "date": "2020-06-22T15:13:38Z",
+      "message": "Manifest cleanup."
+    },
+    {
+      "sha": "255ec02c1d23050d4e86a907f7ed7a63f2e1f74c",
+      "author": "gavanderhoorn",
+      "date": "2020-06-22T15:08:39Z",
+      "message": "Add Travis CI configuration."
+    },
+    {
+      "sha": "fa3b44d13dad8a49a23a1e7ed5706bc654e3f7c3",
+      "author": "gavanderhoorn",
+      "date": "2020-06-22T15:06:51Z",
+      "message": "Initial readme."
+    },
+    {
+      "sha": "c6e7ea032a358cdceaa0e4ebfa28d0b9c35e921e",
+      "author": "gavanderhoorn",
+      "date": "2019-11-23T14:15:22Z",
+      "message": "1.2.7"
+    },
+    {
+      "sha": "0b17d7e22a9e587c5981deed6e66e9a0964edc29",
+      "author": "gavanderhoorn",
+      "date": "2019-11-23T14:15:05Z",
+      "message": "Update changelogs."
+    },
+    {
+      "sha": "f369e9776a4370547126649336080bbaedeba198",
+      "author": "gavanderhoorn",
+      "date": "2019-11-19T20:22:17Z",
+      "message": "1.2.6"
+    },
+    {
+      "sha": "660d7f65dbae044131f704e16c53d122a77d9242",
+      "author": "gavanderhoorn",
+      "date": "2019-11-19T20:20:10Z",
+      "message": "Update changelogs."
+    },
+    {
+      "sha": "28cca18fd417ada6244265aa65fe9b2067827b5b",
+      "author": "Felix Mauch",
+      "date": "2019-09-16T13:24:27Z",
+      "message": "Added a service to set the speed slider position (ros-industrial/universal_robot#454)\n\nSquashed commits:\r\n\r\n* Added a service to set the speed slider position\r\n* Use a more specific name for the data\r\n  The name used is the same as defined in the RTDE interface.\r\n* Added an explanation with valid data range to the service.\r\n* Update comment.\r\n* Renamed service to SetSpeedSliderFraction\r\n  This better represents the technical background\r\n* Use correct name of svc def file.\r\n* Fixup"
+    },
+    {
+      "sha": "8093cd1d0059b85e42ec68a62efe38cd214fd90c",
+      "author": "Felix Mauch",
+      "date": "2019-09-02T12:45:11Z",
+      "message": "Added a domain field to Analog.msg (ros-industrial/universal_robot#450)\n\nOn UR robots the domain of analog in- and outputs can be configured.\r\nThe Analog.msg didn't cover this so far."
+    },
+    {
+      "sha": "693c6bbeaf6547d5a59f2cfb9fa50d876f509ee8",
+      "author": "Felix Mauch",
+      "date": "2019-07-02T15:56:13Z",
+      "message": "migrated all package.xml files to format=2 (ros-industrial/universal_robot#439)"
+    },
+    {
+      "sha": "d3fecdc1efde31e0540d3554d020f23ba341b48e",
+      "author": "gavanderhoorn",
+      "date": "2019-04-05T14:30:12Z",
+      "message": "1.2.5"
+    },
+    {
+      "sha": "16ba8e1605875dbad3f9f436775f65e7df4b04f9",
+      "author": "G.A. vd. Hoorn",
+      "date": "2019-04-05T14:28:15Z",
+      "message": "Update changelogs. (ros-industrial/universal_robot#418)"
+    },
+    {
+      "sha": "fa3d67c834f0a5436524432fc19aa4c0eaefa087",
+      "author": "G.A. vd. Hoorn",
+      "date": "2019-04-04T21:25:15Z",
+      "message": "msgs: correct width and type of 'digital_*_bits'. (ros-industrial/universal_robot#416)"
+    },
+    {
+      "sha": "fcd7ba089ab3c84cb13f955444209e415b711c4b",
+      "author": "G.A. vd. Hoorn",
+      "date": "2019-04-02T10:11:07Z",
+      "message": "msgs: clarify use of fields in SetIO svc. (ros-industrial/universal_robot#415)"
+    },
+    {
+      "sha": "3dac8f3a62ddf9021b488eee9db21d8af468787d",
+      "author": "G.A. vd. Hoorn",
+      "date": "2019-03-08T11:40:14Z",
+      "message": "Update maintainer listing: add Miguel (ros-industrial/universal_robot#410)\n\n* Add Migual Prada as maintainer.\r\n\r\n* Sort maintainers alphabetically.\r\n\r\n* Fix maintainers and author listing in all e-series pkgs.\r\n\r\nWas missing from ros-industrial/universal_robot#380."
+    },
+    {
+      "sha": "17a217db7fd8ffabd9be7889a9cf62b2df63d7a0",
+      "author": "Felix von Drigalski",
+      "date": "2019-02-26T13:47:47Z",
+      "message": "Add RobotModeDataMsg (ros-industrial/universal_robot#395)\n\n* Add RobotModeDataMsg\r\n\r\n* msg: clarify that not all fields from RobotMode are published"
+    },
+    {
+      "sha": "8c52bed1de5c164345934f37a98fedfd6c54c442",
+      "author": "gavanderhoorn",
+      "date": "2018-10-14T06:36:26Z",
+      "message": "all: update maintainer and author information."
+    },
+    {
+      "sha": "3e17a4ff3401d1e7b4999026be1d134092a80a73",
+      "author": "ipa-fxm",
+      "date": "2018-01-06T13:52:56Z",
+      "message": "1.2.1"
+    },
+    {
+      "sha": "3a62d9b7d598389916346b6589c663c71d489126",
+      "author": "ipa-fxm",
+      "date": "2018-01-06T13:04:28Z",
+      "message": "update changelogs"
+    },
+    {
+      "sha": "05ce5da6710167b9a84c1496c5a75d36844e0b85",
+      "author": "ipa-fxm",
+      "date": "2017-08-04T07:45:12Z",
+      "message": "1.2.0"
+    },
+    {
+      "sha": "d89debc1dd448428725c44aa6147d27826b024d0",
+      "author": "ipa-fxm",
+      "date": "2017-08-04T07:44:52Z",
+      "message": "Update changelogs"
+    },
+    {
+      "sha": "986d6fef929eb9d3694965953db7c5caa0ad339b",
+      "author": "gavanderhoorn",
+      "date": "2017-01-02T19:46:23Z",
+      "message": "1.1.9"
+    },
+    {
+      "sha": "a048073691ec632e002e72af0388ed9259a78999",
+      "author": "gavanderhoorn",
+      "date": "2017-01-02T19:42:47Z",
+      "message": "Update changelogs."
+    },
+    {
+      "sha": "938aa3fe5b3aa4ed22af93c619145c10f76bc300",
+      "author": "gavanderhoorn",
+      "date": "2016-12-30T11:04:16Z",
+      "message": "1.1.8"
+    },
+    {
+      "sha": "df467dc027c557faa0d9e8f85db92b5b153ca809",
+      "author": "gavanderhoorn",
+      "date": "2016-12-30T11:03:27Z",
+      "message": "Update changelogs."
+    },
+    {
+      "sha": "b017ce105686828fa0fc40368658c02f7b3ff9c0",
+      "author": "gavanderhoorn",
+      "date": "2016-12-30T10:59:16Z",
+      "message": "all: update maintainers."
+    },
+    {
+      "sha": "55d6284928eeef43dbf822aea258b8859664d4e3",
+      "author": "gavanderhoorn",
+      "date": "2016-12-29T20:36:33Z",
+      "message": "1.1.7"
+    },
+    {
+      "sha": "1eb935d6ff561ee17a0822436dc8ac4620d10830",
+      "author": "gavanderhoorn",
+      "date": "2016-12-29T20:36:18Z",
+      "message": "Update changelogs."
+    },
+    {
+      "sha": "91488e25c0349c6813ee30ed3b81e09c5d801fdd",
+      "author": "Nikolas Engelhard",
+      "date": "2016-11-29T18:24:52Z",
+      "message": "Add message definition for ToolData."
+    },
+    {
+      "sha": "36585cade26a44d37c029f36bbb3b5d81446612e",
+      "author": "ipa-fxm",
+      "date": "2016-04-01T14:09:32Z",
+      "message": "1.1.6"
+    },
+    {
+      "sha": "52970cf95e79f97703953f14e5103552539177e0",
+      "author": "ipa-fxm",
+      "date": "2016-04-01T14:08:22Z",
+      "message": "update changelog"
+    },
+    {
+      "sha": "8b22aede658798d98c3f4bdf990505e56acd2bee",
+      "author": "Thomas Timm Andersen",
+      "date": "2015-09-10T13:43:06Z",
+      "message": "Moved SetIO FUN constants from driver.py to relevant srv file for easier interaction from other files"
+    },
+    {
+      "sha": "bd1b394bf62897a01dbac2d7ae2aa4a9a875119e",
+      "author": "ipa-fxm",
+      "date": "2015-03-13T15:34:13Z",
+      "message": "catkin_lint"
+    },
+    {
+      "sha": "59794e2fb5aaab427b3df164e50ea8c9530b35fc",
+      "author": "Alexander Bubeck",
+      "date": "2014-11-03T16:47:08Z",
+      "message": "merged with hydro dev and set version numbers to 1.1.5"
+    },
+    {
+      "sha": "7a7345700dcbe809cda9efb277f73921aa215656",
+      "author": "Alexander Bubeck",
+      "date": "2014-11-03T16:34:50Z",
+      "message": "Update package.xml"
+    },
+    {
+      "sha": "2901a1fb6207f23b93276829bc20640768b074ca",
+      "author": "ipa-fxm",
+      "date": "2014-11-03T16:11:12Z",
+      "message": "merge with hydro-devel"
+    },
+    {
+      "sha": "a8b8d838f83e02927818d24a80fa702e60282f61",
+      "author": "ipa-fxm",
+      "date": "2014-10-22T11:11:36Z",
+      "message": "catkin_lint fixes"
+    },
+    {
+      "sha": "9277571e08e30644c269ac0bb6ba2102c0fc305d",
+      "author": "ipa-fxm",
+      "date": "2014-10-10T07:09:11Z",
+      "message": "add documentation and link to message definition"
+    },
+    {
+      "sha": "4b1f5b18c8bf0462f2bedc7bb073f367f7cbea75",
+      "author": "ipa-fxm",
+      "date": "2014-09-30T12:23:58Z",
+      "message": "new nessage MasterboardDataMsg for testing"
+    },
+    {
+      "sha": "b538f088efc3526a6529542926045b00af1fdde2",
+      "author": "ipa-fxm",
+      "date": "2014-09-25T14:49:12Z",
+      "message": "new message for RobotStateRT data structure"
+    },
+    {
+      "sha": "a26edd64f525363222318ecec3dcadf2bc780b07",
+      "author": "ipa-fxm",
+      "date": "2014-09-05T09:43:02Z",
+      "message": "moved service definition to ur_msgs, fix typos, add payload bound parameters"
+    },
+    {
+      "sha": "366677e509486c64c3ab5c5e7809477e41975aa8",
+      "author": "ipa-fxm",
+      "date": "2014-10-10T07:09:11Z",
+      "message": "add documentation and link to message definition"
+    },
+    {
+      "sha": "35e4ec16f2d189d4ac0038dd100cd93a9df95d59",
+      "author": "ipa-fxm",
+      "date": "2014-09-30T12:23:58Z",
+      "message": "new nessage MasterboardDataMsg for testing"
+    },
+    {
+      "sha": "dca3e39781888e319069373af318152dcd5875fa",
+      "author": "ipa-fxm",
+      "date": "2014-09-25T14:49:12Z",
+      "message": "new message for RobotStateRT data structure"
+    },
+    {
+      "sha": "70f760e5d78661952479e89e488cae3a87dba145",
+      "author": "ipa-fxm",
+      "date": "2014-09-05T09:43:02Z",
+      "message": "moved service definition to ur_msgs, fix typos, add payload bound parameters"
+    },
+    {
+      "sha": "d2740b336cd064dd1e9046ce5468e9071bc1eed2",
+      "author": "Alexander Bubeck",
+      "date": "2014-09-04T06:46:30Z",
+      "message": "1.0.4"
+    },
+    {
+      "sha": "0033fe647d0fb0344670b39a760ea61292db86cb",
+      "author": "Alexander Bubeck",
+      "date": "2014-09-04T06:45:59Z",
+      "message": "unified versioning of packages"
+    },
+    {
+      "sha": "a77ae2e3de75362ad3b8724f40b319aa4002a701",
+      "author": "ros-industrial",
+      "date": "2014-08-11T23:57:34Z",
+      "message": "builds message and services"
+    },
+    {
+      "sha": "73e75646e95d1e17aea4fcf38f79e25f15bb4fdd",
+      "author": "Andrew Glusiec",
+      "date": "2014-07-09T15:02:38Z",
+      "message": "adding ur_msgs"
+    },
+    {
+      "sha": "e867b3019a5ab4d00b84ee062399b513c5a9e218",
+      "author": "ipa-fxm",
+      "date": "2014-09-02T06:37:13Z",
+      "message": "update with hydro-devel and fix CMakeLists"
+    },
+    {
+      "sha": "1af48b0fbe61d8c11081ef357789768732afb823",
+      "author": "ros-industrial",
+      "date": "2014-08-11T23:57:34Z",
+      "message": "builds message and services"
+    },
+    {
+      "sha": "ecca0f13288cb2509a7c2fd2bbb5b38e2692e9f1",
+      "author": "Andrew Glusiec",
+      "date": "2014-07-09T15:02:38Z",
+      "message": "adding ur_msgs"
+    }
+  ]
+}

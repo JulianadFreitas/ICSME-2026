@@ -1,0 +1,1716 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-07T00:14:11Z",
+    "source": "github_rest",
+    "endpoint": "/repos/{owner}/{repo}/commits",
+    "owner": "CCNYRoboticsLab",
+    "repo": "imu_tools",
+    "per_page": 100
+  },
+  "data": [
+    {
+      "sha": "00cc74b0b71ff448265c137ffa0ab8b625f22325",
+      "author": "Martin Günther",
+      "date": "2026-01-13T19:53:02Z",
+      "message": "2.2.2"
+    },
+    {
+      "sha": "2f938227ee2c3d8a0d9ad6a32c620373e61b96f0",
+      "author": "Martin Günther",
+      "date": "2026-01-13T19:52:22Z",
+      "message": "Update changelogs"
+    },
+    {
+      "sha": "998cfb1ccdbebe1fe9e5fefc5f9736cc4c0d9c9f",
+      "author": "wentywenty",
+      "date": "2026-01-13T19:42:18Z",
+      "message": "Fixed a static library linking issue with the imu_complementary_filter package on Windows. (#218)"
+    },
+    {
+      "sha": "14bb1b911e57012ae54c1d25c74d29566414d394",
+      "author": "Martin Günther",
+      "date": "2026-01-13T19:36:36Z",
+      "message": "Merge pull request #202 from enwaytech:sr/reverse-backport-from-noetic"
+    },
+    {
+      "sha": "4b30703168832204ffac1afea4e4fe0243c80bb2",
+      "author": "Sharmin Ramli",
+      "date": "2024-07-09T12:06:30Z",
+      "message": "Added ability to reset IMU filters when ROS time jumps back (#165)"
+    },
+    {
+      "sha": "cc87241c47075ebfc5500717f2a7fd0fe70b399f",
+      "author": "Sharmin Ramli",
+      "date": "2024-07-09T08:03:13Z",
+      "message": "Increase max stddev, add pose visualization (#192)"
+    },
+    {
+      "sha": "6fe2d40ba40b76967d0bdfe85b0717aa648edd8c",
+      "author": "Adi Vardi",
+      "date": "2026-01-09T17:06:40Z",
+      "message": "use modern postSetParametersCallback (#220)\n\nUse modern postSetParametersCallback. Also solves the bug causing every Double parameters change in the entire system to be printed as a change in this node."
+    },
+    {
+      "sha": "602934f9e8f5cf4d1cef84a4412a3a1f09e00991",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2026-01-09T17:04:44Z",
+      "message": "Update deprecated TransformBroadcaster constructor (#223)\n\nSigned-off-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "4b1c3fb04f7e364cfa40441e0eb2ea4e70b8caf3",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2026-01-09T17:03:58Z",
+      "message": "Update deprecated message filters and tf2 headers (#222)\n\nSigned-off-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "c6055746a4682c27c684a0def5599f8cb8845563",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2026-01-09T17:02:40Z",
+      "message": "Add Qt6 support (#221)\n\nSigned-off-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "0fc51619293204934d2f63cebc712b0d9298144b",
+      "author": "Martin Günther",
+      "date": "2025-05-15T14:04:46Z",
+      "message": "2.2.1"
+    },
+    {
+      "sha": "712be431507b7f44df9ebe6531cf73aa245e7e6c",
+      "author": "Martin Günther",
+      "date": "2025-05-15T14:04:28Z",
+      "message": "Update changelogs"
+    },
+    {
+      "sha": "88e842c9e157f25d0ac6d2fea90c5b57fdee06eb",
+      "author": "Martin Günther",
+      "date": "2025-05-15T13:53:10Z",
+      "message": "Fix deprecated header includes (#216)"
+    },
+    {
+      "sha": "ab49aa47a43fb6ef8b1fd9beaa42cf011e521d02",
+      "author": "David V. Lu!!",
+      "date": "2025-05-09T12:56:46Z",
+      "message": "[kilted] Update deprecated call to ament_target_dependencies (#215)"
+    },
+    {
+      "sha": "a55fc7ceffcf89351bc41d7092970ef398fa139c",
+      "author": "Martin Günther",
+      "date": "2025-05-09T12:23:43Z",
+      "message": "Remove dockerfilelint-precommit-hooks\n\nThis hook hasn't been updated since 2018, we don't really use the\nDockerfiles any more, and it throws the following error on rolling /\nkilted / Ubuntu 2024.04:\n\n    [INFO] Installing environment for https://github.com/pryorda/dockerfilelint-precommit-hooks.\n    [INFO] Once installed this environment will be reused.\n    [INFO] This may take a few minutes...\n    An unexpected error has occurred: CalledProcessError: command: ('/usr/bin/python3', '-mnodeenv', '--prebuilt', '--clean-src', '/github/home/.cache/pre-commit/repo13yssmlf/node_env-default')\n    return code: 1\n    stdout: (none)\n    stderr:\n        /usr/lib/python3/dist-packages/nodeenv.py:24: DeprecationWarning: 'pipes' is deprecated and slated for removal in Python 3.13\n          import pipes\n        /usr/lib/python3/dist-packages/nodeenv.py:37: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html\n          from pkg_resources import parse_version\n        Traceback (most recent call last):\n          File \"<frozen runpy>\", line 198, in _run_module_as_main\n          File \"<frozen runpy>\", line 88, in _run_code\n          File \"/usr/lib/python3/dist-packages/nodeenv.py\", line 1042, in <module>\n            main()\n          File \"/usr/lib/python3/dist-packages/nodeenv.py\", line 881, in main\n            opt.node = get_last_stable_node_version()\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n          File \"/usr/lib/python3/dist-packages/nodeenv.py\", line 835, in get_last_stable_node_version\n            return links[-1][0]\n                   ~~~~~^^^^\n        IndexError: list index out of range\n    Check the log at /github/home/.cache/pre-commit/pre-commit.log"
+    },
+    {
+      "sha": "d0568b01623453dc7bba45150a987cada46d8696",
+      "author": "Martin Günther",
+      "date": "2024-10-01T11:25:01Z",
+      "message": "2.2.0"
+    },
+    {
+      "sha": "ac3048b12cc36641708b0d6dacaf587a27868984",
+      "author": "Martin Günther",
+      "date": "2024-10-01T11:24:22Z",
+      "message": "Update chagelogs"
+    },
+    {
+      "sha": "356c11c41b01b1194d9f9d7b17e5d7360d3e753f",
+      "author": "Martin Günther",
+      "date": "2024-10-01T11:22:01Z",
+      "message": "Split rolling from humble/iron/jazzy (#210)\n\n* removed humble/iron/jazzy from the CI config\r\n* this is in preparation of fixing the deprecated header warnings in\r\nrolling, which is backward-incompatible, so splitting the branches is\r\nthe only way (see #207 for discussion)\r\n* from now on, the 2.2.* releases will go to `rolling` and the 2.1.* releases to the other branches."
+    },
+    {
+      "sha": "11bf90042483e1f96aa9c54ef098ae32af607a8e",
+      "author": "Aleksander Szymański",
+      "date": "2024-10-01T10:49:40Z",
+      "message": "Add QoS overriding options (#207)\n\n* add yaml file with parameters and include it in CMakeLists\r\n* include the yaml in the launch file\r\n* add qos overriding options and change topic namespaces\r\n* fix typos in param names\r\n* add imu/mag topic params to yaml config file\r\n* format launch.py file\r\n* format files with clang-format\r\n\r\n---------\r\n\r\nSigned-off-by: Aleksander Szymański <bitterisland6@gmail.com>"
+    },
+    {
+      "sha": "f089c6dd47458d33791bdf046acc2e623c72a898",
+      "author": "Martin Günther",
+      "date": "2024-09-27T18:05:07Z",
+      "message": "Add jazzy to CI (#208)"
+    },
+    {
+      "sha": "8cf9ce38ac31b44e6fb83deaac9049cf18c53242",
+      "author": "Martin Günther",
+      "date": "2024-04-26T13:53:55Z",
+      "message": "2.1.4"
+    },
+    {
+      "sha": "dea62f5ee958745f5d32e80b3bc498ac6b976487",
+      "author": "Martin Günther",
+      "date": "2024-04-26T13:53:25Z",
+      "message": "Update changelogs"
+    },
+    {
+      "sha": "e4c2fcec84548789310d87103dd830a9cc0b8021",
+      "author": "Tamaki Nishino",
+      "date": "2024-04-26T12:23:14Z",
+      "message": "Show remapped topic names (#196)\n\nThis PR, similar to #192, changes the topic names in the warning message to remapped ones in order to make the message more understandable.\r\n\r\n---------\r\n\r\nSigned-off-by: Tamaki Nishino <otamachan@gmail.com>\r\nCo-authored-by: Martin Günther <martin.guenther@dfki.de>"
+    },
+    {
+      "sha": "102c6d3602d039f45a877658719e21f07dc965d6",
+      "author": "Martin Günther",
+      "date": "2024-04-26T11:11:56Z",
+      "message": "CI: Add \"iron\" to test matrix"
+    },
+    {
+      "sha": "14e7079bac238acc0d4ab8aece56eaf011898133",
+      "author": "Martin Günther",
+      "date": "2024-04-26T11:11:40Z",
+      "message": "CI: Add tmate debugging\n\nThis commit adds the option of running the GitHub workflow manually\n(workflow_dispatch) and optionally enable tmate for SSH debugging."
+    },
+    {
+      "sha": "6e0a278f9b3623fc2163e8960593063fc66c6311",
+      "author": "Martin Günther",
+      "date": "2024-04-26T11:06:37Z",
+      "message": "CI: Update to actions/checkout@v4\n\nThis fixes the following warning:\n\n    Node.js 16 actions are deprecated. Please update the following actions to use Node.js 20: actions/checkout@v3. For more information see: https://github.blog/changelog/2023-09-22-github-actions-transitioning-from-node-16-to-node-20/."
+    },
+    {
+      "sha": "3ebe5a2985cba09981201f8be7f8c16ecb09d5e4",
+      "author": "Martin Günther",
+      "date": "2024-04-26T11:08:02Z",
+      "message": "CI: Use pre-commit from apt repositories instead of pip (#198)\n\npre-commit is available as an APT package starting with Ubuntu 22.04.\r\n\r\nThis commit avoids the following error:\r\n\r\n    WARNING: The directory '/github/home/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.\r\n    error: externally-managed-environment\r\n\r\n    x This environment is externally managed\r\n    --> To install Python packages system-wide, try apt install\r\n        python3-xyz, where xyz is the package you are trying to\r\n        install.\r\n\r\n        If you wish to install a non-Debian-packaged Python package,\r\n        create a virtual environment using python3 -m venv path/to/venv.\r\n        Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make\r\n        sure you have python3-full installed.\r\n\r\n        If you wish to install a non-Debian packaged Python application,\r\n        it may be easiest to use pipx install xyz, which will manage a\r\n        virtual environment for you. Make sure you have pipx installed.\r\n\r\n        See /usr/share/doc/python3.12/README.venv for more information.\r\n\r\n    note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.\r\n    hint: See PEP 668 for the detailed specification."
+    },
+    {
+      "sha": "c8a27cda72ad4e89245e851c732888a089e86065",
+      "author": "Christoph Fröhlich",
+      "date": "2023-11-14T13:08:53Z",
+      "message": "Set read-only parameters as read_only (#185)"
+    },
+    {
+      "sha": "5ffa9646a65caec15e6b920090dd60437ab8f5f2",
+      "author": "Martin Günther",
+      "date": "2022-12-07T16:02:53Z",
+      "message": "2.1.3"
+    },
+    {
+      "sha": "064d0916a08f8c44db7effa9fd52e3629acd629a",
+      "author": "Martin Günther",
+      "date": "2022-12-07T16:02:29Z",
+      "message": "Update changelogs"
+    },
+    {
+      "sha": "592db5a0a9700a17657aff89d3665160646efc80",
+      "author": "Martin Günther",
+      "date": "2022-12-07T10:42:55Z",
+      "message": "complementary: Build shared library\n\nSee #172."
+    },
+    {
+      "sha": "20c6c0068ca188860aeaa14bf490eec4cbe33f68",
+      "author": "Martin Günther",
+      "date": "2022-12-07T09:15:29Z",
+      "message": "Update CMakeLists to use targets\n\nThis is loosely based on the output of:\n\n    ros2 pkg create --build-type ament_cmake --dependencies rclcpp --library-name foolib --node-name foonode foo"
+    },
+    {
+      "sha": "126d8ff82f42d0ae7bbbcce4c75cfd7a0cdfe91b",
+      "author": "Martin Günther",
+      "date": "2022-12-07T09:32:48Z",
+      "message": "Merge rolling into humble"
+    },
+    {
+      "sha": "ba38e7c776599f2972458b9ecbde56b138a600e7",
+      "author": "Max Polzin",
+      "date": "2022-07-22T08:32:28Z",
+      "message": "Remove node_ prefix. (#163)\n\nCo-authored-by: Max <max@seervision.com>"
+    },
+    {
+      "sha": "c1ed30986e2d2a6bc0a4e009a62ee7a3f35f26ad",
+      "author": "Martin Günther",
+      "date": "2022-07-14T10:53:20Z",
+      "message": "2.1.2"
+    },
+    {
+      "sha": "f9921f5787e078f4008742ed9ec4c93500c2e7b3",
+      "author": "Martin Günther",
+      "date": "2022-07-14T10:52:41Z",
+      "message": "Update changelogs"
+    },
+    {
+      "sha": "c6041840b77bc0710c97b5526fa2842cf926c800",
+      "author": "Lou Amadio",
+      "date": "2022-04-27T17:56:03Z",
+      "message": "Enable on Windows (#162)"
+    },
+    {
+      "sha": "daa10569634ab0697d49211399803f2a5fb6142c",
+      "author": "Martin Günther",
+      "date": "2022-05-24T16:00:00Z",
+      "message": "2.1.1"
+    },
+    {
+      "sha": "029830db0f3b9743cfdf1e6766cb50803a922c01",
+      "author": "Martin Günther",
+      "date": "2022-05-24T15:59:22Z",
+      "message": "Update changelogs"
+    },
+    {
+      "sha": "411d259d92b291fb401cfd59af1496fba0189f7a",
+      "author": "Martin Günther",
+      "date": "2022-05-24T15:54:55Z",
+      "message": "Update maintainer email\n\nAlso switch to myself as maintainer of the imu_complementary_filter,\notherwise I don't receive failure emails from the build farm."
+    },
+    {
+      "sha": "13eb717f32a9cf70dab3272abc102eac709fa2d8",
+      "author": "Steven! Ragnarök",
+      "date": "2022-05-24T15:53:25Z",
+      "message": "Add missing build dependency to package.xml. (#161)\n\nThis missing dependency is causing failures in the binary package\r\nbuilds: https://build.ros2.org/job/Rbin_uJ64__imu_complementary_filter__ubuntu_jammy_amd64__binary/30"
+    },
+    {
+      "sha": "94ffb2d4338d946eaccd3501e70980d7643e5c2c",
+      "author": "Martin Günther",
+      "date": "2022-05-02T15:23:20Z",
+      "message": "2.1.0"
+    },
+    {
+      "sha": "2de3d251d7c123c5bd0fbb96068616a4ade47a68",
+      "author": "Martin Günther",
+      "date": "2022-05-02T15:22:52Z",
+      "message": "Update changelogs"
+    },
+    {
+      "sha": "55d6e70af832bc0ddc8bb2ba4a33559f127ec4e1",
+      "author": "Martin Günther",
+      "date": "2022-04-11T15:50:21Z",
+      "message": "Switch to non-deprecated hpp header\n\nThe .h header became deprecated after galactic."
+    },
+    {
+      "sha": "afd130c51335a2060a55296d6b56e8e829091fff",
+      "author": "Martin Günther",
+      "date": "2022-04-12T10:24:42Z",
+      "message": "CI: Only build rolling + humble on rolling/humble branches"
+    },
+    {
+      "sha": "1184ef8d613856d4fb1cd4a68efae36a471522e8",
+      "author": "Martin Günther",
+      "date": "2022-04-28T16:00:03Z",
+      "message": "CI: Fix repo name"
+    },
+    {
+      "sha": "e2c213f295505730ebf848269672758f4e22afcc",
+      "author": "Martin Günther",
+      "date": "2022-04-19T10:54:08Z",
+      "message": "complementary: Add missing dependency on geometry_msgs"
+    },
+    {
+      "sha": "ac375615d6ace0c75a3b9c30680b20c016163857",
+      "author": "Martin Günther",
+      "date": "2022-04-28T15:29:36Z",
+      "message": "Add missing test dependency"
+    },
+    {
+      "sha": "6750fdafdc7e9765b258ece17bf5ba1167f10197",
+      "author": "Martin Günther",
+      "date": "2022-04-12T13:58:11Z",
+      "message": "2.0.0"
+    },
+    {
+      "sha": "75814ec7c6e332ba9ec4a5f87755a678bd4ff363",
+      "author": "Martin Günther",
+      "date": "2022-04-12T13:12:29Z",
+      "message": "Update changelogs"
+    },
+    {
+      "sha": "46b2a02a46e4de09d17c9d038828f983a8f68dea",
+      "author": "Martin Günther",
+      "date": "2022-04-12T12:54:52Z",
+      "message": "Update README"
+    },
+    {
+      "sha": "ed83c6cad76e5b42314a3ce1b69705e93e1da3fd",
+      "author": "Martin Günther",
+      "date": "2022-04-11T16:15:23Z",
+      "message": "Fix gcc warnings + clang-tidy suggestions"
+    },
+    {
+      "sha": "145f902bbdf17348fdb9f9ca25119f34304b7e4c",
+      "author": "Martin Günther",
+      "date": "2022-04-11T15:48:57Z",
+      "message": "Fix CMakeLists\n\nAlso remove boost, which is not required any longer."
+    },
+    {
+      "sha": "e7c0b8d2256d3bd2b19ee9347e8e4a22ac6f6d9a",
+      "author": "Martin Günther",
+      "date": "2022-04-11T14:24:46Z",
+      "message": "Replace defunct travis with github actions"
+    },
+    {
+      "sha": "771ed7a2ab27dfe87686eb6755ea3b9c0d11dbe9",
+      "author": "Martin Günther",
+      "date": "2022-04-11T15:25:57Z",
+      "message": "Reformat python code using black\n\nCommand: pre-commit run -a"
+    },
+    {
+      "sha": "13adb2addbf74ee00a5c7929945ce81b49b7535a",
+      "author": "Martin Günther",
+      "date": "2022-04-11T14:28:22Z",
+      "message": "Manually reformat licenses + defines"
+    },
+    {
+      "sha": "86d7259ac2b6216ab574ad6d7fbd67af33722bc4",
+      "author": "Martin Günther",
+      "date": "2022-04-11T13:41:36Z",
+      "message": "Reformat everything using clang-format\n\nCommand: pre-commit run -a"
+    },
+    {
+      "sha": "795717e44578402017770fe0a5951059f241d107",
+      "author": "Martin Günther",
+      "date": "2022-04-11T12:33:49Z",
+      "message": "Fix trailing whitespace"
+    },
+    {
+      "sha": "f9a443ba9e917dab1d5dea9e4c0bd956a6c4fe99",
+      "author": "Martin Günther",
+      "date": "2022-04-11T14:21:46Z",
+      "message": "Add pre-commit checks"
+    },
+    {
+      "sha": "7d94b76afde071f8462cc2ff1bc8d4adecf6a9f5",
+      "author": "Martin Günther",
+      "date": "2022-04-11T15:06:37Z",
+      "message": "Update Dockerfile to foxy/galactic"
+    },
+    {
+      "sha": "d7a52d20e3b701b89cafc85d4eeb76e78e041fbf",
+      "author": "Guido Sanchez",
+      "date": "2021-10-10T11:37:18Z",
+      "message": "Add launch directory to CMakeLists.txt (#146)"
+    },
+    {
+      "sha": "da23fe7e948a38511266a3b1b4bc4021a9600823",
+      "author": "Maximilian Schik",
+      "date": "2021-02-11T08:43:20Z",
+      "message": "Port imu_complementary_filter to ROS2 (#138)"
+    },
+    {
+      "sha": "e53e79e856ddcb7d6c12dc037bb76debe2ed4020",
+      "author": "Martin Günther",
+      "date": "2021-04-14T07:34:12Z",
+      "message": "Add license files\n\nThe \"COPYING\" file incorrectly had the text of the LGPL, but the\noriginal Madgwick filter [1], [2] is GPL licensed. The source code\nheaders correctly have the GPLv3 license text.\n\n[1]: https://x-io.co.uk/open-source-imu-and-ahrs-algorithms/\n[2]: https://github.com/xioTechnologies/Fusion"
+    },
+    {
+      "sha": "be85973bfe89c875e6f4031c14d6f3301a2c35fa",
+      "author": "Martin Günther",
+      "date": "2021-01-22T10:44:24Z",
+      "message": "Remove cmake_policy from CMakeLists\n\nThis is not required on CMake >= 3.5.1 any more."
+    },
+    {
+      "sha": "59869004bc7deba308e13ac35f4944a03467e59a",
+      "author": "boiscljo",
+      "date": "2020-11-24T14:30:19Z",
+      "message": "Change to allow the usage of imu_filter_madgwick as a library (#129)"
+    },
+    {
+      "sha": "d81281474d337f23ca924e0cf152ae733d14bc74",
+      "author": "Martin Günther",
+      "date": "2020-11-26T10:08:02Z",
+      "message": "imu_filter_madgwick: Install headers"
+    },
+    {
+      "sha": "67c30dcc4076d7e89da1d971cacb2db9ead691ca",
+      "author": "Martin Günther",
+      "date": "2020-11-26T09:12:49Z",
+      "message": "rviz_imu_plugin: Fix include paths"
+    },
+    {
+      "sha": "0cc413c016850f5bdb17670b9bd8d7251e96b9fe",
+      "author": "Martin Günther",
+      "date": "2020-11-26T09:12:17Z",
+      "message": "rviz_imu_plugin: Use C++14"
+    },
+    {
+      "sha": "9323d2e371dde5c13ee99d6cfc6da2e5d964a3af",
+      "author": "Martin Günther",
+      "date": "2020-11-26T09:11:00Z",
+      "message": "Fix package.xml dependencies\n\nThis makes rosdep work again."
+    },
+    {
+      "sha": "13e9ed4e8d2e75e9f26e2456e4336133f6976a1d",
+      "author": "Martin Günther",
+      "date": "2020-10-03T11:51:52Z",
+      "message": "Port rviz plugin to ROS2, add new plugin (#125)"
+    },
+    {
+      "sha": "8236898e6df6f720c47dcc69573d358b0108cc19",
+      "author": "tgreier",
+      "date": "2020-09-28T15:25:48Z",
+      "message": "Update metapackage"
+    },
+    {
+      "sha": "d4f48e5b0aa13d63c17a91e7fb24c53e18abc981",
+      "author": "tgreier",
+      "date": "2020-09-28T15:10:02Z",
+      "message": "Add MagneticField plugin"
+    },
+    {
+      "sha": "c402e013cbce911dc336f619b6bf2951bc28c087",
+      "author": "tgreier",
+      "date": "2020-09-25T21:25:06Z",
+      "message": "Update imu rviz plugin to ROS2"
+    },
+    {
+      "sha": "9145900554fe5079bca80e9b73a847247268c4e8",
+      "author": "tgreier",
+      "date": "2020-09-25T11:15:29Z",
+      "message": "Remove double configuration steps. (#122)\n\nFixes #118."
+    },
+    {
+      "sha": "3722506d44cc23dde11e0c44c32236e11d46301f",
+      "author": "tgreier",
+      "date": "2020-09-25T11:15:05Z",
+      "message": "Add declination and yaw offset. (#121)\n\nFixes #120."
+    },
+    {
+      "sha": "835cb4f718d43612b46bb9e89cb2ea1f823236b5",
+      "author": "tgreier",
+      "date": "2020-06-18T13:44:05Z",
+      "message": "Madgwick for eloquent (#110)\n\nMadgwick filter ported to ROS2 Eloquent. Complementary and rviz plugin not yet ported.\r\n\r\nCo-authored-by: Martin Günther <martin.guenther@dfki.de>"
+    },
+    {
+      "sha": "32fac84ba1d17fad22de74ff81d29e2dbf9c77ce",
+      "author": "Martin Günther",
+      "date": "2020-06-12T16:15:54Z",
+      "message": "Add Travis CI for eloquent"
+    },
+    {
+      "sha": "05e5658d4b6b62e8e210b049ebd5295857234015",
+      "author": "Martin Günther",
+      "date": "2020-06-16T08:41:35Z",
+      "message": "Update maintainers in package.xml"
+    },
+    {
+      "sha": "06989333d74b94de016c236e53100d4e6e1b0397",
+      "author": "Martin Günther",
+      "date": "2020-06-12T16:06:09Z",
+      "message": "Fix warnings: reordering and unused vars"
+    },
+    {
+      "sha": "01058cf5455ef584a4bcde299d07aa38c608be18",
+      "author": "Martin Günther",
+      "date": "2020-05-26T19:14:15Z",
+      "message": "Set cmake_policy CMP0048 to fix warning"
+    },
+    {
+      "sha": "a75660c373b2f68f949cd33569a59e339bf8f666",
+      "author": "Martin Günther",
+      "date": "2020-05-25T16:29:57Z",
+      "message": "1.2.2"
+    },
+    {
+      "sha": "c71bc3cc863812a349adb97ddf0db4c7604d2eed",
+      "author": "Martin Günther",
+      "date": "2020-05-25T16:29:48Z",
+      "message": "Update changelogs"
+    },
+    {
+      "sha": "bfd2ca80d33a0e116522624c2f19699d6033dc0d",
+      "author": "Mike Purvis",
+      "date": "2020-03-02T08:33:57Z",
+      "message": "Drop the signals component of Boost (#103)\n\nUnused and is removed in Boost 1.71 (Ubuntu Focal). Signals2 is header-only."
+    },
+    {
+      "sha": "1325c3fb58d843302b6fbd173a4eee1af9ce06aa",
+      "author": "Alexis Paques",
+      "date": "2020-01-13T16:34:33Z",
+      "message": "Add the option to remove the gravity vector (#101)"
+    },
+    {
+      "sha": "8ff005a9f39397eb1f9f052523c87fc4cf0093c1",
+      "author": "Martin Günther",
+      "date": "2019-12-02T20:36:55Z",
+      "message": "Merge pull request #98 from ms-iot/init_windows"
+    },
+    {
+      "sha": "777d801969ff2577b53d48a73d8425f676b575b6",
+      "author": "Lou Amadio",
+      "date": "2019-12-02T19:03:17Z",
+      "message": "Export symbols so plugin can load"
+    },
+    {
+      "sha": "ae69006ed68c7a269688eee01a23447f2f94378f",
+      "author": "Sean Yen",
+      "date": "2019-07-24T17:43:45Z",
+      "message": "fix install path & boost linkage issues\n\n* Fix install path.\n* Fix more install path & boost path."
+    },
+    {
+      "sha": "a0b7836e1b943a583f9124cfcb3289c13d406b6f",
+      "author": "CCNY Robotics Lab",
+      "date": "2019-08-22T18:41:45Z",
+      "message": "Merge pull request #95 from v4hn/pr-melodic-properly-enable-disable\n\nproperly enable/disable visualization"
+    },
+    {
+      "sha": "ec2c00140437a25f4b13d5ca17ea3df54ef3369c",
+      "author": "v4hn",
+      "date": "2019-08-19T16:26:13Z",
+      "message": "properly show/hide visualization when enabled/disabled"
+    },
+    {
+      "sha": "54160b300b94d4904e8423fc7aa73802a7138855",
+      "author": "Martin Günther",
+      "date": "2019-05-06T11:22:07Z",
+      "message": "1.2.1"
+    },
+    {
+      "sha": "172a0de1aa5a7fa8fbc54ce0ac007e5557bd37c2",
+      "author": "Martin Günther",
+      "date": "2019-05-06T11:21:47Z",
+      "message": "Update changelogs"
+    },
+    {
+      "sha": "12f60e62c6c4584b10efaa8e11ceea7fc0fa01a1",
+      "author": "David V. Lu!!",
+      "date": "2019-02-25T08:49:14Z",
+      "message": "Remove junk xml (#93)"
+    },
+    {
+      "sha": "5266b8f6c92c7d3e8a1ac4b875101556a3beead9",
+      "author": "Martin Günther",
+      "date": "2018-09-18T12:21:44Z",
+      "message": "rviz_imu_plugin: Fix includes, typos and log messages"
+    },
+    {
+      "sha": "0a1017a2c33fddac5a532fa005ff69fabfa631f9",
+      "author": "Jackey-Huo",
+      "date": "2018-09-16T08:51:29Z",
+      "message": "[rviz_imu_plugin] print ros_warn and give unit quaternion to ogre to prevent rviz crash (#90)"
+    },
+    {
+      "sha": "3cabc4057bd1bbce85f359eec628e2e0cdb1ceeb",
+      "author": "Paul Bovbel",
+      "date": "2018-09-07T09:49:38Z",
+      "message": "Fix C++14 builds (#89)"
+    },
+    {
+      "sha": "e4166a7fcf47d19c62a42f1ebbfc989cd1f1d8c6",
+      "author": "Martin Günther",
+      "date": "2018-05-28T09:26:33Z",
+      "message": "Skip messages and warn if computeOrientation fails\n\nBefore this commit, the return code of computeOrientation was never\nchecked, and the returned orientation was NaN if the raw IMU\nacceleration vector was close to 0."
+    },
+    {
+      "sha": "5ecb5cabc58c6b44b3357aaa7717d390ba5fa2ab",
+      "author": "Martin Günther",
+      "date": "2018-05-25T14:59:04Z",
+      "message": "1.2.0"
+    },
+    {
+      "sha": "d400926c2c3b2137708ecd468420e5c08c479dc9",
+      "author": "Martin Günther",
+      "date": "2018-05-25T14:58:28Z",
+      "message": "Update changelogs"
+    },
+    {
+      "sha": "e24b6fae506c4cb68e91664cb467836e73eb8dba",
+      "author": "Martin Günther",
+      "date": "2018-05-25T14:35:34Z",
+      "message": "Remove outdated Makefile"
+    },
+    {
+      "sha": "aac5aa68e4b9db197991063028ff32938f17610c",
+      "author": "Stefan Kohlbrecher",
+      "date": "2018-03-28T15:35:19Z",
+      "message": "Add std dev parameter to orientation estimate from filter (#85)\n\nSimilar to #41, but not using dynamic_reconfigure as not implemented for complementary filter"
+    },
+    {
+      "sha": "a4b1ad0287d1b130bc516c6d68825b19c0fbbed5",
+      "author": "Martin Günther",
+      "date": "2018-02-15T11:55:47Z",
+      "message": "Add warning when IMU time stamp is zero\n\nCloses #82."
+    },
+    {
+      "sha": "7fbac0dc81a85f83dc50ef2ef424cb611c268375",
+      "author": "Mikael Arguedas",
+      "date": "2017-10-27T08:28:58Z",
+      "message": "update to use non deprecated pluginlib macro (#77)"
+    },
+    {
+      "sha": "67d6f51b23d00f7e5b6d9dba1c2bb522ad22d332",
+      "author": "Martin Günther",
+      "date": "2017-05-24T13:21:56Z",
+      "message": "1.1.5"
+    },
+    {
+      "sha": "d09c1f139e4a857bb3cb55c77dc6a117fd1aefb6",
+      "author": "Martin Günther",
+      "date": "2017-05-24T13:04:16Z",
+      "message": "Update changelogs"
+    },
+    {
+      "sha": "2f811f8ee3e417cf6ae02bc21a44b57a01a10e8f",
+      "author": "Martin Günther",
+      "date": "2017-05-24T12:27:39Z",
+      "message": "Rewrite rosbags: Use MagneticField for magnetometer\n\nThis was the script used for the conversion:\n\n```python\nimport rosbag\nimport sys\nfrom geometry_msgs.msg import Vector3Stamped\nfrom sensor_msgs.msg import MagneticField\n\n\"\"\"\nConverts an IMU rosbag from using Vector3Stamped messages for the magnetometer\nto MagneticField messages.\n\"\"\"\n\ninbag_name = sys.argv[1]\noutbag_name = inbag_name.replace('.bag', '-fixed.bag')\n\nwith rosbag.Bag(outbag_name, 'w') as outbag:\n    for topic, msg, t in rosbag.Bag(inbag_name).read_messages():\n        if topic[-4:] == '/mag':\n            msg_out = MagneticField()\n            msg_out.header = msg.header\n\n            # The 1e-4 converts Gauss to Tesla.\n            msg_out.magnetic_field.x = 1e-4 * msg.vector.x\n            msg_out.magnetic_field.y = 1e-4 * msg.vector.y\n            msg_out.magnetic_field.z = 1e-4 * msg.vector.z\n\n            # Default values for Phidgets IMU.\n            msg_out.magnetic_field_covariance = [2.7491722135750453e-06, 0.0, 0.0, 0.0, 2.7491722135750453e-06, 0.0, 0.0, 0.0, 2.7491722135750453e-06]\n\n            outbag.write(topic, msg_out, t)\n        else:\n            outbag.write(topic, msg, t)\n```"
+    },
+    {
+      "sha": "f5be6024415d240c7d2b9b28d540f82d058fc41a",
+      "author": "Martin Günther",
+      "date": "2017-05-24T10:27:50Z",
+      "message": "Lunar: Remove support for Vector3 mag messages"
+    },
+    {
+      "sha": "e55b56ffc3aa6ff3ad68d4d7db3e9cf265deb511",
+      "author": "Martin Günther",
+      "date": "2017-05-24T10:14:48Z",
+      "message": "Lunar: Change default world_frame = enu"
+    },
+    {
+      "sha": "999f163d4426d869251755a92cd453a1004b5dfc",
+      "author": "Martin Günther",
+      "date": "2017-05-22T09:13:51Z",
+      "message": "1.1.4"
+    },
+    {
+      "sha": "fded1305b890821443170f72f724a68ecc604754",
+      "author": "Martin Günther",
+      "date": "2017-05-22T09:13:09Z",
+      "message": "Update changelogs"
+    },
+    {
+      "sha": "bf4c32526c75b6a6a664c7e819d18f79e149c766",
+      "author": "Martin Günther",
+      "date": "2017-05-22T09:10:46Z",
+      "message": "Merge branch 'indigo' into jade + kinetic\n\nConflicts:\n\timu_complementary_filter/CHANGELOG.rst\n\timu_complementary_filter/package.xml\n\timu_filter_madgwick/CHANGELOG.rst\n\timu_filter_madgwick/package.xml\n\timu_tools/CHANGELOG.rst\n\timu_tools/package.xml\n\trviz_imu_plugin/CHANGELOG.rst\n\trviz_imu_plugin/package.xml"
+    },
+    {
+      "sha": "11f405e89925d75b9a17c64d92a139a10ae56118",
+      "author": "Martin Günther",
+      "date": "2017-05-22T08:59:12Z",
+      "message": "1.0.15"
+    },
+    {
+      "sha": "de4561d841bb73ad617266203d81f05676f69208",
+      "author": "Martin Günther",
+      "date": "2017-05-22T08:59:01Z",
+      "message": "Update changelogs"
+    },
+    {
+      "sha": "44a6eeec0d2849c8a2d6d5e2c975daf84da34900",
+      "author": "Martin Günther",
+      "date": "2017-05-18T12:06:39Z",
+      "message": "Print warning if waiting for topic\n\nCloses #61."
+    },
+    {
+      "sha": "12860e43f18dac973929c6ad5d5ba2b9d733ac76",
+      "author": "Martin Günther",
+      "date": "2017-05-18T11:55:58Z",
+      "message": "Fix boost::lock_error on shutdown\n\nThis fixes the following error on shutdown of the node(let):\n\n    terminate called after throwing an instance of 'boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::lock_error> >'\n      what():  boost: mutex lock failed in pthread_mutex_lock: Invalid argument\n\nAlso see https://github.com/ros/ros_comm/issues/720 ."
+    },
+    {
+      "sha": "66f37d0486e14bdd3c0813ab9f913ccf44ee798e",
+      "author": "C. Andy Martin",
+      "date": "2017-05-18T09:21:01Z",
+      "message": "Add option to display orientation in world frame (#69)\n\nPer REP 145 IMU orientation is in the world frame. Rotating the\norientation data to transform into the sensor frame results in strange\nbehavior, such as double-rotation of orientation on a robot. Provide an\noption to display orientation in the world frame, and enable it by\ndefault. Continue to translate the position of the data to the sensor\nframe."
+    },
+    {
+      "sha": "16970ebe066a5dded824e809373586295faa0cde",
+      "author": "C. Andy Martin",
+      "date": "2017-05-18T09:21:01Z",
+      "message": "Add option to display orientation in world frame (#69)\n\nPer REP 145 IMU orientation is in the world frame. Rotating the\r\norientation data to transform into the sensor frame results in strange\r\nbehavior, such as double-rotation of orientation on a robot. Provide an\r\noption to display orientation in the world frame, and enable it by\r\ndefault. Continue to translate the position of the data to the sensor\r\nframe."
+    },
+    {
+      "sha": "71b0b76d5c6f92bf55aa628576a4bd87a607b79e",
+      "author": "Martin Günther",
+      "date": "2017-03-10T16:07:38Z",
+      "message": "1.1.3"
+    },
+    {
+      "sha": "dc07b1059ef4b9e1e528371b68dd2e576eff5848",
+      "author": "Martin Günther",
+      "date": "2017-03-10T16:07:29Z",
+      "message": "Update changelogs"
+    },
+    {
+      "sha": "7f42d906eabc86fd339539581a0e7be944f66d9f",
+      "author": "Martin Günther",
+      "date": "2017-03-10T16:06:31Z",
+      "message": "1.0.14"
+    },
+    {
+      "sha": "914db664eab74c19c09baba3cde28f1b75aabb03",
+      "author": "Martin Günther",
+      "date": "2017-03-10T16:06:11Z",
+      "message": "Update changelogs"
+    },
+    {
+      "sha": "6e9f399cb879a8a479f9cc915e198e561d62ffa8",
+      "author": "Martin Günther",
+      "date": "2017-03-09T16:48:03Z",
+      "message": "Merge branch 'indigo' into jade + kinetic"
+    },
+    {
+      "sha": "dedb11b87db2d6f110a4b4e62009d60d197c708a",
+      "author": "Martin Günther",
+      "date": "2017-03-09T15:44:37Z",
+      "message": "Return precisely normalized quaternions\n\nFixes #67 : TF_DENORMALIZED_QUATERNION warning added in TF2 0.5.14."
+    },
+    {
+      "sha": "70a7d6f5e7b09fc4727c25bc53c132d39c3d0aed",
+      "author": "Martin Günther",
+      "date": "2017-03-09T15:26:48Z",
+      "message": "Tests: Check that output quaternions are normalized"
+    },
+    {
+      "sha": "d67ff396009b49a324782d0232800313dd902d36",
+      "author": "Martin Günther",
+      "date": "2017-03-09T15:14:46Z",
+      "message": "Tests: Fix typo EQAL => EQUAL"
+    },
+    {
+      "sha": "5779fefd1949c2f480fce85046ea29c89c570098",
+      "author": "Martin Günther",
+      "date": "2017-03-09T15:15:27Z",
+      "message": "Tests: Normalize QUAT_MZ_90"
+    },
+    {
+      "sha": "b3a7c8262dd0127a7a7b84a32a18a7dc8e9ce3a8",
+      "author": "Martin Guenther",
+      "date": "2016-12-20T10:18:04Z",
+      "message": "Merge branch 'indigo' into jade + kinetic"
+    },
+    {
+      "sha": "6489c7bd388e9cd585c977e47f57c868cac19555",
+      "author": "Jason Mercer",
+      "date": "2016-12-13T13:52:56Z",
+      "message": "Fixed lock so it stays in scope until end of method."
+    },
+    {
+      "sha": "40dcbc1f6196643f02f1dd541cd89bbae4e8ab13",
+      "author": "Martin Guenther",
+      "date": "2016-09-19T12:00:29Z",
+      "message": "Merge branch 'indigo' into jade + kinetic"
+    },
+    {
+      "sha": "a5149548e823a75c612f6d24cdc1ace7f942cdb7",
+      "author": "Martin Guenther",
+      "date": "2016-09-19T11:42:40Z",
+      "message": "complementary_filter: move const initializations out of header\n\nInitialization of static consts other than int (here: float) inside the\nclass declaration is not permitted in C++. It works in gcc (due to a\nnon-standard extension), but throws an error in C++11."
+    },
+    {
+      "sha": "a19b9cfdfef33e5d89149fccf2f63f605f1f3e3f",
+      "author": "Martin Guenther",
+      "date": "2016-09-07T16:06:13Z",
+      "message": "1.1.2"
+    },
+    {
+      "sha": "816dd0026478ec14084f65bc92e874139d753013",
+      "author": "Martin Guenther",
+      "date": "2016-09-07T15:56:38Z",
+      "message": "Merge branch 'indigo' into jade and kinetic\n\nConflicts:\n\timu_complementary_filter/CHANGELOG.rst\n\timu_complementary_filter/package.xml\n\timu_filter_madgwick/CHANGELOG.rst\n\timu_filter_madgwick/package.xml\n\timu_tools/CHANGELOG.rst\n\timu_tools/package.xml\n\trviz_imu_plugin/CHANGELOG.rst\n\trviz_imu_plugin/package.xml"
+    },
+    {
+      "sha": "244f653063bf148be5a517f1bd5a4b6f92d31391",
+      "author": "Martin Guenther",
+      "date": "2016-09-07T15:44:54Z",
+      "message": "1.0.13"
+    },
+    {
+      "sha": "142557288e391af6ed379bedfa0e4ed9398ca5ea",
+      "author": "Martin Guenther",
+      "date": "2016-09-07T15:44:43Z",
+      "message": "Update changelogs"
+    },
+    {
+      "sha": "22f3175a30125bba877be5b9f710f959975a7011",
+      "author": "Martin Guenther",
+      "date": "2016-09-07T15:38:12Z",
+      "message": "Add missing dependency on tf2_geometry_msgs"
+    },
+    {
+      "sha": "4ab72f8668763cea1b04fd430e341edefb539e7e",
+      "author": "Martin Guenther",
+      "date": "2016-09-07T15:07:36Z",
+      "message": "1.1.1"
+    },
+    {
+      "sha": "9843036d36108510fe2b0b20b52b044fd2e04274",
+      "author": "Martin Guenther",
+      "date": "2016-09-07T14:44:53Z",
+      "message": "1.0.12\n\nBy mistake, 1.0.11 already exists on jade branch, so we have to skip\nthat version here."
+    },
+    {
+      "sha": "be44d871ef2272bebab2a6148cd25a2d26f8fc32",
+      "author": "Martin Guenther",
+      "date": "2016-09-07T14:36:23Z",
+      "message": "Merge branch 'indigo' into jade and kinetic\n\nConflicts:\n\timu_complementary_filter/CHANGELOG.rst\n\timu_filter_madgwick/CHANGELOG.rst\n\timu_tools/CHANGELOG.rst\n\trviz_imu_plugin/CHANGELOG.rst"
+    },
+    {
+      "sha": "4df15a32cefb4cbcf97d893f55690e91881229d8",
+      "author": "Martin Guenther",
+      "date": "2016-09-07T14:34:02Z",
+      "message": "Update changelogs"
+    },
+    {
+      "sha": "420322af8326eac8dce57ba2c946ce9b42cd779c",
+      "author": "Martin Guenther",
+      "date": "2016-09-07T14:04:38Z",
+      "message": "Rename earth_frame => world_frame"
+    },
+    {
+      "sha": "1c161050031a882a9f0c6c7d52bb5c96809195f7",
+      "author": "Martin Guenther",
+      "date": "2016-09-06T13:17:07Z",
+      "message": "Replace use_ned/use_nwu params with earth_frame"
+    },
+    {
+      "sha": "0f8c4509d06619a76d549ed47a68421821a7537e",
+      "author": "Martin Günther",
+      "date": "2016-09-07T14:22:11Z",
+      "message": "Merge pull request #60 from mistoll/ahrs_enu\n\nAdd ENU support, fix orientation init"
+    },
+    {
+      "sha": "51bcc4eed3bcb61e181798b72e6da96e2c9c3a20",
+      "author": "Michael Stoll",
+      "date": "2016-09-05T08:28:17Z",
+      "message": "Added stateless option"
+    },
+    {
+      "sha": "7545f293347a23cfcbbf27ea1b34b66f3794ec85",
+      "author": "Michael Stoll",
+      "date": "2016-09-02T17:03:25Z",
+      "message": "Add unit tests for filters without magnetic field"
+    },
+    {
+      "sha": "2a529c924813fa2f0c8c53a7628c79dbae2b934d",
+      "author": "Michael Stoll",
+      "date": "2016-09-02T13:51:44Z",
+      "message": "Add ENU support, fix orientation init (from #60)\n\n* Optionally use ENU instead of NED convention (closes #36)\n* Replace the (buggy) Euler-angle-based initialization routine\n  (ImuFilterRos::computeRPY) by a (hopefully correct) transformation\n  matrix based one (StatelessOrientation::computeOrientation) and make it\n  available as a library function\n* Refactor madgwickAHRSupdate() (pull out some functions, remove micro\n  optimizations to improve readability)\n\nCloses #36 ."
+    },
+    {
+      "sha": "c331633c83857963051ae0db8e4ca60ceb400836",
+      "author": "Michael Stoll",
+      "date": "2016-09-02T11:32:16Z",
+      "message": "Added unit tests"
+    },
+    {
+      "sha": "d6d0e699b3ba9eb1f3acda1464d1b2b1a1113c1f",
+      "author": "Martin Guenther",
+      "date": "2016-04-25T07:49:07Z",
+      "message": "1.1.0"
+    },
+    {
+      "sha": "9a6b2c81a250b06706833dcc28ad253e004b16e7",
+      "author": "Martin Guenther",
+      "date": "2016-04-25T07:48:52Z",
+      "message": "Update changelogs"
+    },
+    {
+      "sha": "5e917b1c789cb1203856009a324709c49e69e9bd",
+      "author": "Martin Guenther",
+      "date": "2016-04-25T07:42:04Z",
+      "message": "Add qt5 dependencies to rviz_imu_plugin package.xml\n\nThis fixes the compilation errors on Kinetic for Debian Jessie."
+    },
+    {
+      "sha": "1153174d992d99f408cefa97e1630531582ebdef",
+      "author": "Martin Guenther",
+      "date": "2016-04-22T13:50:25Z",
+      "message": "1.0.11"
+    },
+    {
+      "sha": "9e154c84fe478c80a68e75faea0ef7571a5e4f19",
+      "author": "Martin Guenther",
+      "date": "2016-04-22T13:50:11Z",
+      "message": "Update changelogs"
+    },
+    {
+      "sha": "debee52e63f52c1e4bf6df3e8f33d4fcd18c5d38",
+      "author": "Martin Guenther",
+      "date": "2016-04-22T13:37:30Z",
+      "message": "Jade: Change default use_magnetic_field_msg = true"
+    },
+    {
+      "sha": "018a6a5a8b6b171ef901c0a26182ddb602dccb5f",
+      "author": "Martin Guenther",
+      "date": "2016-04-22T13:41:03Z",
+      "message": "1.0.10"
+    },
+    {
+      "sha": "28e7cfd296c170dc3002086fe38e0851e8c41cb6",
+      "author": "Martin Guenther",
+      "date": "2016-04-22T13:40:42Z",
+      "message": "Update changelogs"
+    },
+    {
+      "sha": "0e5278d42fac627ac831617a67c5e25bff45933d",
+      "author": "Martin Guenther",
+      "date": "2016-04-22T11:48:03Z",
+      "message": "Move rviz_imu_plugin headers to src\n\nThis is required so that the CMAKE_AUTOMOC line introduced in the\nprevious commit works.\n\nWithout this change,\nimu_tools/rviz_imu_plugin/CMakeFiles/rviz_imu_plugin.dir/include/rviz_imu_plugin/moc_imu_display.cxx.o\nwould not be included in the library (it was in MOC_FILES before). This\nled to an error when attempting to load the plugin in RViz."
+    },
+    {
+      "sha": "d171a34523cdabacc35540ccb6218f942c0a05d3",
+      "author": "Martin Guenther",
+      "date": "2016-04-22T09:31:35Z",
+      "message": "Support qt4/qt5 using rviz's exported qt version\n\nCloses #58 ."
+    },
+    {
+      "sha": "7eced5f35e1e90cdb17394d97fb98d93085f2589",
+      "author": "Martin Guenther",
+      "date": "2016-03-07T09:19:06Z",
+      "message": "Remove Eigen dependency\n\nEigen is not actually used anywhere. Thanks @asimay!"
+    },
+    {
+      "sha": "cd906ad79a529ec759804e671e33f702da101fb5",
+      "author": "Martin Günther",
+      "date": "2016-01-07T19:02:24Z",
+      "message": "Merge pull request #56 from MatthiasNieuwenhuisen/remove_main_from_lib\n\nRemoved main function from shared library"
+    },
+    {
+      "sha": "d5f56333adaab120ba62269a3fbf9123e81dd787",
+      "author": "Matthias Nieuwenhuisen",
+      "date": "2016-01-06T17:42:45Z",
+      "message": "Removed main function from shared library"
+    },
+    {
+      "sha": "0103c33ded100b56b72dd9d1fd2aa1d1d7e3d80a",
+      "author": "Martin Günther",
+      "date": "2015-10-16T15:42:52Z",
+      "message": "1.0.9"
+    },
+    {
+      "sha": "c77cdb9655d9990919c7cab5b1a676fd597bf2c1",
+      "author": "Martin Günther",
+      "date": "2015-10-16T15:42:12Z",
+      "message": "Update changelogs"
+    },
+    {
+      "sha": "e4324d8fc3cd2fd45fbef48113265214e4b62267",
+      "author": "Martin Günther",
+      "date": "2015-10-16T15:38:07Z",
+      "message": "complementary: Add Eigen dependency\n\nFixes #54."
+    },
+    {
+      "sha": "049a3b99b8a2270022da65efdcd68666fa26ba58",
+      "author": "Martin Günther",
+      "date": "2015-10-07T15:43:02Z",
+      "message": "1.0.8"
+    },
+    {
+      "sha": "2f5d01e654d79ae92f3aed8d3af22f4af47d30b7",
+      "author": "Martin Günther",
+      "date": "2015-10-07T15:41:53Z",
+      "message": "Update changelogs"
+    },
+    {
+      "sha": "d5e7bff7d9f364826af458c026a4a76f4626cf97",
+      "author": "Martin Günther",
+      "date": "2015-10-07T15:41:00Z",
+      "message": "Add imu_complementary_filter to meta package"
+    },
+    {
+      "sha": "cd20b392fd958e1444961903a65860da7e076e83",
+      "author": "Martin Günther",
+      "date": "2015-10-07T15:27:25Z",
+      "message": "1.0.7"
+    },
+    {
+      "sha": "f50d89362def169e3d97b122debab52c522be0f5",
+      "author": "Martin Günther",
+      "date": "2015-10-07T15:26:49Z",
+      "message": "Update changelogs"
+    },
+    {
+      "sha": "434286ff19359cac800724f9828f99483e7bb925",
+      "author": "robertogl",
+      "date": "2015-10-06T16:51:50Z",
+      "message": "Merge pull request #52 from mintar/port_params\n\nPort params from madgwick, change debug topic"
+    },
+    {
+      "sha": "06e2a2acc9363b42eda0a27e52c24fae23bb4472",
+      "author": "Martin Günther",
+      "date": "2015-10-06T16:09:48Z",
+      "message": "complementary: Allow remapping imu namespace"
+    },
+    {
+      "sha": "db289def2ba624c41013d89ce6357dec5a792736",
+      "author": "Martin Günther",
+      "date": "2015-10-06T16:00:20Z",
+      "message": "complementary: Publish RPY as Vector3Stamped"
+    },
+    {
+      "sha": "ba3567284532dfaccb6c2386225a7abfe17b5efc",
+      "author": "Martin Günther",
+      "date": "2015-10-06T15:42:59Z",
+      "message": "complementary: Add constant_dt_ param"
+    },
+    {
+      "sha": "e4fe5e4be5885f049ec1b12598a6fb0c572a9f44",
+      "author": "Martin Günther",
+      "date": "2015-10-06T15:34:54Z",
+      "message": "complementary: Add reverse_tf param"
+    },
+    {
+      "sha": "641bdd1aebcdac6096faed5334277698ee35fd8e",
+      "author": "Martin Günther",
+      "date": "2015-10-06T15:27:04Z",
+      "message": "complementary: Add publish_tf param"
+    },
+    {
+      "sha": "5e8b4d452885535f2a3f190f07c4a673be7164aa",
+      "author": "Martin Günther",
+      "date": "2015-10-06T15:21:30Z",
+      "message": "complementary: Add publish_debug_topics param"
+    },
+    {
+      "sha": "537d2f7e688c0b8fc2e29ff7c9a4240642c72ffc",
+      "author": "robertogl",
+      "date": "2015-10-06T16:02:15Z",
+      "message": "Merge pull request #51 from mintar/magnetic_field\n\ncomplementary: Use MagneticField instead of Vector3"
+    },
+    {
+      "sha": "493529b9bede355662acddceeb816633e62a3ba4",
+      "author": "Martin Günther",
+      "date": "2015-10-06T14:59:01Z",
+      "message": "complementary: Use MagneticField instead of Vector3"
+    },
+    {
+      "sha": "02ce21113badf3d4dcf46a95c94074ae70ae7794",
+      "author": "Martin Günther",
+      "date": "2015-10-06T13:44:38Z",
+      "message": "1.0.6"
+    },
+    {
+      "sha": "c9cced17a7266006a83610e136d3d618a8e5b840",
+      "author": "Martin Günther",
+      "date": "2015-10-06T13:43:09Z",
+      "message": "Update changelogs"
+    },
+    {
+      "sha": "f40e7df37bff1216e14bbde90cccb030cbe69903",
+      "author": "robertogl",
+      "date": "2015-10-06T13:24:48Z",
+      "message": "Merge pull request #50 from mintar/catkin_fixes\n\nFix catkin issues in complementary_filter"
+    },
+    {
+      "sha": "83c26163f25dad52e26e69ec995486ed2208c1fa",
+      "author": "Martin Günther",
+      "date": "2015-10-06T08:48:49Z",
+      "message": "Fix catkin issues in complementary_filter\n\n* don't export complementary_filter_node as a library\n* install complementary_filter library + node\n* remove dependency on non-existent \"system_lib\"\n* remove dependency on rospy\n* fix indentation"
+    },
+    {
+      "sha": "03498f2822ddc44c1e03fb62498d6a1d9710f1d9",
+      "author": "robertogl",
+      "date": "2015-10-05T20:13:05Z",
+      "message": "Merge pull request #49 from v4hn/eigen-cmake-modules\n\ncomplementary_filter: add cmake_modules dependency"
+    },
+    {
+      "sha": "8c8b413cc6c5144ce64e50ef4a548d18141d4519",
+      "author": "Michael Görner",
+      "date": "2015-10-05T19:25:25Z",
+      "message": "complementary_filter: add cmake_modules dependency\n\nthis package provides FindEigen.cmake and without it\nfind_package(Eigen) right below does not work everywhere."
+    },
+    {
+      "sha": "b1debc3285e2e90c3d64747e19c9da77be9d92a0",
+      "author": "Roberto",
+      "date": "2015-10-02T21:13:50Z",
+      "message": "chaged README.md"
+    },
+    {
+      "sha": "339e59c3c315edc78eb78deadbdb3986ac368564",
+      "author": "Roberto",
+      "date": "2015-10-02T18:08:06Z",
+      "message": "new complementary filter"
+    },
+    {
+      "sha": "bd7fa1a7fdb267b6dde091efdaef2073902c927a",
+      "author": "Martin Günther",
+      "date": "2015-09-25T09:53:42Z",
+      "message": "Install header files"
+    },
+    {
+      "sha": "f3aacb6519c892c0d84ec0b84eed89a556b33cf2",
+      "author": "Martin Günther",
+      "date": "2015-08-19T11:59:28Z",
+      "message": "don't print deprecation message when mag isn't used"
+    },
+    {
+      "sha": "b0248acc900f8305a69d17ac8b1ea20ec5c68d97",
+      "author": "Martin Günther",
+      "date": "2015-08-25T13:06:51Z",
+      "message": "Merge pull request #46 from mistoll/indigo"
+    },
+    {
+      "sha": "75749e2746699000fd74651c4011c0d2ec41e5a0",
+      "author": "Michael Stoll",
+      "date": "2015-07-29T06:35:58Z",
+      "message": "Splitted ImuFilter class into ImuFilter and ImuFilterRos"
+    },
+    {
+      "sha": "4dc89cee9708f928a7fe2e1b1a0aa521ea8cee57",
+      "author": "Martin Günther",
+      "date": "2015-06-24T13:56:56Z",
+      "message": "1.0.5"
+    },
+    {
+      "sha": "f9d3af867a2293fbc6dfdca46b18f2fc8013fa18",
+      "author": "Martin Günther",
+      "date": "2015-06-24T13:51:13Z",
+      "message": "update changelogs"
+    },
+    {
+      "sha": "b6e281215a7ed0bcb119f17c0306b6de592bf6ba",
+      "author": "Martin Günther",
+      "date": "2015-06-24T13:30:06Z",
+      "message": "explicitly specify headers in CMakeLists"
+    },
+    {
+      "sha": "2d70e4433b914bb871863469cae8d670d38776f8",
+      "author": "Martin Günther",
+      "date": "2015-06-24T13:29:35Z",
+      "message": "add deprecation message for use_magnetic_field_msg"
+    },
+    {
+      "sha": "3de491bfc4cafd357c08e36cd08cec91d8ec6a85",
+      "author": "Mike Purvis",
+      "date": "2015-06-12T13:35:53Z",
+      "message": "Add \"~use_magnetic_field_msg\" param.\n\nThis allows the user to subscribe to the /imu/mag topic as a\nsensor_msgs/MagneticField rather than a geometry_msgs/Vector3Stamped.\nThe default for now is false, which preserves the legacy behaviour via a\nseparate subscriber which converts Vector3Stamped to MagneticField and\nrepublishes."
+    },
+    {
+      "sha": "1307e1a5004fef155eb2684d95045d27983c707e",
+      "author": "Martin Günther",
+      "date": "2015-05-06T11:16:20Z",
+      "message": "1.0.4"
+    },
+    {
+      "sha": "d78766d84a769d78547b980323af38bdef03c3ec",
+      "author": "Martin Günther",
+      "date": "2015-05-06T11:15:00Z",
+      "message": "updated changelogs"
+    },
+    {
+      "sha": "4dcbc02dbbabd1a45e22fa4b500e3c401a403cae",
+      "author": "Martin Günther",
+      "date": "2015-03-17T14:25:20Z",
+      "message": "update dynamic reconfigure param descriptions"
+    },
+    {
+      "sha": "6d13b7048fd1e0ee772fc0439305f5429b6ba28c",
+      "author": "Martin Günther",
+      "date": "2015-02-05T11:21:41Z",
+      "message": "only advertise debug topics if they are used"
+    },
+    {
+      "sha": "b4a2bfda589f00f8cae44b9cff9884f3647de186",
+      "author": "Martin Günther",
+      "date": "2015-02-05T11:19:00Z",
+      "message": "allow remapping of the whole imu namespace\n\nwith this change, all topics can be remapped at once, like this:\n\n    rosrun imu_filter_madgwick imu_filter_node imu:=my_imu"
+    },
+    {
+      "sha": "a4f488d6f029b2e4d535092994d437e9683b4f18",
+      "author": "Martin Günther",
+      "date": "2015-01-29T14:19:08Z",
+      "message": "1.0.3"
+    },
+    {
+      "sha": "924b43ad158707e8866a802a041ca05a92b4d133",
+      "author": "Martin Günther",
+      "date": "2015-01-29T14:18:16Z",
+      "message": "update changelogs"
+    },
+    {
+      "sha": "785698ac711cd75738cd6fd9b05682cfa49fda7a",
+      "author": "Martin Günther",
+      "date": "2015-01-29T14:14:31Z",
+      "message": "Merge pull request #41 from paulbovbel/covariance-param\n\nCovariance param"
+    },
+    {
+      "sha": "5179c196da687bc548d80d7492306fb73457a82d",
+      "author": "Paul Bovbel",
+      "date": "2015-01-29T13:55:10Z",
+      "message": "Remove param, leave to dyncfg"
+    },
+    {
+      "sha": "72604b3e54d061fb0c987905552a7cd850adf8cc",
+      "author": "Paul Bovbel",
+      "date": "2015-01-28T20:27:59Z",
+      "message": "Add dynamic reconfig for stddev"
+    },
+    {
+      "sha": "626d232300669d6adc2828b19a9039b739ae82ca",
+      "author": "Paul Bovbel",
+      "date": "2015-01-28T20:22:54Z",
+      "message": "Add std dev parameter to orientation estimate from filter"
+    },
+    {
+      "sha": "46983b563de6d6d6b505e0d1e35922dcc3f7d366",
+      "author": "Paul Bovbel",
+      "date": "2015-01-27T21:04:35Z",
+      "message": "Port imu_filter_madgwick to tf2"
+    },
+    {
+      "sha": "624ef16d7457f7df6c2a6319bf40067ca744b64c",
+      "author": "Paul Bovbel",
+      "date": "2015-01-26T20:05:25Z",
+      "message": "Switch to smart pointer"
+    },
+    {
+      "sha": "e2018a0acbd6b3dab4ccd24c5f533164a1b479f9",
+      "author": "Martin Günther",
+      "date": "2015-01-27T15:22:51Z",
+      "message": "1.0.2"
+    },
+    {
+      "sha": "0e9453c91af3bd4e0ac222da550b3eea165dc9c4",
+      "author": "Martin Günther",
+      "date": "2015-01-27T15:21:32Z",
+      "message": "update changelogs"
+    },
+    {
+      "sha": "c23657fbf1c02580ec2d89f06efc56f5a4441ce9",
+      "author": "Martin Günther",
+      "date": "2015-01-27T14:49:52Z",
+      "message": "fix tf publishing (switch parent + child frames)\n\nThe orientation is between a fixed inertial frame (`fixed_frame_`) and\nthe frame that the IMU is mounted in (`imu_frame_`). Also,\n`imu_msg.header.frame` should be `imu_frame_`, but the corresponding TF\ngoes from `fixed_frame_` to `imu_frame_`. This commit fixes that; for\nthe `reverse_tf` case, it was already correct.\n\nAlso see http://answers.ros.org/question/50870/what-frame-is-sensor_msgsimuorientation-relative-to/.\n\nNote that tf publishing should be enabled for debug purposes only, since we can only\nprovide the orientation, not the translation."
+    },
+    {
+      "sha": "d65f22ed81ac8d5b41064bcdd811e85827194d94",
+      "author": "Martin Günther",
+      "date": "2015-01-27T15:00:12Z",
+      "message": "Merge pull request #35 from garaemon/add-reverse-tf-param\n\nAdd ~reverse_tf parameter for the robots which does not have IMU on root-link"
+    },
+    {
+      "sha": "6141f69236c0b933306269696b9c9f9d93826366",
+      "author": "Ryohei Ueda",
+      "date": "2015-01-24T09:22:20Z",
+      "message": "Add ~reverse_tf parameter for the robots which does not have IMU on root-link"
+    },
+    {
+      "sha": "3482163ee8f6fb650bf27e48a6d9ef0fb2f1812e",
+      "author": "Martin Günther",
+      "date": "2015-01-15T08:04:40Z",
+      "message": "Merge pull request #34 from mikepurvis/log-mag-bias\n\nLog mag bias on startup to assist with debugging."
+    },
+    {
+      "sha": "58415c4b2880665cc07bb34fad2e62a0d5ce955e",
+      "author": "Mike Purvis",
+      "date": "2015-01-14T22:33:27Z",
+      "message": "Log mag bias on startup to assist with debugging."
+    },
+    {
+      "sha": "0bcc737a7dfe3538ba15db769fab83bf474205f4",
+      "author": "Martin Günther",
+      "date": "2014-12-11T13:41:44Z",
+      "message": "add boost depends to CMakeLists\n\nAll non-catkin things that we expose in our headers should be added to\nthe DEPENDS, so that packages which depend on our package will also\nautomatically link against it.\n\nAlso see: http://answers.ros.org/question/58498/what-is-the-purpose-of-catkin_depends/#58593"
+    },
+    {
+      "sha": "eda3496295ad07ca45532c1c62fd6debab531b5e",
+      "author": "Martin Günther",
+      "date": "2014-12-10T10:59:00Z",
+      "message": "1.0.1"
+    },
+    {
+      "sha": "6833757fc3f2ed66eebdb2c5408821a2517461a9",
+      "author": "Martin Günther",
+      "date": "2014-12-10T10:58:42Z",
+      "message": "update changelogs"
+    },
+    {
+      "sha": "d400e859a42e81aee6bfc301781cc05f6de37d4c",
+      "author": "Martin Günther",
+      "date": "2014-12-09T10:03:33Z",
+      "message": "add me as maintainer to package.xml"
+    },
+    {
+      "sha": "069f6d17decedaa84e885ffac33a9f16d46f315c",
+      "author": "Martin Günther",
+      "date": "2014-12-05T10:12:35Z",
+      "message": "turn mag_bias into a dynamic reconfigure param\n\nAlso rename mag_bias/x --> mag_bias_x etc., since dynamic reconfigure\ndoesn't allow slashes."
+    },
+    {
+      "sha": "227cdffdbcc2ca749d4c61fde5fe3ef74695cab2",
+      "author": "Martin Günther",
+      "date": "2014-12-10T10:14:04Z",
+      "message": "gain and zeta already set via dynamic_reconfigure\n\nReading the params explicitly is not necessary. Instead,\ndynamic_reconfigure will read them and set them as soon as we call\nconfig_server_->setCallback()."
+    },
+    {
+      "sha": "b322d641587ec165a4b0629d08ba8724b5c79fdf",
+      "author": "Martin Günther",
+      "date": "2014-12-10T10:07:19Z",
+      "message": "reconfigure server: use proper namespace\n\nBefore, the reconfigure server used the private namespace of the nodelet\n*manager* instead of the nodelet, so the params on the parameter server\nand the ones from dynamic_reconfigure were out of sync."
+    },
+    {
+      "sha": "a45cc81f018e0e9c99d9c989c06c3e3c0c64bd58",
+      "author": "Martin Günther",
+      "date": "2014-12-08T09:17:23Z",
+      "message": "check for NaNs in magnetometer message\n\nSome magnetometer drivers (e.g. phidgets_drivers) output NaNs, which\nis a valid way of saying that this measurement is invalid. During\ninitialization, we simply wait for the first valid message, assuming\nthere will be one soon."
+    },
+    {
+      "sha": "f47fc5adad7850113985e968b5cb2920a75ba48f",
+      "author": "Martin Günther",
+      "date": "2014-12-08T09:15:20Z",
+      "message": "magnetometer msg check: isnan() -> !isfinite()\n\nThis catches both inf and NaN. Not sure whether sending inf in a Vector3\nmessage is valid (Nan is), but this doesn't hurt and is just good\ndefensive programming."
+    },
+    {
+      "sha": "441d375b976a1ca12bacbb8c4ec6ddc0b266fc87",
+      "author": "Martin Günther",
+      "date": "2014-12-10T08:30:23Z",
+      "message": "Merge pull request #32 from jackal/mag-fixes\n\nInitializing yaw orientation from magnetometer reading."
+    },
+    {
+      "sha": "a10fb0b20b608b8fdf48184c8ab2576b05756c27",
+      "author": "Shokoofeh Pourmehr",
+      "date": "2014-12-09T15:20:46Z",
+      "message": "Initializie yaw from calibrated magnetometer data\n\n* Add magnetometer biases (mag_bias/x and mag_bias/y) for hard-iron compensation.\n* Initializie yaw orientation from magnetometer reading.\n* Add imu/rpy/raw and imu/rpy/filtered as debug topics. imu/rpy/raw can be used for computing magnetometer biases. imu/rpy/filtered topic is for user readability only."
+    },
+    {
+      "sha": "10f9358a21fc12b4e979258986ee7938029cc76b",
+      "author": "Martin Günther",
+      "date": "2014-11-28T10:55:01Z",
+      "message": "1.0.0"
+    },
+    {
+      "sha": "f538f012547a590f04ca675e050aa8bf744c38b7",
+      "author": "Martin Günther",
+      "date": "2014-11-28T10:24:45Z",
+      "message": "Add changelogs\n\n(generated by catkin_generate_changelog --all + manual cleanup)"
+    },
+    {
+      "sha": "36ed04246c09ddcd793ce33be95e080eaffce2ea",
+      "author": "Martin Günther",
+      "date": "2014-11-28T10:49:17Z",
+      "message": "add missing newline at eof to CMakeLists.txt\n\n(broke catkin_prepare_release)"
+    },
+    {
+      "sha": "e3b52b1ac2b2c4a8e1c39e30a8be3e2201d13b68",
+      "author": "Martin Günther",
+      "date": "2014-09-03T13:00:58Z",
+      "message": "Merge pull request #30 from mikepurvis/fix-frame\n\nRemove setting imu message frame to fixed/odom"
+    },
+    {
+      "sha": "a3fb4931f7153c8eb9652737a65755f43046d439",
+      "author": "Mike Purvis",
+      "date": "2014-09-03T12:45:45Z",
+      "message": "Remove setting imu message frame to fixed/odom"
+    },
+    {
+      "sha": "1ef6399d26bb56306ee528e153b1ab79f27dd712",
+      "author": "Martin Günther",
+      "date": "2014-08-10T21:19:06Z",
+      "message": "Merge pull request #26 from boris-il-forte/hydro\n\nUpdate CMakeLists.txt (add install rules to rviz_imu_plugin)"
+    },
+    {
+      "sha": "8d0e56a6e6d0caf24c0695512265b81d49e719cc",
+      "author": "boris-il-forte",
+      "date": "2014-08-05T10:31:03Z",
+      "message": "Update CMakeLists.txt\n\n- added missing installation rules for plugin\r\n- fix imu plugin that doesn't work after catkin_make --install --instal-space /my/install/space"
+    },
+    {
+      "sha": "2630c35c9e75fcda4648e22579410847447dfc98",
+      "author": "Martin Günther",
+      "date": "2014-03-12T11:22:05Z",
+      "message": "rviz_imu_plugin: install plugin_description.xml"
+    },
+    {
+      "sha": "0ee24ba1b255d58f9565d16c12b82ae5cd8ec8da",
+      "author": "Martin Günther",
+      "date": "2014-03-12T11:20:39Z",
+      "message": "CMakeLists: remove unnecessary link_directories, LIBRARY_OUTPUT_PATH"
+    },
+    {
+      "sha": "3167c172634c6c00307e629e5d446df2647c2df6",
+      "author": "Martin Günther",
+      "date": "2014-01-11T14:10:16Z",
+      "message": "Merge pull request #25 from v4hn/fix-missing-config-depends\n\nadd missing build dependency on generated config"
+    },
+    {
+      "sha": "6256eb0262135b0d375768efb268366032a7c1ea",
+      "author": "v4hn",
+      "date": "2014-01-11T13:52:18Z",
+      "message": "add missing build dependency on generated config\n\nThis removes a racing condition from the build process."
+    },
+    {
+      "sha": "d11c7eaa84d4638b9783dc219719d566116aa693",
+      "author": "Ivan Dryanovski",
+      "date": "2013-12-18T18:38:08Z",
+      "message": "Merge pull request #24 from v4hn/install-nodelet\n\ninstall nodelet xml file"
+    },
+    {
+      "sha": "57f48c4b7814dfe8f1d11df7c4922fef4bf60986",
+      "author": "v4hn",
+      "date": "2013-12-18T17:04:03Z",
+      "message": "install nodelet xml file\n\nOtherwise the nodelet can't be found"
+    },
+    {
+      "sha": "a41cc0678d061c1957583e0729a6f88360479dd3",
+      "author": "Martin Günther",
+      "date": "2013-11-20T10:06:58Z",
+      "message": "Merge pull request #20 from mintar/fix_invsqrt_union_method\n\nfix implementation of invSqrt()"
+    },
+    {
+      "sha": "3d727e3ace43148f6118f0e153663c66b884780b",
+      "author": "Martin Günther",
+      "date": "2013-11-14T09:38:07Z",
+      "message": "fix implementation of invSqrt()\n\nThe old invSqrt() implementation causes the estimate to diverge under\nconstant input. The problem was the line `long i = (long)&y;`, where 64\nbits are read from a 32 bit number. Thanks to @tomas-c for spotting this\nand pointing out the solution.\n\nFixes #17."
+    },
+    {
+      "sha": "6f3cc451a7f37b0d4d70ab7c98399509368ab284",
+      "author": "Martin Günther",
+      "date": "2013-11-13T10:39:22Z",
+      "message": "README: update link"
+    },
+    {
+      "sha": "93440d1184a01ef63ede9f7d8362d67cc50057e7",
+      "author": "Martin Günther",
+      "date": "2013-11-12T13:13:01Z",
+      "message": "updated README to reflect catkinization"
+    },
+    {
+      "sha": "e8bac54499571186e191eab125c8132d3432dcf5",
+      "author": "Martin Günther",
+      "date": "2013-11-12T13:40:10Z",
+      "message": "Merge pull request #16 from kth-ros-pkg/hydro\n\ncatkinization of imu_tools metapackage"
+    },
+    {
+      "sha": "7a987d8a356f6cb0b6a568552b08386f4b63f371",
+      "author": "fevb",
+      "date": "2013-11-10T15:24:52Z",
+      "message": "catkinization of imu_tools metapackage"
+    },
+    {
+      "sha": "0032e44bb648301c63e373ece6a535bbf27191f2",
+      "author": "Martin Günther",
+      "date": "2013-10-28T15:14:28Z",
+      "message": "add .gitignore"
+    },
+    {
+      "sha": "2d9b3e1df2c2848a3fbdf6251e9150ef704f45d5",
+      "author": "Martin Günther",
+      "date": "2013-07-10T12:37:23Z",
+      "message": "fix typo: zeta -> zeta_"
+    },
+    {
+      "sha": "616f9b453df91e43f7c219a1cf775d167d4d0ddf",
+      "author": "Martin Günther",
+      "date": "2013-07-09T10:16:27Z",
+      "message": "fix initialization of initial rotation\n\nThanks to PaulKemppi! Closes #4."
+    },
+    {
+      "sha": "1f84c9f94b69103592df9c543c2802a70806d36c",
+      "author": "Martin Günther",
+      "date": "2013-07-03T10:20:48Z",
+      "message": "Merge pull request #13 from mickeyxu/groovy\n\nAdded gyro drift correction part from Madgwick's report for the MARG implementation."
+    },
+    {
+      "sha": "c0807ba9b0f2dcf38923cf252c85e3e044f2853c",
+      "author": "TUG-DESTOP",
+      "date": "2013-07-02T13:03:09Z",
+      "message": "gyro drift correction function added in MARG implementation"
+    },
+    {
+      "sha": "10f5e1c1f58d045cde8b1ca6c54748617edb0775",
+      "author": "TUG-DESTOP",
+      "date": "2013-07-02T12:18:19Z",
+      "message": "Merge branch 'groovy' of https://github.com/mickeyxu/imu_tools into groovy"
+    },
+    {
+      "sha": "54a95bccf22595c3f3fb0f9948c998ff2743ee95",
+      "author": "TUG-DESTOP",
+      "date": "2013-07-02T12:08:51Z",
+      "message": "set \"zeta\" as a parameter for dynamic reconfigure in the .cfg file"
+    },
+    {
+      "sha": "459e198113b632ff98fb571cb45456516b6e74be",
+      "author": "Martin Günther",
+      "date": "2013-06-27T11:32:04Z",
+      "message": "Merge pull request #12 from lorenzoriano/groovy into groovy"
+    },
+    {
+      "sha": "bc15b54cc80b3be87696b86740ae6e7814498bff",
+      "author": "Martin Günther",
+      "date": "2013-06-27T11:19:35Z",
+      "message": "Merge pull request #8 from uos/master\n\nadded parameter: publish_tf"
+    },
+    {
+      "sha": "663033d16565cf70e97673982c8cd8630b17351e",
+      "author": "Martin Günther",
+      "date": "2013-02-08T16:01:02Z",
+      "message": "add new test bag: phidgets_imu_upside_down\n\nThis is from a phidgets imu, running the phidgets_imu driver mounted on\na wheeled robot that drives a small trip through an office. The IMU is\nmounted upside down (i.e., the chips on the board are on the upper side,\nlin_acc.z is ~ -9.81). The USB port points to the right side of the\nrobot. Rotation quaternion from /base_link (x pointing forward, z\npointing up) to /imu is (0, 1, 0, 0).\n\nContains /imu/data_raw and /imu/mag topics."
+    },
+    {
+      "sha": "db3208115e9fe4429f786fda632825861b43c7db",
+      "author": "lorenzoriano",
+      "date": "2013-06-24T21:51:33Z",
+      "message": "adapted to groovy"
+    },
+    {
+      "sha": "d8a3e32be25ac3777174869a0cfb6f4157cc3835",
+      "author": "lorenzoriano",
+      "date": "2013-06-22T00:27:59Z",
+      "message": "first fixes"
+    },
+    {
+      "sha": "785a2d597533082c364b10aa531eb0cbb2efa595",
+      "author": "Martin Günther",
+      "date": "2013-02-08T16:01:02Z",
+      "message": "add new test bag: phidgets_imu_upside_down\n\nThis is from a phidgets imu, running the phidgets_imu driver mounted on\na wheeled robot that drives a small trip through an office. The IMU is\nmounted upside down (i.e., the chips on the board are on the upper side,\nlin_acc.z is ~ -9.81). The USB port points to the right side of the\nrobot. Rotation quaternion from /base_link (x pointing forward, z\npointing up) to /imu is (0, 1, 0, 0).\n\nContains /imu/data_raw and /imu/mag topics."
+    },
+    {
+      "sha": "63688b1c6c509a812c4ae204a808a98acdf1d362",
+      "author": "Martin Günther",
+      "date": "2013-02-08T14:05:14Z",
+      "message": "add parameter publish_tf\n\nWhen the imu is used together with other packages, such as\nrobot_pose_ekf, publishing the transform often interferes with those\npackages. This parameter allows to disable tf publishing."
+    },
+    {
+      "sha": "4532f5a9c2532523491fb2a9e4ce2f6067b0107c",
+      "author": "CCNY Robotics Lab",
+      "date": "2012-11-14T18:31:59Z",
+      "message": "Merge pull request #6 from FalkorSystems/master\n\nadd some sample imu data from an ar.drone and from a sparkfun razor IMU"
+    },
+    {
+      "sha": "ae4b96bde4d2b9228f794b28576251d235baf1b4",
+      "author": "Sameer Parekh",
+      "date": "2012-11-14T15:41:28Z",
+      "message": "add some sample imu data"
+    },
+    {
+      "sha": "4e6912986b78866d2562cec8254bfcce044cac91",
+      "author": "Ivan Dryanovski",
+      "date": "2012-11-05T23:21:19Z",
+      "message": "Update README with link to rosdep"
+    },
+    {
+      "sha": "07c6a5e80086d84909d0ee486663f6bfe22d2235",
+      "author": "Ivan Dryanovski",
+      "date": "2012-11-05T23:12:26Z",
+      "message": "Update README with license info"
+    },
+    {
+      "sha": "f880029acf7150fa5f386c63a9ddc6ee65c5b803",
+      "author": "Ivan Dryanovski",
+      "date": "2012-11-05T23:09:42Z",
+      "message": "more informative constant_dt message. Reverts to 0.0 on illegal param value"
+    },
+    {
+      "sha": "3f661608a158fbeeb947c5bef6c855f6409ed74f",
+      "author": "Ivan Dryanovski",
+      "date": "2012-11-05T23:00:37Z",
+      "message": "imu_filter_madgwick manifest now correctly lists the package as GPL license."
+    },
+    {
+      "sha": "46de74024c7447ad167c72e82666dbd83ed321cf",
+      "author": "Ivan Dryanovski",
+      "date": "2012-11-05T22:40:53Z",
+      "message": "orientation is initialized from acceleration vector on first message received"
+    },
+    {
+      "sha": "3993c6f8c2955a7bf34f4bd80fe05b52b0d4737d",
+      "author": "Ivan Dryanovski",
+      "date": "2012-11-05T22:13:10Z",
+      "message": "added dynamic reconfigure for gain parameter. Added better messages about constant_dt param at startup"
+    },
+    {
+      "sha": "362dc1f18db9bb791e81b619404dd55a065af78a",
+      "author": "Ivan Dryanovski",
+      "date": "2012-11-05T21:27:55Z",
+      "message": "the tf published is now timestamped as the imu msg, and not as now(). Also added constant dt option for the imu+mag callback"
+    },
+    {
+      "sha": "bee3eab88c4c7928f8f6deb06915070bf7e85293",
+      "author": "Ivan Dryanovski",
+      "date": "2012-11-05T21:22:21Z",
+      "message": "Merge pull request #5 from FalkorSystems/master\n\npublish the orientation into tf"
+    },
+    {
+      "sha": "02790f5402cb554b3e00d6db7fd803be766d4fd7",
+      "author": "Sameer Parekh",
+      "date": "2012-10-24T18:49:25Z",
+      "message": "fix the transform publish -- from the fixed frame to the frame of the imu"
+    },
+    {
+      "sha": "94728b7cb365b7a28f9f098a378e1c764e37ac6e",
+      "author": "Sameer Parekh",
+      "date": "2012-10-19T17:25:40Z",
+      "message": "add a tf broadcaster with the orientation"
+    },
+    {
+      "sha": "ed1a2b02d31fce4bfc220c53392a7f1a28262251",
+      "author": "Ivan Dryanovski",
+      "date": "2012-09-23T00:26:56Z",
+      "message": "as per PaulKemppi: added option to set constant dt"
+    },
+    {
+      "sha": "ec846ec87ceae5a9e5ae86e19eaf6b38a995ec03",
+      "author": "Ivan Dryanovski",
+      "date": "2012-09-23T00:16:01Z",
+      "message": "walchko: Needed to add namespace: std::isnan() and needed to add rosbuild_link_boost(imu_filter signals) to CMakeLists.txt"
+    },
+    {
+      "sha": "783a0740fd432c29942bf5a76110331b926ae050",
+      "author": "Ivan Dryanovski",
+      "date": "2012-09-03T02:53:03Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "a7badd46a7f715275c60c92f6ae881767b00a5e7",
+      "author": "Ivan Dryanovski",
+      "date": "2012-09-03T02:47:53Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "328da4c5b51df0de1f487784e87b1e63870bc5aa",
+      "author": "CCNY Robotics Lab",
+      "date": "2012-09-02T21:44:32Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "e3f96534e4432a8fca659a3032ca0276abee58ac",
+      "author": "CCNY Robotics Lab",
+      "date": "2012-09-02T21:29:35Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "f14f089a5f6504e4957b0774b8a84fb77e5dc2bf",
+      "author": "CCNY Robotics Lab",
+      "date": "2012-09-02T21:27:21Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "fb8239ede125e1de6b55003b1e22d72e404030f6",
+      "author": "CCNY Robotics Lab",
+      "date": "2012-09-01T16:14:01Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "33de2ef548479f5b78899bee0ff75397ae1e137d",
+      "author": "Ivan Dryanovski",
+      "date": "2012-09-01T16:09:11Z",
+      "message": "changed README to README.md"
+    },
+    {
+      "sha": "3302caa7b86ac09409f530ef9d03eec80c268f58",
+      "author": "CCNY Robotics Lab",
+      "date": "2012-09-01T16:07:43Z",
+      "message": "Update README"
+    },
+    {
+      "sha": "bd02273698074419c7b31d28fec9b79ce0925951",
+      "author": "Ivan Dryanovski",
+      "date": "2012-09-01T03:04:32Z",
+      "message": "added sebastian's name and link to the manifest"
+    },
+    {
+      "sha": "2d10fc0cf6ccbe2d465f7a1d3997f570f336a48c",
+      "author": "Ivan Dryanovski",
+      "date": "2012-08-31T21:27:51Z",
+      "message": "removed ros_core dependancy"
+    },
+    {
+      "sha": "1f74590af0d270f1978458d2bc2dfb26ee0cf0ab",
+      "author": "Ivan Dryanovski",
+      "date": "2012-06-25T19:19:22Z",
+      "message": "renamed imu_filter to imu_filter_madgwick"
+    },
+    {
+      "sha": "e1ab32fd9cb7a6a5297feed3d1635f4536779ebd",
+      "author": "Ivan Dryanovski",
+      "date": "2012-06-25T19:14:33Z",
+      "message": "renamed imu_filter to imu_filter_madgwick"
+    },
+    {
+      "sha": "9db19ed0e9560a3124b93fa6d46298f30d791a04",
+      "author": "Ivan Dryanovski",
+      "date": "2012-06-19T02:50:50Z",
+      "message": "added version number in manifest"
+    },
+    {
+      "sha": "2438460e2db380607dc561f48e808c06232d54e9",
+      "author": "Ivan Dryanovski",
+      "date": "2012-06-19T02:49:45Z",
+      "message": "initial commit"
+    }
+  ]
+}

@@ -1,0 +1,828 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-07T00:36:28Z",
+    "source": "github_rest",
+    "endpoint": "/repos/{owner}/{repo}/commits",
+    "owner": "PickNikRobotics",
+    "repo": "ros2_robotiq_gripper",
+    "per_page": 100
+  },
+  "data": [
+    {
+      "sha": "630ed383916e347701dad750f28e362ca7849228",
+      "author": "mosfet80",
+      "date": "2025-12-06T21:21:27Z",
+      "message": "Update ci-format.yml (#99)"
+    },
+    {
+      "sha": "a41ca0e10cd98b067e70b76d34626d2375dde4c9",
+      "author": "Sebastian Castro",
+      "date": "2025-12-04T20:16:09Z",
+      "message": "Fix all deprecation warnings (#108)"
+    },
+    {
+      "sha": "0230e844aa8f1eb7c48c51e1aecb88021695c091",
+      "author": "Nathan Brooks",
+      "date": "2025-11-29T20:19:48Z",
+      "message": "Replace 'gripper_controllers' package that was removed in Kilted+ with 'parallel_gripper_controller' available in Jazzy+. (#103)\n\nUpdate ros2_controllers.yaml file to use Jazzy+ parallel_gripper_controller controller"
+    },
+    {
+      "sha": "12e623212e6891a5fcc9af94d67b07e640916394",
+      "author": "Karim Shaban",
+      "date": "2025-03-14T20:18:57Z",
+      "message": "Include <algorithm> to avoid complier issues (#82)"
+    },
+    {
+      "sha": "856753cffe657da909dcbd25afd5b8d3151e659c",
+      "author": "Jafar Uruç",
+      "date": "2025-03-05T12:42:12Z",
+      "message": "Fix ResourceManager parameters on humble (#74)"
+    },
+    {
+      "sha": "d41285d83370d3906d565cfd055f1d4a47eb2c0c",
+      "author": "Jafar Uruç",
+      "date": "2025-03-05T04:46:01Z",
+      "message": "Fix gripper speed and force parameter initialization and scaling (#77)\n\n* Expose gripper_speed_multiplier, gripper_force_multiplier, gripper_max_speed, gripper_max_force, and gripper_closed_position parameters to xacro\n\n---------\n\nCo-authored-by: Ashwin Varghese Kuruttukulam <ashwinvk@nvidia.com>"
+    },
+    {
+      "sha": "bb68ae57715453786ceb1ef7b48b3b2728416417",
+      "author": "Joseph Carpinelli",
+      "date": "2025-03-04T19:02:16Z",
+      "message": "Add com_port launch & xacro arguments (#75)"
+    },
+    {
+      "sha": "77e60927cd5cdcc7c75b8837ac3104b826a4bb99",
+      "author": "Panagiotis Angelakis",
+      "date": "2024-10-18T19:34:52Z",
+      "message": "update urdf mesh filenames to use package path (#50)\n\nCo-authored-by: Chance Cardona <41308677+chancecardona@users.noreply.github.com>"
+    },
+    {
+      "sha": "27ecc36c1fa0db53a14f814d3b1008ae2874c039",
+      "author": "Sebastian Jahr",
+      "date": "2024-08-08T15:26:02Z",
+      "message": "Replace fake_sensor_commands with 'mock_sensor_commands (#61)"
+    },
+    {
+      "sha": "5f0c39ace3b3b17d1eaff45ca9fc2a285a000725",
+      "author": "Sebastian Castro",
+      "date": "2024-07-18T06:50:14Z",
+      "message": "Remove mimic tags and rename `sim_ignition` to `sim_gazebo` (#54)"
+    },
+    {
+      "sha": "b6136bdc866a929bfb096890ca61dde1335ffd30",
+      "author": "Ashton Larkin",
+      "date": "2024-03-04T18:42:18Z",
+      "message": "Revert robotiq_gripper_controller type until antipodal controller becomes available (#48)\n\n* Revert robotiq_gripper_controller type until antipodal controller becomes available\r\n\r\n* init doubles to 0.0"
+    },
+    {
+      "sha": "25c6e0f2b67c9b4ccf06b72078105b6154583ac9",
+      "author": "Paul Gesel",
+      "date": "2024-02-23T16:00:59Z",
+      "message": "add child parent as params (#47)\n\nSigned-off-by: Paul Gesel <paulgesel@gmail.com>"
+    },
+    {
+      "sha": "d73938272fe9dc26c11ebcfa79955fbf9ef5ef3c",
+      "author": "Paul Gesel",
+      "date": "2024-02-15T03:07:02Z",
+      "message": "Add force and velocity hardware interfaces (#44)\n\n* add velocity interface\r\n\r\nSigned-off-by: Paul Gesel <paulgesel@gmail.com>\r\n\r\n* export new interfaces for force and velocity\r\n\r\nSigned-off-by: Paul Gesel <paulgesel@gmail.com>\r\n\r\n* fix units for commands\r\n\r\nSigned-off-by: Paul Gesel <paulgesel@gmail.com>\r\n\r\n* update config\r\n\r\nSigned-off-by: Paul Gesel <paulgesel@gmail.com>\r\n\r\n* update interface names\r\n\r\nSigned-off-by: Paul Gesel <paulgesel@gmail.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Paul Gesel <paulgesel@gmail.com>"
+    },
+    {
+      "sha": "480fe393cd63cf88015bea61f842df501070818d",
+      "author": "Alex Moriarty",
+      "date": "2024-02-13T17:45:36Z",
+      "message": "github action upgrade checkout@v3 -> @v4 for node20\n\nSigned-off-by: Alex Moriarty <alex.moriarty@picknik.ai>"
+    },
+    {
+      "sha": "4f05323b2cc3b67febe74dead56eba836724ee55",
+      "author": "Alex Moriarty",
+      "date": "2024-02-13T15:25:23Z",
+      "message": "Disable ament_xmllint\n\n- I am disabling this for now it is failing in github actions not locally.\n- Might be due to network issues in the containers https://github.com/ament/ament_lint/issues/448\n\nI will switch to a pre-commit hook for linting in a follow up PR.\n\nSigned-off-by: Alex Moriarty <alex.moriarty@picknik.ai>"
+    },
+    {
+      "sha": "f6a5f8a8bd1c4de70340f21b55e2f4314398b2f7",
+      "author": "Alex Moriarty",
+      "date": "2024-02-08T12:58:36Z",
+      "message": "bump action-ros-ci\n\nSigned-off-by: Alex Moriarty <alex.moriarty@picknik.ai>"
+    },
+    {
+      "sha": "18c7a23a4c14608c012e310edca011e894302841",
+      "author": "Alex Moriarty",
+      "date": "2024-02-08T12:42:44Z",
+      "message": "update setup-ros to get pinned version of empy\n\n- https://github.com/colcon/colcon-core/issues/602\n- https://github.com/ros-tooling/setup-ros/pull/632\n\nSigned-off-by: Alex Moriarty <alex.moriarty@picknik.ai>"
+    },
+    {
+      "sha": "36a87611413b522d11b702e18d2abd0414c01379",
+      "author": "Sebastian Castro",
+      "date": "2024-01-25T20:44:23Z",
+      "message": "Fix Marq name spelling (#42)"
+    },
+    {
+      "sha": "61d6f67fdb0016f78ae15ccbe221e555719e5d0b",
+      "author": "Alex Moriarty",
+      "date": "2023-12-13T15:59:03Z",
+      "message": "Update README (#41)\n\n- remove very broken links\r\n- fix broken links\r\n- add note regarding branches\r\n- add note that PRs are welcome for other grippers\r\n\r\nSigned-off-by: Alex Moriarty <alex.moriarty@picknik.ai>"
+    },
+    {
+      "sha": "b61160a877b54ad4dc2d6acb701c856a59c7e0b7",
+      "author": "Erik Holum",
+      "date": "2023-12-13T15:56:14Z",
+      "message": "Allow extending the hardware interface (#40)"
+    },
+    {
+      "sha": "1ec8f2a9c692d714f5a255795105c63ea127c543",
+      "author": "Marq Rasmussen",
+      "date": "2023-11-22T20:01:57Z",
+      "message": "Make Isaac topics configurable in URDF (#38)"
+    },
+    {
+      "sha": "29ce3986c9ff66d597e78a2f8d699fcd5446dd79",
+      "author": "Giovanni",
+      "date": "2023-10-31T13:41:45Z",
+      "message": "Refactor driver library to follow patterns from PickNikRobotics/ros2_epick_gripper (#34)"
+    },
+    {
+      "sha": "8e4025879957a7568afd870c1063010464bd3249",
+      "author": "Jafar Uruç",
+      "date": "2023-10-13T16:36:38Z",
+      "message": "Add robotiq f2 140 support (#18)\n\n* Move f2_85 visual/collision files to a seperate directory\r\n* Update meshes's file paths\r\n* Add f2_140 meshes and urdf files\r\n* Rename robotiq_gripper.ros2_control.xacro to f2_85.ros2_control.xacro\r\n* Fix typo f2 -> 2f\r\n* Add 2f_140 ros2_control file\r\n* Fix closed position value for 2f 140\r\n* Fix path to visual meshes for 2f_85 model\r\n* update 140 to match 85 gripper (#1)\r\n* add dummy link to rotate 2f-140 to match 2f-85\r\n\r\n---------\r\n\r\nCo-authored-by: Marq Rasmussen <marq.razz@gmail.com>"
+    },
+    {
+      "sha": "115dff28f6e0bff5341e21b6fa3bcfacf89777c3",
+      "author": "Marq Rasmussen",
+      "date": "2023-10-10T12:43:18Z",
+      "message": "Update Isaac ros2_control Interface (#36)"
+    },
+    {
+      "sha": "1a9b663e7a9047d28b84042d8ff1128ee29d5b3b",
+      "author": "Alexander Moriarty",
+      "date": "2023-07-17T21:22:20Z",
+      "message": "0.0.1"
+    },
+    {
+      "sha": "a0ca51e3befdda100a8a119992c06147d27c7727",
+      "author": "Alexander Moriarty",
+      "date": "2023-07-17T21:21:40Z",
+      "message": "Initial CHANGELOG.rst commit\n\nSigned-off-by: Alexander Moriarty <alex.moriarty@picknik.ai>"
+    },
+    {
+      "sha": "7c92525d8f171635ad46fe9df41ddccab6493bb3",
+      "author": "Alex Moriarty",
+      "date": "2023-07-12T19:27:01Z",
+      "message": "CI: bump ros-tooling/action-ros-ci for Iron (#31)\n\n- gets update for Iron\r\n- gets arg for banch to pull on scheduled jobs\r\n\r\nSigned-off-by: Alexander Moriarty <alex.moriarty@picknik.ai>"
+    },
+    {
+      "sha": "9068b756fe77e455970dea7d72cde46f989b80aa",
+      "author": "Anthony Baker",
+      "date": "2023-07-12T16:37:04Z",
+      "message": "Merge pull request #30 from PickNikRobotics/ci-deps-version-bump\n\nros-tooling/setup-ros -> 0.6.2 for Iron"
+    },
+    {
+      "sha": "743d20f21de92cbe3e61a1362a0bdcee765bd7c7",
+      "author": "Alexander Moriarty",
+      "date": "2023-07-12T13:25:47Z",
+      "message": "ros-tooling/setup-ros -> 0.6.2 for Iron\n\nincrease ros-tooling/setup-ros for 0.6.2 for Iron support\n\nSigned-off-by: Alexander Moriarty <alex.moriarty@picknik.ai>"
+    },
+    {
+      "sha": "bba8578cc33f1287d01a535bafc72ce2dd8d4a24",
+      "author": "Alex Moriarty",
+      "date": "2023-07-06T15:00:14Z",
+      "message": "Merge pull request #29 from PickNikRobotics/setup-ci-with-script\n\nci: setup CI using script"
+    },
+    {
+      "sha": "437228ff8691100a0b6cf15faa2a6c0f86d13114",
+      "author": "Alex Moriarty",
+      "date": "2023-07-03T22:16:06Z",
+      "message": "run pre-commit format check on push to main"
+    },
+    {
+      "sha": "3b3f3685db5e7f229475b6a8b129abd69208a65f",
+      "author": "Alex Moriarty",
+      "date": "2023-07-03T04:43:06Z",
+      "message": "disable ament_flake8 flake8 via pre-commit\n\n- disable ament_flake8, flake8 via pre-commit reads .flake8 config\n- ament_flake8 in ros-tooling didn't read .flake8\n- flake8 and black will conflit over single vs double quotes\n\nSigned-off-by: Alex Moriarty <alex.moriarty@picknik.ai>"
+    },
+    {
+      "sha": "199a0d459df138581e3814bd99ebe6f1f2ab296a",
+      "author": "Alex Moriarty",
+      "date": "2023-07-03T03:54:52Z",
+      "message": "clang/cpplint include \" vs <\n\nWith < clang-format will re-order\nWhen re-ordered cpplint complains\n\nSigned-off-by: Alex Moriarty <alex.moriarty@picknik.ai>"
+    },
+    {
+      "sha": "eac5fccaf1f08338a808964186de1b69b384db7a",
+      "author": "Alex Moriarty",
+      "date": "2023-07-03T03:36:09Z",
+      "message": "fix linter include order\n\nSigned-off-by: Alex Moriarty <alex.moriarty@picknik.ai>"
+    },
+    {
+      "sha": "825b7d34c56cd2bd89a1c25a20912ca5955d11b4",
+      "author": "Alex Moriarty",
+      "date": "2023-07-03T03:10:22Z",
+      "message": "Add flake8 to pre-commit and add .flake8\n\nament_lint runs flake8 and flake8 and black are conflicting over \" vs '\n\nSigned-off-by: Alex Moriarty <alex.moriarty@picknik.ai>"
+    },
+    {
+      "sha": "f0427d96981ece899d204c64adfc0aaa7ceeae5e",
+      "author": "Alex Moriarty",
+      "date": "2023-07-03T02:56:27Z",
+      "message": "Revert \"flake8: apply fixes\"\n\nThis reverts commit f3216fef464b8a8c4dc13dbae3da487ec4480922."
+    },
+    {
+      "sha": "f3216fef464b8a8c4dc13dbae3da487ec4480922",
+      "author": "Alex Moriarty",
+      "date": "2023-07-03T01:59:12Z",
+      "message": "flake8: apply fixes\n\nSigned-off-by: Alex Moriarty <alex.moriarty@picknik.ai>"
+    },
+    {
+      "sha": "4715e75c23d3ee8b4742466e2d8336c930cf8dae",
+      "author": "Alex Moriarty",
+      "date": "2023-06-30T21:40:48Z",
+      "message": "IWYU fixes\n\nSigned-off-by: Alex Moriarty <alex.moriarty@picknik.ai>"
+    },
+    {
+      "sha": "f139b2c54866fe18d1b04ed5e8b82d34d08ba670",
+      "author": "Alex Moriarty",
+      "date": "2023-06-30T19:29:55Z",
+      "message": "Add missing copywrite notices\n\n- fixes copywrite linter complaint that these were missing\n\nSigned-off-by: Alex Moriarty <alex.moriarty@picknik.ai>"
+    },
+    {
+      "sha": "801ce6177700ea8e4a38ec6e8dd3d8ded6dca2ce",
+      "author": "Alex Moriarty",
+      "date": "2023-06-30T19:07:55Z",
+      "message": "disable uncrustify: conflicts with clang format\n\nThis disables uncrustify we use clang format\n\nSigned-off-by: Alex Moriarty <alex.moriarty@picknik.ai>"
+    },
+    {
+      "sha": "c7a2de7957c33760ec846a13782e9ab67ece00da",
+      "author": "Alex Moriarty",
+      "date": "2023-06-30T16:54:04Z",
+      "message": "Sync .clang-format with ament_lint\n\nand run pre-commit all files\n\nSigned-off-by: Alex Moriarty <alex.moriarty@picknik.ai>"
+    },
+    {
+      "sha": "7565379d4e02dc1bfd43fba0f10818cc3a84fd0c",
+      "author": "Alex Moriarty",
+      "date": "2023-06-27T19:25:21Z",
+      "message": "pre-commit run --all-files\n\nRun pre-commit\n\nSigned-off-by: Alex Moriarty <alex.moriarty@picknik.ai>"
+    },
+    {
+      "sha": "1d95302ae9f8b6e428aef007b0ba6f660c2692e6",
+      "author": "Alex Moriarty",
+      "date": "2023-06-26T21:56:00Z",
+      "message": "ci: remove abi compatibility jobs\n\nRemoving these jobs for now until we have finished release\n\nSigned-off-by: Alex Moriarty <alex.moriarty@picknik.ai>"
+    },
+    {
+      "sha": "2e56e0eb4a36057de379ef1b0be92f26ccbf29e6",
+      "author": "Alex Moriarty",
+      "date": "2023-06-26T21:55:07Z",
+      "message": "ci: remove rhel github jobs\n\nRemoving RHEL jobs for now will first focus on releasing for Ubuntu\n\nSigned-off-by: Alex Moriarty <alex.moriarty@picknik.ai>"
+    },
+    {
+      "sha": "7c1b5502edf592b929b83ae205c80c8b5b0ca77e",
+      "author": "Alex Moriarty",
+      "date": "2023-06-26T21:44:14Z",
+      "message": "add serial fork & branch to all .repos files\n\nserial is not yet release in ros2 so it is needed here for CI jobs\n\nSigned-off-by: Alex Moriarty <alex.moriarty@picknik.ai>"
+    },
+    {
+      "sha": "3dce97aae1d4fad2426b55d0c275118b0deb735a",
+      "author": "Alex Moriarty",
+      "date": "2023-06-26T21:26:22Z",
+      "message": "reorder package.xml for validation\n\nmove author to after maintainer\n\nSigned-off-by: Alex Moriarty <alex.moriarty@picknik.ai>"
+    },
+    {
+      "sha": "90ea352e7460293d20da2ae3bcbef2078cf01347",
+      "author": "Alex Moriarty",
+      "date": "2023-06-26T21:10:43Z",
+      "message": "run ament_uncrustify\n\nThis is a formatting autofix\n\nSigned-off-by: Alex Moriarty <alex.moriarty@picknik.ai>"
+    },
+    {
+      "sha": "96e959471669a79611aefea78eaae63b1b662262",
+      "author": "Alex Moriarty",
+      "date": "2023-06-22T12:57:56Z",
+      "message": "one LICENSE in top level of repository (#28)\n\nSigned-off-by: Alex Moriarty <alex.moriarty@picknik.ai>"
+    },
+    {
+      "sha": "4722c30b954a5e1a88f4b8920ca2843542ac8a5b",
+      "author": "Alex Moriarty",
+      "date": "2023-06-21T00:46:43Z",
+      "message": "serial: Add serial from tylerjw fork\n\n- we would prefer not to use the fork but we need to turn on CI\n- when https://github.com/wjwwood/serial/issues/204 or\n  https://github.com/wjwwood/serial/issues/283 are closed we can switch\n\n- related to https://github.com/PickNikRobotics/ros2_robotiq_gripper/issues/21\n\nSigned-off-by: Alex Moriarty <alex.moriarty@picknik.ai>"
+    },
+    {
+      "sha": "ef685011248b9de06fcdd53ffa93e74a7dd39c17",
+      "author": "Alex Moriarty",
+      "date": "2023-06-20T23:08:38Z",
+      "message": "ci: setup CI using script\n\n- Run the same script that packages in ros-controls github org use\n- https://rtw.stoglrobotics.de/master/use-cases/ros_packages/configure_repository.html\n\nThese will likely fail due to serial not being released for ROS2\n- see #21\n- https://github.com/wjwwood/serial/issues/204\n- https://github.com/wjwwood/serial/issues/283\n\nSigned-off-by: Alex Moriarty <alex.moriarty@picknik.ai>"
+    },
+    {
+      "sha": "39df0603411fdeb2a15d3371ab91223394a7288e",
+      "author": "Alex Moriarty",
+      "date": "2023-06-16T22:25:56Z",
+      "message": "[robotiq_description] fix ros dependencies (#25)\n\nupdate package.xml ros dependencies\r\n\r\n- remove serial\r\n- add missing exec dependencies\r\n- update robotiq_driver rosdeps\r\n\r\nSigned-off-by: Alex Moriarty <alex.moriarty@picknik.ai>\r\n\r\n---------\r\n\r\nSigned-off-by: Alex Moriarty <alex.moriarty@picknik.ai>"
+    },
+    {
+      "sha": "58eda4b7f58052c427e79cec09bd4b302dcdd3cb",
+      "author": "Alex Moriarty",
+      "date": "2023-06-16T16:10:42Z",
+      "message": "Update Maintainers (#24)"
+    },
+    {
+      "sha": "cf7a883a95f5c6e6953685a34e082a1ea93b4ecd",
+      "author": "Erik Holum",
+      "date": "2023-06-08T14:57:51Z",
+      "message": "Merge pull request #20 from eholum/pr-fix-gripper-reference\n\nUpdate filename to match new 2f_85 xacro"
+    },
+    {
+      "sha": "ab6a56187128e4166a00c659dbfd2e1c773390ee",
+      "author": "Erik Holum",
+      "date": "2023-06-07T17:13:26Z",
+      "message": "Rename the urdf file, as well"
+    },
+    {
+      "sha": "24fc94be1c500340a55526d6e1a5140c08e4359c",
+      "author": "Erik Holum",
+      "date": "2023-06-07T15:35:40Z",
+      "message": "Update filename to match new 2f_85 xacro"
+    },
+    {
+      "sha": "e81e154112671a06102f597cb4bf7f1a12244bd3",
+      "author": "Marq Rasmussen",
+      "date": "2023-06-02T19:33:52Z",
+      "message": "Catch missed read/write packets (#19)"
+    },
+    {
+      "sha": "22bd0a117ff971b7958c8afafe4475526e787061",
+      "author": "Ezra Brooks",
+      "date": "2023-05-30T17:44:30Z",
+      "message": "Merge pull request #13 from eholum/fix-atomic-clang-build\n\nFix Transitive Includes and Linking for Atomic when Building with Clang"
+    },
+    {
+      "sha": "c5afab820c38f48584d2122d14cec628ee4cb910",
+      "author": "Marq Rasmussen",
+      "date": "2023-05-04T13:11:44Z",
+      "message": "Rename macro and fix prefix (#17)"
+    },
+    {
+      "sha": "a87f65b286f0c8a391920c12a47191050b58e088",
+      "author": "Marq Rasmussen",
+      "date": "2023-05-03T20:06:41Z",
+      "message": "Add ros2_control switch and enable mesh loadingin Gazebo (#16)"
+    },
+    {
+      "sha": "d48a55f40d26b1b184504086e5e9be627436ec4c",
+      "author": "Anthony Baker",
+      "date": "2023-04-10T15:27:35Z",
+      "message": "Fix for updateStatus segfault  (#14)"
+    },
+    {
+      "sha": "40e95d4fd21edb32c88d928a43a146ae3875965d",
+      "author": "Chance Cardona",
+      "date": "2023-04-05T21:29:57Z",
+      "message": "Added some friction parameters to the grippers for better interaction in simulation (#15)"
+    },
+    {
+      "sha": "f419f7bf5daaab349fb93bde5057f46e62cf538e",
+      "author": "Erik Holum",
+      "date": "2023-03-31T13:10:53Z",
+      "message": "Link atomic and include in header"
+    },
+    {
+      "sha": "ad50ff993f24febd945af14d03991787375c26f5",
+      "author": "Marq Rasmussen",
+      "date": "2023-03-09T20:27:19Z",
+      "message": "Merge pull request #12 from PickNikRobotics/pr-unify_control_xacro\n\nPr unify control xacro"
+    },
+    {
+      "sha": "958be5218bd81b7304c08a0bea96b870fa368b13",
+      "author": "marqrazz",
+      "date": "2023-03-08T22:14:56Z",
+      "message": "convert to SystemInterface"
+    },
+    {
+      "sha": "1947758da5069234e23d816ed6315b58e1174936",
+      "author": "marqrazz",
+      "date": "2023-03-07T14:47:24Z",
+      "message": "address review"
+    },
+    {
+      "sha": "c7cc5c01d527ed32a7fc4e9b721bc600ad5a1e3f",
+      "author": "marqrazz",
+      "date": "2023-03-06T21:44:52Z",
+      "message": "fix example urdf"
+    },
+    {
+      "sha": "ca95df4e69fd3805debc92e0c42f91affa675570",
+      "author": "marqrazz",
+      "date": "2023-03-06T21:34:50Z",
+      "message": "trim whitespace"
+    },
+    {
+      "sha": "ac32107c7361bef75c38e85d1122625927746d19",
+      "author": "marqrazz",
+      "date": "2023-03-06T20:53:12Z",
+      "message": "Unify URDF and ros2_control xacro"
+    },
+    {
+      "sha": "01da49469cab57ad14575c00fbe03b9885524f45",
+      "author": "Marq Rasmussen",
+      "date": "2023-02-27T13:58:08Z",
+      "message": "Merge pull request #10 from PickNikRobotics/pr-fix_use_fake_hardware\n\nFix use fake hardware option"
+    },
+    {
+      "sha": "6cab2d14959b1d349bcf032e702bb1caa20bc6dc",
+      "author": "marqrazz",
+      "date": "2023-02-24T20:27:48Z",
+      "message": "Fix use fake hardware option"
+    },
+    {
+      "sha": "b6be88dd7c92a3770755769afd400dab58f10900",
+      "author": "Marq Rasmussen",
+      "date": "2023-01-03T21:12:25Z",
+      "message": "Merge pull request #6 from PickNikRobotics/pr-isaac_sim\n\nAdd sim_isaac and sim_ignition ros2_control xacro arg"
+    },
+    {
+      "sha": "167e85af158bb5c268dfddb137b710d930595590",
+      "author": "Sebastian Castro",
+      "date": "2023-01-03T20:10:54Z",
+      "message": "Add Ignition Gazebo switches to ROS2 control sim config (#8)\n\n* Add Ignition Gazebo switches to ROS2 control sim config\r\n\r\n* Fixes after testing\r\n\r\n* PR comments"
+    },
+    {
+      "sha": "878b636716778df83d1ae77bc5e40ee4b3b1d6d6",
+      "author": "marqrazz",
+      "date": "2022-11-14T20:06:39Z",
+      "message": "Add sim_isaac ros2_control xacro arg"
+    },
+    {
+      "sha": "5c30eccb91a358fe381b8b4b465079b8cc463904",
+      "author": "Sakai Hibiki",
+      "date": "2022-09-15T20:16:49Z",
+      "message": "Fix missing prefix for mimic joints. (#1)"
+    },
+    {
+      "sha": "a16508e237fbefb871c794f0552dc3d4582f9e60",
+      "author": "Cory Crean",
+      "date": "2022-09-15T19:21:26Z",
+      "message": "Add mock interface for reactivating gripper when running in simulation."
+    },
+    {
+      "sha": "bfeb3462afe1b04af1bf068068bf9ba753619b75",
+      "author": "Cory Crean",
+      "date": "2022-09-09T21:24:31Z",
+      "message": "Add mock interface for reactivating gripper when running in simulation."
+    },
+    {
+      "sha": "8b290105c98c29168a46ca9a31424df7f7a14c97",
+      "author": "Cory Crean",
+      "date": "2022-08-24T21:28:11Z",
+      "message": "Remove kortex_description dependency."
+    },
+    {
+      "sha": "3153d3e3c826931ecc5d538f40566b4adbb99814",
+      "author": "Cory Crean",
+      "date": "2022-08-24T16:41:35Z",
+      "message": "Update mesh colors."
+    },
+    {
+      "sha": "4065bf82c8662fbe6f8136bb79208191b31e5203",
+      "author": "Cory Crean",
+      "date": "2022-08-12T17:46:10Z",
+      "message": "Don't include hardware interface description in gripper macro."
+    },
+    {
+      "sha": "41d923c6a035e2180095313961131e47e002726f",
+      "author": "Cory Crean",
+      "date": "2022-08-11T21:09:41Z",
+      "message": "Change (arg use_sim) to {sim}."
+    },
+    {
+      "sha": "7132793443932e3d490be71c236e48e57330048e",
+      "author": "Cory Crean",
+      "date": "2022-08-11T20:47:33Z",
+      "message": "Add visual meshes and simplified collision meshes."
+    },
+    {
+      "sha": "1f548eb6d3059a1775fe2691cf84eac6d4ca3fff",
+      "author": "Cory Crean",
+      "date": "2022-08-09T16:38:48Z",
+      "message": "Update joint names."
+    },
+    {
+      "sha": "5befb1820817be575619d1e0dcbe559cd2d227c5",
+      "author": "Cory Crean",
+      "date": "2022-08-09T15:46:36Z",
+      "message": "Invert joint axes."
+    },
+    {
+      "sha": "7dfa7f2049300bc01e3916d0e174f9495bdfaf7f",
+      "author": "Cory Crean",
+      "date": "2022-08-05T22:30:39Z",
+      "message": "Adjust joint limits."
+    },
+    {
+      "sha": "9467b8fa56de3960955ae0c249928b9e2898310f",
+      "author": "Cory Crean",
+      "date": "2022-08-05T22:28:12Z",
+      "message": "Add mimic joints."
+    },
+    {
+      "sha": "07284cdda6f9fa714d7fc0128a13f07905a4dbf8",
+      "author": "Cory Crean",
+      "date": "2022-08-05T21:15:36Z",
+      "message": "Clean up."
+    },
+    {
+      "sha": "f63c155fbaaec3c15878ab3e7992d2b4a117086c",
+      "author": "Cory Crean",
+      "date": "2022-08-05T21:14:55Z",
+      "message": "Add mass properties."
+    },
+    {
+      "sha": "b9483bbf354fc5b5d209abc092cb2fa6e03b2426",
+      "author": "Cory Crean",
+      "date": "2022-08-05T19:17:28Z",
+      "message": "Add gripper URDF."
+    },
+    {
+      "sha": "f7f91a4b33b4c5a1894d6a43230f8eb77875c6d6",
+      "author": "Cory Crean",
+      "date": "2022-08-03T18:58:09Z",
+      "message": "Update joint name."
+    },
+    {
+      "sha": "d97227fb330c2f3dc31827615e8baaf8392fdc71",
+      "author": "Cory Crean",
+      "date": "2022-08-03T17:38:52Z",
+      "message": "Remove robotiq_85_gripper dependency."
+    },
+    {
+      "sha": "ee9899cbf9cb44a06160e082891400b769c46619",
+      "author": "Cory Crean",
+      "date": "2022-07-27T15:30:01Z",
+      "message": "Rename size_t to std::size_t."
+    },
+    {
+      "sha": "1e48593da38462563a9229fbc562f4aa3c405340",
+      "author": "Cory Crean",
+      "date": "2022-07-15T14:42:20Z",
+      "message": "Modify sendCommand to take a const reference."
+    },
+    {
+      "sha": "cc03c37752c2adb2550424bfe3013997aab77342",
+      "author": "Cory Crean",
+      "date": "2022-07-15T14:37:30Z",
+      "message": "Flush the port after sending a command."
+    },
+    {
+      "sha": "e70ba846bbd9700c5a7e79525b30520eb25a119b",
+      "author": "Cory Crean",
+      "date": "2022-07-11T21:29:03Z",
+      "message": "Update to latest version of ros2_controllers."
+    },
+    {
+      "sha": "a1aaa8ec59c453c671e82a4725906c2af18bf8ac",
+      "author": "Cory Crean",
+      "date": "2022-07-11T19:27:47Z",
+      "message": "Read the response after sending an re-activation request."
+    },
+    {
+      "sha": "4ae1d1e7a317e072bbe6309d81e591116554f4bf",
+      "author": "Cory Crean",
+      "date": "2022-07-11T18:10:53Z",
+      "message": "Add RobotiqActivationController."
+    },
+    {
+      "sha": "913586979ce050aabea93fd2197b0624a2b6f2a1",
+      "author": "Cory Crean",
+      "date": "2022-07-11T14:24:26Z",
+      "message": "Update license statement."
+    },
+    {
+      "sha": "0d2f0023dea8c02cbdab2d4bfa279b7b148342d0",
+      "author": "Cory Crean",
+      "date": "2022-07-08T17:42:25Z",
+      "message": "Fix compiler warnings."
+    },
+    {
+      "sha": "04412cc32c120a65fd2111bcb444ad5189bbe675",
+      "author": "Cory Crean",
+      "date": "2022-07-08T17:25:39Z",
+      "message": "Use std::atomic instead of SPSC queue."
+    },
+    {
+      "sha": "338dc05f9bdef610608b49e542c00073f96a1e25",
+      "author": "Cory Crean",
+      "date": "2022-07-08T15:23:29Z",
+      "message": "Change computeCRC to take a reference to a vector instead of iterators."
+    },
+    {
+      "sha": "aac988f91aa62a5a7bc288863f50caf725c395d0",
+      "author": "Cory Crean",
+      "date": "2022-07-07T18:38:11Z",
+      "message": "Fix calculations of gripper position."
+    },
+    {
+      "sha": "6bedafe1fb248a85409b4c14e47c478b70effbca",
+      "author": "Cory Crean",
+      "date": "2022-07-07T18:10:53Z",
+      "message": "Don't capture logger."
+    },
+    {
+      "sha": "dd4cc0323d51ec5c79a42f5db85731e92691c1ad",
+      "author": "Cory Crean",
+      "date": "2022-07-06T20:58:31Z",
+      "message": "Remove debug print statements."
+    },
+    {
+      "sha": "23837abda12597cb5c373eebdf2b811748562bae",
+      "author": "Cory Crean",
+      "date": "2022-07-06T16:06:20Z",
+      "message": "Perform gripper I/O asynchronously."
+    },
+    {
+      "sha": "ff20e90d019fe55b553315a407814e249edd2ca2",
+      "author": "Cory Crean",
+      "date": "2022-06-30T16:29:04Z",
+      "message": "Remove debug print statements."
+    },
+    {
+      "sha": "daf73616f29beb3fcab4d963e87cd6bbea879f9c",
+      "author": "Cory Crean",
+      "date": "2022-06-30T16:27:24Z",
+      "message": "Add minimal launch file for controlling the gripper."
+    },
+    {
+      "sha": "c551883e4c5e2fa69e384efd7f4be5fe8686e645",
+      "author": "Cory Crean",
+      "date": "2022-06-30T14:37:01Z",
+      "message": "Add launch file to view/articulate gripper."
+    },
+    {
+      "sha": "ca1eb93968820833c407ee01ae17da586784ba4d",
+      "author": "Cory Crean",
+      "date": "2022-06-28T20:44:04Z",
+      "message": "Add com_port parameter."
+    },
+    {
+      "sha": "382fe29d3a809af25a46fc8283b2aded16166cec",
+      "author": "Cory Crean",
+      "date": "2022-06-28T20:36:57Z",
+      "message": "Rename gripper_open_pos_ to gripper_closed_pos_"
+    },
+    {
+      "sha": "bc354efd5e2ee28c49a90823a868c836d713edaa",
+      "author": "Cory Crean",
+      "date": "2022-06-28T20:32:23Z",
+      "message": "Remove quotes around COM port name."
+    },
+    {
+      "sha": "0822b19d99536176159b3c33a1176bb9399627cb",
+      "author": "Cory Crean",
+      "date": "2022-06-28T20:08:34Z",
+      "message": "Fix typo in parameter name."
+    },
+    {
+      "sha": "a1f7fccf60e987011f15707ffdc0b22d11815de1",
+      "author": "Cory Crean",
+      "date": "2022-06-28T19:45:24Z",
+      "message": "Add constants for response sizes."
+    },
+    {
+      "sha": "ef7d256911061f041626abeeb8ec7264306fe68f",
+      "author": "Cory Crean",
+      "date": "2022-06-28T19:33:07Z",
+      "message": "Implement sendCommand method."
+    },
+    {
+      "sha": "d923ad1cbf35ab470bb360decaf34fc79799f170",
+      "author": "Cory Crean",
+      "date": "2022-06-28T18:48:21Z",
+      "message": "Switch to BSD-3 license."
+    },
+    {
+      "sha": "d13b617719b3b7614a44087551dcf734dd4c88f7",
+      "author": "Cory Crean",
+      "date": "2022-06-28T18:02:23Z",
+      "message": "Create shared library."
+    },
+    {
+      "sha": "181af9fef1802f49f20229285d29f4c87204f546",
+      "author": "Cory Crean",
+      "date": "2022-06-27T21:58:17Z",
+      "message": "Add parameters for gripper speed, force."
+    },
+    {
+      "sha": "19825986a3302d233912c65ed8b4c4b0f4842b37",
+      "author": "Cory Crean",
+      "date": "2022-06-27T21:50:09Z",
+      "message": "Implement setGripperSpeed, setGripperForce methods."
+    },
+    {
+      "sha": "87df65caf598d62542c185bfccede8af2d9efe36",
+      "author": "Cory Crean",
+      "date": "2022-06-27T21:23:26Z",
+      "message": "Add serial dependency to package.xml."
+    },
+    {
+      "sha": "d616a14d8618a397bd6beaafc804aa8fb1dde68b",
+      "author": "Cory Crean",
+      "date": "2022-06-27T21:02:11Z",
+      "message": "Add parameters."
+    },
+    {
+      "sha": "4d99f8d48bc2e649625d5e8aaad848c492c98b80",
+      "author": "Cory Crean",
+      "date": "2022-06-27T20:43:45Z",
+      "message": "Deactivate gripper when hardware interface is deactivated."
+    },
+    {
+      "sha": "7a800f7b5aea9a83682072267707966cb65d82e8",
+      "author": "Cory Crean",
+      "date": "2022-06-27T20:42:58Z",
+      "message": "Move gripper activation to on_activate."
+    },
+    {
+      "sha": "7e0e7c500efdeb00e9671ae744a220921276b19e",
+      "author": "Cory Crean",
+      "date": "2022-06-27T20:33:19Z",
+      "message": "Implement read and write methods."
+    },
+    {
+      "sha": "45797941183bbbd79cd3ed7d02b7e28f29090735",
+      "author": "Cory Crean",
+      "date": "2022-06-27T20:33:05Z",
+      "message": "Implement getGripperPosition method."
+    },
+    {
+      "sha": "d071c908c9994fc902a0ab52f551a0b6ad744ef2",
+      "author": "Cory Crean",
+      "date": "2022-06-27T19:44:01Z",
+      "message": "Implement setGripperPosition method."
+    },
+    {
+      "sha": "decc848de056ecf54e670206dfef522354e6393a",
+      "author": "Cory Crean",
+      "date": "2022-06-27T19:25:07Z",
+      "message": "Implement setGripperPosition method."
+    },
+    {
+      "sha": "457f15244db0400372b5b61770924698fe9ff397",
+      "author": "Cory Crean",
+      "date": "2022-06-27T19:01:18Z",
+      "message": "Wait for the gripper to finish activating before returning."
+    },
+    {
+      "sha": "c71efb6ea2638d3a2f8adc49435c84d05f504ac2",
+      "author": "Cory Crean",
+      "date": "2022-06-27T18:54:16Z",
+      "message": "Activate the gripper when the hardware interface is initialized."
+    },
+    {
+      "sha": "d68c6094fe333d94874e5cd7a32e23d39b5a24cb",
+      "author": "Cory Crean",
+      "date": "2022-06-27T18:53:50Z",
+      "message": "Implement updateStatus method."
+    },
+    {
+      "sha": "41741ca143fbb363f76091a4289740fc1fb85239",
+      "author": "Cory Crean",
+      "date": "2022-06-24T22:34:23Z",
+      "message": "Add RobotiqGripperInterface."
+    },
+    {
+      "sha": "148c53c03d613e5f04fd91d59b4f3b6f8d8d302f",
+      "author": "Cory Crean",
+      "date": "2022-06-23T22:51:38Z",
+      "message": "Add robotiq_description package."
+    },
+    {
+      "sha": "7252095417ee06451cf0eab0a6abcf856d3fe42a",
+      "author": "Cory Crean",
+      "date": "2022-06-23T22:00:10Z",
+      "message": "Add velocity state interface."
+    },
+    {
+      "sha": "d0868e188d12c39b0b141e130ade1649dff958fb",
+      "author": "Cory Crean",
+      "date": "2022-06-23T21:44:26Z",
+      "message": "Remove example code."
+    },
+    {
+      "sha": "e7f31480d56e8978aaa27c14135fb53dd62aad24",
+      "author": "Cory Crean",
+      "date": "2022-06-23T21:38:17Z",
+      "message": "Add kLogger."
+    },
+    {
+      "sha": "53998bff3f4b518f14902b9c0b00b1b093321bdb",
+      "author": "Cory Crean",
+      "date": "2022-06-23T21:31:50Z",
+      "message": "Change namespace to 'robotiq_gripper'."
+    },
+    {
+      "sha": "b38e761fd5318a7255a5ae15bc87224bffa0f110",
+      "author": "Cory Crean",
+      "date": "2022-06-23T18:39:53Z",
+      "message": "Add RobotiqGripperHardwareInterface."
+    },
+    {
+      "sha": "f07cc42bc7da62a2cd4f10d3779481bf72dc90d9",
+      "author": "Cory Crean",
+      "date": "2022-06-22T20:08:25Z",
+      "message": "Initial commit"
+    }
+  ]
+}

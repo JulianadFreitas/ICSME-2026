@@ -1,0 +1,588 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-07T22:50:46Z",
+    "source": "github_rest",
+    "endpoint": "/repos/{owner}/{repo}/commits",
+    "owner": "AndrejOrsula",
+    "repo": "pymoveit2",
+    "per_page": 100
+  },
+  "data": [
+    {
+      "sha": "e581b733b53eb3aa0782972c33accb905b9257d9",
+      "author": "Andrej Orsula",
+      "date": "2025-12-23T23:33:30Z",
+      "message": "CI: Disable pull_request trigger for the build workflow (#121)\n\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>"
+    },
+    {
+      "sha": "e40c904ac267a01935e4b0abee0150d54e319825",
+      "author": "dependabot[bot]",
+      "date": "2025-11-24T19:34:37Z",
+      "message": "build(deps): bump actions/checkout from 5 to 6 (#120)\n\nBumps [actions/checkout](https://github.com/actions/checkout) from 5 to 6.\n- [Release notes](https://github.com/actions/checkout/releases)\n- [Changelog](https://github.com/actions/checkout/blob/main/CHANGELOG.md)\n- [Commits](https://github.com/actions/checkout/compare/v5...v6)\n\n---\nupdated-dependencies:\n- dependency-name: actions/checkout\n  dependency-version: '6'\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>"
+    },
+    {
+      "sha": "8c562a4133665dcacdc5e2119e15fe0e670020be",
+      "author": "Christian Rauch",
+      "date": "2025-11-21T09:44:52Z",
+      "message": "Merge pull request #115 from AndrejOrsula/ci_run_example\n\nrun 'ex_pose_goal' example"
+    },
+    {
+      "sha": "20695be5d2fbab95f12f353881d82a4900b27210",
+      "author": "Christian Rauch",
+      "date": "2025-11-03T13:16:42Z",
+      "message": "handle ExternalShutdownException during wait for joint states"
+    },
+    {
+      "sha": "7b744381c9c77d83c5217e19d67c7364917ff0b7",
+      "author": "Christian Rauch",
+      "date": "2025-11-03T12:05:59Z",
+      "message": "run 'ex_pose_goal' example"
+    },
+    {
+      "sha": "efe253a73b3d219de178fdd1b831f3151af63e18",
+      "author": "Christian Rauch",
+      "date": "2025-11-03T09:40:46Z",
+      "message": "replace deprecated 'warn' with 'warning'"
+    },
+    {
+      "sha": "c63e58f7cca925b1e3949cbb8dfe7aecfeece159",
+      "author": "Christian Rauch",
+      "date": "2025-11-03T09:33:33Z",
+      "message": "replace internal '_logger' member with public 'get_logger()' method"
+    },
+    {
+      "sha": "db8737c5bfe65c7d9c22638c44774bdd6690ae1e",
+      "author": "Christian Rauch",
+      "date": "2025-11-03T12:05:26Z",
+      "message": "Install ROS 2 CLI Packages"
+    },
+    {
+      "sha": "cce46716318d02e010b268466cd73dad6650daeb",
+      "author": "Christian Rauch",
+      "date": "2025-11-03T09:08:22Z",
+      "message": "remove non-existing 'master' branch"
+    },
+    {
+      "sha": "5f970783bbc628aeb38daa4eae62bc83364536ec",
+      "author": "Christian Rauch",
+      "date": "2025-10-31T08:46:18Z",
+      "message": "Merge pull request #114 from AndrejOrsula/rel_412\n\nupdate the release version in the package.xml"
+    },
+    {
+      "sha": "dea501f120b98456aaa58ccd0fd9c191e963fc2e",
+      "author": "Christian Rauch",
+      "date": "2025-10-31T08:36:40Z",
+      "message": "update the release version in the package.xml"
+    },
+    {
+      "sha": "f2fc1c4d59752581538c3f493a16866cf72a6a39",
+      "author": "dependabot[bot]",
+      "date": "2025-09-08T20:23:50Z",
+      "message": "build(deps): bump actions/setup-python from 5 to 6 (#112)\n\nBumps [actions/setup-python](https://github.com/actions/setup-python) from 5 to 6.\n- [Release notes](https://github.com/actions/setup-python/releases)\n- [Commits](https://github.com/actions/setup-python/compare/v5...v6)\n\n---\nupdated-dependencies:\n- dependency-name: actions/setup-python\n  dependency-version: '6'\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>"
+    },
+    {
+      "sha": "2caf522ad1d0501759774385ed17544ddc6d027a",
+      "author": "Mark Finean",
+      "date": "2025-08-27T12:21:26Z",
+      "message": "Apply the custom start joint state to the request (#109)\n\n* Apply the custom start joint state to the request\n\n* Update pymoveit2/moveit2.py\n\nCo-authored-by: Andrej Orsula <orsula.andrej@gmail.com>\n\n---------\n\nCo-authored-by: Andrej Orsula <orsula.andrej@gmail.com>"
+    },
+    {
+      "sha": "8b791491b497822b45b4e4b41af18e6d8abf6c53",
+      "author": "Flamethr0wer",
+      "date": "2025-07-01T18:14:04Z",
+      "message": "Add a new namespace parameter to MoveIt2Servo\n\nI'm making a setup for two robotic arms, and the moveit_servo package requires a planning group to be specified, meaning that one must use one moveit_servo node per arm. But, as all of them would publish to the same topics, namespacing is necessary. However, pymoveit2 has the service names hardcoded, so simply adding a namespace parameter and adding it to the service names enables multi-arm support 👍"
+    },
+    {
+      "sha": "bbf125a2f2ef1f23501a986ddf7f052116be57d6",
+      "author": "Zarnack",
+      "date": "2025-08-16T16:39:17Z",
+      "message": "Expose link name argument for computing IK (#105)\n\nspecifying the link to use for inverse kinematics\n\nCo-authored-by: sebastian zarnack <sebastian.zarnack@eas.iis.fraunhofer.de>"
+    },
+    {
+      "sha": "a89b816a94bd1daed0995a1364686a0270589373",
+      "author": "Mark Finean",
+      "date": "2025-08-16T16:37:17Z",
+      "message": "Add a method for setting the workspace parameters (#106)\n\n* Add a method for setting the workspace parameters\n\n* Ensure kinematic path request has the same workspace parameters\n\n* Formatting from pre-commit"
+    },
+    {
+      "sha": "584f183fe9d444773a1354d6af0e271af76091cd",
+      "author": "dependabot[bot]",
+      "date": "2025-08-12T05:33:38Z",
+      "message": "build(deps): bump actions/checkout from 4 to 5 (#108)\n\nBumps [actions/checkout](https://github.com/actions/checkout) from 4 to 5.\n- [Release notes](https://github.com/actions/checkout/releases)\n- [Changelog](https://github.com/actions/checkout/blob/main/CHANGELOG.md)\n- [Commits](https://github.com/actions/checkout/compare/v4...v5)\n\n---\nupdated-dependencies:\n- dependency-name: actions/checkout\n  dependency-version: '5'\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>"
+    },
+    {
+      "sha": "c2dda9e97d96586fd6071b7d26d3d236d8c252d7",
+      "author": "Andrej Orsula",
+      "date": "2025-06-08T12:07:10Z",
+      "message": "CI: Add build workflow (#97)\n\n* CI: Add build workflow\n\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>\n\n* replace selection logic for Debian distro by explicit values\n\n* test installing the generated Debian packages\n\n* [DBG] do not push packages in PR\n\n* Enable GITHUB_TOKEN\n\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>\n\n---------\n\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>\nCo-authored-by: Christian Rauch <Christian.Rauch@unileoben.ac.at>"
+    },
+    {
+      "sha": "12ca3044195973a2b82dced5b5a7b04f4a2ade99",
+      "author": "Christian Rauch",
+      "date": "2025-05-15T13:33:34Z",
+      "message": "comment out trimesh pip dependency for bloom package (#99)"
+    },
+    {
+      "sha": "f418cd9639a6322de0133b8243105ac1aa0d4621",
+      "author": "Christian Rauch",
+      "date": "2025-05-11T13:54:22Z",
+      "message": "Revert #94, add trimesh to ROS dependencies, and remove sync param from `reset_controller()` methods (#96)\n\n* Revert \"Always specify executor when spinning the node (#94)\"\n\nThis reverts commit 4797ed5b0b89e602f184459b99f08257f78f319d.\n\n* add rosdep key for trimesh pip package\n\n* remove unused timing variables and parameters"
+    },
+    {
+      "sha": "4797ed5b0b89e602f184459b99f08257f78f319d",
+      "author": "Alon Borenshtein",
+      "date": "2025-05-03T18:28:58Z",
+      "message": "Always specify executor when spinning the node (#94)\n\n* Enhance logging for trajectory execution and action server communication\n\n* Fix formatting by removing unnecessary newline in MoveIt2 class\n\n* Add check for joint_trajectory before logging execution details\n\n* Fix spin_once usage by explicitly passing node's executor\n\nSigned-off-by: Alon <alonborn@gmail.com>\n\n* Refactor logging in MoveIt2 class to reduce verbosity during trajectory execution\n\n* Remove unnecessary logging after trajectory execution in MoveIt2 class\n\n* pre-commit: Apply suggestions\n\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>\n\n---------\n\nSigned-off-by: Alon <alonborn@gmail.com>\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>\nCo-authored-by: Andrej Orsula <orsula.andrej@gmail.com>"
+    },
+    {
+      "sha": "4b1260aeada4268fd92770e889be4a9bf59fbcf8",
+      "author": "andrewbowman23",
+      "date": "2025-03-04T19:47:30Z",
+      "message": "Fix rclpy import and spin issues (#88)\n\n* Fix rclpy import and spin issues from (#87)\n\nCan't use rclpy.spin unless rclpy is imported.\nAlso, wait_until_executed use of spin was incorrect.\n\n* Apply pre-commit suggestions\n\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>\n\n---------\n\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>\nCo-authored-by: Andrej Orsula <orsula.andrej@gmail.com>"
+    },
+    {
+      "sha": "1f030f6072dac16914c91d1368926f182ea5f1fc",
+      "author": "belalhmedan90",
+      "date": "2025-03-04T01:48:16Z",
+      "message": "Fix potential deadlock and wait until service is available (#87)\n\n* Update moveit2.py\n\n* Apply pre-commit suggestions\n\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>\n\n---------\n\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>\nCo-authored-by: Andrej Orsula <orsula.andrej@gmail.com>"
+    },
+    {
+      "sha": "b8dde8584c82615c864be295b77d532251d37364",
+      "author": "Austin Gregg-Smith",
+      "date": "2025-02-19T12:21:22Z",
+      "message": "Feature/string error codes (#83)\n\n* feat: add method for getting the string value of error codes\n\n* feat: update logging to print string error codes\n\n* feat: update logging to print string error codes for gripper\n\n* rename get_enum_string -> enum_to_str and add type hints\n\n* formatting: make pre-commit happy\n\n* pre-commit: fix import order"
+    },
+    {
+      "sha": "640bb856f8af3d690b9c55ed3844647287a8a1f7",
+      "author": "Amal Nanavati",
+      "date": "2024-11-28T10:03:25Z",
+      "message": "[Bugfix] Copy mesh before scaling if it was passed in as a parameter (#80)"
+    },
+    {
+      "sha": "2d684e2a68ec3ce937f1c3c3321ff5ba72034fd8",
+      "author": "Andrej Orsula",
+      "date": "2024-11-25T11:10:18Z",
+      "message": "pre-commit: Update hooks\n\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>"
+    },
+    {
+      "sha": "60cc171b3b75be139411542604cdb52a9275239d",
+      "author": "Amal Nanavati",
+      "date": "2024-11-25T10:58:21Z",
+      "message": "Initialize parameters before ROS2 callbacks (#74)"
+    },
+    {
+      "sha": "b9b82b8d397da942971c584f3f1eab58445a9163",
+      "author": "Raphael Leber",
+      "date": "2024-11-25T10:57:09Z",
+      "message": "Add UR robot + generalize example to every robot (#76)\n\n* add UR robot\r\n\r\n* generalise exemples for every robots"
+    },
+    {
+      "sha": "3ecad18223aef2d809599c0180223e337a343e34",
+      "author": "dependabot[bot]",
+      "date": "2024-10-14T20:01:59Z",
+      "message": "build(deps): bump pre-commit-ci/lite-action from 1.0.3 to 1.1.0 (#77)\n\nBumps [pre-commit-ci/lite-action](https://github.com/pre-commit-ci/lite-action) from 1.0.3 to 1.1.0.\n- [Release notes](https://github.com/pre-commit-ci/lite-action/releases)\n- [Commits](https://github.com/pre-commit-ci/lite-action/compare/v1.0.3...v1.1.0)\n\n---\nupdated-dependencies:\n- dependency-name: pre-commit-ci/lite-action\n  dependency-type: direct:production\n  update-type: version-update:semver-minor\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>"
+    },
+    {
+      "sha": "704b610125f23a5853fee5c69f9602b4394203e2",
+      "author": "dependabot[bot]",
+      "date": "2024-09-16T19:59:37Z",
+      "message": "build(deps): bump pre-commit-ci/lite-action from 1.0.2 to 1.0.3 (#75)\n\nBumps [pre-commit-ci/lite-action](https://github.com/pre-commit-ci/lite-action) from 1.0.2 to 1.0.3.\n- [Release notes](https://github.com/pre-commit-ci/lite-action/releases)\n- [Commits](https://github.com/pre-commit-ci/lite-action/compare/v1.0.2...v1.0.3)\n\n---\nupdated-dependencies:\n- dependency-name: pre-commit-ci/lite-action\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>"
+    },
+    {
+      "sha": "afd30fa01724ba890599ae6143586d6694ff2319",
+      "author": "Yifei Cheng",
+      "date": "2024-06-03T08:03:05Z",
+      "message": "Add function to move gripper to a specific position (#70)"
+    },
+    {
+      "sha": "d38a6536670b607faf19e516d68a112fe6348ce1",
+      "author": "Amal Nanavati",
+      "date": "2024-05-19T00:40:55Z",
+      "message": "Allow clearing all collision objects (#69)\n\n* Enable clearing all collision objects\r\n\r\n* Added example"
+    },
+    {
+      "sha": "7f722fd3fda6e6c958c150cf7d8ad619119d6262",
+      "author": "Andrej Orsula",
+      "date": "2024-05-10T15:24:42Z",
+      "message": "Bump version to 4.0.0\n\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>"
+    },
+    {
+      "sha": "02cd3ed77ece60cc859a0bb17c4db10a2dc3f67c",
+      "author": "Andrej Orsula",
+      "date": "2024-05-10T14:37:14Z",
+      "message": "Autoupdate pre-commit hooks\n\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>"
+    },
+    {
+      "sha": "cfa9cb71b754f94a6ca67b0c3059bd1579918e73",
+      "author": "Andrej Orsula",
+      "date": "2024-05-10T14:35:47Z",
+      "message": "Update list of supported ROS 2 distributions\n\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>"
+    },
+    {
+      "sha": "b11ffc19335d3618a4d13d9d9788cbf98deb054d",
+      "author": "Amal Nanavati",
+      "date": "2024-05-10T13:40:48Z",
+      "message": "Allow users to preload a collision mesh (#67)"
+    },
+    {
+      "sha": "36b554f7b6d1e5cb6b635d65cbc26fd86010110d",
+      "author": "Amal Nanavati",
+      "date": "2024-05-10T13:39:06Z",
+      "message": "Fix bug in previous PR (#68)"
+    },
+    {
+      "sha": "f5f596a9894be0d8a34d2b410618273f93a20d38",
+      "author": "Amal Nanavati",
+      "date": "2024-05-07T09:12:21Z",
+      "message": "Reinstate Humble Compatibility for `GetCartesianPath` & Expose `planning_scene` To User (#66)\n\n* Reinstate Humble compatibility for GetCartesianPath\r\n\r\n* Expose planning scene to user"
+    },
+    {
+      "sha": "1d705a5bb8b6b5f8ac88a55caf0a2b87f18a0f06",
+      "author": "Amal Nanavati",
+      "date": "2024-04-26T11:26:13Z",
+      "message": "Allow Scaling Collision Meshes (#62)\n\n* Allow scaling of collision meshes\r\n\r\n* Added trimesh to rosdeps for easier installation\r\n\r\n* Ran tests with example\r\n\r\n* Remove trimesh as a required dependency"
+    },
+    {
+      "sha": "f362220ba44d24e856abb8d3faf861b743b592a5",
+      "author": "Amal Nanavati",
+      "date": "2024-04-08T09:40:02Z",
+      "message": "Add ability to move collision objects (#59)\n\n* Added a function to move collision objects\r\n\r\n* Add examples"
+    },
+    {
+      "sha": "6923f3d35d7f0444d44134d816734335c33f048f",
+      "author": "Amal Nanavati",
+      "date": "2024-04-04T09:53:24Z",
+      "message": "Allow users to set various cartesian path service parameters (#58)\n\n* Added ability to have cartesian planning calls avoid collisions\r\n\r\n* Fix bad merge\r\n\r\n* Allow users to set cartesian jump threshold\r\n\r\n* Allow users to set cartesian max step\r\n\r\n* Pass frame_id into the cartesian planning service\r\n\r\n* Add ability to specify a required fraction for a cartesian plan to succeed\r\n\r\n* Allowed users to get end effector name and base link name\r\n\r\n* Add revolute and prismatic jump thresholds\r\n\r\n* Formatting\r\n\r\n* Added test cases"
+    },
+    {
+      "sha": "316a4330373c3c91792af188ab662f4db43ba972",
+      "author": "Zarnack",
+      "date": "2024-04-04T09:41:14Z",
+      "message": "Added setting of cartesian speed and acceleration  (#53)\n\n* added re-use of max_velocity_scaling_factor and max_acceleration_scaling_factor from move_action goal to cartesian_path_request\r\n\r\n* Removed getter and setter of 'max_cartesian_speed' to avoid confusion\r\nas the corresponding value of the MotionPlanRequest.msg\r\n(respectively the self.__move_action_goal.request object) is currently\r\nnot used in moveit2.\r\n--> The 'max_cartesian_speed' variable requires the\r\n'default_planner_request_adapters/SetMaxCartesianEndEffectorSpeed'\r\nwhich currently only exists in moveit1."
+    },
+    {
+      "sha": "d168d4c4a1355c9a079928316e9b3d64213d7b18",
+      "author": "Andrej Orsula",
+      "date": "2024-03-30T12:47:41Z",
+      "message": "Use `cartesian_speed_limited_link` instead of `cartesian_speed_end_effector_link` when available (#56)\n\n* Update msg\r\n\r\n* Use  `cartesian_speed_limited_link` instead of `cartesian_speed_end_effector_link` when available\r\n\r\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>\r\nCo-authored-by: Apurv Saha <apurv.robotics@gmail.com>"
+    },
+    {
+      "sha": "fa2610f98e0e7988789dc7dead847f7d1c29778f",
+      "author": "Amal Nanavati",
+      "date": "2024-03-30T12:46:27Z",
+      "message": "Allow users to (dis)allow collisions with an object (#50)\n\n* Added functions to enable/disable collisions with an object vis the allowed collision matrix\r\n\r\n* Clarified function name, reduced replicated code\r\n\r\n* Made toggling collisions async\r\n\r\n* Fix type annotations for consistency\r\n\r\n* formatting\r\n\r\n* Added tests\r\n\r\n* Spelling\r\n\r\n* Update docstring\r\n\r\n* Fix unnecessary change"
+    },
+    {
+      "sha": "bcd2aa91e04adaf6adb885a460216d483b5c212f",
+      "author": "dependabot[bot]",
+      "date": "2024-03-25T19:32:16Z",
+      "message": "build(deps): bump dependabot/fetch-metadata from 1 to 2 (#54)\n\nBumps [dependabot/fetch-metadata](https://github.com/dependabot/fetch-metadata) from 1 to 2.\n- [Release notes](https://github.com/dependabot/fetch-metadata/releases)\n- [Commits](https://github.com/dependabot/fetch-metadata/compare/v1...v2)\n\n---\nupdated-dependencies:\n- dependency-name: dependabot/fetch-metadata\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>"
+    },
+    {
+      "sha": "bd63d260a2c97c97e7e9b14268b1995a2e269235",
+      "author": "dependabot[bot]",
+      "date": "2024-03-11T20:28:12Z",
+      "message": "build(deps): bump pre-commit/action from 3.0.0 to 3.0.1 (#51)\n\nBumps [pre-commit/action](https://github.com/pre-commit/action) from 3.0.0 to 3.0.1.\n- [Release notes](https://github.com/pre-commit/action/releases)\n- [Commits](https://github.com/pre-commit/action/compare/v3.0.0...v3.0.1)\n\n---\nupdated-dependencies:\n- dependency-name: pre-commit/action\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>"
+    },
+    {
+      "sha": "0a3f01937b14206aec88fbe5b1d8f6ea6d6bd89f",
+      "author": "dependabot[bot]",
+      "date": "2024-03-11T20:27:23Z",
+      "message": "build(deps): bump pre-commit-ci/lite-action from 1.0.1 to 1.0.2 (#52)\n\nBumps [pre-commit-ci/lite-action](https://github.com/pre-commit-ci/lite-action) from 1.0.1 to 1.0.2.\n- [Release notes](https://github.com/pre-commit-ci/lite-action/releases)\n- [Commits](https://github.com/pre-commit-ci/lite-action/compare/v1.0.1...v1.0.2)\n\n---\nupdated-dependencies:\n- dependency-name: pre-commit-ci/lite-action\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>"
+    },
+    {
+      "sha": "a4146e6392e325a629b0b0c6370434865751836c",
+      "author": "Andrej Orsula",
+      "date": "2024-03-11T20:25:14Z",
+      "message": "Add Dependabot automation\n\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>"
+    },
+    {
+      "sha": "8bf71aef4ede2b301580c5fe6c8d4a12c48400c4",
+      "author": "Amal Nanavati",
+      "date": "2024-02-27T12:54:10Z",
+      "message": "Allow users to set `planner_id` and `pipeline_id` (#48)\n\n* Added set_planner_id\r\n\r\n* Make planner_id and pipeline_id properties\r\n\r\n* Add planner_id param to example files\r\n\r\n* Formatting"
+    },
+    {
+      "sha": "09ce8d8a75afaf74da907b07a3a63e53cde70393",
+      "author": "Amal Nanavati",
+      "date": "2024-02-20T10:08:29Z",
+      "message": "Added Async Forward/Inverse Kinematics (#43)\n\n* [WIP] Add async service call for FK/IK analogous to planning\r\n\r\n* Compute FK returns a list of post_stampeds\r\n\r\n* Pre-commit formatting\r\n\r\n* Added FK example\r\n\r\n* Comment changes to orientation path constraint examples\r\n\r\n* Added IK example\r\n\r\n* Update examples/ex_fk.py\r\n\r\nCo-authored-by: Andrej Orsula <orsula.andrej@gmail.com>\r\n\r\n* Update examples/ex_ik.py\r\n\r\nCo-authored-by: Andrej Orsula <orsula.andrej@gmail.com>\r\n\r\n* Update moveit2.py\r\n\r\n---------\r\n\r\nCo-authored-by: Ethan Gordon <ekgordon@cs.washington.edu>\r\nCo-authored-by: Andrej Orsula <orsula.andrej@gmail.com>"
+    },
+    {
+      "sha": "cff6677e20d356f69e1611c30bae6281d8e97cfc",
+      "author": "Amal Nanavati",
+      "date": "2024-01-05T15:11:31Z",
+      "message": "Add Path Constraints (#42)\n\n* [WIP] Add ability to do path constraints\r\n\r\n* [WIP] Change API to be more intelligible\r\n\r\n* Allowed different orientation tolerances per axes\r\n\r\n* Make change not breaking by adding float option\r\n\r\n* Added parameterization option\r\n\r\n* Updated set_pose_goal\r\n\r\n* Rearranged parameterization to not be a breaking change\r\n\r\n* Formatting changes form pre-commit\r\n\r\n* Add orientation path constraint example\r\n\r\n* Reused constraint creation code from goal constraints\r\n\r\n* Pre-commit formatting fix\r\n\r\n---------\r\n\r\nCo-authored-by: Ethan Gordon <ekgordon@cs.washington.edu>"
+    },
+    {
+      "sha": "ae4c8bcc5bc68db3588f3136f1f8f38fa9a8c514",
+      "author": "Amal Nanavati",
+      "date": "2023-12-22T21:27:56Z",
+      "message": "Add asynchronous planning and execution (#40)\n\n* Add joint goal example for Kinova JACO2\r\n\r\n* [WIP] Added execution cancellation and polling\r\n\r\n* Switch to ExecuteTrajectory action\r\n\r\n* [WIP] Goal cancellation is broken\r\n\r\n* Added cancellation via topic publication\r\n\r\n* Full cancellation example\r\n\r\n* Need option for both move action and direct planning\r\n\r\n* Created get_trajectory, so users of plan_async can easily get the result\r\n\r\n* Reset last error code before action execution\r\n\r\nConsider two cases, one where action server (either for execute or MoveGroup) is not available, and another where the action succeeds very fast. Both cases are currently indistinguishable from the client perspective, because they will request a goal, and then when they query the state it will be IDLE. This commit resolves that, because if the error code is set that means the action completed very fast, whereas if it is None that means the action did not complete.\r\n\r\n* Reverted to original example\r\n\r\n* Small fixes from rebase\r\n\r\n* Update examples\r\n\r\n* Update docstrings\r\n\r\n* Update docstrings\r\n\r\n* Addressed PR comments\r\n\r\n* Ran pre-commit hook\r\n\r\n* Addressed PR comments\r\n\r\n* Fixed gripper interface\r\n\r\n---------\r\n\r\nCo-authored-by: Ethan K. Gordon <ekgordon@cs.washington.edu>"
+    },
+    {
+      "sha": "6268b9993352b408e268b18856792deecb1bcffa",
+      "author": "Andrej Orsula",
+      "date": "2023-12-21T16:38:55Z",
+      "message": "CI: Add pre-commit\n\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>"
+    },
+    {
+      "sha": "2bc9a4302059f8b5d00923b8842a3bb5ad5cfb2a",
+      "author": "Martin Huber",
+      "date": "2023-11-10T15:28:20Z",
+      "message": "Add support for KUKA LBRs (#38)"
+    },
+    {
+      "sha": "5b35728306665e7f21fe2ab1ee5bb42565c68e12",
+      "author": "MDecarabas",
+      "date": "2023-11-08T21:36:37Z",
+      "message": "Added crane_x7 robot model (#37)\n\n* Added crane_x7 robot model\r\n\r\n* Update pymoveit2/robots/crane_x7.py\r\n\r\nCo-authored-by: Andrej Orsula <orsula.andrej@gmail.com>\r\n\r\n---------\r\n\r\nCo-authored-by: Andrej Orsula <orsula.andrej@gmail.com>"
+    },
+    {
+      "sha": "0bb938cebe2824db8f23468732c0c92f42bafb7e",
+      "author": "Andrej Orsula",
+      "date": "2023-10-04T13:10:42Z",
+      "message": "Default `skip_if_noop` of gripper `open()`/`close()` to False (#36)\n\n* Default `skip_if_noop` of gripper `open()`/`close()` to False\r\n\r\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>"
+    },
+    {
+      "sha": "4f0064218ea35e20c53c2a1a1e130b6f601df881",
+      "author": "Andrej Orsula",
+      "date": "2023-10-03T18:22:55Z",
+      "message": "Simplify usage (#35)\n\n* Make API for Cartesian paths more obvious\r\n- Support `cartesian=True` in `move_to_pose()` even if `execute_via_moveit=True`\r\n- [BREAKING] Remove `cartesian` option in `move_to_configuration()`\r\n\r\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>\r\n\r\n* Fix condition in `add_collision_mesh()`\r\n\r\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>\r\n\r\n* Allow passing `Pose` and `PoseStamped` as pose goal\r\n\r\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>\r\n\r\n* Make `wait_until_executed()` return success of execution\r\n\r\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>"
+    },
+    {
+      "sha": "72ebc8a183ece8d7ba62ab560a67f21eead4c42f",
+      "author": "Andrej Orsula",
+      "date": "2023-09-29T14:05:18Z",
+      "message": "Improvements for scene objects and gripper interface (#34)\n\n* Add additional functionality for scene objects\r\n- Adding of primitive collision objects\r\n- Attaching of collision objects\r\n\r\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>\r\n\r\n* Add a generic gripper interface (`GripperInterface`)\r\n\r\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>\r\n\r\n* Update examples\r\n\r\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>\r\n\r\n* Fix installation of updated examples\r\n\r\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>\r\n\r\n* Update default position of collision object in examples\r\n\r\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>\r\n\r\n* Update examples in README.md\r\n\r\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>"
+    },
+    {
+      "sha": "f4bc6b650082532507a713996459e388eadc1618",
+      "author": "Andrej Orsula",
+      "date": "2023-09-29T12:55:26Z",
+      "message": "Add PhantomX Pincher to robots (#33)\n\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>"
+    },
+    {
+      "sha": "afb0dbd2daee08758c32c8f53d8e1ad2ee1f4ac0",
+      "author": "Ethan Gordon",
+      "date": "2023-08-23T08:44:52Z",
+      "message": "Add Kinova JACO + MICO definitions to robot (#32)\n\n* Added Kinova JACO + MICO robot definition\r\n\r\n* Match moveit groups to https://github.com/Kinovarobotics/kinova-ros/tree/noetic-devel/kinova_moveit\r\n\r\n* Include gripper type and assistive/service designation in kinova prefix\r\n\r\n* Added pre-commit hooks"
+    },
+    {
+      "sha": "6973d6c43833abad947ea372c674e2deff8fd60c",
+      "author": "Amal Nanavati",
+      "date": "2023-07-13T09:01:23Z",
+      "message": "Add `target_link` param to `plan` (#30)\n\nAlthough `target_link` is a parameter to `move_to_pose`, it isn't used if `self.__execute_via_moveit` is False. This commit addresses that."
+    },
+    {
+      "sha": "29dc040ed5fd8703bb19795474114ada2a79d6b0",
+      "author": "Andrej Orsula",
+      "date": "2023-06-06T21:39:21Z",
+      "message": "Add a note about the official `moveit_py` bindings\n\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>"
+    },
+    {
+      "sha": "f55428ab7a31887436aa5921979abbefe9e648b8",
+      "author": "pre-commit-ci[bot]",
+      "date": "2023-03-14T07:17:10Z",
+      "message": "[pre-commit.ci] pre-commit autoupdate (#22)\n\n* [pre-commit.ci] pre-commit autoupdate\r\n\r\nupdates:\r\n- [github.com/pycqa/isort: 5.10.1 → 5.12.0](https://github.com/pycqa/isort/compare/5.10.1...5.12.0)\r\n- [github.com/psf/black: 22.10.0 → 23.1.0](https://github.com/psf/black/compare/22.10.0...23.1.0)\r\n- [github.com/codespell-project/codespell: v2.2.2 → v2.2.4](https://github.com/codespell-project/codespell/compare/v2.2.2...v2.2.4)\r\n\r\n* [pre-commit.ci] auto fixes from pre-commit.com hooks\r\n\r\nfor more information, see https://pre-commit.ci\r\n\r\n---------\r\n\r\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>"
+    },
+    {
+      "sha": "60eb3406a87151bbaa7cf1d70f41c9c87d6f7663",
+      "author": "pre-commit-ci[bot]",
+      "date": "2022-12-06T14:43:55Z",
+      "message": "[pre-commit.ci] pre-commit autoupdate (#21)\n\nupdates:\r\n- [github.com/pre-commit/pre-commit-hooks: v4.3.0 → v4.4.0](https://github.com/pre-commit/pre-commit-hooks/compare/v4.3.0...v4.4.0)\r\n\r\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>"
+    },
+    {
+      "sha": "c6c02d9d317b3596a1b405045ea236c38a0df44d",
+      "author": "pre-commit-ci[bot]",
+      "date": "2022-11-22T13:55:45Z",
+      "message": "[pre-commit.ci] pre-commit autoupdate (#15)\n\nupdates:\r\n- [github.com/psf/black: 22.6.0 → 22.10.0](https://github.com/psf/black/compare/22.6.0...22.10.0)\r\n- [github.com/executablebooks/mdformat: 0.7.14 → 0.7.16](https://github.com/executablebooks/mdformat/compare/0.7.14...0.7.16)\r\n- [github.com/codespell-project/codespell: v2.1.0 → v2.2.2](https://github.com/codespell-project/codespell/compare/v2.1.0...v2.2.2)\r\n\r\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>"
+    },
+    {
+      "sha": "15c17c539bd6a79efc19c3f0e249200eb8148d12",
+      "author": "Andrej Orsula",
+      "date": "2022-11-22T13:54:01Z",
+      "message": "Use `frame_id` in `MoveIt2._plan_cartesian_path()`\n\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>"
+    },
+    {
+      "sha": "854beb12a950632dee2b96b6686c65812a55722c",
+      "author": "Andrej Orsula",
+      "date": "2022-11-22T13:53:05Z",
+      "message": "Clean-up examples\n\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>"
+    },
+    {
+      "sha": "67f455fad35af0b69c4f754f1311175ac00cb7b0",
+      "author": "Andrej Orsula",
+      "date": "2022-07-07T18:40:42Z",
+      "message": "Update & apply pre-commit hooks\n\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>"
+    },
+    {
+      "sha": "20addbf25b0676d7778efa6554023eb6f8ed4057",
+      "author": "Andrej Orsula",
+      "date": "2022-07-04T13:56:13Z",
+      "message": "Enable execution of bash scripts via symlinks\n\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>"
+    },
+    {
+      "sha": "a9869f2160efbe60bce6545d07d7a00de10db9af",
+      "author": "Andrej Orsula",
+      "date": "2022-06-29T14:24:54Z",
+      "message": "Update documentation\n\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>"
+    },
+    {
+      "sha": "484272e00bd1f132fde7a6efc90fc0f52a7f989a",
+      "author": "Andrej Orsula",
+      "date": "2022-06-07T14:21:04Z",
+      "message": "Bump package version in package.xml\n\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>"
+    },
+    {
+      "sha": "9a623a2d66479cf79dfa80552909392ca4e37b23",
+      "author": "Andrej Orsula",
+      "date": "2022-06-07T14:20:45Z",
+      "message": "Add LICENSE\n\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>"
+    },
+    {
+      "sha": "6836e9a5213fd2634754b627859ad0dffdbcb40c",
+      "author": "pre-commit-ci[bot]",
+      "date": "2022-05-10T08:07:11Z",
+      "message": "[pre-commit.ci] pre-commit autoupdate (#12)\n\nupdates:\r\n- [github.com/pre-commit/pre-commit-hooks: v4.0.1 → v4.2.0](https://github.com/pre-commit/pre-commit-hooks/compare/v4.0.1...v4.2.0)\r\n- [github.com/psf/black: 21.10b0 → 22.3.0](https://github.com/psf/black/compare/21.10b0...22.3.0)\r\n- [github.com/executablebooks/mdformat: 0.7.10 → 0.7.14](https://github.com/executablebooks/mdformat/compare/0.7.10...0.7.14)\r\n\r\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>"
+    },
+    {
+      "sha": "88020006d6361116d5809559232f608a37413c49",
+      "author": "Andrej Orsula",
+      "date": "2022-05-02T15:27:24Z",
+      "message": "2.1.0 (#11)\n\n* Add support for Cartesian paths (#8)\r\n\r\n* Add support for collision objects (#9)\r\n\r\n* Remove trimesh from ROS 2 dependencies\r\n\r\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>\r\n\r\n* Expose cartesian planning as a parameter in the pose goal example\r\n\r\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>\r\n\r\n* Add default test mesh for collision object example\r\n\r\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>\r\n\r\n* Move public functions before private\r\n\r\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>\r\n\r\nCo-authored-by: Nils Schulte <47043622+Schnilz@users.noreply.github.com>"
+    },
+    {
+      "sha": "70f8e001b3de0167efb351e28ccfeec488534d5b",
+      "author": "Andrej Orsula",
+      "date": "2022-02-03T15:44:09Z",
+      "message": "2.0.0 (#3) \n\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>"
+    },
+    {
+      "sha": "67d9495a17cd9c300be924af4819782209f9978b",
+      "author": "Andrej Orsula",
+      "date": "2022-01-29T13:46:30Z",
+      "message": "gripper_command: Add example\n\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>"
+    },
+    {
+      "sha": "6cb4143cf6ddedbff329a324d5833441b07594f5",
+      "author": "Andrej Orsula",
+      "date": "2022-01-29T13:46:09Z",
+      "message": "moveit2: Add support for multiple JointState publishers\n\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>"
+    },
+    {
+      "sha": "d4bceabcdcc7df696db6abbb576397ee7de1c679",
+      "author": "Andrej Orsula",
+      "date": "2022-01-29T13:45:22Z",
+      "message": "gripper_command: Refactor and add improvements\n\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>"
+    },
+    {
+      "sha": "2c69a16d1bce89be193016993d87c3825a3412f2",
+      "author": "Andrej Orsula",
+      "date": "2022-01-15T12:57:20Z",
+      "message": "moveit2: Refactor `joint_state` assignment in requests\n\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>"
+    },
+    {
+      "sha": "48c93c6bec975f6510eb3888a631572f97722a1a",
+      "author": "Andrej Orsula",
+      "date": "2022-01-15T12:28:31Z",
+      "message": "moveit2_gripper: Fix `is_open()`\n\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>"
+    },
+    {
+      "sha": "5cbb08529a06d39d4544b392736058d499c989ca",
+      "author": "Andrej Orsula",
+      "date": "2022-01-15T12:17:37Z",
+      "message": "moveit2: Fix typo\n\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>"
+    },
+    {
+      "sha": "8b142a85e6176b467bbd964f392234e747f26b96",
+      "author": "Andrej Orsula",
+      "date": "2022-01-15T11:52:31Z",
+      "message": "moveit2: Do not initialise dummy joint states\n\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>"
+    },
+    {
+      "sha": "1fb7ba884e1643937a2426f5c1c6e3b7ce573b82",
+      "author": "Andrej Orsula",
+      "date": "2022-01-15T10:19:51Z",
+      "message": "moveit2_gripper: Add option to enable motion without planning\n- Provides much faster execution (>100 times faster for 3-finger gripper)\n\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>"
+    },
+    {
+      "sha": "f41dbbef367d6ddf59f9967c587f6f9ec178efa2",
+      "author": "Andrej Orsula",
+      "date": "2022-01-11T09:35:25Z",
+      "message": "moveit2: Add reset option for `ignore_new_calls_while_executing`\n\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>"
+    },
+    {
+      "sha": "740563a24cf77e911fcbe3ddee4df365c956576d",
+      "author": "Andrej Orsula",
+      "date": "2022-01-04T10:44:37Z",
+      "message": "moveit2: Add option for sync `reset_controller()`\n\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>"
+    },
+    {
+      "sha": "f9de89c3eb98ef9084e4a5d89f812966dc236490",
+      "author": "Andrej Orsula",
+      "date": "2022-01-04T10:43:29Z",
+      "message": "moveit2_servo: Add option for sync `enable()`/`disable()`\n\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>"
+    },
+    {
+      "sha": "03269f8b797c2a2487fbc3423c2be22eaa90a08b",
+      "author": "Andrej Orsula",
+      "date": "2022-01-03T17:20:07Z",
+      "message": "moveit2: Refactor `compute_fk()` and `compute_ik()`\n\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>"
+    },
+    {
+      "sha": "02478b4e10baebb726538b379f4663353c5344ee",
+      "author": "Andrej Orsula",
+      "date": "2022-01-03T15:43:07Z",
+      "message": "1.1.0 (#2)\n\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>"
+    },
+    {
+      "sha": "4a298123f3b24bf6a48b14e3a2e8791e5204fb0e",
+      "author": "Andrej Orsula",
+      "date": "2022-01-03T12:57:58Z",
+      "message": "Add isort to pre-commit hooks\n\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>"
+    },
+    {
+      "sha": "48cdd873a7c1501996efaa864ace27fc87d4594a",
+      "author": "Andrej Orsula",
+      "date": "2022-01-03T09:06:29Z",
+      "message": "moveit2_servo: Add option to enable Servo directly on command call\n\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>"
+    },
+    {
+      "sha": "8df89ad6790fe59e104727ed66ee18851cb8f12e",
+      "author": "Andrej Orsula",
+      "date": "2022-01-03T08:57:29Z",
+      "message": "Fix typing of `wait_for_server_timeout_sec` arg\n\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>"
+    },
+    {
+      "sha": "6b1ef36820cda4ac35c1b88a9f248b1862dfc79b",
+      "author": "Andrej Orsula",
+      "date": "2021-12-29T17:40:12Z",
+      "message": "Specify timeout when waiting for all service and action servers\n\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>"
+    },
+    {
+      "sha": "f1836a785f4fecb2d67e1608f80eb26b90f380d6",
+      "author": "Andrej Orsula",
+      "date": "2021-12-28T18:12:03Z",
+      "message": "moveit2_gripper: Fix `reset_open()`/ `reset_closed()`\n\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>"
+    },
+    {
+      "sha": "8870a884cb40e861749204af0dba997cc595c8ab",
+      "author": "Andrej Orsula",
+      "date": "2021-12-25T11:47:23Z",
+      "message": "Add initial version of pymoveit2 (#1)\n\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>"
+    },
+    {
+      "sha": "7149b05b8a00a0d37b2ac19e95bd94619c15f9c4",
+      "author": "Andrej Orsula",
+      "date": "2021-12-13T23:14:11Z",
+      "message": "Add pre-commit configuration and setup\n\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>"
+    },
+    {
+      "sha": "dd2412d6703e14d1d1f1d407ba4b1e3fbfa76933",
+      "author": "Andrej Orsula",
+      "date": "2021-12-13T23:13:07Z",
+      "message": "Initial commit\n\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>"
+    }
+  ]
+}

@@ -1,0 +1,3498 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-06T22:30:28Z",
+    "source": "github_rest",
+    "endpoint": "/repos/{owner}/{repo}/commits",
+    "owner": "gazebosim",
+    "repo": "ros_gz",
+    "per_page": 100
+  },
+  "data": [
+    {
+      "sha": "a4358ac2d6af5b5bcfb9294503f757be11c9383a",
+      "author": "Alejandro Hernandez Cordero",
+      "date": "2026-02-04T16:12:17Z",
+      "message": "3.0.6"
+    },
+    {
+      "sha": "8ca95984bafe4788e127d186e4a1ed37fe3e1c93",
+      "author": "Alejandro Hernandez Cordero",
+      "date": "2026-02-04T16:12:12Z",
+      "message": "Changelog\n\nSigned-off-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "71775b4b87444718c624228d7d6848cafac4a567",
+      "author": "Shahazad Abdulla",
+      "date": "2026-02-04T08:52:42Z",
+      "message": "Add support for configurable frame_id in Gazebo subscriber (#825)\n\n- Allow users to specify 'frame_id' in the bridge configuration YAML.\n- Inject the frame ID into the ROS message header if the message type supports it.\n- Resolves issue where Gazebo messages with empty headers (e.g. Pose_V) result in invalid ROS messages.\n\nSigned-off-by: shahazadabdulla <shahazad.abdulla.engineer@gmail.com>"
+    },
+    {
+      "sha": "b3e8ca29f14a1ac8c7904f8883b8c8f2f08bb077",
+      "author": "Ian Chen",
+      "date": "2026-02-02T08:27:30Z",
+      "message": "Add override_frame_id parameter (#826)\n\nSigned-off-by: Ian Chen <ichen@openrobotics.org>"
+    },
+    {
+      "sha": "d472ca9a0cfaa7015ae5ff5ff8364da25440bb5c",
+      "author": "Shahazad Abdulla",
+      "date": "2026-01-22T21:30:28Z",
+      "message": "Fix missing timestamp in Pose_V -> PoseArray bridge (#812)\n\nSigned-off-by: ShahazadAbdulla <Shahazad.abdulla.engineer@gmail.com>\nCo-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "eed1c750fcc4411a7bd0f2f8719d96ced8625dc8",
+      "author": "Felix Exner",
+      "date": "2026-01-20T10:54:39Z",
+      "message": "Add dependency to ros2pkg (#816)\n\nTechnically, ros2pkg is a runtime dependency of ros_gz_sim, since it's used inside the package's launch files. I am aware that ros2pkg is such a core dependency (in fact it's a transitive dependency of ros-core) such that the practical relevance is very little, but it seems clean to me to add it.\n\nSigned-off-by: Felix Exner <feex@universal-robots.com>"
+    },
+    {
+      "sha": "7658f4a8848af0cad42433e1c99bd1482ab02d4d",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2025-12-26T11:24:54Z",
+      "message": "get rid of deprecated rclcpp::spin_some() (#813)\n\nSigned-off-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "10d169c16cfb6d8c6cac033c040d321ae72383fd",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2025-12-17T16:25:40Z",
+      "message": "Remove image_transport deprecation (#814)\n\nSigned-off-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "cf6dd354677ea43040f7d1c78d23ad082fdc7c52",
+      "author": "Tim Clephas",
+      "date": "2025-11-17T12:13:16Z",
+      "message": "Fix REP url locations (#805)\n\nSigned-off-by: Tim Clephas <tim.clephas@nobleo.nl>\nCo-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "054e9dea6c94b961db29375c989e6a6c6e31a60f",
+      "author": "Alejandro Hernandez Cordero",
+      "date": "2025-11-17T10:15:00Z",
+      "message": "3.0.5"
+    },
+    {
+      "sha": "a56e8768fdb37e9fc00b9d2d74589fd32118c9ff",
+      "author": "Alejandro Hernandez Cordero",
+      "date": "2025-11-17T10:14:55Z",
+      "message": "Changelog\n\nSigned-off-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "7f192a758bdba3259d8ced98205ca50157081382",
+      "author": "Jose Luis Rivero",
+      "date": "2025-10-17T15:21:12Z",
+      "message": "Update README to Gazebo Jetty (#799)\n\nSigned-off-by: Jose Luis Rivero <jrivero@honurobotics.com>\nSigned-off-by: Jose Luis Rivero <jrivero@osrfoundation.org>"
+    },
+    {
+      "sha": "111e4400ec68882821f41021cf28a15e6735074b",
+      "author": "Alejandro Hernandez Cordero",
+      "date": "2025-09-30T08:30:06Z",
+      "message": "make linters happy\n\nSigned-off-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "1adff13dda8c3ecfe94881b93fccab7a6e52a1e3",
+      "author": "Alejandro Hernandez Cordero",
+      "date": "2025-09-30T08:14:19Z",
+      "message": "3.0.4"
+    },
+    {
+      "sha": "cc94023451852c31146e24fce4db741318446614",
+      "author": "Alejandro Hernandez Cordero",
+      "date": "2025-09-30T08:14:11Z",
+      "message": "Changelog\n\nSigned-off-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "ae92d970891015530ed392cd5676bfd133b4eaeb",
+      "author": "Addisu Z. Taddese",
+      "date": "2025-09-30T04:59:35Z",
+      "message": "Implement ROS standard simulation interfaces (#790)\n\n---------\n\nSigned-off-by: Addisu Z. Taddese <addisu@openrobotics.org>\nSigned-off-by: Saurabh Kamat <kamatsaurabh01@gmail.com>\nCo-authored-by: Saurabh Kamat <kamatsaurabh01@gmail.com>\nCo-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "64a87d5ee9bc06780ad7b0daa8b0f0ee50e94d30",
+      "author": "Addisu Z. Taddese",
+      "date": "2025-08-20T08:13:57Z",
+      "message": "Remove `GZ_VERSION` from README (#794)\n\n`GZ_VERSION` is no longer needed when building ros_gz since the version\nof Gazebo paired with the ROS version is installed via the vendor\npackage dependencies.\n\nSigned-off-by: Addisu Z. Taddese <addisu@openrobotics.org>\nCo-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "e0eba4c5c1c1e73dec27ef2df97dc7c060f8deec",
+      "author": "Addisu Z. Taddese",
+      "date": "2025-08-20T07:43:56Z",
+      "message": "Remove GZ_VERSION from CI (#793)\n\nSigned-off-by: Addisu Z. Taddese <addisu@openrobotics.org>"
+    },
+    {
+      "sha": "0ddabf0b6aa0450ef84ff3e744ddc1c116253483",
+      "author": "Nizam Gifary",
+      "date": "2025-08-19T16:19:29Z",
+      "message": "add bayer image two way convertion  from sensor msgs to gz msgs (#792)"
+    },
+    {
+      "sha": "77522600db37d49a23e349c6e109b08caa621188",
+      "author": "mergify[bot]",
+      "date": "2025-07-15T13:25:36Z",
+      "message": "Added missing test and parse service name from YAML (backport #776) (#784)\n\n* Added missing test and parse service name from YAML (#776)\n\nSigned-off-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>\n(cherry picked from commit f69a10d73b3d32fdd4efaea40359a6b62a7f27b2)"
+    },
+    {
+      "sha": "782f6fea1a5b1f383ad11722789760f898e4faa3",
+      "author": "Silvio Traversaro",
+      "date": "2025-07-10T08:51:11Z",
+      "message": "Add Windows support for ros_gz_bridge and ros_gz_sim (#781)\n\nSigned-off-by: Silvio <silvio.traversaro@iit.it>"
+    },
+    {
+      "sha": "a84dedb34d47e00729902ad3fac4a61949b09c44",
+      "author": "Alon Nusem",
+      "date": "2025-07-08T14:40:40Z",
+      "message": "Added documentation for python launch file bridge configuration (#777)\n\nSigned-off-by: 4lon <alon.nusem@gmail.com>"
+    },
+    {
+      "sha": "6511749a59a00531c3633b4ef984746f5ced5baa",
+      "author": "Alejandro Hernandez Cordero",
+      "date": "2025-07-02T07:53:01Z",
+      "message": "3.0.3"
+    },
+    {
+      "sha": "e46e2b64fd88c09f674ebaf40fed7ee54b032c2d",
+      "author": "Alejandro Hernandez Cordero",
+      "date": "2025-07-02T07:52:57Z",
+      "message": "Changelog\n\nSigned-off-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "bba6783a85955e2719a0d11468d9a8a79223b0a7",
+      "author": "mergify[bot]",
+      "date": "2025-06-18T15:37:23Z",
+      "message": "Correct gz sim resource path in ros_gz_sim_demos (#771) (#773)\n\n(cherry picked from commit b3338455c7d469ccc9e48f9630f9f931ab6c8abb)\n\nSigned-off-by: roboticswithjulia <julia.marsal@ekumenlabs.com>\nSigned-off-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>\nCo-authored-by: Júlia Marsal Perendreu <julia.marsal.robotics@gmail.com>\nCo-authored-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "da76fbda12fd4b415a47ec31435649f237da019e",
+      "author": "Alejandro Hernandez Cordero",
+      "date": "2025-06-12T11:29:05Z",
+      "message": "3.0.2"
+    },
+    {
+      "sha": "ac1df3b073ad3ef4ead581b33e5a957b388883bd",
+      "author": "Alejandro Hernandez Cordero",
+      "date": "2025-06-12T11:28:59Z",
+      "message": "Changelog\n\nSigned-off-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "7f19b09e40ee05cc81c12390d4462aad9eaf6887",
+      "author": "Jose Luis Rivero",
+      "date": "2025-06-12T08:02:35Z",
+      "message": "Update README: remove EOLs and add Kilted (#766)\n\nSigned-off-by: Jose Luis Rivero <jrivero@honurobotics.com>"
+    },
+    {
+      "sha": "f40bd9e2f9f7f92bee623aa4cf701b971e270ebf",
+      "author": "mergify[bot]",
+      "date": "2025-06-11T10:55:55Z",
+      "message": "OS agnostic 'which' command (#762) (#765)\n\n(cherry picked from commit 5f25f0aad4a21fd67c01e8415c169d2d3869d3a1)\n\nSigned-off-by: Griffin Tabor <tabor473@gmail.com>\nCo-authored-by: Griffin Tabor <tabor473@gmail.com>"
+    },
+    {
+      "sha": "5332f4d839be1e56d3d3fa522b32a441fc28a201",
+      "author": "Martin Pecka",
+      "date": "2025-06-11T10:42:11Z",
+      "message": "ros_gz_bridge: Allow setting QoS profile from YAML files and launch action. (#761)\n\nThis change breaks API and ABI of the BridgeConfig struct.\n\nSigned-off-by: Martin Pecka <peckama2@fel.cvut.cz>"
+    },
+    {
+      "sha": "5aeea4fa2abb570ab7f6691f152cb6efc16d10b1",
+      "author": "Martin Pecka",
+      "date": "2025-06-09T07:52:36Z",
+      "message": "ros_gz_sim: Added support for passing initial_sim_time to Gazebo. (#756)\n\nSigned-off-by: Martin Pecka <peckama2@fel.cvut.cz>"
+    },
+    {
+      "sha": "6ab206d991072014230c1355e7566fe4899f80d0",
+      "author": "Martin Pecka",
+      "date": "2025-05-26T16:29:02Z",
+      "message": "Added easy way to configure bridge from XML launch files. (#735)\n\nSigned-off-by: Martin Pecka <peckama2@fel.cvut.cz>"
+    },
+    {
+      "sha": "ec1021b03009f04e10d839ce57709adf9da13e61",
+      "author": "Alejandro Hernandez Cordero",
+      "date": "2025-05-26T15:47:17Z",
+      "message": "make linters hapy\n\nSigned-off-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "c9a0988e949b877760e424b70a09407de286efbd",
+      "author": "Alejandro Hernandez Cordero",
+      "date": "2025-05-26T15:28:49Z",
+      "message": "3.0.1"
+    },
+    {
+      "sha": "fc70e554dc0504cd71fadf972b1b09bad2be7992",
+      "author": "Alejandro Hernandez Cordero",
+      "date": "2025-05-26T15:28:38Z",
+      "message": "Changelog\n\nSigned-off-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "76fc7ba3a40f96f7e2530a68557f2b1f98eb0c52",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2025-05-26T12:01:56Z",
+      "message": "Fix debug_env (#747)\n\nSigned-off-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "eb0967b0820e949a078b1dac888aea9f76918a09",
+      "author": "Arjo Chakravarty",
+      "date": "2025-05-23T10:43:58Z",
+      "message": "Log environment variables with which gazebo was launched (#680)\n\n* Log environment variables with which gazebo was launched\n\nThis can be useful for debugging scenarios where we want to debug why a simulation is not loading the correct files.\n\nSigned-off-by: Arjo Chakravarty <arjoc@intrinsic.ai>\n\n* Add confg\n\nSigned-off-by: Arjo Chakravarty <arjoc@intrinsic.ai>\n\n* Minor refactor\n\nSigned-off-by: Arjo Chakravarty <arjoc@intrinsic.ai>\n\n* make linters happy\n\nSigned-off-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>\n\n---------\n\nSigned-off-by: Arjo Chakravarty <arjoc@intrinsic.ai>\nSigned-off-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>\nCo-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "784f8fe3a600eaa9283f8b4e7ed28ad050e69d00",
+      "author": "Alejandro Hernandez Cordero",
+      "date": "2025-05-06T11:53:29Z",
+      "message": "3.0.0"
+    },
+    {
+      "sha": "5d9a2418c31ce3cfb9b94cdb793ee348b570ad69",
+      "author": "Alejandro Hernandez Cordero",
+      "date": "2025-05-06T11:53:23Z",
+      "message": "Changelog\n\nSigned-off-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "d63af40ac5383d66c76bf094b6d658c11cf5820a",
+      "author": "mergify[bot]",
+      "date": "2025-05-06T11:28:46Z",
+      "message": "Added LaserScan-Range bridge (backport #736) (#740)\n\nSigned-off-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>\nCo-authored-by: chcaya <55998117+chcaya@users.noreply.github.com>\nCo-authored-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "388d9318dc8019e511ecd0d6f948c1b8547ea4d6",
+      "author": "Khaled Gabr",
+      "date": "2025-04-22T16:05:24Z",
+      "message": "Spawn, set pose and delete entities using ROS 2 (#705)\n\nSigned-off-by: khaledgabr77 <khaledgabr77@gmail.com>\nSigned-off-by: Khaled Gabr <30967695+khaledgabr77@users.noreply.github.com>\nSigned-off-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>\nCo-authored-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "ec08a0175bbac1b2da2c1bcf04e9d202e23b5769",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2025-04-21T15:36:28Z",
+      "message": "use target_link_libraries instead of ament_target_dependencies (#730)\n\nSigned-off-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "9e2bc76457551eceb57db39f58b73530f0332618",
+      "author": "Leander Stephen D'Souza",
+      "date": "2025-03-31T15:26:36Z",
+      "message": "Added codespell pre-commit hook. (#721)\n\nSigned-off-by: Leander Stephen D'Souza <leanderdsouza1234@gmail.com>"
+    },
+    {
+      "sha": "6776f56ef70069a494162022e738a3da2214838e",
+      "author": "Leander Stephen D'Souza",
+      "date": "2025-03-31T08:16:37Z",
+      "message": "Add pre commit (#718)\n\nSigned-off-by: Leander Stephen D'Souza <leanderdsouza1234@gmail.com>"
+    },
+    {
+      "sha": "fe61a02ea70c824abd1f5fa8552305dbea4de559",
+      "author": "Jose Luis Rivero",
+      "date": "2025-03-21T18:53:18Z",
+      "message": "2.1.6"
+    },
+    {
+      "sha": "bbc90a22d69a6140496520f814aa686c9598de3e",
+      "author": "Jose Luis Rivero",
+      "date": "2025-03-21T18:53:09Z",
+      "message": "Bump changelogs for the next release\n\nSigned-off-by: Jose Luis Rivero <jrivero@honurobotics.com>"
+    },
+    {
+      "sha": "630b477ec12627563cc68cfa43d6b3657dc4e985",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2025-03-18T12:22:55Z",
+      "message": "make linters happy (#709)\n\nSigned-off-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "dd36692b73ec1328d7bd06cc8b584e57008367d5",
+      "author": "Afereti Pama",
+      "date": "2025-03-18T11:49:07Z",
+      "message": "Add SpawnEntity, DeleteEntity, & SetEntityPose Support (#380)\n\n* Feat: add spawn, delete, set pose service and entity_factory to bridge\n---------\n\nSigned-off-by: Afereti Pama <79831813+retinfai@users.noreply.github.com>\nCo-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "96f92fc713077c923171f12d0beda35cc8fe822d",
+      "author": "Alejandro Hernandez Cordero",
+      "date": "2025-02-24T15:37:43Z",
+      "message": "2.1.5"
+    },
+    {
+      "sha": "180dd3a01de8c620bb6fc61d839eb8d8d5428aa3",
+      "author": "Alejandro Hernandez Cordero",
+      "date": "2025-02-24T15:37:38Z",
+      "message": "Changelog\n\nSigned-off-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "16fbab43f8b984c4d23a7d9b8c53910f486f6fd1",
+      "author": "Dyst-0",
+      "date": "2025-02-24T12:53:51Z",
+      "message": "Add LogicalCameraImage support (#698)\n\nSigned-off-by: Dyst-0 <69257845+Dyst-0@users.noreply.github.com>"
+    },
+    {
+      "sha": "44545b9e00b9a194500a2652f8eabb8a2ff80143",
+      "author": "Alejandro Hernandez Cordero",
+      "date": "2025-02-12T10:07:51Z",
+      "message": "2.1.4"
+    },
+    {
+      "sha": "0139bb4533e78069d52d96af2eb647eb46ea0902",
+      "author": "Alejandro Hernandez Cordero",
+      "date": "2025-02-12T10:07:46Z",
+      "message": "Changelog\n\nSigned-off-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "f646d5cade730166f8cb408d483c24b6d382ca0e",
+      "author": "Addisu Z. Taddese",
+      "date": "2025-02-11T11:15:16Z",
+      "message": "Minor optimization to avoid dynamic casting in Gazebo callbacks (#692)\n\nSigned-off-by: Addisu Z. Taddese <addisu@openrobotics.org>"
+    },
+    {
+      "sha": "5e3b0730359a4f3f23cb26f6083ae5620b9a5ea1",
+      "author": "Leander Stephen D'Souza",
+      "date": "2025-01-27T08:13:11Z",
+      "message": "Fix spelling in entity creation (#688)\n\nSigned-off-by: Leander Stephen D'Souza <leanderdsouza1234@gmail.com>"
+    },
+    {
+      "sha": "6156b3ece5064fd9b567496013a7476e2f195cf4",
+      "author": "Addisu Z. Taddese",
+      "date": "2025-01-15T16:11:10Z",
+      "message": "Use PIMPL pattern in gzserver (#683)\n\nSigned-off-by: Addisu Z. Taddese <addisu@openrobotics.org>"
+    },
+    {
+      "sha": "e3bed25bb7647d236d54c146e3d73a1788db4c96",
+      "author": "Patrick Roncagliolo",
+      "date": "2025-01-15T09:20:56Z",
+      "message": "Expose header for `GzServer` (#681)\n\nSigned-off-by: Patrick Roncagliolo <ronca.pat@gmail.com>"
+    },
+    {
+      "sha": "faf5b4ff2097f5fa60657e209687b9b465f413b7",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2025-01-14T14:27:46Z",
+      "message": "2.1.3"
+    },
+    {
+      "sha": "a06e19059f16af9d09d48b2bd69039463fe0539f",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2025-01-14T14:27:39Z",
+      "message": "Changelog\n\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "23f72505ab5a149d5a0c628efdc722e826700ac5",
+      "author": "Øystein Sture",
+      "date": "2025-01-07T22:05:33Z",
+      "message": "Use both ROS package and message name for unique mappings (#656)\n\nSigned-off-by: Øystein Sture <os@skarvtech.com>\r\nCo-authored-by: Addisu Z. Taddese <addisu@openrobotics.org>"
+    },
+    {
+      "sha": "ab81585cca5f59fb8eee360ac37a6001f7833d00",
+      "author": "Addisu Z. Taddese",
+      "date": "2025-01-06T10:18:12Z",
+      "message": "Citadel EOL (#678)\n\nPart of https://github.com/gazebo-tooling/release-tools/issues/1223\n\nSigned-off-by: Addisu Z. Taddese <addisu@openrobotics.org>\nCo-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "550ef7bd800c0dcc32ec7813168ef653ed169c89",
+      "author": "ChenYing Kuo (CY)",
+      "date": "2024-12-24T11:27:37Z",
+      "message": "Shutdown explicitly while existing (#623)\n\nSigned-off-by: ChenYing Kuo <evshary@gmail.com>"
+    },
+    {
+      "sha": "6c0f01f594c4eda3e931d68b6bfc60628a56b510",
+      "author": "Carlos Agüero",
+      "date": "2024-12-18T21:03:52Z",
+      "message": "Refactor triggered_camera demo (#645)\n\nSigned-off-by: Carlos Agüero <caguero@openrobotics.org>\nCo-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "5cc492c4f32d9da2f0abef90f3404226f6c75d70",
+      "author": "Carlos Agüero",
+      "date": "2024-12-18T20:50:10Z",
+      "message": "Refactor rgbd_camera_bridge demo (#643)\n\nSigned-off-by: Carlos Agüero <caguero@openrobotics.org>\nCo-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "5dc7ac2e39bb4c5fdf8c074f66c5b1ca4dfd2762",
+      "author": "Carlos Agüero",
+      "date": "2024-12-18T20:12:43Z",
+      "message": "Refactor diff_drive demo (#635)\n\nSigned-off-by: Carlos Agüero <caguero@openrobotics.org>\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>\nCo-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "f06eb0c0d2631a0a5319c28c644bbb325d44a7d2",
+      "author": "Carlos Agüero",
+      "date": "2024-12-18T16:42:00Z",
+      "message": "Refactor gpu_lidar_bridge demo (#636)\n\n* Refactor gpu_lidar_bridge demo\r\n\r\nSigned-off-by: Carlos Agüero <caguero@openrobotics.org>"
+    },
+    {
+      "sha": "7b11ef8b64eb4198f2fab60880830499653579d0",
+      "author": "Carlos Agüero",
+      "date": "2024-12-18T11:56:45Z",
+      "message": "Refactor camera demo (#634)\n\nSigned-off-by: Carlos Agüero <caguero@openrobotics.org>\nCo-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "b7021077098c590272f745daeaccd6dfe346cc67",
+      "author": "Addisu Z. Taddese",
+      "date": "2024-12-17T23:35:20Z",
+      "message": "Update README.md to include Ionic (#677)\n\nSigned-off-by: Addisu Z. Taddese <addisu@openrobotics.org>"
+    },
+    {
+      "sha": "5e0c49bb72da758b9e0de7baf6d9bf9f95f54c77",
+      "author": "Carlos Agüero",
+      "date": "2024-12-16T10:43:18Z",
+      "message": "Refactor battery demo (#633)\n\nSigned-off-by: Carlos Agüero <caguero@openrobotics.org>"
+    },
+    {
+      "sha": "f9e5409dd665e34e0b554a06bc56e3e14ad5e6dc",
+      "author": "Carlos Agüero",
+      "date": "2024-12-13T19:10:34Z",
+      "message": "Refactor tf_bridge demo (#644)\n\nSigned-off-by: Carlos Agüero <caguero@openrobotics.org>"
+    },
+    {
+      "sha": "e1f578ae2692f4fccbcf015a5fac6985ae687273",
+      "author": "Carlos Agüero",
+      "date": "2024-12-13T18:55:47Z",
+      "message": "Refactor magnetometer demo (#638)\n\nSigned-off-by: Carlos Agüero <caguero@openrobotics.org>"
+    },
+    {
+      "sha": "52ee43e7f9e9cac02a2303747efc45f577fdbde5",
+      "author": "Carlos Agüero",
+      "date": "2024-12-13T18:23:38Z",
+      "message": "Refactor imu demo (#637)\n\n* Refactor imu demo\r\n\r\nSigned-off-by: Carlos Agüero <caguero@openrobotics.org>\r\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "4b57d24f9682b534e2327389cc5506d5ff779b8a",
+      "author": "Carlos Agüero",
+      "date": "2024-12-13T17:20:09Z",
+      "message": "Refactor navsat_gpxfix demo (#642)\n\n* Refactor navsat_gpxfix demo\r\n\r\nSigned-off-by: Carlos Agüero <caguero@openrobotics.org>"
+    },
+    {
+      "sha": "8bfdad1efbae60f56ccff349663ad7a0c4403b0a",
+      "author": "Carlos Agüero",
+      "date": "2024-12-13T16:31:34Z",
+      "message": "Refactor navsat demo (#639)\n\n* Refactor navsat demo\r\n\r\nSigned-off-by: Carlos Agüero <caguero@openrobotics.org>"
+    },
+    {
+      "sha": "13b6640373a8415b473e4caeeef28ee87473d06d",
+      "author": "Carlos Agüero",
+      "date": "2024-12-13T14:07:45Z",
+      "message": "Refactor air pressure demo (#632)\n\n* Refactor air pressure demo\r\n\r\nSigned-off-by: Carlos Agüero <caguero@openrobotics.org>\r\nCo-authored-by: Addisu Z. Taddese <addisu@openrobotics.org>\r\nCo-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "15465f0a114fad85e6d1f615c8687899ba53098e",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2024-12-11T11:20:37Z",
+      "message": "Merge pull request #664 from azeey/improve_parameter_handling\n\nSigned-off-by: Addisu Z. Taddese <addisu@openrobotics.org>\nCo-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "705ee56bbf084c88a4bc7f8d07915c107a7f0589",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2024-12-11T09:05:18Z",
+      "message": "Merge remote-tracking branch 'origin/ros2' into improve_parameter_handling"
+    },
+    {
+      "sha": "c2b51ff9e81e8c4e10a0c8bb662f163c355966b6",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2024-12-11T09:04:19Z",
+      "message": "Merge pull request #663 from azeey/improve_arg_parsing\n\nThe `RosGzBridge` and `GzServer` now support different spellings for\nboolean arguments (`True`, `true`). This also simplifies how\nconditionals are used to create composable nodes by evaluating the\nconditionals and using them as regular Python booleans instead of\nrelying on `PythonExpression`. It was actually the `PythonExpression`\nthat was preventing support of boolean arguments spelled `true`/`false`.\n\nSigned-off-by: Addisu Z. Taddese <addisu@openrobotics.org>"
+    },
+    {
+      "sha": "819c943dbd040b2d78555eb135ddefa334828d6a",
+      "author": "Addisu Z. Taddese",
+      "date": "2024-12-10T21:01:15Z",
+      "message": "Improve parameter handling for RosGzBridge\n\nSigned-off-by: Addisu Z. Taddese <addisu@openrobotics.org>"
+    },
+    {
+      "sha": "ff96f9762452360621b627e55d984e718e7523ee",
+      "author": "Addisu Z. Taddese",
+      "date": "2024-12-10T19:38:43Z",
+      "message": "Fix linter errors\n\nSigned-off-by: Addisu Z. Taddese <addisu@openrobotics.org>"
+    },
+    {
+      "sha": "a0c04de1c0479222ad21f07a4640e3b79f5e6c6c",
+      "author": "Addisu Z. Taddese",
+      "date": "2024-12-10T17:05:43Z",
+      "message": "Improve argument parsing in Actions\n\nThe `RosGzBridge` and `GzServer` now support different spellings for\nboolean arguments (`True`, `true`). This also simplifies how\nconditionals are used to create composable nodes by evaluating the\nconditionals and using them as regular Python booleans instead of\nrelying on `PythonExpression`. It was actually the `PythonExpression`\nthat was preventing support of boolean arguments spelled `true`/`false`.\n\nSigned-off-by: Addisu Z. Taddese <addisu@openrobotics.org>"
+    },
+    {
+      "sha": "63b651a53e30c53474e9e2bf429e417147827b64",
+      "author": "Addisu Z. Taddese",
+      "date": "2024-12-06T23:01:04Z",
+      "message": "Garden EOL (#662)\n\nSigned-off-by: Addisu Z. Taddese <addisu@openrobotics.org>"
+    },
+    {
+      "sha": "0eae6ffbaabb514c9a80e6add1f49f16ade72a2c",
+      "author": "Tatsuro Sakaguchi",
+      "date": "2024-12-05T22:48:38Z",
+      "message": "Set env path (#659)\n\nSigned-off-by: Tatsuro Sakaguchi <tatsuro.sakaguchi@g.softbank.co.jp>"
+    },
+    {
+      "sha": "5c1251a658ad8dd276664c2c88300d27572e25da",
+      "author": "Carlos Agüero",
+      "date": "2024-11-22T08:51:28Z",
+      "message": "Use member variables instead. (#653)\n\nSigned-off-by: Carlos Agüero <caguero@openrobotics.org>"
+    },
+    {
+      "sha": "cfd0f8c74ded9efdcb35410135d0a1da1727dcff",
+      "author": "Aarav Gupta",
+      "date": "2024-11-21T20:08:30Z",
+      "message": "Fix use_respawn argument causing errors (#651)\n\nSigned-off-by: Aarav Gupta <amronos275@gmail.com>"
+    },
+    {
+      "sha": "6bbb9e405856e23f445f9f8fa87f27ccbff4d114",
+      "author": "Carlos Agüero",
+      "date": "2024-11-21T11:30:42Z",
+      "message": "Move gzserver logic to its action (#646)\n\nSigned-off-by: Carlos Agüero <caguero@openrobotics.org>"
+    },
+    {
+      "sha": "558a1cfd55f9921e78a87c563d8ed847e9eae6bd",
+      "author": "Aarav Gupta",
+      "date": "2024-11-20T19:07:37Z",
+      "message": "Add a way to pass extra parameters to ros_gz_bridge (#628)\n\n* Add bridge_params argument to ros_gz_bridge\r\nSigned-off-by: Aarav Gupta <amronos275@gmail.com>\r\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>\r\nSigned-off-by: Wiktor Bajor <wiktorbajor1@gmail.com>\r\nCo-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>\r\nCo-authored-by: Wiktor Bajor <69388767+Wiktor-99@users.noreply.github.com>"
+    },
+    {
+      "sha": "04446e08e5a1153043e074528a7a3f2ec55449ab",
+      "author": "Wiktor Bajor",
+      "date": "2024-11-14T09:20:27Z",
+      "message": "Add remove entity node (#629)\n\nSigned-off-by: Wiktor Bajor <wiktorbajor1@gmail.com>"
+    },
+    {
+      "sha": "ad225a22d4e4974b67f10658f035227fb478b792",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2024-10-31T14:22:30Z",
+      "message": "2.1.2"
+    },
+    {
+      "sha": "c168f26207c4cdbafd7722301ed330e9fec993a1",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2024-10-31T14:22:25Z",
+      "message": "Changelog\n\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "02faa5b2383df27aa36321766c940924febdc5c6",
+      "author": "Aarav Gupta",
+      "date": "2024-10-28T13:52:46Z",
+      "message": "Create ros_gz_spawn_model.launch (#604)\n\nSigned-off-by: Aarav Gupta <amronos275@gmail.com>\r\nCo-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "e8a3ec5404c71e75468d6ebf233d9cab09715b36",
+      "author": "Amronos",
+      "date": "2024-10-25T08:21:30Z",
+      "message": "Add create_own_container argument to ros_gz_spawn_model.launch.py (#622)\n\nSigned-off-by: Aarav Gupta <134804732+Amronos@users.noreply.github.com>"
+    },
+    {
+      "sha": "a4d00a90a1a5f753a0d0fbfe8e1e142540aebadd",
+      "author": "Carlos Agüero",
+      "date": "2024-10-17T21:39:06Z",
+      "message": "Fix ros_gz_sim.launch.py when create_own_container is enabled. (#620)\n\nSigned-off-by: Carlos Agüero <caguero@openrobotics.org>"
+    },
+    {
+      "sha": "2d32f1b79e1c06fda6a62872fa41d95d3c89c597",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2024-10-14T14:00:34Z",
+      "message": "2.1.1"
+    },
+    {
+      "sha": "9871363b6c48c5d0c81e6d6793c7d8debf209e2f",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2024-10-14T14:00:24Z",
+      "message": "Changelog\n\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "8115ccaaedea718841367eb64e500e13df392fd7",
+      "author": "Carlos Agüero",
+      "date": "2024-10-14T13:59:17Z",
+      "message": "Extra parameter to start a container (#616)\n\nSigned-off-by: Carlos Agüero <caguero@openrobotics.org>"
+    },
+    {
+      "sha": "1e30af0105058d68c8f1c98f37904505f613cf97",
+      "author": "Ignacio Vizzo",
+      "date": "2024-10-07T17:26:23Z",
+      "message": "Bugfix: `if \"false\"` is always `True` (#617)\n\nThere is an issue in this launch file when passing the string 'false' as\r\nan argument. In Python, non-empty strings are always evaluated as True,\r\nregardless of their content. This means that even if you pass 'false',\r\nthe system will still evaluate it as True.\r\n\r\nThis bug results in the launch system incorrectly calling the OnShutdown\r\nmethod twice. When any ROS launch action invokes a RosAdapter, it\r\ntriggers the following exception: \"Cannot shutdown a ROS adapter that is\r\nnot running.\"\r\n\r\nTo temporarily work around this issue, you can launch gz_sim_launch.py\r\nwith the on_exit_shutdown argument set to an empty string. This prevents\r\nthe erroneous shutdown sequence and avoids the associated exception.\r\n\r\nSigned-off-by: Ignacio Vizzo <ignacio@dexory.com>"
+    },
+    {
+      "sha": "2d4a1a8f15b820c82f433f3173eba8ba1993bc15",
+      "author": "norakon",
+      "date": "2024-09-16T12:15:42Z",
+      "message": "adds deadline and liveliness QoSPolicyKinds to qos_overriding_options (#609)\n\nSigned-off-by: nora <nko@mail.e>\r\nCo-authored-by: nora <nko@bogaertsgl.com>"
+    },
+    {
+      "sha": "64b8acd1ba2472e684ac523d10a42e4f32cc0623",
+      "author": "Nabeel Sherazi",
+      "date": "2024-09-16T08:41:59Z",
+      "message": "Name gazebo sim node (#611)\n\nSigned-off-by: Nabeel Sherazi <nabeelsherazi97@gmail.com>"
+    },
+    {
+      "sha": "f2f0cedf6fb7bcf959d6db0f44bd1a08c203741e",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2024-09-12T14:31:42Z",
+      "message": "2.1.0"
+    },
+    {
+      "sha": "45bfe79a6d4b8336f9a59572b68f3baf1110f7e8",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2024-09-12T14:31:25Z",
+      "message": "Changelog\n\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "0ec697683d855a133f17227216519655b620287e",
+      "author": "Amronos",
+      "date": "2024-09-12T07:06:26Z",
+      "message": "Change world_string to model_string in gz_spawn_model files (#606)\n\n* Change world_string to model_string\r\n\r\nAlso changed description from XML string to XML(SDF) string\r\n\r\nSigned-off-by: Aarav Gupta <134804732+Amronos@users.noreply.github.com>"
+    },
+    {
+      "sha": "66c7a4a5b41bc2466f2334e216f0434a10303fdc",
+      "author": "Carlos Agüero",
+      "date": "2024-09-11T19:51:10Z",
+      "message": "Use model string in ros_gz_spawn_model.launch.py (#605)\n\nSigned-off-by: Carlos Agüero <caguero@openrobotics.org>"
+    },
+    {
+      "sha": "7e0c94c6b71b6caa5982e2238e93553c521743b5",
+      "author": "Amronos",
+      "date": "2024-09-11T17:30:28Z",
+      "message": "Remove default_value for required arguments (#602)\n\n* Remove default_value for config_file\r\nSigned-off-by: Aarav Gupta <134804732+Amronos@users.noreply.github.com>"
+    },
+    {
+      "sha": "0502c83ac0d2aa4837cbbf292c92005d45e9b27d",
+      "author": "Amronos",
+      "date": "2024-09-06T17:50:47Z",
+      "message": "Fix errors with name of bridge not being given (#600)\n\n* Add argument bridge_name to fix errors\r\n\r\nSigned-off-by: Aarav Gupta <134804732+Amronos@users.noreply.github.com>"
+    },
+    {
+      "sha": "118e33794eda1e6ea2a3ee98d991e90d91d9d563",
+      "author": "Carlos Agüero",
+      "date": "2024-09-06T09:04:13Z",
+      "message": "Restore launch file (#603)\n\nSigned-off-by: Carlos Agüero <caguero@openrobotics.org>"
+    },
+    {
+      "sha": "08fca27b9dd5b3f4375c3f63164f5bb2757b1e00",
+      "author": "Carlos Agüero",
+      "date": "2024-09-05T20:32:46Z",
+      "message": "Use optional parameters in actions (#601)\n\nSigned-off-by: Carlos Agüero <caguero@openrobotics.org>"
+    },
+    {
+      "sha": "07671327a9b28a8370ca99aa713a5e3364b8d38c",
+      "author": "Aarav Gupta",
+      "date": "2024-09-03T07:36:28Z",
+      "message": "Update Install in README.md (#598)\n\nSigned-off-by: Aarav Gupta <134804732+Amronos@users.noreply.github.com>"
+    },
+    {
+      "sha": "8e70cba2c0d6b9118fda55207119f27b76545fa3",
+      "author": "Aarav Gupta",
+      "date": "2024-09-03T07:02:33Z",
+      "message": "Update Install in README.md for Rolling (#595)\n\nSigned-off-by: Aarav Gupta <134804732+Amronos@users.noreply.github.com>"
+    },
+    {
+      "sha": "dbd127a4f2a8de9f87fcc2b988d059c206818b40",
+      "author": "Amronos",
+      "date": "2024-09-02T13:20:57Z",
+      "message": "Update README.md for Jazzy (#593)\n\nSigned-off-by: Amronos <134804732+Amronos@users.noreply.github.com>"
+    },
+    {
+      "sha": "1769efd1f9da48db4adac6c9675c06a6ee0b679a",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2024-08-29T14:09:08Z",
+      "message": "2.0.1"
+    },
+    {
+      "sha": "be0511fd63de92b0897099069719e802eb798af8",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2024-08-29T14:08:57Z",
+      "message": "Changelog\n\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "1ee9444baef76822db10939f28f669da8fab50a8",
+      "author": "Sebastian Kasperski",
+      "date": "2024-08-20T08:47:52Z",
+      "message": "Wait for create service to be available. (#588)\n\nSigned-off-by: Sebastian Kasperski <sebastian.kasperski@dfki.de>"
+    },
+    {
+      "sha": "6daea2caf9f0190f83ec7a73e7ed13307b193029",
+      "author": "Rein Appeldoorn",
+      "date": "2024-07-31T13:50:49Z",
+      "message": "Stamp all outgoing headers with the wall time if parameter override_timestamps_with_wall_time is set to true (#562)\n\nSigned-off-by: Rein Appeldoorn <rein.appeldoorn@nobleo.nl>"
+    },
+    {
+      "sha": "e1417a93be43f097bcf6d227430112c8ed83db89",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2024-07-22T15:06:22Z",
+      "message": "2.0.0"
+    },
+    {
+      "sha": "8e596796bf20a2faf8576735d255ccf8f7d3853a",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2024-07-22T15:06:14Z",
+      "message": "Changelog\n\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "e5967a9a0a88fed1eb9c582dad01918d3b2a1178",
+      "author": "Addisu Z. Taddese",
+      "date": "2024-07-18T23:40:02Z",
+      "message": "Making use_composition true by default (#578)\n\nSigned-off-by: Addisu Z. Taddese <addisu@openrobotics.org>"
+    },
+    {
+      "sha": "3b117f4caa465fddbfd2ceaf3d4e5fc562d559d5",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2024-07-03T15:02:45Z",
+      "message": "1.0.1"
+    },
+    {
+      "sha": "b4f29ea4f7c712e1f9d76418e92a24f53bf05879",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2024-07-03T15:02:34Z",
+      "message": "Changelog\n\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "f9afb69d1163633dd978024bb7271a28cf7b551a",
+      "author": "Victor T. Noppeney",
+      "date": "2024-07-01T11:43:38Z",
+      "message": "Add support for gz.msgs.EntityWrench (base branch: ros2) (#573)\n\nSigned-off-by: Victor T. N. <victortn21@hotmail.com>"
+    },
+    {
+      "sha": "c70f23f8cfe127ae0a1e6e23d062d7cc042d6d84",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2024-06-28T11:34:15Z",
+      "message": "Merge pull request #571 from azeey/jazzy_to_ros2\n\nMerge jazzy ➡️  ros2"
+    },
+    {
+      "sha": "cc9eb906494b6ed30f22bcda940d27cf1ae12226",
+      "author": "Addisu Z. Taddese",
+      "date": "2024-06-27T15:50:32Z",
+      "message": "Merge branch 'ros2' into jazzy_to_ros2"
+    },
+    {
+      "sha": "a781b78852112246245c05481db6335388d4f736",
+      "author": "Carlos Agüero",
+      "date": "2024-06-27T15:44:40Z",
+      "message": "Use memcpy instead of std::copy when bridging images (#565)\n\nWhile testing ros <-> gz communication using the bridge I noticed that the bridge was talking quite a bit of time copying images from Gazebo to ROS. I found that the std::copy operation that we're doing is substantially slower than the memcpy alternative. I think that in principle this shouldn't happen but the numbers are quite clear. Perhaps std::copy is doing something that doesn't use cache effectively\r\n---------\r\n\r\nSigned-off-by: Carlos Agüero <caguero@openrobotics.org>\r\nSigned-off-by: Carlos Agüero <cen.aguero@gmail.com>\r\nCo-authored-by: Jose Luis Rivero <jrivero@osrfoundation.org>"
+    },
+    {
+      "sha": "9167809b7c9dbdad3692353dd3f37c6e2debc408",
+      "author": "Addisu Z. Taddese",
+      "date": "2024-06-25T15:30:25Z",
+      "message": "Merge jazzy into ros2\n\nSigned-off-by: Addisu Z. Taddese <addisu@openrobotics.org>"
+    },
+    {
+      "sha": "5482f8cc9028400fb08a2e5151046192127fefcd",
+      "author": "Addisu Z. Taddese",
+      "date": "2024-06-25T15:24:49Z",
+      "message": "Merge pull request #569 from azeey/iron_to_jazzy\n\nMerge iron ➡️  jazzy"
+    },
+    {
+      "sha": "13f238a034c7bd30bba6fa93a4fe5998d80ea715",
+      "author": "Addisu Z. Taddese",
+      "date": "2024-06-25T15:10:37Z",
+      "message": "Merge remote-tracking branch 'origin/jazzy' into iron_to_jazzy"
+    },
+    {
+      "sha": "142d0ad39de5dac163a72571ec66ac88fc4d0918",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2024-06-25T14:02:02Z",
+      "message": "fixed CI ros version on jazzy branch (#570)\n\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "790050df8dcdfff83dcf811b9eef4f655ef67ffa",
+      "author": "mergify[bot]",
+      "date": "2024-06-25T07:33:15Z",
+      "message": "Add a ROS node that runs Gazebo (#500) (#567)\n\n* Add gzserver with ability to load an SDF file or string\r\n\r\n---------\r\n\r\nSigned-off-by: Addisu Z. Taddese <addisu@openrobotics.org>\r\n(cherry picked from commit 92a2891f4adf35e4a4119aca2447dee93e22a06a)\r\n\r\nCo-authored-by: Addisu Z. Taddese <addisu@openrobotics.org>"
+    },
+    {
+      "sha": "81755300bb886722aa91ad34c9556d3f8de85b47",
+      "author": "Addisu Z. Taddese",
+      "date": "2024-06-25T03:59:45Z",
+      "message": "Merge iron into jazzy\n\nSigned-off-by: Addisu Z. Taddese <addisu@openrobotics.org>"
+    },
+    {
+      "sha": "43e4837f97bb228751843faaea12e2859f202f9f",
+      "author": "Benjamin Perseghetti",
+      "date": "2024-05-06T17:59:36Z",
+      "message": "Add option to change material color from ROS. (#521)\n\nForward port of #486.\n\n    * Message and bridge for MaterialColor.\n\n    This allows bridging MaterialColor from ROS to GZ and is\n    important for allowing simulation users to create status lights.\n\nSigned-off-by: Benjamin Perseghetti <bperseghetti@rudislabs.com>\n(cherry picked from commit 78dc4823121f085594e6028a93f1e571eb04f58b)"
+    },
+    {
+      "sha": "02ea7f635f0fc774335e0ae0bbcbccb5badeca44",
+      "author": "Addisu Z. Taddese",
+      "date": "2024-06-24T14:53:31Z",
+      "message": "Merge pull request #564 from azeey/humble_to_iron\n\nHumble ➡️ Iron"
+    },
+    {
+      "sha": "6abafade13b09686c04e4ab2c5fd03198863d08a",
+      "author": "Addisu Z. Taddese",
+      "date": "2024-06-21T16:51:57Z",
+      "message": "Merge humble -> iron\n\nSigned-off-by: Addisu Z. Taddese <addisu@openrobotics.org>"
+    },
+    {
+      "sha": "4c64bbea8041131b36a84692af7064a4abbfddb4",
+      "author": "Carlos Agüero",
+      "date": "2024-06-07T13:07:15Z",
+      "message": "Use `ignoreLocalMessages` in the bridge (#559)\n\n* Ignore local messages\r\n\r\nSigned-off-by: Carlos Agüero <caguero@openrobotics.org>"
+    },
+    {
+      "sha": "cadae1c8323a74395c09a37e3de4c669c8c09d4f",
+      "author": "Carlos Agüero",
+      "date": "2024-05-31T18:17:48Z",
+      "message": "Update launch files with name parameter (#556)\n\n* Name is required.\r\n\r\nSigned-off-by: Carlos Agüero <caguero@openrobotics.org>"
+    },
+    {
+      "sha": "ae790793925e05cb39553247b95cc62e3b309b4a",
+      "author": "Addisu Z. Taddese",
+      "date": "2024-05-31T15:10:23Z",
+      "message": "Ensure the same container is used for the bridge and gz_server (#553)\n\nThis also adds a required `name` parameter for the bridge so that\r\nmultiple different bridges can be created without name collision\r\n\r\nSigned-off-by: Addisu Z. Taddese <addisu@openrobotics.org>"
+    },
+    {
+      "sha": "d92c1bd7babab05c99b5b9616bd50063768bbc38",
+      "author": "Carlos Agüero",
+      "date": "2024-05-24T17:45:59Z",
+      "message": "Launch gz_spawn_model from xml (#551)\n\nSpawn models from XML.\r\nSigned-off-by: Carlos Agüero <caguero@openrobotics.org>\r\nCo-authored-by: Addisu Z. Taddese <addisu@openrobotics.org>"
+    },
+    {
+      "sha": "10c1bd2c142c10348f458114a87469fb19a8d344",
+      "author": "Carlos Agüero",
+      "date": "2024-05-23T22:09:14Z",
+      "message": "Launch ros_gz_bridge from xml (#550)\n\n* Add gzserver with ability to load an SDF file or string\r\n\r\nSigned-off-by: Addisu Z. Taddese <addisu@openrobotics.org>"
+    },
+    {
+      "sha": "ac0b1a59336a2c010b94022ef69b5ed7f0bff11d",
+      "author": "Carlos Agüero",
+      "date": "2024-05-23T21:40:37Z",
+      "message": "Launch gzserver and the bridge as composable nodes (#528)\n\n* Add gzserver with ability to load an SDF file or string\r\n\r\nSigned-off-by: Addisu Z. Taddese <addisu@openrobotics.org>"
+    },
+    {
+      "sha": "92a2891f4adf35e4a4119aca2447dee93e22a06a",
+      "author": "Addisu Z. Taddese",
+      "date": "2024-05-22T21:12:06Z",
+      "message": "Add a ROS node that runs Gazebo (#500)\n\n* Add gzserver with ability to load an SDF file or string\r\n\r\n---------\r\n\r\nSigned-off-by: Addisu Z. Taddese <addisu@openrobotics.org>"
+    },
+    {
+      "sha": "78dc4823121f085594e6028a93f1e571eb04f58b",
+      "author": "Benjamin Perseghetti",
+      "date": "2024-05-06T17:59:36Z",
+      "message": "Add option to change material color from ROS. (#521)\n\nForward port of #486.\r\n\r\n    * Message and bridge for MaterialColor.\r\n\r\n    This allows bridging MaterialColor from ROS to GZ and is\r\n    important for allowing simulation users to create status lights.\r\n\r\nSigned-off-by: Benjamin Perseghetti <bperseghetti@rudislabs.com>"
+    },
+    {
+      "sha": "9377674444ea7616515c2648f607b02b3adacd4f",
+      "author": "wittenator",
+      "date": "2024-04-30T08:52:21Z",
+      "message": "populate imu covariances when converting (#375) (#540)\n\nSigned-off-by: Alaa El Jawad <ejalaa12@gmail.com>\r\nSigned-off-by: wittenator <9154515+wittenator@users.noreply.github.com>\r\nCo-authored-by: El Jawad Alaa <ejalaa12@gmail.com>"
+    },
+    {
+      "sha": "eb96258fbaafea7ea9c286fa70e6a644b2883476",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2024-04-29T14:24:05Z",
+      "message": "update actions/checkoutv4 (#541)\n\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "98b9d13d230d68f931c54b774e0afe7f99823d9c",
+      "author": "Addisu Z. Taddese",
+      "date": "2024-04-24T20:41:28Z",
+      "message": "Prepare for 1.0.0 Release (#495)\n\nSigned-off-by: Addisu Z. Taddese <addisu@openrobotics.org>"
+    },
+    {
+      "sha": "e6e6b4584bbf7611d1f043b8ce1ff49e0ff2fd00",
+      "author": "Addisu Z. Taddese",
+      "date": "2024-04-24T16:07:01Z",
+      "message": "Use gz_vendor packages (#531)\n\nSigned-off-by: Addisu Z. Taddese <addisu@openrobotics.org>"
+    },
+    {
+      "sha": "a348c07527c54f387a576413a3e3d6d7431ff45b",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2024-04-16T16:35:29Z",
+      "message": "[backport Humble] Create bridge for GPSFix msg (#316) (#538)\n\nSigned-off-by: Vincent Rousseau <vincent.rousseau@sabi-agri.com>\r\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>\r\nCo-authored-by: Rousseau Vincent <vincentrou@gmail.com>"
+    },
+    {
+      "sha": "d87d63db8f3cf61297bcc4cc84829586532bfd13",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2024-04-16T13:00:27Z",
+      "message": "[backport Iron] Create bridge for GPSFix msg (#316) (#537)\n\nSigned-off-by: Vincent Rousseau <vincent.rousseau@sabi-agri.com>\r\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>\r\nCo-authored-by: Rousseau Vincent <vincentrou@gmail.com>"
+    },
+    {
+      "sha": "c3e79391411a9d8b51b002bd5cd5e6cc12ee8767",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2024-04-08T18:38:47Z",
+      "message": "0.254.1"
+    },
+    {
+      "sha": "9e11a66b1deffcd36b8844cf0eb15d451d07ebc7",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2024-04-08T18:38:35Z",
+      "message": "Changelog\n\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "2699e3fa574c21271993912bab70aafa73247f99",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2024-04-08T18:31:04Z",
+      "message": "0.244.14"
+    },
+    {
+      "sha": "58b6cbfa04e3afc98b42d3e21ade9140cb4a01bb",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2024-04-08T18:30:40Z",
+      "message": "Changelog\n\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "c9a5a736bde407f9911822097972fc0a8a0e9ad4",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2024-04-02T13:59:29Z",
+      "message": "Clean humble Ci (#527)\n\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "409a94107912ba9f3808c791c1c7c271ae76877e",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2024-04-02T07:48:58Z",
+      "message": "Added conversion for Detection3D and Detection3DArray (#523) (#526)\n\nSigned-off-by: wittenator <9154515+wittenator@users.noreply.github.com>\r\nCo-authored-by: wittenator <9154515+wittenator@users.noreply.github.com>"
+    },
+    {
+      "sha": "deccb5b9673896a4d9f6672ea9362ae1ec2f4dfa",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2024-04-01T17:46:09Z",
+      "message": "Added conversion for Detection3D and Detection3DArray (#523) (#525)\n\nSigned-off-by: wittenator <9154515+wittenator@users.noreply.github.com>\r\nCo-authored-by: wittenator <9154515+wittenator@users.noreply.github.com>"
+    },
+    {
+      "sha": "c91acf500b4d6325ebfa023267082f55620b44e6",
+      "author": "wittenator",
+      "date": "2024-04-01T15:25:59Z",
+      "message": "Added conversion for Detection3D and Detection3DArray (#523)\n\nSigned-off-by: wittenator <9154515+wittenator@users.noreply.github.com>"
+    },
+    {
+      "sha": "596eb1c142d152403722c13ae9cf5db1cb4f1fb2",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2024-04-01T07:16:18Z",
+      "message": "[Backport rolling] Add ROS namespaces to GZ topics (#517)\n\nSigned-off-by: Kotochleb <krzy.wojciecho@gmail.com>\r\nSigned-off-by: Krzysztof Wojciechowski <49921081+Kotochleb@users.noreply.github.com>\r\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>\r\nCo-authored-by: Krzysztof Wojciechowski <49921081+Kotochleb@users.noreply.github.com>"
+    },
+    {
+      "sha": "230adc581d538a8a817d843e0316f1b5df5ce08e",
+      "author": "Addisu Z. Taddese",
+      "date": "2024-03-29T17:37:58Z",
+      "message": "Keep rolling on Jammy and apply a temporary fix for rosdep (#522)\n\nPins rosdep to a known good version based on https://wiki.ros.org/SnapshotRepository\r\n\r\n---------\r\n\r\nSigned-off-by: Addisu Z. Taddese <addisu@openrobotics.org>"
+    },
+    {
+      "sha": "86596d6c7dce6a1af9def9f2ab7d1bacdc71332f",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2024-03-27T08:50:41Z",
+      "message": "Remove iron CI from rolling (#518)\n\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "d37b8062db0ba4bbac9d6f8a6385456adbad38c9",
+      "author": "Benjamin Perseghetti",
+      "date": "2024-03-27T08:49:56Z",
+      "message": "Add option to change material color from ROS. (#520)\n\nForward port of #486\r\n\r\n    * Message and bridge for MaterialColor.\r\n\r\n    This allows bridging MaterialColor from ROS to GZ and is\r\n    important for allowing simulation users to create status lights.\r\n\r\nSigned-off-by: Benjamin Perseghetti <bperseghetti@rudislabs.com>"
+    },
+    {
+      "sha": "78a2d1c9c01f36cc587dfc02f75adc6a40037377",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2024-03-25T19:55:40Z",
+      "message": "ign to gz (#519)\n\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "b986388fab9c21f818521e839adf4431b857efa2",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2024-03-25T19:10:16Z",
+      "message": "[forward iron] Add ROS namespaces to GZ topics (#516)\n\nSigned-off-by: Kotochleb <krzy.wojciecho@gmail.com>\r\nSigned-off-by: Krzysztof Wojciechowski <49921081+Kotochleb@users.noreply.github.com>\r\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>\r\nCo-authored-by: Krzysztof Wojciechowski <49921081+Kotochleb@users.noreply.github.com>"
+    },
+    {
+      "sha": "0b7c5e942e2b341be0bc50936e1b4fb4d0855cee",
+      "author": "Krzysztof Wojciechowski",
+      "date": "2024-03-20T17:27:29Z",
+      "message": "Add ROS namespaces to GZ topics (#512)\n\nSigned-off-by: Kotochleb <krzy.wojciecho@gmail.com>\r\nSigned-off-by: Krzysztof Wojciechowski <49921081+Kotochleb@users.noreply.github.com>\r\nCo-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "13e5592c3c05cd160903b52c23fd45c10ecaccd7",
+      "author": "Addisu Z. Taddese",
+      "date": "2024-03-11T17:10:38Z",
+      "message": "Support `<gazebo_ros>` in `package.xml` exports (#492)\n\nThis copies the implementation from `gazebo_ros_paths.py` to provide a\r\nway for packages to set resource paths from `package.xml`.\r\n\r\n```\r\ne.g.  <export>\r\n          <gazebo_ros gazebo_model_path=\"${prefix}/models\"/>\r\n          <gazebo_ros gazebo_media_path=\"${prefix}/models\"/>\r\n      </export>\r\n```\r\n\r\nThe value of `gazebo_model_path` and `gazebo_media_path` is appended to `GZ_SIM_RESOURCE_PATH`\r\nThe value of `plugin_path` appended to `GZ_SIM_SYSTEM_PLUGIN_PATH`\r\n\r\n---------\r\n\r\nSigned-off-by: Addisu Z. Taddese <addisu@openrobotics.org>"
+    },
+    {
+      "sha": "a6f58b69005654e759174ef549b4d7c37e8f0e13",
+      "author": "Michael Carroll",
+      "date": "2024-02-23T16:11:39Z",
+      "message": "Correctly export ros_gz_bridge for downstream targets (#503) (#506)\n\nSigned-off-by: Michael Carroll <mjcarroll@intrinsic.ai>"
+    },
+    {
+      "sha": "0367d9ad9042f76364ad4dad13e8774204e6a36b",
+      "author": "Michael Carroll",
+      "date": "2024-02-23T15:51:35Z",
+      "message": "Correctly export ros_gz_bridge for downstream targets (#503) (#507)\n\nSigned-off-by: Michael Carroll <mjcarroll@intrinsic.ai>"
+    },
+    {
+      "sha": "3a3d22ae2378d4d5e47c5d65493ecba825ab466d",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2024-02-23T15:23:39Z",
+      "message": "Add a virtual destructor to suppress compiler warning (#502) (#505)\n\nSigned-off-by: Michael Carroll <mjcarroll@intrinsic.ai>\r\nCo-authored-by: Michael Carroll <mjcarroll@intrinsic.ai>"
+    },
+    {
+      "sha": "8233fbde9f9117251c0f2791c5d156d6b7d155c8",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2024-02-23T15:23:31Z",
+      "message": "Add a virtual destructor to suppress compiler warning (#502) (#504)\n\nSigned-off-by: Michael Carroll <mjcarroll@intrinsic.ai>\r\nCo-authored-by: Michael Carroll <mjcarroll@intrinsic.ai>"
+    },
+    {
+      "sha": "ef9cd5c189b8ed013a6b687a8db0b2146627b926",
+      "author": "Michael Carroll",
+      "date": "2024-02-22T19:43:40Z",
+      "message": "Correctly export ros_gz_bridge for downstream targets (#503)\n\nSigned-off-by: Michael Carroll <mjcarroll@intrinsic.ai>"
+    },
+    {
+      "sha": "db6053d6aff94eb3981ee25eaa4eed3c869ffad9",
+      "author": "Michael Carroll",
+      "date": "2024-02-22T19:21:24Z",
+      "message": "Add a virtual destructor to suppress compiler warning (#502)\n\nSigned-off-by: Michael Carroll <mjcarroll@intrinsic.ai>"
+    },
+    {
+      "sha": "2e016498e1047865f4d0c7e5874a5e09815d51c2",
+      "author": "Katherine Scott",
+      "date": "2024-02-21T21:13:24Z",
+      "message": "Update README.md to clarify what will be supported in Jazzy (#499)\n\nAlso Added a note pointing to REP-2000 for additional details.  \r\n---------\r\n\r\nSigned-off-by: Katherine Scott <katherineAScott@gmail.com>\r\nSigned-off-by: Addisu Z. Taddese <addisu@openrobotics.org>\r\nCo-authored-by: Addisu Z. Taddese <addisu@openrobotics.org>"
+    },
+    {
+      "sha": "b5dffdeb9ce8d99fdb502f3b1c73e20325d04c3f",
+      "author": "Benjamin Perseghetti",
+      "date": "2024-02-01T15:43:39Z",
+      "message": "Add option to change material color from ROS. (#486)\n\n* Message and bridge for MaterialColor.\r\n\r\nThis allows bridging MaterialColor from ROS to GZ and is\r\nimportant for allowing simulation users to create status lights.\r\n\r\n---------\r\n\r\nSigned-off-by: Benjamin Perseghetti <bperseghetti@rudislabs.com>\r\nSigned-off-by: Addisu Z. Taddese <addisu@openrobotics.org>\r\nCo-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>\r\nCo-authored-by: Addisu Z. Taddese <addisuzt@intrinsic.ai>\r\nCo-authored-by: Addisu Z. Taddese <addisu@openrobotics.org>"
+    },
+    {
+      "sha": "2dca3580f7ac27f954fcdffbcff956aba963076f",
+      "author": "Addisu Z. Taddese",
+      "date": "2024-01-30T20:31:11Z",
+      "message": "Undeprecate use of commandline flags (#491)\n\nSigned-off-by: Addisu Z. Taddese <addisu@openrobotics.org>"
+    },
+    {
+      "sha": "6af4c0a4f90bd50a95cc314d6d4290e5701fd2f8",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2024-01-23T20:51:31Z",
+      "message": "0.244.13"
+    },
+    {
+      "sha": "60ac0787e88afcfda6360f250b6de351c3791fee",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2024-01-23T20:51:21Z",
+      "message": "Changelog\n\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "3abc34f62fc81a099891a70ab2ff89924bd0ba28",
+      "author": "El Jawad Alaa",
+      "date": "2024-01-23T13:40:56Z",
+      "message": "backport pr 374 (#489)\n\nSigned-off-by: Alaa El Jawad <ejalaa12@gmail.com>"
+    },
+    {
+      "sha": "d36e3717429f71d72cccaaae041fe074bbc33440",
+      "author": "El Jawad Alaa",
+      "date": "2024-01-23T13:39:14Z",
+      "message": "populate imu covariances when converting (#488)\n\nSigned-off-by: Alaa El Jawad <ejalaa12@gmail.com>"
+    },
+    {
+      "sha": "6810c209862fa32cc2285e445b8808800213811c",
+      "author": "Addisu Z. Taddese",
+      "date": "2024-01-09T17:48:00Z",
+      "message": "0.254.0 (#485)\n\nSigned-off-by: Addisu Z. Taddese <addisu@openrobotics.org>"
+    },
+    {
+      "sha": "9e0483145dbea5ac66a4f0b70232be292350a11d",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2024-01-04T09:20:51Z",
+      "message": "Additional tip for limiting number of cpus (#480) (#482)\n\nSigned-off-by: Addisu Z. Taddese <addisu@openrobotics.org>\r\nCo-authored-by: Addisu Z. Taddese <addisu@openrobotics.org>"
+    },
+    {
+      "sha": "84d5d27e6f730db506e6b229c40ef3fdc7042cf6",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2024-01-04T09:20:47Z",
+      "message": "Additional tip for limiting number of cpus (#480) (#481)\n\nSigned-off-by: Addisu Z. Taddese <addisu@openrobotics.org>\r\nCo-authored-by: Addisu Z. Taddese <addisu@openrobotics.org>"
+    },
+    {
+      "sha": "e348e3be89a871e3d8388e79682da173ff743dc3",
+      "author": "Addisu Z. Taddese",
+      "date": "2024-01-03T18:23:32Z",
+      "message": "Additional tip for limiting number of cpus (#480)\n\nSigned-off-by: Addisu Z. Taddese <addisu@openrobotics.org>"
+    },
+    {
+      "sha": "f09a391a27a8b30a78db6ac1934ed67333c03463",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2024-01-03T15:06:49Z",
+      "message": "Add tip about non-parallel builds to README (#477) (#478)\n\nSigned-off-by: Addisu Z. Taddese <addisu@openrobotics.org>"
+    },
+    {
+      "sha": "bdf138eeec5c2afb90a0ad667e1ccdeec1ecbab6",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2024-01-03T15:06:34Z",
+      "message": "Add tip about non-parallel builds to README (#477) (#479)\n\nSigned-off-by: Addisu Z. Taddese <addisu@openrobotics.org>"
+    },
+    {
+      "sha": "490f4d5f79c08dfd7bb6a424024844d1c9b8f500",
+      "author": "Addisu Z. Taddese",
+      "date": "2024-01-03T10:00:31Z",
+      "message": "Add tip about non-parallel builds to README (#477)\n\nSigned-off-by: Addisu Z. Taddese <addisu@openrobotics.org>"
+    },
+    {
+      "sha": "e619e41c896be411daa30c234dc5bd78fd916947",
+      "author": "Luca Della Vedova",
+      "date": "2024-01-02T18:22:58Z",
+      "message": "Update README to include harmonic (#473)\n\n* Update README to include harmonic\r\n\r\nSigned-off-by: Luca Della Vedova <lucadv@intrinsic.ai>\r\n\r\n* Remove humble-harmonic combination\r\n\r\nSigned-off-by: Luca Della Vedova <lucadv@intrinsic.ai>\r\n\r\n---------\r\n\r\nSigned-off-by: Luca Della Vedova <lucadv@intrinsic.ai>"
+    },
+    {
+      "sha": "8541d59689d23f516071eb5491d69f77b036e8e7",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2023-12-28T19:15:02Z",
+      "message": "Remove deprecations using ros_gz_sim_create (#476)\n\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "c610636b24874a1720c3181ea1f5bbb3d7fef025",
+      "author": "Ayush Singh",
+      "date": "2023-12-28T09:58:34Z",
+      "message": "Added support for using ROS 2 parameters to spawn entities in Gazebo using ros_gz_sim::create (#475)\n\nSigned-off-by: Ayush1285 <ayush.singhftw@gmail.com>"
+    },
+    {
+      "sha": "8fba3b4565c1e31947074854dea0730b1786bf80",
+      "author": "Addisu Z. Taddese",
+      "date": "2023-12-20T23:02:53Z",
+      "message": "Fix bug in `create` where command line arguments were truncated (#472)\n\nSigned-off-by: Addisu Z. Taddese <addisu@openrobotics.org>"
+    },
+    {
+      "sha": "78d3398d5817c06d2bc0ecdaee77f3ab6735e4bf",
+      "author": "Addisu Z. Taddese",
+      "date": "2023-12-13T21:06:02Z",
+      "message": "0.244.12"
+    },
+    {
+      "sha": "d598e13ce2e66061e38dd8dbcbd8854e6a030c02",
+      "author": "Addisu Z. Taddese",
+      "date": "2023-12-13T21:04:51Z",
+      "message": "Changelog\n\nSigned-off-by: Addisu Z. Taddese <addisu@openrobotics.org>"
+    },
+    {
+      "sha": "ced73879e1e559b2d06d0a6ce6208feaf4b251a9",
+      "author": "Addisu Z. Taddese",
+      "date": "2023-12-13T20:05:43Z",
+      "message": "Backport: Add conversion for geometry_msgs/msg/TwistStamped <-> gz.msgs.Twist (#468) (#471)\n\nSigned-off-by: Addisu Z. Taddese <addisu@openrobotics.org>"
+    },
+    {
+      "sha": "c22e289a10defceafed07fb21cfb64b6f7d51f95",
+      "author": "Addisu Z. Taddese",
+      "date": "2023-12-13T19:16:20Z",
+      "message": "Merge pull request #467 from gazebosim/azeey/fwd_humble\n\nForward port humble->iron"
+    },
+    {
+      "sha": "4b3ee9e7b5d57ab468f9e9a967ed50a19f7da0cc",
+      "author": "Addisu Z. Taddese",
+      "date": "2023-12-12T21:51:24Z",
+      "message": "Backport: Add conversion for geometry_msgs/msg/TwistStamped <-> gz.msgs.Twist (#468) (#470)\n\nSigned-off-by: Addisu Z. Taddese <addisu@openrobotics.org>"
+    },
+    {
+      "sha": "1205938fd3dd1727600b29da731929a5a64c8017",
+      "author": "Addisu Z. Taddese",
+      "date": "2023-12-01T05:12:03Z",
+      "message": "Merge humble into iron\n\nSigned-off-by: Addisu Z. Taddese <addisu@openrobotics.org>"
+    },
+    {
+      "sha": "a982161db38058f3c3b6b69f660184930484f077",
+      "author": "Addisu Z. Taddese",
+      "date": "2023-12-07T21:11:50Z",
+      "message": "Add conversion for geometry_msgs/msg/TwistStamped <-> gz.msgs.Twist (#468)\n\nSigned-off-by: Addisu Z. Taddese <addisu@openrobotics.org>"
+    },
+    {
+      "sha": "04acbda5f825b8d04c02aef469d7ef65b336a532",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2023-11-21T14:30:10Z",
+      "message": "Added messages for 2D Bounding Boxes to ros_gz_bridge (#458) (#466)\n\nSigned-off-by: wittenator <9154515+wittenator@users.noreply.github.com>\r\nCo-authored-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "514d53c041e5b95c5e9a58275d12cd3a5ba9222a",
+      "author": "Addisu Z. Taddese",
+      "date": "2023-11-15T17:09:06Z",
+      "message": "Add support for Harmonic/Humble pairing (#462)\n\n* Add harmonic CI (#447)\r\n\r\n* Add harmonic CI\r\n\r\nSigned-off-by: Michael Carroll <mjcarroll@intrinsic.ai>\r\n\r\n* Include garden options\r\n\r\nSigned-off-by: Michael Carroll <mjcarroll@intrinsic.ai>\r\n\r\n* Add harmonic stanza\r\n\r\nSigned-off-by: Michael Carroll <mjcarroll@intrinsic.ai>\r\n\r\n* Additional message headers\r\n\r\nSigned-off-by: Michael Carroll <mjcarroll@intrinsic.ai>\r\n\r\n---------\r\n\r\nSigned-off-by: Michael Carroll <mjcarroll@intrinsic.ai>\r\n\r\n* Use stable osrf repo for Garden and stable+prerelease for Harmonic (#448)\r\n\r\nHarmonic is now in the prerelease repository\r\n\r\nSigned-off-by: Jose Luis Rivero <jrivero@osrfoundation.org>\r\n\r\n* Add additional cmake/package.xml changes\r\n* Update headers\r\n* Update namespaces\r\n* Add ci for harmonic/humble\r\n* Update readme\r\n\r\n---------\r\n\r\nSigned-off-by: Michael Carroll <mjcarroll@intrinsic.ai>\r\nSigned-off-by: Jose Luis Rivero <jrivero@osrfoundation.org>\r\nSigned-off-by: Addisu Z. Taddese <addisu@openrobotics.org>\r\nCo-authored-by: Michael Carroll <mjcarroll@intrinsic.ai>\r\nCo-authored-by: Jose Luis Rivero <jrivero@osrfoundation.org>"
+    },
+    {
+      "sha": "4cf2da6ee1fac81b010a87e8e5ad722e97dc26fb",
+      "author": "wittenator",
+      "date": "2023-11-13T13:08:55Z",
+      "message": "Added messages for 2D Bounding Boxes to ros_gz_bridge (#458) (#460)\n\nSigned-off-by: wittenator <9154515+wittenator@users.noreply.github.com>"
+    },
+    {
+      "sha": "55eebea05fbf223e9b34c78444831903ed84b68e",
+      "author": "wittenator",
+      "date": "2023-11-09T09:12:35Z",
+      "message": "Added messages for 2D Bounding Boxes to ros_gz_bridge (#458)\n\nSigned-off-by: wittenator <9154515+wittenator@users.noreply.github.com>"
+    },
+    {
+      "sha": "161cbcf11fb3f26e0522edd5351ae04c8a1cecb4",
+      "author": "Michael Carroll",
+      "date": "2023-11-03T17:41:18Z",
+      "message": "Filter ROS arguments before gflags parsing (#453)\n\nSigned-off-by: Michael Carroll <mjcarroll@intrinsic.ai>"
+    },
+    {
+      "sha": "2e6b40803d4fe4006bce0612845c389711264484",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2023-11-02T15:58:18Z",
+      "message": "0.247.0"
+    },
+    {
+      "sha": "2733a3e691085a37ec1bc1bf7c0f4efd6dded5f8",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2023-11-02T15:57:53Z",
+      "message": "Changelog\n\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "9b0e3a9c31a9028541ee279677d572b635076f2d",
+      "author": "El Jawad Alaa",
+      "date": "2023-09-25T17:05:45Z",
+      "message": "populate imu covariances when converting (#375)\n\nSigned-off-by: Alaa El Jawad <ejalaa12@gmail.com>"
+    },
+    {
+      "sha": "bc4f777299a292e65511f8e79288f25780ae6fd1",
+      "author": "Michael Carroll",
+      "date": "2023-09-21T13:01:57Z",
+      "message": "set on_exit_shutdown argument for gz-sim ExecuteProcess (#355) (#452)\n\nSigned-off-by: Michael Anderson <anderson@mbari.org>\r\nCo-authored-by: andermi <anderson@mbari.org>"
+    },
+    {
+      "sha": "058542931819a56db9b9e62d0a13f3c057f6646b",
+      "author": "Michael Carroll",
+      "date": "2023-09-21T13:01:48Z",
+      "message": "set on_exit_shutdown argument for gz-sim ExecuteProcess (#355) (#451)\n\nSigned-off-by: Michael Anderson <anderson@mbari.org>\r\nCo-authored-by: andermi <anderson@mbari.org>"
+    },
+    {
+      "sha": "e93c35da79e4261f1d03880c3a051c1895847f00",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2023-09-13T12:34:02Z",
+      "message": "Fix double wait in ros_gz_bridge (#347) (#449)\n\nSigned-off-by: ymd-stella <world.applepie@gmail.com>\r\nCo-authored-by: ymd-stella <7959916+ymd-stella@users.noreply.github.com>"
+    },
+    {
+      "sha": "151d3d88693fbae8e906cf2e4dc083b7cab80f10",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2023-09-13T12:33:44Z",
+      "message": "Fix double wait in ros_gz_bridge (#347) (#450)\n\nSigned-off-by: ymd-stella <world.applepie@gmail.com>\r\nCo-authored-by: ymd-stella <7959916+ymd-stella@users.noreply.github.com>"
+    },
+    {
+      "sha": "68acb72ce4cd7f79fd529233fa96abd37a165a0f",
+      "author": "Jose Luis Rivero",
+      "date": "2023-08-31T18:05:40Z",
+      "message": "0.246.0"
+    },
+    {
+      "sha": "f16f8a2f5040d939193df1f72b00700e17207bfb",
+      "author": "Jose Luis Rivero",
+      "date": "2023-08-31T18:03:45Z",
+      "message": "Update changelogs\n\nSigned-off-by: Jose Luis Rivero <jrivero@osrfoundation.org>"
+    },
+    {
+      "sha": "01f747adcdf3d52758fabfcc81ca00864df05c60",
+      "author": "Jose Luis Rivero",
+      "date": "2023-08-31T16:39:07Z",
+      "message": "Use stable osrf repo for Garden and stable+prerelease for Harmonic (#448)\n\nHarmonic is now in the prerelease repository\r\n\r\nSigned-off-by: Jose Luis Rivero <jrivero@osrfoundation.org>"
+    },
+    {
+      "sha": "e8e35442b7928e26d9115c40ab1968320b3faf01",
+      "author": "Michael Carroll",
+      "date": "2023-08-29T00:41:21Z",
+      "message": "Add harmonic CI (#447)\n\n* Add harmonic CI\r\n\r\nSigned-off-by: Michael Carroll <mjcarroll@intrinsic.ai>\r\n\r\n* Include garden options\r\n\r\nSigned-off-by: Michael Carroll <mjcarroll@intrinsic.ai>\r\n\r\n* Add harmonic stanza\r\n\r\nSigned-off-by: Michael Carroll <mjcarroll@intrinsic.ai>\r\n\r\n* Additional message headers\r\n\r\nSigned-off-by: Michael Carroll <mjcarroll@intrinsic.ai>\r\n\r\n---------\r\n\r\nSigned-off-by: Michael Carroll <mjcarroll@intrinsic.ai>"
+    },
+    {
+      "sha": "0ed5e2c9face471e554718e9d1fa37108808f64c",
+      "author": "Samuel Seng",
+      "date": "2023-08-22T08:06:07Z",
+      "message": "Update README.md to fix humble from source instructions (#431)\n\nFix the branch name when checking out ros_gz otherwise `rosdep install -r --from-paths src -i -y --rosdistro humble` errors with incompatible versions. Additonally link to https://github.com/gazebosim/ros_gz/issues/401#issuecomment-1564347874 which allows compilation on Ubuntu 20.04 + ROS2 Humble + Ignition Fortress\r\n\r\nSigned-off-by: Samuel Seng <djsamseng@gmail.com>"
+    },
+    {
+      "sha": "0882b17e41cee70f365536adc3b2da72662c683a",
+      "author": "jmackay2",
+      "date": "2023-08-04T19:21:45Z",
+      "message": "Replace deprecated ign_find_package with gz_find_package (#432)\n\nSigned-off-by: jmackay <1.732mackay@gmail.com>\r\nCo-authored-by: jmackay2 <jmackay@gmail.com>"
+    },
+    {
+      "sha": "8fd3769b1f641734aaecace8dd84f7b3a3bc89dc",
+      "author": "Addisu Z. Taddese",
+      "date": "2023-08-02T20:50:35Z",
+      "message": "Use `pull_request_target` for triage workflow (#442)\n\nSigned-off-by: Addisu Z. Taddese <addisu@openrobotics.org>"
+    },
+    {
+      "sha": "146cbbd56268870debf769387f835c63d4378b0f",
+      "author": "Addisu Z. Taddese",
+      "date": "2023-08-01T22:52:31Z",
+      "message": "Fix Github project automation for new project board (#441)\n\nSigned-off-by: Addisu Z. Taddese <addisu@openrobotics.org>"
+    },
+    {
+      "sha": "f5af9bebfd05c997b2e71fa0353a215242463b07",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2023-07-18T14:38:44Z",
+      "message": "Improved Iron documentation (#439)\n\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "4a5972bc6c1bcd2797a023ce934e6ef4d8e08de9",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2023-07-18T14:38:31Z",
+      "message": "Improved docs (#438)\n\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "eb63bce8f77c44ecaa049170e5aa604039e5bef5",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2023-07-17T17:36:37Z",
+      "message": "Fixed install instructions (#435) (#437)\n\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "d7b72358434def74596a6f2c8f91520770269c18",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2023-07-17T16:34:20Z",
+      "message": "Fixed install instructions (#435) (#436)\n\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "07f8adc62f9ac009d9054c88a3e5706eab9f65ed",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2023-07-17T15:30:46Z",
+      "message": "Fixed install instructions (#435)\n\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "a587cfa8bc918e9d5340849ec492da78ea0f8651",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2023-06-22T15:58:17Z",
+      "message": "Merge pull request #430 from gazebosim/ahcorde/humble/backport/428\n\n[backport humble] Add link to project template (#428)"
+    },
+    {
+      "sha": "3348a9c4c54e6e87fd026ca3bc5d665870e93c4c",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2023-06-22T15:58:04Z",
+      "message": "Merge pull request #429 from gazebosim/ahcorde/iron/backport/428\n\n[backport iron] Add link to project template (#428)"
+    },
+    {
+      "sha": "fc3d05fc5d412a0fe621679766125309aedc96c4",
+      "author": "Addisu Z. Taddese",
+      "date": "2023-06-22T15:15:22Z",
+      "message": "Add link to project template (#428)\n\nSigned-off-by: Addisu Z. Taddese <addisu@openrobotics.org>"
+    },
+    {
+      "sha": "4a42e94f7349a438080b298577efa5f2bbf91b8a",
+      "author": "Addisu Z. Taddese",
+      "date": "2023-06-22T15:15:22Z",
+      "message": "Add link to project template (#428)\n\nSigned-off-by: Addisu Z. Taddese <addisu@openrobotics.org>"
+    },
+    {
+      "sha": "abb9a8f9a371824036be8d6de772e656357fb7f0",
+      "author": "Addisu Z. Taddese",
+      "date": "2023-06-22T15:15:22Z",
+      "message": "Add link to project template (#428)\n\nSigned-off-by: Addisu Z. Taddese <addisu@openrobotics.org>"
+    },
+    {
+      "sha": "c09b704a821ddfe62fdbc219f3efc4763bf767fc",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2023-06-22T13:02:33Z",
+      "message": "Merge pull request #427 from gazebosim/ahcorde/humble/backport/417\n\n[backport humble] SensorNoise msg bridging (#417)"
+    },
+    {
+      "sha": "6d12a728ed376f56dac3abd13b301da20d1e4724",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2023-06-21T21:54:16Z",
+      "message": "[backport iron] SensorNoise msg bridging (#417) (#425)\n\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>\r\nCo-authored-by: Aditya Pande <aditya050995@gmail.com>"
+    },
+    {
+      "sha": "115aa6b684d2cb1cfd7851799696ab712c7a751a",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2023-06-21T21:54:16Z",
+      "message": "[backport iron] SensorNoise msg bridging (#417) (#425)\n\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>\r\nCo-authored-by: Aditya Pande <aditya050995@gmail.com>"
+    },
+    {
+      "sha": "bdfe874cbd6729063e0dd1b92b9aa1334d91a073",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2023-06-21T19:53:12Z",
+      "message": "[backport Iron] Added Altimeter msg bridging (#413) (#414) (#426)\n\nSigned-off-by: Aditya Pande <adityapande@google.com>\r\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>\r\nCo-authored-by: Aditya Pande <aditya050995@gmail.com>"
+    },
+    {
+      "sha": "e80ee5b5695f33c1fec1c546622732e1b9ec7eb7",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2023-06-21T08:18:12Z",
+      "message": "Merge pull request #420 from gazebosim/ahcorde/iron/backport/411\n\n[backport iron] Update README.md (#411)"
+    },
+    {
+      "sha": "9b76826a8ae9c5114d927e84d1a16155e23323bd",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2023-06-21T07:53:39Z",
+      "message": "Merge branch 'iron' into ahcorde/iron/backport/411\n\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "0f8e2234c0c9c262e643dda45bb5f2b09601d117",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2023-06-21T07:53:05Z",
+      "message": "Merge pull request #421 from gazebosim/ahcorde/humble/backport/411\n\n[backport humble] Update README.md (#411)"
+    },
+    {
+      "sha": "a3071cfe079d4c038c4fdcd70b274d5870044d85",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2023-06-21T07:52:43Z",
+      "message": "[backport Iron] Added Altimeter msg bridging (#413) (#414)\n\nSigned-off-by: Aditya Pande <adityapande@google.com>\r\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>\r\nCo-authored-by: Aditya Pande <aditya050995@gmail.com>"
+    },
+    {
+      "sha": "f923bcfdad58d777c404e265740f8643cd497038",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2023-06-20T15:21:07Z",
+      "message": "Merge pull request #424 from gazebosim/ahcorde/humble/bp/422\n\n[backport Humble] Added more topic to the bridge (#422)"
+    },
+    {
+      "sha": "942e5ae4614f5d138ca2d1838083eb33f8cc15d6",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2023-06-20T15:21:01Z",
+      "message": "Added more topic to the bridge (#422) (#423)\n\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "1b330a567052ed13578ccaacc719ea2896c2c9b2",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2023-06-16T22:12:18Z",
+      "message": "Added more topic to the bridge (#422)\n\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "342b03ba7055de3b33533d19168b4c373d794c79",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2023-06-16T22:12:18Z",
+      "message": "Added more topic to the bridge (#422)\n\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "f0479c2e9bd5d623e74ece3b29c9993b569d81b0",
+      "author": "Arjun K Haridas",
+      "date": "2023-06-12T10:31:36Z",
+      "message": "Update README.md (#411)\n\nThe ROS type for gz.msgs.NavSat messages should be **sensor_msgs/msg/NavSatFix** instead of **sensor_msgs/msg/NavSatFixed**\n\nSigned-off-by: Arjun K Haridas <51917087+topguns837@users.noreply.github.com>"
+    },
+    {
+      "sha": "bac02a3afcf8e405e70147e3822d22b13d47ab33",
+      "author": "Arjun K Haridas",
+      "date": "2023-06-12T10:31:36Z",
+      "message": "Update README.md (#411)\n\nThe ROS type for gz.msgs.NavSat messages should be **sensor_msgs/msg/NavSatFix** instead of **sensor_msgs/msg/NavSatFixed**\n\nSigned-off-by: Arjun K Haridas <51917087+topguns837@users.noreply.github.com>"
+    },
+    {
+      "sha": "979fb12ff0a1cd9ccb86ecb5e39170bc34d92dcd",
+      "author": "Aditya Pande",
+      "date": "2023-06-15T09:16:27Z",
+      "message": "SensorNoise msg bridging (#417)\n\nSigned-off-by: Aditya Pande <adityapande@google.com>"
+    },
+    {
+      "sha": "606ee57978e91cc5f771535b6b5d403c931b8487",
+      "author": "Aditya Pande",
+      "date": "2023-06-14T07:15:16Z",
+      "message": "Added Altimeter msg bridging (#413)\n\nSigned-off-by: Aditya Pande <adityapande@google.com>"
+    },
+    {
+      "sha": "c279a53104718688462a1596f0aab65d7bd84536",
+      "author": "Arjun K Haridas",
+      "date": "2023-06-12T10:31:36Z",
+      "message": "Update README.md (#411)\n\nThe ROS type for gz.msgs.NavSat messages should be **sensor_msgs/msg/NavSatFix** instead of **sensor_msgs/msg/NavSatFixed**\r\n\r\nSigned-off-by: Arjun K Haridas <51917087+topguns837@users.noreply.github.com>"
+    },
+    {
+      "sha": "9c43819ff30c70b4f1cd678e0f77b32b9e52ceef",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2023-06-08T15:03:57Z",
+      "message": "Fix incorrect subscription on demo (#405) (#408)\n\nThis PR fixes an incorrect subscription on one of the demos. Running\r\n```\r\nros2 launch ros_gz_sim_demos gpu_lidar_bridge.launch.py\r\n```\r\ncauses rviz2 to crash and exit with the error:\r\n```\r\nrviz2-3]\r\n[rviz2-3] >>> [rcutils|error_handling.c:108] rcutils_set_error_state()\r\n[rviz2-3] This error state is being overwritten:\r\n[rviz2-3]\r\n[rviz2-3]   'create_subscription() called for existing topic name rt/lidar with incompatible type sensor_msgs::msg::dds_::PointCloud2_, at ./src/subscription.cpp:146, at ./src/rcl/subscription.c:108'\r\n[rviz2-3]\r\n[rviz2-3] with this new error message:\r\n[rviz2-3]\r\n[rviz2-3]   'invalid allocator, at ./src/rcl/subscription.c:218'\r\n[rviz2-3]\r\n[rviz2-3] rcutils_reset_error() should be called after error handling to avoid this.\r\n```\r\nThis is due to an incorrect subscription on the part of the demo. This\r\nPR fixes it by getting a subscription to the right topic for the\r\npointcloud display. (`lidar/points` instead of `lidar`). Was tested on\r\ngarden + humble.\r\n\r\nSigned-off-by: Arjo Chakravarty <arjoc@intrinsic.ai>\r\nCo-authored-by: Arjo Chakravarty <arjoc@intrinsic.ai>"
+    },
+    {
+      "sha": "277a2f2968bf26125ce34be5b429d9c2e8e10624",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2023-06-08T15:03:54Z",
+      "message": "Fix incorrect subscription on demo (#405) (#407)\n\nThis PR fixes an incorrect subscription on one of the demos. Running\r\n```\r\nros2 launch ros_gz_sim_demos gpu_lidar_bridge.launch.py\r\n```\r\ncauses rviz2 to crash and exit with the error:\r\n```\r\nrviz2-3]\r\n[rviz2-3] >>> [rcutils|error_handling.c:108] rcutils_set_error_state()\r\n[rviz2-3] This error state is being overwritten:\r\n[rviz2-3]\r\n[rviz2-3]   'create_subscription() called for existing topic name rt/lidar with incompatible type sensor_msgs::msg::dds_::PointCloud2_, at ./src/subscription.cpp:146, at ./src/rcl/subscription.c:108'\r\n[rviz2-3]\r\n[rviz2-3] with this new error message:\r\n[rviz2-3]\r\n[rviz2-3]   'invalid allocator, at ./src/rcl/subscription.c:218'\r\n[rviz2-3]\r\n[rviz2-3] rcutils_reset_error() should be called after error handling to avoid this.\r\n```\r\nThis is due to an incorrect subscription on the part of the demo. This\r\nPR fixes it by getting a subscription to the right topic for the\r\npointcloud display. (`lidar/points` instead of `lidar`). Was tested on\r\ngarden + humble.\r\n\r\nSigned-off-by: Arjo Chakravarty <arjoc@intrinsic.ai>\r\nCo-authored-by: Arjo Chakravarty <arjoc@intrinsic.ai>"
+    },
+    {
+      "sha": "1893dec404d18655ff3bbc5449f951ca295f7a9d",
+      "author": "Arjo Chakravarty",
+      "date": "2023-06-06T08:44:04Z",
+      "message": "Fix incorrect subscription on demo (#405)\n\nThis PR fixes an incorrect subscription on one of the demos. Running\r\n```\r\nros2 launch ros_gz_sim_demos gpu_lidar_bridge.launch.py\r\n```\r\ncauses rviz2 to crash and exit with the error:\r\n```\r\nrviz2-3]\r\n[rviz2-3] >>> [rcutils|error_handling.c:108] rcutils_set_error_state()\r\n[rviz2-3] This error state is being overwritten:\r\n[rviz2-3]\r\n[rviz2-3]   'create_subscription() called for existing topic name rt/lidar with incompatible type sensor_msgs::msg::dds_::PointCloud2_, at ./src/subscription.cpp:146, at ./src/rcl/subscription.c:108'\r\n[rviz2-3]\r\n[rviz2-3] with this new error message:\r\n[rviz2-3]\r\n[rviz2-3]   'invalid allocator, at ./src/rcl/subscription.c:218'\r\n[rviz2-3]\r\n[rviz2-3] rcutils_reset_error() should be called after error handling to avoid this.\r\n```\r\nThis is due to an incorrect subscription on the part of the demo. This\r\nPR fixes it by getting a subscription to the right topic for the\r\npointcloud display. (`lidar/points` instead of `lidar`). Was tested on\r\ngarden + humble.\r\n\r\nSigned-off-by: Arjo Chakravarty <arjoc@intrinsic.ai>"
+    },
+    {
+      "sha": "f86cd788fc10d705f1e8962d09b26111cd43fa43",
+      "author": "Addisu Z. Taddese",
+      "date": "2023-05-30T14:57:00Z",
+      "message": "Update compatibility table in README (#403)\n\nSigned-off-by: Addisu Z. Taddese <addisu@openrobotics.org>"
+    },
+    {
+      "sha": "8aa41edc9b89c47a50af187c3ef097697c3b2fea",
+      "author": "Michael Carroll",
+      "date": "2023-05-23T19:18:32Z",
+      "message": "0.245.0\n\nSigned-off-by: Michael Carroll <michael@openrobotics.org>"
+    },
+    {
+      "sha": "18b34037610d391d388e2640b7a715d4d2add308",
+      "author": "Michael Carroll",
+      "date": "2023-05-23T18:37:15Z",
+      "message": "Backport: Add missing rosidl_cmake dep to ros_gz_bridge (#391) (#396)\n\n* Add missing rosidl_cmake dep to ros_gz_bridge (#391)\r\n\r\nSigned-off-by: Yadunund <yadunund@openrobotics.org>\r\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>\r\nCo-authored-by: Chris Lalancette <clalancette@gmail.com>\r\nSigned-off-by: Michael Carroll <michael@openrobotics.org>\r\n\r\n* Run fortress and garden against iron\r\n\r\nSigned-off-by: Michael Carroll <michael@openrobotics.org>\r\n\r\n---------\r\n\r\nSigned-off-by: Yadunund <yadunund@openrobotics.org>\r\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>\r\nSigned-off-by: Michael Carroll <michael@openrobotics.org>\r\nCo-authored-by: Yadu <yadunund@gmail.com>\r\nCo-authored-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "b64df31d2611ba4c51851f7270c3fb3096f94e9c",
+      "author": "Michael Carroll",
+      "date": "2023-05-23T17:33:55Z",
+      "message": "0.244.11\n\nSigned-off-by: Michael Carroll <michael@openrobotics.org>"
+    },
+    {
+      "sha": "7f929b05e4c0b4cff1c4db133ab25411525362a3",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2023-05-23T13:04:26Z",
+      "message": "CI: Changed humble for Iron (#395)\n\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "5c33f33360a1cfa4a38281ee5458ad37f67c75bc",
+      "author": "Yadu",
+      "date": "2023-05-23T13:04:08Z",
+      "message": "Add missing rosidl_cmake dep to ros_gz_bridge (#391)\n\nSigned-off-by: Yadunund <yadunund@openrobotics.org>\r\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>\r\nCo-authored-by: Chris Lalancette <clalancette@gmail.com>"
+    },
+    {
+      "sha": "846323f299ee88ad6a01eb9ec140e10eb228169e",
+      "author": "Benjamin Perseghetti",
+      "date": "2023-05-23T00:31:05Z",
+      "message": "Add actuator_msgs to humble bridge. (#394)\n\nSigned-off-by: Benjamin Perseghetti <bperseghetti@rudislabs.com>"
+    },
+    {
+      "sha": "e84dda62a8b066f3d218920ca70d6623f08c2b05",
+      "author": "El Jawad Alaa",
+      "date": "2023-05-22T17:50:31Z",
+      "message": "allow converting from/to TwistWithCovarianceStamped (#374)\n\n* allow converting from/to TwistWithCovarianceStamped \r\n\r\nSigned-off-by: Alaa El Jawad <ejalaa12@gmail.com>\r\n--------\r\nSigned-off-by: Alaa El Jawad <ejalaa12@gmail.com>\r\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>\r\nCo-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "6b6e590a4145708b6c23adebd454e2d0a05ea857",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2023-05-22T15:27:24Z",
+      "message": "Added doc (#393)\n\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "e427acc32628b15f2d592b5bbbc30235be35c14b",
+      "author": "Michael Carroll",
+      "date": "2023-05-22T07:47:42Z",
+      "message": "Update README.md (#390)\n\nUpdate the compatibility table to reflect iron release\r\n\r\nSigned-off-by: Michael Carroll <mjcarroll@intrinsic.ai>"
+    },
+    {
+      "sha": "591b8b57e817b7714204e5938ca3a8bdf901307f",
+      "author": "Michael Carroll",
+      "date": "2023-05-05T22:19:50Z",
+      "message": "Fix humble branch names in humble branch (#388)\n\nSigned-off-by: Michael Carroll <mjcarroll@intrinsic.ai>"
+    },
+    {
+      "sha": "bb612b129c0fb415aa4456f958310301c6851452",
+      "author": "Michael Carroll",
+      "date": "2023-05-05T22:19:35Z",
+      "message": "Fix humble branch names in ros2 branch (#387)\n\nSigned-off-by: Michael Carroll <mjcarroll@intrinsic.ai>"
+    },
+    {
+      "sha": "41129d1d82d5147a537898833cc0cc81a9559d60",
+      "author": "Michael Carroll",
+      "date": "2023-05-05T17:46:39Z",
+      "message": "Port: humble to ros2 (#386)\n\nSigned-off-by: Michael Carroll <mjcarroll@intrinsic.ai>"
+    },
+    {
+      "sha": "a3c332bf2a06ced77eb85b6da10ad13da2261aee",
+      "author": "Michael Carroll",
+      "date": "2023-05-04T14:49:49Z",
+      "message": "Merge branch 'humble' into mjcarroll/humble_to_ros2\n\nSigned-off-by: Michael Carroll <michael@openrobotics.org>"
+    },
+    {
+      "sha": "b55c574d6a3c1045e3c1ba9d60f848a91f5086fa",
+      "author": "Michael Carroll",
+      "date": "2023-05-03T21:27:54Z",
+      "message": "0.244.10\n\nSigned-off-by: Michael Carroll <michael@openrobotics.org>"
+    },
+    {
+      "sha": "4e9cadc5aa03010314143758c2dfedd629a3866a",
+      "author": "El Jawad Alaa",
+      "date": "2023-05-01T18:16:37Z",
+      "message": "allow converting from/to PoseWithCovarianceStamped (#381)\n\n* allow converting from/to PoseWithCovarianceStamped\r\n\r\nSigned-off-by: Alaa El Jawad <ejalaa12@gmail.com>"
+    },
+    {
+      "sha": "c82ab993dd9cd6ee6e19c22067ef08fa82f1607f",
+      "author": "El Jawad Alaa",
+      "date": "2023-03-11T04:43:42Z",
+      "message": "Fix warning message (#371)\n\nSigned-off-by: Alaa El Jawad <ejalaa12@gmail.com>"
+    },
+    {
+      "sha": "b9694c14abd144f2c6773e3b3cafffcdcb8f85e0",
+      "author": "Benjamin Perseghetti",
+      "date": "2023-04-25T20:56:52Z",
+      "message": "Add actuator_msgs to bridge. (#378)\n\nSigned-off-by: Benjamin Perseghetti <bperseghetti@rudislabs.com>"
+    },
+    {
+      "sha": "7c62a1ce3cfb4eb3b54e1cfd092c9b63a9d5f255",
+      "author": "Aditya Pande",
+      "date": "2023-03-22T13:58:31Z",
+      "message": "Update maintainers (#376)\n\nSigned-off-by: Aditya Pande <adityapande@google.com>"
+    },
+    {
+      "sha": "84e9f344cdc5bcb7a36125fdf4f727d5546d2b15",
+      "author": "Addisu Z. Taddese",
+      "date": "2023-03-13T07:30:43Z",
+      "message": "Fix linter error by reordering headers (#373)\n\nSigned-off-by: Addisu Z. Taddese <addisu@openrobotics.org>"
+    },
+    {
+      "sha": "18be705a1a6dc588ef4d8162ad0aa1ed41384827",
+      "author": "El Jawad Alaa",
+      "date": "2023-03-11T04:43:42Z",
+      "message": "Fix warning message (#371)\n\nSigned-off-by: Alaa El Jawad <ejalaa12@gmail.com>"
+    },
+    {
+      "sha": "27f20ffbb2331a5c87685c62053d7eb20544e09a",
+      "author": "Jose Luis Rivero",
+      "date": "2023-03-08T17:29:06Z",
+      "message": "Update ROS 1 branch to be noetic (#370)\n\nSigned-off-by: Jose Luis Rivero <jrivero@osrfoundation.org>"
+    },
+    {
+      "sha": "2e3d68cc9f8dc5da7de96c990b406d70a2b39704",
+      "author": "Jose Luis Rivero",
+      "date": "2023-02-16T08:43:19Z",
+      "message": "Update README in humble branch (#364)\n\nSigned-off-by: Jose Luis Rivero <jrivero@osrfoundation.org>"
+    },
+    {
+      "sha": "8a5f768cea72186424cecb4d52e6a698a47d3d16",
+      "author": "livanov93",
+      "date": "2023-02-08T09:40:35Z",
+      "message": " Introduce WrenchStamped into bridge (#327)\n\nSigned-off-by: Lovro <lovro.ivanov@gmail.com>"
+    },
+    {
+      "sha": "e7660f83be0447fe44c1240df2c6468364d2fd24",
+      "author": "Sebastian Castro",
+      "date": "2023-02-08T09:24:42Z",
+      "message": "Add QoS profile parameter to image bridge (#335)\n\nSigned-off-by: Sebastian Castro <sebas.a.castro@gmail.com>"
+    },
+    {
+      "sha": "34e01105c564b30ddd09d9f386aba577f6a15f61",
+      "author": "Michael Carroll",
+      "date": "2023-01-25T08:46:35Z",
+      "message": "Improve error messages around config loading (#356)\n\nSigned-off-by: Michael Carroll <michael@openrobotics.org>"
+    },
+    {
+      "sha": "63e85a952668b824d266740606a245c2a1db4d0c",
+      "author": "andermi",
+      "date": "2023-01-24T13:52:08Z",
+      "message": "set on_exit_shutdown argument for gz-sim ExecuteProcess (#355)\n\nSigned-off-by: Michael Anderson <anderson@mbari.org>"
+    },
+    {
+      "sha": "74dcf50afc0c487e0d6ef5da8c412ddb14762b30",
+      "author": "Benjamin Perseghetti",
+      "date": "2023-01-13T17:37:09Z",
+      "message": "Humbly bringing the Joy to gazebo. (#353)\n\nEnable using the humble gazebo bridge with Joy.\r\n\r\nSigned-off-by: Benjamin Perseghetti <bperseghetti@rudislabs.com>"
+    },
+    {
+      "sha": "6c2e56efbaadf6e3683d7817703b1b626b768726",
+      "author": "Benjamin Perseghetti",
+      "date": "2023-01-11T21:23:53Z",
+      "message": "Bringing the Joy to gazebo. (#350)\n\nEnable using the gazebo bridge with Joy.\r\n\r\nSigned-off-by: Benjamin Perseghetti <bperseghetti@rudislabs.com>"
+    },
+    {
+      "sha": "fa2a1ab7277d61eb5387a6b789423fd5f9d8761b",
+      "author": "Michael Carroll",
+      "date": "2023-01-11T08:22:53Z",
+      "message": "Make the bridge aware of both gz and ignition msgs (#349)\n\nThis makes the bridge aware of gazebo message definition strings either\r\nstarting with gz or starting with ignition.  This will maximize the\r\ncompatibility on humble-supported systems.\r\n\r\nFixes #339.\r\n\r\nSigned-off-by: Michael Carroll <michael@openrobotics.org>"
+    },
+    {
+      "sha": "d13c5f3dc511ea81b8a3890069354d7986e87501",
+      "author": "ymd-stella",
+      "date": "2023-01-10T14:21:50Z",
+      "message": "Fix double wait in ros_gz_bridge (#347)\n\nSigned-off-by: ymd-stella <world.applepie@gmail.com>"
+    },
+    {
+      "sha": "a398608100db6cb13d6085300491d2891c51e5da",
+      "author": "Arjo Chakravarty",
+      "date": "2023-01-10T08:32:53Z",
+      "message": "Updates readme to reflect correct branches (#348)\n\nSigned-off-by: Arjo Chakravarty <arjo@openrobotics.org>"
+    },
+    {
+      "sha": "1271a5a59bac5899990a8b0e00b1dcd1582c1582",
+      "author": "Clyde McQueen",
+      "date": "2022-12-22T23:05:12Z",
+      "message": "Rename 'ign gazebo' to 'gz sim' (#343)\n\nSigned-off-by: Clyde McQueen <clyde@mcqueen.net>"
+    },
+    {
+      "sha": "28b0eb66741b770e18e3aba1a8cf692f7b609794",
+      "author": "Rousseau Vincent",
+      "date": "2022-11-25T17:55:06Z",
+      "message": "Create bridge for GPSFix msg (#316)\n\nSigned-off-by: Vincent Rousseau <vincent.rousseau@sabi-agri.com>"
+    },
+    {
+      "sha": "bbbb3627513e12ac1adc3ab4f1b626e1202185e7",
+      "author": "Addisu Z. Taddese",
+      "date": "2022-11-22T18:10:37Z",
+      "message": "Fix typo in ROS version (#333)\n\nI think the link to the melodic branch refers to ROS, not ROS 2.\r\n\r\nSigned-off-by: Addisu Z. Taddese <addisu@openrobotics.org>"
+    },
+    {
+      "sha": "5b40dbd136421e42449712606235c248845c454b",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2022-11-22T14:31:24Z",
+      "message": "Added ROSCON 2022 video (#332)\n\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "a2a87b94ae971ec880040960911d98ba40290739",
+      "author": "Michael Carroll",
+      "date": "2022-11-03T12:50:42Z",
+      "message": "0.244.9\n\nSigned-off-by: Michael Carroll <michael@openrobotics.org>"
+    },
+    {
+      "sha": "21402103a593b2cd96c58eb660dcdc33b9ff4ab3",
+      "author": "Michael Carroll",
+      "date": "2022-10-26T21:44:12Z",
+      "message": "Export rcl_interfaces exec dependency (#317)\n\nSigned-off-by: Michael Carroll <michael@openrobotics.org>"
+    },
+    {
+      "sha": "ab64a5249fdac6b74bb33047b06b8cce0ebafe23",
+      "author": "Michael Carroll",
+      "date": "2022-11-01T18:20:16Z",
+      "message": "Humble ➡️ ROS2 (#323) \n\nHumble ➡️ ROS2\r\n\r\nSigned-off-by: Michael Carroll <michael@openrobotics.org>"
+    },
+    {
+      "sha": "6256c843334357237e6e771c226c213e9f074b73",
+      "author": "Michael Carroll",
+      "date": "2022-11-01T14:32:35Z",
+      "message": "Merge branch 'humble' into ports/humble_to_ros2\n\nSigned-off-by: Michael Carroll <michael@openrobotics.org>"
+    },
+    {
+      "sha": "cc639e9f7642d44c77e427d62aab431789fda217",
+      "author": "Michael Carroll",
+      "date": "2022-11-01T14:15:35Z",
+      "message": "Export ROS Stopwatch library (#299) (#322)\n\nNew Stopwatch library needs to be exported and built as shared\r\n\r\nSigned-off-by: Michael Anderson <anderson@mbari.org>\r\nSigned-off-by: Michael Carroll <michael@openrobotics.org>\r\nCo-authored-by: Michael Anderson <anderson@mbari.org>"
+    },
+    {
+      "sha": "6f8afdcd08ea3abef39092199f27d81c07289b3b",
+      "author": "ahcorde",
+      "date": "2022-10-28T18:10:53Z",
+      "message": "0.244.8"
+    },
+    {
+      "sha": "b3ff1bb32bbd236a2250c61ecbc2139c25ff826d",
+      "author": "ahcorde",
+      "date": "2022-10-28T18:10:32Z",
+      "message": "Changelog\n\nSigned-off-by: ahcorde <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "d8f2157488e897f2c7c9d7d0a4257bd04d01ae5f",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2022-10-28T17:58:51Z",
+      "message": "Fixed ros_gz_sim_demos launch files (#319) (#320)\n\nSigned-off-by: ahcorde <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "d0ef0d629ac03302398932f098e319ce54f30bce",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2022-10-28T16:59:30Z",
+      "message": "Fixed ros_gz_sim_demos launch files (#319)\n\nSigned-off-by: ahcorde <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "68c626e7762babe2daaf3214d115a535b28b81c0",
+      "author": "Michael Carroll",
+      "date": "2022-10-26T21:44:12Z",
+      "message": "Export rcl_interfaces exec dependency (#317)\n\nSigned-off-by: Michael Carroll <michael@openrobotics.org>"
+    },
+    {
+      "sha": "e2fe0da42c748537fe2e2dd0a3f1cc93732f9ef6",
+      "author": "ahcorde",
+      "date": "2022-10-12T20:17:26Z",
+      "message": "0.245.0"
+    },
+    {
+      "sha": "ac63a1e4a34a011f44b076b5b6a7371d520eff33",
+      "author": "ahcorde",
+      "date": "2022-10-12T20:16:59Z",
+      "message": "Changelog\n\nSigned-off-by: ahcorde <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "3f97562127de461b6962f8e68dd5990e6bf84bd4",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2022-10-12T20:03:45Z",
+      "message": "Merge pull request #313 from gazebosim/ahcorde/humble_to_ros2\n\nhumble to ros2"
+    },
+    {
+      "sha": "39cdcf88e762589595222d74e41f22b1d876aef1",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2022-10-12T19:18:33Z",
+      "message": "humble to ros2 (#311)\n\nSigned-off-by: Michael Carroll <michael@openrobotics.org>\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\nCo-authored-by: Michael Carroll <michael@openrobotics.org>"
+    },
+    {
+      "sha": "82b935b9077606a3daba30babe0f8855b870eed3",
+      "author": "Michael Carroll",
+      "date": "2022-10-12T18:50:19Z",
+      "message": "Remove Humble+ deprecations (#312)\n\n* Remove Humble+ deprecations\r\n\r\nSigned-off-by: Michael Carroll <michael@openrobotics.org>"
+    },
+    {
+      "sha": "bc523465f36790d91d9e0b162f7120f964cc8e4d",
+      "author": "ahcorde",
+      "date": "2022-10-12T10:27:23Z",
+      "message": "Merge remote-tracking branch 'origin/humble' into ahcorde/humble_to_ros2"
+    },
+    {
+      "sha": "52fcb572166a93ad0e7c426d4b3095df90812c13",
+      "author": "ahcorde",
+      "date": "2022-10-12T10:11:45Z",
+      "message": "0.244.7"
+    },
+    {
+      "sha": "af0a4a6a85f751f0a7603891e6ac62d94db51911",
+      "author": "ahcorde",
+      "date": "2022-10-12T10:11:33Z",
+      "message": "Changelog\n\nSigned-off-by: ahcorde <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "f353bfb00c5223d77e564060e55eaa5e629fbf12",
+      "author": "Michael Carroll",
+      "date": "2022-10-12T10:08:49Z",
+      "message": "Fix launch substitutions for ign_args (#309)\n\n* Fix launch substitutions for ign_args"
+    },
+    {
+      "sha": "3d0937a7eee10ea1ed9673e62ab52f9b1233756a",
+      "author": "Michael Carroll",
+      "date": "2022-10-12T09:07:11Z",
+      "message": "Make sure that ign_* yaml configs work as well (#310)\n\nSigned-off-by: Michael Carroll <michael@openrobotics.org>"
+    },
+    {
+      "sha": "0f82d51df3add0be6d549e96957ece4a7dcacd79",
+      "author": "Ian Chen",
+      "date": "2022-10-04T18:20:23Z",
+      "message": "Bridge between msgs::Float_V and ros_gz_interfaces/Float32Array msg types (#306)\n\n* bridge float_v and float32_multi_array msg type\r\n\r\nCo-authored-by: Ian Chen <ichen@openrobotics.org>"
+    },
+    {
+      "sha": "1dfcd51471491efe11a0f9db38b03a2fe2a499a8",
+      "author": "Ian Chen",
+      "date": "2022-10-04T18:19:47Z",
+      "message": "Bridge between msgs::Pose_V and geometry_msgs/PoseArray msg types (#305)\n\nSigned-off-by: Ian Chen <ichen@openrobotics.org>"
+    },
+    {
+      "sha": "4c4e65727d52a0dd452b6b21277b84e092ac59b3",
+      "author": "Jose Luis Rivero",
+      "date": "2022-10-03T18:22:15Z",
+      "message": "Garden release is out today (#304)\n\nSigned-off-by: Jose Luis Rivero <jrivero@osrfoundation.org>"
+    },
+    {
+      "sha": "84835adcd32e00faff97b271bbba72a0646c8e79",
+      "author": "Olivier Kermorgant",
+      "date": "2022-09-28T00:49:08Z",
+      "message": "replace ign with gz in ros_gz_bridge README (#303)\n\nSigned-off-by: Olivier Kermorgant <olivier_kermorgant@yahoo.fr>"
+    },
+    {
+      "sha": "5bf7cb1069737a529fae3dfc5eb24a2634e96ee0",
+      "author": "Michael Carroll",
+      "date": "2022-09-26T18:06:02Z",
+      "message": "Remove all ignition references on ROS 2 branch (#302)\n\n* Remove all shims\r\n* Update CMakeLists and package.xml for garden\r\n* Complete garden gz renaming\r\n* Drop fortress CI\r\n\r\nSigned-off-by: Michael Carroll <michael@openrobotics.org>"
+    },
+    {
+      "sha": "eeb3b03d82dd690d15167efcc7c132cc7035de94",
+      "author": "Michael Carroll",
+      "date": "2022-09-23T12:58:59Z",
+      "message": "Merge pull request #275 (Galactic to Humble)\n\nGalactic to Humble\r\n\r\nSigned-off-by: Michael Carroll <michael@openrobotics.org>"
+    },
+    {
+      "sha": "f1765bc39a0be768189ebc20f8a4f5f51b5e5426",
+      "author": "Michael Carroll",
+      "date": "2022-09-23T00:08:53Z",
+      "message": "Fix merge\n\nSigned-off-by: Michael Carroll <michael@openrobotics.org>"
+    },
+    {
+      "sha": "6146f4aee0e7f81b396d5a56a912ece3574f4dc0",
+      "author": "Michael Carroll",
+      "date": "2022-09-22T23:57:15Z",
+      "message": "Merge branch 'ros2' into ports/galactic_to_ros2"
+    },
+    {
+      "sha": "e4f4072d0512ee96212327f6dc8b3a924ed47f20",
+      "author": "Michael Carroll",
+      "date": "2022-09-21T16:47:05Z",
+      "message": "Merge branch 'galactic' into ports/galactic_to_ros2"
+    },
+    {
+      "sha": "27396a992909c4f577a81b6656f7a7d4b832a92f",
+      "author": "ahcorde",
+      "date": "2022-09-14T11:05:59Z",
+      "message": "0.244.6"
+    },
+    {
+      "sha": "2052b4b7fd83512d60b3c81b82c25da9d4116903",
+      "author": "ahcorde",
+      "date": "2022-09-14T11:05:34Z",
+      "message": "Changelog\n\nSigned-off-by: ahcorde <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "6cea4c2df831daa3640e60aa10ff7fa4c840d5f1",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2022-09-14T10:56:49Z",
+      "message": "Restructured directories (#296)\n\nSigned-off-by: ahcorde <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "45e69e78e6b36370b2570ff81d56f84579636355",
+      "author": "Jose Luis Rivero",
+      "date": "2022-09-14T07:40:14Z",
+      "message": "Update supported versions to include Humble + Garden (#297)\n\nSigned-off-by: Jose Luis Rivero <jrivero@osrfoundation.org>"
+    },
+    {
+      "sha": "837e5e7d8e84cffec41e8e0efd7cf9344a97615e",
+      "author": "ahcorde",
+      "date": "2022-09-12T21:10:26Z",
+      "message": "0.244.5"
+    },
+    {
+      "sha": "66f53659af561fd6f53ff28c06dd724a93b91b74",
+      "author": "ahcorde",
+      "date": "2022-09-12T21:08:11Z",
+      "message": "Changelog\n\nSigned-off-by: ahcorde <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "a774161f302c3d0a7b7393d22f0e85613bc0c9ca",
+      "author": "Michael Carroll",
+      "date": "2022-09-09T13:31:20Z",
+      "message": "Remove ROS versions from ros2 branch (#294)\n\nSigned-off-by: Michael Carroll <michael@openrobotics.org>"
+    },
+    {
+      "sha": "62e8ad30c743cdab06a17c7de1693e37f6c08dd7",
+      "author": "methylDragon",
+      "date": "2022-09-08T17:07:39Z",
+      "message": "Fix missing msgs include and packages.xml deps (#292)\n\n* Fix missing msgs include and packages.xml deps\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Add additional conditions to support gz sim invocation\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Fix cpplint\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>"
+    },
+    {
+      "sha": "574e6ac6881ce60ce1d48d3dd57425600e241b97",
+      "author": "andermi",
+      "date": "2022-09-05T08:22:41Z",
+      "message": "Add ROS2 version of Stopwatch (#287)\n\nSigned-off-by: Michael Anderson <anderson@mbari.org>"
+    },
+    {
+      "sha": "6b05462235f8534ecd5508fd91c89732376a05f9",
+      "author": "Dharini Dutia",
+      "date": "2022-09-01T23:33:48Z",
+      "message": "sdformat_urdf parser demo (#265)\n\n* parser compatible model and launch framework\r\n\r\nSigned-off-by: Dharini Dutia <dharini@openrobotics.org>\r\n\r\n* added ground plane, common gz plugins, demo commands and cleaned install paths\r\n\r\nSigned-off-by: Dharini Dutia <dharini@openrobotics.org>\r\n\r\n* unique collision names and cleared flake\r\n\r\nSigned-off-by: Dharini Dutia <dharini@openrobotics.org>\r\n\r\n* updating model config\r\n\r\nSigned-off-by: Dharini Dutia <dharini@openrobotics.org>\r\n\r\n* building parser from source\r\n\r\nSigned-off-by: Dharini Dutia <dharini@openrobotics.org>\r\n\r\n* fix flake and update deb dependency for garden\r\n\r\nSigned-off-by: Dharini Dutia <dharini@openrobotics.org>\r\n\r\n* Move packages and files to gz\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* feedback and ign->gz\r\n\r\nSigned-off-by: Dharini Dutia <dharini@openrobotics.org>\r\n\r\n* Support ros_ign migration\r\n\r\nClean up shared libraries, and tick-tock RosGzPointCloud\r\nTick-tock launch args\r\nHard-tock ign_ in sources\r\nMigrate ign, ign_, IGN_ for sources, launch, and test files\r\nMigrate IGN_XXX_VER, IGN_T, header guards\r\nMigrate launchfile, launchfile args, and test source references\r\nMigrate ros_ign_XXX and gz_gazebo -> gz_sim\r\nMigrate ros_ign_XXX project names\r\nMigrate Ign, ign-, IGN_DEPS, ign-gazebo\r\nMigrate ignitionrobotics, ignitionrobotics/ros_ign, osrf/ros_ign\r\nMigrate ignition-version, IGNITION_VERSION, Ignition <LIB>, ros_ign_ci\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* renaming and flake\r\n\r\nSigned-off-by: Dharini Dutia <dharini@openrobotics.org>\r\n\r\n* added ros commands\r\n\r\nSigned-off-by: Dharini Dutia <dharini@openrobotics.org>\r\n\r\n* gz-version\r\n\r\nSigned-off-by: Louise Poubel <louise@openrobotics.org>\r\n\r\n* feedback and ci trial\r\n\r\nSigned-off-by: Dharini Dutia <dharini@openrobotics.org>\r\n\r\n* removing garden condition\r\n\r\nSigned-off-by: Dharini Dutia <dharini@openrobotics.org>\r\n\r\nSigned-off-by: Dharini Dutia <dharini@openrobotics.org>\r\nSigned-off-by: Michael Carroll <michael@openrobotics.org>\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\nSigned-off-by: Louise Poubel <louise@openrobotics.org>\r\nCo-authored-by: Michael Carroll <michael@openrobotics.org>\r\nCo-authored-by: methylDragon <methylDragon@gmail.com>\r\nCo-authored-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "f7f417bf78dd02fb17f01fa0079c6e01f337130f",
+      "author": "andermi",
+      "date": "2022-08-29T19:34:48Z",
+      "message": "Add debugger option in launch (#286)\n\n* add debugger option in launch\r\n* remove xterm dependency; rely on x-terminal-emulator from update-alternatives\r\n\r\nSigned-off-by: Michael Anderson <anderson@mbari.org>"
+    },
+    {
+      "sha": "d8d0441804ece16008b504bdae3dbfab3531e544",
+      "author": "methylDragon",
+      "date": "2022-08-26T16:33:20Z",
+      "message": "Add missing GZ_VERSION ticktocks (#289)\n\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>"
+    },
+    {
+      "sha": "4e6ec6f62edf8a95935d8b5e1345d22081cc353a",
+      "author": "methylDragon",
+      "date": "2022-08-17T21:13:20Z",
+      "message": "ign -> gz : ros_gz Migration (Shims) (#281)\n\nCo-authored-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "90f6a5a5353a1a70f7de22172b2e69ee9eefd3b3",
+      "author": "methylDragon",
+      "date": "2022-07-25T23:17:47Z",
+      "message": "Support ros_ign migration (#282)\n\nClean up shared libraries, and tick-tock RosGzPointCloud\nTick-tock launch args\nHard-tock ign_ in sources\nMigrate ign, ign_, IGN_ for sources, launch, and test files\nMigrate IGN_XXX_VER, IGN_T, header guards\nMigrate launchfile, launchfile args, and test source references\nMigrate ros_ign_XXX and gz_gazebo -> gz_sim\nMigrate ros_ign_XXX project names\nMigrate Ign, ign-, IGN_DEPS, ign-gazebo\nMigrate ignitionrobotics, ignitionrobotics/ros_ign, osrf/ros_ign\nMigrate ignition-version, IGNITION_VERSION, Ignition <LIB>, ros_ign_ci\n\nSigned-off-by: methylDragon <methylDragon@gmail.com>"
+    },
+    {
+      "sha": "df1551700f166fe08dfebc28eba94b97bc845b23",
+      "author": "methylDragon",
+      "date": "2022-06-22T18:24:36Z",
+      "message": "Move packages and files to gz (#282)\n\nSigned-off-by: methylDragon <methylDragon@gmail.com>"
+    },
+    {
+      "sha": "44f8ea921b6a041925041a7425d8dac8e3c3fb03",
+      "author": "NaokiTakahashi",
+      "date": "2022-08-04T12:56:46Z",
+      "message": "Skip the process name (#278)\n\nSigned-off-by: NaokiTakahashi <naoki.takahashi060@gmail.com>"
+    },
+    {
+      "sha": "6aafe60b52350db1772fe4b33a222ddf2c1f7811",
+      "author": "methylDragon",
+      "date": "2022-07-27T01:20:11Z",
+      "message": "ign -> gz : ros_gz Migration (Local Source) (#280)\n\nSigned-off-by: methylDragon <methylDragon@gmail.com>"
+    },
+    {
+      "sha": "fbdf2ec74f27375bb823b6d26cc738e4c879bd11",
+      "author": "methylDragon",
+      "date": "2022-07-26T20:02:55Z",
+      "message": "ign -> gz : ros_gz Migration (Infra, Docs, and CMake) (#279)\n\nSigned-off-by: methylDragon <methylDragon@gmail.com>"
+    },
+    {
+      "sha": "d94e7c7731b22bb5e0e2532312a881e0b49181cc",
+      "author": "Michael Carroll",
+      "date": "2022-07-08T19:36:59Z",
+      "message": "[rolling] Port test improvements from #272 (#273)\n\nPort test improvements from #272 on galactic to humble+.\r\nThis should clear up some of the CI issues that we have been facing.\r\n\r\nSigned-off-by: Michael Carroll <michael@openrobotics.org>\r\nSigned-off-by: Louise Poubel <louise@openrobotics.org>\r\nCo-authored-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "fa5f2f90ca530ad4c283ea708b3b2adaec6b6a2a",
+      "author": "Louise Poubel",
+      "date": "2022-07-08T19:27:02Z",
+      "message": "Fix compilation against Garden (#274)\n\nSigned-off-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "94abe668a8e5ef8cfad9059f9e8ce125f12415c6",
+      "author": "Michael Carroll",
+      "date": "2022-06-30T04:34:34Z",
+      "message": "Make tests faster and more robust (#272)\n\nSigned-off-by: Michael Carroll <michael@openrobotics.org>"
+    },
+    {
+      "sha": "36e77248c73121f127e98c0b13eae29ac69c4572",
+      "author": "Michael Carroll",
+      "date": "2022-06-29T17:22:21Z",
+      "message": "Improve documentation around yaml configuration (#271)\n\nSigned-off-by: Michael Carroll <michael@openrobotics.org>"
+    },
+    {
+      "sha": "1114181df4c4c40e08339804bfe9d3d52597068e",
+      "author": "Michael Carroll",
+      "date": "2022-06-29T16:41:36Z",
+      "message": "Fix small typo in bridge README (#270)\n\nSigned-off-by: Michael Carroll <michael@openrobotics.org>"
+    },
+    {
+      "sha": "eb27eaa2800e946cc68a5a0735a9cfd194094ec8",
+      "author": "Michael Carroll",
+      "date": "2022-06-28T22:04:36Z",
+      "message": "Port NavSat (#224) from ROS 1 to ROS 2 (#268)\n\nCo-authored-by: Tyler Howell <76003804+TyHowellWork@users.noreply.github.com>\r\nSigned-off-by: Michael Carroll <michael@openrobotics.org>"
+    },
+    {
+      "sha": "fda6daaaa931df4d2e4248b0ebb365a5207fa9f0",
+      "author": "Michael Carroll",
+      "date": "2022-06-23T18:15:20Z",
+      "message": "[galactic] Backport: Add std_msgs as dependency of ros_ign_gazebo (#264)\n\nSigned-off-by: Kenji Brameld <kenjibrameld@gmail.com>\r\nCo-authored-by: Kenji Brameld <kenjibrameld@gmail.com>"
+    },
+    {
+      "sha": "7dbbdf13c18bf8f05d10091e9a5b1f8127ad2f96",
+      "author": "Michael Carroll",
+      "date": "2022-06-22T22:53:52Z",
+      "message": "Add ParamVec and bridge from Ignition (#261)\n\n* Introduces `ros_ign_interfaces::msg::ParamVec` for storing a list of Parameters that are int, bool, double, or string.\r\n* Introduces bridge for `ignition::msgs::param` to `ros_ign_interfaces::msg::ParamVec`\r\n* Introduces bridge for `ignition::msgs::param_v` to `ros_ign_interfaces::msg::ParamVec`\r\n\r\nSigned-off-by: Michael Carroll <michael@openrobotics.org>"
+    },
+    {
+      "sha": "d25ae5529bcde8a3b0e2389c6a406e85397534e6",
+      "author": "Michael Carroll",
+      "date": "2022-06-21T17:55:49Z",
+      "message": "Add support for converting Any <-> ParamValue (#260)\n\n* Add support for converting Any <-> ParamValue\r\n\r\nSigned-off-by: Michael Carroll <michael@openrobotics.org>"
+    },
+    {
+      "sha": "f0e9a25845889fe909dd429e1e27d6d0209a219e",
+      "author": "Louise Poubel",
+      "date": "2022-06-21T15:42:30Z",
+      "message": "Feature: set QoS options to override durability (#250) (#259)\n\nSigned-off-by: Daisuke Nishimatsu <border_goldenmarket@yahoo.co.jp>\r\n\r\nCo-authored-by: Louise Poubel <louise@openrobotics.org>\r\n\r\nCo-authored-by: Daisuke Nishimatsu <42202095+wep21@users.noreply.github.com>"
+    },
+    {
+      "sha": "d00d74e85996859c3537618ed46f19227b57bf5d",
+      "author": "Michael Carroll",
+      "date": "2022-06-16T20:23:35Z",
+      "message": "Add node component and yaml-configured bridge node (#238)\n\n* Refactor in support of adding yaml-configured node\r\n\r\nSigned-off-by: Michael Carroll <michael@openrobotics.org>"
+    },
+    {
+      "sha": "562c1fb93e714085153475a281aaee09ad86b821",
+      "author": "Jacob Perron",
+      "date": "2022-06-01T17:51:01Z",
+      "message": "Add support for Garden (#255)\n\nSigned-off-by: Jacob Perron <jacob@openrobotics.org>\r\nSigned-off-by: Louise Poubel <louise@openrobotics.org>\r\n\r\n\r\nCo-authored-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "0455c658a07cfb75ded70107c261e89866961f12",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2022-05-24T16:22:06Z",
+      "message": "Fixed cmd example 4 (#254)\n\nSigned-off-by: ahcorde <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "bdb05fe6d70869d647f6f7ab2174576905f0ea9b",
+      "author": "Carlos Agüero",
+      "date": "2022-05-23T18:40:50Z",
+      "message": "Add rssi to Dataframe.msg (#249)\n\n* Adding rssi field to ros_ign_interfaces/Dataframe.msg\r\n\r\nSigned-off-by: Carlos Agüero <caguero@openrobotics.org>"
+    },
+    {
+      "sha": "3512c016ad05fa56d325ad5c2f9c0dfafcb962a5",
+      "author": "Louise Poubel",
+      "date": "2022-05-20T01:23:21Z",
+      "message": "0.244.3"
+    },
+    {
+      "sha": "5f6c49ac9275a957cf99a1bf9d1d78174435e1b6",
+      "author": "Louise Poubel",
+      "date": "2022-05-20T01:15:44Z",
+      "message": "Humble / Rolling changelog\n\nSigned-off-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "19b15342eabb1c8595c29312fccc8cb64f3445d2",
+      "author": "Daisuke Nishimatsu",
+      "date": "2022-05-20T01:14:17Z",
+      "message": "Feature: set QoS options to override durability (#250)\n\nSigned-off-by: Daisuke Nishimatsu <border_goldenmarket@yahoo.co.jp>\r\n\r\nCo-authored-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "8a7bf43bcc41bd47f24eac074401ab91cf8f639a",
+      "author": "Louise Poubel",
+      "date": "2022-05-20T00:50:03Z",
+      "message": "[ros2] README updates (service bridge, Gazebo rename) (#252)\n\nSigned-off-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "4dcf2076d8a65ed88833b52933cd0acc52fad57c",
+      "author": "Daisuke Nishimatsu",
+      "date": "2022-05-20T00:49:18Z",
+      "message": "Fix linter tests (#251)\n\nSigned-off-by: Daisuke Nishimatsu <border_goldenmarket@yahoo.co.jp>\r\nSigned-off-by: Louise Poubel <louise@openrobotics.org>\r\n\r\nCo-authored-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "9db97fae2a709551a8098e691cd514d860aa7b46",
+      "author": "Michael Carroll",
+      "date": "2022-05-02T17:44:42Z",
+      "message": "Use the python generator for tests as well (#234)\n\n* Use the python generator for tests as well\r\n\r\nSigned-off-by: Michael Carroll <michael@openrobotics.org>"
+    },
+    {
+      "sha": "54c28b1176e09970f73d5cb451cf667467d8c064",
+      "author": "Aditya Pande",
+      "date": "2022-04-27T23:07:49Z",
+      "message": "Adds pose and twist with covariance messages bridging (#222)\n\n* Added pose, twist and odometry with covariance messages bridging\r\nSigned-off-by: Aditya <aditya050995@gmail.com>"
+    },
+    {
+      "sha": "8efbf57b67ac2d5953a72c4d0257aa9155446bda",
+      "author": "Aditya Pande",
+      "date": "2022-04-25T20:30:46Z",
+      "message": "Joint state publisher and tf bridging demo (#244)\n\n* Added joint state publisher and tf bridge demo\r\n\r\nSigned-off-by: Aditya <aditya050995@gmail.com>\r\n\r\nCo-authored-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "ecd7b7e84f923fe5978d75cc67d70b8bb8b04765",
+      "author": "Louise Poubel",
+      "date": "2022-04-25T16:28:19Z",
+      "message": "0.244.2"
+    },
+    {
+      "sha": "d640ee5305d24dc49be933599fe1cd22aa531703",
+      "author": "Louise Poubel",
+      "date": "2022-04-25T16:26:58Z",
+      "message": "Rolling changelog\n\nSigned-off-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "ab2484aef00d4283356a29fa7a864cb16c96f821",
+      "author": "Louise Poubel",
+      "date": "2022-04-22T22:36:49Z",
+      "message": "galactic ➡️ ros2 (#228)\n\nSigned-off-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "8401be8571f1c63ce434c0592ee499d861b0633f",
+      "author": "Louise Poubel",
+      "date": "2022-04-22T22:20:19Z",
+      "message": "Merge branch 'ros2' into ahcorde/galactic_to_ros2\n\nSigned-off-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "699a195d6ca7eb17f19374e9a9496f339f3f36e9",
+      "author": "Ivan Santiago Paunovic",
+      "date": "2022-04-22T22:12:53Z",
+      "message": "Support bridging services (#211)\n\nSigned-off-by: Ivan Santiago Paunovic <ivanpauno@ekumenlabs.com>\r\n\r\nCo-authored-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "257ff1068c4769cffa302b28f5275a3c052bc282",
+      "author": "William Lew",
+      "date": "2022-04-22T22:10:53Z",
+      "message": "Camera trigger demo (#223)\n\nSigned-off-by: William Lew <WilliamMilesLew@gmail.com>\r\n\r\nCo-authored-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "3d3e440343c8924dc07bcfff2522661f990e89e0",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2022-04-22T21:34:29Z",
+      "message": "Change ubuntu 20.04 to 22.04 (#246)\n\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\nSigned-off-by: Louise Poubel <louise@openrobotics.org>\r\n\r\nCo-authored-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "e1ec514a2b510df66d297cbed567a15356e26d66",
+      "author": "Kenji Brameld",
+      "date": "2022-04-22T20:39:14Z",
+      "message": "Add std_msgs as dependency of ros_ign_gazebo (#242)\n\nSigned-off-by: Kenji Brameld <kenjibrameld@gmail.com>"
+    },
+    {
+      "sha": "66fef24b98c4e571f7caf5e17f1b32a1e7694ba2",
+      "author": "Michael Carroll",
+      "date": "2022-04-20T14:22:22Z",
+      "message": "Generate boilerplate files from Python scripts (#233)\n\nThe way that we add factories can be a bit error-prone, as there are a lot of strings that cannot be checked at compilation time. This changes several of the boilerplate files to be generated automatically by python scripts, in line with how ros1_bridge does it.\r\n\r\nSigned-off-by: Michael Carroll <michael@openrobotics.org>"
+    },
+    {
+      "sha": "315ac37441246ff385c6c17a61d48bff7508af55",
+      "author": "Michael Carroll",
+      "date": "2022-04-12T17:39:34Z",
+      "message": "[galactic] Backport GuiCamera, StringVec, TrackVisual, VideoRecord (#241)\n\n* [ros_ign_interfaces] Add more interface definitions.\r\n* Add converion functions for the added messages\r\n* Update the factory factory function with the new messages\r\n* Add new messages to docs\r\n* Add test cases for the new messages conversions\r\n\r\nSigned-off-by: Ivan Santiago Paunovic <ivanpauno@ekumenlabs.com>\r\nCo-authored-by: Ivan Santiago Paunovic <ivanpauno@ekumenlabs.com>"
+    },
+    {
+      "sha": "f08c90b952cb3651e5144c10a0bbeb5dcbb6927e",
+      "author": "Michael Carroll",
+      "date": "2022-04-12T15:17:42Z",
+      "message": "Add Dataframe message and bridging (#239)\n\nSigned-off-by: Michael Carroll <michael@openrobotics.org>"
+    },
+    {
+      "sha": "c7f74b75ed37cdb90b76df5821b575f2b9a225ad",
+      "author": "Joep Tool",
+      "date": "2022-04-11T17:08:22Z",
+      "message": "Added reminder to hit play to receive images. (#237)\n\nSigned-off-by: joe28965 <joeptool@gmail.com>"
+    },
+    {
+      "sha": "629b9e89572e429ecac30e1cd7a913bd9a87a671",
+      "author": "Michael Carroll",
+      "date": "2022-04-07T01:20:15Z",
+      "message": "Factory interface needs virtual destructor (#232)\n\nSigned-off-by: Michael Carroll <michael@openrobotics.org>"
+    },
+    {
+      "sha": "174d32afcb975d51349a45776f0d25e9288b03a1",
+      "author": "Michael Carroll",
+      "date": "2022-04-06T16:35:57Z",
+      "message": "Optional \"lazy\" bridge subscribers (#225)\n\nThis allows for the bridge to be created in such a way that it is \"lazy\". In this case \"lazy\" means:\r\n* The publication (output) side of the bridge is always on and actively looking for subscriptions.\r\n* The subscription (input) side of the bridge is only turned on in the case that there are subscriptions on the output side.\r\n\r\nSigned-off-by: Michael Carroll <michael@openrobotics.org>"
+    },
+    {
+      "sha": "b2376bf3f6ba19255ef5d584a6f8750e4d376920",
+      "author": "ahcorde",
+      "date": "2022-04-01T18:31:27Z",
+      "message": "Merge remote-tracking branch 'origin/galactic' into ahcorde/galactic_to_ros2"
+    },
+    {
+      "sha": "2e31fee5bff91d800530ca86083e718d2cb21bdc",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2022-04-01T18:30:43Z",
+      "message": "Fixed ros_ign_gazebo launch file install directory (#229) (#230)\n\nSigned-off-by: ahcorde <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "c6d24d33f81b30e5603df4b073d8064b11eddbb7",
+      "author": "ahcorde",
+      "date": "2022-03-30T20:12:08Z",
+      "message": "Fixed ci\n\nSigned-off-by: ahcorde <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "1f48883c7864b5c6313420a577b8a229e3378759",
+      "author": "ahcorde",
+      "date": "2022-03-29T16:46:01Z",
+      "message": "Merge remote-tracking branch 'origin/galactic' into ahcorde/galactic_to_ros2"
+    },
+    {
+      "sha": "464734822e5b356dad9c6c674136b0d97a6908ab",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2022-03-29T14:42:10Z",
+      "message": "Merge pull request #227 from ignitionrobotics/ahcorde/foxy_to_galactic\n\nFoxy to Galactic"
+    },
+    {
+      "sha": "78dec8a3a66caf169ea0e027a10601757ee2ff71",
+      "author": "ahcorde",
+      "date": "2022-03-29T08:35:10Z",
+      "message": "Removed foxy CI\n\nSigned-off-by: ahcorde <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "78f2210f852115f5dc7de3ef4c7715922fa10d5d",
+      "author": "ahcorde",
+      "date": "2022-03-29T08:31:32Z",
+      "message": "Merge branch 'foxy' into galactic"
+    },
+    {
+      "sha": "613a86b6da34db6fdb0a9b849e035ad1eb963ff1",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2022-03-28T16:32:51Z",
+      "message": "Added ign_version launch argument to set ignition gazebo version (#226)\n\nSigned-off-by: ahcorde <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "0442066c1ce1a6e35605a8df6bd2fcb3152d756a",
+      "author": "Aditya Pande",
+      "date": "2022-03-07T18:31:10Z",
+      "message": "Updated `ign topic` commnds on README (#221)\n\nSigned-off-by: Aditya <aditya050995@gmail.com>"
+    },
+    {
+      "sha": "a5f4b643bcd54622b66b122f17c8c999fcac9bbe",
+      "author": "Michael Carroll",
+      "date": "2022-02-16T22:25:24Z",
+      "message": "Ignore pycache in case of colcon symlink-install (#217)\n\nSigned-off-by: Michael Carroll <michael@openrobotics.org>"
+    },
+    {
+      "sha": "928cae7253bb7e5518bbff4001a91840fc334ac9",
+      "author": "Ivan Santiago Paunovic",
+      "date": "2022-02-10T15:13:59Z",
+      "message": "Add conversions for ros_ign_interfaces/WorldControl and builtin_interfaces/Time (#216)\n\n* Add conversion methods for WorldControl msg and Time\r\n* Add WorldControl to factory\r\n* Add builtin_interfaces to factories.cpp\r\n* Document the new conversions\r\n* Add test cases for the new conversions\r\n\r\nSigned-off-by: Ivan Santiago Paunovic <ivanpauno@ekumenlabs.com>"
+    },
+    {
+      "sha": "6334294aac55a02158eb56d2f1505997db43fc55",
+      "author": "Ivan Santiago Paunovic",
+      "date": "2022-02-07T19:03:41Z",
+      "message": "[ros_ign_interfaces] Add GuiCamera, StringVec, TrackVisual, VideoRecord (#214)\n\n* [ros_ign_interfaces] Add more interface definitions.\r\n* Add converion functions for the added messages\r\n* Update the factory factory function with the new messages\r\n* Add new messages to docs\r\n* Add test cases for the new messages conversions\r\n\r\nSigned-off-by: Ivan Santiago Paunovic <ivanpauno@ekumenlabs.com>"
+    },
+    {
+      "sha": "c1c05455de97af310e828cdd9aaa7098de6d0075",
+      "author": "Michael Carroll",
+      "date": "2022-02-07T18:43:25Z",
+      "message": "0.233.4\n\nSigned-off-by: Michael Carroll <michael@openrobotics.org>"
+    },
+    {
+      "sha": "331312418298e66c898106978af030d8fa7ba919",
+      "author": "Michael Carroll",
+      "date": "2022-02-07T18:21:06Z",
+      "message": "[galactic] backport test memory usage improvements (#215)\n\n* Improve modularity of ign/ros publisher tests (#194)\r\n* Break apart ros_subscriber test translation unit (#212)\r\n* Fix deprecated parameter declaration\r\n\r\nSigned-off-by: Michael Carroll <michael@openrobotics.org>\r\nSigned-off-by: Louise Poubel <louise@openrobotics.org>\r\nCo-authored-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "0d878e87e8383cd305ed14c8a7ff33b044f3f08b",
+      "author": "Michael Carroll",
+      "date": "2022-01-28T20:14:12Z",
+      "message": "Break apart ros_subscriber test translation unit (#212)\n\nSigned-off-by: Michael Carroll <michael@openrobotics.org>"
+    },
+    {
+      "sha": "05da9b7ef739c0c86d5e6396027ff3096ae6c092",
+      "author": "Michael Carroll",
+      "date": "2022-01-28T18:56:27Z",
+      "message": "Bring ros2 branch up-to-date with Rolling (#213)\n\nSigned-off-by: Michael Carroll <michael@openrobotics.org>"
+    },
+    {
+      "sha": "8e6409be4ad60302791068e471bbb465e63202d9",
+      "author": "Ivan Santiago Paunovic",
+      "date": "2022-01-14T22:30:29Z",
+      "message": "Add missing dependency on rclcpp (#209)\n\nSigned-off-by: Ivan Santiago Paunovic <ivanpauno@ekumenlabs.com>"
+    },
+    {
+      "sha": "dad6d8e540f672085f2fa28a42df3760b4721709",
+      "author": "Aryaman Shardul",
+      "date": "2022-01-14T19:58:53Z",
+      "message": "create.cpp usage message fixed for foxy branch (#208)\n\nSigned-off-by: Aryaman <aryashardul2002@gmail.com>"
+    },
+    {
+      "sha": "0b5263c7da2aed2c2a9a91f9825ff0a345a5348f",
+      "author": "Aryaman Shardul",
+      "date": "2022-01-13T23:45:27Z",
+      "message": "create.cpp usage message fixed for ros2 branch (#207)\n\nSigned-off-by: Aryaman <aryashardul2002@gmail.com>"
+    },
+    {
+      "sha": "c24bfd1c01d560bef0d33b8adbe778b90cc73e3f",
+      "author": "gezp",
+      "date": "2022-01-06T03:58:52Z",
+      "message": "Update maintainer for ros_ign_interfaces (#204)\n\nSigned-off-by: gezp <zhenpeng.ge@qq.com>"
+    },
+    {
+      "sha": "bfacf1a378f19f69e711f651a0d589fdb5e9b1f4",
+      "author": "Louise Poubel",
+      "date": "2022-01-05T01:52:46Z",
+      "message": "0.244.1"
+    },
+    {
+      "sha": "c64de0fd1fe9863f6beae4125644267444818f70",
+      "author": "Louise Poubel",
+      "date": "2022-01-05T01:52:19Z",
+      "message": "Changelog for 0.244.1\n\nSigned-off-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "a4cc0f4ac312696e7acac2517a16a10a4aadcb2f",
+      "author": "Michael Carroll",
+      "date": "2022-01-05T01:27:26Z",
+      "message": "Improve modularity of ign/ros publisher tests (#194)\n\nSigned-off-by: Michael Carroll <michael@openrobotics.org>\r\nSigned-off-by: Louise Poubel <louise@openrobotics.org>\r\n\r\nCo-authored-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "21fa4a3f775a6340a598882aed2e2e2596375fb7",
+      "author": "Louise Poubel",
+      "date": "2021-12-30T20:20:24Z",
+      "message": "0.244.0"
+    },
+    {
+      "sha": "4cd30b3c2c11f266e9963cdcc3b1f6247b5677fe",
+      "author": "Louise Poubel",
+      "date": "2021-12-30T20:17:36Z",
+      "message": "Rolling changelog\n\nSigned-off-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "55e0ad1c1dfbf79cbdb962564207f42734440dee",
+      "author": "Louise Poubel",
+      "date": "2021-12-30T20:09:41Z",
+      "message": "[foxy] Update docs for ros2 branches (#203)\n\nSigned-off-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "2587cca71c81a1d246f01fea7af1b265541ac647",
+      "author": "Louise Poubel",
+      "date": "2021-12-30T19:54:04Z",
+      "message": "0.233.3"
+    },
+    {
+      "sha": "8eca30533f4de24580aa27f1fdd75c4f5bb9092e",
+      "author": "Louise Poubel",
+      "date": "2021-12-30T19:53:58Z",
+      "message": "Galactic changelog\n\nSigned-off-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "8149f2be62402c8a2490cbc870cf879ac7b364fb",
+      "author": "Louise Poubel",
+      "date": "2021-12-30T19:21:46Z",
+      "message": "Separate galactic branch from ros2 branch (#201)\n\nSigned-off-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "5327fea2ed42794b90cbb52965a04e794a4caf2c",
+      "author": "Louise Poubel",
+      "date": "2021-12-30T19:18:32Z",
+      "message": "Default to Fortress for Rolling (future Humble) (#195)\n\nSigned-off-by: Guillaume Doisy <guillaume.doisy@wyca.fr>\r\nSigned-off-by: Louise Poubel <louise@openrobotics.org>\r\n\r\nCo-authored-by: Guillaume dev PC <guillaume.doisy@wyca.fr>"
+    },
+    {
+      "sha": "4533f43d064c4f4c5305f2009f27771a3da2f15f",
+      "author": "Louise Poubel",
+      "date": "2021-12-29T21:59:09Z",
+      "message": "[ros2] 🏁 Dome EOL (#199)\n\nSigned-off-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "2c3ec18283fab2c910e1fbe9ffac8b5f444f67bb",
+      "author": "Louise Poubel",
+      "date": "2021-12-29T21:58:33Z",
+      "message": "[foxy] 🏁 Dome EOL (#198)\n\nSigned-off-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "dcd68ff7f6aa86e2d598a86b44810c799da1d2b1",
+      "author": "William Lew",
+      "date": "2021-12-28T17:54:15Z",
+      "message": "New Light Message, also bridge Color (#187)\n\nSigned-off-by: William Lew <WilliamMilesLew@gmail.com>\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\nCo-authored-by: ahcorde <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "91b84efa8f2a841904317941848dad8e69c08e50",
+      "author": "Michael Carroll",
+      "date": "2021-12-23T22:25:15Z",
+      "message": "Statically link each translation unit (#193)\n\nSigned-off-by: Michael Carroll <michael@openrobotics.org>"
+    },
+    {
+      "sha": "2995c1e0b234f72c90b453b99ec19b65bc610035",
+      "author": "Michael Carroll",
+      "date": "2021-12-23T19:59:06Z",
+      "message": "Break apart convert and factories translation unit (#192)\n\nSigned-off-by: Michael Carroll <michael@openrobotics.org>\r\nSigned-off-by: Louise Poubel <louise@openrobotics.org>\r\n\r\nCo-authored-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "92feb9240a5b427d8ea4aaf7a4001297def09b6f",
+      "author": "William Lew",
+      "date": "2021-12-21T18:39:36Z",
+      "message": "Fixed ROS subscriber test in ros_ign_bridge (#189)\n\nSigned-off-by: William Lew <WilliamMilesLew@gmail.com>"
+    },
+    {
+      "sha": "5d9cfef3d58948a77b962d231e281c88ea88e188",
+      "author": "Louise Poubel",
+      "date": "2021-11-03T00:18:18Z",
+      "message": "Enable QoS overrides (#181)\n\nSigned-off-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "628e0a4b0eeb56e1147a3604a2abbb6c63a98e22",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2021-10-12T09:10:21Z",
+      "message": "Fixed ros ign bridge documentation (#178)\n\nSigned-off-by: ahcorde <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "25e5ba04068f57a27753438101158247f356d2aa",
+      "author": "Vatan Aksoy Tezer",
+      "date": "2021-08-18T00:10:47Z",
+      "message": "Expose Contacts through ROS bridge (#175)\n\nSigned-off-by: Vatan Aksoy Tezer <vatanaksoytezer@gmail.com>"
+    },
+    {
+      "sha": "450df72518504d5ee8fcbcd4cc59e4137baee202",
+      "author": "Louise Poubel",
+      "date": "2021-08-18T00:07:50Z",
+      "message": "[ROS2] Fix triage for PRs from forks (#124) (#176)\n\nSigned-off-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "7b83bc4d5f86a8b87cb4358345ef835f63fdf2b0",
+      "author": "Louise Poubel",
+      "date": "2021-07-20T19:12:58Z",
+      "message": "0.233.2"
+    },
+    {
+      "sha": "f8504f5b622a75e0d9d5647a06b2b16888d6293b",
+      "author": "Louise Poubel",
+      "date": "2021-07-20T19:12:38Z",
+      "message": "Galactic changelog\n\nSigned-off-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "540b9a21bffed1f2ab6216c6c5aa6d486b97c2d6",
+      "author": "Louise Poubel",
+      "date": "2021-07-20T19:03:37Z",
+      "message": "0.221.2"
+    },
+    {
+      "sha": "cbd63eac8c1424cc13754c1cbc0fb8126609918f",
+      "author": "Louise Poubel",
+      "date": "2021-07-20T19:03:33Z",
+      "message": "changelog\n\nSigned-off-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "9529439577b991b5ca323bcd3fc53d54291f7da9",
+      "author": "Vatan Aksoy Tezer",
+      "date": "2021-06-10T17:11:15Z",
+      "message": "Joint states tutorial (#156)\n\nAdds an rrbot model to demos and shows the usage of joint_states plugin.\n\nSigned-off-by: Vatan Aksoy Tezer <vatanaksoytezer@gmail.com>"
+    },
+    {
+      "sha": "549771b1dc12f0be821ab0a6ac41f6da4329b369",
+      "author": "gezp",
+      "date": "2021-05-18T07:17:06Z",
+      "message": "[ros2]  new package ros_ign_interfaces, provide some  Ignition-specific ROS messages. (#152)\n\n* add new package ros_ign_interfaces,provide some Ignition-specific ros .msg and .srv files\r\n\r\nSigned-off-by: gezp <zhenpeng.ge@qq.com>\r\n\r\n* modify to match ign-msgs\r\n\r\nSigned-off-by: gezp <zhenpeng.ge@qq.com>\r\n\r\n* add author info\r\n\r\nSigned-off-by: gezp <zhenpeng.ge@qq.com>\r\n\r\n* modify comments\r\n\r\nSigned-off-by: gezp <zhenpeng.ge@qq.com>\r\n\r\n* update code and doc style\r\n\r\nSigned-off-by: gezp <zhenpeng.ge@qq.com>"
+    },
+    {
+      "sha": "623e9e7b9f482dffbd2d6df25ecbb880c98d88f0",
+      "author": "David V. Lu!!",
+      "date": "2021-06-10T17:03:19Z",
+      "message": "Fix Deprecation Warning (#158)\n\nSigned-off-by: David V. Lu <davidvlu@gmail.com>"
+    },
+    {
+      "sha": "3d848c120bff583ba0bce7da0aa7cbe7cbc10ba6",
+      "author": "Louise Poubel",
+      "date": "2021-07-20T10:43:09Z",
+      "message": "[ros2] Add exec depend on xacro for demos (#170)\n\nSigned-off-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "aebba194ec22efd3fe56f5883a56c06cdf86eaf0",
+      "author": "Louise Poubel",
+      "date": "2021-06-17T20:36:03Z",
+      "message": "[foxy] Update version docs (#167)\n\nSigned-off-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "413999b831e450bd37f1745f7d28c23a9476e0fd",
+      "author": "Louise Poubel",
+      "date": "2021-06-16T17:13:36Z",
+      "message": "[ros2] Update version docs, add Galactic and Fortress (#164)\n\nSigned-off-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "1fc084702cb8999810e5071ab69a7aa48380c3bc",
+      "author": "Vatan Aksoy Tezer",
+      "date": "2021-06-10T17:11:15Z",
+      "message": "Joint states tutorial (#156)\n\nAdds an rrbot model to demos and shows the usage of joint_states plugin.\r\n\r\nSigned-off-by: Vatan Aksoy Tezer <vatanaksoytezer@gmail.com>"
+    },
+    {
+      "sha": "ebe3829aeac517ac62dfe1f6dd1cd8a3dc66e440",
+      "author": "David V. Lu!!",
+      "date": "2021-06-10T17:03:19Z",
+      "message": "Fix Deprecation Warning (#158)\n\nSigned-off-by: David V. Lu <davidvlu@gmail.com>"
+    },
+    {
+      "sha": "afa126234b43d64b72412013f0c7ab30bf9661d7",
+      "author": "Michael Carroll",
+      "date": "2021-06-10T16:38:57Z",
+      "message": "Merge pull request #159 from ignitionrobotics/travis_to_actions\n\nROS2: Remove travis in favor of github actions"
+    },
+    {
+      "sha": "fff2dbf4801cbe2116defb817f8a122536bb79d6",
+      "author": "gezp",
+      "date": "2021-05-18T07:17:06Z",
+      "message": "[ros2]  new package ros_ign_interfaces, provide some  Ignition-specific ROS messages. (#152)\n\n* add new package ros_ign_interfaces,provide some Ignition-specific ros .msg and .srv files\r\n\r\nSigned-off-by: gezp <zhenpeng.ge@qq.com>\r\n\r\n* modify to match ign-msgs\r\n\r\nSigned-off-by: gezp <zhenpeng.ge@qq.com>\r\n\r\n* add author info\r\n\r\nSigned-off-by: gezp <zhenpeng.ge@qq.com>\r\n\r\n* modify comments\r\n\r\nSigned-off-by: gezp <zhenpeng.ge@qq.com>\r\n\r\n* update code and doc style\r\n\r\nSigned-off-by: gezp <zhenpeng.ge@qq.com>"
+    },
+    {
+      "sha": "14790aebfcb1add7359929d6e6ce27dddc90664d",
+      "author": "Louise Poubel",
+      "date": "2021-04-16T21:23:27Z",
+      "message": "0.233.1"
+    },
+    {
+      "sha": "a30b858e0fc5b695a3289fbb029299642d34fc36",
+      "author": "Louise Poubel",
+      "date": "2021-04-16T21:23:10Z",
+      "message": "Rolling changelog updates\n\nSigned-off-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "14d17107ff663417bddf1072fbcd68eec0a93250",
+      "author": "Louise Poubel",
+      "date": "2021-04-16T21:21:05Z",
+      "message": "Default to Edifice for Rolling (#150)\n\nSigned-off-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "7d5de00bb44168b15c2f03f6b563c2a389110ac4",
+      "author": "Louise Poubel",
+      "date": "2021-04-16T18:33:54Z",
+      "message": "0.233.0"
+    },
+    {
+      "sha": "3945d8426fb7ee60dc478cc2b5c620596e5d043e",
+      "author": "Louise Poubel",
+      "date": "2021-04-16T18:32:15Z",
+      "message": "Rolling release changelog\n\nSigned-off-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "808e5b11a790c9b56f7acd4dbd3b5e649d8906a6",
+      "author": "Louise Poubel",
+      "date": "2021-04-16T17:11:53Z",
+      "message": "Add Rolling CI (#149)\n\nSigned-off-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "dfa5ad05f188ecb16b922b77bd790779653f3006",
+      "author": "Andrej Orsula",
+      "date": "2021-04-05T22:33:02Z",
+      "message": "[ros2] Minor updates for demos (#144)\n\n* Re-enable air pressure demo\r\n- Resolves https://github.com/ignitionrobotics/ros_ign/issues/78\r\n\r\n* Add RQt topic viewer to IMU demo\r\n* Add image_topic argument for image_bridge demo\r\n* Do not normalize depth image in RViz2\r\n\r\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>"
+    },
+    {
+      "sha": "889de82414769aceca6d1777a3966f068c910b14",
+      "author": "Andrej Orsula",
+      "date": "2021-04-05T22:28:24Z",
+      "message": "Ignore local publications for ROS 2 subscriber (#146)\n\n- Note: Does not work with all rmw implementations (e.g.: FastRTPS)\r\n\r\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>"
+    },
+    {
+      "sha": "9ddfa24ec5754eefa4a6ebd5fa14ed269f3cddea",
+      "author": "Andrej Orsula",
+      "date": "2021-03-27T23:47:16Z",
+      "message": "[ros2] Update documentation for installation instructions and bridge examples (#142)\n\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>"
+    },
+    {
+      "sha": "54e12e2653054fbb925829784ae9151c793288c3",
+      "author": "Louise Poubel",
+      "date": "2021-03-22T15:18:12Z",
+      "message": "[foxy] Edifice support (#140)\n\nSigned-off-by: Louise Poubel <louise@openrobotics.org>\r\nSigned-off-by: Alejandro Hernández <ahcorde@gmail.com>\r\n\r\nCo-authored-by: Alejandro Hernández <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "a4bc25fde117f9ce7279c83dc419bfb0eb3983b9",
+      "author": "Andrej Orsula",
+      "date": "2021-01-15T23:16:19Z",
+      "message": "[ros2] Add JointTrajectory message conversion (#121)\n\nConversion between\r\n- ignition::msgs::JointTrajectory\r\n- trajectory_msgs::msg::JointTrajectory\r\n\r\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>"
+    },
+    {
+      "sha": "c059286db02989b5651aade4c91287e2f3f7dcdb",
+      "author": "Valerio Magnago",
+      "date": "2020-12-22T18:25:57Z",
+      "message": "Add topic flag to create robot  (#128)\n\nNow it is possible to run ros_ign_gazebo create specifying a topic as\r\nsource of the robot description\r\n\r\nAdd a launch file starting a ignition gazebo world and spawn a sphere in it.\r\nAdditionally a rviz2 interface is loaded to show that also Rviz can load\r\nthe robot description\r\n\r\nThe newly created demo introduce a dependency on the robot_state_publisher package\r\n\r\nSigned-off-by: Valerio Magnago <valerio.magnago@hotmail.it>\r\nCo-authored-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "c454ca5e93cb1a1fe25d0775d9ab6de92f7640af",
+      "author": "Andrej Orsula",
+      "date": "2020-12-08T20:20:53Z",
+      "message": "Add default value for plugin path in launch script (#125)\n\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>"
+    },
+    {
+      "sha": "57f5bf5502e2f7cb151d20f9987fc6aac5dd7209",
+      "author": "Andrej Orsula",
+      "date": "2020-12-04T22:59:24Z",
+      "message": "Fix overwriting of plugin path in launch script (#122)\n\n- IGN_GAZEBO_SYSTEM_PLUGIN_PATH was overwritten by LD_LIBRARY_PATH\r\n- Now it is instead extended by LD_LIBRARY_PATH\r\n- This allows use of ign_gazebo.launch.py with custom gazebo plugins\r\n\r\nSigned-off-by: Andrej Orsula <orsula.andrej@gmail.com>"
+    },
+    {
+      "sha": "565bdb1d924fb9396fe3cb961e1e2a4338cee43e",
+      "author": "chama1176",
+      "date": "2020-10-29T15:49:53Z",
+      "message": "Changed for loading xml from ROS param(#119) (#120)\n\nSigned-off-by: yakushigawa <kaede_yakushigawa@yanmar.com>\r\nSigned-off-by: Kaede Yakushigawa <kaede6120@gmail.com>\r\n\r\nCo-authored-by: yakushigawa <kaede_yakushigawa@yanmar.com>"
+    },
+    {
+      "sha": "ce8b524d70c28b37e7588d2d29777c5494912224",
+      "author": "Florent Audonnet",
+      "date": "2020-10-22T18:12:14Z",
+      "message": "Add TFMessage / Pose_V and Float64 / Double conversions (#117)\n\nAddresses issue #116 \r\n\r\nSigned-off-by: 09ubberboy90 <2330834a@student.gla.ac.uk>\r\nCo-authored-by: iche033 <ichen@osrfoundation.org>"
+    },
+    {
+      "sha": "885c0cf3bbb1859cbcad0fa8180550a604dcbff5",
+      "author": "Jenn",
+      "date": "2020-09-25T21:36:51Z",
+      "message": "updated prereq & branch name (#113)\n\nSigned-off-by: osrf <jenn@openrobotics.org>"
+    },
+    {
+      "sha": "58e0af13a135b37baaee461b2853072ac5d37822",
+      "author": "Louise Poubel",
+      "date": "2020-09-21T19:16:16Z",
+      "message": "ros_ign_gazebo exec depend on ign-gazebo (#110)\n\nSigned-off-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "1ce863c9d4ed850ae8bbe6054f67cd577fb486b8",
+      "author": "Louise Poubel",
+      "date": "2020-08-31T19:39:02Z",
+      "message": "[ros2] Update releases (#108)\n\nSigned-off-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "f5d376f32979493516333a246322f108341e310d",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2020-08-24T18:50:25Z",
+      "message": "Updated README.md (#104)\n\nSigned-off-by: ahcorde <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "5e6d3450d62263005ab5f68fb04013063e64afba",
+      "author": "Luca Della Vedova",
+      "date": "2020-08-22T00:53:45Z",
+      "message": "Add support for Dome (#103)\n\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>"
+    },
+    {
+      "sha": "f5c4aaaf81e97ad25a09d31af8e99ee418173efe",
+      "author": "Louise Poubel",
+      "date": "2020-08-20T03:07:57Z",
+      "message": "0.221.1"
+    },
+    {
+      "sha": "5944c3043d3eda5b6010a9d934b534e306d2fc98",
+      "author": "Louise Poubel",
+      "date": "2020-08-20T03:07:44Z",
+      "message": "changelog for Foxy release\n\nSigned-off-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "e39be0417b37aca42b4cdbc8688d81daf65eea33",
+      "author": "Louise Poubel",
+      "date": "2020-08-20T03:05:24Z",
+      "message": "Add pkg-config as a buildtool dependency (#102)\n\nSigned-off-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "7cb676d99181d4f6707f48e8aa0dc033664f22c9",
+      "author": "ahcorde",
+      "date": "2020-07-24T08:57:46Z",
+      "message": "Port ros_ign_bridge tests to ROS 2 (#98)\n\nSigned-off-by: ahcorde <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "5cf197d93bf875da5cb826cd86a62372dc71fb5c",
+      "author": "ahcorde",
+      "date": "2020-07-24T08:58:53Z",
+      "message": "Rename test_utils.hpp (#98)\n\nSigned-off-by: ahcorde <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "278f2ec3a7ee4ff56cf057cf3a696a4174a47d97",
+      "author": "Louise Poubel",
+      "date": "2020-07-23T23:23:08Z",
+      "message": "0.221.0"
+    },
+    {
+      "sha": "a9041d31a3acc6ba90dd7ea9c685a223871b837e",
+      "author": "Louise Poubel",
+      "date": "2020-07-23T23:23:03Z",
+      "message": "match all version numbers\n\nSigned-off-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "2fa12d15b1e48e5cca19aa0a36616e619e35e19b",
+      "author": "Louise Poubel",
+      "date": "2020-07-23T23:20:37Z",
+      "message": "Changelog\n\nSigned-off-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "7efafa21ff79a2916934e0161fbb267a92b189b6",
+      "author": "Louise Poubel",
+      "date": "2020-07-23T22:33:58Z",
+      "message": "Merge pull request #97 from ignitionrobotics/chapulina/d_to_f\n\ndashing ➡️ ros2\r\nSigned-off-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "616d7ac9a7d7e6cda81311329589ff84f91a96fe",
+      "author": "Louise Poubel",
+      "date": "2020-07-23T01:27:29Z",
+      "message": "Merged from dashing\n\nSigned-off-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "1c07b38bfac350883d21d02e1a4f150ae864f68b",
+      "author": "Louise Poubel",
+      "date": "2020-07-22T00:20:30Z",
+      "message": "Install only what's necessary, rename builtin_interfaces (#95)\n\nSigned-off-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "5e80c484cfa014dcfe06c1e2d2bf74404cb4d33f",
+      "author": "Louise Poubel",
+      "date": "2020-07-22T00:14:53Z",
+      "message": "Move headers to src, rename builtin_interfaces (#95)\n\nSigned-off-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "c5eb32f7d5bd55522c42f657d433807b6a4fb988",
+      "author": "Louise Poubel",
+      "date": "2020-07-22T23:58:42Z",
+      "message": "Update Foxy CI (#94)\n\nSigned-off-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "512575619824829154280fd8f9e6e7b6a2cd4d7a",
+      "author": "Mohamed Ahmed",
+      "date": "2020-07-15T00:33:02Z",
+      "message": "Integer support (#91)\n\nAdds Int32 to the bridge.\r\n\r\nSigned-off-by: mohamedsayed18 <mohamed95.a.s@gmail.com>"
+    },
+    {
+      "sha": "e2feecf0cbba07a2f2b630c3dd42a674d251bc61",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2020-07-02T06:42:49Z",
+      "message": "Updated launch file to use ros_ign_gazebo (#82)\n\n* Added ros_ign_gazebo for ros2\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Execute permission to ign_gazebo script\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Added arguments for the gui too\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Added missing imports in ign_gazebo_ros gui launch\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* single entrypoint, let ign-gazebo manage processes\r\n\r\nSigned-off-by: Louise Poubel <louise@openrobotics.org>\r\n\r\n* fallback to getting world name from service\r\n\r\nSigned-off-by: Louise Poubel <louise@openrobotics.org>\r\n\r\n* gflags\r\n\r\nSigned-off-by: Louise Poubel <louise@openrobotics.org>\r\n\r\n* correct rosdep keys\r\n\r\nSigned-off-by: Louise Poubel <louise@openrobotics.org>\r\n\r\n* removed ign_gazebo script\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Update package.xml\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Avoid the use of --ros-args arguments outside ros\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Updated launch file to use ros_ign_gazebo\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* updated launch files\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Used ign_args\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Fixed merge\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Fixed merge\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Fixed travis\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* make linters happy\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Added feedback\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\nCo-authored-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "8cd6ea7eb7429d0be013c73bb5f948f69c00eeba",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2020-06-29T19:15:37Z",
+      "message": "[ros2] Fixed CI - Added Foxy (#89)\n\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\nCo-authored-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "0c60e54be4c077dfbb2edc6c8741353769287a70",
+      "author": "Louise Poubel",
+      "date": "2020-06-25T17:16:34Z",
+      "message": "Merge pull request #87 from ignitionrobotics/dashing_to_ros2\n\ndashing ➡️ ros2\r\nSigned-off-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "2056911ba44d1bbefb444fb96026596a4a30de5f",
+      "author": "Louise Poubel",
+      "date": "2020-06-25T16:14:25Z",
+      "message": "Add CI for Eloquent (#86)\n\nSigned-off-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "d0eb520540b3fec3914106a5acf59183170ba765",
+      "author": "Louise Poubel",
+      "date": "2020-06-25T15:55:59Z",
+      "message": "Use new ros_ign_gazebo package on ROS 2 demos (#85)\n\nSigned-off-by: Louise Poubel <louise@openrobotics.org>\r\nCo-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "0cf7de8a1d6a78e65acf89728af4e71b2cbeed2c",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2020-06-24T17:04:37Z",
+      "message": "Avoid the use of --ros-args arguments outside ros (#84)\n\nSigned-off-by: ahcorde <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "e1db00a03d5c702d0b5a0730b3fec26e0948b813",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2020-06-15T21:54:09Z",
+      "message": "Added ros_ign_gazebo to ros_ign package.xml (#81)\n\nSigned-off-by: ahcorde <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "fb432bd725ac102196ac616b5175ac56f9a4d3ca",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2020-06-15T21:53:27Z",
+      "message": "Added ros_ign_gazebo for ros2 (#80)\n\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\nCo-authored-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "82354e4923c5bdfbe239b60654fc765567b74a9a",
+      "author": "Louise Poubel",
+      "date": "2020-06-01T21:21:32Z",
+      "message": "[dashing] Workflow updates (#74)\n\nSigned-off-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "c7e4b5feaf3136efdea40ad19df5664784f6fb73",
+      "author": "chapulina",
+      "date": "2020-04-30T23:40:36Z",
+      "message": "Travis CI for multiple versions with travis (ROS 2) (#69)\n\nSigned-off-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "59038531b1fd32e842471d2d74539aa862db40ce",
+      "author": "Luca Della Vedova",
+      "date": "2020-03-31T07:12:01Z",
+      "message": "Ignore ros-args in parameter bridge (#65)\n\n* Ignore ros-args in parameter bridge\r\n\r\n* Refactor ros-args removing logic\r\n\r\n* Fixed lint and uncrustify issues\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>"
+    },
+    {
+      "sha": "b6b1e5971ff1b65c9ad6bc64f0837d772f7d21b3",
+      "author": "chapulina",
+      "date": "2019-12-30T21:25:34Z",
+      "message": "Update Dashing docs (#62)\n\n* Update Dashing docs\r\n\r\nSigned-off-by: Louise Poubel <louise@openrobotics.org>\r\n\r\n* ros_ign_gazebo Dashing TODO\r\n\r\nSigned-off-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "6454fff39fe4733532ddd608c89cb2427790cf5d",
+      "author": "Jose Luis Rivero",
+      "date": "2019-12-13T20:07:47Z",
+      "message": "Update dependencies to Citadel (#57)\n\n* Update dependencies to Citadel\r\n\r\n* Update ros_ign_bridge\r\n\r\n* remove error from merge"
+    },
+    {
+      "sha": "ee88cdd36a4124e0a039dbfcf32e2e3f1c369c41",
+      "author": "Jose Luis Rivero",
+      "date": "2019-12-11T22:32:45Z",
+      "message": "[WIP] Port ign_ros_gazebo_demos to ROS2 (#58)\n\nPort ros_ign_image to ROS2\r\nPort ros_ign_gazebo_demos to ROS2\r\n\r\n* Some demos are blocked by ros_ign_point_cloud\r\n* Some demos are pending RViz displays\r\n* air_pressure is missing FluidPressure message bridge"
+    },
+    {
+      "sha": "f8c5573761110e007e36a25f5f507725348f6a30",
+      "author": "Addisu Taddese",
+      "date": "2019-11-22T22:55:18Z",
+      "message": "Add support for std_msgs/Empty (#53)"
+    },
+    {
+      "sha": "05502de7fb521bc4079642d5f2cfe201b53cd987",
+      "author": "Michael Carroll",
+      "date": "2019-11-15T21:03:52Z",
+      "message": "Add support for std_msgs/Bool (#50)\n\nSigned-off-by: Michael Carroll <michael@openrobotics.org>"
+    },
+    {
+      "sha": "b1e03dfa06957b2008696f7eff1c0c16fc3416d5",
+      "author": "Shivesh Khaitan",
+      "date": "2019-11-11T21:05:41Z",
+      "message": "[ros2] Port ros_ign_bridge to ROS2 (#45)\n\n* [ros2] Port ros_ign_bridge to ROS2\r\n\r\n* Address reviews\r\n\r\n* update README\r\n\r\nSigned-off-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "f10ca6f08eb03d777478bc335133bb4a3dbb160f",
+      "author": "chapulina",
+      "date": "2019-09-11T17:38:10Z",
+      "message": "Enable ROS2 CI for Dashing branch (#43)\n\n* Enable ROS2 CI for Dashing branch\r\n\r\nSigned-off-by: Louise Poubel <louise@openrobotics.org>\r\n\r\n* comment out ignored packages\r\n\r\nSigned-off-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "a6f67bfb13f369fd9313b88056ed8d1cef8aaf76",
+      "author": "Louise Poubel",
+      "date": "2019-08-20T21:33:28Z",
+      "message": "Make all API and comments ROS-version agnostic\n\nSigned-off-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "d22e8834bfb8b37edb00b2183e214e2a1a490633",
+      "author": "Louise Poubel",
+      "date": "2019-08-20T01:35:39Z",
+      "message": "Rename packages and fix compilation + tests\n\nSigned-off-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "2ebaa77ea7ae67e25d431415ac860d02386dd652",
+      "author": "Louise Poubel",
+      "date": "2019-08-20T01:21:07Z",
+      "message": "Move files ros1 -> ros\n\nSigned-off-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "d49e765b7f5a4adb0a44242acf736412db0d4154",
+      "author": "Nate Koenig",
+      "date": "2019-08-15T20:40:11Z",
+      "message": "0.7.0"
+    },
+    {
+      "sha": "0efb8b02610a5f4ae838e2149b783eead7007bae",
+      "author": "Nate Koenig",
+      "date": "2019-08-15T20:38:37Z",
+      "message": "Changelog"
+    },
+    {
+      "sha": "7c3f0912684d304a12c83230270d2d0bdc18bae2",
+      "author": "Nate Koenig",
+      "date": "2019-08-15T20:36:54Z",
+      "message": "Merge pull request #38 from osrf/unidirectional\n\nSupport unidirectional bridge topics"
+    },
+    {
+      "sha": "fbfbfa4fcb0414a91ba3cade1c7eac256d4c4e40",
+      "author": "Nate Koenig",
+      "date": "2019-08-15T17:55:50Z",
+      "message": "More examples"
+    },
+    {
+      "sha": "6619c8ce9e7b2d8e697a8424566af56e2a046a4a",
+      "author": "Nate Koenig",
+      "date": "2019-08-15T16:30:11Z",
+      "message": "Merge branch 'master' into unidirectional"
+    },
+    {
+      "sha": "61912c04525d38e49526683554e990f09d9d92e7",
+      "author": "Nate Koenig",
+      "date": "2019-08-15T16:29:06Z",
+      "message": "Merge pull request #37 from osrf/debug\n\nAdding debug and error statements"
+    },
+    {
+      "sha": "fe5cb89ffc9cd3bf6dee1d965fe68dc212faa56d",
+      "author": "Nate Koenig",
+      "date": "2019-08-15T16:27:51Z",
+      "message": "Switch to characters supported by ros"
+    },
+    {
+      "sha": "0354aa57713e57d2829184d19b401e30358eadbb",
+      "author": "Nate Koenig",
+      "date": "2019-08-15T16:06:18Z",
+      "message": "Merge branch 'debug' into unidirectional"
+    },
+    {
+      "sha": "c5dad1ddcc058da7e910b1491bf8e1dc04f84107",
+      "author": "Nate Koenig",
+      "date": "2019-08-15T16:02:38Z",
+      "message": "More output, and rosconsole depend"
+    },
+    {
+      "sha": "33ae3af3abe6c3d26fd15e4750e5c4ac00f4796c",
+      "author": "Nate Koenig",
+      "date": "2019-08-15T15:28:07Z",
+      "message": "Support specification of bridge direction"
+    },
+    {
+      "sha": "90ce9939f7c0218290f7c21fd20a0971a845cbaa",
+      "author": "Nate Koenig",
+      "date": "2019-08-15T14:59:45Z",
+      "message": "Adding debug and error statements"
+    },
+    {
+      "sha": "b81a8a37c540c51a72ede7c223ca448199619358",
+      "author": "Jose Luis Rivero",
+      "date": "2019-08-04T18:17:06Z",
+      "message": "0.6.3"
+    },
+    {
+      "sha": "b1760f8aa9d451981c31f47c7908623216b213d5",
+      "author": "Jose Luis Rivero",
+      "date": "2019-08-04T18:16:51Z",
+      "message": "Update changelogs"
+    },
+    {
+      "sha": "5733e49ccf622d325602c84e569528e733ac663c",
+      "author": "Jose Luis Rivero",
+      "date": "2019-08-04T18:10:23Z",
+      "message": "Merge pull request #36 from osrf/restest_depen_image\n\nMissing rostest dependency in image package"
+    },
+    {
+      "sha": "28ee6470833a4807bd2e0395398d30e79aa4da6f",
+      "author": "Jose Luis Rivero",
+      "date": "2019-08-04T17:57:48Z",
+      "message": "Missing rostest dependency in image package"
+    },
+    {
+      "sha": "7e54db54d5d8d1ea6b0b11774d3afaf6df02aa09",
+      "author": "Nate Koenig",
+      "date": "2019-08-04T14:58:51Z",
+      "message": "0.6.2"
+    },
+    {
+      "sha": "597f2e68e325e2944699dbb57d9446b55daf80f6",
+      "author": "Nate Koenig",
+      "date": "2019-08-04T14:57:50Z",
+      "message": "changelog"
+    },
+    {
+      "sha": "11922e8ab4526288e2ef341246987052a825e515",
+      "author": "Nate Koenig",
+      "date": "2019-08-04T14:13:56Z",
+      "message": "0.6.1"
+    },
+    {
+      "sha": "879352c9b2f0f419d8316f7f83b56d3976651123",
+      "author": "Nate Koenig",
+      "date": "2019-08-04T14:12:10Z",
+      "message": "changelog"
+    },
+    {
+      "sha": "0f329ccf8329b91aba3471d7fccfb3d985b7b2c3",
+      "author": "Nate Koenig",
+      "date": "2019-08-04T14:09:51Z",
+      "message": "Merge pull request #35 from osrf/image_meta\n\n Add ros_ign_image to metapackage"
+    },
+    {
+      "sha": "5c37c424c0e6160e0f62ccf28970708e05f875eb",
+      "author": "chapulina",
+      "date": "2019-08-03T18:00:38Z",
+      "message": "Add ros_ign_image to metapackage\n\nSigned-off-by: chapulina <louise@openrobotics.org>\n\ntypo\n\nSigned-off-by: chapulina <louise@openrobotics.org>"
+    },
+    {
+      "sha": "7a3654c9c1fa408ca496c5ce0558cf45b0962c14",
+      "author": "Carlos Agüero",
+      "date": "2019-08-02T23:20:24Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "7372b33ed6638072a0011b40f68e544e787062e6",
+      "author": "Carlos Agüero",
+      "date": "2019-08-02T23:11:12Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "35f9107ab9f17fe3c1fdec738326e34c40aad972",
+      "author": "Nate Koenig",
+      "date": "2019-08-02T22:52:39Z",
+      "message": "0.6.0"
+    },
+    {
+      "sha": "33fb78f465a522ac3c93e41261a69b38670b3e4f",
+      "author": "Nate Koenig",
+      "date": "2019-08-02T22:52:08Z",
+      "message": "Added changelog"
+    },
+    {
+      "sha": "1a3ff9f7ce80a52ced4652d3cfc7d5af08f19fe1",
+      "author": "Nate Koenig",
+      "date": "2019-08-02T22:49:59Z",
+      "message": "Update changelog"
+    },
+    {
+      "sha": "c0ceb42f2ad3ae7e894ca82c01ec20afb3e83d99",
+      "author": "Nate Koenig",
+      "date": "2019-08-02T22:48:29Z",
+      "message": "Merge pull request #33 from osrf/issue_31\n\nFix issue #31"
+    },
+    {
+      "sha": "438da3b80ffdf6005d8d2e211ee5134f402216fd",
+      "author": "chapulina",
+      "date": "2019-08-02T20:20:20Z",
+      "message": "Image bridge using image_transport (#34)\n\n* Image bridge using image_transport\r\n\r\n* tests for image\r\n\r\n* correct metapackage\r\n\r\n* tests with catkin\r\n\r\nSigned-off-by: Louise Poubel <louise@openrobotics.org>\r\n\r\n* Revert changes from #32\r\n\r\nSigned-off-by: Louise Poubel <louise@openrobotics.org>"
+    },
+    {
+      "sha": "8b216add128b6f988faafcad95ff272aba30ee92",
+      "author": "Carlos Aguero",
+      "date": "2019-08-01T21:34:36Z",
+      "message": "Use intra-process field from messageInfo."
+    },
+    {
+      "sha": "b267127a6fb8ec10f6448410f34e5a2105ae2e94",
+      "author": "Louise Poubel",
+      "date": "2019-08-01T18:45:27Z",
+      "message": "Revert \"Pointcloud bridge demo for depth camera\"\n\nThis reverts commit 094cd40f21aed734d59c204172ad5afd7a26c8d6."
+    },
+    {
+      "sha": "094cd40f21aed734d59c204172ad5afd7a26c8d6",
+      "author": "Louise Poubel",
+      "date": "2019-08-01T18:43:30Z",
+      "message": "Pointcloud bridge demo for depth camera"
+    },
+    {
+      "sha": "60c0f1140b1a61cbea0bd7e7a9c08b51b6ce3a49",
+      "author": "Nate Koenig",
+      "date": "2019-07-20T03:38:16Z",
+      "message": "0.5.0"
+    },
+    {
+      "sha": "ca79e88a703bcbcfce54b9d0a0305c0699ba59fc",
+      "author": "Nate Koenig",
+      "date": "2019-07-20T03:36:40Z",
+      "message": "0.5.0 partial"
+    },
+    {
+      "sha": "d8833f8501d0f8388da25f075b61b2df099a433b",
+      "author": "Nate Koenig",
+      "date": "2019-07-20T03:30:19Z",
+      "message": "0.5.0"
+    },
+    {
+      "sha": "4820d7e3ac788adef28cdd13c74c06078ed255b3",
+      "author": "chapulina",
+      "date": "2019-07-20T01:17:17Z",
+      "message": "Battery state (#30)"
+    },
+    {
+      "sha": "3414c5c262b98742df20a5f325c8dd51c61269eb",
+      "author": "chapulina",
+      "date": "2019-07-16T20:31:16Z",
+      "message": "Packed demo (#29)\n\n* adding demo for point cloud packed bridge\r\n\r\n* correct rviz file\r\n\r\n* RGBD bridged cloud demo"
+    },
+    {
+      "sha": "dd4ab6125e93c309388b71aa794b3e197a17ec84",
+      "author": "Nate Koenig",
+      "date": "2019-07-16T20:29:57Z",
+      "message": "Merge pull request #28 from osrf/pointcloudpacked\n\nBridge point cloud packed"
+    },
+    {
+      "sha": "d85516888c319f2c0bc48e2db8917cb0638e6dfc",
+      "author": "Nate Koenig",
+      "date": "2019-07-16T20:29:29Z",
+      "message": "0.4.0"
+    },
+    {
+      "sha": "3f487d48fb015a941bd0bcaec23b4eef438131fc",
+      "author": "Nate Koenig",
+      "date": "2019-07-16T20:27:41Z",
+      "message": "Changelog"
+    },
+    {
+      "sha": "b13f677627629455af8ad6282c9dbd39aa82e537",
+      "author": "Nate Koenig",
+      "date": "2019-07-16T20:18:25Z",
+      "message": "tests and reverse bridge for pointcloud"
+    },
+    {
+      "sha": "32e865675de1f5c636fdf0d59b1d9409cb984dbd",
+      "author": "Nate Koenig",
+      "date": "2019-07-13T00:35:58Z",
+      "message": "Bridge point cloud packed"
+    },
+    {
+      "sha": "361f41138352647334520a82480fe0af05ef6679",
+      "author": "Jose Luis Rivero",
+      "date": "2019-07-01T20:56:12Z",
+      "message": "0.3.1"
+    },
+    {
+      "sha": "0ea38b1d01cd198d37635b7b7f2828c3dab4b0a9",
+      "author": "Jose Luis Rivero",
+      "date": "2019-07-01T20:56:05Z",
+      "message": "Added changelogs"
+    },
+    {
+      "sha": "73223602adfb2c6d33d7f7679150f9f2a420a347",
+      "author": "Jose Luis Rivero",
+      "date": "2019-07-01T20:53:19Z",
+      "message": "Merge pull request #24 from osrf/fix_dep\n\nignition-gazebo2 needed at build time"
+    },
+    {
+      "sha": "5adf276226f41e6f10c505a9cf5447db80057300",
+      "author": "Jose Luis Rivero",
+      "date": "2019-07-01T20:39:47Z",
+      "message": "ignition-gazebo2 needed at build time"
+    },
+    {
+      "sha": "44c1e490de52ba715b4fc8d2017f3feb0ae9c6f0",
+      "author": "Nate Koenig",
+      "date": "2019-07-01T16:32:59Z",
+      "message": "Merge pull request #23 from osrf/release\n\nInstructions to release ubuntu packages"
+    },
+    {
+      "sha": "29ea046e6973a85144213e50a8718d1d2ea67540",
+      "author": "Jose Luis Rivero",
+      "date": "2019-07-01T15:25:43Z",
+      "message": "Instructions to release ubuntu packages"
+    },
+    {
+      "sha": "45c9ef21aec2765e2f584f41dc906d28a73e5e3b",
+      "author": "Nate Koenig",
+      "date": "2019-06-28T23:26:29Z",
+      "message": "0.3.0"
+    },
+    {
+      "sha": "2b122ba2c364f88526c2ba400438b6a5bcc8d08e",
+      "author": "Nate Koenig",
+      "date": "2019-06-28T23:24:36Z",
+      "message": "0.2.0"
+    },
+    {
+      "sha": "07b001e1e1739d52390606606b2c70b83d62c9ac",
+      "author": "Nate Koenig",
+      "date": "2019-06-28T23:15:02Z",
+      "message": "Merge pull request #21 from osrf/lidar\n\nPoint clouds from lidars"
+    },
+    {
+      "sha": "4b07992a70c8b66e2ee6161d47bbf8546076dbe2",
+      "author": "Carlos Agüero",
+      "date": "2019-06-28T22:57:43Z",
+      "message": "Conversion between nav_msgs/Odometry and ignition::msgs::Odometry (#22)\n\n* Conversion between nav_msgs/Odometry and ignition::msgs::Odometry.\r\n\r\n* Update documentation.\r\n\r\n* More time to run tests\r\n\r\n* Cleaning test_utils.\r\n\r\n* Remove explicit ROS dependencies for Travis.\r\n\r\n* diff drive demo with cmd_vel and odom\r\n\r\n* process child frame id"
+    },
+    {
+      "sha": "7feb0b4a5178fbc70a9e4e0182896f7e1b082cc6",
+      "author": "chapulina",
+      "date": "2019-06-25T13:41:04Z",
+      "message": "fix RGBD's color"
+    },
+    {
+      "sha": "e318ee4c1b685f90ec3a736433f019c81423be13",
+      "author": "chapulina",
+      "date": "2019-06-24T21:58:08Z",
+      "message": "final tweaks"
+    },
+    {
+      "sha": "2ecd6a2677656e8724da62483307005230f307d7",
+      "author": "chapulina",
+      "date": "2019-06-24T20:14:11Z",
+      "message": "PC2 for gpu_lidar, 1 vertical sample"
+    },
+    {
+      "sha": "e53da7b299d59a47873bb68b525e2a11f261c089",
+      "author": "chapulina",
+      "date": "2019-06-22T00:47:25Z",
+      "message": "Start of lidar PC"
+    },
+    {
+      "sha": "98db8454f2b484cd0918b4e571c4fe030d4af59a",
+      "author": "chapulina",
+      "date": "2019-06-22T01:32:05Z",
+      "message": "Fluid pressure (#20)\n\n* screenshots\r\n\r\n* missing IMU\r\n\r\n* Fluid pressure\r\n\r\n* Fix tests."
+    },
+    {
+      "sha": "573f60925ce162b9e99c927c86eadc1b2730b36d",
+      "author": "chapulina",
+      "date": "2019-06-22T01:14:33Z",
+      "message": "Demos package (#19)\n\n* Start of demos package: camera\r\n\r\n* IMU\r\n\r\n* depth camera\r\n\r\n* magnetometer\r\n\r\n* lidar, base launch\r\n\r\n* READMEs, RGBD camera\r\n\r\n* screenshots\r\n\r\n* missing IMU\r\n\r\n* set plugin path env\r\n\r\n* It's best to always set it"
+    },
+    {
+      "sha": "18f04c2c1bbc82e5c4fb3ba854c4598e72423f0c",
+      "author": "chapulina",
+      "date": "2019-06-20T13:02:24Z",
+      "message": "Point clouds for RGBD cameras (#17)\n\n* Beginning of point cloud package\r\n\r\n* Populating image data, but result is not correct. Must find out where's the source of the problem.\r\n\r\n* RGB -> BGR: why?\r\n\r\n* Cleanup code and example\r\n\r\n* pointcloud -> point_cloud\r\n\r\n* add keys - how was this working before?\r\n\r\n* install wget\r\n\r\n* well, we need ign-gz2 :sweat_smile:\r\n\r\n* README update\r\n\r\n* PR feedback\r\n\r\n* .travis/build: rosdep skip ignition keys (#18)\r\n\r\n* .travis/build: rosdep skip ignition keys\r\n\r\n* Update build"
+    },
+    {
+      "sha": "a8142b2e9c7a4f78e4c6719f9b4c410f81db0b9e",
+      "author": "chapulina",
+      "date": "2019-06-17T23:10:42Z",
+      "message": "Move package to subfolder, add metapackage (#16)"
+    },
+    {
+      "sha": "a1b1903fb5e23f663106ef7064997a2c72b20b77",
+      "author": "chapulina",
+      "date": "2019-06-03T04:18:59Z",
+      "message": "Camera info (#15)\n\n* Camera info\r\n\r\n* attempt at converting depth images"
+    },
+    {
+      "sha": "06654530d71a88df1928cf86a8c4f51b376d9cfc",
+      "author": "Carlos Agüero",
+      "date": "2019-05-20T20:18:46Z",
+      "message": "geometry_msgs/Twist to ignition::msgs::Twist (#14)\n\n* Adding geometry_msgs/Twist to ignition::msgs::Twist conversion.\r\n\r\n* Fix test."
+    },
+    {
+      "sha": "586b44ccec4da401a2dd4d0d2efca1016a62e76d",
+      "author": "Addisu Taddese",
+      "date": "2019-05-14T18:11:27Z",
+      "message": "Replace \"::\" with \"/\" on frame ids for ign -> ros (#12)"
+    },
+    {
+      "sha": "bb9d02ab72185388276b32eb3dc3f530b559e836",
+      "author": "Carlos Agüero",
+      "date": "2019-05-14T18:10:59Z",
+      "message": "Use pixel_format_type() instead of pixel_format(). (#13)"
+    },
+    {
+      "sha": "f2bfc63c4d790d76ee34ee0b9fc5e9b3bfc633f6",
+      "author": "Steven Peters",
+      "date": "2019-05-11T15:29:11Z",
+      "message": "actuators: use generic field names (#11)\n\ncompanion to ign-msgs pr# 129"
+    },
+    {
+      "sha": "4457dc6f2e198ca869421c7961f0dd5b385bb8d2",
+      "author": "Carlos Agüero",
+      "date": "2019-05-09T20:50:06Z",
+      "message": "Use the updated Image msg. (#10)"
+    },
+    {
+      "sha": "b5dd7930e80b0c2438f11ec6cfb97e9f668241a8",
+      "author": "Carlos Agüero",
+      "date": "2019-05-07T00:41:37Z",
+      "message": "Float (#8)\n\n* [WIP] Initial support for actuators msgs.\r\n\r\n* Finish Actuators conversion and tests.\r\n\r\n* Update dependencies to Ignition Msgs4 and Ignition Transport 7.\r\n\r\n* Conversion between std_msgs/Float32 and ignition::msgs::Float\r\n\r\n* test_utils: use 1.5 for test Float value"
+    },
+    {
+      "sha": "038e6fb775a9902e18f7b3318c16bb48f9038850",
+      "author": "Carlos Agüero",
+      "date": "2019-05-07T00:37:01Z",
+      "message": "Joint states (#9)\n\n* [WIP] Initial support for actuators msgs.\r\n\r\n* Finish Actuators conversion and tests.\r\n\r\n* Update dependencies to Ignition Msgs4 and Ignition Transport 7.\r\n\r\n* [WIP] Conversion between sensor_msgs/JointState and Ignition::Msgs::Joint.\r\n\r\n* [WIP] All code ready but segfaulting.\r\n\r\n* More test.\r\n\r\n* Fix segfault."
+    },
+    {
+      "sha": "95ca0fd1218fcb4d64df0b041e36ceea63ec6992",
+      "author": "Carlos Agüero",
+      "date": "2019-05-03T19:49:43Z",
+      "message": "Actuators (#7)\n\n* [WIP] Initial support for actuators msgs.\r\n\r\n* Finish Actuators conversion and tests.\r\n\r\n* Update dependencies to Ignition Msgs4 and Ignition Transport 7."
+    },
+    {
+      "sha": "3debaf550aae9f25a3088a59692fe1615b725eb0",
+      "author": "Javier Choclin",
+      "date": "2019-03-20T21:34:25Z",
+      "message": "Add clock message support (#2)\n\n* Add clock message support\r\n\r\n* Add rosgraph_msgs dependency\r\n\r\n* Fix tests from merge\r\n\r\n* Add  methods to headers convert and builtin"
+    },
+    {
+      "sha": "45ba7b28b63284f542e0cd15d3462c985964f661",
+      "author": "Carlos Agüero",
+      "date": "2019-03-20T21:29:10Z",
+      "message": "Fixing some tests with Ignition::msgs::Pose."
+    },
+    {
+      "sha": "7fef104b13873d60beb6fb35d8e0e42f76691ace",
+      "author": "Jose Luis Rivero",
+      "date": "2019-03-20T17:16:13Z",
+      "message": "Missing dependencies (#5)\n\n* Missing dependencies\r\n\r\n* Move rostest to test_depènd"
+    },
+    {
+      "sha": "d9887851d25d3aa298529618fe0d0127aaadd5ec",
+      "author": "chapulina",
+      "date": "2019-03-18T23:25:59Z",
+      "message": "Remove dependency on ign-common (#6)\n\n* Remove dependency on ign-common\r\n\r\n* Readme, travis: replace common3 with msgs3\r\n\r\n* Explicit msgs3 dependency"
+    },
+    {
+      "sha": "b2864c07a149cac1dc7f5cdb8345a4a5f294b976",
+      "author": "Carlos Agüero",
+      "date": "2019-03-06T19:01:01Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "b77aa92dcc2a6bb0191f0588f0e88438a68a9aea",
+      "author": "iche033",
+      "date": "2019-02-26T20:42:08Z",
+      "message": "Convert between ign Pose and ROS Pose[Stamped]/Transform[Stamped] msgs (#4)"
+    },
+    {
+      "sha": "178edfcca370cd0186a3dfd3ab8db34a6e122253",
+      "author": "iche033",
+      "date": "2019-02-19T18:39:20Z",
+      "message": "fix warnings, update readme (#3)"
+    },
+    {
+      "sha": "bc8346f22af767a452c90969d5aa60237e8a0211",
+      "author": "Carlos Aguero",
+      "date": "2018-10-18T23:49:38Z",
+      "message": "Merge branch 'master' of https://github.com/osrf/ros1_ign_bridge"
+    },
+    {
+      "sha": "efcda1387ad4ecedf678c3343f95bc6651e301d1",
+      "author": "Carlos Aguero",
+      "date": "2018-10-18T23:48:51Z",
+      "message": "Tweak README."
+    },
+    {
+      "sha": "c105148ed452f2200be24be34e4d50e95dc2d285",
+      "author": "Carlos Agüero",
+      "date": "2018-10-18T23:46:35Z",
+      "message": "Travis support (#1)\n\n* Testing travis.\r\n\r\n* Tweak\r\n\r\n* Test.\r\n\r\n* Test.\r\n\r\n* Test\r\n\r\n* Test.\r\n\r\n* Test\r\n\r\n* Test.\r\n\r\n* Testing.\r\n\r\n* Test.\r\n\r\n* Test.\r\n\r\n* Test.\r\n\r\n* Test.\r\n\r\n* Test.\r\n\r\n* Test.\r\n\r\n* Test.\r\n\r\n* Test.\r\n\r\n* Test.\r\n\r\n* Test.\r\n\r\n* Test.\r\n\r\n* Test.\r\n\r\n* Test.\r\n\r\n* Test.\r\n\r\n* Test\r\n\r\n* Test\r\n\r\n* Test\r\n\r\n* Test.\r\n\r\n* Test.\r\n\r\n* Test\r\n\r\n* Test.\r\n\r\n* Travis support."
+    },
+    {
+      "sha": "9768be2bd9829e768c52e020119d7cfe7fae9b4a",
+      "author": "Carlos Aguero",
+      "date": "2018-10-18T21:04:12Z",
+      "message": "Tweak travis."
+    },
+    {
+      "sha": "17702d5ad3266ee7fbf249dc12f0212cb4e44a0e",
+      "author": "Carlos Aguero",
+      "date": "2018-10-18T20:55:06Z",
+      "message": "Testing travis."
+    },
+    {
+      "sha": "3b34d50826320341d176787cdaa300020a6500f3",
+      "author": "Carlos Aguero",
+      "date": "2018-10-18T20:27:53Z",
+      "message": "Testing travis."
+    },
+    {
+      "sha": "cea67bfe04ea61bfec6286a05cb3057b090537a0",
+      "author": "Carlos Aguero",
+      "date": "2018-10-18T17:12:35Z",
+      "message": "Tweak."
+    },
+    {
+      "sha": "c847abde642aab15f8b49198156bf43cc5d26a1d",
+      "author": "Carlos Aguero",
+      "date": "2018-10-18T16:43:19Z",
+      "message": "More test refactor."
+    },
+    {
+      "sha": "11b8b15671853781cff36dfb0469bee6947a9d61",
+      "author": "Carlos Aguero",
+      "date": "2018-10-18T00:44:56Z",
+      "message": "Test refactor."
+    },
+    {
+      "sha": "4e6df87b40b094e4463d633ddeb33314c4f72ec9",
+      "author": "Carlos Aguero",
+      "date": "2018-10-17T15:50:55Z",
+      "message": "Fix header issue."
+    },
+    {
+      "sha": "af928be2a429fbb6021e1418aa31507a9ba509e2",
+      "author": "Carlos Aguero",
+      "date": "2018-10-16T23:12:17Z",
+      "message": "Tests for MagneticField messages."
+    },
+    {
+      "sha": "0be4f5628beccb7334a22915b308e0b66689090b",
+      "author": "Carlos Aguero",
+      "date": "2018-10-16T22:55:59Z",
+      "message": "Tests Ign->ROS1."
+    },
+    {
+      "sha": "7f4ee9fc96bcfb7d6ee769c05d9c2f1498c64cd9",
+      "author": "Carlos Aguero",
+      "date": "2018-10-16T22:02:18Z",
+      "message": "Laserscan test."
+    },
+    {
+      "sha": "d2dffe3f70e9fe2c4e3d25baee98c120c8ae68b6",
+      "author": "Carlos Aguero",
+      "date": "2018-10-16T20:43:29Z",
+      "message": "More testing."
+    },
+    {
+      "sha": "18a7e505f326accc41152b0e73f18e07b0479b34",
+      "author": "Carlos Aguero",
+      "date": "2018-10-16T00:52:30Z",
+      "message": "More tests."
+    },
+    {
+      "sha": "97dc7949b42ed546b090ba3743183b2e47cb85eb",
+      "author": "Carlos Aguero",
+      "date": "2018-10-16T00:08:38Z",
+      "message": "Testing string conversion."
+    },
+    {
+      "sha": "66b0ff9502c873ac7e0ecebf04993036adbece4d",
+      "author": "Carlos Aguero",
+      "date": "2018-10-15T21:09:11Z",
+      "message": "Instructions."
+    },
+    {
+      "sha": "605e65829c7ab5d3d8c492ef6f43f8fa29cc5f29",
+      "author": "Carlos Aguero",
+      "date": "2018-10-13T00:09:48Z",
+      "message": "Install bridges and README."
+    },
+    {
+      "sha": "23a595f029caf83e06af274a14f49b20537f5b56",
+      "author": "Carlos Aguero",
+      "date": "2018-10-12T22:44:09Z",
+      "message": "Clean CMakeLists."
+    },
+    {
+      "sha": "91230e6bb3e8b4e18ad9832ef43fe8dac99a7abd",
+      "author": "Carlos Aguero",
+      "date": "2018-10-12T22:10:50Z",
+      "message": "Image conversion fixes."
+    },
+    {
+      "sha": "5fb2acb1090d2efffd002c899ad2a490b5a24302",
+      "author": "Carlos Aguero",
+      "date": "2018-10-12T21:01:59Z",
+      "message": "Conversion for FluidPressure."
+    },
+    {
+      "sha": "d3401afbf2cf426ae58296a8e667aca1de181c67",
+      "author": "Carlos Aguero",
+      "date": "2018-10-12T20:40:02Z",
+      "message": "Added magnetic field conversion."
+    },
+    {
+      "sha": "939df3efcee79e242132fd7186b969a2a484d911",
+      "author": "Carlos Aguero",
+      "date": "2018-10-12T20:32:59Z",
+      "message": "Adding conversion for Quaternion, Vector3 and IMU messages."
+    },
+    {
+      "sha": "e76edfe996b96b843d8e193c412034498392f655",
+      "author": "Carlos Aguero",
+      "date": "2018-10-12T19:01:16Z",
+      "message": "Adding image conversions."
+    },
+    {
+      "sha": "0e1b2b9e71b03144e184dd02f7142dbc5dd12d01",
+      "author": "Carlos Aguero",
+      "date": "2018-10-12T17:14:58Z",
+      "message": "Add conversions for headers and laser scans."
+    },
+    {
+      "sha": "94a98db12de4aadab7f2aa49452183e8af244ef8",
+      "author": "Carlos Aguero",
+      "date": "2018-10-10T18:50:56Z",
+      "message": "Working on the bidirectional bridge."
+    },
+    {
+      "sha": "0a36c34c485bc7e0e49d5cfe02223ac55fb7a7fa",
+      "author": "Carlos Aguero",
+      "date": "2018-10-09T00:24:20Z",
+      "message": "Create a parameter bridge."
+    },
+    {
+      "sha": "9dd2dbf800a049298df20bb7cf04cb31e1e7577e",
+      "author": "Carlos Aguero",
+      "date": "2018-10-02T22:30:25Z",
+      "message": "Bridge working for ignition::msgs::StringMsg and std_msgs::String."
+    },
+    {
+      "sha": "913869ac8a163951dd63ebae8349616add92e26a",
+      "author": "Carlos Aguero",
+      "date": "2018-10-02T21:07:47Z",
+      "message": "Adding builting_interfaces_factories files."
+    },
+    {
+      "sha": "c105315d230234e59ab580578bb35c2ee199fc5c",
+      "author": "Carlos Aguero",
+      "date": "2018-10-02T19:06:35Z",
+      "message": "Create the first builtin conversion for ignition::msgs::StringMsg and std_msgs::String."
+    },
+    {
+      "sha": "9002f67584dae7d1bd6a39e00a9c265d05fd5ea9",
+      "author": "Carlos Aguero",
+      "date": "2018-10-02T18:05:36Z",
+      "message": "Initial Factory class."
+    },
+    {
+      "sha": "da279a4534d4b1c1cefe9003f49be2c825c19324",
+      "author": "Carlos Aguero",
+      "date": "2018-10-01T23:31:43Z",
+      "message": "Adding factory_interface.hpp."
+    },
+    {
+      "sha": "dc6d05519107a47f2daa5b54d7946310dcde872a",
+      "author": "Carlos Aguero",
+      "date": "2018-08-01T23:41:49Z",
+      "message": "Initial layout."
+    },
+    {
+      "sha": "f46e4d707c9a2aed578ff492cb6c189c2b1750ef",
+      "author": "Carlos Agüero",
+      "date": "2018-08-01T22:42:46Z",
+      "message": "Initial commit"
+    }
+  ]
+}

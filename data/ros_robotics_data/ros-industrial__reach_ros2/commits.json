@@ -1,0 +1,1632 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-07T23:08:19Z",
+    "source": "github_rest",
+    "endpoint": "/repos/{owner}/{repo}/commits",
+    "owner": "ros-industrial",
+    "repo": "reach_ros2",
+    "per_page": 100
+  },
+  "data": [
+    {
+      "sha": "cd048ffcb69c5a0ba2b74124f15afa1ad63c27b5",
+      "author": "Thomas Hettasch",
+      "date": "2025-09-23T15:13:06Z",
+      "message": "Set REACH_PLUGINS variable using an env hook (#47)\n\n* Set REACH_PLUGINS variable using an env hook\n\n* Use ament helper and project name token\n\n* Add explicit export, which is not covered by ament_append_unique_value\n\n* Use dsv hooks for better portability\n\n* Fix formatting with .run-cmake-format"
+    },
+    {
+      "sha": "769735195bc7075756f0745389d54be4e620257b",
+      "author": "Nikhil Sethi",
+      "date": "2025-07-09T22:27:11Z",
+      "message": "Add dockerfile and compose files (#44)\n\n* Add dockerfile and compose files\n\n* Add and test the demo compose file\n\n* Add ipc=host to allow ros comm between containers\n\n* Cleanup args and version\n\n* Update service name to reach_ros\n\n* Add rviz2 as dependency for the demo\n\n* Parameterize the ros distribution for the dockerfile\n\n* Add a ci job for docker\n\n* Updated docker job to run on foxy, humble and jazzy to match other CI jobs\n\n* Call `rosdep update` with EOL distributions argument\n\n---------\n\nCo-authored-by: Michael Ripperger <michael.ripperger@swri.org>"
+    },
+    {
+      "sha": "4310fdf12d7e020738779cb57141b0e781e4c3fd",
+      "author": "Michael Ripperger",
+      "date": "2025-03-06T16:07:39Z",
+      "message": "CI Configuration Update (#41)\n\n* Updated version of colcon-action\n\n* Updated lint CI OS base to 22.04"
+    },
+    {
+      "sha": "31d41e39582fba97abc22beccd9c76e454001513",
+      "author": "Danil Pavlenko",
+      "date": "2025-01-10T15:51:15Z",
+      "message": "Update to later version of RICB that adds hook for PYTHONPATH (#51) (#40)"
+    },
+    {
+      "sha": "9f912d4dd6e364f0bdd40db0e11472df9fc56bad",
+      "author": "Michael Ripperger",
+      "date": "2024-11-21T19:55:53Z",
+      "message": "Update to REACH 1.7.1 (#39)\n\n* Update to REACH 1.7.1\r\n\r\n* Added C language to CMakeLists"
+    },
+    {
+      "sha": "94fbef1d9f9d0c388a5b3c26c3dbb36019783b0f",
+      "author": "Timon Engelke",
+      "date": "2024-11-21T15:43:21Z",
+      "message": "Fix deprecated headers for tf2_eigen (#35)\n\n* Fix deprecated headers for tf2_eigen\r\n\r\n* Make hpp include conditional for backwards compatibility"
+    },
+    {
+      "sha": "f2e0d016be4612c7323f61517fb0dc453f1e8852",
+      "author": "Michael Ripperger",
+      "date": "2024-09-10T15:50:24Z",
+      "message": "Updates (#37)\n\n* Ran clang format\r\n\r\n* Changed rolling CI job to Jazzy\r\n\r\n* Updated CI to use colcon-action\r\n\r\n* Updated to REACH 1.7.0"
+    },
+    {
+      "sha": "df5aa873a9477b176e6e29177d84d186cae7b883",
+      "author": "Timon Engelke",
+      "date": "2024-03-28T15:21:06Z",
+      "message": "Change durability policy of mesh display to transient_local (#36)\n\nCo-authored-by: Timon Engelke <timon.engelke@dlr.de>"
+    },
+    {
+      "sha": "60dfa15fa85eca13a41adc4751e65c931faabccf",
+      "author": "Michael Ripperger",
+      "date": "2024-03-28T15:20:43Z",
+      "message": "Updated setup launch file to provide URDF and SRDF parameter to Rviz for MoveIt planning scene display (#33)"
+    },
+    {
+      "sha": "a0fd97b35c16cc33ee66d0ca1b2a6dff52e5af2f",
+      "author": "Collin Thornton",
+      "date": "2023-10-13T19:26:13Z",
+      "message": "fix export (#32)"
+    },
+    {
+      "sha": "5cc3b4fb1bcbe90984c23877b5688e84a525672f",
+      "author": "Michael Ripperger",
+      "date": "2023-10-04T15:11:11Z",
+      "message": "1.4.0"
+    },
+    {
+      "sha": "a40dd9f112ade868300d5b03c32f7010757e8fd2",
+      "author": "Michael Ripperger",
+      "date": "2023-10-04T15:11:00Z",
+      "message": "Updated changelog"
+    },
+    {
+      "sha": "1803c13aeb7591ea75a49eead0be58cd4ff24374",
+      "author": "Michael Ripperger",
+      "date": "2023-10-04T15:08:55Z",
+      "message": "IK Solver Update (#30)\n\n* Migrate utility function to reach\r\n\r\n* Replace deprecated function\r\n\r\n* Check that IK solver has been loaded for move group\r\n\r\n* Run format jobs on 20.04\r\n\r\n* Ran clang format"
+    },
+    {
+      "sha": "182beaffb0ae23662abf70d709ce997860515cc5",
+      "author": "Michael Ripperger",
+      "date": "2023-10-04T12:36:29Z",
+      "message": "1.3.5"
+    },
+    {
+      "sha": "f6a304f750d48b47074b33f00b0e36dafa96f4c0",
+      "author": "Michael Ripperger",
+      "date": "2023-10-04T12:36:21Z",
+      "message": "Updated changelog"
+    },
+    {
+      "sha": "a6763d80468850b6cdcb9d3b19d347874a5c62b9",
+      "author": "Michael Ripperger",
+      "date": "2023-10-04T12:31:59Z",
+      "message": "Export dependency on reach (#29)"
+    },
+    {
+      "sha": "319c0fc3480c95f6c3036ef061390a72cce00b8e",
+      "author": "Michael Ripperger",
+      "date": "2023-09-26T03:52:43Z",
+      "message": "1.3.4"
+    },
+    {
+      "sha": "8a619553c26b126334f90ab1b670b7c8df2cce6f",
+      "author": "Michael Ripperger",
+      "date": "2023-09-26T03:52:23Z",
+      "message": "Updated changelog"
+    },
+    {
+      "sha": "19535df5ece4b9f9bc4f6811c898a7ecb2f6e6c4",
+      "author": "Michael Ripperger",
+      "date": "2023-09-26T03:49:23Z",
+      "message": "Python CMake Update (#27)\n\n* Ensure PYTHON_INSTALL_DIR is set by ament\r\n\r\n* Replace ROS version compile definition with preprocessor check"
+    },
+    {
+      "sha": "9242a0637c575705e9cb575a841a607e53cab3a0",
+      "author": "Michael Ripperger",
+      "date": "2023-09-22T23:54:36Z",
+      "message": "CI Update (#26)\n\n* Push docker image on ref_type tag\r\n\r\n* Added AFTER_SCRIPT to CI"
+    },
+    {
+      "sha": "fbabb8ee03ba09776791418f78e067ae3d4bec68",
+      "author": "Michael Ripperger",
+      "date": "2023-09-22T18:38:11Z",
+      "message": "1.3.3"
+    },
+    {
+      "sha": "8b8be856ea08f447b5c84d7ed0dafb4f99c1e1af",
+      "author": "Michael Ripperger",
+      "date": "2023-09-22T18:37:59Z",
+      "message": "Updated changelog"
+    },
+    {
+      "sha": "8e3a5b6f0192a7476347a44982f11d57a8927e5c",
+      "author": "Michael Ripperger",
+      "date": "2023-09-22T18:35:16Z",
+      "message": "Use YAML anchors in reach study config files to simplify (#24)"
+    },
+    {
+      "sha": "5e78ed4677596edf9e94dadd7bf8ed3955429ff1",
+      "author": "Michael Ripperger",
+      "date": "2023-09-22T18:34:58Z",
+      "message": "Run CI workflow on tag push and workflow dispatch (#25)"
+    },
+    {
+      "sha": "0f0e34c217bd472ea81fb57b9427ba1921ae9d13",
+      "author": "Michael Ripperger",
+      "date": "2023-09-14T13:52:19Z",
+      "message": "1.3.2"
+    },
+    {
+      "sha": "97f934e2dd1c6ae18d4bfa3459203007ed46028e",
+      "author": "Michael Ripperger",
+      "date": "2023-09-14T13:52:09Z",
+      "message": "Updated changelog"
+    },
+    {
+      "sha": "46784ae0128743041cf1e604c96a4715de26f35e",
+      "author": "Michael Ripperger",
+      "date": "2023-09-14T13:49:25Z",
+      "message": "Updated CMake version for if STRGREATER_EQUAL command (#23)"
+    },
+    {
+      "sha": "7c7ac48089211ac9b03e0443a8135d4e9a223970",
+      "author": "Michael Ripperger",
+      "date": "2023-09-07T23:25:57Z",
+      "message": "1.3.1"
+    },
+    {
+      "sha": "e2a6ace17018485e699fef92534f7f3bacb0cead",
+      "author": "Michael Ripperger",
+      "date": "2023-09-07T23:25:44Z",
+      "message": "Updated changelog"
+    },
+    {
+      "sha": "26c18334a4cf8a10a59a32b65336445ea146de05",
+      "author": "Michael Ripperger",
+      "date": "2023-09-07T23:24:47Z",
+      "message": "Updated python module install (#22)"
+    },
+    {
+      "sha": "2e7a3a2128a64f15f8b5f8ba0c32f1a1d0517427",
+      "author": "Michael Ripperger",
+      "date": "2023-08-16T22:56:22Z",
+      "message": "1.3.0"
+    },
+    {
+      "sha": "3075263d2ff5fb36bcc25204ef70bf9d32b39fba",
+      "author": "Michael Ripperger",
+      "date": "2023-08-16T22:56:12Z",
+      "message": "Updated changelog"
+    },
+    {
+      "sha": "4e792dcc805c5d5f5c08867f357f6496ba242abb",
+      "author": "Marc Bestmann",
+      "date": "2023-08-16T22:51:15Z",
+      "message": "Add customizable color scale for visualization (#18)\n\n* add red to green color scale\r\n\r\n* generalize color scale\r\n\r\n* Updated REACH dependency\r\n\r\n---------\r\n\r\nCo-authored-by: Michael Ripperger <michael.ripperger@swri.org>"
+    },
+    {
+      "sha": "7830f5d296981c777e8c2b8df13dbf092d44c0f3",
+      "author": "Michael Ripperger",
+      "date": "2023-08-16T22:28:23Z",
+      "message": "1.2.0"
+    },
+    {
+      "sha": "ab7dd97d8c8a384c1bad68b0a1cd6be6f89c5ff3",
+      "author": "Michael Ripperger",
+      "date": "2023-08-16T22:28:07Z",
+      "message": "Updated changelog"
+    },
+    {
+      "sha": "80bad0b4f203ebd1a790754826578697be0b5719",
+      "author": "Michael Ripperger",
+      "date": "2023-08-16T22:22:52Z",
+      "message": "Merge pull request #19 from marip8/update/python-interface\n\nPython interface updates"
+    },
+    {
+      "sha": "ddc0ed431ff142bac6faa5ccc75dcaa411462b5c",
+      "author": "Michael Ripperger",
+      "date": "2023-08-16T22:07:19Z",
+      "message": "Suppress output for top-level MoveIt loggers"
+    },
+    {
+      "sha": "21cd33917ff7b97cc0c0e36be6c19446ecca69fb",
+      "author": "Michael Ripperger",
+      "date": "2023-08-16T22:06:33Z",
+      "message": "Fixed compile definition for set_logger_level function"
+    },
+    {
+      "sha": "f08b0d56aba457c35a89acdb01ce4c794a09915e",
+      "author": "Michael Ripperger",
+      "date": "2023-08-16T21:49:09Z",
+      "message": "Updated conditional compile of set_logger_level Python function"
+    },
+    {
+      "sha": "911e8e1ba6631e817635f238e57c119a79a112c8",
+      "author": "Michael Ripperger",
+      "date": "2023-07-14T04:33:41Z",
+      "message": "Handle Python minor version for install"
+    },
+    {
+      "sha": "9ef0208a092f578c3a41ea903d0ca81e8dc9602b",
+      "author": "Michael Ripperger",
+      "date": "2023-07-14T04:27:21Z",
+      "message": "Updated Python README"
+    },
+    {
+      "sha": "893a0aeb1510686322e7bf83731f6e03c5a394d5",
+      "author": "Michael Ripperger",
+      "date": "2023-07-14T04:14:29Z",
+      "message": "Added Python equivalent of the c++ reach study node"
+    },
+    {
+      "sha": "7b8f253efe812372978c0c1e12a4b5e1a06611bd",
+      "author": "Michael Ripperger",
+      "date": "2023-07-14T04:03:03Z",
+      "message": "Added helper function for setting search libraries environment variable"
+    },
+    {
+      "sha": "c9dcf093713c66474b2b4771fb1d6c2943222ac3",
+      "author": "Michael Ripperger",
+      "date": "2023-07-14T03:49:12Z",
+      "message": "Created reach_ros Python package"
+    },
+    {
+      "sha": "cb697b425aac5c110096daa111af90706514d1a8",
+      "author": "Michael Ripperger",
+      "date": "2023-07-14T03:47:50Z",
+      "message": "Added .gitignore"
+    },
+    {
+      "sha": "ff8861c956400bc02b8d6e2d5b31f96e21f38e3d",
+      "author": "Michael Ripperger",
+      "date": "2023-07-14T03:46:18Z",
+      "message": "Updated REACH dependency to 1.4.0"
+    },
+    {
+      "sha": "1b339237d47f5568e376df08fc7779e49b9f197f",
+      "author": "Michael Ripperger",
+      "date": "2023-07-14T00:24:50Z",
+      "message": "Updated demo script"
+    },
+    {
+      "sha": "ecc3fa684bfd8c250136d278ce15456e53095bf4",
+      "author": "Michael Ripperger",
+      "date": "2023-07-14T00:23:27Z",
+      "message": "Throw exception for unknown parameter type"
+    },
+    {
+      "sha": "5a0a12b5f0fa2b148277835eab5f6ba756081d34",
+      "author": "Michael Ripperger",
+      "date": "2023-07-14T00:23:01Z",
+      "message": "Updated CMakeLists"
+    },
+    {
+      "sha": "bd0e91a2c4fb907562a0887a7a5e6ac1ce98ee94",
+      "author": "Michael Ripperger",
+      "date": "2023-08-16T18:29:39Z",
+      "message": "Merge pull request #17 from SammyRamone/feature_python_interface\n\nAdd Python interface for ROS features"
+    },
+    {
+      "sha": "2ea9a7d3a8f3ee46f78669a19f273dad8d09ebaa",
+      "author": "Michael Ripperger",
+      "date": "2023-08-16T16:47:09Z",
+      "message": "Add compile definition and conditional compile directives around features available in Humble+"
+    },
+    {
+      "sha": "ca1ed4b836f32781010dcd25d0bd1934876de21d",
+      "author": "Marc Bestmann",
+      "date": "2023-07-28T10:14:53Z",
+      "message": "fix bool-int-mix-up when setting parameters"
+    },
+    {
+      "sha": "0eedf69ac96ef944298e58cad3524fdef03822fa",
+      "author": "Marc Bestmann",
+      "date": "2023-07-14T14:32:07Z",
+      "message": "add python interface to control log level"
+    },
+    {
+      "sha": "cb055f08a5ea0d38492f8b5d61a28a9ac52e18d5",
+      "author": "Marc Bestmann",
+      "date": "2023-06-29T15:23:13Z",
+      "message": "fix formatting"
+    },
+    {
+      "sha": "7079cc8fb84153e7526ab12105f6539d5b2b9fca",
+      "author": "Marc Bestmann",
+      "date": "2023-06-29T15:14:09Z",
+      "message": "fix formatting"
+    },
+    {
+      "sha": "1c4b15221c518aa693a7fd3832a86a927379dd23",
+      "author": "Marc Bestmann",
+      "date": "2023-06-29T14:47:02Z",
+      "message": "add a python interface"
+    },
+    {
+      "sha": "d3ac7bba99f8a4e5d0e9cd550bca3c94967ca73c",
+      "author": "Michael Ripperger",
+      "date": "2023-06-27T16:52:07Z",
+      "message": "Merge pull request #15 from marip8/updates\n\nUpdates"
+    },
+    {
+      "sha": "35ac8553d41f86c24e5153fb46f22149af5a9b78",
+      "author": "Michael Ripperger",
+      "date": "2023-06-27T14:05:08Z",
+      "message": "Revised ROS node singleton pattern"
+    },
+    {
+      "sha": "1a6f16342c9c26e7d58962f94b4bc288f112e7ba",
+      "author": "Michael Ripperger",
+      "date": "2023-06-27T14:02:30Z",
+      "message": "Remove the plugin library from ament_target_export so downstream packages cannot link against it"
+    },
+    {
+      "sha": "cb9b0f1662b9ef09904b23c831f2cba9aba83015",
+      "author": "Michael Ripperger",
+      "date": "2023-06-27T13:55:30Z",
+      "message": "Link executable against main library instead of plugin library"
+    },
+    {
+      "sha": "ed0d70917d712e2e761eaaa33ce7108a53a8b57c",
+      "author": "Michael Ripperger",
+      "date": "2023-06-24T04:47:40Z",
+      "message": "Merge pull request #14 from ros-industrial/fix/plugin-export\n\nFixed typo in plugin export"
+    },
+    {
+      "sha": "8e2201c3bece2ab765abdf64a93334f8488aec34",
+      "author": "Michael Ripperger",
+      "date": "2023-06-24T04:35:23Z",
+      "message": "Fixed typo in plugin export"
+    },
+    {
+      "sha": "84f6a1e5af618d8b056f7996fb1fba5a289efa0c",
+      "author": "Michael Ripperger",
+      "date": "2023-06-13T22:26:14Z",
+      "message": "1.1.0"
+    },
+    {
+      "sha": "6d0aa1ddab49b787ca6de52d45a4bf74aed28cb1",
+      "author": "Michael Ripperger",
+      "date": "2023-06-13T22:26:04Z",
+      "message": "Updated changelog"
+    },
+    {
+      "sha": "a755945e827d7df10c7d6401d265143680a318a7",
+      "author": "Michael Ripperger",
+      "date": "2023-06-13T22:22:02Z",
+      "message": "Merge pull request #12 from marip8/update/reach\n\nUpdated to REACH 1.3.0"
+    },
+    {
+      "sha": "2f80b4b2b950ae0faad9c64ecc6d7f75087862a6",
+      "author": "Michael Ripperger",
+      "date": "2023-06-13T22:00:58Z",
+      "message": "Updated to REACH 1.3.0"
+    },
+    {
+      "sha": "035036226f600356e9c6c18bc9fb4cacd57172f0",
+      "author": "Michael Ripperger",
+      "date": "2023-06-13T21:28:34Z",
+      "message": "Merge pull request #11 from marip8/update/collision-distance-eval\n\nCollision distance evaluator update"
+    },
+    {
+      "sha": "2caa4698acff900053955afa08b2595c8e6f83f0",
+      "author": "Michael Ripperger",
+      "date": "2023-06-13T21:27:08Z",
+      "message": "Merge pull request #10 from marip8/update/clean-up\n\nClean up config/launch files"
+    },
+    {
+      "sha": "f174d6ac847991bf55bd2c887dd79525bd9e6cc9",
+      "author": "Michael Ripperger",
+      "date": "2023-06-13T21:03:24Z",
+      "message": "Clean up config/launch files"
+    },
+    {
+      "sha": "26c15e1006cae50fe43d36aacffbec1d19f4be95",
+      "author": "Michael Ripperger",
+      "date": "2023-06-13T21:02:54Z",
+      "message": "Updated demo results"
+    },
+    {
+      "sha": "406310d6543f7f5a097c1c88bc3e54357d6f97f7",
+      "author": "Michael Ripperger",
+      "date": "2023-06-13T20:48:34Z",
+      "message": "Updated distance penalty to cap at 1.0"
+    },
+    {
+      "sha": "ef879b2fa8fe3f70b577681cfe694523d546028f",
+      "author": "Michael Ripperger",
+      "date": "2023-06-13T20:46:17Z",
+      "message": "Updated collision distance evaluator to optionally accept collision mesh; updated README"
+    },
+    {
+      "sha": "9844b51e37f999d76eb4a4b4b3eb94ffd9726db7",
+      "author": "Michael Ripperger",
+      "date": "2023-05-13T23:24:28Z",
+      "message": "Merge pull request #9 from ros-industrial/update/README\n\nREADME Updates"
+    },
+    {
+      "sha": "f46f79cdd4b899181b6667658fe811913d046243",
+      "author": "Michael Ripperger",
+      "date": "2023-05-13T23:11:22Z",
+      "message": "Added comments about collision_mesh_frame parameter"
+    },
+    {
+      "sha": "8b2d9209deba922a45e32615b6587ab4460a32a8",
+      "author": "Michael Ripperger",
+      "date": "2023-05-13T23:07:57Z",
+      "message": "Fix deps install in README"
+    },
+    {
+      "sha": "eff9f42ee9c5fc0a4b65382be27e9a44adcc6567",
+      "author": "Michael Ripperger",
+      "date": "2023-05-12T14:19:06Z",
+      "message": "Merge pull request #7 from marip8/updates\n\nUpdates"
+    },
+    {
+      "sha": "ce683e4e4521a1cb1f8e451baa42a9054d0732c8",
+      "author": "Michael Ripperger",
+      "date": "2023-05-11T22:11:31Z",
+      "message": "Updated to reach 1.2.0"
+    },
+    {
+      "sha": "714750e610f1c38d0444c55980bc39917b6f9208",
+      "author": "Michael Ripperger",
+      "date": "2023-05-11T22:10:32Z",
+      "message": "Updated README"
+    },
+    {
+      "sha": "80b259ceb2c9d0206fdacd791d0c61c7f83fd055",
+      "author": "Michael Ripperger",
+      "date": "2023-05-11T22:04:30Z",
+      "message": "Added transformed point cloud target pose generator"
+    },
+    {
+      "sha": "f67937b1e1ccb6e9df295c46ce294a5e9c1a59b8",
+      "author": "Michael Ripperger",
+      "date": "2023-05-11T22:03:23Z",
+      "message": "Exposed interface implementations separately from plugin library"
+    },
+    {
+      "sha": "1ff017c8b6c3ada85a1033e605644bd4103ee312",
+      "author": "Michael Ripperger",
+      "date": "2023-05-11T20:46:03Z",
+      "message": "Fixed collision mesh frame key"
+    },
+    {
+      "sha": "e815a2c1e5e57ca9a84b76193e8823daf6a181e2",
+      "author": "Michael Ripperger",
+      "date": "2023-05-11T14:02:49Z",
+      "message": "Merge pull request #5 from marip8/updates\n\nUpdates"
+    },
+    {
+      "sha": "da912ffef36fc3a82adaacae22fefce5961763ec",
+      "author": "Michael Ripperger",
+      "date": "2023-05-11T00:13:40Z",
+      "message": "Fixed docker commit name in CI configuration"
+    },
+    {
+      "sha": "2209eeca93028b37a8df656d95a263bf38fc2194",
+      "author": "Michael Ripperger",
+      "date": "2023-05-11T00:03:05Z",
+      "message": "Updated node to join executor thread properly"
+    },
+    {
+      "sha": "0cbe53d179470e073784b6ee50997ae1c61664c1",
+      "author": "Michael Ripperger",
+      "date": "2023-05-10T23:56:01Z",
+      "message": "Added reach plugin library name to environment variable for discovery by the plugin loader"
+    },
+    {
+      "sha": "e441135ab16a79d5519acc208c494cf9a9a991ce",
+      "author": "Michael Ripperger",
+      "date": "2023-05-10T23:54:42Z",
+      "message": "Merge pull request #4 from marip8/update/deps\n\nUpdated to reach 1.1.0"
+    },
+    {
+      "sha": "fe0cda56edf2633fb890748a2f624062d3e12238",
+      "author": "Michael Ripperger",
+      "date": "2023-05-10T23:39:22Z",
+      "message": "Updated to reach 1.1.0"
+    },
+    {
+      "sha": "3a0d45fb0c4e69d52a317523f9f3de28c5350946",
+      "author": "Michael Ripperger",
+      "date": "2023-05-10T23:24:45Z",
+      "message": "Merge pull request #3 from marip8/update/deps\n\nUpdated to reach 0.1.1"
+    },
+    {
+      "sha": "8c77a38ba60b3c4049f7c46c445979c6ca51e651",
+      "author": "Michael Ripperger",
+      "date": "2023-05-10T23:22:55Z",
+      "message": "Updated to reach 0.1.1"
+    },
+    {
+      "sha": "c7dee2645bc7373a087d155fdf3cbfd98f8210a2",
+      "author": "Michael Ripperger",
+      "date": "2023-05-10T21:04:23Z",
+      "message": "Merge pull request #2 from marip8/ros2\n\nROS2 Support"
+    },
+    {
+      "sha": "df070c145eb4b092354ffa14517d69f1350dfe0b",
+      "author": "Michael Ripperger",
+      "date": "2023-05-10T20:55:12Z",
+      "message": "Cleared changelog"
+    },
+    {
+      "sha": "331e79c19591eb5d48f80941000d741a288bd7f7",
+      "author": "Michael Ripperger",
+      "date": "2023-05-10T20:54:32Z",
+      "message": "Updated the README files"
+    },
+    {
+      "sha": "a315d257d4976c37f4315459166197d1b6c7e25d",
+      "author": "Michael Ripperger",
+      "date": "2023-05-10T20:47:23Z",
+      "message": "Removed ROS test; removed demo CMakeLists"
+    },
+    {
+      "sha": "782da1fb3b6aa8cb10faa7055aabeee0075cc218",
+      "author": "Michael Ripperger",
+      "date": "2023-05-10T20:27:46Z",
+      "message": "Updated launch files; used demo as default values"
+    },
+    {
+      "sha": "460d5d6a10fe82eaf05f3e917eb6b305cf6a6397",
+      "author": "Michael Ripperger",
+      "date": "2023-05-10T16:42:30Z",
+      "message": "Removed ROS1 launch files"
+    },
+    {
+      "sha": "79eb6ca86db01df198bf549c14a3c6ed0b0fcfc6",
+      "author": "Michael Ripperger",
+      "date": "2023-05-10T16:34:08Z",
+      "message": "Removed rostest dependency"
+    },
+    {
+      "sha": "585145dd05e05f39626545e574849b8d903f5622",
+      "author": "Michael Ripperger",
+      "date": "2023-05-09T20:06:39Z",
+      "message": "Updated CMakeLists"
+    },
+    {
+      "sha": "c844db5a9a706104d75d90c717ee607c5ce16d93",
+      "author": "Michael Ripperger",
+      "date": "2023-05-09T19:54:23Z",
+      "message": "Updated dependencies"
+    },
+    {
+      "sha": "57fdff7e2eb3fee22313cf696790ab2ae63967cb",
+      "author": "Michael Ripperger",
+      "date": "2023-05-09T19:46:15Z",
+      "message": "Use non deprecated pointer typedef"
+    },
+    {
+      "sha": "955e85b7853d261b9002d58f80897ceb4e4cc795",
+      "author": "Michael Ripperger",
+      "date": "2023-05-09T19:46:04Z",
+      "message": "Formatted CMakeLists"
+    },
+    {
+      "sha": "7a3a00da2e76868c47c7a5cfd334ba9d608e2af3",
+      "author": "Michael Ripperger",
+      "date": "2023-05-09T19:43:37Z",
+      "message": "Replace eigen_conversions with tf2_eigen"
+    },
+    {
+      "sha": "a9709a6dbc2d1c1b194f18b23ef387662f64ec6d",
+      "author": "Michael Ripperger",
+      "date": "2023-05-09T19:42:57Z",
+      "message": "Use full placeholders namespace"
+    },
+    {
+      "sha": "c40c427c705f1baa3c9de91258621614f0be2449",
+      "author": "Michael Ripperger",
+      "date": "2023-05-09T19:41:42Z",
+      "message": "Ran clang formatting"
+    },
+    {
+      "sha": "6cc1805539b69de105eadd985a7e77803b1a6b80",
+      "author": "Michael Ripperger",
+      "date": "2023-05-09T19:40:54Z",
+      "message": "Remove colons in SRDF"
+    },
+    {
+      "sha": "af969216b5bebea2b3be453115fae5ff95a23eb2",
+      "author": "Marc Bestmann",
+      "date": "2023-05-02T11:11:23Z",
+      "message": "remove default values used for testing"
+    },
+    {
+      "sha": "fe1fe763cf14fbfbce37d6fb940d780df1191f52",
+      "author": "Marc Bestmann",
+      "date": "2023-05-02T08:15:57Z",
+      "message": "fix demo launch joint visualization"
+    },
+    {
+      "sha": "f3751c38b4d5f0a38b802e241ed58b8f9d4d8d8f",
+      "author": "Marc Bestmann",
+      "date": "2023-05-02T07:51:36Z",
+      "message": "fix multiple instances of node; fix launch"
+    },
+    {
+      "sha": "991425bc62aaaac0962e9a2533a9acb25fe3cbdf",
+      "author": "Marc Bestmann",
+      "date": "2023-04-27T12:34:17Z",
+      "message": "fix compilation of reach_ros package"
+    },
+    {
+      "sha": "d7fb713c69be41ad7f6cb48ef963f70fe92827ed",
+      "author": "Marc Bestmann",
+      "date": "2023-04-26T11:32:24Z",
+      "message": "basic fixes to reach_ros cmake"
+    },
+    {
+      "sha": "e5b66c5a679871d2ad86562688a034c41563973d",
+      "author": "Marc Bestmann",
+      "date": "2023-04-26T09:15:41Z",
+      "message": "make reach core package compile in ROS 2 rolling"
+    },
+    {
+      "sha": "dd49477a81d81861d2622550c1968374b6513f10",
+      "author": "Michael Ripperger",
+      "date": "2023-05-09T18:48:09Z",
+      "message": "Change badge in README"
+    },
+    {
+      "sha": "0c4c1033501ef061451540ab7e9d73cb84367321",
+      "author": "Michael Ripperger",
+      "date": "2023-05-09T18:44:23Z",
+      "message": "Updated CI config file"
+    },
+    {
+      "sha": "5d213608faee688e77d3794eb6bfb0cda6acdb5e",
+      "author": "Michael Ripperger",
+      "date": "2023-05-09T18:19:44Z",
+      "message": "Removed the Python tests"
+    },
+    {
+      "sha": "4aa7a309814b34bb575f4cb26e3889dd6e4a2e36",
+      "author": "Michael Ripperger",
+      "date": "2023-05-09T18:19:30Z",
+      "message": "Added reach to the dependencies.repos"
+    },
+    {
+      "sha": "0a55bcc92720a3db28a9e502c86c63b3daabc364",
+      "author": "Michael Ripperger",
+      "date": "2023-05-09T18:18:56Z",
+      "message": "Install the demo files"
+    },
+    {
+      "sha": "c8e15bd53461d1d9fba2f0c768f2d11dfc373cb6",
+      "author": "Michael Ripperger",
+      "date": "2023-05-09T15:30:31Z",
+      "message": "Updated README to include documentation about demo and usage"
+    },
+    {
+      "sha": "ec3541caddc1f5858c8f7414698d47c2560b698c",
+      "author": "Michael Ripperger",
+      "date": "2023-05-09T14:44:57Z",
+      "message": "Added GIF to README"
+    },
+    {
+      "sha": "0edef048186a69edf5d5d9ef0885299264332354",
+      "author": "Michael Ripperger",
+      "date": "2023-05-09T14:44:14Z",
+      "message": "Flattened reach_ros directory"
+    },
+    {
+      "sha": "7392053ec5578d48e1e868906fd4d182f205d78b",
+      "author": "Michael Ripperger",
+      "date": "2023-05-09T14:43:54Z",
+      "message": "Removed docs directory"
+    },
+    {
+      "sha": "668e7e18a3035f8443fab050a06b9c8091376422",
+      "author": "Michael Ripperger",
+      "date": "2023-05-09T14:42:40Z",
+      "message": "Removed reach directory"
+    },
+    {
+      "sha": "b9685e2fadf6403e3421d8f521f4e0ed35872c7c",
+      "author": "Michael Ripperger",
+      "date": "2022-12-06T22:31:56Z",
+      "message": "1.0.0"
+    },
+    {
+      "sha": "035f13edc7348a2ca61e69cc124be38441e1609a",
+      "author": "Michael Ripperger",
+      "date": "2022-12-06T22:18:56Z",
+      "message": "Updated changelog"
+    },
+    {
+      "sha": "8d04676bd793ca4a5c523999e6bcbbbe3ee1fd56",
+      "author": "Michael Ripperger",
+      "date": "2022-12-06T22:09:37Z",
+      "message": "Install reach_ros headers (#40)"
+    },
+    {
+      "sha": "711595d6d5fc2913b5e463d772a7838e38c0d246",
+      "author": "Michael Ripperger",
+      "date": "2022-12-06T20:01:47Z",
+      "message": "Add Python Interface (#38)\n\n* Make members of reach study class protected\r\n\r\n* Added Python bindings\r\n\r\n* Moved Python bindings of interfaces into separate files; created separate file for Python utilities\r\n\r\n* Simplified python binding classes/functions\r\n\r\n* Updated Python bindings to utilize updated structures\r\n\r\n* Use CMake subdirectory for Python code\r\n\r\n* Updated CMakeLists\r\n\r\n* Fixed free function definitions\r\n\r\n* Changed module name and install location\r\n\r\n* Added heat map scripts\r\n\r\n* Added Python test script\r\n\r\n* Updated boost python object to YAML function\r\n\r\n* Added compile definition for Python build flag\r\n\r\n* Updated file path for local files in unit test\r\n\r\n* Ran clang-format\r\n\r\n* Revised to/from Eigen utilities\r\n\r\n* Added python bindings for heat map colorization functions\r\n\r\n* Updated heat map generator script to utilize internal colorization functions\r\n\r\n* Renamed utils.h to utils.hpp\r\n\r\n* Install Python scripts\r\n\r\n* Ran cmake format\r\n\r\n* Added Python requirements file\r\n\r\n* Updated CI configuration to run Python unit tests\r\n\r\n* Removed unnecessary forward declaration"
+    },
+    {
+      "sha": "0e65fa13609ec163fa181d73c7bb97f9b6666ce0",
+      "author": "Michael Ripperger",
+      "date": "2022-12-06T19:50:25Z",
+      "message": "Updated to later version of plugin loader (#39)"
+    },
+    {
+      "sha": "7a89063f14cf3bcc14d70694e4655534924fde03",
+      "author": "Michael Ripperger",
+      "date": "2022-12-06T00:15:55Z",
+      "message": "Refactor (#37)\n\n* Removed messages package\r\n\r\n* WIP remove ROS components from core package\r\n\r\n* WIP further refactor\r\n\r\n* Reorg and revise namespaces, class names\r\n\r\n* Updated IK interface\r\n\r\n* Added utility for evaluating IK solutions\r\n\r\n* Updated reach study\r\n\r\n* fixup change iK solver interface\r\n\r\n* Update reach study node\r\n\r\n* Updated visualizer\r\n\r\n* Moved apps to different directory\r\n\r\n* Fixup after rebase\r\n\r\n* Fixup minor updates\r\n\r\n* Remove meta-package\r\n\r\n* Fixup remove msgs package\r\n\r\n* Use YAML node for configuration of interfaces\r\n\r\n* Update plugins to YAML\r\n\r\n* Replace ROS parameters with YAML file and boost program options\r\n\r\n* Separate plugin from interface\r\n\r\n* Update plugin definitions\r\n\r\n* Update app to load new plugin types\r\n\r\n* Updated plugin unit test\r\n\r\n* Added target pose generator plugins to test\r\n\r\n* fixup updated ik solver interface\r\n\r\n* Fixup remove evaluator from IK interface\r\n\r\n* Created utility for building search tree\r\n\r\n* Add search tree to reach visualizer class\r\n\r\n* Added colorization function to database\r\n\r\n* Fixup separate plugins\r\n\r\n* Added function for displaying results to display interface\r\n\r\n* Updated reach study to utilize display plugin\r\n\r\n* Updated reach study app to load display plugin\r\n\r\n* Fixup IK solver interface\r\n\r\n* Make members of reach database const\r\n\r\n* Added interface for logger\r\n\r\n* Added logger interface to reach study class\r\n\r\n* Created two logger implementations\r\n\r\n* Added logger to reach study app\r\n\r\n* Fixup multiplicative factory\r\n\r\n* Fixup target pose generator plugin\r\n\r\n* Added helper function for configuring and running the reach study\r\n\r\n* fixup added logger plugins\r\n\r\n* Added no-op plugins for testing\r\n\r\n* Added helper function for getting YAML parameters\r\n\r\n* Use new YAML parameter utility\r\n\r\n* WIP update plugin description for reach_core\r\n\r\n* WIP moveit reach plugins update\r\n\r\n* Removed launch and config directories\r\n\r\n* Changed to boost_plugin_loader and updated reach_core to pure CMake\r\n\r\n* Fixup added reach study node\r\n\r\n* Updated to use pure CMake reach_core\r\n\r\n* fixup logger plugin update\r\n\r\n* Updated reach study to not save results when results dir is empty\r\n\r\n* fixup added plugin utils\r\n\r\n* Fixup added test dir cmakelists\r\n\r\n* Added reach study unit test\r\n\r\n* Fixed serialization of Eigen isometry\r\n\r\n* Added unit test for serialization\r\n\r\n* Added missing 180 degree z-rotation to reach study app\r\n\r\n* Print results after completion of run method\r\n\r\n* Fixup reach database - made name member public\r\n\r\n* Revised reach study comparison\r\n\r\n* Added unit test for reach study comparison\r\n\r\n* Removed collision mesh frame from parameters\r\n\r\n* Implemented interactive marker results display\r\n\r\n* Removed unused test\r\n\r\n* Moved launch files from reach_core into moveit_reach_plugins\r\n\r\n* Merged demo into moveit_reach_plugins package\r\n\r\n* Fixup remove plugin_description.xml from moveit_reach_plugins\r\n\r\n* Renamed package to reach_ros\r\n\r\n* Fixup reach study node remove sleep\r\n\r\n* Consolidated plugin source code files into src directory\r\n\r\n* Updated display plugin to be MoveIt agnostic\r\n\r\n* Remove unused .travis.yml file\r\n\r\n* Updated README files\r\n\r\n* Added code documentation and applied formatting\r\n\r\n* Split logger plugins into individual files; renamed multiplicative evaluator file\r\n\r\n* Added compile definition with name of plugin libraries built in this project\r\n\r\n* Add default save directory for databases\r\n\r\n* Added utility for resovling file URIs\r\n\r\n* Updated point cloud target pose generator to use URI resolution function\r\n\r\n* Updated demo files and structure\r\n\r\n* Replaced demo image with new GIF\r\n\r\n* Added CMake variables to CI build\r\n\r\n* CMake format\r\n\r\n* Added install rules to reach_ros package\r\n\r\n* Consolidated unit tests and fixed install rules\r\n\r\n* Added execution dependencies to reach_ros package.xml\r\n\r\n* Updated location of images in README\r\n\r\n* Exposed createFrame function\r\n\r\n* Removed collision mesh file from constructor of IK solver; make specification of collision mesh and collision mesh rame optional\r\n\r\n* Remove the addition of collision mesh from the constructor; made specification of collision mesh and collision mesh frame optional\r\n\r\n* Moved headers to include directory for inclusion in derived projects\r\n\r\n* Added signal handler to runReachStudy function\r\n\r\n* Renamed ROS display file and class\r\n\r\n* Added debug planning scene publisher to MoveIt IK solver\r\n\r\n* Switch to XML serialization for readability\r\n\r\n* Fixed logger const ptr\r\n\r\n* Added parameter to control max threads for parallelization\r\n\r\n* Convert ReachDatabase to vector\r\n\r\n* Changed input to createSearchTree\r\n\r\n* Updated ReachDatabase to be vector of containers of results for each iteration\r\n\r\n* Regenerated results\r\n\r\n* Removed reach study name parameter\r\n\r\n* Take database by value in ROS display lambda\r\n\r\n* Ran clang-format\r\n\r\n* Renamed reach_database.cpp to types.cpp\r\n\r\n* Renamed reach_core directory to reach\r\n\r\n* Changed section names to compile definitions; added interface target\r\n\r\n* Remove unused headers\r\n\r\n* Added initROS utility for plugins that require a ROS node\r\n\r\n* Removed reference to dependencies.repos in README\r\n\r\n* Added option for computing full color range for results\r\n\r\n* Added context menu item to display reach study target score\r\n\r\n* Added ability to use full color range in ROS display\r\n\r\n* Revised heat map colorization functions\r\n\r\n* Renamed app files"
+    },
+    {
+      "sha": "bf9ea25fcfc43382ce2b1f973489c1f013eb6d9b",
+      "author": "Michael Ripperger",
+      "date": "2022-09-07T15:59:32Z",
+      "message": "Updated documentation (#36)"
+    },
+    {
+      "sha": "f139ba22f910473b1beb0fa57789f0334b86b82d",
+      "author": "Collin Thornton",
+      "date": "2022-09-03T00:21:47Z",
+      "message": "Normalized manipulability (#35)\n\n* Fixed bug in reach_core/launch/setup.launch when starting the robot_state_publisher node\r\n\r\n* added rough evaluator of characteristic length\r\n\r\n* updated test file\r\n\r\n* Changed parameter name to excluded_links\r\n\r\n* Remove check if excluded links list is empty\r\n\r\n* Moved characteristic length computation into standalone function\r\n\r\n* Renamed class to ManipulabilityScaled\r\n\r\n* Minor updates\r\n\r\n* Updated documentation\r\n\r\n* Updated comparison of characteristic length to zero\r\n\r\nCo-authored-by: Michael Ripperger <michael.ripperger@swri.org>"
+    },
+    {
+      "sha": "c73285ae625020dec20a9ad4313400a56f35bfce",
+      "author": "Michael Ripperger",
+      "date": "2022-08-24T19:05:57Z",
+      "message": "0.2.2"
+    },
+    {
+      "sha": "3ba94ac286af42db08f0380d12c9d0b3da75d3f4",
+      "author": "Michael Ripperger",
+      "date": "2022-08-24T19:04:07Z",
+      "message": "Updated changelog"
+    },
+    {
+      "sha": "33c05b8573793c32a145d46edb4d5939aac6e200",
+      "author": "Michael Ripperger",
+      "date": "2022-08-24T18:56:47Z",
+      "message": "Create nested results directories if they do not exist (#34)"
+    },
+    {
+      "sha": "11d0198fb5a1e73ff3c28cf6e8067fb74b81308c",
+      "author": "Michael Ripperger",
+      "date": "2022-07-22T23:27:31Z",
+      "message": "0.2.1"
+    },
+    {
+      "sha": "d9170d0dbdc6a3d52a6bff6d7245a63e550a2191",
+      "author": "Michael Ripperger",
+      "date": "2022-07-22T23:27:21Z",
+      "message": "Updated changelog"
+    },
+    {
+      "sha": "e4d323c1f223d54f99b4b3e4461e327d12b408ec",
+      "author": "Michael Ripperger",
+      "date": "2022-07-22T23:26:43Z",
+      "message": "Fix setting of jacobian row subset (#31)"
+    },
+    {
+      "sha": "58c133603c6b31b72f395272f9625c49daba99d8",
+      "author": "Michael Ripperger",
+      "date": "2022-07-22T22:05:57Z",
+      "message": "0.2.0"
+    },
+    {
+      "sha": "59461a751044159fe830e327100bfa33b24087cd",
+      "author": "Michael Ripperger",
+      "date": "2022-07-22T22:05:37Z",
+      "message": "Updated changelog"
+    },
+    {
+      "sha": "81a8164073ade01a05cd2a7fdad8bb73eabaf7f3",
+      "author": "Michael Ripperger",
+      "date": "2022-07-22T22:03:04Z",
+      "message": "Various Updates (#29)\n\n* Change FLANN search tree to PCL kd-tree; update nearest neighbors search; parallelize with hardware concurrency\r\n\r\n* Update to use non-deprecated IK solve function\r\n\r\n* Use Eigen vectorized array product rather than for loop\r\n\r\n* Support manipulability calculation for subset of dimensions\r\n\r\n* Added plugin for evaluating manipulability ratio\r\n\r\n* Simplified and vectorized joint penalty evaluator\r\n\r\n* Updated README\r\n\r\n* Updated unit test"
+    },
+    {
+      "sha": "5230e4de47ced41a3c0038bd4435c443d9cf9886",
+      "author": "David Spielman",
+      "date": "2022-07-22T19:24:33Z",
+      "message": "Incorporated heat map coloring to rviz markers (#30)\n\n* Incorporated heat map coloring to rviz markers\r\n\r\n* Fixed formatting on heat map rviz marker code\r\n\r\n* Minor updates\r\n\r\nCo-authored-by: David Spielman <david.spielman@swri.org>\r\nCo-authored-by: Michael Ripperger <michael.ripperger@swri.org>"
+    },
+    {
+      "sha": "d1883957aff47fd9bdd77d9ffbd0cf50ec7b3b49",
+      "author": "Michael Ripperger",
+      "date": "2022-07-07T21:41:23Z",
+      "message": "0.1.1"
+    },
+    {
+      "sha": "46a56bf25674dacef952f7a0e99a4438dbc706ae",
+      "author": "Michael Ripperger",
+      "date": "2022-07-07T21:41:05Z",
+      "message": "Updated changelog"
+    },
+    {
+      "sha": "24af5878352329d3f983548cea9967db3705f6da",
+      "author": "Michael Ripperger",
+      "date": "2022-07-07T21:38:55Z",
+      "message": "Added build trigger for releases (#28)"
+    },
+    {
+      "sha": "58f7ea33579ee19059de8aec31a52ff989abd39c",
+      "author": "Michael Ripperger",
+      "date": "2022-07-06T00:06:10Z",
+      "message": "0.1.0"
+    },
+    {
+      "sha": "531a7150677ea11e273338040c3ea9b42d9b0fc0",
+      "author": "Michael Ripperger",
+      "date": "2022-07-05T23:59:30Z",
+      "message": "Added changelogs"
+    },
+    {
+      "sha": "4ec57cb0dfc2221cb8cbddabddeef7499c03f981",
+      "author": "Michael Ripperger",
+      "date": "2022-07-05T23:59:01Z",
+      "message": "Reverted reach_core version before releasing packages"
+    },
+    {
+      "sha": "dc3b64f15ba6867a620bc024e990c1ac024382d5",
+      "author": "Michael Ripperger",
+      "date": "2022-07-05T23:17:20Z",
+      "message": "Updated CI job to push docker to container registry (#27)"
+    },
+    {
+      "sha": "0d5091dcd4e1113c8453a303bd9a1f958076c9b2",
+      "author": "Collin Thornton",
+      "date": "2022-07-05T15:32:25Z",
+      "message": "Fixed bug in reach_core/launch/setup.launch when starting the robot_state_publisher node (#26)"
+    },
+    {
+      "sha": "e2a0828fecc464b60a8fe453c7fbf6a7cf65383c",
+      "author": "Michael Ripperger",
+      "date": "2022-06-09T22:20:14Z",
+      "message": "Add CI, formatting (#25)\n\n* Added formatting files\r\n\r\n* Run clang formatting\r\n\r\n* Run CMake format\r\n\r\n* Updated to c++14\r\n\r\n* Added CI jobs"
+    },
+    {
+      "sha": "c3b6fea633a442ff504c80efd1a8efaa342e70b9",
+      "author": "AndyZe",
+      "date": "2022-05-26T14:08:54Z",
+      "message": "Add hints to Readme (#19)\n\n* Add hints to README\r\n\r\n* Small typos\r\n\r\n* Note about programmatic queries"
+    },
+    {
+      "sha": "b85c626aef602ed2770dd94f451e253ab2697ce4",
+      "author": "Nathan Brooks",
+      "date": "2020-08-14T23:38:21Z",
+      "message": "Remove moveit_core dependency (#20)\n\n* Add moveit_core dependency\r\n\r\n* Remove moveit_core dep and header ref"
+    },
+    {
+      "sha": "dc83932864ce1fa0624ff53b3681c70be58189e7",
+      "author": "Michael Ripperger",
+      "date": "2020-08-10T16:04:42Z",
+      "message": "Plugin Unit Test (#16)\n\n* Added unit test to check loading of plugins\r\n\r\n* Updated to rostest"
+    },
+    {
+      "sha": "e5ff8cd96dac6cbcde0680ca466f7bde885422c4",
+      "author": "AndyZe",
+      "date": "2020-08-05T18:28:11Z",
+      "message": "Update launch file name (#17)"
+    },
+    {
+      "sha": "0d409eea8b8e48abd7449b98222216a76001765d",
+      "author": "Michael Ripperger",
+      "date": "2020-08-05T14:10:31Z",
+      "message": "Update plugin description with new library name (#15)"
+    },
+    {
+      "sha": "078c9624604eb324732d98fb69aa5367c968912d",
+      "author": "AndyZe",
+      "date": "2020-08-05T00:20:56Z",
+      "message": "Change the fixed frame in rviz (#14)"
+    },
+    {
+      "sha": "3120f1115011bf0f9510fceb870f83f862e05131",
+      "author": "Michael Ripperger",
+      "date": "2020-06-27T01:21:24Z",
+      "message": "Revise Point Cloud Loading Service (#12)\n\n* Updated service for loading point clouds\r\n\r\n* Revised and renamed server for loading point clouds\r\n\r\n* Updated handling of point cloud loading service\r\n\r\n* Updated launch file\r\n\r\n* Consolidated libraries"
+    },
+    {
+      "sha": "cac5d1d777faea86511daa07be1ae74311fcbbd7",
+      "author": "Michael Ripperger",
+      "date": "2020-06-27T00:53:50Z",
+      "message": "Added install rule for config directory (#11)"
+    },
+    {
+      "sha": "fce8981fbd5d65dce4d7a02346b325930be5b015",
+      "author": "Loy",
+      "date": "2020-05-15T14:18:46Z",
+      "message": "Remove extraneous backtick (#10)\n\n* Remove extraneous backtick\r\n\r\n* Fix path where rosdep references `src` directory\r\n\r\nThere is not `src` directory in the `reach`, rosdep should be called from the catkin workspace root"
+    },
+    {
+      "sha": "e5b11281dd4af5aca413ebb070ed0e74122dcab3",
+      "author": "Michael Ripperger",
+      "date": "2020-03-17T21:16:49Z",
+      "message": "License Update (#9)\n\n* Moved copied files into single directory\r\n\r\n* Added license notice to copied file directory"
+    },
+    {
+      "sha": "06403038ccb02df7b29bb23bc004463f580bb34e",
+      "author": "Michael Ripperger",
+      "date": "2020-03-17T18:37:13Z",
+      "message": "Demo Update (#8)\n\n* Added robot model to demo\r\n\r\n* Added unit test for demo\r\n\r\n* Updated install rules to install launch files in a 'launch' directory\r\n\r\n* Added joint limits file and reorganized configuration files\r\n\r\n* Added test dependencies to package.xml"
+    },
+    {
+      "sha": "3c9a299c8bf1859b10b0733cf7bafa57c871296e",
+      "author": "Michael Ripperger",
+      "date": "2020-02-18T15:32:14Z",
+      "message": "Merge pull request #3 from marip8/feature/demo\n\nReach Study Demo"
+    },
+    {
+      "sha": "fe58639f684fa38a2465ce5f13b4fa7169b9eb91",
+      "author": "mripperger",
+      "date": "2020-02-17T20:03:08Z",
+      "message": "Updated the main README file"
+    },
+    {
+      "sha": "b9d406efd4595f84a3b2dba2bdb7d60022725a04",
+      "author": "mripperger",
+      "date": "2020-02-17T19:53:50Z",
+      "message": "Added reach study demo"
+    },
+    {
+      "sha": "ef69efa36e8c052108dbc82a1961336a3738147f",
+      "author": "mripperger",
+      "date": "2020-02-17T19:52:50Z",
+      "message": "Updated start launch file to load YAML files with substitution"
+    },
+    {
+      "sha": "f31273b15b9e252ed0210d9ad10f79289a64ea3e",
+      "author": "Michael Ripperger",
+      "date": "2019-11-04T23:49:22Z",
+      "message": "Merge pull request #2 from marip8/fix/launch_file\n\nLaunch File Update"
+    },
+    {
+      "sha": "f394711779b1e5ea124d7747a720c3e9611a0327",
+      "author": "mripperger",
+      "date": "2019-11-04T23:15:47Z",
+      "message": "Updated README"
+    },
+    {
+      "sha": "c4d9e49e0a83e51b15a40e5c2050f6fdfba05e28",
+      "author": "mripperger",
+      "date": "2019-11-04T23:15:37Z",
+      "message": "Updated .travis.yml"
+    },
+    {
+      "sha": "d7fc36f703dbcc7251910458f3a1c8606bd3f59c",
+      "author": "mripperger",
+      "date": "2019-11-04T20:45:04Z",
+      "message": "Update to startup launch file argument loading"
+    },
+    {
+      "sha": "400448a71e450b98bdc9b9fa12cd482190662f8e",
+      "author": "Michael Ripperger",
+      "date": "2019-08-26T14:51:10Z",
+      "message": "Updated README"
+    },
+    {
+      "sha": "c5b80c0c2ead350105b6f152883037de3638a558",
+      "author": "Michael Ripperger",
+      "date": "2019-07-16T03:11:55Z",
+      "message": "Merge pull request #1 from marip8/feature/ci\n\nContinuous Integration"
+    },
+    {
+      "sha": "bc28f46563f3705bebeb645886f578569c9aceef",
+      "author": "mripperger",
+      "date": "2019-07-16T02:24:53Z",
+      "message": "Reorganized reach_core headers to allow easier install"
+    },
+    {
+      "sha": "16542baaba3ad2b322b10985aaddbe371575b603",
+      "author": "mripperger",
+      "date": "2019-07-16T01:45:25Z",
+      "message": "Updated packages CMakeLists"
+    },
+    {
+      "sha": "096afa2be1e105bf55b7e568d55ea955d8d7f3c1",
+      "author": "mripperger",
+      "date": "2019-07-15T22:11:05Z",
+      "message": "Added travis.yml"
+    },
+    {
+      "sha": "2e8f3cfd03c1a888a3beb9a60db51ed80b7adf43",
+      "author": "Ripperger, Michael A",
+      "date": "2019-07-15T22:56:23Z",
+      "message": "Merge pull request #10 from mripperger/feature/license\n\nLicense"
+    },
+    {
+      "sha": "17d8eec9e7cda19f184427ecda4c5c1788dc9a60",
+      "author": "mripperger",
+      "date": "2019-07-15T22:46:39Z",
+      "message": "Added license to repository"
+    },
+    {
+      "sha": "237b1f52ae9409393f61116992e7ca01c3e68060",
+      "author": "mripperger",
+      "date": "2019-07-15T22:46:24Z",
+      "message": "Added licenses to files"
+    },
+    {
+      "sha": "2a0dd8b046f2e0ae9ce8f9a275b15af5e44c5ce9",
+      "author": "Ripperger, Michael A",
+      "date": "2019-07-15T22:54:23Z",
+      "message": "Merge pull request #9 from mripperger/update/clean-up\n\nMinor clean-up"
+    },
+    {
+      "sha": "2ee09530afc1035fdc6cdc517e531ad53eebc64e",
+      "author": "mripperger",
+      "date": "2019-07-15T22:10:18Z",
+      "message": "Modified README"
+    },
+    {
+      "sha": "b0e9688aa3aa534b3474ee5674509b10719c420c",
+      "author": "mripperger",
+      "date": "2019-07-15T21:58:57Z",
+      "message": "Updated Affine to Isometry"
+    },
+    {
+      "sha": "dfbf0eaf3ced09381b0e8b85c3654eda488dead0",
+      "author": "mripperger",
+      "date": "2019-07-15T21:53:34Z",
+      "message": "Added missing headers"
+    },
+    {
+      "sha": "66c993bf5cf1434d72b6d03eb078330d5fc5b43c",
+      "author": "Ripperger, Michael A",
+      "date": "2019-07-08T16:12:17Z",
+      "message": "Merge pull request #8 from mripperger/feature/plugins\n\nPlugin Implementation"
+    },
+    {
+      "sha": "4d81e86fd9461a2bbfb06bfe405f802088cc30ec",
+      "author": "mripperger",
+      "date": "2019-07-08T16:00:21Z",
+      "message": "Updated README documentation"
+    },
+    {
+      "sha": "ac9e358f192ddae4b3547951f23c9f80553a130f",
+      "author": "mripperger",
+      "date": "2019-07-08T15:28:23Z",
+      "message": "Updated reach_core launch and config files"
+    },
+    {
+      "sha": "e198210118511c03dbf2c708185792a1cf15de41",
+      "author": "mripperger",
+      "date": "2019-07-08T15:27:59Z",
+      "message": "Removed loading of kinematic group parameter in reach study node"
+    },
+    {
+      "sha": "c1634b0a465dd234cf1a762bfa97ce250882fa96",
+      "author": "mripperger",
+      "date": "2019-07-08T15:27:28Z",
+      "message": "Moved multiplicative factory plugin to new directory"
+    },
+    {
+      "sha": "8966148fa555e5bf3a2973c5077dc74c02e98699",
+      "author": "mripperger",
+      "date": "2019-07-07T06:16:45Z",
+      "message": "Updated name of display base class in reach study instantiation of plugins"
+    },
+    {
+      "sha": "a679fc38967277869b78e05c94b402503b51591c",
+      "author": "mripperger",
+      "date": "2019-07-07T06:16:04Z",
+      "message": "Updated reach study components to accommodate updates to reach record definition"
+    },
+    {
+      "sha": "781fd6cf5d4aeb0030f75a69e60f2df1dac01f37",
+      "author": "mripperger",
+      "date": "2019-07-07T06:10:42Z",
+      "message": "Moved reach record generation utility and fixed for updated reach record message definition"
+    },
+    {
+      "sha": "c612686ac9b028bcbe045ae718d38b305d593822",
+      "author": "mripperger",
+      "date": "2019-07-07T06:08:19Z",
+      "message": "Changed record robot state type to JointState message"
+    },
+    {
+      "sha": "994ded22f330f5b7abc11f2e4303144847bf1e66",
+      "author": "mripperger",
+      "date": "2019-07-07T06:07:41Z",
+      "message": "Updated IK solver plugins to implement new pure virtual function"
+    },
+    {
+      "sha": "a81951028d500c4bf175a5e37233fdc26b284e5d",
+      "author": "mripperger",
+      "date": "2019-07-07T06:07:08Z",
+      "message": "Added new pure virtual method to IK solver base class to return joint names"
+    },
+    {
+      "sha": "ae75906ddfc5879e6e0c19a110db05f04aa0b4e0",
+      "author": "mripperger",
+      "date": "2019-07-07T05:00:44Z",
+      "message": "Updated plugins to use base class provided in reach_core package"
+    },
+    {
+      "sha": "b6edcd49fe0a3cc9d6bdf0d9645a6b755efa83ab",
+      "author": "mripperger",
+      "date": "2019-07-07T04:59:33Z",
+      "message": "Renamed reach_plugins package to moveit_reach_plugins"
+    },
+    {
+      "sha": "8a1ac94eac8df19c2e8435a3869e2650558156e9",
+      "author": "mripperger",
+      "date": "2019-07-07T04:56:04Z",
+      "message": "Updated reach_core components to use base class defined within the package"
+    },
+    {
+      "sha": "81983c89de1c7a12f57288b1a5ca43fb7e533cd3",
+      "author": "mripperger",
+      "date": "2019-07-07T04:55:08Z",
+      "message": "Moved multiplicative evaluation factory plugin into reach_core package"
+    },
+    {
+      "sha": "16fc8e3af42bb5ae9bc552dd952e3cb915644ce0",
+      "author": "mripperger",
+      "date": "2019-07-07T04:52:27Z",
+      "message": "Build file clean up for reach_core package"
+    },
+    {
+      "sha": "7eccc9d6c6b2f9b782404ead82019815639b0693",
+      "author": "mripperger",
+      "date": "2019-07-07T04:48:13Z",
+      "message": "Moved base class headers into reach_core package"
+    },
+    {
+      "sha": "f5c2341be031ca0fb6bf0a3a712e1f3d4cb90f4a",
+      "author": "mripperger",
+      "date": "2019-07-03T14:31:53Z",
+      "message": "Updated calls to display update robot pose in reach visualizer"
+    },
+    {
+      "sha": "75383c8ecf21b1b8fa1bcc9951cc5cfeb542a862",
+      "author": "mripperger",
+      "date": "2019-07-03T14:31:02Z",
+      "message": "Updated interactive marker callbacks to use bind"
+    },
+    {
+      "sha": "a050103a4ed648440528ac0cd47e13b0d7cacc9e",
+      "author": "mripperger",
+      "date": "2019-07-03T14:29:13Z",
+      "message": "Updated .rviz file"
+    },
+    {
+      "sha": "c89ddbe0880408812d22713891b0c0b52f1c0552",
+      "author": "mripperger",
+      "date": "2019-07-03T14:27:28Z",
+      "message": "Updated MoveIt display plugin with new update robot pose method"
+    },
+    {
+      "sha": "67f50785961ce943886bfe3e0d8e28083ee86a45",
+      "author": "mripperger",
+      "date": "2019-07-03T14:26:50Z",
+      "message": "Changed display base class updateRobotPoseMethod arguments"
+    },
+    {
+      "sha": "fc4b6400772cc743d62f54f6270805788628d7b7",
+      "author": "mripperger",
+      "date": "2019-07-03T05:23:16Z",
+      "message": "Removed results directory"
+    },
+    {
+      "sha": "b85ded7ed66b9c29a6d977e68f79af7f51992d42",
+      "author": "mripperger",
+      "date": "2019-07-03T04:35:42Z",
+      "message": "Updated example reach study object configuration file"
+    },
+    {
+      "sha": "e6505f23dfae4f19e0ca28758932156ebdb4d788",
+      "author": "mripperger",
+      "date": "2019-07-03T04:34:58Z",
+      "message": "Updated build files"
+    },
+    {
+      "sha": "bc8d0253bf12a0c93bd409a536e0e7b8a17fdf32",
+      "author": "mripperger",
+      "date": "2019-07-03T04:34:41Z",
+      "message": "Updated reach study node to load new parameters"
+    },
+    {
+      "sha": "89f926ca2a1d9cc12083eff007a8b95399d27767",
+      "author": "mripperger",
+      "date": "2019-07-03T04:30:13Z",
+      "message": "Implemented plugins and changes to other core components in main reach study library"
+    },
+    {
+      "sha": "d048a27bd936182321633b2bd93d00672c98f2db",
+      "author": "mripperger",
+      "date": "2019-07-03T04:28:37Z",
+      "message": "Updated study parameters structure"
+    },
+    {
+      "sha": "2e903fb2aeaa2c2a2f9d4e2550b80ca9395dfdaf",
+      "author": "mripperger",
+      "date": "2019-07-03T04:20:33Z",
+      "message": "Revised reach visualizer class and removed functionality relocated to plugin class"
+    },
+    {
+      "sha": "e42b780eb21db79c97b43f99402ecdb1c4e0a709",
+      "author": "mripperger",
+      "date": "2019-07-03T04:11:35Z",
+      "message": "Added method to database class for writing to database message"
+    },
+    {
+      "sha": "464c9572dc3674c29fd847cdae2a1156b457eb6c",
+      "author": "mripperger",
+      "date": "2019-07-03T04:07:52Z",
+      "message": "Added method to general utilties for creating from from point and normal"
+    },
+    {
+      "sha": "59ac9ca4c8083b383ce266454f37abeb3da81aaf",
+      "author": "mripperger",
+      "date": "2019-07-03T04:06:10Z",
+      "message": "Removed kinematic utilities"
+    },
+    {
+      "sha": "3a88f14a624d0322792c5dee8ac40fefdb9b6e16",
+      "author": "mripperger",
+      "date": "2019-07-03T03:51:16Z",
+      "message": "Moved code out of IK helper class to be put into IK plugin; changed neighbor IK search to free functions"
+    },
+    {
+      "sha": "4028ae76173abc88d3517fae8e69fba794d1126e",
+      "author": "mripperger",
+      "date": "2019-07-03T03:47:36Z",
+      "message": "Clean up changes to reach plugins"
+    },
+    {
+      "sha": "0019f504daadbe407b31b4991e79b535ceec73bb",
+      "author": "mripperger",
+      "date": "2018-06-15T23:18:53Z",
+      "message": "Minor update to display plugin marker display"
+    },
+    {
+      "sha": "8172afbcb4a5d9756990f1b4132d81ee1700cfb4",
+      "author": "mripperger",
+      "date": "2018-06-15T23:17:34Z",
+      "message": "Updated implementation of plugins to accommodate function argument change"
+    },
+    {
+      "sha": "fdaf3645eb9ab46202812c07088e61e1abbc8a8f",
+      "author": "mripperger",
+      "date": "2018-06-15T23:16:44Z",
+      "message": "Changed IK solver and evaluation functions argument from a vector of joint values to a map of joint names and values"
+    },
+    {
+      "sha": "f5455f957cef1c608c732c2089d90f8384604e37",
+      "author": "mripperger",
+      "date": "2018-05-26T19:55:27Z",
+      "message": "Updated plugin test configuration yaml"
+    },
+    {
+      "sha": "a97099dfe34ac69c7218e608aa81d63c29a85b85",
+      "author": "mripperger",
+      "date": "2018-05-26T19:55:00Z",
+      "message": "Added functionality to reach display base class for publishing neighbor reach markers"
+    },
+    {
+      "sha": "06c69cfcc7fdc12f6e0ec39d270a1fb3c5c2ef7e",
+      "author": "mripperger",
+      "date": "2018-05-26T19:54:18Z",
+      "message": "Added marker creation function to reach plugins utils"
+    },
+    {
+      "sha": "75bd100cc4ecca564a299c447fefae19484876a2",
+      "author": "mripperger",
+      "date": "2018-05-21T01:17:03Z",
+      "message": "Fixup to note about check frame in moveitiksolver plugin"
+    },
+    {
+      "sha": "cd7a793c9d6c87fc06441d9670fdd8e33a5ea946",
+      "author": "mripperger",
+      "date": "2018-05-21T01:16:14Z",
+      "message": "Updated tests to include reach display plugin"
+    },
+    {
+      "sha": "e77783f7687a0515c00c122da99a11b1d78bef68",
+      "author": "mripperger",
+      "date": "2018-05-21T01:15:47Z",
+      "message": "Added reach display library and plugins to build files"
+    },
+    {
+      "sha": "bf34c8b753ac3fc0fb79406cebeb7d4c8b4c4ed8",
+      "author": "mripperger",
+      "date": "2018-05-21T01:14:26Z",
+      "message": "Added a MoveIt based reach display class"
+    },
+    {
+      "sha": "b60d2685b5a7370bb88aedfab6154e774cf0dcfa",
+      "author": "mripperger",
+      "date": "2018-05-21T01:13:38Z",
+      "message": "Added base class for reach display plugin"
+    },
+    {
+      "sha": "a382ddb40ac000c1d9ef5e14b3e740426582669e",
+      "author": "mripperger",
+      "date": "2018-05-20T06:51:52Z",
+      "message": "Updated test config file with collision object parameters"
+    },
+    {
+      "sha": "8a6d9119a9db71fcf61bd622e0a1813d05930185",
+      "author": "mripperger",
+      "date": "2018-05-20T06:51:08Z",
+      "message": "Fixup to creation of utils"
+    },
+    {
+      "sha": "afc7c6e3b860d89f3b5da7c383590f023e3790e2",
+      "author": "mripperger",
+      "date": "2018-05-20T06:50:39Z",
+      "message": "documentation fixup for ik solver base"
+    },
+    {
+      "sha": "07ffa8e46ad06889cfd91a1f7798f60393ba6599",
+      "author": "mripperger",
+      "date": "2018-05-20T06:50:17Z",
+      "message": "Updated MoveIt IK solvers to take parameters for a collision object and add it to the planning scene on initialization"
+    },
+    {
+      "sha": "2ee1e3ea6eb5a6b413c070a91ce5462057c059de",
+      "author": "mripperger",
+      "date": "2018-05-20T06:48:10Z",
+      "message": "Updated distance penalty evaluation to take parameters for a collision object and add it to the planning scene on initialization"
+    },
+    {
+      "sha": "95c8ed85db630e79bcb3db7f896a675769a8bb73",
+      "author": "mripperger",
+      "date": "2018-05-20T06:46:59Z",
+      "message": "Added utils library to reach_plugins package"
+    },
+    {
+      "sha": "33fee2c1762ceaf8a1105921bd262180010396f0",
+      "author": "mripperger",
+      "date": "2018-05-20T03:40:03Z",
+      "message": "Updated plugin loading test config to load discretization plugin"
+    },
+    {
+      "sha": "936037376cb6e83161475aae0a6aa2c5777e3774",
+      "author": "mripperger",
+      "date": "2018-05-20T03:39:25Z",
+      "message": "Updated build files for new discretization plugin"
+    },
+    {
+      "sha": "16c7cadf293ae2bda126ed80b15f5ffa803b4d0b",
+      "author": "mripperger",
+      "date": "2018-05-20T03:38:59Z",
+      "message": "Added new plugin for discretizing target pose around Z-axis by an input discretization angle"
+    },
+    {
+      "sha": "fa5e048860142ed8c25460deec3e11428231cf71",
+      "author": "mripperger",
+      "date": "2018-05-20T03:38:02Z",
+      "message": "Minor updates to MoveItIKSolver plugin to allow discretization class to inherit from it"
+    },
+    {
+      "sha": "2921b1adbe12684ba40b927335e4918f186b6112",
+      "author": "mripperger",
+      "date": "2018-05-15T00:33:56Z",
+      "message": "Added build files for reach_plugins package"
+    },
+    {
+      "sha": "8a9d494df87ca4ebf83dc7e9c399086df62e64af",
+      "author": "mripperger",
+      "date": "2018-05-15T00:33:29Z",
+      "message": "Created node to test instantiation of IK plugin with all evaluation plugins"
+    },
+    {
+      "sha": "8a130ff6395a333f0a62e72c24c92da2370da2b8",
+      "author": "mripperger",
+      "date": "2018-05-15T00:32:36Z",
+      "message": "Added implementation for MoveIt based IK solver"
+    },
+    {
+      "sha": "7d9f3b806219f98762931fe98154a253251b4b64",
+      "author": "mripperger",
+      "date": "2018-05-15T00:31:56Z",
+      "message": "Added implementation for various evaluation plugins"
+    },
+    {
+      "sha": "483a2e5312ce3fcc2294266f49d95427fb04cbe6",
+      "author": "mripperger",
+      "date": "2018-05-15T00:31:21Z",
+      "message": "Created base class for IK solver plugin"
+    },
+    {
+      "sha": "c2c787ecdd5e9f100740097cb41e6c9fe1c96de9",
+      "author": "mripperger",
+      "date": "2018-05-15T00:30:28Z",
+      "message": "Created base class for pose evaluation plugins"
+    },
+    {
+      "sha": "e3ac5a64680986347d9de9a4dc671c620f515401",
+      "author": "Ripperger, Michael A",
+      "date": "2018-05-03T02:27:51Z",
+      "message": "Merge pull request #5 from mripperger/feature/seed_states\n\nAdded support for specifying seed states from which to solve IK"
+    },
+    {
+      "sha": "cc76fd8fc74d14102710127414253dcad4053988",
+      "author": "mripperger",
+      "date": "2018-05-02T23:28:35Z",
+      "message": "Added support for specifying seed states from which to solve IK"
+    },
+    {
+      "sha": "9b07a53300f744a16ab3d3ffc7abeb72cb7398c5",
+      "author": "Ripperger, Michael A",
+      "date": "2018-05-03T02:08:17Z",
+      "message": "Merge pull request #7 from mripperger/update/cleanup\n\nRemoved deprecated code"
+    },
+    {
+      "sha": "be4d498cd09347ffa165501f82366425bd3eaf3e",
+      "author": "mripperger",
+      "date": "2018-05-03T02:07:31Z",
+      "message": "Removed deprecated code"
+    },
+    {
+      "sha": "1fa9771a9ec0324d9d217044175accd607bd0549",
+      "author": "Ripperger, Michael A",
+      "date": "2018-05-03T02:02:39Z",
+      "message": "Merge pull request #6 from mripperger/reorganization\n\nRepository reorganization"
+    },
+    {
+      "sha": "fa4ab988ae57cbeb6b86621d735c6bd885560274",
+      "author": "mripperger",
+      "date": "2018-01-21T00:56:24Z",
+      "message": "Reorganized into metapackage with reach_core and reach_msgs packages; fixes to code to accommodate changes"
+    },
+    {
+      "sha": "ef827c874ff62ac38fa4bb3e67ac1df43c273a1d",
+      "author": "mripperger",
+      "date": "2018-01-20T23:51:42Z",
+      "message": "Updated package.xml and CMakeLists with changes in source file locations"
+    },
+    {
+      "sha": "58f8315fb367f05bec26b0b97f36def9859f6057",
+      "author": "mripperger",
+      "date": "2018-01-20T23:48:57Z",
+      "message": "Incorporated parameter structures in source code"
+    },
+    {
+      "sha": "136c848752b8b27ac55ab5ccfe2864f3d4221c00",
+      "author": "mripperger",
+      "date": "2017-12-13T01:54:02Z",
+      "message": "Major reorganization-->WIP; separated utilities into multiple files; renamed classes; re-namespaced classes"
+    },
+    {
+      "sha": "eeae4c563ed860cf421d932509cd621cf4c709ec",
+      "author": "Ripperger, Michael A",
+      "date": "2018-05-02T23:47:57Z",
+      "message": "Merge pull request #2 from mripperger/feature/pose_discretization\n\nPose Discretization"
+    },
+    {
+      "sha": "370ad37644564d7a80dc0e6202f2f9c3bb3a7491",
+      "author": "mripperger",
+      "date": "2017-10-19T21:36:51Z",
+      "message": "Pushed code into robot_reach_study namespace"
+    },
+    {
+      "sha": "840ca527f7605cd3ca188ff5e51f05e5bbc7e04c",
+      "author": "mripperger",
+      "date": "2017-10-19T21:36:13Z",
+      "message": "Moved discretization functionality to IkHelper class"
+    },
+    {
+      "sha": "9360dbb5439d3b83f3186b7cd194750f6375a9bb",
+      "author": "mripperger",
+      "date": "2017-10-19T20:07:01Z",
+      "message": "Added functionality for discretizing poses about the tool Z-axis and solving IK in initial reach study loop"
+    },
+    {
+      "sha": "46a0aa8070d12ecc02f865d04cf94942d3ba09e7",
+      "author": "mripperger",
+      "date": "2017-10-19T20:05:37Z",
+      "message": "Implementation for single database entry adding function"
+    },
+    {
+      "sha": "2497b561f851ff8c59860364ee66866c64b9d278",
+      "author": "mripperger",
+      "date": "2017-10-19T20:04:44Z",
+      "message": "Added single function for saving database entries"
+    },
+    {
+      "sha": "c3b55cf219f9bfdc6020300463a696d58064134c",
+      "author": "Ripperger, Michael A",
+      "date": "2018-05-02T23:43:05Z",
+      "message": "Merge pull request #3 from mripperger/development\n\nGeneral Improvements"
+    },
+    {
+      "sha": "27fbff88ddc5e82d0b013ca831f32e058ccf196c",
+      "author": "mripperger",
+      "date": "2017-07-21T21:12:44Z",
+      "message": "Added functionality to specify results directory; changed inputs to launch files to be full path to robot launch file and reach object yaml; fixed bug in reach object mesh extension checker"
+    },
+    {
+      "sha": "81ec16c030d929e8e5fda4c8926a904171bfd162",
+      "author": "mripperger",
+      "date": "2017-06-12T20:17:35Z",
+      "message": "Added empty results directory"
+    },
+    {
+      "sha": "69896b9eca1a3f967e2e913a131e2e8424a33ae5",
+      "author": "mripperger",
+      "date": "2017-06-12T20:06:15Z",
+      "message": "Changed the way interactive markers are sized (now = 0.5*optimization_radius). Various other minor changes"
+    },
+    {
+      "sha": "43e5757f0cdb33608041e01b2dfa5dbbaa2f580a",
+      "author": "mripperger",
+      "date": "2017-06-12T16:01:04Z",
+      "message": "Eliminated mesh sampling parameters; allowed ply and obj files to be loaded as collision objects; renamed several parameters; minor code clean up items"
+    },
+    {
+      "sha": "63111954047473b9e253863856de8abc9545c2cf",
+      "author": "mripperger",
+      "date": "2017-06-09T21:21:16Z",
+      "message": "Replaced sample mesh server with a pcd loader that transforms the saved point cloud; the mesh should be sampled before running the study"
+    },
+    {
+      "sha": "bab1e465d0779a67fcc835e1f7f7673530bdd2a4",
+      "author": "mripperger",
+      "date": "2017-06-09T20:09:13Z",
+      "message": "Documentation changes to README and reach_study_object.yaml; added rotation of normals back; minor changes to launch files; added scripts folder for multiple config bash"
+    },
+    {
+      "sha": "8c92626007cf03c372b507b55c7e3a4154e81283",
+      "author": "mripperger",
+      "date": "2017-06-09T15:08:33Z",
+      "message": "Created reach study class to more conveniently hold parameters, data, etc.; created new reach study node; created libraries for supporting classes; add documentation; various code clean up items"
+    },
+    {
+      "sha": "46b02ffc181ccfb4589a8bccba3f1ed7b818e1f5",
+      "author": "mripperger",
+      "date": "2017-03-29T18:50:26Z",
+      "message": "Added functionality for comparing configuration databases"
+    },
+    {
+      "sha": "a4462b904fb9f0cc269ab36453c47c31a7b3a53d",
+      "author": "mripperger",
+      "date": "2017-03-15T23:09:41Z",
+      "message": "Improved neighbor search; added metadata fields to ReachDatabase msg; modified launch files"
+    },
+    {
+      "sha": "d595bfc0fa0d1c11058b11343b495034e2e5a981",
+      "author": "Ripperger, Michael A",
+      "date": "2017-03-29T18:57:48Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "09a298c4a61e2a557ce9d30f8925d516f27996fd",
+      "author": "mripperger",
+      "date": "2017-03-15T15:00:21Z",
+      "message": "Merge branch 'master' of https://raesgit.datasys.swri.edu/mripperger/robot_reach_study"
+    },
+    {
+      "sha": "ad69ae0ed8ceaea1ed79f8f45bfcc1f7ef78021d",
+      "author": "mripperger",
+      "date": "2017-03-15T14:58:27Z",
+      "message": "Initial code commit"
+    },
+    {
+      "sha": "f980edf3edecc50a3e61187f1451aa5f4d550731",
+      "author": "Ripperger, Michael A",
+      "date": "2017-03-10T22:18:46Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "1e6eb8ae838657364abd6019b7d08a49d80b5045",
+      "author": "Ripperger, Michael A",
+      "date": "2017-03-10T22:16:26Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "9d9e49f3a2475e658303b872c087b3c68b7faeef",
+      "author": "Ripperger, Michael A",
+      "date": "2017-03-10T21:31:28Z",
+      "message": "Initial commit"
+    }
+  ]
+}

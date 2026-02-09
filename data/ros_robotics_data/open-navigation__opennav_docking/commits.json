@@ -1,0 +1,678 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-06T23:03:31Z",
+    "source": "github_rest",
+    "endpoint": "/repos/{owner}/{repo}/commits",
+    "owner": "open-navigation",
+    "repo": "opennav_docking",
+    "per_page": 100
+  },
+  "data": [
+    {
+      "sha": "44ad8f877c4567698b4e9735126dd22072826276",
+      "author": "Hannes Bachter",
+      "date": "2026-01-20T16:41:57Z",
+      "message": "improve logging with more verbosity in SimpleChargingDock (#88)\n\nSigned-off-by: Hannes Bachter <hannes.bachter@neura-robotics.com>\nCo-authored-by: Hannes Bachter <hannes.bachter@neura-robotics.com>"
+    },
+    {
+      "sha": "3ead239298391f9ca9fa1a1877ef8fc80cd9d790",
+      "author": "matttburk",
+      "date": "2025-12-09T01:32:19Z",
+      "message": "Set pose_topic for FollowObject goal message (#91)\n\nSet goal_msg.pose_topic to '/detected_dynamic_pose' so it is sent to server properly."
+    },
+    {
+      "sha": "4e68132b9710844c17557d09bade67f8e081eeb8",
+      "author": "Alberto Tudela",
+      "date": "2025-09-25T21:12:50Z",
+      "message": "Following server (#43)\n\n* Added following_msgs\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n* Added initial dynamic following server\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n* Remove controller and link docking\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n* Rename package to opennav_following\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n* Added trajectory publisher\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n* Added following BT\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n* Added exceptions and improve feedback\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n* Skip perception orientation\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n* Stop, goalreached, etc\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n* Remove approach\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n* Initial demo package\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n* Make the following  server resumable.\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n* Update with last changes\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n* Minor fixes in tests\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n* Added retries\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n* Improve backward motion\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n* Add rotation recovery\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n* Minor fixes for CMakelists\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n* Update tests\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n* Added readme to demo\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n* Refactor to nav2_ros_common\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n* Update to new rotateToObject\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n* Added cancel bt node\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n* Added transform tolerance\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n* Remove error timeout\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n* Remove initial perception\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n* Remove pose from goal\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n* Added optional target_frame_id\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n* Added error_msg\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n* Refactor dependencies exception handling with docking exception and new range for error codes\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n* Deleted dynamic param shared pointer\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n* Added rate to main loop\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n* Added iteration timestamp and transform tolerances\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n* Added static_object_timeout\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n* Fix getPoseAtDistance\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n* Added  'search_by_rotating' param\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n* Added topic to action message\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n* feat: add odom_duration parameter and update odometry handling\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n* Update opennav_following_msgs/action/FollowObject.action\n\nCo-authored-by: Steve Macenski <stevenmacenski@gmail.com>\n\n* fix: update follow_object_action to include elapsed time and improve CMake test dependencies\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n* feat: add target_frame parameter to rotateToObject for enhanced object tracking\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n* fix: refactor rotateToObject to use geometry_msgs::msg::Twist directly for improved clarity\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n* refactor: remove getRobotPoseInFrame method and replace with nav2_util::getCurrentPose\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n* fix: set frame_id in publishZeroVelocity\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n* refactor: remove dynamic_pose_ variable and related methods\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n* Update opennav_following_bt/include/opennav_following_bt/follow_object_action.hpp\n\nCo-authored-by: Steve Macenski <stevenmacenski@gmail.com>\n\n* refactor: remove allow_backward parameter and related logic\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n* refactor: remove halt method from FollowObjectAction class\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n* Use SingleThreadedExecutor in ErrorExceptions test\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n* refactor: update pose retrieval methods\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n* refactor: replace main_loop_rate with loop_rate in followObject method and fix race condition\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n* Minor fixes\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n* Improve tests\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n* fix: add  transform in tests\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n* refactor: enhance ObjectPublisher to support topic, frame and skip_pose modes and update tests\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n* fix: reset dynamic pose timestamp and implement detection timeout handling in followObject\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n* fix: improve rotation logic and add search mode handling in FollowingServer tests\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n* feat: add search angle parameters and update rotation logic in FollowingServer\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n* Update params\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n* refactor: consolidate search angle parameters into a single parameter in FollowingServer\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\n\n---------\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\nCo-authored-by: Steve Macenski <stevenmacenski@gmail.com>"
+    },
+    {
+      "sha": "8d438aa3a81caa11da4d9ecbe940c21f5cf4964d",
+      "author": "Silvio Traversaro",
+      "date": "2025-01-21T22:50:43Z",
+      "message": "Add support for compilation on Windows (#80)"
+    },
+    {
+      "sha": "1fa05cbb09d84cd40c2280677ad89725362a3af7",
+      "author": "Steve Macenski",
+      "date": "2025-01-03T00:19:42Z",
+      "message": "Adding in roscon talk link"
+    },
+    {
+      "sha": "fd3183e7fa6f034720c227800a47001198e267bb",
+      "author": "Alberto Tudela",
+      "date": "2024-12-20T19:38:20Z",
+      "message": "Fix trajectory generation bug in docking controller (#78)\n\n* Fix trajectory generation\r\n\r\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\r\n\r\n* Replace for loop by do loop as in graceful_controller\r\n\r\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\r\n\r\n* Ceil and remove resolution\r\n\r\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>"
+    },
+    {
+      "sha": "28ad826afa57d55b05239a8c1bd922a3d694a736",
+      "author": "Alberto Tudela",
+      "date": "2024-12-19T15:03:23Z",
+      "message": "Fix test in main (#76)\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>"
+    },
+    {
+      "sha": "5d44e629c3125332619ffd41ba529bb5191cfb35",
+      "author": "Alberto Tudela",
+      "date": "2024-11-22T20:02:07Z",
+      "message": "Added collision detection for docking (#73)\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>"
+    },
+    {
+      "sha": "3374d58af91d8e5089c9c9937a875940f2da151f",
+      "author": "Steve Macenski",
+      "date": "2024-11-04T18:17:13Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "02e5b5c13ac9f4141020b0dbb757221322686888",
+      "author": "Alberto Tudela",
+      "date": "2024-11-04T18:16:10Z",
+      "message": "Added dynamic reconfigure and export controller in docking (#63)\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>"
+    },
+    {
+      "sha": "9c68683244602f41a6bd4b17eff7752e2aebca8c",
+      "author": "Steve Macenski",
+      "date": "2024-08-08T15:27:44Z",
+      "message": "move nova carter docking to nova carter github (#58)"
+    },
+    {
+      "sha": "b8001deeb25af7ba02cf65fe88f8a42673a884a1",
+      "author": "Vince Reda",
+      "date": "2024-08-07T16:00:48Z",
+      "message": "Check preempted in navigating to staging pose (#57)\n\n* Check preempted in navigating to staging pose\r\n\r\nSigned-off-by: redvinaa <redvinaa@gmail.com>\r\n\r\n* Requested changes\r\n\r\nSigned-off-by: redvinaa <redvinaa@gmail.com>\r\n\r\n* Requested changes vol 2\r\n\r\n* Requested changes vol 3\r\n\r\nSigned-off-by: redvinaa <redvinaa@gmail.com>\r\n\r\n* Fix tests\r\n\r\nSigned-off-by: redvinaa <redvinaa@gmail.com>\r\n\r\n* Fix remaining time calculation\r\n\r\nSigned-off-by: redvinaa <redvinaa@gmail.com>\r\n\r\n* Document missing args\r\n\r\nSigned-off-by: redvinaa <redvinaa@gmail.com>\r\n\r\n* Lint\r\n\r\nSigned-off-by: redvinaa <redvinaa@gmail.com>\r\n\r\n---------\r\n\r\nSigned-off-by: redvinaa <redvinaa@gmail.com>"
+    },
+    {
+      "sha": "328562eb8b930a82ffa4d6731b1be3e75ce1887c",
+      "author": "Steve Macenski",
+      "date": "2024-08-01T22:31:12Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "04850593520c673ff107cb47a5cd4cdb5eea57e8",
+      "author": "Vince Reda",
+      "date": "2024-07-29T22:14:10Z",
+      "message": "Add mutex to reloadDbCb to fail if called during docking (#56)"
+    },
+    {
+      "sha": "4a63900ca8d0609fe0663d8b87edb4d9f5a0561f",
+      "author": "Alberto Tudela",
+      "date": "2024-07-22T20:31:34Z",
+      "message": "Fix dock orientation while moving backwards (#51)\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>"
+    },
+    {
+      "sha": "c8ed2864eb22e68008c9d217f61dd0eeab019780",
+      "author": "Alberto Tudela",
+      "date": "2024-07-15T15:49:31Z",
+      "message": "Export pose_filter and plugins (#52)\n\nSigned-off-by: Alberto Tudela <ajtudela@gmail.com>"
+    },
+    {
+      "sha": "1ef8ea247708087b37f4db0bb2752091e7fd8e03",
+      "author": "Vince Reda",
+      "date": "2024-07-05T16:24:41Z",
+      "message": "Fix error_code_id (#50)\n\nSigned-off-by: redvinaa <redvinaa@gmail.com>"
+    },
+    {
+      "sha": "99a5ca93e06667a232dae9b7da2b186fa66093d0",
+      "author": "Vince Reda",
+      "date": "2024-07-03T16:16:48Z",
+      "message": "Add dock (#49)\n\n* Implement dock id\r\n\r\nSigned-off-by: redvinaa <redvinaa@gmail.com>\r\n\r\n* Update tests\r\n\r\nSigned-off-by: redvinaa <redvinaa@gmail.com>\r\n\r\n* Update docs\r\n\r\nSigned-off-by: redvinaa <redvinaa@gmail.com>\r\n\r\n* Implement requested changes\r\n\r\nSigned-off-by: redvinaa <redvinaa@gmail.com>\r\n\r\n* Fix virtual override error\r\n\r\nSigned-off-by: redvinaa <redvinaa@gmail.com>\r\n\r\n---------\r\n\r\nSigned-off-by: redvinaa <redvinaa@gmail.com>"
+    },
+    {
+      "sha": "ef63d96303af2d4f69bf336907aaec051279aca0",
+      "author": "Steve Macenski",
+      "date": "2024-07-02T15:31:56Z",
+      "message": "Revert \"Add dock id (#46)\" (#48)\n\nThis reverts commit 3fb0491f5a356ef79f9cf131654b0d8cdf3326bb."
+    },
+    {
+      "sha": "3fb0491f5a356ef79f9cf131654b0d8cdf3326bb",
+      "author": "Vince Reda",
+      "date": "2024-07-02T15:25:09Z",
+      "message": "Add dock id (#46)\n\n* Implement dock id\r\n\r\n* Update tests\r\n\r\n* Update docs\r\n\r\n* Implement requested changes"
+    },
+    {
+      "sha": "a3b14ff82a5866dc46f068758d5318c287eb1019",
+      "author": "Steve Macenski",
+      "date": "2024-06-08T19:19:42Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "5230153821b6b11250546eb783171e9764c38808",
+      "author": "Steve Macenski",
+      "date": "2024-06-04T01:02:39Z",
+      "message": "Fix building for 24.04"
+    },
+    {
+      "sha": "963d6e1a7be61561da940b187538bd7e3f6cf1cc",
+      "author": "Griswald Brooks",
+      "date": "2024-05-30T20:14:18Z",
+      "message": "Typos in README.md (#41)\n\nFix some typos"
+    },
+    {
+      "sha": "55b8761876741e0003a18b475ebbe0820483d40e",
+      "author": "Renjie Shao",
+      "date": "2024-05-02T17:42:06Z",
+      "message": "Make the docking server resumable. (#39)\n\n* Make the docking server resumable.\r\n\r\nMove tf2_buffer_ reset to on_cleanup. Initialize tf_listener_ in on_activate\r\n\r\n* Move  tf2_listener_ creation to on_activate"
+    },
+    {
+      "sha": "948dfaa4011afe625b7f568d3a879a7101123577",
+      "author": "Steve Macenski",
+      "date": "2024-03-07T21:24:15Z",
+      "message": "migrating to BTv4"
+    },
+    {
+      "sha": "d7f0bf9afe06bce95fa3ddabd38b09e2397dd9bb",
+      "author": "Steve Macenski",
+      "date": "2024-02-29T16:42:27Z",
+      "message": "Fix minor typo"
+    },
+    {
+      "sha": "03c1976515c852a6a982da8aa94b85583c8b2d39",
+      "author": "Steve Macenski",
+      "date": "2024-02-29T03:36:02Z",
+      "message": "Adding reload db service (#37)\n\n* Adding reload db service\r\n\r\n* docs"
+    },
+    {
+      "sha": "fa936cdbe4c5c404f588cb164c8b553231eb4c87",
+      "author": "Steve Macenski",
+      "date": "2024-02-27T22:17:50Z",
+      "message": "Finish testing main (#35)\n\n* Establishing 90% unit testing\r\n\r\n* Adding a few additional tests for main"
+    },
+    {
+      "sha": "075a65e1d154ac47dcd0fc86deb910da8a2b3a3a",
+      "author": "Steve Macenski",
+      "date": "2024-02-27T21:12:46Z",
+      "message": "Establishing 90% unit testing (#34)"
+    },
+    {
+      "sha": "f3f0b7b3dcfcf64954cb728f3dc456259720e3e8",
+      "author": "Steve Macenski",
+      "date": "2024-02-27T02:20:05Z",
+      "message": "Fix default"
+    },
+    {
+      "sha": "e3190652bb55e5393ebd9a200eb6437927a37ece",
+      "author": "Steve Macenski",
+      "date": "2024-02-26T23:31:50Z",
+      "message": "A few final updates for cleanup  (#31)\n\n* adding videos and nvidia logos\r\n\r\n* removing NV docking plugin to use normal plugin with options set\r\n\r\n* move to twist publisher on Rolling\r\n\r\n* compress gif"
+    },
+    {
+      "sha": "1f08ceb0c897438e8a6f81916e669f68dc0b20c7",
+      "author": "Steve Macenski",
+      "date": "2024-02-24T05:26:08Z",
+      "message": "Hardware testing changes [Humble] (#27)\n\n* fixes on hardware testing working\r\n\r\n* done for day\r\n\r\n* final changes\r\n\r\n* removing roll/pitch\r\n\r\n* adding controller backout target pose\r\n\r\n* documentationg\r\n\r\n* documentationg\r\n\r\n* documentation\r\n\r\n* documentation\r\n\r\n* documentation\r\n\r\n* completed testing\r\n\r\n---------\r\n\r\nCo-authored-by: Ashwin Varghese Kuruttukulam <ashwinvk@nvidia.com>"
+    },
+    {
+      "sha": "e2dd2945bca8e5e14929027c14cfe02d6dbfc253",
+      "author": "Steve Macenski",
+      "date": "2024-02-18T02:22:58Z",
+      "message": "small fixes in pose publisher"
+    },
+    {
+      "sha": "1adfab0187f839e7ff72f0ff8b8dc4287f57d08e",
+      "author": "Steve Macenski",
+      "date": "2024-02-18T01:55:02Z",
+      "message": "done for today"
+    },
+    {
+      "sha": "ee8e5b86b0e2185fad60a71af1212f42c6bdae28",
+      "author": "Steve Macenski",
+      "date": "2024-02-18T01:38:33Z",
+      "message": "finish launch"
+    },
+    {
+      "sha": "5ae403eb6568116a4bcc4ef333f6aa61bf19aebe",
+      "author": "Steve Macenski",
+      "date": "2024-02-18T01:25:47Z",
+      "message": "fix typo"
+    },
+    {
+      "sha": "b2981f52d065135d943599c691c806988c08688c",
+      "author": "Steve Macenski",
+      "date": "2024-02-18T01:25:09Z",
+      "message": "an initial launch file for nova carter dock"
+    },
+    {
+      "sha": "59cc36851a5b9e3e6cc9d041390b209dfd336901",
+      "author": "Steve Macenski",
+      "date": "2024-02-18T01:10:25Z",
+      "message": "Merge branch 'main' of github.com:open-navigation/opennav_docking"
+    },
+    {
+      "sha": "b33714da221adc5e073abdce475a4bf324394706",
+      "author": "Steve Macenski",
+      "date": "2024-02-18T01:10:17Z",
+      "message": "fixing"
+    },
+    {
+      "sha": "5aa3dfc866bd4704bbaefbf2a45f469955c572a3",
+      "author": "Michael Ferguson",
+      "date": "2024-02-17T23:49:34Z",
+      "message": "fix most tests, not sure why test_simple_charging_dock is still failing"
+    },
+    {
+      "sha": "174b86b166514372eabdebda537b60e7a4e332f6",
+      "author": "Steve Macenski",
+      "date": "2024-02-17T23:10:42Z",
+      "message": "a measure of final items"
+    },
+    {
+      "sha": "9c775f2d8216ba4b4f4482983e5253b66f9218cc",
+      "author": "Steve Macenski",
+      "date": "2024-02-17T22:23:55Z",
+      "message": "add prestaging pose tolerance to skip navigation and action request level prevention (#18)"
+    },
+    {
+      "sha": "7e7e45970082b43016c278bef27989fbdf7c927d",
+      "author": "Steve Macenski",
+      "date": "2024-02-17T21:56:18Z",
+      "message": "stall joint names throw if not set"
+    },
+    {
+      "sha": "5760f4bb897bd5c79e3df9779a3103774fc5c557",
+      "author": "Steve Macenski",
+      "date": "2024-02-17T21:54:05Z",
+      "message": "Merge pull request #23 from open-navigation/stall_detection\n\nadd stall detection"
+    },
+    {
+      "sha": "167db0394f030d57b51ca852fc1da62b040d7f43",
+      "author": "Steve Macenski",
+      "date": "2024-02-17T02:18:12Z",
+      "message": "Merge pull request #22 from open-navigation/plugin_docs\n\ndocument dock plugin, especially simple one"
+    },
+    {
+      "sha": "dbd3e543e00c175116b813899ec31d014ef706eb",
+      "author": "Michael Ferguson",
+      "date": "2024-02-15T22:16:54Z",
+      "message": "add stall detection"
+    },
+    {
+      "sha": "0e408d141f4cdc966a99359a7e47925d5aa6609e",
+      "author": "Michael Ferguson",
+      "date": "2024-02-16T17:08:59Z",
+      "message": "document dock plugin, especially simple one"
+    },
+    {
+      "sha": "e2e8cd3dd5d1109f4bd82c3813192c4b32a0a6d3",
+      "author": "Steve Macenski",
+      "date": "2024-02-15T21:30:33Z",
+      "message": "Merge pull request #21 from open-navigation/staging_yaw_offset\n\nimplement staging_offset_yaw"
+    },
+    {
+      "sha": "abf0859e25c2b78cf58806981cf7973db275f0ee",
+      "author": "Michael Ferguson",
+      "date": "2024-02-15T20:56:04Z",
+      "message": "implement staging_offset_yaw\n\nthis will usually be needed if using dock_backwards parameter"
+    },
+    {
+      "sha": "0ec73152eb87fd0cf01f878658abbab514c31f79",
+      "author": "Michael Ferguson",
+      "date": "2024-02-15T16:23:16Z",
+      "message": "update defaults based on typical marker orientation"
+    },
+    {
+      "sha": "e29a45ff9895bea3046f1e38132ed2364ce77367",
+      "author": "Michael Ferguson",
+      "date": "2024-02-15T16:21:50Z",
+      "message": "minor fix from on robot testing"
+    },
+    {
+      "sha": "7f62abe3e590dada4d3d2f4ef85ebb0e5d4b6799",
+      "author": "Steve Macenski",
+      "date": "2024-02-10T02:38:32Z",
+      "message": "Merge pull request #17 from open-navigation/filter\n\nadd pose filter"
+    },
+    {
+      "sha": "a9e7577d734a465335945fab32d75421df31c2f6",
+      "author": "Michael Ferguson",
+      "date": "2024-02-09T20:01:23Z",
+      "message": "separate filter, add test"
+    },
+    {
+      "sha": "904b17df3ba9aad47036d848fe5b813ce4958da1",
+      "author": "Michael Ferguson",
+      "date": "2024-02-08T22:55:37Z",
+      "message": "filter working - WIP"
+    },
+    {
+      "sha": "3d5146c11161fecba1d4bd396f74dcd4af299247",
+      "author": "Michael Ferguson",
+      "date": "2024-02-09T18:05:43Z",
+      "message": "remove unused fixed frame parameter"
+    },
+    {
+      "sha": "b2bfd8744fbe5c237ea556d4c2bca35b2683bbd0",
+      "author": "Steve Macenski",
+      "date": "2024-02-09T17:50:25Z",
+      "message": "Merge pull request #16 from open-navigation/explicit_reverse\n\nexplicit reverse and angular tolerance"
+    },
+    {
+      "sha": "a4c9790211214370c4d8019a461a4ae896be0587",
+      "author": "Michael Ferguson",
+      "date": "2024-02-08T20:24:40Z",
+      "message": "add angular tolerance"
+    },
+    {
+      "sha": "4bc34f386dcf41a351d5c733d33034b7a522e144",
+      "author": "Michael Ferguson",
+      "date": "2024-02-08T15:42:34Z",
+      "message": "be explicit about backwards/forwards"
+    },
+    {
+      "sha": "3c1d79c69f0a2e2bc46ebe241921b9d3321970fb",
+      "author": "Steve Macenski",
+      "date": "2024-02-08T22:57:14Z",
+      "message": "adding commented out test"
+    },
+    {
+      "sha": "3238a29094f9ce09c263671c703eb1bb9eee39f0",
+      "author": "Steve Macenski",
+      "date": "2024-02-08T22:45:37Z",
+      "message": "adding unit testing and minor reorgs"
+    },
+    {
+      "sha": "a898b4e86c06c7f09e06ebc13dc0d22cb5b67f3e",
+      "author": "Michael Ferguson",
+      "date": "2024-02-08T14:52:16Z",
+      "message": "support external marker detection (#12)\n\n* subscribe to marker topic\r\n* add parameters for marker->dock transformation\r\n* publish debug topics"
+    },
+    {
+      "sha": "4a5561a275844762c5916ea78add4a7ec63ee9d5",
+      "author": "Steve Macenski",
+      "date": "2024-02-08T02:05:27Z",
+      "message": "Merge pull request #13 from open-navigation/steve\n\nRefactor"
+    },
+    {
+      "sha": "3b42efd0ad1b544942481126d2192f6d0fd43284",
+      "author": "Steve Macenski",
+      "date": "2024-02-08T02:04:19Z",
+      "message": "review updates"
+    },
+    {
+      "sha": "3081ff5456fbe34556ca42fb45333d021673d425",
+      "author": "Steve Macenski",
+      "date": "2024-02-08T01:32:01Z",
+      "message": "refacator"
+    },
+    {
+      "sha": "3cd04c4cdefa300ea9df9f5562b0b14a491ecfb5",
+      "author": "Michael Ferguson",
+      "date": "2024-02-07T14:28:16Z",
+      "message": "simple_dock cleanup\n\n* split into hpp/cpp\n* parameterize things, cleanup parameter names"
+    },
+    {
+      "sha": "9ef9821d9b286cfe7ad26908e84cc1c31358993a",
+      "author": "Michael Ferguson",
+      "date": "2024-02-07T14:07:27Z",
+      "message": "refactor on upstream graceful controller (#11)\n\n * use upstream SmoothControlLaw\r\n * parameterize the control law parameters\r\n * cleanup parameters and make dynamic\r\n * Undock: allow cancel/preempt to work even if disableCharging is blocking\r\n * Test: update the test to publish that we aren't charging during undock\r\n * Test: actually check the return codes to make sure we get what we want"
+    },
+    {
+      "sha": "9eceb324bea485c28872b06d368604dfeda6c943",
+      "author": "Michael Ferguson",
+      "date": "2024-02-06T20:36:51Z",
+      "message": "refactor of docking server (#8)\n\n* refactor into separate functions\r\n* explicitly transform dock_pose to fixed_frame_\r\n* handle preempts\r\n* const correctness\r\n* add stashDockData\r\n* complete retry handling"
+    },
+    {
+      "sha": "0b030518fc02d516194e90a7ab42e99c92614154",
+      "author": "Steve Macenski",
+      "date": "2024-02-06T00:25:43Z",
+      "message": "Adding nova carter base dock plugin bones; updated callabck to batteryCallback; fixed a few types"
+    },
+    {
+      "sha": "3e6b2966903a9b2349df3a5d3df35889bb0174be",
+      "author": "Michael Ferguson",
+      "date": "2024-02-03T02:37:15Z",
+      "message": "activate velocity pub before action servers"
+    },
+    {
+      "sha": "f45a35bbdb960fcaef1e4dd770107635e0ec7e16",
+      "author": "Michael Ferguson",
+      "date": "2024-02-03T02:31:46Z",
+      "message": "remove _sec/_m from param names"
+    },
+    {
+      "sha": "631e6ee49bfdd9ec4e384fb902d50cf79964798a",
+      "author": "Michael Ferguson",
+      "date": "2024-02-02T18:30:12Z",
+      "message": "bug fix, get rid of to do"
+    },
+    {
+      "sha": "422ad800860245278fd267470dd44fbe4a67e98e",
+      "author": "Michael Ferguson",
+      "date": "2024-02-02T18:13:12Z",
+      "message": "comment the test a bit"
+    },
+    {
+      "sha": "e0a002e9f9930de011f6e30656ee39847f11ef8a",
+      "author": "Michael Ferguson",
+      "date": "2024-02-02T18:05:01Z",
+      "message": "speed up test"
+    },
+    {
+      "sha": "63b0f368a0b324ef00c8e00d01cebddcfe1975ce",
+      "author": "Michael Ferguson",
+      "date": "2024-02-02T18:04:53Z",
+      "message": "fix clamping of graceful law"
+    },
+    {
+      "sha": "b8d6a82bee7f551f77636ca700d561ad58b15dbd",
+      "author": "Michael Ferguson",
+      "date": "2024-02-02T18:04:34Z",
+      "message": "add a bit of logging for state transitions"
+    },
+    {
+      "sha": "c9ef0da2a72ea54055645accc85315f2280eb62f",
+      "author": "Michael Ferguson",
+      "date": "2024-02-02T17:26:12Z",
+      "message": "add feedback, retries make plugin more generic"
+    },
+    {
+      "sha": "62dd07d1ad0fd91ba812d8d87d33f73b4a01f6a0",
+      "author": "Michael Ferguson",
+      "date": "2024-02-02T15:59:28Z",
+      "message": "add disableCharging function"
+    },
+    {
+      "sha": "815fff014a551df02240645a5f96a261dabf9244",
+      "author": "Michael Ferguson",
+      "date": "2024-02-02T15:51:56Z",
+      "message": "initial pass at undocking\n* remove target_pose - dock pose is now robot pose so that\n  we can undock without additional information\n* update graceful control law to work in reverse\n* add undocking to system test\n* fix bug in docking where everything succeeded"
+    },
+    {
+      "sha": "a8facd2b5ff2679ec28030245563a8a4ef69650b",
+      "author": "Michael Ferguson",
+      "date": "2024-02-01T19:01:51Z",
+      "message": "implement cancel, add it to the test"
+    },
+    {
+      "sha": "8fcbdffb0f83d34d3db7214db652e5bc3e6c9a78",
+      "author": "Michael Ferguson",
+      "date": "2024-02-01T18:15:11Z",
+      "message": "system test working for docking"
+    },
+    {
+      "sha": "30704acc80623b52d60e1c0bbd66b080d2d91676",
+      "author": "Michael Ferguson",
+      "date": "2024-02-01T15:41:43Z",
+      "message": "make uncrustify pass"
+    },
+    {
+      "sha": "36e50c55d2f28d4033990a20f57187a126ce3d63",
+      "author": "Michael Ferguson",
+      "date": "2024-02-01T15:38:50Z",
+      "message": "make cpplint pass"
+    },
+    {
+      "sha": "4df154576193e053151fd6f74ec77d48b4f7a628",
+      "author": "Michael Ferguson",
+      "date": "2024-02-01T15:32:53Z",
+      "message": "fix copyright test"
+    },
+    {
+      "sha": "25631377af5418dc5aade858fb115d3c980ffa4f",
+      "author": "Michael Ferguson",
+      "date": "2024-02-01T15:02:43Z",
+      "message": "controller not a plugin, move header"
+    },
+    {
+      "sha": "52b143db1a80d547524036234ccb06e071978855",
+      "author": "Steve Macenski",
+      "date": "2024-01-30T19:32:44Z",
+      "message": "adding behavior tree docking example"
+    },
+    {
+      "sha": "9362ce355514e7b2ee76c6d5d1524c67676fd909",
+      "author": "Steve Macenski",
+      "date": "2024-01-30T18:19:59Z",
+      "message": "adding TF buffer to dock database"
+    },
+    {
+      "sha": "60c846a2b05e0d5e8a657dbf9d60ed30f77ba891",
+      "author": "Steve Macenski",
+      "date": "2024-01-30T18:14:53Z",
+      "message": "Merge pull request #7 from open-navigation/fergs\n\nFergs"
+    },
+    {
+      "sha": "108dbb747586a48750d8242f6129a035092250bf",
+      "author": "Steve Macenski",
+      "date": "2024-01-30T18:14:47Z",
+      "message": "Merge branch 'main' into fergs"
+    },
+    {
+      "sha": "2a5006c2d84a1933e050908b0b4a749e4daaacf5",
+      "author": "Steve Macenski",
+      "date": "2024-01-29T22:42:46Z",
+      "message": "adding contextual error codes"
+    },
+    {
+      "sha": "a081984c9eda51888608ddc001ada51b66208a71",
+      "author": "Steve Macenski",
+      "date": "2024-01-29T22:10:40Z",
+      "message": "readme"
+    },
+    {
+      "sha": "abe5a3c7fa0112783db12bf127ef71ae6b6b30d2",
+      "author": "Steve Macenski",
+      "date": "2024-01-29T21:54:30Z",
+      "message": "adding test script"
+    },
+    {
+      "sha": "9f1d597cba632c6da06150e6628c9b5929af755a",
+      "author": "Steve Macenski",
+      "date": "2024-01-29T21:39:22Z",
+      "message": "adding BT nodes"
+    },
+    {
+      "sha": "a18a96506b538c1d2201e8d87f2efc1587d7d0dc",
+      "author": "Michael Ferguson",
+      "date": "2024-01-21T20:09:31Z",
+      "message": "add publisher"
+    },
+    {
+      "sha": "ef59a5d576e83b6d7788a65c9a9301e2575b3226",
+      "author": "Michael Ferguson",
+      "date": "2024-01-21T19:47:21Z",
+      "message": "add mockup of controller"
+    },
+    {
+      "sha": "a582496628f6a57a79dfe13e103137c2888207e3",
+      "author": "Michael Ferguson",
+      "date": "2024-01-21T18:22:31Z",
+      "message": "launch and plugin load"
+    },
+    {
+      "sha": "06899e940167b2010f78cfdf6f93306270249102",
+      "author": "Michael Ferguson",
+      "date": "2024-01-21T18:21:44Z",
+      "message": "add missing geometry_msgs include"
+    },
+    {
+      "sha": "f340738378aafe9aa2b1aba0160570f1e4ade6fd",
+      "author": "Michael Ferguson",
+      "date": "2024-01-17T22:18:55Z",
+      "message": "mocking out control loops"
+    },
+    {
+      "sha": "72fe96a7b6bccec2e57239b1cf11a4fda033e274",
+      "author": "Steve Macenski",
+      "date": "2024-01-12T00:00:05Z",
+      "message": "navigator retry, timeout, and unit testing"
+    },
+    {
+      "sha": "c32e9f357d03dcaa41893a1af7c174a1989c83de",
+      "author": "Steve Macenski",
+      "date": "2024-01-11T01:09:48Z",
+      "message": "adding navigator to poses"
+    },
+    {
+      "sha": "81a3df86ce0be2bef36c781af0f1615d38e60472",
+      "author": "Steve Macenski",
+      "date": "2024-01-10T00:51:31Z",
+      "message": "docs"
+    },
+    {
+      "sha": "7e6391a9ffcdefa07a2751146cb0451639f87a8b",
+      "author": "Steve Macenski",
+      "date": "2024-01-10T00:50:48Z",
+      "message": "adding docs"
+    },
+    {
+      "sha": "aafd36f65148e097c9e706e6086b6c0df0063dd3",
+      "author": "Steve Macenski",
+      "date": "2024-01-10T00:41:21Z",
+      "message": "readme info"
+    },
+    {
+      "sha": "9636f82f9aa73240557e0eefc7a3eed62a259f28",
+      "author": "Steve Macenski",
+      "date": "2024-01-10T00:13:15Z",
+      "message": "some ~75% unit testing"
+    },
+    {
+      "sha": "eddd200cc071fc657fcf84e49b0e35bee03b69b5",
+      "author": "Steve Macenski",
+      "date": "2024-01-09T22:51:31Z",
+      "message": "adding staging pose logic"
+    },
+    {
+      "sha": "13172280ea9044122a69c64f13a5f54633b7ffe5",
+      "author": "Steve Macenski",
+      "date": "2024-01-09T22:14:34Z",
+      "message": "add dock database and ergonomics to use"
+    },
+    {
+      "sha": "83d3c077260099faffc763243f9e71e7c2587f7c",
+      "author": "Steve Macenski",
+      "date": "2024-01-09T01:53:50Z",
+      "message": "starting dock database"
+    },
+    {
+      "sha": "e1af39e36aa83109a024a43a930206ec80e18464",
+      "author": "Steve Macenski",
+      "date": "2024-01-09T00:50:16Z",
+      "message": "adding BT dir"
+    },
+    {
+      "sha": "615d6ab75d5da8c892e97b5b53d8c451d09fa5f4",
+      "author": "Steve Macenski",
+      "date": "2024-01-09T00:48:45Z",
+      "message": "adding charging dock initial header"
+    },
+    {
+      "sha": "1eccc767b7e46428d8849674b4e541c247c66c64",
+      "author": "Steve Macenski",
+      "date": "2024-01-09T00:43:14Z",
+      "message": "adding opennav docking core package and a few util updates"
+    },
+    {
+      "sha": "972dc2882ae5fa225502aa57bde5dd8b54c01e8a",
+      "author": "Steve Macenski",
+      "date": "2024-01-09T00:32:37Z",
+      "message": "adding basic server structure"
+    },
+    {
+      "sha": "1591e72af79abca781dbb7a17d849f27de6b9127",
+      "author": "Steve Macenski",
+      "date": "2024-01-08T22:54:08Z",
+      "message": "Initial commit"
+    }
+  ]
+}

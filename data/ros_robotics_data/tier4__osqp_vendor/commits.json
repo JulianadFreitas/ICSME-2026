@@ -1,0 +1,138 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-07T22:14:48Z",
+    "source": "github_rest",
+    "endpoint": "/repos/{owner}/{repo}/commits",
+    "owner": "tier4",
+    "repo": "osqp_vendor",
+    "per_page": 100
+  },
+  "data": [
+    {
+      "sha": "3759ffce266ab7043fc809ff2a548e45d413d144",
+      "author": "mosfet80",
+      "date": "2026-01-05T12:13:13Z",
+      "message": "Update .github tests (#20)\n\n* Update build.yml\n\nupdated to developed ROS distro \r\nupdated action-ros-ci\n\n* Update build.yml\n\n* Update lint.yml\n\n* Update build.yml\n\n* Update lint.yml\n\n* Update build.yml\n\n* Update build.yml\n\n* Update lint.yml\n\n* Update build.yml"
+    },
+    {
+      "sha": "0ee5ce290a8c44f1a953d54e1da7a878a8302d7e",
+      "author": "mosfet80",
+      "date": "2026-01-05T11:40:12Z",
+      "message": "Update OSQP -drop ros1 (#22)\n\nupdate osqp to version  0.6.3.\nchangelog: https://github.com/osqp/osqp/releases/tag/v0.6.3\n\nDrop ros1 interfaces\n\nfix cmake <3.10 deprecation\n\nUpdate CMakeLists.txt"
+    },
+    {
+      "sha": "1ea3682dacc08bd05d301098b202e74bd6416251",
+      "author": "Daisuke Nishimatsu",
+      "date": "2022-10-23T11:38:09Z",
+      "message": "0.2.0"
+    },
+    {
+      "sha": "36275126071c0731ff5ca971aac25e1b8e882d69",
+      "author": "Daisuke Nishimatsu",
+      "date": "2022-10-23T11:37:01Z",
+      "message": "docs: update changelog\n\nSigned-off-by: Daisuke Nishimatsu <border_goldenmarket@yahoo.co.jp>"
+    },
+    {
+      "sha": "a05a1b3b2a14dfe1560f4596938d75baf511ddba",
+      "author": "Daisuke Nishimatsu",
+      "date": "2022-10-23T11:34:05Z",
+      "message": "feat: enable to build with both ros1 and ros2 (#16)\n\n* feat: enable to build with both ros1 and ros2\r\n\r\nSigned-off-by: Daisuke Nishimatsu <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix github action\r\n\r\nSigned-off-by: Daisuke Nishimatsu <border_goldenmarket@yahoo.co.jp>\r\n\r\nSigned-off-by: Daisuke Nishimatsu <border_goldenmarket@yahoo.co.jp>"
+    },
+    {
+      "sha": "84661fc072ecd19cd006864c372c259d0c0de4b1",
+      "author": "wep21",
+      "date": "2021-12-07T02:23:23Z",
+      "message": "0.0.4"
+    },
+    {
+      "sha": "0ca2a0ac89844f551f7426d6ff34193ef8571e03",
+      "author": "wep21",
+      "date": "2021-12-07T02:14:48Z",
+      "message": "Add changelog\n\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>"
+    },
+    {
+      "sha": "d3850a7dd68c3334052912c508b92fc3d7f74bd0",
+      "author": "Scott K Logan",
+      "date": "2021-12-06T12:34:03Z",
+      "message": "Suppress update of pinned git repository (#8)\n\nThe source at that ref will never change, so there is no need to try to\r\nupdate it. This will avoid unnecessary invalidation of the build and\r\ninstall targets for the external project.\r\n\r\nSigned-off-by: Scott K Logan <logans@cottsay.net>"
+    },
+    {
+      "sha": "3cbb1528278fe007293216cb89d86accbd3c5fcf",
+      "author": "Scott K Logan",
+      "date": "2021-12-06T12:33:43Z",
+      "message": "Always preserve source permissions in vendor packages (#7)\n\nIn vendor packages where we're installing an executable, we use\r\nUSE_SOURCE_PERMISSIONS to make sure that the executable permissions on\r\nthe binaries are maintained when the external project's staging\r\ndirectory is recursively installed to the final installation directory.\r\n\r\nIn most of our vendor packages, we aren't using that flag where we don't\r\nexpect an executable binary to be installed. However, for reasons I\r\nwon't go into here, some systems use executable permissions on shared\r\nobject libraries as well. The linker seems to handle this on our behalf,\r\nbut we're losing the permissions during the recursive copy operation if\r\nwe don't use this flag.\r\n\r\nSigned-off-by: Scott K Logan <logans@cottsay.net>"
+    },
+    {
+      "sha": "fb9d824776f74be368133a8bf6d89539a4edbaa0",
+      "author": "Scott K Logan",
+      "date": "2021-12-06T12:33:27Z",
+      "message": "Add buildtool_depend on git (#6)\n\nSigned-off-by: Scott K Logan <logans@cottsay.net>"
+    },
+    {
+      "sha": "63f18d81bfac7fed10b1e6fde571ed2bc7f8ca67",
+      "author": "Daisuke Nishimatsu",
+      "date": "2021-12-06T12:33:03Z",
+      "message": "Update workflows (#9)\n\n* Update workflows\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* Remove artifact\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* Skip tests\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>"
+    },
+    {
+      "sha": "511818d9b6243e07c8de12545ff3047b041a801e",
+      "author": "Esteve Fernandez",
+      "date": "2021-04-13T08:00:23Z",
+      "message": "Release 0.0.3"
+    },
+    {
+      "sha": "8df84a34ce0a31c3cc9d2e031f4780b917f31c06",
+      "author": "Esteve Fernandez",
+      "date": "2021-04-13T07:47:45Z",
+      "message": "Merge pull request #5 from tier4/update-0.6.2\n\nBump version to 0.6.2"
+    },
+    {
+      "sha": "3f044a7cfc364a07bbfbdfd42f54a07547be0263",
+      "author": "Esteve Fernandez",
+      "date": "2021-04-13T07:45:23Z",
+      "message": "Bump version to 0.6.2"
+    },
+    {
+      "sha": "1efbb92a72a54cca6fce8b90e4c05235e8dac67d",
+      "author": "Esteve Fernandez",
+      "date": "2020-11-04T13:29:22Z",
+      "message": "Release 0.0.2"
+    },
+    {
+      "sha": "d435e0295fc843f5aa2e3210828bfc9f025202f5",
+      "author": "Esteve Fernandez",
+      "date": "2020-10-29T16:55:47Z",
+      "message": "Added missing CONTRIBUTING.md"
+    },
+    {
+      "sha": "7bec51212ce3c23c3e988372ee2e1a6885f84c33",
+      "author": "Esteve Fernandez",
+      "date": "2020-10-19T09:55:17Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "845f0e4e2ebb81526054c6345261cbbe6d1e42ef",
+      "author": "Esteve Fernandez",
+      "date": "2020-10-16T15:08:59Z",
+      "message": "Removed unused BUILD_SHARED_LIBS=ON, not needed since osqp builds both shared and static libraries"
+    },
+    {
+      "sha": "0131f7a4ee6c240050388082f839b9ff9a104cc4",
+      "author": "Esteve Fernandez",
+      "date": "2020-10-15T15:42:49Z",
+      "message": "Merge pull request #1 from tier4/vendor\n\nAdded OSQP vendor package"
+    },
+    {
+      "sha": "7ee423fb127b16e8a3a93eea00fb1c10dd19afba",
+      "author": "Esteve Fernandez",
+      "date": "2020-10-15T10:46:32Z",
+      "message": "Added OSQP vendor package"
+    },
+    {
+      "sha": "3eb7db653139dbeb8a71370ca0408b0c2f490282",
+      "author": "Esteve Fernandez",
+      "date": "2020-10-15T10:36:53Z",
+      "message": "Initial commit"
+    }
+  ]
+}

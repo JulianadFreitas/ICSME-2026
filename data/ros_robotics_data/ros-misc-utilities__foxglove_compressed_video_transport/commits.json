@@ -1,0 +1,84 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-07T06:36:16Z",
+    "source": "github_rest",
+    "endpoint": "/repos/{owner}/{repo}/commits",
+    "owner": "ros-misc-utilities",
+    "repo": "foxglove_compressed_video_transport",
+    "per_page": 100
+  },
+  "data": [
+    {
+      "sha": "c08369361c2d7c86d06c38b17589194b8185333e",
+      "author": "Bernd Pfrommer",
+      "date": "2025-10-20T13:41:58Z",
+      "message": "default gop_size to 1 and warn if not set"
+    },
+    {
+      "sha": "62d8c8d1f6699232121a9c3c0915f1248f7b17df",
+      "author": "Bernd Pfrommer",
+      "date": "2025-09-03T19:53:06Z",
+      "message": "use correct img transp version 5.0.0"
+    },
+    {
+      "sha": "6ebb55e6949fd25377dcc6fb508fe3d9602a9888",
+      "author": "Bernd Pfrommer",
+      "date": "2025-09-01T14:46:19Z",
+      "message": "support new image transport node interface"
+    },
+    {
+      "sha": "5a36185bba6ef8d17f96ed8ac28db7d223bedaf8",
+      "author": "Bernd Pfrommer",
+      "date": "2025-08-23T23:19:56Z",
+      "message": "fix param dump bug by changing decoder param sep from . to _"
+    },
+    {
+      "sha": "5708b92f70e8d1b0463ecaaf7ee643e0de086950",
+      "author": "Bernd Pfrommer",
+      "date": "2025-08-08T02:34:52Z",
+      "message": "adjust to new image_transport and encoder/decoder API, added tests (#9)\n\n* adapt to new ffmpeg_encoder_decoder API\n* adjustments for new image_transport API\n* added tests\n* rename \"map\" parameter to \"decoders\"\n* parameters no longer have \".\" prefix\n* deal with humble brokenness where base_topic is not prefixed with namespace, but namespace is removed\n* package splitting functions into utilities file"
+    },
+    {
+      "sha": "7491e35b9f8a56f64fccd2197db1a8c2b7166483",
+      "author": "Bernd Pfrommer",
+      "date": "2025-05-26T20:05:07Z",
+      "message": "avoid ament_target_dependencies"
+    },
+    {
+      "sha": "6331d49749927cb2df47f0fb0ef3be797e3b6270",
+      "author": "Tony Najjar",
+      "date": "2025-04-18T15:45:58Z",
+      "message": "Add Constant Rate Factor\n\n---------\nSigned-off-by: Angsa Deployment Team <team@angsa-robotics.com>\nCo-authored-by: Angsa Deployment Team <team@angsa-robotics.com>"
+    },
+    {
+      "sha": "1dd08ca1d0c22f217a377d17fd3680e887fa5996",
+      "author": "Tony Najjar",
+      "date": "2025-04-18T13:17:54Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "0044f8296f3edc98ab1e20d55684d0839001bcf4",
+      "author": "Michal Sojka",
+      "date": "2025-03-30T10:22:17Z",
+      "message": "README: Fix typo"
+    },
+    {
+      "sha": "bb75cbe7335532ed2d18b6f284d86172385e609b",
+      "author": "Michal Sojka",
+      "date": "2025-03-29T23:51:09Z",
+      "message": "Fix segfault\n\nIn my setup under Jazzy, foxglove_compressed_video_transport always\nsegfaults after receiving several frames. See the backtrace below. It\nturns out that the publish_fn address passed to Publisher::publish()\ncan be different in every invocation. Therefore, storing the value\nduring initialization is not sufficient and we have to do for every\nframe.\n\n    #0  0x00007ff8c7da8f80 in ?? ()\n    #1  0x00007fff813feede in std::function<void(foxglove_msgs::msg::CompressedVideo_<std::allocator<void> > const&)>::operator() (this=<optimized out>, __args#0=...)\n        at /nix/store/aw0qxjd1phf16qhlwpdb4x87yymfv9rp-gcc-14-20241116/include/c++/14-20241116/bits/std_function.h:591\n    #2  foxglove_compressed_video_transport::Publisher::packetReady (this=0xa3e450, frame_id=..., stamp=..., codec=..., width=<optimized out>, height=<optimized out>, pts=0,\n        flags=1 '\\001', data=0x7fff44194140 \"\", sz=73604) at /home/ros/devel/src/foxglove_compressed_video_transport/src/publisher.cpp:163\n    #3  0x00007fff812f1a75 in ffmpeg_encoder_decoder::Encoder::drainPacket(std_msgs::msg::Header_<std::allocator<void> > const&, int, int) ()\n       from /nix/store/w84wzlpj2c6gk1mikx22dcxq5wi6mhbq-ros-env/lib/libffmpeg_encoder_decoder.so\n    #4  0x00007fff812f2470 in ffmpeg_encoder_decoder::Encoder::encodeImage(cv::Mat const&, std_msgs::msg::Header_<std::allocator<void> > const&, rclcpp::Time const&) ()\n       from /nix/store/w84wzlpj2c6gk1mikx22dcxq5wi6mhbq-ros-env/lib/libffmpeg_encoder_decoder.so\n    #5  0x00007fff812f2880 in ffmpeg_encoder_decoder::Encoder::encodeImage(sensor_msgs::msg::Image_<std::allocator<void> > const&) ()\n       from /nix/store/w84wzlpj2c6gk1mikx22dcxq5wi6mhbq-ros-env/lib/libffmpeg_encoder_decoder.so\n    #6  0x00007fff813ff0f7 in foxglove_compressed_video_transport::Publisher::publish (this=this@entry=0xa3e450, msg=..., publish_fn=...)\n        at /home/wsh/projects/certicar/devel/ros2_ws/src/foxglove_compressed_video_transport/src/publisher.cpp:212\n    #7  0x00007fff8140792e in image_transport::SimplePublisherPlugin<foxglove_msgs::msg::CompressedVideo_<std::allocator<void> > >::publish (this=0xa3e450, message=..., publisher=...)\n        at /nix/store/w84wzlpj2c6gk1mikx22dcxq5wi6mhbq-ros-env/include/image_transport/image_transport/simple_publisher_plugin.hpp:160\n    #8  image_transport::SimplePublisherPlugin<foxglove_msgs::msg::CompressedVideo_<std::allocator<void> > >::publish (this=0xa3e450, message=...)\n        at /nix/store/w84wzlpj2c6gk1mikx22dcxq5wi6mhbq-ros-env/include/image_transport/image_transport/simple_publisher_plugin.hpp:94\n    #9  0x00007ffff7da268a in image_transport::Publisher::publish(sensor_msgs::msg::Image_<std::allocator<void> > const&) const ()\n       from /nix/store/w84wzlpj2c6gk1mikx22dcxq5wi6mhbq-ros-env/lib/libimage_transport.so\n    #10 0x00007ffff7db31da in image_transport::CameraPublisher::publish(sensor_msgs::msg::Image_<std::allocator<void> >&, sensor_msgs::msg::CameraInfo_<std::allocator<void> >&, rclcpp::Time) const () from /nix/store/w84wzlpj2c6gk1mikx22dcxq5wi6mhbq-ros-env/lib/libimage_transport.so\n    #11 0x000000000050f952 in ros_publish (stamp=<optimized out>, w=<optimized out>, h=<optimized out>, fov=<optimized out>, data=<optimized out>)\n        at /home/wsh/projects/certicar/devel/ros2_ws/src/carla_camera_publisher/ros.cpp:145\n    #12 0x000000000050d361 in operator()<boost::shared_ptr<carla::sensor::SensorData> > (__closure=<optimized out>, data=...)\n        at /home/wsh/projects/certicar/devel/ros2_ws/src/carla_camera_publisher/main.cpp:157\n    #13 std::__invoke_impl<void, main(int, char const**)::<lambda(auto:261)>&, boost::shared_ptr<carla::sensor::SensorData> > (__f=...)\n        at /nix/store/aw0qxjd1phf16qhlwpdb4x87yymfv9rp-gcc-14-20241116/include/c++/14-20241116/bits/invoke.h:61\n    #14 std::__invoke_r<void, main(int, char const**)::<lambda(auto:261)>&, boost::shared_ptr<carla::sensor::SensorData> > (__fn=...)\n        at /nix/store/aw0qxjd1phf16qhlwpdb4x87yymfv9rp-gcc-14-20241116/include/c++/14-20241116/bits/invoke.h:111\n    #15 std::_Function_handler<void(boost::shared_ptr<carla::sensor::SensorData>), main(int, char const**)::<lambda(auto:261)> >::_M_invoke(const std::_Any_data &, boost::shared_ptr<carla::sensor::SensorData> &&) (__functor=..., __args#0=...) at /nix/store/aw0qxjd1phf16qhlwpdb4x87yymfv9rp-gcc-14-20241116/include/c++/14-20241116/bits/std_function.h:290\n    #16 0x000000000058568f in std::_Function_handler<void (carla::Buffer), carla::client::detail::Simulator::SubscribeToSensor(carla::client::Sensor const&, std::function<void (boost::shared_ptr<carla::sensor::SensorData>)>)::{lambda(auto:1)#1}>::_M_invoke(std::_Any_data const&, carla::Buffer&&) ()\n    #17 0x00000000005ed938 in boost::asio::detail::completion_handler<boost::asio::detail::binder0<carla::streaming::detail::tcp::Client::ReadData()::{lambda()#1}::operator()() const::{lambda(boost::system::error_code, unsigned long)#1}::operator()(boost::system::error_code, unsigned long) const::{lambda()#1}>, boost::asio::io_context::basic_executor_type<std::allocator<void>, 0ul> >::do_complete(void*, boost::asio::detail::scheduler_operation*, boost::system::error_code const&, unsigned long) ()\n    #18 0x00000000005f8215 in boost::asio::detail::strand_service::do_complete(void*, boost::asio::detail::scheduler_operation*, boost::system::error_code const&, unsigned long) ()\n    #19 0x000000000053d6f4 in boost::asio::detail::scheduler::run(boost::system::error_code&) [clone .isra.0] ()\n    #20 0x00000000005589fb in std::thread::_State_impl<std::thread::_Invoker<std::tuple<carla::ThreadPool::AsyncRun(unsigned long)::{lambda()#1}> > >::_M_run() ()\n    #21 0x00007ffff6eed0a4 in execute_native_thread_routine () from /nix/store/6kbrc4ca98srlfpgyaayl2q9zpg1gys6-gcc-14-20241116-lib/lib/libstdc++.so.6\n    #22 0x00007ffff6a972e3 in start_thread (arg=<optimized out>) at pthread_create.c:447\n    #23 0x00007ffff6b1b2fc in __GI___clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78"
+    },
+    {
+      "sha": "b420acf3cb852c332283c053cd3aa506fa9acfda",
+      "author": "eLEcTRiCZiTy",
+      "date": "2024-09-26T22:50:45Z",
+      "message": "Fill empty message fields (#1)\n\n* Fix missing timestamp and frame_id in subscriber and publisher\r\n\r\nSigned-off-by: Jan Vojnar <electrygit@outlook.com>"
+    },
+    {
+      "sha": "9f47aca04016203882a9cb08362d4ceb61cb2397",
+      "author": "Bernd Pfrommer",
+      "date": "2024-08-20T20:28:39Z",
+      "message": "initial commit"
+    }
+  ]
+}

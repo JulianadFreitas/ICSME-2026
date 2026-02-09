@@ -1,0 +1,156 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-07T02:29:52Z",
+    "source": "github_rest",
+    "endpoint": "/repos/{owner}/{repo}/commits",
+    "owner": "osrf",
+    "repo": "ros2launch_security",
+    "per_page": 100
+  },
+  "data": [
+    {
+      "sha": "1d0db0e93637b95096cc158eb9e5184c20b60c03",
+      "author": "William Woodall",
+      "date": "2021-08-11T20:55:39Z",
+      "message": "1.0.0\n\nSigned-off-by: William Woodall <william@osrfoundation.org>"
+    },
+    {
+      "sha": "6d14d711cf7f79a68664d938ed5cfabef73f6c4c",
+      "author": "William Woodall",
+      "date": "2021-08-11T20:54:25Z",
+      "message": "changelogs\n\nSigned-off-by: William Woodall <william@osrfoundation.org>"
+    },
+    {
+      "sha": "aa38a8b0884c55ac3db95d592899f907f06865ff",
+      "author": "William Woodall",
+      "date": "2021-08-11T19:55:45Z",
+      "message": "fix flake8 issue (#10)\n\nSigned-off-by: William Woodall <william@osrfoundation.org>"
+    },
+    {
+      "sha": "c1c14ac4a684d538ddf12f1c3f64b61d74f0b2bb",
+      "author": "Abrar Rahman Protyasha",
+      "date": "2021-08-10T19:58:38Z",
+      "message": "Added enclave check in `_setup_security` (#8)\n\nThis commit introduces a check in\r\n`ros2launch_security.node_action.security.SecurityNodeActionExtension._setup_security`\r\nthat ensures an enclave does not already exist before\r\ncreating it. This is necessary because:\r\n\r\n1. It is entirely possible that an enclave was created prior\r\nto a `ros2 launch [...] --secure` run.\r\n2. Without checking for a pre-existing run, the\r\n`sros2.keystore._enclave.create_enclave` method overwrites any specific\r\n`permissions.xml` file with wildcarded permissions, which does not work\r\nwell when integrating with tools like `nodl_to_policy` and `ros2\r\nsecurity create_permissions`, which may have been used earlier either\r\nprogrammatically or through the CLI to generate desired access\r\npermission XML files.\r\n\r\nSigned-off-by: Abrar Rahman Protyasha <abrar@openrobotics.org>"
+    },
+    {
+      "sha": "45a028debc059c34bbc560dafc3b56b8c286371a",
+      "author": "Abrar Rahman Protyasha",
+      "date": "2021-08-10T19:57:35Z",
+      "message": "Integration test with `nodl_to_policy` and middleware-specific XML permissions files (#9)\n\n* Introducing test dependencies on nodl/policy packages\r\n\r\nSigned-off-by: Abrar Rahman Protyasha <abrar@openrobotics.org>\r\n\r\n* Generating explicit permissions for each NoDL description in the package\r\n\r\nSigned-off-by: Abrar Rahman Protyasha <abrar@openrobotics.org>\r\n\r\n* Adding new launch test to CMakeLists.txt\r\n\r\nSigned-off-by: Abrar Rahman Protyasha <abrar@openrobotics.org>\r\n\r\n* Adding end-to-end test using `nodl_to_policy`\r\n\r\nThis commit fixes the launch test where a secure launch\r\ndescription is created, in which permission artifacts\r\nare generated using the converted policies provided by\r\n`nodl_to_policy` package.\r\n\r\nBroadly, it serves as a bigger example for integration of\r\n`nodl_to_policy`.\r\n\r\nSigned-off-by: Abrar Rahman Protyasha <abrar@openrobotics.org>\r\n\r\n* Add documentation to nodl_to_policy test script\r\n\r\nSigned-off-by: Abrar Rahman Protyasha <abrar@openrobotics.org>"
+    },
+    {
+      "sha": "6e1d3b0b4c6b5215576f07ab1343b6a1fbc499e8",
+      "author": "William Woodall",
+      "date": "2021-08-10T18:32:10Z",
+      "message": "End to end test (#4)\n\n* move ros2launch_security into a subdirectory\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* add example\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* adding automated test for example\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* adding test that uses ros2 launch --secure\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* linters\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* fix typos\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* review feedback\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* remove vestigial fix from test I copied from\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>"
+    },
+    {
+      "sha": "99c92c7ede61f0a27aa9a19e45e025470f5e571b",
+      "author": "Michel Hidalgo",
+      "date": "2021-06-15T08:53:24Z",
+      "message": "Resolve substitutions upon SecurityNodeActionExtension._setup_security() (#3)\n\n* Resolve substitutions upon SecurityNodeActionExtension._setup_security()\r\n\r\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>\r\n\r\n* normalize node package and node executable before performing substitutions\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\nCo-authored-by: William Woodall <william@osrfoundation.org>"
+    },
+    {
+      "sha": "a98ba31b6da0d2812404b5a8c894f41cdf3f9564",
+      "author": "Geoffrey Biggs",
+      "date": "2021-05-10T22:58:45Z",
+      "message": "Merge pull request #1 from osrf/security_extension\n\nAdd security extensions"
+    },
+    {
+      "sha": "5b67af9d4161c0692717e0c82e4c7edb9f243552",
+      "author": "Geoffrey Biggs",
+      "date": "2021-04-19T23:38:49Z",
+      "message": "Add author info\n\nCo-authored-by: Kyle Fazzari <kyrofa+github@gmail.com>"
+    },
+    {
+      "sha": "762751a322c0bf58b26ebc0dd34056d7d13601d1",
+      "author": "Geoffrey Biggs",
+      "date": "2021-04-19T23:38:24Z",
+      "message": "Set maintainer info\n\nCo-authored-by: Kyle Fazzari <kyrofa+github@gmail.com>"
+    },
+    {
+      "sha": "1f3428fbd6bfaa1952887f689e342e0984039503",
+      "author": "Geoffrey Biggs",
+      "date": "2021-04-07T23:37:52Z",
+      "message": "Merge pull request #2 from hidmic/security_extension\n\nFix failing tests"
+    },
+    {
+      "sha": "9c6cbd9bf3b52c2cd6eb9ae7c8978480280ae95d",
+      "author": "Michel Hidalgo",
+      "date": "2021-04-05T18:23:09Z",
+      "message": "Fix failing tests\n\n- Target sros2.keystore._keystore, not sros2.api._keystore\n- Target nodl module, not launch_ros.actions.node.nodl\n- Patch nodl.get_node_by_executable() properly\n- Lookup enclave in Node.cmd attribute\n- Add demo_nodes_py as test dependency\n\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>"
+    },
+    {
+      "sha": "6567d1fd66be60058e3ac1e5bbfcadbfdff59de9",
+      "author": "Geoffrey Biggs",
+      "date": "2021-03-30T02:16:29Z",
+      "message": "Match changes in the extension API\n\nSigned-off-by: Geoffrey Biggs <gbiggs@killbots.net>"
+    },
+    {
+      "sha": "db0237e1ac471cbea2cdbe9423c94fa716da40b6",
+      "author": "Geoffrey Biggs",
+      "date": "2021-03-29T08:32:05Z",
+      "message": "Force garbage collection to explicitly remove objects\n\nSigned-off-by: Geoffrey Biggs <gbiggs@killbots.net>"
+    },
+    {
+      "sha": "7d6b2ca26fa9ebf955fc85f84000b75585ddcaba",
+      "author": "Geoffrey Biggs",
+      "date": "2021-03-29T08:28:46Z",
+      "message": "Merge remote-tracking branch 'origin/security_extension' into security_extension"
+    },
+    {
+      "sha": "ce8695a8465a3f4cd7dffe5307d6cfec8f9814a7",
+      "author": "Geoffrey Biggs",
+      "date": "2021-03-29T08:27:50Z",
+      "message": "Remove unused function\n\nSigned-off-by: Geoffrey Biggs <gbiggs@killbots.net>"
+    },
+    {
+      "sha": "42a84bc1a1bd9944b62c074c4616f0c416144447",
+      "author": "Geoffrey Biggs",
+      "date": "2021-03-29T08:25:32Z",
+      "message": "Fix spelling error\n\nCo-authored-by: Michel Hidalgo <michel@ekumenlabs.com>"
+    },
+    {
+      "sha": "68b06309fcae799c4d9f08d5ce84f2b03d1a2889",
+      "author": "Geoffrey Biggs",
+      "date": "2021-03-29T07:41:04Z",
+      "message": "Match changes in the extension API\n\nSigned-off-by: Geoffrey Biggs <gbiggs@killbots.net>"
+    },
+    {
+      "sha": "f3436dcd3bf84ba1828260d81d594cf18c57f41d",
+      "author": "Geoffrey Biggs",
+      "date": "2021-02-07T19:47:48Z",
+      "message": "Add author and maintainer information\n\nSigned-off-by: Geoffrey Biggs <gbiggs@killbots.net>"
+    },
+    {
+      "sha": "9d5f04db2c1ea6c4cb99269ac1097630fba6a3d2",
+      "author": "Geoffrey Biggs",
+      "date": "2021-02-02T03:35:36Z",
+      "message": "Add node action tests\n\nSigned-off-by: Geoffrey Biggs <gbiggs@killbots.net>"
+    },
+    {
+      "sha": "7ff2f974bcb6eeed8fdc2c72c3af09fe3b7bb737",
+      "author": "Geoffrey Biggs",
+      "date": "2021-02-02T03:35:17Z",
+      "message": "Fix copyrights and formatting and setup for tests\n\nSigned-off-by: Geoffrey Biggs <gbiggs@killbots.net>"
+    },
+    {
+      "sha": "bd23194c0aa7ac6070928abb782b4c63742292f2",
+      "author": "Geoffrey Biggs",
+      "date": "2021-02-02T02:48:45Z",
+      "message": "Ignore pycache directories\n\nSigned-off-by: Geoffrey Biggs <gbiggs@killbots.net>"
+    },
+    {
+      "sha": "af7a10316f56eeb7eaf91e272448fa99ebf99047",
+      "author": "Geoffrey Biggs",
+      "date": "2021-01-26T01:06:43Z",
+      "message": "Add security extensions\n\nSigned-off-by: Geoffrey Biggs <gbiggs@killbots.net>"
+    },
+    {
+      "sha": "7c92021d7fe71052553f74d5e6499a2ca0b57295",
+      "author": "Geoffrey Biggs",
+      "date": "2021-01-26T01:06:01Z",
+      "message": "Initial commit\n\nSigned-off-by: Geoffrey Biggs <gbiggs@killbots.net>"
+    }
+  ]
+}

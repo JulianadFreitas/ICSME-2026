@@ -1,0 +1,426 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-06T23:25:09Z",
+    "source": "github_rest",
+    "endpoint": "/repos/{owner}/{repo}/commits",
+    "owner": "rt-net",
+    "repo": "crane_plus",
+    "per_page": 100
+  },
+  "data": [
+    {
+      "sha": "f637c799b53ff5a2b65845d3689c65cee303b762",
+      "author": "YusukeKato",
+      "date": "2026-02-05T09:15:05Z",
+      "message": "TCPリンクを追加 (#91)\n\n* TCPリンクを追加\n\n* リンク名を小文字に統一\n\n* pick_and_placeサンプルをTCPリンクに対応\n\n* TCPリンクをデフォルトとしてサンプルを修正\n\n* TCPリンクの位置を0.121mに変更\n\n* arm group設定のリファクタリング\n\nCo-authored-by: Kuwamai <kuwagata@rt-net.jp>\n\n* end_effectorを設定\n\nCo-authored-by: Kuwamai <kuwagata@rt-net.jp>\n\n* グリッパ角度を元に戻す\n\nCo-authored-by: Kuwamai <kuwagata@rt-net.jp>\n\n* 待機姿勢を修正\n\nCo-authored-by: Kuwamai <kuwagata@rt-net.jp>\n\n* 待機姿勢を修正\n\nCo-authored-by: Kuwamai <kuwagata@rt-net.jp>\n\n* 待機姿勢を修正\n\nCo-authored-by: Kuwamai <kuwagata@rt-net.jp>\n\n* グリッパ角度を元に戻す\n\nCo-authored-by: Kuwamai <kuwagata@rt-net.jp>\n\n* TCP_LINK_LENGT変数を廃止\n\n* Gazebo環境に配置するcubeの位置を調整\n\n* RVizのPlanning Group選択をarmからarm_tcpに変更\n\n* 対象に正対する時に手先を上に向ける\n\n* 実機動作時にパス生成に失敗しないように中継姿勢を追加\n\n* 手先位置をbox真上に修正\n\nCo-authored-by: Kuwamai <kuwagata@rt-net.jp>\n\n* きりのよい値に変更\n\nCo-authored-by: Kuwamai <kuwagata@rt-net.jp>\n\n* きりのよい値に変更\n\nCo-authored-by: Kuwamai <kuwagata@rt-net.jp>\n\n* きりのよい値に変更\n\nCo-authored-by: Kuwamai <kuwagata@rt-net.jp>\n\n---------\n\nCo-authored-by: Kuwamai <kuwagata@rt-net.jp>"
+    },
+    {
+      "sha": "219971e5f3416c4160d8d646a3f82dd0c47f388e",
+      "author": "Kazushi Kurasawa",
+      "date": "2025-12-11T05:28:11Z",
+      "message": "MoveItとtf2のヘッダファイル名の修正 (#92)\n\n* includeするMoveItとtf2のヘッダファイルを.hから.hppに変更\n\n* rollingをCIの対象から削除\n\n* Revert \"rollingをCIの対象から削除\"\n\nThis reverts commit 4b72014708b6069a11299139f363aedb857df027."
+    },
+    {
+      "sha": "809cc37fabf1bbd3baea77f7eb134c5e971887f3",
+      "author": "YusukeKato",
+      "date": "2025-06-03T04:51:28Z",
+      "message": "launchファイルのリファクタリング (#90)\n\n* ros2_controlのコントローラの起動方法をNode()に変更\n\n* フォーマットチェックにあわせてクウォートを修正\n\n* LaunchDescription()の書き方を統一\n\n* Node()の引数の順番を統一\n\n* 設定ファイルの読み込みにMoveItConfigsBuilderを使用するように修正\n\n* launchファイルのコード整形を実施\n\n* 自動整形を実施\n\n* launchファイル以外のコミットを戻す\n\n* 1行の文字数を99文字までに変更して自動整形\n\n* moveit_config.to_dict()で設定ファイルを読み込めるように変更\n\n* import文の体裁を修正\n\n* import文の体裁を修正"
+    },
+    {
+      "sha": "b14458cf0603c1377ad61d81ba324dfe428858d0",
+      "author": "YusukeKato",
+      "date": "2025-04-23T03:17:10Z",
+      "message": "URDFのリファクタリング (#89)\n\n* robotタグのxmlnsの古い記述を削除\n\n* 不要なマテリアルを削除\n\n* 使用していないSCALEの変数を削除\n\n* base_linkとworldのジョイントをS17に合わせる\n\n* STLファイルのパスを直書きに修正\n\n* STLファイルのパスの変数を削除\n\n* 各リンクのinertialを修正\n\n* 度数法から弧度法への変換にradians()を使用、effortの制限を変数に置き換える\n\n* カメラのxacroの読み込み処理をcrane_plus.xacroからcrane_plus.urdf.xacroへ移動\n\n* crane_plusマクロのパラメータを削除\n\n* gazebo_robot_settingsマクロのパラメータを削除\n\n* crane_plus_ros2_control_settingsマクロのパラメータを削除\n\n* crane_plus_gazebo_ros2_control_settingsマクロのパラメータを削除\n\n* カメラスタンドのリンク名を変更、マテリアルを定義して使い回す\n\n* カメラのxacroの名前からurdfを削除\n\n* ros2_controlのコントローラをNode()で起動、launchファイルのフォーマットを修正\n\n* Revert \"ros2_controlのコントローラをNode()で起動、launchファイルのフォーマットを修正\"\n\nThis reverts commit 036da9725d6d3d2c2d476dff956870fafb4da6c4.\n\n* マテリアルをcrane_plus.urdf.xacroで定義\n\n* 実機の動作に合わせて関節角度の制限を広げる\n\n* モデルのURIを修正\n\n* 円周率の変数M_PIを削除してradians()を使用\n\n* RVizの設定ファイルにおいてパラメータをキリのよい値に修正\n\n* stlファイルの名前をシンプルに修正\n\n* 角度リミットの更新に合わせてREADMEも更新\n\n* RViz上でCRANE+ V2が大きく表示されるように調整\n\n* 行末の空白を削除"
+    },
+    {
+      "sha": "f84c6e4bff2f54dfc216f6ecc3c32ce33c90fb11",
+      "author": "YusukeKato",
+      "date": "2025-04-21T02:43:49Z",
+      "message": "Goal toleranceの調整 (#88)\n\n* pick_and_placeサンプルにおいて目標の手先位置姿勢の許容範囲を狭める\n\n* 目標位置姿勢の許容範囲の設定意図が伝わるようにコメントを修正\n\nCo-authored-by: Kuwamai <kuwagata@rt-net.jp>\n\n* 目標位置姿勢の許容範囲の設定意図が伝わるようにコメントを修正\n\n* 意図が正確に伝わるようにコメントを修正\n\nCo-authored-by: Kuwamai <kuwagata@rt-net.jp>\n\n---------\n\nCo-authored-by: Kuwamai <kuwagata@rt-net.jp>"
+    },
+    {
+      "sha": "664747b9161d6aa40fceb5daf9620ef199467477",
+      "author": "Kuwamai",
+      "date": "2025-01-31T03:14:33Z",
+      "message": "3.0.0 (#87)\n\n* Update CHANGELOG.rst\r\n\r\n* 3.0.0\r\n\r\n* 不要な記述を削除"
+    },
+    {
+      "sha": "5d1145d4e375f75ad49308a291940eaa966693df",
+      "author": "Kuwamai",
+      "date": "2025-01-31T02:12:18Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "0e80b1150b6366736c0a2c11ababd550f2a68a72",
+      "author": "Kuwamai",
+      "date": "2025-01-28T01:12:02Z",
+      "message": "Mock components対応 (#86)\n\n* URDFにmock_componentsオプションを追加\r\n\r\n* launchにmock_componentsオプションを追加\r\n\r\n* Update README\r\n\r\n* CI用に依存パッケージの設定を追加"
+    },
+    {
+      "sha": "8198372af2f0afc345dda58b6fce9e61aab2f419",
+      "author": "Kuwamai",
+      "date": "2024-12-23T06:04:10Z",
+      "message": "CIにrollingを追加 (#85)"
+    },
+    {
+      "sha": "478e9a38edd9cd66d35c6a256f2001bac0182707",
+      "author": "mizonon",
+      "date": "2024-12-20T07:15:30Z",
+      "message": "Jazzy対応 (#78)\n\n* jazzy対応（MoveitConfigsBuilder）\n* MoveitCofigsBuilderを使ってmoveit_configの枠を作る\n\n* planning_plugins, requesr_adaptorsの設定をompl_planning.yamlの先頭で行う\n\n* ompl_planning.yamlにstart_state_max_bounds_errorの設定を追加\n\n* 7/19ここまで\n\n* MoveitConfigsBuilderを使うに伴った、yamlファイルの指定の項目追加\n\n* 一通りMoveItConfigsBuilderに対応\n\n* MoveIt Setup Assistantを使って設定ファイルを生成\n\n* urdfの指定を追加\n\n* crane_plus_configのrun_move_group.launchを呼ぶ\n\n* Unable to parse SRDFのエラーが解決できない\n\n* demo.launchが起動できるようになった\n\n* 余計なコメントアウト部分削除\n\n* 余計なコメントアウト削除\n\n* rviz上でMottionPlanningができるようになった\n\n* 余計なコメントアウト削除\n\n* 不要なコメント削除\n\n* 不要ファイルのignore\n\n* crane_plus_moveit_config/launchの中の不要ファイル削除\n\n* default_***_scaling_factorを0.1->1.0に変更\n\n* setup assistantによる書換わりを元の書き方に修正\n\n* exampleのdemo.lauch修正\n\n* run_move_group.rviz削除\n\n* sensors_3d.yaml削除\n\n* solverを元に戻す\n\n* .gitignore変更\n\n* setup_assistant関連のファイル追加\n\n* ciのjazzy対応\n\n* run_move_froup.lauch.pyの整理\n\n* 不要な権限変更\n\n* 不要な権限変更\n\n* 不要なscript削除\n\n* kinematicの設定修正\n\n* ソルバーをKDLに戻す\n\n* warehouse_ros_mongoをcrane_plus_moveit_configのpackage.xmlに含めない\n\n* レビュー結果反映\n\n* README.md(jazzy対応＆バイナリインストール方法追加）\n\n* .dockerのREADME.mdのjazzy対応\n\n* CI対応（copyright追加）\n\n* CI対応\n\n* CI対応(setup_assistant.launch.py)\n\n* CI対応(package.xmlの不要な部分削除)\n\n* コメントをjazzyに合わせる\n\n* ign fuelでgazeboのモデルをダウンロードする記述削除\n\n* ciのDockerイメージをjazzyに対応\n\n* 他の製品と設定を共通化\n\n* crane_plus_description/package.xmlのauthorに溝口を追加\n\n* ompl_planning.yamlに抜けていた記述追加\n\n* .gitignoreの末尾に.vscode追加\n\n* 旧115行目の改行復活\n\n* ファイル名変更controllers.yaml->moveit_controllers.yaml\n\n* kinematics_solver_attemptsの指定削除\n\n* RobotDescriptionLoader対応とmoveit_configの不必要な定義削除\n\n* robot_description_kinematicsの設定を削除\n\n* 削除したrun_move_group.rvizの内容をmoveit.rvizとして反映\n\n* Sciurus17のrun_move_group.launch.pyの書き方に合わせる\n\n* gz_sim対応(crane_plus_gazeboパッケージ)\n\n* gz_sim対応(crane_plus_descriptionパッケージ)\n\n* Ignitionを使用するかのパラメタuse_ignition削除\n\n* test_use_gazeboをGazebo Harmonicに対応\n\n* 3D SceneのGUIをGazebo Harmonicに対応\n\n* MoveitConfigsBuilderを使いつつ、rvizの設定ファイルを適切に設定する要修正\n\n* MoveitConfigsBuilderを使いつつ、rvizの設定ファイルを適切に設定する修正\n\n* Gazebo環境にカメラを追加 (#83)\n\n* カメラ追加\n\n* use_sim_timeオプション追加\n\n* カメラの画角調整\n\n* 色検出サンプルの色しきい値調整\n\n* 把持位置調整\n\n* 現バージョンのデフォルト設定を反映\n\n* ArUcoマーカ付きの立方体を追加\n\n* ワールド、launchファイル追加\n\n* use_cameraの有効化\n\n* use_cameraを引数で切り替えられるように変更\n\n* カメラスタンドのURDF修正\n\n* GazeboのCameraモデル対応したコードのign->gz対応\n\n* CI対応\n\n* CI対応\n\n* rviz_configの名称統一\n\n* spawn_gripper_contolollerの記述を他のコントローラの記述と合わせる\n\n* rviz_configの切替えの仕方を修正\n\n* スタイル修正\n\n* declare_rviz_config追加\n\n* configファイルのパス設定を修正\n\n* gazebo表記をgzに統一\n\n* スタイル修正\n\n* gui.config修正\n\n---------\n\nCo-authored-by: Kuwamai <kuwagata@rt-net.jp>"
+    },
+    {
+      "sha": "2f0964eb89e933aff1554dd3c357fcc279f41a82",
+      "author": "Kuwamai",
+      "date": "2024-12-03T01:54:03Z",
+      "message": "Gazebo環境にカメラを追加 (#83)\n\n* カメラ追加\r\n\r\n* use_sim_timeオプション追加\r\n\r\n* カメラの画角調整\r\n\r\n* 色検出サンプルの色しきい値調整\r\n\r\n* 把持位置調整\r\n\r\n* 現バージョンのデフォルト設定を反映\r\n\r\n* ArUcoマーカ付きの立方体を追加\r\n\r\n* ワールド、launchファイル追加\r\n\r\n* use_cameraの有効化\r\n\r\n* use_cameraを引数で切り替えられるように変更\r\n\r\n* カメラスタンドのURDF修正"
+    },
+    {
+      "sha": "4f353e6475f63c653531ecfc3eef2d3e3c6b47ab",
+      "author": "YusukeKato",
+      "date": "2023-09-08T06:30:21Z",
+      "message": "2.0.1リリースのためにCHANGELOGとpackage.xmlを更新 (#74)\n\n* リリースのためにCHANGELOGを更新\r\n\r\n* 2.0.1"
+    },
+    {
+      "sha": "909db122bbc31be9c540aeba4feea4a4c60e0d7c",
+      "author": "YusukeKato",
+      "date": "2023-09-08T05:54:57Z",
+      "message": "テスト実行時はダミーのパラメータファイルを読み込めるようにdescription_loaderを修正 (#73)\n\n* テスト時はダミーのパラメータファイルを読み込めるようにdescription_loaderを修正\r\n\r\n* CIの設定ファイルから読み込む必要のないsetup.bashの変数を削除\r\n\r\n* 余計な文字を削除"
+    },
+    {
+      "sha": "bf67052a836947fb3df2a66fdb1ccd1572fdab12",
+      "author": "YusukeKato",
+      "date": "2023-09-01T07:58:40Z",
+      "message": "READMEにカメラサンプルデモのGIFを追加 (#70)\n\n* カメラサンプルのデモGIFをREADMEに添付\r\n\r\n* 水平線の追加"
+    },
+    {
+      "sha": "210e72ecdc7c7e6d72fabfa590eee94f6feeb200",
+      "author": "YusukeKato",
+      "date": "2023-08-01T08:17:55Z",
+      "message": "HumbleリリースのためにCHANGELOGとpackage.xmlを更新 (#68)\n\n* update changelog\r\n\r\n* 2.0.0"
+    },
+    {
+      "sha": "c9723cd876475f02feb69367a3c07173d13d4da1",
+      "author": "YusukeKato",
+      "date": "2023-07-31T07:50:25Z",
+      "message": "Gazeboカメラ位置の調整 (#67)\n\n* gui.configをFoxy版のものに置き換える\r\n\r\n* Gazebo上のカメラをCRANE+ V2に近づける"
+    },
+    {
+      "sha": "a248d25a9227488ee30dc01739447fd4bf0f3134",
+      "author": "YusukeKato",
+      "date": "2023-07-27T07:33:16Z",
+      "message": "軌道生成の失敗時にpick_and_placeを中断する機能を追加 (#65)\n\n* 軌道生成の失敗時にpick_and_placeを中断する機能を追加\r\n\r\n* if文の括弧の位置を修正\r\n\r\n* 可読性を高めるために1を定数に置き換える\r\n\r\n* 一行が長過ぎるので二行に分ける\r\n\r\n* if文を三行に分ける\r\n\r\n* if文のスペース調整\r\n\r\n* アーム動作失敗時のコメントを修正\r\n\r\nCo-authored-by: Kuwamai <kuwagata@rt-net.jp>\r\n\r\n* control_arm関数の返り値をbool型に変更\r\n\r\n* control_arm関数の返り値を修正\r\n\r\nCo-authored-by: Kuwamai <kuwagata@rt-net.jp>\r\n\r\n---------\r\n\r\nCo-authored-by: Kuwamai <kuwagata@rt-net.jp>"
+    },
+    {
+      "sha": "5cae6605841ceb24034f3dd937138bcbde806a8f",
+      "author": "YusukeKato",
+      "date": "2023-07-26T02:47:42Z",
+      "message": "カメラサンプルのHumble対応 (#64)\n\n* カメラサンプル追加のコミットだけをcherry-pickして取り入れる\r\n\r\n* ビルド時に警告が出るため、読み込むヘッダファイルを.hから.hppに変更\r\n\r\n* Ignitionという文言を削除"
+    },
+    {
+      "sha": "0d0074477ccbca08c78fab0db44c93e505d8b1de",
+      "author": "YusukeKato",
+      "date": "2023-07-05T09:02:37Z",
+      "message": "READMEのURL更新 (#60)"
+    },
+    {
+      "sha": "a742feb9cdef8dfba13ed9c48c747e15e96352be",
+      "author": "YusukeKato",
+      "date": "2023-07-05T07:15:29Z",
+      "message": "動作環境を更新 (#59)"
+    },
+    {
+      "sha": "82ab8dac7119a2f9a72ebc669bd74d93254ae7b3",
+      "author": "YusukeKato",
+      "date": "2023-07-03T05:18:10Z",
+      "message": "Feature/support humble (#58)\n\n* 依存関係の不具合を修正するためDockerfileを編集\r\n\r\n* CIをgalactic向けに変更\r\n\r\n* joint_state_controllerをjoint_state_broadcasterに変更\r\n\r\n* galactic 対応 (#31)\r\n\r\nCo-authored-by: Ryuji Yasukochi <r.yasukouchi@m2-labo.jp>\r\n\r\n* Humbleでビルドが通った\r\n\r\n* 実機で動作確認した\r\n\r\n* 古いcrane_plus_gazeboを削除\r\n\r\n* Gazebo対応中（未対応）\r\n\r\n* Gazeboの起動確認はできたが、まだ動かない\r\n\r\n* Gazeboの動作を確認\r\n\r\n* 不必要な箇所を削除\r\n\r\n* use_sim_timeを有効化\r\n\r\n* galacticをhumbleに変更\r\n\r\n* foxyをhumbleに変更\r\n\r\n* foxyをhumbleに変更\r\n\r\n* ignitionをgazeboに変更\r\n\r\n* crane_plus_gazeboの動作確認完了\r\n\r\n* ビルド時の警告に対応\r\n\r\n* authorに名前を追加\r\n\r\n* Humbleをhumbleに修正\r\n\r\n* bridgeノードを追加、動作確認完了\r\n\r\n* インデントを修正\r\n\r\n* インデントを修正\r\n\r\n* READMEをhumble版に修正\r\n\r\n* Humbleイメージのビルドを確認完了\r\n\r\n* foxyをhumbleに修正\r\n\r\n* Update crane_plus_gazebo/CHANGELOG.rst\r\n\r\nCo-authored-by: Shota Aoki <s.aoki@rt-net.jp>\r\n\r\n* Update crane_plus_examples/README.md\r\n\r\nCo-authored-by: Shota Aoki <s.aoki@rt-net.jp>\r\n\r\n* レビューコメントに対応\r\n\r\n* Gazeboのモデルデータのダウンロード先を変更（初回起動失敗に対応）\r\n\r\n---------\r\n\r\nCo-authored-by: ShotaAk <s.aoki@rt-net.jp>\r\nCo-authored-by: Ryuji Yasukochi <ryuji.yasu@gmail.com>\r\nCo-authored-by: Ryuji Yasukochi <r.yasukouchi@m2-labo.jp>"
+    },
+    {
+      "sha": "73b34963edd976feb2fd9a59850977eac2126f9a",
+      "author": "Shota Aoki",
+      "date": "2023-05-23T01:33:15Z",
+      "message": "ignitionのモデルをダウンロードできるようにDockerfileを修正 (#57)\n\n* Fix dockerfile to download gazebo models\r\n\r\n* Dlete spaces."
+    },
+    {
+      "sha": "aae88f9b38f85df122f169e2ee25bbf119ac9891",
+      "author": "Shota Aoki",
+      "date": "2022-08-23T07:26:03Z",
+      "message": "Prepare for release 1.1.0 (#50)\n\n* update CHANGELOGs\r\n\r\n* 1.1.0"
+    },
+    {
+      "sha": "e4b2103b00dfd0843a18ee825ca5922b17775d2b",
+      "author": "Shota Aoki",
+      "date": "2022-08-16T06:41:03Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "3f1a3a9adc9957522de0bb4c2953ee2f3f5dc58e",
+      "author": "Shota Aoki",
+      "date": "2022-08-16T04:49:18Z",
+      "message": "Update author tags (#49)"
+    },
+    {
+      "sha": "2299276efa7d07c8deb7c7e568ff4d833352ff40",
+      "author": "Shota Aoki",
+      "date": "2022-08-16T01:45:30Z",
+      "message": "Add crane_plus_ignition dependency (#48)"
+    },
+    {
+      "sha": "d4da307af965db812e9b1ab4476714b4ffc230a0",
+      "author": "Kuwamai",
+      "date": "2022-08-02T04:12:06Z",
+      "message": "effort limitをサーボのカタログ値に変更 (#46)\n\n* joint_handのeffort limitをサーボのカタログ値に変更\r\n\r\n* jointのeffort limitをサーボのカタログ値と同じものに変更"
+    },
+    {
+      "sha": "ef676d8a4cb25a047dcb67522f082552c3bd11fd",
+      "author": "Kuwamai",
+      "date": "2022-08-02T02:45:04Z",
+      "message": "gui.config追加 (#45)"
+    },
+    {
+      "sha": "8707c9d0064a3cbdf793a89158c7539212af845e",
+      "author": "Shota Aoki",
+      "date": "2022-07-19T07:53:54Z",
+      "message": "Rename CRANE+V2 to CRANE+ V2 (#44)"
+    },
+    {
+      "sha": "498a1fe836a2aba3163c5bc07e0a5a65bde7bacb",
+      "author": "Shota Aoki",
+      "date": "2022-06-27T04:07:49Z",
+      "message": "fix typo"
+    },
+    {
+      "sha": "5fa42e7af5bb5c8325fe4aad928d8bde61fe3685",
+      "author": "Shota Aoki",
+      "date": "2022-06-27T04:06:08Z",
+      "message": "build_docker_imageのCIのトリガーを修正"
+    },
+    {
+      "sha": "b5fb0224b2313598cf8247d0386645f70dc69189",
+      "author": "Kuwamai",
+      "date": "2022-06-22T07:00:30Z",
+      "message": "CHANGELOG追加 (#41)"
+    },
+    {
+      "sha": "3f64e508889dfd7deb59dbbd44415340bbb2c22e",
+      "author": "Kuwamai",
+      "date": "2022-06-22T06:31:01Z",
+      "message": "パッケージバージョン表記の更新 (#40)"
+    },
+    {
+      "sha": "cb204e93ab81e922a36c9f758e570fcbc8c8864f",
+      "author": "Shota Aoki",
+      "date": "2022-06-22T06:14:45Z",
+      "message": "crane_plus_ignitionのpackage.xmlを修正 (#39)"
+    },
+    {
+      "sha": "5799efa2c36cda5e7fad7f71eae736950c5e44de",
+      "author": "Shota Aoki",
+      "date": "2022-06-21T07:13:38Z",
+      "message": "crane_plus_ignition パッケージを追加し、Gazeboの使用を非推奨にする (#38)\n\n* ignition起動用のパッケージを追加。メッシュファイルのパスが読み取れていない。\r\n\r\n* ignition上にcrane_plusをspawnできた\r\n\r\n* crane_plus_descriptionをigniotion用に改造\r\n\r\n* ignitionに箱とテーブルを表示\r\n\r\n* 箱を掴めるようにサンプルのパラメータ変更\r\n\r\n* 依存パッケージを変更\r\n\r\n* gazebo.materialスクリプトが読み込まれないため、パラメータを変更\r\n\r\n* Dockerfile内でignitionのモデルをダウンロードする\r\n\r\n* sunとground_planeもfuelからダウンロードする\r\n\r\n* IgnitionとGazeboを共存させる\r\n\r\n* Linterのチェックを通すための修正\r\n\r\n* モデルのspawn位置を修正\r\n\r\n* READMEのGazeboを使用する項目をIgnitionに置き換える\r\n\r\n* 不要な変更を削除"
+    },
+    {
+      "sha": "bac51c0ddadf637cd03417f550b62a076b68d147",
+      "author": "Shota Aoki",
+      "date": "2022-06-13T09:04:51Z",
+      "message": "xacroファイルの読み込みを一元化するためのPythonスクリプトを追加 (#36)\n\n* robot_description_loaderクラスを作成\r\n\r\n* ファイル名を変更\r\n\r\n* robot_description_loaderのテストを追加\r\n\r\n* port_name変更のテスト追加\r\n\r\n* robot_description_loaderが辞書を返すのをやめる\r\n\r\n* crane_plus_controlのlaunchファイルにrobot_descriptionを引数で与える\r\n\r\n* robot_description_loaderにuse_gazeboオプションを追加\r\n\r\n* robot_description_loaderをrun_move_group.launchに適用\r\n\r\n* robot_description_loaderをexample.launchに適用\r\n\r\n* robot_description_loaderをcrane_plus_gazebo.launchに適用\r\n\r\n* controlとmoveitのlaunchファイルを直接実行させないため、READMEの説明文を削除\r\n\r\n* 依存関係を追加\r\n\r\n* test実行前にworkspaceをインストールする\r\n\r\n* Update industrial_ci.yml\r\n\r\n* Fix CI\r\n\r\n* Revert \"Fix CI\"\r\n\r\nThis reverts commit 9ead135567bf19acf29a940ed5b94cf529648f58.\r\n\r\n* Revert \"Update industrial_ci.yml\"\r\n\r\nThis reverts commit 4b7e2eddb1e7950194ab145b686150f71a10b24e.\r\n\r\n* Revert \"test実行前にworkspaceをインストールする\"\r\n\r\nThis reverts commit 551c4cb668eb2e9a4ddaad540b2dd825327fdf84.\r\n\r\n* Fix CI\r\n\r\n* CIでのsetup.bash読み込み方法を修正"
+    },
+    {
+      "sha": "c368bb5af2ceb2222a20640bc2cd03356a8883a6",
+      "author": "Kuwamai",
+      "date": "2022-06-07T07:13:04Z",
+      "message": "GripperActionControllerに関するコメントを削除 (#37)"
+    },
+    {
+      "sha": "e2f9c14cd61cd409aa1609133d6e7e125631b71a",
+      "author": "Kuwamai",
+      "date": "2022-06-03T05:35:03Z",
+      "message": "hardware_interfaceのパラメータをxacro引数から変更する (#35)\n\n* Add a port_num parameter\r\n\r\n* xacro読み込み時に引数が渡せない\r\n\r\n* Add argument to change port_name\r\n\r\n* Fix code style\r\n\r\n* Update README\r\n\r\n* Update README"
+    },
+    {
+      "sha": "eada84d6d86991f080ff57c5423b4493f0598f22",
+      "author": "Shota Aoki",
+      "date": "2022-05-30T04:50:57Z",
+      "message": "Dockerfileを追加。Dockerイメージを作成するGitHub workflowを追加。 (#32)\n\n* Dockerfile追加\r\n\r\n* Add worflow file\r\n\r\n* 動作確認のためworkflowの設定変更\r\n\r\n* workflowを修正\r\n\r\n* gazeboが動作するように予めモデルをダウンロードする\r\n\r\n* typo修正\r\n\r\n* README更新\r\n\r\n* イメージの動作確認ができたので、workflowからPRトリガーを取り除く\r\n\r\n* Update .github/workflows/build_docker_image.yml\r\n\r\nCo-authored-by: Daisuke Sato <tiryoh@gmail.com>\r\n\r\n* Update .github/workflows/build_docker_image.yml\r\n\r\nCo-authored-by: Daisuke Sato <tiryoh@gmail.com>\r\n\r\n* rockerの実行コマンドを修正。USB通信ポート設定の案内を追加\r\n\r\nCo-authored-by: Daisuke Sato <tiryoh@gmail.com>"
+    },
+    {
+      "sha": "57c8e1da5b35a3f5bb8367db9a46db8f2eec8ff0",
+      "author": "Shota Aoki",
+      "date": "2021-08-27T05:02:22Z",
+      "message": "Update crane_plus_gazebo (#30)\n\n* Move crane+ on gazebo\r\n\r\n* Remove cube model from gazebo\r\n\r\n* Remove gripper model parameters\r\n\r\n* Update README\r\n\r\n* Refactoring\r\n\r\n* Fix README\r\n\r\n* Update examples' README"
+    },
+    {
+      "sha": "afeee4b27b108c027519cc20d3f5c872007aa92f",
+      "author": "Shota Aoki",
+      "date": "2021-08-26T04:09:14Z",
+      "message": "Update installation for foxy release. (#29)\n\n* fix package dependencies\r\n\r\n* Add industrial_ci.yml\r\n\r\n* Update installation\r\n\r\n* remove container_ci\r\n\r\n* Update README.md"
+    },
+    {
+      "sha": "5875fb5002d477d1c969c7487c3a41a5028288ec",
+      "author": "Shota Aoki",
+      "date": "2021-06-22T10:41:05Z",
+      "message": "Use new ros2 control interface (#27)\n\n* Use new ros2_control API\r\n\r\n* Delete unused files\r\n\r\n* update comments\r\n\r\n* Read joint speeds\r\n\r\n* Change update _rate to 100Hz\r\n\r\n* Disable read joint speeds to avoid a decrease of the communication rate.\r\n\r\n* fix package.xml\r\n\r\n* Refactoring crane_plus_driver\r\n\r\n* Driver can read joint load, voltage and temperature\r\n\r\n* Get dyanmixel id from joint's parameter\r\n\r\n* Refactoring\r\n\r\n* Fic container_ci.yml\r\n\r\n* Update installation\r\n\r\n* Use controller spawner to load controllers\r\n\r\n* Add parameters to arm and gripper controller for trajectory control\r\n\r\n* Add options for reading servo parameters\r\n\r\n* Update crane_plus_control's README\r\n\r\n* Change to print a communication timeout message once\r\n\r\n* Reformat via ament-uncrustify\r\n\r\n* Load ros2_control.xacro from crane_plus.xacro. This makes using gazebo_ros2_control easier.\r\n\r\n* Use steady timer for timeout detection\r\n\r\n* Pcrane_plus_drivers's functions use references instead of pointers\r\n\r\n* Update crane_plus_control/README.md\r\n\r\n* Update Installation\r\n\r\n* Rename read_xbyte_list to read_xbyte_data_from_each_joints\r\n\r\n* Refactor launch file\r\n\r\n* Rename 1byte to byte, 2byte to word\r\n\r\n* Refacotring to pass lint check"
+    },
+    {
+      "sha": "00353816fc1ee2d509d33ff16d41f42163c76d63",
+      "author": "Shota Aoki",
+      "date": "2020-11-25T07:55:30Z",
+      "message": "Update README.md"
+    },
+    {
+      "sha": "488aabff225e93014ebe3cf02b9d5e14b148c27f",
+      "author": "Shota Aoki",
+      "date": "2020-11-11T02:10:13Z",
+      "message": "Fix READMEs (#25)\n\n* update readme\r\n\r\n* Fix README.md\r\n\r\n* fix README\r\n\r\n* Update README.md\r\n\r\n* Update README.md\r\n\r\n* Update README.md"
+    },
+    {
+      "sha": "8e9c9dcb3feaa7520b542a6f610f7a84ba1477f8",
+      "author": "Shota Aoki",
+      "date": "2020-11-10T04:15:20Z",
+      "message": "Update control error log (#24)\n\n* Use RCLCPP_ERROR instead of throwing runtime error\r\n\r\n* Add emulate_tty option to show colorized error logs"
+    },
+    {
+      "sha": "a73b352d2d159bb29bd33845320696c363310826",
+      "author": "Shota Aoki",
+      "date": "2020-11-10T02:00:28Z",
+      "message": "Update maintainer and author in package.xml (#23)\n\n* Update maintainer and author in package.xml\r\n\r\n* Fix package.xml to pass CI test"
+    },
+    {
+      "sha": "3567c84a8a4fcb23f2d446cdd9d7656b16dbfb4f",
+      "author": "Shota Aoki",
+      "date": "2020-10-30T11:43:38Z",
+      "message": "Update README.md (#22)"
+    },
+    {
+      "sha": "776df02e3e7c619237acf767a7ca4bb9c50ee03b",
+      "author": "Shota Aoki",
+      "date": "2020-10-30T11:18:16Z",
+      "message": "Update for release (#21)\n\n* update package.xml\r\n\r\n* Add meta package\r\n\r\n* Add LICENSE file\r\n\r\n* Add README.md\r\n\r\n* Update README.md"
+    },
+    {
+      "sha": "fbf8b8a0c7b8bf599172f6564b83d16d7b447c6d",
+      "author": "Shota Aoki",
+      "date": "2020-10-30T09:43:22Z",
+      "message": "Update crane_plus_moveit_config (#20)"
+    },
+    {
+      "sha": "d2e11b70ab0bd089d00966f8ffd1f6d5ec3f277a",
+      "author": "Shota Aoki",
+      "date": "2020-10-30T08:56:41Z",
+      "message": "update crane_plus_gazebo (#19)"
+    },
+    {
+      "sha": "e2de28beee984c66689e52f4a6b77903c979fea2",
+      "author": "Shota Aoki",
+      "date": "2020-10-30T08:00:16Z",
+      "message": "Update crane_plus_examples (#18)\n\n* update\r\n\r\n* Refactor gripper_control example\r\n\r\n* refactor joint_values example\r\n\r\n* Refactor examples\r\n\r\n* Update README\r\n\r\n* update README"
+    },
+    {
+      "sha": "b58053300d2b753e8574e57c11852610fcddc818",
+      "author": "Shota Aoki",
+      "date": "2020-10-30T06:50:22Z",
+      "message": "update package.xml (#17)"
+    },
+    {
+      "sha": "fbeb3c16a97bfaea3eab56d6b7fec9b2a3d31dc9",
+      "author": "Shota Aoki",
+      "date": "2020-10-30T06:36:41Z",
+      "message": "Update crane_plus_control (#16)\n\n* Shotdown control node at no power supply\r\n\r\n* update package.xml\r\n\r\n* Upadte README.md\r\n\r\n* Use parameters\r\n\r\n* Check communication timeout\r\n\r\n* Refactoring\r\n\r\n* update README"
+    },
+    {
+      "sha": "a45bbf530c56c42de2dc240dad30ab68909ded06",
+      "author": "Shota Aoki",
+      "date": "2020-10-29T08:35:25Z",
+      "message": "Add joint_values example and pick_and_place example (#15)\n\n* Rename launch file\r\n\r\n* Add pose_groupstate example\r\n\r\n* change launch argument\r\n\r\n* Refactoring\r\n\r\n* Fix crane_plus control rate\r\n\r\n* Add joint_values example\r\n\r\n* Disable collision check for adjacent links\r\n\r\n* Fix base link name of crane_plus.srdf\r\n\r\n* Use LMA kinematics plugin to solve ik\r\n\r\n* Add pick_and_place example"
+    },
+    {
+      "sha": "20fc13a513261325a374ff9f1450cdf55831e323",
+      "author": "Shota Aoki",
+      "date": "2020-10-27T03:26:54Z",
+      "message": "Add pose_groupstate example. (#14)\n\n* Rename launch file\r\n\r\n* Add pose_groupstate example\r\n\r\n* change launch argument\r\n\r\n* Refactoring"
+    },
+    {
+      "sha": "0a3a4ec0c574057d788854918d020a5e07671f4f",
+      "author": "Shota Aoki",
+      "date": "2020-10-27T00:47:45Z",
+      "message": "Add crane_plus_examples (#13)\n\n* Fix home pose\r\n\r\n* Add crane_plus_examples\r\n\r\n* Add demo.launch.py\r\n\r\n* Add README.md"
+    },
+    {
+      "sha": "7e54e2769c49de38f1f4cddca89021d6f8da96b2",
+      "author": "Shota Aoki",
+      "date": "2020-10-19T06:19:59Z",
+      "message": "Fix launch files (#12)\n\n* Add crane_plus_control launch file\r\n\r\n* Add launch argument to run_move_group.launch.py\r\n\r\n* move yaml files to crane_plus_control\r\n\r\n* Delete start_positions.yaml\r\n\r\n* refactor run_move_group.launch.py"
+    },
+    {
+      "sha": "5ae056e80c3cc14dcbb48327f0cf4296578c7a8e",
+      "author": "Shota Aoki",
+      "date": "2020-10-15T09:27:57Z",
+      "message": "Use joint_trajectory_controller for gripper control (#11)"
+    },
+    {
+      "sha": "83249d1f126007b8bcc41188b5f7059995dda0b9",
+      "author": "Shota Aoki",
+      "date": "2020-10-15T06:52:16Z",
+      "message": "Update crane_plus_description (#10)\n\n* display.launch.py launch rviz2\r\n\r\n* Update joint_limits of xacro file\r\n\r\n* Add README.md"
+    },
+    {
+      "sha": "2bc564e2006bf0e3a68201f202db447b55f8ab6c",
+      "author": "Shota Aoki",
+      "date": "2020-10-15T05:28:00Z",
+      "message": "Refactor to pass ament_lint check (#9)\n\n* Add copyrights to crane_plus_control\r\n\r\n* Refactoring to pass ament_lint\r\n\r\n* Refactor crane_plus_description\r\n\r\n* Refactor crane_plus_gazebo\r\n\r\n* Refactor crane_plus_moveit_config\r\n\r\n* Add test to github workflow"
+    },
+    {
+      "sha": "cf58e2aeae0d3bf56d245bc4df9facde6e2ec323",
+      "author": "Shota Aoki",
+      "date": "2020-10-14T08:05:49Z",
+      "message": "Use GitHub workflow for build test. (#8)\n\n* Add github actions workflow file\r\n\r\n* Use DOCKER_IMAGE env\r\n\r\n* Fix CI\r\n\r\n* Fix CI\r\n\r\n* Fix CI\r\n\r\n* Fix CI\r\n\r\n* Fix CI\r\n\r\n* Fix CI\r\n\r\n* Fix CI\r\n\r\n* Fix CI\r\n\r\n* Fix CI\r\n\r\n* Fix CI\r\n\r\n* Fix CI\r\n\r\n* Add SSH login to CI\r\n\r\n* Fix CI\r\n\r\n* Fix CI\r\n\r\n* Fix CI\r\n\r\n* Use industrial_ci\r\n\r\n* Finish\r\n\r\n* Fix\r\n\r\n* Fix\r\n\r\n* Fix\r\n\r\n* Fix\r\n\r\n* change file name\r\n\r\n* Add timeout"
+    },
+    {
+      "sha": "670a823d67dfe5ab3f19086d00be33bbc46830e0",
+      "author": "Shota Aoki",
+      "date": "2020-10-13T09:44:18Z",
+      "message": "Revert \"Use new joint handles (#4)\" (#7)\n\nThis reverts commit c37c0f515f8ac1585e2d8f684907a3101d2167ab."
+    },
+    {
+      "sha": "c0cbd8d4a84d471a79ca52861a2ffdcf582afcf6",
+      "author": "Shota Aoki",
+      "date": "2020-10-13T08:29:53Z",
+      "message": "Update mesh (STL) files. (#6)\n\n* Update mesh data\r\n\r\n* Update collision mesh"
+    },
+    {
+      "sha": "183113ba6551ac5e8661ebffc3fc994da9746cdb",
+      "author": "Shota Aoki",
+      "date": "2020-10-01T05:40:02Z",
+      "message": "Add crane_plus_gazebo (#5)\n\n* Add crane_plus_gazebo. Spawn CRANE+ and table and box\r\n\r\n* update inerital of URDF\r\n\r\n* Fix entity name\r\n\r\n* Fix crane_plus.srdf"
+    },
+    {
+      "sha": "c37c0f515f8ac1585e2d8f684907a3101d2167ab",
+      "author": "Shota Aoki",
+      "date": "2020-09-25T03:16:32Z",
+      "message": "Use new joint handles (#4)\n\n* Use new joint handles\r\n\r\n* Remove a unused valiable"
+    },
+    {
+      "sha": "843a346b46c1d1ea3f18ac28694a4fb2a05b45c4",
+      "author": "Shota Aoki",
+      "date": "2020-09-24T07:48:16Z",
+      "message": "Add crane plus control (#3)\n\n* Add crane_plus_control package\r\n\r\n* Read servo positions\r\n\r\n* Add write function\r\n\r\n* Rename files\r\n\r\n* Change CranePlusDriver to CranePlusInterface\r\n\r\n* ignroe .vscode directory\r\n\r\n* Refactoring\r\n\r\n* Add write_moving_speed method\r\n\r\n* Set current joint positions to target positions at init()\r\n\r\n* Parse dynamixel communication error"
+    },
+    {
+      "sha": "ec56749f22fefed8a173727d69ab55a0cf5e789e",
+      "author": "Shota Aoki",
+      "date": "2020-09-17T07:53:07Z",
+      "message": "Add moveit config (#2)\n\n* Add crane_plus_moveit_config\r\n\r\n* Add a rviz config file"
+    },
+    {
+      "sha": "6e452c4ae7de2fad45ea695dcded5b7e73bcf2d7",
+      "author": "Shota Aoki",
+      "date": "2020-09-15T09:36:40Z",
+      "message": "Update xacro (#1)\n\n* fix joint origin\r\n\r\n* Fix joint limits\r\n\r\n* Fix collision model"
+    },
+    {
+      "sha": "ed90ec8726e4c4d4f9e1adba75d71edb052ee6af",
+      "author": "ShotaAk",
+      "date": "2020-09-15T04:47:32Z",
+      "message": "First commit -m"
+    }
+  ]
+}

@@ -1,0 +1,2364 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-07T07:18:20Z",
+    "source": "github_rest",
+    "endpoint": "/repos/{owner}/{repo}/commits",
+    "owner": "ros-perception",
+    "repo": "laser_filters",
+    "per_page": 100
+  },
+  "data": [
+    {
+      "sha": "689e2a42ba1b9b79643d2fd147ae0fe94ea96cb1",
+      "author": "Jon Binney",
+      "date": "2026-01-19T17:07:55Z",
+      "message": "2.3.2"
+    },
+    {
+      "sha": "9c4fb2999b74f83c3128e4c9251a2eff24e8a474",
+      "author": "Jon Binney",
+      "date": "2026-01-19T17:07:22Z",
+      "message": "Update changelog"
+    },
+    {
+      "sha": "030f6973d69ce051f98231ae4f66ad03ab8d5bbb",
+      "author": "Jonathan Binney",
+      "date": "2026-01-18T16:28:54Z",
+      "message": "Merge pull request #253 from ros-perception/ahcorde/rolling/new_apis\n\nUpdate code to work with rolling"
+    },
+    {
+      "sha": "c48798bd4c434d6478504a202fce141a8c23c9e1",
+      "author": "Alejandro Hernandez Cordero",
+      "date": "2026-01-14T17:15:43Z",
+      "message": "Update code to work with rolling\n\nSigned-off-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "f3cdb02bc98529fbcf907f696a3b7ac01f59f60e",
+      "author": "Jon Binney",
+      "date": "2025-11-17T23:04:20Z",
+      "message": "2.3.1"
+    },
+    {
+      "sha": "5cbadb66dc2513bb34fe48b53774ed957cc9d973",
+      "author": "Jon Binney",
+      "date": "2025-11-17T23:03:53Z",
+      "message": "Update changelog"
+    },
+    {
+      "sha": "4fcafae5fe607bf62bcc990393daac29b57d16a3",
+      "author": "Jonathan Binney",
+      "date": "2025-10-29T17:52:22Z",
+      "message": "Merge pull request #251 from ros-perception/mergify/bp/rolling/pr-250\n\nExpose depth_publisher param (backport #250)"
+    },
+    {
+      "sha": "02e9e924b2ba98e946105fc585412220de761a02",
+      "author": "Guillaume Doisy",
+      "date": "2025-10-29T03:41:50Z",
+      "message": "rename to scan_filtered_history_depth\n\n(cherry picked from commit dea0f172b0e9dc0c6327038f344ff9874d933ecd)"
+    },
+    {
+      "sha": "4488e7438a2b21fc7ec566ea0bef7e5ac980c7cd",
+      "author": "Guillaume Doisy",
+      "date": "2025-10-26T19:10:49Z",
+      "message": "expose depth_publisher\n\n(cherry picked from commit c81a8887c170928f67dfc114d2b1ee2984a1c482)"
+    },
+    {
+      "sha": "1f7bde245a5d549cb226de14e3f9969f97ef764b",
+      "author": "Jonathan Binney",
+      "date": "2025-09-15T12:59:32Z",
+      "message": "Merge pull request #246 from jonbinney/backport/192-to-rolling\n\nBackport #192 to rolling"
+    },
+    {
+      "sha": "38a09b0baaea5413d91110803344a0fbd5c0d591",
+      "author": "Griffin Tabor",
+      "date": "2025-08-12T19:58:42Z",
+      "message": "fix time increment math"
+    },
+    {
+      "sha": "6816fe3c4e2fa09be3c45dbaac3984e755a267c0",
+      "author": "Griffin Tabor",
+      "date": "2025-08-12T19:30:34Z",
+      "message": "add example for bin filter"
+    },
+    {
+      "sha": "da47998b74f04b0ca1bd9f2ad204220c0a4dc78f",
+      "author": "Anthony Goeckner",
+      "date": "2024-09-21T02:47:08Z",
+      "message": "Update copyright email."
+    },
+    {
+      "sha": "f4b817c9eb0fa005f044abcb4f336426e98226ba",
+      "author": "Anthony Goeckner",
+      "date": "2024-09-21T02:45:37Z",
+      "message": "Fixed input angle conversion to filtered angle."
+    },
+    {
+      "sha": "50b304a4a8ae852d48d99bf6a64f94045c9fd9e5",
+      "author": "Anthony Goeckner",
+      "date": "2024-09-19T01:30:21Z",
+      "message": "The filtered scan is now updated to begin at the oldest non-overwritten data (in case of >360-degree scans). This should also resolve any time_increment edge cases."
+    },
+    {
+      "sha": "b10e5443ae42fb2a74632e04870c8de1a084d318",
+      "author": "Anthony Goeckner",
+      "date": "2024-04-30T20:36:52Z",
+      "message": "Use `angle` variable."
+    },
+    {
+      "sha": "a1d3c5c9aeae616740daabbf1ff5713694e2c882",
+      "author": "Anthony Goeckner",
+      "date": "2024-04-30T20:24:47Z",
+      "message": "Revert \"Do not override min/max scan angles. Correctly use the `angle` variable, which is modulo 2*pi.\"\n\nThis reverts commit 88504c4cd9929def5b23c172d608194f4a3de383."
+    },
+    {
+      "sha": "cb21001b792a2984c7b26849d27204c61f3690f9",
+      "author": "Anthony Goeckner",
+      "date": "2024-04-30T20:24:30Z",
+      "message": "Revert \"In binning filter, do not override the original scan arc. Add warning for 360-degree LIDAR.\"\n\nThis reverts commit 1cb8ae7076d15dfdb86cb68eaf36bc649c973a50.\n\nConflicts:\n\tinclude/laser_filters/binning_filter.h"
+    },
+    {
+      "sha": "0df15c5fd999119670b8c3f0f36c809861b0acdc",
+      "author": "Anthony Goeckner",
+      "date": "2024-04-25T18:07:39Z",
+      "message": "Remove commented code."
+    },
+    {
+      "sha": "519a30f288023ea0abfa65d241d1aa8706c02ef0",
+      "author": "Anthony Goeckner",
+      "date": "2024-04-25T18:06:07Z",
+      "message": "In binning filter, do not override the original scan arc. Add warning for 360-degree LIDAR."
+    },
+    {
+      "sha": "1b067b2faf7df8764d560baeea7da84a077eea49",
+      "author": "Anthony Goeckner",
+      "date": "2024-04-25T13:05:16Z",
+      "message": "Do not override min/max scan angles. Correctly use the `angle` variable, which is modulo 2*pi."
+    },
+    {
+      "sha": "68f302aa22c3faadff3d721e45576050d36aec06",
+      "author": "Anthony Goeckner",
+      "date": "2024-04-24T20:40:50Z",
+      "message": "Added LaserScanBinningFilter."
+    },
+    {
+      "sha": "5a8d668409d479cf426134d515b9a767877e7bb0",
+      "author": "Jonathan Binney",
+      "date": "2025-09-04T17:02:56Z",
+      "message": "Merge pull request #244 from ros-perception/backport/234-to-rolling\n\nSet hardware id (Backport #234 to rolling)"
+    },
+    {
+      "sha": "525d23a088ae5c872964bb4abab78eb7bad2ec8c",
+      "author": "Tatsuro Sakaguchi",
+      "date": "2025-09-01T07:56:02Z",
+      "message": "Set hardware id"
+    },
+    {
+      "sha": "9ca83d1c32d64bc6a3091c54753d3226fc49cd65",
+      "author": "Jonathan Binney",
+      "date": "2025-09-04T16:45:38Z",
+      "message": "Merge pull request #242 from ros-perception/backport/227-to-rolling\n\nFix compile warning in speckle filter (Backport #227 to rolling)"
+    },
+    {
+      "sha": "d1ad381f4b330d5993d39c86120f6f51ae24eece",
+      "author": "Jon Binney",
+      "date": "2025-07-01T23:05:00Z",
+      "message": "Fix compile warning in speckle filter"
+    },
+    {
+      "sha": "178e8a92d2aaaad6a1cc4ba6d20bfc037f33a604",
+      "author": "Jonathan Binney",
+      "date": "2025-09-04T16:26:52Z",
+      "message": "Merge pull request #239 from ros-perception/backport/pr212-rolling\n\nBackport #212"
+    },
+    {
+      "sha": "061048961323120bed02594560b605fd38044cc2",
+      "author": "Jeanine van Bruggen",
+      "date": "2025-04-17T11:16:54Z",
+      "message": "added readonly = false to reconfigurable parameters"
+    },
+    {
+      "sha": "f32a98728ed403b7ad0a158457ad76deaf13e672",
+      "author": "Jeanine van Bruggen",
+      "date": "2025-03-26T10:43:18Z",
+      "message": "updated use of get param with default value"
+    },
+    {
+      "sha": "6fb4cce48642a28444bb81456253aebb04e368f9",
+      "author": "Jeanine van Bruggen",
+      "date": "2025-03-24T15:13:57Z",
+      "message": "add parameter reconfigure callback to intensity filter"
+    },
+    {
+      "sha": "44bd8e84c18150f7ba66cdd6a69a1b655412bb6f",
+      "author": "Jeanine van Bruggen",
+      "date": "2025-03-24T14:55:00Z",
+      "message": "port ros2 functionality"
+    },
+    {
+      "sha": "b22ac326149b973130f0d429c8022d631ba8c7cc",
+      "author": "Jonathan Binney",
+      "date": "2025-09-04T12:28:42Z",
+      "message": "Merge pull request #237 from jonbinney/backport/pr219-to-rolling\n\nadded readonly = false to reconfigurable parameters"
+    },
+    {
+      "sha": "066903b0c789e9dd8e059abb32465ef9cc9d003d",
+      "author": "Jeanine van Bruggen",
+      "date": "2025-04-17T10:29:47Z",
+      "message": "added readonly = false to reconfigurable parameters"
+    },
+    {
+      "sha": "8e641ce7530610ae82da0963a36e4002842ccda1",
+      "author": "Jonathan Binney",
+      "date": "2025-07-18T20:46:45Z",
+      "message": "Merge pull request #228 from jonbinney/port/215-to-rolling\n\nPort PR 215 to rolling"
+    },
+    {
+      "sha": "c7c7b78a9aa312f66127f38e227c0788b71abbfa",
+      "author": "Jonathan Binney",
+      "date": "2025-07-18T20:21:08Z",
+      "message": "Merge pull request #229 from jonbinney/ci-remove-kilted-on-rolling\n\nRemove kilted from rolling CI"
+    },
+    {
+      "sha": "d6b68b96ffa3ee2e67efe4a920ae23da6efd64ee",
+      "author": "Jon Binney",
+      "date": "2025-07-18T20:14:03Z",
+      "message": "Remove kilted from rolling CI\n\nKilted is now released from the \"kilted\" branch."
+    },
+    {
+      "sha": "450f5dee3f915e57cb27f64409912af220e1e65f",
+      "author": "Jeanine van Bruggen",
+      "date": "2025-04-17T11:23:52Z",
+      "message": "updated use of getparam"
+    },
+    {
+      "sha": "eae21d996ea2f315b0754c3b4e119cc3d410dc68",
+      "author": "Jeanine van Bruggen",
+      "date": "2025-04-04T10:11:27Z",
+      "message": "updated new getparam implementation"
+    },
+    {
+      "sha": "ef1c7df7c00e0fd7ab7c62931f942a8caae2c83c",
+      "author": "Jeanine van Bruggen",
+      "date": "2025-04-02T07:43:16Z",
+      "message": "fixed build error"
+    },
+    {
+      "sha": "fa1dae3d1c08424763d38e200d45f7d67a98021f",
+      "author": "Jeanine van Bruggen",
+      "date": "2025-03-19T12:49:30Z",
+      "message": "use footprintCB of child class"
+    },
+    {
+      "sha": "02e29ea6849fb139cb5428d6f49664ce332a9403",
+      "author": "Jon Binney",
+      "date": "2025-06-30T15:45:52Z",
+      "message": "2.2.1"
+    },
+    {
+      "sha": "ba928b0566fa9efc552752208c22d0839399c66e",
+      "author": "Jon Binney",
+      "date": "2025-06-30T15:45:45Z",
+      "message": "Update changelog"
+    },
+    {
+      "sha": "fc4f1c104f3975de1861a3f3108e7ff69db2703e",
+      "author": "Jonathan Binney",
+      "date": "2025-06-29T20:52:08Z",
+      "message": "Merge pull request #226 from Yadunund/yadu/fix-tf2-headers\n\nUpdate tf2 headers"
+    },
+    {
+      "sha": "f23644926a62d9d01cbefd8b133ed0de7db83795",
+      "author": "Yadunund",
+      "date": "2025-06-29T19:29:18Z",
+      "message": "Update tf2 headers\n\nSigned-off-by: Yadunund <yadunund@gmail.com>"
+    },
+    {
+      "sha": "57f11553433a42838d114ef9e17d251a523353c3",
+      "author": "Jonathan Binney",
+      "date": "2025-06-22T21:25:42Z",
+      "message": "Merge pull request #224 from traversaro/patch-7\n\nFix compilation on Windows by exporting all symbols with `CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS `"
+    },
+    {
+      "sha": "778e05cb323cd495234f90977586e34d092b1005",
+      "author": "Silvio Traversaro",
+      "date": "2025-06-22T15:18:14Z",
+      "message": "Fix compilation on Windows"
+    },
+    {
+      "sha": "4645eb6890017c9a5874f001e4f63efc591862d3",
+      "author": "Jon Binney",
+      "date": "2025-05-30T16:44:44Z",
+      "message": "2.2.0"
+    },
+    {
+      "sha": "fb1bea78a56a9ed008ef54989628b1d760eec5fc",
+      "author": "Jon Binney",
+      "date": "2025-05-30T16:29:09Z",
+      "message": "Update changelog"
+    },
+    {
+      "sha": "e2604ca891b89ce05d669d6e579ed06533e4a943",
+      "author": "Jonathan Binney",
+      "date": "2025-05-30T15:06:11Z",
+      "message": "Merge pull request #221 from ros-perception/ahcorde/rolling/remove_deprecations\n\nRemoved deprecations"
+    },
+    {
+      "sha": "9ca5c21fcd52c73adb3124773899218a2ee979b2",
+      "author": "Alejandro Hernandez Cordero",
+      "date": "2025-05-30T08:38:35Z",
+      "message": "Merge remote-tracking branch 'origin/rolling' into ahcorde/rolling/remove_deprecations"
+    },
+    {
+      "sha": "4888d848d62c4dccddc71f1e7a85ef2a35bfb2a3",
+      "author": "Jonathan Binney",
+      "date": "2025-05-30T00:00:25Z",
+      "message": "Merge pull request #222 from jonbinney/update-ci-for-kilted\n\nUpdate distros for CI"
+    },
+    {
+      "sha": "593d644c732690948051d2ad5f2c184bdb62ada6",
+      "author": "Jon Binney",
+      "date": "2025-05-29T23:57:44Z",
+      "message": "Change branch name for rolling CI"
+    },
+    {
+      "sha": "3d66534f3a2e264aaf11bc07d6ad868dc44056c6",
+      "author": "Jon Binney",
+      "date": "2025-05-29T23:54:02Z",
+      "message": "Update distros for CI"
+    },
+    {
+      "sha": "b070348da50d526168c35008f107476095c678bc",
+      "author": "Alejandro Hernandez Cordero",
+      "date": "2025-05-23T11:05:05Z",
+      "message": "Removed deprecations\n\nSigned-off-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "7e21947ad660006920e4cdae27f4c2e3709e62d1",
+      "author": "Jonathan Binney",
+      "date": "2025-05-01T18:39:09Z",
+      "message": "Merge pull request #217 from eurogroep/feat/add-heartbeat-diagnostics\n\nAdded heartbeat diagnostics"
+    },
+    {
+      "sha": "d0082619e4b8c551381f48ac9dd4f741bdabe7a5",
+      "author": "Jonathan Binney",
+      "date": "2025-04-02T23:34:33Z",
+      "message": "Merge pull request #216 from eurogroep/fix/segfault-speckle-filter\n\nAdded window size check to prevent segfault in speckle filter"
+    },
+    {
+      "sha": "4b773810057bd36fad8129672f9e9b7673bcb593",
+      "author": "Jeanine van Bruggen",
+      "date": "2025-04-02T09:13:04Z",
+      "message": "fixed build error"
+    },
+    {
+      "sha": "16cb6b135ddf79113b8b14293800187da6ae4155",
+      "author": "Jonathan Binney",
+      "date": "2025-04-02T00:05:55Z",
+      "message": "Merge pull request #213 from eurogroep/fix/param_prefixes_reconfigure\n\nAdded params_prefix to reconfigure callback"
+    },
+    {
+      "sha": "b58d06f89433a1328934502a47b8c7f7eb3d6bdc",
+      "author": "Jeanine van Bruggen",
+      "date": "2025-03-27T10:06:26Z",
+      "message": "made reconfigure logging debug"
+    },
+    {
+      "sha": "4156ca83eaedeacd088fbb8cea89fcaa91e60ba1",
+      "author": "Jeanine van Bruggen",
+      "date": "2025-03-24T16:47:39Z",
+      "message": "added heartbeat diagnostics"
+    },
+    {
+      "sha": "c58676a7eecccb2ed14df31e1ccb6a4be2dc45da",
+      "author": "Jeanine van Bruggen",
+      "date": "2025-03-24T16:33:15Z",
+      "message": "added window size check to prevent segfault"
+    },
+    {
+      "sha": "85b1339e9e51e605e219d5704f34b3967665355d",
+      "author": "Jeanine van Bruggen",
+      "date": "2025-03-24T15:45:18Z",
+      "message": "added params_prefix to reconfigure callback"
+    },
+    {
+      "sha": "bbc883dbb5d41c9b9f125b6f948e6481e2c09ffa",
+      "author": "Jonathan Binney",
+      "date": "2025-01-17T01:25:28Z",
+      "message": "Merge pull request #209 from traversaro/patch-6\n\nRemove use of boost from polygon_filter"
+    },
+    {
+      "sha": "4de646372fc85bcece8c7184cd4546db86b616b7",
+      "author": "Silvio Traversaro",
+      "date": "2025-01-13T17:40:47Z",
+      "message": "Remove use of boost from polygon_filter"
+    },
+    {
+      "sha": "46a42b63b159d243d18521c5049227102971dc1c",
+      "author": "Jonathan Binney",
+      "date": "2024-12-19T16:29:31Z",
+      "message": "Merge pull request #208 from ros-perception/ahcorde/iron-eol\n\nRemove iron from ci - EOL"
+    },
+    {
+      "sha": "039dd54684935e1793db864f0283537f95cf1eb5",
+      "author": "Alejandro Hernández Cordero",
+      "date": "2024-12-19T12:38:32Z",
+      "message": "Remove iron from ci - EOL\n\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>"
+    },
+    {
+      "sha": "32d90a3b4d71ad86908e853206d2bb118344ed26",
+      "author": "Jon Binney",
+      "date": "2024-11-12T22:58:58Z",
+      "message": "2.0.8"
+    },
+    {
+      "sha": "be0597bbdb3a0c59275f61cc79ee4b9499181858",
+      "author": "Jon Binney",
+      "date": "2024-11-12T22:58:23Z",
+      "message": "Update changelog"
+    },
+    {
+      "sha": "15a6e7d5701e6837f9d2df5802cc3d90413f0821",
+      "author": "Jonathan Binney",
+      "date": "2024-08-26T20:16:58Z",
+      "message": "Merge pull request #202 from Oscar-Robotics/ros2\n\nUsing NaN instead of range_max+1 to remove scans in angular_bounds_filter_in_place"
+    },
+    {
+      "sha": "d58b16d1dbedcb233f4d5074f3f31dce7100f3aa",
+      "author": "Yohan Belanger",
+      "date": "2024-08-26T14:29:08Z",
+      "message": "Merge branch 'ros2' of https://github.com/Oscar-Robotics/laser_filters into ros2"
+    },
+    {
+      "sha": "f7236ba9b92f68aa08f4287fec8532957a158801",
+      "author": "Yohan Belanger",
+      "date": "2024-08-26T13:38:10Z",
+      "message": "added comment"
+    },
+    {
+      "sha": "b1375fecc46c51056693714b4127534d91721054",
+      "author": "Yohan Belanger",
+      "date": "2024-08-21T19:15:28Z",
+      "message": "adding replace_with_nan param"
+    },
+    {
+      "sha": "830cde2b30cacc4519c765b920244fa1fbff7fd5",
+      "author": "Jonathan Binney",
+      "date": "2024-08-24T15:24:56Z",
+      "message": "Merge pull request #203 from jonbinney/bugfix/add-launch-testing-depend\n\nAdd missing dependency on ament launch testing"
+    },
+    {
+      "sha": "cd10537ef539112753f5e592b812a3f30357f086",
+      "author": "Jon Binney",
+      "date": "2024-08-24T15:20:31Z",
+      "message": "Add missing dependency on ament launch testing"
+    },
+    {
+      "sha": "4945cd7dd1e92aa869b6af8c03c9efc252d887b0",
+      "author": "Jonathan Binney",
+      "date": "2024-08-23T19:04:52Z",
+      "message": "Merge pull request #189 from eurogroep/feat/ros2-port-all-filters\n\nFeature: ros2 port for all filters"
+    },
+    {
+      "sha": "de3520a302ec9301d4ff58cfd163dd36a4bc3db9",
+      "author": "Jonathan Binney",
+      "date": "2024-08-23T15:09:05Z",
+      "message": "Merge pull request #201 from YBachmann/spatial_median_filter\n\nSpatial median filter"
+    },
+    {
+      "sha": "044f45d2aab12952230e775749459ef9688f0bbe",
+      "author": "Yannic Bachmann",
+      "date": "2024-08-23T13:08:13Z",
+      "message": "Added example launchfiles (xml+py) and example parameter yaml file. Added comment and warning when ensuring window_size_ is odd"
+    },
+    {
+      "sha": "2fe180c3a97f3bf2cc85b926a445556bc4ee3852",
+      "author": "berend-kupers",
+      "date": "2024-08-22T06:16:08Z",
+      "message": "Merge pull request #7 from jonbinney/fix-port-all-filters-test\n\nFix race condition in tests"
+    },
+    {
+      "sha": "0f33136a21f41ce4f17e9eb0cf1f6d176e4f4f00",
+      "author": "Yohan Belanger",
+      "date": "2024-08-21T19:15:28Z",
+      "message": "using NaN instead of range_max+1 to remove scans"
+    },
+    {
+      "sha": "5ea368f7c1ed166dcbb0b377d5cbe82a84d2ed3e",
+      "author": "Jon Binney",
+      "date": "2024-08-20T23:48:05Z",
+      "message": "Fix race condition in tests\n\nWe need to publish scans repeatedly in case the filter chain runs and\nprocesses the output scan before we finish subscribing to that topic."
+    },
+    {
+      "sha": "e02d296ded13853072bb70f8569344e7c9f5803d",
+      "author": "Berend Kupers",
+      "date": "2024-08-19T07:49:54Z",
+      "message": "Durability policy for publisher in speckle filter test"
+    },
+    {
+      "sha": "d5f386b94d2911f385cdfdb006e6a8c91922764b",
+      "author": "Yannic Bachmann",
+      "date": "2024-08-13T15:51:31Z",
+      "message": "Fix typo"
+    },
+    {
+      "sha": "c58a312a871eb46762569e76cb257a4d7506a7cc",
+      "author": "Yannic Bachmann",
+      "date": "2024-08-13T15:38:59Z",
+      "message": "Expand description of filter in laser_filters_plugins.xml"
+    },
+    {
+      "sha": "210e1b16c2c36ef4e819b7fcfc9238aa75042c99",
+      "author": "Yannic Bachmann",
+      "date": "2024-08-13T15:37:58Z",
+      "message": "Don´t declare+initialize window_size before getParam call"
+    },
+    {
+      "sha": "affc0eff86c20057987fcdd1cf03c173e8b6017d",
+      "author": "Yannic Bachmann",
+      "date": "2024-08-13T15:36:01Z",
+      "message": "Use nan and infinity values for the median if they make up the majority of the window"
+    },
+    {
+      "sha": "913a34280bc30ab54d8d32f4bce585b3f2f0e01b",
+      "author": "Jonathan Binney",
+      "date": "2024-08-07T20:06:01Z",
+      "message": "Merge pull request #162 from wolfv/do_not_use_not\n\nDo not use \"not\" as it is not defined in MSVC"
+    },
+    {
+      "sha": "4440285c6fb5005914a5404672f5d3fed514094c",
+      "author": "Berend Kupers",
+      "date": "2024-08-06T12:31:36Z",
+      "message": "Removed unused file"
+    },
+    {
+      "sha": "ffddce3f9985d12800b1af9789edebc14ef31f6a",
+      "author": "Berend Kupers",
+      "date": "2024-08-06T12:31:20Z",
+      "message": "Removed node interface"
+    },
+    {
+      "sha": "742e76ae2e62ee2768e97237ee51e0bea64aa47f",
+      "author": "Berend Kupers",
+      "date": "2024-08-06T12:31:11Z",
+      "message": "Fixed test"
+    },
+    {
+      "sha": "8d978d7dee0b6050199f4b536413306d33054d05",
+      "author": "MAHA Maia",
+      "date": "2024-08-06T07:23:21Z",
+      "message": "Merge branch 'spatial_median_filter' of https://github.com/YBachmann/laser_filters into spatial_median_filter"
+    },
+    {
+      "sha": "35a00143c9338c475cbab2ed11dfec28f6659840",
+      "author": "MAHA Maia",
+      "date": "2024-08-06T07:14:32Z",
+      "message": "Revert \"Initial version for distance moving window filter.\"\n\nThis reverts commit 16118ea4a86e6794a9b3f7ec118c1dc2140e1307."
+    },
+    {
+      "sha": "8e80fa55f19d2e729bbf7923c49d0e9485030654",
+      "author": "Yannic Bachmann",
+      "date": "2024-08-06T07:10:35Z",
+      "message": "Merge branch 'ros-perception:ros2' into spatial_median_filter"
+    },
+    {
+      "sha": "07ae1cfdc4d3c71d6d29c0cb0d75898aeb8f300e",
+      "author": "Yannic Bachmann",
+      "date": "2024-08-05T14:24:06Z",
+      "message": "Added LaserScanMedianFilter"
+    },
+    {
+      "sha": "9dbd42e6b0a05d9f597087a6f06c6d7f752e4ec1",
+      "author": "Jonathan Binney",
+      "date": "2024-07-28T17:17:34Z",
+      "message": "Merge pull request #195 from bjsowa/lazy-subscription\n\nAdd Lazy subscription"
+    },
+    {
+      "sha": "2105037c8a55261965cb7150f967ed94cff8150a",
+      "author": "Błażej Sowa",
+      "date": "2024-07-27T20:53:32Z",
+      "message": "Keep the old publisher QoS settings"
+    },
+    {
+      "sha": "16118ea4a86e6794a9b3f7ec118c1dc2140e1307",
+      "author": "Dr. Denis Štogl",
+      "date": "2024-07-25T10:45:49Z",
+      "message": "Initial version for distance moving window filter."
+    },
+    {
+      "sha": "b87292c57f7cb8abfeca8d63c0b934bec54db698",
+      "author": "Błażej Sowa",
+      "date": "2024-07-25T03:36:36Z",
+      "message": "Check rclcpp version instead of ROS distribution\n\nCo-authored-by: Jonathan Binney <jon.binney@gmail.com>"
+    },
+    {
+      "sha": "280113d5727b4c811f7c7c5a27e172b883e6d2aa",
+      "author": "Błażej Sowa",
+      "date": "2024-07-23T22:06:47Z",
+      "message": "Add lazy subscription to filter chains"
+    },
+    {
+      "sha": "eaaaeab4418e00d5e7f67f9a730be5b2012e8793",
+      "author": "Jonathan Binney",
+      "date": "2024-07-23T21:07:23Z",
+      "message": "Merge pull request #199 from bjsowa/sort-up-ros-parameters\n\nSort up ROS parameters for filter chains"
+    },
+    {
+      "sha": "c9bfbbf98c22a2578895bb07ad5885902bccedf9",
+      "author": "Jonathan Binney",
+      "date": "2024-07-23T15:46:41Z",
+      "message": "Merge pull request #198 from bjsowa/use-templated-node-executables\n\nCreate node executables using rclcpp_component macros"
+    },
+    {
+      "sha": "36063907d6153bf225557cab5b314dfb8c67d895",
+      "author": "Błażej Sowa",
+      "date": "2024-07-22T21:55:09Z",
+      "message": "Merge remote-tracking branch 'origin' into sort-up-ros-parameters"
+    },
+    {
+      "sha": "2a9d757b953ed847713df8005a132455eb4c4044",
+      "author": "Błażej Sowa",
+      "date": "2024-07-22T21:51:05Z",
+      "message": "Add a comment about rclcpp components macro"
+    },
+    {
+      "sha": "fb10f8b4824009fba47c8feb0f67763737388543",
+      "author": "Jonathan Binney",
+      "date": "2024-07-22T21:07:24Z",
+      "message": "Merge pull request #197 from bjsowa/shared-from-this-fix\n\nDon't use shared_from_this in the constructor"
+    },
+    {
+      "sha": "1b6fb992c140b1ef5bb2557c7bd4c46756273171",
+      "author": "Berend Kupers",
+      "date": "2024-07-18T07:00:02Z",
+      "message": "Merge remote-tracking branch 'upstream/ros2' into feat/ros2-port-all-filters"
+    },
+    {
+      "sha": "6fdfd76af482c6c83db1d796070ba32f70b6fdc3",
+      "author": "Błażej Sowa",
+      "date": "2024-07-17T11:00:22Z",
+      "message": "Create node executables using rclcpp_component macros"
+    },
+    {
+      "sha": "8cb26af562c8129f2e3abbb10952f10ec0a50c2d",
+      "author": "Błażej Sowa",
+      "date": "2024-07-17T10:57:22Z",
+      "message": "Don't use shared_from_this in the constructor"
+    },
+    {
+      "sha": "4aefec2800fbc449b4574fec756d5e08f7820597",
+      "author": "Błażej Sowa",
+      "date": "2024-07-16T22:45:04Z",
+      "message": "Sort up ROS parameters for filter chains"
+    },
+    {
+      "sha": "e2ed8c3b4b81eb261c4e16f8a20d1a098de5c954",
+      "author": "Jonathan Binney",
+      "date": "2024-07-16T21:46:26Z",
+      "message": "Merge pull request #196 from jonbinney/update-ros2-test-distros\n\nUpdate list of ros2 distros to test on"
+    },
+    {
+      "sha": "ade478b1db013bde30d2fb606b74faef2a05b519",
+      "author": "Jon Binney",
+      "date": "2024-07-16T21:35:02Z",
+      "message": "Update list of ros2 distros to test on"
+    },
+    {
+      "sha": "01a7828d5c4e2b4f16b842ae1a53080a9daea445",
+      "author": "Jonathan Binney",
+      "date": "2024-07-16T21:10:30Z",
+      "message": "Merge pull request #188 from jcarlosgm30/feature/component-support\n\nfeature: components support"
+    },
+    {
+      "sha": "8b19c2d5226a6ec2cfc4ccd883c0122db801b8a9",
+      "author": "Berend Kupers",
+      "date": "2024-07-16T07:39:03Z",
+      "message": "Copy getPointCloud2FieldIndex function"
+    },
+    {
+      "sha": "8058839c1970c5ddf75bd75dff2850276f4bf0be",
+      "author": "Berend Kupers",
+      "date": "2024-07-16T07:17:06Z",
+      "message": "Added dependency"
+    },
+    {
+      "sha": "50237b282dc5bcb3b1d6710361b71f0c24a22c13",
+      "author": "berend-kupers",
+      "date": "2024-07-16T07:09:18Z",
+      "message": "Changed RCLCPP_WARN_THROTTLE\n\nCo-authored-by: Błażej Sowa <bsowa123@gmail.com>"
+    },
+    {
+      "sha": "5185c7be2a5fbb42eac2eb0dd7b9a5e64ff2ff46",
+      "author": "berend-kupers",
+      "date": "2024-07-16T07:08:33Z",
+      "message": "Update include/laser_filters/polygon_filter.h\n\nCo-authored-by: Błażej Sowa <bsowa123@gmail.com>"
+    },
+    {
+      "sha": "2be7a97d750a398b5b53f81f663c9c4f2c027bad",
+      "author": "josegarcia",
+      "date": "2024-05-13T11:00:12Z",
+      "message": "feat: components support"
+    },
+    {
+      "sha": "6025d92b2f4d51e4df9669a97f6d11e7e74c3334",
+      "author": "josegarcia",
+      "date": "2024-05-13T10:58:07Z",
+      "message": "file reorganization: filter chains as libraries"
+    },
+    {
+      "sha": "e2c35debb5dbeaa9d7ba543905c48789d8e87e25",
+      "author": "Berend Kupers",
+      "date": "2024-01-19T14:51:24Z",
+      "message": "Port scan shadows filter unit tests to ROS2"
+    },
+    {
+      "sha": "d919da86b95b16d702e059dd285dad6d3b1b70a5",
+      "author": "Berend Kupers",
+      "date": "2024-01-19T14:04:37Z",
+      "message": "Port speckle filter unit tests to ROS2"
+    },
+    {
+      "sha": "53ae9b48efcae93cd50a3e5da4427632ae6494ac",
+      "author": "Berend Kupers",
+      "date": "2024-01-19T13:43:55Z",
+      "message": "Port speckle filter launch tests to ROS2"
+    },
+    {
+      "sha": "2e9bb30adb1f15b138550db678f17db6f7dd1fae",
+      "author": "Berend Kupers",
+      "date": "2024-01-19T13:42:54Z",
+      "message": "Removed commented print statements"
+    },
+    {
+      "sha": "7339c23f257a8131cd4c7d285d46ebffba614cf3",
+      "author": "Berend Kupers",
+      "date": "2024-01-19T13:35:27Z",
+      "message": "Port sector filter to ROS2"
+    },
+    {
+      "sha": "84b7bbeac6c7c61e0eea4ed4faedf7f99e9b5d96",
+      "author": "Berend Kupers",
+      "date": "2024-01-19T13:28:20Z",
+      "message": "Port scan blob filter to ROS2"
+    },
+    {
+      "sha": "62aa041eddbe27b9ee70d3ff4b019deb258f3f04",
+      "author": "Berend Kupers",
+      "date": "2024-01-19T13:18:11Z",
+      "message": "Port polygon filter to ROS2"
+    },
+    {
+      "sha": "905f5e9a95c1200bf3a86bf2803af0a654401740",
+      "author": "Jonathan Binney",
+      "date": "2023-11-01T14:29:35Z",
+      "message": "Merge pull request #186 from JosefGst/time_stamp\n\nFix time stamp issue for angular filter"
+    },
+    {
+      "sha": "8d24bf2b9ce7f724bf7669cce1a85851392f8385",
+      "author": "JosefGst",
+      "date": "2023-11-01T07:39:36Z",
+      "message": "change to rclcpp Time"
+    },
+    {
+      "sha": "41efa1b0f1574c611c559c7ed09762c5e5dfb970",
+      "author": "JosefGst",
+      "date": "2023-10-30T09:41:58Z",
+      "message": "add endline"
+    },
+    {
+      "sha": "4340e18797ad9296d09826f05b7c13b1f21eb82d",
+      "author": "JosefGst",
+      "date": "2023-10-30T09:38:21Z",
+      "message": "do time math with duration"
+    },
+    {
+      "sha": "b04f5a308279149f237a7459f8ce3b204e0c0067",
+      "author": "JosefGst",
+      "date": "2023-09-26T09:32:31Z",
+      "message": "add angular filter example"
+    },
+    {
+      "sha": "1ee6c25494f5cb184cc4f7c4d1acbf37fee01bc1",
+      "author": "JosefGst",
+      "date": "2023-09-26T09:32:14Z",
+      "message": "fix time stamp increment"
+    },
+    {
+      "sha": "65cbefd6e8a4f58b360061f8786d80668505cdb2",
+      "author": "Jon Binney",
+      "date": "2023-07-31T17:44:47Z",
+      "message": "2.0.7"
+    },
+    {
+      "sha": "3d78b8162c499414c3f152e3ff3593cf3c5df82a",
+      "author": "Jon Binney",
+      "date": "2023-07-31T17:44:33Z",
+      "message": "Update changelog"
+    },
+    {
+      "sha": "a7e34ed79b6a7989dd4330d27ee521675157650e",
+      "author": "Jonathan Binney",
+      "date": "2023-06-30T19:18:30Z",
+      "message": "Merge pull request #181 from calderpg-tri/escape_invalid_xml\n\nEscape invalid XML in laser_filters_plugins.xml"
+    },
+    {
+      "sha": "e866ec6cb739213504ec88d03b1ea575d141893f",
+      "author": "Calder Phillips-Grafflin",
+      "date": "2023-06-29T21:49:45Z",
+      "message": "Escape invalid xml in laser_filters_plugins.xml"
+    },
+    {
+      "sha": "a76d1a68338f3dedc1c72ddf6df2810c377332c4",
+      "author": "Jon Binney",
+      "date": "2023-03-18T18:24:07Z",
+      "message": "2.0.6"
+    },
+    {
+      "sha": "9da85c4d1069af7ef236c8838e6bc873fef5e97d",
+      "author": "Jon Binney",
+      "date": "2023-03-18T18:23:42Z",
+      "message": "Update changelog"
+    },
+    {
+      "sha": "6097b7f4bc82baeca3d5f74bba32369064d78bbc",
+      "author": "Jonathan Binney",
+      "date": "2023-03-03T21:28:15Z",
+      "message": "Merge pull request #175 from tuxnese/ros2\n\nAdded declaration of parameters"
+    },
+    {
+      "sha": "42c028d0e4e16acd223a87bd8969a678e03bbe97",
+      "author": "Jonathan Binney",
+      "date": "2023-03-03T21:10:23Z",
+      "message": "Merge pull request #173 from FutureInLogistics/nikolaseu-cherry-picks\n\nReduce computation cost of ScanShadowsFilter"
+    },
+    {
+      "sha": "2c831362c4de36aa36485334e68d032446480543",
+      "author": "Riccardo Tornese",
+      "date": "2023-03-01T11:48:40Z",
+      "message": "Added declaration of parameters"
+    },
+    {
+      "sha": "dad25c125cc3c96f585d1cf8e98292bba9380f4b",
+      "author": "Atsushi Watanabe",
+      "date": "2018-03-30T07:38:18Z",
+      "message": "Add some comments to ScanShadowDetector"
+    },
+    {
+      "sha": "7923de57403f5ef03bc3285ba7e947b577bcd3a2",
+      "author": "Atsushi Watanabe",
+      "date": "2018-01-30T01:30:11Z",
+      "message": "Reduce computation cost of ScanShadowsFilter\n\nScanShadowsFilter required a lot of CPU power mainly due to atan2.\nThis commit reduces computation cost of the filter.\n\n* Remove atan2 and directly compare tangent values\n* Add a test to check geometric calculation"
+    },
+    {
+      "sha": "8ab298aa0cc6ad57d1028e5c32cd19f45c7679e8",
+      "author": "Atsushi Watanabe",
+      "date": "2018-01-30T02:08:06Z",
+      "message": "Apply ROS recommended indent style to ScanShadowsFilter"
+    },
+    {
+      "sha": "0ff9bf38ca44412d06e1be3af8763a48e494657f",
+      "author": "Jonathan Binney",
+      "date": "2023-02-25T18:57:26Z",
+      "message": "Merge pull request #174 from jonbinney/update-ci-for-humble\n\nUpdate CI for humble"
+    },
+    {
+      "sha": "4ee8ca3e5d12dba2e6b0b077ff9e2f9b1cadb9ee",
+      "author": "Jon Binney",
+      "date": "2023-02-25T18:47:28Z",
+      "message": "Update CI for humble\n\nKeeping CI on for galactic for the moment; I've added the\n--include-eol-distros flag to rosdep so that it still finds dependencies\non galactic."
+    },
+    {
+      "sha": "25eda91a881c0fa69a679a78bdc061f200a19e4d",
+      "author": "Jonathan Binney",
+      "date": "2022-10-24T05:22:01Z",
+      "message": "Merge pull request #168 from brandonbeggs/ros2\n\nUpdate scan_to_cloud_filter_chain.cpp"
+    },
+    {
+      "sha": "ae589211ce57b66dde9a7562cba4a6d95cd73bc9",
+      "author": "brandonbeggs",
+      "date": "2022-10-20T23:48:00Z",
+      "message": "Update scan_to_cloud_filter_chain.cpp\n\nAs of Eloquent a timer interface is required for the tf buffer.\r\nhttps://docs.ros.org/en/galactic/Releases/Release-Eloquent-Elusor.html#tf2-buffer"
+    },
+    {
+      "sha": "2d6a3c25a939295992c83154f2df629db2f743a5",
+      "author": "Wolf Vollprecht",
+      "date": "2022-06-24T07:52:15Z",
+      "message": "Do not use \"not\" as it is not defined in MSVC"
+    },
+    {
+      "sha": "8491426ae5f9aa9d61ec5e17fdb86dc2bcf70fdf",
+      "author": "Jon Binney",
+      "date": "2022-05-27T03:50:01Z",
+      "message": "2.0.5"
+    },
+    {
+      "sha": "5efa3243086713297cb9b3d52058aaff3971be98",
+      "author": "Jon Binney",
+      "date": "2022-05-27T03:49:42Z",
+      "message": "Update changelog"
+    },
+    {
+      "sha": "7f4c661cda7d0c7f6658f105ffc65804dd342bcd",
+      "author": "Jonathan Binney",
+      "date": "2022-05-23T03:31:41Z",
+      "message": "Merge pull request #161 from ros-perception/clalancette/deboostify\n\nRemove remaining uses of boost."
+    },
+    {
+      "sha": "06add57beaad1563653ad1bb0b71d456adb00383",
+      "author": "Chris Lalancette",
+      "date": "2022-05-20T17:46:40Z",
+      "message": "Remove remaining uses of boost.\n\nAll of that functionality is now available in std:: .  Also, this\nshould fix the build on RHEL.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "cdb2bbe7cc3ddc4ca364317f6899a6a13793545e",
+      "author": "Jon Binney",
+      "date": "2022-04-08T22:56:41Z",
+      "message": "2.0.4"
+    },
+    {
+      "sha": "d7b220d57ca794e5c0a7b609a540eb7d99920180",
+      "author": "Jon Binney",
+      "date": "2022-04-08T22:52:36Z",
+      "message": "Update changelog"
+    },
+    {
+      "sha": "7fd4f2cb5cbf6383fc885f9ed870a4f3f4f2a7e9",
+      "author": "Jonathan Binney",
+      "date": "2022-04-05T01:55:00Z",
+      "message": "Merge pull request #159 from clalancette/clalancette/add-sensor-msgs-dependency\n\nAdd a sensor_msgs dependency to test_scan_filter_chain"
+    },
+    {
+      "sha": "c1a5714267c4563bdd7ce232d58c80c9c1fa6b1a",
+      "author": "Chris Lalancette",
+      "date": "2022-04-01T14:49:01Z",
+      "message": "Add a sensor_msgs dependency to test_scan_filter_chain\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>"
+    },
+    {
+      "sha": "cb5b8222239987d180e1bef1925269201a61a7a2",
+      "author": "Jonathan Binney",
+      "date": "2022-03-05T19:12:23Z",
+      "message": "Merge pull request #156 from motius/inverted_box_filter\n\nadding support for invert-parameter to select if points within or out…"
+    },
+    {
+      "sha": "5dc0f06a3f500444955ddc8bb06f11fb48ffaabe",
+      "author": "Nikolas Engelhard",
+      "date": "2022-02-28T10:09:04Z",
+      "message": "adding support for invert-parameter to select if points within or outside of box are kept"
+    },
+    {
+      "sha": "ff618f2c51d475b5bda85c8496ceb15e8468613e",
+      "author": "Jon Binney",
+      "date": "2021-10-19T17:34:45Z",
+      "message": "2.0.3"
+    },
+    {
+      "sha": "4fc6a043a7088e41ef9a32be221950900f8c60b9",
+      "author": "Jon Binney",
+      "date": "2021-10-19T17:34:24Z",
+      "message": "Update changelog"
+    },
+    {
+      "sha": "8bc64dd34ff2685b7f241da85f1bd8cfea48e7a6",
+      "author": "Jonathan Binney",
+      "date": "2021-10-19T17:32:24Z",
+      "message": "Merge pull request #136 from jonbinney/add-license-file\n\nAdd top level license file"
+    },
+    {
+      "sha": "0604d7fe0115f172d2a04ad84d91620b4ac47d71",
+      "author": "Jon Binney",
+      "date": "2021-10-19T17:23:33Z",
+      "message": "2.0.2"
+    },
+    {
+      "sha": "c6df2b08e3a018e8eb63d4b92b84d7f42948e36d",
+      "author": "Jon Binney",
+      "date": "2021-10-19T17:21:55Z",
+      "message": "Update changelog"
+    },
+    {
+      "sha": "a4b1489a0df53027d550ceb2b63771961899ab54",
+      "author": "Jon Binney",
+      "date": "2021-10-19T17:12:55Z",
+      "message": "Add top level license file\n\nThe license is the same as it always has been; this commmit just copies\nthe license text from the source files into a top level LICENSE file to\nmake it clear."
+    },
+    {
+      "sha": "5c0950022eca1de56d4402d3ac44489f14bcd361",
+      "author": "Jon Binney",
+      "date": "2021-10-18T16:59:57Z",
+      "message": "2.0.1"
+    },
+    {
+      "sha": "cc79cc46a39a6720f29339f488572d6dc435343c",
+      "author": "Jon Binney",
+      "date": "2021-10-18T16:59:39Z",
+      "message": "Update changelog"
+    },
+    {
+      "sha": "dde90f888da86f10cc34c38f808554c7380e9756",
+      "author": "Jonathan Binney",
+      "date": "2021-10-18T16:58:22Z",
+      "message": "Merge pull request #135 from jonbinney/ament-cmake-auto-dep\n\nAdd build depend on ament_cmake_auto"
+    },
+    {
+      "sha": "647ad50a4343c622cfd9eb68d0f23a49ab501d50",
+      "author": "Jon Binney",
+      "date": "2021-10-18T16:28:32Z",
+      "message": "Add build depend on ament_cmake_auto"
+    },
+    {
+      "sha": "08b7a55fc6bf9bfbfcaf89103e3a0f18f3246171",
+      "author": "Jon Binney",
+      "date": "2021-10-13T21:50:59Z",
+      "message": "2.0.0"
+    },
+    {
+      "sha": "f6819687ae262b69d3525f735a7880ad4730c51d",
+      "author": "Jon Binney",
+      "date": "2021-10-13T17:29:12Z",
+      "message": "Update changelog"
+    },
+    {
+      "sha": "dba28b98ee38e66e5273bd7d75c2fd0a5063b581",
+      "author": "Jonathan Binney",
+      "date": "2021-10-13T17:25:56Z",
+      "message": "Merge pull request #133 from jonbinney/undo-use-filters-from-source-on-ci\n\nRevert \"Use filters from source on CI\""
+    },
+    {
+      "sha": "0a443f88faf863a4ed58f99d471ede6344a2e1ed",
+      "author": "Jon Binney",
+      "date": "2021-10-13T17:13:47Z",
+      "message": "Revert \"Use filters from source on CI\"\n\nThis reverts commit 44d0e4c5c392ee8dde762782a6cf0220be3682cb."
+    },
+    {
+      "sha": "544fd2904c425ec27382956170fe3ad73fb759aa",
+      "author": "Jonathan Binney",
+      "date": "2021-07-15T21:48:50Z",
+      "message": "Merge pull request #125 from jonbinney/ci-filters-from-source\n\nUse filters from source on CI"
+    },
+    {
+      "sha": "44d0e4c5c392ee8dde762782a6cf0220be3682cb",
+      "author": "Jon Binney",
+      "date": "2021-07-15T21:33:40Z",
+      "message": "Use filters from source on CI"
+    },
+    {
+      "sha": "92fbac1455b111192b49a486d1af71ea8fddf418",
+      "author": "Jonathan Binney",
+      "date": "2021-07-15T21:23:25Z",
+      "message": "Merge pull request #124 from jonbinney/enable-ci-rolling-galactic\n\nEnable CI for galactic and rolling distros"
+    },
+    {
+      "sha": "43d051855489ee98349496b4e148cfdb8642b65e",
+      "author": "Jon Binney",
+      "date": "2021-07-15T21:13:34Z",
+      "message": "Enable CI for galactic and rolling distros"
+    },
+    {
+      "sha": "8fb5ea6dda546544eaafce025a48481e9d26bd53",
+      "author": "Jonathan Binney",
+      "date": "2021-07-15T19:15:36Z",
+      "message": "Merge pull request #123 from ros-perception/galactic-fix-compilation-bugs\n\nFix small bugs in build on galactic"
+    },
+    {
+      "sha": "88ddc5301e3a4a9b38c855eff2e905001ea7ff24",
+      "author": "Jon Binney",
+      "date": "2021-07-15T19:07:31Z",
+      "message": "Actually check test results on CI"
+    },
+    {
+      "sha": "1005df388b0a47e88d3782b2c50c252b76846952",
+      "author": "Jon Binney",
+      "date": "2021-07-15T19:03:51Z",
+      "message": "Use colcon to build and test on CI"
+    },
+    {
+      "sha": "62dacfb986d900bebe1cb361a516474d1ad819e9",
+      "author": "Jon Binney",
+      "date": "2021-07-15T17:10:47Z",
+      "message": "Use correct directory for rosdep install"
+    },
+    {
+      "sha": "e92eb139fadcd9f4491d3998d9433f46d9c53984",
+      "author": "Jon Binney",
+      "date": "2021-07-15T17:06:10Z",
+      "message": "Remove unneeded find_package of pcl_conversions"
+    },
+    {
+      "sha": "efd152140c66bcca1243b64834a940455f72026e",
+      "author": "Jon Binney",
+      "date": "2021-07-15T16:59:12Z",
+      "message": "Fix small bugs in build on galactic\n\nTests must explicitly depend on rclcpp and the footprint filter was\nmissing an include."
+    },
+    {
+      "sha": "78c0fc2aa1ed0ec7bf88f0d9ab7627162813eeff",
+      "author": "Jonathan Binney",
+      "date": "2021-07-04T20:35:25Z",
+      "message": "Merge pull request #122 from ros-perception/feature/speckle-filter-ros2\n\nPort speckle filter to ros2"
+    },
+    {
+      "sha": "c5f20ee7a892abc6a3dbba646f98f7c8eaedcd9d",
+      "author": "Jon Binney",
+      "date": "2021-07-03T01:59:44Z",
+      "message": "Fix compilation warnings"
+    },
+    {
+      "sha": "a4c5bb7a1781afc05814543728833ca84c45fc48",
+      "author": "Patrick Lascombe",
+      "date": "2021-01-29T13:19:23Z",
+      "message": "Speckle filter running"
+    },
+    {
+      "sha": "f65aa931f72fbb87b7f2cb9e89c8e2dd110ac509",
+      "author": "Patrick Lascombe",
+      "date": "2021-01-29T12:42:46Z",
+      "message": "Scan and speckle launching"
+    },
+    {
+      "sha": "e14b33a1c4a8abf421f6a05319edfd9467615fc1",
+      "author": "Patrick Lascombe",
+      "date": "2021-01-29T08:59:38Z",
+      "message": "speckle_filter pass compilation"
+    },
+    {
+      "sha": "f841899fcc2c23bd2d3d8cedb089b5fbfc5d4ed3",
+      "author": "Rein Appeldoorn",
+      "date": "2020-05-11T11:04:47Z",
+      "message": "update lincense header"
+    },
+    {
+      "sha": "eb6d130ff2a115fe69f4ebdef1689a64090f867c",
+      "author": "Nicolas Limpert",
+      "date": "2020-04-21T17:24:06Z",
+      "message": "speckle_filter: adapt test parameters to parameter set"
+    },
+    {
+      "sha": "1b325596ec977fcba55b48e1b04ea69ee3a70fe6",
+      "author": "Nicolas Limpert",
+      "date": "2020-04-21T11:27:16Z",
+      "message": "speckle_filter: patch test for Python3"
+    },
+    {
+      "sha": "2fd474cba00c578847a5f7c98b8b8e240188e36b",
+      "author": "Nicolas Limpert",
+      "date": "2020-04-19T16:46:28Z",
+      "message": "speckle_filter: fix deletion of validator in dtor"
+    },
+    {
+      "sha": "c209f5cdbec20bcde978c9e70c6e7bbaaaf5e9f9",
+      "author": "Nicolas Limpert",
+      "date": "2020-04-19T16:37:57Z",
+      "message": "speckle_filter: add test for euclidean based filter"
+    },
+    {
+      "sha": "0fbe9233e834882bc53f3ccc4e4772c1944691d3",
+      "author": "Nicolas Limpert",
+      "date": "2020-04-19T11:43:10Z",
+      "message": "speckle_filter: adhere test to new filter structure"
+    },
+    {
+      "sha": "6779c109ec470ba8c8624cf025b19224fe38a3bf",
+      "author": "Nicolas Limpert",
+      "date": "2020-04-19T11:08:38Z",
+      "message": "speckle_filter: introduce RadiusOutlier filtering\n\nThe RadiusOutlier filter and the distance based speckle filter actually\nserve very similar functionality. Hence add the RadiusOutlier filter as\nan additional speckle filter selectable via the configuration."
+    },
+    {
+      "sha": "d49c513307b481969d0ff8e0fa0ec0d5df7ea943",
+      "author": "Nicolas Limpert",
+      "date": "2020-04-19T10:34:42Z",
+      "message": "speckle_filter: exclude window validation to class\n\nIn order to allow additional filtering methods separate\ncheckWindowValid to a custom class to derive from.\nAlso introduce an additional parameter to select the filtering method."
+    },
+    {
+      "sha": "afa758a9d5ba94a10b4624b4ecc25d3725179d25",
+      "author": "Nicolas Limpert",
+      "date": "2020-04-17T09:19:29Z",
+      "message": "speckle_filter: remove double check on nan"
+    },
+    {
+      "sha": "0bf20673e6a2ddd5e25078a36a568e30e1a593c3",
+      "author": "Nicolas Limpert",
+      "date": "2020-04-16T20:36:10Z",
+      "message": "speckle_filter: merge parameter name prefix for ranges"
+    },
+    {
+      "sha": "18b7bfb6f1d9bc71e62777c57ebd8081a2ea4140",
+      "author": "Nicolas Limpert",
+      "date": "2020-04-16T20:34:43Z",
+      "message": "speckle_filter: add example"
+    },
+    {
+      "sha": "7bd14686838b4583b1ba56b5001d5e2d5ac71514",
+      "author": "Rein Appeldoorn",
+      "date": "2020-03-19T10:59:47Z",
+      "message": "feat: Speckle filter"
+    },
+    {
+      "sha": "614166469532d90fa9f856ee7b1411261fd70e9b",
+      "author": "Jonathan Binney",
+      "date": "2021-07-02T19:29:00Z",
+      "message": "Merge pull request #121 from ros-perception/bugfix/ros2-ci-branch-name\n\nFix branch name for ros2 tests"
+    },
+    {
+      "sha": "83b7c29975d97da80430f52789a726625fbd6480",
+      "author": "Jon Binney",
+      "date": "2021-07-02T19:15:55Z",
+      "message": "Fix typo in workflow file"
+    },
+    {
+      "sha": "1a6bc0df4188e4b78fdf82a6a281f74773990166",
+      "author": "Jon Binney",
+      "date": "2021-07-02T18:34:25Z",
+      "message": "Update rosdep and apt before installing deps"
+    },
+    {
+      "sha": "5102f1ec5b6831a2a46f8c89d76676171d35a2f8",
+      "author": "Jon Binney",
+      "date": "2021-07-02T18:31:00Z",
+      "message": "Fix branch name for ros2 tests"
+    },
+    {
+      "sha": "36825a8575c4e692a634689dd3194b3592a180a2",
+      "author": "Jonathan Binney",
+      "date": "2021-07-02T18:25:15Z",
+      "message": "Merge pull request #120 from ros-perception/feature/enable-ros2-ci\n\nEnable CI on ros2 branch"
+    },
+    {
+      "sha": "4a3a60a05b6d06231d7dcbf69da91c5b273127b6",
+      "author": "Jon Binney",
+      "date": "2021-07-02T18:22:40Z",
+      "message": "Change name of CI workflow\n\nGithub actions didn't run it; maybe because it has the same name as the\nros1 workflow?"
+    },
+    {
+      "sha": "0b9ca5ca81c5a5cf6614c2336aca6a47c9a37e0e",
+      "author": "Jon Binney",
+      "date": "2021-07-02T18:15:41Z",
+      "message": "Remove ros1 ci file from ros2 branch"
+    },
+    {
+      "sha": "6e9ec9a9217aadf7c484b66c37976db67e0b43b2",
+      "author": "Jon Binney",
+      "date": "2021-07-02T18:08:52Z",
+      "message": "Enable CI on ros2 branch"
+    },
+    {
+      "sha": "86b71f456529a3dd4a411c964bf51fde26a197e9",
+      "author": "Jonathan Binney",
+      "date": "2021-07-02T17:04:53Z",
+      "message": "Merge pull request #119 from ros-perception/feature/remove-pointcloud-footprint-filter\n\nRemove pointcloud footprint filter"
+    },
+    {
+      "sha": "c8fa20f28f722d74a9cd4468b7521ec1685825e1",
+      "author": "Jon Binney",
+      "date": "2021-07-02T17:01:45Z",
+      "message": "Remove pointcloud footprint filter\n\nIt has been deprecated for years, and is the only filter that depends on\npcl_ros. Removing it means we don't have to install the 500MB of\ndependencies that pcl brings in on CI."
+    },
+    {
+      "sha": "b2845c96cc4fef2cf381c12676ab290cda80d085",
+      "author": "Jonathan Binney",
+      "date": "2020-12-12T01:23:05Z",
+      "message": "Merge pull request #101 from hangst/ros2\n\nROS2 migration (foxy)"
+    },
+    {
+      "sha": "70fa246eea0ab5bba0effa35a26629b61eb9bd78",
+      "author": "hang",
+      "date": "2020-11-06T02:03:59Z",
+      "message": "removed -Wall -Werror compiler options from CMakeLists.txt"
+    },
+    {
+      "sha": "89b447ac07c3c465ec85399cf311e444e1a19361",
+      "author": "hang",
+      "date": "2020-11-05T03:33:55Z",
+      "message": "updated package.xml to depend on rclcpp_lifecycle"
+    },
+    {
+      "sha": "2ac24a4645c49b9e53cdeaa7c993654fcb5a207b",
+      "author": "hang",
+      "date": "2020-11-05T03:33:30Z",
+      "message": "bugfix in laser_filters_plugins.xml : use PointCloud2 instead of deprecated PointCloud"
+    },
+    {
+      "sha": "80905c0b0a5d186cba0bc52774e55ac1fa5a4512",
+      "author": "hang",
+      "date": "2020-11-05T03:31:48Z",
+      "message": "updated CMakeLists.txt added examples to installation"
+    },
+    {
+      "sha": "0da2ed634e0eefe0630741dec6b5e30eadb86468",
+      "author": "hang",
+      "date": "2020-11-05T03:31:19Z",
+      "message": "fixed box and footprint filters: use rclcpp_lifecycle::LifecycleNode instead of rclcpp::Node (for tf2_ros::Buffer)"
+    },
+    {
+      "sha": "cf27b3654f5e998d21aa6aeb72e37c8663ce422b",
+      "author": "hang",
+      "date": "2020-11-05T03:29:31Z",
+      "message": "fixed examples yamls with ros2 parameter syntax, translated launch xml -> py"
+    },
+    {
+      "sha": "8dae03823f2b6564cb3146375554a020287eb7cb",
+      "author": "hang",
+      "date": "2020-10-28T11:26:59Z",
+      "message": "Removed redundant 'scan_fitler_chain' namespace for node params"
+    },
+    {
+      "sha": "a6ba0f93a591b1ebf194e69a19c007d5e8f56612",
+      "author": "hang",
+      "date": "2020-10-28T10:40:59Z",
+      "message": "Fixed ScanToScanFilterChain unabled to get parameters from 'scan_filter_chain' key"
+    },
+    {
+      "sha": "a19d3734ecfc6a388fe0ffe6a87b7d83c1a863b6",
+      "author": "hang",
+      "date": "2020-10-28T09:44:48Z",
+      "message": "Updated LaserScanBoxFilter and LaserScanFootprintFilter to use PointCloud2. Fixed ROS2 include headers and logging macros"
+    },
+    {
+      "sha": "6afbf2a400d17addfe25adb1780f7723d933e688",
+      "author": "hang",
+      "date": "2020-10-28T09:29:55Z",
+      "message": "Bugfix in test_scan_filter_chain.yaml"
+    },
+    {
+      "sha": "cf8c2265e1efebdee8b0077af16b970dd1afe6c3",
+      "author": "hang",
+      "date": "2020-10-28T09:29:30Z",
+      "message": "Fixed filter chains and nodes with ROS2 syntax. Removed deprecated params and conditionals"
+    },
+    {
+      "sha": "6ec27930e480d99d00713133dbfb032a061c5a9f",
+      "author": "hang",
+      "date": "2020-10-28T09:23:44Z",
+      "message": "Replaced PointCloud with PointCloud2. Fixed transformPointCloud function call. Fixed ROS_* logging with RCLCPP_* macros"
+    },
+    {
+      "sha": "0af0b9e3928734c798f78da36a3fd01a5f9839ed",
+      "author": "hang",
+      "date": "2020-10-28T08:58:49Z",
+      "message": "Fixed ROS2_SUPPORTS_PARAMETER_ARRAYS with params_interface_->get_parameter_overrides(). Fixed include headers"
+    },
+    {
+      "sha": "478100697744e52edce9889d5cb61b71972590f9",
+      "author": "hang",
+      "date": "2020-10-28T07:50:47Z",
+      "message": "Fixed CMakeLists.txt with ament_cmake_auto. Added test_scan_filter_chain test case"
+    },
+    {
+      "sha": "4d73a52140d35140621b058c580181471ba08c8a",
+      "author": "hang",
+      "date": "2020-10-28T07:49:02Z",
+      "message": "Fixed include headers (*.h->*.hpp). Fixed sensor_msgs namespace. Fixed filters::FilterChain::configure arguments"
+    },
+    {
+      "sha": "8fbb153f757d44eb697b19e2b83c255e334fd52b",
+      "author": "hang",
+      "date": "2020-10-28T07:39:44Z",
+      "message": "Include header fixes: *.h -> *.hpp"
+    },
+    {
+      "sha": "f65ba1e53f02aad20bb8dc7a9605e68a3297d9a9",
+      "author": "hang",
+      "date": "2020-10-28T07:29:31Z",
+      "message": "Upgraded package.xml to format=3"
+    },
+    {
+      "sha": "9e5971ba301488c40e2b572bde86aa90545405df",
+      "author": "hang",
+      "date": "2020-10-28T07:28:52Z",
+      "message": "Fixed message namespace: sensor_msgs::* -> sensor_msgs::msg::*. Fixed plugin library path by removing lib/lib* for portability"
+    },
+    {
+      "sha": "46627ae70b16ae238569c68d13c2c6b76d53ddc1",
+      "author": "hang",
+      "date": "2020-10-28T07:20:30Z",
+      "message": "Fixed deprecated includes filters/*.h -> filters/*.hpp. Replaced ROS_* logging with RCLCPP_* counterparts"
+    },
+    {
+      "sha": "1fc98286642b3cc59809a6f6adb91acdb221abc5",
+      "author": "hang",
+      "date": "2020-10-28T05:00:40Z",
+      "message": "Fixed 'multiple definitions of filters::impl::normalize_param_prefix' during compilation. Subclassed (with rclcpp::Node) filters that use tf2_ros::Buffer which require rclcpp::Clock"
+    },
+    {
+      "sha": "8a7d21bc4fcc12181a4a2945e45b4b5d0824f8ef",
+      "author": "Jonathan Binney",
+      "date": "2018-02-09T01:44:52Z",
+      "message": "Merge pull request #61 from bfjelds/ros2-devel\n\nRemove xmlrpcpp (ROS1 conecpt) and add eigen"
+    },
+    {
+      "sha": "f4be3992c87e835f7d17211fe3996df25271ff45",
+      "author": "Brian Fjeldstad",
+      "date": "2018-01-30T16:40:58Z",
+      "message": "fix includes for case and type"
+    },
+    {
+      "sha": "51a2d33a06a14df24fc897709714adcf93634d8a",
+      "author": "Brian Fjeldstad",
+      "date": "2018-01-18T20:08:50Z",
+      "message": "delegate handling of dependencys' dependencies"
+    },
+    {
+      "sha": "0d8c0866f9317c3cb5b0af2e5a8ed85f64cacd75",
+      "author": "Brian Fjeldstad",
+      "date": "2018-01-13T03:31:46Z",
+      "message": "move eigen to laser_geometry export"
+    },
+    {
+      "sha": "035a8890419d7304a1a5912b7a2776d94cfba037",
+      "author": "Brian Fjeldstad",
+      "date": "2018-01-12T19:16:33Z",
+      "message": "remove xmlrpcpp and add Eigen"
+    },
+    {
+      "sha": "6d196d5a2c727c07f836a9117f6488de1779ad32",
+      "author": "Jonathan Binney",
+      "date": "2018-01-09T19:17:46Z",
+      "message": "Merge pull request #60 from bfjelds/ros2-devel-on-ros2\n\nMake laser_filters build for ros2 (on windows 10)"
+    },
+    {
+      "sha": "d7d4e0184a3b56da729a0ff8be081e081c0f50e8",
+      "author": "Brian Fjeldstad",
+      "date": "2017-11-30T18:57:44Z",
+      "message": "Make laser_filters build for ros2 (on windows 10)"
+    },
+    {
+      "sha": "c77c70a7abd60194257d48172954dca31cab5c35",
+      "author": "Nick Lamprianidis",
+      "date": "2017-10-25T13:01:08Z",
+      "message": "Updated deprecated pluginlib macros to avoid warning messages"
+    },
+    {
+      "sha": "eb9633939a33198368acbebb67ff110bc3617226",
+      "author": "Jon Binney",
+      "date": "2017-09-07T01:27:56Z",
+      "message": "1.8.5"
+    },
+    {
+      "sha": "013c9284e648cfcd91001e70fa5e35a67ebddc1f",
+      "author": "Jon Binney",
+      "date": "2017-09-07T01:25:30Z",
+      "message": "Update changelog"
+    },
+    {
+      "sha": "d0d096a5e321647bd88b1f3bc2744e6ad23df76f",
+      "author": "Jonathan Binney",
+      "date": "2017-08-31T19:06:28Z",
+      "message": "Merge pull request #56 from ipa-jba/indigo-devel\n\nchange range_filter to infinity for it to work with obstacle_layer"
+    },
+    {
+      "sha": "94a65b45e22207cccb81f2af0d32e93d92ef10bc",
+      "author": "Jannik Abbenseth",
+      "date": "2017-08-31T06:53:15Z",
+      "message": "rename parameter to be more descriptive"
+    },
+    {
+      "sha": "4c2380928b577da22b1f741a2275a7a9bc856a8d",
+      "author": "Jannik Abbenseth",
+      "date": "2017-08-24T15:27:56Z",
+      "message": "change range_filter to infinity for it to work with obstacle_layer\nif you use the ´inf_is_valid´ parameter raytracing is still possible for\nscans out of the window.\nUsefull for laserscanners that may deliver ranges > range_max ... or"
+    },
+    {
+      "sha": "f7ee8d417acea8aaa1a7f956a9b6a5ad7e17cbd9",
+      "author": "Jonathan Binney",
+      "date": "2017-07-18T22:02:48Z",
+      "message": "Merge pull request #53 from allenh1/indigo-devel\n\nFix a small typo in one of the test cases."
+    },
+    {
+      "sha": "1bd3fc311d443107ef41ccb1a802943b29ed5019",
+      "author": "Jonathan Binney",
+      "date": "2017-07-13T15:20:49Z",
+      "message": "Merge pull request #52 from at-wat/add-mask-filter-squashed\n\nAdd LaserScanMaskFilter."
+    },
+    {
+      "sha": "c044e031106dc0fcc20b42507a86925cdf53ee3b",
+      "author": "Hunter L. Allen",
+      "date": "2017-07-07T19:02:44Z",
+      "message": "Fix a small typo in one of the test cases."
+    },
+    {
+      "sha": "cca34cabcda431467af20144fda24e919ef37785",
+      "author": "Atsushi Watanabe",
+      "date": "2017-06-26T03:25:51Z",
+      "message": "Add LaserScanMaskFilter.\n\nThis commit adds LaserScanMaskFilter that removes points on directions defined in a mask, defined as a parameter, from a laser scan.\nIt can be used to remove unreliable points caused by hardware related problems for example scratches on an optical window of the sensor."
+    },
+    {
+      "sha": "63e8b01d774566a9cdf42f37c54757f604fbfb88",
+      "author": "Jon Binney",
+      "date": "2017-04-07T19:02:05Z",
+      "message": "1.8.4"
+    },
+    {
+      "sha": "5fd06a8eb14fba743428062ca50bc624005f67fb",
+      "author": "Jon Binney",
+      "date": "2017-04-07T19:01:55Z",
+      "message": "Update changelog"
+    },
+    {
+      "sha": "cee33fb23bb8d7d49fc27ea94900ebefeeed20dd",
+      "author": "Jonathan Binney",
+      "date": "2017-04-06T16:46:47Z",
+      "message": "Merge pull request #51 from jonbinney/jb-package-names-in-tests\n\nSpecify packages names for filters in tests"
+    },
+    {
+      "sha": "7c8cabb4cbc10943dad417a8dc10ca04b641773d",
+      "author": "Jon Binney",
+      "date": "2017-04-06T16:31:20Z",
+      "message": "Specify packages names for filters in tests"
+    },
+    {
+      "sha": "caea5a6713c9317716d1bd22809303aea4b93ef8",
+      "author": "Jonathan Binney",
+      "date": "2016-07-18T04:17:43Z",
+      "message": "Merge pull request #49 from clearpathrobotics/cpp11\n\nUse std:: namespace for c++11 compat."
+    },
+    {
+      "sha": "a185bb6d0b61cbf8283467770e646241f7cac03e",
+      "author": "Mike Purvis",
+      "date": "2016-07-16T03:47:45Z",
+      "message": "Use std:: namespace for c++11 compat."
+    },
+    {
+      "sha": "ec5b73f221a77aad73f9ce2d9589ac1b10c4dd82",
+      "author": "Jon Binney",
+      "date": "2016-05-21T03:01:39Z",
+      "message": "1.8.3"
+    },
+    {
+      "sha": "1802b850e8764b4ffdde24c8cd28517cfb4be9ad",
+      "author": "Jon Binney",
+      "date": "2016-05-21T03:01:30Z",
+      "message": "Update changelog"
+    },
+    {
+      "sha": "3d962decf4529faa20939405db3154421952833d",
+      "author": "Jonathan Binney",
+      "date": "2016-05-16T21:30:17Z",
+      "message": "Merge pull request #47 from alain-m/fix-footprint-filter-#1087\n\nReplace the invalid value of scans for the footprint_filter by NaN"
+    },
+    {
+      "sha": "df848a37aaddb22a19a2a89019449e3f07abd9cf",
+      "author": "Alain Minier",
+      "date": "2016-05-04T10:38:25Z",
+      "message": "Replaced the invalid value of scans for the\nfootprint_filter by NaN"
+    },
+    {
+      "sha": "2facc0db62cea68afe22586a4255fe8e2993d1d5",
+      "author": "Jon Binney",
+      "date": "2016-04-07T00:57:06Z",
+      "message": "1.8.2"
+    },
+    {
+      "sha": "5112773ff86ad51b1b9b1bca1afc40610d3f0f00",
+      "author": "Jon Binney",
+      "date": "2016-04-07T00:56:41Z",
+      "message": "Update changelog"
+    },
+    {
+      "sha": "ae9fddee87f1cbdb28667de58b2143f6e174447a",
+      "author": "Jonathan Binney",
+      "date": "2016-04-07T00:55:29Z",
+      "message": "Merge pull request #46 from jonbinney/no-eigen\n\nRemove unneeded eigen and cmake_modules"
+    },
+    {
+      "sha": "9e6c1df3a3ab93ee016cdb1ab5110fcc780cdbee",
+      "author": "Jon Binney",
+      "date": "2016-04-07T00:53:32Z",
+      "message": "Remove unneeded eigen and cmake_modules\n\nNothing was actually compiling against eigen."
+    },
+    {
+      "sha": "1751cca7fd393023125178e813702a2759cd31fb",
+      "author": "Jon Binney",
+      "date": "2016-03-27T06:13:55Z",
+      "message": "1.8.1"
+    },
+    {
+      "sha": "a224555931ebdec62857036cab760789467fd9f7",
+      "author": "Jonathan Binney",
+      "date": "2016-03-16T16:44:06Z",
+      "message": "Merge pull request #43 from naveedhd/indigo-devel\n\nRemoved deprecated warning from footprint filter"
+    },
+    {
+      "sha": "fca7daeabff15b6bf8f3737e0b8b2c12d49b5939",
+      "author": "Naveed Usmani",
+      "date": "2016-03-15T09:19:13Z",
+      "message": "Remove deprecated warning from footprint filter"
+    },
+    {
+      "sha": "a4f7780aa268e1176f5a294cc89288bfd06c4a86",
+      "author": "Jonathan Binney",
+      "date": "2016-03-04T20:28:28Z",
+      "message": "Merge pull request #42 from k-okada/indigo-devel\n\ncatkin_make requires cmake_modules in run_depends"
+    },
+    {
+      "sha": "e17cf2579c01da4fb0a52e60189650288112e73d",
+      "author": "Kei Okada",
+      "date": "2016-03-04T15:09:09Z",
+      "message": "catkin_make requires cmake_modules in run_depends"
+    },
+    {
+      "sha": "675813c9267d43c655a3f6ef5e78e1fa748be0cf",
+      "author": "Jonathan Binney",
+      "date": "2016-03-01T23:45:35Z",
+      "message": "Merge pull request #41 from jonbinney/restore-cmake-modules-dep\n\nRestore cmake_modules build dependency"
+    },
+    {
+      "sha": "7d59df513ce07753c6ac086ffe966d59f4abb590",
+      "author": "Jon Binney",
+      "date": "2016-03-01T23:44:43Z",
+      "message": "Restore cmake_modules build dependency"
+    },
+    {
+      "sha": "b303b2432905ac05ab3a3cf8b17c35411da5df36",
+      "author": "asimay",
+      "date": "2016-02-29T10:13:16Z",
+      "message": "Update package.xml"
+    },
+    {
+      "sha": "ac1fa7afd7067cf4bca9810913ccb31b5079fb9e",
+      "author": "asimay",
+      "date": "2016-02-29T03:38:49Z",
+      "message": "Update package.xml\n\nremove eigen dependency and tidy up cmake list reduncy"
+    },
+    {
+      "sha": "5290a5edc6927df6a1829f18a913efe4db56d791",
+      "author": "Jonathan Binney",
+      "date": "2016-02-27T04:47:58Z",
+      "message": "Merge pull request #37 from jonbinney/jb-update-email\n\nUpdate maintainer email address"
+    },
+    {
+      "sha": "87e5607f46149ee80525bce80b724e9bce1011a5",
+      "author": "Jon Binney",
+      "date": "2016-02-27T03:17:19Z",
+      "message": "Update maintainer email address"
+    },
+    {
+      "sha": "f7ffd237ab51f555e070039e58d066010770124d",
+      "author": "Jonathan Binney",
+      "date": "2016-02-25T23:34:44Z",
+      "message": "Merge pull request #36 from 130s/add/travisconf\n\nAdd Travis CI config"
+    },
+    {
+      "sha": "f1e16e1503134761d8ac2e7854f16a389ba717c9",
+      "author": "Isaac I.Y. Saito",
+      "date": "2016-02-25T15:15:07Z",
+      "message": "Add Travis CI config"
+    },
+    {
+      "sha": "6a08db7c99001fa6232400c7b4bca322633d892d",
+      "author": "Jonathan Binney",
+      "date": "2016-02-25T06:13:14Z",
+      "message": "Merge pull request #35 from asimay/indigo-devel\n\nmerge"
+    },
+    {
+      "sha": "316a6463faf8b6fcb4872d560ca089e9c6558c45",
+      "author": "asimay",
+      "date": "2016-02-25T05:57:33Z",
+      "message": "Merge pull request #1 from asimay/asimay-patch-1\n\nUpdate scan_to_scan_filter_chain.cpp"
+    },
+    {
+      "sha": "3fc99a4542da61bd256b3bc6ffcf3df2f3fe0d43",
+      "author": "asimay",
+      "date": "2016-02-25T05:55:26Z",
+      "message": "Update scan_to_scan_filter_chain.cpp\n\nonly publish result if filter succeeded"
+    },
+    {
+      "sha": "9147cac11a3055255f426c29f5859a24937a9f7e",
+      "author": "Jon Binney",
+      "date": "2015-12-18T07:17:18Z",
+      "message": "1.7.4"
+    },
+    {
+      "sha": "369850ba89a1fa1b89dbb4b5b2d350ee919dd9d7",
+      "author": "Jon Binney",
+      "date": "2015-12-18T07:16:56Z",
+      "message": "Update changelog"
+    },
+    {
+      "sha": "3d28093226500815b83781f5a7ce4675af332a74",
+      "author": "Jonathan Binney",
+      "date": "2015-12-10T06:05:40Z",
+      "message": "Merge pull request #34 from furushchev/repair-intensity-filter\n\nfix: segfault on accessing out of index at histogram array"
+    },
+    {
+      "sha": "87a3be9a7cec452225dace444e3ab502022bc4c7",
+      "author": "Furushchev",
+      "date": "2015-12-08T04:04:35Z",
+      "message": "[intensity_filter.h] fix: check if cur_bucket value is out of index of histogram array"
+    },
+    {
+      "sha": "a0c671f9a23d851eafa7b52ce5a52279d84e7de5",
+      "author": "Furushchev",
+      "date": "2015-12-08T04:03:12Z",
+      "message": "[intensity_filter.h] refactor codes; clearify by using boolean to enable/disable displaying histogram"
+    },
+    {
+      "sha": "ea3cea7d9cec84be1b5385c7a25b4563f7dcdc59",
+      "author": "Jonathan Binney",
+      "date": "2015-11-25T21:27:07Z",
+      "message": "Merge pull request #33 from v4hn/custom_filter_tolerance\n\nscan_to_scan_filter_chain: make tf filter tolerance customizable"
+    },
+    {
+      "sha": "ea107a58b05c61762a596ed5891c25b55e35059b",
+      "author": "Jonathan Binney",
+      "date": "2015-11-25T21:23:56Z",
+      "message": "Merge pull request #30 from spuetz/indigo-devel\n\nadded cartesian box filter"
+    },
+    {
+      "sha": "48b5d46a98bf1780d6feb16f0e729525bc58bb5a",
+      "author": "v4hn",
+      "date": "2015-11-23T21:01:31Z",
+      "message": "scan_to_scan_filter_chain: make tf filter tolerance customizable\n\n0.03 is completely arbitrary and too small in my case."
+    },
+    {
+      "sha": "5cdb5f1346d8efb4200919bc74ef008a2dc6e517",
+      "author": "Vincent Rabaud",
+      "date": "2015-11-23T21:02:05Z",
+      "message": "Merge pull request #32 from v4hn/verify-chain\n\nscan2scan filter: only publish result if filter succeeded"
+    },
+    {
+      "sha": "5dfac1556b36cccfa812124c83af490ae67d693b",
+      "author": "Vincent Rabaud",
+      "date": "2015-11-23T21:00:40Z",
+      "message": "Merge pull request #22 from kmhallen/indigo-devel\n\nscan_to_scan_filter_chain: Only subscribe to /tf if requested by parameter"
+    },
+    {
+      "sha": "9f929d50ba576326b1c0478fe90064bc0420e164",
+      "author": "v4hn",
+      "date": "2015-11-23T20:42:46Z",
+      "message": "scan2scan filter: only publish result if filter succeeded"
+    },
+    {
+      "sha": "9c0c366816cb3889bb3d3afb4862f4cae9e4a47e",
+      "author": "Sebastian Pütz",
+      "date": "2015-09-24T15:43:48Z",
+      "message": "added cartesian box filter"
+    },
+    {
+      "sha": "1bc93f20a2803fae4c5b8e4fb3fdf7230e996e6e",
+      "author": "Jonathan Binney",
+      "date": "2015-08-10T19:07:39Z",
+      "message": "Merge pull request #27 from aginika/add-nan-inf-check-laser-scan\n\nadd check inf or nan of input laser_scan intensities"
+    },
+    {
+      "sha": "71aafdcb7381a7e6cc4fa05f900cf72b35d0b491",
+      "author": "Yuto Inagaki",
+      "date": "2015-08-10T15:01:13Z",
+      "message": "add check inf or nan of input laser_scan intensities"
+    },
+    {
+      "sha": "befb74c50c5cff21176a452058dbba9aa7af5fa2",
+      "author": "Kevin Hallenbeck",
+      "date": "2015-04-21T14:03:38Z",
+      "message": "scan_to_scan_filter_chain: Only subscribe to /tf if requested by parameter"
+    },
+    {
+      "sha": "5aef26d18b59ad6387bf7aab4afc9be3b4e53dcb",
+      "author": "Vincent Rabaud",
+      "date": "2014-09-06T20:39:27Z",
+      "message": "1.7.3"
+    },
+    {
+      "sha": "646137bd0011af2e657ffccd2c733ed89d5c82c9",
+      "author": "Vincent Rabaud",
+      "date": "2014-09-06T20:36:00Z",
+      "message": "update changelog"
+    },
+    {
+      "sha": "04f0925e664c9be94cc700902923db2ebc8c5546",
+      "author": "Kevin Hallenbeck",
+      "date": "2014-08-03T17:52:14Z",
+      "message": "Renamed filter to LaserScanAngularBoundsFilterInPlace"
+    },
+    {
+      "sha": "7d5479647c8c8a1f8c75957f9d5d3b8f99b4a212",
+      "author": "Kevin Hallenbeck",
+      "date": "2014-08-02T15:29:07Z",
+      "message": "Added new filter LaserScanAngularRemovalFilter to remove sections of a LaserScan"
+    },
+    {
+      "sha": "d16ef35a980791832b4ad953de6a793d0f54f65a",
+      "author": "Kevin Hallenbeck",
+      "date": "2014-08-02T15:15:00Z",
+      "message": "Fixed typo in LaserScanRangeFilter description"
+    },
+    {
+      "sha": "b9886d6664c341419685b3bdc344c03ec629ff0b",
+      "author": "Vincent Rabaud",
+      "date": "2014-06-24T16:27:13Z",
+      "message": "1.7.2"
+    },
+    {
+      "sha": "713a6474cba0d44c7b0e3ad03df80807cb9a1f9f",
+      "author": "Vincent Rabaud",
+      "date": "2014-06-24T16:26:32Z",
+      "message": "update changelog"
+    },
+    {
+      "sha": "7ad9602324f8a954716c80d794a0f17b8ba84c8c",
+      "author": "Vincent Rabaud",
+      "date": "2014-06-21T06:25:19Z",
+      "message": "Merge pull request #19 from v4hn/no-DEPENDS-dependency\n\nremove superfluous DEPENDS"
+    },
+    {
+      "sha": "499d2f8f3e1f401979dee0e040ea2714f3e81aea",
+      "author": "v4hn",
+      "date": "2014-06-20T20:00:03Z",
+      "message": "remove superfluous DEPENDS\n\nThere never was a DEPENDS flag in add_dependencies..."
+    },
+    {
+      "sha": "0e94c82d83ba90f1ab252d568e1b6c918df369a3",
+      "author": "Jon Binney",
+      "date": "2014-06-06T22:29:51Z",
+      "message": "1.7.1"
+    },
+    {
+      "sha": "c3757accac19ba4a34a8371eba779db5865f493b",
+      "author": "Jonathan Binney",
+      "date": "2014-06-06T20:51:48Z",
+      "message": "Merge pull request #18 from atse2/indigo-devel\n\nSet invalid values to NaN"
+    },
+    {
+      "sha": "a48d6fc2faaf1bd800106d747f84f55f2c0c87dd",
+      "author": "Allison Tse",
+      "date": "2014-06-06T20:45:11Z",
+      "message": "Merge pull request #1 from jonbinney/fix-tests\n\nFix tests to handle NaNs"
+    },
+    {
+      "sha": "6d5503cfa168b48ccbe5d9716159a5f5b01f9b23",
+      "author": "Jon Binney",
+      "date": "2014-06-06T20:15:21Z",
+      "message": "Tests expect NaN for invalid ranges"
+    },
+    {
+      "sha": "b70fce944866b945c8ed32ce27a7b1d324222a7b",
+      "author": "Allison Tse",
+      "date": "2014-06-06T18:37:42Z",
+      "message": "Add comments for changes"
+    },
+    {
+      "sha": "4c77ebc5d726eed9e80d9605341b7f60c2060c4d",
+      "author": "Allison Tse",
+      "date": "2014-06-06T18:34:38Z",
+      "message": "Modify intensity, scan shadow, and range filters to set invalid values to NaN"
+    },
+    {
+      "sha": "1bc5db5a10047924626c75c08a9c72d43f5590e1",
+      "author": "Jon Binney",
+      "date": "2014-03-13T17:45:38Z",
+      "message": "1.7.0"
+    },
+    {
+      "sha": "e1a37f9325fc933a994155b3c83c5b5ea074b51d",
+      "author": "Jon Binney",
+      "date": "2014-03-13T00:17:33Z",
+      "message": "1.6.15"
+    },
+    {
+      "sha": "acdaf4f4cab6599505fb1cc59cd53663630698e9",
+      "author": "Jonathan Binney",
+      "date": "2014-03-10T23:59:58Z",
+      "message": "Merge pull request #17 from jonbinney/cmake-modules-run-dep\n\nadd cmake_modules run dependency"
+    },
+    {
+      "sha": "b7126f7db4240a00e911590f44dccb19ffcc2dd1",
+      "author": "Jon Binney",
+      "date": "2014-03-10T23:58:34Z",
+      "message": "add cmake_modules run dependency"
+    },
+    {
+      "sha": "cc239d64ed1147276ae91de994395ee1d1612ea7",
+      "author": "Jonathan Binney",
+      "date": "2014-03-10T23:46:38Z",
+      "message": "Merge pull request #16 from ros-perception/indigo_dep\n\nFix finding of Eigen"
+    },
+    {
+      "sha": "499a40d8a263f9d1e7f52bb8f712911f2b87d6b5",
+      "author": "Tully Foote",
+      "date": "2014-03-10T22:01:13Z",
+      "message": "Adding needed eigen dependency. \n\nThis was previously successful due to transitive dependencies."
+    },
+    {
+      "sha": "9fe1e6759b236ef3e0724cdfbe99815a4639a5f6",
+      "author": "Tully Foote",
+      "date": "2014-03-10T21:57:41Z",
+      "message": "add cmake_modules to find_package"
+    },
+    {
+      "sha": "7bc020afba54d3f950f97cfa6b6a8bade7e5e589",
+      "author": "Tully Foote",
+      "date": "2014-03-10T21:56:47Z",
+      "message": "add cmake_modules as a build_depend"
+    },
+    {
+      "sha": "05798c2da4d0bb2cfcc370eda9a7bb2ac57b56a2",
+      "author": "Vincent Rabaud",
+      "date": "2014-03-04T20:11:59Z",
+      "message": "1.6.14"
+    },
+    {
+      "sha": "4dced72a562c04010d9edb0e97aed2527b587271",
+      "author": "Vincent Rabaud",
+      "date": "2014-03-04T20:11:48Z",
+      "message": "update changelog"
+    },
+    {
+      "sha": "e494b80ea6da82b44476ce947b1159e58263d288",
+      "author": "Vincent Rabaud",
+      "date": "2014-03-04T20:10:53Z",
+      "message": "fix compilation on some platforms"
+    },
+    {
+      "sha": "f878120fc7bfddac1ac7a735b90ddb0e36193042",
+      "author": "Vincent Rabaud",
+      "date": "2014-03-02T15:07:00Z",
+      "message": "1.6.13"
+    },
+    {
+      "sha": "5b93d9d980a4a00ae564ebdd8e9645db2a9f8c4c",
+      "author": "Vincent Rabaud",
+      "date": "2014-03-02T15:03:08Z",
+      "message": "add a CHANGELOG"
+    },
+    {
+      "sha": "cb64c6561da4cd0df2a1f8e7280d1b0a4b3848a2",
+      "author": "Vincent Rabaud",
+      "date": "2014-03-02T13:51:31Z",
+      "message": "separate tests"
+    },
+    {
+      "sha": "8fe70e84b62dea19c59cfbe2009c65d0d166f5d8",
+      "author": "Vincent Rabaud",
+      "date": "2014-03-02T13:43:23Z",
+      "message": "remove PCL dependency"
+    },
+    {
+      "sha": "fb59bc0285e1a156f17a68924a177154ff109f52",
+      "author": "Vincent Rabaud",
+      "date": "2014-03-02T13:22:15Z",
+      "message": "Merge pull request #14 from efernandez/hydro-devel\n\nDon't check the intensities"
+    },
+    {
+      "sha": "2bc7851e8afab9e1d973dd6246f7bb859003bf87",
+      "author": "Enrique Fernández Perdomo",
+      "date": "2014-02-26T14:37:40Z",
+      "message": "Don't check the intensities\n\nThe intensities are not used in the range filter.\r\nFurthermore, some laser don't have intensities ---e.g hokuyo URG-04LX-UG01---, so this fails for them."
+    },
+    {
+      "sha": "77962d4da3142af975d92ba6be6b6e7615dc0cb9",
+      "author": "Vincent Rabaud",
+      "date": "2013-12-24T09:44:57Z",
+      "message": "\"1.6.12\""
+    },
+    {
+      "sha": "a21f63b21ac8957c258801120991151e0f4f007c",
+      "author": "Vincent Rabaud",
+      "date": "2013-12-24T09:40:07Z",
+      "message": "Merge pull request #13 from v4hn/less_startup_noise\n\nfootprint_filter: print less tf warnings"
+    },
+    {
+      "sha": "5cd88a8e5f34f1a86d4779605633871fd0bb4f49",
+      "author": "v4hn",
+      "date": "2013-12-22T22:34:58Z",
+      "message": "footprint_filter: print less tf warnings\n\nOn startup this filter produces about two pages of console output\n(ROS_ERRORs) on ExtrapolationExceptions because the listener is\nnot setup yet. This commit reduces this to throttled info messages\nuntil the transform works for the first time."
+    },
+    {
+      "sha": "d8b848706795f6d1322c5b2f9d6f8850419a1f87",
+      "author": "Jon Binney",
+      "date": "2013-07-29T21:32:53Z",
+      "message": "compile rostests with add_executable, not catkin_add_gtest"
+    },
+    {
+      "sha": "10d84eae669b2d25e6bbeb3f9a307561d1b86cfb",
+      "author": "William Woodall",
+      "date": "2013-07-19T23:29:43Z",
+      "message": "1.6.11"
+    },
+    {
+      "sha": "6820dbee05188c03ce0e0a37ca6d1c5e1b222c7c",
+      "author": "William Woodall",
+      "date": "2013-07-19T23:28:48Z",
+      "message": "Merge pull request #12 from ros-perception/fix_angles_dep\n\nmissing dependency break isolated build without --install"
+    },
+    {
+      "sha": "b39edb93bdb5b523d428b7499ded20a50ddf07d2",
+      "author": "William Woodall",
+      "date": "2013-07-19T23:21:13Z",
+      "message": "add missing dependency on the angles package"
+    },
+    {
+      "sha": "95fb52e79b5cf6e5683b785dc08da78794469dd6",
+      "author": "Jon Binney",
+      "date": "2013-06-27T23:11:28Z",
+      "message": "1.6.10"
+    },
+    {
+      "sha": "3a6be20610a47ddd720ab652496504363191dd90",
+      "author": "Jon Binney",
+      "date": "2013-06-27T23:10:48Z",
+      "message": "install scan_to_scan filter"
+    },
+    {
+      "sha": "73d639815550466b1e1038cce5a6313bca6dea9a",
+      "author": "Vincent Rabaud",
+      "date": "2013-06-27T07:36:34Z",
+      "message": "1.6.9"
+    },
+    {
+      "sha": "b3b25de99d3c2bb2e9163a8a1e477992f277dbcc",
+      "author": "Vincent Rabaud",
+      "date": "2013-06-22T21:17:49Z",
+      "message": "Merge pull request #11 from piyushk/patch-1\n\nFixed typo in exported library names"
+    },
+    {
+      "sha": "c7f571456ebf34d9c95f80ef5aed42aad21c1615",
+      "author": "Piyush Khandelwal",
+      "date": "2013-06-22T04:38:15Z",
+      "message": "Fixed typo in exported library names\n\nIt's a pretty minor error, but unfortunately breaks the system release due to nonexistent lib_point_cloud_filters.so"
+    },
+    {
+      "sha": "45c173aa4d4b0b963d09b983e2c2d3eb9bbea61a",
+      "author": "Jon Binney",
+      "date": "2013-05-30T22:52:46Z",
+      "message": "1.6.8"
+    },
+    {
+      "sha": "b7684a9b6f703b018bdb4337f8a92a5bededa3dd",
+      "author": "jonbinney",
+      "date": "2013-05-30T20:40:41Z",
+      "message": "Merge pull request #7 from ros-perception/scan-scan-filter-chain\n\nRestored scan_to_scan_filter_chain executable lost in the catkinization."
+    },
+    {
+      "sha": "7bcc4e9e391ed99ac5f06e8f8fefbbe09f284c8e",
+      "author": "Dave Hershberger",
+      "date": "2013-05-29T23:36:30Z",
+      "message": "Restored scan_to_scan_filter_chain executable lost in the catkinization."
+    },
+    {
+      "sha": "39a47c01acf0d347afd0be32fdbbc3ce0d449910",
+      "author": "jonbinney",
+      "date": "2013-05-24T07:01:39Z",
+      "message": "bump version for bugfix"
+    },
+    {
+      "sha": "a271c1a48c1758de859d5201be087df7cfd1f4b9",
+      "author": "jonbinney",
+      "date": "2013-05-24T06:59:44Z",
+      "message": "Merge pull request #6 from jonbinney/install_include\n\nadded install rule for headers in cmakelists"
+    },
+    {
+      "sha": "85da9e69af51dae77e98ed19f17596d88ea89156",
+      "author": "Jon Binney",
+      "date": "2013-05-24T06:59:02Z",
+      "message": "added install rule for headers in cmakelists"
+    },
+    {
+      "sha": "75061e7691b260c4c9486ec64e27ddafbb2cba38",
+      "author": "jonbinney",
+      "date": "2013-05-24T00:37:37Z",
+      "message": "bumped version for hydro release"
+    },
+    {
+      "sha": "d7ec14106f5de9063bc7a21ced6de078b96cffe4",
+      "author": "jonbinney",
+      "date": "2013-05-24T00:22:41Z",
+      "message": "Merge pull request #5 from jonbinney/build_fixes\n\nfixed rostests"
+    },
+    {
+      "sha": "947ea2698cce0ab9cd7af01049885d087f1ebed4",
+      "author": "Jon Binney",
+      "date": "2013-05-24T00:21:40Z",
+      "message": "fixed rostests"
+    },
+    {
+      "sha": "08eb5b4f9adeeb577b72704960a4fae2ce544cfd",
+      "author": "jonbinney",
+      "date": "2013-05-23T05:40:26Z",
+      "message": "Merge pull request #4 from jonbinney/catkinized\n\nCatkinized"
+    },
+    {
+      "sha": "cf45a0de303984ad33cbb8603f3ad7849395214a",
+      "author": "Jon Binney",
+      "date": "2013-05-23T02:10:07Z",
+      "message": "fixes to cmakelists"
+    },
+    {
+      "sha": "8df0b5dc5568081fa5924fb7a2a1002b7726cb7b",
+      "author": "Jon Binney",
+      "date": "2013-05-23T01:55:43Z",
+      "message": "deleted unneeded cmake file"
+    },
+    {
+      "sha": "ed174b2da15a3f8e8e8870151268ee971d43cb46",
+      "author": "Jon Binney",
+      "date": "2013-05-23T01:55:04Z",
+      "message": "catkinized laser_filters"
+    },
+    {
+      "sha": "03a4e13dbab814410a28ab6a396bc786ef34d4c3",
+      "author": "Vincent Rabaud",
+      "date": "2013-05-11T17:05:25Z",
+      "message": "Merge pull request #3 from YoheiKakiuchi/groovy-devel\n\nadd range_filter to laser_scan_filters.cpp"
+    },
+    {
+      "sha": "7273bf97cd2cad2807fed439a9c1e23c9931bca3",
+      "author": "YoheiKakiuchi",
+      "date": "2013-05-10T01:55:29Z",
+      "message": "comment out laser_geometry (it was needed to use this package in fuerte)"
+    },
+    {
+      "sha": "9d02b94f26a90a7198f58ee9d1ffe0fd0d3baa16",
+      "author": "YoheiKakiuchi",
+      "date": "2013-05-09T01:46:44Z",
+      "message": "add range_filter to laser_scan_filters.cpp"
+    },
+    {
+      "sha": "9f9f7d31d32da7a6432dd68d3f73f9ab62765012",
+      "author": "Dave Hershberger",
+      "date": "2012-10-12T18:16:07Z",
+      "message": "releasing 1.5.5"
+    },
+    {
+      "sha": "43dda244f6c1c1b49a392fdcaea69a80299c3bce",
+      "author": "Dave Hershberger",
+      "date": "2012-10-12T18:03:49Z",
+      "message": "added missing dependency on laser_geometry"
+    },
+    {
+      "sha": "a25c8a6680ca24fe30f54d27724563c4be1e58de",
+      "author": "Dave Hershberger",
+      "date": "2012-10-12T17:38:02Z",
+      "message": "added .gitignore"
+    },
+    {
+      "sha": "b081aa7f809beed6ccef2b43f5a748866171397e",
+      "author": "Dave Hershberger",
+      "date": "2012-10-10T23:48:55Z",
+      "message": "created stack.xml and added stuff for unary-stack-ification"
+    },
+    {
+      "sha": "d8ae98a1d8ff2692b7603fb5fe4605d6787cbbba",
+      "author": "Vincent Rabaud",
+      "date": "2012-09-16T00:55:55Z",
+      "message": "revert to the angles package\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/laser_pipeline/trunk@40134 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "5a71a6510918d1cf79d0f5749706a6ab13bfa9fc",
+      "author": "Vincent Rabaud",
+      "date": "2012-09-15T21:26:14Z",
+      "message": "fix the non-inclusion of PCL\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/laser_pipeline/trunk@40128 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "a18b1ef61c381f228bf4e4188d614d2d4a94065c",
+      "author": "Vincent Rabaud",
+      "date": "2012-09-15T20:45:21Z",
+      "message": "more angles fixing\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/laser_pipeline/trunk@40123 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "093e9e013a03bf6e4b658cc3d7b95e74a102ff79",
+      "author": "Eitan Marder-Eppstein",
+      "date": "2012-03-08T21:45:08Z",
+      "message": "Changing the name of the incident angle correction parameter to make some amount of sense\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/laser_pipeline/trunk@38975 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "9196213ec96498c43eabff7532fbaf91f1642e88",
+      "author": "Eitan Marder-Eppstein",
+      "date": "2012-03-08T20:42:41Z",
+      "message": "Fixing the scan to cloud filter chain to actually work properly with PointCloud2 messages\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/laser_pipeline/trunk@38974 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "faf11156fc546ee115a12a2b639c72385de53519",
+      "author": "Kaijen Hsaio",
+      "date": "2012-01-25T01:03:39Z",
+      "message": "added param for hack\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/laser_pipeline/trunk@38655 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "1f3b03f4e042420176037b2c7edc076024b84e1e",
+      "author": "Brian Gerkey",
+      "date": "2012-01-19T18:33:54Z",
+      "message": "add missing boost links, needed for catkin, but backward compatible\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/laser_pipeline/trunk@38615 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "3b681c92a14271bf3322295d2eda3c704996b2ef",
+      "author": "Vincent Rabaud",
+      "date": "2012-01-11T15:24:01Z",
+      "message": "- first try at converting the PointCloud to PointCloud2\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/laser_pipeline/trunk@38479 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "3607c34c4dcff94cf5f67cf1b7bc5ea597c93259",
+      "author": "Vincent Rabaud",
+      "date": "2011-12-13T22:29:05Z",
+      "message": "use the new bullet and eigen conventions\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/laser_pipeline/trunk@38342 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "57d6c45f293ef997f076fe9c799b7caa87755282",
+      "author": "Jeremy Leibs",
+      "date": "2011-01-14T21:17:34Z",
+      "message": "Removing deprecation warnings\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/laser_pipeline/trunk@35256 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "f0ec1fca8ded2f0c4a7030cf847dbbb9fcaf850c",
+      "author": "Eitan Marder-Eppstein",
+      "date": "2011-01-14T08:48:30Z",
+      "message": "Killing deprecated preservative param\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/laser_pipeline/trunk@35241 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "8ea64dd17ce63a08ad467525bb71e59c4a2b421b",
+      "author": "Brian Gerkey",
+      "date": "2010-05-19T20:25:31Z",
+      "message": "Added Ubuntu platform tags to manifest\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/laser_pipeline/trunk@29657 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "13009e4a40532d8b5449f1349d6955d26c8a8699",
+      "author": "Jeremy Leibs",
+      "date": "2010-02-10T19:46:00Z",
+      "message": "Removing deprecated usage of ~ for #3771\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/laser_pipeline/trunk@27729 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "4ae82125db324df3b5c372384747e6b8533dc913",
+      "author": "Melonee Wise",
+      "date": "2010-01-12T03:55:13Z",
+      "message": "adding test for array filter\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/laser_pipeline/trunk@26944 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "2e9571050c9b0abbb313536daf9126bc316e2b99",
+      "author": "Melonee Wise",
+      "date": "2010-01-11T23:41:36Z",
+      "message": "adding shadow filter test\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/laser_pipeline/trunk@26874 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "401a538e6a339d67647b7685f9d945902dc8865a",
+      "author": "Melonee Wise",
+      "date": "2010-01-11T23:27:57Z",
+      "message": "adding test for interp filter\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/laser_pipeline/trunk@26872 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "f2f509aeb000f3dceb58131f41eae5257d3db64e",
+      "author": "Melonee Wise",
+      "date": "2010-01-11T22:54:20Z",
+      "message": "adding simple tests\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/laser_pipeline/trunk@26866 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "a9fd52e90a94f205467df728849455b1fc4e4863",
+      "author": "Melonee Wise",
+      "date": "2010-01-11T09:06:27Z",
+      "message": " adding tests but checking in with CMake comeented out for now\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/laser_pipeline/trunk@26803 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "ac1ff0c95c070b79f4fc58e2eb6bbced8aae646f",
+      "author": "Jeremy Leibs",
+      "date": "2010-01-10T17:50:56Z",
+      "message": "Updating stack/manifest.xml files\n\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/laser_pipeline/trunk@26801 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "08c7bcb021e04ff18f67ddf1c133c4dbb84c3a56",
+      "author": "Eitan Marder-Eppstein",
+      "date": "2010-01-08T22:29:29Z",
+      "message": "Adding a angular bounds filter that allows scans to be truncated to be within a user-specified range.\n\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/laser_pipeline/trunk@26736 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "5f21ce7ff564c270125f6eb37792d7336e139792",
+      "author": "Brian Gerkey",
+      "date": "2009-11-12T09:51:54Z",
+      "message": "Added link against boost::system, to fix build on OS X\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/laser_pipeline/trunk@25628 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "d585b918fc828b3f35e370372f2ebb789088bf1f",
+      "author": "Jeremy Leibs",
+      "date": "2009-09-30T01:49:07Z",
+      "message": "Removing old/unused/broken code from scan_to_cloud_filter_chain.\n\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/laser_pipeline/trunk@24700 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "6c76827f50ce208980bdcc371e7e5b3344095f0b",
+      "author": "Jeremy Leibs",
+      "date": "2009-09-29T22:38:48Z",
+      "message": "Checking in the node diagrams.\n\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/laser_pipeline/trunk@24687 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "cd726be093109cb4fad2228afb99a65275987b77",
+      "author": "Jeremy Leibs",
+      "date": "2009-09-29T19:27:09Z",
+      "message": "Making scan_to_cloud_filter_chain robust to a likely user migration error.\n\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/laser_pipeline/trunk@24660 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "21f7b7d014d82baf85a8d6e34c7ae58d5fc7f2d9",
+      "author": "Jeremy Leibs",
+      "date": "2009-09-29T19:21:34Z",
+      "message": "Making the scan_to_scan_filter_chain use scan_filter_chain.\n\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/laser_pipeline/trunk@24659 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "3f5720ab6c37f9519a74adc14927ab4b173e160f",
+      "author": "Jeremy Leibs",
+      "date": "2009-09-29T05:54:15Z",
+      "message": "Making scan_to_cloud_filter_chain adhere to new API from http://www.ros.org/wiki/laser_filters/Reviews/2009-9-28_API_Review\n\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/laser_pipeline/trunk@24629 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "0add0072fb6e71149fbb8ff9876c565e1c521910",
+      "author": "Jeremy Leibs",
+      "date": "2009-09-29T04:37:34Z",
+      "message": "Making laser_filters adhere to new API from http://www.ros.org/wiki/laser_filters/Reviews/2009-9-28_API_Review\n\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/laser_pipeline/trunk@24627 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "6f66ccfb66a4d3b00a029a5c09763ae59bbe4867",
+      "author": "Jeremy Leibs",
+      "date": "2009-09-25T04:04:58Z",
+      "message": "A little more laser_filter code cleanup.\n\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/laser_pipeline/trunk@24485 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "e67f8a597040b890c38ae924bedc1b780b13e4b2",
+      "author": "Jeremy Leibs",
+      "date": "2009-09-25T03:56:57Z",
+      "message": "Cleaning up generic_laser_filter_node code since it is used as part of the laser_filters tutorial.\n\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/laser_pipeline/trunk@24482 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "e1161c6476023afbccc23372572fedb5795b4f90",
+      "author": "Jeremy Leibs",
+      "date": "2009-09-24T01:23:19Z",
+      "message": "Leaving point_cloud_footprint_filter_example in laser_pipeline as well for now.\n\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/laser_pipeline/trunk@24415 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "139cdcb6bd42d3ea44a425cecea782e6e79716cd",
+      "author": "Jeremy Leibs",
+      "date": "2009-09-23T21:35:14Z",
+      "message": "Adding back int the footprint_filter_examples despite deprecation to avoid breaking people using deprecated plugins.\n\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/laser_pipeline/trunk@24389 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "5002284cb3979d02f10773f16b991f55d6882ad1",
+      "author": "Jeremy Leibs",
+      "date": "2009-09-23T21:21:32Z",
+      "message": "Fixing laser_filter to use tf::MessageFilter instead of tf::MessageNotifier and deprecating the footprint filters.\n\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/laser_pipeline/trunk@24388 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "a5935dc085764cb3b8c69fd8ee9c3b6b174cdc37",
+      "author": "Jeremy Leibs",
+      "date": "2009-09-23T03:23:36Z",
+      "message": "Removing invalid linking from laser_filters.\n\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/laser_pipeline/trunk@24353 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "d2c7ac06e3f6dddce09b3618d5da34a3a6e5c695",
+      "author": "Jeremy Leibs",
+      "date": "2009-09-22T21:28:36Z",
+      "message": "Deprecating preservative parameter.\n\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/laser_pipeline/trunk@24324 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "f8e4ffcfb37ddfce282ea62e6deea8b94470432a",
+      "author": "Eric Berger",
+      "date": "2009-09-22T18:49:15Z",
+      "message": "capitalization in filter description\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/laser_pipeline/trunk@24312 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "abe3e870a6ce128d42020c39ac6adf55e50ae601",
+      "author": "Josh Faust",
+      "date": "2009-09-18T00:38:51Z",
+      "message": "Convert to NodeHandle\n\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/laser_pipeline/trunk@24160 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "49c26efec5a6f3ffb5e140acf33492b84412bc67",
+      "author": "Eitan Marder-Eppstein",
+      "date": "2009-09-04T21:18:00Z",
+      "message": "Adding a filter to interpolate between laser readings to generate range readings for scans that return errors\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/laser_pipeline@23875 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    },
+    {
+      "sha": "005cb33653424d301267ef5e5ed244b94e2d6add",
+      "author": "Jeremy Leibs",
+      "date": "2009-09-01T08:18:14Z",
+      "message": "Merging in remaining missing contents for laser_piple that svn ignored on the first merge.\n\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/laser_pipeline@23510 eb33c2ac-9c88-4c90-87e0-44a10359b0c3"
+    }
+  ]
+}

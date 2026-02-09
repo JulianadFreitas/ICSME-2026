@@ -1,0 +1,2214 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-08T00:15:24Z",
+    "source": "github_rest",
+    "endpoint": "/repos/{owner}/{repo}/commits",
+    "owner": "SICKAG",
+    "repo": "sick_safetyscanners_base",
+    "per_page": 100
+  },
+  "data": [
+    {
+      "sha": "54192fec0aa4bcf3a9c10f56f85bf9d5952102ad",
+      "author": "Lennart Puck",
+      "date": "2024-06-19T12:49:12Z",
+      "message": "depend on used boost libaries"
+    },
+    {
+      "sha": "3848c078b244c3ace29154f90328ab2af9cd7bd6",
+      "author": "Lennart Puck",
+      "date": "2024-06-19T12:22:57Z",
+      "message": "minor formatting"
+    },
+    {
+      "sha": "1b934cc345119bbf4880009cbc38e201e2b2c945",
+      "author": "Carl Morgan",
+      "date": "2024-01-31T00:39:53Z",
+      "message": "Fix header includes for <cstdint> and <string>"
+    },
+    {
+      "sha": "fdcb4cebf73ffaa863317510c90f7ec4833a6a53",
+      "author": "Soren Holm",
+      "date": "2024-04-19T14:33:26Z",
+      "message": "Fix Sync example\n\nA few typos and missing semicolons."
+    },
+    {
+      "sha": "2b785788c2289dcb6a964728d46ecab0afc3cf2c",
+      "author": "Rein Appeldoorn",
+      "date": "2023-09-19T08:42:19Z",
+      "message": "fix(parse-config-metadata): read checksums"
+    },
+    {
+      "sha": "9f5b7708c26508759b890fa466c466b9e5e31b7d",
+      "author": "张天宇",
+      "date": "2023-07-29T06:42:33Z",
+      "message": "fix: fix clang warnings."
+    },
+    {
+      "sha": "711329dcf2cba8b81fc7e18747b62631fcb3cfb9",
+      "author": "Denis Taniguchi",
+      "date": "2022-10-19T11:12:02Z",
+      "message": "fix: fix clang warnings."
+    },
+    {
+      "sha": "52d99327409682aad53213a1b33aa3447dbdfbd1",
+      "author": "Lennart Puck",
+      "date": "2022-10-04T14:45:49Z",
+      "message": "Merge branch 'DasRoteSkelett-fix/missingInclude' into cpp_standalone"
+    },
+    {
+      "sha": "bf19e9a4901c99107e565ff0e05dd8d54668fbe0",
+      "author": "Matthias Schoepfer",
+      "date": "2022-10-03T10:02:08Z",
+      "message": "UDPPacketMerger: fixing missing include\n\nWhile std::map is used, it is not included in this header. This leads to\nthis error with gcc 11.2:\n\n| In file included from /yocto/sf-build/BUILD-ros2-humble-honister/work/core2-64-oe-linux/sick-safetyscanners-base/1.0.2-1-r0/git/src/data_processing/UDPPacketMerger.cpp:35:\n| /yocto/sf-build/BUILD-ros2-humble-honister/work/core2-64-oe-linux/sick-safetyscanners-base/1.0.2-1-r0/git/include/sick_safetyscanners_base/data_processing/UDPPacketMerger.h:87:8: error: 'map' in namespace 'std' does not name a template type\n|    87 |   std::map<uint32_t, sick::datastructure::ParsedPacketBuffer::ParsedPacketBufferVector>\n|       |        ^~~\n| /yocto/sf-build/BUILD-ros2-humble-honister/work/core2-64-oe-linux/sick-safetyscanners-base/1.0.2-1-r0/git/include/sick_safetyscanners_base/data_processing/UDPPacketMerger.h:42:1: note: 'std::map' is defined in header '<map>'; did you forget to '#include <map>'?\n|    41 | #include \"sick_safetyscanners_base/data_processing/ParseDatagramHeader.h\"\n|   +++ |+#include <map>\n|    42 |\n\nSigned-off-by: Matthias Schoepfer <m.schoepfer@rethinkrobotics.com>"
+    },
+    {
+      "sha": "5fa8825a691cc635f82ed7228773b08e7beea544",
+      "author": "Lennart Puck",
+      "date": "2022-05-30T07:17:22Z",
+      "message": "Merging fix for missing using statement"
+    },
+    {
+      "sha": "41a45e02bcd2aa7e5df11807bc944919397cec43",
+      "author": "crown-bdee",
+      "date": "2022-02-04T02:39:01Z",
+      "message": "Added missing 'using' statement to UDPClient.cpp"
+    },
+    {
+      "sha": "a46f34dbe9e6f6c17993cd4cf3ea12548949e28b",
+      "author": "Lennart Puck",
+      "date": "2021-06-30T11:15:15Z",
+      "message": "Merge branch 'Kooiman-kooiman-fix-memory-leak' into cpp_standalone"
+    },
+    {
+      "sha": "243720b335940b754c5a638971859e95576be2e6",
+      "author": "Andrew Kooiman",
+      "date": "2021-06-18T14:33:24Z",
+      "message": "Fix memory leak in createAndExecuteCommand"
+    },
+    {
+      "sha": "65cec9a1c694ff6616d8ca771dd53d74df216a5e",
+      "author": "Lennart Puck",
+      "date": "2021-04-08T09:45:53Z",
+      "message": "added multicast possibily to readme"
+    },
+    {
+      "sha": "d0f07dddbc388d1c97aadc4d587eb62520930641",
+      "author": "Lennart Puck",
+      "date": "2021-04-08T09:45:37Z",
+      "message": "constructor for multicast adresses"
+    },
+    {
+      "sha": "a7c87fe679d50eae0a20280ac97bed4b23f19dca",
+      "author": "Lennart Puck",
+      "date": "2021-04-08T09:45:17Z",
+      "message": "overloaded udpclient for multicast adresses"
+    },
+    {
+      "sha": "3a6adb571f5ea56dedd44309d620d0dda83092a6",
+      "author": "Lennart Puck",
+      "date": "2021-02-16T09:04:31Z",
+      "message": "updated examples in readme"
+    },
+    {
+      "sha": "fd4b4ddde12d4f5c415fd312de19e5aad8873f02",
+      "author": "Lennart Puck",
+      "date": "2021-01-28T12:22:24Z",
+      "message": "changed to constant values for the field data"
+    },
+    {
+      "sha": "9ed4cf0c64e9715239943b70e207583895214102",
+      "author": "Lennart Puck",
+      "date": "2021-01-21T10:12:21Z",
+      "message": "changed the write command method so used signed int isntead of unsigend int"
+    },
+    {
+      "sha": "b6971cc2fc8642e84ef3b0ab8d2503d8aad351b2",
+      "author": "Lennart Puck",
+      "date": "2020-12-10T09:48:43Z",
+      "message": "fixed parsing error of current measurement config data"
+    },
+    {
+      "sha": "6d48587b492961f2ca567f8803a1a85984aa7831",
+      "author": "Lennart Puck",
+      "date": "2020-12-10T09:48:28Z",
+      "message": "include check if number beams is higher then expected"
+    },
+    {
+      "sha": "baccbba8f16a405c12eca87f6cfc12114ad21242",
+      "author": "Lennart Puck",
+      "date": "2020-12-10T09:39:07Z",
+      "message": "included check if expected size matches actual size of parsed data"
+    },
+    {
+      "sha": "04b0580e69116a3f45ec35fccee95504264bd90c",
+      "author": "Lennart Puck",
+      "date": "2020-12-09T18:37:08Z",
+      "message": "fixed bug with wrong angle configuration\n\nmissing multiplication required from cola2 procoll included"
+    },
+    {
+      "sha": "a097128ed2c9832bafce3237f9e79ed3efbb12ed",
+      "author": "Lennart Puck",
+      "date": "2020-12-09T18:36:30Z",
+      "message": "formatting"
+    },
+    {
+      "sha": "683b367c9e02204f3db63de114654dde1c0bd7b8",
+      "author": "Lennart Puck",
+      "date": "2020-11-12T08:10:25Z",
+      "message": "adjusted readme for fix for boost 1.70+"
+    },
+    {
+      "sha": "3269f481deb0c8e5c016156e4995be1e96175f5d",
+      "author": "Lennart Puck",
+      "date": "2020-11-09T15:15:10Z",
+      "message": "Merge PR#3"
+    },
+    {
+      "sha": "7acc24e2fc22fe42ff5247da72695bb4037e33f8",
+      "author": "Fay Zheng",
+      "date": "2020-10-20T21:12:24Z",
+      "message": "fix compilation with boost 1.7"
+    },
+    {
+      "sha": "c64d5640bcf810ed01fe00b89680fa1072003043",
+      "author": "Lennart Puck",
+      "date": "2020-06-15T15:20:24Z",
+      "message": "adjusted readme for boost version\n\nThere are breaking changes in ASIO with boost 1.70."
+    },
+    {
+      "sha": "fcdb5de3800e20026869182b279db7f706592094",
+      "author": "Lennart Puck",
+      "date": "2020-06-15T14:19:48Z",
+      "message": "fixing correct offset in field geometries"
+    },
+    {
+      "sha": "c697dee2f78be165f4b2acf049ed9b5c82c69a17",
+      "author": "Lennart Puck",
+      "date": "2020-05-28T10:18:41Z",
+      "message": "Fixed error in reading chars for device name and project name"
+    },
+    {
+      "sha": "1ff06b364126512f4eebef305abe2db4cab4613b",
+      "author": "Lennart Puck",
+      "date": "2020-04-24T15:10:09Z",
+      "message": "clang format"
+    },
+    {
+      "sha": "f2583544ecc029bd7586726a15482cafdb21b4a4",
+      "author": "Lennart Puck",
+      "date": "2020-04-24T15:08:21Z",
+      "message": "Merge branch 'feature_sync_async_api' into cpp_standalone"
+    },
+    {
+      "sha": "3d5c7d1ae666207801b4f2edf7501f4cfb316848",
+      "author": "schulze",
+      "date": "2020-04-24T08:44:09Z",
+      "message": "Removed COLA2 open/close DEBUG/INFO logs"
+    },
+    {
+      "sha": "55e05fead9f92ed60ce0ab187ed4bedbdfee8b9a",
+      "author": "schulze",
+      "date": "2020-04-24T08:31:21Z",
+      "message": "Each command execution will now open/close a cola2 session to work reliably in synchronous mode. Replaced LOG_ERROR with exceptions"
+    },
+    {
+      "sha": "68c2344826b597670697251f9296b8e464f5484e",
+      "author": "Lennart Puck",
+      "date": "2020-04-23T08:51:41Z",
+      "message": "Merge branch 'feature_sync_async_api' into cpp_standalone"
+    },
+    {
+      "sha": "05e7b163a9cbe481c56cf34ac3e59f17a24233d8",
+      "author": "schulze",
+      "date": "2020-04-21T19:52:40Z",
+      "message": "Fixed TCP end of file error when  sending multiple commands sequentially."
+    },
+    {
+      "sha": "96fcdff02b853c138c077d381446a9e07c0d8a5a",
+      "author": "Lennart Puck",
+      "date": "2020-04-20T07:48:46Z",
+      "message": "added high resolution pictures"
+    },
+    {
+      "sha": "a5da49ba7cfab6297af5ce121f56f0a03c195e1d",
+      "author": "Lennart Puck",
+      "date": "2020-04-20T07:37:32Z",
+      "message": "fixed typo in readme"
+    },
+    {
+      "sha": "06f591bf216f02b28f66353da923f0e997626c8e",
+      "author": "Lennart Puck",
+      "date": "2020-04-20T07:35:55Z",
+      "message": "Merge branch 'feature_sync_async_api' into cpp_standalone"
+    },
+    {
+      "sha": "e2befb062b98b52cce94bc846de8839fccda0551",
+      "author": "schulze",
+      "date": "2020-04-19T13:03:04Z",
+      "message": "Sensor settings are now transmitted on constructor call of the driver classes"
+    },
+    {
+      "sha": "cb6ab0c1a613f8569cb364d1f950d8c0207ebe65",
+      "author": "schulze",
+      "date": "2020-04-17T20:26:00Z",
+      "message": "Added AsyncSickSafetyScanner to README"
+    },
+    {
+      "sha": "4ed811ddec0f04e087f303c8269fd2976eb7be2c",
+      "author": "schulze",
+      "date": "2020-04-17T18:43:03Z",
+      "message": "Added SyncSafetyScanner section to README"
+    },
+    {
+      "sha": "cd58b9ee60df0e57bf7647a8d4bea37e38e5536d",
+      "author": "Lennart Puck",
+      "date": "2020-04-17T08:06:19Z",
+      "message": "clang format"
+    },
+    {
+      "sha": "999db6cd56e37d03d476aeeb008d25ee2171a3a2",
+      "author": "schulze",
+      "date": "2020-04-16T19:14:36Z",
+      "message": "Removed virtual destructor"
+    },
+    {
+      "sha": "24730b571e2a3df5b1993777214c6a0e8c44e912",
+      "author": "schulze",
+      "date": "2020-04-16T18:11:58Z",
+      "message": "Added LOG-macro guards"
+    },
+    {
+      "sha": "d0242761573a273ef9e264ac0c69bbdeafbb6104",
+      "author": "schulze",
+      "date": "2020-04-16T17:51:43Z",
+      "message": "Cleaned up imports"
+    },
+    {
+      "sha": "d6a1664960d971b70c3741dd9b2d43ece4d6a265",
+      "author": "schulze",
+      "date": "2020-04-16T17:39:15Z",
+      "message": "Removed imports of deleted files"
+    },
+    {
+      "sha": "dec318d46947b92f62d2dc02c3d4c661f4755fcb",
+      "author": "schulze",
+      "date": "2020-04-16T17:33:07Z",
+      "message": "Applied Clang-Format (FZI-style)"
+    },
+    {
+      "sha": "a8b00b29c3c6bd48bd02b772b1b087cbe0f0174f",
+      "author": "schulze",
+      "date": "2020-04-16T17:01:33Z",
+      "message": "Removed AsyncTCPClient"
+    },
+    {
+      "sha": "381800233c811a4952c5377f8221837517347d0d",
+      "author": "schulze",
+      "date": "2020-04-16T16:56:36Z",
+      "message": "Compilation warnings will now result in build errors"
+    },
+    {
+      "sha": "217278eb137769605cac9782f013fe8b85e8752c",
+      "author": "schulze",
+      "date": "2020-04-16T16:54:41Z",
+      "message": "Cleanup and changed import style for sick_Safetyscanners_base/ headers"
+    },
+    {
+      "sha": "be4cf7b17ef757458c51332551cd0f820be1acf4",
+      "author": "schulze",
+      "date": "2020-04-16T16:26:10Z",
+      "message": "Added doxygen documentation for modified/new classes"
+    },
+    {
+      "sha": "4175df18d150aadda8bea138f7574aea3a00daf5",
+      "author": "schulze",
+      "date": "2020-04-15T14:14:54Z",
+      "message": "Added Licence headers and cleanup of code"
+    },
+    {
+      "sha": "712dd4b5a6888a337cc5fe2524cc4910a715f242",
+      "author": "schulze",
+      "date": "2020-04-14T16:04:43Z",
+      "message": "Cleanup"
+    },
+    {
+      "sha": "316e926cde8f952bb648d4712afc0c27f9f3a87c",
+      "author": "schulze",
+      "date": "2020-04-12T12:30:01Z",
+      "message": "Added async asio deadline checks"
+    },
+    {
+      "sha": "b0eaba4fff23e09f22c07b1b3022133721f15f74",
+      "author": "schulze",
+      "date": "2020-03-29T22:03:43Z",
+      "message": "API cleanup"
+    },
+    {
+      "sha": "d17b1f522d3dfe3c86f1682603282d7958f39621",
+      "author": "schulze",
+      "date": "2020-03-26T18:16:57Z",
+      "message": "Added async receive of streaming data in the new udp client"
+    },
+    {
+      "sha": "f04aa76a8514db3d0bb99f0727aa2e6f78b440ed",
+      "author": "schulze",
+      "date": "2020-03-18T22:35:12Z",
+      "message": "Changed import-style to relative for sick imports"
+    },
+    {
+      "sha": "934a56ad9caf7e42dddab5e72672b41bc1f28e25",
+      "author": "schulze",
+      "date": "2020-03-18T12:07:32Z",
+      "message": "Added constructor to Async scanner class"
+    },
+    {
+      "sha": "e92c6ee23c87e3776c457f35b7addca71bda5bfb",
+      "author": "schulze",
+      "date": "2020-03-16T13:21:59Z",
+      "message": "Fixed minor bugs"
+    },
+    {
+      "sha": "f09910da5c0a294f2a395a1404e7aa07d83a9f41",
+      "author": "schulze",
+      "date": "2020-03-09T17:44:50Z",
+      "message": "Removed unused dummy implementations, added pure synchronous command execution in Cola2"
+    },
+    {
+      "sha": "ff3900cbd13b5f40b5efbc20f64f375b78b0c2b7",
+      "author": "schulze",
+      "date": "2020-03-05T13:37:44Z",
+      "message": "Refactored Cola2Session"
+    },
+    {
+      "sha": "1232aa3c2bb5c971cd73d49519719658a8212af9",
+      "author": "schulze",
+      "date": "2020-03-05T13:36:55Z",
+      "message": "Renamed Command->CommandMsg"
+    },
+    {
+      "sha": "68ee3f86db80e1393acffc6a6bbd7f5ad6db6d78",
+      "author": "schulze",
+      "date": "2020-03-05T13:35:57Z",
+      "message": "Added generic TCP-Client which supports sync/async communication"
+    },
+    {
+      "sha": "842796fcd197d434930d4429331302dd52e19693",
+      "author": "schulze",
+      "date": "2020-03-05T13:34:00Z",
+      "message": "Changed SafetyScannersBase constructors. Copying & deletion & assignment is now prohibited. An instance of boost::asio::io_service can now be passed to a constructor overload"
+    },
+    {
+      "sha": "49b2bd3fc3a91a1e4b01484a32d4887718166a3b",
+      "author": "schulze",
+      "date": "2020-03-05T13:32:23Z",
+      "message": "Renamed generics,types and moved them into the common sick namespace (this might be temporarily only). Added make_unique since c++11 is lacking this function."
+    },
+    {
+      "sha": "3529696fb065f387543a3d26a2f208825f6071ff",
+      "author": "schulze",
+      "date": "2020-03-05T13:28:23Z",
+      "message": "Renamed Command -> CommandMsg for less confusion with the Command-Pattern"
+    },
+    {
+      "sha": "59ae2884bcca52c46aabe8c9af7a3e1e7304d1ce",
+      "author": "schulze",
+      "date": "2020-02-25T17:20:34Z",
+      "message": "Temporary refactoring"
+    },
+    {
+      "sha": "4525222ee9985a83d940c9a36730dfb3963ed63e",
+      "author": "schulze",
+      "date": "2020-02-21T15:26:07Z",
+      "message": "Moved ip and port information from CommSettings to SickSafetyScannerBase"
+    },
+    {
+      "sha": "8237753621b9d32acdf948204df3a3661604eddc",
+      "author": "schulze",
+      "date": "2020-02-21T14:50:26Z",
+      "message": "Added new CommSettings struct, added constants header and types header with generics (strongly typed flags and callbacks"
+    },
+    {
+      "sha": "8392bf8267733b678ebc4e050cb444fb2895b892",
+      "author": "schulze",
+      "date": "2020-02-20T22:10:56Z",
+      "message": "Moved asynchronous streaming API into child-class of the SickSafetyscannersbase and removed corresponding member variables and constructor variables from the base class"
+    },
+    {
+      "sha": "ae7647526f36ea13f7377c0d843e99fd8d77db02",
+      "author": "schulze",
+      "date": "2020-02-20T16:52:59Z",
+      "message": "Added log.h includes"
+    },
+    {
+      "sha": "a125eec1a2e97011dfe74257719cd780f2a65cfd",
+      "author": "schulze",
+      "date": "2020-02-20T16:26:01Z",
+      "message": "Ported ROS_WARN to LOG_WARN and added USE_ROS_LOGGING option to cmakelist"
+    },
+    {
+      "sha": "dd3ee49c4148da4866de063775ab44caae04b904",
+      "author": "schulze",
+      "date": "2020-02-20T16:06:30Z",
+      "message": "Merge branch 'feature_generic_logging' into feature_sync_async_api"
+    },
+    {
+      "sha": "babb25f9f31b0d8d30810d33df4de759111d9aa1",
+      "author": "schulze",
+      "date": "2020-02-20T16:06:17Z",
+      "message": "Changed ROS_<LEVEL> logging calls to LOG_<LEVEL>"
+    },
+    {
+      "sha": "4f2230a4d226d4d5eb0d759b4a4f8fe66a81ac18",
+      "author": "schulze",
+      "date": "2020-02-20T14:45:03Z",
+      "message": "Added some basic custom exceptions within the sick namespace"
+    },
+    {
+      "sha": "6868b3139b479a63e6e7ea0a7fae2cf0fde46b9c",
+      "author": "Lennart Puck",
+      "date": "2019-12-12T16:15:42Z",
+      "message": "updated readme with safetyscanners"
+    },
+    {
+      "sha": "a4d9a011f346eb9e80499d918e7db87a21d61e39",
+      "author": "Lennart Puck",
+      "date": "2019-11-20T10:57:15Z",
+      "message": "Added Api for Latest telegram to the readme"
+    },
+    {
+      "sha": "31423c39d4fd0a240b8ab5f08cd3ec80b7089246",
+      "author": "Lennart Puck",
+      "date": "2019-11-20T10:54:03Z",
+      "message": "Support for up to 4 channels for the latest telegram command\n\nThe MicroScan3 currently allows only channel 0, but for future compatibility.\nUp to four channels are supported as specified in the cola2 protokol.\nFor ease of use, channel 0 is set as default channel when no index is given."
+    },
+    {
+      "sha": "93fe5a47c1d87c10585fa8b84a94a8b127afd1e4",
+      "author": "Lennart Puck",
+      "date": "2019-11-20T10:18:57Z",
+      "message": "Added Latest Telegram Command"
+    },
+    {
+      "sha": "adf134d71ca93959758a1b5a9ec58f018480ae10",
+      "author": "Lennart Puck",
+      "date": "2019-11-18T16:33:19Z",
+      "message": "clang format"
+    },
+    {
+      "sha": "394c8ab31d26f04fcd596d83ed50c620ffa6b5cc",
+      "author": "Lennart Puck",
+      "date": "2019-11-18T16:17:20Z",
+      "message": "changed data type of for distance in scan point\n\nchange from int16_t to uint16_t to be conform with the\ndatasheet. This supports the long range devices."
+    },
+    {
+      "sha": "78faf4ea886c22c0bf0c39fe67b17a8a540225e1",
+      "author": "Lennart Puck",
+      "date": "2019-10-11T10:10:25Z",
+      "message": "fixed reference to ros repo as example"
+    },
+    {
+      "sha": "a55585278d6a94919e46d511a7c6105f385314d1",
+      "author": "Lennart Puck",
+      "date": "2019-10-11T10:05:52Z",
+      "message": "readme adjustments"
+    },
+    {
+      "sha": "5737f1f97fea8e5b804126f1fde969c53cb74468",
+      "author": "Lennart Puck",
+      "date": "2019-10-11T09:53:06Z",
+      "message": "clang format"
+    },
+    {
+      "sha": "2c1760c56e46300424bc0b211cecf7346c715f93",
+      "author": "Lennart Puck",
+      "date": "2019-10-11T09:51:38Z",
+      "message": "adjusted readme to new name"
+    },
+    {
+      "sha": "09a19b759340aedf4ae684689dde9003051a63c6",
+      "author": "Lennart Puck",
+      "date": "2019-10-11T09:51:22Z",
+      "message": "fixed renaming typo"
+    },
+    {
+      "sha": "6c02ec18d1eab970b2c5e56181f3667b4651481e",
+      "author": "Lennart Puck",
+      "date": "2019-10-11T09:39:35Z",
+      "message": "refactored package name and includes"
+    },
+    {
+      "sha": "b9c9feaf253538212b66ffa70f53155ff4f008b1",
+      "author": "Lennart Puck",
+      "date": "2019-10-11T09:33:40Z",
+      "message": "refactored header guards"
+    },
+    {
+      "sha": "eadf882890e9131b6a3f9d19d6da2f4d302e065c",
+      "author": "Lennart Puck",
+      "date": "2019-10-11T09:31:56Z",
+      "message": "renamed files in repo to with suffix base"
+    },
+    {
+      "sha": "6486fb99f525fa714189ff04e74214c1e695ff60",
+      "author": "Lennart Puck",
+      "date": "2019-10-10T16:27:11Z",
+      "message": "clang format"
+    },
+    {
+      "sha": "ac5247579689b031fe3631006c8104b76d205d9a",
+      "author": "Lennart Puck",
+      "date": "2019-10-10T15:59:14Z",
+      "message": "updated readme with api of library"
+    },
+    {
+      "sha": "a4ddd78a5694764dd840da04ddfb96a4f93fc90c",
+      "author": "Lennart Puck",
+      "date": "2019-10-10T15:58:57Z",
+      "message": "adjusted to function naming convention"
+    },
+    {
+      "sha": "1f2ef08d276417848ca419d5b79f0b771f5a0a5c",
+      "author": "Lennart Puck",
+      "date": "2019-10-10T13:34:18Z",
+      "message": "added default values to constructor of comm settings"
+    },
+    {
+      "sha": "4e273a7a399fe07bc212d43c6026356206f436b5",
+      "author": "Lennart Puck",
+      "date": "2019-09-24T13:38:28Z",
+      "message": "rewrote readme for cpp standalone"
+    },
+    {
+      "sha": "6a396a074299858b6693b59c07e9970c8e90f1f3",
+      "author": "Lennart Puck",
+      "date": "2019-09-24T08:02:09Z",
+      "message": "readded explicit c11 for xenial builds"
+    },
+    {
+      "sha": "59f68b3d3b24fa366a3504bdfc47374120b092f0",
+      "author": "Lennart Puck",
+      "date": "2019-09-23T16:35:17Z",
+      "message": "Deleted Ros specific files"
+    },
+    {
+      "sha": "34ed2a15e53c70ed17031334d35c7a6e890adc23",
+      "author": "Lennart Puck",
+      "date": "2019-09-19T12:47:31Z",
+      "message": "Updated minimum cmake version number to 2.8.12\n\nChecked build against cmake version 2.8.12, removed the Languages option\nin project line. This is only included in later versions.\nThe CMakeLists was checked against 2.8.12, 3.0.2 and 3.10.2.\nThis should yield sufficent support for older cmake versions"
+    },
+    {
+      "sha": "f0e355dae598bd2073de51fb233c3fd7ebd5708b",
+      "author": "Lennart Puck",
+      "date": "2019-09-18T11:46:30Z",
+      "message": "Removing unnecessary snippets from the CMakeLists"
+    },
+    {
+      "sha": "f8155d7bcd7ba95ce6c9cb5cbaa463a674ef4fb0",
+      "author": "Lennart Puck",
+      "date": "2019-09-18T10:45:28Z",
+      "message": "moved compile options and definitions in target compile def/opt"
+    },
+    {
+      "sha": "f834bdc171e64a06b6b893b217209bf560c60ff1",
+      "author": "Lennart Puck",
+      "date": "2019-09-17T16:07:16Z",
+      "message": "updated cmake to install with correct paths so that the lib can be included"
+    },
+    {
+      "sha": "ed17d3f53ed8ec6745e1aa5e2ba14647f93e787f",
+      "author": "Lennart Puck",
+      "date": "2019-08-14T16:04:36Z",
+      "message": "renamed package and reference to original again"
+    },
+    {
+      "sha": "984576f0fbd20e455b45ebe7a6f6a32b6dba2c43",
+      "author": "Lennart Puck",
+      "date": "2019-08-14T16:01:40Z",
+      "message": "adjusted package xml to cmake as build tool"
+    },
+    {
+      "sha": "d7fe70a91494840f700e0da3e17373e9a6341060",
+      "author": "Lennart Puck",
+      "date": "2019-08-14T15:05:56Z",
+      "message": "changed ci to fla pipeline"
+    },
+    {
+      "sha": "6a35eb83c1bc73c8ffa99476ce88db4c756ca359",
+      "author": "Lennart Puck",
+      "date": "2019-08-14T15:03:57Z",
+      "message": "added config cmake"
+    },
+    {
+      "sha": "ea928efd330d31d2c4e615f08276f7972aeb27b0",
+      "author": "Lennart Puck",
+      "date": "2019-08-14T13:49:57Z",
+      "message": "logging not dependant on ros, set flag in cmake"
+    },
+    {
+      "sha": "dcfc00cf602dd73bd0ad64b4f2cc44c9f229195d",
+      "author": "Lennart Puck",
+      "date": "2019-08-14T13:19:30Z",
+      "message": "first standalone cxx cmake file"
+    },
+    {
+      "sha": "e7054cfd05c492f78ddf1387d3d02561941c9fb7",
+      "author": "Lennart Puck",
+      "date": "2019-08-14T15:14:36Z",
+      "message": "reworked enum for interface type"
+    },
+    {
+      "sha": "069b78cfc7308719cfb6466484af0aa56b6a97e4",
+      "author": "Lennart Puck",
+      "date": "2019-07-31T13:25:43Z",
+      "message": "added field set variable command and parsing"
+    },
+    {
+      "sha": "0f542101dc11043a957e0608b838a36e10512605",
+      "author": "Lennart Puck",
+      "date": "2019-07-31T10:10:19Z",
+      "message": "updated parsing of field header data"
+    },
+    {
+      "sha": "68e0342a1a6718c1f28437f399ae1f2d72897f71",
+      "author": "Lennart Puck",
+      "date": "2019-07-31T08:34:09Z",
+      "message": "added missing field data functions for datastruct"
+    },
+    {
+      "sha": "79b17b66ec6052b2e6e9b1c2bce707771069b4f4",
+      "author": "Lennart Puck",
+      "date": "2019-07-30T13:18:12Z",
+      "message": "added version to field data"
+    },
+    {
+      "sha": "b4f5fcdf163d4d6022f173d23ca81936b5248a20",
+      "author": "Lennart Puck",
+      "date": "2019-07-30T11:07:06Z",
+      "message": "style formatting"
+    },
+    {
+      "sha": "01ed77c2328be295feebf2ec8c1bba62c79ea7f4",
+      "author": "Lennart Puck",
+      "date": "2019-07-30T10:55:41Z",
+      "message": "added find sensor method command"
+    },
+    {
+      "sha": "579731de3b3419699b031558b91e03f5d7f92d84",
+      "author": "Lennart Puck",
+      "date": "2019-07-30T09:10:57Z",
+      "message": "updated current config variable command and parsing"
+    },
+    {
+      "sha": "478792fcdf082491a34740534e100c50369e9aeb",
+      "author": "Lennart Puck",
+      "date": "2019-07-29T16:10:14Z",
+      "message": "updated Persistent Config Data Parsing"
+    },
+    {
+      "sha": "4f251cd99297f622fa2c9c6360e0920836b8915c",
+      "author": "Lennart Puck",
+      "date": "2019-07-29T14:57:35Z",
+      "message": "added required user action command and parsing"
+    },
+    {
+      "sha": "433b0ff19e0ec0dc74eb357b4bd171bcf631b5a9",
+      "author": "Lennart Puck",
+      "date": "2019-07-29T14:04:33Z",
+      "message": "added Device Status Variable Command and Parsing"
+    },
+    {
+      "sha": "c96cdb2efceece42fe037bddb9d63a7a9ff2d17a",
+      "author": "Lennart Puck",
+      "date": "2019-07-29T14:04:07Z",
+      "message": "moved enums in class\n\nEnums are not in the class scope where they are used.\nPrevents redefinitions and pollution of namespace."
+    },
+    {
+      "sha": "4dc3b7385e83048e76f2f5c2285b43978fd00e01",
+      "author": "Lennart Puck",
+      "date": "2019-07-29T10:01:04Z",
+      "message": "added Status Overview Command and Parsing"
+    },
+    {
+      "sha": "a089bc16fc495461b4eecee6e439c63982316064",
+      "author": "Lennart Puck",
+      "date": "2019-07-25T15:36:41Z",
+      "message": "added config metadata command and parsing"
+    },
+    {
+      "sha": "50a8023f63667213858b7f57da8ca1d0d669efe7",
+      "author": "Lennart Puck",
+      "date": "2019-07-25T11:17:58Z",
+      "message": "correctet variable index for username command"
+    },
+    {
+      "sha": "af60097a2c8d60d8118463c3bbfb8d55ae4511d6",
+      "author": "Lennart Puck",
+      "date": "2019-07-25T11:00:48Z",
+      "message": "added command and parsing for username"
+    },
+    {
+      "sha": "451b5b4b813efc92f585f756a3735ec637bade45",
+      "author": "Lennart Puck",
+      "date": "2019-07-25T09:27:01Z",
+      "message": "formatting"
+    },
+    {
+      "sha": "fc77eb5a0155788662352a51f5e580c37e6dde5f",
+      "author": "Lennart Puck",
+      "date": "2019-07-25T09:11:44Z",
+      "message": "updated device name used in service callback to new structure"
+    },
+    {
+      "sha": "6b8fe59d7d16f09a149f3714fc95aab46f16abe7",
+      "author": "Lennart Puck",
+      "date": "2019-07-25T09:11:06Z",
+      "message": "updated parsing of application name to include  version variables"
+    },
+    {
+      "sha": "8f9762ed2075da86872d3f0d48f2750715134e41",
+      "author": "Lennart Puck",
+      "date": "2019-07-25T09:10:31Z",
+      "message": "added project name command and parsing"
+    },
+    {
+      "sha": "f45c8e93ca2758c2546ea11664c1575b6f4c4f5b",
+      "author": "Lennart Puck",
+      "date": "2019-07-24T12:47:15Z",
+      "message": "refactored device name command to be consistent with the other commands"
+    },
+    {
+      "sha": "119475c0ac4369fcbcba48c9f608e63f16c03022",
+      "author": "Lennart Puck",
+      "date": "2019-07-24T11:53:11Z",
+      "message": "OrderNumber command and parsing added"
+    },
+    {
+      "sha": "8fc36363a85dc2fc4ef48b13e423c20880d6170d",
+      "author": "Lennart Puck",
+      "date": "2019-07-24T11:22:37Z",
+      "message": "typecode read and parsed from variable"
+    },
+    {
+      "sha": "c86efdd119a409def5a97edaf51a0ab868b713e5",
+      "author": "Lennart Puck",
+      "date": "2019-07-24T09:43:48Z",
+      "message": "fixed static casts and removed unused variable"
+    },
+    {
+      "sha": "9cf32517cf38ae84373947c4a89a3ffeee42a51c",
+      "author": "Lennart Puck",
+      "date": "2019-07-24T09:25:57Z",
+      "message": "formatting"
+    },
+    {
+      "sha": "41c8160a007ed46bd2648f0ff06a5f20d32ff891",
+      "author": "Lennart Puck",
+      "date": "2019-07-24T09:22:40Z",
+      "message": "added static casts and more pass by references"
+    },
+    {
+      "sha": "d2189f5d7493c8e2a055d00e51b9ef7141e6adbc",
+      "author": "Lennart Puck",
+      "date": "2019-07-24T08:07:50Z",
+      "message": "used static casts instead of implicit conversion"
+    },
+    {
+      "sha": "ec2399f266a59d7fd9eb0d1e6137e0f11a5b7aed",
+      "author": "Lennart Puck",
+      "date": "2019-07-23T16:55:36Z",
+      "message": "Further refactoring\n\npassing const refs, and pass by value for booleans"
+    },
+    {
+      "sha": "b84e47e3d0c45982d1ba2cf745064fa8e70c4ea2",
+      "author": "Lennart Puck",
+      "date": "2019-07-23T16:00:18Z",
+      "message": "renamed namespace to namespace convention"
+    },
+    {
+      "sha": "0c993146c0dfee380d3722947ccce83d07b3294b",
+      "author": "Lennart Puck",
+      "date": "2019-07-23T15:51:31Z",
+      "message": "more renaming for naming conventions"
+    },
+    {
+      "sha": "c5c3305c7fdddefcca91be0fd2791a44883e97c8",
+      "author": "Lennart Puck",
+      "date": "2019-07-23T15:39:54Z",
+      "message": "Code formatting"
+    },
+    {
+      "sha": "c24c3d291215bf90479406e8e527d751589b5be2",
+      "author": "Lennart Puck",
+      "date": "2019-07-23T15:37:59Z",
+      "message": "refactoring of functions to match conventions"
+    },
+    {
+      "sha": "c1a00be2b701e9bb5d3c633f2bc320c9d04ab479",
+      "author": "Lennart Puck",
+      "date": "2019-07-23T12:53:00Z",
+      "message": "added firmware and serialnumber commands and parsing"
+    },
+    {
+      "sha": "239850abfe37450cd6f093040fecb7342aa439fb",
+      "author": "Lennart Puck",
+      "date": "2019-07-23T11:34:26Z",
+      "message": "added application name command and parsing"
+    },
+    {
+      "sha": "00dde2d464c4a66a3cd615e8b86970a245063051",
+      "author": "Lennart Puck",
+      "date": "2019-07-22T15:52:51Z",
+      "message": "added cpp for config data"
+    },
+    {
+      "sha": "939b4f8343ca184fd3f43e892afb9d534ae6d4b6",
+      "author": "Lennart Puck",
+      "date": "2019-07-18T15:39:53Z",
+      "message": "added missing header and cpp to CMake and made them buildable"
+    },
+    {
+      "sha": "a4b27632904b6aec3ab4f1903941a41cb2896502",
+      "author": "Lennart Puck",
+      "date": "2019-07-18T14:40:42Z",
+      "message": "clang format"
+    },
+    {
+      "sha": "d31a1b5add6998300e102f236dad874c9aa7563b",
+      "author": "Lennart Puck",
+      "date": "2019-07-18T14:40:18Z",
+      "message": "added implementations for the sopas data"
+    },
+    {
+      "sha": "37636fd157b254dacf4e8d59ccae28605b9cfa58",
+      "author": "Lennart Puck",
+      "date": "2019-07-18T14:39:38Z",
+      "message": "updated header classes for sopas"
+    },
+    {
+      "sha": "ff52611d5db2c3336a2c3cf583b4d6fb8b4a8846",
+      "author": "Lennart Puck",
+      "date": "2019-07-18T13:08:57Z",
+      "message": "created header for all sopas variables\n\nHeader to store the parsed variables from the sensor"
+    },
+    {
+      "sha": "600891252ba43c50851037cd3f48d4f49345c9b7",
+      "author": "Lennart Puck",
+      "date": "2019-07-15T12:48:36Z",
+      "message": "1.0.3"
+    },
+    {
+      "sha": "562f453445a41b99650c1875acc73e8465c1ae60",
+      "author": "Lennart Puck",
+      "date": "2019-07-15T12:47:48Z",
+      "message": "updated changelog"
+    },
+    {
+      "sha": "72c7625450f6f66caa55d261c92332b528513bdb",
+      "author": "Lennart Puck",
+      "date": "2019-07-15T12:31:09Z",
+      "message": "erasing completed frames from map. Fix for issue #19"
+    },
+    {
+      "sha": "abd386ea4e66474d04cad662be16976dcce3f25a",
+      "author": "Lennart Puck",
+      "date": "2019-07-15T09:55:27Z",
+      "message": "Merge Pull Request #8"
+    },
+    {
+      "sha": "e9c9271d5f17f18874c6c6d604f63aa15ae412fa",
+      "author": "Lennart Puck",
+      "date": "2019-07-15T09:45:55Z",
+      "message": "code formatting"
+    },
+    {
+      "sha": "091eee96a8ccbffaa68825890d59f366554999ec",
+      "author": "Lennart Puck",
+      "date": "2019-07-15T09:44:18Z",
+      "message": "Merge branch 'memory_corruption' of https://github.com/chadrockey/sick_safetyscanners into chadrockey-memory_corruption\n\n# Conflicts:\n#\tinclude/sick_safetyscanners/data_processing/ParseMeasurementCurrentConfigData.h\n#\tinclude/sick_safetyscanners/data_processing/ParseMeasurementPersistentConfigData.h\n#\tsrc/data_processing/ParseMeasurementCurrentConfigData.cpp\n#\tsrc/data_processing/ParseMeasurementPersistentConfigData.cpp"
+    },
+    {
+      "sha": "baf3314826dbce7c7e4f91990743ca5829dec0e9",
+      "author": "Lennart Puck",
+      "date": "2019-05-06T15:11:07Z",
+      "message": "Update .gitlab-ci.yml\n\nFixed yaml error in pipeline"
+    },
+    {
+      "sha": "a3b869f5d55bd2941c5bde3f34280e2022077d95",
+      "author": "Lennart Puck",
+      "date": "2019-05-06T15:07:13Z",
+      "message": "Updated ci pipeline to new format\n\nThe deprecated gitlab ci pipeline was exchanged against\nthe new format."
+    },
+    {
+      "sha": "9c435c18cff3ef16f638e27e36e5a185ec15e94c",
+      "author": "Lennart Puck",
+      "date": "2019-05-06T14:21:24Z",
+      "message": "Fixed error on startup that no scan was visualised\n\nThe fix should prevent the node from starting without\npublishing any data. The error appears to be related to\nminor rounding errors, thus setting the resolution smaller then\nthe lowest resolution. But not equal start and end angles.\nThis should fix issue #11 and #12"
+    },
+    {
+      "sha": "220fc4419fc9ad50acfae0ebdf58fbde9fec95eb",
+      "author": "Lennart Puck",
+      "date": "2019-04-11T08:11:17Z",
+      "message": "added initialisation of use_pers_config"
+    },
+    {
+      "sha": "9ba80d149027d552bed9bd5a480f82edd2a944dd",
+      "author": "Lennart Puck",
+      "date": "2019-04-10T08:53:28Z",
+      "message": "Merge update on github master: Added outdoor scanner"
+    },
+    {
+      "sha": "09d7114c3a0ac8943c35e375c50b370a45c50f38",
+      "author": "Lennart Puck",
+      "date": "2019-04-10T08:38:15Z",
+      "message": "Updated Readme , removed sensor tcp port\n\nevery occurance of the sensor tcp port is removed since it can not be configured\nin the sensor. Therefore there is no need to be able to change the port from\nthe driver."
+    },
+    {
+      "sha": "551af534590120e324ca29e677fc95c2856e6a22",
+      "author": "Lennart Puck",
+      "date": "2019-04-10T08:11:36Z",
+      "message": "Merge Pull Request #9\n\nRemoving the possibilities to use the angles from the sensor it self.\n Since dynamic reconfigure can only be set up for one frame."
+    },
+    {
+      "sha": "92507bcde43a91af01bcd1bb5a79512bb2f9852d",
+      "author": "Lennart Puck",
+      "date": "2019-04-10T08:10:39Z",
+      "message": "Merge commit to update feature branch onto current master"
+    },
+    {
+      "sha": "3251beac6e0662c25f15c4aa19a2e0c8c20482a6",
+      "author": "NicolasLoeffler",
+      "date": "2019-04-05T11:14:06Z",
+      "message": "Added outdoorScan3 in the product family table"
+    },
+    {
+      "sha": "606b0beb44b5d57fb25a367cf955e2b131fadd31",
+      "author": "Lennart Puck",
+      "date": "2019-03-04T12:32:43Z",
+      "message": "updated readme"
+    },
+    {
+      "sha": "b87dc26072a7f5e320ee943fed887ad632a384fd",
+      "author": "Lennart Puck",
+      "date": "2019-03-04T12:22:56Z",
+      "message": "removed tcp port from configuration since it can not be configured in the sensor"
+    },
+    {
+      "sha": "077097048467c4ab253b859e01d68df174bbf994",
+      "author": "Lennart Puck",
+      "date": "2019-03-04T12:11:13Z",
+      "message": "fzi style"
+    },
+    {
+      "sha": "b6bf53aa1081e47011cd9eb54aed46754b69e5d1",
+      "author": "Lennart Puck",
+      "date": "2019-03-04T12:10:30Z",
+      "message": "added parameter to use persistent config"
+    },
+    {
+      "sha": "8abf5e7c8b6caf2e98faf5c80ea5ca4ebc94a6a1",
+      "author": "Lennart Puck",
+      "date": "2019-03-04T09:10:32Z",
+      "message": "Added methods to request persistent data from sensor"
+    },
+    {
+      "sha": "5663fbf5ecf713c376e7821ed7255301d75628a6",
+      "author": "Lennart Puck",
+      "date": "2019-02-25T17:18:01Z",
+      "message": "added all parameters to launch file"
+    },
+    {
+      "sha": "5a50d4b02ff4196209aad9addc274e031c52630d",
+      "author": "Lennart Puck",
+      "date": "2019-02-25T17:02:33Z",
+      "message": "updated persistend and current config command and parser to use config data instead of field data"
+    },
+    {
+      "sha": "3af0c721f3dda50460a992aa1af4681cd98a930d",
+      "author": "Lennart Puck",
+      "date": "2019-02-25T17:01:54Z",
+      "message": "removed unused end angle from field data"
+    },
+    {
+      "sha": "f4848d8f217e692e1b678fc754f0ef345d1d7230",
+      "author": "Lennart Puck",
+      "date": "2019-02-25T17:01:10Z",
+      "message": "added datastructure for configs"
+    },
+    {
+      "sha": "b2609c99124b54a550e7222f1fde3b0a5160aa01",
+      "author": "Chad Rockey",
+      "date": "2019-02-13T23:43:28Z",
+      "message": "Fix issue with m_angle_offset.  Remove use_sick_angles"
+    },
+    {
+      "sha": "b529f9cfabcfbef6e3a1aee2305491d56527d33e",
+      "author": "Chad Rockey",
+      "date": "2019-01-30T08:14:11Z",
+      "message": "Use C++ STL to reduce risk of memory corruption"
+    },
+    {
+      "sha": "ee9452c82dc1e98fa56a2eaa02236e4b68f619d6",
+      "author": "Chad Rockey",
+      "date": "2019-01-29T20:42:27Z",
+      "message": "Change ReadWriteHelper to namespace functions instead of a stateless class"
+    },
+    {
+      "sha": "599ef2ee6a8538310ff94de3ef58d35d5c587a78",
+      "author": "Lennart Puck",
+      "date": "2019-01-28T09:06:39Z",
+      "message": "Merge Pull Request #7\nMerge branch 'Jmeyer1292-fix/destruction_race_condition'"
+    },
+    {
+      "sha": "a911a89dc923d99a8d246c38a41a8e2a82fb15ff",
+      "author": "Jonathan Meyer",
+      "date": "2019-01-22T15:22:24Z",
+      "message": "Problems with the order of destruction?"
+    },
+    {
+      "sha": "d437f13d22694e7db363e8208df223650ae4c6ea",
+      "author": "Lennart Puck",
+      "date": "2019-01-15T10:15:38Z",
+      "message": "1.0.2"
+    },
+    {
+      "sha": "7395517d551414b772723e0a1a17cec38c454aee",
+      "author": "Lennart Puck",
+      "date": "2019-01-15T10:12:44Z",
+      "message": "Updated Changelog"
+    },
+    {
+      "sha": "7fc10fe9316dde263099336a1773c22b04387e3b",
+      "author": "Lennart Puck",
+      "date": "2019-01-07T10:48:14Z",
+      "message": "updated Readme"
+    },
+    {
+      "sha": "f0bceb859b189edf62276efcc4afa40433ab043e",
+      "author": "Lennart Puck",
+      "date": "2019-01-07T10:36:23Z",
+      "message": "Read the start angle of the field data from the persistent config instead of the current config"
+    },
+    {
+      "sha": "3d90f4c20e76ad3c68954f006fcf2bcbe4ca86a6",
+      "author": "Lennart Puck",
+      "date": "2018-12-19T17:37:27Z",
+      "message": "changed to 0 angle being at the front of the scan"
+    },
+    {
+      "sha": "a15696c5511b217a9caf1c38f904e3b225aeab83",
+      "author": "Lennart Puck",
+      "date": "2018-12-11T10:29:46Z",
+      "message": "Added image to README"
+    },
+    {
+      "sha": "9819b2f3baf684b4d1ffcfa5430ba68b48ded5f0",
+      "author": "Lennart Puck",
+      "date": "2018-12-11T09:14:43Z",
+      "message": "code formatting to fzi style"
+    },
+    {
+      "sha": "51e83d647925cb7e058eca1a35888df4cdae65e4",
+      "author": "Lennart Puck",
+      "date": "2018-12-11T09:12:42Z",
+      "message": "Merge 'Pull Request #3'"
+    },
+    {
+      "sha": "5bc7ce53e7ccf1a6778bb7e623d124ec04ae2bd6",
+      "author": "Chad Rockey",
+      "date": "2018-12-07T22:45:55Z",
+      "message": "Allow system to choose the host udp port from the ephemeral range.  Resolve typo -> IPAdress to IPAddress"
+    },
+    {
+      "sha": "6f2f8e00dd1bd29fb6e79be886096cedb9869193",
+      "author": "Lennart Puck",
+      "date": "2018-12-06T10:48:43Z",
+      "message": "updated README"
+    },
+    {
+      "sha": "0c3eb597d4d67079d8dbdccc43f001767736444d",
+      "author": "Lennart Puck",
+      "date": "2018-12-06T10:08:49Z",
+      "message": "Merge 'Pull Request #2'"
+    },
+    {
+      "sha": "c8fe5e22f57c79f9148b250134d8f2d12ae0cc92",
+      "author": "Lennart Puck",
+      "date": "2018-12-06T10:08:10Z",
+      "message": "updated rviz config to visualize scan"
+    },
+    {
+      "sha": "80f5b3b5a0c5b07cfaab224046de0e5ed09d5409",
+      "author": "Lennart Puck",
+      "date": "2018-12-06T10:00:42Z",
+      "message": "added namespace in launchfile"
+    },
+    {
+      "sha": "4bd6542f318418029fcfd5776c1bdff672e8615c",
+      "author": "Lennart Puck",
+      "date": "2018-12-06T09:59:57Z",
+      "message": "changed default frame_id name to scan"
+    },
+    {
+      "sha": "d7edfe20352e88ece1f7f76596617cc1c89951a5",
+      "author": "Lennart Puck",
+      "date": "2018-12-06T09:57:23Z",
+      "message": "code formatting"
+    },
+    {
+      "sha": "73ffc0671f3b204b90ea947224718bd50ed1fa51",
+      "author": "Chad Rockey",
+      "date": "2018-12-05T22:52:43Z",
+      "message": "Change publish_frequency parameter to be skip parameter.  Fix typo in Frequency"
+    },
+    {
+      "sha": "a8565e0f09f756b7f4fd85a5d6f35dcd442deb20",
+      "author": "Chad Rockey",
+      "date": "2018-12-05T20:31:53Z",
+      "message": "Properly initialize m_time_offset to positive 0.0"
+    },
+    {
+      "sha": "fce7a9d5bcbd7f1890600f14b07f62f2d187fca5",
+      "author": "Chad Rockey",
+      "date": "2018-12-02T07:48:03Z",
+      "message": "Update README"
+    },
+    {
+      "sha": "d1ad53d2debd2ab6c0b9ec20031a3ffdcdda854e",
+      "author": "Chad Rockey",
+      "date": "2018-12-02T07:39:22Z",
+      "message": "Remove parameters that are only used at node startup from dynamic reconfigure"
+    },
+    {
+      "sha": "319c255a4a6bafd7d16ee86da4d1721048976601",
+      "author": "Chad Rockey",
+      "date": "2018-12-02T07:27:45Z",
+      "message": "Use Radians for angle parameters to match output in LaserScan message"
+    },
+    {
+      "sha": "23db7105137b83c6a0f6fdc3742c6cb8b431f31e",
+      "author": "Chad Rockey",
+      "date": "2018-12-02T07:15:09Z",
+      "message": "Add time_offset parameter to adjust scan system timestamps"
+    },
+    {
+      "sha": "179ef459ab9640938d889dc1d59407cd43cb3b75",
+      "author": "Chad Rockey",
+      "date": "2018-12-02T07:06:07Z",
+      "message": "ROS uses the 'scan' topic name by convention"
+    },
+    {
+      "sha": "aff7680ad21aefb188ff406ca2108deeb7ccc158",
+      "author": "Chad Rockey",
+      "date": "2018-12-02T07:04:23Z",
+      "message": "Publish topics using public nodehandle.  Using private nodehandle appends nodename to topics, preventing use of easy remapping"
+    },
+    {
+      "sha": "bbdaf359ef3b786717620f2198fa76b4b0aeb980",
+      "author": "Chad Rockey",
+      "date": "2018-12-02T06:59:33Z",
+      "message": "Change 'laser_scan_frame_name' parameter to standard 'frame_id'"
+    },
+    {
+      "sha": "10d70c0e73ba34c2be2c0c1ccc837a69c278d12a",
+      "author": "Lennart Puck",
+      "date": "2018-12-05T10:14:09Z",
+      "message": "Changed naming of SICK Safety Scanner"
+    },
+    {
+      "sha": "34dba7f1fc2ba683ac4b8bdd0636b6c7dfa63b4b",
+      "author": "Lennart Puck",
+      "date": "2018-12-03T14:30:53Z",
+      "message": "Added missing function documentation"
+    },
+    {
+      "sha": "b5e9dd911c0ebd463cbfd19b6fe481f3e52ae9fe",
+      "author": "Lennart Puck",
+      "date": "2018-12-03T14:28:56Z",
+      "message": "removed deprecated function to get case number"
+    },
+    {
+      "sha": "43beb8e9e4404375126b2e2dc2f6503b3dc3fdcd",
+      "author": "Lennart Puck",
+      "date": "2018-12-03T14:23:02Z",
+      "message": "Added active monitoring case to output paths msg"
+    },
+    {
+      "sha": "4acce97c71411cd61ffe3970c3ed0ae7ff1bd4cd",
+      "author": "Lennart Puck",
+      "date": "2018-12-03T14:12:23Z",
+      "message": "Added MonitoringCases to field data service"
+    },
+    {
+      "sha": "9743f3cc124fe92efe230e00b89927ee19bbfb35",
+      "author": "Lennart Puck",
+      "date": "2018-11-29T15:42:25Z",
+      "message": "parsing the monitoring case data into the datastructure"
+    },
+    {
+      "sha": "797d5e4a2f61f78a83c1e1b0b61f5df4b1027bc8",
+      "author": "Lennart Puck",
+      "date": "2018-11-29T13:49:51Z",
+      "message": "added monitoring case number and corresponding fields in datastructure"
+    },
+    {
+      "sha": "9491ffe59e7c63080d2d280be5324cc457c9dc1b",
+      "author": "Lennart Puck",
+      "date": "2018-11-29T13:12:12Z",
+      "message": "added method to read the corresponding monitoring case number"
+    },
+    {
+      "sha": "74ee885e3be0f4742a94079ce198f32909847f10",
+      "author": "Lennart Puck",
+      "date": "2018-11-29T13:11:53Z",
+      "message": "Request Monitoring cases until the first invalid is returned"
+    },
+    {
+      "sha": "7c228c98a15cb416401e5757eae233ed1674e535",
+      "author": "Lennart Puck",
+      "date": "2018-11-29T10:46:31Z",
+      "message": "Check if the monitoring case data is valid"
+    },
+    {
+      "sha": "6bf80238458ee8ad6c684757fd9174e9b9782d7a",
+      "author": "Lennart Puck",
+      "date": "2018-11-29T10:46:11Z",
+      "message": "Monitoring variable command starts the parsing process of the tcp packet"
+    },
+    {
+      "sha": "4ccc558af071436684772b666d5265a6fd522e96",
+      "author": "Lennart Puck",
+      "date": "2018-11-29T09:54:06Z",
+      "message": "updated README with new topics and services"
+    },
+    {
+      "sha": "9220a64c4933e661f1245d74f44bc91b76bd2c86",
+      "author": "Lennart Puck",
+      "date": "2018-11-29T09:45:21Z",
+      "message": "added empty parser and empty datastructure class for monitoring cases"
+    },
+    {
+      "sha": "aa7864eeb0b118c44b28f2e2252856589ef40473",
+      "author": "Lennart Puck",
+      "date": "2018-11-28T16:52:09Z",
+      "message": "fzi clang format"
+    },
+    {
+      "sha": "ce7ff8895a3d814607b18b18fbff9ef0a794c8e6",
+      "author": "Lennart Puck",
+      "date": "2018-11-28T16:50:05Z",
+      "message": "base version of command to receive monitoring case data"
+    },
+    {
+      "sha": "68ce0764efe5326d31c3e5d5656bd402ead382d1",
+      "author": "Lennart Puck",
+      "date": "2018-11-28T15:17:12Z",
+      "message": "Merge branch 'master' of ids-git.fzi.de:ros/sick_microscan3_ros_driver"
+    },
+    {
+      "sha": "58e6aef93d10f22de3a6d9bcdf0c821619ba7219",
+      "author": "Lennart Puck",
+      "date": "2018-11-28T15:16:56Z",
+      "message": "adapted function signatures to coding style"
+    },
+    {
+      "sha": "0ea0314ea6df9fd5717ef743bf1c5db8169f81ce",
+      "author": "Lennart Puck",
+      "date": "2018-11-28T14:40:46Z",
+      "message": "Code formatting"
+    },
+    {
+      "sha": "97a06a5cc1d8ab4cd990b3530817f541b6f1a72a",
+      "author": "Lennart Puck",
+      "date": "2018-11-28T14:38:01Z",
+      "message": "Added disconnect routine."
+    },
+    {
+      "sha": "26e7dbd1d8dcd9e8752840a21d2e19f0a2f3443c",
+      "author": "Lennart Puck",
+      "date": "2018-11-28T13:51:28Z",
+      "message": "session pointer reset just before creating a new one. Fixes timing error due to too early reset"
+    },
+    {
+      "sha": "51958008e9e375bcdf412e15738ab8650d4da849",
+      "author": "Lennart Puck",
+      "date": "2018-11-27T17:06:50Z",
+      "message": "fixed active case number for field service"
+    },
+    {
+      "sha": "6add19ed8f9ca4c51cf5bef71ee6d565eb1f4642",
+      "author": "Lennart Puck",
+      "date": "2018-11-27T17:06:22Z",
+      "message": "stop requests for field data after first invalid field"
+    },
+    {
+      "sha": "6b1bb3dc29f5cb9226f150cd22e5dda565cd1c60",
+      "author": "Lennart Puck",
+      "date": "2018-11-27T15:56:21Z",
+      "message": "Shutdown of socket before closing it, needs testing on arm board."
+    },
+    {
+      "sha": "7252cff8b0567c80074d1b8623cc315991db2266",
+      "author": "Lennart Puck",
+      "date": "2018-11-22T19:09:49Z",
+      "message": "Quick fix for embedded board, correct fix needed"
+    },
+    {
+      "sha": "94421d7419c7a66f57310bd346344afe0314406c",
+      "author": "Lennart Puck",
+      "date": "2018-11-22T15:50:02Z",
+      "message": "changed order of startup"
+    },
+    {
+      "sha": "72152916f254d17eba213cf7f452a473cee4b794",
+      "author": "Lennart Puck",
+      "date": "2018-11-22T14:15:36Z",
+      "message": "convert field data to radians for ros service"
+    },
+    {
+      "sha": "6d96903747684ce6125f1ca2d7b9f4f0b474336c",
+      "author": "Lennart Puck",
+      "date": "2018-11-22T11:49:07Z",
+      "message": "added median reflector bit in message and code"
+    },
+    {
+      "sha": "cd635a8a5187f15bba7be57e8256dfcc7c6f9752",
+      "author": "Lennart Puck",
+      "date": "2018-11-20T16:21:34Z",
+      "message": "removed rqt configure from launch file."
+    },
+    {
+      "sha": "e7aa24ac2edb29710cfe9d9238a741351c660cf4",
+      "author": "Lennart Puck",
+      "date": "2018-11-20T12:32:18Z",
+      "message": "added active case number to the service call"
+    },
+    {
+      "sha": "a3934b51b7437990027ce022c880b38928084a22",
+      "author": "Lennart Puck",
+      "date": "2018-11-20T10:10:30Z",
+      "message": "refactored opening and closing cola2 session calls."
+    },
+    {
+      "sha": "073781a89d70ef7a18976b98f88133426293ff74",
+      "author": "Lennart Puck",
+      "date": "2018-11-20T10:05:46Z",
+      "message": "added seperate function to read the device name from the sensor"
+    },
+    {
+      "sha": "2bccaeb57644415066ea891b8ddf7083eb2dd510",
+      "author": "Lennart Puck",
+      "date": "2018-11-20T09:46:19Z",
+      "message": "added mutex for tcp socket"
+    },
+    {
+      "sha": "64b711d76bfaf0ae400d76335de5ef7b2a154eaf",
+      "author": "Lennart Puck",
+      "date": "2018-11-19T16:50:49Z",
+      "message": "added ranges and angles to service call for fields"
+    },
+    {
+      "sha": "0fd0c9a2153c1992cdb0340c3343639aeab06ca6",
+      "author": "Lennart Puck",
+      "date": "2018-11-19T16:20:36Z",
+      "message": "Check if data is valid for the field and only adds valid fields to vector"
+    },
+    {
+      "sha": "a3ae746fb0f6fe6cd4dae85a178468b1828aaa40",
+      "author": "Lennart Puck",
+      "date": "2018-11-19T10:25:08Z",
+      "message": "Field data is returned as a vector for all fields"
+    },
+    {
+      "sha": "a79914bf230e66b1f6265640b53ae19671db2cd9",
+      "author": "Lennart Puck",
+      "date": "2018-11-19T10:24:45Z",
+      "message": "Added setter to field data for angles from degrees"
+    },
+    {
+      "sha": "4dab5feaa4597bd909fead322e090784c0ac2e1e",
+      "author": "Lennart Puck",
+      "date": "2018-11-16T11:49:59Z",
+      "message": "service call requests field data from sensor"
+    },
+    {
+      "sha": "4bdab2cde9935bc3f8e1e57183fefc509f8f48b0",
+      "author": "Lennart Puck",
+      "date": "2018-11-16T10:33:05Z",
+      "message": "added method for field commands"
+    },
+    {
+      "sha": "05ab20dfebcea7977696419776f3a40366cccbd8",
+      "author": "Lennart Puck",
+      "date": "2018-11-15T16:12:22Z",
+      "message": "Filled output paths msg with data"
+    },
+    {
+      "sha": "dac2296574cec899394b57521eed9613c0251d66",
+      "author": "Lennart Puck",
+      "date": "2018-11-15T10:17:34Z",
+      "message": "Added publisher und service server for field data and output paths"
+    },
+    {
+      "sha": "04b8e453063e2c0f99413447094a9c6d2225cfd6",
+      "author": "Lennart Puck",
+      "date": "2018-11-15T09:57:16Z",
+      "message": "Updated Cmakelist for new msg and srv"
+    },
+    {
+      "sha": "1b09d5f0b5888eb28b999064bd1ffa3cd074a7ff",
+      "author": "Lennart Puck",
+      "date": "2018-11-15T09:40:54Z",
+      "message": "Added msg and srv for the data for the visualisation"
+    },
+    {
+      "sha": "d342034d8e0d8a25cafc76dcc67c266b3d369c76",
+      "author": "Lennart Puck",
+      "date": "2018-11-14T13:54:31Z",
+      "message": "Update readme after release is public"
+    },
+    {
+      "sha": "a89bb9a7d9f7c192a1b282007cf34ef852fff116",
+      "author": "Lennart Puck",
+      "date": "2018-11-14T12:00:53Z",
+      "message": "clang format"
+    },
+    {
+      "sha": "69c92027db2e5e1038323ee3ebd699bcde84f9da",
+      "author": "Lennart Puck",
+      "date": "2018-11-13T17:18:10Z",
+      "message": "Execute the command to read the current config variable from the sensor"
+    },
+    {
+      "sha": "9655ac59e509db790d0e1169ba34d1a344c617a3",
+      "author": "Lennart Puck",
+      "date": "2018-11-13T17:17:40Z",
+      "message": "Read start angle and resolution from config variable"
+    },
+    {
+      "sha": "60091c9f0000727fa460daf821117ca2f2789e4a",
+      "author": "Lennart Puck",
+      "date": "2018-11-13T15:53:43Z",
+      "message": "Variable Command to get the current measurement channel configuration from the sensor"
+    },
+    {
+      "sha": "07ce34b98c3735608d42941fcf9e457202fe4820",
+      "author": "Lennart Puck",
+      "date": "2018-11-13T14:36:51Z",
+      "message": "Added Start angle and beam resolution to field data"
+    },
+    {
+      "sha": "8f538b964beedfed008bf11a5974ca7b7f1fb0ca",
+      "author": "Lennart Puck",
+      "date": "2018-11-09T14:08:34Z",
+      "message": "removed setup.cfg for pylint"
+    },
+    {
+      "sha": "fcdd3623b133dfb14071ada02a5852ca671c3ee0",
+      "author": "Lennart Puck",
+      "date": "2018-11-09T14:07:46Z",
+      "message": "removed autogenerated code"
+    },
+    {
+      "sha": "0450a194769da251ac15edb5f64c1dfa08b130c1",
+      "author": "Lennart Puck",
+      "date": "2018-11-09T14:02:44Z",
+      "message": "Merge branch 'master' of ids-git.fzi.de:ros/sick_microscan3_ros_driver"
+    },
+    {
+      "sha": "3e33ac3c521b88c4c602808bea94c36e18768d9a",
+      "author": "Lennart Puck",
+      "date": "2018-11-09T13:59:34Z",
+      "message": "Exclude of autogenerated data for pylint"
+    },
+    {
+      "sha": "0a84142eabbb4d2bdd5dcb62b1c7a8c9f2cc08dc",
+      "author": "Lennart Puck",
+      "date": "2018-11-09T13:44:36Z",
+      "message": "Successful TCP Conecction does not print an error"
+    },
+    {
+      "sha": "ee97a3a69eb2efc7cf858e704ba09e1800dba0cd",
+      "author": "Lennart Puck",
+      "date": "2018-11-09T13:25:22Z",
+      "message": "Update .gitlab-ci.yml"
+    },
+    {
+      "sha": "3e2bfcf46d4720af3a82c55db5947cb8f612d5e2",
+      "author": "Lennart Puck",
+      "date": "2018-11-09T13:20:21Z",
+      "message": "Added author tag"
+    },
+    {
+      "sha": "23cd880c06dfa145c6106c4371f0472ea6ccb58f",
+      "author": "Lennart Puck",
+      "date": "2018-11-05T13:29:36Z",
+      "message": "added more sensors to readme"
+    },
+    {
+      "sha": "7011377a3aaba4b9e240f5d3a9a6f7a7c170d2c9",
+      "author": "Lennart Puck",
+      "date": "2018-10-31T12:22:33Z",
+      "message": "1.0.1"
+    },
+    {
+      "sha": "1dcd653a81e5f7fc5a1364412848ef8b8089a343",
+      "author": "Lennart Puck",
+      "date": "2018-10-31T12:16:48Z",
+      "message": "bump version to 1.0.0 for release"
+    },
+    {
+      "sha": "02e2223458aa1c257d0ef12a035e377cd0177fde",
+      "author": "Lennart Puck",
+      "date": "2018-10-31T12:15:30Z",
+      "message": "added changelog for release"
+    },
+    {
+      "sha": "ab86d8d013e796956ad82c63dddf34520478d48e",
+      "author": "Lennart Puck",
+      "date": "2018-10-31T08:57:58Z",
+      "message": "added defaults for parameters and marked from bianry as in progress"
+    },
+    {
+      "sha": "2faaf59330554156463ffa0cf58aa64937e55a35",
+      "author": "Lennart Puck",
+      "date": "2018-10-30T16:57:17Z",
+      "message": "fixed some typos in readme"
+    },
+    {
+      "sha": "0a3ee244c2b2718a00c78449242e7b0c768d735c",
+      "author": "Lennart Puck",
+      "date": "2018-10-30T16:22:40Z",
+      "message": "Added missing space in readme"
+    },
+    {
+      "sha": "a0473358a3a5332583458cc1abbee7280fdd0e0a",
+      "author": "Lennart Puck",
+      "date": "2018-10-30T16:20:56Z",
+      "message": "Updated Readme"
+    },
+    {
+      "sha": "e6672511b3955ae814f9eb3f0ebaaef4a2962cdd",
+      "author": "Lennart Puck",
+      "date": "2018-10-30T14:20:29Z",
+      "message": "Merge branch 'master' of ids-git.fzi.de:ros/sick_microscan3_ros_driver\n\n# Conflicts:\n#\tlaunch/sick_safetyscanners.launch"
+    },
+    {
+      "sha": "b821384da27d93fc1fd37c73eb71c42fe8116d7b",
+      "author": "Felix Mauch",
+      "date": "2018-10-30T13:40:18Z",
+      "message": "added rqt_reconfigure as exec_dependency"
+    },
+    {
+      "sha": "b2764b7817192289cd9e923f5893f84fe7b1e737",
+      "author": "Felix Mauch",
+      "date": "2018-10-30T13:40:07Z",
+      "message": "renamed node to PROJECT_NAME_node"
+    },
+    {
+      "sha": "8f7654b09d1927585d3d52c818f8c87cc44b465d",
+      "author": "Felix Mauch",
+      "date": "2018-10-30T13:39:44Z",
+      "message": "Fixed boost dependency"
+    },
+    {
+      "sha": "87cfcea3525751754ed0373d091ef6b42e0d4da0",
+      "author": "Felix Mauch",
+      "date": "2018-10-30T13:17:52Z",
+      "message": "added virtual destructor"
+    },
+    {
+      "sha": "dc8a78c8c04b10e7be8a8a6b0145abedd4cc5d98",
+      "author": "Lennart Puck",
+      "date": "2018-10-30T12:55:52Z",
+      "message": "minor fixes from cpplint"
+    },
+    {
+      "sha": "fe10fcf3e188034c1c92c6e40963fe510dfc360c",
+      "author": "Lennart Puck",
+      "date": "2018-10-30T12:35:26Z",
+      "message": "added arguments to launch file to make it includable"
+    },
+    {
+      "sha": "5c4bcb956a414122179c3dc5a9b1a7b54145e136",
+      "author": "Lennart Puck",
+      "date": "2018-10-30T12:19:18Z",
+      "message": "fzi styles"
+    },
+    {
+      "sha": "9f8f6afd3cf35136a47badb303017f827c602756",
+      "author": "Lennart Puck",
+      "date": "2018-10-30T12:18:46Z",
+      "message": "renamed package to sick_safetyscanners, consistens with the sick repo"
+    },
+    {
+      "sha": "aeb910fb9ab67a9633016f33ed43b07420938cb7",
+      "author": "Lennart Puck",
+      "date": "2018-10-30T12:07:53Z",
+      "message": "added intrusion to extended laser scan message"
+    },
+    {
+      "sha": "be3a8dd697ff43a3fe31dfee4fdab138e857822d",
+      "author": "Lennart Puck",
+      "date": "2018-10-30T10:18:51Z",
+      "message": "Fixed typos and missing code docu"
+    },
+    {
+      "sha": "775dee81f0142dbe8de4ca425d4f7d9f4eca6976",
+      "author": "Lennart Puck",
+      "date": "2018-10-30T10:06:50Z",
+      "message": "fzi styles clang format"
+    },
+    {
+      "sha": "ea621e697f01bfb61f3bc1bbec0fd34ea17f5191",
+      "author": "Lennart Puck",
+      "date": "2018-10-30T10:05:36Z",
+      "message": "Further code documentation"
+    },
+    {
+      "sha": "92b40c12dfd0dcb9f905302dfbbae380d1aab491",
+      "author": "Lennart Puck",
+      "date": "2018-10-29T17:24:49Z",
+      "message": "A lot of code documentation"
+    },
+    {
+      "sha": "a7c2b43d6cb6d1e225bc5a73b0c17a843a82751d",
+      "author": "Lennart Puck",
+      "date": "2018-10-26T15:33:54Z",
+      "message": "removed unused variables"
+    },
+    {
+      "sha": "39da9c22bbc71eb14835c64049aa42460161ffc7",
+      "author": "Lennart Puck",
+      "date": "2018-10-26T15:33:38Z",
+      "message": "Refactored ParsedpacketBuffer from a struct to a class, removed warning on build"
+    },
+    {
+      "sha": "a5fd86f1af09ffd2dac3c853a3057c0a51876c13",
+      "author": "Lennart Puck",
+      "date": "2018-10-26T14:58:37Z",
+      "message": "Changed output type to unsigned so session IDs will be correctly displayed"
+    },
+    {
+      "sha": "df7ba51b3fa7e62e134d9560fadb03e7f0575627",
+      "author": "Lennart Puck",
+      "date": "2018-10-26T14:53:33Z",
+      "message": "Result check of return values made in hex and as char. Depending on the system uint8 can be treated as a char or not."
+    },
+    {
+      "sha": "e85dd45ec8d3d579c7de0eef6e9f036af4f153aa",
+      "author": "Lennart Puck",
+      "date": "2018-10-26T14:52:33Z",
+      "message": "formatted again with fzi style, missmatch of style against roslint check"
+    },
+    {
+      "sha": "77f3b2a66aa4e2e76c0667cdcca45a8ca5430492",
+      "author": "Lennart Puck",
+      "date": "2018-10-26T11:42:56Z",
+      "message": "resolved roslint warnings for comments and headerguards"
+    },
+    {
+      "sha": "bc499d971df466bd3502e4166746d0a1d7323825",
+      "author": "Lennart Puck",
+      "date": "2018-10-26T11:42:12Z",
+      "message": "Sorted lists in cmake to resolve linter warnings"
+    },
+    {
+      "sha": "4d474cc2fd92dc5b97efe40538b5ffc04bed765c",
+      "author": "Lennart Puck",
+      "date": "2018-10-26T08:58:56Z",
+      "message": "formatted with clang format and fzi styles"
+    },
+    {
+      "sha": "e21411c03eb3f8a81312b0bd09c7358aeb0b4123",
+      "author": "Lennart Puck",
+      "date": "2018-10-26T08:42:00Z",
+      "message": "fixed catkin lint issues"
+    },
+    {
+      "sha": "2f4317f91c15f92a715a8c6f701e8ed024c01d0f",
+      "author": "Lennart Puck",
+      "date": "2018-10-25T16:13:07Z",
+      "message": "a whole lot of refactoring. changing calls to const ref where possible, and makinf functions const"
+    },
+    {
+      "sha": "002f21e216b0b819637f52950e25465d8f202916",
+      "author": "Lennart Puck",
+      "date": "2018-10-24T16:42:32Z",
+      "message": "updated launch file"
+    },
+    {
+      "sha": "6881e6f5fa10cecf862440fb795d5d9890987adf",
+      "author": "Lennart Puck",
+      "date": "2018-10-24T16:42:05Z",
+      "message": "fixed offset of returned data"
+    },
+    {
+      "sha": "8197ce35656e064e81e211df4874dd760bb80e81",
+      "author": "Lennart Puck",
+      "date": "2018-10-24T16:41:51Z",
+      "message": "replaced cxx11 strings with string"
+    },
+    {
+      "sha": "f6356d81bccce6607ea6d5b8dd07ebc9bbedff94",
+      "author": "Lennart Puck",
+      "date": "2018-10-24T16:41:13Z",
+      "message": "added Device name variable command and case table command"
+    },
+    {
+      "sha": "65991cb8345a832a24b33e048d4c6927ffeec6e8",
+      "author": "Lennart Puck",
+      "date": "2018-10-24T09:43:24Z",
+      "message": "Merge branch 'master' of ids-git.fzi.de:ros/sick_microscan3_ros_driver"
+    },
+    {
+      "sha": "4f8eab895734a1524a48be89c3a05c8b76338591",
+      "author": "Lennart Puck",
+      "date": "2018-10-24T09:43:05Z",
+      "message": "Added parsing for the field geometry and header"
+    },
+    {
+      "sha": "5ef7ffd2c45543b423432bd5d716106f7ddf4ca7",
+      "author": "Felix Mauch",
+      "date": "2018-10-18T06:38:47Z",
+      "message": "Add .gitlab-ci.yml"
+    },
+    {
+      "sha": "8be49108c97a903cb8d909a087857442d472e9df",
+      "author": "Lennart Puck",
+      "date": "2018-10-17T13:28:02Z",
+      "message": "Added classes to read field headers and geometry"
+    },
+    {
+      "sha": "e24f8af91b15697559ff0391e8f1b3306a166715",
+      "author": "Lennart Puck",
+      "date": "2018-10-16T15:16:18Z",
+      "message": "continued documentation"
+    },
+    {
+      "sha": "36f5a7c76296e76c399ba892063ebda45217350b",
+      "author": "Lennart Puck",
+      "date": "2018-10-16T15:16:03Z",
+      "message": "removed deprecated function"
+    },
+    {
+      "sha": "9eb8bcad9d27159b0028e8986dae3bf2e85389a3",
+      "author": "Lennart Puck",
+      "date": "2018-10-16T15:15:23Z",
+      "message": "Added function to read typecode from the sensor to set the correct interface and range"
+    },
+    {
+      "sha": "655bfbfb3e11cf619d935e9548f319014ed0a796",
+      "author": "Lennart Puck",
+      "date": "2018-10-01T09:12:08Z",
+      "message": "started code documentation"
+    },
+    {
+      "sha": "67b4a92536e564064b1ec827a1174173d969022f",
+      "author": "Lennart Puck",
+      "date": "2018-10-01T07:52:49Z",
+      "message": "replaced std::cout with ros info and error"
+    },
+    {
+      "sha": "6ffe9ed2f42b1d24cf4ca31ca1e1c0a43dcf20d8",
+      "author": "Lennart Puck",
+      "date": "2018-10-01T07:36:45Z",
+      "message": "renamed all paket occurances to packet"
+    },
+    {
+      "sha": "249c14f89a23c89eb7686afef1963f6d535bff82",
+      "author": "Lennart Puck",
+      "date": "2018-09-28T13:10:21Z",
+      "message": "removed function pointer for sorting, throwing errors again"
+    },
+    {
+      "sha": "80f1ff0d0907cbd4348d78f9c15d56d8ab29abf3",
+      "author": "Lennart Puck",
+      "date": "2018-09-28T12:49:00Z",
+      "message": "included launch file in install targets"
+    },
+    {
+      "sha": "2c1098c3c28875ccd186159cb8b1720bbc31cf77",
+      "author": "Lennart Puck",
+      "date": "2018-09-28T12:41:14Z",
+      "message": "moved rviz config to etc"
+    },
+    {
+      "sha": "c0eb21f7eccdc4ac24bd22fbb5817d70266ef127",
+      "author": "Lennart Puck",
+      "date": "2018-09-28T12:40:09Z",
+      "message": "surpressed warning for static sorting function"
+    },
+    {
+      "sha": "ccf67f6bcff975715082a23ff63ffe21e8c7f28d",
+      "author": "Lennart Puck",
+      "date": "2018-09-28T12:35:00Z",
+      "message": "replaced boost shared pointer with std shared pointer"
+    },
+    {
+      "sha": "397e587a747be5e5ca03e323321636298d0b0fd7",
+      "author": "Lennart Puck",
+      "date": "2018-09-28T12:22:12Z",
+      "message": "removed deprecated TODO comments"
+    },
+    {
+      "sha": "76e7de9503ccc807c3c9ae9d3a8f680d48e44253",
+      "author": "Lennart Puck",
+      "date": "2018-09-28T12:12:10Z",
+      "message": "cahnged from boost datatype to std datatype for uints and ints"
+    },
+    {
+      "sha": "bbfbdad321c29aa982415a737d8952aa7ae00b3d",
+      "author": "Lennart Puck",
+      "date": "2018-09-28T11:51:31Z",
+      "message": " removed ci script"
+    },
+    {
+      "sha": "2f0d5b278053ea1b4e558acfedd4cd95806be164",
+      "author": "Lennart Puck",
+      "date": "2018-09-28T11:49:01Z",
+      "message": "Add .gitlab-ci.yml"
+    },
+    {
+      "sha": "3f385bc8a61cf6fd7da0857aa8253d3c21bd2bd0",
+      "author": "Lennart Puck",
+      "date": "2018-09-28T11:47:29Z",
+      "message": "changed from pragma once to include guards"
+    },
+    {
+      "sha": "05bdc894ea61a4f864837274e6a68b799e23be59",
+      "author": "Lennart Puck",
+      "date": "2018-09-28T11:06:52Z",
+      "message": "refactored code to remove warnings"
+    },
+    {
+      "sha": "237bc32cb5b70bcd2b1426eb1c8bf434ba59bb0a",
+      "author": "Felix Mauch",
+      "date": "2018-09-28T08:54:04Z",
+      "message": "applied FZI's Coding style guidelines"
+    },
+    {
+      "sha": "5c364ff193bfb44d37e3390f9aac59a234c85f4f",
+      "author": "Lennart Puck",
+      "date": "2018-09-26T09:16:39Z",
+      "message": "raw data is completly pusblished for all incoming packets"
+    },
+    {
+      "sha": "255e8d0fae0dac4716012bfcf9056419b82fd723",
+      "author": "Lennart Puck",
+      "date": "2018-09-26T09:16:07Z",
+      "message": "added dependencies for exported targets, should resolve build problems"
+    },
+    {
+      "sha": "a9141f5178865ce7df0e398199b98bd505dc8eae",
+      "author": "Lennart Puck",
+      "date": "2018-09-25T15:37:11Z",
+      "message": "added raw data message and extended laserscan msg"
+    },
+    {
+      "sha": "7e9d4c0ee526d299c7d8a33a8bfd3993fb74ccdd",
+      "author": "Lennart Puck",
+      "date": "2018-09-25T12:30:35Z",
+      "message": " added mutex and conditional to wait for return of tcp connection"
+    },
+    {
+      "sha": "d6c4931a4166b9c9b19bae23d8eab676dec188c3",
+      "author": "Lennart Puck",
+      "date": "2018-09-25T08:01:12Z",
+      "message": "changed host ip and port to only be set on startup"
+    },
+    {
+      "sha": "6de8356f4ca943ee2e0e5afb144527ff2cfe227d",
+      "author": "Lennart Puck",
+      "date": "2018-09-24T16:43:33Z",
+      "message": "changed type of sensr tcp port to int"
+    },
+    {
+      "sha": "cb6935c9889b9c38d9b5a4f0a16457cfc932f35a",
+      "author": "Lennart Puck",
+      "date": "2018-09-24T16:37:25Z",
+      "message": "added codeblock in readme"
+    },
+    {
+      "sha": "c44083953571dfeed20a05e2f1fde33a4b9edab3",
+      "author": "Lennart Puck",
+      "date": "2018-09-24T16:36:02Z",
+      "message": "fixed markdown in readme"
+    },
+    {
+      "sha": "1a3b315c97e8571ee2d396495f2a2698e83d910b",
+      "author": "Lennart Puck",
+      "date": "2018-09-24T16:34:07Z",
+      "message": "Wrote some documentation in readme"
+    },
+    {
+      "sha": "4956e8bc9dcc66f3986948c8d2bc84ddf56bc428",
+      "author": "Lennart Puck",
+      "date": "2018-09-24T15:58:07Z",
+      "message": "some restructioring of includes"
+    },
+    {
+      "sha": "7dda983209eefe59f4cb4d88aa603fe20079b497",
+      "author": "Lennart Puck",
+      "date": "2018-09-24T08:32:47Z",
+      "message": " added license tag for all src code"
+    },
+    {
+      "sha": "4f65833b2b34ef31d37bc12b9d58e6b60b1825a2",
+      "author": "Lennart Puck",
+      "date": "2018-09-19T12:30:28Z",
+      "message": "added new messages for raw data and extended laserscan"
+    },
+    {
+      "sha": "2acb0b84cd903d05efc24ba0b95571428ac98f86",
+      "author": "Lennart Puck",
+      "date": "2018-09-17T16:49:14Z",
+      "message": "removed debug outputs"
+    },
+    {
+      "sha": "d002605d448182b85e5a05224ef7678101627678",
+      "author": "Lennart Puck",
+      "date": "2018-09-17T16:28:37Z",
+      "message": "code cleanup"
+    },
+    {
+      "sha": "7aadbea0fa396bb0b1a88467904565f73d78c145",
+      "author": "Lennart Puck",
+      "date": "2018-09-17T09:02:12Z",
+      "message": "added checks if packets are published and conditions are met"
+    },
+    {
+      "sha": "f39c312ff7acbf7648639d61e7ad64fda35682f6",
+      "author": "Lennart Puck",
+      "date": "2018-09-13T19:21:23Z",
+      "message": "added reconfigurable parameters which can be set for the sensor"
+    },
+    {
+      "sha": "33440cbc609f02e92db87d2b3c23260c60a451d7",
+      "author": "Lennart Puck",
+      "date": "2018-09-12T15:03:01Z",
+      "message": "minor refactoring microscan3 class"
+    },
+    {
+      "sha": "8ee448f96207314b92b3cbcdcb07258a695ad7f6",
+      "author": "Lennart Puck",
+      "date": "2018-09-12T14:48:11Z",
+      "message": "refactored packetmerger to cleaner code"
+    },
+    {
+      "sha": "82f96a815c704b0f5b3aa741c37c21adee78d598",
+      "author": "Lennart Puck",
+      "date": "2018-09-12T12:40:45Z",
+      "message": "refactoring"
+    },
+    {
+      "sha": "b849ca396ffc44949bb385b27411506e19d27155",
+      "author": "Lennart Puck",
+      "date": "2018-09-12T12:40:04Z",
+      "message": "rafactored parse measurement data to cleaner code"
+    },
+    {
+      "sha": "959266a67ad0a8ce1d5d9e7bb483fd1d879b98de",
+      "author": "Lennart Puck",
+      "date": "2018-09-12T11:41:31Z",
+      "message": "refactored intrusion data to cleaner code"
+    },
+    {
+      "sha": "88852905911d6f48574e55cb97f30540e7bfcea5",
+      "author": "Lennart Puck",
+      "date": "2018-09-12T10:19:23Z",
+      "message": "refactored general system state to cleaner code"
+    },
+    {
+      "sha": "6d602bd630bdbcf59fe7354342d44281c58f3764",
+      "author": "Lennart Puck",
+      "date": "2018-09-12T09:53:51Z",
+      "message": "refactored derived values to cleaner code"
+    },
+    {
+      "sha": "075b67e443fda0c3c23e97968ffc669399a29646",
+      "author": "Lennart Puck",
+      "date": "2018-09-12T09:45:21Z",
+      "message": "refactored parse data to cleaner code"
+    },
+    {
+      "sha": "6d6e9e3cda47084e6c650dfba00dc2cdcb3c027b",
+      "author": "Lennart Puck",
+      "date": "2018-09-12T09:18:28Z",
+      "message": "refactored application data to cleaner code"
+    },
+    {
+      "sha": "0f57b605fa2f657d873ee167e7935dfbb430b39e",
+      "author": "Lennart Puck",
+      "date": "2018-09-11T16:29:33Z",
+      "message": " more clean code refactoring"
+    },
+    {
+      "sha": "dc321f6678240abfa1b470bb8be03e0d737d74e7",
+      "author": "Lennart Puck",
+      "date": "2018-09-11T15:25:29Z",
+      "message": "refactored cola2 session and commands"
+    },
+    {
+      "sha": "3b99f0dd3145ddd4afbfff69c0704740db1d5fd7",
+      "author": "Lennart Puck",
+      "date": "2018-09-11T13:53:07Z",
+      "message": "added mutex to wait for incoming tcp answer"
+    },
+    {
+      "sha": "a7b5d2c2a8434306d6b7a1abe0f5c100c3f7ea55",
+      "author": "Lennart Puck",
+      "date": "2018-09-11T12:36:10Z",
+      "message": "refactored Change Comm Settings"
+    },
+    {
+      "sha": "912ce21b77f9b5feafbb263f948b2cf382cabe5e",
+      "author": "Lennart Puck",
+      "date": "2018-09-11T11:45:38Z",
+      "message": "changed read and write methods so they write at a specified position and do not move through the buffer"
+    },
+    {
+      "sha": "e01dbc1e62fd06cc7188322564a91ff63f4247e7",
+      "author": "Lennart Puck",
+      "date": "2018-09-11T09:32:38Z",
+      "message": "refactored so class, methods and variables follow the same naming convention"
+    },
+    {
+      "sha": "bdf9ee614d81fc263e2d0fa665adf05bdd864c0d",
+      "author": "Lennart Puck",
+      "date": "2018-09-11T08:46:25Z",
+      "message": "removed static functions in favor of member functions"
+    },
+    {
+      "sha": "561e978831d05de1e33de11333c5adbeb1b513dc",
+      "author": "Lennart Puck",
+      "date": "2018-09-10T15:59:16Z",
+      "message": "Changed Big Endian to Little Endian to get the sensor to accept the data and set the konfiguration"
+    },
+    {
+      "sha": "9639b91d3ea323b67cda65c4d89745c7ed58ca3b",
+      "author": "Lennart Puck",
+      "date": "2018-09-10T15:01:34Z",
+      "message": "get acknowledge for change Communication Settings"
+    },
+    {
+      "sha": "a0015bd033d5ea55b60cbbc3b1a93ea4d9ae1bd9",
+      "author": "Lennart Puck",
+      "date": "2018-09-06T16:51:29Z",
+      "message": "parsing of opening and closing session working"
+    },
+    {
+      "sha": "db41ab446590cfc0ffa137c7a44eaa273ba37209",
+      "author": "Lennart Puck",
+      "date": "2018-09-06T15:49:52Z",
+      "message": "tcp packet merging working, next parsing"
+    },
+    {
+      "sha": "53fb0dbf1e2f70f83c9afe162005fddaaf80c24b",
+      "author": "Lennart Puck",
+      "date": "2018-09-06T13:01:08Z",
+      "message": "possible to create and close tcp session with sensor"
+    },
+    {
+      "sha": "4c49496b7e2528e83c11548373593bb3058b23d9",
+      "author": "Lennart Puck",
+      "date": "2018-09-04T15:32:43Z",
+      "message": "added base version of tcp connection for changing comm settings"
+    },
+    {
+      "sha": "79dd1bd362e339c1830e721fef6a67597a352be1",
+      "author": "Lennart Puck",
+      "date": "2018-09-04T15:31:31Z",
+      "message": "added more forgotten classes"
+    },
+    {
+      "sha": "0f204e25002a0df9f211b032d85add6ac4c73647",
+      "author": "Lennart Puck",
+      "date": "2018-09-04T15:30:24Z",
+      "message": "added rviz config"
+    },
+    {
+      "sha": "da8e646e7381066100b016bb8769b115407eda42",
+      "author": "Lennart Puck",
+      "date": "2018-09-04T15:30:13Z",
+      "message": "added in commit missing data_processing classes"
+    },
+    {
+      "sha": "7d03f4747ece944119c70cf9bfd071b6dbeddcba",
+      "author": "Lennart Puck",
+      "date": "2018-09-03T14:07:29Z",
+      "message": "parsed intrusion data, application data and general systm state"
+    },
+    {
+      "sha": "bf30e18503ae3f616aa4d93a88de9d31cef90b62",
+      "author": "Lennart Puck",
+      "date": "2018-08-31T08:57:13Z",
+      "message": "publish scan in ros topic, base version working"
+    },
+    {
+      "sha": "50a9eeb03c74d80c0732364a400a5bb3b0da8885",
+      "author": "Lennart Puck",
+      "date": "2018-08-30T15:35:28Z",
+      "message": "parsed derived values and measurement data and stored them in data structure"
+    },
+    {
+      "sha": "27ac13bc81c15bf890f5d2ab031de8cbc33a5994",
+      "author": "Lennart Puck",
+      "date": "2018-08-30T09:32:30Z",
+      "message": "parsing data header and saving it into data structure"
+    },
+    {
+      "sha": "d3cba1512396aaec123118ec06e6977bc5e664fc",
+      "author": "Lennart Puck",
+      "date": "2018-08-29T17:15:57Z",
+      "message": "added datastructures for values send by scanner"
+    },
+    {
+      "sha": "ff0293e79d8f9650abf582433f520193f4e3f468",
+      "author": "Lennart Puck",
+      "date": "2018-08-29T15:51:58Z",
+      "message": "combined corresponding UDP packets to one, rename packet to correct spelling"
+    },
+    {
+      "sha": "d488d513dbad96db50ecedc9979cea6d79433f03",
+      "author": "Lennart Puck",
+      "date": "2018-08-29T09:24:55Z",
+      "message": "added helper to parse UDP buffer to correct datatypes, parsing the custom Datagram Header"
+    },
+    {
+      "sha": "940ca0d02013d365d0c973bc6eab327388746e7a",
+      "author": "Lennart Puck",
+      "date": "2018-08-28T14:47:42Z",
+      "message": "added classes to parse the datagramheader, parsing not implemented yet"
+    },
+    {
+      "sha": "fd666e2058d1d5a7fc260cc9236d102741c2be1b",
+      "author": "Lennart Puck",
+      "date": "2018-08-28T08:33:57Z",
+      "message": "added paketBuffer and DAtatype file"
+    },
+    {
+      "sha": "c7458d2fdecf4a9647ef77f8cf0d8d8a892a08e4",
+      "author": "Lennart Puck",
+      "date": "2018-08-28T08:32:45Z",
+      "message": "Dummy service to test if running in parallel-> succesful"
+    },
+    {
+      "sha": "6e1c7e736febce603c4db40b87681bbef238dc80",
+      "author": "Lennart Puck",
+      "date": "2018-08-27T13:13:50Z",
+      "message": "threaded udp connection working"
+    },
+    {
+      "sha": "2177c2cfe596cf817e87138d880f7ef082be3d54",
+      "author": "Lennart Puck",
+      "date": "2018-08-21T13:37:58Z",
+      "message": "udp connection running and passing the event down to the ros node, next merge packages and save to data structure"
+    },
+    {
+      "sha": "f3e8668c0839b09835c35dfaa2660621b3916004",
+      "author": "Lennart Puck",
+      "date": "2018-08-20T14:02:26Z",
+      "message": "Initial Commit"
+    }
+  ]
+}
