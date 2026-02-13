@@ -1,12 +1,34 @@
 {
   "_meta": {
-    "fetched_at": "2026-02-09T21:59:40Z",
+    "fetched_at": "2026-02-11T19:18:10Z",
     "source": "github_rest",
     "endpoint": "/repos/{owner}/{repo}/commits",
     "owner": "ros-planning",
-    "repo": "navigation2"
+    "repo": "navigation2",
+    "per_page": 100
   },
   "data": [
+    {
+      "sha": "c4a6f85d75637e82bc455b1ed1f2fdeeafabf568",
+      "author": "Maurice Alexander Purnawan",
+      "author_login": "mini-1235",
+      "date": "2026-02-11T03:41:02Z",
+      "message": "Add support for switching between SMAC planners (#5840)\n\n* Prototype for fixing multiple planners, all unit tests passed\n\nSigned-off-by: mini-1235 <mauricepurnawan@gmail.com>\n\n* Lint\n\nSigned-off-by: mini-1235 <mauricepurnawan@gmail.com>\n\n* Fix analytic expansion\n\nSigned-off-by: mini-1235 <mauricepurnawan@gmail.com>\n\n* Remove log\n\nSigned-off-by: mini-1235 <mauricepurnawan@gmail.com>\n\n* Revert\n\nSigned-off-by: mini-1235 <mauricepurnawan@gmail.com>\n\n* Add distance heuristic and obstacle heuristic class\n\nSigned-off-by: mini-1235 <mauricepurnawan@gmail.com>\n\n* Drop const and lint\n\nSigned-off-by: mini-1235 <mauricepurnawan@gmail.com>\n\n* Apply suggestions from code review\n\nCo-authored-by: Steve Macenski <stevenmacenski@gmail.com>\nSigned-off-by: Maurice Alexander Purnawan <mauricepurnawan@gmail.com>\n\n* Move init motion moel back to nodes\n\nSigned-off-by: mini-1235 <mauricepurnawan@gmail.com>\n\n* Doxygen\n\nSigned-off-by: mini-1235 <mauricepurnawan@gmail.com>\n\n* Add code coverage\n\nSigned-off-by: mini-1235 <mauricepurnawan@gmail.com>\n\n* Initialize as nullptr\n\nSigned-off-by: mini-1235 <mauricepurnawan@gmail.com>\n\n---------\n\nSigned-off-by: mini-1235 <mauricepurnawan@gmail.com>\nSigned-off-by: Maurice Alexander Purnawan <mauricepurnawan@gmail.com>\nCo-authored-by: Steve Macenski <stevenmacenski@gmail.com>"
+    },
+    {
+      "sha": "7ec63ab782ccd6cdf8cf91b04ee66170e5fcea30",
+      "author": "Maurice Alexander Purnawan",
+      "author_login": "mini-1235",
+      "date": "2026-02-10T23:25:18Z",
+      "message": "Redesign controller plugins dynamic parameters patterns (#5920)\n\n* Redesign controller plugins dynamic parameters patterns\n\nSigned-off-by: mini-1235 <mauricepurnawan@gmail.com>\n\n* Lint\n\nSigned-off-by: mini-1235 <mauricepurnawan@gmail.com>\n\n* Fix mppi util\n\nSigned-off-by: mini-1235 <mauricepurnawan@gmail.com>\n\n* Remove activate and deactivate\n\nSigned-off-by: mini-1235 <mauricepurnawan@gmail.com>\n\n* Fix formatting in progress_checker.hpp\n\nSigned-off-by: Maurice Alexander Purnawan <mauricepurnawan@gmail.com>\n\n* Add coverage\n\nSigned-off-by: mini-1235 <mauricepurnawan@gmail.com>\n\n* Add coverage for simple pc\n\nSigned-off-by: mini-1235 <mauricepurnawan@gmail.com>\n\n* Lock setPlan\n\nSigned-off-by: mini-1235 <mauricepurnawan@gmail.com>\n\n---------\n\nSigned-off-by: mini-1235 <mauricepurnawan@gmail.com>\nSigned-off-by: Maurice Alexander Purnawan <mauricepurnawan@gmail.com>"
+    },
+    {
+      "sha": "4caed47d831a5e0b58c60e03a1d9e7e42eb1af50",
+      "author": "RayOwwen",
+      "author_login": "RayOwwen",
+      "date": "2026-02-10T20:16:22Z",
+      "message": "[nav2_route] Optimize corner smoothing threshold and remove redundant interpolation point (#5940)\n\n- Add a smoothing angle threshold parameter (default 2.9 rad) to avoid smoothing near-straight paths.\n- Modified interpolation loop to use i < N, removing the redundant endpoint.\n- Fixed inconsistent point spacing and orientation jitter near graph nodes.\n\nSigned-off-by: RayOwwen <rayowwen@gmail.com>"
+    },
     {
       "sha": "797a1719231babee67f3b1d62d6457032bc4b21a",
       "author": "Xinyu Yu",
