@@ -1,0 +1,181 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T07:35:52Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "orbbec",
+    "repo": "OrbbecSDK_ROS2"
+  },
+  "data": [
+    {
+      "author": "ob-yalian",
+      "date": "2025-10-30T07:04:40Z",
+      "sha": "ec73da0b21a34b043d50075523b9e4e7bc6dc648",
+      "message": "fix: add camera_calibration_parsers to dependencies in CMakeLists.txt",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "obshenlanzhou",
+      "date": "2025-08-18T12:28:36Z",
+      "sha": "e2e0664615b882a780c5ff138450f0658a6e4f36",
+      "message": "Add feature/astra_mini_pro",
+      "files_changed": 7,
+      "additions": 554,
+      "deletions": 18,
+      "commit_type": "docs"
+    },
+    {
+      "author": "obyalian",
+      "date": "2025-08-05T09:11:39Z",
+      "sha": "68b13fd9875c19dbd868a55a85d03beb02fc914f",
+      "message": "Update Orbbec SDK to version 2.4.11",
+      "files_changed": 18,
+      "additions": 1031,
+      "deletions": 1007,
+      "commit_type": "config"
+    },
+    {
+      "author": "christian-rauch",
+      "date": "2025-03-26T10:57:06Z",
+      "sha": "1104367cdaf6026b810a0b481c365a2482cda9f3",
+      "message": "remove unused dependency on 'tf2_eigen'",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "xiexun2025",
+      "date": "2025-08-05T03:19:46Z",
+      "sha": "af8606729f28d2cc2643c9ade3e92637e23e831f",
+      "message": "Refactor: rename reflectivity to intensity in LiDAR point cloud data\n\n- Update LiDAR point structure definitions in ObTypes.h\n- Rename reflectivity field to intensity in OBLiDARPoint and OBLiDARSpherePoint structures\n- Update point cloud field names and iterators in ob_lidar_node.cpp\n- Modify Chinese documentation to reflect the terminology change\n- Ensure consistency across all LiDAR data publishing methods\n\nThis change aligns the codebase with standard LiDAR terminology where\n'intensity' is the commonly used term for describing the strength of\nthe laser return signal.",
+      "files_changed": 3,
+      "additions": 16,
+      "deletions": 16,
+      "commit_type": "docs"
+    },
+    {
+      "author": "yalian",
+      "date": "2025-08-01T16:11:04Z",
+      "sha": "d4bbdb44593d82c38ca2aa1b2470f3fe62942479",
+      "message": "Update Orbbec SDK to version 2.4.10 and modify related configurations\n\n- Updated the OrbbecSDKConfig-release.cmake files for both arm64 and x64 architectures to reference the new SDK version 2.4.10.\n- Replaced occurrences of 'depth_brightness' with 'mean_intensity_set_point' in launch files and the camera node header to improve clarity and consistency.\n- Added new spatial filtering options (SpatialFastFilter and SpatialModerateFilter) in the camera node implementation, including parameters for radius, magnitude, and difference threshold.\n- Updated the setupDevices and setupDepthPostProcessFilter methods to handle the new mean intensity setting and spatial filter parameters.\n- Modified launch files for various examples to reflect the new argument names and added new parameters for spatial filtering.",
+      "files_changed": 31,
+      "additions": 1161,
+      "deletions": 931,
+      "commit_type": "docs"
+    },
+    {
+      "author": "obdatean",
+      "date": "2024-09-24T03:07:05Z",
+      "sha": "6a91d3b42802886650c60886ad49bbdd97882b86",
+      "message": "1. fix use-intra-process-comms color and depth params",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 9,
+      "commit_type": "code"
+    },
+    {
+      "author": "jjiszjj",
+      "date": "2024-11-26T09:14:15Z",
+      "sha": "472dd9b40ffdb96843f19fc651feaf6b3751f67d",
+      "message": "[laser control]fix laser settings",
+      "files_changed": 1,
+      "additions": 13,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "zhuangzi",
+      "date": "2025-01-08T15:05:36Z",
+      "sha": "5ef333c5fe25dd67cfb639057202a68d8d475ba4",
+      "message": "Update orbbec_multicamera.launch.py and yaml",
+      "files_changed": 5,
+      "additions": 25,
+      "deletions": 28,
+      "commit_type": "config"
+    },
+    {
+      "author": "jj",
+      "date": "2024-09-04T04:47:36Z",
+      "sha": "9f764c8e5732d1f986d41046ffb42ffb9a86ee8a",
+      "message": "updata libOrbbecSDK.so ,  ob_camera_node and CMakeLists.txt",
+      "files_changed": 59,
+      "additions": 5939,
+      "deletions": 5066,
+      "commit_type": "docs"
+    },
+    {
+      "author": "zzuliys",
+      "date": "2024-10-16T14:25:35Z",
+      "sha": "8af4e65f44cb020e0f065abd5252646098fa74e9",
+      "message": "support G335Lg multi camera sync",
+      "files_changed": 9,
+      "additions": 273,
+      "deletions": 49,
+      "commit_type": "config"
+    },
+    {
+      "author": "jian-dong",
+      "date": "2022-06-06T11:00:12Z",
+      "sha": "cf657f9c8f6aa9e1f42d5afc88112279513cd2f7",
+      "message": "init commit",
+      "files_changed": 61,
+      "additions": 10233,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Danilrivero",
+      "date": "2024-07-15T10:20:23Z",
+      "sha": "f29d69ad8f81d0b6914ecb712c98e2a20fab7b92",
+      "message": "Implement the femto_bolt.urdf.xacro description",
+      "files_changed": 3,
+      "additions": 127,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Kashery",
+      "date": "2024-06-12T14:29:42Z",
+      "sha": "9aec3bd2646e9ff91393124b4eb3270b1c99ddba",
+      "message": "fix CMakeLists.txt at orbbec_description\n\nfixes build error caused by referencing a non existent rviz directory",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "lixby03",
+      "date": "2023-10-09T11:56:35Z",
+      "sha": "f0a37716022be35fd807c5536a78ce3d3a139a89",
+      "message": "Adapter Femto bolt device.",
+      "files_changed": 19,
+      "additions": 1657,
+      "deletions": 480,
+      "commit_type": "config"
+    },
+    {
+      "author": "默存",
+      "date": "2022-06-13T06:58:47Z",
+      "sha": "008aea027a7c7d3ae3c2fd8fcd46d4efdfd10c60",
+      "message": "Merge branch 'dev' into 'master'\n\nFix point cloud direction\n\nSee merge request OrbbecSDK/orbbecros2sdk!1",
+      "files_changed": 18,
+      "additions": 487,
+      "deletions": 303,
+      "commit_type": "docs"
+    },
+    {
+      "author": "bajingsi",
+      "date": "2023-09-06T10:58:58Z",
+      "sha": "2efbf3f284e405a0f8136165f377f35439d89b84",
+      "message": "Add Dabai max dabai_max.launch.py",
+      "files_changed": 2,
+      "additions": 107,
+      "deletions": 1,
+      "commit_type": "code"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T16:30:06Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros-event-camera",
+    "repo": "libcaer_driver"
+  },
+  "data": [
+    {
+      "author": "berndpfrommer",
+      "date": "2023-11-08T16:09:31Z",
+      "sha": "0a443d84f533709dc927085350b36821548b041d",
+      "message": "initial commit, not working yet",
+      "files_changed": 20,
+      "additions": 1251,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "EschronS",
+      "date": "2025-11-19T18:10:58Z",
+      "sha": "1b2d7c818cda18b100da56592e9af6208d0b5c49",
+      "message": "fix doubled time in the imu (and frame) time_stamp\n\nInstead of passing current rostime to the frame and imu Callbacks,\nnow correctly pass rosBaseTime_ (rostime at startup) to both.\nThen the sensor_time of the SDK_packet is added, resulting in the time visible\nin the msgs.\nnote: the change to the frame callback is technically not tested, because\nthe hardware accessible to me does not support frame capture.\nSigned-of-by: Erik Schlenzka",
+      "files_changed": 6,
+      "additions": 15,
+      "deletions": 11,
+      "commit_type": "code"
+    },
+    {
+      "author": "lennartalff",
+      "date": "2024-01-16T10:48:06Z",
+      "sha": "e4a1cfdc1a7ad612bea2b491680233c0a7fd55c4",
+      "message": "catch runtime exception for DvXplorer Mini\n\nThe libusb device descriptor reports a MIPI device for the DvXplorer\nMini. Hence, setting configs for `modAddr == DVX_MUX` will fail. The\ntry-catch block will handle this case and will allow the DvXplorer Mini\nto operate normally.",
+      "files_changed": 1,
+      "additions": 10,
+      "deletions": 2,
+      "commit_type": "code"
+    }
+  ]
+}

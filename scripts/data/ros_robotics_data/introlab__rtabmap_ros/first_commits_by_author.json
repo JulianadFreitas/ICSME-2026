@@ -1,0 +1,421 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T02:07:18Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "introlab",
+    "repo": "rtabmap_ros"
+  },
+  "data": [
+    {
+      "author": "matlabbe",
+      "date": "2011-06-20T16:49:22Z",
+      "sha": "b4add8dbe8b7cc1dbb8fe7a003ad9f2fd6d3a404",
+      "message": "switch rtabmap_lib svn co from the 0.3 branch to trunk\n\ngit-svn-id: http://rtabmap.googlecode.com/svn/trunk/ros-pkg@110 f169173b-cf89-36c8-b27e-44dbe73f0c83",
+      "files_changed": 49,
+      "additions": 2494,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "rayferric",
+      "date": "2025-03-16T01:24:29Z",
+      "sha": "379b5ca47a126cb558318bbf8d2f5bbeecac67eb",
+      "message": "rgb_transport and depth_transport params (#1282)",
+      "files_changed": 1,
+      "additions": 17,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "chcaya",
+      "date": "2024-11-01T03:35:56Z",
+      "sha": "e9aa8ed082a2669f52186d2802645bb1237634f8",
+      "message": "Fixed callbackCloud warning (#1233)\n\n* Fixed callbackCloud warning\r\n\r\n* reverted warning order\r\n\r\n---------\r\n\r\nCo-authored-by: chcaya <ch.caya@hotmail.ca>\r\nCo-authored-by: matlabbe <matlabbe@gmail.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "ARK3r",
+      "date": "2024-10-17T04:04:25Z",
+      "sha": "c83cff14c9479f5cffe2553b2dc0bdf7cc067018",
+      "message": "update realsense examples for ros2 (#1224)\n\n* update realsense examples\r\n\r\n* Modifiying realsense2 namespace instead.\r\n\r\n* single quote str\r\n\r\n---------\r\n\r\nCo-authored-by: matlabbe <matlabbe@gmail.com>",
+      "files_changed": 3,
+      "additions": 9,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "ChristopherBilberg",
+      "date": "2024-09-21T22:51:13Z",
+      "sha": "e0542c7e4b315d3e309f95ea047ac4a2583efd31",
+      "message": "Make sure to use syncQueueSize for sync policies in (#1209)\n\nPointCloudAggregator\r\n\r\nQueue size parameter was split into sync_queue_size and topic_queue_size\r\nparameters in ae44e1a2157b84e67ade530f2b8e713eac9650e8, however\r\nsyncQueueSize was never used in PointCloudAggregator.\r\n\r\nCo-authored-by: Christopher Prinds Bilberg <chbi@vestergaardcompany.com>",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "borongyuan",
+      "date": "2024-09-02T04:38:25Z",
+      "sha": "3eb0b47a55bd56ea6282e5fff157880dcdca753a",
+      "message": "Fixed node ID=0 issues as msgs may not have seq. (#1202)\n\n(cherry picked from commit 097cab06677e4618ef0e4132cc544bc319d1d9a6)",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "GoesM",
+      "date": "2024-07-01T15:15:12Z",
+      "sha": "680fe729c5285b5a6aa6a1893f0073afe3d06267",
+      "message": "add validation check for scan-message (#1151)\n\n* add validation check for scan-message\r\n\r\nSigned-off-by: goes <GoesM@buaa.edu.cn>\r\n\r\n* remove abundant logger\r\n\r\nSigned-off-by: goes <GoesM@buaa.edu.cn>\r\n\r\n* fit into main\r\n\r\nSigned-off-by: GoesM <GoesM@buaa.edu.cn>\r\n\r\n---------\r\n\r\nSigned-off-by: goes <GoesM@buaa.edu.cn>\r\nSigned-off-by: GoesM <GoesM@buaa.edu.cn>\r\nCo-authored-by: goes <GoesM@buaa.edu.cn>\r\nCo-authored-by: matlabbe <matlabbe@gmail.com>",
+      "files_changed": 1,
+      "additions": 18,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "mathieu86",
+      "date": "2022-06-09T18:34:45Z",
+      "sha": "c4a6fba8e8123d08e203635edc300c29c01c4bc9",
+      "message": "odom: publish TF odom correction when lost if guess frame is provided",
+      "files_changed": 1,
+      "additions": 39,
+      "deletions": 24,
+      "commit_type": "code"
+    },
+    {
+      "author": "doumdi",
+      "date": "2024-04-09T16:22:32Z",
+      "sha": "9694ddb2d1a417ac0dfbe6452cb1db1dfa00d15d",
+      "message": "Create scheduled-stats.yml (#1143)",
+      "files_changed": 1,
+      "additions": 16,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "sloretz",
+      "date": "2023-04-13T16:37:32Z",
+      "sha": "9f2253b84f6826e999613ba2b73fab02005867da",
+      "message": "Add dependency on nav_msgs (#942)\n\n* Add dependency on nav_msgs\r\n\r\nSigned-off-by: Shane Loretz <sloretz@google.com>\r\n\r\n* Also find_package(nav_msgs)\r\n\r\nSigned-off-by: Shane Loretz <sloretz@google.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Shane Loretz <sloretz@google.com>",
+      "files_changed": 2,
+      "additions": 3,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "sam-tj",
+      "date": "2023-05-19T03:03:18Z",
+      "sha": "a6e4414967c415f13e91efb395c7a1c52e87261c",
+      "message": "Spelling fix (#971)",
+      "files_changed": 3,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "adricort",
+      "date": "2023-07-24T18:27:00Z",
+      "sha": "b32f15e2f1b17a50084ea3be77f9a883948d24a9",
+      "message": "Multi camera examples using D405 (#1002)\n\nCo-authored-by: Adrian Ricardez Ortigosa <adrian.ricardezortigosa@dlr.de>",
+      "files_changed": 4,
+      "additions": 1289,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "guoqingzh",
+      "date": "2023-03-24T19:30:49Z",
+      "sha": "607f66f48910de0563dca57b5059a0bf80170c97",
+      "message": "fix error in reg strategry checking (#918)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "lucasw",
+      "date": "2022-05-09T15:50:45Z",
+      "sha": "e90fd9647155424938df21383fb0b0f504eb2a0f",
+      "message": "optionally include FindPkgConfig.cmake",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "tsadarsh",
+      "date": "2022-11-11T18:47:28Z",
+      "sha": "4bd88fd83d11203f234e5c5f049db1350ec55f5b",
+      "message": "`ros2-branch` build failed when I did not run rodep install.\n\nI had a similar error as referenced in #613. It turns out that I had missing dependencies which got fixed when I ran `rosdep install --from-paths src --ignore-src -r -y`. This was mentioned [here](https://github.com/introlab/rtabmap_ros/issues/613#issuecomment-922550063).",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "bperseghetti",
+      "date": "2022-09-21T10:33:08Z",
+      "sha": "6cf771d423c0970286ec760a5bccad2f4a3bdaa5",
+      "message": "Fix PCL warns and msg.hpp warns.",
+      "files_changed": 2,
+      "additions": 5,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jgoppert",
+      "date": "2017-05-04T17:36:32Z",
+      "sha": "6f558da86655451f264153b4c9a1b62a93e42cd1",
+      "message": "Add output arg to launch script.",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "Timple",
+      "date": "2021-07-09T05:36:16Z",
+      "sha": "c8847316ec3354c12cf6abd12acbe0d140657596",
+      "message": "Add missing dependency on rviz_common",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "Dominik-FKIE",
+      "date": "2021-10-14T08:40:16Z",
+      "sha": "9ee61b9a2750921624130addecd6a1a80ad5a214",
+      "message": "Bugfix Corewrapper::globalBundleAdjustmentCallback\n\nFixed wrong order of arguments in the call to Rtabmap::globalBundleAdjustment method.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "windelbouwman",
+      "date": "2021-09-21T08:57:30Z",
+      "sha": "176e76bfc15df4f1cf9264a357950b0eab5994e6",
+      "message": "Fix logic when building without rviz.",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 6,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ruipimentelfigueiredo",
+      "date": "2021-07-08T14:14:15Z",
+      "sha": "9a004836b035d1e4d2bd3242b7062fa9df45fb04",
+      "message": "added support for 5 camera odometry",
+      "files_changed": 1,
+      "additions": 94,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "Kai-Tao Xie",
+      "date": "2021-08-23T03:52:17Z",
+      "sha": "16857f0bbad0c7d44354f0c97e0b2e3b7a622632",
+      "message": "fix possible stackunderflow in CoreWrapper constructed function",
+      "files_changed": 2,
+      "additions": 6,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "caioaamaral",
+      "date": "2021-06-30T14:42:22Z",
+      "sha": "741f2021b21ba9c149ce9b67a550e3b2004b602c",
+      "message": "Add run dependency on 'theora_image_transport'",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "chameau5050",
+      "date": "2021-05-27T17:42:16Z",
+      "sha": "24737918912c5952e4a1b99dc31bb548413bd53c",
+      "message": "move flood fill to octomap::uptade()",
+      "files_changed": 1,
+      "additions": 10,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "MarcLeclercGit",
+      "date": "2021-05-07T14:52:43Z",
+      "sha": "84ac70077cf870c4938f64fa8a18191b872cc321",
+      "message": "add a flood fill filter",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "AlexKaravaev",
+      "date": "2020-10-16T15:02:08Z",
+      "sha": "f5df6e3144b4870699f6c7d6b6e0230e8df6cdfe",
+      "message": "Removed nav2 dependency",
+      "files_changed": 4,
+      "additions": 5,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "mirellameelo",
+      "date": "2020-10-05T00:02:53Z",
+      "sha": "dea88211de3528afc38ca3a2cbb9cd96189b8a50",
+      "message": "updating files to build ros package with rtab-map lib v0.20.3",
+      "files_changed": 2,
+      "additions": 9,
+      "deletions": 7,
+      "commit_type": "code"
+    },
+    {
+      "author": "bondar000",
+      "date": "2020-06-05T15:06:53Z",
+      "sha": "0594b963685f30d844ad44e164d400fd8c50db70",
+      "message": "Add tf pointers initialization",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "pjreed",
+      "date": "2020-04-03T19:46:22Z",
+      "sha": "160ac38e061d560f8667fcd21574c997576e9dc7",
+      "message": "Use project name as basename for interfaces\n\nAs noted by Dirk Thomas in ros2/rosidl#441, libraries for generated\ninterfaces must use ${PROJECT_NAME} as their basename.  This PR\nmodifies rtabmap_ros so that it does so.\n\nIt also tweaks a couple of rosdep keys because nav2_common was used in\nsome launch files but not included, and message_runtime does not exist\nin ROS 2.\n\nFixes #397",
+      "files_changed": 2,
+      "additions": 17,
+      "deletions": 16,
+      "commit_type": "docs"
+    },
+    {
+      "author": "lopetit",
+      "date": "2019-12-17T22:32:51Z",
+      "sha": "71294263b8b01662cd42ec339ea0c9ee50802951",
+      "message": "Octomap: added frontier output topic",
+      "files_changed": 2,
+      "additions": 24,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "PrescilliaA",
+      "date": "2019-11-04T19:18:16Z",
+      "sha": "420d7403dda0e4ce008ea1868afb509f7e261d9a",
+      "message": "Voxel layer from costmap_2d package takes into account robot z position",
+      "files_changed": 4,
+      "additions": 701,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "stefangordon",
+      "date": "2018-11-05T15:28:10Z",
+      "sha": "e60d7eb4e705354f82256b01ee2b5571b1ad0ce6",
+      "message": "Fix extra argument in readme.md",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "revolutionaer",
+      "date": "2018-09-25T17:51:16Z",
+      "sha": "ff0fc9d944af9007b6dea3f6fac8a76ebf5c1fe6",
+      "message": "Update MsgConversion.cpp\n\nShould it be a bug? That you guys forgot to add BGRA8 to stereo?\r\n\r\nKind regards",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "yycho0108",
+      "date": "2018-07-24T13:19:44Z",
+      "sha": "33f6be4416953c2841d4b4a56d341ed8547e9594",
+      "message": "add icp_odometry to install targets and add message-related dependencies for seamless build",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Notou",
+      "date": "2017-05-09T10:12:04Z",
+      "sha": "6fb27f56c59edd3bd70e1491049d0352edc27c93",
+      "message": "Add support for bgra8/rgba8 format and smaller depth image than rgb",
+      "files_changed": 1,
+      "additions": 24,
+      "deletions": 11,
+      "commit_type": "code"
+    },
+    {
+      "author": "lesterlo",
+      "date": "2016-08-26T08:38:37Z",
+      "sha": "40439707fd7c09bc89595c1b432ff62f285ef2ba",
+      "message": "1. Fix compile (link) error of missing ros image_geometry",
+      "files_changed": 2,
+      "additions": 5,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Di Zeng",
+      "date": "2016-07-20T22:31:58Z",
+      "sha": "a8874d341a6569e3a476d8ad6928e71fd38d9a0b",
+      "message": "added ocotomap parameter in rgbd_gui.ini file",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "bibarz",
+      "date": "2015-06-13T00:42:25Z",
+      "sha": "c39f407b91742370113295d5193a42cf664a7615",
+      "message": "floor removal",
+      "files_changed": 4,
+      "additions": 121,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Jean-Baptiste Passot",
+      "date": "2015-07-07T23:48:12Z",
+      "sha": "0c1e7ec153468bc88e9a12169941712e78821877",
+      "message": "Add option for simple extration",
+      "files_changed": 1,
+      "additions": 24,
+      "deletions": 19,
+      "commit_type": "code"
+    },
+    {
+      "author": "JRombouts",
+      "date": "2015-07-08T19:38:35Z",
+      "sha": "cc139c6664978d2032d275804e058837b0a29185",
+      "message": "Adding an option to cut incoming depth",
+      "files_changed": 2,
+      "additions": 26,
+      "deletions": 21,
+      "commit_type": "code"
+    },
+    {
+      "author": "Oleg Sinyavskiy",
+      "date": "2015-06-21T02:57:19Z",
+      "sha": "0cbdb5cd1798950519f15acd27d19f22c0cf92ae",
+      "message": "timing",
+      "files_changed": 1,
+      "additions": 18,
+      "deletions": 2,
+      "commit_type": "code"
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T04:15:48Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "aussierobots",
+    "repo": "ublox_dgnss"
+  },
+  "data": [
+    {
+      "author": "hortovanyi",
+      "date": "2021-05-09T22:39:00Z",
+      "sha": "f5636f88d98caf08a620217b51a791f7a7936985",
+      "message": "Initial commit",
+      "files_changed": 3,
+      "additions": 726,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "stan-guer",
+      "date": "2026-02-03T14:37:44Z",
+      "sha": "ad600f6321266e1f80c7aed7ce454101a5d31ebe",
+      "message": "fix nav-status decoding\n\nAccording to u-blox 20 HPG 2.00 , the status bits in the fixStat and\nflag2 fields in the ubx-nav-status message are not always consecutive,\nthere are padding bits in there that are not accounted for in this\ndecoding logic. Fix that.\n\nAn obvious outcome is that the ubx-nav-status now properly shows\nRTK float or int status, the same status value that is in the (correctly\ndecoded) ubx-nav-pvt message.",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "BravoBravoIX",
+      "date": "2025-12-08T05:51:37Z",
+      "sha": "9e0b3b6e2cbdae456a8cb95aaadc7de7f3efe070",
+      "message": "Fix USB timeout crash in rtcm_callback\n\nAdd exception handling for USB write failures in RTCM callback to prevent\nnode crashes when USB bulk transfers timeout.\n\nChanges:\n- Wrap write_buffer() call in try/catch in rtcm_callback()\n- Change timeout_ms from 45ms to 0 (blocking) to match v0.6.1 behavior\n\nThe 45ms timeout was too tight for slower USB 1.1 devices (F9P) causing\nintermittent LIBUSB_ERROR_TIMEOUT exceptions that crashed the node.\nSetting timeout to 0 restores blocking behavior consistent with\nwrite_buffer_async() and the previous stable release.",
+      "files_changed": 2,
+      "additions": 6,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "ahcorde",
+      "date": "2025-09-10T13:37:07Z",
+      "sha": "0865cfec7b4d7cf569b59b3b08a4acb42b5fd10b",
+      "message": "Replaced libcurl_vendor package with deb or pixi\n\nSigned-off-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ARK3r",
+      "date": "2024-09-10T20:07:33Z",
+      "sha": "36f0805f360dc47aae20489d61b6af45d0c93c5f",
+      "message": "added uart2 and spartn source cfg items",
+      "files_changed": 1,
+      "additions": 22,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "mak22223",
+      "date": "2025-05-14T13:44:44Z",
+      "sha": "8b1cab0433f9c794c1b0b8555e54360a13ed33fe",
+      "message": "Fixed U4, X4, I4 values interpretation",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "bvsam",
+      "date": "2024-11-29T20:45:36Z",
+      "sha": "4250d9f9122c9ffca9b032f8106d41c47fcad3b5",
+      "message": "Adding basic rtcm receival and publishing functionality",
+      "files_changed": 1,
+      "additions": 82,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "RyanZhou416",
+      "date": "2024-12-22T22:21:55Z",
+      "sha": "28689b3ffbc0da46ce9f991e9b60ae6742d0dd67",
+      "message": "Merge branch 'main' into base-rtcm-support",
+      "files_changed": 2,
+      "additions": 44,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "iman01",
+      "date": "2024-04-01T12:13:00Z",
+      "sha": "a9a5881cbc67f04c6587c748f1c60d6d67294cf1",
+      "message": "add serial_str_ & serial_num_string to error stream  of finding USB device with specified serial string",
+      "files_changed": 3,
+      "additions": 9,
+      "deletions": 6,
+      "commit_type": "docs"
+    },
+    {
+      "author": "tfoldi",
+      "date": "2023-11-30T07:51:20Z",
+      "sha": "d835588ac57e69f930e33e4b7db8a020437162de",
+      "message": "chore: set user-agent for caster http requests\n\nSome public caster servers (like caster.centipede.fr) requires\nspecific user agents for streaming requests (NTRIP as first\nstring in the agent).\n\nSigned-off-by: Tamas Foldi <tfoldi@xsi.hu>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "gsokoll",
+      "date": "2023-03-16T00:24:17Z",
+      "sha": "f200dc23c631a441fca30f29804de029acb6ca90",
+      "message": "Add UBX_ESF message class and id's",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 0,
+      "commit_type": "code"
+    }
+  ]
+}

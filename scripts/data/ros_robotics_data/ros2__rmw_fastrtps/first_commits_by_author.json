@@ -1,0 +1,831 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T08:07:18Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros2",
+    "repo": "rmw_fastrtps"
+  },
+  "data": [
+    {
+      "author": "SuperJappie08",
+      "date": "2025-11-19T17:50:57Z",
+      "sha": "0fda8bbaa0d075222c8cdc5812c1c1fa94b1d83a",
+      "message": "Add VS Code folder to .gitignore to prevent #853 (#855)\n\nSigned-off-by: SuperJappie08 <36795178+SuperJappie08@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "clalancette",
+      "date": "2017-08-16T19:14:11Z",
+      "sha": "3e3a8321797d3fcbb27e626e79d31bb00ad2ef69",
+      "message": "Make sure to free memory associated with the service_name. (#141)\n\n* Make sure to free memory associated with the service_name.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Fixes from review.\r\n\r\nMake sure to set pointers to nullptr after freeing, and\r\nalso use symmetric functions to free clients/services.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Make sure that service_name is not nullptr before freeing it.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Switch an rmw_free to rmw_service_free.\r\n\r\nThis is to be symmetric with the allocation.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 2,
+      "additions": 20,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "fujitatomoya",
+      "date": "2022-03-22T02:40:18Z",
+      "sha": "79829674ed8ce1bc6263ffdc94c823915d52e0e5",
+      "message": "address linter waning for windows. (#592)\n\nSigned-off-by: Tomoya Fujita <Tomoya.Fujita@sony.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "ahcorde",
+      "date": "2016-07-07T00:44:09Z",
+      "sha": "af91b6fc24155160aee2eadbeb1f03f7dd6ff09a",
+      "message": "Include durability in data reader/writer fastrtps (#44)",
+      "files_changed": 1,
+      "additions": 30,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "leeminju531",
+      "date": "2023-09-29T12:35:29Z",
+      "sha": "ad4550adea4f65fdc126423f2fec13f441c6bbaa",
+      "message": "Add rmw_count clients,services impl (#641)\n\n* Add rmw_count clients,services impl\r\n\r\nSigned-off-by: leeminju531 <dlalswn531@naver.com>",
+      "files_changed": 4,
+      "additions": 118,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "MiguelCompany",
+      "date": "2018-06-19T18:46:33Z",
+      "sha": "3e653ecd482a82e880f21cf27d638e8cac69bd7b",
+      "message": "Temporary buffer remove (#207)\n\n* Refs #3043. Estimate serialization size.\r\n\r\n* Refs #3043. Max bounded size support.",
+      "files_changed": 10,
+      "additions": 287,
+      "deletions": 19,
+      "commit_type": "code"
+    },
+    {
+      "author": "christophebedard",
+      "date": "2021-05-04T14:25:52Z",
+      "sha": "c3823d462aa47cc12084e466cb2bd14ab808edc1",
+      "message": "Update includes after rcutils/get_env.h deprecation (#529)\n\nSigned-off-by: Christophe Bedard <bedard.christophe@gmail.com>",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "mosfet80",
+      "date": "2025-06-13T17:59:05Z",
+      "sha": "d98cacec980df18810af232b75db80b5ce7da845",
+      "message": "fix cmake deprecation (#831)\n\ncmake v. 3.5 is deprecated\n\nSigned-off-by: Andrea <realeandrea@yahoo.it>",
+      "files_changed": 3,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Mario-DL",
+      "date": "2024-06-03T17:02:51Z",
+      "sha": "97edce2df1030e63c9b9c50040d3fa6b4a49578c",
+      "message": "Use unique mangled names when creating Content Filter Topics (#762)\n\nSigned-off-by: Mario Dominguez <mariodominguez@eprosima.com>\r\nSigned-off-by: Mario-DL <mariodominguez@eprosima.com>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "cottsay",
+      "date": "2019-06-24T23:55:27Z",
+      "sha": "15a44061e64c77265350f980b4f9f5eb89c4fd71",
+      "message": "Fix a comparison with a sign mismatch (#288)\n\nSigned-off-by: Scott K Logan <logans@cottsay.net>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "sloretz",
+      "date": "2018-05-03T16:24:33Z",
+      "sha": "a69bab1a6c493efc8b82cb5036e4e95d0e1c5c46",
+      "message": "Export rmw_fastrtps_cpp target (#198)",
+      "files_changed": 2,
+      "additions": 7,
+      "deletions": 8,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Yadunund",
+      "date": "2023-04-27T09:54:07Z",
+      "sha": "f978ba258495601de704b2322c699953608e6b14",
+      "message": "7.2.0",
+      "files_changed": 6,
+      "additions": 12,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Carlosespicur",
+      "date": "2025-02-26T05:21:56Z",
+      "sha": "772aee145ef6b98f1975f51b2986cae6ae8636f8",
+      "message": "Add deprecation warning for FASTRTPS_DEFAULT_PROFILES_FILE (#806)\n\n* Add deprecation warning for FASTRTPS_DEFAULT_PROFILES_FILE\n\nSigned-off-by: Carlosespicur <carlosespicur@proton.me>\n\n* Apply suggested changes\n\nSigned-off-by: Carlosespicur <carlosespicur@proton.me>\n\n* Apply suggested changes\n\nSigned-off-by: Carlosespicur <carlosespicur@proton.me>\n\n* Fix style errors\n\nSigned-off-by: Carlosespicur <carlosespicur@proton.me>\n\n---------\n\nSigned-off-by: Carlosespicur <carlosespicur@proton.me>",
+      "files_changed": 10,
+      "additions": 41,
+      "deletions": 19,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Blast545",
+      "date": "2024-10-01T00:33:18Z",
+      "sha": "6bdff0b4146ed9821008b2969740d9332d6ee6dc",
+      "message": "Revert \"Unique Client GID for Service Introspectino Event. (#779)\" (#780)\n\nThis reverts commit 565bbc22357413aa7342e9dd0d6518b71f7f10a6.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "marcoag",
+      "date": "2024-03-28T08:29:40Z",
+      "sha": "f91222bac1b6df810c064e112e5b2779a437366e",
+      "message": "Changelog.\n\nSigned-off-by: Marco A. Gutierrez <marcogg@marcogg.com>",
+      "files_changed": 3,
+      "additions": 45,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "IkerLuengo",
+      "date": "2024-04-08T17:26:28Z",
+      "sha": "c2524f53215375ed15b9e79ebbcec2187b05962c",
+      "message": "Allow pkcs11 when calling rmw_dds_common::get_security_files. (#565)\n\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>\r\nCo-authored-by: Miguel Company <MiguelCompany@eprosima.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "h-suzuki-isp",
+      "date": "2024-04-01T17:12:06Z",
+      "sha": "c0dab2d6693313237d70f2e6d9c11fc6f0d9032d",
+      "message": "Add tracepoint for publish/subscribe serialized_message (#748)\n\n* Add: tracepoint for generic pub/sub\r\n\r\nSigned-off-by: h-suzuki <h-suzuki@isp.co.jp>\r\n\r\n* Fix: correspond to PR 454\r\n\r\nSigned-off-by: h-suzuki <h-suzuki@isp.co.jp>\r\n\r\n* Fix: change write to write_to_timestamp\r\n\r\nSigned-off-by: h-suzuki <h-suzuki@isp.co.jp>\r\n\r\n---------\r\n\r\nSigned-off-by: h-suzuki <h-suzuki@isp.co.jp>",
+      "files_changed": 2,
+      "additions": 10,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "cwecht",
+      "date": "2024-01-23T14:56:36Z",
+      "sha": "ba2e66bbd1c25d78176cc41f5cd34095c058be23",
+      "message": "Add timestamp to rmw_publish tracepoint (#694)\n\nSigned-off-by: Christopher Wecht <cwecht@mailbox.org>",
+      "files_changed": 1,
+      "additions": 13,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "Chen Lihui",
+      "date": "2020-08-06T20:11:35Z",
+      "sha": "857d19b993d38aba709abe961e641a68624bb1b9",
+      "message": "Fix trying to get topic data that was already removed. (#417)\n\n* Fix trying to get topic data that was already removed.\r\n\r\nSigned-off-by: Chen.Lihui <lihui.chen@sony.com>\r\n\r\n* Revert \"Fix trying to get topic data that was already removed.\"\r\n\r\nThis reverts commit 08632e8ab7b8bd4c021f4d12c247e03e64e0c945.\r\n\r\nSigned-off-by: Chen.Lihui <lihui.chen@sony.com>\r\n\r\n* Updated based on suggestions\r\n\r\nSigned-off-by: Chen.Lihui <lihui.chen@sony.com>\r\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>",
+      "files_changed": 2,
+      "additions": 14,
+      "deletions": 25,
+      "commit_type": "code"
+    },
+    {
+      "author": "EduPonz",
+      "date": "2019-12-10T22:35:00Z",
+      "sha": "9d1f4f8fc7ac99fad70a8dea2d5e53753abaef8d",
+      "message": "Create README.md (#340)\n\n* Create README.md\r\n\r\nSigned-off-by: EduPonz <eduardoponz@eprosima.com>\r\n\r\n* Style guide compliance\r\n\r\nSigned-off-by: EduPonz <eduardoponz@eprosima.com>\r\n\r\n* Suggested changes\r\n\r\nSigned-off-by: EduPonz <eduardoponz@eprosima.com>",
+      "files_changed": 1,
+      "additions": 80,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "methylDragon",
+      "date": "2023-04-08T19:00:08Z",
+      "sha": "d575a7f7cda0aa644b4cca7b9c5b976c96e6c21a",
+      "message": "Runtime Interface Reflection: rmw_fastrtps (#655)\n\n* Implement first cut\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Migrate to rosidl_dynamic_typesupport and update field IDs\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Refactor dynamic typesupport to couple serialization support to objects\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Fix dynamic data conversion bug\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Move dynamic data deserialize to rmw\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Update subscription.cpp for rebase\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Implement direct taking of dynamic messages\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Call ts dynamic_message_typesupport instead\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Migrate methods to use return types\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Lint\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Add stubs for new rmw interfaces\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Support type hashes\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Fix windows build and rename typesupport\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Support type hashes\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Use dynamic typesupport identifier getter\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Move dynamic type support struct to rosidl\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Use create instead of init\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Remove rmw interfaces\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n---------\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>",
+      "files_changed": 20,
+      "additions": 813,
+      "deletions": 71,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mjcarroll",
+      "date": "2018-05-03T14:00:36Z",
+      "sha": "a48c21d3f43818bb7a6398bda9c00db79adb757e",
+      "message": "Fix deserialization segfault in bionic. (#199)\n\n* Fix deserialization segfault in bionic.",
+      "files_changed": 1,
+      "additions": 26,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "gbiggs",
+      "date": "2023-04-08T04:35:24Z",
+      "sha": "c83749a2257af5e471f7a3315300959015c68535",
+      "message": "[rmw_fastrtps] Improve handling of dynamic discovery (#653)\n\n* Support specification of discovery range and static peers\r\n\r\nSigned-off-by: Geoffrey Biggs <gbiggs@killbots.net>\r\n\r\n* Apply suggestions from eProsima\r\n\r\nSigned-off-by: Geoffrey Biggs <gbiggs@killbots.net>\r\n\r\n* Use participant ignoring\r\n\r\nSigned-off-by: Geoffrey Biggs <gbiggs@killbots.net>\r\n\r\n* Improve handling of aliases for hosts\r\n\r\nSigned-off-by: Geoffrey Biggs <gbiggs@killbots.net>\r\n\r\n* Adds support for using IP addresses to specify peers\r\n\r\nThis commit adds support for using IP addresses to specify peers. It\r\nalso refactors out some networking function so that they can be used by\r\nother files.\r\n\r\nSigned-off-by: Arjo Chakravarty <arjo@openrobotics.org>\r\n\r\n* Remove excessive logging\r\n\r\nSigned-off-by: Arjo Chakravarty <arjo@openrobotics.org>\r\n\r\n* Add name lookup and clean up implementation.\r\n\r\nSigned-off-by: Arjo Chakravarty <arjoc@intrinsic.ai>\r\n\r\n* Two more scenarios fixed.\r\n\r\nTwo more to go.\r\n\r\nSigned-off-by: Arjo Chakravarty <arjoc@intrinsic.ai>\r\n\r\n* Revert rmw changes\r\n\r\nSigned-off-by: Arjo Chakravarty <arjoc@intrinsic.ai>\r\n\r\n* Add support for dynamic allocations\r\n\r\nSee:\r\n* https://github.com/ros2/rmw/pull/349\r\n* https://github.com/ros2/rcl/pull/1038\r\n\r\nSigned-off-by: Arjo Chakravarty <arjoc@intrinsic.ai>\r\n\r\n* Support new requirements\r\n\r\nSigned-off-by: Arjo Chakravarty <arjoc@intrinsic.ai>\r\n\r\n* Update to latest rmw API\r\n\r\nSigned-off-by: Michael X. Grey <grey@openrobotics.org>\r\n\r\n* Update to use API on Fast-DDS master\r\n\r\nSigned-off-by: Shane Loretz <sloretz@google.com>\r\n\r\n* Update with rmw_discovery_options_t changes\r\n\r\nSigned-off-by: Shane Loretz <sloretz@google.com>\r\n\r\n* Minimize diff with rolling in custom_participant_info.hpp\r\n\r\nSigned-off-by: Shane Loretz <sloretz@google.com>\r\n\r\n* Minimize diff with rolling in participant.cpp\r\n\r\nSigned-off-by: Shane Loretz <sloretz@google.com>\r\n\r\n* Collapse lines\r\n\r\nSigned-off-by: Shane Loretz <sloretz@google.com>\r\n\r\n* conditional on one line\r\n\r\nSigned-off-by: Shane Loretz <sloretz@google.com>\r\n\r\n* return instead of setting variable\r\n\r\nSigned-off-by: Shane Loretz <sloretz@google.com>\r\n\r\n* Make log messages more informative\r\n\r\nSigned-off-by: Shane Loretz <sloretz@google.com>\r\n\r\n* Works without ignore participant change!\r\n\r\nSigned-off-by: Shane Loretz <sloretz@google.com>\r\n\r\n* Remove unused code\r\n\r\nSigned-off-by: Shane Loretz <sloretz@google.com>\r\n\r\n* Remove more unused code\r\n\r\nSigned-off-by: Shane Loretz <sloretz@google.com>\r\n\r\n* Minimize diff with rolling\r\n\r\nSigned-off-by: Shane Loretz <sloretz@google.com>\r\n\r\n* NOT_SET and SYSTEM_DEFAULT values\r\n\r\nSigned-off-by: Shane Loretz <sloretz@google.com>\r\n\r\n* OFF implementation that doesn't crash\r\n\r\nSigned-off-by: Shane Loretz <sloretz@google.com>\r\n\r\n* Set discovery range in test\r\n\r\nSigned-off-by: Shane Loretz <sloretz@google.com>\r\n\r\n* Lint\r\n\r\nSigned-off-by: Shane Loretz <sloretz@google.com>\r\n\r\n* Call rmw_discovery_options_init()\r\n\r\nSigned-off-by: Shane Loretz <sloretz@google.com>\r\n\r\n* Workaround deadlock with rclcpp global logging mutex\r\n\r\nSigned-off-by: Shane Loretz <sloretz@google.com>\r\n\r\n* Add shared memory transport for LOCALHOST traffic\r\n\r\nSigned-off-by: Shane Loretz <sloretz@google.com>\r\n\r\n* Configure max initial peers range on udp transport\r\n\r\nSigned-off-by: Shane Loretz <sloretz@google.com>\r\n\r\n* Disable built-in transports and fix lint\r\n\r\nSigned-off-by: Shane Loretz <sloretz@google.com>\r\n\r\n* Error when range is an invalid value\r\n\r\nSigned-off-by: Shane Loretz <sloretz@google.com>\r\n\r\n* undo unnecessary test change\r\n\r\nSigned-off-by: Shane Loretz <sloretz@google.com>\r\n\r\n* Document Setting range to SYSTEM_DEFAULT\r\n\r\nSigned-off-by: Shane Loretz <sloretz@google.com>\r\n\r\n* Limit participants to 1 when discover is OFF\r\n\r\nSigned-off-by: Shane Loretz <sloretz@google.com>\r\n\r\n* With SUBNET and initial peers, add default multicast address as a multicast locator\r\n\r\nSigned-off-by: Shane Loretz <sloretz@google.com>\r\n\r\n* Add multicast address to initial peer list when there are other static peers and SUBNET range\r\n\r\nSigned-off-by: Shane Loretz <sloretz@google.com>\r\n\r\n* Bump required Fast-DDS version to 2.10\r\n\r\nSigned-off-by: Shane Loretz <sloretz@google.com>\r\n\r\n* Set maxInitialPeersRange to 32\r\n\r\nSigned-off-by: Shane Loretz <sloretz@google.com>\r\n\r\n* Grammar\r\n\r\nSigned-off-by: Shane Loretz <sloretz@google.com>\r\n\r\n* Shorten sentence\r\n\r\nSigned-off-by: Shane Loretz <sloretz@google.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Geoffrey Biggs <gbiggs@killbots.net>\r\nSigned-off-by: Arjo Chakravarty <arjo@openrobotics.org>\r\nSigned-off-by: Arjo Chakravarty <arjoc@intrinsic.ai>\r\nSigned-off-by: Michael X. Grey <grey@openrobotics.org>\r\nSigned-off-by: Shane Loretz <sloretz@google.com>\r\nCo-authored-by: Arjo Chakravarty <arjo@openrobotics.org>\r\nCo-authored-by: Arjo Chakravarty <arjoc@intrinsic.ai>\r\nCo-authored-by: Michael X. Grey <grey@openrobotics.org>\r\nCo-authored-by: Shane Loretz <sloretz@google.com>",
+      "files_changed": 12,
+      "additions": 146,
+      "deletions": 30,
+      "commit_type": "config"
+    },
+    {
+      "author": "emersonknapp",
+      "date": "2019-04-02T06:18:00Z",
+      "sha": "f6a90dee67c55d4ff03b6010e48c5e2b07c6f0f9",
+      "message": "Thread safety annotation - minimally intrusive first pass (#259)\n\n* Least intrusive possible thread safety annotation\r\n\r\nSigned-off-by: Emerson Knapp <eknapp@amazon.com>\r\n\r\n* Review change: remove -Werror and include new .hpp name\r\n\r\nSigned-off-by: Emerson Knapp <eknapp@amazon.com>\r\n\r\n* Lint fix\r\n\r\nSigned-off-by: Emerson Knapp <eknapp@amazon.com>",
+      "files_changed": 13,
+      "additions": 72,
+      "deletions": 41,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Barry-Xu-2018",
+      "date": "2020-09-18T14:03:31Z",
+      "sha": "9db729bec120df90db029428e499f5beed8d3f63",
+      "message": "Call Domain::removePublishe while failure occurs in create_publisher (#434)\n\nSigned-off-by: Barry Xu <barry.xu@sony.com>",
+      "files_changed": 2,
+      "additions": 20,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "kenichiice",
+      "date": "2023-01-24T18:50:38Z",
+      "sha": "e12ff1a1be8ded9623ff770a1f4f9e4b51ca8f53",
+      "message": "Add default subscriber profile (#663)\n\nSigned-off-by: OGAWA KenIchi <kenichi@ice.email.ne.jp>\r\n\r\nSigned-off-by: OGAWA KenIchi <kenichi@ice.email.ne.jp>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Oscarchoi",
+      "date": "2022-12-12T20:17:48Z",
+      "sha": "b56cd5fe6f42946d69d2e75ec37bf06d9becbe3f",
+      "message": "Fix incoherent dissociate_writer to dissociate_reader (#647) (#649)\n\nSigned-off-by: Wooyoung Choi <wy.choi@naverlabs.com>",
+      "files_changed": 3,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "audrow",
+      "date": "2022-01-25T13:23:03Z",
+      "sha": "e7c749ae167b7b08cc904737c6eac16e51399b02",
+      "message": "Change default to synchronous (#571)\n\n* Change default to synchronous\r\n\r\nSigned-off-by: Audrow Nash <audrow@hey.com>",
+      "files_changed": 2,
+      "additions": 6,
+      "deletions": 5,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mauropasse",
+      "date": "2021-11-19T20:21:54Z",
+      "sha": "6fe612a91288264f7dd89c7fdf8dd93c1340ce4c",
+      "message": "Add client/service QoS getters (#560)\n\nSigned-off-by: Mauro Passerino <mpasserino@irobot.com>",
+      "files_changed": 7,
+      "additions": 196,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "ihasdapie",
+      "date": "2022-09-23T17:10:00Z",
+      "sha": "aa794564c601a36dfa5448e3d82a40f6a388c96f",
+      "message": "Add rmw_get_gid_for_client impl (#631)\n\n* add rmw_get_gid_for_client impl\r\n\r\nSigned-off-by: Brian Chen <brian.chen@openrobotics.org>\r\n\r\n* lint\r\n\r\nSigned-off-by: Jacob Perron <jacob@openrobotics.org>\r\n\r\n* Assign implementation_identifier\r\n\r\nSigned-off-by: Jacob Perron <jacob@openrobotics.org>\r\n\r\n* Use existing guid copy function instead of std::copy\r\n\r\nSigned-off-by: Brian Chen <brian.chen@openrobotics.org>\r\nSigned-off-by: Jacob Perron <jacob@openrobotics.org>\r\nCo-authored-by: Jacob Perron <jacob@openrobotics.org>",
+      "files_changed": 7,
+      "additions": 117,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "richiware",
+      "date": "2017-09-14T18:27:19Z",
+      "sha": "a9ffcc5b18ae3b92a6c979cbdd1809209923349c",
+      "message": "Removing magic numbers: old maximun lengths (#152)",
+      "files_changed": 1,
+      "additions": 12,
+      "deletions": 24,
+      "commit_type": "code"
+    },
+    {
+      "author": "jacobperron",
+      "date": "2018-12-06T21:08:42Z",
+      "sha": "3577298f4079a8ab8f18af8277f90e08837b6282",
+      "message": "Fix lint: remove trailing whitespace (#244)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "paudrow",
+      "date": "2022-01-15T00:38:16Z",
+      "sha": "cfb433adfcf045903890095790ccbfbde9e04cbd",
+      "message": "6.1.2\n\nSigned-off-by: Audrow Nash <audrow@hey.com>",
+      "files_changed": 6,
+      "additions": 14,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "j-rivero",
+      "date": "2020-08-05T17:06:02Z",
+      "sha": "d57967cd07434a361157c3ba558bbad3f999710c",
+      "message": "Use package path to TypeSupport.hpp headers in ServiceTypeSupport and MessageTypeSupport (#415)\n\nUse package in path to TypeSupport header for ServiceTypeSupport/MessageTypeSupport\r\n\r\nSigned-off-by: Jose Luis Rivero <jrivero@osrfoundation.org>",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "ivanpauno",
+      "date": "2019-04-01T20:52:59Z",
+      "sha": "1835c55fbe0e648b60fb15e69bb53324581db050",
+      "message": "Add function to get publisher actual qos settings (#267)\n\n* Implement rmw_get_actual_qos\r\n\r\nSigned-off-by: ivanpauno <ivanpauno@ekumenlabs.com>",
+      "files_changed": 4,
+      "additions": 81,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "WideAwakeTN",
+      "date": "2022-03-18T19:52:52Z",
+      "sha": "eb189fb3ffe0b77cb3226e4af9451277cd975066",
+      "message": "Removed some heap interactions in rmw_serialize.cpp (#590)\n\nSigned-off-by: Martin Mayer <martin.mayer@gmx.de>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 7,
+      "commit_type": "code"
+    },
+    {
+      "author": "irobot-ros",
+      "date": "2022-02-24T08:31:53Z",
+      "sha": "f9eb927a5b9fec3e276035a799fcacb9815db319",
+      "message": "Add EventsExecutor (#468)\n\n* add RMW listener APIs\r\n\r\nadd constness\r\n\r\nMove set callback APIs\r\n\r\nPut unread events in queue when setting callback\r\n\r\nPut unread events in queue when setting callback\r\n\r\nUse or discard previous events: Guard conditions\r\n\r\nUnset callbacks support\r\n\r\nRename EventHandle to ExecutorEventHandle\r\n\r\nUpdate name\r\n\r\nAdd support for events\r\n\r\nvoid return on set_events_executor_callback\r\n\r\nRevert \"void return on set_events_executor_callback\"\r\n\r\nAdd mutexes\r\n\r\nset to nullptr\r\n\r\nRemove use_executor_callback_, not needed\r\n\r\nRename ExecutorEventCallback -> EventsExecutorCallback\r\n\r\nRename set_events_executor_callback->set_listener_callback\r\n\r\nUse data types when setting callbacks\r\n\r\nMove rcutils/executor_event_types.h to rmw/\r\n\r\nrename event types\r\n\r\nRename executor_context->callback_context\r\n\r\nRename callback_context->user_data\r\n\r\nReorder APIs arguments\r\n\r\nrename rmw_listener_cb_t->rmw_listener_callback_t\r\n\r\nOnly check callback pointer validity\r\n\r\nThis is the only item that is used in the RMW\r\nlayer, while the others are simply forwarded.\r\n\r\nuse void * to pass executor ptr\r\n\r\nRework executor callback data\r\n\r\nUse RMW renamed file\r\n\r\nSigned-off-by: Alberto Soragna <asoragna@irobot.com>\r\n\r\n* Remove use_previous_event\r\n\r\nSigned-off-by: Mauro Passerino <mpasserino@irobot.com>\r\n\r\n* Use unread_count_ as arg\r\n\r\nSigned-off-by: Mauro Passerino <mpasserino@irobot.com>\r\n\r\n* Remove guard condition listener\r\n\r\nSigned-off-by: Mauro Passerino <mpasserino@irobot.com>\r\n\r\n* refactor to remove listener term\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* Rename listener callbacks\r\n\r\nSigned-off-by: Mauro Passerino <mpasserino@irobot.com>\r\n\r\n* Use qos depth for initial callback call\r\n\r\nSigned-off-by: Mauro Passerino <mpasserino@irobot.com>\r\n\r\n* Use QoS depth on fastrtps_dynamic_cpp\r\n\r\nSigned-off-by: Mauro Passerino <mpasserino@irobot.com>\r\n\r\n* Use size_t for new_data_unread_count_\r\n\r\nSigned-off-by: Mauro Passerino <mpasserino@irobot.com>\r\n\r\n* Fix linter issues\r\n\r\nSigned-off-by: Mauro Passerino <mpasserino@irobot.com>\r\n\r\n* fix linter error\r\n\r\nSigned-off-by: Alberto Soragna <alberto.soragna@gmail.com>\r\n\r\nCo-authored-by: Mauro <mpasserino@irobot.com>\r\nCo-authored-by: William Woodall <william@osrfoundation.org>\r\nCo-authored-by: Alberto Soragna <alberto.soragna@gmail.com>",
+      "files_changed": 18,
+      "additions": 351,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "hidmic",
+      "date": "2020-05-11T19:27:39Z",
+      "sha": "d30f93832c647f6855bc1456430d9d670bcba829",
+      "message": "Update quality declarations on feature testing. (#380)\n\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jamoralp",
+      "date": "2021-06-18T19:20:48Z",
+      "sha": "b5f581f2867cdf6e9e69b3966a9cd8313f1a15ce",
+      "message": "Support for SubscriptionOptions::ignore_local_publications (#536)\n\nSigned-off-by: Jose Antonio Moral <joseantoniomoralparras@gmail.com>",
+      "files_changed": 1,
+      "additions": 21,
+      "deletions": 7,
+      "commit_type": "code"
+    },
+    {
+      "author": "shonigmann",
+      "date": "2021-04-02T06:25:46Z",
+      "sha": "a7be807c2945e3551f1dcc43f3fce886586256bd",
+      "message": "updating quality declaration links (re: ros2/docs.ros2.org#52) (#520)\n\nSigned-off-by: Simon Honigmann <shonigmann@blueorigin.com>\r\n\r\nCo-authored-by: Simon Honigmann <shonigmann@blueorigin.com>",
+      "files_changed": 3,
+      "additions": 12,
+      "deletions": 12,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Ignacio Montesino Valle",
+      "date": "2020-12-03T20:33:12Z",
+      "sha": "20b5851495443e2d715ec02cd211dd254b5db050",
+      "message": "Check for correct context shutdown (#486)\n\nSigned-off-by: Ignacio Montesino <ignaciomontesino@eprosima.com>",
+      "files_changed": 2,
+      "additions": 8,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "JLBuenoLopez",
+      "date": "2020-09-29T13:54:40Z",
+      "sha": "a6da71f09d4f98729796a661eb8cd948770478ea",
+      "message": "Refs #9439: Update README: use Fast DDS instead of Fast-RTPS and provide Quality Declarations\n\nSigned-off-by: JLBuenoLopez-eProsima <joseluisbueno@eprosima.com>",
+      "files_changed": 1,
+      "additions": 16,
+      "deletions": 8,
+      "commit_type": "docs"
+    },
+    {
+      "author": "brawner",
+      "date": "2020-04-29T20:22:52Z",
+      "sha": "c43c621c31f4655180f74d1346c8c61f0bc210c3",
+      "message": "Add package READMEs and QUALITY_DECLARATION files (#375)\n\n* Add package READMEs and QUALITY_DECLARATION files\r\n\r\nSigned-off-by: Stephen Brawner <brawner@gmail.com>\r\n\r\n* PR Fixup\r\n\r\nSigned-off-by: Stephen Brawner <brawner@gmail.com>\r\n\r\n* PR Fixup\r\n\r\nSigned-off-by: Stephen Brawner <brawner@gmail.com>",
+      "files_changed": 4,
+      "additions": 301,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Michael Jeronimo",
+      "date": "2020-10-06T23:41:07Z",
+      "sha": "67ff7dc0e99340753857bb63906577717d93c44d",
+      "message": "Update the package.xml files with the latest Open Robotics maintainers\n\nSigned-off-by: Michael Jeronimo <michael.jeronimo@openrobotics.org>",
+      "files_changed": 3,
+      "additions": 9,
+      "deletions": 3,
+      "commit_type": "config"
+    },
+    {
+      "author": "JaimeMartin",
+      "date": "2020-10-06T06:46:14Z",
+      "sha": "401c77747fac52339849e3b7414939b1d38896a4",
+      "message": "Merge pull request #455 from eProsima/feature/ExternalQD\n\nUpdate Quality Declarations and READMEs",
+      "files_changed": 7,
+      "additions": 261,
+      "deletions": 34,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Lobotuerk",
+      "date": "2020-09-11T19:40:34Z",
+      "sha": "7d875d1e3bd1a46c60f52085bbd267e68f974ea7",
+      "message": "Update rmw_publish_serialized_message() error returns (#431)\n\nSigned-off-by: lobotuerk <jtlorente@ekumenlabs.com>",
+      "files_changed": 1,
+      "additions": 10,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "iluetkeb",
+      "date": "2020-04-23T21:29:14Z",
+      "sha": "4d704e876817bacbc73152a69bba15297f6ca42e",
+      "message": "Fill message_info timestamp (#368)\n\n* Fill message_info timestamp\r\nImplements https://github.com/ros2/design/issues/259\r\n\r\nSigned-off-by: Luetkebohle Ingo (CR/AEX3) <ingo.luetkebohle@de.bosch.com>\r\n\r\n* Use rmw_time_point_value_t instead of rmw_time_t\r\n\r\nSigned-off-by: Luetkebohle Ingo (CR/AEX3) <ingo.luetkebohle@de.bosch.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "kyrofa",
+      "date": "2020-04-30T01:43:27Z",
+      "sha": "3b1ac77004ac7bdf273718778f16ac0403da354e",
+      "message": "Add basic support for security logging plugin (#362)\n\nSupport setting the security logging properties in Fast RTPS by exposing\r\nthree environment variables:\r\n\r\n- `ROS_SECURITY_LOG_FILE`: Log security events to the provided file path\r\n- `ROS_SECURITY_LOG_PUBLISH`: Publish security events to DDS topic\r\n- `ROS_SECURITY_LOG_VERBOSITY`: Control verbosity of logged events\r\n\r\nSigned-off-by: Kyle Fazzari <kyle@canonical.com>",
+      "files_changed": 6,
+      "additions": 533,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "nuclearsandwich",
+      "date": "2017-04-11T17:44:54Z",
+      "sha": "63742a48d809ca1ae54fb93bd5c31cb35b441114",
+      "message": "Cherry pick sros2 update for Fast-RTPS master support (#101)\n\n* Added CDR encapsulation\r\n\r\n* uncrustify fixup",
+      "files_changed": 2,
+      "additions": 19,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "dirk-thomas",
+      "date": "2015-08-04T17:25:07Z",
+      "sha": "9696abed662e545d86b26a8dfb4357278844bb3a",
+      "message": "update to new rmw error handling code, add explicit build type",
+      "files_changed": 3,
+      "additions": 32,
+      "deletions": 24,
+      "commit_type": "config"
+    },
+    {
+      "author": "mikaelarguedas",
+      "date": "2016-09-29T00:50:13Z",
+      "sha": "28eefa33fcee5aa08a04bee14fcfae2f91bff9bf",
+      "message": "serialize deserialize arrays (#58)\n\n* serialize deserialize fixed size string arrays\r\n\r\n* specialize size_of to fix nested array containing strings\r\n\r\n* declare generic c ros message structure, should be placed elsewhere someday\r\n\r\n* serialize nested C arrays\r\n\r\n* add generic array init and deserialization\r\n\r\n* linting/redability\r\n\r\n* cleanup calculateMaxAlign and size_of differentiation\r\n\r\n* remove TODO\r\n\r\n* use vector instead of C VLA\r\n\r\n* init string before assign\r\n\r\n* Revert \"init string before assign\"\r\n\r\nThis reverts commit c15cfc342e6bcaa09a638a9a71a331134dd540c2.\r\n\r\n* remove unnecessary comments\r\n\r\n* dont use (de)serializeArray for fixed size string arrays\r\n\r\n* add comment to explain variable definition in larger scope",
+      "files_changed": 1,
+      "additions": 99,
+      "deletions": 24,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mm318",
+      "date": "2019-06-06T23:48:17Z",
+      "sha": "015f1eec1e5858842cdcef9221be8acdfeb4c6bf",
+      "message": "add missing qos setings in get_actual_qos() (#284)\n\nSigned-off-by: Miaofei <miaofei@amazon.com>",
+      "files_changed": 1,
+      "additions": 32,
+      "deletions": 7,
+      "commit_type": "code"
+    },
+    {
+      "author": "jaisontj",
+      "date": "2019-10-09T18:07:31Z",
+      "sha": "394ddbdf65942bb405bb7be6582621de3c698cf3",
+      "message": "Renamed dds_qos_to_rmw_qos to dds_attributes_to_rmw_qos (#330)\n\nSigned-off-by: Jaison Titus <jaisontj92@gmail.com>",
+      "files_changed": 4,
+      "additions": 8,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "Karsten1987",
+      "date": "2017-01-30T18:29:49Z",
+      "sha": "266e6933c58884813a6faee69d6e93a6af73d039",
+      "message": "expose list of nodes (#88)\n\n* expose list of nodes\r\n\r\n* review comments",
+      "files_changed": 1,
+      "additions": 46,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "BMarchi",
+      "date": "2019-10-18T22:30:14Z",
+      "sha": "0b7906b80fc113589f47853fb0be9220941d0ead",
+      "message": "Restrict traffic to localhost only if env var is provided (#331)\n\n* Restrict traffic to localhost only if env var is provided\r\n\r\nSigned-off-by: Brian Ezequiel Marchi <brian.marchi65@gmail.com>\r\n\r\n* Make use of the new api\r\n\r\nSigned-off-by: Brian Ezequiel Marchi <brian.marchi65@gmail.com>\r\n\r\n* Update file and function name from rmw\r\n\r\nSigned-off-by: Brian Ezequiel Marchi <brian.marchi65@gmail.com>\r\n\r\n* Modify create node function parameters signature\r\n\r\nSigned-off-by: Brian Ezequiel Marchi <brian.marchi65@gmail.com>",
+      "files_changed": 4,
+      "additions": 24,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "wjwwood",
+      "date": "2015-08-10T23:56:56Z",
+      "sha": "6099f7e84bf3637d620f5cbb86179b8c7fd4036b",
+      "message": "disable find_package(fastrtps) since it fails\n\nthis line fails because the CMake Module provided\nby Fast-RTPS is incomplete right now.\n\nit happens to compile without the module, so\nI just disabled it",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "kurcha01-arm",
+      "date": "2019-06-13T15:32:54Z",
+      "sha": "99839449fca314d6dbb92ab607b2851d0a91787e",
+      "message": "Export typesupport_fastrtps package dependencies (#294)\n\n* Export typesupport_fastrtps package dependencies\r\n\r\nFixes rosidl_typesupport_fastrtps_c and rosidl_typesupport_fastrtps_cpp\r\nnot being listed as dependencies to this package.\r\n\r\nSigned-off-by: Kurtis Charnock <kurtis.charnock@arm.com>\r\n\r\n* Arrange new lines in HEAD^ alphabetically\r\n\r\nSigned-off-by: Kurtis Charnock <kurtis.charnock@arm.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "1r0b1n0",
+      "date": "2019-05-20T16:53:00Z",
+      "sha": "0c15ea8c93f5a9697fcbf1b5061a7c5bf4c350a9",
+      "message": "fix log_debug typo in rmw_count (#279)\n\nSigned-off-by: Robin Vanhove <rov@robopec.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "nburek",
+      "date": "2019-05-14T22:53:26Z",
+      "sha": "1d0d526f7cb51249a50e898abf1f7e9f8cb1a0af",
+      "message": "Centralize topic name creation logic and update to match FastRTPS 1.8 API (#272)\n\nSigned-off-by: Emerson Knapp <eknapp@amazon.com>",
+      "files_changed": 11,
+      "additions": 80,
+      "deletions": 73,
+      "commit_type": "code"
+    },
+    {
+      "author": "ross-desmond",
+      "date": "2018-12-07T00:05:44Z",
+      "sha": "2f3b6259aef63405b9b4aefc2dc884569b0b30e3",
+      "message": "Add topic cache object for managing topic relations (#236)\n\n* Add topic cache object to maintain participant relationship\r\n* Separate responsibility of maintaining cached data from listener\r\n* Use lock_guard over manual mutex lock\r\n* Use c++14 functions to reduce code\r\n* Add debug statements\r\n* Add lookup of topics for input node\r\n* Remove unnecessary logging\r\n* Add namespace to graph functions",
+      "files_changed": 12,
+      "additions": 964,
+      "deletions": 59,
+      "commit_type": "docs"
+    },
+    {
+      "author": "thomas-moulard",
+      "date": "2019-04-28T15:15:09Z",
+      "sha": "a502ba641eabe0e210594a19c56e406a68620834",
+      "message": "Fix logging in rmw_node_info_and_types.cpp (#273)\n\nWhen logging a rcutils_error_string_t variable, the\r\nstr field of the rcutils_error_string_t variable needs\r\nto be logged, not the struct directly.\r\n\r\nSigned-off-by: Thomas Moulard <tmoulard@amazon.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "DongheeYe",
+      "date": "2018-12-19T17:48:59Z",
+      "sha": "117eebe77d001420e267e674a225e91e8c832f11",
+      "message": "Fix guard condition trigger error (#235)\n\n* Fix guard condition trigger error\r\n\r\n* Use atomic bool exchange instead of lock",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "jwillemsen",
+      "date": "2018-12-20T22:32:51Z",
+      "sha": "705a0c07ca9f3708028660c41de6eadfad16e9f5",
+      "message": "Use empty() instead of size() to check if a vector/map contains elements and fixed some incorrect logging (#245)\n\n* rmw_fastrtps_dynamic_cpp/include/rmw_fastrtps_dynamic_cpp/TypeSupport_impl.hpp:\r\n    * rmw_fastrtps_shared_cpp/include/rmw_fastrtps_shared_cpp/topic_cache.hpp:\r\n    * rmw_fastrtps_shared_cpp/src/rmw_node_info_and_types.cpp:\r\n    * rmw_fastrtps_shared_cpp/src/rmw_node_names.cpp:\r\n    * rmw_fastrtps_shared_cpp/src/rmw_service_names_and_types.cpp:\r\n    * rmw_fastrtps_shared_cpp/src/rmw_topic_names_and_types.cpp:",
+      "files_changed": 6,
+      "additions": 9,
+      "deletions": 10,
+      "commit_type": "code"
+    },
+    {
+      "author": "JuanCarlos-Arce",
+      "date": "2018-12-05T21:06:11Z",
+      "sha": "9bdc763b507b0f93a316d95a9ca7e4d9ca38e273",
+      "message": "RMW_FastRTPS configuration from XML only (#243)\n\n* Refs #3555 Apply the changes to the current master on ROS2\r\n\r\n* Refs #3555 rename the environment variable from \"RMW_LEAVE_MIDDLEWARE_DEFAULT_QOS\" to \"RMW_FASTRTPS_USE_QOS_FROM_XML\"\r\n\r\n* Refs #3555 Fix lint issues.\r\n\r\n* Refs #3555 Fix lint issues.\r\n\r\n* Refs #3555 Add an explanation to the attribute to explain it",
+      "files_changed": 10,
+      "additions": 117,
+      "deletions": 34,
+      "commit_type": "code"
+    },
+    {
+      "author": "guillaumeautran",
+      "date": "2018-01-03T17:23:09Z",
+      "sha": "1175657a64e87f252433fec90a40e732f7d51806",
+      "message": "Small performance improvements (#183)\n\nAddress small performance issues to ROS2 impacting the `rmw_count_publishers` and `rmw_count_subscribers` method when called with a significante number of topics to count.\r\nThe root of the performance issues come from the duplication of `std::string` type of objects. These duplication are honerous with strings and cause a significante amount of CPU cycle to be wasted duplicating things.",
+      "files_changed": 4,
+      "additions": 22,
+      "deletions": 11,
+      "commit_type": "code"
+    },
+    {
+      "author": "Minggang Wang",
+      "date": "2018-06-19T18:42:13Z",
+      "sha": "825c6bc70910e5b0d519ca0afc071a17ec7a9a62",
+      "message": "Validate the buffer_ of CustomServiceRequest object before using it to (#210)\n\ninstantiate class Cdr\r\n\r\nBefore we are going to instantiate the fastcdr::Cdr class by using the member\r\nvariable buffer_ of class CustomServiceRequest, we must ensure that the buffer_\r\ncan not be nullptr.\r\n\r\nThis patch implements the validation.\r\n\r\nFix #209",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "rohitsalem",
+      "date": "2018-06-07T21:13:17Z",
+      "sha": "a33f9f8de78b0db1695a3a446f448ee873739a7e",
+      "message": "Remove topic partitions (#192)\n\n* removed the use of partitions, use the complete topic_name directly\r\n\r\nRemoved assign_partitions.hpp header\r\n\r\ntrial: removal of topic partitions from services and client\r\n\r\nModified readerinfo, writerinfo and added prefix to the topic names.\r\n\r\n* Changed topic namespacing in services and clients\r\n\r\nminor style changes\r\n\r\nDelete assign_partitions.hpp and removed anything related to partitons\r\n\r\nre-adding avoid_ros_namespace_conventions check for prefixing names\r\n\r\nCorrected indentation\r\n\r\nAdded vertical space between the headers\r\n\r\n* remove unnecessary initializations",
+      "files_changed": 8,
+      "additions": 31,
+      "deletions": 164,
+      "commit_type": "code"
+    },
+    {
+      "author": "jwang11",
+      "date": "2017-10-04T21:36:03Z",
+      "sha": "4e72dfc0a172b62929c1aa474187eb06bf666034",
+      "message": "Drop duplicated rmw_init.cpp in rmw_fastrtps_cpp/CMakeLists.txt (#155)",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "sriramster",
+      "date": "2018-01-18T18:10:13Z",
+      "sha": "014920572a75e36bb4d3d2fcf3f9c90d111497cd",
+      "message": "Enable logging level manipulation from rmw_fastrtps (#156)\n\n* Fastrtps supports rich logging facilities, which could be used on any ros2 development.\r\n\r\n* To enable the same, enable setting log levels from rmw_fastrtps layers,\r\n* Add generic logging level parameters to 'rmw.h' which would be used by other\r\n  layers above like rcl/rclcpp.\r\n* Hide DDS specific implementation inside rmw_fastrtps.\r\n\r\nSigned-off-by: Sriram Raghunathan <sriram.max@gmail.com>\r\n\r\n* The changes follow the discussions\r\n\r\nhttps://github.com/ros2/rmw/pull/124\r\n\r\n* The API defined is used to set the logging level particular to the DDS\r\nimplementation.\r\n* This change is specific to DDS type Fast-RTPS.\r\n* The file is named as rmw_configure since we could write API's of type\r\n  'system level config setting' types here.\r\n\r\nSigned-off-by: Sriram Raghunathan <rsriram7@visteon.com>\r\n\r\n* Rename file from rmw_fastrtps_configure to rmw_logging, which follows the patterns being used already.\r\n\r\nlike rmw_node, rmw_publisher..\r\n\r\nSigned-off-by: Sriram Raghunathan <sriram.max@gmail.com>\r\n\r\n* - Fix, coding errors.\r\n- Renmae API to suite ros styles\r\n\r\nSigned-off-by: Sriram Raghunathan <sriram.max@gmail.com>\r\n\r\n* Fix ament_cpplint warnings\r\n\r\nSigned-off-by: Sriram Raghunathan <sriram.max@gmail.com>\r\n\r\n* Remove utility function to create a 'error' returnable API for setting logging\r\n\r\nSigned-off-by: Sriram Raghunathan <rsriram7@visteon.com>\r\n\r\n* Fix, logging msg bug.\r\n\r\n* Modify logging mapping for type 'debug' from warning to info.\r\n\r\nSigned-off-by: Sriram Raghunathan <rsriram7@visteon.com>\r\n\r\n* order log levels, use different local variable name, include unknown severity in error message\r\n\r\n* Fix error due to parameterized logging\r\n\r\n* Fix code style issues from uncrustify",
+      "files_changed": 3,
+      "additions": 55,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "gaoethan",
+      "date": "2017-10-27T15:46:57Z",
+      "sha": "4e22c3ec493c26fcda0c620ab7f0f17149a24008",
+      "message": "Fix rmw_fastrtps dead code (#163)\n\n* * Fix rmw_fastrtps dead code\r\nDead code in API rmw_create_subscription()\r\nbecasue the condition \"rmw_subscription\" cannot be true in the\r\n\"fail\" clauses, the execution cannot reach this statement:\r\n\r\nrmw_subscription_free(rmw_subscription);\r\n\r\nfinally, the \"rmw_subscribtion\" is free by\r\nrmw_destroy_subscription() when it's not a nullptr\r\n\r\nDead code in API rmw_create_publisher()\r\nbecause the condition \"rmw_publisher\" cannot be true in the\r\n\"fail\" clauses, the execution cannot reach this statement:\r\n\r\nrmw_publisher_free(rmw_publisher);\r\n\r\nfinally, the \"rmw_publisher\" is free by\r\nrmw_destroy_publisher() when it's not a nullptr\r\n\r\nSigned-off-by: Ethan Gao <ethan.gao@linux.intel.com>\r\n\r\n* * Add memory allocation checking for topic name\r\nthis memory allocation checking avoids the unintended\r\nbehaviour which derives from unknown memory free issue\r\nat rmw_destroy_publisher\r\n\r\nSigned-off-by: Ethan Gao <ethan.gao@linux.intel.com>\r\n\r\n* publiser -> publisher\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* tweak the log information more accurate\r\n\r\nSigned-off-by: Ethan Gao <ethan.gao@linux.intel.com>",
+      "files_changed": 2,
+      "additions": 12,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "deng02",
+      "date": "2017-10-26T15:40:17Z",
+      "sha": "048ead9cf52c65ed31d86299a4eaa5d184375898",
+      "message": "Remove string allocation in the count of subscribers and publishers",
+      "files_changed": 1,
+      "additions": 12,
+      "deletions": 44,
+      "commit_type": "code"
+    },
+    {
+      "author": "dejan-cmyk",
+      "date": "2017-10-25T00:39:35Z",
+      "sha": "e184e5c16184f2642e013ef1f44d4504baf734ed",
+      "message": "pointers are checked for null",
+      "files_changed": 1,
+      "additions": 86,
+      "deletions": 61,
+      "commit_type": "code"
+    },
+    {
+      "author": "dhood",
+      "date": "2016-12-13T05:12:53Z",
+      "sha": "88b879aac1e417a81813dfd32ddd94118f5253ff",
+      "message": "Rename QoS policies (#78)",
+      "files_changed": 1,
+      "additions": 12,
+      "deletions": 12,
+      "commit_type": "code"
+    },
+    {
+      "author": "allenh1",
+      "date": "2017-06-28T23:01:40Z",
+      "sha": "3ffe48f8dd9472b6c91ad31f8c114e5e33187e82",
+      "message": "Fix publisher/subscriber Count (#129)\n\n* Fixed the counting up, but the count does not decrement when the nodes stop listening.\r\n\r\n* Removed lambda, fixed typo.\r\n\r\n* Added debug message for the case wherein an attempt to remove a subscription which was never registered.\r\n\r\n* Add missed brace.",
+      "files_changed": 1,
+      "additions": 32,
+      "deletions": 20,
+      "commit_type": "code"
+    },
+    {
+      "author": "Hunter Allen",
+      "date": "2017-06-20T03:35:08Z",
+      "sha": "9e68770d7b82ee5e211ccba49b5cc3a9d260d449",
+      "message": "Free allocated memory for topic name (using rmw_free), as well as call rmw_x_free instead of delete on the publisher and subscriber within their respective destroy functions. (#121)",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "esteve",
+      "date": "2016-04-27T21:23:07Z",
+      "sha": "18dcbcefdb54e4e1757d627225cb9789232f6f55",
+      "message": "Converted ServiceTypeSupport.cpp, MessageTypeSupport.cpp and TypeSupport.cpp to headers\n\nAdded support for type support in C",
+      "files_changed": 10,
+      "additions": 637,
+      "deletions": 208,
+      "commit_type": "docs"
+    },
+    {
+      "author": "gerkey",
+      "date": "2015-12-30T21:32:38Z",
+      "sha": "95bda4843d26f3dbecf2f8721d7dfaa658197fb8",
+      "message": "Match alloc and free calls",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "codebot",
+      "date": "2016-03-25T21:56:54Z",
+      "sha": "a4cf2d65e6a4ff359eaa99f0cf6e1946572cbcf0",
+      "message": "Explicit downcast of type size\n\nAvoid Windows compiler warning by making the 64->32 bit downcast explicit,\nusing the elite C++ static_cast operator.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "richiprosima",
+      "date": "2015-05-26T15:38:25Z",
+      "sha": "2d51038691aff5e338215e2c2c7ea19ad8e1a76e",
+      "message": "First commit",
+      "files_changed": 11,
+      "additions": 1182,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jacquelinekay",
+      "date": "2015-12-18T22:16:40Z",
+      "sha": "c4ec13ae6debde157a9d6e7dd786b30ae7791739",
+      "message": "Refactor for rmw_wait/rmw_waitset changes",
+      "files_changed": 1,
+      "additions": 184,
+      "deletions": 28,
+      "commit_type": "code"
+    },
+    {
+      "author": "Adam Dąbrowski",
+      "date": "2016-06-27T06:48:46Z",
+      "sha": "a32610ac92c8e883db9dbdd379c4a03d1202fec8",
+      "message": "Attributes are now correctly passed by reference in rmw_fastrtps_cpp\n- Fixes issue with qos settings not applying in rmw_fastrtps_cpp",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Jackie Kay",
+      "date": "2016-03-01T00:07:25Z",
+      "sha": "de21530d47d373079106eb522e54b64d35226e18",
+      "message": "Don't type-erase request header",
+      "files_changed": 1,
+      "additions": 12,
+      "deletions": 16,
+      "commit_type": "code"
+    }
+  ]
+}

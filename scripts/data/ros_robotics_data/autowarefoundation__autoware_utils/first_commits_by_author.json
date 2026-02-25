@@ -1,0 +1,271 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T02:11:55Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "autowarefoundation",
+    "repo": "autoware_utils"
+  },
+  "data": [
+    {
+      "author": "awf-autoware-bot[bot]",
+      "date": "2023-04-03T06:53:23Z",
+      "sha": "0cd7c6e6f7649491bdba402b0655c9b256bca4d1",
+      "message": "chore: sync files (#168)\n\n* chore: sync files\r\n\r\nSigned-off-by: GitHub <noreply@github.com>\r\n\r\n* style(pre-commit): autofix\r\n\r\n* Update unit_conversion.hpp\r\n\r\n---------\r\n\r\nSigned-off-by: GitHub <noreply@github.com>\r\nCo-authored-by: kenji-miyake <kenji-miyake@users.noreply.github.com>\r\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>\r\nCo-authored-by: Kenji Miyake <31987104+kenji-miyake@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 18,
+      "deletions": 4,
+      "commit_type": "ci"
+    },
+    {
+      "author": "veqcc",
+      "date": "2026-02-20T09:19:51Z",
+      "sha": "39d8c4680814c6bff785b8e23243dbc45b9e282a",
+      "message": "fix(autoware_utils_geometry): add optional check (#89)\n\nfix(autoware_utils_geometry): add optional check before accessing value in triangulate\n\nAdd a check for empty optional before calling .value() on alt_poly.\nIf alt::Polygon2d::create() returns std::nullopt (e.g., for polygons\nwith less than 4 points), the function now returns an empty vector\ninstead of throwing std::bad_optional_access.\n\nDetected by Facebook Infer static analyzer (OPTIONAL_EMPTY_ACCESS).\n\nSigned-off-by: Ryuta Kambe <ryuta.kambe@tier4.jp>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "mitsudome-r",
+      "date": "2025-02-26T00:37:20Z",
+      "sha": "2a2ffa0f3aa554accf8d6e353063772d81ebde5a",
+      "message": "chore: bump version to 1.2.0 (#32)\n\nSigned-off-by: Ryohsuke Mitsudome <ryohsuke.mitsudome@tier4.jp>",
+      "files_changed": 2,
+      "additions": 7,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mertyavuz41",
+      "date": "2026-02-17T13:22:45Z",
+      "sha": "99e412fcc9e6b9c77c16cb33ad36f09d887e7853",
+      "message": "feat(autoware_utils_math): add wrap_angle function (#92)\n\nSigned-off-by: Mert Yavuz <mert@adastec.com>",
+      "files_changed": 1,
+      "additions": 29,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "takam5f2",
+      "date": "2026-02-17T12:41:22Z",
+      "sha": "53291a299ee734e4648ea9346c6054d7cf95a6ab",
+      "message": "feat(autoware_utils_rclcpp): add function to get the timestamp of the latest message (#91)\n\n* feat(polling_subscriber): add getter of latest_timestamp.\n\nSigned-off-by: Takayuki AKAMINE <takayuki.akamine@tier4.jp>\n\n* fix(rclcpp): fixed dead code.\n\nSigned-off-by: Takayuki AKAMINE <takayuki.akamine@tier4.jp>\n\n* add explanation of PollingSubscriber in README.md\n\nSigned-off-by: Takayuki AKAMINE <takayuki.akamine@tier4.jp>\n\n* update explanation of PollingSubscriber in README.md\n\nSigned-off-by: Takayuki AKAMINE <takayuki.akamine@tier4.jp>\n\n* add testcase to check initial value of PollingSubscriber\n\nSigned-off-by: Takayuki AKAMINE <takayuki.akamine@tier4.jp>\n\n* style(pre-commit): autofix\n\n* use std::optional instead of the magic number.\n\nSigned-off-by: Takayuki AKAMINE <takayuki.akamine@tier4.jp>\n\n* updated README.md for the previous commit\n\nSigned-off-by: Takayuki AKAMINE <takayuki.akamine@tier4.jp>\n\n* chore(autoware_utils_rclcpp): add precondition of latest_timestamp() method\n\nSigned-off-by: Takayuki AKAMINE <takayuki.akamine@tier4.jp>\n\n* style(pre-commit): autofix\n\n* change latest_timestamp() to return std::nullopt if there is no valid data received\n\nSigned-off-by: Takayuki AKAMINE <takayuki.akamine@tier4.jp>\n\n* style(pre-commit): autofix\n\n* chore(polling_subscriber): rename method name\n\nSigned-off-by: Takayuki AKAMINE <takayuki.akamine@tier4.jp>\n\n* style(pre-commit): autofix\n\n---------\n\nSigned-off-by: Takayuki AKAMINE <takayuki.akamine@tier4.jp>\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>",
+      "files_changed": 3,
+      "additions": 243,
+      "deletions": 1,
+      "commit_type": "ci"
+    },
+    {
+      "author": "Qubi0-0",
+      "date": "2025-11-20T12:42:48Z",
+      "sha": "1ab84eca6b4c1eb10f54c28c98ea8f547b60495f",
+      "message": "fix(autoware_utils_geometry): handle floating-point errors in segment collision detection (#86)\n\nfix(arc_lane_utils): handle floating-point errors in segment collision detection\n\nSigned-off-by: Jakub Zeifert <kuba1102@gmail.com>",
+      "files_changed": 1,
+      "additions": 23,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "sasakisasaki",
+      "date": "2025-06-03T12:12:55Z",
+      "sha": "260bc9dc62a898fde162e0b9a65fcd78fae070d8",
+      "message": "feat(workflow): add workflows for version control automation (#70)\n\nSigned-off-by: Junya Sasaki <junya.sasaki@tier4.jp>",
+      "files_changed": 2,
+      "additions": 74,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "traversaro",
+      "date": "2025-07-05T16:41:19Z",
+      "sha": "2fe987a6cc899efac88c59fecbf02f2b2646e123",
+      "message": "fix(autoware_utils_uuid): include cstdint as uint8_t is used (#79)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "sarun-hub",
+      "date": "2025-06-25T06:47:34Z",
+      "sha": "eee0b7ba8aba3b983ac79fcd7b2428531af96327",
+      "message": "refactor: set constant value for marker lifetime (#76)\n\nrefactor: set constant value for marker lifetime, and use it in create_default_marker\n\nSigned-off-by: Sarun Mukdapitak <sarun.mukda@gmail.com>",
+      "files_changed": 2,
+      "additions": 5,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "wep21",
+      "date": "2025-06-06T04:08:07Z",
+      "sha": "994e8878a387b27065e1e7927343872c42cddca5",
+      "message": "chore: replace INSTANTIATE_TEST_CASE_P with INSTANTIATE_TEST_SUITE_P (#73)\n\nreplace INSTANTIATE_TEST_SUITE_P with INSTANTIATE_TEST_CASE_P",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "test"
+    },
+    {
+      "author": "ahcorde",
+      "date": "2025-05-22T06:38:52Z",
+      "sha": "a47850e1530cde207d50da35dd6918bb75c7281b",
+      "message": "Replace ament_target_dependencies with target_link_libraries (#69)\n\nSigned-off-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "youtalk",
+      "date": "2024-05-01T01:52:06Z",
+      "sha": "430dff28d7ff259e93eff1a8d68f07907b1648f2",
+      "message": "Initial commit",
+      "files_changed": 1,
+      "additions": 201,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "isamu-takagi",
+      "date": "2025-02-27T04:21:25Z",
+      "sha": "62b5953d32eebcd7bb206b2395d6c9ab6b81155e",
+      "message": "feat(autoware_utils_pcl): split package (#29)\n\n* feat(autoware_utils_pcl): split package\n\nSigned-off-by: Takagi, Isamu <isamu.takagi@tier4.jp>\n\n* add maintainer\n\nSigned-off-by: Takagi, Isamu <isamu.takagi@tier4.jp>\n\n* fix build error\n\nSigned-off-by: Takagi, Isamu <isamu.takagi@tier4.jp>\n\n* add compatibility\n\nSigned-off-by: Takagi, Isamu <isamu.takagi@tier4.jp>\n\n* rename package\n\nSigned-off-by: Takagi, Isamu <isamu.takagi@tier4.jp>\n\n* update readme\n\nSigned-off-by: Takagi, Isamu <isamu.takagi@tier4.jp>\n\n---------\n\nSigned-off-by: Takagi, Isamu <isamu.takagi@tier4.jp>",
+      "files_changed": 16,
+      "additions": 615,
+      "deletions": 412,
+      "commit_type": "docs"
+    },
+    {
+      "author": "pre-commit-ci[bot]",
+      "date": "2024-07-02T07:40:14Z",
+      "sha": "f8f29ab7b2a0b64bad3153b9d4663caa63f94b65",
+      "message": "[pre-commit.ci] pre-commit autoupdate (#9)\n\nupdates:\r\n- [github.com/pre-commit/pre-commit-hooks: v4.4.0 → v4.6.0](https://github.com/pre-commit/pre-commit-hooks/compare/v4.4.0...v4.6.0)\r\n- [github.com/igorshubovych/markdownlint-cli: v0.33.0 → v0.41.0](https://github.com/igorshubovych/markdownlint-cli/compare/v0.33.0...v0.41.0)\r\n- [github.com/pre-commit/mirrors-prettier: v3.0.0-alpha.6 → v4.0.0-alpha.8](https://github.com/pre-commit/mirrors-prettier/compare/v3.0.0-alpha.6...v4.0.0-alpha.8)\r\n- [github.com/adrienverge/yamllint: v1.30.0 → v1.35.1](https://github.com/adrienverge/yamllint/compare/v1.30.0...v1.35.1)\r\n- [github.com/shellcheck-py/shellcheck-py: v0.9.0.2 → v0.10.0.1](https://github.com/shellcheck-py/shellcheck-py/compare/v0.9.0.2...v0.10.0.1)\r\n- [github.com/scop/pre-commit-shfmt: v3.6.0-2 → v3.8.0-1](https://github.com/scop/pre-commit-shfmt/compare/v3.6.0-2...v3.8.0-1)\r\n- [github.com/pycqa/isort: 5.12.0 → 5.13.2](https://github.com/pycqa/isort/compare/5.12.0...5.13.2)\r\n- [github.com/psf/black: 23.3.0 → 24.4.2](https://github.com/psf/black/compare/23.3.0...24.4.2)\r\n- [github.com/pre-commit/mirrors-clang-format: v16.0.0 → v18.1.8](https://github.com/pre-commit/mirrors-clang-format/compare/v16.0.0...v18.1.8)\r\n- [github.com/python-jsonschema/check-jsonschema: 0.23.2 → 0.28.6](https://github.com/python-jsonschema/check-jsonschema/compare/0.23.2...0.28.6)\r\n\r\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 10,
+      "deletions": 10,
+      "commit_type": "ci"
+    },
+    {
+      "author": "mitukou1109",
+      "date": "2025-04-22T05:26:35Z",
+      "sha": "93a21640638330dd82c7647df35e0edb7fbdda7d",
+      "message": "fix(autoware_utils_geometry): fix procedure to check if point is on edge (#56)\n\n* fix procedure to check if point is on edge\n\nSigned-off-by: mitukou1109 <mitukou1109@gmail.com>\n\n* add test cases\n\nSigned-off-by: mitukou1109 <mitukou1109@gmail.com>\n\n---------\n\nSigned-off-by: mitukou1109 <mitukou1109@gmail.com>",
+      "files_changed": 2,
+      "additions": 56,
+      "deletions": 30,
+      "commit_type": "code"
+    },
+    {
+      "author": "storrrrrrrrm",
+      "date": "2025-04-15T08:59:18Z",
+      "sha": "d2725a31d49ea7910b91db21f7abdc7180c1a341",
+      "message": "test(autoware_utils): port unit tests from autoware.universe (#28)\n\nSigned-off-by: JianKangEgon <egon.kang@autocore.ai>\nSigned-off-by: NorahXiong <norah.xiong@autocore.ai>\nSigned-off-by: suchang <chang.su@autocore.ai>",
+      "files_changed": 10,
+      "additions": 4215,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "amadeuszsz",
+      "date": "2025-04-11T09:00:52Z",
+      "sha": "76e6306e31d8aa8886950cc92d653909e882cecb",
+      "message": "feat: remove managed transform buffer (#41)\n\nSigned-off-by: Amadeusz Szymko <amadeusz.szymko.2@tier4.jp>",
+      "files_changed": 4,
+      "additions": 0,
+      "deletions": 287,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Timple",
+      "date": "2025-04-05T04:10:59Z",
+      "sha": "a4e240b67414f8d02a706376a7fb58ba2963dc2a",
+      "message": "fix: boost convex_hull for newer boost versions (#58)\n\n* Fix boost convex_hull for newer boost versions\n\nSigned-off-by: Tim Clephas <tim.clephas@nobleo.nl>\n\n* Specify the distros for searchability\n\nSigned-off-by: Tim Clephas <tim.clephas@nobleo.nl>\n\n* Use boost version for explicity\n\nSigned-off-by: Tim Clephas <tim.clephas@nobleo.nl>\n\n---------\n\nSigned-off-by: Tim Clephas <tim.clephas@nobleo.nl>",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "liuXinGangChina",
+      "date": "2025-02-25T00:25:47Z",
+      "sha": "5bc66a83aebad3e80ea973ac81cd22c165fa9d62",
+      "message": "feat(autoware_utils): porting from universe to core (#30)\n\nfeat(autoware_utils):replace autoware_universe_utils dependency with autoware_utils for all the packages under universe/planning folder, autoware_utils, solve build conflict: v0.0\n\nSigned-off-by: liuXinGangChina <lxg19892021@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "JianKangEgon",
+      "date": "2025-01-23T12:12:51Z",
+      "sha": "182c967b189f786faf0f01a08dd7cd2da7999f2f",
+      "message": "feat(autoware_utils): porting from autoware_universe_utils (#23)\n\nSigned-off-by: JianKangEgon <egon.kang@autocore.ai>\r\nSigned-off-by: NorahXiong <norah.xiong@autocore.ai>\r\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>\r\nCo-authored-by: NorahXiong <norah.xiong@autocore.ai>",
+      "files_changed": 59,
+      "additions": 15463,
+      "deletions": 13,
+      "commit_type": "ci"
+    },
+    {
+      "author": "xmfcx",
+      "date": "2024-07-01T11:14:24Z",
+      "sha": "f4202fe044499023a863bf1804628858c4098d1a",
+      "message": "ci: add codecov token (#8)\n\nSigned-off-by: M. Fatih Cırıt <mfc@leodrive.ai>",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "esteve",
+      "date": "2023-01-23T15:21:34Z",
+      "sha": "ecf8f996cdb0c50e5a93182938e7a1136d9bcf30",
+      "message": "chore: added esteve as a maintainer (#146)\n\nchore: added esteve as a maintainer\r\n\r\nSigned-off-by: Esteve Fernandez <esteve@apache.org>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "dependabot[bot]",
+      "date": "2024-05-02T08:13:14Z",
+      "sha": "b960004bada5fd2baa592e1c805a515b1617eca6",
+      "message": "build(deps): Bump tj-actions/changed-files from 42 to 44 (#4)\n\nBumps [tj-actions/changed-files](https://github.com/tj-actions/changed-files) from 42 to 44.\r\n- [Release notes](https://github.com/tj-actions/changed-files/releases)\r\n- [Changelog](https://github.com/tj-actions/changed-files/blob/main/HISTORY.md)\r\n- [Commits](https://github.com/tj-actions/changed-files/compare/v42...v44)\r\n\r\n---\r\nupdated-dependencies:\r\n- dependency-name: tj-actions/changed-files\r\n  dependency-type: direct:production\r\n  update-type: version-update:semver-major\r\n...\r\n\r\nSigned-off-by: dependabot[bot] <support@github.com>\r\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "ci"
+    },
+    {
+      "author": "lexavtanke",
+      "date": "2024-02-15T13:13:46Z",
+      "sha": "71f2420f05af85c14211e9ed3180330271e9d3ec",
+      "message": "feat(autoware_utils): add functions to generate and convert uuids (#238)\n\nSigned-off-by: Alexey Panferov <lexavtanke@gmail.com>",
+      "files_changed": 4,
+      "additions": 150,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "kenji-miyake",
+      "date": "2022-08-02T09:23:45Z",
+      "sha": "1b8a7ce3cac4f7aafbdee6921f18ce6ddd8e9ce8",
+      "message": "feat: add autoware_utils package (#88)\n\n* feat: rename existing packages name starting with autoware to different names (#180)\r\n\r\n* autoware_api_utils -> tier4_api_utils\r\n\r\nSigned-off-by: tomoya.kimura <tomoya.kimura@tier4.jp>\r\n\r\n* autoware_debug_tools -> tier4_debug_tools\r\n\r\nSigned-off-by: tomoya.kimura <tomoya.kimura@tier4.jp>\r\n\r\n* autoware_error_monitor -> system_error_monitor\r\n\r\nSigned-off-by: tomoya.kimura <tomoya.kimura@tier4.jp>\r\n\r\n* autoware_utils -> tier4_autoware_utils\r\n\r\nSigned-off-by: tomoya.kimura <tomoya.kimura@tier4.jp>\r\n\r\n* autoware_global_parameter_loader -> global_parameter_loader\r\n\r\nSigned-off-by: tomoya.kimura <tomoya.kimura@tier4.jp>\r\n\r\n* autoware_iv_auto_msgs_converter -> tier4_auto_msgs_converter\r\n\r\nSigned-off-by: tomoya.kimura <tomoya.kimura@tier4.jp>\r\n\r\n* autoware_joy_controller -> joy_controller\r\n\r\nSigned-off-by: tomoya.kimura <tomoya.kimura@tier4.jp>\r\n\r\n* autoware_error_monitor -> system_error_monitor(launch)\r\n\r\nSigned-off-by: tomoya.kimura <tomoya.kimura@tier4.jp>\r\n\r\n* autoware_state_monitor -> ad_service_state_monitor\r\n\r\nSigned-off-by: tomoya.kimura <tomoya.kimura@tier4.jp>\r\n\r\n* autoware_web_controller -> web_controller\r\n\r\nSigned-off-by: tomoya.kimura <tomoya.kimura@tier4.jp>\r\n\r\n* remove autoware_version\r\n\r\nSigned-off-by: tomoya.kimura <tomoya.kimura@tier4.jp>\r\n\r\n* remove autoware_rosbag_recorder\r\n\r\nSigned-off-by: tomoya.kimura <tomoya.kimura@tier4.jp>\r\n\r\n* autoware_*_rviz_plugin -> tier4_*_rviz_plugin\r\n\r\nSigned-off-by: tomoya.kimura <tomoya.kimura@tier4.jp>\r\n\r\n* fix ad_service_state_monitor\r\n\r\nSigned-off-by: tomoya.kimura <tomoya.kimura@tier4.jp>\r\n\r\n* ci(pre-commit): autofix\r\n\r\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>\r\n\r\n* chore(tier4_autoware_utils): remove path point with lane id (#316)\r\n\r\nSigned-off-by: tanaka3 <ttatcoder@outlook.jp>\r\n\r\n* fix(behavior_velocity_planner): fix virtual_traffic_light singed_arc_length and state (#306)\r\n\r\n* fix(behavior_velocity): fix virtual_traffic_light singed_arc_length and state\r\n\r\nSigned-off-by: kosuke55 <kosuke.tnp@gmail.com>\r\n\r\n* Use <> to include from another packages\r\n\r\nSigned-off-by: kosuke55 <kosuke.tnp@gmail.com>\r\n\r\n* ci: check include guard (#438)\r\n\r\n* ci: check include guard\r\n\r\n* apply pre-commit\r\n\r\n* Update .pre-commit-config.yaml\r\n\r\nCo-authored-by: Kenji Miyake <31987104+kenji-miyake@users.noreply.github.com>\r\n\r\n* fix: pre-commit\r\n\r\nSigned-off-by: Takagi, Isamu <isamu.takagi@tier4.jp>\r\n\r\nCo-authored-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\nCo-authored-by: Kenji Miyake <31987104+kenji-miyake@users.noreply.github.com>\r\n\r\n* fix(tier4_autoware_utils): modify build error in rolling (#720)\r\n\r\n* fix(tier4_autoware_utils): modify build error in rolling\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(lanelet2_extension): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(ekf_localizer): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(freespace_planning_algorithms): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(interpolation): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(freespace_planner): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(lane_departure_checker): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(map_based_prediction): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(ground_segmentation): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(motion_velocity_smoother): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(multi_object_tracker): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(trajectory_follower): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(control_performance_analysis): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(detected_object_validation): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(goal_distance_calculator): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(ndt_scan_matcher): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(route_handler): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(behavior_path_planner): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(mission_planner): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(obstacle_avoidance_planner): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(obstacle_stop_planner): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(obstacle_collision_checker): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(shape_estimation): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(behavior_velocity_planner): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(path_distance_calculator): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(detection_by_tracker): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(surround_obstacle_checker): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(probabilistic_occupancy_grid_map): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(tier4_debug_tools): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(tier4_vehicle_rviz_plugin): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(pure_pursuit): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(trajectory_follower_nodes): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(occupancy_grid_map_outlier_filter): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(traffic_light_map_based_detector): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(planning_error_monitor): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(planning_evaluator): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(lidar_centerpoint): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* style: fix format of package.xml (#844)\r\n\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\n\r\n* refactor: use autoware cmake (#849)\r\n\r\n* remove autoware_auto_cmake\r\n\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\n\r\n* add build_depend of autoware_cmake\r\n\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\n\r\n* use autoware_cmake in CMakeLists.txt\r\n\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\n\r\n* fix bugs\r\n\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\n\r\n* fix cmake lint errors\r\n\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\n\r\n* refactor: simplify Rolling support (#854)\r\n\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\n\r\n* chore: upgrade cmake_minimum_required to 3.14 (#856)\r\n\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\n\r\n* feat: isolate gtests in all packages (#693)\r\n\r\nSigned-off-by: Maxime CLEMENT <maxime.clement@tier4.jp>\r\n\r\n* feat(tier4_autoware_utils): add vehicle state checker (#896)\r\n\r\n* feat(tier4_autoware_utils): add vehicle state checker\r\n\r\nSigned-off-by: satoshi-ota <satoshi.ota928@gmail.com>\r\n\r\n* fix(tier4_autoware_utils): use absolute value\r\n\r\nSigned-off-by: satoshi-ota <satoshi.ota928@gmail.com>\r\n\r\n* feat(tier4_autoware_utils): divide into two classies\r\n\r\nSigned-off-by: satoshi-ota <satoshi.ota928@gmail.com>\r\n\r\n* test(tier4_autoware_utils): add unit test for vehicle_state checker\r\n\r\nSigned-off-by: satoshi-ota <satoshi.ota928@gmail.com>\r\n\r\n* fix(tier4_autoware_utils): impl class inheritance\r\n\r\nSigned-off-by: satoshi-ota <satoshi.ota928@gmail.com>\r\n\r\n* docs(tier4_autoware_utils): add vehicle_state_checker document\r\n\r\nSigned-off-by: satoshi-ota <satoshi.ota928@gmail.com>\r\n\r\n* fix(tier4_autoware_utils): into same loop\r\n\r\nSigned-off-by: satoshi-ota <satoshi.ota928@gmail.com>\r\n\r\n* fix(tier4_autoware_utils): fix variables name\r\n\r\nSigned-off-by: satoshi-ota <satoshi.ota928@gmail.com>\r\n\r\n* fix(tier4_autoware_utils): remove redundant codes\r\n\r\nSigned-off-by: satoshi-ota <satoshi.ota928@gmail.com>\r\n\r\n* fix(tier4_autoware_utils): fix build error related to vehicle state checker (#1030)\r\n\r\n* fix(tier4_autoware_utils): include vehicle_state_checker.hpp\r\n\r\nSigned-off-by: satoshi-ota <satoshi.ota928@gmail.com>\r\n\r\n* fix(tier4_autoware_utils): set default values in header file\r\n\r\nSigned-off-by: satoshi-ota <satoshi.ota928@gmail.com>\r\n\r\n* feat(tier4_autoware_utils): add pose interpolation function (#1097)\r\n\r\nSigned-off-by: yutaka <purewater0901@gmail.com>\r\n\r\n* feat(tier4_autoware_utils): add point interpolation function (#1100)\r\n\r\n* feat(tier4_autoware_utils): add new calcSignedArclength Function (#1092)\r\n\r\n* feat(tier4_autoware_utils): add new calcSignedArclength Function\r\n\r\nSigned-off-by: yutaka <purewater0901@gmail.com>\r\n\r\n* fix argument\r\n\r\nSigned-off-by: yutaka <purewater0901@gmail.com>\r\n\r\n* feat(tier4_autoware_utils): add new orientation calculation (#1126)\r\n\r\n* feat(tier4_autoware_utils): add new orientation calculation\r\n\r\nSigned-off-by: yutaka <purewater0901@gmail.com>\r\n\r\n* fix format\r\n\r\n* fix(tier4_autoware_utils): fix boundary orientation (#1130)\r\n\r\n* change boundary orientation\r\n\r\nSigned-off-by: yutaka <purewater0901@gmail.com>\r\n\r\n* update test\r\n\r\nSigned-off-by: yutaka <purewater0901@gmail.com>\r\n\r\n* feat(tier4_autoware_utils): add clamp function to clamp the ratio (#1145)\r\n\r\n* feat(tier4_autoware_utils): add calculator to the forward stop point (#1114)\r\n\r\n* feat(tier4_autoware_utils): add calculator to the closest stop point\r\n\r\n* udpate name\r\n\r\nSigned-off-by: yutaka <purewater0901@gmail.com>\r\n\r\n* add test\r\n\r\nSigned-off-by: yutaka <purewater0901@gmail.com>\r\n\r\n* add new stop function\r\n\r\nSigned-off-by: yutaka <purewater0901@gmail.com>\r\n\r\n* feat(tier4_autoware_utils): expand geometry and trajectory utility functions (#990)\r\n\r\n* feat(tier4_autoware_utils): expand geometry utility functions\r\n\r\nSigned-off-by: satoshi-ota <satoshi.ota928@gmail.com>\r\n\r\n* feat(tier4_autoware_utils): expand trajectory utility functions\r\n\r\nSigned-off-by: satoshi-ota <satoshi.ota928@gmail.com>\r\n\r\n* fix(behavior_path_planner): remove unused function\r\n\r\nSigned-off-by: satoshi-ota <satoshi.ota928@gmail.com>\r\n\r\n* fix(tier4_autoware_utils): fix typo\r\n\r\nSigned-off-by: satoshi-ota <satoshi.ota928@gmail.com>\r\n\r\n* fix(tier4_autoware_utils): use calcInterpolatedPoint\r\n\r\nSigned-off-by: satoshi-ota <satoshi.ota928@gmail.com>\r\n\r\n* fix(tier4_autoware_utils): calcLongitudinalOffsetPose\r\n\r\nSigned-off-by: satoshi-ota <satoshi.ota928@gmail.com>\r\n\r\n* fix(tier4_autoware_utils): separate path_with_lane_id utils\r\n\r\nSigned-off-by: satoshi-ota <satoshi.ota928@gmail.com>\r\n\r\n* fix(tier4_autoware_utils): fix interpolated point pose\r\n\r\nSigned-off-by: satoshi-ota <satoshi.ota928@gmail.com>\r\n\r\n* fix(tier4_autoware_utils): fix copyright\r\n\r\nSigned-off-by: satoshi-ota <satoshi.ota928@gmail.com>\r\n\r\n* fix(behavior_velocity_planner): fix include header file\r\n\r\nSigned-off-by: satoshi-ota <satoshi.ota928@gmail.com>\r\n\r\n* fix(tier4_autoware_utils): guard invalid segment index (#1211)\r\n\r\nSigned-off-by: satoshi-ota <satoshi.ota928@gmail.com>\r\n\r\n* feat(tier4_autoware_utils): add new insert point function (#1222)\r\n\r\n* add new length function\r\n\r\nSigned-off-by: yutaka <purewater0901@gmail.com>\r\n\r\n* add test\r\n\r\nSigned-off-by: yutaka <purewater0901@gmail.com>\r\n\r\n* fix test\r\n\r\nSigned-off-by: yutaka <purewater0901@gmail.com>\r\n\r\n* add path with lane id funciton\r\n\r\nSigned-off-by: yutaka <purewater0901@gmail.com>\r\n\r\n* feat(tier4_autoware_utils): add geometry utils (#1257)\r\n\r\n* feat(tier4_autoware_utils): add geometry utils\r\n\r\nSigned-off-by: kosuke55 <kosuke.tnp@gmail.com>\r\n\r\n* Add test and remove averagepose\r\n\r\nSigned-off-by: kosuke55 <kosuke.tnp@gmail.com>\r\n\r\n* fix typo\r\n\r\nSigned-off-by: kosuke55 <kosuke.tnp@gmail.com>\r\n\r\n* Use EXPECT_NEAR\r\n\r\nSigned-off-by: kosuke55 <kosuke.tnp@gmail.com>\r\n\r\n* fix(tier4_autoware_utils): exception handling in tier4 autoware utils (#1268)\r\n\r\n* fix(tier4_autoware_utils): fix exception handling (WIP)\r\n\r\nSigned-off-by: Fumiya Watanabe <rej55.g@gmail.com>\r\n\r\n* fix(tier4_autoware_utils): fix for overlapping points and test\r\n\r\nSigned-off-by: Fumiya Watanabe <rej55.g@gmail.com>\r\n\r\n* fix(tier4_autoware_utils): formatting\r\n\r\nSigned-off-by: Fumiya Watanabe <rej55.g@gmail.com>\r\n\r\n* fix(trajectory_follower): fix for overlapping points and test\r\n\r\nSigned-off-by: Fumiya Watanabe <rej55.g@gmail.com>\r\n\r\n* ci(pre-commit): autofix\r\n\r\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>\r\n\r\n* feat(motion_utils): move marker helper to motion_utils (#1316)\r\n\r\n* move marker helper to motion_utils\r\n\r\nSigned-off-by: yutaka <purewater0901@gmail.com>\r\n\r\n* add string\r\n\r\nSigned-off-by: yutaka <purewater0901@gmail.com>\r\n\r\n* feat(tier4_autoware_utils): add inset target point function by length (#1303)\r\n\r\n* feat(motion_utils): move trajectory and vehicle directory from tier4_autoware_utiils to motion utils (#1333)\r\n\r\n* move to motion utils\r\n\r\nSigned-off-by: yutaka <purewater0901@gmail.com>\r\n\r\n* fix other files\r\n\r\nSigned-off-by: yutaka <purewater0901@gmail.com>\r\n\r\n* feat(motion_utils): add isDrivingForward function (#1360)\r\n\r\n* feat(motion_utils: add isDrivingForward function\r\n\r\nSigned-off-by: Takayuki Murooka <takayuki5168@gmail.com>\r\n\r\n* implemented isDrivingForward\r\n\r\nSigned-off-by: Takayuki Murooka <takayuki5168@gmail.com>\r\n\r\n* use isDrivingForward in each module\r\n\r\nSigned-off-by: kosuke55 <kosuke.tnp@gmail.com>\r\n\r\n* feat(tier4_autoware_utils): add setter/getter of longitudinal velocity\r\n\r\nSigned-off-by: Takayuki Murooka <takayuki5168@gmail.com>\r\n\r\n* added test\r\n\r\nSigned-off-by: Takayuki Murooka <takayuki5168@gmail.com>\r\n\r\nCo-authored-by: kosuke55 <kosuke.tnp@gmail.com>\r\n\r\n* docs(motion_utils): move document to motion utils (#1378)\r\n\r\n* docs(motion_utils): move document from tier4_autoware_utils\r\n\r\nSigned-off-by: satoshi-ota <satoshi.ota928@gmail.com>\r\n\r\n* docs(motion_utils): small change\r\n\r\nSigned-off-by: satoshi-ota <satoshi.ota928@gmail.com>\r\n\r\n* feat(tier4_autoware_utils): add boost_polygon_utils.hpp (#1367)\r\n\r\n* feat(tier4_autoware_utils): add boost_polygon_utils.hpp\r\n\r\nSigned-off-by: Takayuki Murooka <takayuki5168@gmail.com>\r\n\r\n* minor fix\r\n\r\nSigned-off-by: Takayuki Murooka <takayuki5168@gmail.com>\r\n\r\n* fix build error\r\n\r\nSigned-off-by: Takayuki Murooka <takayuki5168@gmail.com>\r\n\r\n* add test\r\n\r\nSigned-off-by: Takayuki Murooka <takayuki5168@gmail.com>\r\n\r\n* fix\r\n\r\nSigned-off-by: Takayuki Murooka <takayuki5168@gmail.com>\r\n\r\n* fix build error\r\n\r\nSigned-off-by: Takayuki Murooka <takayuki5168@gmail.com>\r\n\r\n* Revert \"fix build error\"\r\n\r\nThis reverts commit eb86a9221e3f97158a15ec5996974aa751fa9ab7.\r\n\r\n* ClockWise -> Clockwise\r\n\r\nSigned-off-by: Takayuki Murooka <takayuki5168@gmail.com>\r\n\r\n* feat(motion_utils): fix pose in interpolated pose function (#1402)\r\n\r\n* feat(motion_utils): fix pose in interpolated pose function\r\n\r\nSigned-off-by: yutaka <purewater0901@gmail.com>\r\n\r\n* replace the isDriving funciton with tier4_autoware_utils\r\n\r\nSigned-off-by: yutaka <purewater0901@gmail.com>\r\n\r\n* feat(tier4_autoware_utils): add time argument in appendMarkerArray (#1415)\r\n\r\n* feat(tier4_autoware_utils): add time argument in appendMarkerArray\r\n\r\nSigned-off-by: Takayuki Murooka <takayuki5168@gmail.com>\r\n\r\n* add default argument\r\n\r\nSigned-off-by: Takayuki Murooka <takayuki5168@gmail.com>\r\n\r\n* rename package and remove unnecessary files\r\n\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\n\r\n* refactor\r\n\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\n\r\nCo-authored-by: Tomoya Kimura <tomoya.kimura@tier4.jp>\r\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>\r\nCo-authored-by: taikitanaka3 <65527974+taikitanaka3@users.noreply.github.com>\r\nCo-authored-by: Kosuke Takeuchi <kosuke.tnp@gmail.com>\r\nCo-authored-by: Takagi, Isamu <43976882+isamu-takagi@users.noreply.github.com>\r\nCo-authored-by: Daisuke Nishimatsu <42202095+wep21@users.noreply.github.com>\r\nCo-authored-by: Maxime CLEMENT <78338830+maxime-clem@users.noreply.github.com>\r\nCo-authored-by: Satoshi OTA <44889564+satoshi-ota@users.noreply.github.com>\r\nCo-authored-by: Yutaka Shimizu <43805014+purewater0901@users.noreply.github.com>\r\nCo-authored-by: Fumiya Watanabe <rej55.g@gmail.com>\r\nCo-authored-by: Takayuki Murooka <takayuki5168@gmail.com>",
+      "files_changed": 14,
+      "additions": 727,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "VRichardJP",
+      "date": "2023-05-03T15:37:24Z",
+      "sha": "467e3b1b10fcf3dd841e40554ce3f4db5054cb93",
+      "message": "build: mark autoware_cmake as <buildtool_depend> (#176)\n\n* build: mark autoware_cmake as <buildtool_depend>\r\n\r\nSince autoware_cmake only provide cmake macros only <buildtool_depend> is necessary.\r\nWith <build_depend>, autoware_cmake is automatically exported with ament_target_dependencies() (unecessary)\r\n\r\nSigned-off-by: Vincent Richard <richard-v@macnica.co.jp>\r\n\r\n* style(pre-commit): autofix\r\n\r\n* chore: fix pre-commit errors\r\n\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\n\r\n---------\r\n\r\nSigned-off-by: Vincent Richard <richard-v@macnica.co.jp>\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>\r\nCo-authored-by: Kenji Miyake <kenji.miyake@tier4.jp>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 2,
+      "commit_type": "ci"
+    }
+  ]
+}

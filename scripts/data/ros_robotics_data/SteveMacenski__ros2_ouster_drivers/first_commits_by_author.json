@@ -1,0 +1,191 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T09:56:02Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "SteveMacenski",
+    "repo": "ros2_ouster_drivers"
+  },
+  "data": [
+    {
+      "author": "SteveMacenski",
+      "date": "2019-12-29T05:14:25Z",
+      "sha": "fec4d7bc1a43454ffebbb7e8ed32f8686a38312d",
+      "message": "temp push",
+      "files_changed": 24,
+      "additions": 4572,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "splatter96",
+      "date": "2024-05-29T16:38:23Z",
+      "sha": "2ed3f10eaa7a3914ad083b71b125d0da29b8e019",
+      "message": "Fixed compile issue with newer version of jsoncpp (#144)\n\nCo-authored-by: Paul Auerbach <paul.auerbach@barkhauseninstitut.org>",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ahcorde",
+      "date": "2024-02-08T16:52:46Z",
+      "sha": "157b312800f4474fc0e5b0bbccae03b648995787",
+      "message": "Removed deprecated headers from geometry2 (#141)\n\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "luhuadong",
+      "date": "2023-04-07T02:00:34Z",
+      "sha": "5425ed023d3c1c5293a9af90d2ae81c5df889334",
+      "message": "docs: update README.md (highlighting code blocks) (#135)",
+      "files_changed": 1,
+      "additions": 18,
+      "deletions": 20,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jonbakerfish",
+      "date": "2023-01-02T19:27:34Z",
+      "sha": "b619a88c7a4deb94196afb07fa28ad368f08fe06",
+      "message": "[bug fix] remove redundant _range_image.resize (#124)\n\nbug fix according to https://github.com/ros-drivers/ros2_ouster_drivers/issues/123",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "vinnnyr",
+      "date": "2022-11-28T19:31:44Z",
+      "sha": "d59df70a6e58e646fd305cb913fa8c802fc6588c",
+      "message": "Fix for firmware 2.4 (#118)\n\n* changing all instances of udp_ip to udp_dest\r\n\r\n* change instances of auto_start_flag to operating_mode for firmware 2.4\r\n\r\n* updating README\r\n\r\n* Update README.md\r\n\r\nCo-authored-by: Steve Macenski <stevenmacenski@gmail.com>\r\n\r\n* adjusting log info for driver firmware compatability\r\n\r\nCo-authored-by: Steve Macenski <stevenmacenski@gmail.com>",
+      "files_changed": 4,
+      "additions": 14,
+      "deletions": 13,
+      "commit_type": "docs"
+    },
+    {
+      "author": "JLBicho",
+      "date": "2022-10-03T16:29:14Z",
+      "sha": "cdd778696dbe560699c96345aead75c5282dd93c",
+      "message": "Added default value for IPs (#114)\n\nCo-authored-by: JoseLMV <jlmvalbuena@sdle.es>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Bernardo Taveira",
+      "date": "2022-07-11T18:47:44Z",
+      "sha": "d3cd586e2548f9989b68ebc33b03a5d99b816ea8",
+      "message": "fix tf2_geometry_msgs include not found (#107)",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Mirko K",
+      "date": "2022-07-08T19:10:33Z",
+      "sha": "41a43e29efa298aef146a2e0f336769111f5284d",
+      "message": "Buffered packet processing (#97)\n\n* Simplify lidar scan assembly code\r\n\r\nAs double-buffering is used for the scan assemnly (in contrast to the ouster example)\r\nwe can simply zero out our buffer for the new frame. We then no longer need to\r\nspecial-case zeroing-out missing packets.\r\n\r\n* Initialize FullRotationAccumulator with batchReady == false\r\n\r\n* Implement buffered packet processing\r\n\r\nThis commit splits the processing of lidar data into two seperate\r\nthreads. Previously, the code receiving sensor data from the wire\r\nwas blocked by the lidar or imu processors, causing dataloss on\r\nslower systems (Issue #96).\r\n\r\n* Modifies sensor interface so receiving functions get passed a\r\n  pointer to a buffer to write their data to\r\n* Implements ringbuffers for lidar and imu data in ouster_driver\r\n* Splits processing into two seperate threads:\r\n  * receiveData receives from the wire and fills ringbuffers\r\n  * processData takes packets from the queue, assembles the lidar\r\n    scan and runs the processors\r\n* Threads are implemented as pure threads instead of ros timers,\r\n  as timing inconsistencies for the receiver thread were also\r\n  leading to data loss\r\n\r\n* Revert \"Simplify lidar scan assembly code\"\r\n\r\nThis reverts commit 581b35f14ef098041f03131deb18094ea92b98df.\r\nThis modification to the client code is not necessary for the\r\nbuffered packet processing, and conflicts with changes since\r\nmade in the ouster_examples repository.\r\n\r\n* Lock against race on [lidar|imu]_packet_head\r\n\r\nMoves the modification of the head indices to before the mutex\r\nunlock. This is only necessary for the warning about buffer\r\noverruns to work correctly. We don't need to lock against the\r\nactual data in the buffer.\r\n\r\n* Move ringbuffer code to it's own header\r\n\r\n* Fix linting issues\r\n\r\nCo-authored-by: Mirko Kugelmeier <mirko.kugelmeier@rwth-aachen.de>",
+      "files_changed": 9,
+      "additions": 261,
+      "deletions": 80,
+      "commit_type": "code"
+    },
+    {
+      "author": "simonwaterer",
+      "date": "2022-06-22T18:22:50Z",
+      "sha": "370269b38a5a46ca16e2ba6bd3457b03a2c33a9c",
+      "message": "Filter out all-zero points in the pointcloud processor (#79)\n\n* Filter out all-zero points in the pointcloud processor\r\n\r\n* Apply suggested changes\r\n\r\n* Add `pointcloud_filter_zero_points` parameter to Readme\r\n\r\n* Update README.md\r\n\r\nCo-authored-by: Simon Waterer <simon.waterer@roboticsplus.co.nz>\r\nCo-authored-by: Steve Macenski <stevenmacenski@gmail.com>",
+      "files_changed": 2,
+      "additions": 27,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "clalancette",
+      "date": "2020-11-30T15:36:45Z",
+      "sha": "2a2a7db5aebe17ea05b6ad6e04047ad5cfc0f0ad",
+      "message": "Switch from \"catkin\" -> \"colcon\" (#62)\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "bertaveira",
+      "date": "2022-01-27T04:50:30Z",
+      "sha": "239cd0948bded0aa1a294fa8011662b523e1db40",
+      "message": "fix crash indexing for laser scan creation (#92)\n\n* fix crash indexing for laser scan creation\r\n\r\n* Another solution\r\n\r\n* Add comment explaining fix",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "MattSYoung",
+      "date": "2021-07-01T22:25:27Z",
+      "sha": "37229ea07932af38d9a689a04cab24841d492915",
+      "message": "Port FW 2.0 and 2.1 changes from ouster_examples (#76)\n\n* Ported optional-lite source files\r\n\r\n* Added new functions to types.h/cpp\r\n\r\n* Function changes lidar.h/cpp\r\n\r\n* Added and changed functions in client.h/cpp\r\n\r\n* Bug fix from ouster_example/#246\r\n\r\n* Added signal_multiplier parameter to client and types files\r\n\r\n* Updated changelog\r\n\r\n* Updated changelog\r\n\r\n* Updated changelog with a more detailed list of changes\r\n\r\n* Updated readme with FW version",
+      "files_changed": 11,
+      "additions": 3120,
+      "deletions": 282,
+      "commit_type": "docs"
+    },
+    {
+      "author": "RFRIEDM-Trimble",
+      "date": "2021-06-03T15:36:18Z",
+      "sha": "28eccc46f57e6bdb2938ea098c549b692221c6fa",
+      "message": "Set CMake built type to be Release by default (#71)\n\nSigned-off-by: Ryan Friedman <ryan_friedman@trimble.com>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "MaxandreOgeret",
+      "date": "2021-05-04T17:54:03Z",
+      "sha": "616891c434aba58c6e1ad0a175c929fc11cf8789",
+      "message": "Firmware 2.0 compatibility (#67)\n\n* initial commit firmware 2.0 compatibility\r\n\r\n* now use ros2 ouster metadata\r\n\r\n* added lidar_scan + brought pf to pc processor\r\n\r\n* added point.h from client + finished pointcloud processor.\r\n\r\n* solved \"bad alloc error\" when an OusterDriverException was thrown\r\n\r\n* removed packet format pointer + driver packet buffer now class variable + added metadata defaults\r\n\r\n* simplified pc processor & pc2 conversion for testing purposes\r\n\r\n* handled case with imu data + lidar data, pcl processor working\r\n\r\n* imu processor now working\r\n\r\n* image processor now working\r\n\r\n* scan processor now working + cleaning unused files\r\n\r\n* image processor now uses scan instead of cloud\r\n\r\n* removed notion of sensor model as f2.0 is universal\r\n\r\n* todos and code review\r\n\r\n* removed const for packetformat in the processors as it would prevent to access its accessors\r\n\r\n* use ros time now works, made data const in processors\r\n\r\n* use smart pointers in processors\r\n\r\n* processor factories now use smart pointers. Added EOL at the end of conf yaml file\r\n\r\n* uncrustified\r\n\r\n* scan angle increment now positive\r\n\r\n* better access for TF eigen mat\r\n\r\n* removed useless cloud conversion in scan processor\r\n\r\n* added full rotation accumulator + decrustified\r\n\r\n* removed useless handler function in accumulator and processors\r\n\r\n* Corrected bug where REFLECTIVITY was put in place of RANGE in the Point.\r\n\r\n* added frame_id for ambient_image+intensity_image. Added log about fw requirements. Added readme line about fw requirements\r\n\r\nCo-authored-by: ogeret <maxandre.ogeret@ut.ee>\r\nCo-authored-by: ogeret <>",
+      "files_changed": 47,
+      "additions": 3509,
+      "deletions": 2101,
+      "commit_type": "docs"
+    },
+    {
+      "author": "cottsay",
+      "date": "2020-07-28T01:56:50Z",
+      "sha": "5f2435dd9443ead4e2ea51786b398e1d8bbf0d65",
+      "message": "Fix jsoncpp include/link interface (#57)\n\nIt appears that Ubuntu happens to put the jsoncpp headers at\r\n`jsoncpp/json/json.h`, but it doesn't appear that is necessarily common\r\npractice. By correcting the CMake interface for jsoncpp, the\r\n`/usr/include/jsoncpp` directory is added to the compiler's include\r\ndirectory search path, allowing the header reference to be changed to\r\nthe correct path, `json/json.h`.\r\n\r\nIn particular, Fedora places the jsoncpp header at\r\n`/usr/include/json/json.h`.",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "tpanzarella",
+      "date": "2020-03-12T17:05:54Z",
+      "sha": "b8690cffe7cb216cad2048660b0f5087df357220",
+      "message": "Fixed compiler warnings\n\nThere were two causes of compiler warnings:\n\n1. Removed the default (noop) operations in `sensor_interface.hpp`. The\n   compiler did not like that these implementations were not returning the\n   declared return type. I think the intent here was to have an ABT and so I\n   declared these functions as pure virtual.\n\n2. In `OS1_sensor.cpp` there was a control flow path that would not provide a\n   return value. I explicitly returned `nullptr` if none of the case statements\n   match which should never happen (famous last words).",
+      "files_changed": 2,
+      "additions": 7,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "rotu",
+      "date": "2020-04-02T23:56:01Z",
+      "sha": "00cbaf52eb8f5be91de1e1792b26e03b2bfea054",
+      "message": "Add doc depend on doxygen (#28)\n\ndoesn't do anything right now but serve as user documentation",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "docs"
+    }
+  ]
+}

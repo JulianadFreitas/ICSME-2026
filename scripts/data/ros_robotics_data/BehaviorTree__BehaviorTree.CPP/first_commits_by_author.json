@@ -1,0 +1,1471 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T12:25:24Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "BehaviorTree",
+    "repo": "BehaviorTree.CPP"
+  },
+  "data": [
+    {
+      "author": "facontidavide",
+      "date": "2018-04-18T19:59:55Z",
+      "sha": "aaf764aea1527ddf4536ffcd6711948c74cd0a7c",
+      "message": "Cattkinize (optional) and remove openGL from cmake",
+      "files_changed": 39,
+      "additions": 168,
+      "deletions": 839,
+      "commit_type": "config"
+    },
+    {
+      "author": "chhtz",
+      "date": "2023-10-20T10:46:44Z",
+      "sha": "751b5be43950f79d1f6902ffe3a46301be796b73",
+      "message": "Use feature test macro to check availability of `std::from_chars`",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Copilot",
+      "date": "2026-02-02T14:58:50Z",
+      "sha": "0d7464ccd843c7a13aa9f0a39f07d618bca0f97f",
+      "message": "Fix: DelayNode ignores delay_msec when created from XML (#1097)\n\n* Initial plan\n\n* Fix DelayNode to honor delay_msec port from XML + add test\n\nCo-authored-by: facontidavide <2822888+facontidavide@users.noreply.github.com>\n\n* Improve DelayWithXML test to accurately measure delay timing\n\nCo-authored-by: facontidavide <2822888+facontidavide@users.noreply.github.com>\n\n* Final verification: All tests passing\n\nCo-authored-by: facontidavide <2822888+facontidavide@users.noreply.github.com>\n\n* Remove accidentally committed codeql build artifacts\n\n* Apply suggestion from @facontidavide\n\n* Apply suggestion from @facontidavide\n\n* Apply suggestion from @facontidavide\n\n---------\n\nCo-authored-by: copilot-swe-agent[bot] <198982749+Copilot@users.noreply.github.com>\nCo-authored-by: facontidavide <2822888+facontidavide@users.noreply.github.com>\nCo-authored-by: Davide Faconti <davide.faconti@gmail.com>",
+      "files_changed": 2,
+      "additions": 44,
+      "deletions": 1,
+      "commit_type": "ci"
+    },
+    {
+      "author": "FrankXie05",
+      "date": "2026-02-01T18:44:17Z",
+      "sha": "e0684b0b0ef2ae345f9d9c1aa7f03b25f16759a5",
+      "message": "Add vcpkg installation instructions (#421)\n\n* Add vcpkg installation instructions\n\n* Apply suggestion from @facontidavide\n\n---------\n\nCo-authored-by: FrankXie <v-frankxie@microsoft.com>\nCo-authored-by: Davide Faconti <davide.faconti@gmail.com>",
+      "files_changed": 1,
+      "additions": 13,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "alvintps",
+      "date": "2026-02-01T18:27:04Z",
+      "sha": "c6393f7ba464d2050b48a8cc8fb0ed11be50e1ba",
+      "message": "Fixed possible infinite loop in Groot2Publisher when destructor is ca… (#1058)\n\n* Fixed possible infinite loop in Groot2Publisher when destructor is called\n\n* Made heartbeat read/writes an atomic operation in Groot2Publisher\n\n* Cleanup gtest_groot2_publisher.cpp\n\n* Added tsan_suppressions file to suppress TSAN warnings from zeromq\n\n* Replaced atomics with mutex for type safety with chrono\n\n* Fixed suppressions path",
+      "files_changed": 5,
+      "additions": 71,
+      "deletions": 8,
+      "commit_type": "test"
+    },
+    {
+      "author": "nyibbang",
+      "date": "2026-01-19T22:23:15Z",
+      "sha": "b3dbe30e2180067bf15a4e4bbe9199568dbfe8fd",
+      "message": "Generate .clangd in PROJECT_SOURCE_DIR (#1059)\n\nThis allows the project to be used as a submodule or subdirectory of\nanother CMake project without rewriting their `.clangd` file. This\nincludes using BT.CPP through CMake FetchContent or CPM.",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 7,
+      "commit_type": "docs"
+    },
+    {
+      "author": "dependabot[bot]",
+      "date": "2025-12-29T22:44:48Z",
+      "sha": "8aaddc87dc175124d705f4e5bdeeef8f48b381ce",
+      "message": "Bump codecov/codecov-action from 3 to 5 (#1048)\n\nBumps [codecov/codecov-action](https://github.com/codecov/codecov-action) from 3 to 5.\n- [Release notes](https://github.com/codecov/codecov-action/releases)\n- [Changelog](https://github.com/codecov/codecov-action/blob/main/CHANGELOG.md)\n- [Commits](https://github.com/codecov/codecov-action/compare/v3...v5)\n\n---\nupdated-dependencies:\n- dependency-name: codecov/codecov-action\n  dependency-version: '5'\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "ci"
+    },
+    {
+      "author": "uilianries",
+      "date": "2018-12-31T14:48:47Z",
+      "sha": "acaac99beafdfd2837b297848b277ee0e5fa1e4c",
+      "message": "Conan package distribution (#39)",
+      "files_changed": 8,
+      "additions": 277,
+      "deletions": 5,
+      "commit_type": "config"
+    },
+    {
+      "author": "pleemann",
+      "date": "2025-10-23T16:04:38Z",
+      "sha": "b8a62dda0a32d0fe36a8e709fd97e597a5492ebc",
+      "message": "added Tree::emitWakeUpSignal",
+      "files_changed": 2,
+      "additions": 12,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "lalten",
+      "date": "2025-10-09T16:52:41Z",
+      "sha": "6f1644962cf860c47e8bf3e9f0f4dd1395318e0b",
+      "message": "s/ncurses.h/curses.h/ (#1020)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "ericriff",
+      "date": "2025-10-06T13:59:55Z",
+      "sha": "c381486027294aa95f5d5a503810b031ebdd6f84",
+      "message": "Improve handling of dependencies (#1012)\n\n* Support using minitrace from conan\n\n* Support using tinyxml2 from conan\n\n* Add support for using minicoro from conan\n\n* Add support for using flatbuffers from conan\n\n* Create separate targets for each 3rdparty lib not yet supported by conan so we can avoid exposing the whole 3rdparty folder on target_include_directories\nSince this can create some confusion around which headers are actually being included -- the ones from that folder or the ones from conan?\nAlso fixes the include dirs by using ${CMAKE_CURRENT_SOURCE_DIR} instead of \".\"\n\n* Fix builds\nFor whatever reason including zmq.hpp before zmq_addon.hpp (which does include zmq.hpp internally) breaks builds\n\n* Do not include the whole 3rdparty folder, only link in what we need\n\n* Use the regular lexy target\n\n* Do not expose the whole 3rdparty folder as a include_directory\n\n* Add options to opt-out of vendored libraries\n\n* This was shared across both code paths, conan_build.cmake and ament_build.cmake\nSo it is better to keep this on a single place\n\n* Keep all the find_package calls on the toplevel CMakeLists\n\n* SQLite3 is actually a dependency of cpp-sqlite\n\n* Fix include dirs of the vendored minicoro and flatbuffers\n\n* Define libzmq cmake target on FindZeroMQ to match the conan package\n\n* Improve message. This code path doesn't really mean we're using conan, it just means we're not using ament.\n\n* Use the python version of conanfile.py so we can set the CMake options needed to opt out of vendored dependencies\n\n* Address pre-commit complains\n\n* Use conanfile.py across the board\n\n* Do not look for ZeroMQ directly as it is a dependency of cppzmq\nAlso only look for cppzmq if BTCPP_GROOT_INTERFACE\n\n* Keep a single copy of zmq.hpp\nThis header is part of the cppzmq library so it lives on 3rdparty/cppzmq. But for whatever reason there was\nanother version of this header here. Furthermore it was a differnt version of the library.\n\n* Leave a FIXME for posterity\nThis target was silently being skiped, not it is explicit\n\n* Leave comment for posterity\n\n* Remove empty line\n\n* Remove unneeded line\n\n* Remove uneeded line\n\n* Remove empty line\n\n* Revert unintentional changes\n\n* Use cmake_layout to support multiconfig\n\n* Update toolchain path on cicd\n\n* Emtpy commit to re-trigger CI\n\n* Use cppzmq from conan\n\n* Use cmake presets on conan builds\n\n* It looks like in windows the preset is called conan-default\n\n* It looks like the preset is only called default for config?\n\n* Fix tests path in windows\n\n* Use lexy from conan\n\n* Force cppstd to 17, conan profile detect uses 14\n\n* Try to fix windows builds\n\n* Remove wildcards cmake options, it has been removed on master\n\n* Update changes after cpp-sqlite removal",
+      "files_changed": 24,
+      "additions": 228,
+      "deletions": 2907,
+      "commit_type": "docs"
+    },
+    {
+      "author": "EzraBrooks",
+      "date": "2025-09-11T14:27:17Z",
+      "sha": "2ed6d496b07fd80b302655b64b1caa90f63aebdd",
+      "message": "Clean up VerifyXML logic (#1000)\n\n* Refactor VerifyXML to clarify logic\n\n- Reduces duplication in VerifyXML by handling the ID check for built-in\nnode types up front so they can then be definitively looked up in the\nregistered nodes.\n\n- Enhances error messaging in VerifyXML by using *either* the node name\n  *or* the ID, depending on which is appropriate, instead of leaving\nusers guessing \"which Decorator is wrong\"\n\n- Fixes custom Action and Condition nodes using shorthand syntax not\n  being properly verified\n\n- Fixes `<Control ID=\"ReactiveSequence\"/>` not being verified with the\n  same logic as `<ReactiveSequence/>`\n\n- Fixes `<Action ID=\"MyAction\"/>` not triggering a behavior lookup when\n  `<MyAction/>` would.\n\n* fix tests that were failing due to bad assumptions",
+      "files_changed": 2,
+      "additions": 55,
+      "deletions": 83,
+      "commit_type": "code"
+    },
+    {
+      "author": "sprkrd",
+      "date": "2025-09-11T14:24:31Z",
+      "sha": "875037033bafcbe335d8e130dcb1d9374448d98e",
+      "message": "Append SQLite3_INCLUDE_DIRS to BTCPP_EXTRA_INCLUDE_DIRS, otherwise sqlite3.h won't be found (#1002)\n\nCo-authored-by: alejandro.suarez@omron.com <alejandro.suarez@omron.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "ahuo1",
+      "date": "2025-09-10T10:20:00Z",
+      "sha": "6731c518f804e58147eb9698a03ae7a01f90ef93",
+      "message": "fix: check path attribute before using (#1005)\n\nCo-authored-by: ahuo <ahuo2865189826@gmail.com>",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "redvinaa",
+      "date": "2025-07-20T09:05:17Z",
+      "sha": "8d47d397e792d9bcc756048272e1a3a42baef6fd",
+      "message": "Set current_child_idx of SequenceNode protected (#991)\n\nSigned-off-by: redvinaa <redvinaa@gmail.com>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "sven-hoek",
+      "date": "2025-05-09T18:34:25Z",
+      "sha": "3c62813b84fa9b26d8cb88dc38da17deb852f6a7",
+      "message": "Add action to publish Doxygen documentation as GH Page (#972)\n\n* Add GH Action to publish Doxygen\n\n* Add link in README",
+      "files_changed": 2,
+      "additions": 20,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "shaur-k",
+      "date": "2025-06-19T21:52:25Z",
+      "sha": "cdcbb8cac99f4951298bb83bc1b60c0402c4e9c4",
+      "message": "fix: exclude 3rd party libraries from sonar issue tracking (#984)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "leander-dsouza",
+      "date": "2025-05-29T10:03:38Z",
+      "sha": "c4b93cfda6a18a4a462d50c9d95e67489118bb5c",
+      "message": "Added codespell as a pre-commit hook. (#977)\n\nSigned-off-by: Leander Stephen D'Souza <leanderdsouza1234@gmail.com>",
+      "files_changed": 32,
+      "additions": 74,
+      "deletions": 55,
+      "commit_type": "config"
+    },
+    {
+      "author": "tony-p",
+      "date": "2023-09-01T12:50:59Z",
+      "sha": "6af3359de5912abff1a5936cb8bc8e6a92407899",
+      "message": "fix: Update how unit tests are executed in the github workflow so they are actually run on windows (#647)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "ci"
+    },
+    {
+      "author": "dsobek",
+      "date": "2025-04-19T08:53:36Z",
+      "sha": "5f3f67563228838a46633c707d4a8a698bc16440",
+      "message": "Fix Precondition to only check condition once (#904)",
+      "files_changed": 2,
+      "additions": 118,
+      "deletions": 37,
+      "commit_type": "code"
+    },
+    {
+      "author": "sarcasticnature",
+      "date": "2021-10-13T07:40:24Z",
+      "sha": "d7ce6f59760038f10c1ffbe29509907fd11784f7",
+      "message": "Fix github action (#302)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "devis12",
+      "date": "2025-04-16T09:13:59Z",
+      "sha": "3651a242571aedd95d9a335de4259f192962c3c7",
+      "message": "Bug fix/set blackboard (#955)",
+      "files_changed": 2,
+      "additions": 229,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "cktii",
+      "date": "2025-02-25T17:38:35Z",
+      "sha": "14589e589c5049fbb7f1fb30ccaa3efc66c84f18",
+      "message": "feat: add fuzzing harnesses (#925)",
+      "files_changed": 20,
+      "additions": 780,
+      "deletions": 24,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Isarm",
+      "date": "2025-02-25T09:25:12Z",
+      "sha": "aa085b7e7d3c470f8a577017e855361cce1f2a98",
+      "message": "Add const to applyVisitor (#935)",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "vincent-hui",
+      "date": "2025-02-09T18:59:58Z",
+      "sha": "a44619cd8871c484f5c4b24f9958302455f19211",
+      "message": "Fix compilation error when targeting C++23 (#926)\n\nCompilation fails if cxx_std_17 is changed to cxx_std_23 because expected_lite namespace is not defined. Commit fixes this.\r\n\r\n/home/vincent/BehaviorTree.CPP/include/behaviortree_cpp/json_export.h:117: error: ‘nonstd::expected_lite’ has not been declared; did you mean ‘nonstd::unexpected_type’? [-Wtemplate-body]\r\nIn file included from /home/vincent/BehaviorTree.CPP/src/blackboard.cpp:3:\r\n/home/vincent/BehaviorTree.CPP/include/behaviortree_cpp/json_export.h: In member function ‘BT::Expected<T> BT::JsonExporter::fromJson(const nlohmann::json_abi_v3_11_3::json&) const’:\r\n/home/vincent/BehaviorTree.CPP/include/behaviortree_cpp/json_export.h:117:20: error: ‘nonstd::expected_lite’ has not been declared; did you mean ‘nonstd::unexpected_type’? [-Wtemplate-body]\r\n  117 |     return nonstd::expected_lite::make_unexpected(res.error());\r\n      |                    ^~~~~~~~~~~~~",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "traversaro",
+      "date": "2025-02-05T00:03:49Z",
+      "sha": "8c83f4d3621bc4d4a5a9e7466319b2708855e867",
+      "message": "Fix ROS 2 build when ZeroMQ or SQlite3 include are not in the default include path (#911)\n\n* Fix ROS 2 build when ZeroMQ or SQlite3 include are not in the default include path\n\n* Update ament_build.cmake",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "doisyg",
+      "date": "2020-06-02T20:45:40Z",
+      "sha": "98b41b9efc0f211554d4fc49f02fe24df56819ea",
+      "message": "replace dot by zero in boost version (#197)",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "m-tartari",
+      "date": "2024-11-25T12:23:35Z",
+      "sha": "945a34d093a4319a77218aaf5d9db51edbcdacca",
+      "message": "fix(examples): update t11_groot_howto log filename (#886)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "AndyZe",
+      "date": "2022-06-21T14:56:29Z",
+      "sha": "6e2cc034717d7f0053f2b597d0c412672ea5afd7",
+      "message": "Small comments on node registration (#399)",
+      "files_changed": 2,
+      "additions": 11,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Aglargil",
+      "date": "2023-08-08T14:09:59Z",
+      "sha": "74c7dd7d5043a992426110b23eedca0fc04db2ae",
+      "message": "WhileDoElseNode can have 2 or 3 children (#625)",
+      "files_changed": 1,
+      "additions": 15,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "Tony Najjar",
+      "date": "2024-11-25T15:20:31Z",
+      "sha": "f5e98fd751523fd2797e5353cb9f1cc765587cb4",
+      "message": "Expose return value of wait_for (#887)",
+      "files_changed": 2,
+      "additions": 11,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "Antoine Hoarau",
+      "date": "2024-11-01T07:42:04Z",
+      "sha": "2bc72fdbf67bae7a4561cc0cea50b723d5acb672",
+      "message": "put minitrace in the build_interface link library (#874)\n\nfixes the cmake export set when building behavior tree on standard cmake: CMake Error: install(EXPORT \"behaviortree_cppTargets\" ...) includes target \"behaviortree_cpp\" which requires target \"minitrace\" that is not in any export set.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "b-adkins",
+      "date": "2024-11-01T07:41:28Z",
+      "sha": "0165d7bc22626aff2f53bad98c895178cf821dc2",
+      "message": "Improved XML parsing error message to say where in the XML the offending port is found. (#876)\n\nExample output:\r\n\r\n    a port with name [ball_pose] is found in the XML (<GrabBall>, line 7) but not in the providedPorts() of its registered node type.",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "kinly",
+      "date": "2024-08-28T14:55:54Z",
+      "sha": "4f664475980d3a25eaba35fc6e3071a995dc3888",
+      "message": "fixed: support utf-8 path xml-file (#845)\n\n* fixed: 1. added compile version check to support Chinese path xml-file parsing 2. cmake add msvc /utf-8 options\r\n\r\n* change cmake /utf-8 option add mode",
+      "files_changed": 2,
+      "additions": 13,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "MarqRazz",
+      "date": "2024-02-13T23:18:19Z",
+      "sha": "21ab495156b6b15d224370803f5cb2cc016a0aa2",
+      "message": "Initialize std::atomic_bool (#772)",
+      "files_changed": 7,
+      "additions": 11,
+      "deletions": 11,
+      "commit_type": "code"
+    },
+    {
+      "author": "sharminramli",
+      "date": "2024-06-25T16:25:52Z",
+      "sha": "22739412aa9ae76b3bb23d9b60bedb147ee28229",
+      "message": "Initialize template variable `T out` (#839)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "psyinf",
+      "date": "2024-06-24T08:36:36Z",
+      "sha": "b8277b74410dd84a5f51343086c1d9d732dab56b",
+      "message": "Building with a recent compiler fails due incompatible expected library (#833)\n\n* >Fixes build with newer clang/gcc\r\n\r\n* >Fixes build with newer clang/gcc\r\n\r\n* conditional build of sample nodes\r\n\r\n* using current head version for testing\r\n\r\n* moved to v0.8.0",
+      "files_changed": 3,
+      "additions": 3558,
+      "deletions": 2538,
+      "commit_type": "docs"
+    },
+    {
+      "author": "avikus-seonghyeon.kwon",
+      "date": "2024-05-30T11:39:36Z",
+      "sha": "a1f431c1d91a6f07b601af3165b0d71973c2558b",
+      "message": "Fix typo in FallbackNode constructor parameter name (#830)",
+      "files_changed": 2,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "robin-mueller",
+      "date": "2024-05-19T18:12:50Z",
+      "sha": "961da9682f765c5ff7c74f8f26bddbbaef50758a",
+      "message": "Add test for setting a global blackboard entry using a node's output port #823",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "seanng-1",
+      "date": "2024-04-24T09:53:58Z",
+      "sha": "0deb546a2575330918137ed79894f94c8301bf8f",
+      "message": "Add string concatenation operator to scripting (#802)\n\n* Add string concatenation operator to scripting\r\n\r\n* Linting",
+      "files_changed": 1,
+      "additions": 20,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "shkwon98",
+      "date": "2024-04-24T09:53:25Z",
+      "sha": "db89b3d468e3a3cbfe806e4de5fdb15f2d089da4",
+      "message": "Add library alias for BT::behaviortree_cpp (#808)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "sea-bass",
+      "date": "2024-04-02T08:20:56Z",
+      "sha": "a4ad265d76e40e52c8a9b04f0d7b52c76e313605",
+      "message": "Support string vector conversion for ports (#790)",
+      "files_changed": 4,
+      "additions": 72,
+      "deletions": 775,
+      "commit_type": "code"
+    },
+    {
+      "author": "vicmassy",
+      "date": "2024-03-19T20:15:14Z",
+      "sha": "ead514de4eaf683995a9d82f315eb6c4df8df1d0",
+      "message": "Extend unit test for blackboard backup to run the second tree (#789)",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "imere",
+      "date": "2024-01-29T06:57:41Z",
+      "sha": "67d85cbe2c0ed4796a4ac566b5d83c1644cec1ec",
+      "message": "fix(test): Typo in gtest_blackboard.cpp",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "test"
+    },
+    {
+      "author": "Gaël Écorchard",
+      "date": "2023-11-01T11:49:18Z",
+      "sha": "593e9680f51d8014d642d3caa281daad20ccbcfa",
+      "message": "Remove traces of SequenceStar\n\nSigned-off-by: Gaël Écorchard <gael@km-robotics.cz>",
+      "files_changed": 8,
+      "additions": 15,
+      "deletions": 15,
+      "commit_type": "docs"
+    },
+    {
+      "author": "keenanjohnson",
+      "date": "2024-01-11T23:55:36Z",
+      "sha": "fac7d38b99404d7673d3b7eec393364c3bbb637f",
+      "message": "Delete .DS_Store\n\nA junk file from OSX that is not needed and just adds clutter.",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "adlarkin",
+      "date": "2023-12-21T23:26:44Z",
+      "sha": "49355fd6405c851b84ae1742a25e73474664c2f9",
+      "message": "Add optional metadata to TreeNodeManifest",
+      "files_changed": 6,
+      "additions": 132,
+      "deletions": 12,
+      "commit_type": "code"
+    },
+    {
+      "author": "nzlz",
+      "date": "2023-11-29T03:40:53Z",
+      "sha": "abcfe7d3f2bb86c0671e4d34d184ff676bd82d79",
+      "message": "fix typo",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "0xfizzy",
+      "date": "2023-11-11T15:47:50Z",
+      "sha": "c8e4fd2db41c784f4716c6f61bd88cde9cc5c5a8",
+      "message": "erase server_port+1",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "sidyhe",
+      "date": "2023-10-26T15:28:50Z",
+      "sha": "0b71d52f8d46f213e11a862fc1b73621dd907e86",
+      "message": "clang: fix warning\n\nfix warning: lambda capture 'this' is not used",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "fmros",
+      "date": "2023-08-14T09:29:45Z",
+      "sha": "2341397e17ef3e43faefe31752aeace100a2f097",
+      "message": "feat: add template specialization for convertFromString deque (#628)",
+      "files_changed": 2,
+      "additions": 38,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "aboseley",
+      "date": "2023-10-16T08:36:37Z",
+      "sha": "68a191a2a50852369096e4615ca90bb06632ab17",
+      "message": "SimpleString: fix warning by checking upper size limit (#666)",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "muritane",
+      "date": "2023-08-13T12:10:28Z",
+      "sha": "790fea0560dc3ff6c754339bbbdfdabb9db968a1",
+      "message": "Update groot2_publisher.h (#630)",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "l3enQ",
+      "date": "2023-07-25T16:06:14Z",
+      "sha": "84530127e7fb1262de2367d00fd708e7e78f3fce",
+      "message": "fix recording_fist_time issue on windows (#618)",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "skasperski",
+      "date": "2023-07-12T10:55:46Z",
+      "sha": "ef6e5dbe724763e446eff0e01d0a2fd52107edc6",
+      "message": "Export cxx-standard with target. (#604)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "OPerepadia",
+      "date": "2023-06-06T11:28:23Z",
+      "sha": "09aa9974b65f02c0648df47d9d6cde7a9bf196a8",
+      "message": "Fix missing attribute in generated XML (writeTreeNodesModelXML)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "MithunKinarullathil",
+      "date": "2023-05-12T16:43:42Z",
+      "sha": "39cccbfbea300c0c8023200e1cdcd09d75494e29",
+      "message": "Fix libdummy_nodes_dyn.so location.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "galou",
+      "date": "2022-05-29T08:18:35Z",
+      "sha": "4fa2177850cb0690e46ebb388f1db7293548bb95",
+      "message": "Fix destination in CMakeLists.txt (#389)\n\nSigned-off-by: Gaël Écorchard <gael.ecorchard@cvut.cz>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Rid0n",
+      "date": "2023-05-01T12:52:33Z",
+      "sha": "4d047a267cf615e308031b0a8e60ae71c0790d16",
+      "message": "fix ament not registering executables as tests",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "alsora",
+      "date": "2022-01-23T13:11:04Z",
+      "sha": "df73c99f506183dec68b6730933ecd29a7bce89c",
+      "message": "fix shadowed variable in string_view.hpp (#327)\n\nSigned-off-by: Alberto Soragna <alberto.soragna@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "BartKeulen",
+      "date": "2023-03-03T16:41:09Z",
+      "sha": "bbfd51c68c352aaaa537cc9f722ddae178f89237",
+      "message": "Fix boost dependency in package.xml (#512)\n\n`libboost-coroutine-dev` has been merged into rosdistro on February 21st\r\n2023. Link to merge request: https://github.com/ros/rosdistro/pull/35789/.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "ct2034",
+      "date": "2023-02-07T17:30:08Z",
+      "sha": "f9b0a88d4d9457d2bd59e135b46103b9cc304bf7",
+      "message": "adding the uid to the log to uniquely identify the nodes (#502)\n\nSigned-off-by: Christian Henkel <post@henkelchristian.de>",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "farshbafdoustar",
+      "date": "2023-01-19T11:51:57Z",
+      "sha": "6ec4978b9a378f52715d56243114021404a766c3",
+      "message": "using tinyxml ErrorStr() instead of ErrorName() to get more info about missing file (#497)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "ana-GT",
+      "date": "2023-01-19T10:33:05Z",
+      "sha": "83580a8233e00676492a4a57e9d023402e42ead8",
+      "message": "Fixed use of ros_pkg for ROS1 applications (#483)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "5730289021-NN",
+      "date": "2023-01-19T10:31:43Z",
+      "sha": "89a2e5f453077b7302600a2d5177b12f0ba03f76",
+      "message": "Fix error message StdCoutLogger -> MinitraceLogger (#495)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Bart Keulen",
+      "date": "2023-01-06T14:06:17Z",
+      "sha": "5ced87f8b47eab9ffaaad3edc4a17bff6839f88b",
+      "message": "Fix boost dependency in package.xml (#493)\n\nCo-authored-by: Bart Keulen <b.keulen@avular.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "jorgectf",
+      "date": "2022-11-19T18:36:57Z",
+      "sha": "c9196ffaade66c2e2769e6841b22b40a2ae38e50",
+      "message": "Add CodeQL workflow (#471)",
+      "files_changed": 1,
+      "additions": 63,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "Aposhian",
+      "date": "2022-11-11T07:52:26Z",
+      "sha": "9c56fd9524e82add4ed3388c87eda38fb7bd5288",
+      "message": "remove unused boost dependencies (#468)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "SubaruArai",
+      "date": "2021-10-13T07:41:56Z",
+      "sha": "4c9807ac9550116602f7c32cc3da5f1763f15fdb",
+      "message": "added subclass RetryNodeTypo (#295)\n\nCo-authored-by: Subaru Arai <SubaruArai@local>",
+      "files_changed": 2,
+      "additions": 19,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "aliaydinkucukcollu",
+      "date": "2022-11-02T09:50:10Z",
+      "sha": "dab3eef66f326418ef04028936eb81fa28a3182a",
+      "message": "Ncurses dependency added to the README.md (#458)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Tradias",
+      "date": "2022-09-13T14:29:52Z",
+      "sha": "8f7d0e27204d2a8f307eee7cd55d0a4c76d2779d",
+      "message": "Update expected-lite to 0.6.2 (#418)",
+      "files_changed": 1,
+      "additions": 1062,
+      "deletions": 499,
+      "commit_type": "code"
+    },
+    {
+      "author": "schornakj",
+      "date": "2022-10-01T16:34:08Z",
+      "sha": "b3171a5e11c4b15b40411cc863919b92f592f30d",
+      "message": "Wait for the thread to finish before deleting zmq (#440)\n\nCo-authored-by: JafarAbdi <cafer.abdi@gmail.com>",
+      "files_changed": 3,
+      "additions": 56,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "paulbovbel",
+      "date": "2022-09-15T15:13:04Z",
+      "sha": "22ecdd4c73632fd76fab16cd2c7efb9747beca36",
+      "message": "Added ros_environment dependency to make sure ROS_VERSION is initialized (#420)",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "asasine",
+      "date": "2021-04-25T08:15:39Z",
+      "sha": "bef30e526a81ac02fb2fcc9dccd5e03899814b99",
+      "message": "Registered missing dummy nodes for examples (#275)\n\n* Added CheckTemperature dummy node\r\n\r\n* Added SayHello dummy node",
+      "files_changed": 2,
+      "additions": 17,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "zflat",
+      "date": "2022-08-17T23:19:08Z",
+      "sha": "a363bdcae88350bc748598a7d2950e300859469c",
+      "message": "threshold child count dynamically in parallel control node (#363)",
+      "files_changed": 3,
+      "additions": 100,
+      "deletions": 13,
+      "commit_type": "code"
+    },
+    {
+      "author": "Luca Bonamini",
+      "date": "2022-08-17T23:13:07Z",
+      "sha": "8a8ec27099de69230830ce06c73c00dcfc4564be",
+      "message": "fix(README): change find_package() instruction for BT external usage (#401)\n\nCo-authored-by: Luca Bonamini <luca.bonamini@yapemobility.it>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Timple",
+      "date": "2022-08-17T23:12:31Z",
+      "sha": "bf0c888cdff547960294b0c477b5d61a0484509a",
+      "message": "Example suggests it's not restricted to a few (#414)\n\n* Example suggests it's not restricted to a few\r\n\r\n* Update delay_node.h\r\n\r\nFix flow of sentence, milliseconds is already put in specification.",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "JafarAbdi",
+      "date": "2022-06-23T17:20:34Z",
+      "sha": "59c1a809a60d3c077301e9e5a1789334406b15a1",
+      "message": "Shutdown zmq context after joining the server thread and flushing (#400)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "artivis",
+      "date": "2022-05-21T18:46:33Z",
+      "sha": "e11d3efb198722b5c36126f76c86add582e47149",
+      "message": "revisit export (#379)",
+      "files_changed": 2,
+      "additions": 35,
+      "deletions": 7,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Adam Sasine",
+      "date": "2021-03-05T08:51:56Z",
+      "sha": "b5c6d8dd8f5d5d1fdcbe2e52807ccf401a7d28c7",
+      "message": "Added printTreeRecursively overload with ostream parameter (#264)\n\n* Added overload to printTreeRecursively\r\n\r\n* Changed include to iosfwd\r\n\r\n* Added test to verify function writes to stream\r\n\r\n* Added call to overload without stream parameter\r\n\r\n* Fixed conversion error\r\n\r\n* Removed overload in favor of default argument",
+      "files_changed": 3,
+      "additions": 52,
+      "deletions": 9,
+      "commit_type": "code"
+    },
+    {
+      "author": "imgbot[bot]",
+      "date": "2022-01-23T13:48:15Z",
+      "sha": "44a1fcb69b43ab30f4610224c5790d8ba1ac7612",
+      "message": "[ImgBot] Optimize images (#333)\n\n*Total -- 152.97kb -> 114.57kb (25.1%)\r\n\r\n/docs/images/ReactiveSequence.svg -- 7.58kb -> 4.59kb (39.47%)\r\n/docs/images/SequenceNode.svg -- 11.28kb -> 7.12kb (36.87%)\r\n/docs/images/SequenceStar.svg -- 11.22kb -> 7.09kb (36.8%)\r\n/docs/images/DecoratorEnterRoom.svg -- 20.71kb -> 13.30kb (35.77%)\r\n/docs/images/FallbackBasic.svg -- 19.09kb -> 12.64kb (33.79%)\r\n/docs/images/FetchBeer.svg -- 24.30kb -> 16.36kb (32.66%)\r\n/docs/images/SequenceBasic.svg -- 6.32kb -> 5.49kb (13.04%)\r\n/docs/images/Tutorial1.svg -- 6.67kb -> 5.94kb (10.98%)\r\n/docs/images/FetchBeerFails.svg -- 6.46kb -> 5.83kb (9.76%)\r\n/docs/images/FetchBeer2.svg -- 14.99kb -> 13.76kb (8.18%)\r\n/docs/images/Tutorial2.svg -- 24.35kb -> 22.44kb (7.85%)\r\n\r\nSigned-off-by: ImgBotApp <ImgBotHelp@gmail.com>\r\n\r\nCo-authored-by: ImgBotApp <ImgBotHelp@gmail.com>",
+      "files_changed": 11,
+      "additions": 11,
+      "deletions": 2584,
+      "commit_type": "code"
+    },
+    {
+      "author": "griswaldbrooks",
+      "date": "2022-05-13T17:51:05Z",
+      "sha": "6dcd5ff9603936918d9c5032fb5deefde49e2b5c",
+      "message": "typos (#376)",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 9,
+      "commit_type": "docs"
+    },
+    {
+      "author": "panwauu",
+      "date": "2022-05-13T09:37:30Z",
+      "sha": "a2a5c191b24c0fca6d444ecbd916bb502afae97f",
+      "message": "Update Tutorial 2 Docuemtation (#372)",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 7,
+      "commit_type": "docs"
+    },
+    {
+      "author": "robodrome",
+      "date": "2022-04-27T13:59:27Z",
+      "sha": "095358f769b0232ae11874ae26a7e1968b3f837c",
+      "message": "Update tutorial_09_coroutines.md (#359)\n\nMinor fix, renamed Timepoint to TimePoint.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "hsmin99",
+      "date": "2022-04-27T13:58:32Z",
+      "sha": "f9c24617153807cef415080f53ebb8865cd6c4ff",
+      "message": "Export dependency on ament_index_cpp (#362)\n\nTo make dependent packages try to link ament_index_cpp, export the\r\ndependency explicitly.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "FabianSchurig",
+      "date": "2020-04-17T18:12:11Z",
+      "sha": "cc3f0d9fc7c241933b416a279e9897b1f71e95e0",
+      "message": "catkin C++17 string_view compatibility (#178)\n\n* Use static_cast instead of to_string()\r\n\r\n* Fix to_string to static_cast",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Affonso-Gui",
+      "date": "2021-07-11T08:13:45Z",
+      "sha": "1ea02048ad3b934f06504a00e5628ead42d19375",
+      "message": "Update fallback documentation to V3 (#288)\n\n* Update FallbackNode.md description to V3\r\n\r\n* Fix typo",
+      "files_changed": 3,
+      "additions": 19,
+      "deletions": 9,
+      "commit_type": "docs"
+    },
+    {
+      "author": "goekce",
+      "date": "2022-02-07T14:50:14Z",
+      "sha": "d0d1177ce1b0b4a4d0aff647c7af867acd9417d1",
+      "message": "[docs] match text to graphics (#340)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "benjinne",
+      "date": "2022-02-07T06:30:32Z",
+      "sha": "58b65b350f43c527c00c7625f1bc1192a422c717",
+      "message": "Docs: BT_basics fix typo (#337)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "fultoncjb",
+      "date": "2020-09-01T07:50:45Z",
+      "sha": "63d6fd42a1c4794c81aa7adfb5fba3e42aace8b8",
+      "message": "Allow BT factory to define clock source for TimerQueue/TimerNode (#215)\n\n* Allow BT factory to define clock source for TimerQueue/TimerNode\r\n\r\n* Fix unit tests\r\n\r\nCo-authored-by: Cam Fulton <cfulton@symbotic.com>\r\nCo-authored-by: Davide Faconti <davide.faconti@gmail.com>",
+      "files_changed": 7,
+      "additions": 86,
+      "deletions": 110,
+      "commit_type": "docs"
+    },
+    {
+      "author": "homalozoa",
+      "date": "2022-01-23T13:13:09Z",
+      "sha": "5c3445d67893b4b7772753ddda239664588aa1d0",
+      "message": "[Fix] Fix cmake version warning and -Wformat warning (#319)\n\nSigned-off-by: Homalozoa <xuhaiwang@xiaomi.com>\r\n\r\nCo-authored-by: Homalozoa <xuhaiwang@xiaomi.com>",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Tobias-Fischer",
+      "date": "2022-01-23T13:11:34Z",
+      "sha": "348b816f9abe120e9d964356b65972a8fdb911eb",
+      "message": "Fix Windows shared lib build (#323)",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 6,
+      "commit_type": "docs"
+    },
+    {
+      "author": "pcouvignou-irobot",
+      "date": "2022-01-22T09:22:41Z",
+      "sha": "c25380c59015da2f4807612b91ada9d79aba390c",
+      "message": "Fixed typo \"Exeption\" -> \"Exception\" (#331)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Yadunund",
+      "date": "2021-11-10T08:41:04Z",
+      "sha": "69384df1582cee1dc60fb86a8f910a609461951f",
+      "message": "Build samples independently of examples (#315)\n\nSigned-off-by: Yadunund <yadunund@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "wep21",
+      "date": "2021-11-10T08:40:19Z",
+      "sha": "e125ae7dd65ebc7b98023f76b9f611470fa98464",
+      "message": "Fix dependency in package.xml (#313)\n\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "makokal",
+      "date": "2021-10-19T05:54:06Z",
+      "sha": "7312ad64c2aa73e0efaa5b54d28b56d432a44194",
+      "message": "Fix doc statement (#309)\n\nFix sentence",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "swarajpeppermint",
+      "date": "2021-10-13T07:39:52Z",
+      "sha": "bd14adcfae9792509da12295f437dc19fe3e0faf",
+      "message": "Minor spelling correction (#305)\n\nCorrected `the_aswer` to `the_answer`",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "taehyeon4",
+      "date": "2021-10-13T07:39:32Z",
+      "sha": "f60afbd55b9cae98ed87bd79b404cb1530533174",
+      "message": "Update FallbackNode.md (#306)\n\ntypo correction.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Ace314159",
+      "date": "2021-10-13T07:39:13Z",
+      "sha": "9d9fc1342c0dcfe023120be1686a7ccdb9ad1f75",
+      "message": "Add signal handler for Windows (#307)",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "matthews-jca",
+      "date": "2021-07-11T08:15:29Z",
+      "sha": "bd6e227bb4931d8a34a4ba299e27cb20d983745d",
+      "message": "Update documentation for reactive sequence (#286)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "liangyuwei",
+      "date": "2021-07-11T08:14:42Z",
+      "sha": "b422cc9de3738e13ea57d32822c3731890a87845",
+      "message": "Update FallbackNode.md (#287)\n\nFix the pseudocode in the documentation of 'Reactive Fallback' according to its source code.",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 9,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ross-weir",
+      "date": "2021-07-11T08:12:39Z",
+      "sha": "d769f5908ffed710fa426b7693dae49b69c1b79e",
+      "message": "Use pedantic for non MSVC builds (#289)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "perara",
+      "date": "2021-05-02T15:18:07Z",
+      "sha": "34bd0112aae2d7e71e9cf9125d9ba4f97179aa06",
+      "message": "Fixes for compilation on windows. (#248)\n\n* Fix for detecting ZeroMQ on windows\r\n\r\nNaming convention is a bit different for ZeroMQ, specifically on Windows with vcpkg. While ZMQ and ZeroMQ are valid on linux, the ZMQ naming convention only works on linux.\r\n\r\n* Compilation on windows not working with /WX\r\n\r\n* Macro collision on Windows\r\n\r\nOn windows, the macros defined in the abstract logger collides with other in windows.h. Made them lowercase to avoid collision",
+      "files_changed": 3,
+      "additions": 13,
+      "deletions": 6,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jinwoo-choiter",
+      "date": "2021-04-01T08:28:15Z",
+      "sha": "c17f216082564eff44b5e9be9c83510c45bfb2ea",
+      "message": "Fix bug on halt of delay node (#272)\n\n- When DelayNode is halted and ticked again, it always returned FAILURE since the state of DelayNode was not properly reset.\r\n - This commit fixes unexpected behavior of DelayNode when it is halted.\r\n\r\nCo-authored-by: Jinwoo Choi <jinwoos.choi@samsung.com>",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "SteveMacenski",
+      "date": "2021-04-01T08:25:52Z",
+      "sha": "5ac88ffd56c041bf1d2ca8366808d29ef86cdae7",
+      "message": "Clear all of blackboard's content (#269)",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "francescovigni",
+      "date": "2021-02-16T20:20:04Z",
+      "sha": "6983ace9f722d31776ab4c5de857858cba5c052c",
+      "message": "Fix typo (#260)\n\nCo-authored-by: Francesco Vigni <francesco.vigni@sttech.de>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "onionsflying",
+      "date": "2021-02-04T06:41:14Z",
+      "sha": "332dd520b5d69ebc9ca0e7e6db2848c1328eb53c",
+      "message": "abstract_logger.h: fixed a typo (#257)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "LucasNolasco",
+      "date": "2021-01-28T12:35:08Z",
+      "sha": "582092f84519efac298f6b2094a831b3b17fbc0d",
+      "message": "Fixed typos on SequenceNode.md (#254)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Davide Faconti",
+      "date": "2018-04-19T09:47:51Z",
+      "sha": "5b9e2145ff31823bac28f68eea7aaa560f6d9d99",
+      "message": "directory renamed",
+      "files_changed": 32,
+      "additions": 48,
+      "deletions": 47,
+      "commit_type": "code"
+    },
+    {
+      "author": "amangiat88",
+      "date": "2020-12-03T17:40:55Z",
+      "sha": "9b766efbff5857928bef2595257fd18e243000e1",
+      "message": "Update bt_factory.cpp (#245)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "gramss",
+      "date": "2020-12-02T12:26:23Z",
+      "sha": "5a629b2869b08780c042d5996fd0f1bc817e8833",
+      "message": "Improved switching BTs with active Groot monitoring (ZMQ logger destruction) (#244)\n\n* Skip 100ms (max) wait for detached thread\r\n\r\n* add {} to single line if statements",
+      "files_changed": 1,
+      "additions": 19,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "ValerioMagnago",
+      "date": "2020-09-01T13:37:17Z",
+      "sha": "479813b098337654616f438bcb2eb80e249dfe7a",
+      "message": "docs: Small changes to tutorial 02 (#225)\n\n* docs: fix to my_tree.xml\n\nBefore my_tree.xml was containing an `SayHello` Action that was not registered\ninside the BehaviourTreeFactory contained in the simple_bt.cpp\n\n* docs: tutorial 1 my_tree.xml editable in Groot\n\nAdd to the xml tree definition the node declaration needed to edit the behavior\nxml file with groot\n\n* docs: clearer code for first tutorial\n\nNow at the end of the tutorial the entire code that can be copied and pasted\ndirecty to test the demo is provided.\nIn particular the needed include files are added which are not mentioned along\nthe tutorial and this spare a little time for new users to figure them out.\n\n* docs: remove blank lines\n\n* docs: little addition to tutorial_02 docs\n\n- Provide a default implementation of `SaySomething2`\n- Add Groot support in the xml file\n\n* docs: Add missing SaySimple2\n\n* docs: removed not useful stuff\n\nCo-authored-by: Valerio Magnago <valerio.magnago@fraunhofer.it>",
+      "files_changed": 1,
+      "additions": 45,
+      "deletions": 15,
+      "commit_type": "docs"
+    },
+    {
+      "author": "indraneelpatil",
+      "date": "2020-09-01T07:42:13Z",
+      "sha": "8f1c491df50fe6680cdb6126cbed8b41114e27ba",
+      "message": "Added delay node and wait for enter keypress node (#182)\n\n* Added delay node and wait for enter press node\r\n\r\n* Fixed unsigned int to int conversion bug\r\n\r\n* Added a new timer to keep a track of delay timeout and return RUNNING in the meanwhile\r\n\r\n* Removed wait for keypress node\r\n\r\n* Review changes suggested by gramss\r\n\r\nCo-authored-by: Indraneel Patil <indraneel.p@greyorange.com>",
+      "files_changed": 6,
+      "additions": 152,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Wuqiqi123",
+      "date": "2020-09-01T07:41:33Z",
+      "sha": "beb11cb3cf178aff8eaa847ca6d279527bb0fe87",
+      "message": "Update SequenceNode.md (#211)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "renan028",
+      "date": "2020-02-07T00:59:49Z",
+      "sha": "dd5a3a38650c327519845233775ad08629b73b4e",
+      "message": "fix RetryNode loop that should be an infinity loop if max_attempts_ == -1\n\nAs documentation said:\n\"Use -1 to create an infinite loop.\"",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "aayn",
+      "date": "2020-05-15T22:32:01Z",
+      "sha": "162d5b2e69c51cdbe772f836e3a7f4183fbaeed9",
+      "message": "Fix typo",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "kant",
+      "date": "2020-06-05T23:16:31Z",
+      "sha": "2820685a3c0a83ccba45aaf7c6149fa5b43e2b6a",
+      "message": "Minor fix on line 19\n\n* minor fix on line 29",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "fmrico",
+      "date": "2020-05-16T19:32:29Z",
+      "sha": "3d22c6f020f158275aa1d8219738c528aee6f449",
+      "message": "Adding ForceRunningNode Decorator (#192)",
+      "files_changed": 3,
+      "additions": 68,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Sarath18",
+      "date": "2020-05-16T14:44:21Z",
+      "sha": "4d055f283a63ddba89f18f3f85ced045d14eb0c2",
+      "message": "Add XML parsing support for custom Control Nodes (#194)\n\nSigned-off-by: Sarathkrishnan Ramesh <sarathkrishnan99@gmail.com>",
+      "files_changed": 1,
+      "additions": 16,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "seanyen",
+      "date": "2020-03-03T21:08:36Z",
+      "sha": "b76a75b6d4621f9359fd19d5420005249a7504c1",
+      "message": "Install library to portable locations",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "QQting",
+      "date": "2020-05-15T20:39:23Z",
+      "sha": "3190e20c5fb9fc0e3f5ab856ca3b21cc673e0e5a",
+      "message": "Fix pseudocode for ReactiveFallback. (#191)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "daf@blue-ocean-robotics.com",
+      "date": "2020-04-16T17:24:06Z",
+      "sha": "4549d9e427b1632e206cff6dba29e55a04834f99",
+      "message": "adding ManualSelector (enhancement #174)",
+      "files_changed": 7,
+      "additions": 307,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "s-trinh",
+      "date": "2020-04-16T17:29:00Z",
+      "sha": "1fb010263a6731ec332a386c983e89b409f75241",
+      "message": "Use CMake 3.5.1 as the minimum CMake version for Xenial. (#176)",
+      "files_changed": 3,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "unvestigate",
+      "date": "2020-03-19T10:30:56Z",
+      "sha": "2a1e581b6bb4a25a3d80a30aee72a03d736d364b",
+      "message": "MSVC2015 seems to need an explicit operator== for comparing against literal strings.",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "AlexisTM",
+      "date": "2020-04-02T09:42:04Z",
+      "sha": "c34a79b2ef63fbc9c69a8958647a5da34eda064c",
+      "message": "Fix catkin build for v3 (#169)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "HansRobo",
+      "date": "2019-12-11T08:07:49Z",
+      "sha": "59eaab8be155f9843ba09e42750b4f73b3169cd3",
+      "message": "Add #53 content",
+      "files_changed": 2,
+      "additions": 72,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "ImgBotApp",
+      "date": "2019-02-27T11:47:24Z",
+      "sha": "720ea7837901940aa9f4c0f225830274bc161eda",
+      "message": "[ImgBot] Optimize images\n\n*Total -- 86.90kb -> 74.78kb (13.95%)\n\n/docs/images/ReadTheDocs.png -- 10.77kb -> 4.91kb (54.43%)\n/docs/images/BT.png -- 2.66kb -> 2.00kb (24.89%)\n/docs/images/DecoratorEnterRoom.png -- 10.10kb -> 9.12kb (9.72%)\n/docs/images/CrossDoorSubtree.png -- 20.85kb -> 18.98kb (9%)\n/docs/images/TypeHierarchy.png -- 9.51kb -> 8.73kb (8.26%)\n/docs/images/FallbackSimplified.png -- 5.97kb -> 5.56kb (6.92%)\n/docs/images/LeafToComponentCommunication.png -- 6.91kb -> 6.45kb (6.61%)\n/docs/images/SequenceAll.png -- 5.04kb -> 4.71kb (6.47%)\n/docs/images/SequenceStar.png -- 8.33kb -> 7.88kb (5.42%)\n/docs/images/SequenceNode.png -- 6.76kb -> 6.45kb (4.57%)",
+      "files_changed": 10,
+      "additions": 0,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "peterpolidoro",
+      "date": "2020-03-13T15:20:16Z",
+      "sha": "59633024c17b77d2c943be189076d7431c5385f4",
+      "message": "Modify documentation images.\n\nSequenceNode:\nAimTo -> AimAt\n\"Aim at a target\" might sound more appropriate in this example than \"aim to reach a goal\".\n\nSequenceStar:\nSequence -> ReactiveSequence\nThe text says \"On the other hand, isBatteryOK must be checked at every tick,\nfor this reason its parent must be a ReactiveSequence.\"\nModify the image to match the text.",
+      "files_changed": 2,
+      "additions": 0,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "vlinevich",
+      "date": "2020-03-06T18:55:55Z",
+      "sha": "33026db304f1771444cf19141b57f966922d450a",
+      "message": "Added BUILD_SHARED_LIBS option to cmake. If set to \"OFF\", static library will be generated\nfor a UNIX build\nIf BUILD_UNIT_TESTS is off, do not search for gtest library, and do not include tests subdirectory",
+      "files_changed": 1,
+      "additions": 10,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "RavenX8",
+      "date": "2020-01-07T19:30:36Z",
+      "sha": "c61d913b83eb87e4cb2416521721d09ea1bbd55a",
+      "message": "Update basic_types.cpp\n\nAdded missing include for std::setlocale. This fixes the following error in Visual Studio:\r\n\r\nhttps://ci.appveyor.com/project/facontidavide59577/behaviortree-cpp/build/job/d1ttd2w84nvnqo2e#L52",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Steffen Groot",
+      "date": "2019-12-13T09:55:08Z",
+      "sha": "cb0ebe1f202442435f9e983034707a644ba7f3f3",
+      "message": "Fixed compiling for c++17",
+      "files_changed": 5,
+      "additions": 10,
+      "deletions": 10,
+      "commit_type": "code"
+    },
+    {
+      "author": "msadowski",
+      "date": "2019-12-03T11:07:48Z",
+      "sha": "d23561102840573f856c23cb88c6b7990a93315f",
+      "message": "Fix some typos in readme",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 7,
+      "commit_type": "docs"
+    },
+    {
+      "author": "3wnbr1",
+      "date": "2019-12-02T11:07:06Z",
+      "sha": "b6312a021c218bc42a467059cf97660ca7bcd943",
+      "message": "Add macOS support",
+      "files_changed": 3,
+      "additions": 9,
+      "deletions": 7,
+      "commit_type": "docs"
+    },
+    {
+      "author": "umhan35",
+      "date": "2019-10-30T02:05:31Z",
+      "sha": "5d64dc935ef6bea336b351158e94ad5c786e0043",
+      "message": "fix three typos: inpyt->input, know->known",
+      "files_changed": 3,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Jesus05",
+      "date": "2019-10-28T11:23:37Z",
+      "sha": "e0e8bb81adc8b745320bfcf0731a1ad4b48541f3",
+      "message": "// At the next tick, index will be the same.",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "daniel-serrano",
+      "date": "2019-07-14T15:49:45Z",
+      "sha": "06ec030894846ed93a9d4d6ece139187a1e69ba6",
+      "message": "Add robomosys acknowledgement as requested",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "LoyVanBeek",
+      "date": "2019-05-10T13:12:04Z",
+      "sha": "ed56567195926da9c73b8894d60dec31930d72aa",
+      "message": "Remove 0 in front of http://... URL to publication\n\nHopefully, this makes the link correctly click-able when rendered to HTML",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Ferran Roure",
+      "date": "2019-03-20T14:41:10Z",
+      "sha": "59016dcb25fb1e6e5dff493262ef0054d481359f",
+      "message": "Update index.md",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Masadow",
+      "date": "2018-11-26T17:48:45Z",
+      "sha": "e7ebb0f8a7aa1115080b8651c5dbdc34bd1ab519",
+      "message": "Fixed a crash occuring when you didn't initialized a Tree object (#20)",
+      "files_changed": 2,
+      "additions": 17,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "hlzl",
+      "date": "2019-03-08T22:30:41Z",
+      "sha": "3e3880f0d33d1ffd84326e383f47259a584a244a",
+      "message": "Fixed some typos in the documentation",
+      "files_changed": 11,
+      "additions": 44,
+      "deletions": 44,
+      "commit_type": "docs"
+    },
+    {
+      "author": "luminize",
+      "date": "2019-03-08T19:21:05Z",
+      "sha": "9336049c537805378139b496bee895d2a16b82fb",
+      "message": "docs/xml_format.md\n\nfix typo",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Victor Lopez",
+      "date": "2019-01-28T08:34:13Z",
+      "sha": "960495009d5f63bad0a168bbc81a1a6e420d7736",
+      "message": "Fix providedPorts assert message",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Michael Jeronimo",
+      "date": "2018-12-04T23:24:59Z",
+      "sha": "a6f1734ed13df6addf7be764c1ccfcd858b9fa1f",
+      "message": "Add support for ament/colcon build",
+      "files_changed": 1,
+      "additions": 59,
+      "deletions": 24,
+      "commit_type": "docs"
+    },
+    {
+      "author": "miccol",
+      "date": "2015-05-02T09:34:03Z",
+      "sha": "1fa2128042927f303a8330154d13bf86af42cb14",
+      "message": "first public release",
+      "files_changed": 51,
+      "additions": 3169,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "cmcghan",
+      "date": "2016-05-04T07:01:35Z",
+      "sha": "66e76eb64332d1b3f0e70430512919e191b88bd9",
+      "message": "allow for system-wide \"make install\"\n\nchanged \"sample/example\" to \"sample/btpp_example\"; a \"sudo make install\" command (after \"cmake ..\") should install to /usr/local on an Ubuntu 14.04 system (/usr/local/bin/btpp_example and /usr/local/lib/libbtpp.so); see: https://cmake.org/cmake-tutorial/ and https://cmake.org/cmake/help/v3.0/command/install.html",
+      "files_changed": 1,
+      "additions": 10,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ewerlopes",
+      "date": "2016-02-12T11:58:24Z",
+      "sha": "49f3ded2d5a7a3627da435b2e6e7a68c6692ca32",
+      "message": "First branch commit. Improving source file organization, CMakeFile (now generates a sample folder and the lib)  and includes README.",
+      "files_changed": 41,
+      "additions": 385,
+      "deletions": 503,
+      "commit_type": "docs"
+    }
+  ]
+}

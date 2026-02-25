@@ -1,0 +1,1401 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T03:37:29Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "RobotWebTools",
+    "repo": "rosbridge_suite"
+  },
+  "data": [
+    {
+      "author": "bjsowa",
+      "date": "2024-12-25T14:26:46Z",
+      "sha": "5444d9b7e801af061dd479044a2e0e01b496e0e0",
+      "message": "Add ament_mypy test and fix all mypy errors (#980)",
+      "files_changed": 29,
+      "additions": 111,
+      "deletions": 68,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Spir0u",
+      "date": "2026-02-22T20:04:24Z",
+      "sha": "728ed0d228de384f30c4468fbe5e7ed6eb5a5aa3",
+      "message": "fix: Handle action rejection and server timeout (#1139)\n\n* add server timeout exception\n\n* forward rejected goal handles\n\nThe goal_response_cb should not throw an exception, so the exception is passed in the result and then raised in  send_goal\n\n* return an empty result when result was None due to cancellation/abortion\n\n* fix lint error\n\n---------\n\nCo-authored-by: Błażej Sowa <bsowa123@gmail.com>",
+      "files_changed": 2,
+      "additions": 13,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "dependabot[bot]",
+      "date": "2022-03-01T17:08:12Z",
+      "sha": "1ed0626c0bbe12b4cb0da3a9dd5929061d62854e",
+      "message": "Bump actions/setup-python from 2 to 3 (#714)\n\nBumps [actions/setup-python](https://github.com/actions/setup-python) from 2 to 3.\r\n- [Release notes](https://github.com/actions/setup-python/releases)\r\n- [Commits](https://github.com/actions/setup-python/compare/v2...v3)\r\n\r\n---\r\nupdated-dependencies:\r\n- dependency-name: actions/setup-python\r\n  dependency-type: direct:production\r\n  update-type: version-update:semver-major\r\n...\r\n\r\nSigned-off-by: dependabot[bot] <support@github.com>\r\n\r\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "ci"
+    },
+    {
+      "author": "Timple",
+      "date": "2025-11-19T18:03:08Z",
+      "sha": "8df518fdc54d5399fb6e19b8efbf7537d06cddc4",
+      "message": "docs: Use new REP document URLs (#1114)",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mlanighan",
+      "date": "2025-11-19T16:51:20Z",
+      "sha": "451ffd5b7e39d317ca84dfb27af8c8b3c68f92f4",
+      "message": "fix: Apply service timeout parameter correctly (#1125)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Carter12s",
+      "date": "2022-09-07T23:13:16Z",
+      "sha": "59ee5198f51c0832d70072796540a23bdf108604",
+      "message": "Add roslibrust to readme (#785)\n\n**Public API Changes**\r\nNone\r\n\r\n**Description**\r\nAdding link to recently released rust client.\r\nCo-authored-by: carter <carter@amprobotics.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "pascalauroboa",
+      "date": "2025-08-28T16:20:16Z",
+      "sha": "b1f6b4c0009da86c39132ad36e73cc54ae196a4e",
+      "message": "fix: Change warn to warning (#1067)",
+      "files_changed": 5,
+      "additions": 9,
+      "deletions": 9,
+      "commit_type": "code"
+    },
+    {
+      "author": "cyan-at",
+      "date": "2025-08-07T18:28:38Z",
+      "sha": "cb94ab99d9e92feafa1de05643dab8d37a80f150",
+      "message": "fix: rosbridge_websocket cooperative shutdown (#1048)\n\n* rosbridge_websocket cooperative shutdown necessary changes\n\n* switch back to singlethread, check for ok BEFORE spinning also\n\n* address MatthijsBurgh comments",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "chaitanya-mandala",
+      "date": "2025-06-20T10:12:21Z",
+      "sha": "2ed864b2b445d5b940e2a33f480e48ba5e6b8d60",
+      "message": " feat: Add interface and service for retrieving action type (#1046)\n\n* Added ActionType service and related functionality\n\n- Introduced ActionType service to retrieve the type of a specified ROS action.\n- Updated proxy to include logic for determining action types based on existing action servers.\n- Modified rosapi_node to create the new ActionType service endpoint.\n- Added ActionType message definition in rosapi_msgs.\n\n* Fix pre-commit hook issues: end-of-file and trailing-whitespace\n\n* reverted back vscode settings.json\n\n* Refactor get_action_type to use get_action_names_and_types for improved action type retrieval. Removed outdated logic for action server filtering and topic name extraction.\n\n* Update get_action_type function to set include_hidden parameter default to False for consistency with other functions.\n\n* Added ros2action as a runtime dependency in package.xml",
+      "files_changed": 5,
+      "additions": 27,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "electronicofive",
+      "date": "2025-06-15T17:45:46Z",
+      "sha": "fb157a07668233aca8e4784a2baea0afcef07f0a",
+      "message": "fix: Correct JSON serialization in PNG compression and update tests (#1044)\n\nCo-authored-by: Juan David Vergara <electronicofive@octopusforce.com>",
+      "files_changed": 2,
+      "additions": 3,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "scottbell",
+      "date": "2023-10-27T21:09:55Z",
+      "sha": "910163bd2d55f5693279487a4338a40e193aab02",
+      "message": "Handle ROS 2 types properly (#883)",
+      "files_changed": 3,
+      "additions": 132,
+      "deletions": 23,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ana-GT",
+      "date": "2025-04-30T21:33:13Z",
+      "sha": "c489ed5a3fb876eb102ca9da7cfbf36c236dd04c",
+      "message": "Add missing service timeout parameter to conditional launch (#1028)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "Egoless41",
+      "date": "2025-04-14T15:41:35Z",
+      "sha": "fbb0769ef0d291338ca3c2836f605f298acd1d3e",
+      "message": "Don't subscribe with Transient local QoS when there are volatile publishers (#1023)\n\n* fix: incompatible QoS settings for subs\n\nfor reliability, if any subscribed topic has a non-reliable policy, we set reliability to best effort. for durability, if if any subscribed topic has a non-transient-local policy, we set durability to volatile.\n\n* fix: define variables\n\n* fix: lint and remove default publisher qos durability setting\n\n* fix: default durability policy for tests\n\n* fix: code fixed according to recommendation\n\n* fix: lint\n\n* fix: added recommended changes\n\n* fix: reverted test changes\n\n* fix: check if there are any publisher.\n\n* fix: lint\n\n* fix: qos settings\n\n* fix: requested changes",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "davidferlop",
+      "date": "2025-03-28T18:18:06Z",
+      "sha": "fde7509eb5f9f569ee8ff4cc6fdc6eaa94954662",
+      "message": "Add services to return Action interface details (#1021)\n\nCo-authored-by: davidfernandez <david.fernandez@pal-robotics.com>",
+      "files_changed": 6,
+      "additions": 88,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "noah-wardlow",
+      "date": "2025-03-21T21:41:37Z",
+      "sha": "23888e2a6c66a350011779e348661d1e72d765fc",
+      "message": "Fix array-like parameter serialization in rosbridge get_param (#1018)\n\n* Update params.py\n\n* Update rosapi/src/rosapi/params.py\n\nCo-authored-by: Błażej Sowa <bsowa123@gmail.com>\n\n* Update rosapi/src/rosapi/params.py\n\nCo-authored-by: Błażej Sowa <bsowa123@gmail.com>\n\n---------\n\nCo-authored-by: Błażej Sowa <bsowa123@gmail.com>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "ewak",
+      "date": "2025-02-26T19:33:29Z",
+      "sha": "ceb3f7da0b030b2b04bf86fe9b644f6ca77856eb",
+      "message": "Default subscriber QOS to BestEffort, account for TRANSIENT_LOCAL (#991)\n\n* use permissive QoS to ensure compatibilty with publishers\n\n* use RELIABLE qos if publisher found to be TRANSIENT_LOCAL\n\n---------\n\nCo-authored-by: William Wedler <wwedler@riseup.net>\nCo-authored-by: Mike Wake <michael.wake@aosgrp.com.au>",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Mehsias",
+      "date": "2025-01-25T21:25:55Z",
+      "sha": "0d96ae5816bf6c4aebe86d9ff6d4950d5d2768e8",
+      "message": "Prevent parameter retrieval crashes (#978)\n\n* fix(params): prevent parameter retrieval crashes in ROS2\n\n- Add check for node's fully qualified name to prevent deadlocks\r\n- Add 2.0s timeout to spin_until_future_complete\r\n- Fix crashes when retrieving parameters via Roslibjs\r\n\r\nFixes #972\n\n* added parameter for timeout\n\n* Add new service to retrieve the different interfaces in the ROS Network (#988)\n\n* Fix rosbridge_websocket symlink\n\n* Don't fail on nodes without parameter services\n\n* Remove added empty line\n\n---------\n\nCo-authored-by: Błażej Sowa <bsowa123@gmail.com>\nCo-authored-by: Matthias Rathauscher (LWN) <matthias.rathauscher@liebherr.com>\nCo-authored-by: Lebecque Florian <Florianlebecque@hotmail.com>",
+      "files_changed": 3,
+      "additions": 21,
+      "deletions": 9,
+      "commit_type": "config"
+    },
+    {
+      "author": "FlorianLebecque",
+      "date": "2024-11-28T21:28:56Z",
+      "sha": "460d202f2b4a054d4e7c77dd7dcf05c0d59648e9",
+      "message": "Add namespace and respawn parameters to the nodes in the launch file (#977)\n\nFix indentation\r\n\r\nFix indentation\r\n\r\nUpdate rosbridge_server/launch/rosbridge_websocket_launch.xml\r\n\r\nCo-authored-by: Błażej Sowa <bsowa123@gmail.com>",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 3,
+      "commit_type": "config"
+    },
+    {
+      "author": "sea-bass",
+      "date": "2023-03-08T23:23:14Z",
+      "sha": "a5c395fa8a5b89caf9936ad83684f97a63947649",
+      "message": "Add option to call services in a separate thread (#847)\n\n* Register call_service operation to run in its own thread\r\n\r\n* Configure call_service behavior with node parameter",
+      "files_changed": 3,
+      "additions": 21,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "lboorman",
+      "date": "2024-11-16T02:57:36Z",
+      "sha": "1de68964d2cb0687284760ba45979ec2f584a5b9",
+      "message": "Remove first handler update as queue update is blocked (#974)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "seanpai96",
+      "date": "2024-10-13T14:14:40Z",
+      "sha": "c47870c2d7d7ed10255385141169ab75a29797db",
+      "message": "fix: add url_path parameter in rosbridge_websocket_launch.xml (#963)",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "EzraBrooks",
+      "date": "2024-08-15T19:32:29Z",
+      "sha": "55b8fa321804fdd3b8b1f3e7dd1d987ef73e30f0",
+      "message": "Fix length-limited list types (#840)",
+      "files_changed": 4,
+      "additions": 22,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "dnikitop",
+      "date": "2024-08-15T12:53:03Z",
+      "sha": "febe1c46df9066ff468932924f99cec52b04517e",
+      "message": "fix: update new subs with dds from publisher (#940)",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "ManuETR",
+      "date": "2024-08-15T03:27:13Z",
+      "sha": "996fddd6d4c4e60c78d11f2df61a892d2164cea3",
+      "message": "docs: update ROSBRIDGE_PROTOCOL.md - correcting indentation (#949)\n\nAdd whitespace in front of all ROS action operations -- for correct indentation in Markdown",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 6,
+      "commit_type": "docs"
+    },
+    {
+      "author": "bmartin427",
+      "date": "2024-08-15T03:02:38Z",
+      "sha": "974c6b700aaaab666fff814f2ec19596e94d5b52",
+      "message": "rosapi: Don't start parameter services that aren't spun (#943) (#944)",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "EricGallimore",
+      "date": "2024-08-14T01:59:35Z",
+      "sha": "01c972d2f525c4c66ee0b02a05991469b9ac01e2",
+      "message": "Changed type hints in ros_loader.py to use imports from Typing (#938)",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "Oberacda",
+      "date": "2024-07-09T19:43:54Z",
+      "sha": "d22f102b59e7d9fdeea0ec5e74aa8b98358585d7",
+      "message": "Fix invalid import of get_parameter_value in rosapi for ROS2 Jazzy. (#932)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "michael-cmt",
+      "date": "2024-01-31T22:21:51Z",
+      "sha": "48a1c62be54895aee746d742e4cfdc396b7105b5",
+      "message": "Timeout if service server not available within server_timeout_time (#905)",
+      "files_changed": 2,
+      "additions": 6,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "PhDittmann",
+      "date": "2024-01-16T13:41:55Z",
+      "sha": "4d1437c9dd0980e91b4cb2e72537c7e39a5ba9b8",
+      "message": "Remove 2 OBJ symbols; Fix JSON examples (#901)\n\nCo-authored-by: Philipp Dittmann <dittmann@cs.uni-bremen.de>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 6,
+      "commit_type": "docs"
+    },
+    {
+      "author": "pac48",
+      "date": "2024-01-12T16:21:57Z",
+      "sha": "5f87bee2c2c5d736871be8fab7501cdc88c23378",
+      "message": "Use ROS 2 Node Clock in Message Conversion (#900)",
+      "files_changed": 2,
+      "additions": 16,
+      "deletions": 14,
+      "commit_type": "code"
+    },
+    {
+      "author": "achim-k",
+      "date": "2018-09-29T09:30:15Z",
+      "sha": "5c423b8b133e6444206ff3e287f3f4495b73e5dc",
+      "message": "rosbridge_server: Publish number of connected clients on latched topic. (#359)",
+      "files_changed": 6,
+      "additions": 31,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "rwhitney456",
+      "date": "2023-09-26T18:27:06Z",
+      "sha": "98909f13936743db46c07961a7275a967f70ef6a",
+      "message": "Interpret call_services_in_new_thread as boolean (#857)",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "jspricke",
+      "date": "2018-12-13T03:33:42Z",
+      "sha": "ec07e5d63cc0e8b7c2e7d229c1d22a6d4415a911",
+      "message": "Drop use of ros Python module (#374)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "amacneil",
+      "date": "2021-08-17T16:32:52Z",
+      "sha": "28129f62db9d840ab4319923217fe3c38ff97f0f",
+      "message": "Automatically warn and close stale issues (#590)\n\nThis repo has many stale issues dating back years. Many are not actionable or reproducible.\r\n\r\nProposing an automated bot which will comment on stale issues and PRs.\r\n\r\nFor issues:\r\n- A comment will be made if there is no activity for 180 days\r\n- If no further activity, the issue will be closed after 30 days\r\n\r\nFor PRs:\r\n- A comment will be made if there is no activity for 90 days\r\n- If no further activity, the issue will be closed after 14 days",
+      "files_changed": 1,
+      "additions": 22,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "obi-t4",
+      "date": "2022-10-31T16:45:21Z",
+      "sha": "7af3683ec6a02b1569d7e3c42367721b0be2ac78",
+      "message": "fix memory leak on service call (#774)\n\n* add destroy_client\r\n\r\n* fix memory leak\r\n\r\n* use unique key as clients key\r\n\r\n* Revert \"use unique key as clients key\"\r\n\r\nThis reverts commit 1909996867cc757253030734a27f7c1c1d2378b5.\r\n\r\n* Revert \"fix memory leak\"\r\n\r\nThis reverts commit 2d1b15752c3fd17e1840b9d70a6eef760f5b8ca5.",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "tsender",
+      "date": "2022-10-21T18:55:18Z",
+      "sha": "d6a44c72846cd0af2403b9916cfda7022b43afde",
+      "message": "Optimized large binary array publishing (#819)\n\n* Optimized large binary array publishing\r\n\r\n* Fixed linting issue",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "hugoperier",
+      "date": "2022-10-07T15:09:44Z",
+      "sha": "203d5dc7982fbf813c1f8a9daeb7eb53ae91b526",
+      "message": "hostname parameter is no longer converted as an int value (#780)\n\nCo-authored-by: hugo <hugo.perier@cern.ch>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "jtbandes",
+      "date": "2021-08-03T20:03:53Z",
+      "sha": "7d700ea02f412df9233df379fcfcd7622273ae8c",
+      "message": "Upgrade ROS GitHub actions (#578)\n\nFix CI actions by upgrading to the latest versions. Also add a check for Galactic.",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 6,
+      "commit_type": "ci"
+    },
+    {
+      "author": "p0rys",
+      "date": "2022-04-22T15:37:51Z",
+      "sha": "b4b996b77d0b63548a2cd4a435604472c7d8932c",
+      "message": "Fixed multiple subscriber on transient_local topic (#723)\n\n**Public API Changes**\r\nNone\r\n\r\n**Description**\r\nProblem: Only the first subscription to a transient_local topic does receive the \"latched\" data.\r\n\r\nThe MultiSubscriber class creates a new subscription to initially receive the \"latched\" data for each new client. After this subscription returns with a message the client is shifted over to the \"real\" subscription and the other one is destroyed. Because this intermittent subscribers does not use the same QoS settings as the real one it will never receive latched data from transient_local topics except there is send new data from the publisher.\r\n\r\nFix: This PR adds the QoS settings as a global variable to the MultiSubscriber class and uses it when creating intermittent subscribers for new clients. With the correct settings these will directly get back with the latched data. \r\n\r\nThe transient_local_publisher test is also changed to subscribe three times to cover this case.",
+      "files_changed": 2,
+      "additions": 40,
+      "deletions": 35,
+      "commit_type": "test"
+    },
+    {
+      "author": "sirawats",
+      "date": "2022-06-27T00:50:51Z",
+      "sha": "4bcf816726f0402675d54695674ea77fffc2f785",
+      "message": "Add url_path config option (#709)\n\nAdd new --url_path command line arg and corresponding ROS param to the websocket process. This argument allows for specifying an alternative path other than the root path when running the websocket process.",
+      "files_changed": 1,
+      "additions": 14,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "zflat",
+      "date": "2022-02-17T21:50:05Z",
+      "sha": "d9c4f3973da27920fb9963f1717a362b2ba6e7e1",
+      "message": "RosbridgeWebsocketNode: reorganize into smaller methods (#706)\n\nThis cleans up code style. The main change is to the `RosbridgeWebsocketNode` class in `rosbridge_websocket.py` to fix linting errors about methods that are too many lines.\r\n\r\n**Public API Changes**\r\nRemoves the `authenticate` ros param since the code using that param has been deleted.\r\n\r\n**Description**\r\nThese are code cleanup changes that I implemented in https://github.com/RobotWebTools/rosbridge_suite/pull/676 but since that was closed I am making a smaller PR that is purely code cleanup.",
+      "files_changed": 3,
+      "additions": 91,
+      "deletions": 94,
+      "commit_type": "code"
+    },
+    {
+      "author": "MatthijsBurgh",
+      "date": "2022-05-23T18:58:54Z",
+      "sha": "6c98a370bbf841fd6a3e394315cd0a2b0b7338f0",
+      "message": "(actions) run Rolling on ubuntu 22.04, add Humble (#746)\n\nFixes #725 \r\n\r\nCo-authored-by: Jacob Bandes-Storch <jacob@foxglove.dev>",
+      "files_changed": 2,
+      "additions": 25,
+      "deletions": 13,
+      "commit_type": "config"
+    },
+    {
+      "author": "zecastelo",
+      "date": "2022-04-25T18:20:37Z",
+      "sha": "900cbf041fb1848b1821b7de5030b9386f68d522",
+      "message": "Fixed float arrays conversion (#730)\n\n**Public API Changes**\r\nNone\r\n\r\n**Description**\r\nMessages with `float32` arrays (bounded and unbounded) were being silently dropped. After debugging I found that the conversion was the problem. I added the fix and the respective tests.",
+      "files_changed": 5,
+      "additions": 31,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "kenji-miyake",
+      "date": "2021-09-28T05:05:25Z",
+      "sha": "ef0e4172667068b4c582a7277fe0b3071fa06aaf",
+      "message": "Add pre-commit, format with black and isort (#648)",
+      "files_changed": 108,
+      "additions": 2648,
+      "deletions": 1688,
+      "commit_type": "config"
+    },
+    {
+      "author": "rgov",
+      "date": "2022-02-05T05:26:24Z",
+      "sha": "449070a616b27229c693c504ff111af290897934",
+      "message": "Fix formatting of operations list (#710)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "kedus42",
+      "date": "2022-02-04T17:49:20Z",
+      "sha": "1342a507c99e1d223ff4364d7bf9284517d18a09",
+      "message": "Expanding support for rosbridge dependent software (#708)\n\n**Public API Changes**\r\nNone\r\n\r\n\r\n**Description**\r\nAdded a service that responds with the ros version and distro being used. This helps software dependent on rosbridge recognize which ros messages to expect.",
+      "files_changed": 3,
+      "additions": 12,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "rob-clarke",
+      "date": "2022-02-04T17:47:02Z",
+      "sha": "c176a0ba9ccaf76aefc049d6df7dea8bf8a24380",
+      "message": "Explicitly rename param subnode (#707)\n\n**Public API Changes**\r\nNone(ish)\r\n\r\nThe param subnode is now named `{parent_node_name}_params` when the rosapi node is renamed. Previously it would have the same name.\r\n\r\n\r\n**Description**\r\nPreviously, without any renaming, running the `rosapi` node would spawn a `rosapi_params` subnode. If the top-level node was renamed (or had a name set by a launch file) the param subnode ended up with the same name as the top-level node. This fixes the behaviour by explicitly setting the name of the subnode to the same as the top-level node with `_params` as a suffix.\r\n\r\nUnlike the solution described in [the issue](https://github.com/RobotWebTools/rosbridge_suite/issues/704), this preserves any other global arguments. This means when changing namespace of the top-level node, the subnode will have a matching namespace.\r\n\r\nFixes #704",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "flynneva",
+      "date": "2020-08-08T19:41:56Z",
+      "sha": "e2f8e75ef3d3cb2ab130d5f3df96143b828ddc18",
+      "message": "add ROS2 github actions (#518)\n\n* added ros2 ci for all distros and OS's",
+      "files_changed": 1,
+      "additions": 67,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "defunctzombie",
+      "date": "2021-12-09T23:42:43Z",
+      "sha": "adfa4d6335462e321d774400a6ffbf285cb28531",
+      "message": "Allow subscribing to any qos profile when creating a subscriber (#690)\n\n**Public API Changes**\r\nSubscriber QoS is automatically chosen based on available publishers to achieve compatible QoS settings in more cases.\r\n\r\n**Description**\r\nWhen looking into https://github.com/foxglove/studio/issues/1987 I discovered that rosbridge was not receiving \"latched\" `/tf_static` messages. This led us to learn that subscribers need specific qos profile settings for certain publishers (https://github.com/ros2/ros2cli/issues/523#issuecomment-987107534).\r\n\r\nThis PR attempts to use a qos profile that would accept any published message.\r\n\r\nCloses https://github.com/RobotWebTools/rosbridge_suite/pull/654\r\nCloses https://github.com/RobotWebTools/rosbridge_suite/pull/582\r\nFixes #551 \r\n\r\nCo-authored-by: Jacob Bandes-Storch <jacob@foxglove.dev>",
+      "files_changed": 5,
+      "additions": 137,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "DomenicP",
+      "date": "2021-10-07T16:11:03Z",
+      "sha": "cc5209cfcc2f9732c20f7741f1e029430b69f12c",
+      "message": "Port #464, #478, #496, and #502 from ROS1 branch (#663)\n\nhttps://github.com/RobotWebTools/rosbridge_suite/pull/464\r\nhttps://github.com/RobotWebTools/rosbridge_suite/pull/496\r\nhttps://github.com/RobotWebTools/rosbridge_suite/pull/502",
+      "files_changed": 5,
+      "additions": 134,
+      "deletions": 43,
+      "commit_type": "code"
+    },
+    {
+      "author": "cclauss",
+      "date": "2019-04-29T08:28:49Z",
+      "sha": "5e8840cfc67ab8565f89fd87718ac3c641e28815",
+      "message": ".travis.yml: The 'sudo' tag is now deprecated in Travis CI (#400)\n\n[Travis are now recommending removing the __sudo__ tag](https://blog.travis-ci.com/2018-11-19-required-linux-infrastructure-migration).\r\n\r\n\"_If you currently specify __sudo: false__ in your __.travis.yml__, we recommend removing that configuration_\"\r\n\r\nAlso, do not hard-code __Trusty__ because it reaches its end-of-support this month.\r\nhttps://wiki.ubuntu.com/Releases",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "travipross",
+      "date": "2020-08-24T20:29:39Z",
+      "sha": "ed37542c97c2c3235a8ffac23ed715995cd18ad3",
+      "message": "fix: remove json encoding before setting string params (#521)",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "connormbrooks",
+      "date": "2020-06-03T03:52:40Z",
+      "sha": "1e21dd0b5011c52001f8d67003cc6ee5bcee1a46",
+      "message": "Fix for type error caused by appending byte arrays to empty string buffer (#507)",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "justinscorringe",
+      "date": "2019-11-27T22:00:31Z",
+      "sha": "db0f2d98ed7039fe5a0f9a3d9c42896ada70c84d",
+      "message": "Update rosapi/proxy.py to match eloquent API (#447)\n\n* Update get_service_info to get_service_server_info on rosapi/proxy\r\nUpdates import to match eloquent update\r\n\r\n* Updated get_service_server_info usage",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "dirk-thomas",
+      "date": "2018-08-16T06:20:39Z",
+      "sha": "55fdbeab6aaed10514a9dbc60778f551e8d5087f",
+      "message": "use package format 2, remove unnecessary dependencies (#348)",
+      "files_changed": 6,
+      "additions": 31,
+      "deletions": 33,
+      "commit_type": "docs"
+    },
+    {
+      "author": "hidmic",
+      "date": "2019-09-17T21:09:46Z",
+      "sha": "0cbecacb41451b9d03870c5890c20f5ab1fd4820",
+      "message": "Migrate roslaunch files to ROS 2 launch XML.\n\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>",
+      "files_changed": 3,
+      "additions": 73,
+      "deletions": 73,
+      "commit_type": "code"
+    },
+    {
+      "author": "Juan Ignacio Ubeira",
+      "date": "2019-06-25T20:23:01Z",
+      "sha": "43467ead993a1588394554122d8abb0bc97d805f",
+      "message": "Porting rosapi package. (#388)\n\nSigned-off-by: Juan Ignacio Ubeira <jubeira@ekumenlabs.com>",
+      "files_changed": 12,
+      "additions": 491,
+      "deletions": 344,
+      "commit_type": "config"
+    },
+    {
+      "author": "jihoonl",
+      "date": "2013-03-04T16:01:26Z",
+      "sha": "f04c153a5107e9a6a570d98b433ebda558a50537",
+      "message": "Commenting out rostest",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "lennartdopatka",
+      "date": "2019-08-01T18:18:50Z",
+      "sha": "55b88174fe6da6202d0522aba6c5a763e4ddf88b",
+      "message": "Fixes #418: WebSocketClosedError Spam (#423)\n\n* not raising WebSocketClosedError for old tornado versions",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "mvollrath",
+      "date": "2014-10-19T04:46:25Z",
+      "sha": "2d8a2fa5d23550427d6957acffc7dfa6f55e9c34",
+      "message": "Install Tornado via rosdep\n\nUse python-tornado-pip to make sure we get the speedups introduced in Tornado 3.2.",
+      "files_changed": 84,
+      "additions": 3,
+      "deletions": 31345,
+      "commit_type": "config"
+    },
+    {
+      "author": "Alabate",
+      "date": "2019-06-24T07:19:45Z",
+      "sha": "ccd40a8b935398fada80b0abc87146766fd8996d",
+      "message": "Add settings for websocket timeout (#410)\n\n* Add settings for websocket timeout\r\n\r\n* Error handling of StreamClosedError",
+      "files_changed": 2,
+      "additions": 27,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Kad91",
+      "date": "2019-06-24T07:51:29Z",
+      "sha": "9255ef480cd7ac109f8ec26ebc94e1e2c9409854",
+      "message": "constnames and constvalues in typedef (#412)",
+      "files_changed": 3,
+      "additions": 27,
+      "deletions": 7,
+      "commit_type": "code"
+    },
+    {
+      "author": "gpdas",
+      "date": "2019-04-24T00:51:00Z",
+      "sha": "2b2326825a18eb4dceec346c7a7bdad5db447b49",
+      "message": "fixed logwarn msg formatting in publishers (#398)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "akirayou",
+      "date": "2019-03-29T00:10:02Z",
+      "sha": "f2a3b2b9274e1302a3744b3c75c20af6c38c847b",
+      "message": "BSON can send Nan and Inf (#391)",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "Affonso-Gui",
+      "date": "2018-12-31T02:07:45Z",
+      "sha": "d896276c06be826a80821f4d8a101de6b1ee44dd",
+      "message": "Use Master.getTopicTypes() in /rosapi/topics to increase performance (#381)",
+      "files_changed": 2,
+      "additions": 17,
+      "deletions": 17,
+      "commit_type": "code"
+    },
+    {
+      "author": "dmweis",
+      "date": "2018-12-25T08:38:55Z",
+      "sha": "6c93331fa7515c85f2f9e2bf91ef8eb05f9d7828",
+      "message": "Fix typo (#379)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Behery",
+      "date": "2017-09-08T22:35:33Z",
+      "sha": "31fbad33b401a4a0832aceee68e2260ac0ddb9d1",
+      "message": "Removes array delimiters while parsing parameters (#292)",
+      "files_changed": 1,
+      "additions": 12,
+      "deletions": 12,
+      "commit_type": "code"
+    },
+    {
+      "author": "gonzalocasas",
+      "date": "2018-07-25T01:45:51Z",
+      "sha": "092aec01aa8e20d1b03035e1b786335e9f43c9a5",
+      "message": "Add roslibpy to list of clients (#343)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "klintan",
+      "date": "2018-07-20T05:09:55Z",
+      "sha": "4663d8c3b9a93feda6254e16643d65d12afee71f",
+      "message": "removing has_key for python3, keeping backwards compatibility (#337)\n\n* removing has_key for python3, keeping backwards compatibility\r\n* py3 change for itervalues, keeping py2 compatibility",
+      "files_changed": 3,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "Sanic",
+      "date": "2017-01-22T21:57:11Z",
+      "sha": "c71857ea0e9128ae2eeb3c67c121025a0cf867ca",
+      "message": "Fixed the launch files for the tcp and udp service. Without these modifications, the rosapi node fails because some rosparams are not defined properly before. Now the launchfiles comply to the websocket version.",
+      "files_changed": 2,
+      "additions": 16,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "Jihoon Lee",
+      "date": "2016-06-27T08:15:05Z",
+      "sha": "66dc48f56d9f150f0a3f0562ddf6fcc4963fd644",
+      "message": "Add rosbridge_udp cmake install rule #225",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "elgarlepp",
+      "date": "2018-03-21T09:45:34Z",
+      "sha": "f61921dbf3149db9c77cf4a47a87fa0c61a80cab",
+      "message": "Fix typo in function call",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "pHaeusler",
+      "date": "2018-02-24T21:11:13Z",
+      "sha": "8ae0f7d0bc0055dddc55d9d743dc95e50a90791c",
+      "message": "Add missing argument to InvalidMessageException (#323)\n\nAdd missing argument to InvalidMessageException constructor",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "jorgenfb",
+      "date": "2018-02-24T20:54:21Z",
+      "sha": "50220a0c5dc5447cf1fa9663ed0061d9ff917e12",
+      "message": "Make unregister_timeout configurable (#322)\n\nPull request #247 introduces a 10 second delay to mitigate issue #138.\r\nThis change makes this delay configurable by passing an argument either\r\non the command line or when including a launch file.\r\n\r\nUsage example:\r\n```xml\r\n<launch>\r\n  <include file=\"$(find rosbridge_server)/launch/rosbridge_websocket.launch\">\r\n    <arg name=\"unregister_timeout\" value=\"5.0\"/>\r\n  </include>\r\n</launch>\r\n```\r\n\r\nCloses #320",
+      "files_changed": 14,
+      "additions": 63,
+      "deletions": 14,
+      "commit_type": "code"
+    },
+    {
+      "author": "onjen",
+      "date": "2018-02-24T20:27:54Z",
+      "sha": "02c415c2d9d4cbb8f35e0c4aee326a339770baeb",
+      "message": "message_conversion: create stand-alone object inst (#319)\n\nCatching the ROSInitException allows to create object\r\ninstances without an initialized ROS state",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "MBlistein",
+      "date": "2018-02-01T19:39:02Z",
+      "sha": "791261c6ec6a814ce67b8dc1f9d9526e3a008299",
+      "message": "Remove tornado fork from source code and add python-tornado as run dependency (#317)\n\nRelease only for kinetic+",
+      "files_changed": 89,
+      "additions": 4,
+      "deletions": 31639,
+      "commit_type": "docs"
+    },
+    {
+      "author": "WH-0501",
+      "date": "2018-01-08T03:57:37Z",
+      "sha": "950ac361992528fbe93117a588133ac7ad4e4552",
+      "message": "Fix bug that lost data while sending large packets (#310)\n\n* fix bug that lost data while sending large packets",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "T045T",
+      "date": "2014-06-05T13:08:55Z",
+      "sha": "9ac99093f1cd242c0bebe9c7110f5e50593d5d5f",
+      "message": "update ROSBRIDGE_PROTOCOL.md to reflect how rosbridge_server currently handles many-to-many topics\n\nAdvertising of, and publishing to, many-to-many topics is currently supported in rosbridge_server. This reflects the supported behavior in ROS itself",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "milesial",
+      "date": "2017-12-08T12:25:26Z",
+      "sha": "b4d2fdad0e4d01b0f3b239dcdb2b4d240e78f23a",
+      "message": "Fixed action_servers filter to allow more than one namespace (#305)\n\n* Modified action_servers filter to detect topics with more than one namespace\r\n\r\n* Fixed to return the full namespace",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "ledmonster",
+      "date": "2017-11-20T09:26:32Z",
+      "sha": "f0d359797eb90b322e5eb23cfda89ea7a9aceac8",
+      "message": "Fix subscrider's default queue_length in documentation to match code. Fixes #280 (#302)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "kartikmohta",
+      "date": "2017-11-06T04:38:49Z",
+      "sha": "4b98dc71a396c5c2074005c25036647702902366",
+      "message": "Add Python3 compatibility (#300)\n\n* First pass at Python 3 compatibility\r\n* message_conversion: Only call encode on a Python2 str or bytes type\r\n* protocol.py: Changes for dict in Python3. Compatible with Python 2 too.\r\n* More Python 3 fixes, all tests pass\r\n* Move definition of string_types to rosbridge_library.util",
+      "files_changed": 31,
+      "additions": 282,
+      "deletions": 219,
+      "commit_type": "code"
+    },
+    {
+      "author": "AlexisTM",
+      "date": "2016-10-26T11:17:34Z",
+      "sha": "19a87b7dca8a4747551cbd53c27520213eb5b8d5",
+      "message": "Type conversion convention correction, correcting issue #240",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "pushittodc",
+      "date": "2017-08-30T06:56:23Z",
+      "sha": "f8d8a4d763d684a2aba5ec18f23ea99e252de377",
+      "message": "added topic and service names to warnings in order to improve immediate debugability; minor linting (#286)",
+      "files_changed": 6,
+      "additions": 21,
+      "deletions": 20,
+      "commit_type": "code"
+    },
+    {
+      "author": "adolfo-rt",
+      "date": "2017-07-03T10:31:04Z",
+      "sha": "2412fa29212a75a872a777203d53300df0ece33b",
+      "message": "Merge pull request #281 from RobotWebTools/expose_b64\n\nexpose binary_encoder rosparam that was hidden in deep depth",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Nils Berg",
+      "date": "2015-05-22T09:21:29Z",
+      "sha": "5ef01b48df6488a2c7a3934a43c2f122d4e7daef",
+      "message": "add shutdown handling to rosbridge_tcp and make rosbridge_websocket more robust",
+      "files_changed": 2,
+      "additions": 26,
+      "deletions": 11,
+      "commit_type": "code"
+    },
+    {
+      "author": "sevenbitbyte",
+      "date": "2017-04-06T02:15:20Z",
+      "sha": "d82823d40f4de5669a3a85ce7670f47d2ec4c654",
+      "message": "Create README.md",
+      "files_changed": 1,
+      "additions": 11,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "pmania",
+      "date": "2017-03-14T22:21:59Z",
+      "sha": "07a32363f0be82e67abcec95aa8cf60ac4bd173d",
+      "message": "Set default for bson_only_mode in websocket handler and launch file.",
+      "files_changed": 4,
+      "additions": 12,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "ablakey",
+      "date": "2017-03-14T16:30:27Z",
+      "sha": "ee06b121d50014c90509a73441a4c91617ce55d7",
+      "message": "Update protocol.py\n\nPrevent a KeyError when bson_only_mode is unset.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Victor Lopez",
+      "date": "2017-01-12T17:21:37Z",
+      "sha": "23fc3b0a029e200c1dc220a7c4665729ec72cc4a",
+      "message": "Delay unregister to mitigate !138",
+      "files_changed": 1,
+      "additions": 14,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "TheClearpathDash",
+      "date": "2017-01-17T20:51:39Z",
+      "sha": "9aacefca3ddcf93f48a9a11aead0f6de77a2f9df",
+      "message": "Added default topics to all launch files, and fixed bug where it would crash if nothing was put into the lists as values",
+      "files_changed": 2,
+      "additions": 6,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "plieningerweb",
+      "date": "2017-01-13T20:34:54Z",
+      "sha": "4773f5b7073102921c39fe1a748a289e92043b39",
+      "message": "Fix: Set default to publish all topics\n\nWithout better doc, one does not understand why no topics are published. I thought, something is broken.\r\nWith this defaults, everything is working out of the box. And for a more secure setup, one can change it.",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "marcoarruda",
+      "date": "2016-08-05T13:15:57Z",
+      "sha": "91e146a88eb9c213bce279d1fa52dd5a08eb42b3",
+      "message": "Server side messages",
+      "files_changed": 3,
+      "additions": 47,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Eric",
+      "date": "2016-10-07T22:15:16Z",
+      "sha": "b30db62f6459bb4f96bb9d96aeee135354ce675b",
+      "message": "Added new parameters for topic and service security.\n\nAdded 3 new parameters to rosapi and rosbridge_server which filter the\ntopics, services, and parameters broadcast by the server to match an\narray of glob strings.",
+      "files_changed": 11,
+      "additions": 349,
+      "deletions": 82,
+      "commit_type": "code"
+    },
+    {
+      "author": "vladrotea",
+      "date": "2016-07-03T20:35:28Z",
+      "sha": "c561771258db6b57923d9b4e8096197af8fff6ec",
+      "message": "Fixed deprecated code in pillow",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Russell Toris",
+      "date": "2012-09-12T15:20:23Z",
+      "sha": "525a58da93ad60b5c778a3471d272b601cc37464",
+      "message": "PNG compression now creates a square RGB image padded with new-line characters",
+      "files_changed": 2,
+      "additions": 11,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "rctoris",
+      "date": "2013-12-09T13:58:55Z",
+      "sha": "89403825e70219718a07c1265f6795741441f146",
+      "message": "Merge pull request #64 from steffel/hydro-devel\n\nselectable IP address binding using roslauch",
+      "files_changed": 2,
+      "additions": 8,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "kiloreux",
+      "date": "2016-01-24T09:24:04Z",
+      "sha": "9e6ab903def0e73591211a51b73247ac2c0e76be",
+      "message": "Replaced += with ''.join() for python code",
+      "files_changed": 1,
+      "additions": 22,
+      "deletions": 21,
+      "commit_type": "code"
+    },
+    {
+      "author": "Victor Savu",
+      "date": "2016-01-11T14:43:21Z",
+      "sha": "5481e3d72b2eb7c016033f4f5e29187c7e50a4cb",
+      "message": "Allow TCP Server to reuse address after restart\n\nAfter killing (Ctrl-C) a rosbridge_tcp server instance which has\nconnected clients, starting a new instance (on the same port) can\nfail with the error: '[Errno 98] Address already in use'. Although the\nnode retries until the server starts, this can take up to a few minutes.\n\nInstruct the ThreadingTCPServer to allow the reuse of the same address.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "xuhao1",
+      "date": "2015-11-09T09:52:57Z",
+      "sha": "45bf09a315b75346bb7401b836c5e21c833f5f8b",
+      "message": "Adding UDP",
+      "files_changed": 4,
+      "additions": 191,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "rcodddow",
+      "date": "2015-09-27T02:25:23Z",
+      "sha": "f102f33787e074c493626c26d300ec833be4c678",
+      "message": "Update proxy.py\n\nFixes an issue when call the service \"/rosapi/service_type\"",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "DLu",
+      "date": "2015-06-24T21:24:08Z",
+      "sha": "d7138dc810aa77b8066a0a2d77195172221a1977",
+      "message": "Add bson encoding to the server side",
+      "files_changed": 3,
+      "additions": 19,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "dwlee",
+      "date": "2015-02-17T05:39:26Z",
+      "sha": "243f293283e932344ea0893d54edb90beaf3e87e",
+      "message": "add findding service function as specific service type",
+      "files_changed": 4,
+      "additions": 25,
+      "deletions": 10,
+      "commit_type": "docs"
+    },
+    {
+      "author": "paulbovbel",
+      "date": "2015-06-22T16:45:36Z",
+      "sha": "06242ff3599c4187c46b612b928faa112b0f589b",
+      "message": "Add default strings for certfile and keyfile\n\nThis allows downstream packages with roslaunch_add_file_check tests to pass.",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "BennyRe",
+      "date": "2015-05-22T07:21:08Z",
+      "sha": "2f32a78bde6bb97679f946d9f171671ea397db7c",
+      "message": "Stop IOLoop on shutdown.",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Rayman",
+      "date": "2014-10-01T09:20:44Z",
+      "sha": "ff30f974c13a8e5ac2ec14950175de86a0416d60",
+      "message": "upgrade tornado to 4.0.2",
+      "files_changed": 80,
+      "additions": 19816,
+      "deletions": 9423,
+      "commit_type": "test"
+    },
+    {
+      "author": "jstnhuang",
+      "date": "2015-02-24T09:22:40Z",
+      "sha": "e398184bc35dd81425d0692fef3f6f9976d20ff9",
+      "message": "Make get_topics() and get_topic_type() reference the full list of active topics.",
+      "files_changed": 1,
+      "additions": 12,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "smamessier",
+      "date": "2015-02-22T22:27:16Z",
+      "sha": "aa268f490f7848b8d9bb193fb853f42c844bfae5",
+      "message": "Enabled TCP nodelay in Websocket handler",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "jonbinney",
+      "date": "2014-03-25T00:26:16Z",
+      "sha": "e6d8cbc392e78ea4d2eb5caf37913aed05bab7ee",
+      "message": "use queue_size for publishers",
+      "files_changed": 3,
+      "additions": 20,
+      "deletions": 15,
+      "commit_type": "code"
+    },
+    {
+      "author": "gyeates",
+      "date": "2014-09-29T22:34:13Z",
+      "sha": "6dd04c523fbefc25ed39ee75825f69e9a1d68104",
+      "message": "Remove unused json imports; move json imports to utility\n\nFixes #7",
+      "files_changed": 9,
+      "additions": 15,
+      "deletions": 58,
+      "commit_type": "code"
+    },
+    {
+      "author": "Alex Sorokin",
+      "date": "2014-07-09T23:29:45Z",
+      "sha": "44495be0956dd6c6202b959bc97935715b4a0917",
+      "message": "Handle float infinity and NAN s",
+      "files_changed": 2,
+      "additions": 12,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "JonathanWade",
+      "date": "2014-06-20T14:48:12Z",
+      "sha": "8a33348ef0bfe195f26abe26b4bac953856c7b2e",
+      "message": "Windows-related fix for PIL Image module import",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "jon-weisz",
+      "date": "2014-06-09T21:09:38Z",
+      "sha": "c8afe80bca06371ce4d5d2f93ae0a0e364b9e62a",
+      "message": "Fixed typo in raising type errors.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Garfonso",
+      "date": "2014-06-02T08:42:28Z",
+      "sha": "55c09d0eba7d019ffe191957ad137e36d9f9bc36",
+      "message": "map Inf and NaN to null\n\nJSON does not support Inf and NaN values. Currently they are just written into the JSON and JSON.parse on the client side will fail. Correct is to map them to null which will then be parsed correctly by JSON.parse on the client side.\r\nThe issue with that is that the shortcut for lists of floats might be impossible (maybe someone else with more experience in python comes up with something else?). Maybe something similar is necessary in the to_inst case, but I can not really test them.\r\n\r\nReal world application is to process laser scans, they contain inf and nan values for some drivers if the measurements are invalid or out of range.",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "syrnick",
+      "date": "2014-05-24T18:03:00Z",
+      "sha": "83315db8d51755f08afddc6134df04436e5687f9",
+      "message": "Remove circular dependency.",
+      "files_changed": 3,
+      "additions": 11,
+      "deletions": 7,
+      "commit_type": "code"
+    },
+    {
+      "author": "lrasinen",
+      "date": "2014-05-05T15:41:25Z",
+      "sha": "29cdadc1a4fa4610637ce546a110b8ed87af7ac8",
+      "message": "Ensure proper locking for Parameter Server access",
+      "files_changed": 1,
+      "additions": 17,
+      "deletions": 15,
+      "commit_type": "code"
+    },
+    {
+      "author": "piyushk",
+      "date": "2014-05-02T19:10:45Z",
+      "sha": "876aa3b2eeddf84904bc50643e86a76d8a10bfc9",
+      "message": "Ensure that service name is a string\n\nCloses #104",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "mgruhler",
+      "date": "2014-03-26T08:03:58Z",
+      "sha": "ed6482859e89fb2b987f0100a3a4745c54df158f",
+      "message": "rosbridge_server: add install tag for python files, not just symlinks, to make them executable",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Julian Cerruti",
+      "date": "2014-02-12T15:47:06Z",
+      "sha": "2f92477642014dcd087039d3082fe1c89c8c612a",
+      "message": "First attempt adding latching support for topic publishers",
+      "files_changed": 3,
+      "additions": 34,
+      "deletions": 13,
+      "commit_type": "code"
+    },
+    {
+      "author": "baalexander",
+      "date": "2012-11-05T06:08:34Z",
+      "sha": "41466e2d65af089515ba5d899f496700a81d933a",
+      "message": "Merge pull request #2 from yujinrobot/fuerte-devel\n\nBoost thread is explicitly used, so link it",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "nus",
+      "date": "2014-01-13T13:10:31Z",
+      "sha": "6a628fe3e446de3b3de2160d6827cc02bd0f18be",
+      "message": "Decorated call_service item as list",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Pro",
+      "date": "2013-11-04T14:05:57Z",
+      "sha": "e2fc0a149f8ca4c3f7d66ba9bfa3ecbc1b77230d",
+      "message": "Added error message on result=False\n\nWhen call_service returns False as result, values contains the error message.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "furushchev",
+      "date": "2013-12-09T14:33:59Z",
+      "sha": "b4daf0ce61c5723b2ebcf5bc7669e3b99fc91012",
+      "message": "support publishing non-ascii letters",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Steffel Fénix",
+      "date": "2013-11-14T13:33:28Z",
+      "sha": "84d2ea00c43c1398830ad307e01edfff0fa74fc3",
+      "message": "Specific IP adress binding using roslauch",
+      "files_changed": 2,
+      "additions": 8,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "RainCT",
+      "date": "2013-10-24T17:03:18Z",
+      "sha": "9c6d7b45511b9ec3a835fa09ce706423e1a2a5a9",
+      "message": "Implement multiple subscriptions to latched topics (fixes #1).",
+      "files_changed": 1,
+      "additions": 11,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "OTL",
+      "date": "2013-09-30T12:39:02Z",
+      "sha": "93a0460605a6a884a95d1ac03aa27c7e14c00282",
+      "message": "update Service Response PROTOCOL\n\nadd \"result\": <boolean> field.",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "dabertram",
+      "date": "2013-06-30T16:54:47Z",
+      "sha": "dc03bf5c09e2d5b787d369d4cdab37703802c4ce",
+      "message": "added msg and srv files",
+      "files_changed": 2,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "fmessmer",
+      "date": "2013-08-08T13:05:41Z",
+      "sha": "7884ed10675c566a429b4012c73771fb8687aef3",
+      "message": "use rosloader for finding service_class",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "root",
+      "date": "2013-07-16T22:29:01Z",
+      "sha": "8bccd548076e3fb02c8cde25262e01f5c82e0a21",
+      "message": "linuxonandroid",
+      "files_changed": 4,
+      "additions": 12,
+      "deletions": 12,
+      "commit_type": "code"
+    },
+    {
+      "author": "dave",
+      "date": "2013-06-28T16:43:56Z",
+      "sha": "51e612ff5f71479418853c7dd25de8fcf780661d",
+      "message": "first working classes: service_server",
+      "files_changed": 14,
+      "additions": 696,
+      "deletions": 182,
+      "commit_type": "code"
+    },
+    {
+      "author": "fxm-db",
+      "date": "2013-06-04T17:25:25Z",
+      "sha": "60ab555bdfb3796d31071c341af27a2c2b3aac28",
+      "message": "add defragmentation capability",
+      "files_changed": 2,
+      "additions": 220,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "David Gossow",
+      "date": "2012-11-29T22:13:00Z",
+      "sha": "23a761a9ce0e1befc984ee061ebe077023d088ca",
+      "message": "Fixed typo in README.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Kaijen Hsiao",
+      "date": "2013-01-01T03:19:34Z",
+      "sha": "dcbc5c27073b3f5acd414aeb0bbee074127fe6a2",
+      "message": "commented out that problematic unregister line",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "stonier",
+      "date": "2012-11-04T10:17:15Z",
+      "sha": "598147e025aaae46d810c918e64f4ce10b948b96",
+      "message": "boost thread is explicitly used, so link it (fixes compile error in groovy).",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "JonathanMace",
+      "date": "2012-07-24T19:43:17Z",
+      "sha": "c1d4261950dff2a87b0947b55f682425ac8adfc7",
+      "message": "Testing git commit",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Austin Hendrix",
+      "date": "2012-08-27T21:53:02Z",
+      "sha": "08b8fd61b21f96ca0aa8e8cfab306794221975a1",
+      "message": "Collapse directory structure.",
+      "files_changed": 262,
+      "additions": 0,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jon",
+      "date": "2012-08-15T19:30:44Z",
+      "sha": "437adbcb7aa83f4e9529b965dad5d2913b7ea4f0",
+      "message": "Updated README in the root.",
+      "files_changed": 1,
+      "additions": 17,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Adam Leeper",
+      "date": "2012-08-15T01:31:58Z",
+      "sha": "250babc38922a64a168d2531e25076f772d84018",
+      "message": "added a makefile, yo",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "bener",
+      "date": "2012-08-14T02:29:26Z",
+      "sha": "be160fbdc52bf8cf24d5576cb461bc964fc92f7e",
+      "message": "tf_smart_throttle skeleton",
+      "files_changed": 4,
+      "additions": 63,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Jonathan Mace",
+      "date": "2012-07-24T17:58:19Z",
+      "sha": "c5df570fc6cd7fbf1de0f99d9bf957e67b806014",
+      "message": "initial commit",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 0,
+      "commit_type": "code"
+    }
+  ]
+}

@@ -1,0 +1,1041 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T13:27:49Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "eclipse-cyclonedds",
+    "repo": "cyclonedds"
+  },
+  "data": [
+    {
+      "author": "selimrecep",
+      "date": "2026-02-22T11:32:44Z",
+      "sha": "59d554eb5b8153d43498994d4c328ee3847d4467",
+      "message": "fix: guard IPv6 functions with DDSRT_HAVE_IPV6 preprocessor checks\n\nWhen building with ENABLE_IPV6=OFF, ownaddrs_hash6 and ownaddrs_eq6\nreference union addr members (a6) that don't exist since the IPv6\nsockaddr_in6 field is conditionally compiled out. This causes compile\nerrors on the hash/eq functions and the else branch in ddsi_udp_init.\n\nWrap ownaddrs_hash6, ownaddrs_eq6 and their usage in ddsi_udp_init\nwith #if DDSRT_HAVE_IPV6 guards. When IPv6 is disabled, only the\nIPv4 hash table path is compiled.\n\nFixes #2351\n\nSigned-off-by: Recep Selim Ağırman <recepselimagirman@gmail.com>",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "eboasson",
+      "date": "2018-03-14T00:33:56Z",
+      "sha": "e0068e6daef2b2aa1ac6743e3c8a05ee83ea84b4",
+      "message": "fix vendorid used for entities discovered via cloud",
+      "files_changed": 2,
+      "additions": 15,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "ErwanGa",
+      "date": "2026-02-18T07:12:25Z",
+      "sha": "a1a9cb530a41d1eff247481b690c4ec9c244f5cf",
+      "message": "RTI Compatibily in XCDR2\n\nRTI can't handle \"must understand\" on key fields when using XCDR2\nThe same issue has already been patched for XCDR1 format\n\nSetting must_understand if FLAG_MU, rather than if (FLAG_MU | FLAG_KEY)\n\nSigned-off-by: Erwan GAUTRON <erwan.gautron@yahoo.fr>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "noxpardalis",
+      "date": "2023-03-30T10:33:39Z",
+      "sha": "87b31771ad4dda92afccc6ad1cb84cb7f752b66b",
+      "message": "Fix documentation for `dds_qos_equal`",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 6,
+      "commit_type": "docs"
+    },
+    {
+      "author": "AlexisPotvinARA",
+      "date": "2024-10-29T15:44:50Z",
+      "sha": "d8cef891b9a27cc7bc52477e1c7b2c3f8edf81ba",
+      "message": "Add support for all architecture in debian packaging",
+      "files_changed": 1,
+      "additions": 14,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "trittsv",
+      "date": "2022-05-10T14:55:25Z",
+      "sha": "7bf7b6555f63ccddaf399110d945987c0a457c79",
+      "message": "optional ipv6 support (#1272)\n\n* optional ipv6 support\r\n\r\n* add documentation for missing cmake options",
+      "files_changed": 3,
+      "additions": 7,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Splinter1984",
+      "date": "2023-06-15T14:07:06Z",
+      "sha": "1bcbdf1032e49175f1777718875f0931dcdb175f",
+      "message": "Fix MISRA rule 21-19",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "dpotman",
+      "date": "2019-09-09T12:18:13Z",
+      "sha": "0c23eea7cbb8efd4fdd9e614c8af4fe6c3e36c98",
+      "message": "Fix compilation errors for RMW build on Windows (#248)\n\n* Fix compilation errors for RMW build on Windows\r\n\r\nThis commit fixes the compilation errors that occur when building\r\nthe ROS2 rmw_cyclonedds_cpp module on Windows with the msvc C++\r\ncompiler. The error are fixed by adding explicit casts when calling\r\noperations on atomics and a different syntax is used for compound\r\nliterals (the c99 syntax is not supported in msvc in C++ mode).\r\n\r\nIn additionally some warnings related to emtpy array usage\r\nin structs are suppressed for msvc.\r\n\r\nSigned-off-by: Dennis Potman <dennis.potman@adlinktech.com>\r\n\r\n* Restructured macros for vendor id cast and casts for atomic operations\r\n\r\nTo improve readability I've restructured the macros that are used\r\nfor vendor id casts on msvc in c++ mode and macros for type-casting\r\narguments in operations on atomics (as suggested in the review of\r\nmy previous commit)\r\n\r\nSigned-off-by: Dennis Potman <dennis.potman@adlinktech.com>\r\n\r\n* Moved atomic function suffix to macro\r\n\r\nMoved the suffix for (msvc) 64 bit atomic functions to the\r\nDDSRT_ATOMIC_OP64 macro\r\n\r\nSigned-off-by: Dennis Potman <dennis.potman@adlinktech.com>",
+      "files_changed": 4,
+      "additions": 87,
+      "deletions": 65,
+      "commit_type": "code"
+    },
+    {
+      "author": "mvandenhoek",
+      "date": "2020-02-10T09:10:42Z",
+      "sha": "2d252ad1f6a37dd63e12d0cf81015b4d210aced8",
+      "message": "Description corrections.\n\nSigned-off-by: Michel <michel.vandenhoek@adlinktech.com>",
+      "files_changed": 3,
+      "additions": 7,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "ThijsSassen",
+      "date": "2019-07-05T12:16:28Z",
+      "sha": "2fe4a4ca358ac409905d2d69fe6f7f292bb89436",
+      "message": "Fixed failing FreeRTOS target due to recent code refactors\n\nSigned-off-by: Thijs Sassen <thijs.sassen@adlinktech.com>\n\nAdjusted the close methode not to expand by the lwip close macro and added a check for DDSI_INCLUDE_SSM to match the correct pid table size.\n\nSigned-off-by: Thijs Sassen <thijs.sassen@adlinktech.com>",
+      "files_changed": 9,
+      "additions": 34,
+      "deletions": 29,
+      "commit_type": "code"
+    },
+    {
+      "author": "reicheratwork",
+      "date": "2021-03-09T17:14:03Z",
+      "sha": "e7f92fcd0386cc581a36f0161715a3f57e590e89",
+      "message": "Replacing the separate iox-c binding with the integrated implementation\n\n- the concept of sending a block of data preceded by a header is continued\n- only \"flat\" data structures are supported at this instance, to not have\nto use the cdr (de-)serialization in sending and receiving iox blocks\n- added a monitoring thread which waits on the subscribers signalling\nthey have data available through a waitset\n- this then calls the appropriate reader functions for the received data\n- added the dummy export header features.h, which has the DDS_HAS_SHM define\nset when the cmake flag ENABLE_SHM is set to On\n- added the serdata/sertopic iox utility functions\n  - ddsi_serdata_iox_size_t: returns the \"flat\" size of the sample to be sent\n  - ddsi_serdata_from_iox_t: constructs a serdata from a received iox block\n\nSigned-off-by: Martijn Reicher <martijn.reicher@adlinktech.com>",
+      "files_changed": 19,
+      "additions": 313,
+      "deletions": 121,
+      "commit_type": "docs"
+    },
+    {
+      "author": "alextac98",
+      "date": "2025-08-07T20:05:18Z",
+      "sha": "8b4129883c227d3c5199ae70d3fff2254616ba36",
+      "message": "Fix colors for tab extension to match light/dark/darkest modes",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "gmartin82",
+      "date": "2023-10-23T11:33:11Z",
+      "sha": "8c49a2b7f45bc8275f27b2aa8ec794ba9c574d03",
+      "message": "Check for required serdata ops before enabling PSMX on an endpoint (#1859)\n\n* Added check for required ops before enabling PSMX for an endpoint.\r\n\r\n* Adding parenthses to correct build error.",
+      "files_changed": 4,
+      "additions": 32,
+      "deletions": 26,
+      "commit_type": "code"
+    },
+    {
+      "author": "PatrickM-ZS",
+      "date": "2018-05-07T12:08:20Z",
+      "sha": "1289c7f7dc29701ffabaa2ee32575bb01fee4eec",
+      "message": "Change cmake files to make documentation optional (#2)\n\n* CHAM-613 - Add cmake options for building and downloading docs\r\n\r\nSigned-off-by: Patrick Masselink <patrick.masselink@adlinktech.com>",
+      "files_changed": 3,
+      "additions": 257,
+      "deletions": 276,
+      "commit_type": "docs"
+    },
+    {
+      "author": "MarcelJordense",
+      "date": "2019-10-28T09:52:15Z",
+      "sha": "43ee3f87cac4ac0d1dd01059f0b7406c43927dc4",
+      "message": "use ddsrt_malloc for allocating iov array\n\nSigned-off-by: Marcel Jordense <marcel.jordense@adlinktech.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "binbowang1987",
+      "date": "2025-02-20T12:17:26Z",
+      "sha": "b18cabfb63d4947ef90b05bd0b7690ed2e217216",
+      "message": "ddsi_time_t.seconds should be uint32_t\n\nref DDSI-RTPS 9.3.2.1 IDL Definitions\nstruct Time_t {\n  unsigned long seconds; // time in seconds\n  unsigned long fraction; // time in sec/2^32\n};\n\nSigned-off-by: binbowang <binbowang1987@163.com>",
+      "files_changed": 4,
+      "additions": 10,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "swelborn",
+      "date": "2024-11-14T13:07:14Z",
+      "sha": "8aa39ad955ddd603325da9851a4ad073455d9213",
+      "message": "realpath instead of readlink for DOCKERFILE_DIR",
+      "files_changed": 1,
+      "additions": 14,
+      "deletions": 9,
+      "commit_type": "code"
+    },
+    {
+      "author": "razr",
+      "date": "2024-11-22T13:54:32Z",
+      "sha": "7572681cfb48abe9cfb13769401ca631748340d2",
+      "message": "update VxWorks port",
+      "files_changed": 8,
+      "additions": 140,
+      "deletions": 11,
+      "commit_type": "docs"
+    },
+    {
+      "author": "poetinger",
+      "date": "2022-07-11T11:33:38Z",
+      "sha": "9e9815a03d35291d45b9c1ec8df6bd93c00aea54",
+      "message": "Fix minor grammar mistakes",
+      "files_changed": 1,
+      "additions": 18,
+      "deletions": 17,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ivanpauno",
+      "date": "2024-05-25T01:44:11Z",
+      "sha": "e1e2811c43c01c59e491e268ab28310791752565",
+      "message": "Slightly improve dds_waitset_wait_impl() performance by avoinding to iterate over all conditions\n\nSigned-off-by: Ivan Santiago Paunovic <ivanpauno@gmail.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "t0ny-peng",
+      "date": "2021-08-24T04:23:49Z",
+      "sha": "f2bc7030d4c0979b214e8f12b05f3c092c095598",
+      "message": "Fix the wrong description about the default value of ParticipantIndex",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 6,
+      "commit_type": "docs"
+    },
+    {
+      "author": "robertfemmer",
+      "date": "2024-03-08T14:36:36Z",
+      "sha": "42f93239088e75ed5d5fb4e604b6175f8483e3f4",
+      "message": "fuzz: add fuzzer targeting sample deserialization",
+      "files_changed": 6,
+      "additions": 145,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "e-tmplr",
+      "date": "2024-02-21T13:57:20Z",
+      "sha": "2cdc9a3916c824c74307ca0ae2dfeae3b6d94fac",
+      "message": "Use Ubuntu Jammy for newer version of CMake",
+      "files_changed": 2,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ymski",
+      "date": "2023-11-16T11:37:00Z",
+      "sha": "1c9bc19f94c6dd6c62b573fed335a0663cb84d9f",
+      "message": "Export dds_writecdr_impl\n\nSigned-off-by: Koudai Yamasaki <yamasaki@isp.co.jp>",
+      "files_changed": 2,
+      "additions": 3,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "CenTr1X",
+      "date": "2023-10-24T08:06:13Z",
+      "sha": "49f87b5623f9a994a588c7f046a9ed443840f6be",
+      "message": "fix ddsrt_getprocessname() for FreeRTOS",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "wadehunk",
+      "date": "2023-08-18T19:46:53Z",
+      "sha": "19ac009017b873ea1fc04f168f625a552838c517",
+      "message": "Issue #1312: Generated include guards are insufficient\n\nThis commit computes the MD5 hash for IDL source files and\nutilizes the result to generate a unique header guard macro\nwhen combined with the header file path.\n\nSigned-off-by: Wade Hunkapiller <wade.hunk@gmail.com>",
+      "files_changed": 4,
+      "additions": 45,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "mosfet80",
+      "date": "2023-07-06T12:39:42Z",
+      "sha": "c4d816393c764658fed7f0495d5853d6b7689fbc",
+      "message": "Delete .travis.yml\n\nsome configuration using ubuntu1804   and gcc7, both unused",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 302,
+      "commit_type": "config"
+    },
+    {
+      "author": "e-hndrks",
+      "date": "2020-06-15T13:19:59Z",
+      "sha": "a1e90d97030299d56cec6f4f58c33195c68f61c9",
+      "message": "Modified flags in typetree to include unsupported types, and to use separate flags to indicate signedness and wideness.\n\nSigned-off-by: Erik Hendriks <erik.hendriks@adlinktech.com>",
+      "files_changed": 7,
+      "additions": 175,
+      "deletions": 195,
+      "commit_type": "code"
+    },
+    {
+      "author": "JEnoch",
+      "date": "2023-05-24T10:04:11Z",
+      "sha": "aa35c3cc3de6fdb57c475c6ac404d306f874639c",
+      "message": "cdr target: add required bswap.c as source",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "SeanYu81",
+      "date": "2023-06-15T13:12:25Z",
+      "sha": "5e0dfea02ee461298617e05bf697e010ec3bfc39",
+      "message": "remove leading and trailing white spaces from distinguished name when… (#1719)\n\n* remove leading and trailing white spaces from distinguished name when processing security permission property\r\n\r\n* change string trim implementation for distinguished name",
+      "files_changed": 5,
+      "additions": 59,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "plamenterziev",
+      "date": "2023-05-29T07:32:58Z",
+      "sha": "a52cc15e133d5d0bf08e58653b52f854d0105505",
+      "message": "Remove enum forward declarations",
+      "files_changed": 5,
+      "additions": 22,
+      "deletions": 33,
+      "commit_type": "code"
+    },
+    {
+      "author": "roehling",
+      "date": "2021-01-18T15:16:41Z",
+      "sha": "af7aba56d44ab8b92925cfb150fb58b2089177be",
+      "message": "Fix typos\n\nSigned-off-by: Timo Röhling <timo@gaussglocke.de>",
+      "files_changed": 5,
+      "additions": 7,
+      "deletions": 7,
+      "commit_type": "code"
+    },
+    {
+      "author": "PetervdPerk-NXP",
+      "date": "2023-03-10T13:26:27Z",
+      "sha": "314887ca403c2fb0a0316add22672102936ed36c",
+      "message": "Add CDR project library option",
+      "files_changed": 1,
+      "additions": 55,
+      "deletions": 10,
+      "commit_type": "docs"
+    },
+    {
+      "author": "clalancette",
+      "date": "2021-06-08T13:06:26Z",
+      "sha": "0dcedac2a19a971dea970761e779ddeac57da92c",
+      "message": "Bugfix: PROPERTY_CA_ALGORITHM property is misspelled.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 7,
+      "additions": 7,
+      "deletions": 7,
+      "commit_type": "code"
+    },
+    {
+      "author": "adam-lee",
+      "date": "2023-04-10T22:32:10Z",
+      "sha": "f01644966c596cbee8145b1a08c4e3d62556af65",
+      "message": "Fix typo in the description",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "PeterCadogan",
+      "date": "2023-01-31T10:06:14Z",
+      "sha": "1a56e4b0c96d87aa26c3134b35c6b533066fb2ff",
+      "message": "Documentation edits to the Getting Started Section (#1510)\n\n* Documentation edits to the Getting Started Section\r\n\r\nI've made changes to the Installation and Benchmarking sections. I've also split these sections into separate files.\r\n\r\n* Updated with review comments\r\n\r\n* Edits to the Configuration Guide\r\n\r\n* Edits to the DDSI Concepts page\r\n\r\nAs this was a large topic, with multiple sections, I split it into several files.\r\n\r\n* Update docs/manual/config/ddsi-transient_behavoir.rst\r\n\r\nCo-authored-by: Phil <25635927+poetinger@users.noreply.github.com>\r\n\r\n* Edits to the Network configuration page\r\n\r\nI've separated the Network configuration section into its own page.\r\n\r\nIn addition, I've updated the log on the Getting started page so that it is smaller, and has a white background.\r\n\r\nI've also started to add index and glossary entries. The definitions for  the glossary items need to be defined - see https://github.com/orgs/ZettaScaleLabs/projects/5/views/2?visibleFields=%5B%22Title%22%2C23825276%2C%22Assignees%22%2C%22Status%22%5D\r\n\r\n* Edits to the Data path configuration\r\n\r\nIn addition to the edits, I have put all the external html links into a separate file. Hopefully, this will make it easier to check for broken or superseded links.\r\n\r\n* Edits to the Network partition configuration\r\n\r\nThis includes updates to cross-references, index and glossary\r\n\r\n* Edits to the Examples pages\r\n\r\n* Edits to the Security pages\r\n\r\nI've split the security pages into separate files so that they appear in the left-hand TOC\r\n\r\n* Further edits to the Configuration pages\r\n\r\nI've separated the Network configuration into separate topics.\r\n\r\n* Edits to the Shared memory section\r\n\r\nI've split the Shared memory page into separate files and moved it to a Shared memory folder. I've also updated the Getting started logo to a scalable svg.\r\n\r\n* Updated in response to review comments\r\n\r\nMostly, minor changes to capitalisation. Also some fixes to the Network configuration pages\r\n\r\n* Added a introduction section and merged HelloWorld tutorials into a single tutorial\r\n\r\nI've added a top-level section that has much the same information as the intro in the GitHub website (README.md). This also includes other high-level topics such as the data-centric architecture.\r\n\r\nBecause the HelloWorld C core DDS and C++ HelloWorld tutorials follow the same pattern, with similar explanations (except for the code examples), I've merged them into a single tutorial, with tab groups for the C and C++ specific areas.\r\n\r\n* Updates to the Core DDS (C) tutorial\r\n\r\nThe code in the Core DDS (C) tutorial did not match the subscriber.c and the publisher.c code samples in the Examples > HelloWorld. Therefore, I've replaced the code with a literalinclude so that these remain in sync. For the explanatory parts of the tutorial, I've replaced the snippets with the code from subscriber.c and the publisher.c, including line numbers so that it's easier to reference them.\r\n\r\n* Further updates to the C++ tutorial\r\n\r\nI've update the C++ tutorials so that it matches the publisher.cpp and subscriber.cpp files\r\n\r\n* Added CMake build configuration\r\n\r\nThis was in the README.md file, so I've added it to the Main documentation. Includes links to other relevant pages.\r\n\r\n* Updated external links to OMG IDL\r\n\r\n* Corrected a typo in the external links page\r\n\r\n* Apply suggestions from code review\r\n\r\nCo-authored-by: NoxPardalis <NoxPardalis@users.noreply.github.com>\r\n\r\n* Updates to the threashold example\r\n\r\n* Updated \"Cyclone DDS\" to use variable references\r\n\r\n* Update to platforms.rst\r\n\r\n* Update to prerequisites.rst\r\n\r\n* Apply suggestions from code review\r\n\r\nCo-authored-by: NoxPardalis <NoxPardalis@users.noreply.github.com>\r\n\r\n---------\r\n\r\nCo-authored-by: Phil <25635927+poetinger@users.noreply.github.com>\r\nCo-authored-by: NoxPardalis <NoxPardalis@users.noreply.github.com>",
+      "files_changed": 104,
+      "additions": 6228,
+      "deletions": 4823,
+      "commit_type": "ci"
+    },
+    {
+      "author": "zijian-teng",
+      "date": "2023-03-16T08:35:55Z",
+      "sha": "d07792a5bf792c02093fd509e81c1b81e313c195",
+      "message": "Enable idlc_generate() to support \"dot-separated\" idl files\t(#1612)\n\nSigned-off-by: tez1szh <tez1szh@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Pro",
+      "date": "2023-03-13T08:07:43Z",
+      "sha": "0cb3a89293ab6361742e3d9950a175b12b74c7b6",
+      "message": "fix: allow passing OUTPUT_DIR to IDLC_GENERATE_GENERIC",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "James Pace",
+      "date": "2023-01-27T02:23:40Z",
+      "sha": "de27a112cf673d9479d096ce4a9ac17f9d280434",
+      "message": "Add fix suggested in sros2 bug report.\n\nAs stated in: https://github.com/OpenDDS/OpenDDS/pull/3992#issue-1548228907\n\n\"Implement the suggestion in ros2/sros2#282.\nSpecifically, use PKCS7_NOINTERN to not accept any signatures in the signed document.\nThis, in turn, requires the use of the certs parameter to PKCS7_verify.\nPKCS7_NOVERIFY is used since the permissions CA certificate will not be chain verified.\"\n\nFixes: https://github.com/eclipse-cyclonedds/cyclonedds/issues/1546\nRelated to: https://github.com/ros2/sros2/issues/282\n\nSigned-off-by: James Pace <jpace121@gmail.com>",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "Matej Vargovcik",
+      "date": "2022-10-28T18:38:00Z",
+      "sha": "7cd8140b540831e76ef4408b3e28f3a0f84afb9b",
+      "message": "Fixed iceoryx crash (#1445)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "EttoreVidotto",
+      "date": "2021-07-28T07:46:39Z",
+      "sha": "449b569542d5d59be8de18b3f80143a6d8ea699c",
+      "message": "Default message \"using network interface...\" is printed as info\n\nFix for issue #867",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "jc211",
+      "date": "2023-01-02T05:39:59Z",
+      "sha": "38aeacd81ba4f6818ff53d5226b7075b343a60c2",
+      "message": "Fix compiling for iOS",
+      "files_changed": 2,
+      "additions": 9,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "thijsmie",
+      "date": "2021-05-19T12:37:29Z",
+      "sha": "84891c98ea4adbf109c5b816643680a1b3ca1b2c",
+      "message": "Update docs target\n\n* Build documentation with new FindSphinx.cmake by @k0ekk0ek\r\n* Use conf.py configure file instead of generating one",
+      "files_changed": 11,
+      "additions": 206,
+      "deletions": 60,
+      "commit_type": "docs"
+    },
+    {
+      "author": "YuanYuYuan",
+      "date": "2022-11-25T10:44:21Z",
+      "sha": "c961d703388cccec7ea2193f5859d40e2716e714",
+      "message": "Update shared memory doc and fix the iceoryx version to release_2.0",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 6,
+      "commit_type": "docs"
+    },
+    {
+      "author": "cottsay",
+      "date": "2019-08-30T09:26:33Z",
+      "sha": "1c8c2944ff60544da38fefda5b4e80270e7fec48",
+      "message": "Add a colcon.pkg file to override the CMake package name (#242)\n\n* Add a colcon.pkg file to override the CMake package name\r\n\r\nWithout this file, colcon will take the project name from the\r\nCMakeLists.txt file, which is `CycloneDDS`. This name does not conform\r\nto the standard practices for a ROS package name, and should be\r\nlowercase (i.e. `cyclonedds`).\r\n\r\nThis `colcon.pkg` will make colcon detect the package dependencies using\r\nthis name.\r\n\r\nSigned-off-by: Scott K Logan <logans@cottsay.net>\r\n\r\n* Drop unneeded package type\r\n\r\nThis isn't needed as colcon can detect the package type as `cmake`\r\nwithout it.\r\n\r\nSigned-off-by: Scott K Logan <logans@cottsay.net>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "lopsided98",
+      "date": "2022-10-19T17:33:47Z",
+      "sha": "3ff967e32b8078d497a8b9c70735849c04eaebf6",
+      "message": "Fix assumptions that CMAKE_INSTALL_*DIR variables are relative\n\nThe CMAKE_INSTALL_*DIR variables are allowed to be absolute paths, which allows\nlibraries and headers to be installed into separate prefixes. This means they\ncannot be naively concatenated with CMAKE_INSTALL_PREFIX. If an absolute path\nis needed, CMAKE_INSTALL_FULL_*DIR should be used, while more complicated\nhandling is required to keep ${prefix} interpolation in pkg-config files in\nthe case where CMAKE_INSTALL_*DIR is relative.\n\nSigned-off-by: Ben Wolsieffer <benwolsieffer@gmail.com>",
+      "files_changed": 3,
+      "additions": 14,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mangodan2003",
+      "date": "2022-10-14T13:42:31Z",
+      "sha": "51c078d55e5572cd8159d589b185b447a5067a07",
+      "message": "remove redundant dds_waitset_attach",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "clunietp",
+      "date": "2022-10-10T09:50:08Z",
+      "sha": "267092b9479eba2c31ccccf63237e8bf58c597fd",
+      "message": "Improve topic name support (#1426)\n\n* Improve topic name support\r\n* Update invalid chars\r\n\r\nSigned-off-by: Tom Clunie <clunietp@gmail.com>",
+      "files_changed": 2,
+      "additions": 17,
+      "deletions": 14,
+      "commit_type": "code"
+    },
+    {
+      "author": "JakubSosnovec",
+      "date": "2022-09-30T10:09:07Z",
+      "sha": "8c3ddc3d572bc1a0adf92558e2d2a6547beaf827",
+      "message": "Fix running ShmThroughputSubscriber with no args",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "pgangula-src",
+      "date": "2022-09-27T08:41:02Z",
+      "sha": "1af4657626091e47dfd34ae463a0b59116e69dea",
+      "message": "Changed NetworkInterface ip member to address\n\n//CycloneDDS/Domain/General/Interfaces/NetworkInterface\r\n\r\nAttributes: address",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Rock Chen",
+      "date": "2022-09-15T19:27:11Z",
+      "sha": "f4ea4fcc79d25c7a21df8f827eaac6002639a610",
+      "message": "call iox_sub_release_chunk on unknown-source-entity",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "yixianlv",
+      "date": "2021-01-06T09:34:21Z",
+      "sha": "7813351efcdb4f1129be0949748713a3b85fa9de",
+      "message": "add Getting Started guide by Yixian",
+      "files_changed": 34,
+      "additions": 3125,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "JesseRengers",
+      "date": "2022-06-22T06:28:26Z",
+      "sha": "eac87dc822b815de618eb3f2520e636f736fe4bf",
+      "message": "Fixed perftest script to work with security features",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "ahoenerBE",
+      "date": "2022-05-27T07:04:55Z",
+      "sha": "03aeb611debb4f0e25ac41b220f3a6ac35118bc3",
+      "message": "(idlc) Add options for output directory and path reconstruction / prefix (#1263)\n\n* Add options for output directory and path reconstruction (#1220)\r\n\r\nAdded -o command line option to specify an output directory which may or may not exist.\r\nAdded -b command line option to specify a base path for a directory structure.\r\nWhen using -b, any directories from <base_dir> to <file> will be reconstructed in the output directory. If no output directory is specified, this will result in files being compiled in-place.\r\nNecessary directories will be constructed automatically to hold the output files\r\n\r\nSigned-off-by: Andrew Hoener <ahoener@boston-engineering.com>\r\n\r\n* Extracted path generation to its own functions.\r\nAdded unit tests\r\n\r\nSigned-off-by: Andrew Hoener <ahoener@boston-engineering.com>\r\n\r\n* Updated Generate.cmake to use the new output_dir by default.\r\nAdded BASE_DIR option to specify the base dir for the program\r\n\r\nSigned-off-by: Andrew Hoener <ahoener@boston-engineering.com>",
+      "files_changed": 7,
+      "additions": 334,
+      "deletions": 42,
+      "commit_type": "code"
+    },
+    {
+      "author": "MatthiasKillat",
+      "date": "2021-03-16T12:21:53Z",
+      "sha": "0a5c461287fbc1f443bf31b136ed8921ee50e1bf",
+      "message": "fix colcon build with iceoryx\n\nSigned-off-by: Matthias Killat <matthias.killat@apex.ai>",
+      "files_changed": 2,
+      "additions": 3,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "john.fan",
+      "date": "2022-04-21T06:56:52Z",
+      "sha": "d8d1f44cf6e5da95add16ce6f1b45143f26b4054",
+      "message": "fix zero pointer problem when we use tcp mode.\n\nSigned-off-by: john.fan <john.fan@autocore.ai>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "stefansli",
+      "date": "2022-04-20T18:43:47Z",
+      "sha": "325a2bfbfc181ac0b5261ec7e677f13def112c0d",
+      "message": "Remove wrong inline in ddsi_cdrstream.c\n\nThe function is declared as export in the header. Defining the implementation as `inline` breaks building a static library.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "LanderU",
+      "date": "2021-06-22T10:56:43Z",
+      "sha": "d4f11b3869ac55257f9fe86556774fa36c5f5fbd",
+      "message": "Added QNX OS support\n\nCo-authored-by: Ahmed Sobhy <asobhy@blackberry.com>\nSigned-off-by: LanderU <lander.usategui@gmail.com>",
+      "files_changed": 5,
+      "additions": 24,
+      "deletions": 13,
+      "commit_type": "docs"
+    },
+    {
+      "author": "dkroenke",
+      "date": "2021-04-29T13:50:13Z",
+      "sha": "d88c566fa2d2753cdcf773935de3733b5aaca0e6",
+      "message": "Copy the full length of MAC address into gv->loc_iceoryx_addr.address\n\nSigned-off-by: Dietrich Krönke <dietrich.kroenke@apex.ai>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "sloretz",
+      "date": "2022-03-01T00:55:23Z",
+      "sha": "bff852e746d41c8a2daa8cd2d86fdb728e79bac8",
+      "message": "Make INSTALL_INTERFACE use CMAKE_INSTALL_INCLUDEDIR\n\nSigned-off-by: Shane Loretz <shane.loretz@gmail.com>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "sumanth-nirmal",
+      "date": "2021-04-06T13:25:19Z",
+      "sha": "51092c326f7925f06424c787c7486b98e5d082c5",
+      "message": "Asynchronous write implementation (#685)\n\n* Added current state of async write and follow-up questions\r\n\r\nSigned-off-by: Sumanth Nirmal <sumanth.724@gmail.com>\r\n\r\n* Fix the copy of Xpack in nn_xpack_send\r\n\r\n - The nn_xpack_send does a deep copy of the xpack structure and update the doamingv struct to be sent in the sendq_thread\r\n - Also updated the sendq_thread stae\r\n\r\nSigned-off-by: Sumanth Nirmal <sumanth.724@gmail.com>\r\n\r\n* Sendq thread starts when a data writer is created with a non-zero latency budget\r\n\r\n  - Global async_mode config option is not used for triggering async write\r\n\r\nSigned-off-by: Sumanth Nirmal <sumanth.724@gmail.com>\r\n\r\n* Remove the SendAsync configuration option and its usage in the code\r\n\r\nSigned-off-by: Sumanth Nirmal <sumanth.724@gmail.com>\r\n\r\n* Update the trigger condition\r\n\r\n  - SendQ thread waits indefinetly and sends when queue is not empty\r\n\r\nSigned-off-by: Sumanth Nirmal <sumanth.724@gmail.com>\r\n\r\n* Update the async_write doc with the current behaviour\r\n\r\nSigned-off-by: Sumanth Nirmal <sumanth.724@gmail.com>",
+      "files_changed": 12,
+      "additions": 72,
+      "deletions": 49,
+      "commit_type": "docs"
+    },
+    {
+      "author": "christophebedard",
+      "date": "2020-02-29T16:53:33Z",
+      "sha": "dc57685ac3d28349fbb64472f0e34c8fd7e2eeb4",
+      "message": "Make sure USE_SANITIZER is not empty before foreach\n\nSigned-off-by: Christophe Bedard <bedard.christophe@gmail.com>",
+      "files_changed": 1,
+      "additions": 15,
+      "deletions": 13,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Dennis Potman",
+      "date": "2019-10-09T08:28:19Z",
+      "sha": "3822f42effa1dab7467a2bae54aecf0d3acdce48",
+      "message": "Liveliness QoS implementation for auto and manual-by-participant\n\nThis commit adds support for the liveliness QoS for the liveliness\nkinds automatic and manual-by-participant. It also implements the\nlease_duration from this QoS, which was ignored until now. In the\napi the function dds_assert_liveliness is added to assert liveliness\non a participant, which can be used when using liveliness kind\nmanual-by-participant.\n\nLiveliness kind manual-by-topic is not yet supported, this will be\nadded in a later commit.\n\n* Proxy participants now have 2 fibheaps to keep leases: one for leases\nof pwrs with automatic liveliness and one for leases of the pwrs with\nmanual-by-participant liveliness (both protected by the proxypp lock).\nThe minl_auto and minl_man members represent the shortest lease from\nthese fibheaps and these leases are renewed when receiving data.\nReplacing the minl_ leases is now done by replacing the lease object\n(atomic ptr) with delayed deletion of the old lease using the gc.\n\n* Proxy writers are set not-alive when the lease expired, and reset to\nalive then data is received. When data is received by a pwr, the other\npwrs in the proxypp might also be set alive. I think the specification\nis not clear at this point, and for now I have not implemented this\n\n* I refactored out the counter for man-by-pp proxy writers and improved\nlocking when updating the min-leases on the proxy participant, so I\nthink this fixes the race conditions.\n\nSome additional tests are required, e.g. to test the not-alive->alive\ntransition for pwrs. I will add these in short term, as well as the\nimplementation of the manual-by-topic liveliness kind.\n\nSigned-off-by: Dennis Potman <dennis.potman@adlinktech.com>",
+      "files_changed": 16,
+      "additions": 1116,
+      "deletions": 259,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mtudan",
+      "date": "2021-12-14T13:40:49Z",
+      "sha": "ec866a11f66bf7cfac02b024823d92368d4049c8",
+      "message": "idlc: implement idlc_generate_generic() function\n\nThis commit extends current implementation of the idlc_generate() function\nto be more generic and include some missing options like language support\nand additional include paths. For example, this function should now be\nused in the C++ repo instead of implementing almost the same thing there\nas well.\n\nSigned-off-by: Matija Tudan <tudan.matija@gmail.com>",
+      "files_changed": 1,
+      "additions": 51,
+      "deletions": 13,
+      "commit_type": "code"
+    },
+    {
+      "author": "k0ekk0ek",
+      "date": "2018-08-05T19:58:08Z",
+      "sha": "085985dce7f7017384594c4cdbe71d9cbadb3830",
+      "message": "add support for CUnit versions less than 2.1-3\n\nSigned-off-by: Jeroen Koekkoek <jeroen@koekkoek.nl>",
+      "files_changed": 3,
+      "additions": 23,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "tonynajjar",
+      "date": "2022-01-04T13:05:56Z",
+      "sha": "2d72c0a49c7541a220b8e6c7463190cc13b5b94c",
+      "message": "Capitalize Id as defined in cyclonedds.xsd",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "phretor",
+      "date": "2021-11-23T09:22:12Z",
+      "sha": "fd1c1e0a8c6c81f689833471fb2137800fcf215d",
+      "message": "fuzz/fuzz_config_init integration for oss-fuzz\n\nSigned-off-by: Federico Maggi <federico.maggi@gmail.com>",
+      "files_changed": 6,
+      "additions": 250,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "joespeed",
+      "date": "2021-10-13T21:55:12Z",
+      "sha": "8b30c85761d9d6673915292080f2dce59c5bc2a5",
+      "message": "clarified the current state of performance testing",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "alsora",
+      "date": "2021-10-07T12:08:28Z",
+      "sha": "273b42d3dbf17adb16cd64ec89887451689b0614",
+      "message": "remove grammars from legal notice\n\nSigned-off-by: Alberto Soragna <alberto.soragna@gmail.com>",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "robinlinden",
+      "date": "2020-06-08T19:08:47Z",
+      "sha": "8029274fec8a5bf45f87e86dfac5bb85d817182b",
+      "message": "Allow building without a C++ compiler\n\nSigned-off-by: Robin Lindén <_@robinlinden.eu>",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "elfenpiff",
+      "date": "2021-09-09T09:26:08Z",
+      "sha": "9307882edb288832ee2cbd6a5cb4717664828498",
+      "message": "Use iceoryx user header instead of putting custom header in front of payload\n\nSigned-off-by: Christian Eltzschig <christian.eltzschig@apex.ai>",
+      "files_changed": 4,
+      "additions": 29,
+      "deletions": 22,
+      "commit_type": "code"
+    },
+    {
+      "author": "jobol",
+      "date": "2021-09-03T16:27:19Z",
+      "sha": "1c2f6d800d6667c3412bb3dcd68af951f200582b",
+      "message": "Fix check of snprintf result\n\nThe length returned by snprintf does not includes the ending\nnull. So the test must be changed to ensure that if the final length\nif sadly 64, the library can be found all the time.\n\nAlso add little comments.\n\nSigned-off-by: José Bollo <jose.bollo@iot.bzh>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "12li-wei",
+      "date": "2021-09-03T06:16:19Z",
+      "sha": "a060ead533646a2caa8f8765bf9fc2115558bbf4",
+      "message": "ddsrt_malloc size for maxq_list is incorrect in find_own_ip",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "hansvanthag",
+      "date": "2021-07-14T11:29:28Z",
+      "sha": "38a40ca92fbbf5b5985214449d1c84cac3390f73",
+      "message": "Fix memory-allocation for sampleInfo",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "evshary",
+      "date": "2020-02-19T11:33:39Z",
+      "sha": "af3604dea72b79d88eb477bd78eeb916efd05e97",
+      "message": "Fix some typos. (#399)\n\n* Fix some typos.\r\n\r\nSigned-off-by: ChenYing Kuo <evshary@gmail.com>\r\n\r\n* Also update q_config.c, cyclonedds.rnc, cyclonedds.xsd for correct\r\nbuild.\r\n\r\nSigned-off-by: ChenYing Kuo <evshary@gmail.com>\r\n\r\n* Remove cdds.md.\r\n\r\nSigned-off-by: ChenYing Kuo <evshary@gmail.com>",
+      "files_changed": 7,
+      "additions": 6,
+      "deletions": 1932,
+      "commit_type": "docs"
+    },
+    {
+      "author": "lygstate",
+      "date": "2020-07-26T11:35:46Z",
+      "sha": "b9c2553a7b4650f4cb8981017ec0ac01f333fb3e",
+      "message": "Make set_sndbuf to be consistence with set_rcvbuf\n\nSigned-off-by: Yonggang Luo <luoyonggang@gmail.com>",
+      "files_changed": 1,
+      "additions": 22,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "RamziKaroui",
+      "date": "2021-03-23T23:28:59Z",
+      "sha": "170d268c4dcb6932b8cd1de29aaeb13fdbc008f6",
+      "message": "Update ROADMAP (#726)\n\nSigned-off-by: Ramzi KAROUI <ramzi.karoui@adlinktech.com>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "FransFaase",
+      "date": "2018-11-28T10:38:05Z",
+      "sha": "59d5337c17bd5d3f18682771fcc3508886dc7672",
+      "message": "Add initial design for type support\n\nSigned-off-by: Frans Faase <frans.faase@adlinktech.com>",
+      "files_changed": 1,
+      "additions": 87,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "allenh1",
+      "date": "2020-12-01T13:49:35Z",
+      "sha": "1db5b58051e7099de460dc65c30e3ced7371e8bc",
+      "message": "Add maven to dependency list\n\nSigned-off-by: Hunter L. Allen <hunter.allen@ghostrobotics.io>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mikaelarguedas",
+      "date": "2020-06-17T21:24:57Z",
+      "sha": "768b92774f56a36434d40cd84f760a5edcd88ddd",
+      "message": "move options above where they're used to generate features header\n\nSigned-off-by: Mikael Arguedas <mikael.arguedas@gmail.com>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "pral1kor",
+      "date": "2020-06-05T02:22:03Z",
+      "sha": "54c15c2b7e7a827180fe621968ebd21e76c7e95f",
+      "message": "Add copyright headers\n\nSigned-off-by: Prasanna Bhat (RBEI/EBB) <prasanna.bhat@in.bosch.com>",
+      "files_changed": 5,
+      "additions": 51,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "dodsonmg",
+      "date": "2020-04-15T13:40:57Z",
+      "sha": "b513eaac00eb4a9a100506a59f85cdcff1e7d96d",
+      "message": "add freebsd support\n\nIncluding FreeBSD in preprocessor conditionals for APPLE fixes issues with UDP make_socket, as described in issue #488.\n\nSigned-off-by:  Michael Gary Dodson <md403@cam.ac.uk>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "rotu",
+      "date": "2019-09-17T20:15:46Z",
+      "sha": "03491c503d00cb76266ad88ec791cbd3b821e5bb",
+      "message": "Switch from colcon.pkg to package.xml and add build-time dependencies.\n\nSigned-off-by: Dan Rose <dan@digilabs.io>",
+      "files_changed": 2,
+      "additions": 19,
+      "deletions": 3,
+      "commit_type": "config"
+    },
+    {
+      "author": "prasannabhat",
+      "date": "2020-04-12T05:53:22Z",
+      "sha": "8fc3f4bc719edd212c86646c4bb7fa967e86d122",
+      "message": "Add build scripts & docker scripts\n\nSigned-off-by: Prasanna Bhat <prasanna.yoga@gmail.com>",
+      "files_changed": 6,
+      "additions": 127,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "okellogg",
+      "date": "2020-04-27T17:05:42Z",
+      "sha": "1890322d4eb372982459ed2ff9f27c9e90e51886",
+      "message": "Fix some typos in files:\nREADME.md\ndocs/dev/{modules,logging,debugging}.md\ndocs/manual/{config,options,GettingStartedGuide/helloworld_indepth}.rst\nsrc/idlc/src/org/eclipse/cyclonedds/compilers/IdlcCmdOptions.java\n\nSigned-off-by: Oliver Kellogg <okellogg@users.sourceforge.net>",
+      "files_changed": 8,
+      "additions": 25,
+      "deletions": 25,
+      "commit_type": "docs"
+    },
+    {
+      "author": "SidFaber",
+      "date": "2020-03-10T13:55:03Z",
+      "sha": "9fe51ef3fb795d798f57c0f79569b29ed55a623a",
+      "message": "Install security plugins\n\nSecurity plugins are built but not installed.  Add target to CMakeLists.txt\nfor three security plugins.\n\nSigned-off-by: Sid Faber <sid.faber@canonical.com>",
+      "files_changed": 3,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "stkimmer",
+      "date": "2020-01-24T09:53:18Z",
+      "sha": "aef4f0a12661c7149d990acad47dc00a5573b2b9",
+      "message": "Certificate trigger and directory operations\n\nImplement trigger of certificate and permission expiries using the timed callbacks.\n\nImplement directory operations such that trusted CA can be read.\nThis implements OS abstraction functions such as opendir and stat.\n\nSigned-off-by: Stefan Kimmer <skimmer@s2e-systems.com>",
+      "files_changed": 25,
+      "additions": 3038,
+      "deletions": 168,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jrebelo",
+      "date": "2019-11-25T12:07:34Z",
+      "sha": "97c3025e54db892e6c03129248bf218336a3cd91",
+      "message": "Add timed callback dispatcher to security core\n\nDispatchers are added to a custom linked list while each dispatcher owns a\nfibheap of callbacks that are ordered by expiry timestamp. A seperate\nfibheap is use for each dispatcher to allow disabling and enabling of\neach dispatcher. A new and free function is added that creates a\ntimed_cd_data object that is used by every public function. A thread is\ninitialized at object creation instead of using a counter. Add\na protection for the terminate flag.\n\nSigned-off-by: Joao Rebelo <jrebelo@s2e-systems.com>",
+      "files_changed": 5,
+      "additions": 1066,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "kurtuluso",
+      "date": "2019-05-23T14:57:55Z",
+      "sha": "98cf8e2ae5a82591e1b066b6fd73d79c172f9622",
+      "message": "Security API has been added for OMG DDS Security Specification compliance.\nThis API consists of only header files which are grabbed from spec IDL. The dynamically loaded plugins should implement API functions.\n\nBuilt-in plugins will be added to the repository later. Third party plugins will also be able to be integrated.\n\nSigned-off-by: Kurtulus Oksuztepe <kurtulus.oksuztepe@adlinktech.com>",
+      "files_changed": 18,
+      "additions": 1954,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Martin Bremmer",
+      "date": "2019-03-25T15:12:56Z",
+      "sha": "71f0fa52521199a54f5fda7963f03f47d40613f0",
+      "message": "Fixed ddsi connection writes return values.\n\nSigned-off-by: Martin Bremmer <martin.bremmer@adlinktech.com>",
+      "files_changed": 3,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "TheFixer",
+      "date": "2019-07-16T11:09:06Z",
+      "sha": "1f5083aa44c73adf380adcda21f1bef80ed22ea1",
+      "message": "#213 - Allow readconditions and queryconditions as valid entities for… (#214)\n\nAllow readconditions and queryconditions as valid entities for dds_instance_get_key\r\n\r\nSigned-off-by: TheFixer <thefixer@iteazz.com>",
+      "files_changed": 3,
+      "additions": 110,
+      "deletions": 12,
+      "commit_type": "code"
+    },
+    {
+      "author": "wilcobonestroo",
+      "date": "2019-12-09T21:18:33Z",
+      "sha": "2724f94002b07956429a3e965d0c3b130208fda0",
+      "message": "Refer to roundtrip example\n\nText refers to roundtrip example and code to helloworld.\n\nSigned-off-by: Wilco Bonestroo <w.j.bonestroo@saxion.nl>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "martinbremmer",
+      "date": "2019-10-01T10:43:33Z",
+      "sha": "ef90c11e8dcc9b37c04157a22be952dfb90cff1e",
+      "message": "Added DDS Security msg parameters. (#263)\n\n* Added DDS Security msg parameters.\r\n\r\nSigned-off-by: Martin Bremmer <martin.bremmer@adlinktech.com>\r\n\r\n* Added ENABLE_SECURITY cmake option and DDSI_INCLUDE_SECURITY compile switch.\r\n\r\nSigned-off-by: Martin Bremmer <martin.bremmer@adlinktech.com>",
+      "files_changed": 7,
+      "additions": 261,
+      "deletions": 35,
+      "commit_type": "config"
+    },
+    {
+      "author": "BartP6703",
+      "date": "2019-11-05T09:46:04Z",
+      "sha": "9a3a37732781456a04d6fb9a28384dff2bb5d8ab",
+      "message": "Fixed coverity issues\n\nSigned-off-by: Bart Poot <bart.poot@adlinktech.com>\n\nProcessed review comments\n\nSigned-off-by: Bart Poot <bart.poot@adlinktech.com>",
+      "files_changed": 42,
+      "additions": 168,
+      "deletions": 308,
+      "commit_type": "docs"
+    },
+    {
+      "author": "joxoby",
+      "date": "2019-06-20T17:41:33Z",
+      "sha": "f1db768b3911182c9f0683797e73c0d760aeafff",
+      "message": "Add PacketCapture for received messages in UDP (#202)\n\n* Add PacketCapture for receiving messages in UDP\r\n\r\nSigned-off-by: Juan Oxoby <joxoby@irobot.com>\r\n\r\n* Explicit cast ret to size_t in write_pcap_received()\r\n\r\nSigned-off-by: Juan Oxoby <joxoby@irobot.com>",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "YuSheng",
+      "date": "2019-04-29T17:09:40Z",
+      "sha": "02aaadbd20a1b29113e9fc597238e8219cd5a946",
+      "message": "add RPATH for compiled tools to find the libddsc.so (#153)\n\n* add RPATH for compiled tools to find the libddsc.so\r\n\r\nSigned-off-by: YuSheng <hello@cwyark.me>",
+      "files_changed": 2,
+      "additions": 6,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Erik Boasson",
+      "date": "2019-01-01T17:27:04Z",
+      "sha": "781c6448007fdaf5b34d43e7546d0c342b5dfabf",
+      "message": "participants are not hidden built-in entities in built-in topics and should get an instance handle consistent with the DCPSParticipant topic\n\nSigned-off-by: Erik Boasson <erik.boasson@prismtech.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "kydos",
+      "date": "2018-09-13T08:44:58Z",
+      "sha": "2a67df48fc2af1c1cca449e02cc318f1222b4480",
+      "message": "Updated performance numbers.",
+      "files_changed": 1,
+      "additions": 14,
+      "deletions": 10,
+      "commit_type": "docs"
+    },
+    {
+      "author": "FirasSahliADLinktech",
+      "date": "2018-11-22T15:41:38Z",
+      "sha": "4b627fd9aac36fde2dfd74e22e9c51baa315b068",
+      "message": "Add simple test for dds_time\n\nSigned-off-by: Firas Sahli <firas.sahli@adlinktech.com>",
+      "files_changed": 1,
+      "additions": 17,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Benjamin Cabé",
+      "date": "2018-09-24T12:55:22Z",
+      "sha": "675fbfe013809ab8baf82beb13224306da045438",
+      "message": "Update README.md with proper project name.\n\nSigned-off-by: Benjamin Cabé <benjamin.cabe@eclipse-foundation.org>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Theosakamg",
+      "date": "2018-06-23T19:51:21Z",
+      "sha": "2aff97ad7dd04df825e8d193dd40391d54907e7c",
+      "message": "Fix build with openJDK-10\n\nSigned-off-by: Mickael Gaillard <mick.gaillard@gmail.com>",
+      "files_changed": 2,
+      "additions": 9,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Michiel Beemster",
+      "date": "2018-04-10T15:03:59Z",
+      "sha": "11d9ce37aa7b14cfc026a3d9c3fa721a80187f58",
+      "message": "Initial contribution",
+      "files_changed": 300,
+      "additions": 155142,
+      "deletions": 171,
+      "commit_type": "docs"
+    },
+    {
+      "author": "eclipsewebmaster",
+      "date": "2018-01-02T16:13:05Z",
+      "sha": "7b5cc4fa59ba57a3b796a48bc80bb1e8527fc7f3",
+      "message": "Initial commit",
+      "files_changed": 1,
+      "additions": 203,
+      "deletions": 0,
+      "commit_type": "code"
+    }
+  ]
+}

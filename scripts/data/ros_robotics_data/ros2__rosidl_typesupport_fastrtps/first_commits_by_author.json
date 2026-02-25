@@ -1,0 +1,521 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T07:20:32Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros2",
+    "repo": "rosidl_typesupport_fastrtps"
+  },
+  "data": [
+    {
+      "author": "TonyWelte",
+      "date": "2026-01-16T17:07:19Z",
+      "sha": "07c1e0f3c9169c56bd8f9e40f0cd2807453b305d",
+      "message": "Add DEPENDS_EXPLICIT_ONLY to remove implicit dependencies (#136)\n\n* Add DEPENDS_EXPLICIT_ONLY to remove implicit dependencies\n\nSigned-off-by: Anthony Welte <tony.welte@gmail.com>\n\n* Use version check instead of bumping minimum cmake version\n\nSigned-off-by: Anthony Welte <tony.welte@gmail.com>\n\n---------\n\nSigned-off-by: Anthony Welte <tony.welte@gmail.com>\nCo-authored-by: mergify[bot] <37929162+mergify[bot]@users.noreply.github.com>",
+      "files_changed": 2,
+      "additions": 14,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "ahcorde",
+      "date": "2016-07-07T00:44:09Z",
+      "sha": "af91b6fc24155160aee2eadbeb1f03f7dd6ff09a",
+      "message": "Include durability in data reader/writer fastrtps (#44)",
+      "files_changed": 1,
+      "additions": 30,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "clalancette",
+      "date": "2017-08-16T19:14:11Z",
+      "sha": "3e3a8321797d3fcbb27e626e79d31bb00ad2ef69",
+      "message": "Make sure to free memory associated with the service_name. (#141)\n\n* Make sure to free memory associated with the service_name.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Fixes from review.\r\n\r\nMake sure to set pointers to nullptr after freeing, and\r\nalso use symmetric functions to free clients/services.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Make sure that service_name is not nullptr before freeing it.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Switch an rmw_free to rmw_service_free.\r\n\r\nThis is to be symmetric with the allocation.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 2,
+      "additions": 20,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "mosfet80",
+      "date": "2025-07-16T07:56:05Z",
+      "sha": "3f847d43e4ed89bdda5bf19e98aebedfa1bc2dff",
+      "message": "fix cmake deprecation (#134)\n\nSigned-off-by: mosfet80 <10235105+mosfet80@users.noreply.github.com>",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "ci"
+    },
+    {
+      "author": "MiguelCompany",
+      "date": "2018-06-19T18:46:33Z",
+      "sha": "3e653ecd482a82e880f21cf27d638e8cac69bd7b",
+      "message": "Temporary buffer remove (#207)\n\n* Refs #3043. Estimate serialization size.\r\n\r\n* Refs #3043. Max bounded size support.",
+      "files_changed": 10,
+      "additions": 287,
+      "deletions": 19,
+      "commit_type": "code"
+    },
+    {
+      "author": "cottsay",
+      "date": "2020-05-20T19:55:34Z",
+      "sha": "234c9eb1a9cf31ca4cbf8cd1b01e47b511f989ee",
+      "message": "Add tests for wstring conversion routines (#43)\n\n* Add tests for wstring conversion routines\r\n\r\nSigned-off-by: Scott K Logan <logans@cottsay.net>",
+      "files_changed": 8,
+      "additions": 293,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "fujitatomoya",
+      "date": "2025-03-31T20:45:28Z",
+      "sha": "10eabcb0499fc5bfe124eb0040c24c06fdae19e0",
+      "message": "remove .github/ISSUE_TEMPLATE.md (old version of templates) (#129)\n\nSigned-off-by: Tomoya Fujita <Tomoya.Fujita@sony.com>",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 45,
+      "commit_type": "ci"
+    },
+    {
+      "author": "mjcarroll",
+      "date": "2018-05-03T14:00:36Z",
+      "sha": "a48c21d3f43818bb7a6398bda9c00db79adb757e",
+      "message": "Fix deserialization segfault in bionic. (#199)\n\n* Fix deserialization segfault in bionic.",
+      "files_changed": 1,
+      "additions": 26,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "marcoag",
+      "date": "2024-03-27T09:19:12Z",
+      "sha": "de485c1a56369a5c9e2bdee229cf7cc2f884e843",
+      "message": "Changelog.\n\nSigned-off-by: Marco A. Gutierrez <marcogg@marcogg.com>",
+      "files_changed": 3,
+      "additions": 19,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "emersonknapp",
+      "date": "2023-03-15T19:11:01Z",
+      "sha": "166ab452dc93beabc6838a8a233849a24455e298",
+      "message": "Expose type hash to typesupport structs (rep2011) (#95)\n\n* Exposing the generated type hash through typesupport callbacks struct\r\n\r\nSigned-off-by: Emerson Knapp <emerson.b.knapp@gmail.com>",
+      "files_changed": 6,
+      "additions": 12,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "Yadunund",
+      "date": "2023-04-28T11:00:32Z",
+      "sha": "f9c918ff8b059249f673e343dd2c9a2ffb6992a0",
+      "message": "3.1.0",
+      "files_changed": 6,
+      "additions": 12,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "tylerjw",
+      "date": "2023-03-24T12:16:09Z",
+      "sha": "2f60c45844d8de3f71aa56dd7396049cb6b8311b",
+      "message": "Depend on ament_cmake_ros to default SHARED to ON (#99)\n\n* find_package ament_cmake_ros to default SHARED to ON\r\n\r\nSigned-off-by: Tyler Weaver <maybe@tylerjw.dev>",
+      "files_changed": 2,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ihasdapie",
+      "date": "2023-02-02T14:34:30Z",
+      "sha": "fe7562cab0541b223c06644878bc57cda4819ab3",
+      "message": "Service introspection (#92)\n\n* add service introspection typesupport impls\r\n\r\nSigned-off-by: Brian Chen <brian.chen@openrobotics.org>\r\nSigned-off-by: Jacob Perron <jacob@openrobotics.org>\r\nSigned-off-by: Ivan Santiago Paunovic <ivanpauno@ekumenlabs.com>",
+      "files_changed": 5,
+      "additions": 65,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "audrow",
+      "date": "2021-11-19T16:55:21Z",
+      "sha": "f2351a58ac73710ea81262d26e8a5939a302b3e0",
+      "message": "Update maintainers to Shane Loretz (#83)\n\nSigned-off-by: Audrow Nash <audrow@hey.com>",
+      "files_changed": 3,
+      "additions": 18,
+      "deletions": 6,
+      "commit_type": "config"
+    },
+    {
+      "author": "jacobperron",
+      "date": "2018-12-21T18:05:27Z",
+      "sha": "fc51d0c412c2e8a628d595f3e3b1b739b00eb6cb",
+      "message": "Change uncrustify max line length to 0 (#17)\n\nThis is for compatibility with uncrustify v0.68.",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "paudrow",
+      "date": "2022-05-04T21:20:55Z",
+      "sha": "677bde07ff0b4392476682c3ec3fab5b5d239a9e",
+      "message": "2.3.0\n\nSigned-off-by: Audrow Nash <audrow@hey.com>",
+      "files_changed": 6,
+      "additions": 12,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "sloretz",
+      "date": "2018-05-03T16:24:33Z",
+      "sha": "a69bab1a6c493efc8b82cb5036e4e95d0e1c5c46",
+      "message": "Export rmw_fastrtps_cpp target (#198)",
+      "files_changed": 2,
+      "additions": 7,
+      "deletions": 8,
+      "commit_type": "docs"
+    },
+    {
+      "author": "asorbini",
+      "date": "2021-04-29T19:36:10Z",
+      "sha": "c043df492a7c676b8d122e4d038946973926adde",
+      "message": "Remove fastrtps dependency (#68)\n\n* Remove fastrtps dependency\r\n\r\nSigned-off-by: Andrea Sorbini <asorbini@rti.com>\r\n\r\n* Use proper product names\r\n\r\nSigned-off-by: Andrea Sorbini <asorbini@rti.com>\r\nCo-authored-by: Miguel Company <miguelcompany@eprosima.com>\r\n\r\n* Use proper product names\r\n\r\nSigned-off-by: Andrea Sorbini <asorbini@rti.com>\r\n\r\nCo-authored-by: Miguel Company <miguelcompany@eprosima.com>\r\n\r\nCo-authored-by: Miguel Company <miguelcompany@eprosima.com>",
+      "files_changed": 8,
+      "additions": 9,
+      "deletions": 26,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Blast545",
+      "date": "2020-07-21T14:52:26Z",
+      "sha": "f7132067f2ba6e4779cce0d377aed4f8e9f7f5f4",
+      "message": "Update exec dependencies (#50)\n\n* Update exec dependencies\r\n* Add rosidl_parser as buildtool_export_depend\r\n\r\nSigned-off-by: Jorge Perez <jjperez@ekumenlabs.com>",
+      "files_changed": 2,
+      "additions": 5,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "hidmic",
+      "date": "2018-10-24T18:04:19Z",
+      "sha": "8fd58fd77e5261e56d64133e61a4db1765531ba4",
+      "message": "Removes remaininig srv folder assumptions.",
+      "files_changed": 6,
+      "additions": 38,
+      "deletions": 11,
+      "commit_type": "code"
+    },
+    {
+      "author": "shonigmann",
+      "date": "2021-04-02T06:33:30Z",
+      "sha": "347bf4cc40a889ec539d8ed41fdc0986bf8025cd",
+      "message": "updating quality declaration links (re: ros2/docs.ros2.org#52) (#69)\n\nSigned-off-by: Simon Honigmann <shonigmann@blueorigin.com>\r\n\r\nCo-authored-by: Simon Honigmann <shonigmann@blueorigin.com>",
+      "files_changed": 3,
+      "additions": 16,
+      "deletions": 16,
+      "commit_type": "docs"
+    },
+    {
+      "author": "brawner",
+      "date": "2020-04-30T07:07:26Z",
+      "sha": "85d271abf950e004414626721b524ef3702088ee",
+      "message": "Add Quality Declarations and READMEs for each package (#39)\n\n* Add Quality Declarations and READMEs for each package\r\n\r\nSigned-off-by: Stephen Brawner <brawner@gmail.com>\r\n\r\n* PR Fixup\r\n\r\nSigned-off-by: Stephen Brawner <brawner@gmail.com>\r\n\r\n* PR Fixup\r\n\r\nSigned-off-by: Stephen Brawner <brawner@gmail.com>",
+      "files_changed": 6,
+      "additions": 411,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "chapulina",
+      "date": "2020-11-10T01:11:01Z",
+      "sha": "9544d6ef52583483a71e9fd9c8a22c1bfe04e01b",
+      "message": "Fix item number in QD (#59)\n\nSigned-off-by: Louise Poubel <louise@openrobotics.org>",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "dirk-thomas",
+      "date": "2015-08-04T17:25:07Z",
+      "sha": "9696abed662e545d86b26a8dfb4357278844bb3a",
+      "message": "update to new rmw error handling code, add explicit build type",
+      "files_changed": 3,
+      "additions": 32,
+      "deletions": 24,
+      "commit_type": "config"
+    },
+    {
+      "author": "sung-goo-kim",
+      "date": "2020-09-25T16:14:09Z",
+      "sha": "35b0021c365647c36d5c65c81e10103185e6caac",
+      "message": "fix invalid return on deserialize function (#51)\n\n* fix invalid return on deserialize function\r\n\r\nSigned-off-by: Sunggoo Kim <sung.goo.kim@samsung.com>\r\nCo-authored-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "ivanpauno",
+      "date": "2020-04-01T21:32:49Z",
+      "sha": "ae28699442d38d30a195ee9156aeae952c346c03",
+      "message": "Export typesupport library in a separate cmake variable (#34)\n\nSigned-off-by: Ivan Santiago Paunovic <ivanpauno@ekumenlabs.com>",
+      "files_changed": 2,
+      "additions": 8,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Karsten1987",
+      "date": "2017-01-30T18:29:49Z",
+      "sha": "266e6933c58884813a6faee69d6e93a6af73d039",
+      "message": "expose list of nodes (#88)\n\n* expose list of nodes\r\n\r\n* review comments",
+      "files_changed": 1,
+      "additions": 46,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "nuclearsandwich",
+      "date": "2017-04-11T17:44:54Z",
+      "sha": "63742a48d809ca1ae54fb93bd5c31cb35b441114",
+      "message": "Cherry pick sros2 update for Fast-RTPS master support (#101)\n\n* Added CDR encapsulation\r\n\r\n* uncrustify fixup",
+      "files_changed": 2,
+      "additions": 19,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "jwillemsen",
+      "date": "2018-12-21T00:47:04Z",
+      "sha": "ff35ba5cc8cfb4c3ebaea10937048bbfd5f6b703",
+      "message": "Updated message to say fastrtps instead of Connext (#16)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "apojomovsky",
+      "date": "2018-10-19T20:43:55Z",
+      "sha": "4670a45d87c38e268bd61dc6b25eae0746c5680b",
+      "message": "Makes typesupport generation for srv to be folder-aware",
+      "files_changed": 10,
+      "additions": 65,
+      "deletions": 81,
+      "commit_type": "code"
+    },
+    {
+      "author": "mikaelarguedas",
+      "date": "2016-09-29T00:50:13Z",
+      "sha": "28eefa33fcee5aa08a04bee14fcfae2f91bff9bf",
+      "message": "serialize deserialize arrays (#58)\n\n* serialize deserialize fixed size string arrays\r\n\r\n* specialize size_of to fix nested array containing strings\r\n\r\n* declare generic c ros message structure, should be placed elsewhere someday\r\n\r\n* serialize nested C arrays\r\n\r\n* add generic array init and deserialization\r\n\r\n* linting/redability\r\n\r\n* cleanup calculateMaxAlign and size_of differentiation\r\n\r\n* remove TODO\r\n\r\n* use vector instead of C VLA\r\n\r\n* init string before assign\r\n\r\n* Revert \"init string before assign\"\r\n\r\nThis reverts commit c15cfc342e6bcaa09a638a9a71a331134dd540c2.\r\n\r\n* remove unnecessary comments\r\n\r\n* dont use (de)serializeArray for fixed size string arrays\r\n\r\n* add comment to explain variable definition in larger scope",
+      "files_changed": 1,
+      "additions": 99,
+      "deletions": 24,
+      "commit_type": "docs"
+    },
+    {
+      "author": "guillaumeautran",
+      "date": "2018-01-03T17:23:09Z",
+      "sha": "1175657a64e87f252433fec90a40e732f7d51806",
+      "message": "Small performance improvements (#183)\n\nAddress small performance issues to ROS2 impacting the `rmw_count_publishers` and `rmw_count_subscribers` method when called with a significante number of topics to count.\r\nThe root of the performance issues come from the duplication of `std::string` type of objects. These duplication are honerous with strings and cause a significante amount of CPU cycle to be wasted duplicating things.",
+      "files_changed": 4,
+      "additions": 22,
+      "deletions": 11,
+      "commit_type": "code"
+    },
+    {
+      "author": "Minggang Wang",
+      "date": "2018-06-19T18:42:13Z",
+      "sha": "825c6bc70910e5b0d519ca0afc071a17ec7a9a62",
+      "message": "Validate the buffer_ of CustomServiceRequest object before using it to (#210)\n\ninstantiate class Cdr\r\n\r\nBefore we are going to instantiate the fastcdr::Cdr class by using the member\r\nvariable buffer_ of class CustomServiceRequest, we must ensure that the buffer_\r\ncan not be nullptr.\r\n\r\nThis patch implements the validation.\r\n\r\nFix #209",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "wjwwood",
+      "date": "2015-08-10T23:56:56Z",
+      "sha": "6099f7e84bf3637d620f5cbb86179b8c7fd4036b",
+      "message": "disable find_package(fastrtps) since it fails\n\nthis line fails because the CMake Module provided\nby Fast-RTPS is incomplete right now.\n\nit happens to compile without the module, so\nI just disabled it",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "rohitsalem",
+      "date": "2018-06-07T21:13:17Z",
+      "sha": "a33f9f8de78b0db1695a3a446f448ee873739a7e",
+      "message": "Remove topic partitions (#192)\n\n* removed the use of partitions, use the complete topic_name directly\r\n\r\nRemoved assign_partitions.hpp header\r\n\r\ntrial: removal of topic partitions from services and client\r\n\r\nModified readerinfo, writerinfo and added prefix to the topic names.\r\n\r\n* Changed topic namespacing in services and clients\r\n\r\nminor style changes\r\n\r\nDelete assign_partitions.hpp and removed anything related to partitons\r\n\r\nre-adding avoid_ros_namespace_conventions check for prefixing names\r\n\r\nCorrected indentation\r\n\r\nAdded vertical space between the headers\r\n\r\n* remove unnecessary initializations",
+      "files_changed": 8,
+      "additions": 31,
+      "deletions": 164,
+      "commit_type": "code"
+    },
+    {
+      "author": "jwang11",
+      "date": "2017-10-04T21:36:03Z",
+      "sha": "4e72dfc0a172b62929c1aa474187eb06bf666034",
+      "message": "Drop duplicated rmw_init.cpp in rmw_fastrtps_cpp/CMakeLists.txt (#155)",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "sriramster",
+      "date": "2018-01-18T18:10:13Z",
+      "sha": "014920572a75e36bb4d3d2fcf3f9c90d111497cd",
+      "message": "Enable logging level manipulation from rmw_fastrtps (#156)\n\n* Fastrtps supports rich logging facilities, which could be used on any ros2 development.\r\n\r\n* To enable the same, enable setting log levels from rmw_fastrtps layers,\r\n* Add generic logging level parameters to 'rmw.h' which would be used by other\r\n  layers above like rcl/rclcpp.\r\n* Hide DDS specific implementation inside rmw_fastrtps.\r\n\r\nSigned-off-by: Sriram Raghunathan <sriram.max@gmail.com>\r\n\r\n* The changes follow the discussions\r\n\r\nhttps://github.com/ros2/rmw/pull/124\r\n\r\n* The API defined is used to set the logging level particular to the DDS\r\nimplementation.\r\n* This change is specific to DDS type Fast-RTPS.\r\n* The file is named as rmw_configure since we could write API's of type\r\n  'system level config setting' types here.\r\n\r\nSigned-off-by: Sriram Raghunathan <rsriram7@visteon.com>\r\n\r\n* Rename file from rmw_fastrtps_configure to rmw_logging, which follows the patterns being used already.\r\n\r\nlike rmw_node, rmw_publisher..\r\n\r\nSigned-off-by: Sriram Raghunathan <sriram.max@gmail.com>\r\n\r\n* - Fix, coding errors.\r\n- Renmae API to suite ros styles\r\n\r\nSigned-off-by: Sriram Raghunathan <sriram.max@gmail.com>\r\n\r\n* Fix ament_cpplint warnings\r\n\r\nSigned-off-by: Sriram Raghunathan <sriram.max@gmail.com>\r\n\r\n* Remove utility function to create a 'error' returnable API for setting logging\r\n\r\nSigned-off-by: Sriram Raghunathan <rsriram7@visteon.com>\r\n\r\n* Fix, logging msg bug.\r\n\r\n* Modify logging mapping for type 'debug' from warning to info.\r\n\r\nSigned-off-by: Sriram Raghunathan <rsriram7@visteon.com>\r\n\r\n* order log levels, use different local variable name, include unknown severity in error message\r\n\r\n* Fix error due to parameterized logging\r\n\r\n* Fix code style issues from uncrustify",
+      "files_changed": 3,
+      "additions": 55,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "gaoethan",
+      "date": "2017-10-27T15:46:57Z",
+      "sha": "4e22c3ec493c26fcda0c620ab7f0f17149a24008",
+      "message": "Fix rmw_fastrtps dead code (#163)\n\n* * Fix rmw_fastrtps dead code\r\nDead code in API rmw_create_subscription()\r\nbecasue the condition \"rmw_subscription\" cannot be true in the\r\n\"fail\" clauses, the execution cannot reach this statement:\r\n\r\nrmw_subscription_free(rmw_subscription);\r\n\r\nfinally, the \"rmw_subscribtion\" is free by\r\nrmw_destroy_subscription() when it's not a nullptr\r\n\r\nDead code in API rmw_create_publisher()\r\nbecause the condition \"rmw_publisher\" cannot be true in the\r\n\"fail\" clauses, the execution cannot reach this statement:\r\n\r\nrmw_publisher_free(rmw_publisher);\r\n\r\nfinally, the \"rmw_publisher\" is free by\r\nrmw_destroy_publisher() when it's not a nullptr\r\n\r\nSigned-off-by: Ethan Gao <ethan.gao@linux.intel.com>\r\n\r\n* * Add memory allocation checking for topic name\r\nthis memory allocation checking avoids the unintended\r\nbehaviour which derives from unknown memory free issue\r\nat rmw_destroy_publisher\r\n\r\nSigned-off-by: Ethan Gao <ethan.gao@linux.intel.com>\r\n\r\n* publiser -> publisher\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* tweak the log information more accurate\r\n\r\nSigned-off-by: Ethan Gao <ethan.gao@linux.intel.com>",
+      "files_changed": 2,
+      "additions": 12,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "deng02",
+      "date": "2017-10-26T15:40:17Z",
+      "sha": "048ead9cf52c65ed31d86299a4eaa5d184375898",
+      "message": "Remove string allocation in the count of subscribers and publishers",
+      "files_changed": 1,
+      "additions": 12,
+      "deletions": 44,
+      "commit_type": "code"
+    },
+    {
+      "author": "dejan-cmyk",
+      "date": "2017-10-25T00:39:35Z",
+      "sha": "e184e5c16184f2642e013ef1f44d4504baf734ed",
+      "message": "pointers are checked for null",
+      "files_changed": 1,
+      "additions": 86,
+      "deletions": 61,
+      "commit_type": "code"
+    },
+    {
+      "author": "dhood",
+      "date": "2016-12-13T05:12:53Z",
+      "sha": "88b879aac1e417a81813dfd32ddd94118f5253ff",
+      "message": "Rename QoS policies (#78)",
+      "files_changed": 1,
+      "additions": 12,
+      "deletions": 12,
+      "commit_type": "code"
+    },
+    {
+      "author": "richiware",
+      "date": "2017-09-14T18:27:19Z",
+      "sha": "a9ffcc5b18ae3b92a6c979cbdd1809209923349c",
+      "message": "Removing magic numbers: old maximun lengths (#152)",
+      "files_changed": 1,
+      "additions": 12,
+      "deletions": 24,
+      "commit_type": "code"
+    },
+    {
+      "author": "allenh1",
+      "date": "2017-06-28T23:01:40Z",
+      "sha": "3ffe48f8dd9472b6c91ad31f8c114e5e33187e82",
+      "message": "Fix publisher/subscriber Count (#129)\n\n* Fixed the counting up, but the count does not decrement when the nodes stop listening.\r\n\r\n* Removed lambda, fixed typo.\r\n\r\n* Added debug message for the case wherein an attempt to remove a subscription which was never registered.\r\n\r\n* Add missed brace.",
+      "files_changed": 1,
+      "additions": 32,
+      "deletions": 20,
+      "commit_type": "code"
+    },
+    {
+      "author": "Hunter Allen",
+      "date": "2017-06-20T03:35:08Z",
+      "sha": "9e68770d7b82ee5e211ccba49b5cc3a9d260d449",
+      "message": "Free allocated memory for topic name (using rmw_free), as well as call rmw_x_free instead of delete on the publisher and subscriber within their respective destroy functions. (#121)",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "esteve",
+      "date": "2016-04-27T21:23:07Z",
+      "sha": "18dcbcefdb54e4e1757d627225cb9789232f6f55",
+      "message": "Converted ServiceTypeSupport.cpp, MessageTypeSupport.cpp and TypeSupport.cpp to headers\n\nAdded support for type support in C",
+      "files_changed": 10,
+      "additions": 637,
+      "deletions": 208,
+      "commit_type": "docs"
+    },
+    {
+      "author": "gerkey",
+      "date": "2015-12-30T21:32:38Z",
+      "sha": "95bda4843d26f3dbecf2f8721d7dfaa658197fb8",
+      "message": "Match alloc and free calls",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "codebot",
+      "date": "2016-03-25T21:56:54Z",
+      "sha": "a4cf2d65e6a4ff359eaa99f0cf6e1946572cbcf0",
+      "message": "Explicit downcast of type size\n\nAvoid Windows compiler warning by making the 64->32 bit downcast explicit,\nusing the elite C++ static_cast operator.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "richiprosima",
+      "date": "2015-05-26T15:38:25Z",
+      "sha": "2d51038691aff5e338215e2c2c7ea19ad8e1a76e",
+      "message": "First commit",
+      "files_changed": 11,
+      "additions": 1182,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jacquelinekay",
+      "date": "2015-12-18T22:16:40Z",
+      "sha": "c4ec13ae6debde157a9d6e7dd786b30ae7791739",
+      "message": "Refactor for rmw_wait/rmw_waitset changes",
+      "files_changed": 1,
+      "additions": 184,
+      "deletions": 28,
+      "commit_type": "code"
+    },
+    {
+      "author": "Adam Dąbrowski",
+      "date": "2016-06-27T06:48:46Z",
+      "sha": "a32610ac92c8e883db9dbdd379c4a03d1202fec8",
+      "message": "Attributes are now correctly passed by reference in rmw_fastrtps_cpp\n- Fixes issue with qos settings not applying in rmw_fastrtps_cpp",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Jackie Kay",
+      "date": "2016-03-01T00:07:25Z",
+      "sha": "de21530d47d373079106eb522e54b64d35226e18",
+      "message": "Don't type-erase request header",
+      "files_changed": 1,
+      "additions": 12,
+      "deletions": 16,
+      "commit_type": "code"
+    }
+  ]
+}

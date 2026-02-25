@@ -1,0 +1,211 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T09:57:37Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ouster-lidar",
+    "repo": "ouster-ros"
+  },
+  "data": [
+    {
+      "author": "TobinHall",
+      "date": "2023-04-12T21:02:22Z",
+      "sha": "4d6476e078ca3d2254131e62efeb1e126816cca1",
+      "message": "ROS1 - Adding latched topic transport config/metadata (#81)\n\n* Replace the use of metadata service with latched topic metadata transport\r\n* Refactor code and remove metadata service requests from dependent nodes\r\n* Make metadata parameter optional +\r\nUpdate README.md to reflect the new changes\r\n* *  SW-4745: update the ros 1 driver to the sdk release 20230403 (#93)\r\n    * Update to the latest release\r\n    * fix issue when picking minimum time\r\n    * fix readme link to foxy\r\n    * Implement proper check of overflow\r\n    * Document change and increase driver version number\r\n    * Display success message only on success for multicast mode\r\n    * Update ouster_sdk and remove unused method\r\n    * Remove the time delay in sensor_mtp.launch\r\n    * format change log message\r\n\r\n---------\r\n\r\nCo-authored-by: Ussama Naal <ussama.naal@ouster.io>\r\nCo-authored-by: Ussama Naal <606033+Samahu@users.noreply.github.com>",
+      "files_changed": 15,
+      "additions": 127,
+      "deletions": 94,
+      "commit_type": "ci"
+    },
+    {
+      "author": "Samahu",
+      "date": "2022-08-31T14:36:32Z",
+      "sha": "b2cec0ac5b56d39fcdd8da91a3cf4704daeed015",
+      "message": "Merge pull request #425 from ouster-lidar/fw24-ros-fix\n\nRemove non-existing targets in ouster_ros",
+      "files_changed": 1,
+      "additions": 15,
+      "deletions": 19,
+      "commit_type": "docs"
+    },
+    {
+      "author": "alexchua0108",
+      "date": "2025-08-12T14:46:59Z",
+      "sha": "d151197a3025e25afbe4c55256a358b4b64d4922",
+      "message": "build(cmake): update linking for macOS (Anaconda) compatibility (#481)",
+      "files_changed": 1,
+      "additions": 31,
+      "deletions": 8,
+      "commit_type": "docs"
+    },
+    {
+      "author": "tombrodie",
+      "date": "2024-12-16T22:12:34Z",
+      "sha": "04699773b52e9b517d431e1aeaa70ddd0a102eb5",
+      "message": "Check sensor connection thread validity before joining (#411)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "nkhedekar",
+      "date": "2024-11-20T01:00:39Z",
+      "sha": "c6f66d2c439aa27a6018a09a5e5b02fa222b52db",
+      "message": "Make the bag_file arg of replay.launch optional (#404)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "ovaag",
+      "date": "2023-11-19T18:43:47Z",
+      "sha": "9bb8e3f4eb4767989f6ac4395c50d61b62b94ce7",
+      "message": "Cmakelists: Fix install directories (#258)\n\n* Fix install directories\r\n\r\n---------\r\n\r\nCo-authored-by: Ussama Naal <606033+Samahu@users.noreply.github.com>",
+      "files_changed": 3,
+      "additions": 14,
+      "deletions": 5,
+      "commit_type": "ci"
+    },
+    {
+      "author": "solosuper",
+      "date": "2024-05-13T15:57:44Z",
+      "sha": "2c30d0c1a493da385c1580e9fd51a9ad727c4ec7",
+      "message": "Fix typo in README (#328)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "PhilippSchmaelzle",
+      "date": "2023-08-24T15:49:01Z",
+      "sha": "db68f4eb45d1ca2f87e0268dffe2682c88fa11da",
+      "message": "The timestamp of each point in the destaggered point cloud has to be destaggered as well (#199)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "louis-wiesmann",
+      "date": "2023-08-10T18:21:22Z",
+      "sha": "b4cca332f0d56b35dc506b71655ee33c8fe09168",
+      "message": "add tf prefix to point_cloud_frame (#189)\n\nCo-authored-by: Louis <louis.wiesmann@igg.uni-bonn.de>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "ShepelIlya",
+      "date": "2023-01-28T14:34:31Z",
+      "sha": "d6ab0b4f7e17c0c39bc7d3c8d8f4d53f4d10ac34",
+      "message": "Initial commit",
+      "files_changed": 3,
+      "additions": 18,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "mortenfyhn",
+      "date": "2021-02-01T16:08:54Z",
+      "sha": "79fbacd1e6cabb0f5c563df8ba60900696971215",
+      "message": "Clean up dependencies\n\n* GLEW and GLFW3 were not declared. This breaks the build if you try to use rosdep.\n* Some were declared as build_depend and exec_depends but not build_export_depend. Changed these to simply \"depend\", as that covers all three.\n* Eigen dependency used wrong rosdep keyword, changed from \"libeigen3\" to \"eigen\".\n    * (Check `rosdep resolve libeigen3` vs. `rosdep resolve eigen`.)\n* Added a missing exec_depend on topic_tools.",
+      "files_changed": 1,
+      "additions": 13,
+      "deletions": 13,
+      "commit_type": "config"
+    },
+    {
+      "author": "kairenw",
+      "date": "2021-04-20T03:42:43Z",
+      "sha": "ca05ba3ad1e4cb0781b1d53dc933926360974e3f",
+      "message": "Merge pull request #219 from scoutdi/fix-dependencies\n\nclean up dependencies",
+      "files_changed": 1,
+      "additions": 13,
+      "deletions": 13,
+      "commit_type": "config"
+    },
+    {
+      "author": "Dima Garbuzov",
+      "date": "2018-05-08T03:45:15Z",
+      "sha": "04177a5a46e5b2560c52069e1ecd59ab14bce76c",
+      "message": "OS1 example client and ROS node",
+      "files_changed": 10,
+      "additions": 611,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "dmitrig",
+      "date": "2021-03-16T00:44:24Z",
+      "sha": "6dce293fa3256e386a21fa0a406f8c6bde227596",
+      "message": "Sample visualizer updates and bugfixes (#230)\n\n* Update reflectivity visualization for the upcoming 2.1 firmware\r\nrelease\r\n* Fix a bug causing the viewport to be sized incorrectly on retina\r\ndisplays\r\n* Some code reorganization in the sample visualizer library",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 11,
+      "commit_type": "code"
+    },
+    {
+      "author": "Krishtof-Korda",
+      "date": "2019-09-11T03:08:47Z",
+      "sha": "2e5dfc09bb7966901c8c86748edde968240c1a0d",
+      "message": "Ez/readme improvement (#113)\n\nChange OS-1 to OS1 throughout and clean up links\r\n\r\nSubmitted on behalf of @Emily-Zhang",
+      "files_changed": 1,
+      "additions": 53,
+      "deletions": 31,
+      "commit_type": "docs"
+    },
+    {
+      "author": "standmit",
+      "date": "2019-08-14T15:16:16Z",
+      "sha": "e6aff8b3051e3a4484f3adfbf7dcf844d25fa1d3",
+      "message": "timestamp mode configurable",
+      "files_changed": 2,
+      "additions": 13,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "daniel-dsouza",
+      "date": "2019-06-11T14:02:30Z",
+      "sha": "749452a2934d339110a56829dfbc11103ac155fc",
+      "message": "turn on position independent code for ouster_ros\n\nnow this library can be used when building dynamic libraries.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "pronif",
+      "date": "2019-05-17T12:52:57Z",
+      "sha": "aa6621e4681766a36505b9e0c2655d6a76d3bbbf",
+      "message": "Handle tf_prefix correctly\n\nIgnore tf_prefix if not present in param server, check it is well formatted otherwise",
+      "files_changed": 2,
+      "additions": 8,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "philband",
+      "date": "2019-03-05T00:32:43Z",
+      "sha": "bd9f677a3642efc136a8b4300c6923712d7623d8",
+      "message": "ros node: Added missing dependency tf2_geometry_msgs",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "rrinberg",
+      "date": "2018-10-13T00:14:24Z",
+      "sha": "aac302f6cab33212777406931abb7241f97a7869",
+      "message": "Fix minor bugs and typos\n\n* Improve positional argument parsing in viz\n* Use allocate_shared for Eigen compatibility\n* Fix typo in readme",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    }
+  ]
+}

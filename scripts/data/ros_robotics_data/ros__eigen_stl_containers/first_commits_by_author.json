@@ -1,0 +1,131 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T13:58:43Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros",
+    "repo": "eigen_stl_containers"
+  },
+  "data": [
+    {
+      "author": "mosfet80",
+      "date": "2025-03-17T18:48:47Z",
+      "sha": "33a6c4e5febbd56055db2536ecd06a405ee3d21e",
+      "message": "Update CMakeLists.txt (#20)\n\nHumble Hawksbill (May 2022 - May 2027)  : https://www.ros.org/reps/rep-2000.html\r\n\r\nrequirements:\r\nCxx standard 17\r\nmin cmake 3.14.4",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "clalancette",
+      "date": "2017-03-03T18:34:57Z",
+      "sha": "505a0d303d545ee4189c765fa6ec1a2f2fac82c1",
+      "message": "Fix it up so we can correctly find Eigen everywhere.\n\nSigned-off-by: Chris Lalancette <clalancette@osrfoundation.org>",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Matthias Schoepfer",
+      "date": "2023-10-26T23:17:45Z",
+      "sha": "30c7cc9ffdcf36c481a3d955acf611429f007557",
+      "message": "CMakeLists.txt: fixing relocatable package issue (#19)\n\n* CMakeLists.txt: fixing relocatable package issue\r\n\r\nWith the current CMakeLists, the installed package will have an absolute\r\npath, which breaks if the package gets relocated later on.\r\n\r\nThis patch tries to set up a proper header only ros2 package.\r\n\r\n* Cleanup to be more of an INTERFACE library.\r\n\r\nSigned-off-by: Matthias Schoepfer <m.schoepfer@rethinkrobotics.com>\r\nCo-authored-by: Chris Lalancette <clalancette@gmail.com>",
+      "files_changed": 1,
+      "additions": 24,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Víctor Mayoral Vilches",
+      "date": "2019-02-10T14:07:46Z",
+      "sha": "3863444dd152880a7a54a6a0977da6ae69114ad0",
+      "message": "Port package to ROS 2 (#16)\n\n* Port package to ROS 2\r\n\r\n* Address comments of clalancette\r\n\r\nComments made at https://github.com/ros/eigen_stl_containers/pull/16\r\n\r\n* Small fixups.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 2,
+      "additions": 16,
+      "deletions": 26,
+      "commit_type": "docs"
+    },
+    {
+      "author": "k-okada",
+      "date": "2016-09-28T08:36:57Z",
+      "sha": "ceb6c4d5a58e8de5c67ec17e5e51717e507839ef",
+      "message": "Fix eigen3 depends (#6)\n\n* fix use of DEPENDS to include eigen3\r\n\r\nThis is the correct way to make use of catkin_package's DEPENDS\r\nflag. It was plain broken before and I'm pretty sure nobody ever\r\nchecked.\r\n\r\n* eigen 3.2 does not provdie EIGEN3_INCLUDE_DIRS, only support EIGEN3_INCLUDE_DIR",
+      "files_changed": 2,
+      "additions": 12,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "sloretz",
+      "date": "2017-02-27T22:53:29Z",
+      "sha": "c769b4a6be991c770b6172dd0d63b0714e7bc5c0",
+      "message": "Added @clalancette and @sloretz as maintainers (#9)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "v4hn",
+      "date": "2017-02-27T23:54:47Z",
+      "sha": "a945c460d8b2a6fafbc2a2fcce2fa0b18ceb41c2",
+      "message": "install headers to CATKIN_PACKAGE_INCLUDE_DESTINATION (#4)\n\nHeaders get installed to the same place, but allows overriding",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "VictorLamoine",
+      "date": "2017-02-27T23:39:25Z",
+      "sha": "e914aff69c1aa8b2ff3e0413ab8174a9617060c3",
+      "message": "Add more typedefs (#8)\n\nDidn't break anything",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "wjwwood",
+      "date": "2015-04-22T01:08:04Z",
+      "sha": "f97b652949b03eafdba39d958884ab5adb5d3a08",
+      "message": "Merge pull request #3 from scpeters/patch-1\n\nadd links to repository and issue tracker",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "Jackie Kay",
+      "date": "2016-03-23T17:19:20Z",
+      "sha": "c7ea11fabd6184abf70f6c35f93d271823e8a652",
+      "message": "Wild Changelog appeared!",
+      "files_changed": 1,
+      "additions": 41,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "scpeters",
+      "date": "2015-04-22T00:54:42Z",
+      "sha": "3019ee98e82a2e454e511fb2dca92985ea1773fb",
+      "message": "add links to repository and issue tracker",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "Ioan Sucan",
+      "date": "2012-08-12T22:17:16Z",
+      "sha": "eac644ea505b817aef2556be03d4a5bdde3f75b8",
+      "message": "add vector types",
+      "files_changed": 3,
+      "additions": 86,
+      "deletions": 0,
+      "commit_type": "docs"
+    }
+  ]
+}

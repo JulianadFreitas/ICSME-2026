@@ -1,0 +1,1041 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T04:42:12Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros-simulation",
+    "repo": "gazebo_ros_pkgs"
+  },
+  "data": [
+    {
+      "author": "j-rivero",
+      "date": "2014-08-05T23:03:13Z",
+      "sha": "c2704f0f112457469ce38f93c19a9675ff2921d4",
+      "message": "Port fix_build branch for indigo-devel\n\nSee pull request #221",
+      "files_changed": 4,
+      "additions": 78,
+      "deletions": 17,
+      "commit_type": "code"
+    },
+    {
+      "author": "azeey",
+      "date": "2025-02-04T22:20:57Z",
+      "sha": "350e6c8b72d9669cd53203815c15c0c0c7b68a16",
+      "message": "Noetic: Add `<deprecated>` tag to package.xml files (#1566)\n\nThese packages are now deprecated with Gazebo classic 11 reaching\r\nend-of-life. This adds the `<deprecated>` tag (https://www.ros.org/reps/rep-0149.html#deprecated)\r\nenabling tools to notify users about the deprecation.\r\n\r\nSigned-off-by: Addisu Z. Taddese <addisu@openrobotics.org>",
+      "files_changed": 6,
+      "additions": 36,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "jonas8217",
+      "date": "2025-01-29T09:01:39Z",
+      "sha": "4d1ef0c2a2789c38741a1d6d7ef3767977f3c12c",
+      "message": "It was bugging me (#1564)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "v4hn",
+      "date": "2013-11-01T13:45:22Z",
+      "sha": "ed2782cb7df21dcbe333e101d03762eda6e0deff",
+      "message": "replace time.sleep by rospy.Rate.sleep\n\ntime was not even imported, so I don't know\nwhy this could ever have worked...",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Martin-Oehler",
+      "date": "2024-06-26T09:08:02Z",
+      "sha": "f62d9c9174e92d39dea0dd10b9ef2501c299f2ac",
+      "message": "Added parameter to always publish odom twist in local coordinates (#1531)",
+      "files_changed": 2,
+      "additions": 29,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "Anon0x19",
+      "date": "2023-11-22T12:38:03Z",
+      "sha": "f9e1a4607842afa5888ef01de31cd64a1e3e297f",
+      "message": "[gazebo_ros_diff_drive] Fixed spelling mistake (#1516)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Tobias-Fischer",
+      "date": "2023-02-02T21:50:50Z",
+      "sha": "398cde933cba5d72921055d57d4faa47c4445654",
+      "message": "Fix typo OpenCV_LIBRARIES (#1451)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "wxmerkt",
+      "date": "2022-11-22T08:53:20Z",
+      "sha": "8583aec91f8dafdf5f1607e582398514d4fc0299",
+      "message": "gazebo_ros_ft_sensor: Fix incorrect 'imu' with 'ft_sensor' (#1436)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "scpeters",
+      "date": "2013-07-18T18:14:04Z",
+      "sha": "ebca6f0c42a3eb608984a8e890a9e13d349d8d78",
+      "message": "Include <sdf/sdf.hh> instead of <sdf/SDF.hh>\n\nThe sdformat package recently changed the name of an sdf header\nfile from SDF.hh to SDFImpl.hh; this change will use the lower-case\nheader file which should work with old and new versions of sdformat\nor gazebo.",
+      "files_changed": 8,
+      "additions": 8,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "jacobperron",
+      "date": "2020-03-11T21:24:16Z",
+      "sha": "064c12f6ab9da82af55b5174822384aae36ddbc0",
+      "message": "Measure IMU orientation with respect to world (#1051)\n\nReport the IMU orientation from the sensor plugin with respect to the world frame.\r\nThis complies with convention documented in REP 145: https://www.ros.org/reps/rep-0145.html\r\n\r\nIn order to not break existing behavior, users should opt-in by adding a new SDF tag.\r\n\r\nSigned-off-by: Jacob Perron <jacob@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 10,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "doisyg",
+      "date": "2020-12-17T18:13:56Z",
+      "sha": "6bcd27e26d9af620063ec9d0fe50bb292e635e3c",
+      "message": "[noetic][planar_move_controller] add cmdTimeout param (#1133)\n\nCo-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>",
+      "files_changed": 2,
+      "additions": 23,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "ahcorde",
+      "date": "2020-03-06T23:42:37Z",
+      "sha": "832aaa98cdccd4305ca573a7d0db1d59ad80053e",
+      "message": "[Gazebo 9] Created a MarkerArray to publish normals in ROS (#1047)\n\n* created a MarkerArray to publish normals in ROS\r\n\r\n* Added visualization msgs dependencie depthcamerasensor\r\n\r\n* Added feedback\r\n\r\n* populate point cloud when normals is activated\r\n\r\n* argument to reduce the amount of normals to publish\r\n\r\n* reduced computation in normals publisher\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>",
+      "files_changed": 5,
+      "additions": 156,
+      "deletions": 6,
+      "commit_type": "docs"
+    },
+    {
+      "author": "seanyen",
+      "date": "2019-03-15T18:51:55Z",
+      "sha": "696fcb97e9fe9e378023966ea634ec1c519cb7e5",
+      "message": "use C++11 std sleep instead of usleep. (#877)",
+      "files_changed": 3,
+      "additions": 13,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "iche033",
+      "date": "2014-02-12T21:37:11Z",
+      "sha": "af286014dbf45bb899b32fce3cf4dc5e4284b443",
+      "message": "Use function for accessing scene node in gazebo_ros_video",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "maxbader",
+      "date": "2013-11-04T11:12:41Z",
+      "sha": "e582c4ad94225eceaee1bd64ac3ca837eae0619d",
+      "message": "Gazebo ROS joint state publisher added",
+      "files_changed": 3,
+      "additions": 228,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "sloretz",
+      "date": "2020-05-15T16:55:04Z",
+      "sha": "3201b4525406c3b547b35fb949fef8ede5ea87ae",
+      "message": "Fix bug in clipping of block laser depth values (#902)\n\n* Fix bug in block laser with large min range\r\n* Add block laser clipping test\r\n* REP-117 clipping\r\n\r\nRanges were clipped to maxRange - minRange when they should have been\r\nclipped to only maxRange\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>",
+      "files_changed": 5,
+      "additions": 182,
+      "deletions": 25,
+      "commit_type": "docs"
+    },
+    {
+      "author": "awesomebytes",
+      "date": "2020-05-15T16:47:48Z",
+      "sha": "241b4e3f2bc87cf9f02add4899502c99ed8a8785",
+      "message": "Add option to publish depth images in 16UC1 (#862)\n\nAdd option to publish depth images in 16UC1",
+      "files_changed": 4,
+      "additions": 74,
+      "deletions": 16,
+      "commit_type": "code"
+    },
+    {
+      "author": "chapulina",
+      "date": "2020-04-29T18:16:28Z",
+      "sha": "af65048e12cad6d526e49530dfe3aa3d799b673c",
+      "message": "Gazebo 11 for Noetic (#1094)\n\nSigned-off-by: Louise Poubel <louise@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "mabelzhang",
+      "date": "2020-04-24T00:46:55Z",
+      "sha": "9ae0481116d53c24bb7de7affcde006ec1f807d6",
+      "message": "add node required to noetic (#1082)\n\nSigned-off-by: Mabel Zhang <mabel@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "shun818",
+      "date": "2020-01-08T18:02:46Z",
+      "sha": "bd605b1c9840df09d98cc1717f7ed9092323b33c",
+      "message": "Fix a problem twice named with ros namespace. (#920)\n\ngazebo_ros_imu_sensor: robotNamespace is no longer duplicate inside topics",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "christian-rauch",
+      "date": "2020-01-03T19:02:05Z",
+      "sha": "a73884f611876411bbaea4d523d3da050f381cf5",
+      "message": "add additional light options to 'set_light_properties' service (#874)\n\nThe optional 'Light' properties 'cast_shadows', 'specular', 'direction',\r\nand 'pose' are not optional any more. These properties are now set via the\r\ncorresponding fields in the ROS message. By default, this will be 0.\r\n\r\nhttps://github.com/ros-simulation/gazebo_ros_pkgs/pull/874",
+      "files_changed": 2,
+      "additions": 23,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "lopsided98",
+      "date": "2019-12-26T18:48:06Z",
+      "sha": "6f48667ec8dec65ec363b2c2b300cc10b76b89ab",
+      "message": "gazebo_plugins: export plugin path in package.xml (#923)",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "RemiRigal",
+      "date": "2019-12-23T23:15:17Z",
+      "sha": "c89b250e95e61162ee36ed2b9d31f65e86f84062",
+      "message": "Fix destructor of gazebo_ros_diff_drive.cpp (#1021)\n\nFix issue referenced in #123 where the destructor of ROS DiffDrive plugin causes gzserver to crash on model deletion.",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "kartikmohta",
+      "date": "2018-08-30T02:45:22Z",
+      "sha": "9c105cf957db0a1a1c3bc7bf228c559fef70cba0",
+      "message": "spawn_model: Ensure that \"model_xml\" is a string, required for Python 3",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "MatthijsBurgh",
+      "date": "2019-03-18T22:01:32Z",
+      "sha": "2901fe6cc16c86a68cb01d664a45276cac9ec712",
+      "message": "Add output arg to launch files, plus some small fixes (melodic) (#907)\n\n* Add output arg to empty_world\r\n\r\n* add output arg to elevator_world\r\n\r\n* add output arg to range_world\r\n\r\n* don't set use_sim_time in range_world\r\n\r\nInstead parse it to empty world, where it will be set.\r\n\r\n* add xml prolog to all launch files\r\n\r\n* Remove unnecessary arg in range_world.launch",
+      "files_changed": 7,
+      "additions": 21,
+      "deletions": 11,
+      "commit_type": "code"
+    },
+    {
+      "author": "DLu",
+      "date": "2019-02-21T19:41:09Z",
+      "sha": "e6c0abb17e1cc6c99c18ba48722793e371054c5f",
+      "message": "Remove extra angle bracket (#895)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "paulbovbel",
+      "date": "2018-09-12T16:18:42Z",
+      "sha": "2e0d83597b390d43e559d1ad21a5eb56c20d98ad",
+      "message": "Lower minimum cmake version (#817)",
+      "files_changed": 3,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Kevin Allen",
+      "date": "2018-05-25T20:56:50Z",
+      "sha": "46ac000ea34d006d9f37a2392c2146bbd9e6d1be",
+      "message": "GAZEBO_ROS: refactor spawn_model script\n\n* parse arguments with argparse\n\n* remove deprecated/unused -gazebo and -trimesh options",
+      "files_changed": 2,
+      "additions": 177,
+      "deletions": 284,
+      "commit_type": "config"
+    },
+    {
+      "author": "kev-the-dev",
+      "date": "2018-05-24T23:38:41Z",
+      "sha": "fcaf3fe93ff5cfb6c4bb7bdc298b0b523b6b10cd",
+      "message": "ROS UTILS: initialize rosnode_ in alternative constructor to avoid segfault #478 (#718)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "tik0",
+      "date": "2018-07-04T00:42:37Z",
+      "sha": "b57f2a4b22af7265486bca227ba8006cf56db92e",
+      "message": "Fix handling of boolean values since Gazebo API returns\n'true'/'false' as '1'/'0' strings\n\nSigned-off-by: Timo Korthals <tkorthals@cit-ec.uni-bielefeld.de>",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "marting87",
+      "date": "2018-06-21T13:56:22Z",
+      "sha": "22f1be582e3c175b13ef1ccb08396b6a9bb0fbfa",
+      "message": "Corrected depth camera plugin initialization (#748)\n\n* Initialize depth_image_connect_count_ to 0\r\n* Removed duplicate line in CMakeLists.txt",
+      "files_changed": 2,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Docker",
+      "date": "2018-04-06T00:12:00Z",
+      "sha": "2ebdd10e38af712cd401e58a9ac7eefdce0cb5f2",
+      "message": "fix race condition",
+      "files_changed": 3,
+      "additions": 13,
+      "deletions": 9,
+      "commit_type": "code"
+    },
+    {
+      "author": "codebot",
+      "date": "2017-01-20T00:59:02Z",
+      "sha": "acdc9a88ef94e8777e6a84eddb6210303ceed7e5",
+      "message": "adds triggered cameras and multicameras",
+      "files_changed": 7,
+      "additions": 433,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "clalancette",
+      "date": "2018-05-09T19:28:22Z",
+      "sha": "a08a07b4f10c0adcd88486bc5ddc56f209d8313a",
+      "message": "Fix the build on Ubuntu Artful. (#715)\n\nArtful has some bugs in its cmake files for Simbody that\r\ncause it to fail the build.  If we are on artful, remove\r\nthe problematic entries.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 3,
+      "additions": 62,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "kekeblom",
+      "date": "2017-08-17T22:27:38Z",
+      "sha": "6c21dc326c2699b581d0c955b617d3b8c1a99242",
+      "message": "joint_state_publisher: error in case a joint is not found (#609)",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "alessandrosettimi",
+      "date": "2017-04-25T23:40:14Z",
+      "sha": "4a8821f289da61b1a01f77cb239030eaeb5bee7e",
+      "message": "Add an IMU sensor plugin that inherits from SensorPlugin (#363)\n\n* added a IMU sensor plugin that inherits from SensorPlugin\r\n\r\n* now the plugin works with multiple robots\r\n\r\n* using GetParentName name instead of GetScopedName\r\n\r\n* added comments to highlight the differents between GazeboRosImuSensor and GazeboRosIMU\r\n\r\n* now the message header is properly handled, using bodyName parameter as frame_id\r\n\r\n* added check on gazebo version\r\n\r\n* added check for sensor null pointer\r\n\r\n* changed deprecated functions for gazebo version >= 6\r\n\r\n* fixed version check\r\n\r\n* added missing sensor variable for LastUpdateTime() function call\r\n\r\n* considering '/' included in the robotNamespace\r\n\r\n* replaced \"bodyFrame\" with \"frameName\"",
+      "files_changed": 3,
+      "additions": 381,
+      "deletions": 14,
+      "commit_type": "docs"
+    },
+    {
+      "author": "davetcoleman",
+      "date": "2013-05-28T19:59:20Z",
+      "sha": "bd624de6c922c1132d9998c02ceb4b321a18962a",
+      "message": "Initial commit",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "IanTheEngineer",
+      "date": "2017-04-21T20:14:58Z",
+      "sha": "2c3b4fea62808ccab4991e7c2d95697f5e9a3459",
+      "message": "Fixed broken gazebo_ros_control tutorial link (#566)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "aambrosano",
+      "date": "2017-04-15T20:40:47Z",
+      "sha": "1075d2d08acc0b632c59f4b27d806fa35dfb2345",
+      "message": "[gazebo_ros] Changed the spawn model methods to spawn also lights. (#511)\n\n* [gazebo_ros] Changed the spawn model methods to spawn also lights (and renamed accordingly).\r\nCreated services for deleting lights, and getting and settings lights' properties.\r\n\r\n* [gazebo_ros] Changed the spawn model methods to spawn also lights.\r\nCreated services for deleting lights, and getting and settings lights' properties.\r\n\r\n* [gazebo_ros] Changed the spawn model methods to spawn also lights.\r\nCreated services for deleting lights, and getting and settings lights' properties.\r\n\r\n* [gazebo_ros] Changed the spawn model methods to spawn also lights.\r\nCreated services for deleting lights, and getting and settings lights' properties.\r\n\r\n* [gazebo_ros] Changed the spawn model methods to spawn also lights.\r\nCreated services for deleting lights, and getting and settings lights' properties.",
+      "files_changed": 6,
+      "additions": 225,
+      "deletions": 31,
+      "commit_type": "docs"
+    },
+    {
+      "author": "risteon",
+      "date": "2017-04-10T00:36:50Z",
+      "sha": "9e35e5e4eb56456ccc7bec7542b78976c216ed14",
+      "message": "Fix: add gazebo_ros_range to catkin package libraries (#558)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "garyservin",
+      "date": "2017-04-03T13:46:46Z",
+      "sha": "4e1a61f933060a89f52dd71f5da55fb1037c3af5",
+      "message": "Use correct logerr method (#557)",
+      "files_changed": 1,
+      "additions": 27,
+      "deletions": 27,
+      "commit_type": "code"
+    },
+    {
+      "author": "andreasBihlmaier",
+      "date": "2017-03-11T23:18:46Z",
+      "sha": "3e880c3834855110ea8104b3c07e34f0bbc4f11a",
+      "message": "Make gazebo_ros_control compatible with ros_control with respect to <hardwareInterface> tag (#550)\n\n* ros_control expects \"<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>\", i.e. \"hardware_interface/\" prefix\r\n\r\n* add deprecation warning\r\n\r\n* improve warning\r\n\r\n* fix warning message fix",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "bmagyar",
+      "date": "2015-04-08T09:22:09Z",
+      "sha": "10afbee3f2d5d3186abca41957d8a66057d8d268",
+      "message": "Adds range plugin for infrared and ultrasound sensors from PAL Robotics",
+      "files_changed": 4,
+      "additions": 489,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "lucasw",
+      "date": "2016-03-18T01:53:18Z",
+      "sha": "1e18ac00a7192c1c21f4e99f21f5f9cb4ee889e6",
+      "message": "Fix for issue #408. The last measurement time is the time that gazebo generated the sensor data, so ought to be used. updateRate doesn't seem that useful.\n\nThe other cameras need similar fixes to have the proper timestamps.",
+      "files_changed": 4,
+      "additions": 220,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "furushchev",
+      "date": "2016-04-11T09:03:39Z",
+      "sha": "c09842bbace0c5cb316f9ceb2869b3a75423fcb0",
+      "message": "use HasElement in if condition",
+      "files_changed": 5,
+      "additions": 14,
+      "deletions": 14,
+      "commit_type": "code"
+    },
+    {
+      "author": "k-okada",
+      "date": "2015-03-03T02:02:33Z",
+      "sha": "f9f4dc1a364bd518c271d353f18efdea5e9a18f1",
+      "message": "[gazebo_ros_diff_drive] force call SetMaxForce since this Joint::Reset in gazebo/physics/Joint.cc reset MaxForce to zero and ModelPlugin::Reset is called after Joint::Reset",
+      "files_changed": 2,
+      "additions": 27,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "jspricke",
+      "date": "2016-12-04T16:04:09Z",
+      "sha": "78258ce0af05975202de37d7ac70c9fed6c1b9c4",
+      "message": "Change boost::shared_ptr to urdf::JointConstSharedPtr",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "jonbinney",
+      "date": "2014-05-31T22:38:19Z",
+      "sha": "197616a26c192dc39ad53d2061386873a4df92a5",
+      "message": "Fix repo names in package.xml's",
+      "files_changed": 5,
+      "additions": 10,
+      "deletions": 10,
+      "commit_type": "config"
+    },
+    {
+      "author": "Enrique Fernandez",
+      "date": "2016-11-03T00:25:45Z",
+      "sha": "3f884d38bc1aacb11014a49142bdc35b95365080",
+      "message": "Fix distortion coefficients order\n\nIt should be D = {k1, k2, p1, p2, k3}, according to:\n- sensor_msgs/CameraInfo:\n  http://docs.ros.org/api/sensor_msgs/html/msg/CameraInfo.html\n- OpenCV:\n  http://docs.opencv.org/2.4/modules/calib3d/doc/camera_calibration_and_3d_reconstruction.html",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "shamwell",
+      "date": "2016-10-06T11:06:41Z",
+      "sha": "d7ea382cd71b5b2f2bdbe5838e2561c27ae33c9b",
+      "message": "Fixed getlinkstate service's angular velocity return",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "jliviero",
+      "date": "2016-10-25T13:02:09Z",
+      "sha": "4c65e37e6a45c1b1ea504788d33d57dcdd1aa1b7",
+      "message": "Added comments regarding 'headless' arg and issue #491. Added 'recording' arg as switch for -r",
+      "files_changed": 6,
+      "additions": 20,
+      "deletions": 8,
+      "commit_type": "docs"
+    },
+    {
+      "author": "nkoenig",
+      "date": "2013-09-16T00:03:52Z",
+      "sha": "cb950af9410e80b833dc5749eac6fbeb900b4cbd",
+      "message": "Fix openni plugin",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "peci1",
+      "date": "2014-09-15T05:23:45Z",
+      "sha": "3d4513db441137612bf91c8c1ddbb897e457949b",
+      "message": "[gazebo_ros] Fix for #246\n\nFixing issue #246 in gzserver.",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "jacquelinekay",
+      "date": "2016-04-26T16:53:35Z",
+      "sha": "d2da2fce77eb3a8176e5b5e452b67b7b1edddae2",
+      "message": "Upgrade to gazebo 7 and remove deprecated driver_base dependency (#426)\n\n* Upgrade to gazebo 7 and remove deprecated driver_base dependency\r\n\r\n* disable gazebo_ros_control until dependencies are met\r\n\r\n* Remove stray backslash",
+      "files_changed": 9,
+      "additions": 17,
+      "deletions": 18,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Hugo Boyer",
+      "date": "2016-04-26T18:34:59Z",
+      "sha": "a255d01b04454e8bf3ba48620d81544fbaeea049",
+      "message": "Merge branch 'kinetic-devel' of https://github.com/ros-simulation/gazebo_ros_pkgs into kinetic-devel",
+      "files_changed": 11,
+      "additions": 19,
+      "deletions": 77,
+      "commit_type": "config"
+    },
+    {
+      "author": "wjwwood",
+      "date": "2013-08-09T00:08:35Z",
+      "sha": "e4facd02f93e9d631ff54894a4210b0c6969d0e1",
+      "message": "gazebo_plugins: fix linkedit issues\n\nNote: other linkedit errors were fixed upstream\nin gazebo",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jbohren",
+      "date": "2013-02-18T06:38:06Z",
+      "sha": "e49a9f3ebfa31e31ec000fbcb1e0956f1c930f56",
+      "message": "Adding beginning of ros_control_gazebo integration",
+      "files_changed": 15,
+      "additions": 324,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "wkentaro",
+      "date": "2016-01-05T16:04:37Z",
+      "sha": "71c50f075ca8052da5add3b42bc7d77debbdd072",
+      "message": "Publish organized point cloud from openni_kinect plugin",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "John Hsu",
+      "date": "2013-07-18T22:14:14Z",
+      "sha": "fc28bb25896833ca04bec2edc84ba9725da527a8",
+      "message": "SDF.hh --> sdf.hh",
+      "files_changed": 8,
+      "additions": 8,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "hsu",
+      "date": "2013-06-03T19:23:45Z",
+      "sha": "e6bcdba42fb7fe63fa7938d242b0c32df3f80124",
+      "message": "Merge pull request #4 from osrf/ros_formatting\n\nFormatted files to be double space indent per ROS standards",
+      "files_changed": 3,
+      "additions": 386,
+      "deletions": 386,
+      "commit_type": "code"
+    },
+    {
+      "author": "alex",
+      "date": "2016-01-08T19:25:15Z",
+      "sha": "14b6312b19ebd586ebb5fe017b6c2a2d788df712",
+      "message": "Update readme with the correct doc link\n\nCurrent installing guide 404s",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Krystian",
+      "date": "2015-11-18T17:45:54Z",
+      "sha": "f05d8aafd093619ba38ac263476406e29e1b72db",
+      "message": "Added covariance matrix for published twist message in the skid steer plugin, as packages such as robot_localization require an associated non-zero covariance matrix",
+      "files_changed": 2,
+      "additions": 37,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "bgromov",
+      "date": "2015-10-24T21:26:00Z",
+      "sha": "03a1e27d59c34f1494c1bb586f85de701e8d6661",
+      "message": "Fix invalid signal name on OS X\n\nscripts/gazebo: line 30: kill: SIGINT: invalid signal specification",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "guihomework",
+      "date": "2015-10-06T17:06:52Z",
+      "sha": "13abddfd946acd7a1967a4a6d73e150c55cefd66",
+      "message": "Restart package resolving from last position, do not start all over.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "MirkoFerrati",
+      "date": "2015-09-12T14:42:15Z",
+      "sha": "3979b7e67e299fb797a8993e5fbe8335ee8d2c2a",
+      "message": "Added a missing initialization inside Differential Drive",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Adolfo Rodriguez Tsouroukdissian",
+      "date": "2013-05-10T09:17:02Z",
+      "sha": "2844e2cebab437d21b1e16f02271ba5c6c6f12f5",
+      "message": "Remove warning due to API change.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "fmessmer",
+      "date": "2014-10-09T08:20:19Z",
+      "sha": "2851ad0cd0f2c02924e6dfc6bd5230c34355071f",
+      "message": "move declaration for DefaultRobotHWSim to header file",
+      "files_changed": 3,
+      "additions": 475,
+      "deletions": 399,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Isaac IY Saito",
+      "date": "2015-08-06T07:37:55Z",
+      "sha": "71dcc776c6efdd9408e69e3a39dcd55212419226",
+      "message": "[empty_world.launch] Allow respawning gazebo node.",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "akio",
+      "date": "2015-06-28T09:10:16Z",
+      "sha": "247fea0da3666bf7ce74f1013322600912ccbe49",
+      "message": "Fix DefaultRobotHWSim puts robotNamespace twice\n\nDefaultRobotHWSim::initSim() member function uses both\nnamespaced NodeHandle and robot_namespace string to create\nparameter names.\n\nFor example,  if a robotNamespace is \"rrbot\",\nDefaultRobotHWSim tries to get parameters from following names:\n\n- /rrbot/rrbot/gazebo_ros_control/pid_gains/*\n- /rrbot/rrbot/joint_limits/*\n\nThis commit change these names to:\n\n- /rrbot/gazebo_ros_control/pid_gains/*\n- /rrbot/joint_limits/*",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Sabrina Heerklotz",
+      "date": "2015-03-03T13:05:03Z",
+      "sha": "7674396ab20a102f97c6bc954a7e42e7cbb6f451",
+      "message": "fixed mistake at calculation of joint velocity",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "mikeferguson",
+      "date": "2015-02-11T23:49:15Z",
+      "sha": "40f7974fed383450d2c8d754a62bd255a8937315",
+      "message": "add PointCloudCutoffMax",
+      "files_changed": 2,
+      "additions": 18,
+      "deletions": 9,
+      "commit_type": "code"
+    },
+    {
+      "author": "Jim Rothrock",
+      "date": "2014-12-16T18:50:46Z",
+      "sha": "67abdd9b74d4e1ddd8f744905f7ca3879c5b7799",
+      "message": "Added emergency stop support.",
+      "files_changed": 3,
+      "additions": 50,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "rcodddow",
+      "date": "2014-11-07T15:08:45Z",
+      "sha": "cdb2d2630ddcc4a9d7d8b8508b60056dab553281",
+      "message": "Update CMakeLists.txt",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ayrton04",
+      "date": "2014-09-05T17:56:24Z",
+      "sha": "ecdb7ac4a214003c49dd565f7b597783787e0a44",
+      "message": "Fixing handling of non-world frame velocities in setModelState.",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "cottsay",
+      "date": "2014-05-20T21:05:13Z",
+      "sha": "b9d24d52d835781186ed010791179aa955014747",
+      "message": "gazebo_ros_control: Add build-time dependency on gazebo\n\nThis fixes a regression caused by a889ef8b768861231a67b78781514d834f631b8e",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "fsuarez6",
+      "date": "2013-10-28T16:01:07Z",
+      "sha": "d7b2c00ede5839777180fc6206719e97d3c4b775",
+      "message": "Add time import\n\nWhen using the -wait option the script fails because is missing the time import",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "caguero",
+      "date": "2014-08-28T02:06:26Z",
+      "sha": "72fd65374f68d2e7f9ee9cd4138584e128510008",
+      "message": "Fixes for calling GetParam() with different physic engines.",
+      "files_changed": 1,
+      "additions": 80,
+      "deletions": 16,
+      "commit_type": "code"
+    },
+    {
+      "author": "osrf",
+      "date": "2014-07-31T21:26:19Z",
+      "sha": "78216fb4053b653cd144ac1953dde36c14c58fc7",
+      "message": "Update for hydro + gazebo 1.9",
+      "files_changed": 2,
+      "additions": 49,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Alexander Bubeck",
+      "date": "2014-07-15T08:26:22Z",
+      "sha": "160fc6ecbc9426f7e68fa6a763d444e90f507c31",
+      "message": "Should fix build error for binary releases.\n\nSee: http://www.ros.org/debbuild/indigo.html?q=gazebo_ros_control",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "gborque",
+      "date": "2014-07-14T14:18:58Z",
+      "sha": "5db9c9268870e8b394a43250596c3ef56eb2382d",
+      "message": "Added Gaussian Noise generator",
+      "files_changed": 2,
+      "additions": 117,
+      "deletions": 81,
+      "commit_type": "code"
+    },
+    {
+      "author": "garaemon",
+      "date": "2014-06-13T10:12:20Z",
+      "sha": "fac19798b92d54925ad24c1e3bc56d4e360ea34e",
+      "message": "publish organized pointcloud from openni plugin",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Arn-O",
+      "date": "2014-05-30T14:04:44Z",
+      "sha": "12beb3e22abd51f163eeabac483c24a9d2f98f9a",
+      "message": "fix issue #198\n\nOperator ``==`` is not recognized by sh scripts.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "clynamen",
+      "date": "2014-05-15T10:04:52Z",
+      "sha": "ef795adf2c9d5a6a53b6e696b3fc2a9c45c84ff6",
+      "message": "Add verbose parameter\n\nAdd verbose parameter for --verbose gazebo flag",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Markus Achtelik",
+      "date": "2014-05-08T16:20:20Z",
+      "sha": "d0eca3d907ce57cae53e076d9352fa16d4486495",
+      "message": "added osx support for gazebo start scripts",
+      "files_changed": 5,
+      "additions": 44,
+      "deletions": 19,
+      "commit_type": "code"
+    },
+    {
+      "author": "vrabaud",
+      "date": "2014-04-08T23:46:30Z",
+      "sha": "2f9e72b2b1f5f148ae9b8b91a1c2ecbca705d4ad",
+      "message": "remove PCL dependency",
+      "files_changed": 6,
+      "additions": 67,
+      "deletions": 77,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Dejan Pangercic",
+      "date": "2014-03-26T05:24:26Z",
+      "sha": "8440a0c5c9ac8078fb4b0bdfc1eebff495340c1e",
+      "message": "this corrects the right orientation of the laser scan and improves on comparison between 2 double numbers",
+      "files_changed": 1,
+      "additions": 12,
+      "deletions": 14,
+      "commit_type": "code"
+    },
+    {
+      "author": "toliver",
+      "date": "2014-03-13T18:53:02Z",
+      "sha": "bcd65be653be12b16fab46e14e36ad9ac8a5e5e1",
+      "message": "Initialize depth_image_connect_count_ in openni_kinect plugin",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "jordi-pages",
+      "date": "2014-03-03T11:36:08Z",
+      "sha": "9e7ba6906a5863c8240d1048918ddb8bf1d9c547",
+      "message": "multicamera bad namespace. Fixes #161\n\nThere was a race condition between GazeboRosCameraUtils::LoadThread\ncreating the ros::NodeHandle and GazeboRosCameraUtils::Load\nsuffixing the camera name in the namespace",
+      "files_changed": 2,
+      "additions": 15,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "jim-rothrock",
+      "date": "2013-09-20T16:32:46Z",
+      "sha": "71718549e310f3b10796734d51b51c807aaf24a1",
+      "message": "Added the urdf_string parameter to parseTransmissionsFromURDF().",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Paul Mathieu",
+      "date": "2013-10-15T07:57:05Z",
+      "sha": "2993a49632038cf10711245007cc4e13dd7bb1ca",
+      "message": "Remove dependency to meta-package ros_controllers",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "ugocupcic",
+      "date": "2013-12-18T10:39:23Z",
+      "sha": "0a2180e08cc0321436863dc4fd3f4fc7cba5108d",
+      "message": "the parent sensor in gazebo seems not to be active",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "meyerj",
+      "date": "2013-10-24T12:00:50Z",
+      "sha": "4dc7ba07fb01d23b727b9aa2b9527bbb87c2ac84",
+      "message": "gazebo_ros_control: use the model NodeHandle to get the robot_description parameter",
+      "files_changed": 2,
+      "additions": 3,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "Johannes Meyer",
+      "date": "2013-06-21T15:40:43Z",
+      "sha": "83e0de5963c081aa08034ad66b19f98dcd922d98",
+      "message": "gazebo_plugins/gazebo_ros: fixed install directories for include files and gazebo scripts",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "dirk-thomas",
+      "date": "2013-09-17T23:43:16Z",
+      "sha": "bfcf3a2487da077239e8250a88cf1f8a590fe398",
+      "message": "add missing build dependency on diagnostic_updater which is used in src/gazebo_ros_prosilica.cpp",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ericperko",
+      "date": "2013-09-02T20:46:27Z",
+      "sha": "dd520a5ed70070ded29c0f76643a1a3b551c789c",
+      "message": "Fixed a minor typo in spawn_model error message when -model not specified",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "fmder",
+      "date": "2013-06-05T17:57:19Z",
+      "sha": "a8583ba89b2b608c36fc6e996cd271d23f236d70",
+      "message": "Added the robot namespace to the tf prefix.\n\nThe tf_prefix param is published under the robot namespace and not the\nrobotnamespace/camera node which makes it non-local we have to use the\nrobot namespace to get it otherwise it is empty.",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "piyushk",
+      "date": "2013-06-17T18:00:53Z",
+      "sha": "c98ffb951cb8409b450dd51e796bf56de2f5ed92",
+      "message": "modified script to work in bash correctly (tested on ubuntu 12.04 LTS)",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "bit-pirate",
+      "date": "2013-08-01T05:12:22Z",
+      "sha": "3bf7a82be23c53e3d0dafb7a430f01ad980bd0a1",
+      "message": "prevents dynamic_reconfigure from overwritting update rate param on start-up",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 3,
+      "commit_type": "config"
+    },
+    {
+      "author": "tfoote",
+      "date": "2013-07-13T08:08:35Z",
+      "sha": "08a08914dc9af65f14ecf6a8e6b86529f3fa649c",
+      "message": "temporarily add tbb as a work around for #74",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "ZdenekM",
+      "date": "2013-06-25T09:00:10Z",
+      "sha": "94e68df8a6cd458bb2e7774fb9d69371fc7d4c52",
+      "message": "Skid steering drive plugin.",
+      "files_changed": 3,
+      "additions": 541,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Fadri Furrer",
+      "date": "2013-06-21T22:26:28Z",
+      "sha": "81ba7c093510046e16a3a7bdfc8f1cd3b61350da",
+      "message": "fix for terminating the service_thread_ in PubQueue.h",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "FIXED-TERM Hausman Karol (CR/RTC1.1-NA)",
+      "date": "2013-06-10T21:03:18Z",
+      "sha": "0bc352e028d7ee806ed8b30546eb382e7a9ba6a3",
+      "message": "fix curved laser issue",
+      "files_changed": 1,
+      "additions": 21,
+      "deletions": 11,
+      "commit_type": "code"
+    },
+    {
+      "author": "fmder1",
+      "date": "2013-05-30T15:22:40Z",
+      "sha": "133e9903f4fcede30a3c52a680fe66e94f4bf247",
+      "message": "Using pkg-config to find the script installation path.\n\nCorrected a bash typo with client_final variable in gazebo script.",
+      "files_changed": 5,
+      "additions": 11,
+      "deletions": 6,
+      "commit_type": "code"
+    }
+  ]
+}

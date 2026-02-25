@@ -1,0 +1,1861 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T01:42:21Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros2",
+    "repo": "geometry2"
+  },
+  "data": [
+    {
+      "author": "mjcarroll",
+      "date": "2018-11-01T19:57:13Z",
+      "sha": "b043a97b6c5502787ebcdfcfa73cb19599a1405e",
+      "message": "Fix Eigen3 dependency. (#77)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ahcorde",
+      "date": "2019-11-26T20:44:13Z",
+      "sha": "3a088b144de003747479f53546203b1a24a6687e",
+      "message": "Adding support for view_frame (#192)\n\n* Adding tf2_tools support for view_frames\r\n\r\n* Changelog\r\n\r\n* tf2_tools 0.12.1 package version\r\n\r\n* tf2_tools common linters\r\n\r\n* tf2_tools changelog Forthcoming\r\n\r\n* tf2_tools log error and destroy client and node when a exception raised\r\n\r\n* tf2_tools 0.12.4 package version\r\n\r\n* tf2_tools revert some changes\r\n\r\n* tf2_tools - reduce changes\r\n\r\n* tf2_tools: finally block and passing the time instead of the node\r\n\r\n* tf2_tools: buffer with less arguments\r\n\r\n* tf2_tools: Fix condition",
+      "files_changed": 5,
+      "additions": 75,
+      "deletions": 40,
+      "commit_type": "docs"
+    },
+    {
+      "author": "YannikMeinkenRosenxt",
+      "date": "2026-01-08T14:35:18Z",
+      "sha": "b4f74ca97d6ffd141ac0612759c984533d73a13b",
+      "message": "Copy child_frame_id from input (#889)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "alireza-moayyedi",
+      "date": "2025-07-24T06:56:54Z",
+      "sha": "a9583654e0c7e871b828579a67f534e37363b94a",
+      "message": "Add RPY quaternion constructor (#806)",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "maxbader",
+      "date": "2025-12-15T09:11:47Z",
+      "sha": "23c575dc257201afe6d0f7e9a9b3702a0661f133",
+      "message": "static function to crate quaternions directly from rotation added (#881)",
+      "files_changed": 1,
+      "additions": 39,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "rkent",
+      "date": "2025-11-24T12:51:11Z",
+      "sha": "1322e89e17746e8fc32154561a07f48ed349752a",
+      "message": "Disable TAGFILES in rosdoc2 to separate namespace tf2 documentation into packages (#856)\n\nGenerated-by: Portions of this commit may include code completion from github.copilot version 1.372.0 or later\n\nSigned-off-by: R Kent James <kent@caspia.com>",
+      "files_changed": 13,
+      "additions": 631,
+      "deletions": 93,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mini-1235",
+      "date": "2025-11-20T21:34:06Z",
+      "sha": "00ea530fc667164413a983b2ab1a7d680a993f9a",
+      "message": "Prevent log spam from tf2_ros message_filter (#851)\n\nSigned-off-by: mini-1235 <mauricepurnawan@gmail.com>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Timple",
+      "date": "2025-11-17T08:57:44Z",
+      "sha": "5ab41706082765bf3f91ddfe861d88ef0e124697",
+      "message": "Fix REP url locations (#847)\n\nThis popped up in my global replace\n\nSigned-off-by: Tim Clephas <tim.clephas@nobleo.nl>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "technikus",
+      "date": "2025-11-06T17:16:48Z",
+      "sha": "c716b0b67244be2327d9e3fb5bb4c7e69ea38f17",
+      "message": "Adding explicit handling for normalization of zero-quaternions (#839)",
+      "files_changed": 2,
+      "additions": 19,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "clalancette",
+      "date": "2017-03-27T21:24:42Z",
+      "sha": "00c7ea79972174c4d60e1add861ed289beb1098a",
+      "message": "Switch tf2_eigen to use package.xml format 2. (#216)\n\n* Switch tf2_eigen to use package.xml format 2.\r\n\r\nThis is to modernize it a bit to make it more compatible\r\nwith ROS 2.  While we are in here, remove the run/exec dependency\r\non cmake_modules, which doesn't seem to be needed at runtime.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@osrfoundation.org>\r\n\r\n* Make geometry_msgs and tf2 <depend>\r\n\r\nThis makes sure they are exec_depend, build_depend, and\r\nbuild_export_depend, all three of which are needed.  Also\r\nmake eigen a build_export_depend, since it is included in\r\nthe exported header file.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@osrfoundation.org>",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 7,
+      "commit_type": "config"
+    },
+    {
+      "author": "mergify[bot]",
+      "date": "2023-08-21T11:00:49Z",
+      "sha": "8b5440ac3b274ed57ddd364b5ed640cade4bdaa2",
+      "message": "Add doTransform support for Point32, Polygon and PolygonStamped (backport #616) (#619)\n\n* Add doTransform support for Point32, Polygon and PolygonStamped (#616)\r\n\r\nCo-authored-by: Guillaume Doisy <guillaume@dexory.com>\r\n(cherry picked from commit 70d8c95cf54ceeff7b5a3bc8de379b599a146beb)\r\nCo-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>",
+      "files_changed": 2,
+      "additions": 230,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "CursedRock17",
+      "date": "2024-03-04T15:14:56Z",
+      "sha": "b81000d18c92e4841fcc46bfc7b541da44723c0d",
+      "message": "Removing console_bridge (#655)\n\nSigned-off-by: CursedRock17 <mtglucas1@gmail.com>",
+      "files_changed": 4,
+      "additions": 12,
+      "deletions": 17,
+      "commit_type": "docs"
+    },
+    {
+      "author": "fujitatomoya",
+      "date": "2025-03-31T20:42:18Z",
+      "sha": "8ad57bc36dafec52e194f41787592af3aa417349",
+      "message": "remove .github/ISSUE_TEMPLATE.md (old version of templates) (#776)\n\nSigned-off-by: Tomoya Fujita <Tomoya.Fujita@sony.com>",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 45,
+      "commit_type": "ci"
+    },
+    {
+      "author": "authaldo",
+      "date": "2025-08-20T08:12:25Z",
+      "sha": "1fd8b0feb1d152512c3c8c09eda0a2930a5cdbb2",
+      "message": "Fixed inconsistency of C++ and Python implementations of StaticTransformPublisher (#820)\n\nSigned-off-by: Dominik Authaler <dominik.authaler@uni-ulm.de>",
+      "files_changed": 2,
+      "additions": 73,
+      "deletions": 11,
+      "commit_type": "code"
+    },
+    {
+      "author": "Crola1702",
+      "date": "2025-08-07T13:24:51Z",
+      "sha": "80ac894f64b553e3b1f87eea08124cf241af69a6",
+      "message": "Set Cmake Policy CMP0144 (#819)\n\nThis is a warning happening on CI. See [nightly_win_rep#3818](https://ci.ros2.org/job/nightly_win_rep/3818/cmake/folder.1076240561/)\n\nPolicy information: https://cmake.org/cmake/help/latest/policy/CMP0144.html\n\nSigned-off-by: Crola1702 <cristobal.arroyo@ekumenlabs.com>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "roncapat",
+      "date": "2023-03-15T19:10:13Z",
+      "sha": "3bac620777043a1c8761cd74c1bb814667341b65",
+      "message": "Extend TimeCache API to provide rich ExtrapolationException infos (#586)\n\n* Extend TimeCache API to provide rich ExtrapolationException infos",
+      "files_changed": 6,
+      "additions": 169,
+      "deletions": 28,
+      "commit_type": "code"
+    },
+    {
+      "author": "MirkoFerrati",
+      "date": "2025-07-28T07:12:37Z",
+      "sha": "effa539126beb465a4d17fd93d8076180d1a27b2",
+      "message": "Ensure variable is considered volatile in message_filter_test (#812)\n\nSigned-off-by: Mirko Ferrati <mirko.ferrati@gmail.com>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "mosfet80",
+      "date": "2025-03-11T17:43:37Z",
+      "sha": "d60e39d663e21d2e426a2a7ff3e3d266df6f8c9a",
+      "message": "uniform cmake min version (#764)\n\ncmake <3.10 is deprecated.\nUniform minimum cmake version to the same version used in the tf2/CMakeLists.txt test library",
+      "files_changed": 9,
+      "additions": 9,
+      "deletions": 9,
+      "commit_type": "docs"
+    },
+    {
+      "author": "garyservin",
+      "date": "2014-12-03T18:15:41Z",
+      "sha": "bda8f0752c5036fccb8fb8d9c3a4d562a7333702",
+      "message": "Remove tf2_py dependency for Android",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "szobov",
+      "date": "2025-07-01T12:05:22Z",
+      "sha": "8c7809351901083c7a8a7645b3bc5392f8be83a7",
+      "message": "Fix message filter target frames string (#803)\n\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>",
+      "files_changed": 2,
+      "additions": 20,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "andschi",
+      "date": "2025-06-15T19:30:29Z",
+      "sha": "bbc69c7ec086f59d7531eab6607e0804c16ab68a",
+      "message": "Default initialize TransformStorage's frame_id_ and child_frame_id_ with UINT32_MAX (#783)\n\n* Fix comparison of TransformStorage with zero-initialized / default-constructed frame ids (#771)\n\n* Revert \"Fix comparison of TransformStorage with zero-initialized / default-constructed frame ids (#771)\"\n\nThis reverts commit 4381a9d9201e0ddd53094e1668cfceab172c4fc1.\n\n* default initialize TransformStorage's frame_id_ and child_frame_id_ with UINT32_MAX",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "cottsay",
+      "date": "2013-04-11T04:24:12Z",
+      "sha": "5adab7ced524f78ccaf7b1e9cef751b4bc1cb31e",
+      "message": "Make PythonLibs find_package python2 specific\n\nOn systems with python 3 installed and default, find_package(PythonLibs) will find the python 3 paths and libraries. However, the c++ include structure seems to be different in python 3 and tf2 uses includes that are no longer present or deprecated.\r\n\r\nUntil the includes are made to be python 3 compliant, we should specify that the version of python found must be python 2.",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "InvincibleRMC",
+      "date": "2025-04-24T20:10:35Z",
+      "sha": "2be7ac1aecd3d8a9194e7ff605a24a3813fe554c",
+      "message": "Add isnan support (#780)\n\nSigned-off-by: Michael Carlstrom <rmc@carlstrom.com>",
+      "files_changed": 5,
+      "additions": 17,
+      "deletions": 7,
+      "commit_type": "code"
+    },
+    {
+      "author": "cramke",
+      "date": "2025-04-24T17:25:10Z",
+      "sha": "9b4c2c5010101ad753b3b9c58a64d283b3f8b8e3",
+      "message": "Overflow Issue in durationFromSec() Function when Handling Extremely Large or Small Values (#785)\n\nSigned-off-by: Carsten Ramke <carsten.ramke@gmail.com>",
+      "files_changed": 2,
+      "additions": 21,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "roehling",
+      "date": "2013-11-27T08:47:27Z",
+      "sha": "cd89d1659654d110efc1df961f09218ca3a6ff56",
+      "message": "Fix const correctness of tf2::Vector3 rotate() method\n\nThe method does not modify the class thus should be const.\nThis has already been fixed in Bullet itself.",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "YuanYuYuan",
+      "date": "2025-03-04T14:01:00Z",
+      "sha": "4ec4f9684d03a903da951ab6d4d08cbc87de49ee",
+      "message": "fix: add `rclcpp::shutdown` (#762)",
+      "files_changed": 16,
+      "additions": 47,
+      "deletions": 15,
+      "commit_type": "code"
+    },
+    {
+      "author": "EmmanuelMess",
+      "date": "2025-02-09T18:31:08Z",
+      "sha": "00e182217b3d0f668adb639923b6cc4e2ddfda59",
+      "message": "Fix external docs mappings  (#757)\n\nSigned-off-by: Emmanuel <EmmanuelMess@users.noreply.github.com>",
+      "files_changed": 3,
+      "additions": 24,
+      "deletions": 9,
+      "commit_type": "ci"
+    },
+    {
+      "author": "kyle-basis",
+      "date": "2025-01-14T13:08:18Z",
+      "sha": "609deb138650697acb73085440bf46e38bf2da09",
+      "message": "Remove many extra conversions from Matrix3x3 to Quaternion (#741)\n\nSigned-off-by: kyle-basis <kyle@basisrobotics.tech>\nCo-authored-by: jmachowinski <jmachowinski@users.noreply.github.com>\nCo-authored-by: Katherine Scott <katherineAScott@gmail.com>",
+      "files_changed": 5,
+      "additions": 253,
+      "deletions": 148,
+      "commit_type": "ci"
+    },
+    {
+      "author": "lopsided98",
+      "date": "2025-01-03T20:27:00Z",
+      "sha": "894ab122f63123e40a0df8d643cbcde6835ccfde",
+      "message": "tf2_kdl: add python_orocos_kdl_vendor dependency (#745)\n\n* tf2_kdl: add python_orocos_kdl_vendor dependency\r\n\r\nThe tf2_kdl Python API depends on PyKDL, which is provided by python_orocos_kdl_vendor.\r\n\r\n* tf2_kdl: remove tf2_msgs test dependency\r\n\r\nThis dependency is not needed.\r\n\r\nSigned-off-by: Ben Wolsieffer <benwolsieffer@gmail.com>",
+      "files_changed": 2,
+      "additions": 1,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "rkeating-planted",
+      "date": "2024-11-20T02:00:16Z",
+      "sha": "abea0e92e3eabfaa1079752d9ac6da352bc590d2",
+      "message": "Fix tf2_geometry_msgs_INCLUDE_DIRS. (#729)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "abhishek47kashyap",
+      "date": "2024-10-28T21:01:22Z",
+      "sha": "37fb99ca2a739cebe6cdc70bc0dc18cfd511b2ee",
+      "message": "specified quaternion order to be xyzw (#718)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Ryanf55",
+      "date": "2024-10-15T10:41:10Z",
+      "sha": "59114173c82f851675156b66d4895401f441719a",
+      "message": "Add configurable TF topics (#709)\n\n* Set defaults in transform lister and expose them as args to the\r\n  TransformLister\r\n* Add CLI args in view_frames to change /tf and /tf_static topics\r\n\r\nSigned-off-by: Ryan Friedman <25047695+Ryanf55@users.noreply.github.com>",
+      "files_changed": 3,
+      "additions": 27,
+      "deletions": 5,
+      "commit_type": "ci"
+    },
+    {
+      "author": "ayrton04",
+      "date": "2024-08-28T06:57:27Z",
+      "sha": "d85102217f692746abea8546c8e41f0abc95c8b8",
+      "message": "Adding static transform listener (#673)\n\nCo-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>",
+      "files_changed": 3,
+      "additions": 198,
+      "deletions": 15,
+      "commit_type": "code"
+    },
+    {
+      "author": "EricCousineau-TRI",
+      "date": "2024-05-14T19:00:13Z",
+      "sha": "a17a2bf8297052d2c6a404f9799bfe3b81040482",
+      "message": "[cache_unittest] Add direct implementation testing on ordering, pruning (#678)\n\n* [cache_unittest] Add direct implementation testing on ordering, pruning\r\n\r\n* do getAllItems() approach\r\n\r\n* Return a reference instead.\r\n\r\n* mark getAllItems as internal\r\n\r\n* Fix warning on Windows.\r\n\r\nCo-authored-by: Chris Lalancette <clalancette@gmail.com>",
+      "files_changed": 3,
+      "additions": 148,
+      "deletions": 4,
+      "commit_type": "test"
+    },
+    {
+      "author": "mikaelarguedas",
+      "date": "2016-03-31T02:50:50Z",
+      "sha": "a7dfe42c0eec1c4c0e5aec75d16629ae37af213c",
+      "message": "added a static transform broadcaster in python",
+      "files_changed": 2,
+      "additions": 52,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "marcoag",
+      "date": "2024-03-28T09:45:10Z",
+      "sha": "08452555616a1e9aac1c7f5d26437818247a34df",
+      "message": "Changelog.\n\nSigned-off-by: Marco A. Gutierrez <marcogg@marcogg.com>",
+      "files_changed": 15,
+      "additions": 55,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jmachowinski",
+      "date": "2024-04-10T12:30:00Z",
+      "sha": "fd033ed9c8032c59a5fe077e980d22bacb2b9206",
+      "message": "Compile fix for upcomming changes to rclcpp::Executor (#668)\n\nSigned-off-by: Janosch Machowinski <j.machowinski@nospam.org>",
+      "files_changed": 10,
+      "additions": 566,
+      "deletions": 587,
+      "commit_type": "code"
+    },
+    {
+      "author": "nachovizzo",
+      "date": "2024-01-10T18:50:55Z",
+      "sha": "1621942bc2ad1270ee0bfc1f6b7a44a5849a7b5e",
+      "message": "Fix constantly increasing memory in std::list (#636)\n\n* Fix constantly increasing memory in std::list\r\n\r\nWhen someone is constantly publishing with the same tf2 timestamp\r\n(application error, I know), the storage_ of the tf2::TimeCache grows\r\nunbounded causing system-wide memory leaks. In a ROS system, each tf2\r\nListener will spawn one of these TimeCache objects and thus, all ROS\r\nnodes that have any sort of tf2 listener will slowly start allocating\r\nmore and more memory\r\n\r\nAnd also fixed the situation where two different tf2 needs to be\r\nintroduced at the same timestamp.\r\n\r\nSince the tests were failing I realized that I had to dive a bit deeper\r\ninto the simple solution. And extend a bit the TransformStorage clase to\r\nbe comparable, now instead of just looking to the timestamps, the\r\nimplementation avoids inserting duplicates in the buffer.\r\n\r\nIf for some reason, someone is publishing a different Transfrom\r\n(xyz,rpy) at the same timestamp. Well, that case is not being captured\r\nnow, but I'd say that's another problem\r\n\r\nSigned-off-by: Ignacio Vizzo <ignaciovizzo@gmail.com>",
+      "files_changed": 5,
+      "additions": 177,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "traversaro",
+      "date": "2024-03-11T12:41:17Z",
+      "sha": "3c509320fbed3b2962c24daee170d3b89d5d61e8",
+      "message": "Fix installation directory of .dll files in tf2_eigen_kdl (#657)\n\nSigned-off-by: Silvio Traversaro <silvio@traversaro.it>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "pac48",
+      "date": "2022-11-04T18:44:07Z",
+      "sha": "49d4be4e8dd08282fc3bf5238459ce41d6befe6f",
+      "message": "add torque due to force offset (#538)\n\n* add torque due to force offset",
+      "files_changed": 2,
+      "additions": 12,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "AiVerisimilitude",
+      "date": "2023-11-13T17:07:33Z",
+      "sha": "e07648f5952a353f646a5a4d8e2261ba98200b64",
+      "message": "Avoid unecessary time conversions. (#635)\n\nSigned-off-by: Guilherme Rodrigues <guilherme.rodrigues@ait.ac.at>",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "SteveMacenski",
+      "date": "2018-10-26T20:27:40Z",
+      "sha": "af186c8fbf6e0b87348701a46b2ae04909c3e4fc",
+      "message": "Porting tf2_sensor_msgs in C++ (#2) (#75)\n\n* cherry pick over to ros2\r\n\r\n* adding new clock logic",
+      "files_changed": 5,
+      "additions": 82,
+      "deletions": 76,
+      "commit_type": "docs"
+    },
+    {
+      "author": "MatthijsBurgh",
+      "date": "2023-09-04T20:57:30Z",
+      "sha": "4b8483886bd3aaf798fcdadf140ff5e9e5165070",
+      "message": "Remove 'efficient copy' prints (#625)\n\nMatching https://github.com/ros/geometry2/pull/530",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "AndyZe",
+      "date": "2021-10-03T22:56:07Z",
+      "sha": "9f4acba185a5cd586276ad9bb8432f7fa8b9c626",
+      "message": "Add doTransform function for twists or wrenches (#406)\n\n* Add doTransform function for twists or wrenches\r\n\r\nCo-authored-by: Abrar Rahman Protyasha <aprotyas@u.rochester.edu>\r\nCo-authored-by: Chris Lalancette <clalancette@gmail.com>",
+      "files_changed": 2,
+      "additions": 73,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "z80020100",
+      "date": "2023-07-20T16:32:57Z",
+      "sha": "2eaab2584ed6b6635a34f47df46d73bb717dee2a",
+      "message": "Fix invalid timer handle exception (#474)\n\n* Add class MockCreateTimerROS for testing\r\n\r\n* Add a test case to reproduce invalid timer handle exception\r\n\r\n* Fix invalid timer handle exception caused by removing handle repeatedly",
+      "files_changed": 2,
+      "additions": 104,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "vineet131",
+      "date": "2021-09-27T17:55:55Z",
+      "sha": "8d74d9b1a0725620f78515de191d365626b7ea96",
+      "message": "Fix for issue #431 - Covariance is not transformed in do_transform_pose_with_covariance_stamped (#453)\n\n* -Fixed the issue of covariance not being transformed in do_transform_pose_with_covariance_stamped, corresponding to https://github.com/ros2/geometry2/issues/431 and made the same changes as the C++ API\r\n\r\nCo-authored-by: Abrar Rahman Protyasha <aprotyas@u.rochester.edu>",
+      "files_changed": 2,
+      "additions": 132,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "erichlf",
+      "date": "2023-06-15T20:32:38Z",
+      "sha": "dfb7eb528ed7bdc900258bd0cd3be6279f812443",
+      "message": "Add time jump callback (#608)\n\n* Add time jump callback\r\n\r\nWhen use_sim_time is set the python tf2 buffer should be cleared. However, this\r\nwasn't happening. To handle this a time jump callback was added to clear the\r\nbuffer when a time jump is detected.\r\n\r\nCo-authored-by: Erich L Foster <efoster@seegrid.com>",
+      "files_changed": 1,
+      "additions": 14,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Yadunund",
+      "date": "2023-03-14T14:43:06Z",
+      "sha": "89203814b16b6c2e848b31878053ac34453cf048",
+      "message": "Enable document generation using rosdoc2 for ament_python pkgs (#587)\n\n* Add missing deps and fix cross reference\r\n\r\n* Add custom sphinx source for tf2_ros_py\r\n\r\nSigned-off-by: Yadunund <yadunund@openrobotics.org>",
+      "files_changed": 9,
+      "additions": 350,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "tylerjw",
+      "date": "2023-03-23T21:06:09Z",
+      "sha": "8caee00d09a2c64d5f2d65aa114c0f74621a105f",
+      "message": "Depend on ament_cmake_ros to default SHARED to ON (#591)\n\n* find_package ament_cmake_ros to default SHARED to ON\r\n\r\nSigned-off-by: Tyler Weaver <maybe@tylerjw.dev>",
+      "files_changed": 2,
+      "additions": 3,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "tonynajjar",
+      "date": "2023-03-18T12:46:40Z",
+      "sha": "2ed3342fce7a745b86c9b1ebd5c2bf4d03afe46e",
+      "message": "Add do_transform_polygon_stamped (#582)\n\n* Add do_transform_polygon_stamped\r\n\r\nCo-authored-by: Chris Lalancette <clalancette@gmail.com>",
+      "files_changed": 1,
+      "additions": 32,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "ahans",
+      "date": "2023-01-18T16:21:46Z",
+      "sha": "f95dfbef3f7b2b65ecf18c7cc70bdac84a2bb6d4",
+      "message": "Fix use-after-free bug in BufferServer::cancelCB (#579)\n\n`info` was a reference to the `GoalInfo` entry in `active_goals_` that\r\n`it` pointed at. It was used after the entry had been erased from the\r\nlist (through `it`). Swapping the line with `erase` and the one with the\r\ncall to `canceled` would have been the minimal fix, but instead we do a\r\nrefactor here to improve the overall code quality and make such errors\r\nless likely in the future.\r\n\r\nSigned-off-by: Alexander Hans <ahans@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 13,
+      "deletions": 14,
+      "commit_type": "ci"
+    },
+    {
+      "author": "alsora",
+      "date": "2022-09-19T18:15:23Z",
+      "sha": "d6559f955c3f9de3360d35e10373d7c44185db4a",
+      "message": "Allow to construct `TransformBroadcaster` and `TransformListener` from node interfaces (#552)\n\n* add constructors for tf objects that accept node interfaces as arguments\r\n\r\nSigned-off-by: Alberto Soragna <alberto.soragna@gmail.com>",
+      "files_changed": 3,
+      "additions": 104,
+      "deletions": 22,
+      "commit_type": "code"
+    },
+    {
+      "author": "sloretz",
+      "date": "2018-08-08T23:05:42Z",
+      "sha": "7dafb4d6c0c7025dfeeed3cef336113c62601dac",
+      "message": "Use ros2 time (#67)\n\n* Buffer constructor accepts a clock\r\n* Use rclcpp::Time::seconds()",
+      "files_changed": 9,
+      "additions": 187,
+      "deletions": 79,
+      "commit_type": "docs"
+    },
+    {
+      "author": "audrow",
+      "date": "2021-03-05T13:41:23Z",
+      "sha": "b9f360e3a074a8e759a5fe8c2556a45e7f0f4cf4",
+      "message": "Fix linter errors (#385)\n\nSigned-off-by: Audrow Nash <audrow.nash@gmail.com>",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "jacobperron",
+      "date": "2018-11-22T04:31:35Z",
+      "sha": "86ed6f9a6c861ebbfdb54fc7e93c9139948dfdfb",
+      "message": "Remove cmake_modules dependency from package.xml (#83)",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "gonzodepedro",
+      "date": "2022-08-23T17:50:27Z",
+      "sha": "8c2aa5aa4ebe46b925618f314ece7dbf4aab3eb8",
+      "message": "Suppress spam from calling canTransform (#529)\n\n* suppress spam in canTransform\r\n\r\n* Uncrustify\r\n\r\nSigned-off-by: Gonzalo de Pedro <gonzalo@depedro.com.ar>\r\n\r\n* Suppress console spam in other calls to canTransform\r\n\r\nThe user has few options to workaround potential console spam from canTransform.\r\nIf we want, it would be better to update the API to optional return the error string.\r\n\r\nSigned-off-by: Jacob Perron <jacob@openrobotics.org>\r\n\r\nSigned-off-by: Gonzalo de Pedro <gonzalo@depedro.com.ar>\r\nSigned-off-by: Jacob Perron <jacob@openrobotics.org>\r\nCo-authored-by: Grigoriy Lipenko <gnlipenko@sberautotech.ru>\r\nCo-authored-by: Jacob Perron <jacob@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 12,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "wep21",
+      "date": "2022-07-11T12:55:10Z",
+      "sha": "2687a3543bf61481b06dcf37839c7e92bed85d2e",
+      "message": "feat: export tf2 sensor msgs target (#536)\n\n* feat: export tf2 sensor msgs target\r\n\r\nSigned-off-by: Daisuke Nishimatsu <border_goldenmarket@yahoo.co.jp>",
+      "files_changed": 2,
+      "additions": 49,
+      "deletions": 22,
+      "commit_type": "docs"
+    },
+    {
+      "author": "paudrow",
+      "date": "2022-01-14T22:22:34Z",
+      "sha": "74b873a497f405f4296bb1c5de4023ff45eb9007",
+      "message": "0.21.0\n\nSigned-off-by: Audrow Nash <audrow@hey.com>",
+      "files_changed": 33,
+      "additions": 85,
+      "deletions": 18,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Blast545",
+      "date": "2022-05-24T20:10:41Z",
+      "sha": "85b3d0d0e304d81ee6394e2d1d5c521e3f6e2123",
+      "message": "tf2_sensor_msgs find the right Python executable. (#525)\n\nSigned-off-by: Jorge Perez <jjperez@ekumenlabs.com>",
+      "files_changed": 2,
+      "additions": 10,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Michael Jeronimo",
+      "date": "2019-03-06T17:56:25Z",
+      "sha": "29ff2310b577a3f30f5bd584135bb30ea7e12db5",
+      "message": "Use node inteface pointers in the MessageFilter class\n\nIn the MessageFilter class, use node interfaces instead of using the node directly\nso that the code works with either rclcpp::Node or rclcpp_lifecycle::LifecycleNode.\nRetain the existing node-based interface for backwards compatibility.",
+      "files_changed": 1,
+      "additions": 51,
+      "deletions": 14,
+      "commit_type": "code"
+    },
+    {
+      "author": "Flova",
+      "date": "2022-03-21T17:09:22Z",
+      "sha": "6b18a40056708c6f3acaafc08352b14554e33962",
+      "message": "Drop PyKDL dependency in tf2_geometry_msgs (#509)\n\n* Drop PyKDL dependency\r\n\r\nSigned-off-by: Florian Vahl <git@flova.de>\r\nCo-authored-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 6,
+      "additions": 243,
+      "deletions": 74,
+      "commit_type": "docs"
+    },
+    {
+      "author": "gezp",
+      "date": "2021-09-28T07:37:34Z",
+      "sha": "6bc47ce1aeccb0aa7b8775843438b264d6e788fa",
+      "message": "Reduce transform listener nodes (#442)\n\n* reduce transform listener nodes\r\n\r\nSigned-off-by: zhenpeng ge <zhenpeng.ge@qq.com>\r\n\r\n* remove a blank line\r\n\r\nSigned-off-by: zhenpeng ge <zhenpeng.ge@qq.com>\r\n\r\n* improve code style\r\n\r\nSigned-off-by: zhenpeng ge <zhenpeng.ge@qq.com>",
+      "files_changed": 2,
+      "additions": 37,
+      "deletions": 51,
+      "commit_type": "code"
+    },
+    {
+      "author": "Chen Lihui",
+      "date": "2022-02-17T21:36:18Z",
+      "sha": "5a298f908eb8e39b33309d7fad8697353f1fb5da",
+      "message": "clear relative callback of Buffer if MessageFilter is destroyed (#490)\n\n* clear relative callback of Buffer if MessageFilter is destroyed\r\n\r\nSigned-off-by: Chen Lihui <lihui.chen@sony.com>",
+      "files_changed": 5,
+      "additions": 96,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "ijnek",
+      "date": "2022-03-21T14:28:19Z",
+      "sha": "fb8ee4b0f3875c93888123bbd529b669cc51f81b",
+      "message": "Fix precision loss from using rclcpp::Time::seconds() (#511)\n\n* add reproduce test\r\n\r\nSigned-off-by: Kenji Brameld <kenjibrameld@gmail.com>",
+      "files_changed": 2,
+      "additions": 32,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "jcmonteiro",
+      "date": "2022-03-21T13:33:47Z",
+      "sha": "0b364862f3e6bd054934f197926c52058a7e8d89",
+      "message": "forward declare fromMsg to avoid missing symbols in downstream libraries (#485)\n\nCo-authored-by: Erwin Lejeune <erwin.lejeune15@gmail.com>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "simulacrus",
+      "date": "2022-01-27T18:17:02Z",
+      "sha": "210791c2a57a5c7c87e348e684c9cdc28469cb70",
+      "message": "More info in tf2_echo output (#468)\n\nCo-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>\r\nCo-authored-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 35,
+      "deletions": 11,
+      "commit_type": "code"
+    },
+    {
+      "author": "destogl",
+      "date": "2021-12-21T17:57:00Z",
+      "sha": "7a660094d0da9c463be5fea1df60d836b3349e9b",
+      "message": "Feature: Add doTransform for Wrench messages (#476)\n\n* Add doTransform for Wrench and WrenchStamped for c++",
+      "files_changed": 2,
+      "additions": 123,
+      "deletions": 7,
+      "commit_type": "code"
+    },
+    {
+      "author": "aprotyas",
+      "date": "2021-12-18T05:49:59Z",
+      "sha": "9ff7dadb7462c606e5996a296f6ef4fe4e41cbc7",
+      "message": "tf2: Enable common linter tests (#469)\n\nAs discussed in https://github.com/ros2/geometry2/pull/467:\r\n\r\n- Enables a subset of relevant linter tests from `ament_lint_common` in `tf2`.\r\n- Excludes LinearMath headers (include/tf2/LinearMath) from being linted.\r\n- Fixes line-length formatting issues in a few source files, so that there are no lint failures in the current state.\r\n\r\nNote that individual linters had to be invoked rather than use `ament_lint_auto` because the LinearMath headers should not have linters run on them - see https://github.com/ros2/geometry2/pull/258#issuecomment-621499030 for more information - and because `ament_lint_auto` does not provide a general way of providing file exclusion lists.\r\n\r\nSigned-off-by: Abrar Rahman Protyasha <aprotyas@u.rochester.edu>",
+      "files_changed": 8,
+      "additions": 89,
+      "deletions": 49,
+      "commit_type": "docs"
+    },
+    {
+      "author": "allenh1",
+      "date": "2019-05-22T19:24:03Z",
+      "sha": "33f90e470da23c4b513c4f35ae3fa472d36ab4fc",
+      "message": "Store dedicated transform listener thread as a std::unique_ptr (#111)\n\n* Store dedicated transform listener thread as a std::unique_ptr\r\n\r\nSigned-off-by: Hunter L. Allen <hunterlallen@protonmail.com>\r\n\r\n* Move thread join into custom deleter for std::unique_ptr so that the nullptr check may be removed\r\n\r\nSigned-off-by: Hunter L. Allen <hunterlallen@protonmail.com>\r\n\r\n* Respond to review comments\r\n\r\nSigned-off-by: Hunter L. Allen <hunterlallen@protonmail.com>",
+      "files_changed": 2,
+      "additions": 11,
+      "deletions": 19,
+      "commit_type": "docs"
+    },
+    {
+      "author": "nkalupahana",
+      "date": "2021-10-11T14:08:33Z",
+      "sha": "70ca8431dac5f3eebcad8b17d7db4173c3401478",
+      "message": "Remove unused import (#465)",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "gurnarok",
+      "date": "2021-09-23T21:18:24Z",
+      "sha": "8e508d01789803334dfcd59ba277cb49c0ea4219",
+      "message": "Adding date-time to frames filename (#454)\n\n* Added options for datetime filename stamp",
+      "files_changed": 1,
+      "additions": 15,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "adamkrawczyk",
+      "date": "2021-09-15T14:36:30Z",
+      "sha": "b5ebd16d6dedef0bbd2936c39cd3581b91809b52",
+      "message": "doTransform non stamped msgs (#452)\n\n* Add `doTransform` methods for non-stamped messages\r\n\r\nCo-authored-by: adamkrawczyk <adam-krawczyk@outlook.com>\r\nCo-authored-by: Abrar Rahman Protyasha <aprotyas@u.rochester.edu>\r\nSigned-off-by: Abrar Rahman Protyasha <aprotyas@u.rochester.edu>",
+      "files_changed": 2,
+      "additions": 601,
+      "deletions": 183,
+      "commit_type": "code"
+    },
+    {
+      "author": "Abrar Rahman Protyasha",
+      "date": "2021-06-11T18:50:47Z",
+      "sha": "ae30f0ba0cea64a13347a90ce4945e4452d7cf37",
+      "message": "`tf2_geometry_msgs`: Fixing covariance transformation in `doTransform<PoseWithCovarianceStamped, TransformStamped>` (#430)\n\nFixes #372.\r\n\r\n* Implement covariance transformation (cpp).\r\n\r\n* Fixed `TfGeometry/FrameWithCovariance` test. The updated test checks against the correctly transformed\r\ncovariance matrix.\r\n\r\nSigned-off-by: Abrar Rahman Protyasha <abrar@openrobotics.org>",
+      "files_changed": 2,
+      "additions": 116,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "charlielito",
+      "date": "2021-07-08T16:06:31Z",
+      "sha": "141e3cb732e5c4dba744abac381c8317ffb286f0",
+      "message": "Fix buffer_client.py using default timeout_padding (#437)\n\n* Fix buffer_client.py using default timeout_padding\r\n\r\nfixes #436\r\n\r\nCo-authored-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 9,
+      "commit_type": "code"
+    },
+    {
+      "author": "ShivamPR21",
+      "date": "2021-06-21T08:56:35Z",
+      "sha": "c36999b17cbf1e64a7937232133db79898bfa608",
+      "message": "Fixed errors due to missing header link. (#432)\n\nSigned-off-by: Shivam Pandey <pandeyshivam2017robotics@gmail.com>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "gleichdick",
+      "date": "2021-02-08T15:23:25Z",
+      "sha": "a53f4a31e3a63d439903375c15773e4314db6e2a",
+      "message": "Fix doTransform with Eigen Quaternion (#369)\n\n* Fix Eigen Quaternion transform\r\n\r\nCo-authored-by: Bjar Ne <gleichdick@users.noreply.github.com>",
+      "files_changed": 3,
+      "additions": 197,
+      "deletions": 4,
+      "commit_type": "ci"
+    },
+    {
+      "author": "dorezyuk",
+      "date": "2021-05-13T14:40:25Z",
+      "sha": "8df50cd5ecc9df85bb32fc07dd1814ffd89d78d2",
+      "message": "Speedup covariance unwrapping (#399)\n\n* add a test for covariance unwrapping\r\n\r\n* speedup covariance unwrapping\r\n\r\nCo-authored-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 2,
+      "additions": 33,
+      "deletions": 11,
+      "commit_type": "code"
+    },
+    {
+      "author": "PGotzmann",
+      "date": "2021-05-03T15:00:02Z",
+      "sha": "4d9745e0feb4338f885b1966804c0072daaeb51e",
+      "message": "Fix tf2_echo does not work with ros-args (#407) (#408)\n\n* Fix tf_echo does not work with ros-args (#407)\r\n\r\nCo-authored-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 37,
+      "deletions": 19,
+      "commit_type": "code"
+    },
+    {
+      "author": "ivanpauno",
+      "date": "2019-03-19T12:20:34Z",
+      "sha": "7d96bce9044ecc44e0f5368211ed8adadbae02de",
+      "message": "Using ament_target_dependencies where possible (#98)\n\n* Fixed ros2#658\r\n\r\nSigned-off-by: ivanpauno <ivanpauno@ekumenlabs.com>\r\n\r\n* Modified Eigen include directory again\r\n\r\nSigned-off-by: ivanpauno <ivanpauno@ekumenlabs.com>\r\n\r\n* Deleted custom variable 'Eigen_INCLUDE_DIR'\r\n\r\nSigned-off-by: ivanpauno <ivanpauno@ekumenlabs.com>\r\n\r\n* revert unrelated whitespace change\r\n\r\nSigned-off-by: ivanpauno <ivanpauno@ekumenlabs.com>\r\n\r\n* Added Eigen message again\r\n\r\nSigned-off-by: ivanpauno <ivanpauno@ekumenlabs.com>",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 7,
+      "commit_type": "docs"
+    },
+    {
+      "author": "tzskp1",
+      "date": "2021-03-05T13:40:37Z",
+      "sha": "fdc32090c007a4500e1ac0cec6a09ffe45af2341",
+      "message": "fix accessing freed resources (#386)",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "homalozoa",
+      "date": "2021-01-04T18:39:45Z",
+      "sha": "f4ea23490cbbdde8c18725a458153a5fe5d456e7",
+      "message": "Adapt to Python 3.9 (#362)\n\nPyEval_CallObjectWithKeywords(), PyEval_CallObject(), PyEval_CallFunction and PyEval_CallMethod are deprecated in Python 3.9 based on https://github.com/python/cpython/blob/master/Include/ceval.h#L23.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "wecacuee",
+      "date": "2020-11-16T19:06:41Z",
+      "sha": "ad35d72a51137cc9caebe474c3e2b8aa0de0fff4",
+      "message": "Clarify the role of child_frame_id and header.frame_id in the documentation. (#345)\n\n* The order of child_frame_id and header.frame_id is unclear. It should be clarified in the documentation.\r\n\r\nCo-authored-by: Vikas Dhiman <wecacuee@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 11,
+      "deletions": 2,
+      "commit_type": "ci"
+    },
+    {
+      "author": "asobhy-qnx",
+      "date": "2020-11-11T12:55:52Z",
+      "sha": "8a3db872eaa01e59a98f65dd7ddce8b55788bda3",
+      "message": "fix order of find eigen3_cmake_module & find eigen3 (#344)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "JafarAbdi",
+      "date": "2020-10-20T16:51:42Z",
+      "sha": "ccccd4f00095f197c02285a3f5d4b8d9886fb2bd",
+      "message": "Port eigen_kdl.h/cpp to ROS2 (#311)\n\n* Port eigen_kdl.h/cpp to ROS2\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\nCo-authored-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 7,
+      "additions": 636,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "surfertas",
+      "date": "2020-09-10T17:55:28Z",
+      "sha": "d7276d572b65dae69e7597d4715352dae61b6aef",
+      "message": "Add type hints to tf2_ros_py code(#275) (#315)\n\n* adding typehints to tf2_ros_py code\r\n\r\nCo-authored-by: Chris Lalancette <clalancette@gmail.com>",
+      "files_changed": 7,
+      "additions": 367,
+      "deletions": 149,
+      "commit_type": "config"
+    },
+    {
+      "author": "Joshua Whitley",
+      "date": "2020-09-03T14:33:23Z",
+      "sha": "a4f152f67d09b50d6d6450bb00c44512e52a880c",
+      "message": "Add PoseWithCovarianceStamped transform support (#312)\n\n* Adding PoseWithCovarianceStamped to tf2 and tf2_geometry_msgs.\r\n\r\n* Adding tests for PoseWithCovarianceStamped for tf2_geometry_msgs.\r\n\r\n* Addressing feedback and fixing WithCovarianceStamped copy constructor.",
+      "files_changed": 6,
+      "additions": 326,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "vmayoral",
+      "date": "2019-05-10T21:20:44Z",
+      "sha": "c4e331b9dfa97517aeac6e97ca09c523bc891486",
+      "message": "Port tf2_kdl (#90)\n\n* improve computation efficiency\r\n\r\n* improve comments\r\n\r\n* normalize quaternions to be in half-space w >= 0\r\n\r\n... as in tf1\r\n\r\n* add Eigen::Isometry3d conversions\r\n\r\nFix conflicts and adapt code to ROS 2.0\r\nEdited by @vmayoral.\r\n\r\n* Port tf2_kdl\r\n\r\n* Adapt for eigen3\r\n\r\n* Return to eigen in package.xml\r\n\r\nFollow advice of @tfoote\r\n\r\n* Remove cmake_modules\r\n\r\n* Update tf2_kdl messages\r\n\r\n* Include the right headers\r\n\r\n* tf2_eigen, leftover from the cherry-pick\r\n\r\nWhile cherry-picking changes to get isometry3d in\r\n\r\n* Fix problem with stamp\r\n\r\nPicked also a leftover from the ROS2 conversion\r\n\r\n* Fix more issues while porting to ROS2\r\n\r\n* Remove duplicated definitions\r\n\r\n* Undo changes in unit tests\r\n\r\nLeave code as it was left by @clalancette.\r\nOnly added some additional lines to test also\r\nIsometry as per the commits of Robert\r\n\r\n* Update tf2_eigen, add toMsg2\r\n\r\nConvert a Eigen::Vector3d type to a geometry_msgs::msg::Vector3\r\nwhile avoiding overloading issues with previous definitions\r\n\r\n* make tf2_kdl an ament pkg\r\n\r\n* Default to C++14\r\n\r\n* First steps towards getting tests\r\n\r\n* Fix timePointFromTime conversions\r\n\r\n* Make unit test compile\r\n\r\n* Fixing test tf2_kdl\r\n\r\n* including it own includes in tf2_kdl\r\n\r\n* Using timeFromTimePoint function from tf2_ros2\r\n\r\n* Fixing tf2_kdl test memory leaks\r\n\r\n* indent return\r\n\r\n* Define _USE_MATH_DEFINES so Windows gets M_PI symbol.\r\n\r\n* Quaternion one to one mapping\r\n\r\n* Removing delete of a unique_ptr object\r\n\r\n* Fixing possible loss of data in windows\r\n\r\n* Remove unused NSEC_PER_SECOND.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Adding ament_python_install_package to tf2_kdl\r\n\r\n* Remove deprecated tf2_kdl/include/tf2_kdl/tf2_kdl subdirectory\r\n\r\n* Porting tf2_kdl python test\r\n\r\n* Porting tf2_kdl pythonn library\r\n\r\n* Cleanup the package.xml and CMakeLists.txt\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 11,
+      "additions": 420,
+      "deletions": 136,
+      "commit_type": "docs"
+    },
+    {
+      "author": "marting87",
+      "date": "2020-06-26T14:40:54Z",
+      "sha": "03950303a0674e91169da8c44de5ece01e7293fb",
+      "message": "Moved unique_lock of messages_mutex_ to guarantee pointer (#279)\n\n* Moved unique_lock of messages_mutex_ to guarantee msg_it points to the correct element in messages_\r\n\r\nCo-authored-by: Martin Ganeff <mganeff@lely.com>",
+      "files_changed": 1,
+      "additions": 29,
+      "deletions": 23,
+      "commit_type": "code"
+    },
+    {
+      "author": "dirk-thomas",
+      "date": "2013-12-26T20:02:53Z",
+      "sha": "752978bb68d97020e41fb638e0b4f7edc91bb91b",
+      "message": "tf2: add missing console bridge include directories (fix #48)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mdtoom",
+      "date": "2020-08-10T21:47:54Z",
+      "sha": "52268361184ebf121f4a5df511805b6801ae5c64",
+      "message": "Clear callbacks_to_remove variable after removing (#303)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "ScottMcMichael",
+      "date": "2020-08-06T11:53:26Z",
+      "sha": "1073e17a804e8fa3d758a9b96e036362759587b4",
+      "message": "Fix cache_time None check in buffer.py (#297)\n\n* Fix none check\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\nCo-authored-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 2,
+      "additions": 18,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "ymd-stella",
+      "date": "2020-07-14T16:20:15Z",
+      "sha": "7b0187f57d1d4f845601a774b609660af1dc92ba",
+      "message": "Generate callbacks after updating message_ (#274)\n\n* Generate callbacks after updating message_\r\n\r\nSigned-off-by: ymd-stella <world.applepie@gmail.com>\r\n\r\n* Add test for multithread TransformListener to test_message_filter\r\n\r\nSigned-off-by: ymd-stella <world.applepie@gmail.com>",
+      "files_changed": 3,
+      "additions": 61,
+      "deletions": 51,
+      "commit_type": "test"
+    },
+    {
+      "author": "brawner",
+      "date": "2020-04-28T17:53:23Z",
+      "sha": "bbb1105bc682e44e9b047d389a952520028a9d6b",
+      "message": "Fix displayTimePoint truncation error (#253)\n\nSigned-off-by: Stephen Brawner <brawner@gmail.com>",
+      "files_changed": 3,
+      "additions": 113,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "wjwwood",
+      "date": "2013-03-13T21:49:23Z",
+      "sha": "86cc4775ce4ed850b08b4ee4ae416e8cb8a61165",
+      "message": "Added link against catkin_LIBRARIES for tf2_ros lib, also CMakeLists.txt clean up",
+      "files_changed": 1,
+      "additions": 66,
+      "deletions": 45,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Karsten1987",
+      "date": "2017-03-22T15:38:17Z",
+      "sha": "90d589b9380e555075e415a568555296b1268391",
+      "message": "fix installation dir on windows (#212)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "rotu",
+      "date": "2019-08-13T18:10:59Z",
+      "sha": "f282d2767e4d60d808be4a9cdf9a7019404b6e48",
+      "message": "Make sure that TransformListener's node gets a unique name (#129)\n\n* Make sure that TransformListener's node gets a unique name\r\n\r\n* Revert accidental whitespace changes",
+      "files_changed": 1,
+      "additions": 10,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "pbaughman",
+      "date": "2020-03-20T02:36:18Z",
+      "sha": "d77aae2e9003d4837669c08ce19bf59e16240b6c",
+      "message": "Remote ready_fn from launch_testing tests (#243)\n\nSigned-off-by: Pete Baughman <peter.c.baughman@gmail.com>",
+      "files_changed": 3,
+      "additions": 14,
+      "deletions": 9,
+      "commit_type": "code"
+    },
+    {
+      "author": "hidmic",
+      "date": "2019-09-03T17:34:41Z",
+      "sha": "a59b75417e3a6e74ce5f9269e5c282877e3de0d2",
+      "message": "Use of -r/--remap flags where appropriate. (#159)\n\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "tfoote",
+      "date": "2009-09-10T00:41:47Z",
+      "sha": "c52a6d18f33512774b9ac1d8591e078b987c9b6e",
+      "message": "reving for release",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "vasart",
+      "date": "2019-11-19T00:04:23Z",
+      "sha": "3fd31f7bcddacbeeb91181e9fa8464052a4d7697",
+      "message": "Remove unused setup.py files (#190)",
+      "files_changed": 4,
+      "additions": 0,
+      "deletions": 52,
+      "commit_type": "config"
+    },
+    {
+      "author": "emersonknapp",
+      "date": "2019-05-03T17:16:30Z",
+      "sha": "58e5a6257705665118f7f2ea651d858370a5d81a",
+      "message": "Fix call to create_publisher after API changed (#105)\n\n* Fix call to create_publisher after API changed\r\n\r\nSigned-off-by: Emerson Knapp <eknapp@amazon.com>\r\n\r\n* revert whitespace changes",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "vinnamkim",
+      "date": "2019-09-16T21:18:25Z",
+      "sha": "c3cabae25308c35e5f7d3e6ee879aa5b052dc711",
+      "message": "tf2_ros is not built for Python (#99)\n\n* made tf2_py compile with ROS2\r\n\r\n* made tf2_py compile with ROS2\r\n\r\n* fixed package ordering, time message conversion\r\n\r\n* fixed dll deployment\r\n\r\n* fix the installation path of tf2_py\r\n - Also, remove tf2_ros dependency from tf2_py\r\n\r\nSigned-off-by: vinnam kim <vinnam.kim@gmail.com>\r\n\r\n* Port tf2_ros\r\n\r\nSigned-off-by: vinnam kim <vinnam.kim@gmail.com>\r\n\r\n* Port tf2_ros/buffer_client.py\r\n\r\nSigned-off-by: vinnam kim <vinnam.kim@gmail.com>\r\n\r\n* Fix some codes\r\n - Add tf2_ros unit tests\r\n - Fix tf2_ros codes to work\r\n\r\nSigned-off-by: vinnam kim <vinnam.kim@gmail.com>\r\n\r\n* Fix build errors because of ament_lint_auto dependency\r\n\r\nSigned-off-by: vinnamkim <vinnam.kim@gmail.com>\r\n\r\n* Fix tf2_py\r\n - Add unit tests\r\n - Fix c extension code to make correctly\r\n\r\nSigned-off-by: vinnamkim <vinnam.kim@gmail.com>\r\n\r\n* Rebase to the latest ros2\r\n - Modify some build script\r\n\r\nSigned-off-by: vinnamkim <vinnam.kim@gmail.com>\r\n\r\n* Revert removing geometry2 and geometry_experimental\r\n\r\nSigned-off-by: vinnamkim <vinnam.kim@gmail.com>\r\n\r\n* Fix build script of tf2_py with respect to the review\r\n\r\nSigned-off-by: vinnamkim <vinnam.kim@gmail.com>\r\n\r\n* Remove unnecessary whitespace changes\r\n\r\nSigned-off-by: vinnamkim <vinnam.kim@gmail.com>\r\n\r\n* Trim trailing whitespace\r\n\r\nSigned-off-by: vinnamkim <vinnam.kim@gmail.com>\r\n\r\n* Fix Py_DECREF order\r\n\r\nSigned-off-by: vinnamkim <vinnam.kim@gmail.com>\r\n\r\n* Remove the unused variable\r\n\r\nSigned-off-by: vinnamkim <vinnam.kim@gmail.com>\r\n\r\n* Prevent floating number conversion from getLatestCommonTime\r\n\r\nSigned-off-by: vinnamkim <vinnam.kim@gmail.com>\r\n\r\n* Remove unused imports\r\n\r\nSigned-off-by: vinnamkim <vinnam.kim@gmail.com>\r\n\r\n* Fix colcon test error on pytest\r\n - Declare dependency on actionlib_msgs\r\n\r\nSigned-off-by: vinnamkim <vinnam.kim@gmail.com>\r\n\r\n* Add geometry_msgs dependency to tf2_py\r\n\r\nSigned-off-by: vinnamkim <vinnam.kim@gmail.com>\r\n\r\n* Cleanup.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Fixes for Windows.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Fix some initializer warnings.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Prevent transform_listener.py from finding an attribute not existed in tf_message\r\n\r\nSigned-off-by: vinnamkim <vinnam.kim@gmail.com>\r\n\r\n* Add unit test for broadcaster and listner\r\n\r\nSigned-off-by: vinnamkim <vinnam.kim@gmail.com>\r\n\r\n* Add static broadcaster unit test\r\n\r\nSigned-off-by: vinnamkim <vinnam.kim@gmail.com>\r\n\r\n* Make tf2_ros Python consistent with transform_listener, transform_broadcaster and static_transform_broadcaster of tf2_ros C++\r\n\r\nSigned-off-by: vinnamkim <vinnam.kim@gmail.com>\r\n\r\n* Document python_compat functions\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* transform_convert error handling fixes\r\n\r\nAlso fixed leaking PyFloat's set in python object.\r\n\r\nSigned-off-by: Shane Loretz<sloretz@openrobotics.org>\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* Eliminate constants\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* Static QoS uses TransientLocal\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* TransformListener uses its own callback group\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* Remove debug print\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* Ask node to destroy subscription\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* Add lookup_transform_async()\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* Simplify async function\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* Full async transform methods\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* Add shortcut to avoid suspending if result is already available\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* Add test for async transform lookup\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* Remove redundant code\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* Remove unused __is_done()\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* TODO why not service\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* Remove unnecessary list check\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* Better checks for lists of transforms\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* Default spin_thread to False\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* Error checking in rostime_converter\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* rostime_converter error handling fixes\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* Simpler error handling\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* time -> duration\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* Simple error checking\r\n\r\nMay print warning if multiple exceptions raised in converter\r\n\r\nSigned-off-by: Shane Loretz<sloretz@openrobotics.org>\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* error handling in getLatestCommonTime()\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* spell test_tf2_py out for searchability\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* Static Broadcaster QoS depth 1\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* Unintent docstring\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* Restore whitespace\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* Return future so callers can add done callbacks\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* wait_for_transform_async returns Future\r\n\r\nThis allows callers to take advantage of done callbacks, or cancel the\r\nfuture if they want to implement their own timeout mechanism.\r\n\r\nSigned-off-by: Shane Loretz<sloretz@openrobotics.org>\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* Whitespace and bug fix\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* Test asyncronous lookup_transform methods\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* Fix source/target mixup\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* Single quotes\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* Remove commented code\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* Remove commented code\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* More specific node name\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* Remove debug and unindent __init__\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* Update licenses\r\n\r\nSigned-off-by: vinnamkim <vinnam.kim@gmail.com>\r\n\r\n* Only add __init__.py to build space when testing\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* Remove example comments from package.xml\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* Remove shebag from __init__.py\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* Remove test_depend that are exec_depend\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* Space between if and ( in new code\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* Update TfListener __init__ docstr\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* Remove unnecessary str()\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* Add -Wpedantic\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* Big cleanup block with goto\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* Cleanup cleanup in getLatestCommonTime()\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* Check for null before using pointers\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* Minor style fixup in new code.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 21,
+      "additions": 1675,
+      "deletions": 487,
+      "commit_type": "ci"
+    },
+    {
+      "author": "jdlangs",
+      "date": "2019-10-04T18:20:13Z",
+      "sha": "71b054249cda9f1bbdbdc2f61bd518b998ce0378",
+      "message": "Use smart pointers for global buffer variables in tests",
+      "files_changed": 3,
+      "additions": 6,
+      "deletions": 9,
+      "commit_type": "code"
+    },
+    {
+      "author": "thomas-moulard",
+      "date": "2019-09-27T01:38:07Z",
+      "sha": "64a19215f60aca42471a7da202085169dd39e6cc",
+      "message": "Make BufferClient destructor virtual\n\nReported by clang:\r\n```\r\ndelete called on non-final 'tf2_ros::BufferClient' that has virtual functions but non-virtual destructor [-Wdelete-non-virtual-dtor]\r\n```\r\n\r\nhttps://ci.ros2.org/view/nightly/job/nightly_linux_clang_libcxx/175/warnings23Result/",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "evshary",
+      "date": "2019-09-17T12:16:52Z",
+      "sha": "c8f53a970462a01ae3557bab2961b811e6f54c90",
+      "message": "class Clock is in clock not timer.\n\nSigned-off-by: evshary <evshary@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "IanTheEngineer",
+      "date": "2018-04-26T22:56:54Z",
+      "sha": "70ca8179fac1534d3142661772a26fad38a4fdfc",
+      "message": "Adds additional conversions for tf2, KDL, Eigen\n\nOriginally PR #292 at https://github.com/ros/geometry2/pull/292\n\n- adds non-stamped Eigen to Transform function\n- converts Eigen Matrix Vectors to and from geometry_msgs::Twist\n- adds to/from message for geometry_msgs::Pose and KDL::Frame",
+      "files_changed": 2,
+      "additions": 44,
+      "deletions": 10,
+      "commit_type": "code"
+    },
+    {
+      "author": "bpwilcox",
+      "date": "2019-05-24T07:17:58Z",
+      "sha": "ff8be6a13051f6759af8163acd10b10d87d28a46",
+      "message": "stop spinning TransformListener thread node in destructor (#114)\n\n* stop spinning TransformListener thread node in destructor\r\n\r\nSigned-off-by: bpwilcox <bpwilcox@eng.ucsd.edu>",
+      "files_changed": 2,
+      "additions": 5,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "esteve",
+      "date": "2014-05-15T19:44:13Z",
+      "sha": "6083a7f28a2b6911fff4599e64494d0b84831951",
+      "message": "Removed AsyncSpinner workaround",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Alejandro Hernández Cordero",
+      "date": "2019-05-10T02:03:36Z",
+      "sha": "25126cc8f66d5937489424034e82db978778cac7",
+      "message": "Tf2_msgs including actions (#109)\n\n* Adding tf2_msgs actions",
+      "files_changed": 3,
+      "additions": 7,
+      "deletions": 9,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mm318",
+      "date": "2019-05-08T18:55:49Z",
+      "sha": "a43b87550413e543d1b66b902b3a8eb2ea6b6a63",
+      "message": "add LICENSE file (#106)\n\n* add LICENSE file\r\n\r\nSigned-off-by: Miaofei <miaofei@amazon.com>",
+      "files_changed": 1,
+      "additions": 29,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "scheunemann",
+      "date": "2019-04-30T08:50:52Z",
+      "sha": "1073aca8a7eb512c1be158d4a3969a88e661156d",
+      "message": "also export Eigen3 include directories (#102)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "nuclearsandwich",
+      "date": "2018-06-27T17:07:23Z",
+      "sha": "e876b85d4f4c10ef9f6f2a26f95fc740059007e9",
+      "message": "0.9.0",
+      "files_changed": 5,
+      "additions": 5,
+      "deletions": 5,
+      "commit_type": "config"
+    },
+    {
+      "author": "sagniknitr",
+      "date": "2019-02-15T01:46:41Z",
+      "sha": "aaae4cf046e44787be12e4f5209cef34a8123a39",
+      "message": "Update message_filter.h (#91)\n\n* Use correct method to get node time.",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "lucasw",
+      "date": "2018-11-28T20:29:35Z",
+      "sha": "d82891abe895820a242f966711e99726c24bce8e",
+      "message": "Allow static_transform_publisher to be run with ros arguments ros2#80 (#82)\n\n* Allow static_transform_publisher to be run with ros arguments ros2#80\r\n\r\n* Small cleanups.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 23,
+      "deletions": 20,
+      "commit_type": "code"
+    },
+    {
+      "author": "gaoethan",
+      "date": "2018-11-22T02:09:38Z",
+      "sha": "697b2f4b30bbb7a601004ca5ec2f3e7145870595",
+      "message": "Port tf2 ros message filter with ros2 tf2 and message filters (#81)\n\n* Port tf2 message filter to ros2\r\n - add ros2 package dependencies and rules\r\n - remove boost with std functions instead\r\n - use rclcpp Time and Duration\r\n - remove APIs to node callback queue due to no callback queue\r\n   in ros2 now\r\n - Change failure callback register with failure prompting due to\r\n   no corresponding boost signal2 in C++11 and later\r\n - Fix expected transform count in case of time tolerance\r\n - Adapt to ros2 tf2 APIs\r\n\r\n* Add tf2_ros_test_message_filter to enable feature checking\r\n\r\n* Align tf2 message filters coding style\r\n\r\n* Some small style fixes.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* optimize lock using while handling coming messages\r\n\r\n* Upgrade all message counts to 64 bitThis should resolve C4267 warnings about downgrading a size_t.\r\n\r\n* Add back in the code for the callback queues.\r\n\r\nIt is commented out since we don't have underlying support for\r\nit, with a TODO for the future.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Small style fixes to reduce diff.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Remove unnecessary rmw dependency.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 4,
+      "additions": 355,
+      "deletions": 277,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ruffsl",
+      "date": "2018-10-31T23:22:40Z",
+      "sha": "9ed3aef2380c2893aa4264bf42665875477449c3",
+      "message": "Fix depend element for eigen",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "Carl Delsey",
+      "date": "2018-10-08T19:09:13Z",
+      "sha": "a94b4ed8333f3caea5bdaac679d69ab3c7d83eec",
+      "message": "Export tf2 dependency from tf2_ros (#72)\n\ntf2_ros brings in tf2 headers. This dependency was not being\r\nexported before. As a consequence of this, if a package\r\nincluded the tf2_ros package and included the `transform_listener.h`\r\nheader, the package would fail to compile.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "botteroa-si",
+      "date": "2018-07-03T12:06:58Z",
+      "sha": "6a46333c1510a0c7d0d108b6b2ecef5945d5a601",
+      "message": "Fix lookupTransform() behaviour when transforming from a frame to itself",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "yechun1",
+      "date": "2018-03-16T06:53:38Z",
+      "sha": "aca9b215ca3569525b22902032ce7a20c726d5a2",
+      "message": "update timeToSec to add missed nanosec\n\nSigned-off-by: Chris Ye <chris.ye@intel.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "dhood",
+      "date": "2017-03-21T16:31:09Z",
+      "sha": "0b5edc6927bca7b6935a8a13be9ed07e28f25e66",
+      "message": "Add tf2::TimePoint <-> builtin_interfaces::msg::Time conversions",
+      "files_changed": 1,
+      "additions": 20,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "bponsler",
+      "date": "2017-08-11T14:30:10Z",
+      "sha": "630f83259ff42d71bf6daa65bd20588fdacd839f",
+      "message": "Modified lookupTransform to set timestamp properly\n\nUpdated the BufferCore::lookupTransform functions to properly set the resulting message header timestamp. This fixes issue #38",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "Adam Allevato",
+      "date": "2017-06-12T21:56:49Z",
+      "sha": "2800f84fcdfa1d8b57222febf0837116d357bf4d",
+      "message": "Added include to tf2_geometry_msgs (#22)\n\nThis fixes build errors when attempting to import tf2_geometry_msgs.h by itself.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "alex",
+      "date": "2017-01-05T19:03:01Z",
+      "sha": "d12b8906c8686dc1b980c489a3e4b83d78d6a488",
+      "message": "Add missing type checks at Python/C++ tf2 transform interface #159 (#197)",
+      "files_changed": 1,
+      "additions": 35,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "gerkey",
+      "date": "2009-09-21T21:37:00Z",
+      "sha": "9b459169a504a8d9374054ba80a4671458ca46a9",
+      "message": "Testing commit to latest",
+      "files_changed": 0,
+      "additions": 0,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "achim-k",
+      "date": "2017-01-25T00:04:22Z",
+      "sha": "19b643134648ec9937f5f074b977ec387bebb402",
+      "message": "tf2_ros: add option to unregister TransformListener (#201)",
+      "files_changed": 1,
+      "additions": 11,
+      "deletions": 17,
+      "commit_type": "code"
+    },
+    {
+      "author": "rhaschke",
+      "date": "2017-01-24T23:24:39Z",
+      "sha": "1b44c4dced86f11c5b24a4cfadbfd1f21673ac3a",
+      "message": "fixup #186: inline template specializations (#200)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "mikepurvis",
+      "date": "2016-11-04T18:30:03Z",
+      "sha": "43795b7d303834b8934e31480e7f68775d26273b",
+      "message": "Drop roslib.load_manifest (#191)",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "phil0stine",
+      "date": "2016-09-08T20:34:16Z",
+      "sha": "439e2350ca9b2f0581a3631f0929acc2021db73e",
+      "message": "updating getAngleShortestPath() (#187)",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "cwecht",
+      "date": "2016-09-07T23:19:42Z",
+      "sha": "be9728de5dd922766e3e61d605d2c4b10afe2258",
+      "message": "Add tf2_eigen conversions for Pose and Point (not stamped) (#186)\n\n* tf2_eigen: added conversions for Point msg type (not timestamped) to Eigen::Vector3d\r\n\r\n* tf2_eigen: added conversions for Pose msg type (not timestamped) to Eigen::Affine3d\r\n\r\n* tf2_eigen: new functions are inline now\r\n\r\n* tf2_eigen test compiling again\r\n\r\n* tf2_eigen: added tests for Affine3d and Vector3d conversion\r\n\r\n* tf2_eigen: added redefinitions of non-stamped conversion function to make usage in tf2::convert() possible\r\n\r\n* tf2_eigen: reduced redundancy by reusing non-stamped conversion-functions in their stamped counterparts\r\n\r\n* tf2_eigen: added notes at doTransform-implementations which can not work with tf2_ros::BufferInterface::transform\r\n\r\n* tf2_eigen: fixed typos",
+      "files_changed": 3,
+      "additions": 178,
+      "deletions": 27,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jspricke",
+      "date": "2015-11-10T21:13:39Z",
+      "sha": "c4d7465591456a8cc1148ef34f6170cc2f3153ef",
+      "message": "Don't export catkin includes\n\nThey only point to the temporary include in the build directory.",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "de-vri-es",
+      "date": "2016-06-10T20:44:17Z",
+      "sha": "ae3dd7119d72212833cce1127d84ce2dd6bffcdc",
+      "message": "Make tf2_py compatible with python3. (#173)\n\n* tf2_py: Use PyUnicode objects for text in python3.\r\n\r\n* tf2_py: Make module initialization python3 compatible.\r\n\r\n* tf2_py: Fix type definition for python3.\r\n\r\n* tf2_py: Move and rename PyObject_BorrowAttrString.",
+      "files_changed": 2,
+      "additions": 137,
+      "deletions": 60,
+      "commit_type": "code"
+    },
+    {
+      "author": "felixduvallet",
+      "date": "2016-06-01T14:38:11Z",
+      "sha": "76b1e5f2d109dcda71fc6eed834f36933f431706",
+      "message": "Code linting & reorganization\n\n - whitespace\n - indentation\n - re-organized code to remove duplications.\n\nwhitespace & indentation changes only.\n\nsimplified (de-duplicated) duplicate code.\n\nmissing a duplicate variable.\n\nwhitespace changes only.",
+      "files_changed": 2,
+      "additions": 19,
+      "deletions": 38,
+      "commit_type": "code"
+    },
+    {
+      "author": "eric-wieser",
+      "date": "2016-04-02T01:28:37Z",
+      "sha": "1957a441092d0bd90f115924f54831657ac6161f",
+      "message": "Fix indexing beyond end of array",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Jackie Kay",
+      "date": "2016-03-28T22:12:14Z",
+      "sha": "85ee9ae98a8177a07e4924b8527ac68a47321839",
+      "message": "Doxygen documentation for bullet functions and update to mainpage.dox",
+      "files_changed": 2,
+      "additions": 34,
+      "deletions": 21,
+      "commit_type": "docs"
+    },
+    {
+      "author": "gavanderhoorn",
+      "date": "2016-03-23T08:49:12Z",
+      "sha": "8856caddb23651dc68056d5f5bbe58c0efe110a3",
+      "message": "Fix comment on BufferCore::MAX_GRAPH_DEPTH.\n\nProbably a copy/pasta of DEFAULT_CACHE_TIME.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "boris-il-forte",
+      "date": "2016-01-11T13:01:01Z",
+      "sha": "e16cac9d8da6685fb4635938f5f19fd091b2b986",
+      "message": "Added eigenTotransform function",
+      "files_changed": 1,
+      "additions": 17,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "g-gemignani",
+      "date": "2015-12-15T10:45:11Z",
+      "sha": "e4466f0f482dcacf79b9ab9deaa70429e161e3a6",
+      "message": "casted el to string in view_frames",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "vrabaud",
+      "date": "2012-09-18T17:07:40Z",
+      "sha": "a0e510c035ebf0e250dcc77365387eee61b41861",
+      "message": "add boost linkage",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Daniel Claes",
+      "date": "2016-01-27T13:01:23Z",
+      "sha": "ba00258027dbfb7cc86e3becd3e457716262d163",
+      "message": "Add python_orocos_kdl dependency for ros-*-base installs",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "chapulina",
+      "date": "2015-12-09T19:46:34Z",
+      "sha": "b0b1046422ba757ee8a5041474d25bf423e839df",
+      "message": "vector3 not affected by translation",
+      "files_changed": 2,
+      "additions": 33,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "Laurent GEORGE",
+      "date": "2015-08-12T09:42:30Z",
+      "sha": "9201aae5bbbeff0bc3bfc05c949040ee22531e0d",
+      "message": "Fixing do_transform_cloud for python\n\nThe previous code was not used at all (it was a mistake in the __init__.py so\nthe do_transform_cloud was not available to the python users).\n\nThe python code need some little correction (e.g there is no method named\nread_cloud but it's read_points for instance, and as we are in python we can't\nuse the same trick as in c++ when we got an immutable)\n\nI added a simple test for the point_cloud python version too.",
+      "files_changed": 3,
+      "additions": 56,
+      "deletions": 9,
+      "commit_type": "code"
+    },
+    {
+      "author": "Paul Bovbel",
+      "date": "2015-01-19T19:13:16Z",
+      "sha": "3829a4a11f78472b84f4fbd911c3778f7657dfd1",
+      "message": "Fix keeping original pointcloud header in transformed pointcloud",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "v4hn",
+      "date": "2014-03-10T18:46:13Z",
+      "sha": "4b4bcc73c61650b446da839cf9f91510a8c2ff2c",
+      "message": "make can_transform actually do something\n\nUp to now these functions never waited for a transform.\nThe sleep loop's condition was broken and the sleep code itself\nas well.",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "jmtatsch",
+      "date": "2015-04-14T11:30:00Z",
+      "sha": "7844321fab7856e44379c84d20f18d9e99e9444b",
+      "message": "Update message_filter.h\n\nadded missing commas because it would not compile with gcc4.9 without.",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "koji",
+      "date": "2015-04-09T12:42:37Z",
+      "sha": "281dfbdf63296277a855f4478220cb564b3b0613",
+      "message": "create tf2_eigen.",
+      "files_changed": 5,
+      "additions": 233,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jacquelinekay",
+      "date": "2015-04-03T00:52:12Z",
+      "sha": "589c7dc114312d2f7a91a70dacbc9f6119ab018a",
+      "message": "Fixed chainToVector",
+      "files_changed": 2,
+      "additions": 123,
+      "deletions": 14,
+      "commit_type": "code"
+    },
+    {
+      "author": "mrath",
+      "date": "2015-03-20T07:56:18Z",
+      "sha": "411d5c52ce2f1fabbe2cf8a6524dfdb284194a70",
+      "message": "changed queue_size in Python transform boradcaster to match that in c++ (100)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "bricerebsamen",
+      "date": "2015-03-13T20:17:55Z",
+      "sha": "1f4ccf7e18879f265e2b8f5ecab360412056405c",
+      "message": "allowing to use message filters with PCL types\n\nPCL point clouds don't have a header, but they have a frame id and a stamp,\nso we need to rely on the FrameId and Stamp traits rather than the header.\n\n- removed the static assert on HasHeader\n- using FrameId::value instead of FrameId::pointer",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "jonbinney",
+      "date": "2015-02-03T00:54:49Z",
+      "sha": "3833c782556d504e5a02c3cb355fc35f4300a288",
+      "message": "Remove unused assignments in max/min functions",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "k-okada",
+      "date": "2014-12-18T05:52:34Z",
+      "sha": "9f8dda7d285911fb7ef78f0600806ed5199b16c3",
+      "message": "change _allFramesAsDot() -> _allFramesAsDot(double current_time)",
+      "files_changed": 2,
+      "additions": 21,
+      "deletions": 9,
+      "commit_type": "code"
+    },
+    {
+      "author": "Garfonso",
+      "date": "2013-10-16T12:51:34Z",
+      "sha": "bbc5c296cc252529809cc94292c9fb07ac9358c6",
+      "message": "Added 6 param transform again\n\nYes, using Euler angles is a bad habit. But it is much more convenient if you just need a rotation by 90° somewhere to set it up in Euler angles. So I added the option to supply only the 3 angles.",
+      "files_changed": 1,
+      "additions": 32,
+      "deletions": 20,
+      "commit_type": "code"
+    },
+    {
+      "author": "trainman419",
+      "date": "2014-05-12T19:08:15Z",
+      "sha": "0d4cecaf51c7a87e8e59925600d50178c3ed8e80",
+      "message": "Fix format string",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Tully Foote",
+      "date": "2014-02-21T18:15:44Z",
+      "sha": "4f1472df81edf25dce68c61ca38b19c8424e3353",
+      "message": "finding eigen from cmake_modules instead of from catkin",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "kwatts",
+      "date": "2011-07-06T01:50:33Z",
+      "sha": "21783f1432a2a4fe667b2eb8a9e60107a288a6d4",
+      "message": "Ring 45 test running on non-optimized tf2 branch, from Tully's commit r880",
+      "files_changed": 1,
+      "additions": 328,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "chadrockey",
+      "date": "2013-10-15T00:38:11Z",
+      "sha": "0193086045f05e26d8a8be462a029e9e83369163",
+      "message": "Fixed static_transform_publisher duplicate check, added rostest.",
+      "files_changed": 2,
+      "additions": 35,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "bulwahn",
+      "date": "2013-07-15T13:07:54Z",
+      "sha": "404b49802540224d5de3e2694681b8e6c2d91dfd",
+      "message": "package.xml: corrected typo in description",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "ablasdel",
+      "date": "2013-06-28T23:45:15Z",
+      "sha": "296d4916706d64f719b8c1592ab60d3686f994e1",
+      "message": "cherrypicking groovy patch for #10 into hydro",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "jkammerl",
+      "date": "2013-01-03T22:49:35Z",
+      "sha": "fea0ac969a95bec63edcb74454050a4e425ef239",
+      "message": "catkinizing tf2_msgs",
+      "files_changed": 3,
+      "additions": 38,
+      "deletions": 43,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Mirza Shah",
+      "date": "2013-02-14T20:55:13Z",
+      "sha": "c1805c2c05a00f991a007988328627a345213c96",
+      "message": "catkinized tf2_kdl",
+      "files_changed": 10,
+      "additions": 552,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "David Gossow",
+      "date": "2013-01-10T18:38:04Z",
+      "sha": "08aed0d6df38c50b416d40805cbaad196ce6f1aa",
+      "message": "added setup.py etc to tf2_geometry_msgs",
+      "files_changed": 3,
+      "additions": 1,
+      "deletions": 27,
+      "commit_type": "config"
+    },
+    {
+      "author": "Kaijen Hsiao",
+      "date": "2012-12-06T05:32:08Z",
+      "sha": "0f4e2ff59ea32243d979df1302d247c34e109f91",
+      "message": "catching None result in buffer client before it becomes an AttributeError, raising tf2.TransformException instead",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Wim Meeussen",
+      "date": "2010-09-22T01:01:52Z",
+      "sha": "89f23abf85c825b00d595629ad5848ebc1eca45d",
+      "message": "merge",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "Brian Gerkey",
+      "date": "2012-01-26T04:11:46Z",
+      "sha": "90d6e9d76a3725e0b7339b940b900c6915120254",
+      "message": "oneiric linker fixes, bump version to 0.2.3",
+      "files_changed": 2,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Eitan Marder-Eppstein",
+      "date": "2010-09-22T00:38:02Z",
+      "sha": "17d6a7068c26b04956f199e97da3a3e2405877b2",
+      "message": "Adding to author list to create branch",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "Ken Conley",
+      "date": "2011-07-13T10:01:14Z",
+      "sha": "a1db6b7ead8e3455e5ed81927c0365b95f01b1c1",
+      "message": "adding addition ros header includes for strictness",
+      "files_changed": 2,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "convert-repo",
+      "date": "2011-02-09T05:18:38Z",
+      "sha": "2658dcb8b8b16401e3a51cc310c7d23bc048a442",
+      "message": "update tags",
+      "files_changed": 0,
+      "additions": 0,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "hershwg",
+      "date": "2011-01-25T23:14:07Z",
+      "sha": "afd95d11f044417af7a67a6223e69cbeec1d8734",
+      "message": "merged faust's changes 864 and 865 into non_optimized branch: BufferCore instead of Buffer in TransformListener, and added a constructor that takes a NodeHandle.",
+      "files_changed": 2,
+      "additions": 16,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "Josh Faust",
+      "date": "2010-10-19T18:03:21Z",
+      "sha": "a2b1b1e7e6f07a997f6c40c82087c416d86aa6f5",
+      "message": "remove exposure of time_cache.h from buffer_core.h",
+      "files_changed": 7,
+      "additions": 99,
+      "deletions": 44,
+      "commit_type": "code"
+    },
+    {
+      "author": "wim",
+      "date": "2009-12-11T18:41:30Z",
+      "sha": "bef35553cb1806c511431e9931f87234c6ac98ca",
+      "message": "create symbolic link called site-pacakges to dist-packages for compatibility with newer python versions",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "jfaust",
+      "date": "2009-09-23T20:41:15Z",
+      "sha": "9d3ddd4fd167c3248fbf491476e246faa09080a0",
+      "message": "Remove last remnants of Node use",
+      "files_changed": 8,
+      "additions": 4,
+      "deletions": 647,
+      "commit_type": "docs"
+    },
+    {
+      "author": "nobbis",
+      "date": "2010-09-30T22:15:53Z",
+      "sha": "a1f25634347681d015e7ed1f46f084f44ca4bc46",
+      "message": "tf frame viewer is now an rxbag plugin",
+      "files_changed": 7,
+      "additions": 489,
+      "deletions": 41,
+      "commit_type": "config"
+    },
+    {
+      "author": "mmwise",
+      "date": "2009-09-28T21:43:38Z",
+      "sha": "2b138bbb76ed38c8a03f448373cf72ed0bc78056",
+      "message": "changing display of legend to be above the tree",
+      "files_changed": 1,
+      "additions": 22,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "kwc",
+      "date": "2009-09-04T23:10:08Z",
+      "sha": "cf65bfce51f2f4e950bbff4d4f8d54a5e047f5a6",
+      "message": "migration part 1",
+      "files_changed": 95,
+      "additions": 14714,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "rusu",
+      "date": "2009-11-15T22:13:27Z",
+      "sha": "13f9864ba7fb1d80b4cd1eb25d2a6dcbb84272e8",
+      "message": "upgrade from 2.0.3 to 2.0.9",
+      "files_changed": 2,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "config"
+    },
+    {
+      "author": "jamesb",
+      "date": "2009-09-22T16:35:32Z",
+      "sha": "2f66cc4c4f3b81eaaebf6cdce7a8e782bfc75580",
+      "message": "Fix compiler warnings",
+      "files_changed": 1,
+      "additions": 10,
+      "deletions": 10,
+      "commit_type": "code"
+    },
+    {
+      "author": "tfield",
+      "date": "2010-02-09T01:34:18Z",
+      "sha": "45174ef91eaf99600670d94cdf0fb82230855806",
+      "message": "tf: change_notifier now supports multiple frames; publishes tfMessages",
+      "files_changed": 1,
+      "additions": 149,
+      "deletions": 35,
+      "commit_type": "code"
+    },
+    {
+      "author": "sturm",
+      "date": "2009-10-30T11:02:37Z",
+      "sha": "c19605dfc9adcfab483ef58467f82a8d54a7e2c1",
+      "message": "added createQuaternionMsgFromRollPitchYaw helper function",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "sglaser",
+      "date": "2010-06-02T22:23:50Z",
+      "sha": "817cb86761eb90f33acb3628e54a941ee67f38c4",
+      "message": "Moving eigen_conversions from sandbox.",
+      "files_changed": 8,
+      "additions": 394,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "eitan",
+      "date": "2009-12-16T02:42:44Z",
+      "sha": "ad4c5c867c8b8f6445a97a0e3b9eb61c5fd6b54a",
+      "message": "Switching refernece frame and moving frame ordering for lookup transform call to actually be correct",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "rsmits",
+      "date": "2010-02-16T07:30:43Z",
+      "sha": "409cfd509a05b151a1a73f22e9e19f06f3c4b0cc",
+      "message": "fix infinite make loop with cmake 2.8",
+      "files_changed": 1,
+      "additions": 66,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "blaise",
+      "date": "2010-01-29T18:50:39Z",
+      "sha": "d425524ba62cb39b8f1f98630b489c3ce91834a0",
+      "message": "searchparam when publishing",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "sachinc",
+      "date": "2009-09-17T13:22:41Z",
+      "sha": "4314795b2177d166be9ea029fb32d1a38b5d5fdc",
+      "message": "added tutorials corresponding to new wiki pages",
+      "files_changed": 0,
+      "additions": 0,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "wheeler",
+      "date": "2009-12-01T01:12:35Z",
+      "sha": "961d8140fd3e4ffa316b7df422fbae8ce715f665",
+      "message": "Remove use of deprecated rosbuild macros",
+      "files_changed": 2,
+      "additions": 8,
+      "deletions": 8,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mihelich",
+      "date": "2009-11-26T01:09:53Z",
+      "sha": "b1c6dac5af0acf0887f536e1b9934fd4c3fe1e0a",
+      "message": "eigen: Export EIGEN_USE_NEW_STDVECTOR so that '#include <Eigen/StdVector>' will pull in the new, non-broken version.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "meeussen",
+      "date": "2009-09-09T00:27:58Z",
+      "sha": "82dc9212ac55fc8ffef151877f1ab260b3ec8ef7",
+      "message": "Rename tf message from \\tf_message to \\tf. Listener is backwards compatible, broadcaster is not. See ticket #2381",
+      "files_changed": 9,
+      "additions": 40,
+      "deletions": 23,
+      "commit_type": "code"
+    }
+  ]
+}

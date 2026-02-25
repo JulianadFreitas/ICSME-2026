@@ -1,0 +1,251 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T14:29:55Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "Fields2Cover",
+    "repo": "fields2cover"
+  },
+  "data": [
+    {
+      "author": "Gonzalo-Mier",
+      "date": "2022-06-08T03:04:46Z",
+      "sha": "5ad5c8439d3758e65dd9093c62b621320bd4534c",
+      "message": "First version of the library",
+      "files_changed": 183,
+      "additions": 15527,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "arunabhcode",
+      "date": "2026-01-09T00:16:59Z",
+      "sha": "9e1366bc2c3bb3128f7b6538a4a72bfaf9171a96",
+      "message": "add arm Dockerfile, fix F2CUtils for arm cross-compilation and add cross-compilation toolchain file",
+      "files_changed": 3,
+      "additions": 142,
+      "deletions": 1,
+      "commit_type": "ci"
+    },
+    {
+      "author": "kylona",
+      "date": "2025-03-13T21:48:06Z",
+      "sha": "e995c00a144587213b653b78ac74d43790971a4d",
+      "message": "Remove protected flag from or-tools helper functions in route planner. Adjust swig config to support",
+      "files_changed": 3,
+      "additions": 17,
+      "deletions": 12,
+      "commit_type": "code"
+    },
+    {
+      "author": "vinnnyr",
+      "date": "2024-05-29T22:05:35Z",
+      "sha": "6fbcc58ec0fcf694bc8ec32584fcc4aa721b4149",
+      "message": "restoring loop reduction",
+      "files_changed": 1,
+      "additions": 14,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "lyfkyle",
+      "date": "2025-04-14T08:24:48Z",
+      "sha": "e14b2d4fe84799ebb56d117c607d1da7a4dc37cf",
+      "message": "Fix BCD with horizontal edges (#202)\n\nCo-authored-by: Lu Yunfan <yunfan.lu@dyson.com>",
+      "files_changed": 2,
+      "additions": 47,
+      "deletions": 12,
+      "commit_type": "code"
+    },
+    {
+      "author": "impala454",
+      "date": "2025-03-21T00:35:08Z",
+      "sha": "cba540b578e01d57d81a6435c9b6c69118d95484",
+      "message": "Swap in standard CMake BUILD_TESTING option",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "TobyTowler",
+      "date": "2024-11-18T15:40:46Z",
+      "sha": "df4cb3555e034bcbb2312cf0f3f7765555e788c9",
+      "message": "fixed graph.h issue",
+      "files_changed": 1,
+      "additions": 21,
+      "deletions": 26,
+      "commit_type": "code"
+    },
+    {
+      "author": "aosmw",
+      "date": "2024-04-24T05:33:03Z",
+      "sha": "a1477a2c5667546a8ba4580a9a1d07072451f90d",
+      "message": "Fix cmake install locations for ROS2/colcon\n\n* Work around non-standard (for ROS2) location of toplevel include file\nfields2cover.h that refers to sub includes via \"relative paths\" mechanism\nby also including $<INSTALL_INTERFACE:include/fields2cover> in\ntarget_include_directores(Fields2Cover ...\n\n* Install cmake support files in ROS2 standard/convention directory\nshare/fields2cover/cmake\n\nSigned-off-by: Mike Wake <michael.wake@aosgrp.com.au>",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "wimos-ai",
+      "date": "2024-05-31T02:55:29Z",
+      "sha": "1e4647b1fea3437b14c3ee1eba5d8f05b44abd2e",
+      "message": "Fixes #153",
+      "files_changed": 7,
+      "additions": 14,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "tonynajjar",
+      "date": "2024-05-23T16:16:11Z",
+      "sha": "d5c317100be350de8a11e49176eb02a956e06814",
+      "message": "Add swig to package.xml",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "Andres Rosero",
+      "date": "2024-04-30T20:28:36Z",
+      "sha": "ca360f33482e27ab2e898fb79f2054651bf0f55f",
+      "message": "add redirect flag",
+      "files_changed": 2,
+      "additions": 9,
+      "deletions": 7,
+      "commit_type": "code"
+    },
+    {
+      "author": "Taka-Kazu",
+      "date": "2024-05-11T14:39:32Z",
+      "sha": "8a1e6fa1e63fe038574c3cc97ad17a66255112ba",
+      "message": "Use CMAKE_INSTALL_PREFIX to specify where to install the python interface",
+      "files_changed": 2,
+      "additions": 5,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "clalancette",
+      "date": "2024-03-13T21:22:20Z",
+      "sha": "f55b1e9b82f61690be851fc93afb4b6481eadd7f",
+      "message": "Remove pessimizing std::move.\n\nWhen compiling on gcc 13.2, it complains that the std::move\nin these locations are pessimizing, since it can do\ncopy elision.  Just get rid of the unnecessary std::move\nin these cases.\n\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>",
+      "files_changed": 2,
+      "additions": 5,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "SteveMacenski",
+      "date": "2023-09-26T21:09:39Z",
+      "sha": "f0a9db29e4c86201d48e38ae8ba53dc2043d1fa1",
+      "message": "Return after throw is ignored",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Marnonel6",
+      "date": "2023-09-30T20:41:02Z",
+      "sha": "ffd02cb140d4ccea29bc746275cf8f0bea847f6f",
+      "message": "Added a complete example with swath discretization",
+      "files_changed": 2,
+      "additions": 159,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Fedor Vlasov",
+      "date": "2023-07-04T18:09:04Z",
+      "sha": "3d86a1e7a2c4dc38663facd3c6481796a5ca86b3",
+      "message": "fix pack expansion when compiled with clang",
+      "files_changed": 2,
+      "additions": 15,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Essen, Rick van",
+      "date": "2023-05-17T11:20:40Z",
+      "sha": "f9d854484f52cada095481189c5712a96fe9a8ff",
+      "message": "Add error msg in getGeometry",
+      "files_changed": 6,
+      "additions": 78,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Timple",
+      "date": "2022-11-01T07:33:39Z",
+      "sha": "879da5826d2cc5ae5d04f8bb9dc5ca340da827d7",
+      "message": "Add support for the ROS build system",
+      "files_changed": 2,
+      "additions": 42,
+      "deletions": 9,
+      "commit_type": "docs"
+    },
+    {
+      "author": "developerdenesh",
+      "date": "2022-11-01T06:33:37Z",
+      "sha": "66862d88b867e5b0945773fc40c927cd9b6674f2",
+      "message": "Update README.rst\n\nAdding additional step of creating the build folder",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mdabek",
+      "date": "2022-10-04T20:39:19Z",
+      "sha": "2ecf6bdeaf2517194c7cb0ba606cd98479eb57c8",
+      "message": "Added required gtest dependency check",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "philipogorman",
+      "date": "2022-09-15T15:21:14Z",
+      "sha": "86e44be9648c96a5e8134651ec21336e2b329642",
+      "message": "resolve conflict",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Philip O'Gorman",
+      "date": "2022-09-14T04:12:39Z",
+      "sha": "82f378bdb5d838fa826bba87a1c7487d27fe9e79",
+      "message": "remove redundant clone that caused memory leak",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "jfulem",
+      "date": "2022-08-02T19:53:48Z",
+      "sha": "5f6e18b64a7b2ff4348702f2a7a37410a7a2173e",
+      "message": "Merge branch 'main' into python_interface",
+      "files_changed": 12,
+      "additions": 168,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "tomasloksa",
+      "date": "2022-07-27T08:17:53Z",
+      "sha": "fe421d034789c4d8834087516ddec3521e3eae84",
+      "message": "add spiral order",
+      "files_changed": 2,
+      "additions": 61,
+      "deletions": 0,
+      "commit_type": "code"
+    }
+  ]
+}

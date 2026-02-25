@@ -1,0 +1,551 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T12:48:32Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros2",
+    "repo": "cartographer"
+  },
+  "data": [
+    {
+      "author": "clalancette",
+      "date": "2019-04-26T19:32:30Z",
+      "sha": "482544593ab8d4bf080265d052192d4557fc2f0f",
+      "message": "Switch maintainers to Open Robotics.\n\nAlso update the authors to include the people from Robotis\nwho did the work to update here.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 3,
+      "commit_type": "config"
+    },
+    {
+      "author": "wohe",
+      "date": "2016-08-10T09:34:52Z",
+      "sha": "aa7b060ac5c6e7294929c24cd43e806e56710629",
+      "message": "Remove unnecessary explicit dependency on glog. (#3)\n\nIt is not needed (anymore?) and leads to linking errors\r\n(does not find libglog) when glog_catkin is used and\r\nlibgoogle-glog-dev is not installed.",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "macmason",
+      "date": "2017-03-01T09:26:48Z",
+      "sha": "30b9fcce349aef816b5b484a0b5ba112760e68f4",
+      "message": "Claim an old TODO. (#209)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "MichaelGrupp",
+      "date": "2017-12-07T07:53:04Z",
+      "sha": "176fc42c3febb941c4253d830e413845c9ad03be",
+      "message": " Remove empty leftover of pose_estimate.h (#740)\n\nFollow-up of #670.",
+      "files_changed": 6,
+      "additions": 6,
+      "deletions": 11,
+      "commit_type": "code"
+    },
+    {
+      "author": "cclauss",
+      "date": "2020-10-19T12:38:41Z",
+      "sha": "aeb8a10c01aeebc112840a251176556f96a238e4",
+      "message": "Undefined name: preceding_comments -> preceding_comments.message. (#1720)\n\nSigned-off-by: Christian Clauss <cclauss@me.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Yannic",
+      "date": "2020-09-14T09:42:59Z",
+      "sha": "f2035b087759a6b085290fcd8ff39eadf20f2db0",
+      "message": "Upgrade Protobuf to v3.13.0 (#1746)\n\nThis makes cartographer compatible with\r\n`--incompatible_blacklisted_protos_requires_proto_info`.\r\nSee https://github.com/bazelbuild/bazel/issues/11694\r\n\r\nSigned-off-by: Yannic Bonenberger <contact@yannic-bonenberger.com>",
+      "files_changed": 1,
+      "additions": 19,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "seanyen",
+      "date": "2020-08-31T09:23:47Z",
+      "sha": "2137b8477e2e42a1615ca34d7e4a7af69feb65fe",
+      "message": "Updated the ROS on Windows feed URL (#1743)\n\nSigned-off-by: seanyen <seanyen@microsoft.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "schwoere",
+      "date": "2018-04-24T14:32:31Z",
+      "sha": "d9ada58710d6b077e18240e03baaaa3e87c01447",
+      "message": "Removed check for existence of first submap of first trajectory in pose graph optimization (#1099)\n\nRemoved check for existence of first submap of first trajectory.\r\n\r\nThis check is equivalent to the original implementation which got changed in [#584](https://github.com/googlecartographer/cartographer/pull/584/files)",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "jihoonl",
+      "date": "2017-05-15T14:06:20Z",
+      "sha": "f26e4366c9589d565f33154e0debf4e3f4659730",
+      "message": "Make SparsePoseGraph::constraints() public. (#284)",
+      "files_changed": 3,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "pifon2a",
+      "date": "2017-11-06T14:35:21Z",
+      "sha": "0d2bc8b938222384d1b4fb63c6cef1b15aaed270",
+      "message": "Adds a 'LandmarkData' struct and proto. (#628)",
+      "files_changed": 6,
+      "additions": 228,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "spielawa",
+      "date": "2018-01-05T10:27:21Z",
+      "sha": "63a80c9340782e8b35260b682c227320cc955885",
+      "message": "Adding a minimal implementation of std::optional. (#783)\n\nWe're using C++11, which doesn't have std::optional. We need a few\r\nfeatures of std::optional for improved GPS support. These are\r\nimplemented here.",
+      "files_changed": 2,
+      "additions": 104,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "pHaeusler",
+      "date": "2020-06-15T08:13:54Z",
+      "sha": "36afcb55907d3a941a7bc91a90b277e083714e2c",
+      "message": "Fix typo in tsdf_range_data_inserter_2d.cc (#1612)\n\nFix typo in RangeDataSorter.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "mgladkova",
+      "date": "2020-06-12T10:17:54Z",
+      "sha": "d973a084f7e18568915178c7dd5cf1df67830925",
+      "message": "Fix MapById::lower_bound function and implement test to reproduce the bug (#1616)\n\nThis fixes the bug that has been faced during localization with an initial pose and a trimmed map (OverlappingSubmapsTrimmer2D has been used). A small test is added that reproduces the problem (an infinite loop) where a trimmed trajectory (MapById instance) is used.",
+      "files_changed": 2,
+      "additions": 57,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "facontidavide",
+      "date": "2020-06-03T08:36:59Z",
+      "sha": "46063be28f31e8e4951a8342b144346f3cc3899c",
+      "message": "MinMaxRangeFiteringPointsProcessor: use squaredNorm() instead of norm() (#1637)\n\nThis should represent a considerable speedup.",
+      "files_changed": 2,
+      "additions": 6,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "cottsay",
+      "date": "2020-06-03T09:13:57Z",
+      "sha": "6bbf2558ce26ed74405f288d4c17df465f7eaeb1",
+      "message": "Drop superfluous ROS dependency on catkin (#1599)\n\nThis package's CMakeLists.txt doesn't reference catkin at all, and can\r\nbe regarded as a \"pure CMake\" package. In fact, the package.xml already\r\nstates that this package is built using cmake directly, but still\r\ndepends on catkin.\r\n\r\nThis change makes the package buildable without catkin, as would be\r\ndesired when building with colcon in ROS 2.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "zjwoody",
+      "date": "2017-08-16T13:21:04Z",
+      "sha": "ba6f782949eb7cdb96e43c178c7b6ef83bd57215",
+      "message": "Fix ClangTidy warnings. (#455)",
+      "files_changed": 35,
+      "additions": 59,
+      "deletions": 50,
+      "commit_type": "code"
+    },
+    {
+      "author": "dirk-thomas",
+      "date": "2020-05-29T16:44:48Z",
+      "sha": "851578a01a4a68a310de682e183c1bcc935e5546",
+      "message": "fix compiler warning about comparison between signed and unsigned in test (#12)\n\nSigned-off-by: Dirk Thomas <dirk-thomas@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "ci"
+    },
+    {
+      "author": "mikaelarguedas",
+      "date": "2020-02-24T15:23:20Z",
+      "sha": "3b513dfe68dd25df966a841c65058a5f4c1301cf",
+      "message": "restrict boost dependencies to the ones used (#14)\n\n* restrict boost dependencies to the ones used\r\n\r\nSigned-off-by: Mikael Arguedas <mikael.arguedas@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "jkammerl",
+      "date": "2018-04-17T15:25:18Z",
+      "sha": "26e8ce63ba4f56c91f208cd177bf9082fd027b58",
+      "message": "Add async_grpc dependency to cartographer_grpc (#1079)\n\nThe map_builder_server target requires async_grpc.",
+      "files_changed": 2,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "gaschler",
+      "date": "2017-09-13T13:47:02Z",
+      "sha": "31b5a6f1a996044c3fb9ed23be68b4d6a06f9ba7",
+      "message": "Allow multiple SubmapTextures. (#519)\n\nThis changes submap_visualization.proto that multiple textures can be provided.\r\nAs of now, the first texture is generated from the high resolution\r\ngrid, which is the same as before.\r\nThe second texture is generated from the low resolution grid.",
+      "files_changed": 3,
+      "additions": 60,
+      "deletions": 43,
+      "commit_type": "code"
+    },
+    {
+      "author": "Christoph Schütte",
+      "date": "2017-08-25T09:39:56Z",
+      "sha": "96b71e227f53f3fdd796d6e5796ffd94eb741e2f",
+      "message": "Add histograms for pose residuals (#478)\n\n* WIP Add histograms for pose residuals\r\n\r\n* Address reviewers comments\r\n\r\n* Address more comments.",
+      "files_changed": 7,
+      "additions": 47,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Marco Feuerstein",
+      "date": "2019-03-26T10:33:03Z",
+      "sha": "111d7bb5aac7c8ba6d5d3125de2d2fe4ddcec2e4",
+      "message": "Ability to pass additional comments to ply header. (#1549)",
+      "files_changed": 2,
+      "additions": 17,
+      "deletions": 6,
+      "commit_type": "docs"
+    },
+    {
+      "author": "damienrg",
+      "date": "2017-07-10T09:02:14Z",
+      "sha": "39cb8401a537f93131eb0520a234517a9ad6e8c2",
+      "message": "Implements a ProbabilityGridPointsProcessor (#383)",
+      "files_changed": 7,
+      "additions": 278,
+      "deletions": 67,
+      "commit_type": "code"
+    },
+    {
+      "author": "ojura",
+      "date": "2017-01-26T10:14:58Z",
+      "sha": "f047ad35c148da4a6a0241c60e8f6c357ca50af4",
+      "message": "Add Ceres sparse linear algebra library dependency (#189)\n\nCeres can be built without linking against a sparse linear algebra library\r\nsuch as SuiteSparse or Eigen-sparse. This can happen if the user does not\r\nhave all the dependencies, which normally get installed when following\r\nthe Cartographer installation guide. In this case, Cartographer will\r\nwork, but without loop closures, because Ceres is not working fast enough\r\n(the loop closure optimization without a sparse linear algebra library\r\nis a few orders of magnitude slower). Another bad side effect of this is\r\nthat Cartographer will hang when finalizing the trajectory or on exit,\r\nbecause all loop closing optimizations will be waiting in a queue which\r\ncan take hours to process.\r\n\r\nWhen Ceres is regularly built against a sparse linear algebra library, as it\r\nis supposed to be, it declares a component named SparseLinearAlgebraLibrary.\r\nBecause normal functioning of Cartographer seemingly depends on this being\r\npresent, it is introduced here in Cartographer as a required Ceres component\r\ndependency.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "klwkbin",
+      "date": "2018-10-10T09:33:22Z",
+      "sha": "de4886ea4eddeda75ed424895603abbaed1e8e5a",
+      "message": "Read missing option fix_z_in_3d in OptimizationProblemOptions. (#1440)",
+      "files_changed": 4,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "sebastianklose",
+      "date": "2018-05-09T09:22:07Z",
+      "sha": "c2f54b8df20ecb0fae0e3ad722b1ae3ac28e0d5a",
+      "message": "Organize all protos in mapping in a single folder. (#1147)",
+      "files_changed": 57,
+      "additions": 62,
+      "deletions": 63,
+      "commit_type": "code"
+    },
+    {
+      "author": "Jonathan Huber",
+      "date": "2019-01-17T15:57:30Z",
+      "sha": "fd67975761e1f7fab60d2a84627b8a8e46d831ff",
+      "message": "Allow introduction of new landmarks into loaded (frozen) map (#1475)\n\nIn the current implementation, as soon as one trajectory is frozen it is not possible to use new landmarks anymore.\r\nIn this PR a suggest a change, that allows introducing new landmarks also in the presence of a frozen trajectory. This is done with the following steps:\r\n- Store set of frozen landmarks\r\n- Landmarks that are loaded from a pbstream, with the flag ` load_frozen_state=true` are inserted into the set of frozen landmarks via `setLandmarkPose` function\r\n- frozen landmarks are set constant in the optimization problem\r\n- new landmarks can be introduced and will be optimized in the optimization problem\r\n\r\nMotivated by and closes #1470",
+      "files_changed": 12,
+      "additions": 33,
+      "deletions": 32,
+      "commit_type": "code"
+    },
+    {
+      "author": "alexmillane",
+      "date": "2019-01-16T09:04:57Z",
+      "sha": "eec7af0a4f242e4959e122dc701e371af6e598ca",
+      "message": "Fix TSD converter include location (#1500)\n\n* Moved value converter include out of internal folder.\r\n\r\n* Ran clang-format.",
+      "files_changed": 4,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "amikholap",
+      "date": "2018-11-06T16:50:19Z",
+      "sha": "b7fb299d1a462b92b8fcd779a25ddd40b7e72ead",
+      "message": "Better Abseil library order (#1458)\n\nGot linker error for Abseil in the build env due to imprecise library order.\r\nWorked fine on the dev machine though.\r\nMaybe helps someone.\r\n\r\nhttps://pastebin.com/raw/AEKPBt1n",
+      "files_changed": 2,
+      "additions": 10,
+      "deletions": 9,
+      "commit_type": "code"
+    },
+    {
+      "author": "stevewolter",
+      "date": "2018-07-17T11:38:37Z",
+      "sha": "6c31420b974a3ead500052cdb0a1b96b7a5dd29c",
+      "message": "Log status of failed RPCs in PoseGraphStub. (#1288)\n\nLog status of failed RPCs in PoseGraphStub.\r\n\r\nThis improves the usefulness of error messages in the log.",
+      "files_changed": 1,
+      "additions": 11,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "danielsievers",
+      "date": "2018-02-19T15:30:32Z",
+      "sha": "c38bb60407209f46c2f5d5cb599728c2c2cee93b",
+      "message": "(De)serialize trajectory data from the optimization problem (#915)\n\n* Write/Read the trajectory data (gravity, imu calibration, and fixed frame origin) into the serialized state proto",
+      "files_changed": 10,
+      "additions": 114,
+      "deletions": 10,
+      "commit_type": "code"
+    },
+    {
+      "author": "Kevin Daun",
+      "date": "2018-04-13T11:43:09Z",
+      "sha": "46d3a9443a47020ad408a2d3b0a61259ae67ffb4",
+      "message": " Introduce Grid2D as base class for 2D grids (#1046)\n\nThis is a first step towards generalizing submaps (see [ongoing RFC discussion](https://github.com/googlecartographer/rfcs/pull/30)).\r\nAlthough this PR already introduces a correspondence cost grid, the grid is still used as probability grid.",
+      "files_changed": 11,
+      "additions": 328,
+      "deletions": 172,
+      "commit_type": "code"
+    },
+    {
+      "author": "drigz",
+      "date": "2018-01-22T15:47:07Z",
+      "sha": "0c227097e70b8ec9aab58d4ed875d21767773605",
+      "message": "Add a Bazel build for cartographer (#834)\n\nThis does not include cartographer_grpc, nor any of the binaries\r\n(*_main.cc). It has been tested with Bazel 0.9.0 on Ubuntu 14.04 with\r\nthe latest (at time of writing) dazel/dazel container, by running:\r\n\r\n```\r\nbazel build //...\r\nbazel test //...\r\n```\r\n\r\nWhile this is a large CL, the files under third_party are not new - they have been through internal review, and this is their open-source release. The other files come to 212 lines of code.",
+      "files_changed": 26,
+      "additions": 3072,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "CodeArno",
+      "date": "2018-06-29T10:48:29Z",
+      "sha": "eed07d2f80743679e9d37f21d5051a6fbd9881ad",
+      "message": "Extract ground truth generation into a library. (#1215)\n\nExtract ground truth generation from `autogenerate_ground_truth_main.cc` into a library function in `ground_truth.h/cc`, so it can be reused outside that binary.\r\n\r\nTested with Cartographer ROS.\r\n`cartographer_autogenerate_ground_truth -pose_graph_filename=/home/afleck/Downloads/b3-2016-04-05-15-51-36.bag.pbstream -output_filename=/home/afleck/Downloads/ground_truth.pb`\r\nstill runs as before.",
+      "files_changed": 3,
+      "additions": 194,
+      "deletions": 124,
+      "commit_type": "code"
+    },
+    {
+      "author": "mbokeloh",
+      "date": "2018-07-19T14:35:27Z",
+      "sha": "5fdb705ea5cd1391c1225d3e40fe2feb0d8c577e",
+      "message": "[GenericPoseGraph] Added relative pose cost 3d. (#1303)\n\n* [GenericPoseGraph] Added relative pose cost 3d.\r\n\r\n* Added another case to the test.\r\n\r\n* Removed ceres function from cost function.\r\n\r\n* Ran clang-format.\r\n\r\n* Minor renaming.",
+      "files_changed": 4,
+      "additions": 184,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "Alexander Reimann",
+      "date": "2018-07-02T18:32:23Z",
+      "sha": "0981620d8fd4d3489ff1b503183b128909f1c86d",
+      "message": "Add max_submaps_with_pure_localization parameter (#1141)\n\nAdds a parameter for the currently hard coded `kSubmapsToKeep` in `pure_localization` mode.\r\n\r\nThe new parameter `max_submaps_with_pure_localization` allows to specify the history size of submaps in `pure_localization` mode.\r\n\r\nCloses #1116",
+      "files_changed": 7,
+      "additions": 31,
+      "deletions": 11,
+      "commit_type": "code"
+    },
+    {
+      "author": "sotnik-github",
+      "date": "2018-06-06T13:38:10Z",
+      "sha": "3f0bb0eec5ba8a8c7c55d258483f015c044e7afa",
+      "message": "Fixing 846 without tests. (#1183)\n\nFixing \"Optimizing: -nan%... #846\" https://github.com/googlecartographer/cartographer/issues/846.\r\nThe issue was triggered in a multithreaded execution, when all nodes were processed, but the working queue was still non empty (having other kind of jobs).\r\nUnfortunately I failed to reproduce the bug in tests, so no new tests were added.",
+      "files_changed": 2,
+      "additions": 22,
+      "deletions": 16,
+      "commit_type": "code"
+    },
+    {
+      "author": "RobertMilijas",
+      "date": "2018-05-15T20:32:03Z",
+      "sha": "a0ec8046bddcf2f56080e6157d10337e5a152a45",
+      "message": "Allow easier access to CeresPose's data_ (#1149)\n\nIntroduce a FromPose function which transforms a Ridig3d pose into the\r\nCeresPose's Data format.",
+      "files_changed": 2,
+      "additions": 15,
+      "deletions": 7,
+      "commit_type": "code"
+    },
+    {
+      "author": "SirVer",
+      "date": "2016-10-11T13:18:59Z",
+      "sha": "eeb17bf055c6b09d8149280837ab84d5e7822dbb",
+      "message": "Adds google_binary to create installable binaries. (#43)\n\n- Do not link in Ceres if gflags or glog is used, but still rely on ceres\r\n  to find those libraries for us.\r\n- Update CMakeLists with new settings.",
+      "files_changed": 13,
+      "additions": 87,
+      "deletions": 49,
+      "commit_type": "docs"
+    },
+    {
+      "author": "kdaun",
+      "date": "2018-03-08T10:18:08Z",
+      "sha": "82a491181df91a96c04424f144716fbb1392f0d8",
+      "message": "Add IsTrajectoryFrozen to PoseGraph (#962)\n\nAdds IsTrajectoryFrozen to the PoseGraph interface",
+      "files_changed": 8,
+      "additions": 19,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "ulvgard",
+      "date": "2017-11-16T08:16:34Z",
+      "sha": "b2e948d8a23da0cd9cb93c785865fac001253bec",
+      "message": "Fix typo in CMake install script (#683)\n\nFixes a typo in CMake scripts when installing generated header files.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "catskul",
+      "date": "2016-10-10T16:07:48Z",
+      "sha": "49ec6a9e37d292f377a0dbaee66a05832508a5b9",
+      "message": "Add .gitignore to hide the \"build\" directory (#40)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "damonkohler",
+      "date": "2016-08-02T07:07:31Z",
+      "sha": "166f2568bc278802b1e2116a468c961d22d9ca24",
+      "message": "Initial import of Cartographer codebase.",
+      "files_changed": 290,
+      "additions": 30436,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Mofef",
+      "date": "2017-06-26T12:32:44Z",
+      "sha": "4c3059e0881e662ec971e518a7b71aaae47c725f",
+      "message": "Improve code comments. (#243)",
+      "files_changed": 7,
+      "additions": 30,
+      "deletions": 8,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ahundt",
+      "date": "2017-07-28T10:11:57Z",
+      "sha": "d22402bdfa591b9628d920f3e69663b69a98a800",
+      "message": "color.cc constexpr std::sqrt is not ISO C++ (#432)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "lanyaye",
+      "date": "2017-07-25T13:59:57Z",
+      "sha": "56dbad15e3dde6c3c11afecaddd48a1650f818fe",
+      "message": "Fix proto_stream to support 32-bit platforms. (#427)\n\nIn proto_stream.cc, size_t is only correct on 64-bit platforms. Changing it to uint64 adds support for 32-bit platforms. This fixes #426.",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "jspricke",
+      "date": "2017-05-04T10:47:12Z",
+      "sha": "12b3cc0d7b28cee34f73d099b8f3a611590356fa",
+      "message": "Support new Debian version of gmock and add testing for debian systems (#236)",
+      "files_changed": 6,
+      "additions": 63,
+      "deletions": 10,
+      "commit_type": "config"
+    },
+    {
+      "author": "brandon-northcutt",
+      "date": "2017-07-03T15:59:55Z",
+      "sha": "5396156968acb8a25f5c0a0a18c7020cd87fbb96",
+      "message": "Submap serialization support. (#376)",
+      "files_changed": 8,
+      "additions": 142,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "jordansmithgoogle",
+      "date": "2017-06-14T09:34:59Z",
+      "sha": "7ce73858efa0fe30906e6baecd09dd6a55460eb2",
+      "message": "Adds a HybridGridPoints processor (#323)",
+      "files_changed": 3,
+      "additions": 125,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "yutakaoka",
+      "date": "2017-05-08T09:58:53Z",
+      "sha": "522b37979ae5a19d1813644e026bb6233234be61",
+      "message": "Enable multiple configuration for multi-trajectory (#248)",
+      "files_changed": 7,
+      "additions": 90,
+      "deletions": 23,
+      "commit_type": "code"
+    },
+    {
+      "author": "wjwwood",
+      "date": "2017-03-20T07:37:47Z",
+      "sha": "c78f29fdac778a09bf2d2aaa3b121bf56996845a",
+      "message": "Adds #include <array> in files that use std::array (#222)",
+      "files_changed": 3,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "scturtle",
+      "date": "2016-11-24T14:16:35Z",
+      "sha": "17a3393694f4e442f27c4a899f6e999be9e959c8",
+      "message": "Fix `to_remove`. (#143)",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "at-wat",
+      "date": "2016-10-18T12:35:45Z",
+      "sha": "ccc26a7f4fdc674579d18c8c3b31ae6f4732abbe",
+      "message": "Add missing <vector> include. (#74)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "tfoote",
+      "date": "2016-08-23T08:33:58Z",
+      "sha": "a2533cd75e35057910372f0270620e2b80d972f9",
+      "message": "Adds a few missing rosdeps. (#5)\n\nThis change depends on: ros/rosdistro#12453",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "config"
+    }
+  ]
+}

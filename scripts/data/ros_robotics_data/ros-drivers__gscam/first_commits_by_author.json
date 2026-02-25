@@ -1,0 +1,161 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T15:07:09Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros-drivers",
+    "repo": "gscam"
+  },
+  "data": [
+    {
+      "author": "k-okada",
+      "date": "2017-05-14T09:18:36Z",
+      "sha": "fc1d8293ecbd0287fc5db9b60f36bfdb8138edcc",
+      "message": "add ROS Orphaned Package Maintainers to maintainer tag",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "mikaelarguedas",
+      "date": "2017-10-27T21:07:46Z",
+      "sha": "0f8db5e1757c61ff1bb385c2e1aea3eaecb7e115",
+      "message": "update to use non deprecated pluginlib macro",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "jbohren",
+      "date": "2012-06-12T21:15:33Z",
+      "sha": "3e72e77f9362ae8c6469c2d4ea8c79f9a660ce41",
+      "message": "Adding changes that were made to the distribution branch that\nshould have gone into the exerpeimental branch in r2862.\n\nAdded a bunch of enhancements and fixed bugs involving data\nmissing fromthe image message headers.\n\nIndex: src/gscam.cpp\n===================================================================\nAdded camera_name and camera_parameters_file globals for camera\ninfo.\n\nMoved ros init to the top of the main function.\n\nGets the gstreamer configuration either from environment variable\nGSCAM_CONFIG or ROS param \"~/gscam_config\".\n\nGets the camera calibration parameters from the file located at ROS\nparam \"~/camera_parameters_file\", will look at\n\"../camera_settings.txt\" by default.\n\nA bunch of re-indenting for consistency.\n\nUpdated a lot of error fprintfs to ROS_ERROR calls.\n\nGets the TF frame_id from the ROS param \"~/frame_id\", can be over-\nwritten by camera parameters.\n\nNow sets the appropriate ROS timestap in the image message header.\n\nNow sets the appropriate TF frame in the image message header.\n\nAdded more detailed info/error/warn messages.\n\nModified the warning / segfault avoidance added to experimental in\nr2756. Instead of skipping the frame, it just copies only the\namount of data that it was received, and reports the warning each\ntime, instead of just once. In a large scale system with lots of\nmessages, a single warning might easily get lost in the noise.\n\nIndex: examples/webcam_parameters.txt\n===================================================================\nAdded example camera parameters (uncalibrated) for a laptop webcam.\n\nIndex: examples/webcam.launch\n===================================================================\nAdded a launchfile that makes use of the new rosparam options and\nTF frame.\n\ngit-svn-id: http://brown-ros-pkg.googlecode.com/svn/trunk/experimental/gscam@2863 0d49d21e-669f-11de-873c-fb8c264d332a",
+      "files_changed": 3,
+      "additions": 226,
+      "deletions": 151,
+      "commit_type": "docs"
+    },
+    {
+      "author": "bulwahn",
+      "date": "2015-01-20T07:41:49Z",
+      "sha": "bac79bd5dc702ff2ffcdb2b270707fb52095f4c5",
+      "message": "gscam_nodelet.h: include scoped_ptr.hpp to compile with boost 1.57\n\nWhen compiling gscam with the currently latest boost version 1.57,\nit fails with:\nIn file included from [...]/src/gscam_nodelet.cpp:5:0:\n[...]/include/gscam/gscam_nodelet.h:20:12: error: 'scoped_ptr' in namespace 'boost' does not name a template type\n     boost::scoped_ptr<GSCam> gscam_driver_;\n            ^\n[...]/include/gscam/gscam_nodelet.h:21:12: error: 'scoped_ptr' in namespace 'boost' does not name a template type\n     boost::scoped_ptr<boost::thread> stream_thread_;\n            ^\n\nIt seems that the dependencies of boost/thread.hpp have changed\nand boost/scoped_ptr.hpp is not included anymore with\nboost/thread.hpp. Hence, the scoped_ptr is not defined in the\ngscam_nodelet header. After scanning quickly through the release\nnotes of version 1.57, the boost bug tracker and a few changesets,\nI could not find not a hint what has changed in the thread library\nthat gscam must include scoped_ptr itself.\n\nThis commit simply addresses the compiler error by explicitly\nadding boost's scoped_ptr header in the gscam_nodelet header.\nAs this commit also compiles with boost version 1.56, the commit\nis not expected to cause any problems with other build\nconfigurations.\n\nSigned-off-by: Lukas Bulwahn <lukas.bulwahn@oss.bmw-carit.de>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "blutack",
+      "date": "2014-10-01T16:09:41Z",
+      "sha": "30edca450554271b00ae464b5a430363d15f7e0b",
+      "message": "Remove dependency on opencv2 to fix under indigo\n\nPackages can no longer depend on opencv2 as of indigo. \r\nI've updated the package to depend instead on cv_bridge as suggested by http://wiki.ros.org/indigo/Migration#OpenCV.",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "dhood",
+      "date": "2014-08-18T11:10:26Z",
+      "sha": "c5867b7a1ba3bd7063ea268d729c9c0b006f5f0b",
+      "message": "Install the parameters file refered to in v4l.launch",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "rctoris",
+      "date": "2013-12-04T03:05:11Z",
+      "sha": "ac5657a02e258c6ec77333f9e1f4aed9d999bfd8",
+      "message": "Merge pull request #11 from cedricpradalier/master\n\nAdd jpeg direct publishing without decoding",
+      "files_changed": 3,
+      "additions": 118,
+      "deletions": 50,
+      "commit_type": "code"
+    },
+    {
+      "author": "kubark42",
+      "date": "2014-05-21T02:22:59Z",
+      "sha": "543ec261de5ce9117500eefe948e8ee822717ca9",
+      "message": "Examples: Added example for OSX\n\nAdd a simple launch configuration for OSX. The camera can be selected by\nchanging the default=\"0\" to the appropriate integer.",
+      "files_changed": 1,
+      "additions": 20,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "cedricpradalier",
+      "date": "2013-11-26T13:05:01Z",
+      "sha": "e45140e992183f4548c81882efca4aaedcf14ea2",
+      "message": "Prepared for jpeg-only subscription",
+      "files_changed": 2,
+      "additions": 69,
+      "deletions": 43,
+      "commit_type": "code"
+    },
+    {
+      "author": "Séverin Lemaignan",
+      "date": "2013-11-19T12:16:45Z",
+      "sha": "a77a4743828fda1d19ed103569c8a7a57e96b42d",
+      "message": "Added missing bits to install the nodelet",
+      "files_changed": 2,
+      "additions": 9,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "SirVer",
+      "date": "2013-06-03T12:28:11Z",
+      "sha": "8dce9c9de6b83f409834a7a4a7650e00126f332e",
+      "message": "Add in support for mono cameras.",
+      "files_changed": 2,
+      "additions": 36,
+      "deletions": 15,
+      "commit_type": "code"
+    },
+    {
+      "author": "evan.exe@gmail.com",
+      "date": "2012-05-08T16:55:53Z",
+      "sha": "d7e79163225ed2a6eb8c0df3b5b023d3be185cde",
+      "message": "avoid segfault when buffer size is too small\n\ngit-svn-id: http://brown-ros-pkg.googlecode.com/svn/trunk/experimental/gscam@2756 0d49d21e-669f-11de-873c-fb8c264d332a",
+      "files_changed": 1,
+      "additions": 12,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "nevernim@gmail.com",
+      "date": "2012-01-23T15:47:04Z",
+      "sha": "7de52ed09a145d96a501e31f714aad218d1b4006",
+      "message": "ROSProcessingjs clean-up\n\ngit-svn-id: http://brown-ros-pkg.googlecode.com/svn/trunk/experimental/gscam@1864 0d49d21e-669f-11de-873c-fb8c264d332a",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "trevorjay",
+      "date": "2010-06-01T15:08:28Z",
+      "sha": "710d918861fb17f9feb2bbcc6e2b8dd7bc9800b4",
+      "message": "two publishers\n\ngit-svn-id: http://brown-ros-pkg.googlecode.com/svn/trunk/experimental/gscam@632 0d49d21e-669f-11de-873c-fb8c264d332a",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "chriscrick",
+      "date": "2010-04-08T17:47:15Z",
+      "sha": "15a9648f32d99d353b93c878734bb3116d128235",
+      "message": "Changed the name of the GStreamer camera package.  probe will henceforth be known as gscam.\n\n\n\ngit-svn-id: http://brown-ros-pkg.googlecode.com/svn/trunk/experimental/gscam@506 0d49d21e-669f-11de-873c-fb8c264d332a",
+      "files_changed": 6,
+      "additions": 266,
+      "deletions": 0,
+      "commit_type": "docs"
+    }
+  ]
+}

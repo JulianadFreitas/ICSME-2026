@@ -1,0 +1,701 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T01:06:59Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ament",
+    "repo": "ament_cmake"
+  },
+  "data": [
+    {
+      "author": "ahcorde",
+      "date": "2020-12-09T17:08:31Z",
+      "sha": "5a29128155e6aa7d27c4d29d19e98edbfc2243d2",
+      "message": "Fix variable name in ament_export_libraries.cmake (#314)\n\nSigned-off-by: ahcorde <ahcorde@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "rhaschke",
+      "date": "2023-01-06T01:03:04Z",
+      "sha": "c5489e8c22489625a804618a160649953d21dec8",
+      "message": "Fix compiler warnings related to gtest/gmock (#408)\n\n* Suppress compiler warnings when building gmock\r\n\r\ndefinition of implicit copy constructor ... is deprecated because it has a user-declared copy assignment operator [-Wdeprecated-copy]\r\n\r\n* Declare gtest/gmock include dirs as SYSTEM PRIVATE for test targets\r\n\r\nSigned-off-by: Robert Haschke <rhaschke@techfak.uni-bielefeld.de>",
+      "files_changed": 4,
+      "additions": 4,
+      "deletions": 12,
+      "commit_type": "code"
+    },
+    {
+      "author": "Timple",
+      "date": "2021-11-11T13:35:12Z",
+      "sha": "a51ed2214ce96fe0ef1ee00455cb03ba14bd52f1",
+      "message": "Fix misleading comment (#361)\n\nSigned-off-by: Tim Clephas <tim.clephas@nobleo.nl>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "sloretz",
+      "date": "2019-07-17T16:08:33Z",
+      "sha": "604c2e756f2dd50abbb986b36a81c49b87511135",
+      "message": "_library_dirs -> _library_dirs_suffix (#179)\n\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "cottsay",
+      "date": "2020-04-17T20:13:16Z",
+      "sha": "40d20211c9d43bc871ab3afb7b804936b3350bca",
+      "message": "Drop duplicated <skipped/> element in result file (#242)\n\nThe `<skipped/>` element was actually added as part of the\r\n`skipped_message` several lines earlier.\r\n\r\nWhile multiple `<skipped/>` elements doesn't violate the JUnit schema,\r\nthere is no reason to have more than one.\r\n\r\nSigned-off-by: Scott K Logan <logans@cottsay.net>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "traversaro",
+      "date": "2023-03-15T16:17:20Z",
+      "sha": "daf0ddf9424020a3bd90243b468a0fdc1cfce4bb",
+      "message": "ament_cmake_uninstall_target: Correct location of install_manifest.txt (#432)\n\nSigned-off-by: Silvio Traversaro <silvio@traversaro.it>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "clalancette",
+      "date": "2020-12-07T23:34:19Z",
+      "sha": "19396150b9a9ef95e2f3644569a8da949e7499bc",
+      "message": "1.0.2",
+      "files_changed": 21,
+      "additions": 21,
+      "deletions": 21,
+      "commit_type": "config"
+    },
+    {
+      "author": "mosfet80",
+      "date": "2025-06-19T17:03:20Z",
+      "sha": "7f8f485aedd76548f6d4280f26289528fed7ef92",
+      "message": "Update CMake requirement (#589)\n\nfix cmake <3.10 deprecation\n\nSigned-off-by: mosfet80 <10235105+mosfet80@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "ci"
+    },
+    {
+      "author": "nathan-b-flya",
+      "date": "2025-06-05T21:09:00Z",
+      "sha": "2338decc4f6edf043c953d3773d42cc9ff10974b",
+      "message": "perf: faster normalize_path implementation using cmake_path (#586)\n\nSigned-off-by: nathan-b-flya <nathan.boisard@flyability.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 83,
+      "commit_type": "code"
+    },
+    {
+      "author": "Yadunund",
+      "date": "2023-04-26T10:17:13Z",
+      "sha": "154f1989578a30afe0b3613369681073470d16d9",
+      "message": "2.1.0",
+      "files_changed": 44,
+      "additions": 88,
+      "deletions": 22,
+      "commit_type": "docs"
+    },
+    {
+      "author": "HansRobo",
+      "date": "2025-04-07T19:01:33Z",
+      "sha": "ed4a0a5c2ea3f978d327b92dd60bfaa4e1278d4f",
+      "message": "Fix headers destination installed by ament_auto_package (#540)\n\n* fix headers destination installed by ament_auto_package \n\nSigned-off-by: Kotaro Yoshimoto <pythagora.yoshimoto@gmail.com>\n\n* Fix exporting include directory target by ament_auto_package\n\nSigned-off-by: Kotaro Yoshimoto <pythagora.yoshimoto@gmail.com>\n\n---------\n\nSigned-off-by: Kotaro Yoshimoto <pythagora.yoshimoto@gmail.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "EzraBrooks",
+      "date": "2025-01-16T15:55:59Z",
+      "sha": "1b66f6c25f7d6ed98b3aadafe57af0df6ce91573",
+      "message": "Create destination directory during symlink install (#569)\n\nSigned-off-by: Ezra Brooks <ezra@brooks.cx>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "zflat",
+      "date": "2024-08-23T16:23:04Z",
+      "sha": "4c630d4c36af09e8a426ef5c1fbc8850f656019c",
+      "message": "set search path args and then append (#543)\n\nFix appending search paths specified by GTEST_DIR that was being\r\noverridden by the set command for system paths\r\n\r\nSigned-off-by: William Wedler <william.wedler@videoray.com>\r\nCo-authored-by: William Wedler <william.wedler@videoray.com>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 6,
+      "commit_type": "test"
+    },
+    {
+      "author": "eggerk",
+      "date": "2024-05-13T20:09:15Z",
+      "sha": "fdbf4574d7ccc67c29d63f906ddbd88017eb9ecc",
+      "message": "More specific prefix in some cmake_parse_argument calls (#523)\n\nSigned-off-by: Kevin Egger <kevin.egger@sevensense.ch>",
+      "files_changed": 2,
+      "additions": 8,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "marcoag",
+      "date": "2024-03-28T08:01:37Z",
+      "sha": "e19f49cfb49190036f27d1bac7dfe27c43759114",
+      "message": "Changelog.\n\nSigned-off-by: Marco A. Gutierrez <marcogg@marcogg.com>",
+      "files_changed": 22,
+      "additions": 117,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "VRichardJP",
+      "date": "2023-08-03T12:42:45Z",
+      "sha": "c0bd2912c50d743fdda9e37ce3b481fc1efa8ca0",
+      "message": "Fix `ament_target_dependencies` (#452)\n\nCMake `find_library` does not do anything if the input variable is already set.\r\n\r\nSigned-off-by: Vincent Richard <vincent.francois.richard@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Michael Jeronimo",
+      "date": "2020-10-09T20:29:12Z",
+      "sha": "dba61376f8fdb166f5644ea0a09aecc6d86db16d",
+      "message": "Check condition attr in package.xml dependencies\n\nThe condition attribute was already parsed when reading the XML\nfile. Just needed to check the condition when adding dependencies\nto the list for a particular key/target.\n\nFixes #266\n\nSigned-off-by: Michael Jeronimo <michael.jeronimo@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Ryanf55",
+      "date": "2024-02-07T22:57:47Z",
+      "sha": "7fdd2d124a7a0e9744d982838f025ccecd685180",
+      "message": "Add NAMESPACE support to ament_export_targets (#498)\n\n* Add NAMESPACE support to ament_export_targets\r\n* Improve documentation for NAMESPACE argument\r\n\r\nSigned-off-by: Ryan Friedman <ryanfriedman5410+github@gmail.com>",
+      "files_changed": 2,
+      "additions": 15,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "cwecht",
+      "date": "2023-02-10T22:08:48Z",
+      "sha": "9d23b7c4ef2d67fbab5887d09cef6ad68195fc6c",
+      "message": "Fix ament_auto_add_gtest's parameter passing (#421)",
+      "files_changed": 1,
+      "additions": 14,
+      "deletions": 14,
+      "commit_type": "code"
+    },
+    {
+      "author": "jordan-palacios",
+      "date": "2023-10-17T13:51:20Z",
+      "sha": "261214a73714f6852bcc4b9dad5a3bf9156f603f",
+      "message": "Add ament_auto_add_gmock to ament_cmake_auto (#482)\n\n* Adding ament_auto_add_gmock to ament_cmake_auto\r\n\r\nSimilar rationale of ament_auto_add_gtest, but for gmock.\r\n\r\nament_auto_add_gmock is a convinient macro that groups ament_add_gmock,\r\ntarget_include_directories, target_link_libraries and\r\nament_target_dependencies in a single call for gmock tests.\r\n\r\n* Added missing find_package for ament auto gtest and gmock\r\n\r\nThis saves us from having to test_depend ament_cmake_gtest or\r\nament_cmake_gmock directly in the target's package.xml\r\n\r\nSigned-off-by: Jordan Palacios <jordan.palacios@pal-robotics.com>",
+      "files_changed": 5,
+      "additions": 69,
+      "deletions": 0,
+      "commit_type": "test"
+    },
+    {
+      "author": "ngmor",
+      "date": "2023-09-01T21:47:42Z",
+      "sha": "65b1754af10bb1f8d23f33d68ef6f41c0bce5376",
+      "message": "Recursively check for errors/failures in produced JUnit result XMLs (#446)\n\nSigned-off-by: Nick Morales <ngmorales97@gmail.com>",
+      "files_changed": 1,
+      "additions": 31,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "christophebedard",
+      "date": "2020-04-03T03:59:40Z",
+      "sha": "1cc195d6f9231f199d2dc414278d069c9057e079",
+      "message": "Enable coverage information generation for pytest tests with CMake (#226)\n\n* Enable coverage information generation for pytest tests with CMake\r\n\r\nSigned-off-by: Christophe Bedard <bedard.christophe@gmail.com>\r\n\r\n* Add comment about pytest-cov version requirement for --cov-branch\r\n\r\nSigned-off-by: Christophe Bedard <bedard.christophe@gmail.com>\r\n\r\n* Add --pytest-with-coverage to run_test.py and mention the env var\r\n\r\nSigned-off-by: Christophe Bedard <bedard.christophe@gmail.com>\r\n\r\n* Rename to AMENT_CMAKE_TEST_PYTEST_WITH_COVERAGE\r\n\r\nSigned-off-by: Christophe Bedard <bedard.christophe@gmail.com>\r\n\r\n* Fix missing quote\r\n\r\nSigned-off-by: Christophe Bedard <bedard.christophe@gmail.com>\r\n\r\n* Exclude gtests from pytest coverage explicitly\r\n\r\nThey were excluded before, but only because gtests didn't use --env or --append-end.\r\n\r\nSigned-off-by: Christophe Bedard <bedard.christophe@gmail.com>\r\n\r\n* Append pytest-cov flags in ament_add_pytest_test() directly\r\n\r\nSigned-off-by: Christophe Bedard <bedard.christophe@gmail.com>\r\n\r\n* Fix ament_has_pytest_cov()\r\n\r\nSigned-off-by: Christophe Bedard <bedard.christophe@gmail.com>\r\n\r\n* Change default logic to avoid overriding CLI params\r\n\r\nSigned-off-by: Christophe Bedard <bedard.christophe@gmail.com>\r\n\r\n* Remove --cov-append pytest_cov option\r\n\r\nSigned-off-by: Christophe Bedard <bedard.christophe@gmail.com>\r\n\r\n* Simplify indentation\r\n\r\nSigned-off-by: Christophe Bedard <bedard.christophe@gmail.com>\r\n\r\n* Remove QUIET arg from ament_has_pytest_cov()\r\n\r\nSigned-off-by: Christophe Bedard <bedard.christophe@gmail.com>\r\n\r\n* Change ament_has_pytest_cov() to ament_get_pytest_cov_version()\r\n\r\nSigned-off-by: Christophe Bedard <bedard.christophe@gmail.com>\r\n\r\n* Do not return() if pytest_cov is not found in ament_add_pytest_test()\r\n\r\nSigned-off-by: Christophe Bedard <bedard.christophe@gmail.com>\r\n\r\n* Fix missing empty <options> argument\r\n\r\nSigned-off-by: Christophe Bedard <bedard.christophe@gmail.com>\r\n\r\n* Simplify pytest_cov version regex match\r\n\r\nSigned-off-by: Christophe Bedard <bedard.christophe@gmail.com>\r\n\r\n* Write pytest_cov results to test-specific directory\r\n\r\nSigned-off-by: Christophe Bedard <bedard.christophe@gmail.com>\r\n\r\n* Make sure to create test-specific pytest_cov directory\r\n\r\nSigned-off-by: Christophe Bedard <bedard.christophe@gmail.com>",
+      "files_changed": 3,
+      "additions": 99,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "roehling",
+      "date": "2022-08-11T11:49:34Z",
+      "sha": "ca8c26ea3c89e69c0c636b7cd0c088674c689f5f",
+      "message": "Support new target export template introduced with CMake 3.24 (#395)\n\nSigned-off-by: Timo Röhling <timo.roehling@fkie.fraunhofer.de>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "eyr1n",
+      "date": "2023-03-28T00:14:03Z",
+      "sha": "d1a7b87f135e3ded05ee8e014af4f86508e03ddd",
+      "message": "Support INTERFACE on ament_auto_add_library (#420)\n\n* Support INTERFACE on ament_auto_add_library\r\nSigned-off-by: Rin Iwai <iwai.rin.ij@tut.jp>\r\n\r\n* Use export_targets instead of export_libraries\r\nSigned-off-by: Rin Iwai <iwai.rin.ij@tut.jp>\r\n\r\n* Fix ament_auto_package.cmake\r\nSigned-off-by: Rin Iwai <iwai.rin.ij@tut.jp>\r\n\r\n* Fix export and install libraries\r\nSigned-off-by: Rin Iwai <iwai.rin.ij@tut.jp>",
+      "files_changed": 2,
+      "additions": 29,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "ejalaa12",
+      "date": "2023-03-23T12:16:14Z",
+      "sha": "e355e9ca44fd06d267052021e6b1ef59cb4b83cc",
+      "message": "use the error handler replace to allow non-utf8 to be decoded (#381)\n\n* use the error handler replace to allow non-utf8 to be decoded\r\n\r\nFixes #379\r\n\r\nSigned-off-by: Alaa <ejalaa12@gmail.com>\r\nCo-authored-by: Chris Lalancette <clalancette@gmail.com>\r\nCo-authored-by: Michael Carroll <carroll.michael@gmail.com>",
+      "files_changed": 3,
+      "additions": 80,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "iquarobotics",
+      "date": "2023-03-20T20:03:59Z",
+      "sha": "5f96d9c83c54e2e813aea45220eec47b45209499",
+      "message": "Changed version gte macro to make it MSVC compatible. Fix #433 (#434)\n\nSigned-off-by: Albert Palomer <albert.palomer@iquarobotics.com>",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "mjcarroll",
+      "date": "2023-02-13T22:03:57Z",
+      "sha": "b773f2f9485242248b7b1d111b9d1158516b1ace",
+      "message": "Changelog.\n\nSigned-off-by: Michael Carroll <michael@openrobotics.org>",
+      "files_changed": 22,
+      "additions": 155,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "MichaelOrlov",
+      "date": "2022-11-29T16:48:53Z",
+      "sha": "d38014a000241c145904c4a16851cb5033d0286f",
+      "message": "Workaround to exclude Clion's cmake folders from colcon test (#410)\n\n- Add AMENT_IGNORE to CMAKE_BINARY_DIR to avoid picking up cmake\r\nspecific folders created by CLion in `colcon build` and `colcon test`\r\ncommands\r\n\r\nSigned-off-by: Michael Orlov <michael.orlov@apex.ai>\r\n\r\nSigned-off-by: Michael Orlov <michael.orlov@apex.ai>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "ijnek",
+      "date": "2022-11-21T16:39:36Z",
+      "sha": "a16e5cb7e2e2cd03bcabbe4a73348274e5fc5831",
+      "message": "if (NOT ${UNDEFINED_VAR}) gets evaluated to false, so change to if (NOT UNDEFINED_VAR) so it evaluates to true. (#407)\n\nSigned-off-by: Kenji Brameld <kenjibrameld@gmail.com>\r\n\r\nSigned-off-by: Kenji Brameld <kenjibrameld@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "audrow",
+      "date": "2022-11-08T13:19:07Z",
+      "sha": "4d56683ae48c985e715207bfd8a0880900beb2f2",
+      "message": "[rolling] Update maintainers - 2022-11-07 (#411)\n\n* Update maintainers to Michael Jeronimo\r\n\r\nSigned-off-by: Audrow Nash <audrow@openrobotics.org>",
+      "files_changed": 23,
+      "additions": 24,
+      "deletions": 22,
+      "commit_type": "config"
+    },
+    {
+      "author": "JWhitleyWork",
+      "date": "2022-09-20T19:20:18Z",
+      "sha": "799183ab9bcfd9b66df0de9b644abaf8c9b78e84",
+      "message": "Rolling: ament_cmake_auto should include dependencies as SYSTEM (#385)\n\n* 0.9.7\r\n\r\nSigned-off-by: Joshua Whitley <whitleysoftwareservices@gmail.com>\r\n\r\n* Add includes as SYSTEM in ament_auto_add_library.\r\n\r\nSigned-off-by: Joshua Whitley <whitleysoftwareservices@gmail.com>\r\n\r\n* Add includes as SYSTEM in ament_auto_add_executable.\r\n\r\nSigned-off-by: Joshua Whitley <whitleysoftwareservices@gmail.com>\r\n\r\n* Also add build depends as SYSTEM.\r\n\r\nSigned-off-by: Joshua Whitley <whitleysoftwareservices@gmail.com>\r\n\r\n* Revert changes to linking to project libraries.\r\n\r\nSigned-off-by: Joshua Whitley <whitleysoftwareservices@gmail.com>\r\n\r\nSigned-off-by: Joshua Whitley <whitleysoftwareservices@gmail.com>\r\nCo-authored-by: ahcorde <ahcorde@gmail.com>",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "jacobperron",
+      "date": "2019-06-03T20:04:13Z",
+      "sha": "3c432f29b80fd203883a5d83b2b4db3bfb015924",
+      "message": "Add WERROR option to ament_add_pytest_test (#168)\n\nThis has the benefit of making deprecation warnings visible, which are not by default.\r\nDefault value for the option is OFF.\r\n\r\nSigned-off-by: Jacob Perron <jacob@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 1,
+      "commit_type": "ci"
+    },
+    {
+      "author": "paudrow",
+      "date": "2021-11-29T20:58:09Z",
+      "sha": "9bcc8134958a102b0d629bf44fe289ad57d68b0a",
+      "message": "Update maintainers to Michael Jeronimo and Michel Hidalgo (#362)\n\nSigned-off-by: Audrow Nash <audrow@hey.com>",
+      "files_changed": 22,
+      "additions": 69,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "methylDragon",
+      "date": "2022-06-08T21:48:09Z",
+      "sha": "1aebbce3210449ce8f2b6690270687ab386cbb16",
+      "message": "Implement ament_add_default_options (#390)\n\n* Implement ament_add_default_options\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Mangle cmake_parse_arguments vars\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Unset macro variables at end\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Update comment and string\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Refine macro unsets\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>",
+      "files_changed": 2,
+      "additions": 47,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "wep21",
+      "date": "2021-12-06T18:47:08Z",
+      "sha": "4ac1ed1153ac774116c273021944eb3ea836495c",
+      "message": "Fix typo in ament_auto_find_test_dependencies (#363)\n\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "test"
+    },
+    {
+      "author": "hidmic",
+      "date": "2020-04-23T15:12:39Z",
+      "sha": "f2a54d4e749aea2a740371ac0963ab37e9a1c9a8",
+      "message": "Use _LIBRARY_DIRS in ament_target_dependencies() (#245)\n\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>",
+      "files_changed": 1,
+      "additions": 15,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Joshua Whitley",
+      "date": "2021-10-13T20:35:13Z",
+      "sha": "215ddb6f506469cee5dff4c2b17c6af485b9f2b9",
+      "message": "Add ament_auto_add_gtest (#344)\n\n* Add ament_auto_add_gtest\r\n* Add ament_auto_find_test_dependencies\r\n* Add found build dependencies to ament_auto_add_gtest\r\n* Adding dependency on ament_cmake_gtest and fixing lints\r\n\r\nSigned-off-by: Joshua Whitley <josh.whitley@autoware.org>\r\nCo-authored-by: Joshua Whitley <whitleysoftwareservices@gmail.com>",
+      "files_changed": 6,
+      "additions": 160,
+      "deletions": 2,
+      "commit_type": "test"
+    },
+    {
+      "author": "serge-nikulin",
+      "date": "2021-09-30T19:03:19Z",
+      "sha": "09c5b06f6bb51ecf232ee4094799e0325538cd5a",
+      "message": "Add ament_cmake_gen_version_h package (#198)\n\nSigned-off-by: Serge Nikulin <serge@safeai.ai>",
+      "files_changed": 11,
+      "additions": 382,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "gleichdick",
+      "date": "2021-07-01T13:44:05Z",
+      "sha": "84e1cea2df62102509de530a5b1bb6d8cde2b5a2",
+      "message": "Add note regarding interface libraries (#339)\n\nSigned-off-by: Bjar Ne <gleichdick@users.noreply.github.com>\r\n\r\nCo-authored-by: Bjar Ne <gleichdick@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "wentasah",
+      "date": "2021-06-14T12:35:47Z",
+      "sha": "0edbcff991a8bfffd8c2eb381e43e9a6fe53e0c4",
+      "message": "doc/resource_index: Indent list subitems correctly (#342)\n\nThe list subitems were indented only by one space, making them\r\nrendered (on GitHub) at the same level as their parent items. This\r\nmade the list of requirements confusing. We indent them by one more\r\nspace to render them properly as sub-items.\r\n\r\nSigned-off-by: Michal Sojka <michal.sojka@cvut.cz>",
+      "files_changed": 1,
+      "additions": 10,
+      "deletions": 10,
+      "commit_type": "config"
+    },
+    {
+      "author": "v-lopez",
+      "date": "2020-12-17T19:57:00Z",
+      "sha": "106e9c5b087d368f938aff8e1676928af43a1dea",
+      "message": "Disable gtest warning when building in Release (#298)\n\nhttps://github.com/google/googletest/issues/1303\r\nSigned-off-by: Victor Lopez <victor.lopez@pal-robotics.com>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Naveau",
+      "date": "2020-12-08T18:42:17Z",
+      "sha": "7f76158f2a153c4da2f899d0506a4ea640143c84",
+      "message": "[ament_cmake_python] ament_cmake_python_get_python_install_dir public (#300)\n\n* [ament_cmake_python] make the ament_cmake_python_get_python_install_dir a public interface.\r\n\r\nSigned-off-by: Maximilien Naveau <maximilien.naveau@tuebingen.mpg.de>",
+      "files_changed": 2,
+      "additions": 30,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "andre-nguyen",
+      "date": "2020-11-09T13:25:50Z",
+      "sha": "c43912452fbf7d26fe27512920e03c1be8e3f3ba",
+      "message": "Add SYSTEM keyword option to ament_target_dependencies (#297)\n\n* Add SYSTEM keyword option to ament_target_dependencies\r\n\r\nSigned-off-by: Andre Nguyen <anguyen@applanix.com>\r\n\r\n* Add documentation of SYSTEM keyword for ament_target_dependencies\r\n\r\nSigned-off-by: Andre Nguyen <anguyen@applanix.com>",
+      "files_changed": 1,
+      "additions": 10,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "siposcsaba89",
+      "date": "2020-10-21T15:45:46Z",
+      "sha": "110e58fe5bd99fb5c252ade6c89b52e5db345fc1",
+      "message": "fix imported targets with multiple configuration (#290)\n\n* fix imported targets with multiple configuration\r\n\r\nSigned-off-by: Csaba Sipos <siposcsaba89@gmail.com>\r\n\r\n* taking into account DEBUG_CONFIGURATIONS global variable\r\n\r\nSigned-off-by: Csaba Sipos <siposcsaba89@gmail.com>",
+      "files_changed": 1,
+      "additions": 20,
+      "deletions": 7,
+      "commit_type": "code"
+    },
+    {
+      "author": "brawner",
+      "date": "2020-10-20T19:46:56Z",
+      "sha": "a5fb3112b5c46c42b1824c96af4171d469eb13bf",
+      "message": "Catch JSONDecodeError and printout some debug info (#291)\n\nSigned-off-by: Stephen Brawner <brawner@gmail.com>",
+      "files_changed": 1,
+      "additions": 13,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "dirk-thomas",
+      "date": "2014-05-19T04:03:18Z",
+      "sha": "522f5882f134d92f1bd90c33f390af5732f02f95",
+      "message": "add license",
+      "files_changed": 1,
+      "additions": 202,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "ruffsl",
+      "date": "2020-08-12T20:06:57Z",
+      "sha": "191f1d434624fc14d9cfb80d146f5e6e0d0dbf45",
+      "message": "Add actual test time to xUnit result files (#270)\n\n* Add actual test time to xUnit result files\r\nFixes #269\r\n\r\nSigned-off-by: ruffsl <roxfoxpox@gmail.com>\r\n\r\n* Report test_time even with skipped test\r\n\r\nSigned-off-by: ruffsl <roxfoxpox@gmail.com>\r\n\r\n* Set time attribute for testcase element\r\n\r\nSigned-off-by: ruffsl <roxfoxpox@gmail.com>",
+      "files_changed": 1,
+      "additions": 14,
+      "deletions": 7,
+      "commit_type": "test"
+    },
+    {
+      "author": "seanyen",
+      "date": "2020-02-22T04:22:12Z",
+      "sha": "9a89444ac0b07601beca36b99c2617e073b96e42",
+      "message": "[Windows] Adding .lib into the symlink install file list (#219)\n\n* Adding .lib into the symlink install file list\r\n\r\nSigned-off-by: seanyen <seanyen@microsoft.com>\r\n\r\n* rework.\r\n\r\nSigned-off-by: seanyen <seanyen@microsoft.com>\r\n\r\n* conditionally guard by WIN32.\r\n\r\nSigned-off-by: seanyen <seanyen@microsoft.com>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "j-rivero",
+      "date": "2020-03-11T17:57:48Z",
+      "sha": "53b9ac3f1f931bc7e8db696a70e9919741b17adc",
+      "message": "Generate xunit files valid for the junit10.xsd\n\nSigned-off-by: Jose Luis Rivero <jrivero@osrfoundation.org>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "ivanpauno",
+      "date": "2019-03-26T14:10:18Z",
+      "sha": "4bf1068ccfd756724a64fe7ac21f645e13fec54c",
+      "message": "Added PUBLIC option to ament_target_dependencies (#161)\n\n* Added PUBLIC option to ament_target_dependencies\r\n\r\nSigned-off-by: ivanpauno <ivanpauno@ekumenlabs.com>\r\n\r\n* Corrected with PR comments.\r\n\r\nSigned-off-by: ivanpauno <ivanpauno@ekumenlabs.com>\r\n\r\n* simplify patch\r\n\r\nSigned-off-by: ivanpauno <ivanpauno@ekumenlabs.com>",
+      "files_changed": 1,
+      "additions": 13,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "blackliner",
+      "date": "2020-04-29T16:00:03Z",
+      "sha": "6bcf8d21d66b830b90a7937792a74332eeac4ac4",
+      "message": "Fix parallel testing (#254)\n\n* Fix parallel testing\r\n\r\nWe ran ctest . -j 10, and sometimes it happened that we got failing CI builds because the command in line 116 was executed in parallel.\r\n```\r\n[2020-04-28T19:13:39.193Z] 1: Traceback (most recent call last):\r\n[2020-04-28T19:13:39.193Z] 1:   File \"/opt/ros/eloquent/share/ament_cmake_test/cmake/run_test.py\", line 23, in <module>\r\n[2020-04-28T19:13:39.193Z] 1:     sys.exit(ament_cmake_test.main())\r\n[2020-04-28T19:13:39.193Z] 1:   File \"/opt/ros/eloquent/lib/python3.6/site-packages/ament_cmake_test/__init__.py\", line 116, in main\r\n[2020-04-28T19:13:39.193Z] 1:     os.makedirs(output_path)\r\n[2020-04-28T19:13:39.193Z] 1:   File \"/usr/lib/python3.6/os.py\", line 220, in makedirs\r\n[2020-04-28T19:13:39.193Z] 1:     mkdir(name, mode)\r\n[2020-04-28T19:13:39.193Z] 1: FileExistsError: [Errno 17] File exists: 'some_dir/build/x86_debug/ros2/build_docker/functions/ament_cmake_gtest'\r\n```\r\n\r\nSigned-off-by: Florian Berchtold <florian.berchtold@gmail.com>\r\n\r\n* remove condition\r\n\r\nSigned-off-by: blackliner <florian.berchtold@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "emersonknapp",
+      "date": "2020-04-03T19:28:26Z",
+      "sha": "c754316a44b453d1706568dd43e6ab27102b4a37",
+      "message": "Don't pass FALSE value to ament_add_test when SKIP_TEST is not provided (#236)\n\nSigned-off-by: Emerson Knapp <emerson.b.knapp@gmail.com>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "rotu",
+      "date": "2019-08-21T17:40:10Z",
+      "sha": "8b884aa06cbb6af1ae2fec8a817b4bb495ad28bf",
+      "message": "Rename uninstall target so it is unique per project (#188)\n\n* Rename uninstall target so it is unique per project\r\n\r\nFixes #127\r\nSigned-off-by: Dan Rose <dan@digilabs.io>\r\n\r\n* Revert whitespace change\r\n\r\nSigned-off-by: Dan Rose <dan@digilabs.io>\r\n\r\n* add cumulative uninstall target\r\n\r\nSigned-off-by: Dan Rose <dan@digilabs.io>",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "JafarAbdi",
+      "date": "2020-01-29T22:39:59Z",
+      "sha": "0fd5578dd6c313ab24b752f6bc2b1c24368a9194",
+      "message": "Fix symlink install versioned shared library (#216)\n\n* Fix symlink install versioned shared library\r\n\r\nSigned-off-by: JafarAbdi <cafer.abdi@gmail.com>\r\n\r\n* Update ament_cmake_symlink_install.cmake.in\r\n\r\nSigned-off-by: JafarAbdi <cafer.abdi@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "nuclearsandwich",
+      "date": "2017-06-12T15:33:07Z",
+      "sha": "dc243d84429ccefbe3532c59a242a114eb20bad6",
+      "message": "Use python3-nose rosdep key. (#95)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "alsora",
+      "date": "2019-08-29T15:46:26Z",
+      "sha": "e17328e1db525211916cb62ef40c30a35b81eab5",
+      "message": "check existance of uninstall target before creating it (#195)\n\nSigned-off-by: Soragna, Alberto <alberto.soragna@gmail.com>",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "jpsamper2009",
+      "date": "2019-04-05T20:11:20Z",
+      "sha": "b6a5a351e14b7f106a4e56430a5f2ac41f5a49c1",
+      "message": "Add option to exclude packages in ament_execute_extensions: (#165)\n\n- This provides a mechanism for 'ament-auto' packages to have\r\ntheir own exclude options\r\n\r\nSigned-off-by: Juan Pablo Samper <jp.samper@apex.ai>",
+      "files_changed": 1,
+      "additions": 10,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Peter Baughman",
+      "date": "2019-06-11T17:05:14Z",
+      "sha": "996fc382f77c77ed9315d29dfa6160a6d5db495d",
+      "message": "Add 'runner' option to ament_add_gmock / nose (#177)\n\n* Add 'runner' option to ament_add_gmock\r\n\r\nSigned-off-by: Pete Baughman <pete.baughman@apex.ai>\r\n\r\n* Give ament_add_nose ability to specify a different runner, too\r\n\r\nSigned-off-by: Pete Baughman <pete.baughman@apex.ai>",
+      "files_changed": 2,
+      "additions": 14,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "pbaughman",
+      "date": "2019-06-06T18:08:14Z",
+      "sha": "5918edeff1206f58361d8a4abca069a22b80b385",
+      "message": "Add runner option to ament_add_test (#174)\n\n* ament_cmake allow speficiation of a different test runner\r\n\r\n  - By default, still uses run_test.py\r\n  - Example use case: ament_cmake_ros can use a test runner that sets a ROS_DOMAIN_ID\r\n\r\nSigned-off-by: Pete Baughman <pete.baughman@apex.ai>\r\n\r\n* ament_cmake move run_test.py to a python module\r\n\r\n  - This should let us see the history\r\n\r\nSigned-off-by: Pete Baughman <pete.baughman@apex.ai>\r\n\r\n* ament_cmake refactor run_test.py into an importable python module\r\n\r\n  - Adds an ament_cmake_test python package\r\n\r\nSigned-off-by: Pete Baughman <pete.baughman@apex.ai>",
+      "files_changed": 8,
+      "additions": 384,
+      "deletions": 341,
+      "commit_type": "docs"
+    },
+    {
+      "author": "esteve",
+      "date": "2015-09-22T22:52:07Z",
+      "sha": "2ae655672248dffb64edd4124e231c6eca268703",
+      "message": "Use VERSION_LESS to test the Nose version\n\n`VERSION_LESS` is used for checking versions:\r\n\r\nhttp://cmake.org/cmake/help/v2.8.12/cmake.html#command:if",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "mikaelarguedas",
+      "date": "2016-06-22T19:53:46Z",
+      "sha": "5f488a9af34e171bfde4a4c17a30ab40ee83e367",
+      "message": "Windows python debug (#73)\n\n* add python interpreter to nose test parameters\r\n\r\n* update doc\r\n\r\n* rename interpreter to executable and add doc",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "greimela-si",
+      "date": "2018-07-03T22:56:06Z",
+      "sha": "fd3d09b351b88d33daa320314b178f253ccfb172",
+      "message": "Add SKIP_TEST flag to ament_add_gmock() (#143)",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "csukuangfj",
+      "date": "2018-06-08T04:46:11Z",
+      "sha": "7aa10a5d97c666a1eac9d9df82dd68eea754773b",
+      "message": "fix typos. (#138)",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Karsten1987",
+      "date": "2017-08-16T22:57:58Z",
+      "sha": "d32f7619eb5c2650a33597ba7221e5f6c5a94908",
+      "message": "make installing the markerfile optional (#105)\n\n* make installing the markerfile optional\r\n\r\n* correct check for unused args",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "wjwwood",
+      "date": "2014-09-17T01:28:05Z",
+      "sha": "d6cd067a55e11a391dd84004349e32bd44dcf026",
+      "message": "add support for zsh with env and env hook",
+      "files_changed": 4,
+      "additions": 30,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "dhood",
+      "date": "2016-04-13T23:40:38Z",
+      "sha": "6e359a95e9c21fa4fee5e4710ed143aa11bea56a",
+      "message": "Ignore dot files and subdirectories in get_resources (#67)\n\n* Ignore directories, and files starting with a dot in find_resources\r\n\r\n* Copyedit\r\n\r\n* Specify behaviour of get_resources with directories and hidden files",
+      "files_changed": 2,
+      "additions": 24,
+      "deletions": 14,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Lennart Nachtigall",
+      "date": "2016-12-10T18:56:31Z",
+      "sha": "370eb7670cb64a5b9bfb90c3ccdee267d50a6f69",
+      "message": "Fixed rebasing error, fixed indentation, looking for pthread on non windows systems",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Esteve Fernandez",
+      "date": "2016-02-17T23:28:25Z",
+      "sha": "5ae9592c7bf7b7dd837c714921e38ca03749f35b",
+      "message": "Added DESTINATION argument",
+      "files_changed": 1,
+      "additions": 24,
+      "deletions": 7,
+      "commit_type": "code"
+    },
+    {
+      "author": "tfoote",
+      "date": "2015-07-31T23:48:15Z",
+      "sha": "d9e5c1723560cc9e63ed581fe1b028082719ab23",
+      "message": "adding basic usage documentation",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 0,
+      "commit_type": "docs"
+    }
+  ]
+}

@@ -1,0 +1,271 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T04:25:12Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros2",
+    "repo": "ament_cmake_ros"
+  },
+  "data": [
+    {
+      "author": "ahcorde",
+      "date": "2025-04-01T06:21:51Z",
+      "sha": "5a1fe8aad9af94a71bea24e24c74ea4ea9303ef6",
+      "message": "Resolve windows warnings in rmw_test_fixture (#22)\n\nSigned-off-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>",
+      "files_changed": 3,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "test"
+    },
+    {
+      "author": "cottsay",
+      "date": "2025-03-18T19:16:07Z",
+      "sha": "a08d837aab31369fec31bfef82db51165bc4ef97",
+      "message": "Split generic parts of ament_cmake_ros into _core package (#20)\n\nIn an effort to increase the utility of the test isolation in\nament_cmake_ros, I'd like to take additional dependencies which are\ncurrently downstream of ament_cmake_ros. These packages only depend on\nament_cmake_ros for some basic CMake configuration, so this change\nextracts that configuration into a new *_core package (aligning with\nament_cmake_core).\n\nThere should be no change in behavior for packages which currently\ndepend on ament_cmake_ros. Dependees which don't require the testing\nmacros from ament_cmake_ros will now have the option to switch to the\nnew ament_cmake_ros_core package.\n\nSigned-off-by: Scott K Logan <logans@cottsay.net>",
+      "files_changed": 7,
+      "additions": 68,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "wjwwood",
+      "date": "2025-10-23T14:12:52Z",
+      "sha": "2d1fe183b6d48d6e4e2a2b6d615335dae600c323",
+      "message": "default to c++17 due to use of newer methods on std::map (#55)\n\nSigned-off-by: William Woodall <wjwwood@intrinsic.ai>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mwcondino",
+      "date": "2025-10-01T09:49:42Z",
+      "sha": "1e9364de4e2b63f1fabcc6421e4ff8cff7fefb3c",
+      "message": "add find_package call (#50)\n\nSigned-off-by: mwcondino <mwcondino@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "clalancette",
+      "date": "2020-06-23T13:36:03Z",
+      "sha": "c90564064abb561ab43d2c9fa830413976ce79a6",
+      "message": "Add pytest.ini to suppress warning output locally. (#8)\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "mosfet80",
+      "date": "2025-07-18T07:46:36Z",
+      "sha": "130f9e064108acfbd19f327885c95c13f8c2c936",
+      "message": "fix cmake deprecation (#47)\n\ncmake version < then 3.10 is deprecated\n\nSigned-off-by: Mos <realeandrea@yahoo.it>",
+      "files_changed": 4,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "izzaaaatanishq",
+      "date": "2025-04-24T20:54:52Z",
+      "sha": "1fa14ddd69dc1eb4b164d4ed5622442dcc118059",
+      "message": "Split the generator expression for each library (#36)\n\nSigned-off-by: Tanishq Chaudhary <tanishqchaudhary101010@gmail.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "fujitatomoya",
+      "date": "2025-03-31T20:41:04Z",
+      "sha": "65828bdd7139802b0d86e039d39c454bfa3f77eb",
+      "message": "remove .github/ISSUE_TEMPLATE.md (old version of templates) (#23)\n\nSigned-off-by: Tomoya Fujita <Tomoya.Fujita@sony.com>",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 45,
+      "commit_type": "ci"
+    },
+    {
+      "author": "Yadunund",
+      "date": "2023-04-27T00:57:12Z",
+      "sha": "53d09d9c0ac672f6666982da8af8ca2f1e394bf4",
+      "message": "Update changelogs in preparation of minor bump\n\nSigned-off-by: Yadunund <yadunund@openrobotics.org>",
+      "files_changed": 2,
+      "additions": 6,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "marcoag",
+      "date": "2024-04-26T14:46:16Z",
+      "sha": "10007a5280fd35a3732bad0988cae7ea63a03e27",
+      "message": "Changelog.\n\nSigned-off-by: Marco A. Gutierrez <marcogg@marcogg.com>",
+      "files_changed": 2,
+      "additions": 6,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "audrow",
+      "date": "2021-11-21T18:09:13Z",
+      "sha": "add4d35a981fadef6ffc7f5180bcb19a84acc08d",
+      "message": "Update maintainers to Michel Hidalgo (#13)\n\nSigned-off-by: Audrow Nash <audrow@hey.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "paudrow",
+      "date": "2022-04-30T00:01:10Z",
+      "sha": "c0171edd760e1ed3341f25d16d87d06bea6a1adf",
+      "message": "0.11.0\n\nSigned-off-by: Audrow Nash <audrow@hey.com>",
+      "files_changed": 5,
+      "additions": 9,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "methylDragon",
+      "date": "2022-05-06T17:45:57Z",
+      "sha": "bbbc6ec4dea550f12d68863c558eb7f54be151e4",
+      "message": "Update maintainers (#15)\n\nSigned-off-by: methylDragon <methylDragon@gmail.com>",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "jacobperron",
+      "date": "2020-04-18T00:42:56Z",
+      "sha": "bcf94994adf196d43ccb26fb1ac398b13f733908",
+      "message": "0.9.0",
+      "files_changed": 3,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "config"
+    },
+    {
+      "author": "roehling",
+      "date": "2021-10-14T17:13:24Z",
+      "sha": "b8ee10cb6876220e6bff6475cb9f5284f4ff0d5e",
+      "message": "Refactor domain_coordinator API to use a context manager (#12)\n\n* Refactor domain_coordinator API to use a context manager\r\n\r\nThe domain_coordinator refactored to expose a single context manager\r\nwhich returns a unique ROS_DOMAIN_ID that is valid until the context\r\ngoes out of scope.\r\n\r\nThe function has been deliberately renamed to force fatal errors if\r\nthe call site was not updated to use a \"with\" context.\r\n\r\nFixes #9\r\n\r\nSigned-off-by: Timo Röhling <timo.roehling@fkie.fraunhofer.de>",
+      "files_changed": 4,
+      "additions": 118,
+      "deletions": 153,
+      "commit_type": "code"
+    },
+    {
+      "author": "hidmic",
+      "date": "2020-10-08T19:22:36Z",
+      "sha": "2a4eb8332422bb75b4f552b973068c35ef5be5b8",
+      "message": "Update package maintainers. (#11)\n\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "dirk-thomas",
+      "date": "2017-01-03T17:55:25Z",
+      "sha": "2819373c089f1874eebf0e3be572df1f409ef501",
+      "message": "add LICENSE and CONTRIBUTING.md",
+      "files_changed": 2,
+      "additions": 215,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "galou",
+      "date": "2019-11-02T05:16:02Z",
+      "sha": "3f421a0bafa8de0caae1ae2baefc5b982bf4f81a",
+      "message": "Add .gitignore (#7)\n\nSigned-off-by: Gaël Écorchard <gael.ecorchard@cvut.cz>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "mjcarroll",
+      "date": "2019-09-24T17:00:33Z",
+      "sha": "e7c18f52a32e42f8847e65661d0521e5c29238c4",
+      "message": "0.8.0\n\nSigned-off-by: Michael Carroll <michael@openrobotics.org>",
+      "files_changed": 3,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "config"
+    },
+    {
+      "author": "ivanpauno",
+      "date": "2019-09-11T20:04:45Z",
+      "sha": "2b9a71d1b8d089f597744ce52c729d6bf64fac80",
+      "message": "Install manifest and package marker (#6)\n\nSigned-off-by: ivanpauno <ivanpauno@ekumenlabs.com>",
+      "files_changed": 2,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Peter Baughman",
+      "date": "2019-06-13T23:43:05Z",
+      "sha": "ea3bde35648a352e60e4a6d6da204afa6f8332da",
+      "message": "Add isolated gmock test (#4)\n\n* Add isolated version of ament_add_gmock\r\n\r\nSigned-off-by: Pete Baughman <pete.baughman@apex.ai>\r\n\r\n* Prevent add_ros_isolated_*_tests from interfering with domain_coordinator self-test\r\n\r\nSigned-off-by: Pete Baughman <pete.baughman@apex.ai>\r\n\r\n* Move isolated test functions to ament_cmake_ros\r\n\r\nSigned-off-by: Pete Baughman <pete.baughman@apex.ai>\r\n\r\n* Move ament_cmake_ros_isolated_gmock into ament_cmake_ros too\r\n\r\nSigned-off-by: Pete Baughman <pete.baughman@apex.ai>\r\n\r\n* Remove files that got left behind when isolated_gmock moved to ament_cmake_ros\r\n\r\nSigned-off-by: Pete Baughman <pete.baughman@apex.ai>\r\n\r\n* Fix lint errors\r\n\r\nSigned-off-by: Pete Baughman <pete.baughman@apex.ai>\r\n\r\n* Fix python flake8\r\n\r\nSigned-off-by: Pete Baughman <pete.baughman@apex.ai>",
+      "files_changed": 15,
+      "additions": 71,
+      "deletions": 142,
+      "commit_type": "config"
+    },
+    {
+      "author": "pbaughman",
+      "date": "2019-06-07T23:16:52Z",
+      "sha": "d699ccfe4e1ec2f1eb234651f5cbe6190a27c709",
+      "message": "Add ament_add_pytest_isolated and ament_add_gtest_isolated (#3)\n\n* ament_cmake_ros add cmake test functions with isolation\r\n\r\n  - Add a domain_coordinator package containing the functionality from launch_testing and\r\n    a run_test_isolated.py script that can be used by the isolated cmake test functions instead\r\n    of the default run_test.py\r\n  - Add ament_cmake_gtest_isolated to run gtests with ROS_DOMAIN_ID isolation\r\n  - Add ament_cmake_pytest_isolated to run pytests with ROS_DOMAIN_ID isolation\r\n\r\nSigned-off-by: Pete Baughman <pete.baughman@apex.ai>\r\n\r\n* ament_cmake_ros Add doc strings for cmake test functions\r\n\r\nSigned-off-by: Pete Baughman <pete.baughman@apex.ai>\r\n\r\n* ament_cmake_test_isolated shuffle run_test_isolated into its own package\r\n\r\n  - Make domain_coordinator an ament_python package\r\n  - remove run_test_isolated.py from domain_coordinator\r\n  - Add a new cmake package that provides run_test_isolated.py\r\n\r\nSigned-off-by: Pete Baughman <pete.baughman@apex.ai>\r\n\r\n* Address PR comments\r\n\r\n  - Fix copyright date from 2017->2019\r\n  - Simplify dependencies of isolated test packages\r\n  - Put more information in domain_coordinator setup.py\r\n\r\nSigned-off-by: Pete Baughman <pete.baughman@apex.ai>\r\n\r\n* Add missing fields in setup.py\r\n\r\nSigned-off-by: Pete Baughman <pete.baughman@apex.ai>\r\n\r\n* Rename ament_cmake_*_isolated to ament_cmake_ros_isolated_*\r\n\r\n  - Give a better name so this doesn't seem like the same thing as build isolated vs build merge install\r\n  - Add the explanation of how ROS_DOMAIN_ID is selected in the cmake function documentation\r\n\r\nSigned-off-by: Pete Baughman <pete.baughman@apex.ai>",
+      "files_changed": 18,
+      "additions": 537,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "nuclearsandwich",
+      "date": "2019-04-11T19:26:01Z",
+      "sha": "070c7265354dc11ab04faac3b5ec7bb175b9e5d6",
+      "message": "0.7.0",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "mikaelarguedas",
+      "date": "2017-08-10T23:02:00Z",
+      "sha": "0f9d939bd0fc3b64f9315d3a544a1b23193f3077",
+      "message": "add issue template",
+      "files_changed": 1,
+      "additions": 44,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "dhood",
+      "date": "2017-11-22T01:23:15Z",
+      "sha": "efe7732205f1c16f35805037bfb62ecc4aef7589",
+      "message": "Add definition of ROS_PACKAGE_NAME (#2)\n\n* Specify ROS_PACKAGE_NAME definition for use in logging macros\r\n\r\n* remove license of generated extras file\r\n\r\n* Revert \"remove license of generated extras file\"\r\n\r\nThis reverts commit 57ffcb8497e371dc247ce4e3b30ccb904c3d0827.\r\n\r\n* Fix comment on file source\r\n\r\n* Get package name from package.xml\r\n\r\n* Revert \"Get package name from package.xml\"\r\n\r\nThis reverts commit 244cfc1dc255c9634dbfb80377cd2a8110d9a30b.",
+      "files_changed": 2,
+      "additions": 3,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "esteve",
+      "date": "2017-03-22T17:07:38Z",
+      "sha": "8cf878bd9b2ef21b7bccbf4ed95e0719485104b6",
+      "message": "Export ament_cmake\n\nThis export the `ament_cmake` package to address https://github.com/ros2/rmw_fastrtps/pull/87#issuecomment-288464040",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "docs"
+    }
+  ]
+}

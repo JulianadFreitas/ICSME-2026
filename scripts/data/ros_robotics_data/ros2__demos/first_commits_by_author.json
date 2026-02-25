@@ -1,0 +1,951 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T01:16:01Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros2",
+    "repo": "demos"
+  },
+  "data": [
+    {
+      "author": "JEnoch",
+      "date": "2026-02-20T09:37:04Z",
+      "sha": "feec1e82ad7899592bbb469f945614fd7cb4f7b3",
+      "message": "Add tests isolation in test_dlopen_composition.py.in and test_linktime_composition.py.in (#764)\n\nSigned-off-by: Julien Enoch <julien.e@zettascale.tech>",
+      "files_changed": 2,
+      "additions": 8,
+      "deletions": 2,
+      "commit_type": "test"
+    },
+    {
+      "author": "InvincibleRMC",
+      "date": "2026-02-18T13:23:26Z",
+      "sha": "ab5fce326329d012e07d5be417d21962c53977fb",
+      "message": "Don't use `libopencv-dev` for exec (#760)\n\nSigned-off-by: Michael Carlstrom <rmc@carlstrom.com>",
+      "files_changed": 2,
+      "additions": 10,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "ahcorde",
+      "date": "2024-07-10T12:46:57Z",
+      "sha": "e5dc79917333bb6bc9a3efe02fecb3c214cfacef",
+      "message": "Removed pre-compiler check for opencv3 (#695)\n\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "CursedRock17",
+      "date": "2026-01-15T22:22:59Z",
+      "sha": "59c25b8be0d4f9b832458765da0567e77d4c9d8d",
+      "message": "Switching to example_interfaces (#674)\n\n* Switching to example_interfaces\n\nSigned-off-by: CursedRock17 <mtglucas1@gmail.com>\n\n* Fixing cpplint\n\nSigned-off-by: CursedRock17 <mtglucas1@gmail.com>\n\n* Slight cpplint error\n\nSigned-off-by: CursedRock17 <mtglucas1@gmail.com>\n\n---------\n\nSigned-off-by: CursedRock17 <mtglucas1@gmail.com>\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>\nCo-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>",
+      "files_changed": 69,
+      "additions": 240,
+      "deletions": 222,
+      "commit_type": "docs"
+    },
+    {
+      "author": "wjwwood",
+      "date": "2015-08-04T01:04:12Z",
+      "sha": "58c2f99ed20d231674c5ca78ac9e1a4da1af3ff9",
+      "message": "work in progress for intra process demo",
+      "files_changed": 3,
+      "additions": 115,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mini-1235",
+      "date": "2025-11-11T09:29:46Z",
+      "sha": "2e1c82054adf3145c2d3d2feada1d7463d0e503a",
+      "message": "Update subscription callback signatures (#754)\n\nSigned-off-by: mini-1235 <mauricepurnawan@gmail.com>",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "r-simonelli",
+      "date": "2025-11-06T08:17:14Z",
+      "sha": "c16f9345c25e229ef93421ac9506b4ab1aa3f7cc",
+      "message": "r-simonelli/demos-lifecycle (#750)\n\nImproves documentation for lifecycle nodes by explaining the distinction\nbetween primary and transition states, clarifying the behavior of callbacks,\nand refining the description of the lifecycle listener node.\n\nSigned-off-by: Ruggero Simonelli <ruggero.simonelli@protonmail.com>\nCo-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>",
+      "files_changed": 1,
+      "additions": 53,
+      "deletions": 36,
+      "commit_type": "docs"
+    },
+    {
+      "author": "cardboardcode",
+      "date": "2022-08-18T18:15:25Z",
+      "sha": "dcf8814e04c69f904809c59b0eae28bfc4bb3d48",
+      "message": "Added README.md for dummy_map_server (#572)\n\n* :heavy_plus_sign: :book: Added README.md for dummy_map_server ROS2 package. Verified instructions.\r\n\r\nSigned-off-by: Bey Hao Yun <beyhy94@gmail.com>\r\n\r\n* Update dummy_robot/dummy_map_server/README.md\r\n\r\nDecomposed sentence into smaller sizes.\r\n\r\nCo-authored-by: Audrow Nash <audrow@hey.com>\r\nSigned-off-by: Bey Hao Yun <beyhy94@gmail.com>\r\n\r\n* Update dummy_robot/dummy_map_server/README.md\r\n\r\nReworded.\r\n\r\nCo-authored-by: Audrow Nash <audrow@hey.com>\r\nSigned-off-by: Bey Hao Yun <beyhy94@gmail.com>\r\n\r\n* :hammer: Modified use of --packages-select to --packages-up-to based on feedback.\r\n\r\nSigned-off-by: Bey Hao Yun <beyhy94@gmail.com>\r\n\r\n* :hammer: Modified README.md further to adhere to feedback given.\r\n\r\nSigned-off-by: Bey Hao Yun <beyhy94@gmail.com>\r\n\r\n* :hammer: Modified README.md commands to adhere to higher cross-platform compatibility.\r\n\r\nSigned-off-by: Bey Hao Yun <beyhy94@gmail.com>\r\n\r\n* Update dummy_robot/dummy_map_server/README.md\r\n\r\nCo-authored-by: Audrow Nash <audrow@hey.com>\r\nSigned-off-by: Bey Hao Yun <beyhy94@gmail.com>\r\n\r\nSigned-off-by: Bey Hao Yun <beyhy94@gmail.com>\r\nCo-authored-by: Audrow Nash <audrow@hey.com>",
+      "files_changed": 2,
+      "additions": 90,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Yadunund",
+      "date": "2023-03-13T12:55:04Z",
+      "sha": "825e38e94605d725093096f79dffc1d3a1f30c2c",
+      "message": "Enable document generation using rosdoc2 (#606)\n\n* Fix warnings for lifecycle_py, demo_nodes_py, quality_of_service_demo_py\r\n\r\nSigned-off-by: Yadunund <yadunund@openrobotics.org>",
+      "files_changed": 3,
+      "additions": 14,
+      "deletions": 12,
+      "commit_type": "config"
+    },
+    {
+      "author": "fujitatomoya",
+      "date": "2019-10-02T17:18:31Z",
+      "sha": "f3d61e6b07c7f4d6742dd1c09155c61cdd26a9c0",
+      "message": "Need to specify NodeOption explicitly to allow declaration. (#389)\n\n* specify NodeOption explicitly to allow declaration.\r\n\r\nSigned-off-by: Tomoya.Fujita <Tomoya.Fujita@sony.com>\r\n\r\n* replace deprecated API for parameter event into new API.\r\n\r\nSigned-off-by: Tomoya.Fujita <Tomoya.Fujita@sony.com>\r\n\r\n* fix issue rclcpp#851.\r\n\r\nSigned-off-by: Tomoya.Fujita <Tomoya.Fujita@sony.com>",
+      "files_changed": 2,
+      "additions": 13,
+      "deletions": 19,
+      "commit_type": "code"
+    },
+    {
+      "author": "clalancette",
+      "date": "2017-03-01T19:03:39Z",
+      "sha": "1e9b8469f19fbdc846c30596fa3429036842fb10",
+      "message": "Add support for RGB8 (#116)\n\n* Style cleanup in showimage.cpp.\r\n\r\nJust make the style consistent throughout the file.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@osrfoundation.org>\r\n\r\n* Add rgb8 support to showimage.\r\n\r\nThis is useful so that we can use showimage as a more generic\r\nimage viewer for ROS2 images.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@osrfoundation.org>\r\n\r\n* Make uncrustify happier.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@osrfoundation.org>",
+      "files_changed": 1,
+      "additions": 14,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "mosfet80",
+      "date": "2025-04-08T11:57:39Z",
+      "sha": "9b1db070e21c86d49fba2cce7ce6b0cefed22a28",
+      "message": "Uniform CMAKE min VERSION (#714)\n\ndemo_nodes_cpp/CMakeLists.txt require cmake min version 3.12 other modules cmake 3.5.\nIt is proposed to standardize with version 3.12.\nThis also fixes cmake <3.10 deprecation warnings\n\nSigned-off-by: Andrea <realeandrea@yahoo.it>",
+      "files_changed": 15,
+      "additions": 15,
+      "deletions": 15,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mergify[bot]",
+      "date": "2025-05-08T15:45:59Z",
+      "sha": "713dccaa5a4d030c52bc3ba695e276c395ccf986",
+      "message": "Update README.md (#718) (#719)\n\nThis removes the outdated comment about not using FastDDS for topic monitoring between two machines.\n\n\n\n(cherry picked from commit ad559c0fe89300563dd82fdc958906093cb609e4)\n\nSigned-off-by: jmackay2 <1.732mackay@gmail.com>\nCo-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>\nCo-authored-by: jmackay2 <1.732mackay@gmail.com>",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "cottsay",
+      "date": "2018-11-19T23:43:11Z",
+      "sha": "be2d7bc9b9ab956b4f4fc5b4bab59434dbfcfaae",
+      "message": "Update package maintainer for logging_demo and topic_monitor (#285)\n\nThank you to Deanna for her contributions",
+      "files_changed": 2,
+      "additions": 6,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "khaledgabr77",
+      "date": "2025-05-03T17:57:14Z",
+      "sha": "3b2cedb6d557f11dc67cdd2f3be75a4716380497",
+      "message": "fix typo in docs demo_nodes_cpp (#715)\n\nSigned-off-by: khaledgabr77 <khaledgabr77@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Barry-Xu-2018",
+      "date": "2023-04-13T05:56:41Z",
+      "sha": "a2fb913afe0417f30e74d52e11630b4fa1d50a9c",
+      "message": "Add matched event demo for rclcpp and rclpy (#607)\n\n* Add matched event demo for rclcpp and rclpy\r\n\r\nSigned-off-by: Barry Xu <barry.xu@sony.com>\r\n\r\n* Address comments\r\n\r\nSigned-off-by: Barry Xu <barry.xu@sony.com>\r\n\r\n* Address review comments for cpp\r\n\r\nSigned-off-by: Barry Xu <barry.xu@sony.com>\r\n\r\n* Update demo codes for python\r\n\r\nSigned-off-by: Barry Xu <barry.xu@sony.com>\r\n\r\n* Fix python codes\r\n\r\nSigned-off-by: Barry Xu <barry.xu@sony.com>\r\n\r\n* Extend waiting time for test\r\n\r\nSigned-off-by: Barry Xu <barry.xu@sony.com>\r\n\r\n* Use spin_all to replace spin_some\r\n\r\nSigned-off-by: Barry Xu <barry.xu@sony.com>\r\n\r\n* Make sure executor spin till matched event occur\r\n\r\nSigned-off-by: Barry Xu <barry.xu@sony.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Barry Xu <barry.xu@sony.com>",
+      "files_changed": 7,
+      "additions": 521,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "sloretz",
+      "date": "2017-09-11T04:16:49Z",
+      "sha": "5fe49d05a394ad7e8addb1a13203534dc1fb7abd",
+      "message": "Inherit from rclpy.Node and use rclpy.spin() (#169)",
+      "files_changed": 5,
+      "additions": 75,
+      "deletions": 54,
+      "commit_type": "code"
+    },
+    {
+      "author": "christophebedard",
+      "date": "2021-10-03T22:57:11Z",
+      "sha": "85c3ed082d3b99196786309065070557344a4fac",
+      "message": "Fix use of future in lifecycle demo (#534)\n\n* Fix use of future in lifecycle demo\r\n\r\nSigned-off-by: Christophe Bedard <bedard.christophe@gmail.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "trushant05",
+      "date": "2024-05-16T08:46:16Z",
+      "sha": "4a18995bb7ef52ff40c7892005dca3a68d64fff0",
+      "message": "[intra_process_demo] executable name in README.md fix-up (#690)\n\nSigned-off-by: Trushant Adeshara <150821956+Trushant-Adeshara-UM@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "ci"
+    },
+    {
+      "author": "mikaelarguedas",
+      "date": "2017-01-05T16:28:29Z",
+      "sha": "4153a0c0dbb601b8d753ee0b8bf4cd43f7a4f1ae",
+      "message": "dependency order (#104)",
+      "files_changed": 3,
+      "additions": 19,
+      "deletions": 23,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jmackay2",
+      "date": "2024-05-06T12:20:07Z",
+      "sha": "eec5c12ea95dfaaa230f9f1a8e9cff9b09dde5d5",
+      "message": "Update dummy_sensors readme to echo the correct topic (#675)\n\nSigned-off-by: jmackay2 <1.732mackay@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "marcoag",
+      "date": "2024-04-26T15:00:41Z",
+      "sha": "f7311f80bb2290dc2e1d365179a006d3811b8008",
+      "message": "Changelog.\n\nSigned-off-by: Marco A. Gutierrez <marcogg@marcogg.com>",
+      "files_changed": 21,
+      "additions": 63,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Michael Jeronimo",
+      "date": "2020-10-14T16:08:30Z",
+      "sha": "01c49bb7035980bdd81b75b2ce02c254231e7e61",
+      "message": "Update the package.xml files with the latest Open Robotics maintainers (#466)\n\n* Update the package.xml files with the latest Open Robotics maintainers\r\n\r\nSigned-off-by: Michael Jeronimo <michael.jeronimo@openrobotics.org>\r\n\r\n* Add the previous maintainer as author\r\n\r\nSigned-off-by: Michael Jeronimo <michael.jeronimo@openrobotics.org>",
+      "files_changed": 20,
+      "additions": 57,
+      "deletions": 26,
+      "commit_type": "config"
+    },
+    {
+      "author": "FelipeGdM",
+      "date": "2023-12-26T21:43:19Z",
+      "sha": "9918a149f8c1dc65238697619e5feca65db5533e",
+      "message": "Migrate std::bind calls to lambda expressions (#659)\n\n* ♻️ Actions tutorial lambda refactor\r\n\r\nSigned-off-by: Felipe Gomes de Melo <felipegmelo.42@gmail.com>\r\n\r\n* ♻️ Composition nodes lambda refactor\r\n\r\nSigned-off-by: Felipe Gomes de Melo <felipegmelo.42@gmail.com>\r\n\r\n* ♻️ Lifecycle nodes lambda refactor\r\n\r\nSigned-off-by: Felipe Gomes de Melo <felipegmelo.42@gmail.com>\r\n\r\n* ♻️ Logging demo lambda refactor\r\n\r\nSigned-off-by: Felipe Gomes de Melo <felipegmelo.42@gmail.com>\r\n\r\n* ♻️ Image tools lambda refactor\r\n\r\nSigned-off-by: Felipe Gomes de Melo <felipegmelo.42@gmail.com>\r\n\r\n* ♻️  Intra process lambda refactor\r\n\r\nSigned-off-by: Felipe Gomes de Melo <felipegmelo.42@gmail.com>\r\n\r\n* 🎨 Format code\r\n\r\nSigned-off-by: Felipe Gomes de Melo <felipegmelo.42@gmail.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Felipe Gomes de Melo <felipegmelo.42@gmail.com>",
+      "files_changed": 12,
+      "additions": 130,
+      "deletions": 121,
+      "commit_type": "docs"
+    },
+    {
+      "author": "adityapande-1995",
+      "date": "2023-12-16T01:39:09Z",
+      "sha": "69aa0e4d8662b7bd06138462cc328415b3198263",
+      "message": "Revert \"fix loading parameter behavior from yaml file. (#656)\" (#660)\n\nThis reverts commit eed4553af15b2e18ddbc1f956edc8c0d6c23d537.\r\n\r\nSigned-off-by: Aditya Pande <adityapande@google.com>",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 3,
+      "commit_type": "config"
+    },
+    {
+      "author": "AiVerisimilitude",
+      "date": "2023-11-13T22:19:47Z",
+      "sha": "a29e65623e8ace15b8253ab33f19f3d8165c3cfe",
+      "message": "Explicit time conversion (#657)\n\nSigned-off-by: Guilherme Rodrigues <guilherme.rodrigues@ait.ac.at>",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "jrutgeer",
+      "date": "2023-11-08T20:32:54Z",
+      "sha": "cad665e70f55a8cd32ac03a65a23979cfaff37f0",
+      "message": "Added extra documentation and clarifications. (#651)\n\n* Added extra documentation and clarifications.\r\n\r\nSigned-off-by: Johan Rutgeerts <johan.rutgeerts@lancewood.eu>\r\nCo-authored-by: Chris Lalancette <clalancette@gmail.com>",
+      "files_changed": 1,
+      "additions": 80,
+      "deletions": 36,
+      "commit_type": "docs"
+    },
+    {
+      "author": "AliAshkaniNia",
+      "date": "2023-10-12T01:42:35Z",
+      "sha": "49bbb5220f1f7e4f75dd412874ac4ebf8c1960a9",
+      "message": "Replacing old-style C++ allocator with a polymorphic memory resource (PMR) (#653)\n\n* Replaced C++11 allocator with a polymorphic memory resource (pmr)\r\n\r\nSigned-off-by: Ali Ashkani Nia <ashkaninia@gmail.com>",
+      "files_changed": 1,
+      "additions": 20,
+      "deletions": 53,
+      "commit_type": "code"
+    },
+    {
+      "author": "Chen Lihui",
+      "date": "2022-05-02T16:34:56Z",
+      "sha": "a1bc6dcbd71c12dceb33ee69e76b455b30f2177f",
+      "message": "add a demo of content filter listener (#557)\n\n* add a demo of content filter listener\r\n\r\nSigned-off-by: Chen Lihui <lihui.chen@sony.com>\r\n\r\n* add warn message if content filter is not supported by DDS\r\n\r\nSigned-off-by: Chen Lihui <lihui.chen@sony.com>\r\n\r\n* keep `like` to make the demo simple\r\n\r\nand comment that rmw_connextdds not supported currently\r\n\r\nSigned-off-by: Chen Lihui <lihui.chen@sony.com>\r\n\r\n* remove the macro as it will be removed in the rclcpp\r\n\r\nSigned-off-by: Chen Lihui <lihui.chen@sony.com>\r\n\r\n* use = instead of like\r\n\r\nSigned-off-by: Chen Lihui <lihui.chen@sony.com>\r\n\r\n* address reviews\r\n\r\nSigned-off-by: Chen Lihui <lihui.chen@sony.com>\r\n\r\n* not make this configurable from the cli\r\n\r\nSigned-off-by: Chen Lihui <lihui.chen@sony.com>\r\n\r\n* remove comment and update log output\r\n\r\nSigned-off-by: Chen Lihui <lihui.chen@sony.com>\r\n\r\n* use temperature instead of chatter\r\n\r\nSigned-off-by: Chen Lihui <lihui.chen@sony.com>\r\n\r\n* rename\r\n\r\nSigned-off-by: Chen Lihui <lihui.chen@sony.com>",
+      "files_changed": 8,
+      "additions": 226,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "IamPhytan",
+      "date": "2023-03-09T22:11:49Z",
+      "sha": "6b98f4f7bdaea957bcbacf3e10f7440a4442c652",
+      "message": "[demo_nodes_cpp] Add YAML launch demos for topics (#605)\n\n* [demo_nodes_cpp] Add YAML launch demos for topics\r\n\r\nSigned-off-by: Damien LaRocque <phicoltan@gmail.com>",
+      "files_changed": 2,
+      "additions": 18,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "patrickwasp",
+      "date": "2023-03-09T16:37:13Z",
+      "sha": "19366a0dfd0e6620e2272b3828868b744bd79ba5",
+      "message": "update launch file name format to match documentation (#588)\n\nSigned-off-by: Patrick Wspanialy <patrick.wspanialy@ecoation.com>",
+      "files_changed": 23,
+      "additions": 9,
+      "deletions": 9,
+      "commit_type": "docs"
+    },
+    {
+      "author": "kagibson",
+      "date": "2022-12-07T15:14:15Z",
+      "sha": "c212741529cff5fc3311af6d201bc5758f120540",
+      "message": "Add README's for action_tutorials. (#576)\n\nCo-authored-by: Audrow Nash <audrow@hey.com>",
+      "files_changed": 4,
+      "additions": 149,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "audrow",
+      "date": "2020-05-14T07:03:20Z",
+      "sha": "f77da0374bec07d3227829fdaf784755f7e312ea",
+      "message": "Replace `ros2 msg` command in lifecycle README (#446)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "deepanshubansal01",
+      "date": "2022-10-13T12:28:29Z",
+      "sha": "25f6176add32c826b05f6b5c808b35d640ff7134",
+      "message": "Demo for pre and post set parameter callback support (#565)\n\n* local parameter callback support\r\n\r\nSigned-off-by: deepanshu <deepanshubansal01@gmail.com>",
+      "files_changed": 4,
+      "additions": 210,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ihasdapie",
+      "date": "2022-08-29T23:52:23Z",
+      "sha": "9c4ced3c5be392145312e0c0d3653140a2e29cc0",
+      "message": "Add demo for rclpy parameter client (#566)\n\n* WIP: python examples for async parameter client\r\n\r\nSigned-off-by: Brian Chen <brian.chen@openrobotics.org>\r\n\r\n* reorganize\r\n\r\nSigned-off-by: Brian Chen <brian.chen@openrobotics.org>\r\n\r\n* linting & use tempfile\r\n\r\nSigned-off-by: Brian Chen <brian.chen@openrobotics.org>\r\n\r\n* linting\r\n\r\nSigned-off-by: Brian Chen <brian.chen@openrobotics.org>\r\n\r\n* put async_param_server node in async_param_client\r\n\r\nSigned-off-by: Brian Chen <brian.chen@openrobotics.org>\r\n\r\n* address review comments\r\n\r\nSigned-off-by: Brian Chen <brian.chen@openrobotics.org>\r\n\r\n* delete param demo with static and non-static param\r\n\r\nSigned-off-by: Brian Chen <brian.chen@openrobotics.org>\r\n\r\n* tabs aren't valid yaml\r\n\r\nSigned-off-by: Brian Chen <brian.chen@openrobotics.org>\r\n\r\n* decrease demo complexity\r\n\r\nSigned-off-by: Brian Chen <brian.chen@openrobotics.org>\r\n\r\n* use parameter blackboard\r\n\r\nSigned-off-by: Brian Chen <brian.chen@openrobotics.org>\r\n\r\n* add warning if wait_for_services fails to demo\r\n\r\nSigned-off-by: Brian Chen <brian.chen@openrobotics.org>",
+      "files_changed": 4,
+      "additions": 114,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jacobperron",
+      "date": "2018-10-25T19:58:49Z",
+      "sha": "79b0aa08ac59b785da067fecb9b0b12e5c7b1fd9",
+      "message": "Fix lint warning from invalid escape sequences (#280)\n\nUse raw string for regex pattern to avoid warning.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "paudrow",
+      "date": "2022-01-14T16:22:58Z",
+      "sha": "d02682294cb96eb1ef574bbd21c6c4453e3fb8dd",
+      "message": "0.19.0\n\nSigned-off-by: Audrow Nash <audrow@hey.com>",
+      "files_changed": 46,
+      "additions": 96,
+      "deletions": 26,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ivanpauno",
+      "date": "2019-05-06T20:32:58Z",
+      "sha": "1a4dc3c4f052eefabb56c04ff53b1af06781ce5b",
+      "message": "Corrected publish calls with shared_ptr signature (#327)\n\n* Corrected publish calls with shared_ptr signature\r\n\r\nSigned-off-by: ivanpauno <ivanpauno@ekumenlabs.com>\r\n\r\n* Corrected with PR comments\r\n\r\nSigned-off-by: ivanpauno <ivanpauno@ekumenlabs.com>\r\n\r\n* Changed unique_ptr publish calls\r\n\r\nSigned-off-by: ivanpauno <ivanpauno@ekumenlabs.com>\r\n\r\n* Corrected publish call with unique_ptr in logger_usage_component\r\n\r\nSigned-off-by: ivanpauno <ivanpauno@ekumenlabs.com>\r\n\r\n* Solve linter problems. Corrected pendulum_control demo.\r\n\r\nSigned-off-by: ivanpauno <ivanpauno@ekumenlabs.com>\r\n\r\n* Cleaned allocator_tutorial\r\n\r\nSigned-off-by: ivanpauno <ivanpauno@ekumenlabs.com>\r\n\r\n* Corrected talker_serialized_message.cpp\r\n\r\nSigned-off-by: ivanpauno <ivanpauno@ekumenlabs.com>",
+      "files_changed": 20,
+      "additions": 142,
+      "deletions": 124,
+      "commit_type": "docs"
+    },
+    {
+      "author": "gonzodepedro",
+      "date": "2019-01-08T00:03:26Z",
+      "sha": "bb0caa2fdb34188551da09f74ea1848b0172fc4c",
+      "message": "Do not show freq parameter on help when not necessary (#296)",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "ori155",
+      "date": "2021-11-12T16:20:52Z",
+      "sha": "7f8cd3aac2a179288bf02a412432f43c4d451355",
+      "message": "Fixed typo executor -> executors (#542)\n\nSigned-off-by: Ori <ori155@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "vmayoral",
+      "date": "2021-10-27T12:01:47Z",
+      "sha": "36285f8dd704cfeead1c9a927d5d051fee0b01c8",
+      "message": "Fix typo in demo_nodes_cpp_native package description (#536)\n\nSigned-off-by: Víctor Mayoral Vilches <v.mayoralv@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "Abrar Rahman Protyasha",
+      "date": "2021-08-26T22:31:32Z",
+      "sha": "d9c8dacaeddbb7fd8316b1e2bd9b04160f8c6a2c",
+      "message": "Fixing deprecated subscriber callback warnings (#532)\n\n* Fixing deprecated subscriber callback warnings\r\n\r\nSubscriber callbacks migrated from `SharedPtr` to `ConstSharedPtr`\r\ntypes. This patch affects:\r\n\r\n- Composition\r\n- Intra process\r\n- Lifecycle\r\n- Topic statistics\r\n- Quality of services\r\n- Image tools\r\n- Demo nodes C++\r\n\r\nSigned-off-by: Abrar Rahman Protyasha <abrar@openrobotics.org>\r\n\r\n* Remove `const typename` callback type specifier\r\n\r\n`const` is unnecessary because the messages are being copied regardless,\r\nand `typename` is unnecessary because the callback types are not\r\ntemplated.\r\n\r\nSigned-off-by: aprotyas <aprotyas@u.rochester.edu>\r\n\r\n* Remove `const` callback type specifier\r\n\r\nThese messages are copied anyway, so the `const` specifier is\r\nunnecessary.\r\n\r\nSigned-off-by: aprotyas <aprotyas@u.rochester.edu>",
+      "files_changed": 16,
+      "additions": 20,
+      "deletions": 20,
+      "commit_type": "code"
+    },
+    {
+      "author": "xwnb",
+      "date": "2021-07-23T14:06:39Z",
+      "sha": "630f05374362a0bc3e06b23e21b3c20acf8d1286",
+      "message": "ambigulity: unknown type name 'nullptr_t' (#528)\n\n* ambigulity: unknown type name 'nullptr_t'\r\n\r\nSigned-off-by: xwnb <xwnbzc@outlook.com>",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "mickeyouyou",
+      "date": "2021-05-17T11:51:59Z",
+      "sha": "87ec2bffdef03e55e01e635ddee469e6629fd001",
+      "message": "Update talker_loaned_message.cpp (#518)\n\nfix loan word\r\n\r\nSigned-off-by: zongbao feng <mickeyouou@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "eliasdc",
+      "date": "2021-05-10T21:31:45Z",
+      "sha": "78485c5455d1e8b41c4f56e01a9fd8cf4d554036",
+      "message": "Fix topic_monitor for high publication rate (#461)\n\n* adjust received value based on latest received message (#460)\r\n* sleep the main thread so background threads can do work (#460)\r\n\r\nSigned-off-by: Elias De Coninck <elias@tractonomy.com>",
+      "files_changed": 1,
+      "additions": 10,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "hidmic",
+      "date": "2019-02-27T19:36:58Z",
+      "sha": "c8fcb4d6eef13dbe779fa1f2bc9a7bcf70ddcde7",
+      "message": "Drops legacy launch API usage. (#311)\n\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>",
+      "files_changed": 20,
+      "additions": 388,
+      "deletions": 374,
+      "commit_type": "config"
+    },
+    {
+      "author": "joshua-qnx",
+      "date": "2021-04-29T18:56:25Z",
+      "sha": "4b0959390900fd45cd8a9661cf517d8fcb522455",
+      "message": "Add support for visualizing yuv422 (#499)\n\n* added supported for visualizing yuv422\r\n\r\nSigned-off-by: Joshua Kurien <jkurien@blackberry.com>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "MiguelCompany",
+      "date": "2021-04-06T01:43:24Z",
+      "sha": "4907e8136923186507e10341274b6035884bfee6",
+      "message": "Update demo_nodes_cpp_native to new Fast DDS API (#493)\n\n* Use new API on demo_nodes_cpp_native\r\n\r\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>",
+      "files_changed": 2,
+      "additions": 11,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "asorbini",
+      "date": "2021-03-24T13:31:36Z",
+      "sha": "10764cfbff33e16c16c6e86ddb1ec37ec6dea384",
+      "message": "Replace rmw_connext_cpp with rmw_connextdds (#489)\n\n* Replace rmw_connext_cpp with rmw_connextdds\r\n\r\nSigned-off-by: Andrea Sorbini <asorbini@rti.com>\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 2,
+      "additions": 6,
+      "deletions": 20,
+      "commit_type": "docs"
+    },
+    {
+      "author": "y-okumura-isp",
+      "date": "2020-06-17T15:43:18Z",
+      "sha": "3be50ec4253a73bf8671e2b54637944b219beee7",
+      "message": "Follow API/file name changes (ros2/realtime_support#94) (#451)\n\nSigned-off-by: y-okumura <y-okumura@isp.co.jp>",
+      "files_changed": 4,
+      "additions": 6,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "Prajakta Gokhale",
+      "date": "2019-06-21T13:07:12Z",
+      "sha": "b7581d1d978bf06283f23bbad1419801bf9b9b5c",
+      "message": "Fix armhf build warnings (#372)\n\nFix armhf build warnings caused by incompatible format specifiers.\r\n\r\nSigned-off-by: Prajakta Gokhale <prajaktg@amazon.com>",
+      "files_changed": 2,
+      "additions": 8,
+      "deletions": 7,
+      "commit_type": "code"
+    },
+    {
+      "author": "Anas Abou Allaban",
+      "date": "2020-07-09T21:13:02Z",
+      "sha": "ab95bef2d44a952f1690acd872585ed9ad0f177b",
+      "message": "Remove deprecated warning (#459)\n\nSigned-off-by: Anas Abou Allaban <aabouallaban@pm.me>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "dirk-thomas",
+      "date": "2015-07-15T22:47:26Z",
+      "sha": "5256a6b6e5ec5deaf3deb861775f66406263539d",
+      "message": "add LICENSE and CONTRIBUTING.md files",
+      "files_changed": 2,
+      "additions": 215,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ShotaAk",
+      "date": "2020-05-14T16:00:57Z",
+      "sha": "48ae30a8d81b9630790c02af1f8c0ce37d7c4d8a",
+      "message": "Fix typo (#445)\n\nSigned-off-by: ShotaAk <s.aoki@rt-net.jp>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "claireyywang",
+      "date": "2020-04-30T22:59:49Z",
+      "sha": "f882bf9ff701541c2b8b048edaf2b3d2a2bd2816",
+      "message": "add changelog\n\nSigned-off-by: claireyywang <clairewang@openrobotics.org>",
+      "files_changed": 19,
+      "additions": 102,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "p-vega",
+      "date": "2020-04-27T20:17:49Z",
+      "sha": "359ffb40dc8e3277276770020808a77b69d4fd61",
+      "message": "Add XML and YAML launch scripts for dummy_robot_bringup (#440)\n\n* Add XML and YAML launch scripts for dummy_robot_bringup\r\n\r\nSigned-off-by: Pablo Vega <epvega@gmail.com>\r\n\r\n* Modify YAML launch script to use parameters\r\n\r\nUse parameters instead of command line arguments for\r\nrobot_state_publisher configuration\r\n\r\nSigned-off-by: Pablo Vega <epvega@gmail.com>\r\n\r\n* Change single quotes for double quotes on xml launch script parameter name\r\n\r\nSigned-off-by: Pablo Vega <epvega@gmail.com>",
+      "files_changed": 2,
+      "additions": 28,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "Karsten1987",
+      "date": "2016-10-04T21:58:16Z",
+      "sha": "a42bbe6a4b3fc7fc0d814dc8164350aaf4e82760",
+      "message": "(fix) quickfix for printing error message on windows (#81)\n\n* (fix) quickfix for printing error message on windows\r\n\r\n* (fix) keep try/catch short and uncrustify",
+      "files_changed": 3,
+      "additions": 23,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "jaisontj",
+      "date": "2020-04-01T18:30:45Z",
+      "sha": "df9a85e41737b65a04cf2c8c4357bea71ae85384",
+      "message": "Demo to show the working of the incompatible_qos event callbacks. (#416)\n\nSigned-off-by: Jaison Titus <jaisontj92@gmail.com>\r\nSigned-off-by: Miaofei <miaofei@amazon.com>\r\nCo-authored-by: Miaofei <miaofei@amazon.com>",
+      "files_changed": 7,
+      "additions": 343,
+      "deletions": 16,
+      "commit_type": "docs"
+    },
+    {
+      "author": "SteveMacenski",
+      "date": "2020-01-23T13:14:57Z",
+      "sha": "cfb9013c307a8ebe910d82ba76a46b5fe1ced0f1",
+      "message": "change the logging demo test for updated console format (#421)\n\nSigned-off-by: stevemacenski <stevenmacenski@gmail.com>",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "youtalk",
+      "date": "2018-07-10T15:12:41Z",
+      "sha": "e3b99c4cfdbbb50455d4a1fab17324497f774c0d",
+      "message": "Fix typo (#268)\n\n* Fix typo\r\n\r\n* Fix comments",
+      "files_changed": 4,
+      "additions": 8,
+      "deletions": 8,
+      "commit_type": "docs"
+    },
+    {
+      "author": "nuclearsandwich",
+      "date": "2018-12-07T19:12:39Z",
+      "sha": "f2a1d9f5fe694a11fb42f3c036dacd130141ac0e",
+      "message": "0.6.0",
+      "files_changed": 30,
+      "additions": 103,
+      "deletions": 16,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mjcarroll",
+      "date": "2018-04-26T15:18:15Z",
+      "sha": "8eebf5ae73cfff3f7046b4758e039a553514edac",
+      "message": "Change #if to #ifdef",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "rotu",
+      "date": "2019-10-24T03:25:19Z",
+      "sha": "8b6ee3419b3b17bf1e5b61bb93d0bc4918c6de1c",
+      "message": "Don't redefine add_dependencies (#408)\n\nrosidl defines `add_dependencies`, and cmake will gladly redefine functions without a warning. If you have a multi-project CMake tree, this can lead to weirdness\r\n\r\nCMake Error at src/ros2/demos/demo_nodes_cpp/CMakeLists.txt:42 (target_compile_definitions):\r\n  target_compile_definitions called with non-compilable target type\r\nCall Stack (most recent call first):\r\n  install/share/rosidl_typesupport_cpp/cmake/rosidl_typesupport_cpp_generate_interfaces.cmake:129 (add_dependencies)\r\n  install/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)\r\n  install/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)\r\n  src/ros2/demos/logging_demo/CMakeLists.txt:21 (rosidl_generate_interfaces)\r\n\r\nSigned-off-by: Dan Rose <dan@digilabs.io>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 5,
+      "commit_type": "docs"
+    },
+    {
+      "author": "BMarchi",
+      "date": "2019-10-22T20:19:55Z",
+      "sha": "6c4323261c335426af871a4d67f4025752c45417",
+      "message": "Fix burguer mode parameter typo in help text (#406)\n\nSigned-off-by: Brian Ezequiel Marchi <brian.marchi65@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "pbaughman",
+      "date": "2019-10-21T21:00:51Z",
+      "sha": "bf679d78909e11bb9d416bf80b1745c5d8d39a04",
+      "message": "Replace ready_fn with ReadyToTest action (#404)\n\nSigned-off-by: Pete Baughman <pete.baughman@apex.ai>",
+      "files_changed": 14,
+      "additions": 42,
+      "deletions": 41,
+      "commit_type": "code"
+    },
+    {
+      "author": "alsora",
+      "date": "2019-10-21T20:47:26Z",
+      "sha": "a92aeb21d4e36e3247bfe56d6f2898165ec15cf1",
+      "message": "remove intra-process manager impl (#382)\n\nSigned-off-by: Soragna, Alberto <alberto.soragna@gmail.com>",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "maryaB-osr",
+      "date": "2019-09-03T17:53:00Z",
+      "sha": "97651912ebad439a6bc62c34671cad6a5bfee785",
+      "message": "Add warning about Fast-RTPS (#387)\n\nissue #365\r\n\r\nAlso fixed typo \"Publishing a messages\" > \"Publishing a message\"\r\n\r\nSigned-off-by: maryaB-osr <marya@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Siddharth Kucheria",
+      "date": "2019-07-29T23:06:24Z",
+      "sha": "86f16deb442932304ea2944d4a9d80d21db73e48",
+      "message": "Demos using composition (#375)\n\n* demos now using composition\r\n\r\nSigned-off-by: Siddharth Kucheria <kucheria@usc.edu>",
+      "files_changed": 25,
+      "additions": 978,
+      "deletions": 899,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mm318",
+      "date": "2019-06-21T20:45:30Z",
+      "sha": "f78dcc981cc783aad162e2a8530a7aa23c4fda21",
+      "message": "Add interactive quality of service demos (#371)\n\n* add interactive demos that demonstrate qos\r\n\r\nSigned-off-by: Miaofei <miaofei@amazon.com>\r\n\r\n* update documentation\r\n\r\nSigned-off-by: Miaofei <miaofei@amazon.com>\r\n\r\n* refactor to use common code\r\n\r\nSigned-off-by: Miaofei <miaofei@amazon.com>\r\n\r\n* update documentation\r\n\r\nSigned-off-by: Miaofei <miaofei@amazon.com>\r\n\r\n* fix linter issues\r\n\r\nSigned-off-by: Miaofei <miaofei@amazon.com>\r\n\r\n* avoid use of raw pointers\r\n\r\nSigned-off-by: Miaofei <miaofei@amazon.com>",
+      "files_changed": 11,
+      "additions": 767,
+      "deletions": 70,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Cameron Evans",
+      "date": "2019-06-10T18:49:18Z",
+      "sha": "df5ec3a477c683bbaf9b3a2ec064680a0d36829d",
+      "message": "Fixes lifecycle_service_client namespace (#369)\n\nThe lifecycle demo works as expected with the following commands.\r\nterminal 1:\r\n```\r\nros2 run lifecycle lifecycle_talker\r\n```\r\nterminal 2:\r\n```\r\nros2 run lifecycle lifecycle_service_client\r\n```\r\n\r\nlifecycle_service_client creates clients for\r\n/lc_talker/get_state\r\n/lc_talker/change_state\r\n\r\nBy providing topic names starting with '/', the clients do not automatically\r\nprepend the current namespace. So, the following did not work as expected.\r\nterminal 1:\r\n```\r\nros2 run lifecycle lifecycle_talker __ns:=/foo\r\n```\r\nterminal 2:\r\n```\r\nros2 run lifecycle lifecycle_service_client __ns:=/foo\r\n```\r\nResults in the error:\r\n```\r\n[ERROR] [foo.lc_client]: Service /lc_talker/change_state is not available.\r\n```\r\n\r\nAfter removing the leading '/' from the lifecycle_service_client topic names,\r\nthe demo works as expected when providing a namespace.\r\n\r\nSigned-off-by: cevans87 <c.d.evans87@gmail.com>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "emersonknapp",
+      "date": "2019-03-19T19:38:51Z",
+      "sha": "2da5a007dc68b1b9f5abc3966a6756ef7115089c",
+      "message": "Remove unused lambda capture (#315)\n\nSigned-off-by: Emerson Knapp <eknapp@amazon.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "josephduchesne",
+      "date": "2019-01-10T10:57:16Z",
+      "sha": "946947702237b540db5ca1d5147b84ceedc8c624",
+      "message": "Added serialized listener demo for python (#287)\n\n* Added serialized listener demo for python\r\n\r\n* Fixed nitpicks",
+      "files_changed": 2,
+      "additions": 51,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "sgvandijk",
+      "date": "2018-12-07T00:40:02Z",
+      "sha": "855e99ff20ccde37764e47321937dd7b8e057ee4",
+      "message": "Prevent frame going out of scope when converting RGB -> BGR (#288)",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "testkit",
+      "date": "2018-06-19T02:16:43Z",
+      "sha": "6ef84cd227575b026523aed7e927eaee11c59600",
+      "message": " Fix potiential nullptr dereferenced issue in demo_nodes_cpp (#242)\n\n*   Fix potiential nullptr dereferenced issue in demo_nodes_cpp\r\n  Edit based on comments about nullptr, blank space, redundent\r\n  rcutils_cli_option_exist() calling.\r\n  Fix the similar bug in topics/listener.cpp, topics/talker.cpp\r\n\r\n* Linter fixup",
+      "files_changed": 5,
+      "additions": 17,
+      "deletions": 10,
+      "commit_type": "docs"
+    },
+    {
+      "author": "kev-the-dev",
+      "date": "2018-06-26T23:29:51Z",
+      "sha": "03ee0e0963ecb0990742eaeee22b334c11b16722",
+      "message": "Convert launch files to new style (#262)\n\n* Convert launch files to new style\r\n\r\nin dummy_robot_bringup and lifecycle\r\n\r\n* Change launch file extension to .launch.py",
+      "files_changed": 4,
+      "additions": 58,
+      "deletions": 82,
+      "commit_type": "code"
+    },
+    {
+      "author": "dhood",
+      "date": "2016-05-25T01:46:12Z",
+      "sha": "82bbf8fefafcfed5f9bf8e844821ab81b564f1bf",
+      "message": "Ensure using correct rmw implementation in tests (#66)\n\n* Use RCL_ASSERT_RMW_ID_MATCHES to ensure correct rmw implementation is being used\r\n\r\n* Add ConsoleOuput handler so error messages can be seen\r\n\r\n* Order imports alphabetically",
+      "files_changed": 4,
+      "additions": 15,
+      "deletions": 7,
+      "commit_type": "docs"
+    },
+    {
+      "author": "gbiggs",
+      "date": "2018-01-11T12:13:40Z",
+      "sha": "bfd63e19dbcecd77febd8f1dea573a6d3e047d94",
+      "message": "Fix comments for state callbacks (#221)\n\n* Fix comments for state callbacks\r\n\r\n* Make comment match state name exactly",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ThoGit",
+      "date": "2018-01-02T16:55:17Z",
+      "sha": "7009e76b8febcb52546102e6c228a47700be2871",
+      "message": "Fix pendulum inertia in physic model.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "lucasw",
+      "date": "2017-11-28T00:40:53Z",
+      "sha": "bb9a55bfa743e1cd051898daadfd55d995ab8e7f",
+      "message": "Support bgra8 (#195)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "tfoote",
+      "date": "2017-11-17T01:27:27Z",
+      "sha": "25ebb493e16df93ac844c630911ea8bda4470a2a",
+      "message": "updating to use new time source logic (#186)\n\nupdating to use new time source logic",
+      "files_changed": 3,
+      "additions": 18,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "fmrico",
+      "date": "2017-07-11T03:34:22Z",
+      "sha": "76b14a238e0770f6cb2a0d4b5d8f9612e1a3fed5",
+      "message": "add namespace to some existing functions #37 (#148)\n\n* add namespace to some existing functions #37\r\n\r\n* Fixed typo rclutils -> rcutils",
+      "files_changed": 5,
+      "additions": 15,
+      "deletions": 15,
+      "commit_type": "code"
+    },
+    {
+      "author": "Kukanani",
+      "date": "2017-05-22T21:41:04Z",
+      "sha": "31b48cdf89eac4ab211dacac58b10022db48e2cd",
+      "message": "Fixed incorrect image size in watermark and image view nodes (#129)\n\ncv::Mat constructor takes (# of rows, # of cols), which is (height, width) instead of the previously used (width, height).\r\n\r\nThis fix causes images and watermarks to look right when running demos like image_pipeline_all_in_one.",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Theosakamg",
+      "date": "2017-04-10T21:35:18Z",
+      "sha": "0f35af87afcce5fa89e3dbcc1dd5ac641ead2364",
+      "message": "Fix std::sin call (#125)\n\n* Fix #124\r\n\r\n* use the C++ version of the math header",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Matt Hansen",
+      "date": "2017-02-08T21:48:49Z",
+      "sha": "20656e100d6fc9b0f293424fc853cdc4424ad056",
+      "message": "Switched producer and consumer node names (#112)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "rohbotics",
+      "date": "2016-12-21T21:10:23Z",
+      "sha": "90b9a5544631341526e4a29aad3bf2a5686e9a9b",
+      "message": "Merge pull request #103 from rohbotics/master\n\nPrint out errors reported in the result of set parameter",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Rohan Agrawal",
+      "date": "2016-12-21T17:59:07Z",
+      "sha": "948ca1ef6b228e7aea94eff2b6b761ea0b2c2bfc",
+      "message": "print out errors reported the result of set parameter",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Sarcasm",
+      "date": "2016-12-17T10:17:28Z",
+      "sha": "27377a59d656c0f99f881740659541b42a4d8c27",
+      "message": "use new rclcpp::literals namespace (#87)\n\n* use new rclcpp::literals namespace\r\n\r\n* add NOLINT to 'using namespace rclcpp::literals'\r\n\r\n* use std::chrono_literals\r\n\r\n* using chrono literals",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "codebot",
+      "date": "2016-07-11T02:21:31Z",
+      "sha": "9b69be80e971d88bf53968e2f4e3876c88d9949b",
+      "message": "add conversion string for 32-bit floating-point images to showimage, so it can render depth images from the Astra",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "harin55",
+      "date": "2016-08-26T06:35:32Z",
+      "sha": "6934990b2bd8ee7267f2c1fd610c88c39dd0a63c",
+      "message": "fix missing header\n\nThe use of `M_PI` requires the standard library math.h",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "jacquelinekay",
+      "date": "2015-08-22T01:40:11Z",
+      "sha": "19e5bbeacb86a8976527778ac7b7bc56451ce59f",
+      "message": "Merge pull request #7 from ros2/realtime_demo\n\nMinimal implementation of realtime control demo",
+      "files_changed": 11,
+      "additions": 813,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Jackie Kay",
+      "date": "2015-08-06T23:30:04Z",
+      "sha": "b603bfe739e2021ec7b64a0f34c349e02a57377d",
+      "message": "fix stringstream syntax error",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "gerkey",
+      "date": "2015-12-18T17:13:24Z",
+      "sha": "b4291d192a14f756854390da563e587a4b08c5b8",
+      "message": "Merge pull request #51 from ros2/test_fix_hack\n\nAdd delay to pendulum_teleop",
+      "files_changed": 3,
+      "additions": 44,
+      "deletions": 1,
+      "commit_type": "test"
+    },
+    {
+      "author": "esteve",
+      "date": "2015-07-30T16:24:09Z",
+      "sha": "78ed29cb0116d3eb7dcf8c6fbefdbd24bc9c3c10",
+      "message": "Added showimage executable",
+      "files_changed": 4,
+      "additions": 72,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Esteve Fernandez",
+      "date": "2015-10-14T22:12:30Z",
+      "sha": "cefcefd0ad5c1163a43291daa13bf134efa64a21",
+      "message": "Replaced create_subscription_with_unique_ptr_callback with create_subscription",
+      "files_changed": 3,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    }
+  ]
+}

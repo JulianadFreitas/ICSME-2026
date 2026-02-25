@@ -1,0 +1,391 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T10:48:52Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros2",
+    "repo": "sros2"
+  },
+  "data": [
+    {
+      "author": "ahcorde",
+      "date": "2024-07-22T20:54:47Z",
+      "sha": "22f9e97f5c3d97571772543e3c2aede9010ae9af",
+      "message": "Give more time to generate policies in tests (#323)\n\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "fujitatomoya",
+      "date": "2024-05-08T20:09:45Z",
+      "sha": "1a4257d5f2b7f260900286c6722c26904ffdabe3",
+      "message": "[DOC] add `--no-daemon` and `--spin-time` explanation in readme. (#307)\n\n* add `--no-daemon` and `--spin-time` explanation in readme.\r\n* increase `--spin-time` from 3 to 4 seconds based on CI.\r\n\r\n---------\r\n\r\nSigned-off-by: Tomoya Fujita <Tomoya.Fujita@sony.com>",
+      "files_changed": 3,
+      "additions": 21,
+      "deletions": 12,
+      "commit_type": "docs"
+    },
+    {
+      "author": "dependabot[bot]",
+      "date": "2025-07-31T07:05:14Z",
+      "sha": "1ee43aa979c80411fe5f6ba2e30db7033b00cbc5",
+      "message": "🛠️ Bump codecov/codecov-action from 4 to 5 (#359)\n\n* 🛠️ Bump codecov/codecov-action from 4 to 5\n\nBumps [codecov/codecov-action](https://github.com/codecov/codecov-action) from 4 to 5.\n- [Release notes](https://github.com/codecov/codecov-action/releases)\n- [Changelog](https://github.com/codecov/codecov-action/blob/main/CHANGELOG.md)\n- [Commits](https://github.com/codecov/codecov-action/compare/v4...v5)\n\n---\nupdated-dependencies:\n- dependency-name: codecov/codecov-action\n  dependency-version: '5'\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\n\n* file argument is now files\n\nSigned-off-by: Mikael Arguedas <mikael.arguedas@gmail.com>\n\n---------\n\nSigned-off-by: dependabot[bot] <support@github.com>\nSigned-off-by: Mikael Arguedas <mikael.arguedas@gmail.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>\nCo-authored-by: Mikael Arguedas <mikael.arguedas@gmail.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "ci"
+    },
+    {
+      "author": "InvincibleRMC",
+      "date": "2025-12-09T09:45:59Z",
+      "sha": "cbc1ecb5d57ec4d4e046c873afdfc32bfa7f1caa",
+      "message": "Remove importlib (#368)\n\nSigned-off-by: Michael Carlstrom <rmc@carlstrom.com>",
+      "files_changed": 3,
+      "additions": 3,
+      "deletions": 24,
+      "commit_type": "config"
+    },
+    {
+      "author": "mikaelarguedas",
+      "date": "2017-06-17T03:25:20Z",
+      "sha": "b4325d83ef5b9d57b025da00333b1f6179175675",
+      "message": "Add tools for security files generation (#3)\n\n* skeleton\r\n\r\n* creating repos file to simplify installation\r\n\r\n* add some warning text about work-in-progress\r\n\r\n* docs\r\n\r\n* create ca cert/key and create and sign governance file\r\n\r\n* skeleton for creating keys\r\n\r\n* signing skeleton\r\n\r\n* key generation appears to be starting to work\r\n\r\n* docs\r\n\r\n* installation docs\r\n\r\n* doc formatting\r\n\r\n* fix vcs import line\r\n\r\n* docs: fix vcs import line again\r\n\r\n* doc: add more apt packages to install\r\n\r\n* multi-machine demo docs. add missing dependency\r\n\r\n* fix doc\r\n\r\n* style\r\n\r\n* update rmw_implementation branch\r\n\r\n* remove unused code\r\n\r\n* use .cnf for config files\r\n\r\n* parse policies.yaml and set access control\r\n\r\n* add policies.yaml file example\r\n\r\n* if no policy found: allow everything\r\n\r\n* add create_permissions verb\r\n\r\n* added cpp talker listener permissions\r\n\r\n* update readme to generate permissions\r\n\r\n* README typos and sugar\r\n\r\n* fix branch name on ros/geometry2\r\n\r\n* doc fixup\r\n\r\n* a few minor tweaks to allow overwriting of permissions files and minor doc changes\r\n\r\n* trivial tweak to rename subparser\r\n\r\n* create wildcard placeholder permissions file when creating key\r\n\r\n* pin down rclcpp version\r\n\r\n* Sros2 demo (#2)\r\n\r\n* update sros2 repo\r\n\r\n* add dockerfile for demo\r\n\r\n* add test in docker instructions\r\n\r\n* use sed to knock out unused rmw and fastrtps\r\n\r\n* add windows instructions\r\n\r\n* checkout master branch from sros2 repository\r\n\r\n* trivial doc fix\r\n\r\n* modify instructions to show how to recursively clone fastrtps so the build will work\r\n\r\n* trivial edit to readme\r\n\r\n* fix code block in doc\r\n\r\n* pull repos file from master branch\r\n\r\n* use master branch of c_utilities\r\n\r\n* add tests\r\n\r\n* fix style violations\r\n\r\n* fixup comments in examples access control policies\r\n\r\n* update repos file and dependencies in dockerfile\r\n\r\n* update install rule to match new file location\r\n\r\n* build in isolation\r\n\r\n* remove unnecessary files\r\n\r\n* rename security environment variables\r\n\r\n* Sros2 dirk (#4)\r\n\r\n* remove redundant pep257 test\r\n\r\n* copy existing script into multiple modules\r\n\r\n* use ros2cli\r\n\r\n* style and stuff\r\n\r\n* make argcomplete optional\r\n\r\n* typo\r\n\r\n* use lambda when can't import argcomplete\r\n\r\n* split imports in case only one of them can be found\r\n\r\n* flake8 doesnt like lambdas\r\n\r\n* add back pep257\r\n\r\n* update readme\r\n\r\n* udate Dockerfile\r\n\r\n* general docs improvements\r\n\r\n* fix description in setup.py\r\n\r\n* remove TODOs before merging\r\n\r\n* remove reference to sros2.repos file and fixup docker exec command",
+      "files_changed": 23,
+      "additions": 1268,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "clalancette",
+      "date": "2020-06-19T12:22:37Z",
+      "sha": "3b6d145f20344301f056f3077b3a5c25bd6ae932",
+      "message": "Add pytest.ini so local tests don't display warning (#224)\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "mosfet80",
+      "date": "2025-05-29T14:52:27Z",
+      "sha": "edaaf8f0c9a87aa6f6af5063d19aa4e7f4406567",
+      "message": "Update CMakeLists.txt (#344)\n\nSigned-off-by: mosfet80 <10235105+mosfet80@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "ci"
+    },
+    {
+      "author": "cottsay",
+      "date": "2021-01-28T21:46:31Z",
+      "sha": "2b520b9912a585fbae5ce5bcaa64d892d50194ac",
+      "message": "Declare missing dependency on python3-importlib-resources (#249)\n\nSigned-off-by: Scott K Logan <logans@cottsay.net>\r\nCo-authored-by: Mikael Arguedas <mikael.arguedas@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "cdisco",
+      "date": "2025-06-27T07:20:46Z",
+      "sha": "0bc98988baa76c8793bc728c57a30cfa19edd2ae",
+      "message": "update utilities to pass instance not class of ec.SECP256R1 (#352)\n\nSigned-off-by: Claudio Discepola <c_disco@hotmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Yadunund",
+      "date": "2023-03-13T12:53:44Z",
+      "sha": "85c1f21afeb93dac137edc4c3a961a376f5ca47c",
+      "message": "Make type of get_package_share_directory apparent for sphinx (#284)\n\nSigned-off-by: Yadunund <yadunund@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "marcoag",
+      "date": "2024-04-29T08:00:46Z",
+      "sha": "1b3c9dcdc71d1d583a80daa0dbaf0d67f6b2902b",
+      "message": "Changelog.\n\nSigned-off-by: Marco A. Gutierrez <marcogg@marcogg.com>",
+      "files_changed": 2,
+      "additions": 6,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "BorisBoutillier",
+      "date": "2023-05-15T14:33:37Z",
+      "sha": "352b9278cc21aa10b0ee6776e15cc703784074c7",
+      "message": "Fix SSH commands after issues founf in testing (#286)\n\nSigned-off-by: Boris Boutillier <boris.boutillier@gmail.com>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 6,
+      "commit_type": "docs"
+    },
+    {
+      "author": "paudrow",
+      "date": "2022-05-19T21:00:11Z",
+      "sha": "c40c70635773e3d2c9d2965c9e4008cf38f6a069",
+      "message": "0.11.0 (#280)\n\nSigned-off-by: Audrow Nash <audrow@hey.com>",
+      "files_changed": 5,
+      "additions": 9,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jacobperron",
+      "date": "2019-01-11T01:11:29Z",
+      "sha": "9efd4e05d6032279798277678ddfbef998ee91c8",
+      "message": "Add generate_permissions verb + update policy definition to support services and actions (#71)\n\n* Add generate permissions security command line\r\n\r\nGenerate an sros2 yaml permissions file with the permissions of every visible node\r\non the dds network.\r\n\r\nAdd custom service security to sros2\r\n\r\nExample: run the minimal_publisher_lambda node\r\nExecute: `ros2 security generate_permissions node_policies.yaml`\r\n\r\nIt will create the following file in the current directory:\r\n```\r\n/minimal_publisher:\r\n  services:\r\n    /minimal_publisher/describe_parameters:\r\n      allows:\r\n      - request\r\n      - reply\r\n      .\r\n      .\r\n      .\r\n  topics:\r\n    /parameter_events:\r\n      allows:\r\n      - publish\r\n      - subscribe\r\n    /topic:\r\n      allows:\r\n      - publish\r\n```\r\n\r\ncr https://code.amazon.com/reviews/CR-3943967\r\n\r\n* Proposed policy definition changes\r\n\r\nIssue: services and actions are not considered in the policy yaml\r\ndefinition.\r\nSolution: Add ipc types (services and actions)\r\n\r\nIssue: access values are strings with p, s, or ps in order. This is not\r\ndescriptive and difficult to scale should more permissions become necessary.\r\nSolution: Either change the parsing of the string or change the yaml to\r\nbe more flexible and descriptive for users.\r\n\r\nThe proposed changes include:\r\n* Access value is a list, not a string\r\n* Add ipc types such as actions and services\r\n* Access values are no longer shorthand p or s, but publish/subscribe\r\n\r\nAmend policy definition with verbose ROS ipc types",
+      "files_changed": 5,
+      "additions": 245,
+      "deletions": 55,
+      "commit_type": "docs"
+    },
+    {
+      "author": "KeisukeShima",
+      "date": "2021-09-13T13:31:41Z",
+      "sha": "7b895bac1c8a3272bde843289c2b448aac9593e5",
+      "message": "Fix variables in sros2_cmake (#274)\n\nSigned-off-by: Keisuke Shima <19993104+KeisukeShima@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "ci"
+    },
+    {
+      "author": "hidmic",
+      "date": "2019-12-06T21:06:14Z",
+      "sha": "863f48c3ff6ddc6228f88254ec7934cca4999359",
+      "message": "Use ros2cli.node.NodeStrategy consistently. (#173)\n\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "asorbini",
+      "date": "2021-03-11T19:09:17Z",
+      "sha": "a02492f91e9747341b0c9d3822b4b86e5de2dfcb",
+      "message": "Enable topic \"ros_discovery_info\" for rmw_connextdds (#253)\n\n* Enable ros_discovery_info for rmw_connextdds\r\n\r\nSigned-off-by: Andrea Sorbini <asorbini@rti.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "kyrofa",
+      "date": "2019-06-13T13:15:08Z",
+      "sha": "7b6e67568e88f3e55154589e5540f8295187d93d",
+      "message": "Add tests for list_keys verb (#123)\n\n* Add tests for list_keys verb\r\n\r\nAlso ensure list_keys properly handles a non-existent keystore.\r\n\r\nSigned-off-by: Kyle Fazzari <kyle@canonical.com>\r\n\r\n* Use api instead of commands for non-list_keys verbs\r\n\r\nSigned-off-by: Kyle Fazzari <kyle@canonical.com>\r\n\r\n* Flip import order for flake8\r\n\r\nSigned-off-by: Kyle Fazzari <kyle@canonical.com>\r\n\r\n* Make sure error message is common between platforms\r\n\r\nSigned-off-by: Kyle Fazzari <kyle@canonical.com>",
+      "files_changed": 2,
+      "additions": 66,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "j-rivero",
+      "date": "2020-07-30T20:31:33Z",
+      "sha": "219dd9fbd7d27b55e131648eb2408a50859983d4",
+      "message": "Add scope parameter (#230)\n\nSigned-off-by: Jose Luis Rivero <jrivero@osrfoundation.org>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "ruffsl",
+      "date": "2018-12-05T08:44:35Z",
+      "sha": "ea198c0a875b146aac6b62ab3d5d8a30ccc1ca82",
+      "message": "Add example xml profile and transform\nThis profile is language agnostic, and transforms can be added for more transports",
+      "files_changed": 4,
+      "additions": 282,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "ivanpauno",
+      "date": "2019-05-30T21:24:52Z",
+      "sha": "6c607b91be12f2d399cfd78620b0ac54fd945bab",
+      "message": "Add svn installation instructions (#115)\n\n* Add svn installation instructions\r\n\r\nSigned-off-by: ivanpauno <ivanpauno@ekumenlabs.com>\r\n\r\n* Correct spelling\r\n\r\nSigned-off-by: ivanpauno <ivanpauno@ekumenlabs.com>",
+      "files_changed": 1,
+      "additions": 12,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "dirk-thomas",
+      "date": "2017-06-17T15:23:05Z",
+      "sha": "68f3929adb211d1866ed5d5eb929d99056f6fe8e",
+      "message": "fix wrong imports",
+      "files_changed": 5,
+      "additions": 5,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "nuclearsandwich",
+      "date": "2019-01-15T23:41:54Z",
+      "sha": "558b12c2ae935ff764d1a0f0a6fa73c64a70d00e",
+      "message": "0.6.1",
+      "files_changed": 3,
+      "additions": 8,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mjcarroll",
+      "date": "2018-11-19T15:58:14Z",
+      "sha": "7553561d1e844e7dddb25d6f73f85e18785b4c30",
+      "message": "Update package maintainer for sros2.",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "Peter Baughman",
+      "date": "2019-09-26T20:48:51Z",
+      "sha": "fc2d8597a1f00f58bd376b0cd5829374fcc11d21",
+      "message": "Fix test_policy_to_permissions test failing when there's no internet (#158)\n\n* Install an XML catalog so we can look this schema up locally\r\n\r\nSigned-off-by: Pete Baughman <pete.baughman@apex.ai>\r\n\r\n* Mangle the XML_CATALOG_FILE when you import sros2\r\n\r\n  - This changes a test-only fix into a always fix\r\n  - Make the path into a URL instead of just a local file path\r\n\r\nSigned-off-by: Pete Baughman <pete.baughman@apex.ai>\r\n\r\n* Disable lxml2 resource lookup over the internet for tests\r\n\r\nSigned-off-by: Pete Baughman <pete.baughman@apex.ai>\r\n\r\n* Remove trailing slash from path\r\n\r\n  - This should fix the windows CI job\r\n\r\nSigned-off-by: Pete Baughman <pete.baughman@apex.ai>\r\n\r\n* Add README.md explaining where the cataloged schema comes from\r\n\r\nSigned-off-by: Pete Baughman <pete.baughman@apex.ai>\r\n\r\n* Escape the path, not the 'file:' part\r\n\r\nThis should work on linux AND on windows\r\n\r\nSigned-off-by: Pete Baughman <pete.baughman@apex.ai>",
+      "files_changed": 7,
+      "additions": 184,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "pbaughman",
+      "date": "2019-09-20T19:18:24Z",
+      "sha": "40f64512e1d15dffe95806a69dedd400d4b32c98",
+      "message": "Fix missing resources needed for ament (#160)\n\n* Fix missing resources needed for ament\r\n\r\nSigned-off-by: Pete Baughman <pete.baughman@apex.ai>\r\n\r\n* Keep consistent formatting with other index PRs\r\n\r\nSigned-off-by: ruffsl <ruffsl@users.noreply.github.com>\r\nSigned-off-by: Pete Baughman <pete.baughman@apex.ai>",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "AAlon",
+      "date": "2019-09-13T00:35:46Z",
+      "sha": "1ec3e93d476f3ecb401ba905b257f86a61801db5",
+      "message": "Fix author, maintainer information in sros2_cmake/package.xml (#156)\n\nSigned-off-by: Avishay Alon <avishaya@amazon.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "Siddharth Kucheria",
+      "date": "2019-07-09T16:32:48Z",
+      "sha": "1c274b41cde9ab30220b85b1b82d164dae0d23a1",
+      "message": "Add request service permissions in generated policies  (#141)\n\n* added request service permissions\r\n\r\nSigned-off-by: Siddharth Kucheria <kucheria@usc.edu>",
+      "files_changed": 4,
+      "additions": 53,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "Kyle Fazzari",
+      "date": "2019-06-12T17:38:43Z",
+      "sha": "9ec694dd73c76a925d17d4ad55fda9d9fd27099e",
+      "message": "Add tests for generate_policy verb (#122)\n\n* Add tests for generate_policy verb\r\n\r\nThe verbs are missing tests. Let's get started by adding some basic\r\ncoverage to `generate_policy`. Also ensure that `generate_policy` abides\r\nby established conventions, returning 0 upon success.\r\n\r\nSigned-off-by: Kyle Fazzari <kyle@canonical.com>\r\n\r\n* Add std_msgs as a test_depend\r\n\r\nAlso use `1` instead of QoSProfile.\r\n\r\nSigned-off-by: Kyle Fazzari <kyle@canonical.com>\r\n\r\n* Reorder imports\r\n\r\nSigned-off-by: Kyle Fazzari <kyle@canonical.com>",
+      "files_changed": 4,
+      "additions": 82,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "emersonknapp",
+      "date": "2019-06-19T20:14:49Z",
+      "sha": "a725d1e4774dedbe5208b93e3f97634468efb629",
+      "message": "Add basic create_keystore test. (#124)\n\n* Add basic create_keystore test.\r\n\r\nAlso add dependency on cryptography module to parse generated files.\r\n\r\nSigned-off-by: Emerson Knapp <eknapp@amazon.com>\r\n\r\n* Copy lxml pattern for cryptography, depend on python3-cryptography and don't include in setup.py\r\n\r\nSigned-off-by: Emerson Knapp <eknapp@amazon.com>",
+      "files_changed": 2,
+      "additions": 91,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "ross-desmond",
+      "date": "2018-11-13T23:24:18Z",
+      "sha": "597f1bd99848e6f0993cc2051ef398150f93bf06",
+      "message": "cmake security macro\n\nAdd security macro for automagically generating public and private keys\nfor authentication and encryption.\n\ncustom macro use\n`ros2_secure_node(NODES node_name_1 node_name_2 ...)`\n\ncr https://code.amazon.com/reviews/CR-3517594",
+      "files_changed": 6,
+      "additions": 142,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "wjwwood",
+      "date": "2018-08-31T21:56:12Z",
+      "sha": "e99e163b79a0b45c0e5402654a63c1be5fcc8c11",
+      "message": "ignore __pycache__ in git\n\nSigned-off-by: William Woodall <william@osrfoundation.org>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "dhood",
+      "date": "2017-09-12T23:21:39Z",
+      "sha": "0e2db9a92a45c52aca414373af21ed7a40ab4004",
+      "message": "make policy filenames match",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "sloretz",
+      "date": "2017-09-13T00:46:24Z",
+      "sha": "7e6172f6cd1bf3c9efe790b845977f6822421b3e",
+      "message": "install/setup.bat -> <path to ros2 install>/setup.bat (#25)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "tfoote",
+      "date": "2017-12-07T00:14:46Z",
+      "sha": "6f4391945ca285cd160e548f11f6735eb04b9a69",
+      "message": "explicitly call out setting the variables\n\nIt's commented above, but this leaves the optimization to leave them out for those who know more rather than just having it not work.",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Víctor Mayoral Vilches",
+      "date": "2017-07-06T16:34:36Z",
+      "sha": "956b9d53a07d1af065c3db9b5ebff475ac897633",
+      "message": "OS X: fix typo for env. variable (#15)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Adam Allevato",
+      "date": "2017-06-28T15:24:09Z",
+      "sha": "7f29ae7d3c3bbeb4f48ec496d1cd7caf73985ad5",
+      "message": "Updates to Windows running instructions (#9)\n\n- Fixed the OpenSSL install link\r\n - Added OpenSSL to path\r\n - Updated talker and listener calls\r\n - Deleted source section",
+      "files_changed": 1,
+      "additions": 12,
+      "deletions": 27,
+      "commit_type": "docs"
+    },
+    {
+      "author": "codebot",
+      "date": "2016-12-23T00:40:38Z",
+      "sha": "1a98dcc452228f8c0cc37f2792f5a187df1f9bf8",
+      "message": "Initial commit",
+      "files_changed": 1,
+      "additions": 201,
+      "deletions": 0,
+      "commit_type": "code"
+    }
+  ]
+}

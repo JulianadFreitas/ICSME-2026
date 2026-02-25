@@ -1,0 +1,411 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T16:37:53Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "frankaemika",
+    "repo": "libfranka"
+  },
+  "data": [
+    {
+      "author": "francando",
+      "date": "2026-01-09T16:10:09Z",
+      "sha": "e0d0ca0e946757691c223a13d3661a33a873c827",
+      "message": "feat: removed useless trampoline classes, added bindings for async position control\nported async example",
+      "files_changed": 5,
+      "additions": 212,
+      "deletions": 291,
+      "commit_type": "code"
+    },
+    {
+      "author": "BarisYazici",
+      "date": "2023-08-21T07:38:42Z",
+      "sha": "c66dfb5a240dbb44ece29f40dbc1aea1db618199",
+      "message": "Merge pull request #184 in SWDEV/libfranka from ROVIS-276-update-libfranka-versioning-to to fr3-develop\n\n* commit '9a9e949a85e82011e22f637a8f1e274b4dcd6e05':\n  updated changelog",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "AndreasKuhner",
+      "date": "2023-12-20T16:10:52Z",
+      "sha": "30b3f5bcdbd329c4cc1ebdceefc5ed87dd855f48",
+      "message": "chore: Updating copyright from Franka Emika to Franka Robotics",
+      "files_changed": 112,
+      "additions": 137,
+      "deletions": 132,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Jakob Schlichting",
+      "date": "2026-02-06T15:22:05Z",
+      "sha": "43410ad13eb28858728ea03f14a7932fd0c8d3bf",
+      "message": "Pull request #278: Fix Jenkins to properly publish build info\n\nMerge in MOCTRL/libfranka from fix/jenkins-build-info to main\n\n* commit '60fcb5b69ddba66a393251adbf17b215274aea65':\n  fix: matrixbuild runs on same node to properly publish build info",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "schl_ja",
+      "date": "2026-02-05T08:55:40Z",
+      "sha": "7ee3a0ff92be1cc5069d75235d762ace1f2c2fc1",
+      "message": "fix: enable deb packages release for all distros back",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "kmohyeldine",
+      "date": "2022-09-02T06:59:54Z",
+      "sha": "4f9e3cc666e42d267f1ab566869c4f4c552e5b57",
+      "message": "add rate limiter changes to CHANGELOG.md",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Prashanth-HR",
+      "date": "2025-11-26T13:47:35Z",
+      "sha": "ef07f5bdaabe332a08c37831517b023f423dd473",
+      "message": "Added velocity controller examples",
+      "files_changed": 6,
+      "additions": 405,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "winkma",
+      "date": "2024-08-21T13:58:14Z",
+      "sha": "2bdcb961af492e2626f46cf2edbd0fe45ea334df",
+      "message": "added package.xml to prepare ros-humble-libfranka package release",
+      "files_changed": 2,
+      "additions": 13,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Jack Smith",
+      "date": "2024-11-07T13:31:17Z",
+      "sha": "100861cd0c9cf62d153278918c0eee9d6387b4c7",
+      "message": "refactor: Refactor build files and Docker configuration for improved optimization and consistency\n\n- CMakeLists.txt:\n  - Remove explicit clang-UTIL version requirements for flexibility.\n  - Clean up commented lines.\n\n- service_types.h:\n  - Use struct instead of sizeof to improve compatibility.\n  - Replace std::copy with memcpy to avoid compiler warning (see GCC bug #106199).\n\n- Dockerfile:\n  - Combine RUN commands to reduce the number of image layers.\n  - Remove redundant lines.\n\n- docker-compose.yml:\n  - Add user and group arguments to improve configurability.\n\n- Dependencies:\n  - Reorder urdfdom and urdfdom_headers setup for better clarity regarding console_bridge dependencies.\n\n- Documentation:\n  - Update README for alignment with recent changes.\n\nThis final cleanup improves consistency, optimizes the build process, and reduces the overall image size.",
+      "files_changed": 6,
+      "additions": 53,
+      "deletions": 35,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ssilenzi",
+      "date": "2024-12-17T18:11:27Z",
+      "sha": "a3c42b0c12dfba06661d88d9eae0e60812947d3d",
+      "message": "fix: resolve the correct user id in the Dockerfile",
+      "files_changed": 5,
+      "additions": 20,
+      "deletions": 20,
+      "commit_type": "config"
+    },
+    {
+      "author": "rhaschke",
+      "date": "2022-08-25T15:16:17Z",
+      "sha": "c9b25d461b2ff9ac4fb0c5cc4a822e24800918f9",
+      "message": "commandNotPossibleMsg(): improve error message (#124)\n\n* commandNotPossibleMsg()\r\n\r\nReplace multiple occurrences of identical error message with a function that also lists the current robot mode\r\n\r\nCo-authored-by: Marco Boneberger <marco.boneberger@franka.de>",
+      "files_changed": 5,
+      "additions": 32,
+      "deletions": 10,
+      "commit_type": "code"
+    },
+    {
+      "author": "gomezgu",
+      "date": "2024-09-23T09:48:01Z",
+      "sha": "b7c6a2d8de0fe4b88473856bcc2066412c9740fd",
+      "message": "fix: extra while loop deleted from readOnce",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "AndreasJosefGassner",
+      "date": "2023-05-03T14:24:00Z",
+      "sha": "9bbbf9988a449394f7ef7a1844e9f0d6af44e23c",
+      "message": "updated libfranka to allow external control loops, such as required by ROS 2",
+      "files_changed": 8,
+      "additions": 339,
+      "deletions": 69,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Maverobot",
+      "date": "2021-05-10T07:02:31Z",
+      "sha": "906c5470439d28df25c50520c1ca08c353e20bf4",
+      "message": "Add missing `include`s",
+      "files_changed": 3,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Andrej Pangercic",
+      "date": "2023-05-11T05:37:56Z",
+      "sha": "550bb8cb5dc7565b439bb7f2452c9bcffa82d4ad",
+      "message": "ci: Forcedly stop Jenkins pipeline after an hour.",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "ci"
+    },
+    {
+      "author": "Marco Boneberger",
+      "date": "2021-02-09T09:31:41Z",
+      "sha": "902124c5876eaa3998e912ecdd5bdca46b64a0ad",
+      "message": "fix twist calculation in differentiateOneSample and add test.",
+      "files_changed": 1,
+      "additions": 15,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "falfab",
+      "date": "2022-03-24T08:39:10Z",
+      "sha": "cac09ea3377f76f51c5d734f4d9a69701cebc468",
+      "message": "FIX: version bumping",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 9,
+      "commit_type": "docs"
+    },
+    {
+      "author": "gollth",
+      "date": "2022-02-17T08:58:59Z",
+      "sha": "d5fe23364313c03a06603e4c688e48f094eb796b",
+      "message": "CHANGE: Update common submodule to new base_acceleration naming",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Rawan Kalawoun",
+      "date": "2022-04-19T11:19:33Z",
+      "sha": "6d9fcbd3da3ee5a939f27753fb2b99d1e1cbd1be",
+      "message": "Merge pull request #150 in SWDEV/libfranka from bugfix/support_external_build_library to develop\n\n* commit 'c25c296e541a7f6982fa27bf7bf36fbefb8c51b4':\n  support external build folder for libfranka, ignore qtcreator file",
+      "files_changed": 3,
+      "additions": 9,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "kala_ra",
+      "date": "2022-04-13T09:04:24Z",
+      "sha": "c25c296e541a7f6982fa27bf7bf36fbefb8c51b4",
+      "message": "support external build folder for libfranka, ignore qtcreator file",
+      "files_changed": 3,
+      "additions": 9,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Marco Morganti",
+      "date": "2022-01-28T12:39:19Z",
+      "sha": "06bbeb3e5099e21c27386a5b30b5bf9de36e5c87",
+      "message": "ADD: signal O_ddP_O and errors gravity_vector_initialization_timeout and gravity_vector_invalid_reading",
+      "files_changed": 6,
+      "additions": 46,
+      "deletions": 7,
+      "commit_type": "code"
+    },
+    {
+      "author": "christoph-jaehne",
+      "date": "2017-02-17T14:05:36Z",
+      "sha": "b19beba6455e5c1722a1f05fac2e0d4da2c1eab3",
+      "message": "updated forces from EE to K frame",
+      "files_changed": 6,
+      "additions": 32,
+      "deletions": 32,
+      "commit_type": "code"
+    },
+    {
+      "author": "sgablFR",
+      "date": "2017-05-14T18:09:38Z",
+      "sha": "70e0c01b5aebf23974497f7eda0d0fb4fdeada5f",
+      "message": "Updated Submodule",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "fwalch",
+      "date": "2017-01-18T14:19:06Z",
+      "sha": "d6d0fe67f28b29b8183594cb9685b9b2d15204fe",
+      "message": "Set up project skeleton.\n\nInclude CMake, clang-format, clang-tidy, Doxygen, gitignore configuration.\n\nCMake functionality includes:\n\n * Shared library with basic installation, (Debian) packaging\n * Google Test-based unit tests, including running tests with\n   Valgrind, sanitizers\n * Example code subproject (can be built standalone)\n * Documentation generation with Doxygen\n * Code coverage generation with lcov\n * Running clang-format, clang-tidy",
+      "files_changed": 13,
+      "additions": 2795,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "Pascal-So",
+      "date": "2020-06-17T00:19:54Z",
+      "sha": "a24d779f2b4706137ddfb50ab1917fe293845022",
+      "message": "use CMAKE_CURRENT_SOURCE_DIR instead of CMAKE_SOURCE_DIR",
+      "files_changed": 4,
+      "additions": 8,
+      "deletions": 8,
+      "commit_type": "docs"
+    },
+    {
+      "author": "chrisczap",
+      "date": "2021-03-03T12:48:26Z",
+      "sha": "0f22348c813602a1f5d337f6c6ee25785be13958",
+      "message": "Updated description in robot_state.h",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "ntorresalberto",
+      "date": "2020-12-03T16:30:47Z",
+      "sha": "5dffb91835ed0eba1f5b0ec9aff4b72200f09a52",
+      "message": "add rpm to cpack config",
+      "files_changed": 1,
+      "additions": 28,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "marcoesposito1988",
+      "date": "2020-01-16T11:16:52Z",
+      "sha": "07fcbeb37e746d4df16886f7d4f4f73704eb4d73",
+      "message": "Add /bigobj compile option for run_all_tests",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "sgabl",
+      "date": "2020-07-31T09:50:01Z",
+      "sha": "58aa7408992169f5e98d713a9de75a4248ddc647",
+      "message": "Sort includes.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Libor Wagner",
+      "date": "2020-06-03T10:52:35Z",
+      "sha": "fbec4214e288d8dd941ddf6c192c9f6f9757d808",
+      "message": "Fix missing imports (#65)",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "sjahr",
+      "date": "2018-11-07T00:37:08Z",
+      "sha": "0207f46d226f01e011796c76b89338b3ceee9621",
+      "message": "fix undocumented parameter errors",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Sebastian Jahr",
+      "date": "2019-01-17T11:58:51Z",
+      "sha": "547c224fbb89559801351bcfc9453b41067603a3",
+      "message": "add platform depending compile options",
+      "files_changed": 1,
+      "additions": 11,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Jose Medina",
+      "date": "2017-09-21T11:00:23Z",
+      "sha": "a9cc2548450d6e8958cabb5965b7738282874100",
+      "message": "adds rate saturation to the joint pos/vel examples",
+      "files_changed": 2,
+      "additions": 54,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "dudalu",
+      "date": "2017-01-19T18:44:56Z",
+      "sha": "32f7cca25bd7b202a57c80ec0bcc82dbeee0dee9",
+      "message": "Using a constructor instead of a factory method, using pImpl to hide the implementation of the Robot class.",
+      "files_changed": 5,
+      "additions": 61,
+      "deletions": 36,
+      "commit_type": "docs"
+    },
+    {
+      "author": "EnricoSartori",
+      "date": "2018-02-08T13:49:07Z",
+      "sha": "6ad2a5f00cfc5c9aabbfcecefc1c6e24df94b46c",
+      "message": "Bugfix: print_data mutex unlock problem fixed in joint_impedance_control.cpp",
+      "files_changed": 1,
+      "additions": 21,
+      "deletions": 17,
+      "commit_type": "code"
+    },
+    {
+      "author": "Sebastian Nagel",
+      "date": "2017-07-31T07:17:14Z",
+      "sha": "b621a059da30af486eb964a39b8285e3b8c91aac",
+      "message": "Merge pull request #36 in SWDEV/libfranka from feature/SWDEV-367-ros-integrate-gripper to master\n\n* commit '7c9a2b72623a104bbc23862bd416adf04cd0a3df':\n  Gripper: Mark methods const.",
+      "files_changed": 2,
+      "additions": 10,
+      "deletions": 10,
+      "commit_type": "code"
+    },
+    {
+      "author": "Hamidreza Rizeh",
+      "date": "2017-11-21T10:15:17Z",
+      "sha": "1f306483755c23c8d2c5656a8eba3f11f81c17ee",
+      "message": "Merge pull request #81 in SWDEV/libfranka from feature/RACE-1225-gripper-move-grasp-epsilon-to-operation to master\n\n* commit '6322c3d87c887e6c484d243c913b65576b462dbb':\n  Updated submodule.\n  Added default values for grasp epsilon.\n  Minor submodule update.\n  Fixed Jenkins build.\n  Minor format update.\n  Moved grasp epsilons into one struct.\n  Updated Changelog, breaking removed from network protocol.\n  Updated Changelog.\n  Updated tests for grasp epsilon.\n  Updated submodule common.\n  Extended docs for grasp epsilon.\n  Added epsilon to grasp operation.",
+      "files_changed": 7,
+      "additions": 40,
+      "deletions": 17,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Hamid Rizeh",
+      "date": "2017-09-12T13:47:23Z",
+      "sha": "5c91b96e805de7524eec8aa8469bc82d2fc1ead5",
+      "message": "Minor fix of some docs.",
+      "files_changed": 8,
+      "additions": 73,
+      "deletions": 73,
+      "commit_type": "code"
+    },
+    {
+      "author": "Mohamadreza Sabaghian",
+      "date": "2017-09-13T14:25:08Z",
+      "sha": "cce1a9a2d47dc5ad2ba5295e6c9eecc118c1a22a",
+      "message": "Merge pull request #52 in SWDEV/libfranka from joint_p2p_example to master\n\n* commit '86c7a5da7dcff76d43a0d7d3a4b7447d481af7dd':\n  Minor fixes.\n  Rename loop variables.\n  Minor changes.\n  minor change\n  Minor change\n  Implements review comments\n  adds the reference\n  Fixes a bug\n  Fix clang-format, move declaration of computed values into the lambda\n  Small newline adjustment\n  Implements reviw comments\n  Cleans up the joint p to p example\n  Implements the clang-tidy warnings\n  clang tidy warnings fixed\n  Adds the joint point to point example to libfranka examples",
+      "files_changed": 2,
+      "additions": 219,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mo",
+      "date": "2017-08-31T09:25:54Z",
+      "sha": "e841ac087c17a6ca1257b91f1c0cd5ec9e3daf1a",
+      "message": "Adds the joint point to point example to libfranka examples",
+      "files_changed": 2,
+      "additions": 223,
+      "deletions": 0,
+      "commit_type": "docs"
+    }
+  ]
+}

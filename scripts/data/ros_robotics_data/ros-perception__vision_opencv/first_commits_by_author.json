@@ -1,0 +1,891 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T07:09:14Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros-perception",
+    "repo": "vision_opencv"
+  },
+  "data": [
+    {
+      "author": "mosfet80",
+      "date": "2023-07-19T13:10:51Z",
+      "sha": "a911396bb0b158dd72530b7f346615dfdfae35d7",
+      "message": "\n\nrolling use c++17\nremove unused travis file",
+      "files_changed": 3,
+      "additions": 2,
+      "deletions": 96,
+      "commit_type": "config"
+    },
+    {
+      "author": "talregev",
+      "date": "2015-09-02T16:22:38Z",
+      "sha": "9a196a0d273b5d5a43a42a1308a8983de212916f",
+      "message": "start to extend the cv_bridge with cvCompressedImage class, that will convert from cv::Mat opencv images to CompressedImage ros messages and vice versa\n\nFinish to write CvCompressedImage extention of cv_bridge.\nNeed to write a small example to see that it working, and how to use it (it will be very similar to CvImage class uses).\n\ngoing to version 1.11.9\n- fix case at CompressedImage empty string at source. convert it to BGR8. (default).\n\nadd simple example nodelet.\n\ncompleate the cv_bridge extension:\n- Add CvCompressedImage class that convert from CompressedImage msg to opencv image and vice versa.\n- Add two examples from [wiki](http://wiki.ros.org/cv_bridge/Tutorials/UsingCvBridgeToConvertBetweenROSImagesAndOpenCVImages):\n  That can show how CvImage and CvCompressedImage can be used.\n\nroll back to version 1.11.8\nroll back CvImage constractor.\n\nchange API:\n- prevent code duplicate code\n- API is more simpler and more logic that way.\n\nremove docs and comments.\n\nremove tabs.\n\nAdd ducuments for dst_format.\nFix default value for sensor_msgs::CompressedImagePtr toCompressedImageMsg(const std::string& dst_format = std::string()) const;",
+      "files_changed": 8,
+      "additions": 499,
+      "deletions": 13,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ijnek",
+      "date": "2022-07-15T15:22:29Z",
+      "sha": "24838847e71c0c70782a9b9abfe4ddaff4be0587",
+      "message": "python3-opencv should be a more general dependency (#439)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "ScottMonaghan",
+      "date": "2024-04-05T19:29:43Z",
+      "sha": "2bae6d2f432fe814d3765fa2447ca1febca4475f",
+      "message": "incorrect case for CameraInfo msg members in directed.py test",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "christian-rauch",
+      "date": "2021-11-23T17:52:29Z",
+      "sha": "bf556c88e25249d82638d7796bd85400b6744a19",
+      "message": "prevent conversion of single channel 16bit integer images to/from colour (#412)",
+      "files_changed": 1,
+      "additions": 20,
+      "deletions": 13,
+      "commit_type": "code"
+    },
+    {
+      "author": "ahcorde",
+      "date": "2023-07-13T10:14:45Z",
+      "sha": "0d8901ba0d80c6b8f221cf52b20dd3c0deb5f00d",
+      "message": "Fixed converstion for 32FC1\n\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Yadunund",
+      "date": "2023-02-01T08:22:27Z",
+      "sha": "7717ffd5383017fe79b19ff94cd4aff68607be4f",
+      "message": "Added override for encoding string\n\nSigned-off-by: Yadunund <yadunund@openrobotics.org>",
+      "files_changed": 3,
+      "additions": 60,
+      "deletions": 24,
+      "commit_type": "docs"
+    },
+    {
+      "author": "light-tech",
+      "date": "2022-10-05T02:50:28Z",
+      "sha": "19dbeb2fe2f380f37fc172c22850025c9e206757",
+      "message": "Add new CMake option CV_BRIDGE_DISABLE_PYTHON to cv_bridge to disable building Python support if desired",
+      "files_changed": 2,
+      "additions": 8,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "cst0",
+      "date": "2022-09-26T00:02:03Z",
+      "sha": "75a4c8fe82940faf6bb03b34370dd8ef4a343851",
+      "message": "provide functionality of PR #428 to rolling",
+      "files_changed": 2,
+      "additions": 53,
+      "deletions": 22,
+      "commit_type": "code"
+    },
+    {
+      "author": "Marcel Zeilinger",
+      "date": "2022-08-26T11:15:07Z",
+      "sha": "c09fe52701a5c76cfa21d8de42a87de65fd70f14",
+      "message": "[cv_bridge] Add colormap argument to python wrapper",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "Daisuke Nishimatsu",
+      "date": "2022-06-21T16:35:22Z",
+      "sha": "94ef22835a98eb33ab1a81fd0dee633841a1aa5f",
+      "message": "feat: add type adapter for cv::Mat\n\nSigned-off-by: Daisuke Nishimatsu <border_goldenmarket@yahoo.co.jp>",
+      "files_changed": 6,
+      "additions": 545,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "wep21",
+      "date": "2022-07-22T19:03:48Z",
+      "sha": "78654f6ff8751dfe70bc94388849b5ec578d362b",
+      "message": "test: modify python test (#444)",
+      "files_changed": 3,
+      "additions": 3,
+      "deletions": 7,
+      "commit_type": "test"
+    },
+    {
+      "author": "RachelRen05",
+      "date": "2022-07-15T15:44:02Z",
+      "sha": "55e2595e9658f933ed057cd4e3c16aa1adb6af7a",
+      "message": "Update README.md (#252)",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 5,
+      "commit_type": "docs"
+    },
+    {
+      "author": "wolfv",
+      "date": "2022-06-24T07:47:36Z",
+      "sha": "9a5f551fb435a5caa6d9d172e66d1a3a016fb989",
+      "message": "Fix visibility of static const data member",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "clalancette",
+      "date": "2017-04-19T20:31:37Z",
+      "sha": "7194a312d51a6c3f624cd29dcb47585d95cb7423",
+      "message": "Remove the last remnants of boost from image_geometry.\n\nAll of its functionality can be had from std:: in C++11, so\nuse that instead.  This also requires us to add the -std=c++11\nflag.\n\nSigned-off-by: Chris Lalancette <clalancette@osrfoundation.org>",
+      "files_changed": 3,
+      "additions": 12,
+      "deletions": 9,
+      "commit_type": "docs"
+    },
+    {
+      "author": "sloretz",
+      "date": "2022-01-14T19:00:53Z",
+      "sha": "9ea89084cff3227844d42ae2009c2b1be14f842c",
+      "message": "More alot (#419)\n\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>",
+      "files_changed": 5,
+      "additions": 57,
+      "deletions": 95,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mjcarroll",
+      "date": "2018-11-26T16:07:15Z",
+      "sha": "04d60a6a1f8469a2adcb74c091eed5248912005d",
+      "message": "Changelogs.",
+      "files_changed": 4,
+      "additions": 19,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "708yamaguchi",
+      "date": "2021-11-23T18:01:11Z",
+      "sha": "c279577c78692cfaa309d8433560cdd6ef56b3a9",
+      "message": "Add header arg to cv2_to_imgmsg (#326)",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "iPaddy",
+      "date": "2021-11-23T17:51:57Z",
+      "sha": "c7f2b6dbfb471651d8a426c45ad70180a8f45b9e",
+      "message": "substituted missing sphinx extension (#417)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "mintar",
+      "date": "2021-03-01T14:18:46Z",
+      "sha": "aa09e6c2039460c316aa585d4636557dba902bfc",
+      "message": "Add equidistant distortion model (#358)\n\nThe equidistant distortion model is based on the following publication:\n\nJ. Kannala and S. Brandt (2006). A Generic Camera Model and Calibration Method for Conventional, Wide-Angle, and Fish-Eye Lenses, IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. 28, no. 8, pp. 1335-1340\n\nIn OpenCV, this model is called the \"fisheye\" distortion model.",
+      "files_changed": 3,
+      "additions": 317,
+      "deletions": 8,
+      "commit_type": "docs"
+    },
+    {
+      "author": "paudrow",
+      "date": "2022-01-25T19:37:14Z",
+      "sha": "0730d098a337608ba49e10764b01c53da495c0bb",
+      "message": "3.0.1\n\nSigned-off-by: Audrow Nash <audrow@hey.com>",
+      "files_changed": 10,
+      "additions": 21,
+      "deletions": 6,
+      "commit_type": "docs"
+    },
+    {
+      "author": "flynneva",
+      "date": "2021-11-23T18:08:06Z",
+      "sha": "c196b812250714fe95492e786d873d5ad1f9ac8e",
+      "message": "fix windows build for image_geometry (#388)",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "pmusau17",
+      "date": "2021-07-14T21:48:05Z",
+      "sha": "8ad476324dd92a8265d0cf337cb0e859c78ce9d3",
+      "message": "fix endianness comparison (#397)\n\nFix endianness comparison between source and platform, when source\r\nis little endian and platform is big endian, they are different too.\r\n\r\nCo-authored-by: zhouchengming <eric.zcm@cainiao.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "jacobperron",
+      "date": "2021-06-10T13:35:29Z",
+      "sha": "7df66485d409d1fce67c437643e06e95f7800575",
+      "message": "Export sensor_msgs dependency (#392)\n\nOtherwise, packages that include cv_bridge.h will get a build error if they do not explicitly link against sensor_msgs.\r\n\r\nSigned-off-by: Jacob Perron <jacob@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "homalozoa",
+      "date": "2021-03-01T14:21:19Z",
+      "sha": "05062b20bb086104d3a45d0ac17bdb9b7be8bf20",
+      "message": "Fix multiple undefined references (#370)\n\nAs discussion in 318 and 364. This change should be pulled.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "seanyen",
+      "date": "2019-10-16T01:27:08Z",
+      "sha": "9df164adfb7a3124f276d7d8050cdb8e3cc2cfa2",
+      "message": "Export interfaces for Win32 Shared Lib (#301)",
+      "files_changed": 3,
+      "additions": 22,
+      "deletions": 13,
+      "commit_type": "docs"
+    },
+    {
+      "author": "dirk-thomas",
+      "date": "2013-01-13T07:22:53Z",
+      "sha": "07fa5181c053fe02f7e8fbeaf95c12bb2ca1b30e",
+      "message": "use CATKIN_DEVEL_PREFIX instead of obsolete CATKIN_BUILD_PREFIX",
+      "files_changed": 2,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mikaelarguedas",
+      "date": "2017-04-28T02:13:56Z",
+      "sha": "773fd0b959ae673c5ba79c8197e4bbf8fefb3202",
+      "message": "remove dependency on boost given that we dont use it anymore (#4)",
+      "files_changed": 2,
+      "additions": 0,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "LewisLiuPub",
+      "date": "2020-04-30T14:12:15Z",
+      "sha": "eae9586fbca96242da215274ff5c752a68b02380",
+      "message": "add opencv4 into the dependency list for ROS2 (#324)\n\n* add opencv4 into the dependency list.\r\n\r\nSigned-off-by: Lewis Liu <wei.zhi.liu@intel.com>\r\n\r\n* update CMakefile for automatically selecting openCV4 or openCV3 judging from\r\nopenCV installation situation.",
+      "files_changed": 3,
+      "additions": 25,
+      "deletions": 6,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Karsten1987",
+      "date": "2019-05-30T19:19:54Z",
+      "sha": "491f103b1e75a2069ac2488fa82f2d48fa65742d",
+      "message": "silence unused return value warnings (#276)\n\nSigned-off-by: Karsten Knese <karsten@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "luca-della-vedova",
+      "date": "2020-01-04T03:26:28Z",
+      "sha": "312ce6c7607a16adf62a5ec9679c960e32638880",
+      "message": "Updated fromCameraInfo function to match ROS2 CameraInfo message (#295)\n\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 7,
+      "commit_type": "code"
+    },
+    {
+      "author": "jnoyola",
+      "date": "2019-10-22T21:08:38Z",
+      "sha": "667bf16dd984e52c4d84dbb1f724c204605123a3",
+      "message": "include Boost to fix Windows build (#290)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Lalit Begani",
+      "date": "2019-01-11T15:03:10Z",
+      "sha": "115c8d287c0e301ed4a89e88b9524977c343ee29",
+      "message": "Replace ament commands with colcon (#263)\n\nLatest ros2 repo does not include ament_tools. Executing ament command results in error.",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "gaoethan",
+      "date": "2018-04-12T15:27:00Z",
+      "sha": "06965d6efd06cd688c078ec4b85a23c77816f91b",
+      "message": "ignore the following folder firstly\n image_geometry\n opencv_tests\n vision_opencv\n\nSigned-off-by: Ethan Gao <ethan.gao@linux.intel.com>",
+      "files_changed": 3,
+      "additions": 0,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Lars Berscheid",
+      "date": "2018-07-19T13:53:45Z",
+      "sha": "a2f02e1cd245c1f2c1792baff00dc558c9c4f6e2",
+      "message": "fix buffer type error",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Mikael Arguedas",
+      "date": "2018-05-24T13:05:34Z",
+      "sha": "1959c42121f82e0b94d9d6e42336a46596e71ccf",
+      "message": "reenable ported packages",
+      "files_changed": 3,
+      "additions": 0,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "nuclearsandwich",
+      "date": "2017-06-19T20:56:40Z",
+      "sha": "3eff43b60546ec92e2119f1f8ed45cd2be43a98a",
+      "message": "Use upstream opencv2. (#8)\n\nAs discussed in Slack, despite this dependency key, ROS 2 actually builds\r\nagainst upstream opencv (2.x) rather than opencv3.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "vrabaud",
+      "date": "2011-05-25T21:18:30Z",
+      "sha": "73a0f46d06b97e3970269a70f6cb87318edc84a8",
+      "message": "- fix build issues on Natty",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "k-okada",
+      "date": "2014-12-31T06:53:48Z",
+      "sha": "a4d8d0f64e4fe1720e6a24b38a4657a65187fba8",
+      "message": "add opencv_apps, proposed in #40",
+      "files_changed": 85,
+      "additions": 7309,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "VictorLamoine",
+      "date": "2017-04-13T11:41:51Z",
+      "sha": "62053a3ea29980c7d113802aa76bda1c88e94eb1",
+      "message": "Silence warnings about un-used variables",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Hans Gaiser",
+      "date": "2017-01-24T15:39:52Z",
+      "sha": "169d58873fdf666f63f3f4f0bf15e60772f03f6e",
+      "message": "Import using __future__ for python 3 compatibility.",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "wkentaro",
+      "date": "2015-11-24T13:14:01Z",
+      "sha": "2a6e88125eaced07616fb2bdfa1adaab9977c89b",
+      "message": "Run travis on trusty to test indigo",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 6,
+      "commit_type": "config"
+    },
+    {
+      "author": "bulwahn",
+      "date": "2013-08-06T11:32:36Z",
+      "sha": "cc36d709d47a2659975b4cd95720c3a19fb71636",
+      "message": "check for CATKIN_ENABLE_TESTING",
+      "files_changed": 4,
+      "additions": 8,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "de-vri-es",
+      "date": "2016-05-05T22:22:45Z",
+      "sha": "69e73ef45d8e427bdb824f472ee7f24e2378df92",
+      "message": "Fix compilation of cv_bridge with opencv3 and python3.",
+      "files_changed": 2,
+      "additions": 71,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Peter-Levine",
+      "date": "2016-09-20T00:27:51Z",
+      "sha": "ead421b85eeb750cbf7988657015296ed6789bcf",
+      "message": "Fix \"stdlib.h: No such file or directory\" errors in GCC-6\n\nIncluding '-isystem /usr/include' breaks building with GCC-6.\r\nSee https://gcc.gnu.org/bugzilla/show_bug.cgi?id=70129",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "YuOhara",
+      "date": "2015-11-16T12:06:44Z",
+      "sha": "8f667b0e674d9652e26016405237815dda593e32",
+      "message": "[image_geometry]add a condition if D=None",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "jpanikulam",
+      "date": "2016-05-01T13:04:54Z",
+      "sha": "78a4096a36e0929a55cd05422783206f5f8800f3",
+      "message": "Add fullResolution getter to PinholeCameraModel",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "lucasw",
+      "date": "2016-03-01T14:47:47Z",
+      "sha": "b0c9a874bfd57f099ff26a0d51640abaf52692d8",
+      "message": "issue #117 pull request #118 check all distortion coefficients to see if rectification ought to be done",
+      "files_changed": 2,
+      "additions": 101,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "eric-wieser",
+      "date": "2016-02-25T04:44:15Z",
+      "sha": "a6078c1ceeba340504cf1a0239f1feb0c87c0d0b",
+      "message": "Remove eval, and other fixes\n\nAlso, extend from object, so as not to get a python 2.2-style class, and use the new-style raise statement",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "garaemon",
+      "date": "2015-10-05T13:21:47Z",
+      "sha": "f5c11eb405efa7e9eb1d1abfcdf7a4aa7463151f",
+      "message": "Add opencv_apps to vision_opencv dependency",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "trainman419",
+      "date": "2016-01-27T03:31:15Z",
+      "sha": "b1a7f86e027da21daa687b2825af7db1874abc55",
+      "message": "Use respawn instead of watch",
+      "files_changed": 2,
+      "additions": 1,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "knorth55",
+      "date": "2015-12-02T12:11:20Z",
+      "sha": "79433c0d2cb4cef76ff53b13433925ecdf0d5691",
+      "message": "[oepncv_apps] fix bug for segment_objects_nodelet.cpp",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "carlosmccosta",
+      "date": "2015-09-29T18:06:29Z",
+      "sha": "142faa2a2f073bf814b935ee9366061dead1db81",
+      "message": "Added sensor_msgs::Image conversion to cv::Mat from rqt_image_view in\norder to be able to create videos from kinect color and depth images\n(cv_bridge\ncurrently doesn't support 16UC1 image encoding).\n\nCode adapted from:\nhttps://github.com/ros-visualization/rqt_common_plugins/blob/groovy-devel/rqt_image_view/src/rqt_image_view/image_view.cpp",
+      "files_changed": 2,
+      "additions": 69,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "fmauch",
+      "date": "2015-09-15T15:38:28Z",
+      "sha": "1b3ed2ee64566f73484c99ba0fe58d70dd73eed9",
+      "message": "Accept grayscale images as input as well",
+      "files_changed": 12,
+      "additions": 128,
+      "deletions": 80,
+      "commit_type": "code"
+    },
+    {
+      "author": "aginika",
+      "date": "2015-07-13T06:55:21Z",
+      "sha": "053ed5215d683b405c306c3663b210b7c8800389",
+      "message": "fix image output of fback_flow",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "bsubei",
+      "date": "2015-06-02T01:53:43Z",
+      "sha": "b4d9ac8ceff71de35d240c2b50fdfb0bbe19df78",
+      "message": "fixes #62, bug in Python rectifyPoint old opencv1 API",
+      "files_changed": 2,
+      "additions": 3,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "garyservin",
+      "date": "2014-12-15T19:36:59Z",
+      "sha": "d95d20a16f4cf6c9bb77b85d8b4b3f355b57f174",
+      "message": "Remove Python for Android",
+      "files_changed": 2,
+      "additions": 8,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mattalvarado",
+      "date": "2014-12-02T19:31:46Z",
+      "sha": "52471a7141a9a38e3248134418c244d46dd28721",
+      "message": "Updated Q matrix to account for cameras with different Fx and Fy values",
+      "files_changed": 1,
+      "additions": 47,
+      "deletions": 10,
+      "commit_type": "code"
+    },
+    {
+      "author": "carnegieroboticsllc",
+      "date": "2014-12-04T18:03:29Z",
+      "sha": "b6de753c07d2ee7a02c43146b5838da685753336",
+      "message": "Update stereo_camera_model.cpp\n\nCorrect slight error in the Q matrix derivation",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "dimatura",
+      "date": "2014-11-12T23:23:49Z",
+      "sha": "77192f089e9bc6e8b4605de20c5030702b101c09",
+      "message": "Removed trailing whitespace.",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "liborw",
+      "date": "2014-07-18T11:56:51Z",
+      "sha": "fa12e9f84b270961ca370593b659427f8985caae",
+      "message": "Fix #42",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Isaac Isao Saito",
+      "date": "2014-05-23T03:50:17Z",
+      "sha": "e136978606f88d76c3b768718b12f3af8c390f42",
+      "message": "Correct dependency from non-existent package to cv_bridge",
+      "files_changed": 4,
+      "additions": 5,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "xqms",
+      "date": "2014-05-19T22:52:54Z",
+      "sha": "a569de90ac8083a367b731245172b1432557ad97",
+      "message": "pinhole_camera_model: fix implicit shared_ptr cast to bool for C++11\n\nIn C++11 boost::shared_ptr does not provide the implicit bool conversion\noperator anymore, so make the cast in pinhole_camera_model.h explicit.\nThat does not hurt in older C++ standards and makes compilation with C++11\npossible.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "cottsay",
+      "date": "2014-04-27T00:28:58Z",
+      "sha": "cedbf59769c21e751f4fb6ad4ef2bae03ec422cb",
+      "message": "Add depend on python for cv_bridge",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "mdouskos",
+      "date": "2014-02-05T15:01:02Z",
+      "sha": "9b6cb3d5f51ca213ff019d04f5729cc6a64cedc0",
+      "message": "fixed Python rectifyImage implementation in PinholeCameraModel",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Tobias Bär",
+      "date": "2014-01-17T12:20:33Z",
+      "sha": "775ecdad660114e4761e144386e4ffe04261b641",
+      "message": "Added operator= for the PinholeCameraModel.\n\nAdded the operator= for the PinholeCameraModel. I am not sure if the\nPinholeCameraModel needs to have a destructor, too. To follow the\n'rule of three' it should actually have one.",
+      "files_changed": 2,
+      "additions": 9,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "jensenb",
+      "date": "2013-11-22T17:39:09Z",
+      "sha": "a65be36e9341018b776fe9f0d6f18040be41b87f",
+      "message": "Fixed issue with image message step size",
+      "files_changed": 2,
+      "additions": 38,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "arhachey",
+      "date": "2013-02-10T23:12:36Z",
+      "sha": "2421bd19564dae31c2241f00ccfda76f84a981df",
+      "message": "Add dependency on generated messages\n\nCatkin requires explicit enumeration of dependencies on generated messages.\nAdd this declaration to properly flatten the dependency graph and force Catkin\nto generate geometry_msgs before compiling image_geometry.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "wjwwood",
+      "date": "2012-12-06T23:26:15Z",
+      "sha": "5e85ad335add73ada4b5a0ed80274d0ad0da95f8",
+      "message": "Cleanup of package.xml",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "Jonathan Binney",
+      "date": "2012-08-29T00:06:40Z",
+      "sha": "4c9d8e03c1640db4e4e63b0ec1b7b06e2073b5e3",
+      "message": "added catkin_project() to cv_bridge, image_geometry, and opencv_tests",
+      "files_changed": 5,
+      "additions": 12,
+      "deletions": 6,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mihelich",
+      "date": "2009-11-18T04:47:25Z",
+      "sha": "4b19ca393763e4c58d7f5b7506996f922d8281d2",
+      "message": "image_geometry: Started C++ API. PinholeCameraModel is in theory (untested) able to track state efficiently and rectify images.",
+      "files_changed": 4,
+      "additions": 287,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "gerkey",
+      "date": "2009-07-23T21:12:34Z",
+      "sha": "798a7c6e17179b440615efd4154f53531d55c3a7",
+      "message": "added missing versioncontrol tag to manifest",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "kwc",
+      "date": "2009-09-04T23:10:08Z",
+      "sha": "a32b6b938137d40d763f7ded8655dc77fae0f9ec",
+      "message": "migration part 1",
+      "files_changed": 22,
+      "additions": 961,
+      "deletions": 134,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ethanrublee",
+      "date": "2011-06-24T03:52:16Z",
+      "sha": "8cc391f6e64c9ef2be0eadcb5856c8d14f047972",
+      "message": "Making this depend on libopencv-2.3-dev debian available in ros-shadow.",
+      "files_changed": 4,
+      "additions": 10,
+      "deletions": 59,
+      "commit_type": "config"
+    },
+    {
+      "author": "jamesb",
+      "date": "2009-09-22T00:20:40Z",
+      "sha": "b0de7df198db24f028f47a261db7cbb05a4e11f7",
+      "message": "New methods for cv image conversion",
+      "files_changed": 2,
+      "additions": 44,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "mdim",
+      "date": "2010-10-29T09:44:21Z",
+      "sha": "b27b072599b179dce1b02a8cbdf5296fd72be287",
+      "message": "update used OpenCV revision",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "rusu",
+      "date": "2010-01-27T03:36:42Z",
+      "sha": "a72a30862b104de94f4e7c5f7be65666aacdff6f",
+      "message": "changed to revision 2633, compile examples",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "relrotciv",
+      "date": "2010-05-26T16:44:23Z",
+      "sha": "a1abcfdbee4c3ea81dd22da0940a7d7c92d3541a",
+      "message": "Changed opencv rev to 3107 fixing compiler problems for outlet_pose_estimation",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "pantofaru",
+      "date": "2009-09-25T16:08:55Z",
+      "sha": "26480c837158292cb8f4703534f649360832127e",
+      "message": "fixed imgMsgToCv function names",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "wheeler",
+      "date": "2009-12-01T01:33:29Z",
+      "sha": "c527c299bdc2d803ac3fb488fbe2bf029dd4831b",
+      "message": "Remove use of deprecated rosbuild macros",
+      "files_changed": 3,
+      "additions": 12,
+      "deletions": 12,
+      "commit_type": "docs"
+    },
+    {
+      "author": "tfoote",
+      "date": "2009-06-23T21:32:34Z",
+      "sha": "9e4c30ad54100e6ef5c04748efbe0f76b10aa38d",
+      "message": "creating opencv stack with latest and python",
+      "files_changed": 7,
+      "additions": 371,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "morgan_quigley",
+      "date": "2009-08-17T06:53:02Z",
+      "sha": "6c0fd121fae02c74c267701a5c8da518d181dbf1",
+      "message": "tweak opencv manifest to rename its rosdeps to more friendly-looking names, rather than copying the debian scheme. update the existing global rosdep.yaml so that 'old' rosdep works. add a bunch of stack rosdep.yaml files to federate rosdep2 across stacks. this partitioning of the rosdeps is just a starting point; I anticipate we'll have to shuffle these (mostly, moving them upstream over time)",
+      "files_changed": 2,
+      "additions": 21,
+      "deletions": 5,
+      "commit_type": "config"
+    },
+    {
+      "author": "jamesbowman",
+      "date": "2009-07-15T17:47:36Z",
+      "sha": "559b6328f8b3fa07ef73e1a8f65cb8e5b6b33948",
+      "message": "Added dep for 8.04 on libswscale-dev",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "kurtkonolige",
+      "date": "2009-08-21T22:46:20Z",
+      "sha": "ec9e853eda52404c4fe00b3101b04912a35e3521",
+      "message": "moved image_view to new imaging_pipeline stack",
+      "files_changed": 5,
+      "additions": 0,
+      "deletions": 198,
+      "commit_type": "docs"
+    },
+    {
+      "author": "sfkwc",
+      "date": "2009-08-09T23:29:03Z",
+      "sha": "2df3b416fbbb3b1b268adbb43137f10221be086c",
+      "message": "svn ignores",
+      "files_changed": 0,
+      "additions": 0,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "jleibs",
+      "date": "2009-08-10T11:15:57Z",
+      "sha": "885beb708484030382c99dd7874f7a1180d72d3b",
+      "message": "Removing leading underscores from strings in the encoding field for CvBridge.",
+      "files_changed": 1,
+      "additions": 31,
+      "deletions": 31,
+      "commit_type": "code"
+    },
+    {
+      "author": "jfaustwg",
+      "date": "2009-07-24T20:18:36Z",
+      "sha": "b5df023bd43ba6cdc8ab4b84bafed85556d6759f",
+      "message": "Move image_view into the opencv stack",
+      "files_changed": 5,
+      "additions": 198,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "vp153",
+      "date": "2009-07-24T00:23:04Z",
+      "sha": "2b5fff660176fe7d5652a4da772cb8cd1fa461f0",
+      "message": "updated to OpenCV rev. 1975",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    }
+  ]
+}

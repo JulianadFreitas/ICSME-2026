@@ -1,0 +1,281 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T10:59:52Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros-tooling",
+    "repo": "topic_tools"
+  },
+  "data": [
+    {
+      "author": "emersonknapp",
+      "date": "2021-04-23T18:47:16Z",
+      "sha": "b869e0a24924dfe075f7064f5dcfae0a223e0aa8",
+      "message": "Add github actions setup (#1)\n\n* Add github actions setup\r\n\r\nSigned-off-by: Emerson Knapp <eknapp@amazon.com>",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 1,
+      "commit_type": "ci"
+    },
+    {
+      "author": "zeerekahmad",
+      "date": "2025-08-13T21:20:00Z",
+      "sha": "c1c07f1b9d52bfe1f6a4a2ae7cf26ac1bc75c544",
+      "message": "Enable QOS Overrides to All Publishers (#131)\n\nEnable QoS Overriding parameters on publishers, to increase the topic tool flexibility. Lets you, for example, apply a new QoS profile via the `relay` node\n\nSigned-off-by: Zeerek <zeerek@polymathrobotics.com>\nCo-authored-by: Emerson Knapp <emerson.b.knapp@gmail.com>",
+      "files_changed": 1,
+      "additions": 24,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "christophebedard",
+      "date": "2023-03-14T16:29:02Z",
+      "sha": "cf9638d17e87b09b136c28bc5d96245f649f0886",
+      "message": "Fix race in throttle node (#56)\n\nSigned-off-by: Christophe Bedard <bedard.christophe@gmail.com>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "ahcorde",
+      "date": "2025-05-22T15:43:37Z",
+      "sha": "aa6e749567eace2cabd9e83b8bd5bc5ea74644aa",
+      "message": "Replace ament_target_dependencies with target_link_libraries (#127)\n\nSigned-off-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>",
+      "files_changed": 1,
+      "additions": 20,
+      "deletions": 6,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Martin-Oehler",
+      "date": "2025-02-18T16:23:07Z",
+      "sha": "7b1258ba43a14b69cab329a7b64d42470b3d560f",
+      "message": "Removed manual namespace resolution (#123)\n\nSigned-off-by: Martin Oehler <oehler@sim.tu-darmstadt.de>",
+      "files_changed": 2,
+      "additions": 8,
+      "deletions": 16,
+      "commit_type": "code"
+    },
+    {
+      "author": "pschnattinger",
+      "date": "2024-09-27T19:07:18Z",
+      "sha": "a5f025ac4949bd82bf69cae9f3cc3a89e9b504da",
+      "message": "fix: cpp install paths (#116)\n\n* fix: cpp install paths\r\n\r\nSigned-off-by: Philipp Schnattinger <Philipp.Schnattinger@node-robotics.com>\r\n\r\n* chore: fix indent\r\n\r\nSigned-off-by: Philipp Schnattinger <Philipp.Schnattinger@node-robotics.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Philipp Schnattinger <Philipp.Schnattinger@node-robotics.com>",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "MichaelOrlov",
+      "date": "2024-06-13T16:23:54Z",
+      "sha": "a54c290e84326b0e7ba7d98b9d5c25e5869b7b49",
+      "message": "Use Ubuntu Noble distro in CI scripts for rolling (#107)\n\nSigned-off-by: Michael Orlov <michael.orlov@apex.ai>",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "config"
+    },
+    {
+      "author": "adamlm",
+      "date": "2024-08-26T18:07:34Z",
+      "sha": "ba45cd2539c204b71db7b7b270c69c04adced9c3",
+      "message": "Fix unsubscribing when switching to none topic (#111)\n\nSigned-off-by: Adam Morrissett <adam@swarmbotics.ai>",
+      "files_changed": 2,
+      "additions": 26,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "rcywongaa",
+      "date": "2024-07-09T18:37:57Z",
+      "sha": "ad48bc00b0f08cca2170079ee44304bacc0786d2",
+      "message": "Add demux (#106)\n\n* Copy, rename and make buildable\r\n\r\nSigned-off-by: Rufus Wong <rcywongaa@gmail.com>\r\n\r\n* Swap input and output topic\r\n\r\nSigned-off-by: Rufus Wong <rcywongaa@gmail.com>\r\n\r\n* Reset publisher if output topic changes\r\n\r\nSigned-off-by: Rufus Wong <rcywongaa@gmail.com>\r\n\r\n* Add tests\r\n\r\nSigned-off-by: Rufus Wong <rcywongaa@gmail.com>\r\n\r\n* Fix test failures\r\n\r\nSigned-off-by: Rufus Wong <rcywongaa@gmail.com>\r\n\r\n* Fix header guard\r\n\r\nSigned-off-by: Rufus Wong <rcywongaa@gmail.com>\r\n\r\n* Make linter happy\r\n\r\nSigned-off-by: Rufus Wong <rcywongaa@gmail.com>\r\n\r\n* Add README entry\r\n\r\nSigned-off-by: Rufus Wong <rcywongaa@gmail.com>\r\n\r\n* Remove lazy parameter\r\n\r\nSigned-off-by: Rufus Wong <rcywongaa@gmail.com>\r\n\r\n* Rename default input topic to ~/input\r\n\r\nSigned-off-by: Rufus Wong <rcywongaa@gmail.com>\r\n\r\n* Fix typo\r\n\r\nSigned-off-by: Rufus Wong <rcywongaa@gmail.com>\r\n\r\n* Remove usage of ament_cmake_auto\r\n\r\nSigned-off-by: Rufus Wong <rcywongaa@gmail.com>\r\n\r\n* Add missing dependency on ament_cmake\r\n\r\nSigned-off-by: Rufus Wong <rcywongaa@gmail.com>\r\n\r\n* Fix uncrustify warnings\r\n\r\nSigned-off-by: Rufus Wong <rcywongaa@gmail.com>\r\n\r\n* Add initial_topic_ variable to avoid confusion\r\n\r\nThis addresses comment\r\nhttps://github.com/ros-tooling/topic_tools/pull/106#discussion_r1637020280\r\n\r\nSigned-off-by: Rufus Wong <rcywongaa@gmail.com>\r\n\r\n* Fix outtopic spelling\r\n\r\nThis addresses comment\r\nhttps://github.com/ros-tooling/topic_tools/pull/106#discussion_r1637040958\r\n\r\nSigned-off-by: Rufus Wong <rcywongaa@gmail.com>\r\n\r\n* Add error message on incorrect number of arguments\r\n\r\nAddresses\r\nhttps://github.com/ros-tooling/topic_tools/pull/106#discussion_r1637033132\r\n\r\nSigned-off-by: Rufus Wong <rcywongaa@gmail.com>\r\n\r\n* Formatting\r\n\r\nSigned-off-by: Rufus Wong <rcywongaa@gmail.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Rufus Wong <rcywongaa@gmail.com>",
+      "files_changed": 17,
+      "additions": 604,
+      "deletions": 45,
+      "commit_type": "docs"
+    },
+    {
+      "author": "dependabot[bot]",
+      "date": "2021-04-23T17:59:47Z",
+      "sha": "8a8e906b2f687992bbb67be89f980c046b785036",
+      "message": "Bump actions/upload-artifact from v1 to v2.2.3\n\nBumps [actions/upload-artifact](https://github.com/actions/upload-artifact) from v1 to v2.2.3.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/actions/upload-artifact/releases\">actions/upload-artifact's releases</a>.</em></p>\n<blockquote>\n<h2>v2.2.3</h2>\n<ul>\n<li>Fixes for proxy related issues</li>\n</ul>\n</blockquote>\n</details>\n<details>\n<summary>Commits</summary>\n<ul>\n<li><a href=\"https://github.com/actions/upload-artifact/commit/ee69f02b3dfdecd58bb31b4d133da38ba6fe3700\"><code>ee69f02</code></a> Bump <code>@​actions/artifact</code> to version 0.5.1 (<a href=\"https://github-redirect.dependabot.com/actions/upload-artifact/issues/189\">#189</a>)</li>\n<li><a href=\"https://github.com/actions/upload-artifact/commit/bcd44ad93dd08b3451067a5656ad3ef9a411ffc7\"><code>bcd44ad</code></a> Bump y18n from 4.0.0 to 4.0.1 (<a href=\"https://github-redirect.dependabot.com/actions/upload-artifact/issues/186\">#186</a>)</li>\n<li><a href=\"https://github.com/actions/upload-artifact/commit/ea3d524381d563437a7d64af63f3d75ca55521c4\"><code>ea3d524</code></a> Merge pull request <a href=\"https://github-redirect.dependabot.com/actions/upload-artifact/issues/173\">#173</a> from yacaovsnc/main</li>\n<li><a href=\"https://github.com/actions/upload-artifact/commit/e95d1b9c8db06f3ebbe7993730a352795b5f480a\"><code>e95d1b9</code></a> update index.js</li>\n<li><a href=\"https://github.com/actions/upload-artifact/commit/0fbc4b771a173865a1ba8d32aa2dee55f7dbd380\"><code>0fbc4b7</code></a> Display a warning if user tries to upload over 10000 files</li>\n<li><a href=\"https://github.com/actions/upload-artifact/commit/a1af2e8f43d8f9773237d6887240adbade5a7037\"><code>a1af2e8</code></a> Add on: pull_request trigger to CodeQL workflow (<a href=\"https://github-redirect.dependabot.com/actions/upload-artifact/issues/165\">#165</a>)</li>\n<li><a href=\"https://github.com/actions/upload-artifact/commit/a4f98af3fa605e9619b0cd55a37b720eb29ed7cd\"><code>a4f98af</code></a> Update README.md</li>\n<li><a href=\"https://github.com/actions/upload-artifact/commit/16b8b2b2e710272c0a2fea3431b2fab02e34a3c5\"><code>16b8b2b</code></a> Update where does the upload go section (<a href=\"https://github-redirect.dependabot.com/actions/upload-artifact/issues/162\">#162</a>)</li>\n<li><a href=\"https://github.com/actions/upload-artifact/commit/e448a9b857ee2131e752b06002bf0e093c65e571\"><code>e448a9b</code></a> Add retries to all HTTP calls + resolve dependabot alerts (<a href=\"https://github-redirect.dependabot.com/actions/upload-artifact/issues/160\">#160</a>)</li>\n<li><a href=\"https://github.com/actions/upload-artifact/commit/e6bd6b77493dc00b6a9e3c38172973cc618562d6\"><code>e6bd6b7</code></a> Replace &quot;file(s)&quot; with &quot;file&quot; or &quot;files&quot; (<a href=\"https://github-redirect.dependabot.com/actions/upload-artifact/issues/159\">#159</a>)</li>\n<li>Additional commits viewable in <a href=\"https://github.com/actions/upload-artifact/compare/v1...ee69f02b3dfdecd58bb31b4d133da38ba6fe3700\">compare view</a></li>\n</ul>\n</details>\n<br />\n\n\nDependabot will resolve any conflicts with this PR as long as you don't alter it yourself. You can also trigger a rebase manually by commenting `@dependabot rebase`.\n\n[//]: # (dependabot-automerge-start)\n[//]: # (dependabot-automerge-end)\n\n---\n\n<details>\n<summary>Dependabot commands and options</summary>\n<br />\n\nYou can trigger Dependabot actions by commenting on this PR:\n- `@dependabot rebase` will rebase this PR\n- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it\n- `@dependabot merge` will merge this PR after your CI passes on it\n- `@dependabot squash and merge` will squash and merge this PR after your CI passes on it\n- `@dependabot cancel merge` will cancel a previously requested merge and block automerging\n- `@dependabot reopen` will reopen this PR if it is closed\n- `@dependabot close` will close this PR and stop Dependabot recreating it. You can achieve the same result by closing it manually\n- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)\n- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)\n- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)\n\n\n</details>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "ci"
+    },
+    {
+      "author": "jaagut",
+      "date": "2023-10-03T15:28:11Z",
+      "sha": "f73df4aed3e6c472b378f644e7cee9ba8f7d0048",
+      "message": "Update readme (#82)\n\n* Readme: add overview of components\r\n\r\nSigned-off-by: Jan Gutsche <githubrostoolingtopictools@jaagut.de>\r\n\r\n* Readme: Update wiki.ros.org URL to https\r\n\r\nSigned-off-by: Jan Gutsche <githubrostoolingtopictools@jaagut.de>\r\n\r\n* Readme: specify shell language for commands\r\n\r\nSigned-off-by: Jan Gutsche <githubrostoolingtopictools@jaagut.de>\r\n\r\n* Readme: Consistent punctuation\r\n\r\nSigned-off-by: Jan Gutsche <githubrostoolingtopictools@jaagut.de>\r\n\r\n* Readme: Update parameter description\r\n\r\nSigned-off-by: Jan Gutsche <githubrostoolingtopictools@jaagut.de>\r\n\r\n* Readme: Clearify mux initial_topic param\r\n\r\nSigned-off-by: Jan Gutsche <githubrostoolingtopictools@jaagut.de>\r\n\r\n---------\r\n\r\nSigned-off-by: Jan Gutsche <githubrostoolingtopictools@jaagut.de>\r\nCo-authored-by: Jan Gutsche <githubrostoolingtopictools@jaagut.de>",
+      "files_changed": 1,
+      "additions": 46,
+      "deletions": 29,
+      "commit_type": "docs"
+    },
+    {
+      "author": "andrewbest-tri",
+      "date": "2023-08-23T20:48:27Z",
+      "sha": "7dc8c430495de0c4912b68beadc991a7cc7eefa2",
+      "message": "Apply race condition fix to mux (#78)\n\nApply fix described in https://github.com/ros-tooling/topic_tools/pull/56 to mux_node\r\n\r\nSigned-off-by: Andrew Best <andrew.best@tri.global>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "ymd-stella",
+      "date": "2023-07-17T14:32:54Z",
+      "sha": "8ac5118006032522b737022eef1ce4ba93471b4f",
+      "message": "Fix mux example (#75)\n\nSigned-off-by: ymd-stella <world.applepie@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "anrp-tri",
+      "date": "2023-07-06T20:50:36Z",
+      "sha": "1f4896a2f500d416d911936c4ecf268b09a426ba",
+      "message": "Make compatible with windows (#68)\n\nSigned-off-by: Andrew Patrikalakis <anrp@tri.global>\r\nCo-authored-by: anrp <anrp@tri.global>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "mllofriu",
+      "date": "2023-06-22T23:27:23Z",
+      "sha": "a026e1b86d93d16de6e989eba91b0f519a2ee489",
+      "message": "Unit tests for all nodes (#61)\n\n* Add a basic unit test for relay_node\r\n* Add a test for drop\r\n* Add a test for the throttle node\r\n* Add a test for mux. Add a call to re-suscribe when the topic is switched\r\n\r\nSigned-off-by: Martin Llofriu <mllofriu@gmail.com>",
+      "files_changed": 8,
+      "additions": 559,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Haoguang Yang",
+      "date": "2023-05-18T17:32:50Z",
+      "sha": "0b3edaaca47afe7907569af682a746e65469bc3e",
+      "message": "Performance improvement in Python scripts (#60)\n\n* performance tweak: use lambdas to prevent repeated evals\r\n\r\nSigned-off-by: Haoguang Yang <yang1510@purdue.edu>",
+      "files_changed": 3,
+      "additions": 18,
+      "deletions": 10,
+      "commit_type": "config"
+    },
+    {
+      "author": "Kettenhoax",
+      "date": "2023-05-16T18:39:46Z",
+      "sha": "8dac8f13c1a816aefd642367e38828ea7b2dad36",
+      "message": "Add delay tool (#30)\n\n* Add delay tool\r\n\r\nSigned-off-by: Marcel Zeilinger <marcel.zeilinger@ait.ac.at>",
+      "files_changed": 5,
+      "additions": 192,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "martimorta-at-work",
+      "date": "2023-03-04T22:26:35Z",
+      "sha": "623a01c4adce912fb27cdec9776eafc608a4c0d0",
+      "message": "Fix mux (#51)\n\n* Fix mux by resetting sub if input_topic_ changes\r\n\r\nSigned-off-by: Marti Morta-Garriga <48062886+martimorta-at-work@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 10,
+      "deletions": 1,
+      "commit_type": "ci"
+    },
+    {
+      "author": "Bitterisland6",
+      "date": "2023-01-06T23:57:41Z",
+      "sha": "d0f09e560db781d9f3f84948be5a65c62e148840",
+      "message": "Eliminate race condition in relay node (#49)\n\n* added mutex use for publisher\r\n\r\nSigned-off-by: Bitterisland6 <bitterisland6@gmail.com>\r\n\r\n* formated code with ament_uncrustify\r\n\r\nSigned-off-by: Bitterisland6 <bitterisland6@gmail.com>\r\n\r\nSigned-off-by: Bitterisland6 <bitterisland6@gmail.com>",
+      "files_changed": 3,
+      "additions": 8,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "bartek-kc",
+      "date": "2022-11-09T22:46:21Z",
+      "sha": "d08df8aaedbca313aba1cc4feee45e9199d142ff",
+      "message": "Fixing conditional jump based on uninitialized optional values (#48)\n\n* Fixing conditional jump based on uninitialized optional values\r\n\r\nSigned-off-by: bartek-kc <bartosz.kozlowiec@robotec.ai>\r\n\r\n* Fixing Uncrustify and cpplint warnings\r\n\r\nSigned-off-by: bartek-kc <bartosz.kozlowiec@robotec.ai>\r\n\r\nSigned-off-by: bartek-kc <bartosz.kozlowiec@robotec.ai>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "wep21",
+      "date": "2021-11-01T23:06:24Z",
+      "sha": "bea969e0049b37f00fae45ba6b553ba23e7e5876",
+      "message": "Separate relay into exec and library (#15)\n\n* Seperate into exec and library\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>",
+      "files_changed": 6,
+      "additions": 170,
+      "deletions": 120,
+      "commit_type": "docs"
+    },
+    {
+      "author": "esteve",
+      "date": "2022-10-06T00:47:03Z",
+      "sha": "f020814732143bb6b93056270070465a47ead42d",
+      "message": "Port relay_field from ROS 1 (#42)\n\n* Port relay_field from ROS 1\r\n\r\nSigned-off-by: Esteve Fernandez <esteve.fernandez@tier4.jp>",
+      "files_changed": 3,
+      "additions": 242,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "simutisernestas",
+      "date": "2022-05-17T14:23:14Z",
+      "sha": "eb62b37cf0553d748377bb45c9d1f0bae368bbff",
+      "message": "fix use_wall_clock spelling in README (#39)\n\nSigned-off-by: Ernestas <simutisernestas@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "smnogar",
+      "date": "2022-02-03T21:00:52Z",
+      "sha": "5176c55ece622ec6e7b45a76df0230d54c001787",
+      "message": "Improve QoS detection robustness (#27)\n\n* improve qos detection robustness\r\n\r\nSigned-off-by: Steve Nogar <stephen.m.nogar.civ@mail.mil>\r\nCo-authored-by: Emerson Knapp <eknapp@amazon.com>",
+      "files_changed": 1,
+      "additions": 68,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "wmmc88",
+      "date": "2022-01-07T19:19:58Z",
+      "sha": "51914506599d62f284c2b326cb996c8299e70449",
+      "message": "add visibility_control header. fixes windows build (#28)\n\nSigned-off-by: Melvin Wang <melvin.mc.wang@gmail.com>",
+      "files_changed": 6,
+      "additions": 60,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mateusz-lichota",
+      "date": "2021-10-28T17:25:51Z",
+      "sha": "2d89d027a97aee993023e60249d00da3968814c5",
+      "message": "Relay tool port (#13)\n\n* Create a first version of the relay tool\r\n\r\nSigned-off-by: Mateusz Lichota <mateusz@lichota.net>\r\nCo-authored-by: Emerson Knapp <emerson.b.knapp@gmail.com>",
+      "files_changed": 5,
+      "additions": 182,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "Emerson Knapp",
+      "date": "2021-04-23T17:38:43Z",
+      "sha": "8478af094ffedbf91e108063582f24278aef87fd",
+      "message": "Initial commit, empty ament_cmake package\n\nSigned-off-by: Emerson Knapp <eknapp@amazon.com>",
+      "files_changed": 5,
+      "additions": 266,
+      "deletions": 0,
+      "commit_type": "docs"
+    }
+  ]
+}

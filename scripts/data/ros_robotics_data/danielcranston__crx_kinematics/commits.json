@@ -1,0 +1,473 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T13:19:30Z",
+    "source": "github_rest",
+    "endpoint": "/repos/{owner}/{repo}/commits",
+    "owner": "danielcranston",
+    "repo": "crx_kinematics"
+  },
+  "data": [
+    {
+      "sha": "36ea1d137ae18e604b849de2ac65448a416f7f11",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2026-02-21T08:25:56Z",
+      "message": "1.0.0"
+    },
+    {
+      "sha": "2f4c8bfd6f9724a798787c1ee29ff5ceb1ad88c8",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2026-01-23T14:04:41Z",
+      "message": "add per-distro CI badges to README"
+    },
+    {
+      "sha": "18e4fd76cb9784f460048dc3ba60f4e1b1800fb1",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2026-01-23T13:51:38Z",
+      "message": "Split up CI into separate individual jobs to allow per-distro badge"
+    },
+    {
+      "sha": "8e998469d25e9e654ff27a3189d125c59d2fb6a6",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2026-01-21T13:25:37Z",
+      "message": "add rolling to CI"
+    },
+    {
+      "sha": "619d9758d20fcd05e93388e7c239ad4e6c405dad",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2026-01-20T13:40:21Z",
+      "message": "support humble"
+    },
+    {
+      "sha": "60ffb3fdf76e31dd80430136403a9f419d2aec18",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2026-01-20T13:23:52Z",
+      "message": "add crx10ia_l urdf/srdf from paolofrance/ros2_fanuc_interface to tests\n\nhighlighting FK/IK works when tcp orientation is defined differently\nfrom the official URDFs."
+    },
+    {
+      "sha": "fa3b0a5d0f081176070da4a1eb671c135dac469d",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2026-01-17T08:35:59Z",
+      "message": "drop KDL dependency, find joint limits & tcp orientation from RobotModel\n\nNice with fewer dependencies, but I'm unsure if RobotModel guarantees\nthat joint_states appear in topological order. If not, we're at the\nmercy of the moveit config to define them as such. If it doesn't, joint\nlimits will be applied to the wrong joints."
+    },
+    {
+      "sha": "67a13fa45b3771a0802ad545b8a1c00e8ce94ca9",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2026-01-17T06:32:13Z",
+      "message": "automatically deduce tcp orientation (T_rostool_pendanttool)\n\nThis gets rid of the hardcoded T_rostool_pendanttool which assumed\nthe URDF / planning group matches the official FANUC URDF.\n\nNow it's automatically deduced, meaning we can support any tool\norientation (e.g. paolofrance/ros2_fanuc_interface).\n\nFinally, also extend tests a bit."
+    },
+    {
+      "sha": "5d470edaffc044f133c078b6bda7f2dc5c30ee58",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2026-01-16T13:44:32Z",
+      "message": "micro-optimization"
+    },
+    {
+      "sha": "4b271fdcc76a1ff0c00a7c92f620b372f8ebe38c",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2026-01-16T13:25:41Z",
+      "message": "check orientation as well when confirming IK sol reproduces desired pose\n\nMight revert this pending some quantative investigation on whether\nthere's ever a case where orientation is bad but position isn't.\nThose 3x3 -> quaternion conversions are unfortunate ..."
+    },
+    {
+      "sha": "f8f48457df3a8fedc732fc489c7c0a558a2599ce",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2026-01-16T12:31:24Z",
+      "message": "parse joint limits from URDF, retain only IK solutions within limits"
+    },
+    {
+      "sha": "2c6e5932f56b7d0df21a10a6bdfeadb0c56ef8c6",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2026-01-15T11:38:39Z",
+      "message": "small logging cleanup"
+    },
+    {
+      "sha": "b5b1848588e55cb2d89e5abd54ef3cfdba560092",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2025-12-28T13:25:57Z",
+      "message": "update .clang-format to sort includes"
+    },
+    {
+      "sha": "8137dd8cc2dabfdd63667da74233a457e183c6e6",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2025-12-28T10:44:48Z",
+      "message": "add randomized ik/fk roundtrip tests, fix some stuff along the way\n\nspecifically\n  - dual solutions when not coupling J2/J3 (plugin behavior) would not\n    be harmonized around +-180 for larger joint angles\n  - put a bandaid (at the plugin level) on the fact that joint solutions\n    can sometimes have a position error of several cm (after FK). This\n    ensures no such solutions are returned."
+    },
+    {
+      "sha": "2f18e1877cb2644e459b1c9f83f72933dbe00489",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2025-12-26T00:41:56Z",
+      "message": "ensure 359-360 degree segment is evaluated for zeros"
+    },
+    {
+      "sha": "ce538ae33f2f9132e0c5111b212e4b18d5a062fb",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2025-12-22T14:13:24Z",
+      "message": "add comment in README that Fanuc _driver_ currently only supports Humble"
+    },
+    {
+      "sha": "dbb7d93ab595ccfdd4dfa0240571956e23190f7a",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2025-12-22T14:03:31Z",
+      "message": "small fixups to plugin fk and test"
+    },
+    {
+      "sha": "0286f643d20d6ae9d019f0c4233f4d1da5bfb6e0",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2025-12-22T13:19:30Z",
+      "message": "build plugin with '-Wall -Wextra -Wpedantic -Werror' as well"
+    },
+    {
+      "sha": "82ebdb479c0bd235cf7d8dcda65bee116bed3f3c",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2025-12-22T13:05:31Z",
+      "message": "extend README to mention the Moveit 2 Kinematics plugin\n\nAnd fix a typo in DERIVATION.md while we're at it."
+    },
+    {
+      "sha": "afe1b50fa6238391e0c8897b4d057fbe8a273a45",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2025-12-21T02:38:14Z",
+      "message": "extend kinematics plugin test slightly"
+    },
+    {
+      "sha": "4899867829974dae0496b40a7a61ea374db545fb",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2025-12-20T12:10:05Z",
+      "message": "drop visual/geometry elements in test URDFs, silence test-time warnings\n\nAnd while at it, might as well drop the 'inertial' and 'ros2_control'\nelements to save some lines"
+    },
+    {
+      "sha": "864c9379873151d4821aebb4086289b86d2e12a6",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2025-12-20T12:02:59Z",
+      "message": "add comment about tool frame discrepancy in DERIVATION.md, fix typo"
+    },
+    {
+      "sha": "818553efa20424d5660bcb06ba67e5929f06e093",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2025-12-20T11:23:49Z",
+      "message": "implement plugin FK, add basic plugin test for CRX10ia and CRX30ia\n\nNotably, the test does not require external repositories. The trade-off\nis ~800 lines of SRDF and xacro-parsed URDF files being committed into\nthis repo, though."
+    },
+    {
+      "sha": "03bb7319ce17d819562cde98be81c50bcedd2d51",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2025-12-20T09:00:26Z",
+      "message": "fixup into filter IK solutions"
+    },
+    {
+      "sha": "edcd8fc49232fa1ee63014858cbd6c5098955be8",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2025-12-20T07:57:20Z",
+      "message": "let whether to couple J2/J3 be decided at CRXRobot construction time\n\nby adding couple_j2_j3."
+    },
+    {
+      "sha": "5c68ac42858036d5fef39dfc92fd96ca7aa2b5c1",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2025-12-20T07:46:31Z",
+      "message": "filter IK solutions based on the user-defined IKCallbackFn"
+    },
+    {
+      "sha": "6dc6bd851dc54e506a581853af9ceda7f34828d4",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2025-12-20T07:11:01Z",
+      "message": "choose the ik solution closest to the seed (reference) state"
+    },
+    {
+      "sha": "912fff45269241f8b200767bc94c56d9fe5d4349",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2025-12-12T14:10:36Z",
+      "message": "support all 5 official fanuc descriptions (by looking at the URDF model name)"
+    },
+    {
+      "sha": "adbdf0d3df2efbd71930f3aa0213bdef014c739d",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2025-12-12T12:30:34Z",
+      "message": "Revert \"adjust for paolofrance/ros2_fanuc_interface description / moveit config\"\n\nThis reverts commit e069ad1c290c410d67e4ded178abc09ad9f89666."
+    },
+    {
+      "sha": "e069ad1c290c410d67e4ded178abc09ad9f89666",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2025-12-12T12:12:17Z",
+      "message": "adjust for paolofrance/ros2_fanuc_interface description / moveit config\n\nSpecifically, the crx10ia_l.\n\nros2 launch crx10ia_l_moveit_config  demo.launch.py"
+    },
+    {
+      "sha": "105d89c35889644f6b0569f8812ffcba6a785cfd",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2025-12-11T14:20:19Z",
+      "message": "implement minimal Plugin IK (working with official CRX10ia description)"
+    },
+    {
+      "sha": "7315190f4795178a71d55c22db27710c99ce84a9",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2025-12-07T02:13:59Z",
+      "message": "give KinematicsPlugin virtual functions some basic body\n\n(interactive marker shows up when using the MotionPlanning rviz plugin)"
+    },
+    {
+      "sha": "69fcb78de4632d97ed613684378ed80afe8f34b4",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2025-12-04T15:26:50Z",
+      "message": "add LICENSE"
+    },
+    {
+      "sha": "1bb96abdcf7cae61acc96cd5a1456574ba1dddc9",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2025-12-04T14:34:53Z",
+      "message": "add README.md and DERIVATION.md"
+    },
+    {
+      "sha": "fed3e579e80bf180ecdebcdc48d1fcfe29144234",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2025-12-01T10:59:34Z",
+      "message": "add Github Actions CI"
+    },
+    {
+      "sha": "3d97c3c9084fa7738c8cf2a4963ff3c5d6630386",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2025-11-30T11:37:56Z",
+      "message": "start of moveit kinematics plugin"
+    },
+    {
+      "sha": "83f795ce3e6b15f00f2ffa1c5822b0d863743efc",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2025-11-29T13:29:20Z",
+      "message": "add missing __init__.py"
+    },
+    {
+      "sha": "d1308d3f5b41f58861c820d95f70f922218d78d3",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2025-11-28T14:40:21Z",
+      "message": "add C++ FK/IK implementation"
+    },
+    {
+      "sha": "25a8a2b3814c56401e369adf90cbe450e62c3b87",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2025-11-19T13:43:33Z",
+      "message": "cleanup/simplify"
+    },
+    {
+      "sha": "9aacf0226fe7e2ba6f4c598fc07e99a121a91ab8",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2025-11-18T23:09:31Z",
+      "message": "cleanup"
+    },
+    {
+      "sha": "9abb72d3d0cca4b41ff2d6f238f3f970c31dc625",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2025-11-14T12:23:34Z",
+      "message": "search-replace old package name to crx_kinematics_py"
+    },
+    {
+      "sha": "594336ae62f0541866904645e5ddf94f1f2872cf",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2025-11-14T12:22:55Z",
+      "message": "move package to repo subfolder"
+    },
+    {
+      "sha": "8e6151c246362df43a78c3a28d7f0d641c9ead53",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2025-11-14T12:18:38Z",
+      "message": "add gitignore"
+    },
+    {
+      "sha": "6c6e59aaf0e603791b7b771eee40c8bb310da30f",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2025-11-13T12:43:22Z",
+      "message": "add demo node service to visualize dual joint pose"
+    },
+    {
+      "sha": "4b82a1f9daa20787b8c3e4b6de0e9ffd6942820d",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2025-11-12T14:46:05Z",
+      "message": "update tests to reflect inclusion of dual solutions, cleanup"
+    },
+    {
+      "sha": "f663d99e69b69e5b0303fe8a75d9d208cbf5c1ff",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2025-11-12T14:45:20Z",
+      "message": "implement Step 7 (dual solutions), add convenience demo service"
+    },
+    {
+      "sha": "0d1348682fd012b22d9e9e8bca05af3598c0857a",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2025-11-12T11:43:13Z",
+      "message": "wrap intermediate return data in IKDebugData dataclass, cleanup"
+    },
+    {
+      "sha": "673c909a6a8b9badabeb2ae8bc0b38217a78c7b0",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2025-11-12T00:38:52Z",
+      "message": "prefer np.arctan2 over np.atan2 to support numpy<2 versions"
+    },
+    {
+      "sha": "e4030f3caf958715de3386de51771a0eab6f0f21",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2025-11-11T23:27:00Z",
+      "message": "update rviz config"
+    },
+    {
+      "sha": "427bc25e650aacb56c0c6f5429b4229f9fa4b615",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2025-11-11T23:25:05Z",
+      "message": "add test reproducing paper results"
+    },
+    {
+      "sha": "ae0b9d46e3eb58151fed3a611eb5e66435ad5ce1",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2025-11-11T23:24:05Z",
+      "message": "add visual meshes"
+    },
+    {
+      "sha": "d95dcc2434b55fb42dc3c4ea2f8c5d56f894de4c",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2025-11-11T23:17:08Z",
+      "message": "add __init__.py"
+    },
+    {
+      "sha": "31ff5be2b23e7b1649c90a3eb1e33564b7644b7f",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2025-11-11T14:30:30Z",
+      "message": "break out a robot.py, add robot mesh viz"
+    },
+    {
+      "sha": "cd7f1728cdab5e9c53de0afb839359d8338561e5",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2025-11-10T12:49:55Z",
+      "message": "extract find_zeros fn, use scipy.optimize.root_scalar"
+    },
+    {
+      "sha": "c95c2d467b73fc1c81b2c277e9cf6897f7068471",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2025-11-09T13:59:25Z",
+      "message": "cleanup"
+    },
+    {
+      "sha": "ad06c9aeff056b62c117a206a83cbf82af8f7529",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2025-11-09T13:44:03Z",
+      "message": "implement IK for O3DOWN case (previously only O3UP)"
+    },
+    {
+      "sha": "d3de63a15bd3f998d3c8e6ba54e086bfe102b964",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2025-11-08T14:09:00Z",
+      "message": "wip cleanup"
+    },
+    {
+      "sha": "5da9ba3bdebac22e8c0e0f4cf734baf443c456f4",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2025-11-07T13:15:22Z",
+      "message": "implement J5 and J6 calculation (needs cleanup)"
+    },
+    {
+      "sha": "6953229e609aea8b6a5c308f4c116d71f0d9ba94",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2025-11-06T02:35:31Z",
+      "message": "add pyproject.toml, format imports"
+    },
+    {
+      "sha": "b86ff73698ceecd7d0fa5f43734d2df686dce26a",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2025-11-06T02:12:12Z",
+      "message": "add dedicated rviz config"
+    },
+    {
+      "sha": "aa3c177516a45ff9011c4623c1ffefbf11415d01",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2025-11-06T02:11:43Z",
+      "message": "support ROS versions prior to Kilted"
+    },
+    {
+      "sha": "7ae7f479ec54b03bf10644323bc425b3b9429eb8",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2025-11-05T23:07:31Z",
+      "message": "small cleanup"
+    },
+    {
+      "sha": "2e2cd860501544a020b0109e9d30e8f36d7e67ee",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2025-11-05T22:44:15Z",
+      "message": "show approximate zeros in plot image"
+    },
+    {
+      "sha": "e849ffbcc69dbdec0f769603d3a7c2079cd60e26",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2025-11-05T14:01:47Z",
+      "message": "add remainder of ros package files"
+    },
+    {
+      "sha": "36a871ebee386e0f4d0f115238fb35a485f66649",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2025-11-05T13:55:40Z",
+      "message": "add IK step4 (sample signals/dot products) and related visualization"
+    },
+    {
+      "sha": "a353e2a9ee8f8f8aa8814192d5270db6d9e8856b",
+      "author": "Daniel",
+      "author_login": "danielcranston",
+      "date": "2025-11-05T13:52:39Z",
+      "message": "initial commit: FK and partial IK (up to ~step3) implemented"
+    }
+  ]
+}

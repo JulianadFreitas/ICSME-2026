@@ -1,0 +1,111 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T10:21:25Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "mikeferguson",
+    "repo": "robot_calibration"
+  },
+  "data": [
+    {
+      "author": "mikeferguson",
+      "date": "2014-11-09T09:50:01Z",
+      "sha": "3ec8eafaec0b42e3e3f21d1edd659c56f88c278c",
+      "message": "Initial commit",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Tacha-S",
+      "date": "2025-03-17T12:34:39Z",
+      "sha": "87593d4bfa5896dc5a88b5317ea975f490c354aa",
+      "message": "Fix initial magnetic field strength unit (#194)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "glpuga",
+      "date": "2021-12-12T14:10:28Z",
+      "sha": "ce377f2d6bbd4f5b95a3125307340858d962fa19",
+      "message": "Add exception when the chain cannot be created (#105)",
+      "files_changed": 3,
+      "additions": 110,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "AndyZe",
+      "date": "2021-08-10T02:35:10Z",
+      "sha": "413e7316506320a329c4d85c3865be9fd63ce330",
+      "message": "Document base_link, model frame parameter (#97)",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Naoki-Hiraoka",
+      "date": "2019-08-18T09:36:32Z",
+      "sha": "016cc2ad75254896e4cac2b1738c506f90a6ab49",
+      "message": "allow multiple checkerboards",
+      "files_changed": 2,
+      "additions": 6,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "d-walsh",
+      "date": "2019-06-18T22:09:56Z",
+      "sha": "ca785f1beb4873b409e247882adbe2393b1f67c1",
+      "message": "Fixed isnan() error on Kinetic",
+      "files_changed": 2,
+      "additions": 10,
+      "deletions": 10,
+      "commit_type": "code"
+    },
+    {
+      "author": "saurabhbansal90",
+      "date": "2018-06-25T08:55:16Z",
+      "sha": "8ad71474ce9f719b71e230f41fc3686ffbfe8b64",
+      "message": "Update led_finder.cpp",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Guilherme Lawless",
+      "date": "2018-02-09T10:30:09Z",
+      "sha": "20aae7cba0c090fc33216a1228c9bcc6df46790e",
+      "message": "Fix broken OpenCV linking in ROS Kinetic",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "narora1",
+      "date": "2015-06-22T23:58:32Z",
+      "sha": "6a293337dd161d78334406c08fd5be05ae28301e",
+      "message": "Ground Plane calibration added",
+      "files_changed": 10,
+      "additions": 362,
+      "deletions": 10,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mintar",
+      "date": "2017-03-23T15:01:20Z",
+      "sha": "added19e00a8e3717551c7aa12f34421dffc4a09",
+      "message": "fix: don't append observations if finder has failed\n\nWithout this patch, the observations array size is increased by 2 even when\n`findInternal()` returns `false`.\n\nThe following patch would have solved the problem too, but it seemed\ncleaner to let `findInternal()` work on a temporary copy instead of\ntracking down and undoing all changes:\n\n    @@ -208,6 +208,9 @@ ROS_INFO_STREAM(\"looking for point \" << i);\n               isnan(rgbd.point.z))\n           {\n             ROS_ERROR_STREAM(\"checkerboard_finder: NAN point on geometrymsgs point \" << i);\n    +\n    +\t// undo the resize from above\n    +        msg->observations.resize(msg->observations.size() - 2);\n\n             return false;\n           }",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 1,
+      "commit_type": "code"
+    }
+  ]
+}

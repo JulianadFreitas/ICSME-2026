@@ -1,0 +1,1671 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T02:47:50Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros-perception",
+    "repo": "image_pipeline"
+  },
+  "data": [
+    {
+      "author": "ahcorde",
+      "date": "2024-01-17T09:43:05Z",
+      "sha": "8076d4e930bbe739f3bc745873f7b4309d73c430",
+      "message": "Depth image transport configure susbcribers (#844) (#845)\n\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>",
+      "files_changed": 1,
+      "additions": 17,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "mini-1235",
+      "date": "2025-11-03T15:57:03Z",
+      "sha": "96935d6e32c7d601b86d803236c261752591ee8a",
+      "message": "Fix incorrect plugin name for PointCloudXyzrgbRadialNode (#1120)\n\nHi, the plugin `PointCloudXyzrgbRadialNode` is incorrectly registered as\n`PointCloudXyziRadialNode`, this PR fixes the issue\n\nSigned-off-by: mini-1235 <mauricepurnawan@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Nosille",
+      "date": "2025-07-14T11:46:04Z",
+      "sha": "aefba9d3cf2158ffc52b4ed5dfb6ab665543772c",
+      "message": "fix remapping bug in RectifyNode (#1108)\n\nThe previous effort to fix remapping issues\n(https://github.com/ros-perception/image_pipeline/issues/940), addressed\nby pull request\n(https://github.com/ros-perception/image_pipeline/pull/941), overlooked\nthe RectifyNode.\n\nCo-authored-by: IntrepidBase <kyler.a.farrar@erdc.dren.mil>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "christophebedard",
+      "date": "2025-06-06T10:24:20Z",
+      "sha": "746268fcfd21b389bc39ae60bb6345a53c838558",
+      "message": "Update index.ros.org package website links (#1101)\n\nFixes https://github.com/ros-infrastructure/rosindex/issues/539\n\n`index.ros.org/p/$pkg/` links with the GitHub repo at the end no longer\nwork and result in a 404.\n\nThis should be backported to all non-EOL distro branches.\n\nSigned-off-by: Christophe Bedard <bedard.christophe@gmail.com>",
+      "files_changed": 8,
+      "additions": 8,
+      "deletions": 8,
+      "commit_type": "config"
+    },
+    {
+      "author": "christianrauch",
+      "date": "2022-12-11T16:53:04Z",
+      "sha": "7c5f03e8a55ddf1583ef6470ae4394ba5512a285",
+      "message": "remove commented code",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "fgrcar",
+      "date": "2025-04-21T08:03:58Z",
+      "sha": "2e109648dab4f577d955c0d6d66358582ee16414",
+      "message": "Replace OpenCV version string comparison with semver. (#1087)\n\nWhen using the ChArUco markers with `cameracalibrator`, I found out that\nthere's an issue with the last versions of OpenCV due to the fact that\nversions are compared as strings and the thing goes wrong for versions\n4.10 and above.",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "mikeferguson",
+      "date": "2014-04-27T08:34:55Z",
+      "sha": "9b437bd1c55f4629b1e910fb41b66c3692ffc964",
+      "message": "depth_image_proc: fix missing symbols in nodelets",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "christian-rauch",
+      "date": "2025-02-18T17:05:04Z",
+      "sha": "d541f3061696abba489d1421ff723b4730f72463",
+      "message": "fix depth_image_proc launch files (#1077)\n\nA couple of fixes to make the `depth_image_proc` launch files work\nagain. The issues are mostly caused by API with launch and the RealSense\nnode.",
+      "files_changed": 10,
+      "additions": 40,
+      "deletions": 19,
+      "commit_type": "code"
+    },
+    {
+      "author": "zycczy",
+      "date": "2025-02-13T09:28:45Z",
+      "sha": "cebd97a410a02f338ad7c2cba2384e8ed281373a",
+      "message": "image_view：set CvtColorForDisplay encoding as bgr8 (#1071)\n\nSigned-off-by: Zhaoyuan Cheng <zycczyby@gmail.com>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "muellerbernd",
+      "date": "2025-02-12T10:09:56Z",
+      "sha": "8cc46a33429a06f47c8286f4df6da1df02cb4a04",
+      "message": "Fix new opencv aruco api (#1072)\n\nThis fix is based on\nhttps://github.com/ros/meta-ros/commit/719fe6e421af07a16e4958036beadd50ae0ef5fb.\nI have not found any matching PR here. This also fixes compiling for\njazzy.",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "mergify[bot]",
+      "date": "2025-02-07T10:48:37Z",
+      "sha": "0908a961f9c16ac1b349ada22196e72e4c56b811",
+      "message": "Check repeatedly (backport #1066) (#1070)\n\nI made it so that it is checked multiple times instead of just once.\n\n- fix #1052 \n\nSigned-off-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>\nCo-authored-by: Tatsuro Sakaguchi <tacchan.mello.ioiq@gmail.com>\nCo-authored-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 7,
+      "commit_type": "code"
+    },
+    {
+      "author": "traversaro",
+      "date": "2025-01-06T09:24:20Z",
+      "sha": "86f51ab6bbece716ebadfead12e671c9167d19d6",
+      "message": "Fix Windows compilation in image_publisher.cpp (#1061)\n\nPR https://github.com/ros-perception/image_pipeline/pull/985 added some\ncode that used `M_PI`, but `M_PI` is not defined in any standard, and\nbefore including `cmath` or `math.h` in Windows it is necessary to\ndefine `_USE_MATH_DEFINES` to ensure that `M_PI` is defined.",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "CursedRock17",
+      "date": "2024-12-26T23:32:13Z",
+      "sha": "3359a6edc0b4121fd409871afd4cbdc2b15e1896",
+      "message": "Deprecating tf2 C Headers (#1039)\n\nRelated to this [pull\nrequest](https://github.com/ros2/geometry2/pull/720) in `geometry2` in\nwhich we deprecated the `.h` style headers in favor of `.hpp`.\n\nSigned-off-by: CursedRock17 <mtglucas1@gmail.com>\nCo-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "rursprung",
+      "date": "2024-12-10T22:27:41Z",
+      "sha": "6ff605c129e85f8fb9cfaef5e146c9a76ef1cbf1",
+      "message": "`image_view_node`: support bayer images (#1046)\n\nso far bayer images always failed with an error:\r\n```\r\n[ERROR] [..] [image_view_node]: Unable to convert 'bayer_rggb8' image for display: 'cv_bridge.cvtColorForDisplay() does not have an output encoding                that is color or mono, and has is bit in depth'\r\n```\r\n\r\nthe `stereo_view_node` on the other hand already supports bayer images,\r\nhowever it always forcibly converts them to monochrome, even if they are\r\ncolour images.\r\n\r\nfor now, this adds the same logic for the single-image viewer and thus\r\nonly partially resolves #1045.",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "quic-zhaoyuan",
+      "date": "2024-11-28T20:02:45Z",
+      "sha": "bb4ab63f19ec4d7df9cd80a0785ed2e4ffa144d1",
+      "message": "stereo_image_proc: disparity_node: Add parameter to control camera_info (#1051)\n\nAdd a parameter, use_image_transport_camera_info (default:\r\ntrue), to control whether DisparityNode uses\r\nimage_transport::getCameraInfoTopic for deriving camera_info topics.\r\n\r\n    Default Behavior (backward compatible):\r\nWhen use_image_transport_camera_info is true, the node continues using\r\nimage_transport::getCameraInfoTopic for camera_info resolution,\r\nmaintaining existing functionality.\r\n\r\n    Custom Behavior:\r\nWhen use_image_transport_camera_info is false, the node directly uses\r\nthe camera_info topics specified via remapping (e.g., left/camera_info\r\nand right/camera_info), bypassing image_transport's derivation logic.\r\n\r\nThis solution allows users to explicitly remap the camera_info topics\r\nfor both cameras, providing flexibility for scenarios where topic names\r\nare not unique or need customization.\r\n\r\n---------\r\n\r\nSigned-off-by: Zhaoyuan Cheng <quic_zhaochen@quicinc.com>\r\nSigned-off-by: Zhaoyuan <quic_zhaochen@quicinc.com>\r\nCo-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>",
+      "files_changed": 2,
+      "additions": 20,
+      "deletions": 6,
+      "commit_type": "docs"
+    },
+    {
+      "author": "skalldri",
+      "date": "2024-11-25T09:32:41Z",
+      "sha": "0dd99bf0f8afd84e849c5dfc69b2c7efb37df890",
+      "message": "Support QoS override parameters in depth_image_proc/register (#1043)\n\nThis PR adds support to the `depth_image_proc` - `register` node for\r\nsetting External QoS Configuration on topic _subscriptions_.",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "tedsteiner",
+      "date": "2024-10-29T18:02:19Z",
+      "sha": "4993e05e86fb742e29e6b94d8ad66f31e4aa4f1c",
+      "message": "Use TF2 package for quaternion conversion (#1031)\n\nThe OpenCV quaternion class was not added until OpenCV 4.5.1, so it's\r\nless widely available than the TF2 conversion. This change allows a\r\nsource build of the ROS 2 \"perception\" variant on Ubuntu 20.04 without a\r\ncustom source build of OpenCV.\r\n\r\nAddresses issue\r\nhttps://github.com/ros-perception/image_pipeline/issues/1030",
+      "files_changed": 2,
+      "additions": 8,
+      "deletions": 6,
+      "commit_type": "config"
+    },
+    {
+      "author": "ugol-1",
+      "date": "2024-09-17T09:54:13Z",
+      "sha": "731b43c632b4f76c15642dd386c493b1f09827d3",
+      "message": "Fix #1032 (#1033)\n\nUse `status_message` from `SetCameraInfo` response instead of some\r\nnon-existing `result()`.\r\nFixes #1032\r\n\r\nCo-authored-by: ugol-1 <ugol-1@potatomatic.com>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "MRo47",
+      "date": "2024-06-03T16:17:50Z",
+      "sha": "efb9005a5ca45f4ceb7563fc01d7e33d6f39214d",
+      "message": "Added stereo calibration using charuco board (#976)\n\nFrom #972 \r\nDoing this first for rolling.\r\n\r\nThis was a TODO in the repository, opening this PR to add this feature.\r\n- The main issue why this wasn't possible imo is the way `mk_obj_points`\r\nworks. I'm using the inbuilt opencv function to get the points there.\r\n- The other is a condition when aruco markers are detected they are\r\nadded as good points, This is fine in case of mono but in stereo these\r\nhave to be the same number as the object points to find matches although\r\nthis should be possible with aruco.",
+      "files_changed": 1,
+      "additions": 41,
+      "deletions": 25,
+      "commit_type": "code"
+    },
+    {
+      "author": "bjsowa",
+      "date": "2024-08-20T08:41:01Z",
+      "sha": "e5e6026ad969875779db5b44f512f366d2452733",
+      "message": "Publish using unique ptr (#1016)\n\nPrevents doing an extra copy of the data when using intra-process\r\ncommunication.",
+      "files_changed": 21,
+      "additions": 145,
+      "deletions": 132,
+      "commit_type": "code"
+    },
+    {
+      "author": "SFhmichael",
+      "date": "2024-06-25T12:17:13Z",
+      "sha": "bc5cab9516e274744dd062b66863139a2bfb035d",
+      "message": "Change camera info message to lower case (#1005)\n\nChange camera info message to lower case since message type had been\r\nchange in rolling and humble.\r\n[](https://github.com/ros2/common_interfaces/blob/rolling/sensor_msgs/msg/CameraInfo.msg)",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "Kotochleb",
+      "date": "2024-05-27T16:03:57Z",
+      "sha": "7f25ec90f416fceec66e7e95494d18b89cb9ed91",
+      "message": "[rolling] image_publisher: Fix image, constantly flipping when static image is published (#986)\n\nContinuation of\r\nhttps://github.com/ros-perception/image_pipeline/pull/984.\r\n\r\nWhen publishing video stream from a camera, the image was flipped\r\ncorrectly. Yet for a static image, which was loaded once, the flip\r\nfunction was applied every time `ImagePublisher::doWork()` was called,\r\nresulting in the published image being flipped back and forth all the\r\ntime.\r\n\r\nThis PR should be straightforward to port it to `Humble`, `Iron` and\r\n`Jazzy`.",
+      "files_changed": 2,
+      "additions": 5,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "tfoldi",
+      "date": "2024-05-17T08:57:57Z",
+      "sha": "a8cd84027d23d3bd21c506f2538b7a4d29e4ba6f",
+      "message": "fix: cv2.aruco.interpolateCornersCharuco is deprecated (#979)\n\nThere has been API Changes in the newer releases of opencv2 (from\r\n4.8.0). The PR addresses this by supporting both the old and new APIs.\r\n\r\nupdated Syntax\r\n```\r\ncharucodetector = cv2.aruco.CharucoDetector(board)\r\ncharuco_corners, charuco_ids, marker_corners, marker_ids = charucodetector.detectBoard(image)\r\n```\r\nbefore 4.8.0\r\n```\r\nmarker_corners, marker_ids, rejectedImgPoints = cv2.aruco.detectMarkers( image, dictionary)\r\nretval, charuco_corners, charuco_ids = cv2.aruco.interpolateCornersCharuco( marker_corners, marker_ids, image, board)\r\n```\r\n\r\nSee the changed examples in the main opencv2 repo:\r\n\r\n\r\nhttps://github.com/opencv/opencv/blob/f9a59f2592993d3dcc080e495f4f5e02dd8ec7ef/samples/python/calibrate.py#L110",
+      "files_changed": 2,
+      "additions": 19,
+      "deletions": 7,
+      "commit_type": "code"
+    },
+    {
+      "author": "ScottMonaghan",
+      "date": "2024-04-23T08:25:04Z",
+      "sha": "171d4366a5ae5c70a0092654ed4bb6114f48ed48",
+      "message": "replace disutils with python3-semver (#970)\n\nFix for \r\n - #969 \r\n \r\nI added a dependency for `python3-semver` to replace version parsing\r\nwith `disutils`.\r\n\r\nPlease let me know if you have any questions, concerns, or additional\r\nrequested changes.",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 3,
+      "commit_type": "config"
+    },
+    {
+      "author": "VishalBalaji321",
+      "date": "2024-03-19T00:57:21Z",
+      "sha": "3f8c5432cb60846e1385cbf39d02435a6fc4cef0",
+      "message": "Fix spelling error for cv2.aruco.DICT from 6x6_50 to 7x7_1000 (#961)\n\nThere was mismatch of capitalisation of \"X\" for OpenCV\r\ncv2.aruco.DICT_n**X**n_ in camera_calibration package for dicts 6x6_50\r\nto 7x7_1000\r\n\r\nCo-authored-by: Vishal Balaji <vishal.balaji@schanzer-racing.de>",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "NoahMollerstuen",
+      "date": "2024-03-08T04:04:05Z",
+      "sha": "58099efbf46115fff99e89bd7b2cefac76478e56",
+      "message": "Fix parameter names in components.rst (#959)\n\nIn the docs for `image_proc::CropDecimateNode` , change the parameter\r\nnames `x_offset` and `y_offset` to `offset_x` and `offset_y`, matching\r\nthe actual names of parameters defined in crop_decimate.cpp",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Alessio-Parmeggiani",
+      "date": "2024-03-01T09:29:11Z",
+      "sha": "b8839433dda96c7671e4f9b00fad37a9824fc0e7",
+      "message": "Update depth_image_proc::RegisterNode documentation (#957)\n\nAdding missing parameters from register node of depth_image_proc\r\npackage.\r\nRelated to Issue #956",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "SteveMacenski",
+      "date": "2019-04-05T21:30:15Z",
+      "sha": "620e42872f758b8e264b16013da9f1c47e92e0f8",
+      "message": "adding stevemacenski as maintainer to get emails",
+      "files_changed": 8,
+      "additions": 8,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "PhilippPolterauer",
+      "date": "2024-02-21T00:18:01Z",
+      "sha": "432f134ce928c4952d10d51638c568fac1e6e74e",
+      "message": "add invalid_depth param (#943)\n\nAdd option to set all invalid depth pixels to a specified value, typically the maximum range.\r\n\r\n * Updates convertDepth parameter name and optimizes use of the parameter.\r\n * Updates PointCloudXYZ, PointCloudXYZI, and PointCloudXYZRGB with new invalid_depth parameter",
+      "files_changed": 10,
+      "additions": 53,
+      "deletions": 22,
+      "commit_type": "docs"
+    },
+    {
+      "author": "PabloDArandaR",
+      "date": "2024-02-19T14:32:05Z",
+      "sha": "1ac37117ca86c3d3e728ea142e0803b8723e7753",
+      "message": "DisparityNode: replace full_dp parameter with sgbm_mode (#945)\n\nPreviously, only the SGBM and HH modes were allowed",
+      "files_changed": 4,
+      "additions": 23,
+      "deletions": 13,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jonathanTIE",
+      "date": "2024-02-01T21:06:26Z",
+      "sha": "cdb7eb4300be4227f2747a2352b835612d67211e",
+      "message": "calibration: better warnings around board configuration #713 (#724)",
+      "files_changed": 2,
+      "additions": 5,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "artineering",
+      "date": "2024-01-31T19:48:03Z",
+      "sha": "0866bf14dff4842f9f9716a0464226b82be1fad9",
+      "message": "Port extract_images_sync script to ROS 2 (#919)\n\nChange Description: The extract_images_sync python script was upgraded\r\nto ROS 2.\r\nTesting: Upgraded node tested against Iron on Ubuntu 22.04.3 LTS\r\nIssue: fixes #860\r\n\r\n---------\r\n\r\nCo-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>\r\nCo-authored-by: Michael Ferguson <mfergs7@gmail.com>",
+      "files_changed": 4,
+      "additions": 41,
+      "deletions": 27,
+      "commit_type": "docs"
+    },
+    {
+      "author": "wep21",
+      "date": "2024-01-17T14:27:27Z",
+      "sha": "24dec5202e278d510fd050073edd677eb1912cb2",
+      "message": "fix: change type for epsilon (#822)\n\nSigned-off-by: wep21 <daisuke.nishimatsu1021@gmail.com>",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "russkel",
+      "date": "2023-05-04T07:06:24Z",
+      "sha": "491545e7e7eb3b30d7667afa5ffafd6597b03885",
+      "message": "feat: image_saver reports an error on file save",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Wojcik98",
+      "date": "2023-04-19T09:32:38Z",
+      "sha": "93dd06251dea56363aafe6ce964196d3da19291e",
+      "message": "Fix QoS incompatibility camera_calibration ROS2",
+      "files_changed": 1,
+      "additions": 26,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "ijnek",
+      "date": "2022-07-18T04:12:03Z",
+      "sha": "c6b33166ad569bcb76155824d31c59317e0f83ed",
+      "message": "add python3-opencv to camera calibration dependency\n\nSigned-off-by: Kenji Brameld <kenjibrameld@gmail.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "ksommerkohrt",
+      "date": "2022-05-24T20:39:28Z",
+      "sha": "daa1b43e0adcdc1aabba7eac4fae672fc65a61f5",
+      "message": "Updated depth_image_proc for ros2\n\nInstantiated template for convertDepth, added options to register, and\nchanged register from a class loader to an RCLPP component.",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "schornakj",
+      "date": "2021-08-20T17:21:36Z",
+      "sha": "c60baa3bf79e23116b5c9770af4da4de61494117",
+      "message": "fix to allow remapping resize and image topics\n\nSigned-off-by: Joe Schornak <joe.schornak@gmail.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "JWhitleyWork",
+      "date": "2021-11-12T21:51:01Z",
+      "sha": "428cd396680c1eca5c677b086c40c22e17d97e68",
+      "message": "Fix uncrustify errors",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "jacobperron",
+      "date": "2019-12-11T21:24:24Z",
+      "sha": "70dd1b45883fb477bfc6e3024c1415711655163f",
+      "message": "Port image processor library to ROS 2 (#484)\n\n* Add back processor.cpp\r\n\r\nThe implementation was removed (accidentally?) in #426.\r\n\r\nSigned-off-by: Jacob Perron <jacob@openrobotics.org>\r\n\r\n* Port processor.cpp for ROS 2\r\n\r\n* Added library back to CMakeLists.txt\r\n* Renamed image_proc executable to it's former name\r\n* Made changes for library to compile\r\n* Added new dependency to rcutils for logging\r\n* Linted to satisfy tests\r\n\r\nSigned-off-by: Jacob Perron <jacob@openrobotics.org>",
+      "files_changed": 4,
+      "additions": 162,
+      "deletions": 7,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ivanpauno",
+      "date": "2020-05-05T19:18:17Z",
+      "sha": "5ae707d518e6bc408f48a3109c707ae9716e314f",
+      "message": "Add parameter to avoid points2 padding (#524)\n\n* Add parameter to allow avoiding padding in the generated pointcloud message\r\n\r\nSigned-off-by: Ivan Santiago Paunovic <ivanpauno@ekumenlabs.com>\r\n\r\n* Add parameter description\r\n\r\nSigned-off-by: Ivan Santiago Paunovic <ivanpauno@ekumenlabs.com>\r\n\r\n* Edit parameter description\r\n\r\nSigned-off-by: Ivan Santiago Paunovic <ivanpauno@ekumenlabs.com>\r\n\r\n* Fix nit\r\n\r\nSigned-off-by: Ivan Santiago Paunovic <ivanpauno@ekumenlabs.com>\r\n\r\nCo-authored-by: Jacob Perron <jacob@openrobotics.org>\r\n\r\n* Actually use the created parameter descriptor\r\n\r\nSigned-off-by: Ivan Santiago Paunovic <ivanpauno@ekumenlabs.com>\r\n\r\nCo-authored-by: Jacob Perron <jacob@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 25,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Tillmann Falck",
+      "date": "2022-03-17T16:55:00Z",
+      "sha": "5757f00473cb6150c320b5bb044a44a2b45c5aff",
+      "message": "Add conversion from YUV422-YUY2\n\nSigned-off-by: Kenji Brameld <kenjibrameld@gmail.com>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "ihasdapie",
+      "date": "2022-06-03T21:10:38Z",
+      "sha": "55bf2a38c327b829c3da444f963a6c66bfe0598f",
+      "message": "Forward container namespace from stereo_image_proc -> image_proc (#752)\n\nSigned-off-by: Brian Chen <brian.chen@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "clalancette",
+      "date": "2020-07-15T21:34:36Z",
+      "sha": "2e0c6d42cb650534e4aeea586482030e5c0d46c8",
+      "message": "Opencv 3 compatibility (#564)\n\n* Remove GTK from image_view.\r\n\r\nIt is no longer used at all in image_view.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Reinstate OpenCV 3 compatibility.\r\n\r\nWhile Foxy only supports Ubuntu 20.04 (and hence OpenCV 4),\r\nwe still strive to maintain Ubuntu 18.04 (which has OpenCV 3).\r\nIn this case, it is trivial to keep keep image_pipeline working\r\nwith OpenCV 3, so reintroduce compatibility with it.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Fixes from review.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* One more fix.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 5,
+      "additions": 10,
+      "deletions": 9,
+      "commit_type": "docs"
+    },
+    {
+      "author": "nstolyarov",
+      "date": "2022-04-26T18:57:24Z",
+      "sha": "dedae5d033cf71849264c6a10b0bcffe64ec4313",
+      "message": "image_publisher: Fix out_img timestamp for using with sim time (#735)\n\n* Fix out_img timestamp for using with sim time\r\n\r\nCo-authored-by: Nikita Stolyarov <stolyarov.n.r@sberbank.ru>\r\nCo-authored-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 4,
+      "additions": 31,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "flynneva",
+      "date": "2021-06-08T05:31:32Z",
+      "sha": "635bbb94a7ca72be11bb914a736b5052a6ec0b8d",
+      "message": "move to hpp/cpp structure, create conversions file",
+      "files_changed": 13,
+      "additions": 779,
+      "deletions": 564,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Erwin Lejeune",
+      "date": "2021-12-06T16:19:20Z",
+      "sha": "11e8c37636608a2378101748c08e0d98c2a2abba",
+      "message": "transport should be use as a ros-arg parameter",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Victor Dubois",
+      "date": "2021-05-03T20:57:10Z",
+      "sha": "0a51854243fa36704286cf9704f96f1f773adf86",
+      "message": "fix premature camera model change in camera_calibration",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "mjcarroll",
+      "date": "2018-10-18T03:20:46Z",
+      "sha": "117700f13802891a0500530540f9259b7717d763",
+      "message": "Initial ROS2 commit.",
+      "files_changed": 8,
+      "additions": 0,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "DavidTorresOcana",
+      "date": "2019-11-07T18:33:10Z",
+      "sha": "2640ed1e0a9ad513b88ec4010b0b4fd857fb3ff0",
+      "message": "Add Fisheye calibration tool (#440)\n\n* Add Fisheye calibration tool\n\n* Add calibration for fisheye cameras\nFix #146\n\n* Correct typo\n\n* Restore camera_calib files permisions\n\n* Upgrades to calibrator tool for multi model calibration\n\n* Solve fisheye balance selection TODO:\nFor some reason estimateNewCameraMatrixForUndistortRectify is not producing the expected result, hence a workaround was implemented\n\n* Add fisheye calibration flags as user arguments\n\n* Add undistortion of points for fisheye\n\n* cam_calib: rolling back flags\nRolling back changes to previous commit on camera calibrator flags to enable backwards compatibility\n\n* cam_calib: Style formating",
+      "files_changed": 3,
+      "additions": 61,
+      "deletions": 16,
+      "commit_type": "code"
+    },
+    {
+      "author": "Joshua Whitley",
+      "date": "2019-04-08T17:03:40Z",
+      "sha": "683840f0b37255767021062d4a953d36ced67d33",
+      "message": "Merge pull request #343 from fkie-forks/work_around_opencv_highgui_bug\n\nWork around OpenCV highgui bug",
+      "files_changed": 3,
+      "additions": 33,
+      "deletions": 37,
+      "commit_type": "config"
+    },
+    {
+      "author": "John Stechschulte",
+      "date": "2020-07-17T03:58:21Z",
+      "sha": "06dccd960b97b7e61f8f482620853eae403fab47",
+      "message": "updated linear_error function to handle partial board views (#561)\n\n* updated linear_error function to handle partial board views\r\n\r\n* more charuco fixes\r\n\r\n* filter len fix",
+      "files_changed": 2,
+      "additions": 46,
+      "deletions": 19,
+      "commit_type": "code"
+    },
+    {
+      "author": "Photon",
+      "date": "2020-07-07T05:31:20Z",
+      "sha": "9d10725940b5d56b418c09e610084d476ab4a38a",
+      "message": "Fix missing detected checkerboard points (#558)\n\nVariables are swapped",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "JStech",
+      "date": "2020-06-19T21:26:34Z",
+      "sha": "45fff69734306827b4f457f8c3dd9db88481b92a",
+      "message": "ChArUco board, Noetic (#549)\n\n* wip\n\n* detecting ChArUco board\n\n* successful ChArUco calibration\n\n* updated with review comments",
+      "files_changed": 2,
+      "additions": 210,
+      "deletions": 60,
+      "commit_type": "docs"
+    },
+    {
+      "author": "soeroesg",
+      "date": "2020-06-12T09:51:30Z",
+      "sha": "5a0b40905b9aa07c40765d6d6e03ada224ff124d",
+      "message": "trimmed whitespace at line endings",
+      "files_changed": 2,
+      "additions": 9,
+      "deletions": 9,
+      "commit_type": "code"
+    },
+    {
+      "author": "valgur",
+      "date": "2019-07-17T17:21:20Z",
+      "sha": "b342b21c05c1bc83e45240f6a86ab34afc9c1c6f",
+      "message": "Replace deque with a modified Queue, add --queue-size param\n\nFixes excessive (up to 100%) CPU usage caused by queue synchronization code.\n\nThe new, modified Queue class BufferQueue drops the oldest item when adding\nto a full queue. This is identical to deque's behavior, but adds the\nmuch more CPU-efficient thread synchronization mechanism of Queue.",
+      "files_changed": 2,
+      "additions": 35,
+      "deletions": 24,
+      "commit_type": "code"
+    },
+    {
+      "author": "Spiros Evangelatos",
+      "date": "2018-09-14T17:03:29Z",
+      "sha": "4d387d7ae13f7c2f48336866f6e6f9ffc9a85e90",
+      "message": "Add max-chessboard-speed option to allow more accurate calibration of rolling shutter cameras.",
+      "files_changed": 2,
+      "additions": 5,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "paudrow",
+      "date": "2021-04-14T22:37:49Z",
+      "sha": "6bc77729e21c71dd19e5822cbc7ad1e8fac2fbc4",
+      "message": "Allow QoS overrides for publishers\n\nSigned-off-by: Audrow Nash <audrow@hey.com>",
+      "files_changed": 2,
+      "additions": 30,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "hardesh",
+      "date": "2022-02-10T15:22:52Z",
+      "sha": "3cc137863ab039aa1a1a2271e6df2d9622479089",
+      "message": "Fixed typo in pointcloudxyz launch file",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "vmayoral",
+      "date": "2021-12-20T14:27:44Z",
+      "sha": "b9f76e8610cdf09e5f0a423efc97008772622027",
+      "message": "Add tracetools_image_pipeline package to the pipeline\n\nAdd an LTTng tracing provider wrapper for image_pipeline\nmetapackage. Include tracepoints for two initial ROS 2\ncomponents: image_proc::RectifyNode and ResizeNode\n\nSigned-off-by: Víctor Mayoral Vilches <v.mayoralv@gmail.com>",
+      "files_changed": 15,
+      "additions": 815,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "evan-flynn-apexai",
+      "date": "2021-11-16T17:03:00Z",
+      "sha": "457cd16017d64fa006e6b57242ed816932748e2d",
+      "message": "use unique_ptrs, remove unused code, add back in missing initMatrix call\n\nSigned-off-by: Evan Flynn <evan.flynn@apex.ai>",
+      "files_changed": 3,
+      "additions": 35,
+      "deletions": 10,
+      "commit_type": "code"
+    },
+    {
+      "author": "fmrico",
+      "date": "2021-01-31T17:08:11Z",
+      "sha": "83de4e7273a93553d170f6598c18ed7235945fc1",
+      "message": "Warning instead of fatal error when frames are differents\n\nSigned-off-by: Francisco Martin Rico <fmrico@gmail.com>",
+      "files_changed": 2,
+      "additions": 3,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "ashwinsushil",
+      "date": "2021-03-17T14:14:32Z",
+      "sha": "fbfeebb563c8cfc467b6ade723be4db158c48810",
+      "message": "Add retry video capture feature with timeout\n\nRetry onInit() if the loading image fails or if the image is empty.\nThis is useful if the stream is lost for a while or if the stream\nis not ready in the beginning.",
+      "files_changed": 2,
+      "additions": 13,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "pmusau17",
+      "date": "2021-06-23T14:09:21Z",
+      "sha": "2633d14cb99fb523ea6012af2d52048973ad595b",
+      "message": "fix for stereo_image_proc_tests\n\nSigned-off-by: Patrick Musau <pmusau13ster@gmail.com>",
+      "files_changed": 2,
+      "additions": 8,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "jaiveersinghNV",
+      "date": "2021-11-11T19:31:48Z",
+      "sha": "cb60e3fdbc5e0cb972f29fc781719478873571e1",
+      "message": "Update camera_calibration setup.cfg to use underscores (#688)\n\nFixes a deprecation warning.",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "larsll",
+      "date": "2021-06-21T18:38:07Z",
+      "sha": "77e4a5c0e8322f3e4d56fb28c874ed7b96841251",
+      "message": "Fix timestamp creation",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "rebecca-butler",
+      "date": "2021-06-25T18:00:31Z",
+      "sha": "8a9a9423ebf7a5460b80035583f6e2bd56025a41",
+      "message": "Add color param to stereo_image_proc (#661)\n\n* Add color param to point cloud node in stereo_image_proc\r\n\r\nSigned-off-by: Rebecca Butler <rebecca@openrobotics.org>\r\n\r\n* Add test for point cloud node with color disabled\r\n\r\nSigned-off-by: Rebecca Butler <rebecca@openrobotics.org>\r\n\r\n* Fix style issues\r\n\r\nSigned-off-by: Rebecca Butler <rebecca@openrobotics.org>\r\n\r\n* Rename test node\r\n\r\nSigned-off-by: Rebecca Butler <rebecca@openrobotics.org>\r\n\r\n* Remove repeated line\r\n\r\nSigned-off-by: Rebecca Butler <rebecca@openrobotics.org>",
+      "files_changed": 3,
+      "additions": 124,
+      "deletions": 67,
+      "commit_type": "code"
+    },
+    {
+      "author": "cottsay",
+      "date": "2013-01-11T06:12:14Z",
+      "sha": "02f8306e310bb8a85d1d7ad4d91c3e7e5ce47608",
+      "message": "Change GTK_LIBRARIES to GTK2_LIBRARIES\n\nNot sure if this was a typo to begin with or not, but Fedora needs GTK2_LIBRARIES to compile. Ubuntu works fine with either GTK_LIBRARIES or GTK2_LIBRARIES.",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mdtoom",
+      "date": "2020-09-03T18:31:40Z",
+      "sha": "4d13964fcc035a96d753876a4d0eabbcfd7d6568",
+      "message": "Fixed crash when rosargs are given (#597)\n\nCo-authored-by: Matthijs den Toom <mdentoom@lely.com>",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "trthanhquang",
+      "date": "2020-08-02T12:57:13Z",
+      "sha": "90f4667a478f303af7961b8f1fbdc4444b023653",
+      "message": "[Foxy][Image Publisher] Update launch file (#579)\n\nCo-authored-by: louis <louis.tran@otsaw.com>",
+      "files_changed": 3,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "dawonn-haval",
+      "date": "2020-08-01T15:22:07Z",
+      "sha": "32ce7f79f15bc3450d5fb356d13324b7e36f369f",
+      "message": "Disable \"Publish Color!\" debug_info (#577)\n\nFixes #568\r\n\r\nSigned-off-by: Dereck Wonnacott <dereck.wonnacott@havalus.com>",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "sgvandijk",
+      "date": "2020-06-29T19:53:37Z",
+      "sha": "4f0f7c6e040bb931ab16a20df516a381313c5925",
+      "message": "Remove redundant install call in CMakeLists.txt (#555)",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "PfeifferMicha",
+      "date": "2020-06-29T16:26:19Z",
+      "sha": "8af665af186c1fc092b318f0f43ae7fe62570066",
+      "message": "Removed basestring (no longer exists in new python 3 version). (#554)\n\nFixes #551",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "doisyg",
+      "date": "2020-05-21T15:23:23Z",
+      "sha": "2b17a38a5e3d4aef9c6a51c2de10d7396c521648",
+      "message": "build with openCV4 (#534)\n\n* build with openCV4\r\n\r\n* naive CI for foxy\r\n\r\n* deps\r\n\r\n* gtk3\r\n\r\n* remove ibgtk2.0-dev\r\n\r\n* ament_uncrustify --reformat\r\n\r\n* test only image_pipeline packages\r\n\r\nCo-authored-by: doisyg <guillaume.?doisy@wyca.fr>",
+      "files_changed": 27,
+      "additions": 147,
+      "deletions": 105,
+      "commit_type": "config"
+    },
+    {
+      "author": "caelinsutch",
+      "date": "2020-04-23T19:37:09Z",
+      "sha": "68225f794efc5dc01dd8b33206fcde58fb9bc0ba",
+      "message": "Switched default interpolation in recitfy.cpp to mode 1 (#522)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "klintan",
+      "date": "2019-07-06T21:07:29Z",
+      "sha": "44129ce216bced362bca7f3ca1df12b495d5b7c6",
+      "message": "Fixed CMakeLists.txt for Dashing",
+      "files_changed": 3,
+      "additions": 17,
+      "deletions": 11,
+      "commit_type": "docs"
+    },
+    {
+      "author": "scpeters",
+      "date": "2020-04-02T17:55:40Z",
+      "sha": "0ff8e2f97917360048f45677546607e1e9fd133c",
+      "message": "image_view: add missing depends to package.xml (#511)\n\n* image_view: depend on rclcpp_components\r\n\r\n* image_view: don't find rosidl_default_generators",
+      "files_changed": 2,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "yechun1",
+      "date": "2018-11-21T22:03:09Z",
+      "sha": "ea6464a5ef705c66539b5d361a887e0d60ba40ae",
+      "message": "Port depth image proc on ROS2 (#362)\n\n* Port depth_image_proc on ROS2\r\n\r\n* Port depth_image_proc of image_pipeline on ROS2\r\n\r\n* rename Nodelets as Node\r\n\r\n* add launch examples, such as \"ros2 launch depth_image_proc point_cloud_xyzi.launch.py\"\r\n\r\n* verified point_cloud_xyzrgb, point_cloud_xyz, convert_metric based on Realsense camera(https://github.com/intel/ros2_intel_realsense).\r\n\r\nSigned-off-by: Chris Ye <chris.ye@intel.com>\r\n\r\n* add ament_lint_auto test and adjust code style\r\n\r\nSigned-off-by: Chris Ye <chris.ye@intel.com>\r\n\r\n* update test example for depth_image_proc\r\n\r\n- rename raw topic as image_transport fixed the issue (https://github.com/ros-perception/image_common/issues/96)\r\n- update test example of point_cloud_xyzrgb.launch\r\n\r\nSigned-off-by: Chris Ye <chris.ye@intel.com>\r\n\r\n* remove unused dependence in cmakelist\r\n\r\n* remove boost which is unused on ROS2\r\n\r\n* remove cv_bridge version check logic as setted in find_package\r\n\r\n* update maintainer in package.xml\r\n\r\nSigned-off-by: Chris Ye <chris.ye@intel.com>\r\n\r\n* added all example launchers for demo test\r\n\r\npass test:\r\n ros2 launch depth_image_proc point_cloud_xyzrgb.launch.py\r\n ros2 launch depth_image_proc point_cloud_xyz.launch.py\r\n ros2 launch depth_image_proc convert_metric.launch.py\r\n ros2 launch depth_image_proc crop_foremost.launch.py\r\n ros2 launch depth_image_proc point_cloud_xyz_radial.launch.py\r\n ros2 launch depth_image_proc disparity.launch.py\r\n ros2 launch depth_image_proc register.launch.py\r\n ros2 launch depth_image_proc point_cloud_xyzi.launch.py\r\n ros2 launch depth_image_proc point_cloud_xyzi_radial.launch.py\r\n\r\nSigned-off-by: Chris Ye <chris.ye@intel.com>\r\n\r\n* @wip update to use raw pointers.\r\n\r\n* continue to update to use raw pointer\r\n\r\nSigned-off-by: Chris Ye <chris.ye@intel.com>",
+      "files_changed": 35,
+      "additions": 3583,
+      "deletions": 1732,
+      "commit_type": "test"
+    },
+    {
+      "author": "luca-della-vedova",
+      "date": "2019-09-11T02:00:37Z",
+      "sha": "08cb75f0bf99f565f7b902724d634d68e3852a7d",
+      "message": "Fixed double free crash, removed deprecation warnings. (#453)\n\n* Fixed double free crash, removed deprecation warnings.\r\n\r\nThe image_rotate node was crashing on startup due to creation of a temporary rclcpp::Node::SharedPtr(this) that tried to free this when going out of scope, replaced with a normal pointer to this.\r\nAlso removed deprecation warnings by changing to the new ROS2 API functions.\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\n* Fixed uncrustify issues\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 19,
+      "deletions": 22,
+      "commit_type": "code"
+    },
+    {
+      "author": "lucasw",
+      "date": "2016-03-01T14:52:37Z",
+      "sha": "9da99b4ed13832ac757d9bc93dfa201226b009d5",
+      "message": "issue #180 Check if all distortion coefficients are zero.\n\nTest with:\n\nrostest --reuse-master --text image_proc test_rectify.xml\n\nCan also test interactively with vimjay image_rect.launch, which brings up an rqt gui and camera info distortion coefficients can be dynamically reconfigured.",
+      "files_changed": 4,
+      "additions": 228,
+      "deletions": 1,
+      "commit_type": "test"
+    },
+    {
+      "author": "garaemon",
+      "date": "2014-04-08T03:35:53Z",
+      "sha": "01cb5525e25dc85ef84d01ce1f070bd583f0e678",
+      "message": "move image_rotate.cpp to nodelet directory according to the directory convenstion of image_pipeline",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "yoshito-okada",
+      "date": "2018-05-04T14:38:03Z",
+      "sha": "aa1452ea930380066be4dbd676328bd7d3cf975a",
+      "message": "handle window in single thread",
+      "files_changed": 1,
+      "additions": 54,
+      "deletions": 23,
+      "commit_type": "code"
+    },
+    {
+      "author": "angeltop",
+      "date": "2019-04-02T09:20:42Z",
+      "sha": "77d2e80b3279997ac0c66f3b013f4d85a5338038",
+      "message": "image_view: video recorder fix for conversion of fps to ros::Duration",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "bknight-i3drobotics",
+      "date": "2019-04-01T13:46:09Z",
+      "sha": "68988e82e47af3cfa77cdbfdf9e8e530610afed1",
+      "message": "Fix typo\n\nTypo in line: 14. Changed 'sterel algorithm' to 'stereo algorithm'",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "roehling",
+      "date": "2018-06-27T07:32:58Z",
+      "sha": "fe43302f7b30e5f1c7012b1d03a6b5b688a3f98e",
+      "message": "Work around an OpenCV bug with GTK and threading",
+      "files_changed": 1,
+      "additions": 11,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "de-vri-es",
+      "date": "2019-01-17T20:17:42Z",
+      "sha": "4c132e4a806f18ddd06e3f23b0f2fb71c50f56d6",
+      "message": "Remove unused `signals` from find_package(Boost COMPONENTS ...)\n\nThe signals library was not used at all, and it has been removed from\nboost 1.69. As a result, the package doesn't build anymore with boost\n1.69 without this change.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "k-okada",
+      "date": "2016-01-04T17:01:51Z",
+      "sha": "835229b2db6258275874ff1e96cc696be6cd2e07",
+      "message": "add image_publisher",
+      "files_changed": 6,
+      "additions": 367,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "vrabaud",
+      "date": "2012-03-19T20:44:43Z",
+      "sha": "0aef00de9951aa334159b0108837746d54627e6f",
+      "message": "restore the opencv2 dependency as a rosdep",
+      "files_changed": 7,
+      "additions": 8,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "mintar",
+      "date": "2018-05-10T12:50:43Z",
+      "sha": "387ffa77cbd1a13586690f594be17f96a9fb45db",
+      "message": "camera_checker: Ensure cols + rows are in correct order (#319)\n\nWithout this commit, specifying a smaller column than row size lead to\r\nhuge reported errors:\r\n\r\n```\r\n$ rosrun camera_calibration cameracheck.py --size 6x7 --square 0.0495\r\nLinearity RMS Error: 13.545 Pixels      Reprojection RMS Error: 22.766 Pixels\r\n\r\n$ rosrun camera_calibration cameracheck.py --size 7x6 --square 0.0495\r\nLinearity RMS Error: 0.092 Pixels      Reprojection RMS Error: 0.083 Pixels\r\n\r\n```\r\n\r\nThis commit switches columns and rows around if necessary.",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "miquelmassot",
+      "date": "2014-05-06T15:55:07Z",
+      "sha": "c8e2dadfb958b9e9a4f79f73ddd47c515bfec4be",
+      "message": "Fix #68: StringIO issues in calibrator.py",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "hannometer",
+      "date": "2018-05-10T12:46:18Z",
+      "sha": "0db760e5b6c8288245653e198cccf2fdb817c61f",
+      "message": "fix 'VideoCapture' undefined symbol error (#318)\n\n* fix 'VideoCapture' undefined symbol error\r\n\r\nThe following error occured when trying to run image_publisher:\r\n[...]/devel/lib/image_publisher/image_publisher: symbol lookup error: [...]/devel/lib//libimage_publisher.so: undefined symbol: _ZN2cv12VideoCaptureC1Ev\r\n\r\nProbably, changes in cv_bridge reducing the OpenCV component dependencies led to the error. See\r\nhttps://github.com/ros-perception/vision_opencv/commit/8b5bbcbc1ce65734dc600695487909e0c67c1033\r\n\r\nThis is fixed by manually finding OpenCV with the required components and adding the dependencies to the library, not just the node.\r\n\r\n* add image_publisher opencv 2 compatibility",
+      "files_changed": 1,
+      "additions": 12,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Fruchtzwerg94",
+      "date": "2018-05-09T09:20:01Z",
+      "sha": "1aa583e843d18e44043d7816873cf4e6541cb127",
+      "message": "Scale pixels down from 16 to 8 bits instead of just clipping\n\nClipping 16 bit pixels just to 8 bit pixels leads to white images if the original image uses the full range of the 16 bits. Instead the pixel should be scaled down to 8 bits.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "tfoote",
+      "date": "2017-12-08T23:45:13Z",
+      "sha": "87e0283acdde56dde0e689ed1a8d0221012ca860",
+      "message": "Merge pull request #311 from knorth55/revert-299\n\nRevert \"Fix image_resize nodelet (#299)\"",
+      "files_changed": 5,
+      "additions": 42,
+      "deletions": 107,
+      "commit_type": "docs"
+    },
+    {
+      "author": "knorth55",
+      "date": "2016-04-19T14:18:18Z",
+      "sha": "45a5b1b5dfd477f98b864fe905ae23db5c9927ee",
+      "message": "fix typo np -> numpy",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "jbosch",
+      "date": "2013-11-13T08:36:21Z",
+      "sha": "b0664e4a4a66a2def35e8937ec6e770286a865da",
+      "message": "Bit of clean up",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "bikramak",
+      "date": "2017-11-05T17:37:30Z",
+      "sha": "32e19697ebce47101b063c6a02b95dfa2c5dbc52",
+      "message": "Fix image_resize nodelet (#299)\n\nUpdate interpolation types\r\n   Add arguments to enable disable each nodelet\r\n   Add default arguments for image_resize and image_rect\r\n   Use toCVShare instead of toCVCopy\r\n   Include image_resize in image_proc",
+      "files_changed": 5,
+      "additions": 107,
+      "deletions": 42,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mikepurvis",
+      "date": "2017-11-01T21:35:30Z",
+      "sha": "c117d1ae5f870d0cf276fbe785964bb464c731dd",
+      "message": "Updated fix for traits change. (#303)",
+      "files_changed": 2,
+      "additions": 7,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mikehosmar",
+      "date": "2017-09-18T19:59:45Z",
+      "sha": "f2c5e1ddbff056ffd5100e2c5f8c4ffb705e78ca",
+      "message": "[image_rotate] Added TF timeout so that transforms only need to be newer than last frame. (#293)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "furushchev",
+      "date": "2017-06-05T21:22:34Z",
+      "sha": "0d4d0592117cd152f36ca7b66291efd4e9425b56",
+      "message": "[image_proc][crop_decimate] support changing target image frame_id (#276)",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "cwecht",
+      "date": "2017-04-30T18:36:36Z",
+      "sha": "43d6163e441218b24cd9bb460fb728580e4529d8",
+      "message": "DisparityViewNodelet: fixed freeze (#244)",
+      "files_changed": 1,
+      "additions": 10,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "wkentaro",
+      "date": "2015-11-20T04:04:26Z",
+      "sha": "727a7326c0b2db3d848e2e1c2e2d13f3d8f938d4",
+      "message": "Extract images which are synchronized with message_filters",
+      "files_changed": 3,
+      "additions": 98,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "kartikmohta",
+      "date": "2013-05-07T04:20:04Z",
+      "sha": "7ee580dbbbcb9c5de1576008aa3caad37a8865b0",
+      "message": "Fix bc905fcd, include boost/version.hpp before using BOOST_VERSION macro",
+      "files_changed": 8,
+      "additions": 22,
+      "deletions": 9,
+      "commit_type": "code"
+    },
+    {
+      "author": "hgaiser",
+      "date": "2017-03-07T15:31:47Z",
+      "sha": "870a897ce4e1b4aa57d506543d375e7408dec332",
+      "message": "Use floor division where necessary. (#247)",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "leolchat",
+      "date": "2017-02-19T17:34:45Z",
+      "sha": "17c5fd7e82befb1f2b23f78fa1024a6bedae45ec",
+      "message": "Fix and Improve Camera Calibration Checker Node (#254)\n\n* Fix according to calibrator.py API\r\n\r\n* Add approximate to cameracheck",
+      "files_changed": 1,
+      "additions": 18,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "mryellow",
+      "date": "2017-01-29T20:48:05Z",
+      "sha": "32214a6e51058945191d95f3499e3d05fb7567e4",
+      "message": "Including stereo_msgs dep fixes #248 (#249)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Christopher Wecht",
+      "date": "2016-12-20T15:44:44Z",
+      "sha": "9e03686f4b9e1029083b0efbb69432569f5db323",
+      "message": "stere_view: fixed empty left, right, disparity windows with opencv3",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "bulwahn",
+      "date": "2013-10-12T11:43:17Z",
+      "sha": "daf9fb642294226484cab5dcd0b56c6f475e27d1",
+      "message": "check for CATKIN_ENABLE_TESTING",
+      "files_changed": 4,
+      "additions": 18,
+      "deletions": 15,
+      "commit_type": "docs"
+    },
+    {
+      "author": "MartinPeris",
+      "date": "2016-10-04T13:31:45Z",
+      "sha": "3b15319533f2a005f36a05132781150bd66fdfdb",
+      "message": "During stereo calibration check that the number of corners detected in the left and right images are the same. This fixes ros-perception/image_pipeline#225",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "iKrishneel",
+      "date": "2016-03-09T06:08:26Z",
+      "sha": "603a1fdd50ab1d8522d491a0a7344eb2eb46d04c",
+      "message": "add cv::waitKey for opencv3 installed from source to fix freezing issue",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "jkerfs",
+      "date": "2016-03-02T22:53:12Z",
+      "sha": "f7ddf0399f5240655e363e96bbb472f13412c080",
+      "message": "when no image is saved, do not save camera info\n\nWhen the images are not recorded because \"save_all_image\" is false and \"save_image_service\" is false, the frame count should not be incremented and the camera info should not be written to disk.",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "jspricke",
+      "date": "2016-02-14T13:27:11Z",
+      "sha": "6ecc28a6be221e079915f2f9fdf93a82a942e8cb",
+      "message": "Add std_srvs to catkin find_package()",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "yoneken",
+      "date": "2015-12-25T18:44:30Z",
+      "sha": "c3ab5b63394cc41811aa7e2030e61dd1b31d91e8",
+      "message": "Add a feature for a depth image to crop foremost image",
+      "files_changed": 3,
+      "additions": 148,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "carlosmccosta",
+      "date": "2015-08-20T15:05:35Z",
+      "sha": "5146c70b5957ef37daca7c76785535d306f66c31",
+      "message": "Added sensor_msgs::Image conversion to cv::Mat from rqt_image_view in\norder to be able to create videos from kinect depth images (cv_bridge\ncurrently doesn't support 16UC1 image encoding).\n\nCode adapted from:\nhttps://github.com/ros-visualization/rqt_common_plugins/blob/groovy-devel/rqt_image_view/src/rqt_image_view/image_view.cpp",
+      "files_changed": 1,
+      "additions": 22,
+      "deletions": 17,
+      "commit_type": "code"
+    },
+    {
+      "author": "suryaambrose",
+      "date": "2015-07-17T11:58:32Z",
+      "sha": "56aae36da4a83b50303a802f10e16bd53e627170",
+      "message": "[Calibrator]: add yaml file with calibration data in output",
+      "files_changed": 1,
+      "additions": 35,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "bassofil",
+      "date": "2015-05-12T14:23:03Z",
+      "sha": "75ecbaa018017a3868cbe0922ad3f04aa4338b1d",
+      "message": "Correct three errors that prevented the node to work properly.",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "jolting",
+      "date": "2014-07-19T00:00:34Z",
+      "sha": "42936f74a341bb93f4ad0983257cd9270cd63f1c",
+      "message": "Add point_cloud_xyzi nodelet\n\nThis is for cameras that output depth and intensity images.\nIt's based on the point_cloud_xyzrgb nodelet.",
+      "files_changed": 3,
+      "additions": 324,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Hiroaki Yaguchi",
+      "date": "2015-02-27T12:06:38Z",
+      "sha": "30c3d14e693886bd24812d8c5728c2664f363acb",
+      "message": "modify pointcloud data format of stereo_image_proc using point_cloud2_iterator",
+      "files_changed": 1,
+      "additions": 32,
+      "deletions": 66,
+      "commit_type": "code"
+    },
+    {
+      "author": "garyservin",
+      "date": "2014-12-16T18:02:47Z",
+      "sha": "cfdbb0aff10bbbe75edb7e736c6948debcf79e65",
+      "message": "Convert function to inline to avoid duplicates with image_transport",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "enriquefernandez",
+      "date": "2014-10-28T17:43:35Z",
+      "sha": "25152612f08e5fee68377de01dc4928149132ab2",
+      "message": "exports DepthTraits",
+      "files_changed": 7,
+      "additions": 19,
+      "deletions": 11,
+      "commit_type": "docs"
+    },
+    {
+      "author": "vgrabe",
+      "date": "2014-09-23T16:48:36Z",
+      "sha": "e86c11bfdd6543a210469226adefaa2537cd8c72",
+      "message": "Update calibrator.py\n\nbugfix: stereo calibrator crashed after the signature of the method for the computation of the epipolar error changed but the function call was not updated",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Russell Toris",
+      "date": "2014-08-20T19:18:09Z",
+      "sha": "c8daaba6f5ef86dc72097cf1a6cf70a90fa59522",
+      "message": "flips width and height during resize to give correct aspect ratio",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Aaron Denney",
+      "date": "2014-07-24T02:27:20Z",
+      "sha": "c171d08d52841697f1eb7712a6afefe80da2e838",
+      "message": "Handle rescaling.\n\nNo type argument in cv2.resize().",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "andreasBihlmaier",
+      "date": "2014-06-22T10:23:53Z",
+      "sha": "fe1e408a233a3ed6cabcad188e2686d70558e0e4",
+      "message": "also print self.report() on calibrate ... allows to use the params without having to commit them (e.g. for extrensic calibration between to cameras not used as stereo pair)",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "stonier",
+      "date": "2014-06-13T00:12:53Z",
+      "sha": "ca7ae6b2bcb332c02b89dd9f476feb9f2da8aa36",
+      "message": "Missing runtime dependency - eigen_conversions\n\n`libdepth_image_proc` is missing this dependency at runtime\r\n\r\n```\r\n> ldd libdepth_image_proc.so  | grep eigen\r\n        libeigen_conversions.so => not found\r\n```\r\n\r\nWhich causes the following error on loading depth_image_proc:\r\n\r\n```\r\n[ INFO] [1402564815.530736554]: /camera/rgb/camera_info -> /camera/rgb/camera_info\r\n[ERROR] [1402564815.727176562]: Failed to load nodelet [/camera/depth_metric_rect] of type\r\n [depth_image_proc/convert_metric]: Failed to load library /opt/ros/indigo/lib//libdepth_image_proc.so.\r\n Make sure that you are calling the PLUGINLIB_EXPORT_CLASS macro in the library code, and that\r\n names are consistent between this macro and your XML. Error string: Could not load library (Poco\r\n exception = libeigen_conversions.so: cannot open shared object file: No such file or directory)\r\n[FATAL] [1402564815.727410623]: Service call failed!\r\n```",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "JoonasMelin",
+      "date": "2014-04-07T13:10:07Z",
+      "sha": "918bda2f78ab16cb384ddfc571e3d957e163031e",
+      "message": "Fixes a typo on stereo camera info service calls\n\nScript works after correcting the call names.",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "contradict",
+      "date": "2014-02-23T01:13:34Z",
+      "sha": "d11edf31628c5bc4dd5511748b80b351d3e17ed6",
+      "message": "Fix crash in approxsync.py\n\nFirst, remove some dead (if 0) code. It appears to be broken too.\r\n\r\nIf an input message in queues[0] was within slop of two messages in queues[1], both of these cases would appear since the for loop has already created the list to iterate over. When the second one is processed, the message in queues[0] has already been deleted, resulting in a crash when the list of messages was built.\r\n\r\nFix this by always checking to see if we still have all the messages to satisfy the slop condition.",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 17,
+      "commit_type": "code"
+    },
+    {
+      "author": "Jonathan J Hunt",
+      "date": "2014-02-03T23:47:37Z",
+      "sha": "1523307dae3b0df429879d8fec2ae8845e21c71e",
+      "message": "Added requirement for core.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Séverin Lemaignan",
+      "date": "2013-12-12T10:01:50Z",
+      "sha": "53be3397d1e844a5854f0d8643fe9ad726d0d58a",
+      "message": "Added helper tool to record image topic to a video\n\nIt relies on the standard OpenCV VideoWriter class.\n\nIt is configured to encode the video as MJPG by default in an AVI\ncontainer (AVI is mandated by OpenCV).\n\nAlternative encoders can be specified with the 'codec' parameter.\n\nThe video size is acquired from the topic, but the frame-rate has to be\nmanually set with the node parameter 'fps' (defaults to 15 fps).",
+      "files_changed": 2,
+      "additions": 110,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "Jep",
+      "date": "2013-11-11T15:45:41Z",
+      "sha": "ca423126b732e5d8219e49041aebd39bd035c6aa",
+      "message": "Added the possibility to set more calibration flags: number of coefficients, fixed ratio...",
+      "files_changed": 1,
+      "additions": 38,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "wjwwood",
+      "date": "2013-07-11T05:46:54Z",
+      "sha": "1314fa8eccffdc107ee8b96be81374d6dbc049af",
+      "message": "Fixes to reflect changes in pcl-1.7",
+      "files_changed": 4,
+      "additions": 8,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jihoonl",
+      "date": "2013-06-12T07:08:25Z",
+      "sha": "909333d318bcb124145e842b9a61158632858332",
+      "message": "depth image can use different transport hint",
+      "files_changed": 1,
+      "additions": 10,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Stephan Wirth",
+      "date": "2013-04-12T23:17:46Z",
+      "sha": "6f6a292c1fd54a5363d50c5baaf87138e61c7410",
+      "message": "added handling of image messages with opencv encodings to calibrator.py",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "kevin",
+      "date": "2013-04-25T00:32:32Z",
+      "sha": "b0eabaf78851304b84f4e351b582f4b6259a2196",
+      "message": "fixed Boost error on OSX",
+      "files_changed": 8,
+      "additions": 14,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Austin Hendrix",
+      "date": "2013-03-18T23:06:47Z",
+      "sha": "29574cfd9f1eb0c25218aeead75d126d256a0abe",
+      "message": "Fix ros-perception/image_pipeline/issues/21",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "jon-weisz",
+      "date": "2013-01-21T04:54:50Z",
+      "sha": "9aff0d86107a8464b4b19a49853879e7a238d9f4",
+      "message": "pluginlib macro update",
+      "files_changed": 8,
+      "additions": 8,
+      "deletions": 11,
+      "commit_type": "code"
+    },
+    {
+      "author": "Aaron Blasdel",
+      "date": "2012-12-21T20:16:23Z",
+      "sha": "47dd98d243e01fd2b4904a5c52e1951080d8dd09",
+      "message": "added missing license headers",
+      "files_changed": 3,
+      "additions": 97,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "dirk-thomas",
+      "date": "2012-12-19T10:02:25Z",
+      "sha": "4dbcb374c71fd764fdc09cd482f5b402f5c91774",
+      "message": "fix dyn reconf",
+      "files_changed": 3,
+      "additions": 14,
+      "deletions": 13,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mirzashah",
+      "date": "2012-12-14T21:51:29Z",
+      "sha": "3762557df481ef8fb47caa581188609b2ecc1330",
+      "message": "Updated package.xml file(s) to handle new catkin buildtool_depend requirement",
+      "files_changed": 6,
+      "additions": 11,
+      "deletions": 6,
+      "commit_type": "config"
+    },
+    {
+      "author": "mihelich",
+      "date": "2009-09-24T08:07:34Z",
+      "sha": "416584617a9e092276710bc5a9cd28bcb58762f3",
+      "message": "image_view: image_view uses new image_transport API. Old version remains as image_view_tmp until contents of image_transport_plugins are updated. Added first version of stereo_view and a simple test program for it.",
+      "files_changed": 5,
+      "additions": 343,
+      "deletions": 13,
+      "commit_type": "docs"
+    },
+    {
+      "author": "kwc",
+      "date": "2009-09-04T23:12:08Z",
+      "sha": "ae3963bcde80669d2cb17aa0862103e2c24baea1",
+      "message": "moving trunk out of pkg",
+      "files_changed": 0,
+      "additions": 0,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "eitan",
+      "date": "2011-06-30T04:19:40Z",
+      "sha": "d0dc881e7bf778b34387db99bc8460a981428210",
+      "message": "Changing how image view handles floating point images so that you don't always have to scale them before publishing to see something reasonable",
+      "files_changed": 1,
+      "additions": 20,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "wim",
+      "date": "2011-04-21T23:56:55Z",
+      "sha": "9b8e02a5bc4514b88e911d2dd269aae838355555",
+      "message": "Fix for corner detection: detect corners on smaller image to speed up processing",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "watts",
+      "date": "2010-11-08T22:35:58Z",
+      "sha": "f03333a7930bcf83f822ae9a2e9caef282748bd9",
+      "message": "Warn if no image for camera_calibration. #4242",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "jamesb",
+      "date": "2009-11-13T23:24:03Z",
+      "sha": "af3e0e7fcdf013f61b6549661354036bc2d00cff",
+      "message": "First cut",
+      "files_changed": 2,
+      "additions": 488,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "aleeper",
+      "date": "2010-12-08T23:54:41Z",
+      "sha": "5213cd6a61bc90da464ffa61c6b7264576d9dba4",
+      "message": "stuff",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "kaijenhsiao",
+      "date": "2010-12-07T00:21:21Z",
+      "sha": "2f682bc22af3581033ce45046016b1df5eb53bc1",
+      "message": "Gave output image header info: changed it so that the output image header has stamp equal to input image, and frame_id according to rotated camera frame.",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "pbeeson",
+      "date": "2010-10-01T17:15:34Z",
+      "sha": "50643a9e4f4677b82dcd601ad642b44cdf8a79f1",
+      "message": "Working on new disparity map",
+      "files_changed": 1,
+      "additions": 49,
+      "deletions": 7,
+      "commit_type": "code"
+    },
+    {
+      "author": "rusu",
+      "date": "2009-11-16T21:25:56Z",
+      "sha": "3fe1aa09e0abb57f62064a17361d375089d67e85",
+      "message": "Channels renamed from x/y to u/v",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "gerkey",
+      "date": "2009-08-31T19:10:05Z",
+      "sha": "2061de29345fd406579f1907d015774a53dd4b39",
+      "message": "Renamed imaging_pipeline to image_pipeline",
+      "files_changed": 24,
+      "additions": 26,
+      "deletions": 1122,
+      "commit_type": "docs"
+    },
+    {
+      "author": "blaise",
+      "date": "2009-09-25T17:59:51Z",
+      "sha": "c646813e2fa4ce90ad933722923464fb34a2f5d0",
+      "message": "Fixed deadlock that occurs when saving an image",
+      "files_changed": 1,
+      "additions": 16,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "vpradeep",
+      "date": "2010-01-18T19:22:52Z",
+      "sha": "05e98c30ebd6541490ddfbae7d1be77ee4cc378a",
+      "message": "Adding stereo frame diagram",
+      "files_changed": 1,
+      "additions": 1052,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "sturm",
+      "date": "2010-01-04T16:23:23Z",
+      "sha": "f55588e30cd76388a076082613f38ca59153b6c3",
+      "message": "number of distortion parameters is 4 instead of 5",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "mmwise",
+      "date": "2009-12-22T23:31:37Z",
+      "sha": "0a0c2ee4840947d73bf5bf526cf48ab88d5c6742",
+      "message": "adding color coded bars for user testing",
+      "files_changed": 1,
+      "additions": 21,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "relrotciv",
+      "date": "2009-11-28T03:40:35Z",
+      "sha": "2a108d5aeebe37bbc29eaec97233b2ce5c3f0380",
+      "message": "Added a command-line tool for extracting images from bag files",
+      "files_changed": 2,
+      "additions": 137,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "konolige",
+      "date": "2009-09-26T00:25:49Z",
+      "sha": "64cb55ed686eff2b0ee8bfae5ea67b8321cabb1d",
+      "message": "debugging of stereo_image_proc",
+      "files_changed": 1,
+      "additions": 14,
+      "deletions": 13,
+      "commit_type": "code"
+    },
+    {
+      "author": "wheeler",
+      "date": "2009-10-14T21:16:34Z",
+      "sha": "d0cbbe3adc0a3c183aa281387d12c9220b913376",
+      "message": "fix for g++ 4.4",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "hsu",
+      "date": "2009-11-18T02:07:42Z",
+      "sha": "ee8e884aa4eff77ec18e25dcea34216c5c4a1657",
+      "message": "image_geometry is gone.",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "ethan",
+      "date": "2009-10-22T02:44:35Z",
+      "sha": "d6defe47775c99c37c1288c99afd0b97ed688fed",
+      "message": "Updating stereo_image_proc to publish the new point cloud message",
+      "files_changed": 2,
+      "additions": 20,
+      "deletions": 22,
+      "commit_type": "config"
+    },
+    {
+      "author": "leibs",
+      "date": "2009-10-06T00:43:29Z",
+      "sha": "1d08d0f4ed4dd468c21b84d55579ca03914ef2ee",
+      "message": "Stereo_image_proc is converted to NodeHandle API.",
+      "files_changed": 2,
+      "additions": 98,
+      "deletions": 73,
+      "commit_type": "docs"
+    },
+    {
+      "author": "blaisegassend",
+      "date": "2009-08-25T22:29:36Z",
+      "sha": "90b0958737fcd904cd8ad9efd3557df6d1f7d2c8",
+      "message": "Removed spurious dependency of imaging_pipeline on camera_drivers.",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "pmihelich",
+      "date": "2009-08-27T21:23:01Z",
+      "sha": "41d44b183d001a163e85de70c8f77145e28ad1ff",
+      "message": "compressed_image_transport: Initial commit. Plug-ins to image transport for CompressedImage topics.",
+      "files_changed": 10,
+      "additions": 397,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jamesbowman",
+      "date": "2009-09-01T19:46:36Z",
+      "sha": "9bbb289e992a1522e69cfaa8562570416dd73505",
+      "message": "Move #include <emmintrin.h> from include/stereolib.h to src/proc/stereolib.c",
+      "files_changed": 2,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "jleibs",
+      "date": "2009-09-01T18:45:31Z",
+      "sha": "92767165b06c05cfe8b649b1340b7b6ab32dbf1c",
+      "message": "Added missing sse2 compile flags to executables",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ethandreyfuss",
+      "date": "2009-08-28T23:37:26Z",
+      "sha": "12c6552bce77dce207d41539bd19a55025b19525",
+      "message": "Initial compiling commit of theora transport for image publisher",
+      "files_changed": 11,
+      "additions": 718,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "kurtkonolige",
+      "date": "2009-08-21T22:46:20Z",
+      "sha": "6e13293a386b63acbe8b6411824f6819b96e9d7d",
+      "message": "moved image_view to new imaging_pipeline stack",
+      "files_changed": 12,
+      "additions": 573,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mariusmuja",
+      "date": "2009-08-28T20:28:02Z",
+      "sha": "b92fef3fe5680432f24081e43bdddf59cfa538b8",
+      "message": "3D model tracker added to tabletop_objects",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    }
+  ]
+}

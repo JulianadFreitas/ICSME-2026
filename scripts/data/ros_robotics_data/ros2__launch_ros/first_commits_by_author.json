@@ -1,0 +1,771 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T07:32:54Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros2",
+    "repo": "launch_ros"
+  },
+  "data": [
+    {
+      "author": "claraberendsen",
+      "date": "2026-02-18T18:06:03Z",
+      "sha": "aa6ef2125269ccf9fcf4eba3f80fe9da9ec317ae",
+      "message": "set PYTHONUNBUFFERED to 1 to avoid hangs due to lost buffers (#519)\n\n---\nThis attempts to fix https://github.com/ros2/launch_ros/issues/444 by forcing stdout to not buffer and hang due to that buffer being lost during high resource usage.\n\nSigned-off-by: claraberendsen <42071084+claraberendsen@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "InvincibleRMC",
+      "date": "2025-11-27T08:47:22Z",
+      "sha": "95aaac474194164e525420a21ff46e3599aa1fee",
+      "message": "remove importlib (#508)\n\nSigned-off-by: Michael Carlstrom <rmc@carlstrom.com>",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 8,
+      "commit_type": "config"
+    },
+    {
+      "author": "ahcorde",
+      "date": "2020-05-11T09:20:43Z",
+      "sha": "7bd55520ebef9429e78a8bb9d70ce6cd39f0ca9e",
+      "message": "Fix ros2 launch (#147)\n\n* Fix ros2 launch on Windows\r\n\r\nargcomplete it doesn't support Windows. Moved the `argcomplete` outside the try catch\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Fixed comment on ros2launch\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>",
+      "files_changed": 1,
+      "additions": 10,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "SuperJappie08",
+      "date": "2025-10-10T04:24:25Z",
+      "sha": "2f27466bbfe125229d2c9c65f96df7ad700bfe40",
+      "message": "Expose composable_lifecycle_node in front-end (#480)\n\n* Expose composable_lifecycle_node in front-end\n\nSigned-off-by: SuperJappie08 <36795178+SuperJappie08@users.noreply.github.com>\n\n* Fix composable lifecycle node typing error\n\nSigned-off-by: SuperJappie08 <36795178+SuperJappie08@users.noreply.github.com>\n\n---------\n\nSigned-off-by: SuperJappie08 <36795178+SuperJappie08@users.noreply.github.com>",
+      "files_changed": 4,
+      "additions": 74,
+      "deletions": 10,
+      "commit_type": "ci"
+    },
+    {
+      "author": "mjcarroll",
+      "date": "2018-11-15T20:58:45Z",
+      "sha": "282fb0857659088145ceac85aa732d5538d3ce70",
+      "message": "Ensure that shutdown event is handled correctly (#154)\n\nThere is a potential race condition in bewteen when the shutdown event\r\nis emitted and the rest of the shutdown handling code.  This introduces\r\nan additional await to ensure that the event is emitted before\r\nproceeding.",
+      "files_changed": 2,
+      "additions": 17,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "LastStarDust",
+      "date": "2023-03-02T17:45:55Z",
+      "sha": "c08ee600441b4f8688a604472f960af103e6a9fa",
+      "message": "exit() methods should not reraise the passed-in exception (#357)\n\nSigned-off-by: Pintaudi Giorgio <pintaudi@axelspace.com>",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "emersonknapp",
+      "date": "2020-01-03T16:03:10Z",
+      "sha": "f906510021b4ed98e8247dc785372e2fe383bf85",
+      "message": "Fix linter by removing unused import (#110)\n\nSigned-off-by: Emerson Knapp <emerson.b.knapp@gmail.com>",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "cottsay",
+      "date": "2019-06-24T22:55:41Z",
+      "sha": "37929eea57f2c7863207a9f808d8b16b73464de9",
+      "message": "Use wildcard syntax in generated parameter YAML files (#35)\n\nThis will eliminate the requirement that a node name override be\r\nspecified when passing a dictionary of parameters from launch.\r\n\r\nSigned-off-by: Scott K Logan <logans@cottsay.net>",
+      "files_changed": 2,
+      "additions": 14,
+      "deletions": 23,
+      "commit_type": "code"
+    },
+    {
+      "author": "christophebedard",
+      "date": "2021-06-29T15:22:51Z",
+      "sha": "f14b6a23c2facb3a5a8365769d18da9ac372f8ca",
+      "message": "Add ros_arguments option to Node action (#249)\n\nSigned-off-by: Christophe Bedard <bedard.christophe@gmail.com>",
+      "files_changed": 2,
+      "additions": 16,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "clalancette",
+      "date": "2019-03-19T18:53:26Z",
+      "sha": "185a7291c05b622167ac5772100272c5b5b1da80",
+      "message": "Make 'ros2 launch' work again. (#201)\n\nAfter commit 7611f7bd8f517b744f84dac630a7e40be145a7ef,\r\nget_default_launch_description() no longer takes\r\n'prefix_output_with_name' anymore.  Remove the use from\r\nthe examples and from the 'ros2 launch' command implementation.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 3,
+      "additions": 2,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "mosfet80",
+      "date": "2025-07-16T19:25:15Z",
+      "sha": "a3bb018f256dfcdcb9956dc6764966559d6cba5d",
+      "message": "fix setuptools deprecations (#475)\n\nSigned-off-by: Mos <realeandrea@yahoo.it>",
+      "files_changed": 4,
+      "additions": 20,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "ijnek",
+      "date": "2025-06-17T09:02:12Z",
+      "sha": "9c5f6a7c9ab960d918b58acfe76d62c0983a9925",
+      "message": "improve type readability in errors (#469)\n\nSigned-off-by: ijnek <kenjibrameld@gmail.com>",
+      "files_changed": 2,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "izzaaaatanishq",
+      "date": "2025-06-16T08:06:10Z",
+      "sha": "325a6b3c226ed3d26f3a030f4eef4541f843ad9e",
+      "message": "user control of log file base names, in ros2 launch (#461)\n\nSigned-off-by: Tanishq Chaudhary <tanishqchaudhary101010@gmail.com>\nCo-authored-by: Katherine Scott <katherineAScott@gmail.com>",
+      "files_changed": 2,
+      "additions": 8,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "emrekuru97",
+      "date": "2025-05-29T16:05:00Z",
+      "sha": "6b503adc7cffb48c29b38ec099eff723118583f2",
+      "message": "Fix: LoadComposableNodes fails to parse wildcard param files correctly (#460) (#465)\n\nSigned-off-by: emrekuru97 <emre.kuru97@hotmail.com>",
+      "files_changed": 4,
+      "additions": 46,
+      "deletions": 9,
+      "commit_type": "config"
+    },
+    {
+      "author": "TroublemaKer-6",
+      "date": "2025-04-08T19:07:22Z",
+      "sha": "9907300a51aae1188530ea60d88e03ca72c5dbea",
+      "message": "Remove the slash stripping since leading slash matters (#456)\n\nSigned-off-by: Fangfei FAN <z5444929@ad.unsw.edu.au>\nCo-authored-by: Fangfei FAN <z5444929@ad.unsw.edu.au>",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "fujitatomoya",
+      "date": "2024-01-08T17:34:54Z",
+      "sha": "82fe7c53755e130a882713fc61a353412b2fd52e",
+      "message": "add \"--log-file-name\" command line argument for test. (#387)\n\nSigned-off-by: Tomoya Fujita <Tomoya.Fujita@sony.com>",
+      "files_changed": 2,
+      "additions": 6,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "SteveMacenski",
+      "date": "2025-02-19T00:30:53Z",
+      "sha": "3569f0d76c68884ca8796c0134bad29e8732d868",
+      "message": "Autostarting lifecycle nodes and example launch file demo (#430)\n\n* autostarting lifecycle nodes and example\n\nSigned-off-by: Steve Macenski <stevenmacenski@gmail.com>\n\n* fix linting\n\nSigned-off-by: Steve Macenski <stevenmacenski@gmail.com>\n\n* fix linting\n\nSigned-off-by: Steve Macenski <stevenmacenski@gmail.com>\n\n* removing an unused variable\n\nSigned-off-by: Steve Macenski <stevenmacenski@gmail.com>\n\n* initializing a member client as none like sub\n\nSigned-off-by: Steve Macenski <stevenmacenski@gmail.com>\n\n* completing auto-start feature for composition nodes\n\nSigned-off-by: Steve Macenski <stevenmacenski@gmail.com>\n\n* linting\n\nSigned-off-by: Steve Macenski <stevenmacenski@gmail.com>\n\n* final linting fix\n\nSigned-off-by: Steve Macenski <stevenmacenski@gmail.com>\n\n* Resolving issue with StateTransition messages\n\nSigned-off-by: Steve Macenski <stevenmacenski@gmail.com>\n\n* removing Node's autostart\n\nSigned-off-by: Steve Macenski <stevenmacenski@gmail.com>\n\n* Fixing lifecyclenode type\n\nSigned-off-by: Steve Macenski <stevenmacenski@gmail.com>\n\n* update docstring\n\nSigned-off-by: Steve Macenski <stevenmacenski@gmail.com>\n\n* adding in composable lifecycle node\n\nSigned-off-by: Steve Macenski <stevenmacenski@gmail.com>\n\n* Adding docstring\n\nSigned-off-by: Steve Macenski <stevenmacenski@gmail.com>\n\n* require autostart non-None\n\nSigned-off-by: Steve Macenski <stevenmacenski@gmail.com>\n\n* remove unused imports\n\nSigned-off-by: Steve Macenski <stevenmacenski@gmail.com>\n\n* review comments continued\n\nSigned-off-by: Steve Macenski <stevenmacenski@gmail.com>\n\n* is lifecycle node and autostart to lifecycle-only classes\n\nSigned-off-by: Steve Macenski <stevenmacenski@gmail.com>\n\n* final bits\n\nSigned-off-by: Steve Macenski <stevenmacenski@gmail.com>\n\n* whoops, remove the Avatar-inspired printout\n\nSigned-off-by: Steve Macenski <stevenmacenski@gmail.com>\n\n* finish linting\n\nSigned-off-by: Steve Macenski <stevenmacenski@gmail.com>\n\n* review fix\n\nSigned-off-by: Steve Macenski <stevenmacenski@gmail.com>\n\n* remove old import\n\nSigned-off-by: Steve Macenski <stevenmacenski@gmail.com>\n\n---------\n\nSigned-off-by: Steve Macenski <stevenmacenski@gmail.com>",
+      "files_changed": 11,
+      "additions": 454,
+      "deletions": 88,
+      "commit_type": "docs"
+    },
+    {
+      "author": "rkent",
+      "date": "2025-01-31T12:03:26Z",
+      "sha": "2e737c8cb0ad7afc436938c30b5e14b4282ff2f7",
+      "message": "mock launch components causing rosdoc2 to fail Python API (#425)\n\nSigned-off-by: R. Kent James <kent@caspia.com>",
+      "files_changed": 2,
+      "additions": 61,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "huweiATgithub",
+      "date": "2024-09-25T16:22:50Z",
+      "sha": "edb63764c39993645fd6bc7e0fc31ed7316f0b45",
+      "message": "Fix url in setup.py (#413)\n\nSigned-off-by: Wei Hu <whuae@connect.ust.hk>",
+      "files_changed": 3,
+      "additions": 6,
+      "deletions": 6,
+      "commit_type": "config"
+    },
+    {
+      "author": "marcoag",
+      "date": "2024-03-28T09:38:48Z",
+      "sha": "0cdfff5d2c73cc26bc37decb82a1f51cfe77845b",
+      "message": "Changelog.\n\nSigned-off-by: Marco A. Gutierrez <marcogg@marcogg.com>",
+      "files_changed": 4,
+      "additions": 19,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "MatthijsBurgh",
+      "date": "2024-03-06T16:53:49Z",
+      "sha": "d71c7a9b88069fee19db140f7c543bced221a0a8",
+      "message": "Fix: typing. Iterable doesn't have __getitem__ (#393)\n\nSigned-off-by: Matthijs van der Burgh <matthijs.van.der.burgh@vbti.nl>",
+      "files_changed": 3,
+      "additions": 6,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "yaswanth1701",
+      "date": "2023-11-21T15:52:19Z",
+      "sha": "b84db65eae1a543e9512c96c99a59de4e3666ea0",
+      "message": "added type hinting to launch_testing_ros/test/examples (#386)\n\nSigned-off-by: yaswanth <gonnayaswanth17@gmail.com>",
+      "files_changed": 6,
+      "additions": 33,
+      "deletions": 17,
+      "commit_type": "test"
+    },
+    {
+      "author": "gavanderhoorn",
+      "date": "2023-10-09T18:11:49Z",
+      "sha": "bc609787102ae1c0b8ad2ee9dbecf0165a9108a2",
+      "message": "issue template: don't recommend ROS Answers any more (#381)\n\nRefer users to Robotics Stack Exchange instead.\r\n\r\nSigned-off-by: gavanderhoorn <g.a.vanderhoorn@tudelft.nl>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ottojo",
+      "date": "2023-08-28T20:21:56Z",
+      "sha": "760e2193288af5c4e5948725bf0def1e18fe8b80",
+      "message": "Create py.typed to mark this library as typed (#379)\n\n* Create py.typed\r\n\r\nSigned-off-by: Jonas Otto <jonas@jonasotto.com>",
+      "files_changed": 2,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "wjwwood",
+      "date": "2015-04-15T01:21:52Z",
+      "sha": "9d789b3e672645a0b74939cde89af5d55b94758b",
+      "message": "ignore __pycache__ folders",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Yadunund",
+      "date": "2023-03-13T12:53:30Z",
+      "sha": "1d57793d3d9337ea6ed59b30408054abd00b2f2c",
+      "message": "Enable document generation using rosdoc2 (#359)\n\n* Add exec dep for launch_testing_ros\r\n\r\nSigned-off-by: Yadunund <yadunund@openrobotics.org>",
+      "files_changed": 4,
+      "additions": 22,
+      "deletions": 20,
+      "commit_type": "config"
+    },
+    {
+      "author": "AlexeyMerzlyakov",
+      "date": "2023-01-30T11:02:20Z",
+      "sha": "954a2110ec271b606f6acaf6d1d72cd2e2ae05ff",
+      "message": "Fix normalize_parameters_dict for multiple nodes in the same namespace (#347)\n\nSigned-off-by: Alexey Merzlyakov <alexey.merzlyakov@samsung.com>",
+      "files_changed": 3,
+      "additions": 58,
+      "deletions": 3,
+      "commit_type": "config"
+    },
+    {
+      "author": "methylDragon",
+      "date": "2022-12-08T05:33:42Z",
+      "sha": "e2c2025e03d2051a1c787c46fcf8930fe63df81b",
+      "message": "Ensure load_composable_nodes respects condition (#339)",
+      "files_changed": 2,
+      "additions": 96,
+      "deletions": 9,
+      "commit_type": "code"
+    },
+    {
+      "author": "hellantos",
+      "date": "2022-12-08T21:15:18Z",
+      "sha": "85e5f78b0b12d9c240d0eca052453d2d067c041c",
+      "message": "Add LifecyleTransition action (#317)\n\nCo-authored-by: Jacob Perron <jacob@openrobotics.org>",
+      "files_changed": 4,
+      "additions": 314,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "FelipeGdM",
+      "date": "2022-12-08T18:43:33Z",
+      "sha": "d38055ca61acc84134ccf10b50a8e5c8721ff883",
+      "message": "Improve evaluate_paramenter_dict exceptions error message (#320)",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "wep21",
+      "date": "2022-12-07T18:57:50Z",
+      "sha": "af784b2f70d649c45330dc321e6101d84d328ef7",
+      "message": "fix: return text value to avoid exception (#338)\n\nSigned-off-by: Daisuke Nishimatsu <border_goldenmarket@yahoo.co.jp>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "audrow",
+      "date": "2021-11-23T18:41:50Z",
+      "sha": "20aef202b81dfb00eb833dcf40ab04f85ffe7174",
+      "message": "Update maintainers in setup.py (#287)\n\nSigned-off-by: Audrow Nash <audrow@hey.com>",
+      "files_changed": 4,
+      "additions": 8,
+      "deletions": 8,
+      "commit_type": "config"
+    },
+    {
+      "author": "paudrow",
+      "date": "2022-04-05T21:22:29Z",
+      "sha": "a114e1fd5d92a0e672cab31002bc6e086521e985",
+      "message": "0.19.1\n\nSigned-off-by: Audrow Nash <audrow@hey.com>",
+      "files_changed": 12,
+      "additions": 22,
+      "deletions": 8,
+      "commit_type": "docs"
+    },
+    {
+      "author": "kenji-miyake",
+      "date": "2021-06-08T20:22:33Z",
+      "sha": "e2abd4bf62fc7b0c37683441c89c9d548ee6abf7",
+      "message": "Support container in frontend (#235)\n\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>",
+      "files_changed": 4,
+      "additions": 250,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Keng12",
+      "date": "2022-04-29T21:52:30Z",
+      "sha": "5b457c3083b4ba937e3f04b670d045a4f527559a",
+      "message": "Fix long wait during shutdown in WaitForTopics (#314)\n\nSigned-off-by: Keng12 <k.chaig1@gmail.com>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "adityapande-1995",
+      "date": "2021-09-01T23:44:02Z",
+      "sha": "a65ad43062d386bae3a61a6679e41151a44d23d4",
+      "message": "launch_ros action SetParametersFromFile (#260)\n\nAdded new launch_ros action to set parameters for all nodes in scope using a global parameter yaml file\r\n\r\nSigned-off-by: Aditya Pande <aditya050995@gmail.com>",
+      "files_changed": 10,
+      "additions": 286,
+      "deletions": 44,
+      "commit_type": "config"
+    },
+    {
+      "author": "sloretz",
+      "date": "2018-07-09T04:40:09Z",
+      "sha": "436c484136d45e8a87e5b2256918bb103fad5775",
+      "message": "Fix exception when launch process with environment variables (#96)\n\n* Add failing test for ExecuteProcess with env\r\n\r\n* Store env as list of 2-tuple",
+      "files_changed": 3,
+      "additions": 67,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "Blast545",
+      "date": "2021-10-11T21:31:36Z",
+      "sha": "06a47b04be890dbc3879af0b4c807f41a5d34317",
+      "message": "Revert \"launch testing : Wait for topics to publish (#274)\" (#276)\n\nThis reverts commit bbcc0cc8c693e5c3009a6e7e269b45518c209fbb.\r\n\r\nSigned-off-by: Jorge Perez <jjperez@ekumenlabs.com>",
+      "files_changed": 3,
+      "additions": 0,
+      "deletions": 228,
+      "commit_type": "test"
+    },
+    {
+      "author": "jacobperron",
+      "date": "2018-09-19T01:33:12Z",
+      "sha": "84bb757d884d1ba5f2ef231e64405ba9223f23ae",
+      "message": "Add UnregisterEventHandler action (#110)\n\nAlso added tests for RegisterEventHandler and UnregisterEventHandler actions.",
+      "files_changed": 3,
+      "additions": 101,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "DLu",
+      "date": "2021-11-23T18:57:09Z",
+      "sha": "b6f187aeae25975435a776de0017bf6c704cb591",
+      "message": "More Helpful Error Messages (#275)\n\n* More Helpful Error Messages\r\n\r\nSigned-off-by: David V. Lu <davidvlu@gmail.com>\r\n\r\n* Linting\r\n\r\nSigned-off-by: David V. Lu <davidvlu@gmail.com>",
+      "files_changed": 2,
+      "additions": 72,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "hidmic",
+      "date": "2019-02-27T19:33:24Z",
+      "sha": "632ef1f3eca7dbc54fbed85ab65a5efc512d83ed",
+      "message": "Migrates legacy launch API tests (#167)\n\n* Emits events.ExecutionComplete on Action completion.\r\n\r\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>\r\n\r\n* Makes LaunchTestService handle non-process actions.\r\n\r\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>\r\n\r\n* Makes LaunchTestService handle fixture process actions.\r\n\r\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>\r\n\r\n* Adds output checks to LaunchTestService.\r\n\r\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>\r\n\r\n* Updates launch_testing package tests.\r\n\r\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>\r\n\r\n* Applies fixes after launch_testing refactor.\r\n\r\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>\r\n\r\n* Adds OpaqueCoroutine action subclass.\r\n\r\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>\r\n\r\n* Apply suggestions from code review\r\n\r\nCo-Authored-By: hidmic <michel@ekumenlabs.com>\r\n\r\n* Addresses peer review comments.\r\n\r\n- Emit ExecutionComplete events on demand.\r\n- Shutdown OpaqueCoroutine gracefully.\r\n- Fix failing test cases.\r\n\r\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>\r\n\r\n* Refactors launch_testing API a bit.\r\n\r\nTo cope with more test cases.\r\n\r\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>\r\n\r\n* Applies style fixes to launch_testing.\r\n\r\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>\r\n\r\n* Deal with non zero exit on shutdown.\r\n\r\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>\r\n\r\n* Avoids output tests' races.\r\n\r\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>\r\n\r\n* Applies misc fixes after Windows triaging.\r\n\r\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>\r\n\r\n* Applies more fixes after Windows triaging.\r\n\r\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>\r\n\r\n* Fixes linter issue.\r\n\r\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>\r\n\r\n* Addresses peer review comments.\r\n\r\n- Improved OpaqueCoroutine documentation.\r\n- Added test for launch.event_handlers.OnExecutionComplete.\r\n\r\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>",
+      "files_changed": 22,
+      "additions": 766,
+      "deletions": 98,
+      "commit_type": "docs"
+    },
+    {
+      "author": "rebecca-butler",
+      "date": "2021-06-15T15:56:28Z",
+      "sha": "54a44edefa69a9348bb3592c06e3ba76a345a3cc",
+      "message": "ROS Timer Action (#244)\n\n* Add ros timer action\r\n\r\nSigned-off-by: Rebecca Butler <rebecca@openrobotics.org>\r\n\r\n* Refactor timer event loop\r\n\r\nSigned-off-by: Rebecca Butler <rebecca@openrobotics.org>\r\n\r\n* Fix timer future bug\r\n\r\nSigned-off-by: Rebecca Butler <rebecca@openrobotics.org>\r\n\r\n* Add ros timer action unit tests\r\n\r\nSigned-off-by: Rebecca Butler <rebecca@openrobotics.org>\r\n\r\n* Add 'use_sim_time' arg to RosTimerAction\r\n\r\nSigned-off-by: Rebecca Butler <rebecca@openrobotics.org>\r\n\r\n* Cleanup\r\n\r\nSigned-off-by: Rebecca Butler <rebecca@openrobotics.org>\r\n\r\n* Minor fixes to address comments\r\n\r\nSigned-off-by: Rebecca Butler <rebecca@openrobotics.org>\r\n\r\n* Rename ros_timer_action to ros_timer\r\n\r\nSigned-off-by: Rebecca Butler <rebecca@openrobotics.org>\r\n\r\n* Add SetUseSimTime action\r\n\r\nSigned-off-by: Rebecca Butler <rebecca@openrobotics.org>\r\n\r\nSigned-off-by: Rebecca Butler <rebecca@openrobotics.org>\r\n\r\n* Improve accuracy of measuring timeout in tests\r\n\r\nSigned-off-by: Rebecca Butler <rebecca@openrobotics.org>\r\n\r\n* Fix import order and minor changes\r\n\r\nSigned-off-by: Rebecca Butler <rebecca@openrobotics.org>\r\n\r\n* Fix linter errors\r\n\r\nSigned-off-by: Rebecca Butler <rebecca@openrobotics.org>\r\n\r\n* Fix typo\r\n\r\nSigned-off-by: Rebecca Butler <rebecca@openrobotics.org>\r\n\r\nCo-authored-by: Rebecca Butler <rebecca@openrobotics.org>",
+      "files_changed": 5,
+      "additions": 456,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "camm73",
+      "date": "2021-08-24T13:39:46Z",
+      "sha": "16d4d06867ddb2c20430e5a0c7278c3c10dfbc3e",
+      "message": "Resolves #37 - Added --launch-prefix argument for 'ros2 launch' command (#254)\n\n* Added launch-prefix argument for 'ros2 launch' command\r\n\r\nSigned-off-by: Cameron Miller <cammlle@amazon.com>\r\n\r\n* Pass launch-prefix to LaunchService\r\n\r\nSigned-off-by: Cameron Miller <cammlle@amazon.com>\r\n\r\n* Revert to commit: fca036eb0\r\n\r\nSigned-off-by: Cameron Miller <cammlle@amazon.com>\r\n\r\nCo-authored-by: Cameron Miller <cammlle@amazon.com>",
+      "files_changed": 2,
+      "additions": 13,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "rob-clarke",
+      "date": "2021-07-16T13:35:30Z",
+      "sha": "83659fdba82b85b1ddbdab9ed3a32c155640a14d",
+      "message": "Simplify logic to fix absolute paths (#230)\n\n* Simplify logic to fix absolute paths\r\n\r\nSigned-off-by: Rob Clarke <robert.clarke@bristol.ac.uk>\r\n\r\n* Linting\r\n\r\nSigned-off-by: Rob Clarke <robert.clarke@bristol.ac.uk>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 13,
+      "commit_type": "code"
+    },
+    {
+      "author": "felixdivo",
+      "date": "2021-05-06T19:48:12Z",
+      "sha": "01c90fa5ca46e941e246876fdbabd10b7b100af7",
+      "message": "Better document parameter handling in Node (#234)\n\nSigned-off-by: Felix Divo <felix.divo@gmail.com>",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "mikepurvis",
+      "date": "2021-04-21T13:41:14Z",
+      "sha": "96913dbe748da98b9396daf5b98ddcf28b7637ae",
+      "message": "Use underscores in setup.cfg instead of dashes. (#227)\n\nSigned-off-by: Mike Purvis <mpurvis@clearpath.ai>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "gbiggs",
+      "date": "2021-04-05T14:41:53Z",
+      "sha": "cedfedfc0bf718d4e3fa5ba978b31fae62502f91",
+      "message": "Add options extensions to ros2launch and extensibility to the node action (#216)\n\n* Add extensibility to the node action\r\n\r\nSigned-off-by: Geoffrey Biggs <gbiggs@killbots.net>\r\nCo-authored-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 5,
+      "additions": 275,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "ivanpauno",
+      "date": "2019-03-14T11:50:46Z",
+      "sha": "7611f7bd8f517b744f84dac630a7e40be145a7ef",
+      "message": "Add test actions (#178)\n\n* Adding GTest and PyTest actions\r\n\r\nSigned-off-by: ivanpauno <ivanpauno@ekumenlabs.com>\r\n\r\n* Corrected bugs in GTest and PyTest actions\r\n\r\nSigned-off-by: ivanpauno <ivanpauno@ekumenlabs.com>\r\n\r\n* Migrated to ament_cmake package. Avoided pytest-timeout dependency\r\n\r\nSigned-off-by: ivanpauno <ivanpauno@ekumenlabs.com>\r\n\r\n* Adding missing licenses\r\n\r\nSigned-off-by: ivanpauno <ivanpauno@ekumenlabs.com>\r\n\r\n* Uncommented all tests\r\n\r\nSigned-off-by: ivanpauno <ivanpauno@ekumenlabs.com>\r\n\r\n* Added substitutions support. Deleted extra getter in Test action\r\n\r\nSigned-off-by: ivanpauno <ivanpauno@ekumenlabs.com>\r\n\r\n* Correct path handling in tests\r\n\r\nSigned-off-by: ivanpauno <ivanpauno@ekumenlabs.com>\r\n\r\n* Added documentation\r\n\r\nSigned-off-by: ivanpauno <ivanpauno@ekumenlabs.com>\r\n\r\n* Corrected with PR comments.\r\n\r\nSigned-off-by: ivanpauno <ivanpauno@ekumenlabs.com>\r\n\r\n* Reusing ExecuteProcess on_shutdown actions in test timeout\r\n\r\nSigned-off-by: ivanpauno <ivanpauno@ekumenlabs.com>\r\n\r\n* Added non-locking test. Avoided using shell option in pytest execution\r\n\r\nSigned-off-by: ivanpauno <ivanpauno@ekumenlabs.com>\r\n\r\n* Clean up PyTest and GTest actions and their tests.\r\n\r\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>\r\n\r\n* Add ament_cmake as launch_testing build dependency.\r\n\r\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>\r\n\r\n* Add ament_cmake_gtest and ament_cmake_python as launch_testing dependencies.\r\n\r\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>\r\n\r\n* Stop assuming python3 naming in launch_testing PyTest action.\r\n\r\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>\r\n\r\n* More launch_testing package.xml fixes.\r\n\r\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>",
+      "files_changed": 16,
+      "additions": 437,
+      "deletions": 57,
+      "commit_type": "ci"
+    },
+    {
+      "author": "Michael Jeronimo",
+      "date": "2020-10-06T19:09:14Z",
+      "sha": "f80ad2a2edd573a3494a849262035297781d8798",
+      "message": "Update the package.xml files with the latest Open Robotics maintainers\n\nSigned-off-by: Michael Jeronimo <michael.jeronimo@openrobotics.org>",
+      "files_changed": 4,
+      "additions": 8,
+      "deletions": 3,
+      "commit_type": "config"
+    },
+    {
+      "author": "vmayoral",
+      "date": "2020-08-28T16:38:21Z",
+      "sha": "38407baecc035389794c67247bbf620aa050c320",
+      "message": "Address security bug in yaml loading (#175)\n\n* Address security bug in yaml loading\r\n\r\nCurate bug similar to https://github.com/ros/actionlib/pull/171.\r\nConnected with https://github.com/aliasrobotics/RVD/issues/2401.\r\n\r\nSigned-off-by: Víctor Mayoral Vilches <v.mayoralv@gmail.com>\r\n\r\n* revert one of the changes\r\n\r\nSigned-off-by: Dirk Thomas <dirk-thomas@users.noreply.github.com>\r\n\r\nCo-authored-by: Dirk Thomas <dirk-thomas@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "ci"
+    },
+    {
+      "author": "dawonn-haval",
+      "date": "2020-07-23T19:06:00Z",
+      "sha": "e121f6b1359b7a7cbe8e982334009f8e5c751d79",
+      "message": "Resolve libyaml warning when loading parameters from file (#161)\n\nFixes #160\r\n\r\nSigned-off-by: Dereck Wonnacott <dereck.wonnacott@havalus.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "rotu",
+      "date": "2019-07-02T01:51:56Z",
+      "sha": "78469a9122ad4ca8416bf3a6c34acecbfafb982f",
+      "message": "Fix typo\n\nSigned-off-by: Dan Rose <dan@digilabs.io>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "dirk-thomas",
+      "date": "2015-03-18T21:28:58Z",
+      "sha": "128d17f794346875afcb66868c8f92483e311454",
+      "message": "add CONTRIBUTING.md and LICENSE files",
+      "files_changed": 2,
+      "additions": 215,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mm318",
+      "date": "2020-03-10T20:32:46Z",
+      "sha": "d10e4429563920fe101c4ce721f53eb3f1fe3b05",
+      "message": "Add warning message when launching Non-Uniquely Named Nodes (#127)\n\nA warning is added in case that:\r\n* More than one node launched by the same `LaunchContext` uses the same fully qualified node name.\r\n* If the name/namespace is not explicitly provided in the launchfile, it's not possible to do the check. No warning is printed in this case.\r\nSigned-off-by: Miaofei <miaofei@amazon.com>",
+      "files_changed": 6,
+      "additions": 322,
+      "deletions": 7,
+      "commit_type": "config"
+    },
+    {
+      "author": "nuclearsandwich",
+      "date": "2018-08-27T16:51:21Z",
+      "sha": "b39645c5aa637eed932b5bab5e11f67dbd9d06a4",
+      "message": "Fix linter errors from #131. (#132)",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "BMarchi",
+      "date": "2019-11-25T20:45:30Z",
+      "sha": "04f131ade588aab50b0011756c3ca7b53b89c07f",
+      "message": "Add pid to launch_ros node name as suffix\n\nSigned-off-by: Brian Ezequiel Marchi <brian.marchi65@gmail.com>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "oceanusxiv",
+      "date": "2019-12-04T19:08:48Z",
+      "sha": "4662df0f7293146705941e1b72ff9627fcddbacf",
+      "message": "Allow separate launch composition (#77)\n\n* Allow LoadComposableNodes to accept target container as string\r\n\r\nSigned-off-by: Eric Fang <eric1221bday@gmail.com>",
+      "files_changed": 1,
+      "additions": 26,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "mxgrey",
+      "date": "2019-12-04T17:36:49Z",
+      "sha": "74691543553ced2fb5acd3761acb76dccff08423",
+      "message": "Pass the node-name attribute through the substitution parser (#101)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "galou",
+      "date": "2019-11-02T05:11:22Z",
+      "sha": "52cda324fe1132bd8a3a5df9292e6eec061d79da",
+      "message": "Install package.xml (#92)\n\nThis avoids a warning with colcon.\r\n\r\nSigned-off-by: Gaël Écorchard <gael.ecorchard@cvut.cz>",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Peter Baughman",
+      "date": "2019-10-22T23:32:15Z",
+      "sha": "18cc7fc699692e040dde3406c8170fe9f269c254",
+      "message": "Remove self.proc_output and ready_fn (#90)\n\nSigned-off-by: Pete Baughman <pete.baughman@apex.ai>",
+      "files_changed": 1,
+      "additions": 10,
+      "deletions": 9,
+      "commit_type": "test"
+    },
+    {
+      "author": "Matt Hansen",
+      "date": "2019-05-14T23:11:59Z",
+      "sha": "d7bbc734b85fcd5ef674359f2bc0b016a15ce5c3",
+      "message": "Launch autocomplete doesnt require dot (#24)\n\nSigned-off-by: Matthew Hansen <matthew.k.hansen@intel.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "pbaughman",
+      "date": "2019-02-01T16:10:29Z",
+      "sha": "300196b15b0aa99c045460e7d81333df99b8f8da",
+      "message": "Refactor arg print functions (#172)\n\n- Make it easier to print args if you already have a LaunchDescription object",
+      "files_changed": 2,
+      "additions": 10,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "Kyle Fazzari",
+      "date": "2019-02-07T17:38:57Z",
+      "sha": "8b3ec039926d1a814d6ececb57bc85758886d2d6",
+      "message": "launch: ensure event handlers add event to context locals (#177)\n\n* launch: ensure event handlers add event to context locals\r\n\r\nAlso add tests for all event handlers.\r\n\r\nSigned-off-by: Kyle Fazzari <kyrofa@ubuntu.com>\r\n\r\n* Use super().handle() instead\r\n\r\nSigned-off-by: Kyle Fazzari <kyrofa@ubuntu.com>\r\n\r\n* Split BaseEventHandler from EventHandler\r\n\r\nSigned-off-by: Kyle Fazzari <kyrofa@ubuntu.com>",
+      "files_changed": 10,
+      "additions": 450,
+      "deletions": 37,
+      "commit_type": "code"
+    },
+    {
+      "author": "joncppl",
+      "date": "2018-11-28T07:23:02Z",
+      "sha": "07b6d4c1763b4709d465e43b0479529812bdab57",
+      "message": "signit executes the shutdown event synchronously (#156)\n\n* signit executes the shutdown event synchronously\r\n\r\n* line length\r\n\r\n* avoid split parameter indention",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "yechun1",
+      "date": "2018-11-01T20:29:23Z",
+      "sha": "a89671962220c8691ea4f128717bca599c711cda",
+      "message": "rename transitions as lifecycle_msgs changed (#153)\n\nTRANSITION_SHUTDOWN is delated in lifecycle_msgs/msg/Transition.msg\r\n\r\nAlign with the code changes from https://github.com/ros2/rcl_interfaces/commit/852a37ba3ae0f7e58f4314fa432a8ea7f0cbf639\r\n\r\nSigned-off-by: Chris Ye <chris.ye@intel.com>",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "dhood",
+      "date": "2016-02-17T14:13:40Z",
+      "sha": "029b3e7f9415dff0e19fbff5a5b85086654a97d0",
+      "message": "Allow for variation on RTI licence in default filtered_prefixes",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "mikaelarguedas",
+      "date": "2016-07-12T20:53:13Z",
+      "sha": "aa66d2b6590833a0ab70658a4d9ffb231e9e2005",
+      "message": "Pass environment to launched processes (#38)\n\n* pass env parameter to subprocess\r\n\r\n* add unit test\r\n\r\n* restore original file path\r\n\r\n* adding back main\r\n\r\n* use deepcopy to be sure to use disctinct dictionaries\r\n\r\n* add copyright\r\n\r\n* move import to module level, remove unused brackets assert\r\n\r\n* add env to kwargs\r\n\r\n* change key existence checking logic\r\n\r\n* its 2016 already",
+      "files_changed": 3,
+      "additions": 72,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "rhololkeolke",
+      "date": "2018-02-20T17:46:31Z",
+      "sha": "3fb4221e0be405e21db9e8d230524af30fdaeee5",
+      "message": "Fix hang on keyboard interrupt (#69)\n\nWhen keyboard interrupt exception occurs loop.run_forever is\r\ncalled. But there is no loop.stop call. This causes a hang.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "bponsler",
+      "date": "2017-08-23T20:52:17Z",
+      "sha": "7468717fcc7673882bdfe63d4c833e9b266b578f",
+      "message": "Added support for command line launch arguments (#57)\n\n* Added support for command line launch arguments\r\n\r\nUpdated to support passing in command line arguments in the same format used by roslaunch (i.e., arg_name:=value). This supports zero or more arguments added after one or more launch files passed on the command line.\r\n\r\n* Updates to parsing/handling of command line args\r\n\r\n* Addressed review comments\r\n\r\nFixed linter errors, updated copyrights, updated sphinx documentation, used different form of print.\r\n\r\n* pep257 fixup\r\n\r\n* use single quotes\r\n\r\n* Addressing comments from review\r\n\r\nUsing single quotes instead of double quotes, fixed mistaken copyright year, allow the launch arg value to contain the arg separator, cleaned up main\r\n\r\n* Updated to support --args format\r\n\r\n* Fixing additional style errors\r\n\r\nRemoved unnecessary code, fixed style/linting problems.\r\n\r\n* while passing the linter as is the extra indentation makes it a bit easier to read",
+      "files_changed": 4,
+      "additions": 186,
+      "deletions": 7,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Karsten1987",
+      "date": "2016-10-01T22:10:30Z",
+      "sha": "a2aa2425c117e0de29418e82b5a0441a3b4ca56a",
+      "message": "(dev) comply with D213",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "rohbotics",
+      "date": "2016-08-13T00:27:12Z",
+      "sha": "c7a34bf1ce9e22b55004e06b36854f7e954bdc5b",
+      "message": "Use Python 3.5 async (#40)\n\n* Use new async/await everywhere\r\n\r\n* Add back newline after class def",
+      "files_changed": 4,
+      "additions": 25,
+      "deletions": 31,
+      "commit_type": "code"
+    },
+    {
+      "author": "jacquelinekay",
+      "date": "2015-12-17T00:57:24Z",
+      "sha": "7886a66af4fb32a19b68644f90e5c89e59d7f40f",
+      "message": "Merge pull request #19 from ros2/complete_matching\n\nComplete matching",
+      "files_changed": 4,
+      "additions": 107,
+      "deletions": 12,
+      "commit_type": "code"
+    },
+    {
+      "author": "gerkey",
+      "date": "2015-12-17T23:42:37Z",
+      "sha": "d65b4e8355b80aef0ee86c5bb3f97025c8b60e2b",
+      "message": "Add the ability to decide whether to exit on output match, and also a new exit handler that ignores process return codes.",
+      "files_changed": 2,
+      "additions": 33,
+      "deletions": 11,
+      "commit_type": "code"
+    },
+    {
+      "author": "Esteve Fernandez",
+      "date": "2015-11-11T23:06:51Z",
+      "sha": "64cb246107e54917348196862e000d1f09c411aa",
+      "message": "Added send_signal to ProcessDescriptor",
+      "files_changed": 1,
+      "additions": 12,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "esteve",
+      "date": "2015-11-11T23:41:33Z",
+      "sha": "ca730ffed89e212cd5b0f73a1528c39cff238bee",
+      "message": "Merge pull request #11 from ros2/send-signal\n\nAdded send_signal to ProcessDescriptor",
+      "files_changed": 1,
+      "additions": 12,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "tfoote",
+      "date": "2015-11-17T21:37:53Z",
+      "sha": "9e123a9cb9a63888b31ea7d37a2969892b3f49ce",
+      "message": "Merge pull request #13 from ros2/launch_testing\n\nAdded launch_testing package",
+      "files_changed": 3,
+      "additions": 112,
+      "deletions": 0,
+      "commit_type": "config"
+    }
+  ]
+}

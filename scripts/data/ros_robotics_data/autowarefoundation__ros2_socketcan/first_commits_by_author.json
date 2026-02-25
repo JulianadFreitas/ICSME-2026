@@ -1,0 +1,161 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T10:26:02Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "autowarefoundation",
+    "repo": "ros2_socketcan"
+  },
+  "data": [
+    {
+      "author": "JWhitleyWork",
+      "date": "2022-02-03T22:09:31Z",
+      "sha": "181033db915741070fa85e093909cbf360cd7ad1",
+      "message": "Merge pull request #13 from wep21/prepare/1.1.0\n\n1.1.0",
+      "files_changed": 2,
+      "additions": 14,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "khallenbeck-dsi",
+      "date": "2026-01-21T00:27:58Z",
+      "sha": "b1d1a6698624758ffabe84ba0e9b68d00780aaef",
+      "message": "Fix loopback option to be sender only (#66)\n\n* Add loopback option to sender\n\nSigned-off-by: Kevin Hallenbeck <khallenbeck@dataspeedinc.com>\n\n* Remove loopback option from receiver\n\nRevert most of e39a814\n\nSigned-off-by: Kevin Hallenbeck <khallenbeck@dataspeedinc.com>\n\n---------\n\nSigned-off-by: Kevin Hallenbeck <khallenbeck@dataspeedinc.com>",
+      "files_changed": 11,
+      "additions": 16,
+      "deletions": 18,
+      "commit_type": "config"
+    },
+    {
+      "author": "TetsuKawa",
+      "date": "2025-08-06T02:11:26Z",
+      "sha": "822ca033c8ce934dc5a622d7bb80adb575522b33",
+      "message": "feat: add filters arg to xml launch (#63)\n\nfeat: add filters\n\nSigned-off-by: TetsuKawa <kawaguchitnon@icloud.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "FranzAlbers",
+      "date": "2024-12-04T22:01:06Z",
+      "sha": "06937e7344bde3a15e0bb14cea2d873a82574750",
+      "message": "feat: allow remapping of can_fd topics via launch file (#52)\n\nSigned-off-by: Franz Albers <Franz.Albers@tu-dortmund.de>",
+      "files_changed": 2,
+      "additions": 14,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "xmfcx",
+      "date": "2024-03-26T13:59:36Z",
+      "sha": "9d89f9f63fd003d5fd5a5488e631333ac08369e4",
+      "message": "ci(build_test.yml): update the rolling to noble (#44)\n\nSigned-off-by: M. Fatih Cırıt <mfc@leodrive.ai>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "ismetatabay",
+      "date": "2024-09-23T09:06:26Z",
+      "sha": "d0a44226c29b07d5074362e4eb34da1093da0f13",
+      "message": "fix: checking can id (#40)\n\nSigned-off-by: ismetatabay <ismet@leodrive.ai>",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "ChinYikMing",
+      "date": "2024-07-17T12:35:06Z",
+      "sha": "1971390aebeb85e21bd7784f63690a4b69651e81",
+      "message": "chore: rename design doc filename to README.md (#37)",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "wep21",
+      "date": "2021-03-05T22:28:55Z",
+      "sha": "6a02546179839026cabe16953308acfd4d7f4b75",
+      "message": "Add reader node\n\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>",
+      "files_changed": 5,
+      "additions": 228,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Timple",
+      "date": "2024-03-25T15:56:40Z",
+      "sha": "cbbc12373eb1c56d9c6e78c09d17a8c2e27547cc",
+      "message": "Allow remapping of the canbus topics (#39)\n\nSigned-off-by: Tim Clephas <tim.clephas@nobleo.nl>",
+      "files_changed": 3,
+      "additions": 8,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "MarcelDudek",
+      "date": "2022-12-12T23:38:26Z",
+      "sha": "d994b3b3aee065f8472c5f2a2c5defa5e6a1ac4c",
+      "message": "SocketCAN filters (#25)\n\n* SocketCAN filters\r\n\r\nFilters can be set using launch parameter.\r\nA list of pairs (can id and mask) are fetched and applied to\r\nsocket filter.\r\n\r\nAdded unit test for filters application and fuctionality.\r\n\r\nSigned-off-by: Marcel Dudek <lotnik1998@gmail.com>\r\n\r\n* Full support of SocketCAN filters\r\n\r\nSocketCAN filters can be now\r\nwith string description used\r\nby candump utility.\r\n\r\nAdded support for error masks\r\nand joined CAN filters.\r\n\r\nInstead of list of integers, receiver\r\nnode now uses string parameter\r\nin order to receive filters. Filters will\r\nnow be parsed and setup during\r\nconfiguration.\r\n\r\nAdded unit test for parsing and\r\nupdated filters unit test.\r\n\r\nSigned-off-by: Marcel Dudek <lotnik1998@gmail.com>\r\n\r\n* Reference to man-pages docs of filters syntax\r\n\r\nAdded links referencing man-pages docs for candump,\r\ncontaining more information about socketcan filters\r\nsyntax used. Links were added to doxygen documentation\r\nof filters parsing method and to launch argument\r\ndescription.\r\n\r\nSigned-off-by: Marcel Dudek <lotnik1998@gmail.com>\r\n\r\nSigned-off-by: Marcel Dudek <lotnik1998@gmail.com>",
+      "files_changed": 8,
+      "additions": 494,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "LukaJuricic",
+      "date": "2022-10-27T19:57:20Z",
+      "sha": "76873dbc7fb2768c4cbbbc7d8143c0e51c1d7264",
+      "message": "Fix unit conversion bug in to_timeval() (#24)\n\nSigned-off-by: ljuricic <98381369+ljuricic@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "ci"
+    },
+    {
+      "author": "a-higuchi",
+      "date": "2022-09-05T06:10:10Z",
+      "sha": "213d45bbfbcf43a48c12ee5b87389a7b934ee063",
+      "message": "fix previously received data remains\n\nSigned-off-by: Akira Higuchi <v-higuchi7241@esol.co.jp>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "asaba96",
+      "date": "2022-02-03T08:00:14Z",
+      "sha": "dbddda9aa2c92f820af49929ff0716b9cc9bbbfd",
+      "message": "Added bus time (#12)\n\n* added the ability to get the bus time for the can packet, versus using ros time when received; packs bus time as part of the can id struct\r\n\r\nSigned-off-by: Andrew Saba <asaba96@pitt.edu>\r\n\r\n* cleanup; cast fix\r\n\r\nSigned-off-by: Andrew Saba <asaba96@pitt.edu>\r\n\r\n* chore: apply uncrustify\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* chore: fix include order for cpplint\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\nCo-authored-by: wep21 <border_goldenmarket@yahoo.co.jp>",
+      "files_changed": 14,
+      "additions": 90,
+      "deletions": 51,
+      "commit_type": "code"
+    },
+    {
+      "author": "Joshua Whitley",
+      "date": "2021-02-19T20:44:56Z",
+      "sha": "cb9aa5c206cd07a5a26626d6c707e51a91b32ce8",
+      "message": "Initial commit",
+      "files_changed": 1,
+      "additions": 201,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Kenji Miyake",
+      "date": "2021-03-11T13:00:30Z",
+      "sha": "fba6587e29cf509297ed88e77e63c5943cba7da5",
+      "message": "Add namespace to support multiple nodes\n\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>",
+      "files_changed": 3,
+      "additions": 15,
+      "deletions": 6,
+      "commit_type": "config"
+    }
+  ]
+}

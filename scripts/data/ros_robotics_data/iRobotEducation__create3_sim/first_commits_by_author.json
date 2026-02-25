@@ -1,0 +1,221 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T02:52:43Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "iRobotEducation",
+    "repo": "create3_sim"
+  },
+  "data": [
+    {
+      "author": "luffydod",
+      "date": "2025-07-09T21:42:33Z",
+      "sha": "1fccb769708860267a5c90a10110308fa3faa785",
+      "message": "fix ros_gz_bridge message type for Gazebo Harmonic (#241)",
+      "files_changed": 2,
+      "additions": 10,
+      "deletions": 10,
+      "commit_type": "code"
+    },
+    {
+      "author": "skyegalaxy",
+      "date": "2025-07-08T21:28:48Z",
+      "sha": "7362f34dcef245ba84d616de3b127c86d31b6d9a",
+      "message": "bump setup-ros and action-ros-ci (#242)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "Prince25",
+      "date": "2025-04-02T17:11:23Z",
+      "sha": "c3cbc51058319b69c68f680c5817f434bb69c22e",
+      "message": "Fix Typos and Update ROS 2 Jazzy Reference (#238)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Alberto Soragna",
+      "date": "2022-03-31T11:12:01Z",
+      "sha": "1cdf7bdeecee353e3474080ef7ce33fc04d20763",
+      "message": "1.0.0",
+      "files_changed": 24,
+      "additions": 36,
+      "deletions": 36,
+      "commit_type": "docs"
+    },
+    {
+      "author": "alsora",
+      "date": "2021-10-08T14:04:41Z",
+      "sha": "500379729e8ffb82121eaf841394cbf5e557d170",
+      "message": "add colcon and rosdep to readme (#72)\n\nSigned-off-by: Alberto Soragna <alberto.soragna@gmail.com>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "civerachb-cpr",
+      "date": "2024-08-16T20:07:00Z",
+      "sha": "71cda803f89c34356bbd5fcc3a05bb85b4195f6f",
+      "message": "Jazzy updates (#229)\n\n* Remove the COLCON_IGNORE, fix some namespace issues with the Create3 plugin\r\n\r\n* Initial bulk renaming ignition -> gz, ign -> gz\r\n\r\n* Rename files & folders ignition -> gz\r\n\r\n* Add python setup files\r\n\r\n* Copypasta\r\n\r\n* Remove setup files (they're no longer necessary after all?), add ament_cmake_python dependency\r\n\r\n* Remove substitution deprecations\r\n\r\n* Add IfCondition wrappers\r\n\r\n* Missing import\r\n\r\n* Rename gazebo launch file\r\n\r\n* Update launch file\r\n\r\n* Update the GUI config with fixed camera position, add 3d scene manager\r\n\r\n* Enable the plugins, fix the path envars\r\n\r\n* Remove commented-out parameters\r\n\r\n* Initial migration from Twist to TwistStamped. Headers are not initalized; just the message type is changed so far\r\n\r\n* Override the backup safety for now; it seems to be clobbering the undock behaviour\r\n\r\n* Update the gz_ros_bridge to use stamped messages for cmd_vel\r\n\r\n* Don't allow the dock/undock actions to be preempted\r\n\r\n* Add the InteractiveViewControl so we can move the camera around inside Gazebo\r\n\r\n* Reduce the width of wall 12 so the robot's default spawn location doesn't clip into the wall\r\n\r\n* Add launch instructions to the readme\r\n\r\n* Add note about how to change initial pose\r\n\r\n* Fix logging for the buttons plugin\r\n\r\n* Revert accidental change to changelog\r\n\r\n* Revert changes to CMakeLists\r\n\r\n* Set the time in the stamped twist message headers\r\n\r\n* Revert get_default_velocity_cmd to have no parameters as it's used externally, set the stamp outside that function (since we may create the command, do some math, and then publish it later). Add an unstamped velocity command input\r\n\r\n* Revert additional changelog modifications\r\n\r\n* Add dependency on gz_gui_vendor (provides gz-gui8)\r\n\r\n* Add dependency on gz_math_vendor (provides gz-math7)\r\n\r\n* Update CI for Jazzy\r\n\r\n* Make gz-gui8 required in cmake\r\n\r\n* Update CI versions to latest\r\n\r\n* Linter fixes",
+      "files_changed": 76,
+      "additions": 420,
+      "deletions": 335,
+      "commit_type": "docs"
+    },
+    {
+      "author": "j-rivero",
+      "date": "2024-09-19T14:35:27Z",
+      "sha": "480bfa13b3c446e40b338f48e2fbcb095f7ca76d",
+      "message": "Generalize gz vendor use and modernize CMake (#232)\n\n* Generalize gz vendor use and modernize CMake\r\n\r\nSigned-off-by: Jose Luis Rivero <jrivero@osrfoundation.org>\r\n\r\n* Do not use component targets in ament_target_dependencies\r\n\r\n* Fix indentation\r\n\r\n---------\r\n\r\nSigned-off-by: Jose Luis Rivero <jrivero@osrfoundation.org>",
+      "files_changed": 3,
+      "additions": 28,
+      "deletions": 24,
+      "commit_type": "docs"
+    },
+    {
+      "author": "adnan-saood",
+      "date": "2024-01-13T02:25:20Z",
+      "sha": "4ea6457b07e7bfea4109e02c489ae525c10ab7e4",
+      "message": "Wheel Ticks calculation code equation correction (#222)\n\n* Fixed ticks calculation equation\r\n\r\n* Removed unused variables in wheel ticks publisher",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 9,
+      "commit_type": "code"
+    },
+    {
+      "author": "galou",
+      "date": "2024-01-13T02:10:47Z",
+      "sha": "e4ab872df6c93aa16870e04d79dae11278a40d16",
+      "message": "Add dependencies to irobot_create_description (#219)\n\nSigned-off-by: Gaël Écorchard <gael@km-robotics.cz>\r\nCo-authored-by: Gaël Écorchard <gael@km-robotics.cz>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "roni-kreinin",
+      "date": "2022-01-11T16:53:23Z",
+      "sha": "0ce0717673746a2ef7698a2a8bf2bd3d79432538",
+      "message": "Updated URDF to work with both gazebo classic and ignition (#138)\n\n* Updated URDF to work with both gazebo classic and ignition:\r\n- Added gazebo arg to create3.urdf.xacro and standard_dock.urdf.xacro. This arg sets which gazebo version to use.\r\n- Added ray sensor macro which creates the correct sensor given the gazebo arg\r\n- Added ignition plugins when gazebo=ignition\r\n- Adjusted front caster position to better align with the create3 model\r\n- Adjusted wheeldrop spring stiffness to compensate for the front caster position change\r\n\r\n* Launch joint_state_publisher and diffdrive_controller only in classic\r\n\r\n* Use joint_state_publisher for both ignition and classic\r\nCleaned up gazebo launch arg\r\nAdjusted front caster position\r\n\r\n* Simulation -> simulator\r\n\r\n* Fixed linter errors\r\n\r\n* More Linter fixes\r\n\r\n* import order",
+      "files_changed": 16,
+      "additions": 404,
+      "deletions": 278,
+      "commit_type": "code"
+    },
+    {
+      "author": "crthilakraj",
+      "date": "2022-04-13T10:15:33Z",
+      "sha": "d8a6919d7d5df4d1dce8fe9978fe156080a60d0b",
+      "message": "fix setting environment variable GAZEBO_MODEL_PATH for aws models (#174)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "justinIRBT",
+      "date": "2021-10-13T15:33:26Z",
+      "sha": "76631c35858becbe67303432d7f4b657cd05d53a",
+      "message": "Use linear acceleration limits that match the robot.  Get the effective rotational accel limits based on per wheel linear limits and wheel base.  Note, these limits won't take effect until ros2_controllers/diff_drive_controller fixes accel limits. (#86)",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 5,
+      "commit_type": "config"
+    },
+    {
+      "author": "Santti4go",
+      "date": "2022-03-02T22:57:46Z",
+      "sha": "1e8e4e2979e7e31cffa3f2280f901a54d3f5497f",
+      "message": "Reliable QoS for publishers (#158)\n\n* reliable QoS for publishers\r\n\r\n* reliable QoS for publishers\r\n\r\n* Fixing tests",
+      "files_changed": 14,
+      "additions": 23,
+      "deletions": 22,
+      "commit_type": "code"
+    },
+    {
+      "author": "ahcorde",
+      "date": "2022-02-16T17:38:28Z",
+      "sha": "32192d559ba22a1a946bf888014f2f1fe2350537",
+      "message": "Use ign_ros2_control (#148)\n\n* Use ign_ros2_control\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Removed remapping\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Documentation\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>",
+      "files_changed": 7,
+      "additions": 29,
+      "deletions": 82,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Ednip7",
+      "date": "2022-01-25T12:22:16Z",
+      "sha": "f5f7786b119150cb3b066b8986dc817faeb9faed",
+      "message": "Add Launch arguments to enable/disable visualization of rays (#139)\n\n* Add Launch arguments to enable/disable visualization of rays\r\n\r\n* Add ray visualization argument for dock\r\n\r\n* Address Emi's comment\r\n\r\n* Update robot_description.launch.py\r\n\r\n* Solved merge conflicts and indentation problems",
+      "files_changed": 4,
+      "additions": 34,
+      "deletions": 12,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Emiliano Borghi",
+      "date": "2021-07-28T11:37:48Z",
+      "sha": "b83286c27616b0e0007d9fddaccb390ab02feb1d",
+      "message": "Add irobot_create_sim meta-package (#7)\n\n* Add irobot_create_sim package\r\n\r\n* Add metapackage to CI workflow",
+      "files_changed": 4,
+      "additions": 29,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "LolaSegura",
+      "date": "2021-09-03T12:55:05Z",
+      "sha": "ca61174fa482c339e1c286ef93aebaec6cc838be",
+      "message": "Hides internal topics from 'ros2 topic list'. (#40)",
+      "files_changed": 6,
+      "additions": 18,
+      "deletions": 18,
+      "commit_type": "config"
+    },
+    {
+      "author": "rjcausarano",
+      "date": "2021-06-17T20:35:44Z",
+      "sha": "997c9e06f27a6adce0f6fa91d051fe8b21c4677c",
+      "message": "Adds irobot_create_description package (#1)\n\n* create3_description package with gazebo and rviz included in launch file\r\n\r\n* Adds model.rviz\r\n\r\n* Address PR comments\r\n\r\n* Updates create3 URDF\r\n\r\n* Fix TF tree in Rviz\r\n\r\n* License moved to root and other minor comments addressed\r\n\r\n* Removes traces of gazebo and launches robot in RViz only\r\n\r\n* Gives files more appropriate names and makes macro of the caster wheel\r\n\r\n* xacro formatting changes and adds README specifying dependencies\r\n\r\n* Address comments\r\n\r\n* Reformats xacro files and simplifies CMakeLists\r\n\r\n* creates numeric variables in xacro files\r\n\r\n* revert version number change\r\n\r\n* Change variable names\r\n\r\n* Makes spawning in RViz optional and true by delfault\r\n\r\n* Improvements to launchfile\r\n\r\n* updates README and CI config\r\n\r\n* Apply suggestions from linters",
+      "files_changed": 18,
+      "additions": 614,
+      "deletions": 7,
+      "commit_type": "docs"
+    },
+    {
+      "author": "apojomovsky",
+      "date": "2021-06-04T17:58:30Z",
+      "sha": "c6247b34cf0ca80881d39e0c78f0c6095a232145",
+      "message": "Added irobot_create_msgs",
+      "files_changed": 26,
+      "additions": 485,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "lchico",
+      "date": "2021-08-09T14:02:36Z",
+      "sha": "c97fdaaccaf246e1f62e3b8521e773cbe89a1447",
+      "message": "Add cliff sensors (#9)\n\n* Use realistic wheel drop model (#8)\r\n\r\n* Use realistic wheeldrop model\r\n\r\n* Rename parent argument to parent_link\r\n\r\n* Add wheel drop plugin\r\n\r\n* Enable C++ linter\r\n\r\n* Fix linter\r\n\r\n* Create irobot_create_gazebo_plugins\r\n\r\n* Add env hooks\r\n\r\n* Fix reminiscents of irobot_create_gazebo_plugins\r\n\r\n* Address Alexis' comments\r\n\r\n* Use 62 Hz by default\r\n\r\n* Fix body inclination offset\r\n\r\n* Fix plugin installation\r\n\r\n* Remove env-hooks\r\n\r\n* Address Rodri's comment\r\n\r\nAdd urdf cliff sensor to create3\r\n\r\nAdd cliff plugin\r\n\r\nAddressed Emi and Rodr's comments\r\n\r\nEnable linter\r\n\r\nAddress Emi Rodri and Alexis comments\r\n\r\nUpdate irobot_create_description/urdf/cliffs_sensor.urdf.xacro\r\n\r\nCo-authored-by: Emiliano Borghi <emiliano.borghi@gmail.com>\r\n\r\nAddress more comments\r\n\r\nUpdate cliff sensor links and added to the create3\r\n\r\nFix remapping warning\r\n\r\nUpdate ament checks  and emi comments\r\n\r\nAddressed Emi's comments\r\n\r\nAddress more Emi's commment\r\n\r\nUpdate cliff topic\r\n\r\nAddress Emi's functions\r\n\r\nImprove the code with Emi comments\r\n\r\n* Fix rebase issue\r\n\r\n* Address Rodri comments\r\n\r\n* Update argument to be camel_cased\r\n\r\n* Add always_on flag\r\n\r\n* Update irobot_create_description/urdf/create3.urdf.xacro\r\n\r\nCo-authored-by: Emiliano Borghi <creativa_eborghi@irobot.com>\r\n\r\n* Update irobot_create_description/urdf/sensors/cliff_sensor.urdf.xacro\r\n\r\nCo-authored-by: Emiliano Borghi <creativa_eborghi@irobot.com>\r\n\r\n* Update irobot_create_gazebo_plugins/CMakeLists.txt\r\n\r\nCo-authored-by: Emiliano Borghi <creativa_eborghi@irobot.com>\r\n\r\n* Update irobot_create_gazebo_plugins/src/gazebo_ros_cliff_sensor.cpp\r\n\r\nCo-authored-by: Emiliano Borghi <creativa_eborghi@irobot.com>\r\n\r\n* Last Emi comments\r\n\r\n* Missing comments\r\n\r\n* Update irobot_create_description/urdf/sensors/cliff_sensor.urdf.xacro\r\n\r\nCo-authored-by: Rodrigo Causarano <46730379+rjcausarano@users.noreply.github.com>\r\n\r\n* Update rodri comments\r\n\r\n* Address Alexis comments\r\n\r\n* Address Alexis comments\r\n\r\n* Address Alexis comments\r\n\r\n* Fix clang format\r\n\r\nCo-authored-by: Emiliano Borghi <creativa_eborghi@irobot.com>\r\nCo-authored-by: Luis Chico <lchico@ekumenlabs.com>\r\nCo-authored-by: Rodrigo Causarano <46730379+rjcausarano@users.noreply.github.com>",
+      "files_changed": 5,
+      "additions": 268,
+      "deletions": 1,
+      "commit_type": "ci"
+    },
+    {
+      "author": "eborghi10",
+      "date": "2021-06-17T13:10:13Z",
+      "sha": "2bc8031314d42427faacad5985f66b73000cd46e",
+      "message": "Add checks for CI and useful information (#2)\n\n* Add main README to the repo\r\n\r\n* Add CONTRIBUTING file\r\n\r\n* Add issue templates\r\n\r\n* Add code owners\r\n\r\n* Add PR templates\r\n\r\n* Add Github action workflow for CI\r\n\r\n* Update README",
+      "files_changed": 8,
+      "additions": 163,
+      "deletions": 0,
+      "commit_type": "ci"
+    }
+  ]
+}

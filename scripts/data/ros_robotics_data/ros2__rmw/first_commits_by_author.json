@@ -1,0 +1,531 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T08:02:06Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros2",
+    "repo": "rmw"
+  },
+  "data": [
+    {
+      "author": "fujitatomoya",
+      "date": "2020-03-30T00:59:26Z",
+      "sha": "b3bf0fd6c908ecd4edac3bc9bb092a075db9f6fe",
+      "message": "add comment about RMW_RET_UNSUPPORTED for loaned_message. (#208)\n\nSigned-off-by: Tomoya.Fujita <Tomoya.Fujita@sony.com>",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "SuperJappie08",
+      "date": "2025-11-19T17:44:56Z",
+      "sha": "63c5fae8d206dce2fa970d4281b70593e556a083",
+      "message": "Add VS Code folder to .gitignore to prevent #410 (#412)\n\nSigned-off-by: SuperJappie08 <36795178+SuperJappie08@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "clalancette",
+      "date": "2017-08-10T20:40:38Z",
+      "sha": "6b14fe285c88cea42e74a66026f135b2c56ff2f5",
+      "message": "Make the TOPIC and NAMESPACE macros unsigned. (#118)\n\n* Make the TOPIC and NAMESPACE macros unsigned.\r\n\r\nThis is more correct; they can never be negative, as that\r\ndoesn't make any sense.  This also fixes some warnings on\r\nmismatched types that get thrown up when adding -Wall -Wextra\r\nto the flags, which this commit also does.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Add -Wpedantic to the flags.\r\n\r\nThis also required one more small fix.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 5,
+      "additions": 9,
+      "deletions": 5,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ahcorde",
+      "date": "2020-04-10T10:27:42Z",
+      "sha": "6c513772fec7ccafe4eaaf5f838fbcfcc0d92393",
+      "message": "Added the right dependency rosidl runtime c instead of rosidl generator c (#198)\n\nSigned-off-by: ahcorde <ahcorde@gmail.com>",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "leeminju531",
+      "date": "2023-02-09T21:43:33Z",
+      "sha": "555bb905e8f52dc0a0f43361a0b3f19b474ec99e",
+      "message": "Add rmw count clients, services (#334)",
+      "files_changed": 1,
+      "additions": 102,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Timple",
+      "date": "2025-11-17T09:01:38Z",
+      "sha": "afa7d196c704e2a22be2b460d498872a05df5212",
+      "message": "Fix REP url locations (#406)\n\nThis popped up in my global replace\n\nSigned-off-by: Tim Clephas <tim.clephas@nobleo.nl>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 5,
+      "commit_type": "docs"
+    },
+    {
+      "author": "christophebedard",
+      "date": "2021-07-15T12:19:37Z",
+      "sha": "dcd8f836e6c2545b39c1540963e175f06625e2f0",
+      "message": "Fix copy-paste error in API doc for rmw_get_gid_for_publisher (#310)\n\nSigned-off-by: Christophe Bedard <bedard.christophe@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "cottsay",
+      "date": "2020-06-10T22:15:20Z",
+      "sha": "5126779ed3d0763735dc6244c2349ca9c219b6d9",
+      "message": "Handle zero-length names_and_types properly (#239)\n\nfrom malloc(3):\r\n> If nmemb or size is 0, then calloc() returns either NULL, or a unique\r\n> pointer value that can later be successfully passed to free().\r\n\r\nSo depending on implementation-specific behavior, the existing behavior\r\nmight fail during a call to `rmw_names_and_types_init` with a `size` of\r\n0.\r\n\r\nSigned-off-by: Scott K Logan <logans@cottsay.net>",
+      "files_changed": 2,
+      "additions": 41,
+      "deletions": 19,
+      "commit_type": "code"
+    },
+    {
+      "author": "Yadunund",
+      "date": "2023-04-27T09:39:00Z",
+      "sha": "36003aaed8fd9718c20b19f4da6fb21929574058",
+      "message": "7.2.0",
+      "files_changed": 4,
+      "additions": 8,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mjcarroll",
+      "date": "2018-04-23T15:35:02Z",
+      "sha": "2b2651e3b17b0d142cbfe4a5c5ca39db69f09e6d",
+      "message": "Change #if to #ifdef.\n\nNeeded because you can't use preprocessor on undefined variables in\nMISRA.",
+      "files_changed": 15,
+      "additions": 30,
+      "deletions": 30,
+      "commit_type": "code"
+    },
+    {
+      "author": "felixf4xu",
+      "date": "2024-06-05T08:26:51Z",
+      "sha": "707ac2f69636eda7a31b9a17ab38b0e603e0d8e8",
+      "message": "add mingw support (#370)\n\nSigned-off-by: U-CW01\\uig08771 <uig08771@HIL4255W.cw01.contiwan.com>\r\n(cherry picked from commit 17f978d161cb4728eb8befe8f2d149d111e9c411)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "gavanderhoorn",
+      "date": "2024-05-20T12:10:53Z",
+      "sha": "22f59f8931944999864ef3b0d7aa75ab7258f028",
+      "message": "Minor typo fix (#368)\n\nPossessive vs plural.\r\n\r\nSigned-off-by: G.A. vd. Hoorn <g.a.vanderhoorn@tudelft.nl>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "marcoag",
+      "date": "2024-04-26T17:12:45Z",
+      "sha": "33eadcdeb9ee9d5b63bec3f2d60da42b0bdb0fc0",
+      "message": "Changelog.\n\nSigned-off-by: Marco A. Gutierrez <marcogg@marcogg.com>",
+      "files_changed": 2,
+      "additions": 8,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "methylDragon",
+      "date": "2023-04-08T19:02:49Z",
+      "sha": "ab5cd2cd6d94d959f4d8d37a6e656e8a06463adc",
+      "message": "Runtime Interface Reflection: rmw (#340)\n\n* Implement first cut\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Migrate to rosidl_dynamic_typesupport and update field IDs\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Refactor dynamic typesupport to couple serialization support to objects\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Implement dynamic data serialize and deserialize\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Migrate to rosidl type description\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Fix const\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Use allocators for memory management\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Call ts dynamic_message_typesupport and make description mandatory\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Migrate methods to use return types\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Lint\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Support type hashes\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Fix windows build\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Use dynamic typesupport identifier getter\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Move dynamic type support struct to rosidl and fix mem issues\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Refine CMakeLists and package.xml\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Clean up whitespace\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Use create instead of init\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Remove RMW interfaces\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n---------\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>",
+      "files_changed": 5,
+      "additions": 101,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "wjwwood",
+      "date": "2014-09-03T01:27:38Z",
+      "sha": "6da45b20c9f001b7891c88d2b2cbfa8da187195a",
+      "message": "add init function to interface",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "gbiggs",
+      "date": "2020-07-14T14:21:54Z",
+      "sha": "c00d3655bb708dd8e3d5134281555aa73006c43c",
+      "message": "Correct parameter names to match documentation (#250)\n\nSigned-off-by: Geoffrey Biggs <gbiggs@killbots.net>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Barry-Xu-2018",
+      "date": "2021-06-02T17:16:00Z",
+      "sha": "2c58d9ac8f8bae4a89632db5938bb033b199d32b",
+      "message": "Add rmw_publisher_wait_for_all_acked support (#296)\n\nSigned-off-by: Barry Xu <Barry.Xu@sony.com>",
+      "files_changed": 1,
+      "additions": 45,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "emersonknapp",
+      "date": "2021-03-11T18:48:40Z",
+      "sha": "703992c68986bf66490ae3274a62bfcd38e55e08",
+      "message": "Introduce RMW_DURATION_INFINITE constant and API return value promise (#301)\n\n* Introduce RMW_DURATION_INFINITE constant and API return value promise\r\n\r\nSigned-off-by: Emerson Knapp <eknapp@amazon.com>\r\n\r\n* Address review feedback:\r\n\r\n* Add new time.h/c\r\n* Update documentation to distinguish between unspecified/infinite\r\n* Add overflow/bounds checking for time utils\r\n\r\nSigned-off-by: Emerson Knapp <eknapp@amazon.com>\r\n\r\n* Fix compile-time initializers for C build on clang\r\n\r\nSigned-off-by: Emerson Knapp <eknapp@amazon.com>\r\n\r\n* Remove empty comment\r\n\r\nSigned-off-by: Emerson Knapp <eknapp@amazon.com>",
+      "files_changed": 7,
+      "additions": 316,
+      "deletions": 18,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jacobperron",
+      "date": "2019-07-09T16:16:21Z",
+      "sha": "9f2e181306c66ac0f09674086a108d4657611766",
+      "message": "Add function for getting clients by node (#179)\n\nSigned-off-by: Jacob Perron <jacob@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 35,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "ihasdapie",
+      "date": "2022-09-23T17:09:49Z",
+      "sha": "67b0f0a229c0bd665913a1d937ee82bf896ad554",
+      "message": "Add rmw_get_gid_for_client method (#327)\n\n* add rmw_get_gid_for_client\r\n\r\nSigned-off-by: Brian Chen <brian.chen@openrobotics.org>\r\n\r\n* Add documentation and remove extra empty line\r\n\r\nSigned-off-by: Brian Chen <brian.chen@openrobotics.org>\r\nSigned-off-by: Jacob Perron <jacob@openrobotics.org>\r\nCo-authored-by: Jacob Perron <jacob@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 36,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "audrow",
+      "date": "2022-01-25T13:22:15Z",
+      "sha": "de38e79ca8906c8a7757557acdef57f8474351ff",
+      "message": "Use FastDDS as default DDS (#315)\n\nSigned-off-by: Audrow Nash <audrow@hey.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "nnmm",
+      "date": "2022-10-22T19:07:17Z",
+      "sha": "6ad4fcbb7ee67dc18ec73385bf3839c14ff61567",
+      "message": "Remove unused test_loaned_message_sequence.cpp (#336)\n\nSigned-off-by: Nikolai Morin <nikolai.morin@apex.ai>",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 24,
+      "commit_type": "test"
+    },
+    {
+      "author": "paudrow",
+      "date": "2022-04-30T00:56:42Z",
+      "sha": "6805b3680e8142b002f9e996239d904b81b0baa5",
+      "message": "6.2.0\n\nSigned-off-by: Audrow Nash <audrow@hey.com>",
+      "files_changed": 4,
+      "additions": 8,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ivanpauno",
+      "date": "2019-04-01T20:54:01Z",
+      "sha": "16d3cf4aaf3e964459b816aa32b0ff69bb95a477",
+      "message": "Add function to get publisher actual qos settings (#169)\n\n* Added rmw_publisher_get_actual_qos function\r\n\r\nSigned-off-by: ivanpauno <ivanpauno@ekumenlabs.com>\r\n\r\n* Add RMW_QOS_POLICY_*_UNKNOWN enum value\r\n\r\nSigned-off-by: ivanpauno <ivanpauno@ekumenlabs.com>",
+      "files_changed": 2,
+      "additions": 32,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "Chen Lihui",
+      "date": "2022-03-21T15:56:59Z",
+      "sha": "d778df84af42cdbc5458361a2fe220317494634c",
+      "message": "Add support for content filtered topics (#302)\n\n* To support a feature of content filtered topic\r\n\r\nSigned-off-by: Chen Lihui <lihui.chen@sony.com>",
+      "files_changed": 9,
+      "additions": 620,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "irobot-ros",
+      "date": "2022-02-24T08:32:06Z",
+      "sha": "cebd22cc456c3fb2624116671dfde55e7248f2c4",
+      "message": "Add EventsExecutor (#286)\n\n* Add RMW listener APIs\r\n\r\nadd constness\r\n\r\nUse or discard previous events: Guard conditions\r\n\r\nMove parentheses\r\n\r\nRename Event_callback to ExecutorEventCallback\r\n\r\nupdate name\r\n\r\nAdd events support\r\n\r\nvoid return on set_events_executor_callback\r\n\r\nRevert \"void return on set_events_executor_callback\"\r\n\r\nRename ExecutorEventCallback -> EventsExecutorCallback\r\n\r\nRename set_events_executor_callback->set_listener_callback\r\n\r\nUse data types when setting callbacks\r\n\r\nMove rcutils/executor_event_types.h to rmw/\r\n\r\nAdd executor_event_types.h\r\n\r\nrename event types\r\n\r\nRename executor_context->callback_context\r\n\r\nAdd APIs documentation\r\n\r\nModify doc\r\n\r\nRename callback_context->user_data\r\n\r\nReorder APIs arguments\r\n\r\nAdd more info on set_listener_callback comments\r\n\r\nrename rmw_listener_cb_t->rmw_listener_callback_t\r\n\r\nAdd missing comments\r\n\r\nuse void * to pass executor ptr\r\n\r\nRework executor callback data\r\n\r\nUse RMW renamed file\r\n\r\nDefine publisher/subscription event types\r\n\r\nSigned-off-by: Alberto Soragna <asoragna@irobot.com>\r\n\r\n* Restore event data types\r\n\r\nSigned-off-by: Mauro Passerino <mpasserino@irobot.com>\r\n\r\n* remove event_data_type\r\n\r\nSigned-off-by: Mauro Passerino <mpasserino@irobot.com>\r\n\r\n* Remove use_previous_event\r\n\r\nSigned-off-by: Mauro Passerino <mpasserino@irobot.com>\r\n\r\n* Add num_events arg\r\n\r\nSigned-off-by: Mauro Passerino <mpasserino@irobot.com>\r\n\r\n* Remove guard condition listener\r\n\r\nSigned-off-by: Mauro Passerino <mpasserino@irobot.com>\r\n\r\n* refactor to remove listener term\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\nCo-authored-by: Mauro <mpasserino@irobot.com>\r\nCo-authored-by: William Woodall <william@osrfoundation.org>\r\nCo-authored-by: Alberto Soragna <alberto.soragna@gmail.com>",
+      "files_changed": 2,
+      "additions": 195,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "sloretz",
+      "date": "2018-01-24T18:58:01Z",
+      "sha": "e8799d79e0bc1648cf58be5b9edf2b523be51585",
+      "message": "Clarify that NULL blocks forever in rmw_wait (#134)\n\n* Clarify that NULL blocks forever",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "hidmic",
+      "date": "2020-05-13T19:48:53Z",
+      "sha": "ee559fa79de780b933a72c11a4eaf4a4958777c0",
+      "message": "Fix cppcheck error. (#229)\n\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "mauropasse",
+      "date": "2021-11-19T20:21:42Z",
+      "sha": "2cf10dbf2e34b26182ba4eef10f277bd11f44c06",
+      "message": "Add client/service QoS getters (#314)\n\nSigned-off-by: Mauro Passerino <mpasserino@irobot.com>",
+      "files_changed": 1,
+      "additions": 152,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "anamud",
+      "date": "2021-04-05T17:15:42Z",
+      "sha": "c52ff6621599add1471d05f31f8731ab5e805da6",
+      "message": "Unique network flows (#294)\n\n* Add option to enable unique network flow\r\n\r\n- Option enabled for publishers and subscriptions\r\n- TODO: Discuss error handling if option is not supported\r\n\r\nSigned-off-by: Ananya Muddukrishna <ananya.x.muddukrishna@ericsson.com>\r\n\r\n* Get network flows of publishers and subscriptions\r\n\r\nSigned-off-by: Ananya Muddukrishna <ananya.x.muddukrishna@ericsson.com>\r\n\r\n* Increase options to enable unique network flow\r\n\r\nMore options are required to capture application intent.\r\n\r\nSigned-off-by: Ananya Muddukrishna <ananya.x.muddukrishna@ericsson.com>\r\n\r\n* Rename files for consistency\r\n\r\nSigned-off-by: Ananya Muddukrishna <ananya.x.muddukrishna@ericsson.com>\r\n\r\n* Rename network flow to network flow endpoint\r\n\r\nSigned-off-by: Ananya Muddukrishna <ananya.x.muddukrishna@ericsson.com>\r\n\r\n* Rename file for consistency\r\n\r\nSigned-off-by: Ananya Muddukrishna <ananya.x.muddukrishna@ericsson.com>\r\n\r\n* Pluralize endpoints in API\r\n\r\nSigned-off-by: Ananya Muddukrishna <ananya.x.muddukrishna@ericsson.com>\r\n\r\n* Add DSCP to network flow endpoint\r\n\r\nSigned-off-by: Ananya Muddukrishna <ananya.x.muddukrishna@ericsson.com>\r\n\r\n* Improve readability\r\n\r\nSigned-off-by: Ananya Muddukrishna <ananya.x.muddukrishna@ericsson.com>\r\n\r\n* Correct typo\r\n\r\nSigned-off-by: Ananya Muddukrishna <ananya.x.muddukrishna@ericsson.com>\r\n\r\n* Guard constant argument\r\n\r\nSigned-off-by: Ananya Muddukrishna <ananya.x.muddukrishna@ericsson.com>\r\n\r\n* Use same allocator in init and fini\r\n\r\nSigned-off-by: Ananya Muddukrishna <ananya.x.muddukrishna@ericsson.com>\r\n\r\n* Uncrustify\r\n\r\nSigned-off-by: Ananya Muddukrishna <ananya.x.muddukrishna@ericsson.com>\r\n\r\n* Update doc\r\n\r\nSigned-off-by: Ananya Muddukrishna <ananya.x.muddukrishna@ericsson.com>\r\n\r\n* Prefer direct setting over simplistic setters\r\n\r\nSigned-off-by: Ananya Muddukrishna <ananya.x.muddukrishna@ericsson.com>\r\n\r\n* Check for valid allocator\r\n\r\nSigned-off-by: Ananya Muddukrishna <ananya.x.muddukrishna@ericsson.com>\r\n\r\n* Use rcutils_snprintf instead of strncpy\r\n\r\nSigned-off-by: Ananya Muddukrishna <ananya.x.muddukrishna@ericsson.com>\r\n\r\nCo-authored-by: Ananya Muddukrishna <ananya.x.muddukrishna@ericsson.com>",
+      "files_changed": 14,
+      "additions": 789,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "shonigmann",
+      "date": "2021-04-02T06:38:15Z",
+      "sha": "c71e97a670717cbf755627723a6d7ef5d756c4f4",
+      "message": "updating quality declaration links (re: ros2/docs.ros2.org#52) (#307)\n\nSigned-off-by: Simon Honigmann <shonigmann@blueorigin.com>\r\n\r\nCo-authored-by: Simon Honigmann <shonigmann@blueorigin.com>",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 6,
+      "commit_type": "docs"
+    },
+    {
+      "author": "brawner",
+      "date": "2020-04-24T18:39:56Z",
+      "sha": "8229a773b0e840beedc68c54baad83056f37747c",
+      "message": "Adding doxygen documentation and READMEs to packages (#204)\n\n* Adding doxygen documentation and READMEs to packages\r\n\r\nSigned-off-by: Stephen Brawner <brawner@gmail.com>\r\n\r\n* PR Fixup\r\n\r\nSigned-off-by: Stephen Brawner <brawner@gmail.com>\r\n\r\n* Fixing merge with master\r\n\r\nSigned-off-by: Stephen Brawner <brawner@gmail.com>",
+      "files_changed": 19,
+      "additions": 524,
+      "deletions": 35,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Karsten1987",
+      "date": "2017-01-30T18:29:28Z",
+      "sha": "9d7fdfbedbca870aa81c3fe3007aea63a06580b4",
+      "message": "expose list of nodes (#90)\n\n* expose list of nodes\r\n\r\n* review comments\r\n\r\n* extend year of copyright",
+      "files_changed": 4,
+      "additions": 48,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "dirk-thomas",
+      "date": "2014-07-31T00:54:12Z",
+      "sha": "a226aecd96471dfafd0b7fbaaeb10858ee6021a4",
+      "message": "add license",
+      "files_changed": 1,
+      "additions": 202,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "iluetkeb",
+      "date": "2020-04-23T21:28:51Z",
+      "sha": "32cb12a41e1b86c484a70aedd19b13006eca3317",
+      "message": "Add timestamps to message info (#214)\n\n* Add timestamps to message info\r\nSee https://github.com/ros2/design/issues/259\r\n\r\nSigned-off-by: Luetkebohle Ingo (CR/AEX3) <ingo.luetkebohle@de.bosch.com>\r\n\r\n* Add initializer for message_info_t\r\n\r\nSigned-off-by: Luetkebohle Ingo (CR/AEX3) <ingo.luetkebohle@de.bosch.com>\r\n\r\n* Use rmw_time_point_value_t instead of rmw_time_t\r\n\r\nSigned-off-by: Luetkebohle Ingo (CR/AEX3) <ingo.luetkebohle@de.bosch.com>",
+      "files_changed": 3,
+      "additions": 35,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mikaelarguedas",
+      "date": "2016-10-28T01:59:56Z",
+      "sha": "44b528275c6939620e519aa95a08ed9975f7bc04",
+      "message": "add zero init tnat sanity check (#76)\n\n* add zero init tnat sanity check\r\n\r\n* include order\r\n\r\n* warning on unused result\r\n\r\n* move RMW_\r\n\r\n* move RMW_WARN_UNUSED macro to macros files\r\n\r\n* uncrustify\r\n\r\n* add macros include to rmw\r\n\r\n* use full name\r\n\r\n* address comments",
+      "files_changed": 6,
+      "additions": 91,
+      "deletions": 8,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jaisontj",
+      "date": "2020-01-14T17:36:12Z",
+      "sha": "a3774531e9b7289574501275aafbc3f93120360e",
+      "message": "Adding required structs and methods to get a list  of publishers or subscribers with their respective qos (#186)\n\nSigned-off-by: Jaison Titus <jaisontj92@gmail.com>\r\nSigned-off-by: Miaofei <miaofei@amazon.com>",
+      "files_changed": 13,
+      "additions": 1116,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mm318",
+      "date": "2019-04-16T00:43:38Z",
+      "sha": "ba0a71707236939c08ece8265a18b19758dd3121",
+      "message": "Add new QoS policy data types to rmw (#173)\n\n* add new qos policy data types\r\n\r\nSigned-off-by: Miaofei <miaofei@amazon.com>\r\n\r\n* address some of the feedback in the pull request\r\n\r\nSigned-off-by: Miaofei <miaofei@amazon.com>\r\n\r\n* correct comments/docblock formatting\r\n\r\nSigned-off-by: Miaofei <miaofei@amazon.com>",
+      "files_changed": 3,
+      "additions": 119,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "BMarchi",
+      "date": "2019-10-18T22:30:11Z",
+      "sha": "3850771ba0c5d26eb50f98023e42a4550541ae41",
+      "message": "Add function to enable localhost communication only from env var (#190)\n\n* Add function to check for allowed hosts from env var\r\n\r\nSigned-off-by: Brian Ezequiel Marchi <brian.marchi65@gmail.com>\r\n\r\n* Change the use and name of the local host env variable\r\n\r\nSigned-off-by: Brian Ezequiel Marchi <brian.marchi65@gmail.com>\r\n\r\n* Rename host file and functions\r\n\r\nSigned-off-by: Brian Ezequiel Marchi <brian.marchi65@gmail.com>\r\n\r\n* Change rmw_create_node signature and add loopback bool\r\n\r\nSigned-off-by: Brian Ezequiel Marchi <brian.marchi65@gmail.com>\r\n\r\n* Move localhost file to rcl\r\n\r\nSigned-off-by: Brian Ezequiel Marchi <brian.marchi65@gmail.com>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "ross-desmond",
+      "date": "2018-12-07T00:05:12Z",
+      "sha": "1f825506c6a3b6872c6e883695448d2ca03b7dd5",
+      "message": "Add node graph functions (#158)\n\n* Add node graph interface for information by node\r\n\r\ncr https://code.amazon.com/reviews/CR-3755115\r\n\r\n* Add namespace to graph functions\r\n\r\n* Runs uncrustify --reformat on all files\r\n\r\nThis commit has been generated by running:\r\n\r\nament_uncrustify .\r\n\r\n* Fix copyright header\r\n\r\n* Fix cpplint issues",
+      "files_changed": 1,
+      "additions": 137,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "nuclearsandwich",
+      "date": "2018-06-23T13:28:02Z",
+      "sha": "b4e6596161f122d520e5085742dd2e48dcdca82b",
+      "message": "0.5.0",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "Lalit Begani",
+      "date": "2019-01-28T15:49:59Z",
+      "sha": "d834daafe8bf5fe723c72e6b5ca27c27b0a008ed",
+      "message": "Fix typo error (#164)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "mlautman",
+      "date": "2019-01-11T16:02:04Z",
+      "sha": "132f3066f7026f9bd7b48741cf2f775b924c3857",
+      "message": "minor notes explaining rmw_qos_profile_t (#156)\n\n* minor notes explaining rmw_qos_profile_t\r\n\r\n* Doxygen\r\n\r\n* Doxygen\r\n\r\n* fixup\r\n\r\n* Update rmw/include/rmw/types.h\r\n\r\n* using triple slash to match style",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "sriramster",
+      "date": "2018-01-18T18:10:21Z",
+      "sha": "d75889e06350beb541c5e6ca97747d6f268f60de",
+      "message": "Enable setting log levels in DDS implementation (#124)\n\n* Add rmw_log_level_t enum to enable setting log levels for the lowlevel DDS api's\r\n\r\n* This patch enables support for three basic log levels\r\n* There needs an API inside the DDS specific rmw implementation i.e\r\n  rmw_fastrtps/rmw_opensplice etc to convert the enum to DDS specific variable\r\n\r\nSigned-off-by: Sriram Raghunathan <sriram.max@gmail.com>\r\n\r\n* Update changes based on github discussion based on\r\n\r\nhttps://github.com/ros2/rmw/pull/124#issuecomment-336526120\r\n\r\nUsing rcutils based log level, mapping them onto rmw specific\r\nones.\r\n\r\nSigned-off-by: Sriram Raghunathan <sriram.max@gmail.com>\r\n\r\n* Minor changes to existing code. Fix comment consistency and spacing consistency.\r\n\r\nSigned-off-by: Sriram Raghunathan <sriram.max@gmail.com>\r\n\r\n* Change variable name for consistency\r\n\r\nSigned-off-by: Sriram Raghunathan <rsriram7@visteon.com>\r\n\r\n* Add, rmw_log_set_severity API to rmw.h. This follows the set of\r\npatches across ros2 sources for setting log levels inside DDS\r\nimplementation\r\n\r\nSigned-off-by: Sriram Raghunathan <sriram.max@gmail.com>\r\n\r\n* Remove pointer to variable severity, from the github discussions it was'nt needed\r\n\r\nSigned-off-by: Sriram Raghunathan <sriram.max@gmail.com>\r\n\r\n* Fix enum declaration errors\r\n\r\nSigned-off-by: Sriram Raghunathan <sriram.max@gmail.com>\r\n\r\n* Fix code styling issues",
+      "files_changed": 2,
+      "additions": 18,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "gaoethan",
+      "date": "2017-11-17T19:48:50Z",
+      "sha": "22de6a507d9d32af7ae85cdd1a84599a3c5301d4",
+      "message": "optimize not to access uninitialized scalar variable (#128)\n\n* optimize not to access uninitialized scalar variable\r\n\r\nSigned-off-by: Ethan Gao <ethan.gao@linux.intel.com>\r\n\r\n* use the result of t_validation_result instead\r\n\r\nSigned-off-by: Ethan Gao <ethan.gao@linux.intel.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "esteve",
+      "date": "2015-01-17T00:34:49Z",
+      "sha": "401a71ef2348c902f774f1401ec02d5180b4e247",
+      "message": "Merge pull request #1 from ros2/request_reply\n\nAdded support for services and clients",
+      "files_changed": 3,
+      "additions": 57,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "codebot",
+      "date": "2016-12-13T22:40:24Z",
+      "sha": "18b08d89a11819cda6fd2c79b38fa4d3f392e398",
+      "message": "c++14 (#83)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "dhood",
+      "date": "2016-12-09T19:56:29Z",
+      "sha": "0941ee356a975bd5990610dca0cb202b023c17c2",
+      "message": "Update default QoS history to keep last (#82)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "jacquelinekay",
+      "date": "2015-08-05T02:24:53Z",
+      "sha": "d5bd0c27972a32b6136735eb69d51edcb4ddc678",
+      "message": "Merge pull request #25 from ros2/wait_timeout\n\nintroduce time struct, add timeout duration to rmw_wait",
+      "files_changed": 2,
+      "additions": 8,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Jackie Kay",
+      "date": "2015-07-24T23:50:36Z",
+      "sha": "d4c156491227b3beac02c5cf3051ae2807f689c9",
+      "message": "add rmw_time_t, pass time to rmw_wait",
+      "files_changed": 2,
+      "additions": 8,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Esteve Fernandez",
+      "date": "2014-12-04T00:29:19Z",
+      "sha": "30959b1f7d0cdd3e1483c3b5e588f282730ec8e6",
+      "message": "Enable C++11",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "alex",
+      "date": "2015-08-17T17:24:17Z",
+      "sha": "de77667c239bccb2e3813ef026c9dac8c5df93fe",
+      "message": "Fixed up include guard names to RMW",
+      "files_changed": 7,
+      "additions": 19,
+      "deletions": 19,
+      "commit_type": "code"
+    }
+  ]
+}

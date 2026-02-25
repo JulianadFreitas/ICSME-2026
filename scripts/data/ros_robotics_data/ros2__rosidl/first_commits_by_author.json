@@ -1,0 +1,931 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T02:03:21Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros2",
+    "repo": "rosidl"
+  },
+  "data": [
+    {
+      "author": "oysstu",
+      "date": "2022-01-05T14:42:23Z",
+      "sha": "2ec002300a41290ea69092ae883f4c5c02661939",
+      "message": "Set CXX standard to 17 (#635)\n\nThe codecvt library is marked as deprecated in MSVC, but has no replacement in the standard. According to the deprecation notice, the library will not be removed until a suitable replacement has been standardized. In order to avoid pulling in additional third party libraries, the deprecation warning is disabled until the time comes that a replacement can be made (probably C++23)\r\n\r\nSigned-off-by: Øystein Sture <os@skarvtech.com>",
+      "files_changed": 6,
+      "additions": 16,
+      "deletions": 11,
+      "commit_type": "docs"
+    },
+    {
+      "author": "InvincibleRMC",
+      "date": "2024-09-13T16:33:16Z",
+      "sha": "c027a3867a4b4c6e42b8f79796e9950d4b28ffac",
+      "message": "Add types `rosidl_pycommon` (#824)\n\n* add types\r\n\r\nSigned-off-by: Michael Carlstrom <rmc@carlstrom.com>\r\n\r\n* use hasattr check\r\n\r\nSigned-off-by: Michael Carlstrom <rmc@carlstrom.com>\r\n\r\n* flake8\r\n\r\nSigned-off-by: Michael Carlstrom <rmc@carlstrom.com>\r\n\r\n* use str instead\r\n\r\nSigned-off-by: Michael Carlstrom <rmc@carlstrom.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Michael Carlstrom <rmc@carlstrom.com>",
+      "files_changed": 12,
+      "additions": 68,
+      "deletions": 27,
+      "commit_type": "config"
+    },
+    {
+      "author": "TonyWelte",
+      "date": "2026-01-16T17:06:43Z",
+      "sha": "12e9798aeb3350b1bb4795fc0ca01cf837ce1346",
+      "message": "Add DEPENDS_EXPLICIT_ONLY to remove implicit dependencies (#910)\n\n* Add DEPENDS_EXPLICIT_ONLY to remove implicit dependencies\n\nSigned-off-by: Anthony Welte <tony.welte@gmail.com>\n\n* Use version check instead of bumping minimum cmake version\n\nSigned-off-by: Anthony Welte <tony.welte@gmail.com>\n\n---------\n\nSigned-off-by: Anthony Welte <tony.welte@gmail.com>\nCo-authored-by: mergify[bot] <37929162+mergify[bot]@users.noreply.github.com>",
+      "files_changed": 3,
+      "additions": 21,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "yassine-cherni",
+      "date": "2025-12-28T04:41:38Z",
+      "sha": "c0227ee0dc934a53f174c55c6b014e3b4c684208",
+      "message": "Fix typo in README for type description generator (#924)\n\nSigned-off-by: Yassine Cherni  <125700497+yassine-cherni@users.noreply.github.com>\nSigned-off-by: Yassine-cherni <cherniyassine395@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "ci"
+    },
+    {
+      "author": "ahcorde",
+      "date": "2020-02-26T07:39:20Z",
+      "sha": "d7078e3be48ade33a0739d2967d0dd649bd5435b",
+      "message": "Added rosidl_generator_c as a member of group rosidl_runtime_packages (#440)\n\nSigned-off-by: ahcorde <ahcorde@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "HansRobo",
+      "date": "2025-12-05T09:04:02Z",
+      "sha": "3466f0ac3984c5785459b7f4d92d8bf9c1c1b1bf",
+      "message": "Add `rosidl_auto_generate_inetrfaces` function (#918)\n\nSigned-off-by: Kotaro Yoshimoto <pythagora.yoshimoto@gmail.com>\nCo-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>",
+      "files_changed": 2,
+      "additions": 137,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "cottsay",
+      "date": "2020-09-24T19:41:39Z",
+      "sha": "f1139b2ccb3f23505dff68a2c623824fcfed4cec",
+      "message": "Fix the declared language for a few packages (#530)\n\nSigned-off-by: Scott K Logan <logans@cottsay.net>",
+      "files_changed": 3,
+      "additions": 5,
+      "deletions": 5,
+      "commit_type": "docs"
+    },
+    {
+      "author": "christophebedard",
+      "date": "2024-04-26T20:50:25Z",
+      "sha": "7f225172aea51e37c54d23dc1d6b77d20bb1d0c2",
+      "message": "Fix u16 docs and improve docs formatting (#805)\n\n* Fix documentation of u16 sequence size param\r\n\r\n* Clarify meaning of size param for *U16String__assignn_from_char\r\n\r\nSigned-off-by: Christophe Bedard <christophe.bedard@apex.ai>",
+      "files_changed": 6,
+      "additions": 32,
+      "deletions": 31,
+      "commit_type": "docs"
+    },
+    {
+      "author": "fujitatomoya",
+      "date": "2025-03-31T20:44:51Z",
+      "sha": "ab4d588b33ad6659fb4edeade4e7813d94a7bc80",
+      "message": "remove .github/ISSUE_TEMPLATE.md (old version of templates) (#858)\n\nSigned-off-by: Tomoya Fujita <Tomoya.Fujita@sony.com>",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 45,
+      "commit_type": "ci"
+    },
+    {
+      "author": "clalancette",
+      "date": "2017-11-01T12:11:57Z",
+      "sha": "24555d22ee80119c0a0e4df60c58e7044252cbb1",
+      "message": "Zero initialization (#236)\n\n* Add in infrastructure for zero-initialization.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Fix up linters.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Rename MyVector3 -> FieldsWithSameTypeSomeDefaults\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Remove the build_depend.\r\n\r\nIt is not necessary to have rosidl_generator_c as a build_depend\r\nfor this package, just as an export (and for tests).\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Make sure the expected value is always first.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Remove redundant default_value check.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Rename test_initialization to test_msg_initialization.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Use the fully-namespaced field name.\r\n\r\nThis is more correct, and makes this actually work for services\r\nthat reference messages.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Make sure to check for the size of the array for fixed types.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Add in a test for service initialization.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Rename PrimitivesSomeDefault -> Various.\r\n\r\nThat's because it no longer contains only primitives.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 11,
+      "additions": 639,
+      "deletions": 51,
+      "commit_type": "test"
+    },
+    {
+      "author": "mosfet80",
+      "date": "2024-11-22T18:49:49Z",
+      "sha": "a2590c9a95e802b0200a04c5b5b4ffdee34d94d8",
+      "message": "Update check-copied-type-description-sources.yaml (#836)\n\nfix node.js <20 deprecation\r\n\r\nSigned-off-by: mosfet80 <realeandrea@yahoo.it>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "config"
+    },
+    {
+      "author": "frneer",
+      "date": "2025-05-11T23:32:26Z",
+      "sha": "c9a3084d8570ee7d1f3a35b81d7cf9259aee6dbc",
+      "message": "rosidl_cli: Add type description support (#857)\n\n* Add type description support to rosidl_cli\n\nSigned-off-by: Francisco Rossi <frossi@ekumenlabs.com>\n\n* Fix typing annotation\n\nSigned-off-by: Francisco Rossi <frossi@ekumenlabs.com>\n\n* Please flake8, mypy\n\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>\n\n* Please flake8 take 2\n\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>\n\n---------\n\nSigned-off-by: Francisco Rossi <frossi@ekumenlabs.com>\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>\nCo-authored-by: Michel Hidalgo <michel@ekumenlabs.com>\nCo-authored-by: mergify[bot] <37929162+mergify[bot]@users.noreply.github.com>\nCo-authored-by: Christophe Bedard <bedard.christophe@gmail.com>",
+      "files_changed": 15,
+      "additions": 516,
+      "deletions": 98,
+      "commit_type": "ci"
+    },
+    {
+      "author": "dependabot[bot]",
+      "date": "2024-01-02T17:08:30Z",
+      "sha": "5ea1c94f0c0ce564a0b6a6a35396d315249ccb7e",
+      "message": "Bump tj-actions/changed-files from 35 to 41 in /.github/workflows (#780)\n\nBumps [tj-actions/changed-files](https://github.com/tj-actions/changed-files) from 35 to 41.\r\n- [Release notes](https://github.com/tj-actions/changed-files/releases)\r\n- [Changelog](https://github.com/tj-actions/changed-files/blob/main/HISTORY.md)\r\n- [Commits](https://github.com/tj-actions/changed-files/compare/v35...v41)\r\n\r\n---\r\nupdated-dependencies:\r\n- dependency-name: tj-actions/changed-files\r\n  dependency-type: direct:production\r\n...\r\n\r\nSigned-off-by: dependabot[bot] <support@github.com>\r\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "ci"
+    },
+    {
+      "author": "Blast545",
+      "date": "2022-02-22T21:09:32Z",
+      "sha": "917a40d79143230b4833f14e18b80cfe0930a09f",
+      "message": "Add missing build_export_depend dependency (#665)\n\n* Add missing exec dependency\r\n* Change to build_export_depend dependency\r\n\r\nSigned-off-by: Jorge Perez <jjperez@ekumenlabs.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "mjcarroll",
+      "date": "2018-04-23T15:37:16Z",
+      "sha": "3cc9b9b31a7c8335532722b265677e7a4fd6c366",
+      "message": "Change #if to #ifdef.\n\nNeeded because you can't use preprocessor on undefined variables in\nMISRA.",
+      "files_changed": 15,
+      "additions": 30,
+      "deletions": 30,
+      "commit_type": "code"
+    },
+    {
+      "author": "nwn",
+      "date": "2025-02-06T21:21:43Z",
+      "sha": "078e685aef15f6339f764a00b8600a5ddba92e41",
+      "message": "Add name and data_type traits for actions (#848)\n\nThis implements the `rosidl_generator_traits::name<>()` and\r\n`rosidl_generator_traits::data_type<>()` trait functions for generated\r\nactions, similarly to how it's done for messages and services.\r\n\r\nUnit tests are added to verify this behaviour, and also extend the prior\r\ntests to cover the data_type trait for all interface types.\r\n\r\nSigned-off-by: Nathan Wiebe Neufeldt <wn.nathan@gmail.com>",
+      "files_changed": 2,
+      "additions": 44,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "harrysarson",
+      "date": "2024-12-10T20:27:56Z",
+      "sha": "95739d5b19d614296aa6e0d6411a134c293da197",
+      "message": "Deterministic iteration order for reproducible codegen (#846)\n\nPython set's do not have a deterministic iteration order (unlike dicts),\r\ntherefore replace usage of set with OrderedDict's for the `includes`\r\nvariable in `full__description.c.em` to make codegen reproducible.\r\n\r\nThe `include_directives` set is used by the nested templates to\r\nprevent generation of duplicate include directives, but is not iterated\r\nover by those nested templates.\r\n\r\nIn `idl__type_support.c.em` rather that iterating over the\r\n`include_directives` set (which introduces non-determinism) to generate\r\nthe includes for top level header files, we iterate over those top level\r\nincludes as a list and seperately construct the `include_directives` set\r\nfrom the list. This ensures deterministic codegen.\r\n\r\nSigned-off-by: Harry Sarson <harry.sarson@codethink.co.uk>",
+      "files_changed": 2,
+      "additions": 9,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "m12watanabe1a",
+      "date": "2024-04-30T22:21:55Z",
+      "sha": "4ba0effa201030ae8f45597b29d4ca685b2d50a1",
+      "message": "Implement `resize` function for String (#806)\n\nSigned-off-by: m12watanabe1a <40206149+m12watanabe1a@users.noreply.github.com>\r\nSigned-off-by: WATANABE Aoi <40206149+m12watanabe1a@users.noreply.github.com>",
+      "files_changed": 3,
+      "additions": 49,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "marcoag",
+      "date": "2024-03-27T13:18:47Z",
+      "sha": "8a9c361b4d621df045f0a92d63982d88224618e2",
+      "message": "Changelog.\n\nSigned-off-by: Marco A. Gutierrez <marcogg@marcogg.com>",
+      "files_changed": 15,
+      "additions": 61,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "CursedRock17",
+      "date": "2024-04-24T13:00:48Z",
+      "sha": "2e4d84d5a28607083ce7039b43ccdc70d95f3e92",
+      "message": "Global use of nodiscard (#801)\n\n* Global use of nodiscard\r\n\r\nSigned-off-by: CursedRock17 <mtglucas1@gmail.com>",
+      "files_changed": 9,
+      "additions": 14,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "MiguelCompany",
+      "date": "2024-04-08T17:46:50Z",
+      "sha": "a8d9f8b8f19f86d9d44d0840967094094b655a80",
+      "message": "Adding interfaces to support `@key` annotation (#796)\n\nSigned-off-by: Mario Dominguez <mariodominguez@eprosima.com>\r\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>\r\nCo-authored-by: Mario Dominguez <mariodominguez@eprosima.com>",
+      "files_changed": 6,
+      "additions": 36,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "AlexisTM",
+      "date": "2023-05-10T01:14:23Z",
+      "sha": "5df46c347e0c1a125973d4651dcc4f92517f4b1b",
+      "message": "Fix IWYU for clangd in C and C++ (#742)\n\n* IWYU: Hide implementation details for C and CPP\r\n\r\nSigned-off-by: Alexis Paques <paa1ti@bosch.com>",
+      "files_changed": 6,
+      "additions": 18,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "AiVerisimilitude",
+      "date": "2023-09-06T13:04:40Z",
+      "sha": "f7951bb6819600be504be6caf831ff955fffcb0b",
+      "message": "Fixed C++20 warning implicit capture of this in lambda (#766)\n\nSigned-off-by: Guilherme Rodrigues <guilherme.rodrigues@ait.ac.at>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "mikepurvis",
+      "date": "2023-08-21T17:27:45Z",
+      "sha": "f47565cf5f0edfc535e5278503a6a0bce772f1e5",
+      "message": "Add rosidl_find_package_idl helper function (#754)\n\n* Create rosidl_find_package_idl helper function.\r\n\r\nSigned-off-by: Mike Purvis <mpurvis@clearpathrobotics.com>",
+      "files_changed": 11,
+      "additions": 57,
+      "deletions": 10,
+      "commit_type": "config"
+    },
+    {
+      "author": "emersonknapp",
+      "date": "2023-03-15T12:32:24Z",
+      "sha": "b93c518f950c4cb223d920a9010a48604558fd8e",
+      "message": "Type hash in interface codegen (rep2011) (#722)\n\nFirst part of type hash generation.  Adds in a new generator that\r\nwill generate the type hashes for every type, as well as supporting\r\nstructures for that.  This will all be written out to a generated file\r\nat compile time.  Some additional details:\r\n\r\n* Generate type hash during code gen\r\n* Include referenced type descriptions\r\n* Add type version hash to all 3 generators\r\n* Output json\r\n* rosidl generator creating and installing expected files\r\n* Generate action struct\r\n* Type hash depended upon and loaded by C and C++ generators\r\n* Add rosidl_type_hash_t to rosidl_runtime_c\r\n* Add type hash to introspection\r\n* Parse type hash string utility\r\n* Add schema checking test\r\n* Generate hashes in C for services and actions\r\n\r\nSigned-off-by: Emerson Knapp <emerson.b.knapp@gmail.com>",
+      "files_changed": 36,
+      "additions": 1480,
+      "deletions": 26,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Chen Lihui",
+      "date": "2023-07-19T18:30:16Z",
+      "sha": "c72b4545894ca99b58b73c5b8f3e232541353862",
+      "message": "update comment (#757)\n\n* update comment\r\n\r\nSigned-off-by: Chen Lihui <lihui.chen@sony.com>\r\nCo-authored-by: Chris Lalancette <clalancette@gmail.com>",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 5,
+      "commit_type": "docs"
+    },
+    {
+      "author": "StefanFabian",
+      "date": "2023-05-15T19:36:54Z",
+      "sha": "e3b71ece1a5c351f4656e4ce6cbe421910936bc7",
+      "message": "Generate typesupport declarations for actions, messages and services (#703)\n\n* Generate typesupport getter declarations for actions, messages and services.\r\n\r\nSigned-off-by: Stefan Fabian <fabian@sim.tu-darmstadt.de>\r\nSigned-off-by: Shane Loretz <sloretz@google.com>",
+      "files_changed": 8,
+      "additions": 267,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "sloretz",
+      "date": "2018-10-24T21:45:47Z",
+      "sha": "8ab7ccd727036a07510426f7447bdb4a8356a0ef",
+      "message": "subfolder in service symbol name",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Yadunund",
+      "date": "2023-03-13T17:41:00Z",
+      "sha": "383ca189952504b3f4a58e8938383ca557189204",
+      "message": "Fix warnings (#726)\n\nSigned-off-by: Yadunund <yadunund@openrobotics.org>",
+      "files_changed": 3,
+      "additions": 5,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "methylDragon",
+      "date": "2023-04-08T18:57:54Z",
+      "sha": "6da86606a0c9d5907876179d303019a06e4486e2",
+      "message": "Runtime Interface Reflection: rosidl (#728)\n\n* Add type description utils\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Fix realloc check bug\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Fix const and bool bug\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Implement type name string replacement\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Lint\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Fix windows build\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Fix print\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Fix print (for nulls)\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Refactor type description utils to use return types\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Fix windows warnings\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Remove print functions\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n---------\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>",
+      "files_changed": 4,
+      "additions": 2682,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ahans",
+      "date": "2023-03-22T21:46:23Z",
+      "sha": "ce20c11796796c50494fd2672384fe26cf56476b",
+      "message": "Return reference from BoundedVector::emplace_back (#730)\n\nUsing `auto` made `BoundedVector::emplace_back()` return a copy instead\r\nof a reference. Code such as the following would not compile in that\r\ncase:\r\n```\r\nauto & value = bounded_vector.emplace_back();\r\n```\r\nDue to the `auto` usage an rvalue was returned which couldn't be bound\r\nto an lvalue reference.\r\n\r\nSigned-off-by: Alexander Hans <ahans@users.noreply.github.com>",
+      "files_changed": 2,
+      "additions": 3,
+      "deletions": 2,
+      "commit_type": "ci"
+    },
+    {
+      "author": "yashi",
+      "date": "2023-02-06T17:38:32Z",
+      "sha": "ed099a29f7cc05f9f7721dff570d30fb919b748e",
+      "message": "rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake: Make ament free (#709)\n\nThe module FindPython3 already provides the interpreter executable\r\npath via Python3_EXECUTABLE.  No need to use ament.\r\n\r\nLess loaded module means faster execution.  And easier for out of tree\r\nbuild system to reuse this function.\r\n\r\nSigned-off-by: Yasushi SHOJI <yashi@spacecubics.com>\r\nSigned-off-by: Shane Loretz <sloretz@openrobotics.org>\r\nCo-authored-by: Shane Loretz <sloretz@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "ihasdapie",
+      "date": "2023-02-02T14:34:17Z",
+      "sha": "a63f32e7c425da1a8ea300227ac82fb7b3a0bd28",
+      "message": "[service introspection] generate service_event messages (#700)\n\n* add service event message\r\n\r\nSigned-off-by: Brian Chen <brian.chen@openrobotics.org>\r\nSigned-off-by: Jacob Perron <jacob@openrobotics.org>\r\nSigned-off-by: Ivan Santiago Paunovic <ivanpauno@ekumenlabs.com>\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 31,
+      "additions": 582,
+      "deletions": 15,
+      "commit_type": "config"
+    },
+    {
+      "author": "guichristmann",
+      "date": "2023-01-17T13:55:47Z",
+      "sha": "a46056cc3cf0c69d1d1db5b9c2afbfd13fe9fba3",
+      "message": "Adding tests for unicode support in message comments. (#720)\n\n* Adding tests for unicode support in message comments.\r\n\r\nSigned-off-by: guichristmann <guichristmann@gmail.com>",
+      "files_changed": 1,
+      "additions": 147,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "audrow",
+      "date": "2021-11-23T23:53:11Z",
+      "sha": "e76e89632598f01ae5427466fa50821a69516e45",
+      "message": "Update maintainers to Michel Hidalgo and Shane Loretz (#633)\n\nSigned-off-by: Audrow Nash <audrow@hey.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "ralwing",
+      "date": "2022-11-08T21:47:50Z",
+      "sha": "bdcaddd542fb15b46c2e235c601f4a87a10ed3a5",
+      "message": "fix conversion to ‘std::streamsize’ {aka ‘long int’} from ‘size_t’ {aka ‘long unsigned int’} may change the sign of the result (#715)\n\nSigned-off-by: Grzegorz Głowacki <gglowacki@autonomous-systems.pl>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "jacobperron",
+      "date": "2018-10-25T20:04:27Z",
+      "sha": "5567043cfec04ac92ad6a30c4e61e91f4bc3a91c",
+      "message": "Use explicit template types with std::fill when generating messages (#307)\n\nThis fixes MSVC warnings when filling arrays/vectors with types smaller than int.",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "traversaro",
+      "date": "2022-07-12T21:07:52Z",
+      "sha": "e28e487c6baa4ab94e7d10ec1c22815a0718ae96",
+      "message": "Add namespaced ALIAS target to easily consume generated libraries via add_subdirectory (#605)\n\nSigned-off-by: Silvio Traversaro <silvio.traversaro@iit.it>\r\n\r\nCo-authored-by: Shane Loretz <sloretz@osrfoundation.org>",
+      "files_changed": 4,
+      "additions": 8,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Greek64",
+      "date": "2022-07-11T22:41:42Z",
+      "sha": "0250ae85e442485fd438451f88f60cbcf65088fd",
+      "message": "Add action2idl script (#654)\n\nSigned-off-by: Greek64 <greek64.mail@gmail.com>\r\n\r\nCo-authored-by: Shane Loretz <sloretz@osrfoundation.org>",
+      "files_changed": 2,
+      "additions": 23,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "paudrow",
+      "date": "2022-03-28T22:52:50Z",
+      "sha": "2a5f899efeb1cc0a8ea65e9a502b4f08994a353d",
+      "message": "3.1.1\n\nSigned-off-by: Audrow Nash <audrow@hey.com>",
+      "files_changed": 25,
+      "additions": 66,
+      "deletions": 13,
+      "commit_type": "docs"
+    },
+    {
+      "author": "j-rivero",
+      "date": "2022-02-01T22:29:42Z",
+      "sha": "ea69c5275e61de995ec816240a37073b0093b6e5",
+      "message": "add documentation for generators and API (#646)\n\n* Add documentation for generators and API\r\n\r\nSigned-off-by: Geoffrey Biggs <gbiggs@killbots.net>\r\nSigned-off-by: Jose Luis Rivero <jrivero@osrfoundation.org>",
+      "files_changed": 16,
+      "additions": 175,
+      "deletions": 10,
+      "commit_type": "docs"
+    },
+    {
+      "author": "hidmic",
+      "date": "2018-10-22T20:30:12Z",
+      "sha": "850566a51035b6081167e14403b79b4a733f01b2",
+      "message": "Makes rosidl interfaces generation action folder aware.",
+      "files_changed": 14,
+      "additions": 101,
+      "deletions": 66,
+      "commit_type": "code"
+    },
+    {
+      "author": "nnmm",
+      "date": "2022-03-18T15:00:00Z",
+      "sha": "90c5d1cc0d7b8e26de088aa0d77de277efee005f",
+      "message": "Set the output size unconditionally when copying sequences (#669)\n\nSigned-off-by: Nikolai Morin <nnmmgit@gmail.com>",
+      "files_changed": 3,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "ibnHatab",
+      "date": "2022-01-22T13:23:32Z",
+      "sha": "55f4854d32454bcff45a2b30cf5a8308be8a025b",
+      "message": "rename nested loop index (#643)\n\nSigned-off-by: ibnHatab <lib.aca55a@gmail.com>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "ivanpauno",
+      "date": "2020-04-01T21:32:39Z",
+      "sha": "4d837670d5758a3d45b8c86f3d867f44edd1c221",
+      "message": "Export typesupport library in a separate cmake variable (#453)\n\nSigned-off-by: Ivan Santiago Paunovic <ivanpauno@ekumenlabs.com>",
+      "files_changed": 2,
+      "additions": 10,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "jonselling",
+      "date": "2021-12-06T18:32:31Z",
+      "sha": "e76ed132fb51d825cc6765059c13664bff0130a1",
+      "message": "Use target output name for exporting typesupport library (#625)\n\nSigned-off-by: Jonathan Selling <jselling@neyarobotics.com>",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "eboasson",
+      "date": "2021-10-29T15:55:30Z",
+      "sha": "de87159a7fbe5e2286166ea9829c13dc3344bdf8",
+      "message": "Quality Declaration for typesupport_introspection (#621)\n\n* Quality Declaration for typesupport_introspection\r\n\r\nSigned-off-by: Erik Boasson <eb@ilities.com>\r\nCo-authored-by: Chris Lalancette <clalancette@gmail.com>",
+      "files_changed": 6,
+      "additions": 346,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "pablogs9",
+      "date": "2021-05-05T17:44:56Z",
+      "sha": "44105c65b545401ea912abce2fa91ae2d7832496",
+      "message": "Use RCUtils allocators in rosidl_generator_c (#584)\n\n* Initial\r\n\r\nInitial\r\n\r\nSigned-off-by: Your Name <you@example.com>\r\n\r\n* Move include\r\n\r\nSigned-off-by: Pablo Garrido <pablogs9@gmail.com>\r\n\r\n* Update package.xml\r\n\r\nSigned-off-by: Pablo Garrido <pablogs9@gmail.com>\r\n\r\n* Add rosidl_runtime_c rcutils allocators\r\n\r\nSigned-off-by: Pablo Garrido <pablogs9@gmail.com>",
+      "files_changed": 6,
+      "additions": 71,
+      "deletions": 32,
+      "commit_type": "config"
+    },
+    {
+      "author": "shonigmann",
+      "date": "2021-04-02T06:11:44Z",
+      "sha": "67bcca666d818823aba8ea08c12160a9badf4e41",
+      "message": "updating quality declaration links (re: ros2/docs.ros2.org#52) (#581)\n\nSigned-off-by: Simon Honigmann <shonigmann@blueorigin.com>\r\n\r\nCo-authored-by: Simon Honigmann <shonigmann@blueorigin.com>",
+      "files_changed": 3,
+      "additions": 14,
+      "deletions": 14,
+      "commit_type": "docs"
+    },
+    {
+      "author": "dawonn",
+      "date": "2021-01-05T14:09:05Z",
+      "sha": "71e7cff396647d9067b930611903c5cff16258ca",
+      "message": "Treat \\t as whitespace (#557)\n\nSigned-off-by: Dereck Wonnacott <dereck@gmail.com>",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "tfoote",
+      "date": "2015-12-18T18:44:46Z",
+      "sha": "28b1c37ab537b78ffcf01a3e15e90fbbd466f775",
+      "message": "add additional dependencies to workaround ros2/ros2#174",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "brawner",
+      "date": "2020-05-06T07:05:50Z",
+      "sha": "84412ce044a45203bc95945055224963f25cd373",
+      "message": "Package READMEs and QUALITY_DECLARATIONS for runtime packages (#480)\n\n* Package READMEs and QUALITY_DECLARATIONS for runtime packages\r\n\r\nSigned-off-by: Stephen Brawner <brawner@gmail.com>\r\n\r\n* PR Fixup\r\n\r\nSigned-off-by: Stephen Brawner <brawner@gmail.com>\r\n\r\n* Add dependency breakdown\r\n\r\nSigned-off-by: Stephen Brawner <brawner@gmail.com>",
+      "files_changed": 6,
+      "additions": 444,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "chapulina",
+      "date": "2020-09-28T15:55:26Z",
+      "sha": "e506cc725ab5f121e11c0acaaebd3a4b1d537b30",
+      "message": "QD: Add links to hosted API docs (#533)\n\nSigned-off-by: Louise Poubel <louise@openrobotics.org>",
+      "files_changed": 3,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "dirk-thomas",
+      "date": "2014-07-11T19:18:10Z",
+      "sha": "896cc3afa9cf0039d0d409d6eb6a03ad28df6f41",
+      "message": "add license",
+      "files_changed": 1,
+      "additions": 202,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "dabonnie",
+      "date": "2020-09-10T23:54:41Z",
+      "sha": "2330a8e8ab167f0e5ad6b231bdb5335e3e8689f1",
+      "message": "Revert \"add to_yaml() function for C++ messages (#523)\" (#525)\n\nThis reverts commit aac71e5f5d4ea3e48809bc9978549463dba4ab4d.\r\n\r\nSigned-off-by: Devin Bonnie <dbbonnie@amazon.com>",
+      "files_changed": 5,
+      "additions": 0,
+      "deletions": 442,
+      "commit_type": "docs"
+    },
+    {
+      "author": "shoeffner",
+      "date": "2020-08-11T15:50:18Z",
+      "sha": "bbc154baf5122b31e494e2722936f8e329bc0513",
+      "message": "Declaring is_message in namespace rosidl_generator_traits. (#512)\n\nResolves issues with older GCC versions, as described in https://gcc.gnu.org/bugzilla/show_bug.cgi?id=56480\r\n\r\nResolves #479\r\n\r\nSigned-off-by: Sebastian Höffner <info@sebastian-hoeffner.de>",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "atyshka",
+      "date": "2020-08-03T16:32:15Z",
+      "sha": "76c536eb35b15076c619f835bea3561e2c6fc6a3",
+      "message": "Modifications to python generator lib to return generated files (#511)\n\nSigned-off-by: Alex Tyshka <atyshka@gmail.com>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "lopsided98",
+      "date": "2020-06-24T18:05:21Z",
+      "sha": "226a425befa56d7eadfc236b4324062b5ac7807c",
+      "message": "rosidl_generator_c: don't depend on rosidl_runtime_c when tests are disabled (#503)\n\nSigned-off-by: Ben Wolsieffer <benwolsieffer@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jwakely",
+      "date": "2020-05-20T17:27:04Z",
+      "sha": "987d2b11560c04234494ed92155d0be206490515",
+      "message": "Clean up BoundedVector (#487)\n\n* Stop using reserved names for parameters\r\n\r\nNames beginning with _[A-Z] or __ are reserved for the implementation.\r\n\r\nSigned-off-by: Jonathan Wakely <github@kayari.org>\r\n\r\n* Make comparison operators friends\r\n\r\nThis avoids the need for the disgusting reinterpret_casts.\r\n\r\nSigned-off-by: Jonathan Wakely <github@kayari.org>\r\n\r\n* Remove unnecessary conversion operator\r\n\r\nSigned-off-by: Jonathan Wakely <github@kayari.org>",
+      "files_changed": 1,
+      "additions": 270,
+      "deletions": 294,
+      "commit_type": "code"
+    },
+    {
+      "author": "carlossvg",
+      "date": "2020-06-01T22:22:11Z",
+      "sha": "b4a4431b49f0aa786f9cf990acf2bcccc5d3c98a",
+      "message": "Fix bug inserting bounded_vector in reverse order (#444)\n\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>",
+      "files_changed": 2,
+      "additions": 18,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "mxgrey",
+      "date": "2020-04-08T22:16:31Z",
+      "sha": "5d447722e261ce4c24114e5659ab81a27bd6adc6",
+      "message": "Add a utility for rigorously initializing a message instance (#448)\n\n* Add a utility for rigorously initializing a message instance\r\n\r\nSigned-off-by: Michael X. Grey <grey@openrobotics.org>\r\n\r\n* Add tests for the message building feature\r\n\r\nSigned-off-by: Michael X. Grey <grey@openrobotics.org>\r\n\r\n* Use macros to reduce code bloat\r\n\r\nSigned-off-by: Michael X. Grey <grey@openrobotics.org>\r\n\r\n* uncrustify\r\n\r\nSigned-off-by: Michael X. Grey <grey@openrobotics.org>\r\n\r\n* move builder functionality into a completely separate header\r\n\r\nSigned-off-by: Dirk Thomas <dirk-thomas@users.noreply.github.com>\r\n\r\n* provide templated function <pkgname>::build<MsgType>() for builder pattern\r\n\r\nSigned-off-by: Dirk Thomas <dirk-thomas@users.noreply.github.com>\r\n\r\n* include the builder header by default\r\n\r\nSigned-off-by: Dirk Thomas <dirk-thomas@users.noreply.github.com>\r\n\r\n* inline template specialization\r\n\r\nSigned-off-by: Dirk Thomas <dirk-thomas@users.noreply.github.com>\r\n\r\n* fix clang warnings\r\n\r\nSigned-off-by: Dirk Thomas <dirk-thomas@users.noreply.github.com>\r\n\r\n* style\r\n\r\nSigned-off-by: Dirk Thomas <dirk-thomas@users.noreply.github.com>\r\n\r\n* special case for EMPTY_STRUCTURE_REQUIRED_MEMBER_NAME\r\n\r\nSigned-off-by: Dirk Thomas <dirk-thomas@users.noreply.github.com>\r\n\r\nCo-authored-by: Dirk Thomas <dirk-thomas@users.noreply.github.com>",
+      "files_changed": 9,
+      "additions": 431,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "Claire Wang",
+      "date": "2020-01-30T19:00:48Z",
+      "sha": "ba141eb9c80b49ef1a4de31f8fcd8966f4e68d38",
+      "message": "add readme with link to rosidl doc (#433)\n\nSigned-off-by: claireyywang <clairewang@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "kylemarcey",
+      "date": "2020-01-16T19:43:18Z",
+      "sha": "29ad520e30a2cd1e0fedfee55e933c7fd67766ba",
+      "message": "Allow 'get_const_expr_value' to parse either literals or scoped_names… (#430)\n\n* Allow 'get_const_expr_value' to parse either literals or scoped_names (#429)\r\n\r\nSigned-off-by: kyle.marcey <kyle.marcey@apex.ai>\r\n\r\n* Add test case for annotation using scoped_name (#430)\r\n\r\nSigned-off-by: kyle.marcey <kyle.marcey@apex.ai>\r\n\r\n* fix linter warning\r\n\r\nSigned-off-by: Dirk Thomas <dirk-thomas@users.noreply.github.com>\r\n\r\n* check len of children before accessing them\r\n\r\nSigned-off-by: Dirk Thomas <dirk-thomas@users.noreply.github.com>\r\n\r\n* nitpick: swap comparison sides\r\n\r\nSigned-off-by: Dirk Thomas <dirk-thomas@users.noreply.github.com>\r\n\r\n* avoid finding single literal again\r\n\r\nSigned-off-by: Dirk Thomas <dirk-thomas@users.noreply.github.com>\r\n\r\n* since const_expr could contain different expressions (e.g. or) remove the comment and output the whole tree in case of unsupported case\r\n\r\nSigned-off-by: Dirk Thomas <dirk-thomas@users.noreply.github.com>\r\n\r\nCo-authored-by: Dirk Thomas <dirk-thomas@users.noreply.github.com>",
+      "files_changed": 3,
+      "additions": 48,
+      "deletions": 36,
+      "commit_type": "ci"
+    },
+    {
+      "author": "nuclearsandwich",
+      "date": "2017-06-22T19:34:36Z",
+      "sha": "0db440edbdabce997b7712c167ffac86fecd6fdd",
+      "message": "Add empy dependency. (#218)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "DongheeYe",
+      "date": "2019-12-03T22:00:56Z",
+      "sha": "a34641521e3e477bc7d4c79b5815b6cab8972715",
+      "message": "Fix double free issue when initialization is failed (#423)\n\nSigned-off-by: Donghee Ye <donghee.ye@samsung.com>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "Karsten1987",
+      "date": "2016-10-03T23:07:38Z",
+      "sha": "7cc3cdf8804d0805662251f8d01207dd6502a24f",
+      "message": "(dev) comply with D213 (#163)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Siddharth Kucheria",
+      "date": "2019-08-27T20:23:08Z",
+      "sha": "3bad3ae9e60ec6461bef2ae4177d43e6508fd61d",
+      "message": "[rosidl_generator_c] Updated tests for new msg types from test_interface_files (#398)\n\n* Rewriting tests for test_interface_files\r\n\r\nSigned-off-by: Siddharth Kucheria <kucheria@usc.edu>\r\n\r\n* Added more tests to test_interfaces.c, fix typo in separate_compiltion.c\r\n\r\nSigned-off-by: Siddharth Kucheria <kucheria@usc.edu>\r\n\r\n* More tests to bounded/unbounded sequences\r\n\r\nSigned-off-by: Siddharth Kucheria <kucheria@usc.edu>\r\n\r\n* Removed msg/srv files\r\n\r\nSigned-off-by: Siddharth Kucheria <kucheria@usc.edu>\r\n\r\n* Minor changes\r\n\r\nSigned-off-by: Siddharth Kucheria <kucheria@usc.edu>\r\n\r\n* Update rosidl_generator_c/test/test_interfaces.c\r\n\r\nCo-Authored-By: Jacob Perron <jacob@openrobotics.org>",
+      "files_changed": 42,
+      "additions": 905,
+      "deletions": 1383,
+      "commit_type": "test"
+    },
+    {
+      "author": "wjwwood",
+      "date": "2014-09-17T18:22:59Z",
+      "sha": "d31eae4e0c0597bebd96dfabe3cbd435b9ceb913",
+      "message": "fix missing string include which breaks OS X build",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "cho3",
+      "date": "2019-06-07T18:16:14Z",
+      "sha": "9ffe2148b9c249b8539a27745062d6c2c1716f2b",
+      "message": "Add emplace_back, move_assignment to BoundedVector (#385)\n\n* Add emplace_back, move_assignment to BoundedVector\r\n\r\nSigned-off-by: Christopher Ho <christopherj.ho@gmail.com>\r\n\r\n* Address reviewer comments:\r\n\r\n- Use `auto` for portability\r\n- Add unit tests\r\n- Add documentation\r\n\r\nSigned-off-by: Christopher Ho <christopher.ho@apex.ai>",
+      "files_changed": 2,
+      "additions": 58,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "thomas-moulard",
+      "date": "2019-05-15T18:24:40Z",
+      "sha": "d12e809f9913656f4dd717d1d21ffd67816bcf30",
+      "message": "Fix leak in test_interfaces.c (#381)\n\n* Fix leak in test_interaces.c\r\n\r\nBefore this fix when running test_interfaces:\r\n\r\n==15142==ERROR: LeakSanitizer: detected memory leaks\r\n\r\nDirect leak of 120 byte(s) in 1 object(s) allocated from:\r\n    #0 0x7fd778a99d38 in __interceptor_calloc (/usr/lib/x86_64-linux-gnu/libasan.so.4+0xded38)\r\n    #1 0x7fd77858a0f6 in rosidl_generator_c__String__Sequence__init ../../src/ros2/rosidl/rosidl_generator_c/src/string_functions.c:114\r\n    #2 0x7fd7787a85cf in rosidl_generator_c__msg__StringArrays__init rosidl_generator_c/rosidl_generator_c/msg/string_arrays__functions.c:48\r\n    #3 0x7fd7787a90d2 in rosidl_generator_c__msg__StringArrays__create rosidl_generator_c/rosidl_generator_c/msg/string_arrays__functions.c:264\r\n    #4 0x560bf3da9991 in test_string_arrays ../../src/ros2/rosidl/rosidl_generator_c/test/test_interfaces.c:379\r\n    #5 0x560bf3da7c00 in main ../../src/ros2/rosidl/rosidl_generator_c/test/test_interfaces.c:154\r\n    #6 0x7fd7781b3b96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)\r\n\r\nDirect leak of 120 byte(s) in 1 object(s) allocated from:\r\n    #0 0x7fd778a99d38 in __interceptor_calloc (/usr/lib/x86_64-linux-gnu/libasan.so.4+0xded38)\r\n    #1 0x7fd77858a0f6 in rosidl_generator_c__String__Sequence__init ../../src/ros2/rosidl/rosidl_generator_c/src/string_functions.c:114\r\n    #2 0x7fd7787a85cf in rosidl_generator_c__msg__StringArrays__init rosidl_generator_c/rosidl_generator_c/msg/string_arrays__functions.c:48\r\n    #3 0x7fd7787a90d2 in rosidl_generator_c__msg__StringArrays__create rosidl_generator_c/rosidl_generator_c/msg/string_arrays__functions.c:264\r\n    #4 0x560bf3daa659 in test_string_arrays_default_value ../../src/ros2/rosidl/rosidl_generator_c/test/test_interfaces.c:448\r\n    #5 0x560bf3da7c5d in main ../../src/ros2/rosidl/rosidl_generator_c/test/test_interfaces.c:159\r\n    #6 0x7fd7781b3b96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)\r\n\r\n... etc\r\n\r\nSUMMARY: AddressSanitizer: 860 byte(s) leaked in 48 allocation(s).\r\n\r\nAfter applying the fix:\r\n\r\nTesting rosidl_generator_c message types...\r\nTesting simple primitive message types...\r\nTesting simple primitives with default values...\r\nTesting string types...\r\nTesting primitives unbounded arrays types...\r\nTesting primitives bounded arrays types...\r\nTesting primitives static arrays types...\r\nTesting nested sub-messages...\r\nTesting static_array_nested messages...\r\nTesting bounded_array_nested messages...\r\nTesting dynamic_array_nested messages...\r\nTesting dynamic_array_primitives_nested messages...\r\nTesting string arrays...\r\nTesting string arrays with default values...\r\nAll tests were good!\r\n\r\nSigned-off-by: Thomas Moulard <tmoulard@amazon.com>\r\n\r\n* Check StringArrays is not null after invoking create\r\n\r\nSigned-off-by: Thomas Moulard <tmoulard@amazon.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 5,
+      "commit_type": "test"
+    },
+    {
+      "author": "malsbat",
+      "date": "2019-05-14T19:56:26Z",
+      "sha": "23a3f5d9a348a72670bef206100b8a584c690139",
+      "message": "Fix resize function (#379) for C. (#380)\n\nSigned-off-by: Todd Malsbary <todd.malsbary@intel.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "allenh1",
+      "date": "2017-07-12T19:55:52Z",
+      "sha": "882a0149d7fa760b6a247ec039bd1b9a93b50d94",
+      "message": "Check return value of msg `__init` calls (#220)\n\n* Added checks for the return value of msg `__init` calls.\r\n\r\n* Fixed a warning created by the test code\r\n\r\n* Removed cleanup statements, as they are not needed.\r\n\r\n* Add missing destroy call, fix indentation.\r\n\r\n* Added a test for invalid initialization.\r\n\r\n* Wrap arg1 and arg2 in parenthesis in EXPECT macros to cover the case of complex messages.",
+      "files_changed": 6,
+      "additions": 124,
+      "deletions": 31,
+      "commit_type": "docs"
+    },
+    {
+      "author": "guillaumeautran",
+      "date": "2018-12-22T22:18:56Z",
+      "sha": "04d40a582a6e0cc090bdd262a87c7918fd26906c",
+      "message": "Fixed cmake files to properly deal with action interface dependencies (#343)",
+      "files_changed": 2,
+      "additions": 5,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "apojomovsky",
+      "date": "2018-10-23T17:11:32Z",
+      "sha": "8da603ab05a1ae0e742c99f5a57575481de776c5",
+      "message": "Enable rosidl to generate srv sources from different namespaces",
+      "files_changed": 3,
+      "additions": 6,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "sservulo",
+      "date": "2018-10-23T17:12:37Z",
+      "sha": "b495672bf6e64955b1ec2b5f79ea99de7e4c4e16",
+      "message": "Update on rosidl introspection to support srv from multiple sources/namespaces",
+      "files_changed": 10,
+      "additions": 34,
+      "deletions": 22,
+      "commit_type": "code"
+    },
+    {
+      "author": "BorjaOuterelo",
+      "date": "2018-10-03T00:18:43Z",
+      "sha": "206dd2bbea68ece80d5e811236cb4aecda495d6c",
+      "message": "Fixes rosidl type support struct typedef redefinition. (#299)",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "yechun1",
+      "date": "2018-08-15T14:18:57Z",
+      "sha": "7d17255760052e4cad06d1c02e77a33e5a92f5f3",
+      "message": "free tmpstr to fix memory leak (#295)\n\nSigned-off-by: Chris Ye <chris.ye@intel.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "sagniknitr",
+      "date": "2018-07-13T14:48:36Z",
+      "sha": "a9b0201a4959202ef00c900a0c44476312174269",
+      "message": "Change msg__traits.hpp.em to support returning message datatype (#291)\n\n* Change msg__traits.hpp.em to support returning message datatype\r\n\r\n* Update msg__traits.hpp.em\r\n\r\nrevert back to original namespace\r\n\r\n* Add test for msg__traits data_type() function\r\n\r\n* Change data type to ROS 2 format\r\n\r\n* Change CMakeLists.txt to support the new test case\r\n\r\n* Update test_msg_datatype.cpp\r\n\r\n* Fix linting errors",
+      "files_changed": 3,
+      "additions": 38,
+      "deletions": 0,
+      "commit_type": "test"
+    },
+    {
+      "author": "mikaelarguedas",
+      "date": "2016-03-30T20:16:52Z",
+      "sha": "5434124b8e4a80c61e3fc2d0e0c50fb9d4c17d9a",
+      "message": "add nested message implementation",
+      "files_changed": 6,
+      "additions": 254,
+      "deletions": 181,
+      "commit_type": "code"
+    },
+    {
+      "author": "martins-mozeiko",
+      "date": "2018-05-24T05:37:05Z",
+      "sha": "cf692c13dba0d33ab7ae38e0a01d4aa386fdbd40",
+      "message": "Generate imports for assert only in debug mode (#277)\n\n* generate imports for assert only in debug mode\r\n\r\n* fix indentation",
+      "files_changed": 1,
+      "additions": 44,
+      "deletions": 43,
+      "commit_type": "code"
+    },
+    {
+      "author": "dhood",
+      "date": "2016-05-28T01:13:03Z",
+      "sha": "e364f951f9d1f3b9e8c4ada737e1cf1a49b62604",
+      "message": "Only add linter tests if option in rosidl_generate_interfaces is set (#142)",
+      "files_changed": 4,
+      "additions": 33,
+      "deletions": 38,
+      "commit_type": "code"
+    },
+    {
+      "author": "yamokosk",
+      "date": "2017-04-21T00:04:15Z",
+      "sha": "69400938eef1f6886fd65951d18fae7d3780e47d",
+      "message": "adds *__destroy_ros_message function for generated message code (#215)\n\n* adds *__destroy_ros_message function for generated message code\r\n\r\n* remove extra blank line\r\n\r\n* add _DESTRO_ROS_MESSAGE metaclass attribute",
+      "files_changed": 3,
+      "additions": 12,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "gerkey",
+      "date": "2014-11-17T19:34:13Z",
+      "sha": "498071342d824746a0d0c5a76e1f142d564f467d",
+      "message": "adding CONTRIBUTING.md",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "meyerj",
+      "date": "2016-12-26T10:49:43Z",
+      "sha": "132493f5b84c700c2055d46de90c063705c44dd1",
+      "message": "fixed size check in BoundedVector<T>::assign(first, last)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "codebot",
+      "date": "2016-12-13T22:42:13Z",
+      "sha": "bc4a535ae19390ae5ab437b374d4b009547d2632",
+      "message": "c++14 (#187)",
+      "files_changed": 3,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jacquelinekay",
+      "date": "2015-07-22T18:55:05Z",
+      "sha": "5c64221e87d37c365094b4e3e7d59b331ae17570",
+      "message": "Merge pull request #33 from ros2/fixed_size\n\nImplement has_fixed_size and test",
+      "files_changed": 26,
+      "additions": 412,
+      "deletions": 25,
+      "commit_type": "docs"
+    },
+    {
+      "author": "esteve",
+      "date": "2015-01-17T00:34:33Z",
+      "sha": "b2a6fe74a8e93f96d956a9121ef4306cda059391",
+      "message": "Merge pull request #2 from ros2/request_reply\n\nAdded support for services",
+      "files_changed": 7,
+      "additions": 153,
+      "deletions": 50,
+      "commit_type": "code"
+    },
+    {
+      "author": "Jackie Kay",
+      "date": "2015-07-16T18:27:25Z",
+      "sha": "13a3c6ba39317104c7ae8632834072ffbf31e886",
+      "message": "Implemented has_fixed_size and test showing sizeof is sufficient",
+      "files_changed": 26,
+      "additions": 412,
+      "deletions": 25,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ernestmc",
+      "date": "2015-11-12T20:03:50Z",
+      "sha": "a37305ce6424529a9666771bcbc972017a155536",
+      "message": "Merge pull request #44 from ernestmc/issue_26\n\nFixes #26",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "Ernesto Corbellini",
+      "date": "2015-11-10T20:39:41Z",
+      "sha": "4f8ab7bc63501e62ff38c6064efd8d63058bfa93",
+      "message": "Fixed static array issue.\n\nSepareted in two conditions for when the static array type is primitive and when it's a complex one.",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "Esteve Fernandez",
+      "date": "2014-11-14T21:43:06Z",
+      "sha": "ae01f8cc2d724d3f4235ee50a02702cc43660cc9",
+      "message": "Added Python generator",
+      "files_changed": 11,
+      "additions": 487,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "vmayoral",
+      "date": "2014-08-16T00:29:14Z",
+      "sha": "c34786f06a6f3cf3cd7eb1dd530e07dabcd4316b",
+      "message": "static and dynamic arrays",
+      "files_changed": 3,
+      "additions": 10,
+      "deletions": 10,
+      "commit_type": "code"
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T03:49:40Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "tier4",
+    "repo": "agnocast"
+  },
+  "data": [
+    {
+      "author": "Koichi98",
+      "date": "2024-07-29T01:15:11Z",
+      "sha": "39cdbc2efa3ba054e92dd0fb42ab1041cfd4a624",
+      "message": "fix: added management of mqd using unordered_map in the publisher (#29)\n\n* fix: Add mq_close() to close mq descriptors\r\n\r\n* fix: Use unordered_map to store the opened mq descriptors\r\n\r\nSigned-off-by: Koichi Imai <kotty.0704@gmail.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Koichi Imai <kotty.0704@gmail.com>\r\nCo-authored-by: Takahiro Ishikawa <sykwer@gmail.com>",
+      "files_changed": 1,
+      "additions": 11,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "atsushi421",
+      "date": "2024-07-24T00:55:12Z",
+      "sha": "3f76ea9efa8506f5e710d86b05702184e9613d9d",
+      "message": "chore: add pull_request_template.md (#25)\n\nSigned-off-by: atsushi421 <atsushi.yano.2@tier4.jp>",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "kobayu858",
+      "date": "2025-11-25T06:23:03Z",
+      "sha": "ef1355fe0f33195d983cc712b22b6a4fce967669",
+      "message": "feat(agnocastlib): add bridge mode (#741)\n\n* feat: bridge_mode\n\nSigned-off-by: kobayu858 <yutaro.kobayashi.2@tier4.jp>\n\n* refactor: tolower\n\nSigned-off-by: kobayu858 <yutaro.kobayashi.2@tier4.jp>\n\n* refactor: remove perf std\n\nSigned-off-by: kobayu858 <yutaro.kobayashi.2@tier4.jp>\n\n---------\n\nSigned-off-by: kobayu858 <yutaro.kobayashi.2@tier4.jp>\nCo-authored-by: Koichi Imai <45482193+Koichi98@users.noreply.github.com>",
+      "files_changed": 2,
+      "additions": 28,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "k1832",
+      "date": "2026-02-19T09:04:00Z",
+      "sha": "59c78b7d66d0f1504da467396ebbc417dd73ae90",
+      "message": "fix(agnocast_kmod): add .owner = THIS_MODULE to file_operations (#1080)\n\n* fix(agnocast_kmod): add .owner = THIS_MODULE to file_operations\n\nWithout .owner, the kernel does not hold a module reference when\nuserspace opens /dev/agnocast, allowing rmmod to succeed while\nfile descriptors are still open.\n\nSigned-off-by: Keita Morisaki <keita.morisaki@tier4.jp>\n\n* test(agnocast_kmod): add rmmod refcount test for .owner fix\n\nVerifies that rmmod fails with EBUSY while /dev/agnocast is open\nand succeeds after the fd is closed.\n\nSigned-off-by: Keita Morisaki <keita.morisaki@tier4.jp>\n\n---------\n\nSigned-off-by: Keita Morisaki <keita.morisaki@tier4.jp>\nCo-authored-by: Koichi Imai <45482193+Koichi98@users.noreply.github.com>",
+      "files_changed": 2,
+      "additions": 52,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "sykwer",
+      "date": "2024-07-03T02:44:20Z",
+      "sha": "df7f510173e3ee9d9dec1e8ae3cc3181ba9395b4",
+      "message": "initial commit\n\nSigned-off-by: sykwer <sykwer@gmail.com>",
+      "files_changed": 35,
+      "additions": 2730,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "TetsuKawa",
+      "date": "2025-02-25T08:11:10Z",
+      "sha": "85b15dfaba55534323e1f51daec11a824111ff39",
+      "message": "feat(ros2agnocast): add node info agnocast command (#399)\n\n* feat: add node info_agnocast verb\r\n\r\nSigned-off-by: TetsuKawa <kawaguchitnon@icloud.com>\r\n\r\n* fix: response to cppcheck\r\n\r\nSigned-off-by: TetsuKawa <kawaguchitnon@icloud.com>\r\n\r\n* fix: response to build-and-test\r\n\r\nSigned-off-by: TetsuKawa <kawaguchitnon@icloud.com>\r\n\r\n* fix: response to build-and-test\r\n\r\nSigned-off-by: TetsuKawa <kawaguchitnon@icloud.com>\r\n\r\n* fix: response to build and test\r\n\r\nSigned-off-by: TetsuKawa <kawaguchitnon@icloud.com>\r\n\r\n* fix: fix description\r\n\r\nSigned-off-by: TetsuKawa <kawaguchitnon@icloud.com>\r\n\r\n* fix: remove unnecessary args\r\n\r\nSigned-off-by: TetsuKawa <kawaguchitnon@icloud.com>\r\n\r\n* feat: repalace new, delete to malloc, free\r\n\r\nSigned-off-by: TetsuKawa <kawaguchitnon@icloud.com>\r\n\r\n* fix: response to build and test\r\n\r\nSigned-off-by: TetsuKawa <kawaguchitnon@icloud.com>\r\n\r\n* feat: response to clang\r\n\r\nSigned-off-by: TetsuKawa <kawaguchitnon@icloud.com>\r\n\r\n* feat: response to build-and-check\r\n\r\nSigned-off-by: TetsuKawa <kawaguchitnon@icloud.com>\r\n\r\n* fix: response to build-and-test\r\n\r\nSigned-off-by: TetsuKawa <kawaguchitnon@icloud.com>\r\n\r\n---------\r\n\r\nSigned-off-by: TetsuKawa <kawaguchitnon@icloud.com>",
+      "files_changed": 4,
+      "additions": 197,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "tomiy-0x62",
+      "date": "2026-02-15T08:26:42Z",
+      "sha": "09b6d42ea0042e481f8c840a318ab618a6fa34de",
+      "message": "feat(agnocastlib): get gid API for publisher (#1022)\n\n* get_gid impl\n\nSigned-off-by: Koichi Imai <koichi.imai.2@tier4.jp>\n\n* delete unnecessary comments\n\nSigned-off-by: Koichi Imai <koichi.imai.2@tier4.jp>\n\n* fix comments\n\nSigned-off-by: Koichi Imai <koichi.imai.2@tier4.jp>\n\n* fix\n\nSigned-off-by: Koichi Imai <koichi.imai.2@tier4.jp>\n\n* change gid format\n\n* fix wrong byte offsets\n\n* separate the test coverage workflows into two and give write permission\n\nSigned-off-by: Koichi Imai <koichi.imai.2@tier4.jp>\n\n* fix copilot\n\nSigned-off-by: Koichi <koichi.imai.2@tier4.jp>\n\n---------\n\nSigned-off-by: Koichi Imai <koichi.imai.2@tier4.jp>\nSigned-off-by: Koichi <koichi.imai.2@tier4.jp>\nCo-authored-by: Koichi Imai <koichi.imai.2@tier4.jp>\nCo-authored-by: Koichi Imai <45482193+Koichi98@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 29,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "bdm-k",
+      "date": "2025-02-10T08:43:12Z",
+      "sha": "ac8f4bace13131cf1f5487a9e5b2ca752bcff7f5",
+      "message": "refactor: use zero-length messages for topic publishing (#369)\n\n* refactor: use zero-length messages for topic publishing\r\n\r\n* provide a source for C++ empty struct behavior\r\n\r\n* adjust the wording",
+      "files_changed": 3,
+      "additions": 6,
+      "deletions": 12,
+      "commit_type": "docs"
+    },
+    {
+      "author": "PeterWrighten",
+      "date": "2026-01-23T07:26:33Z",
+      "sha": "7dd3fd9bb83c6c898de6e8d5e9b7ef977aea3a4b",
+      "message": "fix(README.md): shell command typo error in For User part (#956)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "r1ru",
+      "date": "2025-05-12T00:50:44Z",
+      "sha": "146eef0bef978b664ca668bbe5c30e578a17a879",
+      "message": "Change to use topic_local_id_t as the key for opened_mqs (#634)\n\n* Change to use topic_local_id_t as the key for opened_mqs\n\n* Fix the type of ioctl_publish_msg_args publish_core\n\n---------\n\nCo-authored-by: Koichi Imai <45482193+Koichi98@users.noreply.github.com>",
+      "files_changed": 3,
+      "additions": 8,
+      "deletions": 9,
+      "commit_type": "ci"
+    },
+    {
+      "author": "Enigamict",
+      "date": "2025-03-13T07:51:50Z",
+      "sha": "286fc4832db76fe72aeeb0f65b0bbf9c825c1bd1",
+      "message": "test(kmod) Add test for increment_message_entry function (#486)\n\nSigned-off-by: Enigamict <atsuki.takata@tier4.jp>",
+      "files_changed": 2,
+      "additions": 60,
+      "deletions": 10,
+      "commit_type": "code"
+    },
+    {
+      "author": "mojomex",
+      "date": "2025-08-04T02:43:48Z",
+      "sha": "6154d84129bf022f903f45b5342e137697ecf9a6",
+      "message": "build: set C++ standard explicitly to support Clang builds (#677)\n\nSigned-off-by: Max SCHMELLER <max.schmeller@tier4.jp>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "veqcc",
+      "date": "2024-07-12T07:36:20Z",
+      "sha": "90ea2d22969cb34a1adccbf1a787672b857adc31",
+      "message": "fix: rename loan api (#1)\n\nSigned-off-by: veqcc <ryuta.kambe@tier4.jp>",
+      "files_changed": 3,
+      "additions": 5,
+      "deletions": 5,
+      "commit_type": "code"
+    }
+  ]
+}

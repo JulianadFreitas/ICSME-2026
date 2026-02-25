@@ -1,0 +1,221 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T12:10:56Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "astuff",
+    "repo": "avt_vimba_camera"
+  },
+  "data": [
+    {
+      "author": "MikoMikarro",
+      "date": "2023-05-29T13:51:52Z",
+      "sha": "095642d40fa521d93ce4e96d1c4abb3779116b73",
+      "message": "Adding framerate control for Vimba v6 (#121)\n\n* Adding framerate control for Vimva v6\r\n\r\n* Update AvtVimbaCamera.cfg\r\n\r\nchanged white spacing to align all parameters\r\n\r\n* Update Mako_G-319.launch",
+      "files_changed": 5,
+      "additions": 12,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "dagata-mining",
+      "date": "2022-10-11T15:23:23Z",
+      "sha": "dbf72afc8b05526236262158f06a0dae81c9b91e",
+      "message": "BUG FIX Issue #104 - Passing Variables and not constant in Trigger::PrepareActionCommand (#108)\n\nCo-authored-by: Dagata_Mining <agrenier@pointlaz.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "PhilippSchmaelzle",
+      "date": "2022-08-10T15:49:39Z",
+      "sha": "d3303a10a03dfd6b5293a0e6ea02eaf5f38112e6",
+      "message": "Nodelet parameter namespace (#102)\n\n* Provide reconfiguration server with knowledge of private parameters\r\n\r\n* Manager has to be passed with global name reference",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "icolwell-as",
+      "date": "2019-08-19T22:36:06Z",
+      "sha": "d0357fa96051e36ba43ce6f2f11db74350375bf3",
+      "message": "Changelog for upcoming release",
+      "files_changed": 1,
+      "additions": 13,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jilinzhouas",
+      "date": "2022-02-15T20:28:07Z",
+      "sha": "6d6c21be6a73f3449877d49957f5efc5bf1252fa",
+      "message": "[#75] Fix a bug in function getTriggerModeInt() (#77)\n\n- Return Invalid mode if the input mode_str is undefined.\r\n- It returned an underfined mode (local variable) before in this case",
+      "files_changed": 2,
+      "additions": 8,
+      "deletions": 7,
+      "commit_type": "code"
+    },
+    {
+      "author": "gbartyzel",
+      "date": "2021-12-09T15:55:06Z",
+      "sha": "c63397d589052b7302b00a4ecfed3fcf3cf40924",
+      "message": "Added features required to run USB cameras (#54)",
+      "files_changed": 5,
+      "additions": 59,
+      "deletions": 7,
+      "commit_type": "config"
+    },
+    {
+      "author": "vbrebion",
+      "date": "2020-11-17T16:13:24Z",
+      "sha": "bbdbdb3235dee0130e525805909172678330f208",
+      "message": "Fixed 'escalating to SIGTERM' when closing (#22)\n\nThe issue was comming from the signal handler for the SIGINT event.\r\nIndeed, it was always activated, and thus would catch our ctrl+C presses while not exiting the application.\r\nMade it enabled only for the few lines where it is needed, and re-enabled the default one just after to make the application exit correctly",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "miquelmassot",
+      "date": "2014-02-19T07:52:01Z",
+      "sha": "bc9f5181be9caae67196e42cfa685dcd19211873",
+      "message": "first commit",
+      "files_changed": 2,
+      "additions": 217,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Will Baker",
+      "date": "2018-06-05T20:19:31Z",
+      "sha": "5b86f9b099b5e8904652b31e6c0df31ed70a14ed",
+      "message": "Add nodelet",
+      "files_changed": 10,
+      "additions": 108,
+      "deletions": 5,
+      "commit_type": "docs"
+    },
+    {
+      "author": "chewwt",
+      "date": "2017-12-16T15:37:04Z",
+      "sha": "4174bd9c53b0bd365727439883ebaf8092269320",
+      "message": "add support for armv8",
+      "files_changed": 4,
+      "additions": 154,
+      "deletions": 100,
+      "commit_type": "docs"
+    },
+    {
+      "author": "130s",
+      "date": "2017-08-02T18:54:35Z",
+      "sha": "d4b3930969ddc56ee020a51dc5052d6483726ae4",
+      "message": "[CI] Add config for ROS Kinetic (and Lunar as an option).",
+      "files_changed": 1,
+      "additions": 31,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "mintar",
+      "date": "2017-07-20T13:40:00Z",
+      "sha": "457182fdd799219df45a9656268f60b53909766d",
+      "message": "Open camera on init\n\nWithout this patch, the camera is never opened. This bug was introduced in 63f868791.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "SparusII",
+      "date": "2016-02-26T08:05:47Z",
+      "sha": "6cbc4c66f3f2a699aae4412298ea0a43dbbdebdc",
+      "message": "changed stereo camera launchfile",
+      "files_changed": 2,
+      "additions": 56,
+      "deletions": 101,
+      "commit_type": "code"
+    },
+    {
+      "author": "shaun-edwards",
+      "date": "2017-06-04T01:17:06Z",
+      "sha": "9e0e177f7d177338e3d9ac593280bf10a72a2e1d",
+      "message": "Fixed crashing of dynamic reconfigure",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "agoins",
+      "date": "2017-03-30T22:31:12Z",
+      "sha": "b6b35eb88531b45eeadf0849f681d461b0e09ed8",
+      "message": "Fixed dynamic reconfigure configuration that did not allow camera parameters to be updated",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "josepqp",
+      "date": "2016-09-14T10:54:48Z",
+      "sha": "55877bddf14dd5699662fd61478d421d68bfbc04",
+      "message": "1) Added ARM 32 bits libraries\n2) Modified CMakeList.txt to compile with ARM 32 bits\n3) Added Iris Parameter",
+      "files_changed": 7,
+      "additions": 52,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "plnegre",
+      "date": "2016-05-30T10:52:57Z",
+      "sha": "71c015f0fa1a6ca03ce7db10f63931132fd09baa",
+      "message": "Left and right callback in a separate thread",
+      "files_changed": 2,
+      "additions": 26,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "lucasb-eyer",
+      "date": "2015-04-22T09:10:48Z",
+      "sha": "ea7a1e8c7a84a5ff010c48eb9040e5cf1dd64b94",
+      "message": "Set the frame_id of the image header, too.",
+      "files_changed": 2,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "SPENCER-Freiburg Laptop",
+      "date": "2014-10-30T09:39:47Z",
+      "sha": "02df92e79402376599dffeef51088de8c12b7ede",
+      "message": "Fix names/values of auto settings.",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "pkok",
+      "date": "2014-10-28T13:13:04Z",
+      "sha": "0f9087df3066cdf52c1d18c3b6703849940a5bba",
+      "message": "Allow user to connect by specifying either GUID or IP address.",
+      "files_changed": 2,
+      "additions": 5,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "cottsay",
+      "date": "2014-03-25T19:37:09Z",
+      "sha": "7b1f2917da1ae7f1764711605e46f4b8f52d2f40",
+      "message": "Fix 32-bit compiles\n\nThere is no such thing as x86_32 architecture. Most Linux distros report i386 for 32-bit machines.",
+      "files_changed": 2,
+      "additions": 0,
+      "deletions": 0,
+      "commit_type": "code"
+    }
+  ]
+}

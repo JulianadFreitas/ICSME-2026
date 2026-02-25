@@ -1,0 +1,751 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T07:42:46Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros-perception",
+    "repo": "perception_pcl"
+  },
+  "data": [
+    {
+      "author": "Adraub",
+      "date": "2025-03-06T19:03:07Z",
+      "sha": "cbf738c4930ebf80062580dc4f615650a7322d53",
+      "message": "Fix pcd timestamp format output in pointcloud_to_pcd (#481)\n\n* Fix pcd timestamp format output in pointcloud_to_pcd\n\nFix pcd timestamp indentation offset if nanosec value is less than 100000000 ns\n\n* Fix coding style\n\nFixes uncrustify CI error",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Spike-hd",
+      "date": "2026-02-13T12:21:43Z",
+      "sha": "8f1b64cffe8f577bfd74c37a4e448c3743112c39",
+      "message": "pcl_ros: apply QoS overrides to filters and tools (#521)\n\nCo-authored-by: Hadrien <hdu@lescompanions.fr>",
+      "files_changed": 4,
+      "additions": 66,
+      "deletions": 9,
+      "commit_type": "code"
+    },
+    {
+      "author": "Rayman",
+      "date": "2024-06-03T20:26:30Z",
+      "sha": "1b11ebd3b97bade5bdd70f9e17738d179f2c73de",
+      "message": "Fix `Could NOT find Boost (missing: Boost_INCLUDE_DIR)` (#452)\n\n* Fix `Could NOT find Boost (missing: Boost_INCLUDE_DIR)`\r\n\r\nFix #446\r\nSee the discussion at https://github.com/ros-perception/perception_pcl/pull/447\r\n\r\n* Fix ament_cpplint\r\n\r\n* Fix ament_lint_cmake",
+      "files_changed": 3,
+      "additions": 7,
+      "deletions": 6,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Timple",
+      "date": "2025-05-07T07:05:53Z",
+      "sha": "a7e1135bed2258acde34caeb81b487bf7d66b009",
+      "message": "fix deprecation of .h files in message_filters (#493)",
+      "files_changed": 10,
+      "additions": 26,
+      "deletions": 25,
+      "commit_type": "code"
+    },
+    {
+      "author": "Tacha-S",
+      "date": "2023-06-12T15:48:07Z",
+      "sha": "daee50f3d9956425039cf3853fee732df60be3a9",
+      "message": "Set sensor data QoS to filter subscribers (#419)\n\n* Set sensor data QoS to filter subscribers\r\n\r\n* Fix format for consistency\r\n\r\n* Fix type\r\n\r\n* Fix style format",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "eigendude",
+      "date": "2026-02-04T21:06:36Z",
+      "sha": "7937f6a6c4762fe7ee8be10c4bdbe63ff14ef6c5",
+      "message": "Fix BSD-3-Cause license name in package.xml files (#516)",
+      "files_changed": 3,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "config"
+    },
+    {
+      "author": "xaru8145",
+      "date": "2026-01-05T14:15:20Z",
+      "sha": "e5349e2536989b690a66a226bffd2331501c7733",
+      "message": "Update PCLNode to use TransformListener Node constructor so that it does not create a new node under the hood",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "AntoBrandi",
+      "date": "2025-08-28T07:45:09Z",
+      "sha": "11d26da61eeb8f13b28830cabeeda64d9c28c9c7",
+      "message": "Correct Statistical Outlier Removal param description",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "traversaro",
+      "date": "2025-01-13T18:44:10Z",
+      "sha": "548531c692c1aa21044eb07a1014d2654ca2f9e4",
+      "message": "Add support for Windows",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "thomasemter",
+      "date": "2025-05-30T17:15:08Z",
+      "sha": "8e5dd60464637a6ba87759e18256c04488bf8992",
+      "message": "Fix ament_export_dependencies (#500)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "vladimirjendrol",
+      "date": "2025-05-13T17:12:45Z",
+      "sha": "0623695afaa4d901b39ea2fbb27d952441273b01",
+      "message": "Port bag_to_pcd to ROS 2 (#486)",
+      "files_changed": 3,
+      "additions": 77,
+      "deletions": 94,
+      "commit_type": "docs"
+    },
+    {
+      "author": "JVALPASS",
+      "date": "2025-05-07T15:28:13Z",
+      "sha": "93af46d5f284c272a61a356691f8dcb3d3bd223c",
+      "message": "Add CombinedPointCloudToPCD Node for Accumulating Multiple Point Clouds into a Single PCD (#479)\n\n- Introduces CombinedPointCloudToPCD, a ROS 2 component node that:\n  - Subscribes to sensor_msgs/PointCloud2 and accumulates multiple clouds.\n  - Optionally transforms each cloud to a fixed frame.\n  - Allows saving a combined PCD file in either binary, compressed, or ASCII format.\n  - Permits saving on node shutdown or at a configurable timer interval.\n- Preserves the BSD License from Willow Garage and references original authors.\n- Useful for aggregating data from multiple scans into one dataset.",
+      "files_changed": 2,
+      "additions": 357,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "alireza-moayyedi",
+      "date": "2025-04-30T10:59:15Z",
+      "sha": "9e80ff76fd1776b40b08f3ffea2674ff3bca2f88",
+      "message": "Properly order the header includes for cpplint (#490)",
+      "files_changed": 3,
+      "additions": 13,
+      "deletions": 10,
+      "commit_type": "code"
+    },
+    {
+      "author": "roncapat",
+      "date": "2025-05-01T07:15:23Z",
+      "sha": "61942d6906df40d380bcc982a78fb8a7cfae7970",
+      "message": "Modern CMake (#489)",
+      "files_changed": 1,
+      "additions": 28,
+      "deletions": 11,
+      "commit_type": "docs"
+    },
+    {
+      "author": "bjsowa",
+      "date": "2025-03-06T17:48:39Z",
+      "sha": "8586103462d67267ac1dbac5b5e250cd819d0c6c",
+      "message": "Split off pcl_ros_filter into separate library (#480)\n\nCo-authored-by: Paul Bovbel <paul@bovbel.com>",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "CursedRock17",
+      "date": "2025-01-02T18:48:08Z",
+      "sha": "43a3f650ba3ef8a46969d00f08de6f33b933a597",
+      "message": "Deprecating tf2 C Headers (#469)\n\nSigned-off-by: CursedRock17 <mtglucas1@gmail.com>",
+      "files_changed": 3,
+      "additions": 10,
+      "deletions": 10,
+      "commit_type": "code"
+    },
+    {
+      "author": "SteveMacenski",
+      "date": "2019-12-02T17:39:11Z",
+      "sha": "1273c7581d172f0a3c99e5f267e8c7c61692c38d",
+      "message": "changing base version to 2.1.0 for first ros2 sync [eloquent] (#253)\n\n* changing base version to 2.0.0 for first ros2 sync\r\n\r\n* changing industrial CI to use eloquent\r\n\r\n* increment 2.0.0 to 2.1.0 for eloquent release",
+      "files_changed": 5,
+      "additions": 6,
+      "deletions": 4,
+      "commit_type": "config"
+    },
+    {
+      "author": "RBT22",
+      "date": "2024-09-23T19:57:39Z",
+      "sha": "d2c64121fd66fe2539abc10fcf679e153c8c7d1f",
+      "message": "Fix handling of empty input point cloud in computePublish method (#467)",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "ShepelIlya",
+      "date": "2024-08-29T07:46:22Z",
+      "sha": "d97ca08419bd9d173649a9de181fc56d2a3ac83e",
+      "message": "point_cloud.hpp ros2 types fixed (#425)",
+      "files_changed": 1,
+      "additions": 16,
+      "deletions": 16,
+      "commit_type": "code"
+    },
+    {
+      "author": "cosama",
+      "date": "2024-07-10T17:35:34Z",
+      "sha": "f127921808b1c6fb6237a7e4cf19d16b85a0e43b",
+      "message": "sorts pc msg fields by offset (#438)",
+      "files_changed": 2,
+      "additions": 10,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "mvieth",
+      "date": "2020-07-30T18:52:57Z",
+      "sha": "21cf907c46b1303f21164082a3bb5f82c2d64271",
+      "message": "Add missing include for new PCL versions (#293)\n\nAfter this change https://github.com/PointCloudLibrary/pcl/commit/6df3e602a72ea16657f901c9a6911d95b263ba08#diff-24324a084e511502d7f34054ec31b353L50, an explicit include for KdTree is needed.\r\nIt was formerly a transitive include via pcl/surface/mls.h - pcl/search/pcl_search.h - pcl/search/kdtree.h - pcl/kdtree/kdtree_flann.h.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Yadunund",
+      "date": "2024-04-23T16:24:49Z",
+      "sha": "44d02743e451296d6bc871b101cea33c59adc1d6",
+      "message": "Swtich to build_export_depend for libpcl-all-dev (#447)\n\nSigned-off-by: Yadunund <yadunund@openrobotics.org>",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "Ar-Ray-code",
+      "date": "2024-04-05T18:40:09Z",
+      "sha": "7e3401c96a9f58861693917f479f43ff3521f3c1",
+      "message": "porting pointcoud_to_pcd to ros2 (#444)\n\n* porting pointcoud_to_pcd to ros2\r\n\r\n* and rgb option and swich format\r\n\r\n* fix exception handling",
+      "files_changed": 3,
+      "additions": 134,
+      "deletions": 97,
+      "commit_type": "docs"
+    },
+    {
+      "author": "daisukes",
+      "date": "2022-12-09T19:12:01Z",
+      "sha": "5c5382eb5c85af9e00076395e84520a209b81673",
+      "message": "migrate pcl_nodelet.hpp to pcl_node.hpp (#385)\n\n* migrate pcl_nodelet.hpp to pcl_node.hpp\r\nTODOs\r\n- lazy subscription\r\n- cpplint, uncrustify\r\n- type adaptation\r\n\r\nSigned-off-by: Daisuke Sato <daisukes@cmu.edu>\r\n\r\n* rename latched_indices to transient_local_indices\r\n\r\nSigned-off-by: Daisuke Sato <daisukes@cmu.edu>\r\n\r\n* - remove some TODOs\r\n- change pub_output_ type\r\n\r\nSigned-off-by: Daisuke Sato <daisukes@cmu.edu>\r\n\r\n* remove TODOs\r\n\r\nSigned-off-by: Daisuke Sato <daisukes@cmu.edu>\r\n\r\n* use template instead of PublisherBase\r\n\r\nSigned-off-by: Daisuke Sato <daisukes@cmu.edu>\r\n\r\nSigned-off-by: Daisuke Sato <daisukes@cmu.edu>",
+      "files_changed": 1,
+      "additions": 120,
+      "deletions": 83,
+      "commit_type": "code"
+    },
+    {
+      "author": "Aposhian",
+      "date": "2022-11-29T18:27:59Z",
+      "sha": "ca69652eb8cec020dc6eb43c3c16d3bc8224ff3f",
+      "message": "use modular pcl dependencies for bloom (#384)",
+      "files_changed": 2,
+      "additions": 15,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "asymingt",
+      "date": "2023-02-16T01:32:08Z",
+      "sha": "628aaec1dc73ef4adea01e9d28f11eb417b948fd",
+      "message": "Migrate the ROS1 pcl_ros::RadiusOutlierRemoval filter to ROS2 (#399)\n\n* Add the RadiusOutlierRemoval filter.\r\n\r\n* Lint\r\n\r\n* PLay iit again, Linty Sam.\r\n\r\n* Header order\r\n\r\n* This is now just getting embarrassing\r\n\r\n* Move parameter to class constructor.",
+      "files_changed": 4,
+      "additions": 96,
+      "deletions": 48,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Kettenhoax",
+      "date": "2023-01-09T18:17:28Z",
+      "sha": "3b0cfd8529a59fc135418c2a27e40acb926ad06a",
+      "message": "Export PCL dependency in pcl_conversions (#392)\n\nCo-authored-by: Marcel Zeilinger <marcel.zeilinger@ait.ac.at>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ardiya",
+      "date": "2022-11-18T18:39:32Z",
+      "sha": "7c6a2a5a38709fe9aa31acdb443d7490f78f8cfe",
+      "message": "Avoid redundant boost::make_shared copy in pcl_ros::Publisher<PointT> (#380)\n\n`boost make_shared` is actually making a copy. This PR introduces the `sensor_msgs::PointCloud2` as pointer directly so that it doesn't need a `boost::make_shared` convertsion to pointer anymore.",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "ralwing",
+      "date": "2022-11-03T12:03:31Z",
+      "sha": "389297dfadb92df6b1efb53958723c40c2a4556d",
+      "message": "Fixing implicit conversion warnings #378 (#379)",
+      "files_changed": 1,
+      "additions": 13,
+      "deletions": 10,
+      "commit_type": "code"
+    },
+    {
+      "author": "wep21",
+      "date": "2022-04-13T20:17:03Z",
+      "sha": "bd7a060e98d2bb6720b3bc30794fd25c5ef43241",
+      "message": "use common header instead of io (#361)\n\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>",
+      "files_changed": 15,
+      "additions": 15,
+      "deletions": 15,
+      "commit_type": "code"
+    },
+    {
+      "author": "ivanpauno",
+      "date": "2022-04-04T19:54:29Z",
+      "sha": "27448f757529620e0100c61ce1acb2b3f6c132cc",
+      "message": "Migrate pcd to pointcloud tool (#359)\n\n* Migrate pcl_ros pcd_to_pointcloud tool\r\n\r\nSigned-off-by: Ivan Santiago Paunovic <ivanpauno@ekumenlabs.com>\r\n\r\n* Remove log used for debugging\r\n\r\nSigned-off-by: Ivan Santiago Paunovic <ivanpauno@ekumenlabs.com>\r\n\r\n* Undo unnecessary changes\r\n\r\nSigned-off-by: Ivan Santiago Paunovic <ivanpauno@ekumenlabs.com>\r\n\r\n* Remove commented out code\r\n\r\nSigned-off-by: Ivan Santiago Paunovic <ivanpauno@ekumenlabs.com>\r\n\r\n* Address peer review comments\r\n\r\nSigned-off-by: Ivan Santiago Paunovic <ivanpauno@ekumenlabs.com>\r\n\r\n* rename node\r\n\r\nSigned-off-by: Ivan Santiago Paunovic <ivanpauno@ekumenlabs.com>",
+      "files_changed": 3,
+      "additions": 67,
+      "deletions": 95,
+      "commit_type": "docs"
+    },
+    {
+      "author": "sloretz",
+      "date": "2022-02-03T18:11:55Z",
+      "sha": "8093d5b35df0c570efb918d170182b45eada78b0",
+      "message": "Install headers to include/${PROJECT_NAME} (#354)\n\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>",
+      "files_changed": 2,
+      "additions": 17,
+      "deletions": 13,
+      "commit_type": "docs"
+    },
+    {
+      "author": "richmattes",
+      "date": "2021-09-27T21:28:26Z",
+      "sha": "755f566356a1d34d4b914f477cdf3820aa1a6b07",
+      "message": "pcl_ros: Use vec.data() instead of &vec[0] (#348)\n\nUpdate pcl_ros to use the data() member function of STL containers to\r\nget the pointer to the underlying storage, instead of dereferencing the\r\nzeroth element and taking its reference.  When a container is of size 0,\r\ndereferencing element 0 with operator[]() is undefined behavior, and\r\nwill trigger assertions when features like _GLIBCXX_ASSERTIONS are\r\nenabled.\r\n\r\nFixes #333.",
+      "files_changed": 2,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "kenji-miyake",
+      "date": "2021-08-30T18:08:25Z",
+      "sha": "1a214ccc6eea62c57bf359c6dac50452e0257ce4",
+      "message": "Fix obsolete header (#342)\n\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "pmusau17",
+      "date": "2021-06-28T16:37:50Z",
+      "sha": "35a9f258487585e7a10e1d30a4d72f4b2f9bd16e",
+      "message": "shared library bug fix (#331)\n\nSigned-off-by: Patrick Musau <pmusau13ster@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "theseankelly",
+      "date": "2020-08-06T18:13:01Z",
+      "sha": "0ac68106885f170ab5ba30d7ba96e6ba5a048253",
+      "message": "Rename headers from .h to .hpp (#296)\n\n* Rename headers from .h to .hpp per ROS2 guidelines\r\n\r\nThis change is the result of the following command run from pcl_ros dir:\r\n\r\n$ find -name *.h | xargs -I {} mv {} {}pp\r\n\r\nSigned-off-by: Sean Kelly <sean@seankelly.dev>\r\n\r\n* Update internal includes for the renamed headers\r\n\r\nThis change was the result of the following bash script:\r\n\r\n$ find -name *.h -o -name *.cpp -o -name *.hpp | xargs -I {} sed -i 's/\\(pcl_ros\\/.*\\)\\(h\\)\\([\">]\\)$/\\1\\2pp\\3/g' {}\r\n\r\nSigned-off-by: Sean Kelly <sean@seankelly.dev>",
+      "files_changed": 83,
+      "additions": 94,
+      "deletions": 94,
+      "commit_type": "code"
+    },
+    {
+      "author": "ShivamPR21",
+      "date": "2020-07-01T19:13:29Z",
+      "sha": "4ed0d3ecefa74b264a0384baf723b55f7288b4d0",
+      "message": "link pcl library to targets (#287)\n\n* link pcl library to targets\r\n\r\n* changes OS_CODE_NAME to focal in travis config file",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "kunaltyagi",
+      "date": "2020-05-12T01:50:15Z",
+      "sha": "2b770b15ed76a5dfe626f8c553607015b77fc729",
+      "message": "Changes in preparation for PCL 1.11 (#273) (#279)\n\n* Deriving typedef from pcl type\r\n\r\n* Explicit boost shared_ptr for function parameters\r\n\r\n* Use boost::shared_ptr instead of PCL::Ptr\r\n\r\n* Implementing boost-std compatibility\r\n\r\n* Using the compatibility layer",
+      "files_changed": 28,
+      "additions": 225,
+      "deletions": 103,
+      "commit_type": "code"
+    },
+    {
+      "author": "ruffsl",
+      "date": "2014-10-18T21:59:47Z",
+      "sha": "ac5593dd7c7f1ca3e8290b65070ab1684d9dee03",
+      "message": "Adding target_frame\n\n[Ability to specify frame in bag_to_pcd #55](https://github.com/ros-perception/perception_pcl/issues/55)",
+      "files_changed": 1,
+      "additions": 15,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "klintan",
+      "date": "2019-10-29T23:10:32Z",
+      "sha": "a1fd4d2a09533adeca171b0e9285cba49d292785",
+      "message": "Updated ROS2 PR: pcl_conversion only to ROS2 (dashing) (#244)\n\n* pcl_conversion to ros2\r\n\r\n* travis for ros2 and fixed cmakelists\r\n\r\n* exporting dependencies\r\n\r\n* updated travis\r\n\r\n* fixed smaller things\r\n\r\n* added colcon ignore to meta package\r\n\r\n* merge pcl_conversions.h with version released in Dashing\r\n\r\n* merge test script, CMakeListst, package.xml\r\n\r\n* append authors, clean up\r\n\r\n* PR feedback\r\n\r\n* fixed PR comments\r\n\r\n* fixed PR comments, cmakelists message_filters, reverted type masq, added maintainer\r\n\r\n* removed dashing and made ros_distro matrix env",
+      "files_changed": 10,
+      "additions": 225,
+      "deletions": 294,
+      "commit_type": "docs"
+    },
+    {
+      "author": "kejxu",
+      "date": "2019-04-05T14:50:11Z",
+      "sha": "a8ba2c790db5db181725606649e1fc7c776c1ffd",
+      "message": "use <chrono> and <thread> on Windows (#221)\n\n* Changing from usleep to c++14 style sleep_for for Windows support",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "wkentaro",
+      "date": "2016-04-02T17:28:34Z",
+      "sha": "fc55edf7ad8ff79f4a8052787803875b7d068a99",
+      "message": "Add travis config\n\nRefering to https://github.com/ros-perception/vision_opencv",
+      "files_changed": 2,
+      "additions": 95,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "hrnr",
+      "date": "2018-05-17T21:14:13Z",
+      "sha": "f8fee6128aff90e5a211506929287870a26978cf",
+      "message": "pcl_ros: fix exported includes in Ubuntu Artful\n\npcl_ros needs the same fix as pcl_conversions",
+      "files_changed": 1,
+      "additions": 15,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "James Ward",
+      "date": "2018-05-07T23:53:32Z",
+      "sha": "cd3720923a1a0bbf75b5967c120974f76d2b7e56",
+      "message": "Increase limits on CropBox filter parameters\n\nMin and max of CropBox filter was +/- 5m. For a pointcloud from a Velodyne, for example, this is not enough.\nIncreased to +/- 1000m.",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 6,
+      "commit_type": "config"
+    },
+    {
+      "author": "paulbovbel",
+      "date": "2014-04-08T22:34:30Z",
+      "sha": "388c0dc0ff1c0fa5bfed38ae98a72d3a90d57fa4",
+      "message": "fix Eigen dependency",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mikaelarguedas",
+      "date": "2017-07-14T23:57:34Z",
+      "sha": "5a8d278fb98101154559735fa809e549956ac006",
+      "message": "find only PCL components used instead of all PCL",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "clalancette",
+      "date": "2018-05-02T14:50:33Z",
+      "sha": "242ce31b32da388b4163175c9e25dd20790cd9d7",
+      "message": "Fix a bug building on artful.\n\nThe comment explains it in more detail.  While we are at it,\nfix the link in the README.rst to point to the right repository.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 2,
+      "additions": 12,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Paul Bovbel",
+      "date": "2015-01-06T18:19:57Z",
+      "sha": "a70e770af53acd9a282e62a1137f7104dd54daa1",
+      "message": "refactor naming and fix nodelet export",
+      "files_changed": 9,
+      "additions": 14,
+      "deletions": 16,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mintar",
+      "date": "2013-06-19T15:38:31Z",
+      "sha": "1a8f70b099d3c8024a3be22e46b378c9942b795a",
+      "message": "bag_to_pcd: check return code of transformPointCloud()\n\nThis fixes a bug where bag_to_pcd segfaults because of an ignored\ntf::ExtrapolationException.",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "jspricke",
+      "date": "2015-08-18T15:01:24Z",
+      "sha": "aa370cefc883842d470daa8fb96e1c5b36d683eb",
+      "message": "Add fixed_frame to pointcloud_to_pcd",
+      "files_changed": 1,
+      "additions": 29,
+      "deletions": 7,
+      "commit_type": "code"
+    },
+    {
+      "author": "jacquelinekay",
+      "date": "2016-04-21T22:18:33Z",
+      "sha": "7fd1bac6769c6679053cb4bb7b5c82f208cbc236",
+      "message": "manually remove dependency on vtkproj from PCL_LIBRARIES",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "v4hn",
+      "date": "2015-06-22T15:31:48Z",
+      "sha": "c40e5afdbd22531cdef36475946b57ca6e8a884b",
+      "message": "cleanup broken library links\n\nAll removed library names are included in ${PCL_LIBRARIES}.\nHowever, the plain library names broke catkin's overlay mechanism:\nWhere ${PCL_LIBRARIES} could point to a local installation of the PCL,\ne.g. pcd_ros_segmentation might still link to the system-wide installed version\nof pcl_segmentation.",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 6,
+      "commit_type": "docs"
+    },
+    {
+      "author": "LucidOne",
+      "date": "2014-04-09T19:47:14Z",
+      "sha": "c178c5a08dcb7b155e47e2553019a169831deca8",
+      "message": "Fixes #46 on indigo-devel\n\nTested with velodyne data on indigo on Ubuntu 14.04",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "bricerebsamen",
+      "date": "2014-02-27T23:22:42Z",
+      "sha": "7dc1ae60b0af203ec5d2ccbc1e70541d3ca898ba",
+      "message": "Added conversions for stamp types",
+      "files_changed": 1,
+      "additions": 32,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Mitchell Wills",
+      "date": "2015-02-16T22:57:55Z",
+      "sha": "10727ec6503bafebcee3e625ac1096b37885eadf",
+      "message": "Added option to save pointclouds in binary and binary compressed format",
+      "files_changed": 1,
+      "additions": 41,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "dani-carbonell",
+      "date": "2014-11-20T10:51:34Z",
+      "sha": "a41d54b3ebaaa9b0f538abc892d13c0e885e7b16",
+      "message": "Update common.py\n\nExtended filter limits up to ±100000.0 in order to support intensity channel filtering.",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "MattDerry",
+      "date": "2014-10-13T16:39:10Z",
+      "sha": "155a69e484673860313a616da15fede14335c751",
+      "message": "Update pcl_nodelets.xml\n\nIncluded missing closing library tag.  This was causing the pcl/Filter nodelets below the missing nodelet tag to not be exported correctly.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "scpeters",
+      "date": "2014-04-02T01:01:31Z",
+      "sha": "1e6d600c097b15ad3250e96554d18483a4facea0",
+      "message": "Use cmake_modules to help find eigen on indigo",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "wjwwood",
+      "date": "2013-06-26T22:41:31Z",
+      "sha": "649d1ca6ce62922043262b09a34e6024ee04cd25",
+      "message": "Initial code commit",
+      "files_changed": 4,
+      "additions": 226,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "cottsay",
+      "date": "2014-02-26T23:37:53Z",
+      "sha": "cb8c9c4408e45ab528b21c3ef108649b58d68474",
+      "message": "Make pcl_ros run_depend on libpcl-all-dev\n\nWhen downstream projects build against pcl_ros, they need the pcl headers provided by libpcl-all-dev.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "tfoote",
+      "date": "2013-09-20T17:35:49Z",
+      "sha": "a397fdc26797376a8b7a7d9bcc1ca56fde428816",
+      "message": "adding changelogs",
+      "files_changed": 2,
+      "additions": 7,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "dirk-thomas",
+      "date": "2012-12-19T23:22:05Z",
+      "sha": "2da1700056bfb2361eb6ed18314937316a27d6cf",
+      "message": "fix dyn reconf files",
+      "files_changed": 6,
+      "additions": 6,
+      "deletions": 10,
+      "commit_type": "config"
+    },
+    {
+      "author": "bulwahn",
+      "date": "2013-08-04T15:50:04Z",
+      "sha": "3d35f0f74828131640a57108cac9a48235cea180",
+      "message": "package.xml: tuned whitespaces\n\nThis commit removes trailing whitespaces and makes the line with the license information in the package.xml bitwise match exactly the common license information line in most ROS packages.\r\nThe trailing whitespaces were detected when providing a bitbake recipe in the meta-ros project (github.com/bmwcarit/meta-ros). In the recipe, the hash of the license line is declared and is used to check for changes in the license. For this recipe, it was not matching the common one.\r\nA related already merged commit is https://github.com/ros/std_msgs/pull/3 and a related pending commit is https://github.com/ros-perception/pcl_msgs/pull/1.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "rlklaser",
+      "date": "2013-07-19T23:37:21Z",
+      "sha": "45c5de6aff1d161838a542f37485d3426f332bd6",
+      "message": "Update common.py\n\nfilters min max are bounded to only -5,5 when using rosparam load and dynamic reconfigure",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "jkammerl",
+      "date": "2012-09-10T15:20:50Z",
+      "sha": "6d993c0282d795b43849bd142f10c782de086589",
+      "message": "removed pcl release from perception_pcl groovy stack",
+      "files_changed": 8,
+      "additions": 0,
+      "deletions": 193,
+      "commit_type": "docs"
+    },
+    {
+      "author": "DeFrenZ",
+      "date": "2013-05-21T22:21:31Z",
+      "sha": "8c6b34f6b7a3afd4b4c326be1811ea63d3d9d735",
+      "message": "removed a whitespace",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "k-okada",
+      "date": "2013-05-10T18:29:09Z",
+      "sha": "f2553aac6c3abe764580eda80dfd2490ca52820d",
+      "message": "copy features/segmentation/surface from fuerte-devel",
+      "files_changed": 45,
+      "additions": 5073,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "vrabaud",
+      "date": "2012-10-04T14:58:35Z",
+      "sha": "a1b32d4fb63c273b53fd503fa79c2a53ec8bfd07",
+      "message": "comply to the new catkin API",
+      "files_changed": 5,
+      "additions": 41,
+      "deletions": 62,
+      "commit_type": "docs"
+    },
+    {
+      "author": "kalectro",
+      "date": "2013-02-20T16:59:27Z",
+      "sha": "c6a48a583f1b93eedbcc3d8d33290fb8a9f8b7fa",
+      "message": "now also works without specifying publishing interval like described in the wiki. Also renamed rate_ to time_ since it is no rate",
+      "files_changed": 1,
+      "additions": 19,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "jon-weisz",
+      "date": "2013-01-21T04:22:03Z",
+      "sha": "758f23264dfcdc71be852d7b85cca77f4cb822bc",
+      "message": "update pluginlib macro",
+      "files_changed": 22,
+      "additions": 26,
+      "deletions": 26,
+      "commit_type": "code"
+    },
+    {
+      "author": "mirzashah",
+      "date": "2012-12-14T23:02:54Z",
+      "sha": "d5d9e3816a2372efca4b207cc94a595e7a1aad67",
+      "message": "Updated for new <buildtool_depend>catkin<...> catkin rule",
+      "files_changed": 2,
+      "additions": 3,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "rusu",
+      "date": "2012-09-05T23:29:36Z",
+      "sha": "adf647f14dd7826a08680c4e8bd543101cc1d8db",
+      "message": "added PCL 1.6 stac for Groovy",
+      "files_changed": 21,
+      "additions": 1467,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mikeferguson",
+      "date": "2014-05-27T19:53:08Z",
+      "sha": "d080cd78ac14481f580a6361a6afccbeb3c4a6b8",
+      "message": "add pcl::PointCloud to Image msg converter for extracting the rgb component of a cloud",
+      "files_changed": 1,
+      "additions": 31,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Ioan Sucan",
+      "date": "2013-07-12T13:12:04Z",
+      "sha": "a369efcaa8a375c4145419ed448390d8aa4d80b9",
+      "message": "small fix for conversion functions",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    }
+  ]
+}

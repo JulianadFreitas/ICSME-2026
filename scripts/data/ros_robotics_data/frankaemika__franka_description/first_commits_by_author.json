@@ -1,0 +1,161 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T14:48:50Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "frankaemika",
+    "repo": "franka_description"
+  },
+  "data": [
+    {
+      "author": "francando",
+      "date": "2026-01-20T15:57:13Z",
+      "sha": "64121c668e406d15cad4133aab98c2dc2f4ae880",
+      "message": "feat: generating dummy srdf for robots without it\nfeat: renamed robot_arms into robot, moved tmr into robots\nfix: updated paths for tmr\nchore: changelog updated",
+      "files_changed": 89,
+      "additions": 21,
+      "deletions": 5,
+      "commit_type": "docs"
+    },
+    {
+      "author": "schl_ja",
+      "date": "2026-01-08T15:03:47Z",
+      "sha": "2d16f8259b23ccc157309defbf1d9884e577d04f",
+      "message": "Added fr3_duo srdf and enabled arm_prefixes for urdf",
+      "files_changed": 4,
+      "additions": 120,
+      "deletions": 8,
+      "commit_type": "docs"
+    },
+    {
+      "author": "gomezgu",
+      "date": "2024-01-26T13:53:25Z",
+      "sha": "3aa78af4828b0aea42a8f189d8637c946bb14611",
+      "message": "fix: license name in readme",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "BarisYazici",
+      "date": "2024-01-26T09:58:55Z",
+      "sha": "3add82340cf33f6ea23d6031efded761c3b56301",
+      "message": "fix: typos",
+      "files_changed": 4,
+      "additions": 5,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "AndreasKuhner",
+      "date": "2024-04-22T12:03:46Z",
+      "sha": "7b9f77417235bf07398c18e09e1e2a30263ddafe",
+      "message": "bump: Added changelog",
+      "files_changed": 1,
+      "additions": 11,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ignacio-franka",
+      "date": "2025-03-31T07:57:54Z",
+      "sha": "9fe644f29f46719d3a7aa93ca74257c29191ba36",
+      "message": "FIX: IMU was not included in the xacro file",
+      "files_changed": 1,
+      "additions": 11,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "winkma",
+      "date": "2024-06-07T14:59:11Z",
+      "sha": "14c5d6373404f20cd24e0f6d5f5ddd959588fe04",
+      "message": "feat: changed minor principal moment of inertia to satisfy triangle inequality",
+      "files_changed": 3,
+      "additions": 87,
+      "deletions": 85,
+      "commit_type": "config"
+    },
+    {
+      "author": "Majanao",
+      "date": "2025-10-28T09:00:15Z",
+      "sha": "f4fa7e5aa00908b9ef244ca6edeea861cf40c9fb",
+      "message": "* Refactor FR3 Duo Robot Configuration\n\n    - Removed the cover kinematics argument from fr3_duo.urdf.xacro as it is no longer needed.\n    - Updated inertials.yaml for fr3_duo_cover and fr3_duo_mount to indicate that values need to be corrected.\n    - Deleted the kinematics.yaml file for fr3_duo_cover since it is no longer in use.\n    - Removed fr3_duo_fixed_structure.urdf.xacro as it is obsolete.\n    - Adjusted kinematic parameters in fr3_duo_mount's kinematics.yaml for both left and right configurations to new values.",
+      "files_changed": 12,
+      "additions": 66,
+      "deletions": 715,
+      "commit_type": "config"
+    },
+    {
+      "author": "honglin",
+      "date": "2025-08-24T08:27:40Z",
+      "sha": "8e604320326104c3ad8f500fa04854274c312528",
+      "message": "refactor: migrate to jazzy",
+      "files_changed": 6,
+      "additions": 174,
+      "deletions": 174,
+      "commit_type": "code"
+    },
+    {
+      "author": "ssilenzi",
+      "date": "2024-11-20T09:47:41Z",
+      "sha": "8a3e6db53895a9c7ef50322d23d1b802ab3a01fe",
+      "message": "fix: scripts create_urdf.sh and visualize_franka.sh need the correct user id\n\n* commit '2525a2ebf556dc8326f1479d4c47755df64db271':\n  fix: correct same problem on visualize_franka.sh\n  fix: script create_urdf.sh needs the correct user id",
+      "files_changed": 2,
+      "additions": 11,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "jcarpinelli-bdai",
+      "date": "2025-03-21T14:25:24Z",
+      "sha": "8a5522798a4843cb8f82cf6844233309c6be7d77",
+      "message": "Changes XACRO arguments to parameters for simpler macro invocations",
+      "files_changed": 3,
+      "additions": 17,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "noyansahin-franka",
+      "date": "2024-07-02T14:35:43Z",
+      "sha": "b836c1ef29bd79a774fdc80efb37d217011a965e",
+      "message": "Remove arm_id parameter from toplevel robot xacros\n\narm_id was specified in the toplevel robot xacros as a left-over\nfrom when we didn't have individual arm xacros. Now that we do,\nhaving the arm_id parameter in the toplevel robot xacros is\nredundant and can be removed.",
+      "files_changed": 3,
+      "additions": 15,
+      "deletions": 21,
+      "commit_type": "code"
+    },
+    {
+      "author": "Moritz Martens",
+      "date": "2024-07-22T07:32:13Z",
+      "sha": "b029149045fc0a0262c6e95d2f86f1704b95e62b",
+      "message": "CHG: undo changes to CHANGELOG and package which will be done automatically",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "Jack Smith",
+      "date": "2024-11-27T13:02:19Z",
+      "sha": "062ca391ccea2519cef07863edbf6890bb171210",
+      "message": "Update CHANGELOG.rst with changes since Release 0.2.0\n       revert previosu tgas and incorrect revision",
+      "files_changed": 2,
+      "additions": 14,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "FE-EnricoSartori",
+      "date": "2023-12-18T16:25:20Z",
+      "sha": "1ddff9ba71abb199fb349ffcc3155e86cfdb094e",
+      "message": "Publish franka_description",
+      "files_changed": 94,
+      "additions": 12961,
+      "deletions": 0,
+      "commit_type": "docs"
+    }
+  ]
+}

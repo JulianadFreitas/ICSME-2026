@@ -1,0 +1,411 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T05:48:11Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "CCNYRoboticsLab",
+    "repo": "imu_tools"
+  },
+  "data": [
+    {
+      "author": "mintar",
+      "date": "2013-02-08T14:05:14Z",
+      "sha": "63688b1c6c509a812c4ae204a808a98acdf1d362",
+      "message": "add parameter publish_tf\n\nWhen the imu is used together with other packages, such as\nrobot_pose_ekf, publishing the transform often interferes with those\npackages. This parameter allows to disable tf publishing.",
+      "files_changed": 2,
+      "additions": 7,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "wentywenty",
+      "date": "2026-01-13T19:42:18Z",
+      "sha": "998cfb1ccdbebe1fe9e5fefc5f9736cc4c0d9c9f",
+      "message": "Fixed a static library linking issue with the imu_complementary_filter package on Windows. (#218)",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "sharminramli",
+      "date": "2024-07-09T08:03:13Z",
+      "sha": "cc87241c47075ebfc5500717f2a7fd0fe70b399f",
+      "message": "Increase max stddev, add pose visualization (#192)",
+      "files_changed": 2,
+      "additions": 46,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "adivardi",
+      "date": "2026-01-09T17:06:40Z",
+      "sha": "6fe2d40ba40b76967d0bdfe85b0717aa648edd8c",
+      "message": "use modern postSetParametersCallback (#220)\n\nUse modern postSetParametersCallback. Also solves the bug causing every Double parameters change in the entire system to be printed as a change in this node.",
+      "files_changed": 2,
+      "additions": 20,
+      "deletions": 28,
+      "commit_type": "code"
+    },
+    {
+      "author": "ahcorde",
+      "date": "2026-01-09T17:02:40Z",
+      "sha": "c6055746a4682c27c684a0def5599f8cb8845563",
+      "message": "Add Qt6 support (#221)\n\nSigned-off-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>",
+      "files_changed": 2,
+      "additions": 12,
+      "deletions": 11,
+      "commit_type": "docs"
+    },
+    {
+      "author": "DLu",
+      "date": "2019-02-25T08:49:14Z",
+      "sha": "12f60e62c6c4584b10efaa8e11ceea7fc0fa01a1",
+      "message": "Remove junk xml (#93)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "Bitterisland6",
+      "date": "2024-10-01T10:49:40Z",
+      "sha": "11bf90042483e1f96aa9c54ef098ae32af607a8e",
+      "message": "Add QoS overriding options (#207)\n\n* add yaml file with parameters and include it in CMakeLists\r\n* include the yaml in the launch file\r\n* add qos overriding options and change topic namespaces\r\n* fix typos in param names\r\n* add imu/mag topic params to yaml config file\r\n* format launch.py file\r\n* format files with clang-format\r\n\r\n---------\r\n\r\nSigned-off-by: Aleksander Szymański <bitterisland6@gmail.com>",
+      "files_changed": 4,
+      "additions": 56,
+      "deletions": 20,
+      "commit_type": "docs"
+    },
+    {
+      "author": "otamachan",
+      "date": "2024-04-26T12:23:14Z",
+      "sha": "e4c2fcec84548789310d87103dd830a9cc0b8021",
+      "message": "Show remapped topic names (#196)\n\nThis PR, similar to #192, changes the topic names in the warning message to remapped ones in order to make the message more understandable.\r\n\r\n---------\r\n\r\nSigned-off-by: Tamaki Nishino <otamachan@gmail.com>\r\nCo-authored-by: Martin Günther <martin.guenther@dfki.de>",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "christophfroehlich",
+      "date": "2023-11-14T13:08:53Z",
+      "sha": "c8a27cda72ad4e89245e851c732888a089e86065",
+      "message": "Set read-only parameters as read_only (#185)",
+      "files_changed": 2,
+      "additions": 37,
+      "deletions": 24,
+      "commit_type": "code"
+    },
+    {
+      "author": "maxpolzin",
+      "date": "2022-07-22T08:32:28Z",
+      "sha": "ba38e7c776599f2972458b9ecbde56b138a600e7",
+      "message": "Remove node_ prefix. (#163)\n\nCo-authored-by: Max <max@seervision.com>",
+      "files_changed": 3,
+      "additions": 8,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "ooeygui",
+      "date": "2019-12-02T19:03:17Z",
+      "sha": "777d801969ff2577b53d48a73d8425f676b575b6",
+      "message": "Export symbols so plugin can load",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "nuclearsandwich",
+      "date": "2022-05-24T15:53:25Z",
+      "sha": "13eb717f32a9cf70dab3272abc102eac709fa2d8",
+      "message": "Add missing build dependency to package.xml. (#161)\n\nThis missing dependency is causing failures in the binary package\r\nbuilds: https://build.ros2.org/job/Rbin_uJ64__imu_complementary_filter__ubuntu_jammy_amd64__binary/30",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "gmsanchez",
+      "date": "2021-10-10T11:37:18Z",
+      "sha": "d7a52d20e3b701b89cafc85d4eeb76e78e041fbf",
+      "message": "Add launch directory to CMakeLists.txt (#146)",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "taDachs",
+      "date": "2021-02-11T08:43:20Z",
+      "sha": "da23fe7e948a38511266a3b1b4bc4021a9600823",
+      "message": "Port imu_complementary_filter to ROS2 (#138)",
+      "files_changed": 8,
+      "additions": 159,
+      "deletions": 200,
+      "commit_type": "docs"
+    },
+    {
+      "author": "boiscljo",
+      "date": "2020-11-24T14:30:19Z",
+      "sha": "59869004bc7deba308e13ac35f4944a03467e59a",
+      "message": "Change to allow the usage of imu_filter_madgwick as a library (#129)",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "tgreier",
+      "date": "2020-06-18T13:44:05Z",
+      "sha": "835cb4f718d43612b46bb9e89cb2ea1f823236b5",
+      "message": "Madgwick for eloquent (#110)\n\nMadgwick filter ported to ROS2 Eloquent. Complementary and rviz plugin not yet ported.\r\n\r\nCo-authored-by: Martin Günther <martin.guenther@dfki.de>",
+      "files_changed": 20,
+      "additions": 524,
+      "deletions": 445,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mikepurvis",
+      "date": "2014-09-03T12:45:45Z",
+      "sha": "a3fb4931f7153c8eb9652737a65755f43046d439",
+      "message": "Remove setting imu message frame to fixed/odom",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "AlexisTM",
+      "date": "2020-01-13T16:34:33Z",
+      "sha": "1325c3fb58d843302b6fbd173a4eee1af9ce06aa",
+      "message": "Add the option to remove the gravity vector (#101)",
+      "files_changed": 4,
+      "additions": 49,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "seanyen",
+      "date": "2019-07-24T17:43:45Z",
+      "sha": "ae69006ed68c7a269688eee01a23447f2f94378f",
+      "message": "fix install path & boost linkage issues\n\n* Fix install path.\n* Fix more install path & boost path.",
+      "files_changed": 2,
+      "additions": 18,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ccny-ros-pkg",
+      "date": "2012-09-01T16:07:43Z",
+      "sha": "3302caa7b86ac09409f530ef9d03eec80c268f58",
+      "message": "Update README",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "v4hn",
+      "date": "2013-12-18T17:04:03Z",
+      "sha": "57f48c4b7814dfe8f1d11df7c4922fef4bf60986",
+      "message": "install nodelet xml file\n\nOtherwise the nodelet can't be found",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Jackey-Huo",
+      "date": "2018-09-16T08:51:29Z",
+      "sha": "0a1017a2c33fddac5a532fa005ff69fabfa631f9",
+      "message": "[rviz_imu_plugin] print ros_warn and give unit quaternion to ogre to prevent rviz crash (#90)",
+      "files_changed": 4,
+      "additions": 90,
+      "deletions": 11,
+      "commit_type": "code"
+    },
+    {
+      "author": "paulbovbel",
+      "date": "2018-09-07T09:49:38Z",
+      "sha": "3cabc4057bd1bbce85f359eec628e2e0cdb1ceeb",
+      "message": "Fix C++14 builds (#89)",
+      "files_changed": 1,
+      "additions": 27,
+      "deletions": 27,
+      "commit_type": "code"
+    },
+    {
+      "author": "skohlbr",
+      "date": "2018-03-28T15:35:19Z",
+      "sha": "aac5aa68e4b9db197991063028ff32938f17610c",
+      "message": "Add std dev parameter to orientation estimate from filter (#85)\n\nSimilar to #41, but not using dynamic_reconfigure as not implemented for complementary filter",
+      "files_changed": 2,
+      "additions": 18,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "mikaelarguedas",
+      "date": "2017-10-27T08:28:58Z",
+      "sha": "7fbac0dc81a85f83dc50ef2ef424cb611c268375",
+      "message": "update to use non deprecated pluginlib macro (#77)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "c-andy-martin",
+      "date": "2017-05-18T09:21:01Z",
+      "sha": "66f37d0486e14bdd3c0813ab9f913ccf44ee798e",
+      "message": "Add option to display orientation in world frame (#69)\n\nPer REP 145 IMU orientation is in the world frame. Rotating the\norientation data to transform into the sensor frame results in strange\nbehavior, such as double-rotation of orientation on a robot. Provide an\noption to display orientation in the world frame, and enable it by\ndefault. Continue to translate the position of the data to the sensor\nframe.",
+      "files_changed": 2,
+      "additions": 27,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "jasonimercer",
+      "date": "2016-12-13T13:52:56Z",
+      "sha": "6489c7bd388e9cd585c977e47f57c868cac19555",
+      "message": "Fixed lock so it stays in scope until end of method.",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "mistoll",
+      "date": "2015-07-29T06:35:58Z",
+      "sha": "75749e2746699000fd74651c4011c0d2ec41e5a0",
+      "message": "Splitted ImuFilter class into ImuFilter and ImuFilterRos",
+      "files_changed": 8,
+      "additions": 552,
+      "deletions": 444,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Matthias Nieuwenhuisen",
+      "date": "2016-01-06T17:42:45Z",
+      "sha": "d5f56333adaab120ba62269a3fbf9123e81dd787",
+      "message": "Removed main function from shared library",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "robertogl",
+      "date": "2015-10-02T18:08:06Z",
+      "sha": "339e59c3c315edc78eb78deadbdb3986ac368564",
+      "message": "new complementary filter",
+      "files_changed": 8,
+      "additions": 1237,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Michael Görner",
+      "date": "2015-10-05T19:25:25Z",
+      "sha": "8c8b413cc6c5144ce64e50ef4a548d18141d4519",
+      "message": "complementary_filter: add cmake_modules dependency\n\nthis package provides FindEigen.cmake and without it\nfind_package(Eigen) right below does not work everywhere.",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Paul Bovbel",
+      "date": "2015-01-26T20:05:25Z",
+      "sha": "624ef16d7457f7df6c2a6319bf40067ca744b64c",
+      "message": "Switch to smart pointer",
+      "files_changed": 2,
+      "additions": 5,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "garaemon",
+      "date": "2015-01-24T09:22:20Z",
+      "sha": "6141f69236c0b933306269696b9c9f9d93826366",
+      "message": "Add ~reverse_tf parameter for the robots which does not have IMU on root-link",
+      "files_changed": 2,
+      "additions": 17,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "Shokoofeh Pourmehr",
+      "date": "2014-12-09T15:20:46Z",
+      "sha": "a10fb0b20b608b8fdf48184c8ab2576b05756c27",
+      "message": "Initializie yaw from calibrated magnetometer data\n\n* Add magnetometer biases (mag_bias/x and mag_bias/y) for hard-iron compensation.\n* Initializie yaw orientation from magnetometer reading.\n* Add imu/rpy/raw and imu/rpy/filtered as debug topics. imu/rpy/raw can be used for computing magnetometer biases. imu/rpy/filtered topic is for user readability only.",
+      "files_changed": 2,
+      "additions": 93,
+      "deletions": 15,
+      "commit_type": "code"
+    },
+    {
+      "author": "boris-il-forte",
+      "date": "2014-08-05T10:31:03Z",
+      "sha": "8d0e56a6e6d0caf24c0695512265b81d49e719cc",
+      "message": "Update CMakeLists.txt\n\n- added missing installation rules for plugin\r\n- fix imu plugin that doesn't work after catkin_make --install --instal-space /my/install/space",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "idryanov",
+      "date": "2012-06-19T02:49:45Z",
+      "sha": "2438460e2db380607dc561f48e808c06232d54e9",
+      "message": "initial commit",
+      "files_changed": 28,
+      "additions": 1966,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "fevb",
+      "date": "2013-11-10T15:24:52Z",
+      "sha": "7a987d8a356f6cb0b6a568552b08386f4b63f371",
+      "message": "catkinization of imu_tools metapackage",
+      "files_changed": 14,
+      "additions": 142,
+      "deletions": 100,
+      "commit_type": "docs"
+    },
+    {
+      "author": "TUG-DESTOP",
+      "date": "2013-07-02T12:08:51Z",
+      "sha": "54a95bccf22595c3f3fb0f9948c998ff2743ee95",
+      "message": "set \"zeta\" as a parameter for dynamic reconfigure in the .cfg file",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "lorenzoriano",
+      "date": "2013-06-22T00:27:59Z",
+      "sha": "d8a3e32be25ac3777174869a0cfb6f4157cc3835",
+      "message": "first fixes",
+      "files_changed": 2,
+      "additions": 35,
+      "deletions": 29,
+      "commit_type": "code"
+    },
+    {
+      "author": "sameerparekh",
+      "date": "2012-10-19T17:25:40Z",
+      "sha": "94728b7cb365b7a28f9f098a378e1c764e37ac6e",
+      "message": "add a tf broadcaster with the orientation",
+      "files_changed": 2,
+      "additions": 20,
+      "deletions": 0,
+      "commit_type": "code"
+    }
+  ]
+}

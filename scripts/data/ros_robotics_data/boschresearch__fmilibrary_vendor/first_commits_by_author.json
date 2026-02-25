@@ -1,0 +1,31 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T14:42:27Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "boschresearch",
+    "repo": "fmilibrary_vendor"
+  },
+  "data": [
+    {
+      "author": "ralph-lange",
+      "date": "2019-04-16T19:19:48Z",
+      "sha": "9ad10c66c6edc496c347e051e91b5c47e6bea91f",
+      "message": "Added initial README.md.\n\nSigned-off-by: Ralph Lange (CR/AEE1) <ralph.lange@de.bosch.com>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "cottsay",
+      "date": "2021-03-26T02:33:11Z",
+      "sha": "6c14c5ab49ae945aedde808999c9476060ff892a",
+      "message": "Clean up external project for packaging\n\nA quirk of the way CMake handles external projects that use git is that\neach time the target is evaluated, an update step is performed to make\nsure the sources are fresh. Unfortunately, this causes the external\nproject's build and install steps to be re-evaluated as well, even if\nthe git update didn't actually change anything.\n\nWhen this package is processed, it is first built, and then installed\nwith a separate invocation by the build tool. Because of the quirk, the\nexternal project is re-built during the installation phase. In most\ncircumstances, the binaries built in the prior invocation are deemed\nadequate and no re-compilation is performed.\n\nUnfortunately, this wreaks havoc when the installation invocation uses\nDESTDIR, which is the case for the debian and RPM builds on the\nbuildfarm. The DESTDIR environment variable affects the external\nproject's installation into the staging directory, and you end up with a\nbunch of extra files getting installed by the debian into `/tmp`, which\nis certainly not right.\n\nWhat we've been doing in the other vendor packages in ROS 2 is\nsuppressing the update step so that CMake doesn't attempt to re-build\nthe external project during the installation phase at all. This has the\nside effect that changing the GIT_TAG doesn't cause the external project\nto invoke git to pull a new version of the package, so to work around\nthat, we've been embedding the version number in the name of the\nexternal project, which will obviously result in a new build when the\ntarget git tag changes.",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 3,
+      "commit_type": "docs"
+    }
+  ]
+}

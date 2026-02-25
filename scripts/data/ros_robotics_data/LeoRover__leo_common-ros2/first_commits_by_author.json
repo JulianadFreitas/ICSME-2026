@@ -1,0 +1,61 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T05:50:32Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "LeoRover",
+    "repo": "leo_common-ros2"
+  },
+  "data": [
+    {
+      "author": "bjsowa",
+      "date": "2019-07-26T19:28:05Z",
+      "sha": "0fdd748807f9a10133699174d14ef561d007e8b8",
+      "message": "Initial port for ROS2",
+      "files_changed": 23,
+      "additions": 7698,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Bitterisland6",
+      "date": "2022-08-24T15:29:02Z",
+      "sha": "e790cdad0c5238aca9b1e19de19af77d77f67fc6",
+      "message": "Add service definition for setting IMU calibration (#2)",
+      "files_changed": 2,
+      "additions": 6,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jasiex01",
+      "date": "2023-10-18T11:10:59Z",
+      "sha": "95f19f3e6539e0346e3fc87a271938c7aa13ab9b",
+      "message": "Adjust description package to work in new Gazebo simulation (#5)\n\n* Add enviormental variable hooks\r\n\r\n* Adjust simulation xacro for new simulation\r\n\r\n* Macros.xacro cleanup\r\n\r\n* Addd surface element to wheels\r\n\r\n* Add custom topic name for joint state plugin\r\n\r\n* Fix gazebo launch warnings\r\n\r\n* Change bullet parameters\r\n\r\n* Update diff system plugin name\r\n\r\n* Update enviormental hooks\r\n\r\n* Remove joint prefix\r\n\r\n* Add imu system plugin\r\n\r\n* Bring back joint_prefix param\r\n\r\n* Add joints prefix param to all joints\r\n\r\n* Remove unnecessary link prefixes",
+      "files_changed": 3,
+      "additions": 195,
+      "deletions": 141,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mergify[bot]",
+      "date": "2023-11-15T13:05:40Z",
+      "sha": "ec35c46b1bb5d3a0586c11865e980753830e06bb",
+      "message": "Change wheel ode friction params (#8) (#9)\n\n(cherry picked from commit c58dd8914bec18f3301540b5b32e4c574340b251)\r\n\r\nCo-authored-by: Jan Hernas <40989249+jasiex01@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 20,
+      "deletions": 12,
+      "commit_type": "ci"
+    },
+    {
+      "author": "cottsay",
+      "date": "2022-05-25T23:35:20Z",
+      "sha": "48ba1f58a4780ac8da12bba1acace88a5385004a",
+      "message": "Remove architecture_independent from leo_msgs (#1)\n\nIn ROS 1, message packages did not create any binaries and were\r\ntherefore architecture-independent packages.\r\n\r\nIn ROS 2, static typesupport results in library creation whenever\r\nmessages are generated, which are not architecture-independent.",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 1,
+      "commit_type": "config"
+    }
+  ]
+}

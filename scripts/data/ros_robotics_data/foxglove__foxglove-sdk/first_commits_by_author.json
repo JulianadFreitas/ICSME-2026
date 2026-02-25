@@ -1,0 +1,441 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T08:59:26Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "foxglove",
+    "repo": "foxglove-sdk"
+  },
+  "data": [
+    {
+      "author": "Muon",
+      "date": "2026-01-07T00:32:29Z",
+      "sha": "f81f449aab2b6d1cbd0218332c5e6951f7aeab1f",
+      "message": "[python] Support opening MCAP writers on file-like objects (#798)\n\n### Changelog\n* Python: extend `open_mcap()` to also accept file-like objects. \n\n### Docs\nNone\n\n### Description\n\nThis PR extends `open_mcap()` to accept file-like objects in addition to\nfile paths, enabling MCAP recording to any Python object implementing\n`write()`, `seek()`, and `flush()`. This allows using in-memory buffers,\nnetwork streams, or similar as MCAP writing sinks.\n\nCloses: FIRE-248\n\n<!-- CURSOR_SUMMARY -->\n---\n\n> [!NOTE]\n> Adds file-like object support for MCAP writing in Python.\n> \n> - Extends `open_mcap(path, ...)` to accept `str | Path | BinaryIO`;\nupdates stubs and docstrings in\n`python/foxglove/_foxglove_py/__init__.pyi`\n> - Implements `PyFileLikeWriter` and `WriterInner` in Rust\n(`src/mcap.rs`) to adapt Python objects with `write/seek/flush` to\n`Write + Seek`; updates `PyMcapWriter` to use `BufWriter<WriterInner>`\n> - Updates `open_mcap` in `src/lib.rs` to handle either filesystem\npaths (with `allow_overwrite`) or file-like objects (ignoring overwrite)\n> - Adds tests in `python/foxglove/tests/test_mcap.py` for writing to\n`BytesIO`, validating MCAP magic bytes, and reading back via\n`mcap.reader`\n> \n> <sup>Written by [Cursor\nBugbot](https://cursor.com/dashboard?tab=bugbot) for commit\n1e7f13b31cef6989b20283fbf3e2a4499d9898cc. This will update automatically\non new commits. Configure\n[here](https://cursor.com/dashboard?tab=bugbot).</sup>\n<!-- /CURSOR_SUMMARY -->",
+      "files_changed": 4,
+      "additions": 151,
+      "deletions": 14,
+      "commit_type": "test"
+    },
+    {
+      "author": "eloff",
+      "date": "2025-02-07T18:55:16Z",
+      "sha": "62680feeb17e4ff8fccfe2a66754fff1d2739861",
+      "message": "Core implement ws server listener interface for subs and adverts (#189)\n\nAdd new callbacks to ServerListener:\r\n\r\n```\r\nfn on_subscribe(&self, _channel_id: ChannelId) {}\r\nfn on_unsubscribe(&self, _channel_id: ChannelId) {}\r\nfn on_client_advertise(&self, _channel: &ClientChannel) {}\r\nfn on_client_unadvertise(&self, _channel_id: ClientChannelId) {}\r\n```\r\n\r\nThis mirrors how the callbacks are defined in the [Python\r\nimplementation](https://github.com/foxglove/ws-protocol/blob/main/python/src/foxglove_websocket/server/__init__.py#L508),\r\nand they function in a similar way (e.g. not firing for duplicate or\r\nerroneous requests)\r\n\r\nI added RecordingServerListener to testutil to allow more easily testing\r\nServerListener.\r\n\r\nI modified existing tests to verify these callbacks are called at the\r\nappropriate times with the expected arguments, and not called for\r\nduplicate requests.",
+      "files_changed": 11,
+      "additions": 525,
+      "deletions": 130,
+      "commit_type": "config"
+    },
+    {
+      "author": "dave-foxglove",
+      "date": "2026-02-19T17:25:02Z",
+      "sha": "1d0ce44077799615eedfe09e7cdb41dbf4b073a6",
+      "message": "Rename schemas module to messages in Rust SDK (#893)\n\n## Description\n- Renames `foxglove::schemas` to `foxglove::messages` throughout the\nRust SDK\n- Adds deprecated `foxglove::schemas` re-export for backward\ncompatibility\n- Updates codegen templates (`generateSdkRustCTypes.ts`,\n`foxglove_proto_gen`) to emit `messages` paths\n- Updates all internal imports, examples, and C FFI bindings\n\nThe `schemas` module contained message type definitions (e.g., `Log`,\n`CompressedImage`), not schema format descriptors. Renaming to\n`messages` aligns the module name with its contents. The `Schema` struct\nand `get_schema()` methods are unchanged.\n\n~44 of the 91 files are pure renames (binary `.bin` data files,\n`schemas_wkt` directories) with no content changes. The remaining ~25\nare one-line import swaps.\n\n## Changelog\n\nAdding \"messages\" as an alias of \"schemas\" in the Rust API with the long\nterm goal of removing the \"schemas\" label.\n\n## Docs\n\nFollow-up:\nhttps://linear.app/foxglove/issue/FLE-236/update-docs-to-rename-foxglove-schemas-to-messages\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)",
+      "files_changed": 90,
+      "additions": 506,
+      "deletions": 369,
+      "commit_type": "code"
+    },
+    {
+      "author": "gasmith",
+      "date": "2025-02-04T00:49:36Z",
+      "sha": "94f1cccfed0bae15cd3d6a21a7d9649d060833ef",
+      "message": "SDK docs (#172)\n\nI made only small changes to existing wording, because it was well done.\r\nI added docs for types missing docs, hid types that are public for\r\ntechnical reasons, and renamed TypedMessage trait to Encode after\r\ndiscussing with Greg.\r\n\r\nThis doesn't fix the problem of having no readme. I'm not sure if we\r\nshould repeat the crate docs, or just part of them, or put something\r\nelse there.\r\n\r\n---------\r\n\r\nCo-authored-by: Eloff <dan.eloff@gmail.com>",
+      "files_changed": 17,
+      "additions": 355,
+      "deletions": 73,
+      "commit_type": "docs"
+    },
+    {
+      "author": "foxglovebot",
+      "date": "2025-02-07T15:19:59Z",
+      "sha": "4cd0dd9e12650995fbd71cf20554dc40fd67fb3c",
+      "message": "Release SDK version v0.1.2",
+      "files_changed": 3,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "config"
+    },
+    {
+      "author": "indirectlylit",
+      "date": "2026-02-11T16:52:04Z",
+      "sha": "5cb032f4e5f0d6792fad3b4ae7ba86474017a4cb",
+      "message": "introduce optional fields and mark LocationFix 'color' as optional (#865)\n\n### Changelog\n\nMake `color` field optional in `LocationFix` messages\n\n### Docs\n\nupdated in PR\n\n### Description\n\nIn https://github.com/foxglove/foxglove-sdk/pull/556 we added a new\n`color` field to `LocationFix` messages. However, introducing this meant\nthat users could not produce messages which rely on Foxglove's automatic\ncolor assignment logic.\n\nThis PR adds a new `optional` attribute to the `FoxgloveMessageField`\ntype and applies this to the `color` field.\n\nFor ROS, we continue requiring users to to provide those values. This is\ndocumented in the schemas README",
+      "files_changed": 27,
+      "additions": 286,
+      "deletions": 26,
+      "commit_type": "docs"
+    },
+    {
+      "author": "benfoxall",
+      "date": "2026-02-23T16:48:14Z",
+      "sha": "2ebf3399f09c180008da23fb2d5f6bc877b0e1f1",
+      "message": "Update documentation link for Python SDK (#915)\n\n### Changelog\n\nNone\n\n### Docs\n\nNone\n\n### Description\n\nThe current link to the SDK docs is broken. I found a `pages.dev` url\nwhich _seems_ like it's what I'm looking for.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "surbina",
+      "date": "2025-10-27T14:36:15Z",
+      "sha": "dce1da49a8e2c7f11ba1f394fa7e4e5a1b826b76",
+      "message": "notebook: set up jupyter notebook widget (#663)\n\n### Changelog\n<!-- Write a one-sentence summary of the user-impacting change (API,\nUI/UX, performance, etc) that could appear in a changelog. Write \"None\"\nif there is no user-facing change -->\nAdd Python notebook integrations\n\n### Docs\n\n<!-- Link to a Docs PR, tracking ticket in Linear, OR write \"None\" if no\ndocumentation changes are needed. -->\nhttps://github.com/foxglove/docs/pull/1022\n\n### Description\n\nThis PR adds the notebook integration for Python, particularly:\n- Adds the notebook integration using Anywidget\n- Uses @foxglove/embed to show Foxglove in a notebook\n- Provides an API to load a layout from a file\n- Provides an API to visualize messages from buffer associated with a\nContext\n- Add build script and update CI jobs where necessary\n- Adds API docs\n\nThe integration is shipped as an extra dependency of the foxglove-sdk\npackage. To install, run the following command:\n\n```bash\npip install foxglove-sdk[notebook]\n```\n\n\nhttps://drive.google.com/file/d/1BSLsBt6WSsnnj3a6G-hWsivNr8vzNZnp/view?usp=sharing\n\n<!--Log-view workflow:\n\nhttps://drive.google.com/file/d/1n45DwcTnxdjvStrMAd_93zLc-2KFC4kI/view?usp=sharing\n\nLog-reload workflow:\n\nhttps://drive.google.com/file/d/1zEcR7xSxrQ2e7ODgigkBYz-d9gYl_yT_/view?usp=sharing-->\n\n<!--With global context:-->\n\n<!--img width=\"687\" height=\"797\" alt=\"Screenshot 2025-09-23 at 17 38 31\"\nsrc=\"https://github.com/user-attachments/assets/82401306-f635-45bb-8de5-81fc40095e79\"\n/-->\n<!--img width=\"539\" height=\"791\" alt=\"Screenshot 2025-10-01 at 18 58 15\"\nsrc=\"https://github.com/user-attachments/assets/85b39f4c-a5fe-4b13-bd65-b8b52feb328b\"\n/-->\n<!--img width=\"534\" height=\"793\" alt=\"Screenshot 2025-10-02 at 17 36 59\"\nsrc=\"https://github.com/user-attachments/assets/a6133698-5c8f-45e2-a3be-84e449b2c819\"\n/-->\n<!--img width=\"534\" height=\"808\" alt=\"Screenshot 2025-10-07 at 10 41 27\"\nsrc=\"https://github.com/user-attachments/assets/6e215287-8547-47f9-8079-b414b9c0ddd7\"\n/-->\n\n\n\n<!--With an explicit context:-->\n<!--img width=\"540\" height=\"851\" alt=\"Screenshot 2025-10-01 at 18 59 36\"\nsrc=\"https://github.com/user-attachments/assets/7377d549-dad2-4a9d-a2cb-6757b22a984f\"\n/-->\n<!--img width=\"540\" height=\"850\" alt=\"Screenshot 2025-10-02 at 17 36 11\"\nsrc=\"https://github.com/user-attachments/assets/4c62232f-f6ca-49d5-968f-e116463f5054\"\n/-->\n<!--img width=\"547\" height=\"866\" alt=\"Screenshot 2025-10-07 at 10 44 30\"\nsrc=\"https://github.com/user-attachments/assets/3e1ec0b5-2623-47c4-90e4-cd74f5d74cf4\"\n/-->\n\n### How to test?\n\n1. Clone this repo\n1. Follow instructions\n[here](https://github.com/foxglove/foxglove-sdk/blob/sebastian/ert-577-set-up-widget-package/python/foxglove-sdk/CONTRIBUTING.md)\nto setup the repo for local development\n1. Activate the virtual environment created by poetry\n    ```bash\n    eval $(poetry env activate)\n    ```\n1. Install Jupyter\n    ```bash\n    pip install jupyterlab\n    ```\n1. Build and install the sdk locally, including the notebook extra\ndependencies\n    ```bash\n    pip install -e \".[notebook]\"\n    ```\n1. Launch Jupyter\n    ```bash\n    jupyter lab\n    ```\n\nExample notebooks:\n1. Log-view flow:\nhttps://drive.google.com/file/d/1iBURbNQjiOtXc8Onk1vjhTwdd8q2VATq/view?usp=drive_link\n2. Log-reload flow:\nhttps://drive.google.com/file/d/12Ftbu-qpXIdwSJln4_Dy7FefcoJjctO1/view?usp=drive_link\n\n<!-- If necessary, link relevant Linear or Github issues. Use `Fixes:\nfoxglove/repo#1234` to auto-close the Github issue or Fixes: FG-### for\nLinear isses. -->\n\n---------\n\nCo-authored-by: Greg Smith <gasmith@foxglove.dev>",
+      "files_changed": 22,
+      "additions": 1398,
+      "deletions": 67,
+      "commit_type": "ci"
+    },
+    {
+      "author": "achim-k",
+      "date": "2023-06-28T18:28:52Z",
+      "sha": "4cea813314a802cd769b0edcb7f99ac26eb921d2",
+      "message": "Do not normalize time/duration types in generateRosMsgDefinition (#115)\n\n### Public-Facing Changes\r\n\r\nDo not normalize `time` & `duration` types in `generateRosMsgDefinition`\r\n\r\n### Description\r\nChanges `generateRosMsgDefinition` to not normalize `time` & `duration`\r\nfields to their ROS2 equivalents (e.g. `builtin_interfaces/Time`). This\r\nis now done in `generateRosMsg` as `generateRosMsgDefinition` should\r\noutput a message definition which is compliant with\r\n[@foxglove/message-definition](https://github.com/foxglove/message-definition)\r\nwhere e.g. `builtin_interfaces/Time` does not exist.\r\n\r\nSee\r\nhttps://github.com/foxglove/rosmsg2-serialization/pull/17#issuecomment-1608102161",
+      "files_changed": 3,
+      "additions": 48,
+      "deletions": 25,
+      "commit_type": "docs"
+    },
+    {
+      "author": "clalancette",
+      "date": "2025-09-25T16:52:52Z",
+      "sha": "4c7b2c299998d42cfd8b67b51989ca69d2bca206",
+      "message": "Make sure to add rustfmt and clippy to the setup-rust-toolchain action. (#671)\n\n### Changelog\n\nNone.\n\n### Docs\n\nNone.\n\n### Description\n\nIn recent pull requests, the CI/rust action always seemed to be failing\nwith `error: 'cargo-fmt' is not installed for the toolchain\n'stable-x86_64-unknown-linux-gnu'.`. So we make sure to always install\nit.\n\nThis should make 'cargo fmt' and 'cargo clippy' always work.\n\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "jtbandes",
+      "date": "2021-11-30T22:39:26Z",
+      "sha": "599255da11fb2809e8d3980dc1d1293950acf492",
+      "message": "Add script to generate .proto files from ROS common msgs (#2)",
+      "files_changed": 122,
+      "additions": 1975,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "ericmlujan",
+      "date": "2025-06-25T18:44:30Z",
+      "sha": "711c80d8c8fb6b8e53d3108bf630c063d1d48993",
+      "message": "Introduce strict build and configure CI to use it (#509)\n\n### Changelog\nNone\n\n### Docs\nNone\n\n### Description\nEnable a set of Clang and MSVC compiler warnings and set them to fail\nbuilds if the `STRICT` compilation flag is set. This flag is set `true`\nby default in containerized builds, including the ones that run as a\npre-merge check in GitHub Actions.\n\nTo disable these warnings, a user can run `make STRICT=false` from the\n`cpp/` directory.\n\nThis PR also contains changes required to address the warnings in the\nexisting SDK codebase.\n\n<!-- In addition to unit tests, describe any manual testing you did to\nvalidate this change. -->\n\n<table><tr><th>Before</th><th>After</th></tr><tr><td>\n\nBuilds fail if compiler warnings are enabled and escalated to errors\n\n</td><td>\n\nBuilds pass with compiler warnings enabled\n\n</td></tr></table>\n\nFixes: FG-12163\n\n<!-- If necessary, link relevant Linear or Github issues. Use `Fixes:\nfoxglove/repo#1234` to auto-close the Github issue or Fixes: FG-### for\nLinear isses. -->",
+      "files_changed": 21,
+      "additions": 175,
+      "deletions": 119,
+      "commit_type": "ci"
+    },
+    {
+      "author": "amacneil",
+      "date": "2022-07-13T02:39:12Z",
+      "sha": "e17952aeee7dc41315069da3b1069a4e6ec0f370",
+      "message": "Consolidate Transform and FrameTransform (#46)",
+      "files_changed": 14,
+      "additions": 79,
+      "deletions": 229,
+      "commit_type": "config"
+    },
+    {
+      "author": "dependabot[bot]",
+      "date": "2022-06-07T23:18:55Z",
+      "sha": "5be5fa4e52f32b985e6b53c11b1300f1355e71d4",
+      "message": "Bump protobufjs from 6.11.2 to 6.11.3 (#36)\n\nBumps [protobufjs](https://github.com/protobufjs/protobuf.js) from 6.11.2 to 6.11.3.\r\n- [Release notes](https://github.com/protobufjs/protobuf.js/releases)\r\n- [Changelog](https://github.com/protobufjs/protobuf.js/blob/v6.11.3/CHANGELOG.md)\r\n- [Commits](https://github.com/protobufjs/protobuf.js/compare/v6.11.2...v6.11.3)\r\n\r\n---\r\nupdated-dependencies:\r\n- dependency-name: protobufjs\r\n  dependency-type: direct:development\r\n...\r\n\r\nSigned-off-by: dependabot[bot] <support@github.com>\r\n\r\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 14,
+      "commit_type": "ci"
+    },
+    {
+      "author": "ritvik-saronic",
+      "date": "2026-02-04T23:20:56Z",
+      "sha": "befc6cbe208638fb986a15474d5c0015d5399248",
+      "message": "fix(encode): support arrays and label Option<T> as optional (#855)\n\n### Changelog\n- Added derive(Encode) support for arrays.\n- Marked Option<T> types as optional.\n\n### Docs\n\nNone\n\n### Description\n\n- Added encoding for arrays following the same format as Vec\n- When an Option<T> is None, currently the field is not written at all\nbut the field is still marked as Required. Changed it to optional.\n\n---------\n\nCo-authored-by: Greg Smith <gasmith@foxglove.dev>",
+      "files_changed": 4,
+      "additions": 358,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "defunctzombie",
+      "date": "2021-11-16T19:11:13Z",
+      "sha": "3f41e13fc9f89c4c9243eb19559ae7519abf5171",
+      "message": "Make it so",
+      "files_changed": 1,
+      "additions": 11,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "joe-saronic",
+      "date": "2026-01-31T00:14:34Z",
+      "sha": "68f121135420791fde9dd4f1b6323943069836ee",
+      "message": "Added schemars-chrono feature (#851)\n\n### Changelog\n\nA new `schemars-chrono` Cargo feature enables the `chrono04` feature on\nthe underlying `schemars` dependency so that we can have automatic\nschema generation for types including `chrono` timestamps.\n\n### Docs\n\nNone\n\n### Description\n\nBuilding with `schemars` feature is nice, but sometimes you need\n`chrono` support too. Enabling `chrono` feature does not enable\n`chorno04` on the underlying `schemars` dependency, so you miss out on\nsome possibilities. The new feature ensures that you can generate\nschemas with `chrono` date-time types.\n\n---------\n\nCo-authored-by: Jeff Zellner <jeffz@eml.cc>",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "aneuwald",
+      "date": "2025-11-03T17:52:21Z",
+      "sha": "a39a0430e8b7bec78f32c618e6f4f3aede50a3ed",
+      "message": "Add tangential distortion parameters from the full kb model (Fisheye62DistortionModel) (#724)\n\n### Changelog\nAdd `fisheye62` distortion model to `CameraCalibration` schema docs.\n\n### Docs\n.\n\n### Description\n\nApp implementation PR: https://github.com/foxglove/app/pull/10895\n\nThis change updates the `CameraCalibration` schema to add documentation\nfor the newly supported `fisheye62` distortion model.\n\nERT-1009",
+      "files_changed": 18,
+      "additions": 24,
+      "deletions": 21,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ndmmdn",
+      "date": "2026-01-22T18:25:55Z",
+      "sha": "49c7f940df080026925d8e5ef5d3c9fec96aba6c",
+      "message": "Add Client Count Topic to Foxglove_bridge (#692)\n\n### Changelog\n<!-- Write a one-sentence summary of the user-impacting change (API,\nUI/UX, performance, etc) that could appear in a changelog. Write \"None\"\nif there is no user-facing change -->\n- Foxglove_bridge now publishes the number of foxglove clients connected\nto it under `/foxglove_bridge/client_count`\n### Docs\n\n<!-- Link to a Docs PR, tracking ticket in Linear, OR write \"None\" if no\ndocumentation changes are needed. -->\n- I added a mention of the topic to the foxglove_bridge\n[readme](https://github.com/ndmmdn/foxglove-sdk/blob/feat-client-count/ros/src/foxglove_bridge/README.md)\nand that it requires a parameter to be set.\n### Description\n\n<!-- Describe the problem, what has changed, and motivation behind those\nchanges. Pretend you are advocating for this change and the reader is\nskeptical. -->\n- There are several examples where it is useful to no if a client is\nconnected to the foxglove bridge, for example to pause other bandwidth\nintensive processes. Additionally, similar to the `who` command in bash,\nit can also be useful to know if there are multiple people connected to\nthe same robot. Both of these cases can now be detected via the new\nclient count topic.\n<!-- In addition to unit tests, describe any manual testing you did to\nvalidate this change. -->\n\nthere exists the\n[test_callbacks](https://github.com/ndmmdn/foxglove-sdk/blob/feat-client-count/cpp/test_callbacks.cpp)\ntest to allow testing on the c++ server level.\n\nAdditionally, the new functionality was tested by build and running the\nfoxglove_bridge as described in the readme. In a separate terminal, the\n`/foxglove_bridge/client_count` topic was subscribed to. Then using\nseveral foxglove instances on the same laptop, connections and\ndisconnections were made to verify the client count is updated\ncorrectly.\n\n<table><tr><th>Before</th><th>After</th></tr><tr><td>\n\n<!--before content goes here-->\n\n</td><td>\n\n<!--after content goes here-->\n\n</td></tr></table>\n\n<!-- If necessary, link relevant Linear or Github issues. Use `Fixes:\nfoxglove/repo#1234` to auto-close the Github issue or Fixes: FG-### for\nLinear isses. -->\nThis is a refactor/adaptation of [this foxglove_bridge\nPR](https://github.com/foxglove/ros-foxglove-bridge/pull/376)\n\n---------\n\nCo-authored-by: Eric Lujan <eric@lujan.io>\nCo-authored-by: Eric Lujan <eric@foxglove.dev>",
+      "files_changed": 16,
+      "additions": 239,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Blackjack200",
+      "date": "2026-01-21T19:30:28Z",
+      "sha": "3dfaa33c73988b44413e4d5ebda548fc2b7a37f0",
+      "message": "C++: Add initial session_id support via WebSocketServerOptions (#822)\n\n### Changelog\n\nC++ SDK: Add optional `session_id` to WebSocketServerOptions for setting\nan initial session ID when starting the server. Previously, `session_id`\ncould only be set after server start via `clearSession()`.\n\n### Docs\n\nNone. This change adds an optional field that matches the existing\nbehavior in the Rust and Python SDKs, which already document this\nparameter.\n\n### Description\n\n#### Problem\n\nAs reported in https://github.com/orgs/foxglove/discussions/1209, the\nC++ SDK lacked the ability to set an initial `session_id` when starting\na server. This was inconsistent with the Rust and Python SDKs, which\nboth support setting `session_id` via server options.\n\n#### Change\n\nAdded `session_id` field to WebSocketServerOptions in the C++ SDK,\nallowing users to specify an initial session ID when creating a server:\n\n```cpp\nfoxglove::WebSocketServerOptions options;\noptions.context = context;\noptions.name = \"my-server\";\noptions.session_id = \"my-custom-session-id\";  // Now supported!\nauto server = foxglove::WebSocketServer::create(std::move(options));\n```\n\nThis also required adding the `session_id` parameter to the C API\n(foxglove_server_options struct) and its implementation, so the C++\nlayer can pass the value through to the underlying Rust SDK.\n\n#### Testing\n\n- Added new test case \"Initial session id\" in\n`cpp/foxglove/tests/test_server.cpp` that verifies the session ID is\ncorrectly set in the initial serverInfo message\n\nFixes: FLE-190",
+      "files_changed": 5,
+      "additions": 74,
+      "deletions": 0,
+      "commit_type": "test"
+    },
+    {
+      "author": "hillna",
+      "date": "2025-11-18T18:35:21Z",
+      "sha": "5667ea91e98b8c013999461ea9d5496f237513b8",
+      "message": "deps: bump js-yaml to 3.14.2 and 4.1.1 (#766)\n\n### Changelog\nNone\n\n### Docs\nNone\n\n### Description\nBump `js-yaml` to resolve\nhttps://github.com/foxglove/foxglove-sdk/security/dependabot/44 and\nhttps://github.com/foxglove/foxglove-sdk/security/dependabot/45",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "nidanin",
+      "date": "2025-04-18T15:42:59Z",
+      "sha": "7767f4855b75ece70f916db983d63c73db5b59fe",
+      "message": "Fix generation of data fields in python class generation. (#375)\n\nThe code to generate python classes was generating fields with the\nhardcoded name of `data` for the field instead of the field name. This\ndidn't get flagged as an error because we happen to use the name `data`\nfor this kind of field in our existing schema.\n\nCo-authored-by: Miles Egan <miles@foxglove.dev>",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "bennetthardwick",
+      "date": "2025-07-08T21:33:12Z",
+      "sha": "f120ee73bbc4adceda2c007191d40d7bd1f34d01",
+      "message": "Fix data loader seek from end (#529)\n\n### Changelog\n<!-- Write a one-sentence summary of the user-impacting change (API,\nUI/UX, performance, etc) that could appear in a changelog. Write \"None\"\nif there is no user-facing change -->\n\nNone\n\n### Docs\n\n<!-- Link to a Docs PR, tracking ticket in Linear, OR write \"None\" if no\ndocumentation changes are needed. -->\n\nNone\n\n### Description\n\nThe conversion to `SeekFrom::End` was around the wrong way. This came up\nwhen trying to build an MCAP loader that seeks from the end of the file\nto read summary info.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "sanderpick",
+      "date": "2025-12-15T19:22:08Z",
+      "sha": "4b7c34fbb179d3514c7728d3236a6f1703a38efe",
+      "message": "MCAP attachments (#791)\n\n### Changelog\n\nAdd `McapWriterHandle::attach()` method and `McapAttachment` type to\nenable writing attachments to MCAP files via the Rust SDK.\n\n### Docs\n\nIs there a docs repo?\n\n### Description\n\nThis PR exposes the mcap crate's attachment functionality through the\nfoxglove SDK, allowing users to store arbitrary binary data\n(configuration files, calibration data, images, etc.) alongside messages\nin MCAP recordings.\n\n#### Changes\n- Added `McapAttachment` type re-export from the mcap crate\n- Added `McapSink::attach()` internal implementation\n- Added `McapWriterHandle::attach()` public API with documentation and\nexample\n- Added comprehensive tests for attachment functionality\n\n#### Usage example\n```rust\nuse std::borrow::Cow;\nuse foxglove::{McapWriter, McapAttachment};\n\nlet mcap = McapWriter::new()\n    .create_new_buffered_file(\"test.mcap\")\n    .expect(\"create failed\");\n\nmcap.attach(&McapAttachment {\n    log_time: 0,\n    create_time: 0,\n    name: \"config.json\".to_string(),\n    media_type: \"application/json\".to_string(),\n    data: Cow::Borrowed(br#\"{\"setting\": true}\"#),\n}).expect(\"attach failed\");\n\nmcap.close().expect(\"close failed\");\n```\n\n#### Testing\nAdded unit tests for basic attachment, multiple attachments, and error\nhandling when attaching after close. All 212 tests pass with `--features\nunstable`. Manual testing works:\n```\n$ mcap info test.mcap \nlibrary:   foxglove-sdk-rust/v0.0.0                                    \nprofile:                                                               \nmessages:  3204                                                        \nduration:  1m22.913993797s                                             \nstart:     2025-12-10T13:34:08.054447689-07:00 (1765398848.054447689)  \nend:       2025-12-10T13:35:30.968441486-07:00 (1765398930.968441486)  \ncompression:\n\tlz4: [732/732 chunks] [1.36 GiB/968.95 MiB (30.44%)] [11.69 MiB/sec] \nchunks:\n\tmax uncompressed size: 1.91 MiB\n\tmax compressed size: 1.34 MiB\n\toverlaps: no\nchannels:\n\t[redacted]\nchannels: 5\nattachments: 1\nmetadata: 1\n```\n\n<!-- CURSOR_SUMMARY -->\n---\n\n> [!NOTE]\n> Adds support for writing MCAP attachments via\n`McapWriterHandle::attach` and re-exports `McapAttachment`, with sink\nimplementation and tests.\n> \n> - **Public API**\n> - Re-export `McapAttachment` from `mcap` in `rust/foxglove/src/lib.rs`\nand `rust/foxglove/src/mcap_writer.rs`.\n> - Add `McapWriterHandle::attach(&McapAttachment)` with docs and\nexample.\n> - **MCAP Sink**\n> - Implement `McapSink::attach(&mcap::Attachment)` to write\nattachments.\n> - **Tests**\n> - Add unit tests for attachments: basic write, multiple attachments,\nand error after close in `rust/foxglove/src/mcap_writer/mcap_sink.rs`\ntests.\n> \n> <sup>Written by [Cursor\nBugbot](https://cursor.com/dashboard?tab=bugbot) for commit\n2adb09da41a5ef5b4206143fef54661d9474f363. This will update automatically\non new commits. Configure\n[here](https://cursor.com/dashboard?tab=bugbot).</sup>\n<!-- /CURSOR_SUMMARY -->",
+      "files_changed": 3,
+      "additions": 184,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jesse-foxglove",
+      "date": "2025-12-10T23:16:56Z",
+      "sha": "5c4a88d57b18c31c08def347f82bcefc706842a9",
+      "message": "Update VoxelGrid docs to be more in line with Grid for clarity (#775)\n\n### Changelog\nUpdate VoxelGrid docs\n\n### Docs\n\n\nhttps://linear.app/foxglove/issue/ERT-1111/voxelgrid-positionorientation-is-wrong\n\n### Description\n\nUpdate VoxelGrid docs to be in line with Grid Docs\n\n<table><tr><th>Before</th><th>After</th></tr><tr><td>\n\n<img width=\"851\" height=\"400\" alt=\"image\"\nsrc=\"https://github.com/user-attachments/assets/57106113-0692-48bb-9c1f-239690af1e8f\"\n/>\n\n</td><td>\n\nWill read \"Origin of the grid’s lower-front-left corner in the reference\nframe. The grid’s pose is defined relative to this corner, so an\nuntransformed grid with an identity orientation has this corner at the\norigin.\"\n\n</td></tr></table>\n\nFixes: ERT-1111\n\n\n<!-- CURSOR_SUMMARY -->\n---\n\n> [!NOTE]\n> Clarifies `VoxelGrid.pose` to reference the grid’s lower-front-left\ncorner and pose semantics across all schema/message definitions.\n> \n> - **Schemas and message definitions**:\n> - Clarify `VoxelGrid.pose` description to: origin is the grid’s\nlower-front-left corner; pose defined relative to this corner.\n> - Updated across C (`c/include/foxglove-c/foxglove-c.h`), Rust\n(`c/src/generated_types.rs`, `rust/foxglove/src/schemas/foxglove.rs`),\nC++ (`cpp/foxglove/include/foxglove/schemas.hpp`), Python docs\n(`python/foxglove-sdk/src/generated/schemas.rs`), ROS1/ROS2 msgs\n(`ros*/VoxelGrid.msg`, `schemas/ros*/VoxelGrid.msg`), Flatbuffers\n(`schemas/flatbuffer/VoxelGrid.fbs`), JSON Schema\n(`schemas/jsonschema/*.json`, `schemas/jsonschema/index.ts`), OMG IDL\n(`schemas/omgidl/foxglove/VoxelGrid.idl`), Protobuf\n(`schemas/proto/foxglove/VoxelGrid.proto`), and TypeScript\ntypes/snapshots (`typescript/schemas/src/**`).\n> \n> <sup>Written by [Cursor\nBugbot](https://cursor.com/dashboard?tab=bugbot) for commit\n0bbcabab615bf6547463d55189e74fa2bda1c18e. This will update automatically\non new commits. Configure\n[here](https://cursor.com/dashboard?tab=bugbot).</sup>\n<!-- /CURSOR_SUMMARY -->",
+      "files_changed": 18,
+      "additions": 21,
+      "deletions": 18,
+      "commit_type": "config"
+    },
+    {
+      "author": "james-rms",
+      "date": "2023-11-24T02:36:31Z",
+      "sha": "4474e3b0618592d7b28e6a8ccd23117c33fb5b0e",
+      "message": "ci.yml: PyPI uses OIDC for auth (#138)\n\nSwitch our pypi publish CI step to use OIDC for authentication to pypi.org and test.pypi.org.",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 8,
+      "commit_type": "config"
+    },
+    {
+      "author": "chencaidy",
+      "date": "2025-11-21T14:01:52Z",
+      "sha": "7081019499ce56b25790aaec60a682c688fbd2b2",
+      "message": "foxglove_bridge: fix message format error when using cache (#769)\n\n### Changelog\n<!-- Write a one-sentence summary of the user-impacting change (API,\nUI/UX, performance, etc) that could appear in a changelog. Write \"None\"\nif there is no user-facing change -->\n\nFix message format error when using cache, foxglove shows \"Failed to\nparse channel schema\".\n\n### Docs\n\n<!-- Link to a Docs PR, tracking ticket in Linear, OR write \"None\" if no\ndocumentation changes are needed. -->\n\nNone\n\n### Description\n\n<!-- Describe the problem, what has changed, and motivation behind those\nchanges. Pretend you are advocating for this change and the reader is\nskeptical. -->\n\nfoxglove_bridge contains a hard-coded issue when retrieving cached\nmessage files, causing IDL files to be correctly recognized only on the\nfirst attempt. Subsequent cached requests return an incorrect format.\n\nHere is the first discussions:\nhttps://github.com/orgs/foxglove/discussions/1195\n\nThis fix was tested on my computer, both MSG and IDL worked well.",
+      "files_changed": 2,
+      "additions": 6,
+      "deletions": 5,
+      "commit_type": "docs"
+    },
+    {
+      "author": "chef-kyle",
+      "date": "2025-11-04T20:43:01Z",
+      "sha": "3a121300c21fef80b593b65b7fdcdbffee52fd10",
+      "message": "Ignore foxglove_bridge in ROS1 (#703)\n\n### Changelog\nEnsure that foxglove_bridge is ignored in ROS1.\n\n### Docs\n\nNone\n\n### Description\nI'd like to add foxglove_msgs to [ros-o](https://github.com/ros-o/ros-o)\nvia https://github.com/ubi-agni/ros-builder-action/pull/91 but catkin is\npicking up on the ROS2 only package `foxglove_bridge`.\n\nFor testing I'll point the ros-o build at my fork.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "sofuture",
+      "date": "2025-02-24T20:18:40Z",
+      "sha": "22bbc57986643d59ee700779db83dcd5b032e1a4",
+      "message": "python: publish docs to gh pages (#228)\n\n### Changelog\r\nPublish python docs to https://foxglove.github.io/foxglove-sdk/python/\r\n\r\n### Docs\r\nNone\r\n\r\n### Description\r\nPublish python docs via github action.",
+      "files_changed": 2,
+      "additions": 42,
+      "deletions": 1,
+      "commit_type": "ci"
+    },
+    {
+      "author": "bryfox",
+      "date": "2025-02-04T20:02:20Z",
+      "sha": "f650277515e5e36b38854128bc51733894e51f5e",
+      "message": "Add readme to rust crate (#175)\n\nThis adds a high-level overview to a README file, which links to docs.rs\r\nfor more information (available on next release).\r\n\r\nThe existing readme with development documentation, is moved to\r\nREADME-development.\r\n\r\nSharing content between the readme and crate documentation is\r\nproblematic as noted in feedback below.",
+      "files_changed": 4,
+      "additions": 47,
+      "deletions": 13,
+      "commit_type": "docs"
+    },
+    {
+      "author": "msadowski",
+      "date": "2025-07-09T12:58:08Z",
+      "sha": "f8b310daa8d8f82c28c3e47b3ca1b7bb70074c1f",
+      "message": "Change Python schemas readme to point to Discord instead of Slack (#530)\n\nThis PR replaces a link to Slack with Discord links.",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "banisadr",
+      "date": "2024-01-12T20:57:53Z",
+      "sha": "b46d17806d23cb11d28cc2bd0fc36bebc5bb620d",
+      "message": "Updating distortion model description  (#139)\n\n### Public-Facing Changes\r\n\r\nUpdates description for distortion used in doc generation. Added details\r\non expected parameters, underlying model, and reference implementation\r\nused. Currently [this\r\npage](https://docs.foxglove.dev/docs/visualization/message-schemas/camera-calibration/#distortion_model)\r\nis lacking that information.\r\n\r\n---------\r\n\r\nCo-authored-by: John Hurliman <jhurliman@jhurliman.org>",
+      "files_changed": 14,
+      "additions": 433,
+      "deletions": 387,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jeff-foxglove",
+      "date": "2025-07-02T15:09:51Z",
+      "sha": "b873d4cb61fc60bdbf97369963deed0ae208690c",
+      "message": "including the order of filling/from which corner to the foxglove.Grid docs (#510)\n\n### Changelog\nUpdating foxglove.Grid docs to include the direction the data is filled\nstarting from which corner\n\n### Docs\n\nNone\n\n### Description\n\nAdding clearer doc comments to indicate which direction the data for\nfoxglove.Grid fills based on feedback from unsure customers\n\nFixes: FG-11523",
+      "files_changed": 18,
+      "additions": 22,
+      "deletions": 18,
+      "commit_type": "docs"
+    },
+    {
+      "author": "MatthewDHarrison",
+      "date": "2025-09-25T17:34:36Z",
+      "sha": "9028d7b938a69cfd2612174089b30d7a421ad9d6",
+      "message": "Fix memory leak in generic_client allocate_message (#667)\n\n### Changelog\n\nNone\n\n### Docs\n\nNone\n\n### Description\n\nWe have found that with a high volume of service calls the memory usage\nof the foxglove bridge grows unbounded. Using valgrind with memcheck,\nthe source of some of these definitely lost blocks was found to be the\n`allocate_message` function in `generic_client`, where a buffer has\nmemory allocated using the `MessageMembers` `_init_function` which is\nfreed using `free`. This seems to mean that if a message type contains\npointers, the memory pointed to will never be freed.\n\nTo remedy this, we instead call `members->_fini_function` , which the\nMessage-specific clean-up functions (as documented\n[here](https://docs.ros.org/en/ros2_packages/humble/api/rosidl_typesupport_introspection_cpp/generated/structrosidl__typesupport__introspection__cpp_1_1MessageMembers__s.html)\nand implemented\n[here](https://github.com/ros2/rosidl/blob/4edcac1c0aa162d4c231389811c105214c74a439/rosidl_typesupport_introspection_cpp/resource/msg__type_support.cpp.em#L253)",
+      "files_changed": 1,
+      "additions": 10,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "jlack1987",
+      "date": "2025-07-12T00:26:10Z",
+      "sha": "907183ed1b0f13e42a3621123b2c123458ce4b63",
+      "message": "Fix template type issue (#538)\n\n### Changelog\nFix a compiler error involving template types.\n\n### Docs\n\nNone\n\n### Description\n\nWhen trying to compile on Ubuntu 24.04 I get the following compiler\nerror\n```bash\nfoxglove-sdk/cpp/foxglove/include/foxglove/server/parameter.hpp:335:50: error: expected unqualified-id before ‘.’ token\n  335 |       result.emplace(dictKey, dictValue.template .get<T>());\n      |                                                  ^\nfoxglove-sdk/cpp/foxglove/include/foxglove/server/parameter.hpp:335:56: error: expected primary-expression before ‘>’ token\n  335 |       result.emplace(dictKey, dictValue.template .get<T>());\n      |                                                        ^\nfoxglove-sdk/cpp/foxglove/include/foxglove/server/parameter.hpp:335:58: error: expected primary-expression before ‘)’ token\n  335 |       result.emplace(dictKey, dictValue.template .get<T>());\n```\n\n<!-- If necessary, link relevant Linear or Github issues. Use `Fixes:\nfoxglove/repo#1234` to auto-close the Github issue or Fixes: FG-### for\nLinear isses. -->\n\nCo-authored-by: Jordan Lack <jordan@terradepth.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "nthia",
+      "date": "2025-06-26T16:26:24Z",
+      "sha": "06fa9b1639071d4dbae87e77ea4fc810cff825b3",
+      "message": "rust data loaders (#460)\n\n### Changelog\n\nAdds a `foxglove_data_loader` crate for writing foxglove data loader\nextensions in rust that compile to wasm.\n\n### Docs\n\n[FG-11831](https://linear.app/foxglove/issue/FG-11831/document-writing-a-data-loader-extension-with-the-sdk)\n\n### Description\n\nThis PR adds a `foxglove_data_loader` crate with `DataLoader` and\n`MessageIterator` traits for user code to implement plus a\n`foxglove_data_loader::export!()` macro which exports user data loader\nimplementation to the wasm component build.\n\nThe wasm output of builds made with this interface can be passed as\n`wasmUrl` to `extensionContext.registerDataLoader()`.\n\nUsage looks like:\n\n``` rs\nuse foxglove_data_loader::{\n    reader, console, BackfillArgs, Channel, DataLoader, DataLoaderArgs, Initialization,\n    Message, MessageIterator, MessageIteratorArgs, Schema, TimeRange,\n};\nfoxglove_data_loader::export!(MyLoader);\n\nstruct MyLoader { /* ... */ }\n\nimpl DataLoader for MyLoader {\n    type MessageIterator = MyIterator;\n    type Error = anyhow::Error;\n\n    fn new(args: DataLoaderArgs) -> Self {\n        // args.paths is a Vec<String> of file paths you can reader::open()\n        unimplemented![]\n    }\n\n    fn initialize(&mut self) -> Result<Initialization, Self::Error> {\n        // the Initialization contains the channels, schemas, time range, and any problems\n        unimplemented![]\n    }\n\n    fn create_iter(&mut self, args: MessageIteratorArgs) -> Result<Self::MessageIterator, Self::Error> {\n        unimplemented![]\n    }\n\n    fn get_backfill(&mut self, args: BackfillArgs) -> Result<Vec<Message>, Self::Error> {\n        unimplemented![]\n    }\n}\n\nstruct MyIterator { /* ... */ }\n\nimpl MessageIterator for MyIterator {\n    type Error = anyhow::Error;\n\n    fn next(&mut self) -> Option<Result<Message, Self::Error>> {\n        unimplemented![]\n    }\n}\n```\n\nThere is a `data_loader::reader::open(&path)` function that returns a\nReader from the internal WIT. The `inputs` vec contains a list of path\nstrings you can `reader::open()`. `std::io::Read` and `std::io::Seek`\nare implemented for the WIT Reader to make it easier to use with the\nrest of the rust ecosystem. For example, you can do things like:\n\n``` rs\nlet reader = foxglove_data_loader::reader::open(&inputs[0]);\nlet mut lines = BufReader::new(reader).lines();\n```\n\nFixes: FG-11694\n\n---------\n\nCo-authored-by: Roman Shtylman <roman@foxglove.dev>",
+      "files_changed": 6,
+      "additions": 982,
+      "deletions": 94,
+      "commit_type": "config"
+    },
+    {
+      "author": "paulsohn",
+      "date": "2025-06-24T00:48:52Z",
+      "sha": "53d501a464e3077474709863f58d1c7cb8757eb2",
+      "message": "C++: Include missing <vector> (#506)\n\n### Changelog\n\nC++: Add missing `#include <vector>` to prevent build failure.\n\n### Docs\n\nNone\n\n### Description\n\nI am following https://docs.foxglove.dev/docs/sdk/example step by step\nwith foxglove sdk v0.9.0, in Ubuntu 22.04 / Clang 14.0.0, created\n`CMakeLists.txt` with the given content, set up the `main.cpp` and built\nwith\n```bash\n$ mkdir build\n$ cd build\n$ cmake ..\n$ cmake --build .\n```\n\nThe last build command fails with the following error:\n```\n[  7%] Building CXX object CMakeFiles/foxglove-sdk-bridge.dir/main.cpp.o\n[ 15%] Building CXX object CMakeFiles/foxglove-sdk-bridge.dir/_deps/foxglove-src/src/channel.cpp.o\n[ 23%] Building CXX object CMakeFiles/foxglove-sdk-bridge.dir/_deps/foxglove-src/src/context.cpp.o\n[ 30%] Building CXX object CMakeFiles/foxglove-sdk-bridge.dir/_deps/foxglove-src/src/error.cpp.o\n[ 38%] Building CXX object CMakeFiles/foxglove-sdk-bridge.dir/_deps/foxglove-src/src/foxglove.cpp.o\n[ 46%] Building CXX object CMakeFiles/foxglove-sdk-bridge.dir/_deps/foxglove-src/src/mcap.cpp.o\n[ 53%] Building CXX object CMakeFiles/foxglove-sdk-bridge.dir/_deps/foxglove-src/src/schemas.cpp.o\n[ 61%] Building CXX object CMakeFiles/foxglove-sdk-bridge.dir/_deps/foxglove-src/src/server.cpp.o\n[ 69%] Building CXX object CMakeFiles/foxglove-sdk-bridge.dir/_deps/foxglove-src/src/server/connection_graph.cpp.o\n/home/sohn/workspace/foxglove-sdk-bridge/build/_deps/foxglove-src/src/server/connection_graph.cpp:18:32: error: implicit instantiation of undefined template 'std::vector<foxglove_string>'\n  std::vector<foxglove_string> ids;\n                               ^\n/usr/lib/llvm-14/bin/../include/c++/v1/iosfwd:260:28: note: template is declared here\nclass _LIBCPP_TEMPLATE_VIS vector;\n                           ^\n/home/sohn/workspace/foxglove-sdk-bridge/build/_deps/foxglove-src/src/server/connection_graph.cpp:19:28: error: implicit instantiation of undefined template 'std::vector<std::string>'\n  ids.reserve(publisher_ids.size());\n                           ^\n/usr/lib/llvm-14/bin/../include/c++/v1/iosfwd:260:28: note: template is declared here\nclass _LIBCPP_TEMPLATE_VIS vector;\n                           ^\n/home/sohn/workspace/foxglove-sdk-bridge/build/_deps/foxglove-src/src/server/connection_graph.cpp:20:25: error: implicit instantiation of undefined template 'std::vector<std::string>'\n  for (const auto& id : publisher_ids) {\n                        ^\n/usr/lib/llvm-14/bin/../include/c++/v1/iosfwd:260:28: note: template is declared here\nclass _LIBCPP_TEMPLATE_VIS vector;\n                           ^\n/home/sohn/workspace/foxglove-sdk-bridge/build/_deps/foxglove-src/src/server/connection_graph.cpp:32:32: error: implicit instantiation of undefined template 'std::vector<foxglove_string>'\n  std::vector<foxglove_string> ids;\n                               ^\n/usr/lib/llvm-14/bin/../include/c++/v1/iosfwd:260:28: note: template is declared here\nclass _LIBCPP_TEMPLATE_VIS vector;\n                           ^\n/home/sohn/workspace/foxglove-sdk-bridge/build/_deps/foxglove-src/src/server/connection_graph.cpp:33:29: error: implicit instantiation of undefined template 'std::vector<std::string>'\n  ids.reserve(subscriber_ids.size());\n                            ^\n/usr/lib/llvm-14/bin/../include/c++/v1/iosfwd:260:28: note: template is declared here\nclass _LIBCPP_TEMPLATE_VIS vector;\n                           ^\n/home/sohn/workspace/foxglove-sdk-bridge/build/_deps/foxglove-src/src/server/connection_graph.cpp:34:25: error: implicit instantiation of undefined template 'std::vector<std::string>'\n  for (const auto& id : subscriber_ids) {\n                        ^\n/usr/lib/llvm-14/bin/../include/c++/v1/iosfwd:260:28: note: template is declared here\nclass _LIBCPP_TEMPLATE_VIS vector;\n                           ^\n/home/sohn/workspace/foxglove-sdk-bridge/build/_deps/foxglove-src/src/server/connection_graph.cpp:47:32: error: implicit instantiation of undefined template 'std::vector<foxglove_string>'\n  std::vector<foxglove_string> ids;\n                               ^\n/usr/lib/llvm-14/bin/../include/c++/v1/iosfwd:260:28: note: template is declared here\nclass _LIBCPP_TEMPLATE_VIS vector;\n                           ^\n/home/sohn/workspace/foxglove-sdk-bridge/build/_deps/foxglove-src/src/server/connection_graph.cpp:48:27: error: implicit instantiation of undefined template 'std::vector<std::string>'\n  ids.reserve(provider_ids.size());\n                          ^\n/usr/lib/llvm-14/bin/../include/c++/v1/iosfwd:260:28: note: template is declared here\nclass _LIBCPP_TEMPLATE_VIS vector;\n                           ^\n/home/sohn/workspace/foxglove-sdk-bridge/build/_deps/foxglove-src/src/server/connection_graph.cpp:49:25: error: implicit instantiation of undefined template 'std::vector<std::string>'\n  for (const auto& id : provider_ids) {\n                        ^\n/usr/lib/llvm-14/bin/../include/c++/v1/iosfwd:260:28: note: template is declared here\nclass _LIBCPP_TEMPLATE_VIS vector;\n                           ^\n9 errors generated.\ngmake[2]: *** [CMakeFiles/foxglove-sdk-bridge.dir/build.make:188: CMakeFiles/foxglove-sdk-bridge.dir/_deps/foxglove-src/src/server/connection_graph.cpp.o] Error 1\ngmake[1]: *** [CMakeFiles/Makefile2:83: CMakeFiles/foxglove-sdk-bridge.dir/all] Error 2\ngmake: *** [Makefile:91: all] Error 2\n```\n\n<!-- In addition to unit tests, describe any manual testing you did to\nvalidate this change. -->\n\nIt turns out `foxglove/server/connection_graph.hpp` is using\n`std::vector` but `<vector>` is not included by itself or any included\nheaders. I manually added this inclusion in\n`build/_deps/foxglove-src/include/foxglove/server/connection_graph.hpp`\nand confirmed that the build succeeds.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "fgwt202412",
+      "date": "2024-12-16T18:39:39Z",
+      "sha": "b2591f75bbb1aee010ca8dd40a171e6f7fb86ec1",
+      "message": "Fix CI errors due to ubuntu 24.04 image rollout (#160)\n\n### Changelog\r\n<!-- Write a one-sentence summary of the user-impacting change (API,\r\nUI/UX, performance, etc) that could appear in a changelog. Write \"None\"\r\nif there is no user-facing change -->\r\n\r\nNone\r\n\r\n### Docs\r\n\r\n<!-- Link to a Docs PR, tracking ticket in Linear, OR write \"None\" if no\r\ndocumentation changes are needed. -->\r\n\r\nNone\r\n\r\n### Description\r\n\r\n<!-- Describe the problem, what has changed, and motivation behind those\r\nchanges. Pretend you are advocating for this change and the reader is\r\nskeptical. -->\r\n\r\nCI [broke\r\nrecently](https://github.com/foxglove/schemas/actions/runs/12341162294/job/34439471378?pr=159)\r\nbecause Python 3.7 is not supported for Ubuntu 24.04 x64. See\r\nhttps://github.com/actions/setup-python/issues/962. This fixes the\r\n`python` job to use Ubuntu 22.04.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "snosenzo",
+      "date": "2022-10-28T17:49:25Z",
+      "sha": "b36014a3987ea81cf0184b7abb2d6ab6a3888688",
+      "message": "Expose types for `jsonschema/index.ts` (#69)\n\nExpose types for jsonschemas in case users want to use data from them in\r\ntypescript\r\nFixes #68",
+      "files_changed": 2,
+      "additions": 36,
+      "deletions": 36,
+      "commit_type": "code"
+    },
+    {
+      "author": "jameskuszmaul-brt",
+      "date": "2024-05-22T23:57:10Z",
+      "sha": "a4b0b3592c8ecf10dbb273c7ee51c2b8211df873",
+      "message": "Add explicit field IDs to flatbuffer schemas (#148)\n\n### Changelog\r\nAdded explicit field IDs to flatbuffer schemas.\r\n\r\n### Docs\r\n\r\nNone\r\n\r\n### Description\r\n\r\nThis allows the schemas to be compiled with `--require-explicit-ids`\r\nturned on in `flatc`, which can be nice to help prevent people from\r\naccidentally making breaking changes to flatbuffer schemas if they\r\nchoose to reorder fields (or insert new fields in the middle of the\r\nschemas). Because of how flatc works with includes, if downstream users\r\nwant to use `--require-explicit-ids` on their own schemas that happen to\r\ninclude foxglove schema types, they must update the foxglove schemas\r\nthat they use to include IDs.",
+      "files_changed": 44,
+      "additions": 214,
+      "deletions": 213,
+      "commit_type": "config"
+    },
+    {
+      "author": "foxymiles",
+      "date": "2023-07-07T18:32:20Z",
+      "sha": "5a6ab57ccd41e5898e54288f3632968546a2021b",
+      "message": "Add typescript schema export utility (#119)\n\n### Public-Facing Changes\r\nNone\r\n\r\n### Description\r\nAdd typescript schema export utility. This will be used in studio to\r\nimport schema definitions in order to make them available for use in\r\nuser scripts.",
+      "files_changed": 6,
+      "additions": 1094,
+      "deletions": 28,
+      "commit_type": "config"
+    },
+    {
+      "author": "jhurliman",
+      "date": "2022-09-12T19:26:39Z",
+      "sha": "7fc5ca80b3805dd7b90d9604cf445525fc147080",
+      "message": "Upgrade rosmsg-msgs-common to 2.0.0 (#62)",
+      "files_changed": 9,
+      "additions": 882,
+      "deletions": 819,
+      "commit_type": "config"
+    },
+    {
+      "author": "esthersweon",
+      "date": "2021-11-23T23:09:41Z",
+      "sha": "4d5c525f0dd9502faff917978040af244989bf97",
+      "message": "Update fields and location for LocationFix datatype",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 2,
+      "commit_type": "code"
+    }
+  ]
+}

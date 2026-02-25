@@ -1,0 +1,551 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T10:06:49Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros",
+    "repo": "pluginlib"
+  },
+  "data": [
+    {
+      "author": "ahcorde",
+      "date": "2020-04-08T22:08:23Z",
+      "sha": "0a2ee2128e1bf867c1e76013db4c62f653e61b85",
+      "message": "Using rcpputils for library names (#186)\n\n* Using rcpputils for library names\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Update pluginlib/include/pluginlib/class_loader_imp.hpp\r\n\r\nCo-Authored-By: Karsten Knese <Karsten1987@users.noreply.github.com>\r\n\r\n* Removed comment\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\nCo-authored-by: Karsten Knese <Karsten1987@users.noreply.github.com>",
+      "files_changed": 3,
+      "additions": 27,
+      "deletions": 29,
+      "commit_type": "ci"
+    },
+    {
+      "author": "pum1k",
+      "date": "2026-02-20T14:13:32Z",
+      "sha": "ee18deb88a5e4768d149a761009368a103db1864",
+      "message": "Add support for passing arguments to constructors (#291)\n\n- updated `create*Instance` methods to forward arguments to plugin\n  constructors using class_loader interface traits\n\nSigned-off-by: pum1k <55055380+pum1k@users.noreply.github.com>",
+      "files_changed": 8,
+      "additions": 145,
+      "deletions": 9,
+      "commit_type": "ci"
+    },
+    {
+      "author": "mini-1235",
+      "date": "2025-11-19T16:14:33Z",
+      "sha": "82475ee7d72ff9d7717cd4cef841b12a5ec932d3",
+      "message": "Improve logging when unable to parse the plugin (#285)\n\nSigned-off-by: mini-1235 <mauricepurnawan@gmail.com>",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "ipa-fez",
+      "date": "2025-10-07T08:06:34Z",
+      "sha": "8cd98e6f6a6ce636db13d0d81efe28da168a7e74",
+      "message": "refactor: replace regex with find_last_of to split plugin name (#271)\n\nSigned-off-by: Felix Zeltner <28302109+ipa-fez@users.noreply.github.com>\nCo-authored-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>",
+      "files_changed": 3,
+      "additions": 27,
+      "deletions": 58,
+      "commit_type": "ci"
+    },
+    {
+      "author": "artivis",
+      "date": "2020-02-14T19:51:09Z",
+      "sha": "9382dad86ae69ea5b9f3f02bafa9490242fd4a38",
+      "message": "Check for NULL in XMLNode::Value\n\nSigned-off-by: artivis <jeremie.deray@canonical.com>",
+      "files_changed": 1,
+      "additions": 10,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "mosfet80",
+      "date": "2025-10-03T12:23:29Z",
+      "sha": "2798b48780ab84e1af635cf64c4fe0e5b3fa7602",
+      "message": "fix cmake deprecation (#273)\n\ncmake version < then 3.10 is deprecated.\n\nSigned-off-by: Mos <realeandrea@yahoo.it>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "DLu",
+      "date": "2021-12-06T22:40:05Z",
+      "sha": "56273f20572727a8ad846d028484c0d803ec24d4",
+      "message": "Move LibraryLoadExceptions down a level for more accurate error messages. (#221)\n\nSigned-off-by: David V. Lu <davidvlu@gmail.com>",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 15,
+      "commit_type": "code"
+    },
+    {
+      "author": "cottsay",
+      "date": "2025-04-25T21:07:04Z",
+      "sha": "4eb834c02ae9da32bed4e1d44517631cd3e68516",
+      "message": "5.7.0",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "clalancette",
+      "date": "2020-10-06T21:34:14Z",
+      "sha": "5071c3013bbfe6721f69370500b35128c88c3e8f",
+      "message": "Make Chris a maintainer of pluginlib. (#210)\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "marcoag",
+      "date": "2024-03-28T09:50:36Z",
+      "sha": "c7d06cd3af00fe08885cf7635c0b35560349bb0b",
+      "message": "Changelog.\n\nSigned-off-by: Marco A. Gutierrez <marcogg@marcogg.com>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "christophebedard",
+      "date": "2024-02-26T13:00:11Z",
+      "sha": "60b778852c7743d55bc624eef9b47abee9b84114",
+      "message": "Switch from rcpputils::fs to std::filesystem (#254)\n\nSigned-off-by: Christophe Bedard <christophe.bedard@apex.ai>",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 7,
+      "commit_type": "code"
+    },
+    {
+      "author": "allenh1",
+      "date": "2024-01-18T20:06:52Z",
+      "sha": "1efdb426f70cc2894bdd92d1df1e67c58a208e62",
+      "message": "Remove redundant throw of a std::runtime_error (#232)\n\nSigned-off-by: Hunter L. Allen <hunter.allen@apex.ai>",
+      "files_changed": 1,
+      "additions": 20,
+      "deletions": 24,
+      "commit_type": "code"
+    },
+    {
+      "author": "SteveMacenski",
+      "date": "2023-10-27T18:46:14Z",
+      "sha": "16ae61c9084fc9377f060f01529c4b52be2ad82a",
+      "message": "Fix wShadow compile warning (#250)",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "audrow",
+      "date": "2022-11-16T16:20:30Z",
+      "sha": "f47cf2aec4663654d338db6ac71eba8bd9d66dcc",
+      "message": "[rolling] Update maintainers - 2022-11-07 (#242)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "paudrow",
+      "date": "2021-11-19T18:15:01Z",
+      "sha": "0c28429c8702c30d630c7335ee2823e2382bf92d",
+      "message": "Update maintainers to Chris Lalancette (#223)\n\nSigned-off-by: Audrow Nash <audrow@hey.com>",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 3,
+      "commit_type": "config"
+    },
+    {
+      "author": "jacobperron",
+      "date": "2020-05-07T22:10:39Z",
+      "sha": "276d4f3551c89ba6caf4b7bb929e2f66a345e7a9",
+      "message": "2.5.1",
+      "files_changed": 2,
+      "additions": 6,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "sloretz",
+      "date": "2019-05-01T15:13:45Z",
+      "sha": "816b41d7e7eaea7216e9cb9594a29f6541d24e5a",
+      "message": "[ros2] Cast pointers to void * when using %p (#152)\n\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "alsora",
+      "date": "2021-11-13T02:40:44Z",
+      "sha": "840db4423ab5202deb78397920f002f291465d2f",
+      "message": "extend termination condition to avoid infinite loop if package.xml is not found (#220)\n\nSigned-off-by: Alberto Soragna <alberto.soragna@gmail.com>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "asobhy-qnx",
+      "date": "2020-09-03T17:17:52Z",
+      "sha": "9c5b43745b7db5f3cde0383afca94616425c2f5c",
+      "message": "adds QNX c++ fs library compiler option (#205)",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Karsten1987",
+      "date": "2018-07-18T01:37:02Z",
+      "sha": "dfe3824ed2831bb429f7e40c866633eb69dec305",
+      "message": "export rcutils (#120)",
+      "files_changed": 2,
+      "additions": 3,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "seanyen",
+      "date": "2020-05-09T03:51:27Z",
+      "sha": "306f6ca3be600b91aa7dadabdcaec50e454daae9",
+      "message": "[ros2] Export tinyxml2 directly from pluginlib-extras.cmake (#192)\n\n* [ros2] Export tinyxml2 directly from pluginlib-extras.cmake\r\n\r\n* use imported instead.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "dirk-thomas",
+      "date": "2012-02-02T23:59:06Z",
+      "sha": "09fcde735db54835d2f06d502483c476d9c80a08",
+      "message": "add auto-unload for libraries using boost shared pointer",
+      "files_changed": 2,
+      "additions": 49,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "nuclearsandwich",
+      "date": "2018-11-20T18:48:18Z",
+      "sha": "e9fe2de1d5bff3488e9a10d76c7aa997114f8f39",
+      "message": "2.2.0",
+      "files_changed": 6,
+      "additions": 28,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "emersonknapp",
+      "date": "2019-03-21T18:12:37Z",
+      "sha": "3bbc242f1cbdeb9a51375fb8941deb386dbf9f2f",
+      "message": "Choose the appropriate library for experimental filesystem, based on the compiler and standard library (#146)\n\nSigned-off-by: Emerson Knapp <eknapp@amazon.com>",
+      "files_changed": 2,
+      "additions": 23,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "esteve",
+      "date": "2014-02-14T18:15:10Z",
+      "sha": "cc528c997c6b0944463c4ad961c3d5154383012b",
+      "message": "Update maintainer field",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "mjcarroll",
+      "date": "2018-10-26T21:02:24Z",
+      "sha": "fa988fed137306268a64d576ffed2ba3eed99ad0",
+      "message": "Ros2 reorganize tests (#130)\n\n* Reorganize tests into fixture and consumer package.\r\n\r\n* Fix tests and reenable managed tests.\r\n\r\n* Disable the use of Boost.\r\n\r\n* Fix include path.\r\n\r\n* Fix visibility and MSVC __cplusplus version issues.\r\n\r\n* Add documentation to the workaround.\r\n\r\n* Clean up MSVC warnings.",
+      "files_changed": 15,
+      "additions": 325,
+      "deletions": 84,
+      "commit_type": "docs"
+    },
+    {
+      "author": "bhatsach",
+      "date": "2019-02-12T17:40:41Z",
+      "sha": "cc6af504b3bcd827ef84536c13ea7c1c678fc4e6",
+      "message": "Add stdc++fs as a target link library for clang compiler on linux (#144)\n\n* Add stdc++fs as a target link library for clang compiler on linux\r\n\r\nThis change is needed to compile pluginlib package and packages which\r\ndepend on it on linux clang compiler\r\n\r\n* Add and export stdc++fs lib for linux platform\r\n\r\n* Add c++fs library link on all non-Apple *nix platforms.\r\n\r\nThis change is necessary for building with Clang on Linux. The use of\r\n`UNIX AND NOT APPLE` is cribbed from a bunch of StackOverflow and CMake\r\nmailing list examples to cover non-Apple *nix cases which for ROS 2\r\ntoday means Linux, basically. But in the future it could also mean\r\nNetBSD or FreeBSD, QNX, or NuttX as long as they provide libc++fs.",
+      "files_changed": 2,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mlautman",
+      "date": "2018-12-09T17:25:50Z",
+      "sha": "ff63024c74d546ec7825f5f361db8774e8ba4151",
+      "message": "adding ament_package() to test_pluginlib (#132)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "test"
+    },
+    {
+      "author": "mikaelarguedas",
+      "date": "2016-03-10T22:04:07Z",
+      "sha": "dfb2b1405f67502ef3d72537b8935ad26864ba6b",
+      "message": "update maintainer",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "jerry73204",
+      "date": "2018-05-15T17:44:11Z",
+      "sha": "1a4de29fa55173e9b897ca8ff57ebc88c047e0b3",
+      "message": "Fix compile error with gcc 8.1.0 (#116)\n\n* Fix compile error with gcc 8.1.0\r\n\r\nGcc 8.1.0 fails to compile filesystem_helper.hpp with -std=c++14. The cause is that it passes the check \"__has_include(<filesystem>)\". However, std::filesystem is not defined. We add an additional check \"__cplusplus >= 201703L\".\r\n\r\n* Avoid incorrect __cpluscplus check with MSVC compiler",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "wjwwood",
+      "date": "2017-10-04T00:59:38Z",
+      "sha": "9bdd335f5fe8317d562869d5f68ace917edea72b",
+      "message": "remove unused “plugin_tool”",
+      "files_changed": 3,
+      "additions": 2,
+      "deletions": 465,
+      "commit_type": "docs"
+    },
+    {
+      "author": "terakoji",
+      "date": "2017-07-27T02:23:49Z",
+      "sha": "64642ae81ddcb0b289513d2febb40da72e61ff30",
+      "message": "do not use popen to solve catkin_path. (#49)",
+      "files_changed": 2,
+      "additions": 32,
+      "deletions": 52,
+      "commit_type": "code"
+    },
+    {
+      "author": "rojkov",
+      "date": "2017-07-25T18:18:17Z",
+      "sha": "04af213afbd28dc88cb1bdfeb012a25e3ad8c847",
+      "message": "Switch from TinyXML to TinyXML2 (#52)\n\nThe library TinyXML is considered to be unmaintained and\r\nsince all future development is focused on TinyXML2 this\r\npatch updates pluginlib to use TinyXML2.\r\n\r\nSigned-off-by: Dmitry Rozhkov <dmitry.rozhkov@linux.intel.com>",
+      "files_changed": 4,
+      "additions": 21,
+      "deletions": 21,
+      "commit_type": "docs"
+    },
+    {
+      "author": "de-vri-es",
+      "date": "2016-09-20T19:31:08Z",
+      "sha": "b135f7cb5504c29ba8fffa187a2267dfe6681236",
+      "message": "Wrap long comment on createInstance and friend.",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "cwecht",
+      "date": "2016-09-20T18:39:43Z",
+      "sha": "5216921f847eb3474227e842b6d141abbcce1b16",
+      "message": "Throw exception if plugin.xml is broken (#41)\n\n* added test case for broken xml files with missing attributes of class tag\r\n\r\n* added checks if all needed attributes of the class tag are existing\r\n\r\n* removed comment and empty line",
+      "files_changed": 4,
+      "additions": 34,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jspricke",
+      "date": "2015-12-26T08:29:03Z",
+      "sha": "e9a2ec209801349e2cf747e1162b12d0bc9abacf",
+      "message": "Remove Boost Software License from license tag\n\nThe Boost Software License was only in there for Poco, as can be seen in\n6e0659f. As Poco was removed in 44ab6fb and all remaining Files have a\nBSD header, let's remove the Boost tag as well, to be consistent.",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "Mike O'Driscoll",
+      "date": "2015-10-21T19:34:18Z",
+      "sha": "90af041582a66124c5904a3f6a07cec21a40420b",
+      "message": "Add \":\" to split function within getName.\n\ngetName split wasn't supporting `::` as the delimiter for the package name and\nthe plugin name.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Esteve Fernandez",
+      "date": "2014-03-11T15:22:18Z",
+      "sha": "2f93986685736bcb916af18b84f1e38bb2429a65",
+      "message": "1.9.24",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "tfoote",
+      "date": "2009-10-02T19:51:37Z",
+      "sha": "d76982723b3437f53326c8f9fc0f961db08ced25",
+      "message": "fixing #2894",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "mirzashah",
+      "date": "2012-09-20T20:50:48Z",
+      "sha": "f9e06df46f0935f7b258c58abd0d792fb7f1c0c5",
+      "message": "Fixed unhandled exception to make all unit tests pass",
+      "files_changed": 2,
+      "additions": 22,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "Mirza Shah",
+      "date": "2012-08-02T20:24:29Z",
+      "sha": "46d9231464fb8be1a0c356ff276cb78eb33a42b1",
+      "message": "Missing LIBRARIES and DEPENDS specifiers from CMakeLists.txt, now added.",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "danepowell",
+      "date": "2013-07-12T20:14:54Z",
+      "sha": "3f2ba68bb14b6750e8c53bc812ae9ae5b23d4ff5",
+      "message": "Added file hint for deprecated warnings.",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "davetcoleman",
+      "date": "2013-02-20T20:20:37Z",
+      "sha": "09170a20c5bd47ecb940c171e9629c77c5a39b6a",
+      "message": "Converted ROS_DEBUG and ROS_WARN calls to ROS_DEBUG_NAMED and ROS_WARN_NAMED calls",
+      "files_changed": 1,
+      "additions": 37,
+      "deletions": 37,
+      "commit_type": "code"
+    },
+    {
+      "author": "Mario Prats",
+      "date": "2013-01-23T01:38:31Z",
+      "sha": "155d9d5225b729d8c9d0d150fda1b02263b06680",
+      "message": "Support for boost filesystem v2",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Aaron Blasdel",
+      "date": "2012-12-21T22:36:25Z",
+      "sha": "d11776fe7446de08b47fcd60b9acab803dd9e100",
+      "message": "added missing license header",
+      "files_changed": 0,
+      "additions": 0,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "hershwg",
+      "date": "2012-01-13T23:51:30Z",
+      "sha": "92269c724e0e61dcc8b5a0126570f3713e7a5152",
+      "message": "pluginlib: added a pure-virtual base class for ClassLoader called ClassLoaderBase, which is not templated.  Only one function of ClassLoader is actually templated.  This allows client code to not be templated where it doesn't need to be.",
+      "files_changed": 1,
+      "additions": 111,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Ken Conley",
+      "date": "2011-06-27T23:27:01Z",
+      "sha": "a882d8e15691cd570ab8beb9042e911aa5e5c684",
+      "message": "converting to unary stack (separated from common)",
+      "files_changed": 3,
+      "additions": 17,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "gerkey",
+      "date": "2010-05-19T20:25:06Z",
+      "sha": "7f9e4ad22c1e3ba907bf32aaa96c57a5c4306c83",
+      "message": "Added Ubuntu platform tags to manifest",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "mwise",
+      "date": "2010-09-28T21:35:37Z",
+      "sha": "a648463339f18104ed9da8ec2e2c47deaa4166d5",
+      "message": "adding pluginlib tests",
+      "files_changed": 7,
+      "additions": 98,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "vpradeep",
+      "date": "2010-06-09T18:50:01Z",
+      "sha": "017a11f8ad9fddb9e3fa9b9ddbb564697f5c9fe9",
+      "message": "Fixed exception comments",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "eitan",
+      "date": "2009-09-28T19:20:15Z",
+      "sha": "1891c99e9ec5fa4c45144b7e4909d877fd99f580",
+      "message": "Removing ROS_ERRORS in favor of adding information to the exceptions thrown",
+      "files_changed": 2,
+      "additions": 45,
+      "deletions": 20,
+      "commit_type": "code"
+    },
+    {
+      "author": "rusu",
+      "date": "2010-03-11T01:21:32Z",
+      "sha": "52c5d1ac209dec25f25909e3cf014894f48f17f5",
+      "message": "macro deprecation",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "wheeler",
+      "date": "2009-11-30T23:30:59Z",
+      "sha": "73ab64fa548acf13aecb6afdbe2f076f1a7404fe",
+      "message": "Remove use of deprecated rosbuild macros",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "kwc",
+      "date": "2009-09-04T23:10:08Z",
+      "sha": "6e0659f636f3ad0c9d0b16e97a48d97788aeea7f",
+      "message": "migration part 1",
+      "files_changed": 123,
+      "additions": 19389,
+      "deletions": 0,
+      "commit_type": "docs"
+    }
+  ]
+}

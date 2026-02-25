@@ -1,0 +1,281 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T01:17:41Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros-drivers",
+    "repo": "phidgets_drivers"
+  },
+  "data": [
+    {
+      "author": "clalancette",
+      "date": "2019-06-28T14:37:50Z",
+      "sha": "bf3147628f8303219e264c0e8254868d77fb946c",
+      "message": "Cleanup spacing in all of the CMakeLists.txt\n\nNo functional change.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 5,
+      "additions": 49,
+      "deletions": 49,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mintar",
+      "date": "2013-02-08T16:30:33Z",
+      "sha": "92085b36997243a5a6690e6b537cba50d68b7365",
+      "message": "added warning if IMU time lags behind ROS time",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "cedricpradalier",
+      "date": "2025-05-08T15:39:27Z",
+      "sha": "254d8a264ca015fb4c0358cfc828f28c03190c0c",
+      "message": "Add stepper motor package for ROS2 (STC1005) (#186)\n\n* Validated on real hardware with STC1005\n* Closes #185.\n\n---------\n\nCo-authored-by: Martin Günther <martin.guenther@dfki.de>",
+      "files_changed": 15,
+      "additions": 1059,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mklpiening",
+      "date": "2022-11-16T08:40:11Z",
+      "sha": "5b73078758b1c180bdab354c297ede2366cbee0a",
+      "message": "added support for phidget spatial onboard orientation estimation",
+      "files_changed": 5,
+      "additions": 96,
+      "deletions": 13,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jlblancoc",
+      "date": "2017-08-07T23:37:24Z",
+      "sha": "494bed2271b0e9cef720e63e4371586d8caae48c",
+      "message": "Improvements to high-speed encoder node:\n\n* Publish one topic per encoder channel.\n* On-the-fly determination of number of encoder channels.\n* Two topic message types:\n  * (a) Tick count + instantaneous speed.\n  * (b) decimated, smooth velocity.\n* Publication at a programmable rate, independent of arrival of encoder ticks.",
+      "files_changed": 5,
+      "additions": 172,
+      "deletions": 31,
+      "commit_type": "docs"
+    },
+    {
+      "author": "AlexisFetet",
+      "date": "2022-06-01T12:53:43Z",
+      "sha": "30a68ba8010d910b3f0031fb32eb4a401af4bb12",
+      "message": "adding support for analog outputs for ROS2 (#145)\n\n* support for analog output\r\n\r\nCo-authored-by: Alexis <alexis.fetet@capacites.fr>\r\nCo-authored-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 14,
+      "additions": 656,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "cottsay",
+      "date": "2021-03-27T10:10:13Z",
+      "sha": "1244f5d00b6bbe9e99427fd9f0a13de08303a01a",
+      "message": "Compile libphidget22 with -fPIC (#88)\n\nThis seems to be unnecessary on some platforms, but for greater\r\ncompatibility, it's best to specify it explicitly.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "MichaelGrupp",
+      "date": "2018-08-01T13:57:53Z",
+      "sha": "a5523f3418453c83096ed892c58e01f7650d8efa",
+      "message": "phidgets_imu: Ensure strictly ordered timestamps (#26)\n\nFixes #17.",
+      "files_changed": 2,
+      "additions": 12,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "peterpolidoro",
+      "date": "2019-09-26T14:39:58Z",
+      "sha": "2e18370a91e6d7b2fe476f6ed84e90c61e29a1da",
+      "message": "Only publish motor_back_emf if supported by DC Motor device (#53)\n\n* Only publish motor_back_emf if supported by DC Motor device\r\n\r\nOnly publish motor_back_emf if supported by DC Motor device\r\n\r\n* Pull request changes for motor_back_emf commit\r\n\r\n* A few more cleanups.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 6,
+      "additions": 53,
+      "deletions": 11,
+      "commit_type": "docs"
+    },
+    {
+      "author": "tim-fan",
+      "date": "2019-06-28T12:57:53Z",
+      "sha": "937ac38f2a2d9de9e177a3b8255f970ae4147f2b",
+      "message": "Update libphidget to version 2.1.9.20190409 (#34)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "hikinggrass",
+      "date": "2019-06-25T16:36:48Z",
+      "sha": "106c3feff2373cda3bbbc607a6daa1275823d90d",
+      "message": "Add missing OnInputChange handler (#33)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "seebq",
+      "date": "2018-12-29T08:14:24Z",
+      "sha": "04cba59812789eb0aecf668c170f3c25ba47b354",
+      "message": "phidgets_high_speed_encoder: fix missing tick2rad values (#30)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "jspricke",
+      "date": "2018-09-18T13:08:43Z",
+      "sha": "58ceec82bc18f89dc4e31078a2c458485166ca7a",
+      "message": "Add parameter use_imu_time (default true) (#27)\n\nSetting use_imu_time to false will disable the imu time calibration and\r\nalways use the Host time, i.e. ros::Time::now().",
+      "files_changed": 2,
+      "additions": 18,
+      "deletions": 11,
+      "commit_type": "code"
+    },
+    {
+      "author": "dogoepp",
+      "date": "2018-01-17T15:36:17Z",
+      "sha": "9964027c8c22b7d696e979e0ef564d49e1ccf25d",
+      "message": "Add service to set IK output state",
+      "files_changed": 2,
+      "additions": 12,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "russelhowe",
+      "date": "2017-11-15T17:39:00Z",
+      "sha": "310c649f884075f8967818e306cd0e4f38a8f38f",
+      "message": "Squashed commit of the following\n\nThese commits are copied from\nhttps://github.com/jsarrett/usma_phidgets\nAn attempt was made to up-stream the changes from there, but he never got a\nresponse. I squashed all the commits and applied the resulting patch to this\nrepo.\n\ncommit 581479e258da50948ba137e84ac9f74beeb8d809\nAuthor: James Sarrett <jsarrett@gmail.com>\nDate:   Fri Feb 10 13:05:36 2017 -0800\n\nadd paramter to open a specifc phidget serial number to PhidgetIK\n\ncommit 8f1c76c422840cb190f2fa440717ba12b4633c5c\nAuthor: James Sarrett <jsarrett@gmail.com>\nDate:   Fri Feb 10 10:27:18 2017 -0800\n\ncreate topics to set output states\n\ncommit cf27bab6a15ec3bc161b215695fc500f6395bd03\nAuthor: James Sarrett <jsarrett@gmail.com>\nDate:   Fri Feb 10 09:34:36 2017 -0800\n\nuse std::vector instead of fixed size array for inputs and sensors\n\ncommit 2b8fa829d9b12d9a2da837c77d4608b514c529fe\nAuthor: James Sarrett <jsarrett@gmail.com>\nDate:   Fri Feb 10 03:46:19 2017 -0800\n\ndon't publish unless the publisher is setup\n\ncommit fd92d7a2c83649f641c3925790efe1db3cc7ec61\nAuthor: James Sarrett <jsarrett@gmail.com>\nDate:   Fri Feb 10 03:21:34 2017 -0800\n\nBROKEN, but the right idea.  need ot keep reference ot publisher instead of copy.\n\ncommit bdf13af2703e8f5ce533a401d22ff441c33fcbc0\nAuthor: James Sarrett <jsarrett@gmail.com>\nDate:   Fri Feb 10 00:04:47 2017 -0800\n\ncopy phidgets_ir note and modify it to open an InterfaceKit",
+      "files_changed": 8,
+      "additions": 313,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mikaelarguedas",
+      "date": "2017-10-27T08:31:58Z",
+      "sha": "5aecfad1116914fd78a08262551be90cb449801a",
+      "message": "update to use non deprecated pluginlib macro (#19)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Geoff Viola",
+      "date": "2016-05-24T17:31:19Z",
+      "sha": "217b9a8f8c726030cb40500cc3dbfecab61a6f33",
+      "message": "added new phidgets_high_speed_encoder package",
+      "files_changed": 4,
+      "additions": 316,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "imitschke",
+      "date": "2017-06-29T19:59:04Z",
+      "sha": "6ce29160b6c0d8a98325dbbc9e5208c25eac9527",
+      "message": "fixed broken url to phidgets library (#12)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jovobe",
+      "date": "2017-04-26T15:37:36Z",
+      "sha": "2c198f304883fe80d3dd1e438f10368c7d9030f0",
+      "message": "phidgets_imu: add optional serial number parameter (#7)",
+      "files_changed": 3,
+      "additions": 10,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Zabot",
+      "date": "2017-02-21T00:16:47Z",
+      "sha": "f1ca55414d6251d4a3ab092e219fbb3a2191554b",
+      "message": "Added basic encoder board api",
+      "files_changed": 3,
+      "additions": 162,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "muhrix",
+      "date": "2013-06-23T02:51:04Z",
+      "sha": "ee9962ec55bcd7b64f39d273e35da2725e78aa7a",
+      "message": "Updated to latest version of libphidget (2.1.8.20130618)",
+      "files_changed": 5,
+      "additions": 11,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "mani-monaj",
+      "date": "2016-07-14T21:31:40Z",
+      "sha": "ce5d4195b5956f9d196b8ddbe42080287c59a770",
+      "message": "Major refactoring of diagnostics (#20)\n\n- Remove all diagnostics logic from phidget_api\n- Add diagnostics to phidgets_imu\n  - Connect/disconnect/error states are propogated from callbacks\n  - Periodic updates for diagnostics through processImuData()\n  - Add Frequency and Timestamp (drift) diagnostics for imu/data_raw\n  topic",
+      "files_changed": 7,
+      "additions": 119,
+      "deletions": 72,
+      "commit_type": "config"
+    },
+    {
+      "author": "keshaviyengar",
+      "date": "2015-06-14T21:43:37Z",
+      "sha": "8ab34d5d444fcd8b42bf06b715608f0f8a73cf10",
+      "message": "Added first commit for diagnostics for the phidgets. Only imu is\ncomplete.",
+      "files_changed": 5,
+      "additions": 64,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "Murilo F. M",
+      "date": "2013-10-03T15:08:45Z",
+      "sha": "0fbe295a295f257de2d4e3e922f1d54ce1eaa1e8",
+      "message": "Catkinised packages",
+      "files_changed": 19,
+      "additions": 770,
+      "deletions": 185,
+      "commit_type": "docs"
+    },
+    {
+      "author": "idryanov",
+      "date": "2012-07-10T14:08:08Z",
+      "sha": "293315cec8630eb28c1fa4c37b1afaa3cbc04dd9",
+      "message": "removed github readme",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ccny-ros-pkg",
+      "date": "2012-07-10T13:43:22Z",
+      "sha": "de2ca441853ea1f84075d8f2e5f07f3136e26a99",
+      "message": "Initial commit",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Ivan Dryanovski",
+      "date": "2012-07-10T13:40:37Z",
+      "sha": "ab9eb55737708d3939b0e283869583778f33e40a",
+      "message": "initial commit",
+      "files_changed": 90,
+      "additions": 811,
+      "deletions": 0,
+      "commit_type": "config"
+    }
+  ]
+}

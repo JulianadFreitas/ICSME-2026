@@ -1,0 +1,2441 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T03:06:06Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros2",
+    "repo": "rviz"
+  },
+  "data": [
+    {
+      "author": "ahcorde",
+      "date": "2020-01-11T10:49:17Z",
+      "sha": "38218b4e0e946ca9cb4159ffbe2cd19715d7e000",
+      "message": "Installed RViz configs for visual tests (#487) (#498)\n\n* Installed RViz configs for visual tests",
+      "files_changed": 4,
+      "additions": 13,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "t0k0shi",
+      "date": "2026-02-23T13:56:57Z",
+      "sha": "22593ba8a46839e0d7457eac9b3fc2eee2454cbd",
+      "message": "Fix setHidden regression in PropertyTreeWidget (#1667)\n\nPR #1587 added a `property->parent() != nullptr` guard in\npropertyHiddenChanged(), but Property objects use rviz's own\ngetParent() hierarchy rather than Qt's parent(). Since parent()\nalways returns nullptr for these properties, the guard prevented\nall setHidden calls from taking effect.\n\nRemove the guard and rely on parentIndex().isValid() which\nalready uses getParent() internally and handles null correctly.\n\nFixes #1620\n\nSigned-off-by: t0k0shi <7973370+t0k0shi@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 8,
+      "commit_type": "ci"
+    },
+    {
+      "author": "prina404",
+      "date": "2026-02-17T14:53:58Z",
+      "sha": "ffcd622a6b86ab7f6e8ffa11373eb9e5ec150c19",
+      "message": "Add topic name filtering when adding new visualizations (#1662)",
+      "files_changed": 2,
+      "additions": 65,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "zakmat",
+      "date": "2026-02-10T16:20:51Z",
+      "sha": "05af6b5d621b5d0aa7b2d79cf67e7d9df0d9c675",
+      "message": "use QPointer in QTimer::singleShot to prevent use-after-free (#1657)\n\nThe QTimer::singleShot in Property::setModel used model_ as context\nbut captured 'this' (Property*). If the Property was destroyed before\nthe timer fired, this caused a use-after-free crash in the\npropertyHiddenChanged signal emission.\n\nFix by capturing QPointer guarded 'this'. Semantic stays the same - Qt automatically cancels\nthe timer if the model_ is destroyed but QPointer on Property provides extra protection.\n\nThe bug manifests as a segfault in MoveIt Setup Assistant when loading\nrobot models, crashing in PropertyTreeModel::propertyHiddenChanged().\n\nSigned-off-by: Mateusz Żak <mateusz.zak@robotec.ai>",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "mjcarroll",
+      "date": "2013-01-10T15:04:01Z",
+      "sha": "ee575a92e0dbd84d88eaa94b04c450817b0dedde",
+      "message": "Update src/rviz/ogre_helpers/ogre_logging.cpp\n\nFix the ms_Singleton assertion error when loading rviz as rqt plugin.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Zyrin",
+      "date": "2025-12-16T18:32:08Z",
+      "sha": "1197754d6ceaffe88f8e732b800884583254da4f",
+      "message": "Add CameraInfo topic property to DepthCloudDisplay (#1643)\n\nSigned-off-by: Alexis Tsogias <a.tsogias@cellumation.com>\nCo-authored-by: Alexis Tsogias <a.tsogias@cellumation.com>",
+      "files_changed": 2,
+      "additions": 12,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "DLu",
+      "date": "2015-10-21T15:29:37Z",
+      "sha": "731984c40a5c7564addaf0e405d8dc885b434474",
+      "message": "Update map_display.cpp\n\nChange OK status to Warning for downsampled maps.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "eeshakumar",
+      "date": "2025-11-26T17:23:01Z",
+      "sha": "6fb29f8106b3bb62fbc5cbc8be6c9f25ebc27e1a",
+      "message": "Fix Translation Issue in XYOrbitViewController (#1630)",
+      "files_changed": 3,
+      "additions": 52,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "doisyg",
+      "date": "2025-11-19T18:01:51Z",
+      "sha": "74c9bc85e66a0b60f27d6ad62ca81361590081a1",
+      "message": "Overcome 16384 size limit (#1622)\n\nCo-authored-by: Guillaume Doisy <guillaume@dexory.com>",
+      "files_changed": 2,
+      "additions": 7,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "SuperJappie08",
+      "date": "2025-11-19T17:15:31Z",
+      "sha": "af65cdc43ab51877a7e4951abfcc47f2245b423e",
+      "message": "Add VS Code folder to .gitignore to prevent #1625 (#1626)\n\nSigned-off-by: SuperJappie08 <36795178+SuperJappie08@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "clalancette",
+      "date": "2018-10-05T21:29:52Z",
+      "sha": "e5a0fc82d9c40d9c04e9c96b1f4e93c30d28cf98",
+      "message": "Add semicolons to all RCLCPP and RCUTILS macros. (#357)\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "mini-1235",
+      "date": "2025-10-02T09:56:07Z",
+      "sha": "ce030d4a46ae262da674485a1e395b25f96826c2",
+      "message": "Replace QRegExp with QRegularExpression to support Qt6 (#1592)\n\nSigned-off-by: mini-1235 <mauricepurnawan@gmail.com>",
+      "files_changed": 4,
+      "additions": 14,
+      "deletions": 14,
+      "commit_type": "code"
+    },
+    {
+      "author": "mosfet80",
+      "date": "2023-05-01T21:08:26Z",
+      "sha": "82538e5b4453b1b85f0b49a206d8b225f65b2424",
+      "message": "Clean Code (#975)\n\n* Clean Code",
+      "files_changed": 8,
+      "additions": 2,
+      "deletions": 102,
+      "commit_type": "code"
+    },
+    {
+      "author": "kaichie",
+      "date": "2025-09-26T07:46:25Z",
+      "sha": "9fc805430608f21027de319afa2cd68b0e4abcfb",
+      "message": "fix crash (#1587)",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 7,
+      "commit_type": "code"
+    },
+    {
+      "author": "jsupratman13",
+      "date": "2025-09-01T09:25:21Z",
+      "sha": "815ebb2e69e297818877a3f8a87e7ae282f224d4",
+      "message": "add ros action property (#1549)\n\nSigned-off-by: Joshua Supratman <supratmanjoshua@gmail.com>\nCo-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>",
+      "files_changed": 3,
+      "additions": 272,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "riv-mjohnson",
+      "date": "2025-08-18T17:58:28Z",
+      "sha": "c7de3dfa092c0bd95d2b8f5bd311b81fe2946713",
+      "message": "Deprecates update(float, float) methods and provides update(std::chrono::duration, std::chrono::duration) replacements. (#1533)\n\nSigned-off-by: Mark Johnson <104826595+riv-mjohnson@users.noreply.github.com>\nCo-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>",
+      "files_changed": 12,
+      "additions": 83,
+      "deletions": 19,
+      "commit_type": "ci"
+    },
+    {
+      "author": "AntoBrandi",
+      "date": "2025-09-15T12:33:54Z",
+      "sha": "f4f2851bdab8bd74a9b0bbef0892b0c760da1ee2",
+      "message": "Fix pointcloud2 display divide by 0 (#1581)",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "lreiher",
+      "date": "2025-08-29T09:34:55Z",
+      "sha": "a33b5e9445547020092346c2d8b14ae4961d60cd",
+      "message": "add support for ffmpeg_image_transport and point_cloud_transport (#1568)\n\nCo-authored-by: Emre Karincali <emre.karincali@ika.rwth-aachen.de>",
+      "files_changed": 3,
+      "additions": 10,
+      "deletions": 7,
+      "commit_type": "code"
+    },
+    {
+      "author": "kbrameld",
+      "date": "2025-08-25T07:54:59Z",
+      "sha": "74020ced8ec2e179afd9b735ae987c1f3252ab0f",
+      "message": "Extend the message filter display for point cloud 2 display (#1566)",
+      "files_changed": 2,
+      "additions": 38,
+      "deletions": 150,
+      "commit_type": "code"
+    },
+    {
+      "author": "mergify[bot]",
+      "date": "2025-08-19T14:55:00Z",
+      "sha": "55bb914536407c83d3bab6e63bd90c22d75a8381",
+      "message": "Update OGRE mesh files from ROS1 RViz (#1536) (#1559)\n\ncurrent RViz2 OGRE mesh files are coarse, outdated(2017-12-08)\nthan ROS1 RViz OGRE mesh files(2020-04-01)\nrefer to the following commits for the details:\nhttps://github.com/ros-visualization/rviz/pull/1463\nhttps://github.com/ros-visualization/rviz/pull/1487\n\n(cherry picked from commit f49880c720d210deced7a6eb6a301f39b1a1135a)\n\nCo-authored-by: Seunghwan Jo <snipertype@hotmail.com>",
+      "files_changed": 4,
+      "additions": 0,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "kosuke55",
+      "date": "2025-08-19T09:38:06Z",
+      "sha": "8ad6fed0ee568e19b9d134987164eeda66901f7c",
+      "message": "Fix QoS profile loading for InitialPoseTool from rviz config files (#1544)\n\nSigned-off-by: kosuke55 <kosuke.tnp@gmail.com>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "JohnTGZ",
+      "date": "2025-08-14T17:21:00Z",
+      "sha": "af656e37a932163abd85ff507e29ed4234df954f",
+      "message": "add resourceExists check to loadEmbeddedTexture before loading texture (#1542)\n\n* add resourceExists check to loadEmbeddedTexture before loading texture\n\n* added comments\n\n* update comments",
+      "files_changed": 1,
+      "additions": 24,
+      "deletions": 20,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Yadunund",
+      "date": "2023-03-13T20:34:14Z",
+      "sha": "0ef2b56373b98b5536f0f817c11dc2b5549f391d",
+      "message": "Fix build failures on macOS + Apple Silicon (#944)\n\n* Fix malformed pragma-patch.diff\r\n\r\nSigned-off-by: Yadunund <yadunund@openorbotics.org>",
+      "files_changed": 2,
+      "additions": 25,
+      "deletions": 5,
+      "commit_type": "docs"
+    },
+    {
+      "author": "matthias88",
+      "date": "2025-06-26T21:22:06Z",
+      "sha": "6a0b30129a9130d3247c7e104f7a3cf4a0b993f2",
+      "message": "Assign the geometry to the resource group \"rviz_rendering\" (#1502)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "traversaro",
+      "date": "2022-01-24T14:39:37Z",
+      "sha": "3e12c99c1a5a85235fe22fbab28a4e729db1b1af",
+      "message": "Fix support for assimp 5.1.0 (#817)\n\n* Fix support for assimp 5.1.0\r\n\r\n* Add ament_export_dependencies on assimp for rviz_assimp_vendor\r\n\r\n* Make sure to export rviz_assimp_vendor dep from rviz_rendering.\r\n\r\nCo-authored-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 4,
+      "additions": 16,
+      "deletions": 14,
+      "commit_type": "docs"
+    },
+    {
+      "author": "hidmic",
+      "date": "2020-03-17T19:53:50Z",
+      "sha": "ff8fcf9a2411c3a5641bd8872c85bc9f3fce0a75",
+      "message": "Use RViz node clock in tools. (#519)\n\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>",
+      "files_changed": 6,
+      "additions": 18,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "chen-harrison",
+      "date": "2025-06-02T18:35:34Z",
+      "sha": "656dcdd49e44f64d1f8b6f09a6d6f6effbdb8961",
+      "message": "Fix Issue with Quaternion Angular Distance (#1473)\n\nOriginal issue here:\nhttps://github.com/ros2/rviz/issues/1381\n\n- Add new implementation for calculating angular distance between\n  quaternions suggested by issue author, but include additional step of\n  normalizing quaternions prior to the dot product operation\n- Add gmock test to verify that new implementation works even with small\n  angular distances, e.g. 1.0e-6\n- Decrease tolerance on expected values of angle distance calculations\n  in similar tests, for parity",
+      "files_changed": 2,
+      "additions": 13,
+      "deletions": 7,
+      "commit_type": "code"
+    },
+    {
+      "author": "wep21",
+      "date": "2022-01-07T02:48:54Z",
+      "sha": "d084db174db0ca4170759c0d9c50b49f54b4a7f9",
+      "message": "Set message type for ros topic display (#800)\n\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "fmauch",
+      "date": "2023-06-15T22:33:55Z",
+      "sha": "2052e4888799efe5c552a8a002b4e7aadef6d090",
+      "message": "Re-implemented setName for tools (#989)\n\nIn the migration towards RViz2 dynamically setting a tool name seems to\r\ngot dropped. This commit adds this feature again.",
+      "files_changed": 4,
+      "additions": 23,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "georgflick",
+      "date": "2025-05-06T20:35:36Z",
+      "sha": "3ad5349278adaec9bef5bac21a6f33d800626174",
+      "message": "Backported FrameAligned camera (#1453)\n\nSigned-off-by: Georg Flick <georg.flick@enway.ai>\nCo-authored-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>",
+      "files_changed": 6,
+      "additions": 555,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "StefanFabian",
+      "date": "2025-03-26T13:30:34Z",
+      "sha": "84c82b1bdf3669fdd37f95fbf2691f9e8443b48b",
+      "message": "Add missing glew dependency for ogre vendor package. (#1350)\n\nSigned-off-by: Stefan Fabian <fabian@sim.tu-darmstadt.de>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "cottsay",
+      "date": "2014-01-26T09:50:31Z",
+      "sha": "c44571777f93028f9bf3965bc5957ba72a383122",
+      "message": "Better feature detection for assimp version\n\nThe unified headers were introduced in Assimp 2.0.1150, so checking for Assimp 3.0.0 is not quite the best solution.\n\nSee https://github.com/assimp/assimp/commit/6fa251c2f2e7a142bb861227dce0c26362927fbc",
+      "files_changed": 2,
+      "additions": 5,
+      "deletions": 7,
+      "commit_type": "docs"
+    },
+    {
+      "author": "roncapat",
+      "date": "2022-10-26T14:32:24Z",
+      "sha": "9b360e0701a312e87331fb96cd7c771d5ebcd6ce",
+      "message": "Add Map Display binary option (#846)\n\n* Add Map Display binary option",
+      "files_changed": 4,
+      "additions": 84,
+      "deletions": 20,
+      "commit_type": "code"
+    },
+    {
+      "author": "mjforan",
+      "date": "2024-10-10T16:00:47Z",
+      "sha": "d3b8d07b3ca7941df7ae7061ba7c33486ca3f4f6",
+      "message": "Handle time source exception (#1285)",
+      "files_changed": 5,
+      "additions": 103,
+      "deletions": 30,
+      "commit_type": "code"
+    },
+    {
+      "author": "YuanYuYuan",
+      "date": "2025-03-04T14:47:55Z",
+      "sha": "dcbcdd6cf483acf7682414f25cbad32670622dfc",
+      "message": "fix: add rclcpp::shutdown (#1343)",
+      "files_changed": 2,
+      "additions": 6,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "quic-zhaoyuan",
+      "date": "2025-02-18T22:23:47Z",
+      "sha": "29182bafed759459d92f70c40f0f1035df9a91bf",
+      "message": "Nv12 color format (#1318)\n\n* rviz: display: image: Add NV12 to RGB conversion support in rviz2\n\n- Introduce a new `convertNV12ToRGBData` method for handling NV12 images\n- Correctly handle separate Y and UV planes within the NV12 buffer\n- Ensure proper stride usage for row and column indexing\n- Update `setFormatAndNormalizeDataIfNecessary` to recognize \"nv12\" encoding\n\nSigned-off-by: Zhaoyuan Cheng <zycczyby@gmail.com>\nSigned-off-by: quic-zhaoyuan <164289792+quic-zhaoyuan@users.noreply.github.com>\nCo-authored-by: zycczy <zycczyby@gmail.com>",
+      "files_changed": 2,
+      "additions": 45,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "scott-robotics",
+      "date": "2025-01-10T09:01:28Z",
+      "sha": "0708e9f86100f5e88a342ab08b6634cf20cf651f",
+      "message": "Fixed the XY Orbit controller move (#1327)\n\nCo-authored-by: Terry Scott <tscott@seegrid.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "rapop",
+      "date": "2025-01-06T13:36:59Z",
+      "sha": "9be9fab373e21792f3fe1df084fdddac8c76f500",
+      "message": "Fix preferred tools loading names (#1321)",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "CursedRock17",
+      "date": "2024-06-06T14:17:31Z",
+      "sha": "7c097d00de11d9c7c8e34ffd8022cb5a011ca6f1",
+      "message": "Prepping for qos deprecation (#1214)\n\nSigned-off-by: CursedRock17 <mtglucas1@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "disRecord",
+      "date": "2024-12-18T08:53:45Z",
+      "sha": "2dbce10f068449c38b5ecd79f1b7a1e3ee3c8175",
+      "message": "Change EffortDisplay superclass from MessageFilterDisplay to RosTopicDisplay to avoid dropping messages with empty frame_id. (#1312)\n\nProblem: EffortDisplay does not react on JointState messages with emty frame_id.\nAlso the following warning is displayed:\n\n  [rviz2]: Message Filter dropping message: frame '' at time ..... for reason\n  'the frame id of the message is empty'\n\nReason: MessageFilterDisplay uses tf2_ros::MessageFilter which checks\nthat frame_id is not empty. This mechanism is designed to perform message\nframe change \"on-fly\" but it is nao applicable to JointState messages.\n\nSolution: Use RosTopicDisplay instead of MessageFilterDisplay. Use type erased signal/slot\npair to ensure messages are processed in the main thread.",
+      "files_changed": 2,
+      "additions": 20,
+      "deletions": 7,
+      "commit_type": "code"
+    },
+    {
+      "author": "suchetanrs",
+      "date": "2024-12-17T09:02:50Z",
+      "sha": "9f1f4476c406b66a6eaa73a892f0ad2cc0dc9e1b",
+      "message": "Fix access control for Accel, Effort and Twist displays (#1311)\n\nSigned-off-by: Suchetan R S <suchetan.saravanan@gmail.com>",
+      "files_changed": 3,
+      "additions": 3,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "penww",
+      "date": "2024-10-15T11:25:14Z",
+      "sha": "f7112b1ae4337363c4d8177bffe7cce6bbcabf29",
+      "message": "Clean code for Image display (#1271)\n\nSigned-off-by: Peng Wang <quic_penwang@quicinc.com>",
+      "files_changed": 1,
+      "additions": 31,
+      "deletions": 60,
+      "commit_type": "code"
+    },
+    {
+      "author": "christianrauch",
+      "date": "2024-10-03T11:09:16Z",
+      "sha": "ff31ffedb8070f01b620b7b6883794fd8718cc7b",
+      "message": "replace deprecated encodings 'yuv422' and 'yuv422_yuy2' (#1276)",
+      "files_changed": 2,
+      "additions": 14,
+      "deletions": 14,
+      "commit_type": "code"
+    },
+    {
+      "author": "Masa0u0",
+      "date": "2024-09-26T15:52:08Z",
+      "sha": "8e757c2c39e382a0523e4ce230e5719ea450f483",
+      "message": "Avoid redefinition of default color materials (#1281)",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "ayrton04",
+      "date": "2017-04-29T22:58:54Z",
+      "sha": "3cb7b0d8c706b2bd239cb4e8c817d6a3b5f22708",
+      "message": "Adding option to transform map based on header timestamp (#1066)\n\n* Adding option to transform map based on header timestamp\r\n\r\n* Adding map_display.h to PR\r\n\r\n* Adding second attempt to transform if the attempt with the correct time stamp fails",
+      "files_changed": 2,
+      "additions": 16,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "m-elwin",
+      "date": "2024-07-26T16:13:13Z",
+      "sha": "72c0826545b4cc173413699a381cc36da78437bf",
+      "message": "Detect wayland and make sure X rendering is used. (#1253)\n\nrviz2 does not work under wayland unless using X compatibility.\r\nThe current workaround on wayland is to set the QT_QPA_PLATFORM\r\nenvironment variable to xcb.  This patch now detects\r\nif rviz2 is started in a wayland session and if so sets that\r\nvariable automatically.\r\n\r\nSigned-off-by: Matthew Elwin <elwin@northwestern.edu>",
+      "files_changed": 1,
+      "additions": 15,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "bochen87",
+      "date": "2024-07-22T11:37:46Z",
+      "sha": "642b1a34b1a50bfa8afa76817ec3fe0e2f9cf210",
+      "message": "Set ContentsMargins for RenderPanel to 0 to avoid borders in fullscreen mode. Fixes #1024 (#1228)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "chama1176",
+      "date": "2024-07-17T10:40:46Z",
+      "sha": "85dfbef6d96956960b48115f046dbb2539aa0f36",
+      "message": "Fix: issue #1220. (#1237)\n\nSigned-off-by: chama1176 <kaede6120@gmail.com>\r\nCo-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>",
+      "files_changed": 2,
+      "additions": 18,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "marip8",
+      "date": "2024-05-27T16:06:38Z",
+      "sha": "526f25105b4f679a4c09128558d94b678affd0fa",
+      "message": "Replace ESC shortcut for exiting full screen with solution from https://github.com/ros-visualization/rviz/pull/1416 (#1205)",
+      "files_changed": 3,
+      "additions": 8,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "ottojo",
+      "date": "2024-03-20T08:52:02Z",
+      "sha": "2273179562a451fe5382839d50a46afa5e1af076",
+      "message": "apply origin rotation to inertia box visualization (#1171)\n\nSigned-off-by: Jonas Otto <jonas@jonasotto.com>",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "marcoag",
+      "date": "2024-03-27T09:10:16Z",
+      "sha": "f7012cf680ce297ba794ab3bd1b409b44679f6f9",
+      "message": "Changelog.\n\nSigned-off-by: Marco A. Gutierrez <marcogg@marcogg.com>",
+      "files_changed": 8,
+      "additions": 26,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "nuclearsandwich",
+      "date": "2017-12-08T18:21:26Z",
+      "sha": "ba8db4c3ac139c79759b17979fd1f5127580e5ea",
+      "message": "Update rviz2 packages for bloom (#139)\n\n* Drop the version number to match rviz2 for bloom.\r\n\r\n* update package.xml’s, versions, and disable rviz good\r\n\r\n* restore version\r\n\r\n* Add opengl dependency for ogre.\r\n\r\n* add license info and website for vendors\r\n\r\n* Add libxrandr dependency.\r\n\r\n* Fix xml tag structure.\r\n\r\n* missing newline EOF",
+      "files_changed": 10,
+      "additions": 85,
+      "deletions": 5,
+      "commit_type": "config"
+    },
+    {
+      "author": "AustinMooreT",
+      "date": "2024-01-10T15:07:16Z",
+      "sha": "30b471adec88db247238cdb036ea00e0a17e6f46",
+      "message": "Switch from ROS_TIME to SYSTEM_TIME on rclcpp::Time construction (#1117)\n\nThis prevents a std::runtime_exception due to differing clock types\r\nbetween default constructed rclcpp::Time object and an explicitly\r\nconstructed rclcpp::Time object constructed from a msg::Time object\r\nusing a ROS_TIME clock type\r\n\r\nCo-authored-by: austin.moore <austin.moore@resonantsciences.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "yaswanth1701",
+      "date": "2024-01-10T08:59:43Z",
+      "sha": "95552e4dde407ccfbc20cdc6349f55f77d61f1e6",
+      "message": "fixed MovableText::getWorldTransforms transform (#1118)\n\nSigned-off-by: Yaswanth1701 <gonnayaswanth17@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "hyunseok-yang",
+      "date": "2023-05-17T16:55:35Z",
+      "sha": "9bb249500160d56d3d00755fddcdcfe7c560bad1",
+      "message": "Modify access specifier to protected or public for the scope of processMessage() member function (#984)\n\n* Modify access specifier to protected or public for the scope of processMessage() member function\r\n- pose_display, pose_with_covariance_display\r\n- marker_display, marker_array_display\r\n- point_cloud_common\r\n- relative_humidity_display, temperature_display, fluid_pressure_display, illuminance_display\r\n\r\nSigned-off-by: (=YG=) Hyunseok Yang <hyunseok7.yang@lge.com>\r\nCo-authored-by: Chris Lalancette <clalancette@gmail.com>",
+      "files_changed": 9,
+      "additions": 16,
+      "deletions": 10,
+      "commit_type": "code"
+    },
+    {
+      "author": "paulerikf",
+      "date": "2021-06-30T21:42:54Z",
+      "sha": "49512b5fa1572159d29247f6bd4a805b968d6d1f",
+      "message": "Extract message type in ImageTransportDisplay (#711)\n\nI might have misunderstood something here, but seems to me like we can use the same method of getting MessageType that is being used in MessageFilterDisplay: https://github.com/ros2/rviz/blob/cd1da34cfc01d9c6223c181ba6e7bf277ee4c1a8/rviz_common/include/rviz_common/message_filter_display.hpp#L63",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "christophfroehlich",
+      "date": "2023-12-07T20:23:43Z",
+      "sha": "ae8c885ada6a6497ea59c9a18fb4adb36746439e",
+      "message": "Fix typo (#1104)\n\nSigned-off-by: Christoph Fröhlich <christophfroehlich@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "ci"
+    },
+    {
+      "author": "AiVerisimilitude",
+      "date": "2023-08-31T15:42:28Z",
+      "sha": "b8f9299eefe8dd84ba010dca89a7ce616736a8e3",
+      "message": "Fix implicit capture of \"this\" warning in C++20 (#1053)\n\nSigned-off-by: Guilherme Rodrigues <guilherme.rodrigues@ait.ac.at>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "maxbader",
+      "date": "2023-11-09T19:02:48Z",
+      "sha": "ea2dbb3097f095dd24add190c242f3048a747c63",
+      "message": "Rolling namespace in title (#1074)\n\n* Update visualization_frame.cpp\r\n\r\n* window title format option added\r\n\r\nSigned-off-by: Markus Bader <markus.bader@tirol.com>\r\nCo-authored-by: Chris Lalancette <clalancette@gmail.com>",
+      "files_changed": 3,
+      "additions": 61,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "MatthijsBurgh",
+      "date": "2023-10-31T16:48:14Z",
+      "sha": "90cfbda2e2b34bbd4a8129079081ec8a3e43b635",
+      "message": "(robot) fix styling of log msg (#1080)\n\nSigned-off-by: Matthijs van der Burgh <MatthijsBurgh@outlook.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "LeweC",
+      "date": "2023-10-10T15:57:27Z",
+      "sha": "59c1485398238551645cf047e93e888995171309",
+      "message": " removed enableInteraction reference (#1075)\n\n* removed enableInteraction reference",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "felixf4xu",
+      "date": "2023-10-09T08:09:35Z",
+      "sha": "55978d94267466c9008dbcc097578cb7ea09345d",
+      "message": "RVIZ_RENDERING_PUBLIC to export class RenderSystem (#1072)\n\n* RVIZ_RENDERING_PUBLIC to export class RenderSystem",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "codebot",
+      "date": "2023-07-04T09:48:27Z",
+      "sha": "733350fd12a3b6a7a6a5b3be42c56a6135081611",
+      "message": "load GLB meshes (#1001)",
+      "files_changed": 2,
+      "additions": 52,
+      "deletions": 10,
+      "commit_type": "code"
+    },
+    {
+      "author": "ygerlach",
+      "date": "2023-07-06T01:48:40Z",
+      "sha": "439c683fefb128731146307a5b538d8d356ddcb3",
+      "message": "use static QCoreApplication::processEvents() function without a QApplication instance (#924)\n\n* fix posible segfault, use static processEvents()\r\n\r\n* do not process app_ if it is not set\r\n\r\n* Fix uncrustify warning.\r\n\r\nCo-authored-by: Chris Lalancette <clalancette@gmail.com>",
+      "files_changed": 2,
+      "additions": 16,
+      "deletions": 14,
+      "commit_type": "code"
+    },
+    {
+      "author": "goekce",
+      "date": "2023-06-05T18:16:28Z",
+      "sha": "349cb1aca46cbf732dae6f3f7c2fb2d6b0af40e1",
+      "message": "CMake: rename FeatureSummary.cmake to avoid name clashes (#953)\n\n* CMake: rename FeatureSummary.cmake to avoid name clashes\r\n\r\nAccording to https://github.com/OGRECave/ogre/issues/2381:\r\n\r\n```\r\nThe reason is FeatureSummary is a CMake's module, and /usr/lib64/cmake/Qt6Gui/Qt6GuiDependencies.cmake has a line include(FeatureSummary). Since you have FeatureSummary.cmake in your project, it gets loaded instead of /usr/share/cmake/Modules/FeatureSummary.cmake. The solution is simple: just rename FeatureSummary.cmake in your project.\r\n```\r\n\r\nBackports the [patch from upstream](https://github.com/OGRECave/ogre/pull/2383/commits/e34ef06bb0d49ce847efe3a80ebe01c9762ea0b1).\r\n\r\n* Explicitly rename files\r\n\r\nThe version of `patch` available in chocolatey in Windows is ancient and\r\ndoesn't support git-style renaming of files, so we'll need to do it\r\nexplicitly (for now).\r\n\r\nSigned-off-by: Scott K Logan <logans@cottsay.net>\r\n\r\n---------\r\n\r\nSigned-off-by: Scott K Logan <logans@cottsay.net>\r\nCo-authored-by: goekce <git2022@aydos.de>\r\nCo-authored-by: Scott K Logan <logans@cottsay.net>",
+      "files_changed": 2,
+      "additions": 12,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "methylDragon",
+      "date": "2023-04-08T00:12:39Z",
+      "sha": "cc9b8e1651206cc9b5e933d7bb0f2504413f6fa3",
+      "message": "Fix ODR errors with gmock (#967)\n\n* Fix ODR errors with gmock\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Compile test fixture sources explicitly\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Add gmock libraries to gtests (for the fixtures..)\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Split text fixtures with and without sources\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Explicitly compile point cloud page object\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Explicitly compile point cloud messages\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n---------\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>",
+      "files_changed": 2,
+      "additions": 113,
+      "deletions": 61,
+      "commit_type": "docs"
+    },
+    {
+      "author": "AndreasR30",
+      "date": "2022-09-21T00:18:04Z",
+      "sha": "a535da7bd41a2c36f39220cbc83da8f3b097661b",
+      "message": "Consider region of interest in CameraDisplay (#864)\n\nThis feature was already implemented in Rviz1",
+      "files_changed": 1,
+      "additions": 25,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "sloretz",
+      "date": "2018-08-08T23:05:56Z",
+      "sha": "3931ade03c226f595c2461c28544a7016b16a69d",
+      "message": "Pass clock to tf2_ros::buffer (#340)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "xkaraman",
+      "date": "2023-01-03T15:18:09Z",
+      "sha": "0c41714f7ac90a5962ee7eddca54f4f147c1dbd3",
+      "message": "Fix tolerance calculation precision (#934)",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "xbroquer",
+      "date": "2023-01-02T16:32:42Z",
+      "sha": "2cb54fc2a93ab80746cd2bfda202c7fca232acad",
+      "message": "Fix MeshResourceMarker for mesh with color-based embedded material (#928)\n\nIssue: Colors from embedded color based mesh are overridden\r\nand not rendered as expected\r\n\r\nIt was a known issue on ROS1 that was fixed by\r\nhttps://github.com/ros-visualization/rviz/pull/1424\r\n\r\nKudos to the original author\r\n\r\nFix #927\r\n\r\nSigned-off-by: Xavier BROQUERE <xav.broquere@gmail.com>",
+      "files_changed": 1,
+      "additions": 27,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "audrow",
+      "date": "2020-08-18T16:44:31Z",
+      "sha": "a59841594a1f90a646cbf93c6dc43530cf6c7b97",
+      "message": "Filter topics in drop down menu (#591)\n\n* Filter topics based\r\n\r\nSigned-off-by: Audrow <audrow.nash@gmail.com>\r\n\r\n* Filter topic popup by expected topic type\r\n\r\nSigned-off-by: Audrow <audrow.nash@gmail.com>\r\n\r\n* Make lookup and replace strings constant + modify error message\r\n\r\nSigned-off-by: Audrow <audrow.nash@gmail.com>\r\n\r\n* Remove filter topics as unfinished from readme\r\n\r\nSigned-off-by: Audrow <audrow.nash@gmail.com>\r\n\r\n* Make linters happy\r\n\r\nSigned-off-by: Audrow <audrow.nash@gmail.com>\r\n\r\n* Use name function to get the message type\r\n\r\nSigned-off-by: Audrow Nash <audrow.nash@gmail.com>\r\n\r\n* Remove string include\r\n\r\nSigned-off-by: Audrow Nash <audrow.nash@gmail.com>",
+      "files_changed": 3,
+      "additions": 2,
+      "deletions": 10,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ijnek",
+      "date": "2022-08-02T19:11:51Z",
+      "sha": "4e976dc444e7e59ec9cdef30f1f04e0beafcafc8",
+      "message": "Ogre 1.12.10 upgrade (#878)\n\n* Upgrade to OGRE 1.12.10\r\n\r\nSigned-off-by: Kenji Brameld <kenjibrameld@gmail.com>\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 90,
+      "additions": 236,
+      "deletions": 124,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Ace314159",
+      "date": "2021-07-15T08:13:37Z",
+      "sha": "b7b7d095dae7027b2cea456787ca0207cc07061b",
+      "message": "Export InteractiveMarker (#718)",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Eric-Bwr",
+      "date": "2022-09-19T14:40:01Z",
+      "sha": "efa6b89b16ce6581d9d749da4fa70d1b17566670",
+      "message": "std::copy fix - OccupancyGridUpdate - Data is not being processed correctly (#895)\n\n* std_copy_fix\r\n\r\nCo-authored-by: Eric Böwer <e.boewer@kalverkamp.de>\r\nCo-authored-by: Chris Lalancette <clalancette@gmail.com>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Crola1702",
+      "date": "2022-09-12T15:48:52Z",
+      "sha": "1ea07e86d05a21b9bf610a0ef1ac9dc930d0286f",
+      "message": "Fixes policy CMP0135 warning for CMake >= 3.24 (#898)\n\n* Fixes policy CMP0135 warning for CMake >= 3.24\r\n\r\nSigned-off-by: Crola1702 <cristobal.arroyo@ekumenlabs.com>",
+      "files_changed": 2,
+      "additions": 10,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "timonegk",
+      "date": "2022-08-31T13:52:52Z",
+      "sha": "4df5aa3938c919f197993e1390096dd45c53c888",
+      "message": "Show link names in inertia error message (#874)\n\n* Show link names in inertia error message\r\n\r\n* Suppress warning message for base link and static links\r\n\r\nSigned-off-by: Timon Engelke <timon.engelke@online.de>",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "paudrow",
+      "date": "2022-01-25T19:31:48Z",
+      "sha": "ac30afdc59005aafe53ff93a2099ec1ef90b669b",
+      "message": "9.1.1\n\nSigned-off-by: Audrow Nash <audrow@hey.com>",
+      "files_changed": 16,
+      "additions": 38,
+      "deletions": 8,
+      "commit_type": "docs"
+    },
+    {
+      "author": "hunter-allen-apexai",
+      "date": "2022-06-21T17:47:47Z",
+      "sha": "057e227a95de45b01acc0f4e6c8f992a0e747d44",
+      "message": "Use make_shared to construct PointCloud2 (#869)\n\nSigned-off-by: Hunter L. Allen <hunter.allen@apex.ai>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "juchajam",
+      "date": "2022-06-09T15:14:54Z",
+      "sha": "3584a2981d9b49a53d03dc243ce7be8dc142b758",
+      "message": "Add RVIZ_COMMON_PUBLIC macro (#865)",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "jacobperron",
+      "date": "2018-12-21T18:06:56Z",
+      "sha": "4d5e94d27fdab7a7811529312ab62e0bb74e1e2f",
+      "message": "Fix errors from uncrustify v0.68 (#366)\n\n* Fix errors from uncrustify v0.68\r\n\r\n* Fix uncrustify errors in rviz_default_plugins",
+      "files_changed": 13,
+      "additions": 38,
+      "deletions": 38,
+      "commit_type": "code"
+    },
+    {
+      "author": "Kettenhoax",
+      "date": "2022-04-25T20:59:46Z",
+      "sha": "72b54facd486eb9feb790ba9a997b05019b08eda",
+      "message": "Add time jump handler (#752) (#791)\n\nCo-authored-by: Marcel Zeilinger <marcel.zeilinger@ait.ac.at>",
+      "files_changed": 2,
+      "additions": 38,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "laszloturanyi",
+      "date": "2022-03-28T20:03:56Z",
+      "sha": "a7e3ceb23765b00a8cb444c76042e48a0a6170d3",
+      "message": "Fix interface link libraries in ogre vendor (#761)\n\nCo-authored-by: Laszlo Turanyi <laszlo.turanyi@faulhornlabs.com>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "Blast545",
+      "date": "2022-03-17T17:27:37Z",
+      "sha": "31be46fb96e2a659784419af1a07a09e65aef7fb",
+      "message": "Make getVerticesPerPoint method public and improve tests (#843)\n\n* Make tests less dependant to opengl version\r\n\r\nSigned-off-by: Jorge Perez <jjperez@ekumenlabs.com>",
+      "files_changed": 3,
+      "additions": 8,
+      "deletions": 21,
+      "commit_type": "code"
+    },
+    {
+      "author": "Chen Lihui",
+      "date": "2020-11-06T21:20:26Z",
+      "sha": "5ec2e5a85e12fd7919b45e283228a58ababbab18",
+      "message": "Update status message by removing colon or adjust colon position (#624)\n\nSigned-off-by: Chen Lihui <lihui.chen@sony.com>",
+      "files_changed": 4,
+      "additions": 9,
+      "deletions": 9,
+      "commit_type": "code"
+    },
+    {
+      "author": "corycrean",
+      "date": "2022-01-13T20:54:31Z",
+      "sha": "ca59b6f243d76f4e54729610f29fa097a77fe0fa",
+      "message": "Add underscores to material names (#811)",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "ivanpauno",
+      "date": "2019-03-18T20:17:52Z",
+      "sha": "b5227d74c80e4511e800bcab3aa14d0fc3bae6da",
+      "message": "Used ament_include_directories_order macro in rviz_default_plugins CMakeLists.txt (#384)\n\nSigned-off-by: ivanpauno <ivanpauno@ekumenlabs.com>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "schornakj",
+      "date": "2021-03-05T13:42:08Z",
+      "sha": "3ca50ac6a983dc3cf6fa3690fa93890a7983d580",
+      "message": "Expose VisualizationManager and YamlConfigReader to the public API (#649)\n\nIn order to create a standalone Qt application that contains an embedded RViz2 RenderPanel,\r\nthe header for the VisualizationManager class must be moved to the public API to allow\r\ninstantiating a VisualizationManager independently from the context of the RViz2 application.\r\nThe YamlConfigReader class also needs to be moved to the public API to allow runtime\r\nconfiguration of the VisualizationManager, for example to add a Grid plugin.\r\n\r\nSigned-off-by: Joe Schornak <joe.schornak@gmail.com>",
+      "files_changed": 15,
+      "additions": 14,
+      "deletions": 14,
+      "commit_type": "docs"
+    },
+    {
+      "author": "davidorchansky",
+      "date": "2021-09-17T12:41:47Z",
+      "sha": "cdc89151ae43aa03aefb14170f6b5c94282d1b2f",
+      "message": "Exposed tool_manager header file. (#767)",
+      "files_changed": 6,
+      "additions": 5,
+      "deletions": 5,
+      "commit_type": "docs"
+    },
+    {
+      "author": "uodna-t",
+      "date": "2021-09-16T23:04:15Z",
+      "sha": "00f4a4bf35ac0221cbbf6e6515de47ed09c01865",
+      "message": "refactor: make const getter methods const (#756)",
+      "files_changed": 4,
+      "additions": 6,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "bailaC",
+      "date": "2021-09-14T08:17:08Z",
+      "sha": "78843bfe24fcbfa6f8172829196d9cda52bc9a5c",
+      "message": "Handle NaN values for Wrench msgs (#746)\n\n* Initial changes.\r\n\r\n* Update rviz_default_plugins/src/rviz_default_plugins/displays/wrench/wrench_display.cpp\r\n\r\nCo-authored-by: Denis Štogl <destogl@users.noreply.github.com>\r\n\r\n* Update rviz_default_plugins/src/rviz_default_plugins/displays/wrench/wrench_display.cpp\r\n\r\nCo-authored-by: Denis Štogl <destogl@users.noreply.github.com>\r\n\r\n* Update rviz_default_plugins/src/rviz_default_plugins/displays/wrench/wrench_display.cpp\r\n\r\nCo-authored-by: Denis Štogl <destogl@users.noreply.github.com>\r\n\r\n* Update rviz_default_plugins/include/rviz_default_plugins/displays/wrench/wrench_display.hpp\r\n\r\nCo-authored-by: Denis Štogl <destogl@users.noreply.github.com>\r\n\r\n* Update rviz_default_plugins/src/rviz_default_plugins/displays/wrench/wrench_display.cpp\r\n\r\nCo-authored-by: Denis Štogl <destogl@users.noreply.github.com>\r\n\r\n* Addressing review comments.\r\n\r\n* Code format.\r\n\r\n* Addressing review comments.\r\n\r\n* lint error fix.\r\n\r\nCo-authored-by: Denis Štogl <destogl@users.noreply.github.com>",
+      "files_changed": 2,
+      "additions": 37,
+      "deletions": 6,
+      "commit_type": "ci"
+    },
+    {
+      "author": "gbalke",
+      "date": "2021-08-27T22:57:03Z",
+      "sha": "b30097c0918eb8e381d96a2178f39b8acdddf4f5",
+      "message": "Triangle lists support textures (#719)\n\n* Triangle lists support textures\r\n\r\nSigned-off-by: Greg Balke <greg@openrobotics.org>\r\n\r\n* Uncrustify Format\r\n\r\nSigned-off-by: Greg Balke <greg@openrobotics.org>\r\n\r\n* Texture loaded from message directly\r\n\r\nSigned-off-by: Greg Balke <greg@openrobotics.org>\r\n\r\n* Update to support latest marker message format\r\n\r\nSigned-off-by: Greg Balke <greg@openrobotics.org>\r\n\r\n* Update rviz_default_plugins/src/rviz_default_plugins/displays/marker/markers/triangle_list_marker.cpp\r\n\r\nCo-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>\r\n\r\n* Remove unused includes\r\n\r\nSigned-off-by: Greg Balke <greg@openrobotics.org>\r\n\r\n* Adjust string matching to meet updated spec texture_embedded:// -> embedded://\r\n\r\nSigned-off-by: Greg Balke <greg@openrobotics.org>\r\n\r\n* Comment on constant\r\n\r\nSigned-off-by: Greg Balke <greg@openrobotics.org>\r\n\r\n* Fix errors\r\n\r\nSigned-off-by: Greg Balke <greg@openrobotics.org>\r\n\r\nCo-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>",
+      "files_changed": 3,
+      "additions": 88,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "wolfv",
+      "date": "2021-08-17T08:21:52Z",
+      "sha": "617cbc182e42a225bdf6076b1f80401177ba5f1d",
+      "message": "Fix for ogre failing when material already exists (#729)\n\n* Fix for ogre failing when material already exists\r\n\r\n* Update rviz_rendering/src/rviz_rendering/material_manager.cpp\r\n\r\nCo-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>\r\n\r\n* fix uncrustify\r\n\r\nCo-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "gonzodepedro",
+      "date": "2021-08-13T13:29:58Z",
+      "sha": "60a7269a5b88266969fd24cf154f5b2c04a8ca6a",
+      "message": "Report sample lost events (#686)\n\n* Report messages lost\r\n\r\nSigned-off-by: Gonzalo de Pedro <gonzalo@depedro.com.ar>\r\n\r\n* Uncrustify\r\n\r\nSigned-off-by: Gonzalo de Pedro <gonzalo@depedro.com.ar>\r\n\r\n* more uncrustify\r\n\r\nSigned-off-by: Gonzalo de Pedro <gonzalo@depedro.com.ar>\r\n\r\n* Changes based on review\r\n\r\nSigned-off-by: Gonzalo de Pedro <gonzalo@depedro.com.ar>\r\n\r\n* Changed stringstream for ostringstream\r\n\r\nSigned-off-by: Gonzalo de Pedro <gonzalo@depedro.com.ar>",
+      "files_changed": 4,
+      "additions": 56,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "rebecca-butler",
+      "date": "2021-07-15T19:09:37Z",
+      "sha": "4a4da3e2950dfbd5cd4b348e1959558f77e3ac1d",
+      "message": "Add rviz_rendering dependency to rviz_common (#727)\n\n* Add rviz_rendering dependency to rviz_common\r\n\r\nSigned-off-by: Rebecca Butler <rebecca@openrobotics.org>\r\n\r\n* Remove rviz_rendering from target_link_libraries\r\n\r\nSigned-off-by: Rebecca Butler <rebecca@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "briansoe66",
+      "date": "2021-07-19T15:33:01Z",
+      "sha": "2b551f808e8e8c9bd29bc006d06a549c00db4861",
+      "message": "mass property visualization (#714)\n\n* Add mass properties to robot model display, robot, and robot link.\r\nVisual representation is based on gazebo,\r\ni.e. visualize mass as equivalent lead ball and inertia as box.\r\n\r\n* revert mock_view_picker\r\n\r\n* fix whitespace\r\n\r\n* fix whitespace\r\n\r\n* fix whitespace\r\n\r\n* add definition for M_PI on windows",
+      "files_changed": 6,
+      "additions": 220,
+      "deletions": 15,
+      "commit_type": "code"
+    },
+    {
+      "author": "cturcotte-qnx",
+      "date": "2021-07-14T07:46:22Z",
+      "sha": "add6b0a0c4565fe7ba0ef8da36018c8f2b84b019",
+      "message": "Yuv to rgb changes (#701)\n\n* added yuv to rgb Image conversion\r\n\r\n* yuv2rgb fixes\r\n\r\n* optimized calculation\r\n\r\n* reorder stride_\r\n\r\n* formatting fixes\r\n\r\n* formatting fixes\r\n\r\n* formatting fixes\r\n\r\n* requested changes",
+      "files_changed": 2,
+      "additions": 168,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "ketatam",
+      "date": "2021-05-07T19:37:23Z",
+      "sha": "731f24d39bfa4edf25814448cf9d65ed8fd9981a",
+      "message": "use image_transport to subscribe to image messages (#523)\n\n* use image_transport to subscribe to image messages\r\n\r\nuse image_transport in camera_display and image_display\r\nuse image_transport to get camera_info_topic\r\n\r\n* update README after reenabling image transport\r\n\r\n* Add image transport dependency to package.xml\r\n\r\nSigned-off-by: Audrow <audrow.nash@gmail.com>\r\n\r\n* Update headers to fix macOS warnings\r\n\r\nSigned-off-by: Audrow Nash <audrow.nash@gmail.com>\r\n\r\nCo-authored-by: Martin Idel <martin.idel@googlemail.com>\r\n\r\n* Add Macros to fix linking in Windows\r\n\r\nSigned-off-by: Audrow Nash <audrow.nash@gmail.com>\r\n\r\nCo-authored-by: Martin Idel <martin.idel@googlemail.com>\r\n\r\n* Move Windows visibility macros to header files\r\n\r\nSigned-off-by: Audrow Nash <audrow.nash@gmail.com>\r\n\r\nCo-authored-by: ketatam <mohamed.amine.ketata@tngtech.com>\r\nCo-authored-by: Audrow <audrow.nash@gmail.com>\r\nCo-authored-by: Martin Idel <martin.idel@googlemail.com>",
+      "files_changed": 12,
+      "additions": 440,
+      "deletions": 24,
+      "commit_type": "docs"
+    },
+    {
+      "author": "pijaro",
+      "date": "2021-05-05T22:31:54Z",
+      "sha": "c74ca569dd9c7c277cd476f57a2d27f36943d5fb",
+      "message": "Putting glsl 1.50 resources back in RenderSystem (#668)\n\n* Included glsl v150 resources in rendering system\r\n\r\nSigned-off-by: Piotr Jaroszek <piotr.jaroszek@robotec.ai>\r\n\r\n* Unit tests fixed for glsl 150\r\n\r\nSigned-off-by: Piotr Jaroszek <piotr.jaroszek@robotec.ai>\r\n\r\n* getGlslVersion test method changed to const\r\n\r\nSigned-off-by: Piotr Jaroszek <piotr.jaroszek@robotec.ai>\r\n\r\n* Public dll spec for getglsl method.\r\n\r\nSigned-off-by: Piotr Jaroszek <piotr.jaroszek@robotec.ai>",
+      "files_changed": 6,
+      "additions": 45,
+      "deletions": 14,
+      "commit_type": "code"
+    },
+    {
+      "author": "christophebedard",
+      "date": "2021-03-12T03:15:16Z",
+      "sha": "3c88c66766eeb2185d77bad225e76efca0453086",
+      "message": "Update ROS 2 docs links in README (#659)\n\nSigned-off-by: Christophe Bedard <bedard.christophe@gmail.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "JafarAbdi",
+      "date": "2021-03-25T16:59:26Z",
+      "sha": "f44489fd35a2ae0d29258123f5ae1c896ef461a0",
+      "message": "Add visualization_frame to the public API (#660)\n\n* Expose visualization_frame to the public API",
+      "files_changed": 4,
+      "additions": 11,
+      "deletions": 11,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ipa-fez",
+      "date": "2021-03-13T20:06:53Z",
+      "sha": "cd63e71f9d0a1f9c303c42c8c0f609882d4906d8",
+      "message": "reset current line width when calculating text width (#655)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "VictorLamoine",
+      "date": "2016-06-16T22:01:04Z",
+      "sha": "6afa5a658d4087a3e23f00ea3c14d5c9bab6ce5e",
+      "message": "Allow disabling RViz splash-screen (#1024)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "wjwwood",
+      "date": "2012-11-03T00:06:13Z",
+      "sha": "5024f61a64b448c9f315c31c07bd66d555b4ed49",
+      "message": "Releasing rviz version 1.9.11",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "Michael Jeronimo",
+      "date": "2019-04-11T16:47:50Z",
+      "sha": "c4dfcd40e22f3f0fd82a97c356cf5f6173645b67",
+      "message": "Free the transformation_manager so that rviz doesn't crash at shutdown (#386)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "fujitatomoya",
+      "date": "2020-10-13T15:21:40Z",
+      "sha": "3d1b082973eab0d3cdda8e6d38146a61e7a77b3c",
+      "message": "use rcutils_get_env. (#609)\n\n* use rcutils_get_env.\r\n\r\nSigned-off-by: Tomoya.Fujita <Tomoya.Fujita@sony.com>",
+      "files_changed": 3,
+      "additions": 9,
+      "deletions": 15,
+      "commit_type": "docs"
+    },
+    {
+      "author": "neumann-nico",
+      "date": "2020-09-11T22:03:05Z",
+      "sha": "3f6108cbf071956bd57d8df946df97bb4bbd2203",
+      "message": "TimePanel port (#599)\n\n* Add TimePanel port\r\n\r\n* Fix ros time elapsed crash\r\n\r\n* Disable time panel temporarily in default configuration\r\n\r\ncan be added manually over the gui\r\n\r\n* Add time panel again\r\n\r\nfixed indentation",
+      "files_changed": 9,
+      "additions": 50,
+      "deletions": 442,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Martin-Idel",
+      "date": "2019-06-10T22:16:40Z",
+      "sha": "015116808ca3c35a48d088fd2766f1d1bacaa3bf",
+      "message": "Fix STL loader (#410)\n\n* Add test to show bug\r\n\r\n* Fix bug with loading an stl mesh twice\r\n\r\nThe mesh loader checks whether the mesh has already been loaded.\r\nHowever, it only checks in the ResourceGroup `rviz_rendering`, but\r\nthe STL loader loads into the DefaultResourceGroup by accident.\r\n\r\n* Add BaseWhiteNoLighting to rviz_rendering resource group\r\n\r\nPrevious to Ogre 1.11, materials would be searched in all groups\r\nWith 1.11, this is no longer true.\r\n\r\nIn RViz, we try to put materials in our own resource group, but we\r\nneed the Ogre fallback material.",
+      "files_changed": 5,
+      "additions": 24,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "mikeferguson",
+      "date": "2015-02-04T04:52:14Z",
+      "sha": "6451e59afa9029e881b0c717ca6b87e29d17152b",
+      "message": "scale ambient by 0.5 for collada and other assimp-loaded resources\nThis is consistent with numerous other places within the codebase where ambient is almost always scaled by 0.5",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "richmattes",
+      "date": "2020-08-17T15:58:31Z",
+      "sha": "b16b032e79c52302216fae05aeeb97743fc70f09",
+      "message": "rviz_common: Remove variadic macro warning check (#421)\n\nRemove the check to conditionally disable the\r\n`-Wgnu-variadic-macro-arguments` compiler diagnostic.  As discussed in\r\nissue 402, the `CheckCXXCompilerFlag` CMake check will always pass for a\r\n`-Wno-` compiler flag due to the way gcc suppresses unrecognized command\r\ndiagnostics for flags that disable warning messages.\r\n\r\nThe comments around the check indicate that the flag should be removed\r\nwhen possible, so this commit removes it.\r\n\r\nSigned-off-by: Rich Mattes <richmattes@gmail.com>",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 6,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mdtoom",
+      "date": "2020-07-29T19:01:44Z",
+      "sha": "69912e9e49cf9278abcd6d71088fc02a9757cddc",
+      "message": "Added covariance settings to set pose estimate (#569)\n\nCo-authored-by: Matthijs den Toom <mdentoom@lely.com>",
+      "files_changed": 2,
+      "additions": 20,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "spiralray",
+      "date": "2020-07-17T16:20:14Z",
+      "sha": "4532ef69ebe36be9aa6bfc1ed067f90a3267c12a",
+      "message": "Fix the order of destructors (#572)\n\n* fixed nullptr exception on destructor\r\n\r\n* revert constructor and delete unneeded nullptr check",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "dirk-thomas",
+      "date": "2012-03-29T23:42:22Z",
+      "sha": "8aecef87b04ef9b9bcd43353faf42739085d6684",
+      "message": "updated sip cmake\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/visualization/branches/visualization-1.8@39221 eb33c2ac-9c88-4c90-87e0-44a10359b0c3",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 13,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Karsten1987",
+      "date": "2019-02-25T23:21:04Z",
+      "sha": "023dddcea431395cff9f0a830c17f1fb19941976",
+      "message": "fix robot state publisher #14 (#378)\n\nSigned-off-by: Karsten Knese <karsten@openrobotics.org>",
+      "files_changed": 2,
+      "additions": 21,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "ymd-stella",
+      "date": "2020-06-17T19:21:53Z",
+      "sha": "0ba40aeab2155eed0a5f6aa9d5bb45968707ebc9",
+      "message": "Use dedicated TransformListener thread (#551)\n\nSigned-off-by: ymd-stella <world.applepie@gmail.com>",
+      "files_changed": 1,
+      "additions": 10,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "rotu",
+      "date": "2019-07-17T18:55:25Z",
+      "sha": "e65c1c66d0714da9ecd6344d38eeea3030dd03ae",
+      "message": "Disambiguate \"estimate\" pose from \"goal\" pose in log (#427)",
+      "files_changed": 4,
+      "additions": 11,
+      "deletions": 12,
+      "commit_type": "code"
+    },
+    {
+      "author": "brawner",
+      "date": "2020-02-22T04:20:37Z",
+      "sha": "efe7a82d2e1c4552c5183110edd59e980c32f04b",
+      "message": "Update deprecated enums in rviz_common (#510)",
+      "files_changed": 3,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "nbbrooks",
+      "date": "2020-01-24T22:03:48Z",
+      "sha": "fcc4b1b20d366203295fd4e6c245c4d79615a0e7",
+      "message": "Fix documentation for developing custom rviz_common plugins (#501)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "chapulina",
+      "date": "2015-04-02T21:54:29Z",
+      "sha": "d24eadca3ad2e0d45e9c1e273cf618dc5244df3b",
+      "message": "indentation",
+      "files_changed": 2,
+      "additions": 10,
+      "deletions": 7,
+      "commit_type": "code"
+    },
+    {
+      "author": "SteveMacenski",
+      "date": "2019-09-04T02:17:52Z",
+      "sha": "88847cb49305d68a2ffc9a410876fa0c41eac6fa",
+      "message": "Rename 2d Nav Goal to 2d Goal Pose + move_base_simple to goal_pose (#455)\n\n* rename nav pose tool to goal pose tool\r\n\r\n* rename topic for goal pose tool to goal_pose from move_base_simple/goal\r\n\r\n* updating header gaurds for pose tool",
+      "files_changed": 9,
+      "additions": 16,
+      "deletions": 16,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mikaelarguedas",
+      "date": "2017-08-01T23:59:53Z",
+      "sha": "21a76fa898e66ad65a622fd982e47aec67cfc1c7",
+      "message": "find tinyxml and link against it (#1130)\n\n* find tinyxml and link against it\r\n\r\n* add missing include",
+      "files_changed": 3,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "seanyen",
+      "date": "2019-10-26T01:18:04Z",
+      "sha": "f560c940c91ff1839f6a95849575aa657f85a4da",
+      "message": "Skip freetype2 dependencies (#405)",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "zmichaels11",
+      "date": "2019-08-16T05:35:05Z",
+      "sha": "e113fcf390e56d380b77700ca078de07ff06aa24",
+      "message": "fix assert in mesh_loader_test (#446)\n\nReplaced ASSERT_EQ on floats by first casting to string with ASSERT_FLOAT_EQ",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "shiveshkhaitan",
+      "date": "2019-08-07T18:25:52Z",
+      "sha": "6a946d0f05a2da0872df77f049770553fcee9c4e",
+      "message": "Re-enable use of tf message filter (#375)\n\n* Remove dependency on tf2\r\n\r\n* Minor fixes\r\n\r\n* Address reviews\r\n\r\n* Remove empty constructor\r\n\r\nSigned-off-by: Jacob Perron <jacob@openrobotics.org>",
+      "files_changed": 41,
+      "additions": 363,
+      "deletions": 114,
+      "commit_type": "docs"
+    },
+    {
+      "author": "allenh1",
+      "date": "2017-12-08T01:56:45Z",
+      "sha": "de76abd5929c18c5ee348d69ad56ea23737d6e79",
+      "message": "Fix GCC 8 compiler error. (#136)\n\n* Fix GCC 8 compiler error.\r\n\r\n* move tool for publishing point clouds\r\n\r\n* fix send_lots_of_points_node testing tool\r\n\r\n* change default frame so it works with the dummy robot demo\r\n\r\n* uncrustify",
+      "files_changed": 6,
+      "additions": 62,
+      "deletions": 55,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Hunter L. Allen",
+      "date": "2019-06-27T21:06:21Z",
+      "sha": "8b2fcc1838e079d0e365894abd7cfd7b255b8d8b",
+      "message": "Remove -Werror from defualt compiler options (#420)\n\nSigned-off-by: Hunter L. Allen <hunterlallen@protonmail.com>",
+      "files_changed": 6,
+      "additions": 6,
+      "deletions": 6,
+      "commit_type": "docs"
+    },
+    {
+      "author": "emersonknapp",
+      "date": "2019-03-22T11:58:24Z",
+      "sha": "3344a8ed63b134549eeb82682f0dee76f53b7565",
+      "message": "Pass through CXX flags to OGRE vendor build (#381)\n\n* Pass through CXX flags\r\n\r\nSigned-off-by: Emerson Knapp <eknapp@amazon.com>\r\n\r\n* fixup\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* re-add removed libc++ flag, because OSX build always needs it\r\n\r\nSigned-off-by: Emerson Knapp <eknapp@amazon.com>",
+      "files_changed": 1,
+      "additions": 22,
+      "deletions": 5,
+      "commit_type": "docs"
+    },
+    {
+      "author": "nzlz",
+      "date": "2019-06-10T11:56:59Z",
+      "sha": "a930d85d0203e49a0b2e1d98e494c87c67cc7175",
+      "message": "typo in plugin_development.md (#412)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mm318",
+      "date": "2019-04-16T00:43:57Z",
+      "sha": "b8be03d9687c8ad4d72ad9deff861ea66e74adb9",
+      "message": "Update to be compatible with new rmw_qos_profile_t  (#392)\n\n* update to be compatible with latest QoS changes\r\n\r\nSigned-off-by: Miaofei <miaofei@amazon.com>\r\n\r\n* correct initialization of rmw_qos_profile_t struct instances\r\n\r\nSigned-off-by: Miaofei <miaofei@amazon.com>",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 9,
+      "commit_type": "code"
+    },
+    {
+      "author": "lmayencourt",
+      "date": "2019-01-29T23:39:17Z",
+      "sha": "a8eea3365c743afb8f38470b9697a58484c2c764",
+      "message": "Propagate toolchain-file to external-project (#374)\n\nIf defined, propagate the CMAKE_TOOLCHAIN_FILE argument to the cmake\r\nargument of freetype, zlib and ogre projects.\r\n\r\nChange-Id: Ibf2802b96c2238a06191e78a1b2a3128769a83af\r\nSigned-off-by: Louis Mayencourt <louis.mayencourt@arm.com>",
+      "files_changed": 1,
+      "additions": 12,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "GW1708",
+      "date": "2019-01-07T22:23:22Z",
+      "sha": "9f3f3a6aeca39e853a409d8e0467dfe610d97df3",
+      "message": "Migrate scalar displays (#367)\n\n* moved scalar displays (temperature, illuminance, relative humidity, fluid pressure) header and source file from rviz to rviz2\r\n\r\n* Changed header and source files to compile successfully\r\n\r\nchanged pointers to smart pointers\r\nreplaced outdated headers\r\nupdated CMakeList and plgins_description\r\n\r\n* Refactored Scalar Displays\r\n\r\nAdded the header file point cloud scalar that includes all functionality that was possible to template. This excludes the process message function and the set initial values und update properties function.\r\nFurthermore the process message function was split up into several smaller functions where the createpointcloud2message function allows for unit tests because no instance of the actual point cloud is needed.\r\n\r\n* Update Docs\r\n\r\nupdated ported displays.\r\nChanged ament for colcon\r\n\r\n* Implemented Visual Tests\r\n\r\nThey test if color changes correctly.\r\nRefactored point cloud common page object by implementing the queuesize method. Therefore laser scan, point cloud and point cloud 2 page objects become redundant\r\n\r\n* Implemented point cloud scalar display test\r\n\r\nTest for correct memory allocation and correct copy of values.\r\nAlso uncrustified files with linter errors\r\n\r\n* Pull Request Changes\r\n\r\nIndentation, doc blocks\r\n\r\n* Added DBUILD_TESTING keyword\r\n\r\nwithout it the tests do not execute\r\n\r\n* added DBUILD_TESTING keyword\r\n\r\nwithout it the tests do not run",
+      "files_changed": 45,
+      "additions": 1534,
+      "deletions": 978,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Martin-Idel-SI",
+      "date": "2017-08-31T14:05:16Z",
+      "sha": "df4105c6e28234938ae1c20b31dc51c7b04d1023",
+      "message": "Get ogre_media folder from rviz install location\n\n- move ogre_media folder in installation step in CMake\n- set resource directory before building the rendering system\n- get the path to set the directory from ament_index",
+      "files_changed": 3,
+      "additions": 20,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "kartikmohta",
+      "date": "2016-05-24T22:53:00Z",
+      "sha": "311fd949913dbc6ad3e989b8ceb6ef2b04292350",
+      "message": "Fix compile error due to the user-defined string literals feature (#1010)",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "greimela-si",
+      "date": "2017-08-30T11:24:19Z",
+      "sha": "a9f96b5dd540e3fc30e443bda7c4919af352d966",
+      "message": "Modify sphere material to show light reflections",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "botteroa-si",
+      "date": "2018-02-05T22:19:33Z",
+      "sha": "95c92fd9df9e19f675520a0789b9ce2b19d7185e",
+      "message": "Migrate polygon display (#194)\n\n* Initial move\r\n\r\n* Add to plugins_description.xml\r\n\r\n* Make display compile\r\n\r\n* Uncrustify\r\n\r\n* Change from uint32_t to size_t to silence warning on Windows.\r\n\r\n* Minor refactoring.\r\n\r\n* Enable alpha blending for the Polygon Display.",
+      "files_changed": 5,
+      "additions": 195,
+      "deletions": 153,
+      "commit_type": "docs"
+    },
+    {
+      "author": "oceanusxiv",
+      "date": "2018-08-03T04:01:09Z",
+      "sha": "6779e30ae9ac74857df54a91096b781a96efc1f3",
+      "message": "fixes laserscan 1 meter limit bug (#345)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "anhosi",
+      "date": "2017-10-20T20:11:58Z",
+      "sha": "bc66920fd088c73cbcc7ecdcd563cb824297173b",
+      "message": "Linting/fix rviz rendering followup (#70)\n\n* Remove NOLINT comments\r\n\r\n- replace using namespace statements\r\n\r\n* Improve expressiveness of NOLINT comment\r\n\r\n* Remove ./ from header includes\r\n\r\n- As a NOLINT is necessary for these includes anyway there is no need\r\n  for the ./ as path (introduced in pr #67)\r\n- The NOLINT can be removed once the corresponding headers are renamed\r\n  to a .hpp.\r\n\r\n* Restore include order\r\n\r\n- disable cpplint where necessary\r\n\r\n* Rename all headers to hpp file ending\r\n\r\nA current cppcheck (windows) parses .h files as c files instead of c++ files\r\n\r\n* Adapt code to moving of header files\r\n\r\n* Switch to \" style includes for ros headers\r\n\r\n- This avoids cpplint include order errors\r\n- Also fixing few include order issues\r\n\r\n* Restore double spaces for line comments\r\n\r\n- In case of NOLINT comments the linter does not pick up on the wrong style.",
+      "files_changed": 52,
+      "additions": 263,
+      "deletions": 256,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mjbogusz",
+      "date": "2018-05-16T08:07:13Z",
+      "sha": "cff3fe6bc675f3c760d44a2ab134cb9b02228e37",
+      "message": "Fix build error for ignored qualifiers warning/error on GCC8 (#261)",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "russkel",
+      "date": "2018-03-20T03:04:36Z",
+      "sha": "cd988d8f4187f6d44ebe307b537998a7dac916c6",
+      "message": "remove ogre-master timeout (#231)\n\nThe 10 minute timeout meant internet connections slower than ~300kb/s couldn't build this project. Timeout is removed.",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Johannes Jeising",
+      "date": "2017-09-28T21:24:35Z",
+      "sha": "2b45ce1ad5dc929c91eb264592598fba3b8b0dd4",
+      "message": "[rviz_rendering] update ogre version + fix deprecated function (#31)\n\n* update ogre version + fix deprecated function\r\n\r\n* Adopt patch from 1.7 to new ogre version 1.8\r\n\r\n* readd one of the patches to fix white space\r\n\r\n* fix deprecation warnings",
+      "files_changed": 7,
+      "additions": 90,
+      "deletions": 290,
+      "commit_type": "docs"
+    },
+    {
+      "author": "yechun1",
+      "date": "2017-11-15T17:43:19Z",
+      "sha": "f3a416eb1477562a7c4c8469476f102be4c84351",
+      "message": "Fix OgreMain-NOTFOUND when build rviz_rendering (#109)",
+      "files_changed": 1,
+      "additions": 24,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "racko",
+      "date": "2017-12-15T00:34:33Z",
+      "sha": "b5ab260c28e7bcad345f17431e8d45d7066669d6",
+      "message": "Fixed missing break in switch-case (#158)\n\n* Fall-through is not intended: listAppendNew sets the type to List\r\n  while the call to setValue after the fall-through resets the type to\r\n  Value.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "sharst",
+      "date": "2017-08-17T21:13:38Z",
+      "sha": "73ad3e122283b2a8cbd116bda0b2ccf63c3b03e7",
+      "message": "Check for odometry quaternion normalization before display (#1139)",
+      "files_changed": 1,
+      "additions": 15,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Thomas",
+      "date": "2017-08-17T20:54:44Z",
+      "sha": "b01e2559c27c03c903d3c25e18c011ed675eaa01",
+      "message": "Avoid unnecessary addPoints in PointCloudCommon::update by switching setRenderMode and addPoints (#1122)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "dhood",
+      "date": "2017-08-02T21:14:10Z",
+      "sha": "da45dc986a31f2874ba864ddeb3f2786e329b665",
+      "message": "Add dhood as maintainer (#1131)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "1r0b1n0",
+      "date": "2016-10-17T19:40:01Z",
+      "sha": "94c1d05f9c2dcb2851cd51333ae2776012c05894",
+      "message": "bugfix in float_edit for non-english locales  (#1043)\n\n* bugfix in float_edit for non-english locales\r\n\r\n* double -> float",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "gerkey",
+      "date": "2017-07-31T21:37:31Z",
+      "sha": "ce5037811748b79d1c0e6f1986c23c9364e7f0c9",
+      "message": "Add option to invert Z axis for orbit-based view controllers (#1128)\n\n* Working on adding z-down option for camera view\r\n\r\n* Add z-down support as an option",
+      "files_changed": 5,
+      "additions": 23,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "v4hn",
+      "date": "2014-07-16T18:02:34Z",
+      "sha": "a0e07f2a3fc9bb8109489c2e1297f8590f0b1cd2",
+      "message": "don't show map unless the map plugin is active",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "CodeFinder2",
+      "date": "2017-07-17T19:02:07Z",
+      "sha": "0a6afc8b7a650b2e61b029a8d3765a41c4ad89bf",
+      "message": "map_display: don't ignore resolution changes in OccupancyGrid maps (#1115)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Adam Allevato",
+      "date": "2017-06-28T23:31:26Z",
+      "sha": "f23ae4ffbd1b3e31d7ceaaeeba4f52c19e9a0ca5",
+      "message": "Added keyboard shortcuts actions to VisualizationFrame directly (#1117)",
+      "files_changed": 1,
+      "additions": 11,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "genemerewether",
+      "date": "2017-05-17T21:58:51Z",
+      "sha": "3cddcb77316e326775e52bf9ca249262cba4bda7",
+      "message": "Update variable name (#1104)\n\nSomehow, variable names got out of sync. Lines 370 and 371 refer to \"parameters\" but it is \"params\" everywhere else.\r\n\r\nThanks for the Retina fixes! Just tested on Sierra and they work great.",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "de-vri-es",
+      "date": "2016-06-03T08:37:29Z",
+      "sha": "d28b37c240b579b033b5dc3f63273635eb688e5d",
+      "message": "Fix unused parameter warnings.",
+      "files_changed": 4,
+      "additions": 53,
+      "deletions": 12,
+      "commit_type": "code"
+    },
+    {
+      "author": "Ellon",
+      "date": "2017-05-05T00:51:39Z",
+      "sha": "c1ec0e413d825b7533724363b2ce0b91d7d16926",
+      "message": "Covariances updated (#1099)\n\n* Include covariance_visual.h as local file\r\n\r\n* Use rviz namespace explicitely; Clean trailing whitespaces\r\n\r\nThe use of rviz:: make the files close to the ones of the original plugin\r\n\r\n* Add offset to covariance property\r\n\r\nWhile here, fix end of namespace comment\r\n\r\n* Refactor CovarianceVisual\r\n\r\n- Declare rviz objects explicitly in the header\r\n\r\n- Add offset for orientation (used to position orientation shapes)\r\n\r\n- Rename orientation_scale_node_ to orientation_root_node_\r\n\r\n- Limit the angle to be displayed to 89 deg\r\n\r\n- Add helper functions in anonymoous namespace\r\n\r\n* Fix tolerance test at angular discontinuity\r\n\r\n* Rename PoseWithCovarianceDisplay::Shape enums",
+      "files_changed": 8,
+      "additions": 279,
+      "deletions": 211,
+      "commit_type": "docs"
+    },
+    {
+      "author": "phil0stine",
+      "date": "2017-05-02T06:29:39Z",
+      "sha": "80265012f1a9feaea7fba73f407e42ec35a7a36a",
+      "message": "renamed duplicated pass_depth.vert in nogp program (#1063)",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "axelschroth",
+      "date": "2017-04-29T01:36:25Z",
+      "sha": "54a1e956611f467abc25645b8f5af3c40ab908e3",
+      "message": "Update display if empty pointcloud2 is published (#1073)\n\nDo not show last point cloud any more, if published point cloud message does not contain any points",
+      "files_changed": 1,
+      "additions": 33,
+      "deletions": 32,
+      "commit_type": "code"
+    },
+    {
+      "author": "roehling",
+      "date": "2017-04-29T00:52:08Z",
+      "sha": "2b52e1769c50e30b86fc9c6af72a56f28010dbc6",
+      "message": "Correctly scale the render panel on high resolution displays (#1078)",
+      "files_changed": 4,
+      "additions": 26,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "k-okada",
+      "date": "2013-05-10T10:57:36Z",
+      "sha": "e04d803f50fb33cb0bde6590a770fedbe0fb9940",
+      "message": "add effort, point, wrench",
+      "files_changed": 12,
+      "additions": 1973,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "hiddewie",
+      "date": "2017-03-23T18:55:48Z",
+      "sha": "1f53c35c3a2f21a81b270d92f920d499a82f1c27",
+      "message": "Fixed duplicate property name for Path colors (#1089)\n\nSee issue #1087.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "rhaschke",
+      "date": "2015-11-22T00:20:41Z",
+      "sha": "282376702f2810031284dba3b26ecf47c636cb8e",
+      "message": "fixed update of SplitterHandle\n\nSplitterHandle only reacted on Resize events. However, when\nthe columns where resized externally or scrolling happened,\nthe position of the splitter wasn't correctly updated.",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "lucasw",
+      "date": "2016-10-25T17:35:42Z",
+      "sha": "aa3ff29cc15ea4a6bfdc15b883eb56459230abd4",
+      "message": "Visualize joint axis and display type and limits (#1029)\n\n* Show joint properties in left hand panel and optionally show joint axis as arrow in the 3d view.\r\n\r\n* Use the correct property for enabling and disabling showing the joint axis.",
+      "files_changed": 2,
+      "additions": 115,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "RobertBlakeAnderson",
+      "date": "2016-10-17T18:54:53Z",
+      "sha": "41ff98922267c46aa17fa38bbff0c5f33296f314",
+      "message": "Added close() signal to Tool class (#1051)",
+      "files_changed": 3,
+      "additions": 14,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "at-wat",
+      "date": "2016-10-17T18:21:54Z",
+      "sha": "13bd5ef8df178abd9354d13cc31366ca7ff19fad",
+      "message": "Fix double free in display dialog (#1053)\n\nThis commit deletes AddDisplayDialog object after use.\r\n\r\nCopy operator of QString in rviz::AddDisplayDialog::updateDisplay() causes double free AFTER CLOSING THE DIALOG.\r\nSince AddDisplayDialog object created in DisplaysPanel::onNewDisplay never deleted, local variable topic_output could be overwritten after leaving local scope.\r\nThis seems to have occurred especially in many-core (16-physical-core in my case) environments.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "jspricke",
+      "date": "2015-12-05T17:52:09Z",
+      "sha": "1f897d9794a5ad0b04d396836f345bd7a26cc8e9",
+      "message": "Remove default_plugin from exported libraries",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "vmayoral",
+      "date": "2016-07-21T10:16:50Z",
+      "sha": "a15ac18551c2a159163b446d9ad5fe357f4bab87",
+      "message": "README, fix typo (#1034)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "bponsler",
+      "date": "2015-12-03T06:06:56Z",
+      "sha": "ecf860b1aaba64f846dbe0b2aaf859006f22e6fc",
+      "message": "Fixing a bug in the BillboardLine class when setting up the chains. The case where the number of points is an exact multiple of 16384 (MAX_ELEMENTS) was not being handled and resulted in the number of chains being set to 0 which resulted in ogre throwing an exception.",
+      "files_changed": 1,
+      "additions": 10,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "Simon Schmeisser (isys vision)",
+      "date": "2015-08-17T10:50:49Z",
+      "sha": "3694f320ee3ee477a70d5370506d4307ff0a33b1",
+      "message": "port rviz to Qt5 with continued support for Qt4",
+      "files_changed": 13,
+      "additions": 88,
+      "deletions": 130,
+      "commit_type": "docs"
+    },
+    {
+      "author": "davetcoleman",
+      "date": "2014-06-13T06:28:54Z",
+      "sha": "326ff01ca336b13cb4fcf516bcbf0d87523a009f",
+      "message": "Add ability to delete all markers in Marker plugin",
+      "files_changed": 2,
+      "additions": 17,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "wkentaro",
+      "date": "2016-03-22T07:07:34Z",
+      "sha": "9b99fc2de20a0f0678830440799773feccf62e5b",
+      "message": "Add \"Duplicate\" button to duplicate display with same config",
+      "files_changed": 2,
+      "additions": 29,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Joao Avelino",
+      "date": "2016-03-10T01:52:28Z",
+      "sha": "cdaad1f337cd213261f034ecfd02d2922457ddb3",
+      "message": "Unreliable connection option now available on image, camera and map displays",
+      "files_changed": 4,
+      "additions": 32,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "aaronhoy",
+      "date": "2016-02-24T01:34:41Z",
+      "sha": "ada12f84714a2560d7668d8a8ef7363b0c24cda3",
+      "message": "Adding raw mode for map vizualization\n\nThis allows map pixel values to be passed directly through and drawn as is.",
+      "files_changed": 1,
+      "additions": 19,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Mike O'Driscoll",
+      "date": "2016-02-19T23:48:29Z",
+      "sha": "9c09f1cdad10e4ea30acad9499632251308a4453",
+      "message": "Add user option to prefer UDP/unreliable transport.\n\nAdded \"Unreliable hint\" option to base MessageFilterDisplay template\nclass.",
+      "files_changed": 1,
+      "additions": 16,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "cmansley",
+      "date": "2016-02-10T07:06:54Z",
+      "sha": "2f9981e37328559f5dcb708148e1f3c67c9ee1e4",
+      "message": "Convert to class\n\nViewportMouseEvent is forward declared as a class in other headers, which causes warnings in clang with -Wmismatched-tags",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Tobias Berling",
+      "date": "2016-02-01T19:00:36Z",
+      "sha": "dc1a02ebd7c8406e4c262ad57a19cdfe1a2a3456",
+      "message": "Fix CMake warning about FindEigen.cmake being deprecated. Using FindEigen3 now.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "caguero",
+      "date": "2015-04-02T22:37:09Z",
+      "sha": "7d69feb60a5ee100b3a0ac8e02d3ca02135b3621",
+      "message": "Check that the STL file is valid.",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "stwirth",
+      "date": "2015-11-23T11:38:19Z",
+      "sha": "91763c118fcd7dc7f1f38dafc4aef522ff3c9011",
+      "message": "Minor map color documentation fix in map_display.cpp\n\nColor for lethal obstacle values for the obstacle map display is yellow, not purple.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "dkargin",
+      "date": "2015-11-07T10:33:03Z",
+      "sha": "98fbca837ae717a8082d1b1f796d22a32b46bcce",
+      "message": "Fixed billboard line generation for zero key points",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "peci1",
+      "date": "2015-10-23T09:55:50Z",
+      "sha": "8fd906473bb17c5ee1c5bf1482e81297ca5c9e10",
+      "message": "Documented how is the color transform computed.",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "NikolausDemmel",
+      "date": "2015-10-17T21:19:22Z",
+      "sha": "c144aece0dbdb187a4429fc11fb2d29c4f1b8867",
+      "message": "Don't attempt to `transformMap` until one is actually received.\n\nWithout this patch, the map display shows frame transformation errors\nfrom with an empty frame_id, since it attempts to transform the \ndefault-initialized occupancy grid variable.",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Benjamin Chrétien",
+      "date": "2014-02-25T23:17:35Z",
+      "sha": "03d7e032474f1747435c86790c24217d63565537",
+      "message": "Disable shiboken when version is detected which would segfault (fix #728)",
+      "files_changed": 1,
+      "additions": 73,
+      "deletions": 68,
+      "commit_type": "docs"
+    },
+    {
+      "author": "hersh",
+      "date": "2014-02-12T21:33:39Z",
+      "sha": "408aba08f5286546ef16ae6ffb0a8bbf440e8d30",
+      "message": "Merge pull request #716 from acornacorn/hydro-devel\n\nMake rviz work with Ogre 1.10",
+      "files_changed": 138,
+      "additions": 603,
+      "deletions": 488,
+      "commit_type": "docs"
+    },
+    {
+      "author": "marv",
+      "date": "2015-10-09T12:19:43Z",
+      "sha": "512ff74dcecd93c3a69750d5d82ba804d79aa63f",
+      "message": "build: Use PKG_CONFIG_EXECUTABLE\n\n... instead of using a hard-coded pkg-config to make cross-compiling\npossible where the pkg-config binary is host-prefixed (e.g.\narmv7-unknown-linux-pkg-config when cross-compiling for armv7)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "arntanguy",
+      "date": "2015-10-09T11:06:36Z",
+      "sha": "606fe02f63a719c59d72c26511fb6fe0e6cedcae",
+      "message": "Fix #911 #616 : TF Segfaults on reset/update\n\nDo not needlessly delete tree_property_ elements, update them instead.\n\nMost likely fixes #808 too.",
+      "files_changed": 1,
+      "additions": 16,
+      "deletions": 7,
+      "commit_type": "code"
+    },
+    {
+      "author": "aballier",
+      "date": "2015-09-26T09:39:39Z",
+      "sha": "2f93b132a63e25e3cece330ebaf16de7a8aa9517",
+      "message": "python_bindings: sip: Use CATKIN_PACKAGE_LIB_DESTINATION instead of hardcoded lib.\n\nFixes build with libdir != lib.\nhttps://bugs.gentoo.org/show_bug.cgi?id=561480",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Jonathan Meyer",
+      "date": "2015-09-21T15:54:16Z",
+      "sha": "e6593f825478492551c7a8825dc6b1397d0a831e",
+      "message": "Updated warning message to indicate triangle count is a 32bit integer, not 16.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "stonier",
+      "date": "2014-11-15T14:14:33Z",
+      "sha": "59168210bb583c08d13bed9cb1efdb85383f0379",
+      "message": "apply colour to all visuals of the line class, closes #820.",
+      "files_changed": 2,
+      "additions": 29,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Michael Görner",
+      "date": "2015-09-01T14:54:52Z",
+      "sha": "8d40f9e0ac4462b13fae9e6f1b214b2b7df5be10",
+      "message": "disable Display if associated Panel becomes invisible\n\nOtherwise the state between Panel & Display becomes inconsistent.\n\nFixed symptom:\nWhen loading a configuration that contains a disabled CameraDisplay,\nduring the configuration of the panel(the camera render widget),\nthe panel is set visible for a very short period of time.\nBecause of the missing logic, the CameraDisplay is enabled\ntogether with the panel, but the Display remains enabled\nafter the Panel is set invisible. One ends up with an enabled\n(and subscribed) CameraDisplay without the corresponding RenderWidget,\neven so the configuration specified that the Display is _not_ enabled.",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "hdeeken",
+      "date": "2015-01-15T16:46:44Z",
+      "sha": "8277331f6ac0743dcde4bc8284b9e3985e74e774",
+      "message": "allow tools to get access to any keyevent\n\nwith this patch the shortkey handling of rviz is altered to operate as such:\n\nthe Tool baseclass offers a keep_control_ flag that if set to true allows a Tool to get all key events even those that usually are used as shortkeys to activate tools\nin oder to do so the QACtion handling within the visualization_frame was altered to check if a tool keeps control and if so it generates a KeyEvent from the actions shortkey and passes it to the tool",
+      "files_changed": 4,
+      "additions": 62,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "garaemon",
+      "date": "2015-02-14T05:17:10Z",
+      "sha": "c8687e779be3634e19b233c5267443a2cac5d553",
+      "message": "Check if position of wrench is not NaN",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "goretkin",
+      "date": "2015-03-11T21:14:37Z",
+      "sha": "72f92f2a4a4c7261da48a54a1bd3775293be8934",
+      "message": "Allow force and torque in Wrench to be scaled separately",
+      "files_changed": 4,
+      "additions": 29,
+      "deletions": 14,
+      "commit_type": "code"
+    },
+    {
+      "author": "kojiterada",
+      "date": "2015-08-02T03:55:01Z",
+      "sha": "b23de550ebf30232773f81fdb51ca7a7b1997e3f",
+      "message": "Treat ros::Time(0) as static",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "tmoinel",
+      "date": "2015-07-21T19:07:11Z",
+      "sha": "f33153618ce3c088797fa81a945d73feaf745aa3",
+      "message": "Correctly display color and alpha in pointcloud select field.",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "ellislm",
+      "date": "2015-06-04T13:54:34Z",
+      "sha": "687637b706ad905eb2359dd51ed5bb1d26b98f55",
+      "message": "mesh markers: Fixing mesh alpha and tinting",
+      "files_changed": 1,
+      "additions": 47,
+      "deletions": 37,
+      "commit_type": "code"
+    },
+    {
+      "author": "jbohren",
+      "date": "2009-08-03T23:06:34Z",
+      "sha": "8534a37e5542d24f395c8b06f1d4639f08b53a29",
+      "message": "Fix to keep rviz from exploding\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/visualization@20557 eb33c2ac-9c88-4c90-87e0-44a10359b0c3",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "otim",
+      "date": "2015-01-15T09:06:37Z",
+      "sha": "67b0b51b1f151270121364f1827419e3d5b4e123",
+      "message": "added a new view so the camera not only follows the tracked frame but also turns with it - so far it is called the third person follower",
+      "files_changed": 6,
+      "additions": 340,
+      "deletions": 9,
+      "commit_type": "config"
+    },
+    {
+      "author": "lsouchet",
+      "date": "2015-03-02T12:58:03Z",
+      "sha": "c7c021e6d641805ebcad4f3b3fbe3ec44282b283",
+      "message": "INITIALPOSE: Update timestamp in /initialpose message.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "gavanderhoorn",
+      "date": "2015-02-12T11:38:14Z",
+      "sha": "d15d8ceb4cb0d9e6861786c32f060966e83fa1f6",
+      "message": "Add a simple 'About' dialog to the help menu.",
+      "files_changed": 2,
+      "additions": 22,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "tlind",
+      "date": "2014-04-16T12:24:33Z",
+      "sha": "db09324faf4652a695027c13698def611511f06a",
+      "message": "Fix memory leak in BillboardLine destructor (material not being destroyed correctly)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Dave Hershberger",
+      "date": "2014-02-27T19:09:08Z",
+      "sha": "14801cd469dce83b5e1b3dce71acd9408403e749",
+      "message": "Fixed a bug in tutorials caused by uninitialized ros::Time here.",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "ahendrix",
+      "date": "2014-10-12T22:24:57Z",
+      "sha": "82bfda5469dddbf7cde9c14a650a67ef1060296c",
+      "message": "Add dependency on opengl\n\nrviz calls find_package(OpenGL), so it should have a direct dependency\non OpenGL. This matters on ARM, where the other packages that rviz\ndepends on use OpenGL.ES, and don't provide a transitive dependency on\nOpenGL.",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "Alex Bencz",
+      "date": "2014-09-19T17:36:33Z",
+      "sha": "61e1fa847875804d347e453eadfa819ace6b8fdd",
+      "message": "Update map via QT signal instead of in ros thread\n\nResolved issues when running RViz in rqt where the incomingMap callback\nis not issued from RViz's main QThread causing a crash in Ogre. Map\nupdates are now handled by emitting a signal to update the map from the\ncallback thread.",
+      "files_changed": 2,
+      "additions": 11,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "ZdenekM",
+      "date": "2014-08-26T07:39:15Z",
+      "sha": "b9364cb6ed7e55569fc1f27317bc114463fb3b61",
+      "message": "added TF listener as parameter to constructors of VisualizationManager and FrameManager",
+      "files_changed": 4,
+      "additions": 12,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "bcharrow",
+      "date": "2013-07-17T20:45:22Z",
+      "sha": "bf3a2bf50e10f589b5a5fb93085ba4b1e5ab4d73",
+      "message": "Create new dialog class, AddDisplayDialog, for adding a display\n\nAddDisplayDialog is a clone of NewObjectDialog.",
+      "files_changed": 4,
+      "additions": 393,
+      "deletions": 6,
+      "commit_type": "docs"
+    },
+    {
+      "author": "trainman419",
+      "date": "2013-11-08T06:02:56Z",
+      "sha": "891e90e2b950632bdebdaf4c37af5b664eeab39b",
+      "message": "Fix message type for Polygon display.\n\nThe polygon display type actually subscribes to PolygonStamped. Fix it, so that it's possible to select robot footprints for navigation from the new display by topic menu in rviz.",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "Acorn Pooley",
+      "date": "2014-02-05T01:02:18Z",
+      "sha": "c7b8d44c511d4171b0ae13a6edbc7cc8d8a0c9bf",
+      "message": "include ogre without OGRE prefix\n\nThis is necessary to find Ogre files in the right place with\ncompatibility between Ogre < 1.9 and Ogre >= 1.9.\n\nThis is also necessary when 2 versions of Ogre are installed on the\nbuild machine.",
+      "files_changed": 134,
+      "additions": 460,
+      "deletions": 460,
+      "commit_type": "code"
+    },
+    {
+      "author": "chadrockey",
+      "date": "2012-11-19T19:55:07Z",
+      "sha": "0d0dcbecb4d1f91ab88809203ddde5e232a9c144",
+      "message": "Added visualization support for fixed-distance rangers.",
+      "files_changed": 1,
+      "additions": 13,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "Adam Leeper",
+      "date": "2011-06-03T17:12:17Z",
+      "sha": "fa0f1198ab9a7caa4e0c72c94f56d991e3924a23",
+      "message": "changed button feedback so that MOUSE_DOWN and MOUSE_UP give you the control name (line 423 in interactive_marker_control.cpp and line 358 in interactive_marker.cpp)\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/visualization/trunk@37043 eb33c2ac-9c88-4c90-87e0-44a10359b0c3",
+      "files_changed": 3,
+      "additions": 29,
+      "deletions": 13,
+      "commit_type": "docs"
+    },
+    {
+      "author": "vrabaud",
+      "date": "2012-11-14T05:31:42Z",
+      "sha": "d49f5a85fc7cadb993b68bd30e982fd7b36a2350",
+      "message": "do not specify Python libraries in the LIBRARIES flag",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jbrindza",
+      "date": "2014-01-03T21:02:48Z",
+      "sha": "49d251702aa9d0f9054ff2935c62397ee64a2700",
+      "message": "Update frame_manager.cpp\n\nChanged TF listener to use a dedicated thread.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "hgaiser",
+      "date": "2014-05-01T14:52:37Z",
+      "sha": "c8fa842bac5c7e13c76bf684dbe7d0eb3c573dc7",
+      "message": "Fix segfault on exit for OSX",
+      "files_changed": 1,
+      "additions": 11,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "RainCT",
+      "date": "2014-02-12T16:49:00Z",
+      "sha": "090b701898eb9901c4c9e4867225af0bff349255",
+      "message": "A \"Queue Size\" property to Range plugin (refs #450)",
+      "files_changed": 2,
+      "additions": 13,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "mikepurvis",
+      "date": "2014-03-26T22:16:17Z",
+      "sha": "4b457f62e6f639f6e92687afc1acc9156423b5a8",
+      "message": "Add missing libraries to rviz link step, fixes OS X build.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "MirkoFerrati",
+      "date": "2014-03-11T15:29:46Z",
+      "sha": "f68344d74bac24ae92ce6d824c020d8f10004797",
+      "message": "EffortDisplay: Added a check to avoid segfaults when receiving a joint state without efforts",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "tfoote",
+      "date": "2009-02-18T00:15:00Z",
+      "sha": "2da2a7e67c3a4117ce615f9acf0451445b19b90b",
+      "message": "making tf API consistent by using ros::Duration #847\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/visualization@11282 eb33c2ac-9c88-4c90-87e0-44a10359b0c3",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "kwatts",
+      "date": "2014-01-29T20:55:26Z",
+      "sha": "dc8941f3813c08c24fd1289829f003289529ce80",
+      "message": "RVIZ doesn't use __connection_header from incoming messages, but only uses ros::MessageEvent's",
+      "files_changed": 4,
+      "additions": 16,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "xqms",
+      "date": "2013-10-26T14:39:28Z",
+      "sha": "e1920ef8d1f4d010fd4efc4021b8de624c49c316",
+      "message": "selection_manager: fix render() for orthographic cameras\n\nReverts part of 62d689fb9 to support custom projection matrices again.",
+      "files_changed": 1,
+      "additions": 13,
+      "deletions": 13,
+      "commit_type": "code"
+    },
+    {
+      "author": "David Gossow",
+      "date": "2011-05-05T20:53:16Z",
+      "sha": "f040591a53a66b29ea1ba2c5ace1770ea9477567",
+      "message": "separated selection headers & source files\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/visualization/trunk@36723 eb33c2ac-9c88-4c90-87e0-44a10359b0c3",
+      "files_changed": 7,
+      "additions": 490,
+      "deletions": 330,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ktossell",
+      "date": "2013-10-18T19:05:07Z",
+      "sha": "781f3dd79b55c5b43ba8ad4bc8c1acb64e024e2b",
+      "message": "Added support for yaml-cpp 0.5+.\n\nThe new version of yaml-cpp has a new process for loading YAML documents,\na new iterator interface, and no template<T>Node::operator>>(T&). There's no\nversion information in the headers, so use pkg-config to test for >=0.5.",
+      "files_changed": 2,
+      "additions": 35,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "dgossow",
+      "date": "2013-08-25T15:43:35Z",
+      "sha": "49e7c4401c9baee2dd587fab42d03ea6e5224490",
+      "message": "Merge pull request #671 from chadrockey/hydro-devel\n\nAdded IlluminanceDisplay",
+      "files_changed": 5,
+      "additions": 240,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "hershwg",
+      "date": "2010-12-06T23:32:36Z",
+      "sha": "44435e82cf00cc32ae4a13ebb6ecfb7039a13b40",
+      "message": "Fixed bug where images in camera display would stop showing in certain view orientations\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/visualization/trunk@34579 eb33c2ac-9c88-4c90-87e0-44a10359b0c3",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "isucan",
+      "date": "2013-07-31T09:53:02Z",
+      "sha": "8b7c07ed5f9198b92af21eb918ae591698148038",
+      "message": "add helper class for rendering meshes built manually",
+      "files_changed": 5,
+      "additions": 260,
+      "deletions": 6,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Acorn",
+      "date": "2013-03-05T00:22:58Z",
+      "sha": "eaec21e2be91ce7023ee820e37140b86f49cb6d7",
+      "message": "preserve alpha when using setColor()",
+      "files_changed": 1,
+      "additions": 19,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Matei Ciocarlie",
+      "date": "2010-12-10T02:01:05Z",
+      "sha": "c49d4e3e05948d0a826d364d7c4782e9897438fb",
+      "message": "adding new display type for gripper click\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/visualization/trunk@34647 eb33c2ac-9c88-4c90-87e0-44a10359b0c3",
+      "files_changed": 5,
+      "additions": 160,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "jon-weisz",
+      "date": "2013-01-28T21:19:43Z",
+      "sha": "71ea5839276d3bff36ad1c1d4f8bac2704358d08",
+      "message": "Update src/rviz/default_plugin/interactive_markers/interactive_marker_control.cpp\n\nadded check to see if mouse_dragging_ is true (which would mean we are dragging the mouse) before calling mouseMoveEvent callback.\r\nThis fixes a problem where the right clicking on an interactive marker to bring up a menu and then clicking on the marker with the left button would drag the marker as though the mouse had dragged from the point of the right click.",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "jkammerl",
+      "date": "2012-08-03T15:09:33Z",
+      "sha": "557f297c622b71f015a9906ffc31a565e0bd2cf2",
+      "message": "added \"depth cloud\" plugin to default plugins\n\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/visualization/trunk@39820 eb33c2ac-9c88-4c90-87e0-44a10359b0c3",
+      "files_changed": 6,
+      "additions": 779,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "spencerjackson",
+      "date": "2013-02-13T07:46:34Z",
+      "sha": "bc3a0bcc731c20a5650068fa40e711092d7b4b78",
+      "message": "Fix compatibility with latest OGRE\n\nIn PointCloudRenderable::getWorldTransforms, call parent method\nto obtain the world transform, as the name the matrix is stored in\nhas changed in newer versions. In RosLogListener, use updated signature\nfor Ogre::LogListener::messageLogged, if OGRE is newer than version\n1.8.0.",
+      "files_changed": 2,
+      "additions": 16,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Aaron Blasdel",
+      "date": "2012-11-03T00:01:51Z",
+      "sha": "f5d24b829c1fd9f5b3bd88b3109274ecc3605c9b",
+      "message": "removed Makefile, manifext.xml, stack.xml they were interfearing with building downstream tutorials",
+      "files_changed": 3,
+      "additions": 0,
+      "deletions": 70,
+      "commit_type": "config"
+    },
+    {
+      "author": "Ioan Sucan",
+      "date": "2009-02-18T22:16:43Z",
+      "sha": "18f361e24fbd80ef7d41aa5ea700426e9e558ef4",
+      "message": "small optimization for planning models forward kinematics: calling computeTransform() with the same argument twice in a row does not redo computation; projection definition for ompl was moved in base/ ; projections are better organized in kinematic_lanning added a projection for the end effector position\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/visualization@11348 eb33c2ac-9c88-4c90-87e0-44a10359b0c3",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Mirza Shah",
+      "date": "2012-11-13T00:15:20Z",
+      "sha": "0e8a2fe458007358002d639fb63ba931a7d35e1a",
+      "message": "Changed image_view target to rviz_image_view to avoid namespace collision with target with same name in image_pipeline",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Mario Prats",
+      "date": "2012-11-08T18:27:02Z",
+      "sha": "59033c1c6257186fca6cb12200b2a27acd0b3cca",
+      "message": "refactored interactive markers so they can be used in other displays (needed for moveit rviz plugin)",
+      "files_changed": 4,
+      "additions": 49,
+      "deletions": 24,
+      "commit_type": "code"
+    },
+    {
+      "author": "aleeper",
+      "date": "2012-09-25T00:24:48Z",
+      "sha": "b5c984a6ef476627586e6d7aaf8f74cd27cb4328",
+      "message": "added some accessor and convenience functions to selection_manager, interactive_marker_control",
+      "files_changed": 4,
+      "additions": 23,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Brian Gerkey",
+      "date": "2009-03-03T02:32:36Z",
+      "sha": "e469d2dce2697d41990e6b41d95d3102be37f460",
+      "message": "Merged from tabletop_manipulation_feb-2009 branch.  Mostly changes to\ntabletop_manipulation package, with a smattering of fixes and tweaks to\nother packges.\n\n\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/visualization@12028 eb33c2ac-9c88-4c90-87e0-44a10359b0c3",
+      "files_changed": 2,
+      "additions": 7,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Ken Conely",
+      "date": "2009-08-10T00:02:33Z",
+      "sha": "5c3d98bea08ff711faffc4268d93c89b05ade795",
+      "message": "#2250 getting rid of _with_covariance in Odometry fields\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/visualization@21278 eb33c2ac-9c88-4c90-87e0-44a10359b0c3",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "John Hsu",
+      "date": "2009-05-29T19:20:46Z",
+      "sha": "782613d370a0805e6241d79fba3cf0d08eddd8b9",
+      "message": "Merging from branch:\nsvn merge -r 15738:15794 https://personalrobots.svn.sf.net/svnroot/personalrobots/pkg/branches/gazebo-branch-merge .\n\n\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/visualization@16379 eb33c2ac-9c88-4c90-87e0-44a10359b0c3",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Josh Faust",
+      "date": "2009-02-14T00:48:09Z",
+      "sha": "491cf79176ebbe95a30c4c7db5425c64371e6dba",
+      "message": "rviz first checkin after copy from ogre_visualizer\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/visualization@11154 eb33c2ac-9c88-4c90-87e0-44a10359b0c3",
+      "files_changed": 85,
+      "additions": 17651,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Nate Koenig",
+      "date": "2010-01-29T19:04:26Z",
+      "sha": "9b4fbdb40213304b59fa6a32994b793e930ea8bb",
+      "message": "Ogre-1.7.0RC1 patch. This patch is not applied by default\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/visualization/trunk@27580 eb33c2ac-9c88-4c90-87e0-44a10359b0c3",
+      "files_changed": 1,
+      "additions": 13,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Eitan Marder-Eppstein",
+      "date": "2009-04-02T02:19:45Z",
+      "sha": "83bb934fc1e8b722bfc915230b6bb6a6d2157b5d",
+      "message": "Modified to work with new goal message type for the navigation stack\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/visualization@13287 eb33c2ac-9c88-4c90-87e0-44a10359b0c3",
+      "files_changed": 2,
+      "additions": 8,
+      "deletions": 8,
+      "commit_type": "config"
+    },
+    {
+      "author": "jleibs-test",
+      "date": "2009-09-01T08:05:18Z",
+      "sha": "b98b8e373f9038ab7b32a501fbecbe20e5cd3cd6",
+      "message": "Merging in changes from reorgnization of laser pipeline.\n\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/visualization@23502 eb33c2ac-9c88-4c90-87e0-44a10359b0c3",
+      "files_changed": 3,
+      "additions": 6,
+      "deletions": 6,
+      "commit_type": "config"
+    },
+    {
+      "author": "Eric Berger",
+      "date": "2009-08-10T11:16:47Z",
+      "sha": "c6ed93b65d4588a022c2cf1656d535a3828d80b7",
+      "message": "Eliminating robot_msgs references\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/visualization@21391 eb33c2ac-9c88-4c90-87e0-44a10359b0c3",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "James Bowman",
+      "date": "2009-08-07T22:14:04Z",
+      "sha": "aca2fdc899093f0644d90b3e3924208b3c75c1ca",
+      "message": "New sensor_msgs::Image message\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/visualization@21065 eb33c2ac-9c88-4c90-87e0-44a10359b0c3",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 41,
+      "commit_type": "code"
+    },
+    {
+      "author": "Stu Glaser",
+      "date": "2009-02-17T20:10:09Z",
+      "sha": "57749c8bb555f3caa512f34fca23138316636c5d",
+      "message": "Ported the robot helper for the visualizer over to the mechanism model\n\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/visualization@11259 eb33c2ac-9c88-4c90-87e0-44a10359b0c3",
+      "files_changed": 3,
+      "additions": 167,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "mihelich",
+      "date": "2009-07-31T22:17:14Z",
+      "sha": "e5c69baae4c8cba24ecc748168e0d72a1e61e237",
+      "message": "Renamed CamInfo message to CameraInfo.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/visualization@20324 eb33c2ac-9c88-4c90-87e0-44a10359b0c3",
+      "files_changed": 2,
+      "additions": 10,
+      "deletions": 10,
+      "commit_type": "code"
+    },
+    {
+      "author": "Wim Meeussen",
+      "date": "2009-07-09T21:09:06Z",
+      "sha": "0e7479b8b0d9fccf501410c909be8b64ed8831d1",
+      "message": "joint and link names are now stored inside kdl tree\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/visualization@18587 eb33c2ac-9c88-4c90-87e0-44a10359b0c3",
+      "files_changed": 3,
+      "additions": 1,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "Morgan Quigley",
+      "date": "2009-05-31T01:11:12Z",
+      "sha": "06eea43b71a940a789eb124840e55c6634b0e8fb",
+      "message": "add 'other' path to drop other robot models into\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/visualization@16469 eb33c2ac-9c88-4c90-87e0-44a10359b0c3",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Radu Rusu",
+      "date": "2009-02-19T17:20:24Z",
+      "sha": "2d8e37a1e0f60a136efde82bd55105d854b0f9d2",
+      "message": "point size for pmaps\n\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/visualization@11397 eb33c2ac-9c88-4c90-87e0-44a10359b0c3",
+      "files_changed": 2,
+      "additions": 39,
+      "deletions": 50,
+      "commit_type": "code"
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T10:18:14Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "open-rmf",
+    "repo": "rmf_task"
+  },
+  "data": [
+    {
+      "author": "mxgrey",
+      "date": "2020-02-03T09:42:12Z",
+      "sha": "393f65a95a6927bca96a4b1b32c773f152db10db",
+      "message": "Add a doc file to address frequently asked questions (#71)",
+      "files_changed": 2,
+      "additions": 122,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "kjchee",
+      "date": "2025-09-24T04:50:45Z",
+      "sha": "b765a6604dc82f14d143b3f710b0fd4ab720c650",
+      "message": "Introduce start_at_departure option for go_to_place event (#128)\n\nSigned-off-by: kjchee <keai_jiang_chee@cgh.com.sg>",
+      "files_changed": 2,
+      "additions": 72,
+      "deletions": 17,
+      "commit_type": "code"
+    },
+    {
+      "author": "luca-della-vedova",
+      "date": "2023-01-11T07:55:21Z",
+      "sha": "7bc64b63ea163e5f90c70f76b372102f27440678",
+      "message": "Fix battery consumption modeling for perform_action tasks (#76)\n\n* Update task planner test\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\n* Add failing unit test for compose task charging\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\n* Fix segfault\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\n* Add lowerbound to battery drain in PerformAction::estimate_finish()\r\n\r\nSigned-off-by: Yadunund <yadunund@openrobotics.org>\r\n\r\n* Cleanup unit test\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\n* Uncrustify\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\n* Update changelog, rename test file\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\n* Minor cleanup\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>\r\nSigned-off-by: Yadunund <yadunund@openrobotics.org>\r\nCo-authored-by: Yadunund <yadunund@openrobotics.org>",
+      "files_changed": 4,
+      "additions": 211,
+      "deletions": 5,
+      "commit_type": "docs"
+    },
+    {
+      "author": "aaronchongth",
+      "date": "2019-11-19T06:27:37Z",
+      "sha": "a5c99997ccde1fba3c4d6e0ee8dfd131c2635b17",
+      "message": "some docs (#25)\n\n* some docs\r\n\r\n* english bad",
+      "files_changed": 2,
+      "additions": 25,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Yadunund",
+      "date": "2020-03-03T09:48:07Z",
+      "sha": "5f4eda9b6eaa73c857f1767eaf8a44d210d619b2",
+      "message": "Updated dependencies (#80)",
+      "files_changed": 1,
+      "additions": 12,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "arjo129",
+      "date": "2021-06-10T02:56:16Z",
+      "sha": "8890ee8afd32c4f7106a365a41770b8d7f1334da",
+      "message": "bump ros-tooling version (#24)\n\n* bump ros-tooling version\r\n\r\nSigned-off-by: Arjo Chakravarty <arjo@openrobotics.org>\r\n\r\n* bump versions\r\n\r\nSigned-off-by: Arjo Chakravarty <arjo@openrobotics.org>",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "orensbruli",
+      "date": "2022-09-19T03:03:33Z",
+      "sha": "8c1cd09d1ebd51f748af25131ca68a5c9cc1c4d2",
+      "message": "[CI] Reusable CI (#69)\n\nModified build.yaml to use reusable workflow\r\n\r\nSigned-off-by: Esteban Martinena <orensbruli@gmail.com>",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 31,
+      "commit_type": "ci"
+    },
+    {
+      "author": "cottsay",
+      "date": "2023-01-25T12:32:12Z",
+      "sha": "1d021da0a251df3c81f50b141189850a77ae76c6",
+      "message": "Add missing buildtool_depend on cmake (#75)\n\nSigned-off-by: Scott K Logan <logans@cottsay.net>\r\n\r\nSigned-off-by: Scott K Logan <logans@cottsay.net>",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "nuclearsandwich",
+      "date": "2022-10-07T22:07:45Z",
+      "sha": "edb58d9f95bd8f889296be251e6825e002b0abe6",
+      "message": "Add find_package/find_dependency for vendored project.\n\nThe vendor package for nlohmann_json_schema_validator was previously\nexporting dependency info for that package, however that is not the\nrecommended workflow for vendor packages which are ideally as\ntransparent as possible.\n\nSigned-off-by: Steven! Ragnarök <steven@nuclearsandwich.com>",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "Marco A. Gutiérrez",
+      "date": "2021-06-08T06:26:36Z",
+      "sha": "26267190b10aa1efc38e9b3c469daabccfb267a3",
+      "message": "adding date to changelog (#23)\n\nSigned-off-by: Marco A. Gutierrez <marco@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Briancbn",
+      "date": "2022-02-15T02:25:06Z",
+      "sha": "cb367f930bda3cdc3b4e3bf7dd6926c41889945b",
+      "message": "Add task sequence AMENT_PREFIX_PATH too (#56)\n\nSigned-off-by: Chen Bainian <chenbn@artc.a-star.edu.sg>",
+      "files_changed": 2,
+      "additions": 11,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "lingfei93",
+      "date": "2022-02-13T17:03:13Z",
+      "sha": "7c89611c211eb65bf05a6c71a4840ca0714cb098",
+      "message": "prepend package path to AMENT_PREFIX_PATH (#53)\n\nSigned-off-by: Ren Lingfei <ren_lingfei@artc.a-star.edu.sg>",
+      "files_changed": 2,
+      "additions": 12,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "codebot",
+      "date": "2019-08-21T06:25:59Z",
+      "sha": "6670900d3dc7ec7236b5878c83d4f61e72a39ec4",
+      "message": "Initial commit",
+      "files_changed": 2,
+      "additions": 203,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ddengster",
+      "date": "2021-04-19T10:56:47Z",
+      "sha": "54f241425de6f9bbca590b0bc21e2d083148eb41",
+      "message": "add Ci, codecov, uncrustify everything (#8)\n\n* add ci and codecov, fix uncrustify location and uncrustify everything\r\n\r\nSigned-off-by: ddengster <ed.fan@osrfoundation.org>",
+      "files_changed": 25,
+      "additions": 359,
+      "deletions": 263,
+      "commit_type": "config"
+    },
+    {
+      "author": "gbiggs",
+      "date": "2021-03-05T01:00:00Z",
+      "sha": "e01cb941496f664ef25cab59d1cf04cb1844cc17",
+      "message": "Rename license file\n\nSigned-off-by: Geoffrey Biggs <gbiggs@killbots.net>",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 0,
+      "commit_type": "docs"
+    }
+  ]
+}

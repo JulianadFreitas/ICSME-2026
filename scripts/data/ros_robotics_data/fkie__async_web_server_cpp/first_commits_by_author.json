@@ -1,0 +1,131 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T12:05:02Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "fkie",
+    "repo": "async_web_server_cpp"
+  },
+  "data": [
+    {
+      "author": "wentasah",
+      "date": "2026-01-12T16:02:47Z",
+      "sha": "3f40f9e6f9b8f8a50f6342197c0ed563f62b723f",
+      "message": "Fix compile errors with Boost >= 1.87 (#8)\n\nThat release removed many deprecated features. See\nhttps://www.boost.org/doc/libs/latest/doc/html/boost_asio/history.html#boost_asio.history.asio_1_33_0\n\nTypical error message looks like this:\n\n    In file included from /build/async_web_server_cpp-release-release-jazzy-async_web_server_cpp-2.0.1-1/include/async_web_server_cpp/websocket_connection.hpp:4,\n                     from /build/async_web_server_cpp-release-release-jazzy-async_web_server_cpp-2.0.1-1/src/websocket_connection.cpp:1:\n    /build/async_web_server_cpp-release-release-jazzy-async_web_server_cpp-2.0.1-1/include/async_web_server_cpp/http_connection.hpp:43:52: error: expected ')' before '&' token\n       43 |     explicit HttpConnection(boost::asio::io_service& io_service,\n          |                            ~                       ^\n          |                                                    )\n    /build/async_web_server_cpp-release-release-jazzy-async_web_server_cpp-2.0.1-1/include/async_web_server_cpp/http_connection.hpp:82:18: error: 'io_service' in namespace 'boost::asio' does not name a type; did you mean 'use_service'?\n       82 |     boost::asio::io_service::strand strand_;\n          |                  ^~~~~~~~~~\n          |                  use_service\n\nTest suite passes.",
+      "files_changed": 4,
+      "additions": 6,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "roehling",
+      "date": "2018-11-15T17:14:29Z",
+      "sha": "492ea08328690b1413cdf3829da4419296bf5d1d",
+      "message": "Fix compatibility issue with Apache2 websocket proxy\n\nThe Apache2 proxy uses \"Upgrade: WebSocket\" headers when forwarding a\nWebSocket connection (note the camel case), breaking interoperability\nwith the web server.\n\nThe WebSocket RFC 6455 is somewhat inconclusive as it uses \"Upgrade:\nwebsocket\" in all its examples and requires the \"websocket\" keyword in\nsection 4.1, but states that \"WebSocket\" has been registered as HTTP\nUpgrade Token in section 11.2.\n\nIn any case, following the robustness principle to be as liberal as\npossible when accepting data and as conservative as possible when\nsending it, this commit makes the \"websocket\" keyword matching case\ninsensitive in the request handler.",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "jfrancis71",
+      "date": "2025-08-31T20:26:25Z",
+      "sha": "d1876da58215b853ac6fd66ef704442babc5f873",
+      "message": "Fix to build with current Boost libraries: (#7)\n\nAdding array include to include/async_web_server_cpp/http_connection.hpp\nBoost class path member leaf is now replaced with filename, see https://github.com/boostorg/filesystem/commit/5df060e95ca844fe91b29001b4ae22bdb65635c6",
+      "files_changed": 2,
+      "additions": 5,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "apiyap",
+      "date": "2021-09-08T02:32:50Z",
+      "sha": "0d853ae294bf51dcad4ef4fa701af9cb4abb05d3",
+      "message": "fix warning message",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "sfalexrog",
+      "date": "2020-08-17T15:04:25Z",
+      "sha": "c04b7fd36c8d7be0f8eee6b82189f22b8941d6af",
+      "message": "Update package.xml and CMakeLists for Noetic\n\n* package.xml updated to version 3 to allow conditional dependencies\n\n* CMakeLists: cmake_minimum_required set to 3.0.2",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "dirk-thomas",
+      "date": "2018-08-15T23:01:33Z",
+      "sha": "ea90d0e44229d9dc7162692e199a927b2e72010b",
+      "message": "use package format 2, change dependency type",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "config"
+    },
+    {
+      "author": "russelhowe",
+      "date": "2019-05-23T17:41:13Z",
+      "sha": "f82abfba2ce1e73a15b6f24dbd5313bfa8ca9d58",
+      "message": "Fix unit tests\n\nWithout this include specification, the tests can't find `ros/package.h`",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "rctoris",
+      "date": "2014-11-25T19:32:45Z",
+      "sha": "2d506b7edc89b0ab8d1a9372cf0d4c1847ff0c8a",
+      "message": "Initial commit",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mjcarroll",
+      "date": "2018-08-23T22:19:51Z",
+      "sha": "94e6f17d75fc796af185848fb3fa3918178ff659",
+      "message": "Fix function without return value.\n\nThis fixes a segfault on GCC8.",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Russell Toris",
+      "date": "2014-12-02T13:41:35Z",
+      "sha": "14a4f53c7aa1fcf4850ce494ae8034cede32b697",
+      "message": "OCD clenup",
+      "files_changed": 3,
+      "additions": 14,
+      "deletions": 16,
+      "commit_type": "docs"
+    },
+    {
+      "author": "dekent",
+      "date": "2016-02-18T15:54:33Z",
+      "sha": "540ca338b3553ac209ce805bf8f0c63909e59c21",
+      "message": "Update package.xml",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "Mitchell Wills",
+      "date": "2014-11-25T19:57:24Z",
+      "sha": "b982d75fe24d7c9d6e7432c818018bfb50298844",
+      "message": "Initial import of cpp_web_server from webrtc_ros",
+      "files_changed": 21,
+      "additions": 2106,
+      "deletions": 0,
+      "commit_type": "docs"
+    }
+  ]
+}

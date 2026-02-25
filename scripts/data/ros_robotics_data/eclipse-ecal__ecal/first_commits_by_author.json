@@ -1,0 +1,521 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T13:56:07Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "eclipse-ecal",
+    "repo": "ecal"
+  },
+  "data": [
+    {
+      "author": "KerstinKeller",
+      "date": "2021-08-27T07:50:37Z",
+      "sha": "ef8eb30877f276a99ebf9b45cfbb7ff2f0007185",
+      "message": "Allow to build eCAL with Conan (on Windows). (#373)\n\nCo-authored-by: Kerstin Keller <49187426+Kerstin-Keller@users.noreply.github.com>",
+      "files_changed": 5,
+      "additions": 123,
+      "deletions": 13,
+      "commit_type": "ci"
+    },
+    {
+      "author": "Ndgt",
+      "date": "2026-02-19T02:12:53Z",
+      "sha": "a40502d83299680b33a29baf60c1529fc667f7db",
+      "message": "Add ECAL_USE_HDF5 check for measurement targets",
+      "files_changed": 10,
+      "additions": 158,
+      "deletions": 142,
+      "commit_type": "docs"
+    },
+    {
+      "author": "aaroon-5",
+      "date": "2025-04-01T12:46:53Z",
+      "sha": "d00e25b1c9c97f2a7574d5377602108044946735",
+      "message": "[docu] Fixed incorrect description of string publisher class (#2100)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "hannemn",
+      "date": "2019-06-18T09:02:37Z",
+      "sha": "4def2495cea5846d9a6a4483ab1159504eba6a13",
+      "message": "Travis CI and AppVeyor integration (#9)",
+      "files_changed": 2,
+      "additions": 36,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "Peguen",
+      "date": "2024-04-10T09:13:37Z",
+      "sha": "75ca067e0b5cb43bf08d03e7988bb4871e6f56e0",
+      "message": "[core] Convert defines to constexpr / additional config reader function (#1515)\n\n* Changed defines to constexpr in ecal_def, ecal_def_ini + added uint and size_t reading in ecal_config_reader.",
+      "files_changed": 4,
+      "additions": 141,
+      "deletions": 125,
+      "commit_type": "code"
+    },
+    {
+      "author": "FlorianReimold",
+      "date": "2019-10-10T15:58:09Z",
+      "sha": "5f194e30db0f87c3144cb8016ecb3ea7eae30b5e",
+      "message": "eCAL v5.5.0:\n* eCAL message recorder released\n  * records messages in realtime in HDF5 format\n  * synchronized recording over multiple targets\n  * pre-buffer feature\n  * modern QT based control gui\n* eCAL message player\n  * eCAL message replay\n  * topic filtering\n  * adjustable replay speed / looped play\n  * modern QT based gui\n  * command line version (with interactive mode)\n* eCAL HDF5 recording read / write C++ SDK\n  * high level API to iterate over recorded data sets\n    * auto merging of splitted record files\n    * distributed recording on multiple machines, handling as one recording\n* Performance improvements\n  * reduced memory copying on subscriber side\n  * new latency send / receive samples demonstrating new performance\n    using callback receive method\n    * see Performance section in Readme.md file\n    * performance factor 2 for windows factor 4 Linux for large messages\n* CPack installer generates start menu entries on windows platform\n* Different bug fixes",
+      "files_changed": 300,
+      "additions": 50613,
+      "deletions": 1282,
+      "commit_type": "docs"
+    },
+    {
+      "author": "github-actions[bot]",
+      "date": "2025-11-12T13:51:33Z",
+      "sha": "6a13f18ac450db42384f0039f0a1f01c2cafb77a",
+      "message": "[AutoGenFiles] Updated license documentation (#2414)\n\nCo-authored-by: KerstinKeller <13848742+KerstinKeller@users.noreply.github.com>",
+      "files_changed": 6,
+      "additions": 157,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "EmirTutar",
+      "date": "2025-08-15T07:47:49Z",
+      "sha": "3c67baa7c5ac78251e9201a29272713684aa62c2",
+      "message": "[gh-actions] Added GitHub Action to Trigger Test Suite (ecal-test-suite) (#2283)\n\nCo-authored-by: Kristof Hannemann <50989282+hannemn@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 57,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "DownerCase",
+      "date": "2023-11-28T16:58:03Z",
+      "sha": "6e77c5b2b54037834d4ea0fc5186258a830ea83f",
+      "message": "Python: Fix client remove response callback (#1272)",
+      "files_changed": 3,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "LeWimbes",
+      "date": "2025-07-23T14:14:58Z",
+      "sha": "c41a58ca39d28945099969a42672d1b900dfbcc3",
+      "message": "[README] Update eCAL Go lang binding in README #2257",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "KaiKosch",
+      "date": "2025-03-27T12:23:52Z",
+      "sha": "e2ffed6ddf1f4477a3edeeae46f7b42726677eca",
+      "message": "[sample] Aligned sample names (#2088)",
+      "files_changed": 51,
+      "additions": 87,
+      "deletions": 541,
+      "commit_type": "docs"
+    },
+    {
+      "author": "rex-schilasky",
+      "date": "2019-03-08T18:18:01Z",
+      "sha": "12caf98853ee7eb589b1e130b2256a67088128a9",
+      "message": "initial revision (builds, links, setup works)\n\nCo-authored-by: Kerstin Keller <49187426+Kerstin-Keller@users.noreply.github.com>\nCo-authored-by: Florian Reimold <11774314+FlorianReimold@users.noreply.github.com>\nCo-authored-by: Kristof Hannemann <50989282+hannemn@users.noreply.github.com>\nCo-authored-by: Florian Geis <45308813+floriangeis@users.noreply.github.com>\nCo-authored-by: Claudiu Vasilescu <32865900+claudiuvasilescu@users.noreply.github.com>\nCo-authored-by: Ileana Zepa <51079902+ileanabratu@users.noreply.github.com>",
+      "files_changed": 300,
+      "additions": 81020,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "albrechtdennis",
+      "date": "2025-01-30T12:17:52Z",
+      "sha": "428e952e60ae387af3677961cc115a14cf0e710d",
+      "message": "[mon_gui] Change font for new and deleted/disconnected topics in mon_gui (#1955)\n\n\r\n---------\r\n\r\nCo-authored-by: Peguen <73380451+Peguen@users.noreply.github.com>",
+      "files_changed": 7,
+      "additions": 105,
+      "deletions": 19,
+      "commit_type": "ci"
+    },
+    {
+      "author": "ashariff-11",
+      "date": "2024-06-24T14:20:07Z",
+      "sha": "41145e1b5e7261c376c4c228c755cefd3f8514c6",
+      "message": "[core] const keyword removed from Send() in CPublisher (#1639)\n\nCo-authored-by: Kerstin Keller <KerstinKeller@users.noreply.github.com>",
+      "files_changed": 3,
+      "additions": 8,
+      "deletions": 8,
+      "commit_type": "ci"
+    },
+    {
+      "author": "LeonHosch",
+      "date": "2024-04-30T08:35:27Z",
+      "sha": "c0e30492298d1ca6f24159a238dac74fcefac945",
+      "message": "[Python] Added BinarySubscriber and BinaryPublisher with examples (#1526)\n\nCo-authored-by: Leon Hosch <leon.hosch@continental.com>",
+      "files_changed": 12,
+      "additions": 416,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "dependabot[bot]",
+      "date": "2021-03-20T10:08:21Z",
+      "sha": "19e1d7cab84500de4587da955e88f512aa99e24c",
+      "message": "Bump jinja2 from 2.11.2 to 2.11.3 (#223)\n\nBumps [jinja2](https://github.com/pallets/jinja) from 2.11.2 to 2.11.3.\r\n- [Release notes](https://github.com/pallets/jinja/releases)\r\n- [Changelog](https://github.com/pallets/jinja/blob/master/CHANGES.rst)\r\n- [Commits](https://github.com/pallets/jinja/compare/2.11.2...2.11.3)\r\n\r\nSigned-off-by: dependabot[bot] <support@github.com>\r\n\r\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "ci"
+    },
+    {
+      "author": "jheeks",
+      "date": "2023-11-08T07:47:53Z",
+      "sha": "8766373026c808e84345f26c19c9f685337e8491",
+      "message": "MMA: Fix segfault in GetCpuCores (#1242)\n\n* Use get_nprocs() to read the number of cores which is simpler and more generic.",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 32,
+      "commit_type": "code"
+    },
+    {
+      "author": "GJYang",
+      "date": "2023-12-20T11:47:44Z",
+      "sha": "5e3d6b6e7600fc6801dea25ffc2b96de20c3251f",
+      "message": "Python: Fix wrapper function miss matching (#1285)",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "KaanConti",
+      "date": "2023-06-07T13:21:16Z",
+      "sha": "fcf750b5050037e4b5726dcc5492006bd6f0c9a6",
+      "message": "Sample: Python sample for writing protobuf messages with low level eCALHdf5 API (#1120)",
+      "files_changed": 4,
+      "additions": 170,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "wep21",
+      "date": "2023-06-29T13:28:59Z",
+      "sha": "6651f3feba945b6b460124ac6d137a8cf4fd77a1",
+      "message": "feat: add package.xml for ROS builds (#1124)\n\n---------\r\n\r\nSigned-off-by: wep21 <daisuke.nishimatsu1021@gmail.com>",
+      "files_changed": 2,
+      "additions": 29,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "MathieuROCANCOURT",
+      "date": "2023-06-02T07:05:57Z",
+      "sha": "4d3559ca5ea71a58fb5caee73fd5d918c0f7dcdd",
+      "message": "Doc: Update services.rst to reflect the name of the sample names",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Blutkoete",
+      "date": "2021-05-31T18:13:01Z",
+      "sha": "fc606a606936cdaca50704d4570741baf1273c07",
+      "message": "Add some explicit includes to support building with GCC 11",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "jo-mue",
+      "date": "2023-04-05T10:51:07Z",
+      "sha": "40372cac8fb75122ceeff008abe8740094fc66f6",
+      "message": "Update simpleini to 4.19 fixing c++17 build error (#1049)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "JerryHyun",
+      "date": "2023-03-10T10:33:46Z",
+      "sha": "998f46c800abf23b56a5f36cb1515082abcdf294",
+      "message": "Bugfix/time related dylib not found on mac os (#1003)\n\n* Fix: time-related dylib were not found on macOS",
+      "files_changed": 1,
+      "additions": 13,
+      "deletions": 9,
+      "commit_type": "code"
+    },
+    {
+      "author": "MihaiIMuraru",
+      "date": "2022-04-27T16:14:07Z",
+      "sha": "70cdeed4261a8cad5993be55b55057269185ea2c",
+      "message": "Rec: RPC API now has a \"Can Upload\" and \"Can Comment\" field for each measurement",
+      "files_changed": 4,
+      "additions": 27,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "OrhanKupusoglu",
+      "date": "2022-05-09T15:12:04Z",
+      "sha": "a642000baa83e87696174d2ce1e4318964f054a6",
+      "message": "GH Actions: Enable local and remote clang-tidy scan on Linux (#579)",
+      "files_changed": 8,
+      "additions": 837,
+      "deletions": 7,
+      "commit_type": "config"
+    },
+    {
+      "author": "mirzacanovic",
+      "date": "2022-11-28T13:47:47Z",
+      "sha": "45cfabf08eadd5293ba3d7376c423b63aaa1f45f",
+      "message": "GH Actions: Build Python wheels for older versions in Windows (#888)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "mkiael",
+      "date": "2022-11-18T09:32:58Z",
+      "sha": "528c0520f17a3cb6df604259794aa547c8e3e59c",
+      "message": "Update link to eCal rmw repository in README",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "adriana-chirila",
+      "date": "2022-08-24T13:09:40Z",
+      "sha": "0a0eebb3d7f36974e2b8965fc5d32ebe5677d160",
+      "message": "eCAL Measurement Cutter: Added Command Line Application for cutting measurements (#775)",
+      "files_changed": 42,
+      "additions": 2474,
+      "deletions": 13,
+      "commit_type": "config"
+    },
+    {
+      "author": "aeon0",
+      "date": "2022-09-23T08:55:34Z",
+      "sha": "fd4295852bfc09cb78d1f6c5db1c9f5a020a5242",
+      "message": "C++ API Doc: Fix type in example code (#798)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "SirArep",
+      "date": "2022-01-17T11:25:42Z",
+      "sha": "f82b56f082df21b35dccd947b4275865f841c60f",
+      "message": "eCAL Play: Added GetStatus RPC Service call\n\n\r\nCo-authored-by: Arpad Maroti <arpad.maroti@continental.com>",
+      "files_changed": 6,
+      "additions": 105,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "bkhalifaconti",
+      "date": "2022-09-09T10:29:16Z",
+      "sha": "67cf3ec9e0616f7abe6ee5014ec89b681e3ef414",
+      "message": "eCAL Rec / ecalhdf5: Support one file per topic feature  (#755)\n\nCo-authored-by: Florian Reimold <11774314+FlorianReimold@users.noreply.github.com>",
+      "files_changed": 52,
+      "additions": 1648,
+      "deletions": 501,
+      "commit_type": "ci"
+    },
+    {
+      "author": "emilbic28",
+      "date": "2022-04-20T12:18:02Z",
+      "sha": "d79a00f7a941b6c61ebe2cf65a9e0eba34d760d1",
+      "message": "Player: Save as improvements\n\n* Added Save as / Load options for labels\n* Added Save / Save as / Load option for channel mapping file",
+      "files_changed": 11,
+      "additions": 390,
+      "deletions": 117,
+      "commit_type": "code"
+    },
+    {
+      "author": "patrick-fleischmann-conti",
+      "date": "2022-08-09T08:10:33Z",
+      "sha": "0a8b36187d3e7105bbe877dbf45fe265d7107595",
+      "message": "FIX: Multiply Defined Symbols (#749)\n\nFix multiply defined symbols linker error that occurs when\r\nIMeasurement or OMeasurement is used in two different translation\r\nunits as the present method definition in the two header files\r\nviolates the One Definition Rule.",
+      "files_changed": 2,
+      "additions": 5,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "Kerstin-Keller",
+      "date": "2019-08-01T14:22:03Z",
+      "sha": "244531e4a0f3be8f1ce881f5bbeca354b05d29aa",
+      "message": "eCAL v5.3.5:\n* windows cpack installer install all needed runtime libs and config files\n* 2 new application \"ecal_config\" and \"ecal_stop\" added (dumpl config, stop all running eCAL processes)\n* minor fix on server/client tcp header for future extensions\n\nauthor: Rex Schilasky <49162693+rex-schilasky@users.noreply.github.com>",
+      "files_changed": 32,
+      "additions": 370,
+      "deletions": 74,
+      "commit_type": "ci"
+    },
+    {
+      "author": "brakmic-aleksandar",
+      "date": "2021-01-21T09:33:35Z",
+      "sha": "82fe056171735778ed84998abb6d3a2a3e820bd6",
+      "message": "Addd async support to CTcpClient",
+      "files_changed": 7,
+      "additions": 292,
+      "deletions": 18,
+      "commit_type": "code"
+    },
+    {
+      "author": "hassnaaHamdi",
+      "date": "2022-04-13T13:32:24Z",
+      "sha": "5ab5cba28293c220d6e4fa9d88f823447531dfcc",
+      "message": "add documentation for packaging ecal into docker container and using … (#615)\n\nCo-authored-by: Hassnaa Hamdi <6700165+hassnaaHamdi@users.noreply.github.com>",
+      "files_changed": 10,
+      "additions": 255,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "tcoyvwac",
+      "date": "2022-02-25T06:42:43Z",
+      "sha": "0f8eb1c7428a606de9edda3a823ebf48c375e8c0",
+      "message": "Fix: Add mutex header to define missing objects",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "bsirang",
+      "date": "2021-09-28T21:54:28Z",
+      "sha": "a36baa246002093fe5901a686ff3d92d38963f41",
+      "message": "check for default (empty) proto",
+      "files_changed": 1,
+      "additions": 19,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "pablorcum",
+      "date": "2021-05-28T07:09:16Z",
+      "sha": "c32ebe67ec904b8fdc2afe9303b6e8963a7e90db",
+      "message": "Fixed cross build for QNX",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 7,
+      "commit_type": "docs"
+    },
+    {
+      "author": "phongt",
+      "date": "2021-06-19T02:15:16Z",
+      "sha": "f208b0c680433f6d0c67164da4db9221d6671cda",
+      "message": "doc: Change default option BUILD_SAMPLES to OFF\n\nSync documentation with cmake options in CMakeLists.txt\n\nSigned-off-by: Phong Tran <tranmanphong@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Rex Schilasky",
+      "date": "2020-08-27T17:25:44Z",
+      "sha": "0f000f48a9a2fc0c5c1c462a7311d86733013cc7",
+      "message": "use github actions #68 (#72)\n\ngithub actions introduced (#68)\r\n* supported platforms\r\n  * Ubuntu 20.04\r\n  * Windows Server 2019\r\n  * MacOS Catalina 10.15 (experimental)\r\n* CapnProto 0.8.0 and Iceoryx 0.16.1 build for Ubuntu 20.04",
+      "files_changed": 12,
+      "additions": 453,
+      "deletions": 78,
+      "commit_type": "ci"
+    },
+    {
+      "author": "software-natives-docker",
+      "date": "2021-05-14T18:44:36Z",
+      "sha": "855649d241494c0538d6a31b58a66287d7a1ad79",
+      "message": "Fixed typo",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "christopherbate",
+      "date": "2021-04-28T07:21:21Z",
+      "sha": "b13e96c4e3c073e5bc1c88ac51eafbcb9bf75598",
+      "message": "Cross-compilation (arm64) example and build fixture, some CMake fixes (#257)\n\nSupport cross-compiling\r\n\r\n* Add cross-compilation testing framework.\r\n\r\n* XC support: cmake find_path and FindHdf5 calls.\r\n\r\n* XC support: handle protoc host import.\r\n\r\n* XC support: cleanup infra files\r\n\r\nCo-authored-by: Christopher Bate <cbate@outrider.ai>",
+      "files_changed": 12,
+      "additions": 155,
+      "deletions": 15,
+      "commit_type": "docs"
+    },
+    {
+      "author": "imgeorgiev",
+      "date": "2020-10-07T07:29:05Z",
+      "sha": "0d08ab7d67d8809469c30128b698fd4852346951",
+      "message": "Add cpp class lambda callback example (#90)\n\nThank you @imgeorgiev !",
+      "files_changed": 7,
+      "additions": 278,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "schilasky",
+      "date": "2019-10-30T15:40:38Z",
+      "sha": "8ccd086a288b5eb3b166d99cc0aa27e5aa052b49",
+      "message": "PVS Studio code analysis added (#23)\n\npsv studio code analysis tool introduced for windows os first (#22)",
+      "files_changed": 3,
+      "additions": 91,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "JoshFrankfurth",
+      "date": "2020-09-03T19:59:21Z",
+      "sha": "70f953148aa94a1b7c6b5cdcc8f9da8cbe3fe0b9",
+      "message": "What: update URL for ROS2 eCAL Middleware (#75)\n\nWhy: Link pointing to HDF5 Group",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "johngladp",
+      "date": "2020-07-14T10:09:06Z",
+      "sha": "e824832c6f8b2a32ed56751117afa44c95a6afbb",
+      "message": "Configuration overwrite keys are now applied to the default configuration when an ini file fails to be loaded. (#61)\n\nSupport usage without an ini configuration file on disk.  When an empty string is provided in the \"ecal-ini-file\" command line parameter default settings are used but the overwrite keys are ignored.  This change moves the processing of the overwrite keys to after the ini file load attempt has occurred; the overwire keys are now applied regardless of the success of loading an ini file.  This permits an application to specify an empty value for the \"ecal-ini-file\" and thus configure ecal entirely within the application.\r\n\r\nAdded the \"/_vs_out\" and \".vs/\" folder to the .gitignore file to better support building using visual studio 2019's folder open cmake build flow (which works rather well presently).\r\n\r\nWork around for daft Visual Studio 2019 (16.6.2) bug that causes build errors to be reported when there aren't any due to the presence of the word \"error\" in a cmake message.",
+      "files_changed": 3,
+      "additions": 28,
+      "deletions": 24,
+      "commit_type": "config"
+    },
+    {
+      "author": "NewProggie",
+      "date": "2019-11-07T14:17:06Z",
+      "sha": "d26eacc04ad10ed8465108a2cb0e04855288ca86",
+      "message": "Add Conan integration (#18)\n\n* Add Conan dependencies for simpleini, tclap and asio\r\n\r\n* Add Conan protobuf package from bintray\r\n\r\n* Prepare CI build scripts for using Conan\r\n\r\n* Add spdlog from bincrafters\r\n\r\n* Add HDF5 package to conanfile.txt\r\n\r\n* Add own Qt5 Conan package (needed for WinExtras)\r\n\r\n* Add proto compiler as another dependency",
+      "files_changed": 35,
+      "additions": 75,
+      "deletions": 106,
+      "commit_type": "config"
+    },
+    {
+      "author": "gavanderhoorn",
+      "date": "2019-06-07T19:28:51Z",
+      "sha": "2db519bf23536f7204fe10df8ce314b38a152e4d",
+      "message": "readme: correct minor typo.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Jörg Tobias Borgert",
+      "date": "2019-06-06T19:01:35Z",
+      "sha": "80221b74dd2ec92a95d737c19acb282b40994e86",
+      "message": "Make eCAL compile on current Arch Linux.",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    }
+  ]
+}

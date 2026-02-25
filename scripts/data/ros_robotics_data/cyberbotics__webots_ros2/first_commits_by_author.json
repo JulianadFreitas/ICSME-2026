@@ -1,0 +1,451 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T01:47:31Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "cyberbotics",
+    "repo": "webots_ros2"
+  },
+  "data": [
+    {
+      "author": "lukicdarkoo",
+      "date": "2020-02-18T14:41:40Z",
+      "sha": "f7162f2f3b465676b250b3be74829b813b989887",
+      "message": "Add initial structure for epuck2 package",
+      "files_changed": 15,
+      "additions": 329,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "soham2560",
+      "date": "2025-07-10T12:30:10Z",
+      "sha": "7169ebb3f6b633d671729593fef5000f9d1e155c",
+      "message": "Added hardware_interface ver 5.x.x support (#1042)\n\n* added hardware_interface ver 5.x.x support\nSigned-off-by: soham2560\n\n* added ver5.3 support\n\n* added clang changes\n\n* fixed logic for testing ver\n\n* Update webots_ros2_control/src/Ros2Control.cpp\n\nCo-authored-by: Olivier Michel <Olivier.Michel@cyberbotics.com>\n\n* Update webots_ros2_control/src/Ros2Control.cpp\n\nCo-authored-by: Olivier Michel <Olivier.Michel@cyberbotics.com>\n\n---------\n\nCo-authored-by: Olivier Michel <Olivier.Michel@cyberbotics.com>",
+      "files_changed": 3,
+      "additions": 65,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Rami-Sabbagh",
+      "date": "2025-03-13T17:26:01Z",
+      "sha": "7435cfba110794900641cf57e5b33dfd07badaca",
+      "message": "Fix WSL IP detection when DNS Tunnelling is enabled (#1032)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "ralphieraccoon",
+      "date": "2024-02-15T17:40:40Z",
+      "sha": "929c45ccae07cef55baa915f515fb9f912e8f028",
+      "message": "moved load_urdf so it runs for all ROS2 distros. (#898)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "onionsflying",
+      "date": "2025-01-14T09:52:31Z",
+      "sha": "9d870d1deaaf6c646bc5ee241b8a926949bd07d2",
+      "message": "Update Ros2ControlSystem.cpp: correct joint.acceleration (#1023)\n\n* Update Ros2ControlSystem.cpp: correct acceleration\r\n\r\n* Update webots_ros2_control/CHANGELOG.rst",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ad-daniel",
+      "date": "2022-04-01T08:17:19Z",
+      "sha": "89898817363b7e02f11e7c49b0fa76c499b84633",
+      "message": "Fix laser publisher (#425)",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "MNikoliCC",
+      "date": "2024-12-21T23:26:37Z",
+      "sha": "4f63238bc639b76e02ddfe8a0585801b97327402",
+      "message": "Update GitHub artifacts action to v4 (#1014)\n\n* Update artifacts\n\n* fix controller manager (wip)\n\n* format\n\n* fix\n\n* fix\n\n* fix\n\n* disable automatic controller sync\n\n* format\n\n* format\n\n* format\n\n* format\n\n---------\n\nCo-authored-by: Darko Lukic <lukicdarkoo@gmail.com>",
+      "files_changed": 8,
+      "additions": 19,
+      "deletions": 9,
+      "commit_type": "config"
+    },
+    {
+      "author": "omichel",
+      "date": "2019-09-05T06:59:20Z",
+      "sha": "5d5b0a0d6bfedfe6abadf7e177daa035299a7cfd",
+      "message": "Update README.md",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ygoumaz",
+      "date": "2022-10-17T13:20:54Z",
+      "sha": "d282da8647bc73167dc4715100a1eb017eeb2a58",
+      "message": "Replace Windows compatibility with WSL (#481)\n\n* add wsl support\r\n\r\n* Add auto Webots installation for WSL\r\n\r\n* refactor automatic Webots detection\r\n\r\n* Improve WSL automatic installation\r\n\r\n* automatic controller url for wsl\r\n\r\n* Adapt all examples to wsl\r\n\r\n* test with higher webots\r\n\r\n* Replace target version by minimum\r\n\r\n* Minimum to R2022b\r\n\r\n* restore windows compatibility\r\n\r\n* Revert \"restore windows compatibility\"\r\n\r\nThis reverts commit 358fe1297a7a45703a589815cb1984f525d4e05d.\r\n\r\n* update urdf2webots submodule\r\n\r\n* Restore windows part\r\n\r\n* comment minimal version\r\n\r\n* Update webots_ros2_driver/webots_ros2_driver/webots_launcher.py\r\n\r\nCo-authored-by: Olivier Michel <Olivier.Michel@cyberbotics.com>\r\n\r\n* Update webots_ros2_driver/webots_ros2_driver/urdf_spawner.py\r\n\r\nCo-authored-by: Olivier Michel <Olivier.Michel@cyberbotics.com>\r\n\r\n* Update webots_ros2_mavic/launch/robot_launch.py\r\n\r\nCo-authored-by: Olivier Michel <Olivier.Michel@cyberbotics.com>\r\n\r\n* Update webots_ros2_epuck/launch/robot_launch.py\r\n\r\nCo-authored-by: Olivier Michel <Olivier.Michel@cyberbotics.com>\r\n\r\n* Update webots_ros2_driver/webots_ros2_driver/webots_launcher.py\r\n\r\nCo-authored-by: Olivier Michel <Olivier.Michel@cyberbotics.com>\r\n\r\n* Update webots_ros2_tests/test/test_system_driver.py\r\n\r\nCo-authored-by: Olivier Michel <Olivier.Michel@cyberbotics.com>\r\n\r\n* Update webots_ros2_tiago/launch/robot_launch.py\r\n\r\nCo-authored-by: Olivier Michel <Olivier.Michel@cyberbotics.com>\r\n\r\n* Update webots_ros2_universal_robot/launch/robot_launch/robot_nodes_launch.py\r\n\r\nCo-authored-by: Olivier Michel <Olivier.Michel@cyberbotics.com>\r\n\r\n* Update webots_ros2_tesla/launch/robot_launch.py\r\n\r\nCo-authored-by: Olivier Michel <Olivier.Michel@cyberbotics.com>\r\n\r\n* Update robot_launch.py\r\n\r\n* Update multirobot_launch.py\r\n\r\nCo-authored-by: Olivier Michel <Olivier.Michel@cyberbotics.com>",
+      "files_changed": 11,
+      "additions": 149,
+      "deletions": 114,
+      "commit_type": "docs"
+    },
+    {
+      "author": "skpawar1305",
+      "date": "2023-07-28T13:02:12Z",
+      "sha": "f3045ad16c6c41b0edbf845f06391be5d0990022",
+      "message": "avoid using namespace in control_config for ur5e moveit example (#837)\n\n* avoid using namespace in control_config for ur5e moveit example\r\n\r\n* Update moveit_movegroup.yaml\r\n\r\n* Update ros2_control_config.yaml\r\n\r\n* Delete useless config\r\n\r\n* Restore multirobot_launch.py\r\n\r\n* Add ur5e namespace\r\n\r\n* Update moveit_controllers.yaml\r\n\r\n* Update robot_moveit_nodes_launch.py\r\n\r\n---------\r\n\r\nCo-authored-by: Yannick Goumaz <61198661+ygoumaz@users.noreply.github.com>",
+      "files_changed": 4,
+      "additions": 8,
+      "deletions": 7,
+      "commit_type": "ci"
+    },
+    {
+      "author": "adamlm",
+      "date": "2024-01-29T12:29:52Z",
+      "sha": "1812230265f654b87296993c37894ff21eb2530a",
+      "message": "#888 Fix IP address for Docker (#889)\n\nWhen this package's nodes run in a Docker container, the get_host_ip\r\nfunction can return the wrong IP address, causing routing failures.\r\nNow the function checks if the process is running in a Docker\r\ncontainer, returning the special host.docker.internal DNS name.\r\n\r\nSigned-off-by: Adam Morrissett <me@adamlm.com>",
+      "files_changed": 2,
+      "additions": 17,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "knmcguire",
+      "date": "2024-01-03T15:30:47Z",
+      "sha": "8c03af2d04094a59704a6c476d380ce3ca2a36fa",
+      "message": "Add crazyflie webots packages (#872)\n\n* Added crazyflie ros2 webots package\r\n\r\n* format autopep8\r\n\r\n* autopep8 and description additions\r\n\r\n* remove unused imports\r\n\r\n* Update webots_ros2_crazyflie/worlds/crazyflie_apartment.wbt\r\n\r\nCo-authored-by: Olivier Michel <Olivier.Michel@cyberbotics.com>\r\n\r\n* Update webots_ros2_crazyflie/worlds/crazyflie_apartment.wbt\r\n\r\nCo-authored-by: Olivier Michel <Olivier.Michel@cyberbotics.com>\r\n\r\n* Update webots_ros2_crazyflie/worlds/crazyflie_apartment.wbt\r\n\r\nCo-authored-by: Olivier Michel <Olivier.Michel@cyberbotics.com>\r\n\r\n* updated package.xml and setup.py\r\n\r\n* change version to 2023.1.1\r\n\r\n---------\r\n\r\nCo-authored-by: Olivier Michel <Olivier.Michel@cyberbotics.com>",
+      "files_changed": 10,
+      "additions": 936,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "andyblarblar",
+      "date": "2023-11-20T09:38:45Z",
+      "sha": "b65c5aea7fc203b25125b96c918f7624aa2002c4",
+      "message": "Copy forests (#865)",
+      "files_changed": 1,
+      "additions": 10,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "delihus",
+      "date": "2023-03-16T09:40:52Z",
+      "sha": "45049a29d6d92cc0fd07c28cb18cc4d5c4cea5e9",
+      "message": "get default lidar updateRate from .proto (#674)\n\n* get default lidar updateRate from .proto\r\n\r\n* Update webots_ros2_driver/src/plugins/static/Ros2Lidar.cpp\r\n\r\nCo-authored-by: Olivier Michel <Olivier.Michel@cyberbotics.com>\r\n\r\n* Updated changelog\r\n\r\n* Update webots_ros2_driver/src/plugins/static/Ros2Lidar.cpp\r\n\r\n---------\r\n\r\nCo-authored-by: Olivier Michel <Olivier.Michel@cyberbotics.com>",
+      "files_changed": 3,
+      "additions": 7,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "github-actions[bot]",
+      "date": "2022-10-20T14:38:38Z",
+      "sha": "70c941c900eeab87053a1557ffbd752f90a4e8d3",
+      "message": "Sync submodule (#492)\n\nCo-authored-by: ad-daniel <ad-daniel@github.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "angel-ayala",
+      "date": "2023-03-08T14:30:27Z",
+      "sha": "98eca924ea7d5e5505c6c1784565a61bb719d72c",
+      "message": "Adding receiver and emitter nodes (#656)\n\n* Adding Emitter and Receiver nodes (initial version)\r\n\r\n* Device name store\r\n\r\n* Ros2Emitter and Ros2Receiver inherits from Ros2SensorPlugin\r\n\r\n* Emitter and Receiver minor fixes and transfered data type\r\n\r\n* Clang format compliance\r\n\r\n* Fix clang-format\r\n\r\n* Fixed clang-format\r\n\r\n* Added line ending\r\n\r\n* Added new line\r\n\r\n* clang format\r\n\r\n* clang format\r\n\r\n* clang format\r\n\r\n* Emitter node's missing functions\r\n\r\n* Receiver node's missing functions and Emitter bug fixes\r\n\r\n* clang format\r\n\r\n* Applying omichel's code reviews uggestions\r\n\r\nCo-authored-by: Olivier Michel <Olivier.Michel@cyberbotics.com>\r\n\r\n* Change realloc to cast for wb_receiver_get_data() result\r\n\r\n* Clangformat compliance\r\n\r\n* Clangformat compliance external files rollback\r\n\r\n* Clangformat compliance external files rollback\r\n\r\n* Receiver bug fix\r\n\r\n---------\r\n\r\nCo-authored-by: Angel Ayala <aaam@ecomp.poli.br>\r\nCo-authored-by: Olivier Michel <Olivier.Michel@cyberbotics.com>",
+      "files_changed": 14,
+      "additions": 317,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "nikolaseu",
+      "date": "2023-07-07T09:02:25Z",
+      "sha": "5ad0820a8f0000db09ba886778402b8ead0480f6",
+      "message": "Add animation recording services (#810)\n\n* Add webots_ros2_msgs.srv.SetString service type\r\n\r\n* Add animation_{start,stop}_recording services\r\n\r\n* Function return calls are not actually bool. Ignore them\r\n\r\n* Add Ros2Supervisor namespace\r\n\r\n* Fix test_pep8_conformance: E261: at least two spaces before inline comment\r\n\r\n* Update changelogs\r\n\r\n* Fix test_pep8_conformance: f-string is missing placeholders\r\n\r\n* Fix clock\r\n\r\n---------\r\n\r\nCo-authored-by: Nicolas Ulrich <ulrich@filics.eu>\r\nCo-authored-by: Yannick Goumaz <61198661+ygoumaz@users.noreply.github.com>",
+      "files_changed": 7,
+      "additions": 30,
+      "deletions": 4,
+      "commit_type": "ci"
+    },
+    {
+      "author": "jamestkpoon",
+      "date": "2023-07-03T14:00:09Z",
+      "sha": "da4855e0274e4a6c7f99a1db95517b447b6f94b5",
+      "message": "also check pointcloud subscription count for shouldBeEnabled (#804)\n\n* also check pointcloud subscription count for shouldBeEnabled\r\n\r\n* added comments to changelogs\r\n\r\n* Update CHANGELOG.rst\r\n\r\n* Update CHANGELOG.rst\r\n\r\n---------\r\n\r\nCo-authored-by: james <jamestkpoon@users.noreply.github.com>\r\nCo-authored-by: Yannick Goumaz <61198661+ygoumaz@users.noreply.github.com>",
+      "files_changed": 3,
+      "additions": 11,
+      "deletions": 2,
+      "commit_type": "ci"
+    },
+    {
+      "author": "justinberi",
+      "date": "2023-05-03T12:30:43Z",
+      "sha": "5fa13fa04e3e7c7b25fa7fa54249e249f9318935",
+      "message": "Calculate vertical fov according to https://www.cyberbotics.com/doc/r… (#722)\n\n* Calculate vertical fov according to https://www.cyberbotics.com/doc/reference/rangefinder\r\nSigned-off-by: Justin Beri <18635834+justinberi@users.noreply.github.com>\r\n\r\nUse suggested formating\r\n\r\nCo-authored-by: Yannick Goumaz <61198661+ygoumaz@users.noreply.github.com>\r\nSigned-off-by: Justin Beri <18635834+justinberi@users.noreply.github.com>\r\n\r\nUpdate change logs\r\n\r\nSigned-off-by: Justin Beri <18635834+justinberi@users.noreply.github.com>\r\n\r\nFix more formating\r\n\r\nSigned-off-by: Justin Beri <18635834+justinberi@users.noreply.github.com>\r\n\r\n* Tweak changelog entry for clarity\r\n\r\nSigned-off-by: Justin Beri <18635834+justinberi@users.noreply.github.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Justin Beri <18635834+justinberi@users.noreply.github.com>",
+      "files_changed": 3,
+      "additions": 6,
+      "deletions": 2,
+      "commit_type": "ci"
+    },
+    {
+      "author": "stefaniapedrazzi",
+      "date": "2021-02-18T09:34:02Z",
+      "sha": "d4dd5b04a1c8764e16f5f3c5b2858e75dd1ae5c8",
+      "message": "Add OpenDR project acknowledgement (#201)\n\n* Add OpenDR project acknowledgement\r\n\r\n* Update README.md",
+      "files_changed": 1,
+      "additions": 20,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "JolonB",
+      "date": "2023-05-01T15:17:36Z",
+      "sha": "05243e7b3f789bca60aa222d4a5fa2307bdfc981",
+      "message": "Fix argument parsing (#718)\n\n* Fix argument parsing\r\n\r\nSigned-off-by: Jolon\r\n\r\n* Update changelog\r\n\r\nSigned-off-by: Jolon\r\n\r\n---------\r\n\r\nSigned-off-by: Jolon\r\nCo-authored-by: Yannick Goumaz <61198661+ygoumaz@users.noreply.github.com>",
+      "files_changed": 4,
+      "additions": 11,
+      "deletions": 6,
+      "commit_type": "ci"
+    },
+    {
+      "author": "sebastianohl",
+      "date": "2023-02-13T18:11:14Z",
+      "sha": "49a9275d8b187f7633d4801aac313321f09024c2",
+      "message": "adding possibility to select stream type (#625)\n\n* adding possibility to select stream type\r\n\r\n* Update webots_ros2_driver/webots_ros2_driver/webots_launcher.py\r\n\r\nCo-authored-by: Olivier Michel <Olivier.Michel@cyberbotics.com>\r\n\r\n---------\r\n\r\nCo-authored-by: Sebastian Ohl <sebastian@ohl.de>\r\nCo-authored-by: Olivier Michel <Olivier.Michel@cyberbotics.com>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "ftyghome",
+      "date": "2023-03-06T10:57:11Z",
+      "sha": "d739aad9f4a852a46f8923f131dcbcfbba37ac4d",
+      "message": "Fix ros2_control wheel_separation param for turtlebot3 (#658)\n\nSigned-off-by: GnSight <ftyg@live.com>\r\nCo-authored-by: Olivier Michel <Olivier.Michel@cyberbotics.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "TBreeze98",
+      "date": "2023-01-10T15:56:08Z",
+      "sha": "7c978b829e473f9ec24daed0d7ba25de7918d5ad",
+      "message": "Added ability to import objects with webots wbt type. Refactored the … (#539)\n\n* Added ability to import objects with webots mdt type. Refactored the superviser file to allow for this feature addition. Signed-off-by: TBreeze98\r\n\r\n* fixed typo\r\n\r\n* corrected file location\r\n\r\n* changed all references of wdt and mdt to wbt\r\n\r\n* made changes suggested by ygoumaz\r\n\r\n* added field type check which fixes crash\r\n\r\n* changed variable names as suggested by ygoumaz\r\n\r\n* removed modifications of field.py\r\n\r\n* added check to validate that the object has been imported into the world\r\n\r\n* Update webots_ros2_driver/webots_ros2_driver/ros2_supervisor.py\r\n\r\nCo-authored-by: Olivier Michel <Olivier.Michel@cyberbotics.com>\r\n\r\n* Update webots_ros2_driver/webots_ros2_driver/ros2_supervisor.py\r\n\r\nCo-authored-by: Olivier Michel <Olivier.Michel@cyberbotics.com>\r\n\r\n* Update webots_ros2_driver/webots_ros2_driver/ros2_supervisor.py\r\n\r\nCo-authored-by: Olivier Michel <Olivier.Michel@cyberbotics.com>\r\n\r\n* Update webots_ros2_driver/webots_ros2_driver/ros2_supervisor.py\r\n\r\nCo-authored-by: Olivier Michel <Olivier.Michel@cyberbotics.com>\r\n\r\n* Update webots_ros2_driver/webots_ros2_driver/ros2_supervisor.py\r\n\r\nCo-authored-by: Olivier Michel <Olivier.Michel@cyberbotics.com>\r\n\r\n* Update webots_ros2_driver/webots_ros2_driver/ros2_supervisor.py\r\n\r\nCo-authored-by: Olivier Michel <Olivier.Michel@cyberbotics.com>\r\n\r\n* Update webots_ros2_driver/webots_ros2_driver/ros2_supervisor.py\r\n\r\nCo-authored-by: Olivier Michel <Olivier.Michel@cyberbotics.com>\r\n\r\n* Update webots_ros2_driver/webots_ros2_driver/ros2_supervisor.py\r\n\r\nCo-authored-by: Olivier Michel <Olivier.Michel@cyberbotics.com>\r\n\r\nCo-authored-by: Olivier Michel <Olivier.Michel@cyberbotics.com>\r\nCo-authored-by: Yannick Goumaz <61198661+ygoumaz@users.noreply.github.com>",
+      "files_changed": 3,
+      "additions": 79,
+      "deletions": 23,
+      "commit_type": "ci"
+    },
+    {
+      "author": "AKreutz",
+      "date": "2022-11-18T09:03:50Z",
+      "sha": "3f04ae2bf9499b40ec1a794a3e6ff853dcc337cc",
+      "message": "Update calculation of `CameraRecognitionObject` (#523)\n\n* Update calculation of CameraRecognitionObject\r\n\r\nCalculation now conforms to the new camera coordinate frame introduced\r\nwith Webots R2022b.\r\n\r\nSigned-off-by: Andreas Kreutz <andreas.kreutz@hotmail.de>\r\n\r\n* Add test for recognition object calculation\r\n\r\nSigned-off-by: Andreas Kreutz <andreas.kreutz@hotmail.de>\r\n\r\n* Add missing dependency\r\n\r\nSigned-off-by: Andreas Kreutz <andreas.kreutz@hotmail.de>\r\n\r\n* Fix linting error\r\n\r\nSigned-off-by: Andreas Kreutz <andreas.kreutz@hotmail.de>\r\n\r\n* Update changelogs\r\n\r\nSigned-off-by: Andreas Kreutz <andreas.kreutz@hotmail.de>\r\n\r\nSigned-off-by: Andreas Kreutz <andreas.kreutz@hotmail.de>\r\nCo-authored-by: ad-daniel <44834743+ad-daniel@users.noreply.github.com>",
+      "files_changed": 10,
+      "additions": 68,
+      "deletions": 10,
+      "commit_type": "ci"
+    },
+    {
+      "author": "PhilippPolterauer",
+      "date": "2022-09-26T16:48:27Z",
+      "sha": "91d1ca15a57fa00dbb1bb429752cfc231c156ab5",
+      "message": "made ros2_supervisor executable (#475)\n\nCo-authored-by: Philipp Polterauer <philipp.polterauer@magna.com>",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "BenjaminHug8",
+      "date": "2021-09-01T09:25:03Z",
+      "sha": "1c6daaa44a2db91647f37bfad0b57fb7ec69e6f4",
+      "message": "Fix to suit to pep257 convention (#290)\n\n* init\r\n\r\n* fixed all errors pep257\r\n\r\n* CI",
+      "files_changed": 14,
+      "additions": 18,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "ijnek",
+      "date": "2022-04-25T13:11:39Z",
+      "sha": "4b7ecfb9e189c31c1b134424008d6ea9109ef683",
+      "message": "include string (#434)\n\nSigned-off-by: Kenji Brameld <kenjibrameld@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "TaoYibo1866",
+      "date": "2022-02-04T16:10:04Z",
+      "sha": "ebf6c40e890eb295a8cb15aac3b79b4f61e5f472",
+      "message": "Add PointCloud2 support for RangeFinder. (#389)\n\n* pointcloud tested\r\n\r\n* Update Ros2RangeFinder.hpp\r\n\r\n* Update Ros2RangeFinder.cpp\r\n\r\n* Update webots_ros2_driver/src/plugins/static/Ros2RangeFinder.cpp\r\n\r\nCo-authored-by: Olivier Michel <Olivier.Michel@cyberbotics.com>\r\n\r\n* Update Ros2RangeFinder.cpp\r\n\r\n* Update Ros2RangeFinder.cpp\r\n\r\nCo-authored-by: Benjamin Hug <61198898+BenjaminHug8@users.noreply.github.com>\r\nCo-authored-by: Olivier Michel <Olivier.Michel@cyberbotics.com>",
+      "files_changed": 2,
+      "additions": 81,
+      "deletions": 12,
+      "commit_type": "ci"
+    },
+    {
+      "author": "joachimhgg",
+      "date": "2022-01-21T15:15:55Z",
+      "sha": "c7bd2e82ce7eebf6c742d85a72a65ad3f34c0bdb",
+      "message": "remove no sandbox references + pep8 compliance",
+      "files_changed": 3,
+      "additions": 27,
+      "deletions": 21,
+      "commit_type": "code"
+    },
+    {
+      "author": "zegangYang",
+      "date": "2022-01-03T13:03:07Z",
+      "sha": "5de2db725801414d6900cdc61309ebb293cb482d",
+      "message": "fix: 🐛 link error when build libwebots_ros2_control on macOS (#348)\n\n* fix: 🐛 link error when build libwebots_ros2_control on macOS\r\n\r\nfix Link error when build libwebots_ros2_control_system.dylib on macOS\r\n\r\n✅ Closes: #344\r\n\r\n* Simplify the linking\r\n\r\n* Update CMakeLists.txt\r\n\r\n* Update CMakeLists.txt\r\n\r\nCo-authored-by: Darko Lukic <lukicdarkoo@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Benjamin Délèze",
+      "date": "2021-12-23T11:50:15Z",
+      "sha": "3a7b0213fcf7a74684cf0d2329762143e3107fee",
+      "message": "Merge pull request #364 from cyberbotics/merge-develop-into-master\n\nMerge develop into master",
+      "files_changed": 65,
+      "additions": 538,
+      "deletions": 2376,
+      "commit_type": "config"
+    },
+    {
+      "author": "Timple",
+      "date": "2021-07-22T14:42:03Z",
+      "sha": "55a374138d18902f94bdb5e7588cf48ac70c9e82",
+      "message": "Fix library directory",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 10,
+      "commit_type": "docs"
+    },
+    {
+      "author": "yanick-douven",
+      "date": "2021-06-29T13:43:12Z",
+      "sha": "4bee7a0744887dd00b8ac47d1227587ee7ffee00",
+      "message": "Add --input and --xacro-opts arguments to allow calling xacro2proto from a launch file",
+      "files_changed": 1,
+      "additions": 44,
+      "deletions": 21,
+      "commit_type": "code"
+    },
+    {
+      "author": "dzywater",
+      "date": "2021-08-26T12:50:01Z",
+      "sha": "4422388869d5458073d33165f571e319aa2afee2",
+      "message": "Fix uninitialized mWebotsXMLElement (#278)\n\n* fix 273\r\n\r\n* Update webots_ros2_driver/src/WebotsNode.cpp\r\n\r\nCo-authored-by: Darko Lukić <lukicdarkoo@gmail.com>\r\n\r\nCo-authored-by: Your Name <you@example.com>\r\nCo-authored-by: Darko Lukić <lukicdarkoo@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Stefan Arndt",
+      "date": "2021-07-21T14:01:44Z",
+      "sha": "b9af1b6a3432d4f747e66a5eac85fc3c550bd579",
+      "message": "Added new --no-rendering option to webots launcher (#253)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "fmrico",
+      "date": "2021-02-02T15:55:14Z",
+      "sha": "8230dd586462c4754f5eb4fd2022f8428ff94a90",
+      "message": "Range and qos (#198)\n\n* Range Finder\r\n\r\nSigned-off-by: Francisco Martin Rico <fmrico@gmail.com>\r\n\r\n* Fix QoS\r\n\r\nSigned-off-by: Francisco Martin Rico <fmrico@gmail.com>\r\n\r\n* Unused import\r\n\r\n* Add docs\r\n\r\n* Fix deep code errors and avoid unnecessary call\r\n\r\nSigned-off-by: Francisco Martin Rico <fmrico@gmail.com>\r\n\r\n* Fix deep code errors and avoid unnecessary call\r\n\r\nSigned-off-by: Francisco Martin Rico <fmrico@gmail.com>\r\n\r\n* Geometric wheels values\r\n\r\nSigned-off-by: Francisco Martin Rico <fmrico@gmail.com>\r\n\r\n* CI fix\r\n\r\nCo-authored-by: Darko Lukic <lukicdarkoo@gmail.com>",
+      "files_changed": 9,
+      "additions": 145,
+      "deletions": 24,
+      "commit_type": "docs"
+    },
+    {
+      "author": "BruceXSK",
+      "date": "2021-04-15T07:44:59Z",
+      "sha": "b37b9916f002503148171279a9a4a1051cd1092d",
+      "message": "Update webots_node.py (#222)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "AleBurzio11",
+      "date": "2021-04-10T14:19:58Z",
+      "sha": "220e4eb5c6f95c26163ab571ab9f1cbfb4948b28",
+      "message": "Fix crash on no line detection (#214) (#217)\n\n* Fix crash on no line detection (#214)\r\n\r\n* fix whitespace",
+      "files_changed": 1,
+      "additions": 13,
+      "deletions": 9,
+      "commit_type": "code"
+    },
+    {
+      "author": "renan028",
+      "date": "2021-02-23T14:07:51Z",
+      "sha": "b2ee7d5552fef422488ba9e251c200f3b12f7a1c",
+      "message": "add recognition publisher and message (#200)\n\n* add recognition publisher and message\r\n\r\n* fix checking both subscription count and publish",
+      "files_changed": 6,
+      "additions": 126,
+      "deletions": 9,
+      "commit_type": "config"
+    },
+    {
+      "author": "harshkakashaniya",
+      "date": "2020-11-06T13:28:58Z",
+      "sha": "48248c310b7b9658d1a58c58b57aa8b08a3e7291",
+      "message": "Dev: Tutorial package added for webots ROS2 tutorial series by soft-illusion (#163)\n\n* Updated package by soft-illusion for youtube webots ros2 tutorial series\r\n\r\n* Update Package.xml\r\n\r\n* Chore: syntax error solved\r\n\r\n* setup.py issues solved\r\n\r\n* launch file syntex issue solved\r\n\r\n* Intendation added\r\n\r\n* updated syntax of line_following launch\r\n\r\n* Update webots_ros2_tutorials/setup.py\r\n\r\nCo-authored-by: David Mansolino <David.Mansolino@cyberbotics.com>\r\n\r\n* Update webots_ros2_tutorials/webots_ros2_tutorials/master.py\r\n\r\nCo-authored-by: David Mansolino <David.Mansolino@cyberbotics.com>\r\n\r\n* Update webots_ros2_tutorials/webots_ros2_tutorials/slave.py\r\n\r\nCo-authored-by: David Mansolino <David.Mansolino@cyberbotics.com>\r\n\r\n* Update Slave time step variable\r\n\r\n* Update webots_ros2_tutorials/test/test_flake8.py\r\n\r\nCo-authored-by: David Mansolino <David.Mansolino@cyberbotics.com>\r\n\r\n* Update webots_ros2_tutorials/worlds/epuck_with_custom.wbt\r\n\r\nCo-authored-by: David Mansolino <David.Mansolino@cyberbotics.com>\r\n\r\n* Update webots_ros2_tutorials/worlds/epuck_with_custom.wbt\r\n\r\nCo-authored-by: David Mansolino <David.Mansolino@cyberbotics.com>\r\n\r\n* Final commit according to suggestions of David\r\n\r\n* Extern controller issue solved\r\n\r\n* Dev: imporoved setup.py\r\n\r\n* Chore : following standards for .wbt\r\n\r\n* Chore : changed proto name\r\n\r\n* Update webots_ros2_tutorials/webots_ros2_tutorials/slave.py\r\n\r\nCo-authored-by: Darko Lukić <lukicdarkoo@gmail.com>\r\n\r\n* Update webots_ros2_tutorials/protos/RobotSense.proto\r\n\r\nCo-authored-by: Olivier Michel <Olivier.Michel@cyberbotics.com>\r\n\r\n* Update webots_ros2_tutorials/worlds/custom_line_follower.wbt\r\n\r\nCo-authored-by: Olivier Michel <Olivier.Michel@cyberbotics.com>\r\n\r\n* Chore : suggested changes by olivier are made\r\n\r\n* Update webots_ros2_tutorials/package.xml\r\n\r\nCo-authored-by: Darko Lukić <lukicdarkoo@gmail.com>\r\n\r\n* Resource folder deleted\r\n\r\n* slave class name change\r\n\r\n* resource file is breaking the repo\r\n\r\n* Chore : updated proto and slave file with changes by olivier\r\n\r\n* Chore : Changes by darko with variables in lower case and pylint\r\n\r\n* Proto updated with intengtion\r\n\r\n* Use allcaps for DEF/USE, removed useless DEFs\r\n\r\n* Update webots_ros2_tutorials/setup.py\r\n\r\nCo-authored-by: Darko Lukić <lukicdarkoo@gmail.com>\r\n\r\n* changing variable name in slave.py\r\n\r\nCo-authored-by: David Mansolino <David.Mansolino@cyberbotics.com>\r\nCo-authored-by: Darko Lukić <lukicdarkoo@gmail.com>\r\nCo-authored-by: Olivier Michel <Olivier.Michel@cyberbotics.com>",
+      "files_changed": 14,
+      "additions": 741,
+      "deletions": 0,
+      "commit_type": "test"
+    },
+    {
+      "author": "DavidMansolino",
+      "date": "2019-07-19T14:12:10Z",
+      "sha": "9dabbe1e84bde215d58c03495abdb36fa0e6c6e9",
+      "message": "Initial commit",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Simon-Steinmann",
+      "date": "2020-08-28T09:33:08Z",
+      "sha": "64e2fa803296b4c316c0a1a60d4af40a795a7642",
+      "message": "Use motor name for Joint_states_publisher",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "michou214",
+      "date": "2020-02-14T10:07:27Z",
+      "sha": "4263612bbece0c5ff68928ca1dc421ce18abde2c",
+      "message": "Fix the launch problem",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    }
+  ]
+}

@@ -1,0 +1,271 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T07:25:48Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros",
+    "repo": "geometry_tutorials"
+  },
+  "data": [
+    {
+      "author": "ahcorde",
+      "date": "2020-04-02T08:05:52Z",
+      "sha": "cac72da625fefeb09a5677ec38ada1f0694cb0a9",
+      "message": "Bump CMake version to avoid CMP0048 warning (#29)\n\nSigned-off-by: ahcorde <ahcorde@gmail.com>",
+      "files_changed": 3,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "suchetanrs",
+      "date": "2025-05-03T20:32:21Z",
+      "sha": "619db7db2f7da9ee76bbc40946cc73ecf1380be4",
+      "message": "Fix incorrect srv import (#88)\n\nSigned-off-by: suchetanrs <suchetan.saravanan@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "CursedRock17",
+      "date": "2024-12-27T20:27:01Z",
+      "sha": "fc0fb8ba359e9fe6c82b6601be7019004c51690d",
+      "message": "Deprecating tf2 C Headers (#87)\n\nSigned-off-by: CursedRock17 <mtglucas1@gmail.com>",
+      "files_changed": 3,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "clalancette",
+      "date": "2022-08-19T14:33:44Z",
+      "sha": "2429533a8068a9e30f407e48c7bb10c2ad609621",
+      "message": "Cleanup CI (#70)\n\n* Get the include dirs from the target if it is available.\r\n\r\nIt will have the most up-to-date information.  Fall back\r\nto the variable in case the target doesn't exist.\r\n\r\n* Switch rolling CI to use 22.04.\r\n\r\n* Fix style to conform with cpplint.\r\n\r\n* Skip cppcheck.\r\n\r\nIt doesn't work with Rolling and Ubuntu 22.04.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 9,
+      "additions": 115,
+      "deletions": 58,
+      "commit_type": "config"
+    },
+    {
+      "author": "FelipeGdM",
+      "date": "2024-01-10T14:08:07Z",
+      "sha": "6481e8fa9b5cef611f3d6d3aea2ea338701c481a",
+      "message": "Migrate std::bind calls to lambda expressions (#76)\n\n* ♻️ Geometry msgs lambda refactor\r\nCo-authored-by: Chris Lalancette <clalancette@gmail.com>",
+      "files_changed": 2,
+      "additions": 30,
+      "deletions": 32,
+      "commit_type": "code"
+    },
+    {
+      "author": "kennywangaigraphx",
+      "date": "2021-09-22T07:15:49Z",
+      "sha": "125c3dc4dadee56f9fc7b4b4ca9199c15ecfa885",
+      "message": "Add source code and launch file for tf2 PointStamped message publisher and listener/filter (#62)\n\n* Add Py Code of PointStamped Messages Broadcaster\r\n\r\nAdd Python Code of PointStamped Messages Broadcaster Node\r\n\r\n* Add launch File turtle_tf2_sensor_message.launch\r\n\r\nAdd launch File turtle_tf2_sensor_message.launch.py\r\n\r\n* Add turtle_tf2_message_filter.cpp\r\n\r\n* Update file turtle_tf2_sensor_message.launch.py\r\n\r\n* Update file turtle_tf2_message_broadcaster.py\r\n\r\n* Update setup.py to add an entry for the node\r\n\r\n* Update CMakeLists.txt for message_filter\r\n\r\nUpdate CMakeLists.txt for turtle_tf2_message_filter node\r\n\r\n* Update package.xml for message_filter\r\n\r\nUpdate package.xml for dependencies of turtle_tf2_message_filter.cpp\r\n\r\n* Update turtle_tf2_message_filter.cpp\r\n\r\nUpdate turtle_tf2_message_filter.cpp after checking linters.\r\n\r\n* Update turtle_tf2_message_filter.cpp after linting\r\n\r\n* Update  turtle_tf2_message_broadcaster.py\r\n\r\nfor the copyright year from 2015 to 2021 and delete the line \"self.sub\".\r\n\r\n* Update files according to linting\r\n\r\n* Update the tf2_geometry_msgs.h header\r\n\r\n* Update CMakeLists.txt and turtle_tf2_message_filter.cpp\r\n\r\n* Update CMakeLists.txt for endif\r\n\r\n* Delete test_copyright.cpython-38-pytest-6.2.4.pyc\r\n\r\n* Delete test_flake8.cpython-38-pytest-6.2.4.pyc\r\n\r\n* Delete test_pep257.cpython-38-pytest-6.2.4.pyc\r\n\r\n* Delete __init__.cpython-38.pyc\r\n\r\n* Delete turtle_tf2_broadcaster.cpython-38.pyc\r\n\r\n* Delete turtle_tf2_message_broadcaster.cpython-38.pyc\r\n\r\n* Update cpp node and py node\r\n\r\nsort include headers; change two node instances to one instance; change turtle3 spawning manner.\r\n\r\n* Update turtle_tf2_message_broadcaster.py\r\n\r\nremove whitespaces in line 39 and 42\r\n\r\n* Update turtle_tf2_message_filter.cpp\r\n\r\nsome little updates",
+      "files_changed": 7,
+      "additions": 276,
+      "deletions": 2,
+      "commit_type": "ci"
+    },
+    {
+      "author": "kurshakuz",
+      "date": "2021-06-09T09:23:58Z",
+      "sha": "0145301960e265a72f9a80bcb0058a3c364588cb",
+      "message": "Migrate turtle_tf2 tutorial package to ROS2 (#34)\n\n* add dummy robot tf pkg\r\n\r\n* remove old packages\r\n\r\n* update package name and add launch file\r\n\r\n* turtle reaches target\r\n\r\n* add rviz config\r\n\r\n* use params for naming\r\n\r\n* remove old broadcaster\r\n\r\n* license and styling\r\n\r\n* update license date\r\n\r\n* rename package, update metapackage info\r\n\r\n* Update package.xml\r\n\r\n* update metapackage cmakelists\r\n\r\n* update maintainer\r\n\r\n* add example tf2 static broadcaster\r\n\r\n* add more comments to static broadcaster\r\n\r\n* add transforms3d to dependency\r\n\r\n* update node names\r\n\r\n* update dependency name\r\n\r\n* update maintainers in geometry_tutorials/package.xml\r\n\r\nCo-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>\r\n\r\n* update return format in turtle_tf2_py/turtle_tf2_py/static_turtle_tf2_broadcaster.py\r\n\r\nCo-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>\r\n\r\n* alphabetize deps in package.xml\r\n\r\n* fix typo in turtle_tf2_py/turtle_tf2_py/turtle_tf2_listener.py\r\n\r\nCo-authored-by: Audrow Nash <audrow@hey.com>\r\n\r\n* add tests and fix test errors\r\n\r\n* update copyright years in tests\r\n\r\nCo-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>\r\nCo-authored-by: Audrow Nash <audrow@hey.com>",
+      "files_changed": 53,
+      "additions": 598,
+      "deletions": 1987,
+      "commit_type": "docs"
+    },
+    {
+      "author": "paudrow",
+      "date": "2021-06-15T21:58:54Z",
+      "sha": "0dd5d9304720f4544b852b10010a84a2cba57dd1",
+      "message": "Add Audrow as a maintainer and move Shyngys to author (#37)\n\n* Add Audrow as a maintainer and move Shyngys to author\r\n\r\nSigned-off-by: Audrow Nash <audrow@hey.com>\r\n\r\n* Update setup.py\r\n\r\nSigned-off-by: Audrow Nash <audrow@hey.com>",
+      "files_changed": 3,
+      "additions": 10,
+      "deletions": 5,
+      "commit_type": "config"
+    },
+    {
+      "author": "jwhendy",
+      "date": "2017-07-05T22:59:20Z",
+      "sha": "06f90ef8ff7beb760f22cde10fd5644456ec44f9",
+      "message": "updated node names in all tf and tf2 nodes/*.py files to match filenames for simplicity",
+      "files_changed": 12,
+      "additions": 33,
+      "deletions": 41,
+      "commit_type": "code"
+    },
+    {
+      "author": "tfoote",
+      "date": "2010-09-10T07:06:04Z",
+      "sha": "052f1a8d520167c9e80c9b69d41a43c99852c29b",
+      "message": "the actual place to keep it",
+      "files_changed": 0,
+      "additions": 0,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Vincent Rousseau",
+      "date": "2016-08-09T07:32:40Z",
+      "sha": "cfa0e5d0c0e87c37d36572a824f7e0a261fa1b6e",
+      "message": "[turtle_tf2] Fix frame name",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "23pointsNorth",
+      "date": "2016-06-02T16:29:36Z",
+      "sha": "9807e3581ec58e995327e4acc06522d50c6cb61b",
+      "message": "Clean up code\n\nRemove extra new lines. Remove semicolon at the end of closing bracket.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "romainreignier",
+      "date": "2015-03-26T17:20:32Z",
+      "sha": "622581150ab62345b7fcaa77232e3ae9ff80001a",
+      "message": "Add install rule for turtle_tf_message_filter",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "kwmrmsy",
+      "date": "2014-12-03T03:18:08Z",
+      "sha": "372471774d594d4b07523ae93fbaaf12ba3cd375",
+      "message": "catch tf.ExtrapolationException\n\nsee http://answers.ros.org/question/12024/tftutorials-demo-problem-ros-electric/, this still happens in hydro",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "spourmehr",
+      "date": "2014-11-21T20:23:39Z",
+      "sha": "cc18f9829854460b52c82eb54a5d73a207ad8864",
+      "message": "Fixes for \"Using sensor messages with tf\" tutorial.",
+      "files_changed": 4,
+      "additions": 58,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "k-okada",
+      "date": "2014-08-27T02:02:57Z",
+      "sha": "e847dd5b8be27d6fd70c29eae1eda0a86ec9c2bc",
+      "message": "add start_debug_demo.launch, that is introduced in http://wiki.ros.org/tf/Tutorials/Debugging%20tf%20problems",
+      "files_changed": 3,
+      "additions": 68,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "PaulBouchier",
+      "date": "2014-08-01T03:42:55Z",
+      "sha": "b2d1614fe96735f8d8b18a69f338f954619956dd",
+      "message": "Fix wrong order of arguments to q.setRPY in commit 82964f6.\nThe API shows the order is:\nvoid    setRPY (const tfScalar &roll, const tfScalar &pitch, const tfScalar &yaw)\n\nLine 14 should read:\n\nq.setRPY(0, 0, msg->theta);\n\nThis fault breaks this tutorial:\n\nhttp://wiki.ros.org/tf/Tutorials/Writing%20a%20tf%20broadcaster%20%28C%2B%2B%29\n\nIn a way that doesn't show up until the subsequent tutorial, where the\nfollower doesn't follow. The fix to line 14 proposed above fixes the\nsubsequent tutorial.\n\nThe problem is discussed in this thread:\n\nhttp://answers.ros.org/question/45884/turtle-tf-tutorial-fails-to-work/?answer=47845#post-id-47845\n\nand an incorrect fix was applied to the wiki. The note in the wiki under\nthe code, which says the code should read:\n\ntransform.setRotation( tf::Quaternion(0, 0, msg->theta) );\n\nis wrong - it should say transform.setRPY.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "destogl",
+      "date": "2014-07-25T20:16:27Z",
+      "sha": "246f34bd7fcd4a61d6e505dcda550941ed1eb365",
+      "message": "Added queue size for Publisher to avoid warning.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "wjwwood",
+      "date": "2013-06-28T20:39:28Z",
+      "sha": "028fea8b2f777dc07c3f22eaff51bbee3132dd13",
+      "message": "Cleaned up build system and package.xml",
+      "files_changed": 7,
+      "additions": 178,
+      "deletions": 71,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Doug Sievers",
+      "date": "2013-03-30T05:46:07Z",
+      "sha": "338fb5d183d0a8f5c55bb0da5d5a9accd5e03724",
+      "message": "Add missing files for tf::MessageFilter tutorial",
+      "files_changed": 2,
+      "additions": 74,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "130s",
+      "date": "2013-01-25T20:04:20Z",
+      "sha": "a3448d525c3b825e847ed44723d9bce9af454261",
+      "message": "geometry_tutorials) Catkinized. Added metapackage.",
+      "files_changed": 10,
+      "additions": 60,
+      "deletions": 114,
+      "commit_type": "docs"
+    },
+    {
+      "author": "IsaacSaito",
+      "date": "2012-12-27T23:57:14Z",
+      "sha": "90e07793004368e00b113801cb0c6685486ebde7",
+      "message": "Adding .vcg file that works on Groovy",
+      "files_changed": 1,
+      "additions": 121,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Wim Meeussen",
+      "date": "2011-02-08T22:12:27Z",
+      "sha": "143941b8212d61d079546bb0c20076d2d4da471a",
+      "message": "getting ready for 0.1.3 release",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "convert-repo",
+      "date": "2011-02-09T05:45:07Z",
+      "sha": "d2e594a4b38c36760e18b7cbd77d499196487912",
+      "message": "update tags",
+      "files_changed": 0,
+      "additions": 0,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "mwise",
+      "date": "2011-02-05T01:01:53Z",
+      "sha": "c0551742eb52da1e0f418c337862c6c279fc982f",
+      "message": "removing dep on joystick drivers",
+      "files_changed": 3,
+      "additions": 10,
+      "deletions": 4,
+      "commit_type": "config"
+    },
+    {
+      "author": "kwc",
+      "date": "2010-11-20T09:00:59Z",
+      "sha": "434b2620f93e4b8baa8429f22e3919b23c461ea1",
+      "message": "0.1.1 added ros_comm depend",
+      "files_changed": 2,
+      "additions": 3,
+      "deletions": 2,
+      "commit_type": "docs"
+    }
+  ]
+}

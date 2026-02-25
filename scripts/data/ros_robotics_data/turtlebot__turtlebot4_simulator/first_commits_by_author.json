@@ -1,0 +1,81 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T03:40:28Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "turtlebot",
+    "repo": "turtlebot4_simulator"
+  },
+  "data": [
+    {
+      "author": "civerachb-cpr",
+      "date": "2024-09-03T17:57:14Z",
+      "sha": "7786143d0ae43a0e7f7c8145919e502c865e3735",
+      "message": "Initial Jazzy implementation (#80)\n\n* Begin renaming ignition -> gz, updating dependencies for Jazzy\r\n\r\n* Update gazebo macros, include paths\r\n\r\n* More include paths\r\n\r\n* Namespace replacements\r\n\r\n* Include messages in the header\r\n\r\n* Update dependencies\r\n\r\n* create_ignition -> create_gz\r\n\r\n* Rename more launch files\r\n\r\n* Revert launch argument change\r\n\r\n* More ignition renames\r\n\r\n* Remove depcreated condition checks\r\n\r\n* Fix imports\r\n\r\n* IfCondition wrappers\r\n\r\n* Rename gazebo -> sim/gz, fix resource path envar\r\n\r\n* Fix permissions\r\n\r\n* Update the GUI configurations\r\n\r\n* Update the simulation launch file\r\n\r\n* ign -> gz for plugin logging, cover up the \"UNKNOWN %0\" text for now\r\n\r\n* Replace the Table model with CoffeeTable; Table doesn't appear to be supported anymore\r\n\r\n* Replace the sitting person so they're in a chair instead of on the ground\r\n\r\n* Hmi -> HMI in titlebars\r\n\r\n* Ignition -> Harmonic transition, minor updates to the warehouse world\r\n\r\n* Fix gz-gui8 rosdep\r\n\r\n* Launch Rviz in the naviation profile if it's being started as part of the simulation launch\r\n\r\n* Update CI for Jazzy\r\n\r\n* Change the gz_gui_vendor dependency to depend (from buildtool_depend)\r\n\r\n* Update github issue template\r\n\r\n* Enable OSRF testing packages for CI\r\n\r\n* Linting & formatting fixes",
+      "files_changed": 41,
+      "additions": 348,
+      "deletions": 292,
+      "commit_type": "config"
+    },
+    {
+      "author": "j-rivero",
+      "date": "2024-09-19T14:14:16Z",
+      "sha": "779b16a2653a74fd0fd35394c889acc134398e2c",
+      "message": "Generalize gz vendor use and modernize CMake (#82)\n\nAuthor: Jose Luis Rivero <jrivero@osrfoundation.org>\r\nApprover: Chris Iverach-Brereton <civerachb-cpr@clearpathrobotics.com>",
+      "files_changed": 2,
+      "additions": 7,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "tonybaltovski",
+      "date": "2022-12-05T22:26:50Z",
+      "sha": "66168fec8693ff794bcb8542438f18108d1e293e",
+      "message": "Updated Github CI for ROS2 Humble.",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 5,
+      "commit_type": "config"
+    },
+    {
+      "author": "hilary-luo",
+      "date": "2023-04-06T15:44:06Z",
+      "sha": "629a8c7ce01b9363af95e0e7c373c30e2a72c729",
+      "message": "Fixed world name and set max step size for better performance",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "roni-kreinin",
+      "date": "2022-02-11T19:12:00Z",
+      "sha": "4899d958a2ae852364b65022643785ec190342e4",
+      "message": "Initial commit",
+      "files_changed": 29,
+      "additions": 3231,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "ahcorde",
+      "date": "2022-03-01T22:01:13Z",
+      "sha": "afc6c7f6e2fff56c8dfe87784bd0a828fc2c79ce",
+      "message": "Improved instructions to compile code from source\n\nSigned-off-by: ahcorde <ahcorde@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "kscottz",
+      "date": "2022-03-04T00:55:09Z",
+      "sha": "0ffd52ab194d5a21d0bad24cd0089afe834dcd13",
+      "message": "Lingering bringup repository in package xml \n\nThis line was causing the following error. It is residual from the recent changes. \r\n\r\n  kscottz@woodrat:~/turtlebot4_ws$ rosdep install --from-path src -yi\r\n  ERROR: the following packages/stacks could not have their rosdep keys resolved\r\n  to system dependencies:\r\n  turtlebot4_ignition_bringup: Cannot locate rosdep definition for [turtlebot4_bringup]",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 1,
+      "commit_type": "config"
+    }
+  ]
+}

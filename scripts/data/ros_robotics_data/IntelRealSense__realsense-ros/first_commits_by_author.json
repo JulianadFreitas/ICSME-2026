@@ -1,0 +1,1241 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T07:59:31Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "IntelRealSense",
+    "repo": "realsense-ros"
+  },
+  "data": [
+    {
+      "author": "Nir-Az",
+      "date": "2022-02-27T12:59:28Z",
+      "sha": "4c59aba2bc6bf37ac4f8783603a58de957c5e9af",
+      "message": "switch to zero-copy only",
+      "files_changed": 4,
+      "additions": 22,
+      "deletions": 11,
+      "commit_type": "code"
+    },
+    {
+      "author": "nivgo",
+      "date": "2026-01-04T15:36:05Z",
+      "sha": "c99d4cf25b533c9163d7914765fefc77abc3b1de",
+      "message": "Add Intel realsense D436 URDF model",
+      "files_changed": 3,
+      "additions": 948,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "remibettan",
+      "date": "2022-02-21T13:20:31Z",
+      "sha": "d94d2d74d75e963b6161e49c19ccb43c7c8db984",
+      "message": "Merge pull request #2252 from doronhi/ros2-beta-diagnostic-updater\n\nROS2-beta: Add frequency monitoring to /diagnostics topic.",
+      "files_changed": 7,
+      "additions": 83,
+      "deletions": 16,
+      "commit_type": "docs"
+    },
+    {
+      "author": "OhadMeir",
+      "date": "2025-11-11T09:05:05Z",
+      "sha": "be7f4edd441b0ef07eafa5a893839cf96fb2af59",
+      "message": "Add motion_fps to launch file",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Gilaadb",
+      "date": "2022-08-02T08:49:10Z",
+      "sha": "223ed72bb6ae73cb0db8ddfc7c6216bfd5245f28",
+      "message": "Publish static tf for IMU frames\n\n{camera}_imu_frame and {camera}_imu_optical_frame were not published.\nThe tf is the same as the Gyro's and Accelerometer's. Now publishing\nIMU frames tf when ever publishing gyro's tf.",
+      "files_changed": 2,
+      "additions": 11,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "NetanelBlumenfeld",
+      "date": "2025-07-01T07:04:01Z",
+      "sha": "0a12d45b1db6dd38c7aac28176979f7c6f9b0eae",
+      "message": "feat(rviz): add RGBD plugin and clean integration\n\n- Add RealSense RGBD RViz plugin (adapted from private repo)\n- Disable TF filtering to avoid message queue drops\n- Use target_link_libraries (no ament_target_dependencies)\n- Fix CMake message targets (ROS 2 Humble typesupport)\n- Minor README fixes",
+      "files_changed": 8,
+      "additions": 1155,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ynyBonfennil",
+      "date": "2025-08-18T10:12:36Z",
+      "sha": "159c8fc7853d8203359b701fa98e7c86db150869",
+      "message": "Fix argument names (`_usb_port_id` and `_device_type`)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "adamwhats",
+      "date": "2025-07-30T13:43:39Z",
+      "sha": "20b16f4c462e7e097604ef5c91a2761e8ebc22b5",
+      "message": "Use package:// to discover meshes",
+      "files_changed": 7,
+      "additions": 8,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "ashrafk93",
+      "date": "2025-03-18T07:43:16Z",
+      "sha": "09e9f8eed2b4e28c0c20a20042486e7caed7b7cf",
+      "message": "Add lifecycle node dependency",
+      "files_changed": 23,
+      "additions": 279,
+      "deletions": 54,
+      "commit_type": "docs"
+    },
+    {
+      "author": "cinessa",
+      "date": "2025-05-06T08:25:41Z",
+      "sha": "3d2cdf203759f4f08f99af1cd65e697f46dcbec2",
+      "message": "Update main.yml\n\nchanged SECRET",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "pondersome",
+      "date": "2025-04-12T16:41:52Z",
+      "sha": "d76ad32246b38549a149fa3ab404753126ff3ae3",
+      "message": "Support TF Prefixing\n\n- Added a tf_prefix parameter that can be used to prefix all TF frames produced by the node.\n- Added documentation for this parameter and the base_frame_id parameter into the readme. Fixed some typos there too.\n- Added functionality to the launch file to warn about unsupported parameters\n- Added a test for the new tf_prefix parameter, but only supporting the D455 which I can test with\n- To run just the new test:\npython3 -m pytest test_camera_tf_tests.py -v -k \"TestCamera_TestTF_Prefix\"",
+      "files_changed": 6,
+      "additions": 115,
+      "deletions": 20,
+      "commit_type": "ci"
+    },
+    {
+      "author": "louislelay",
+      "date": "2024-09-26T02:12:08Z",
+      "sha": "deba84b1ed0262c9ab3b610083dec17e926dda77",
+      "message": "Updated the topics and services listed in the README for ros2 topic list and ros2 service list, as the previous ones were out of date.",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 6,
+      "commit_type": "docs"
+    },
+    {
+      "author": "FarStryke21",
+      "date": "2025-03-06T17:20:00Z",
+      "sha": "312fe56037635b68d62c0df0400a456d772dce4b",
+      "message": "Added base_frame_id param to the rs_launch.py file",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "noacoohen",
+      "date": "2024-07-10T11:58:24Z",
+      "sha": "3f603ac526336c6c773fdae0c52dd7433ba2ad31",
+      "message": "add D421 pid",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "administrator",
+      "date": "2024-08-09T08:32:02Z",
+      "sha": "f49627c9ea3f2b7cb3694527cf0f69824e17425d",
+      "message": "disabling FPS & TF tests for ROS-CI",
+      "files_changed": 2,
+      "additions": 5,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "SamerKhshiboun",
+      "date": "2022-03-03T09:35:52Z",
+      "sha": "e63a4e6d8327d78cf1f12b5da23434e1315d6c55",
+      "message": "FIX README.md:\nupdate supported ROS2 Distributions\nupdate ROS2 Distributions installation links",
+      "files_changed": 1,
+      "additions": 11,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "acornaglia",
+      "date": "2024-09-25T08:10:28Z",
+      "sha": "9d8987743a313a5f59b4e3d68288dbaee6e7beef",
+      "message": "Added ROS bag loop option\n\nSigned-off-by: Cornaglia, Alessandro <alessandro.cornaglia@intel.com>",
+      "files_changed": 2,
+      "additions": 10,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "PrasRsRos",
+      "date": "2023-03-30T13:16:39Z",
+      "sha": "6b64c6d150d3263ea48ee8416ecf0c0f68b453bb",
+      "message": "Added testcases:\n\nTo run them:\n\tcolcon build\n\t. install/setup.bash\n\texport ROSBAG_DIR_PATH=<records dir>\n\tcolcon test --packages-select realsense2_camera --event-handlers console_direct+\n\tcolcon test-result --all --test-result-base build/realsense2_camera/test_results/ --verbose\n\n\tTo run using pytest:\n\t\tpytest-3 -s realsense2_camera/test/pytest_integration_test_template.py",
+      "files_changed": 5,
+      "additions": 315,
+      "deletions": 1,
+      "commit_type": "ci"
+    },
+    {
+      "author": "patrickwasp",
+      "date": "2024-10-04T17:31:56Z",
+      "sha": "75612a177495f1da5ad445fc9f6f3edc473aa46e",
+      "message": "fix config typo",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Noy-Zini",
+      "date": "2024-09-24T14:04:06Z",
+      "sha": "b9626dfcf87e9725e7481c938f2d077973b6e613",
+      "message": "replace plugins versions withe commit hash",
+      "files_changed": 3,
+      "additions": 6,
+      "deletions": 6,
+      "commit_type": "config"
+    },
+    {
+      "author": "kadiredd",
+      "date": "2024-03-12T19:07:46Z",
+      "sha": "d318ee0f923b8bf43ed6e92cddc0d533a3906658",
+      "message": "Assertion failed when the camera device not found",
+      "files_changed": 7,
+      "additions": 29,
+      "deletions": 16,
+      "commit_type": "code"
+    },
+    {
+      "author": "AviaAv",
+      "date": "2024-06-10T21:53:20Z",
+      "sha": "6ba38014e43f7b6b971be2e5851c202f1a102909",
+      "message": "update README and fix SIC example",
+      "files_changed": 2,
+      "additions": 331,
+      "deletions": 159,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Arun-Prasad-V",
+      "date": "2023-03-30T13:49:43Z",
+      "sha": "ec8023a55af2bedccba07805d91e0b59a336ae5d",
+      "message": "Avoid configuring dynamic_tf_broadcaster within tf_publish_rate param's callback",
+      "files_changed": 2,
+      "additions": 1,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "fortizcuesta",
+      "date": "2024-05-14T08:14:32Z",
+      "sha": "90294331110c066f5965d3239e9367aaf3539905",
+      "message": "Allow hw synchronization of several realsense devices",
+      "files_changed": 9,
+      "additions": 115,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "jiuguangw",
+      "date": "2024-05-11T13:21:39Z",
+      "sha": "21fbfd754b1ed347ea1a8323e3cbc32a22abcca6",
+      "message": "Update CMakeLists.txt",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "anisotropicity",
+      "date": "2024-05-11T04:12:14Z",
+      "sha": "4acf08d68e6e014d6783cdc9306a903ef62022ec",
+      "message": "Update rs_launch.py to add depth_module.color_profile\n\nFix for not being able to set the color profile for D405 cameras.\r\nSee https://github.com/IntelRealSense/realsense-ros/issues/3090",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "deep0294",
+      "date": "2024-01-25T10:33:56Z",
+      "sha": "f77ac0ecd75f9cd79f22c2ecf7fefd3b3ff1c8dd",
+      "message": "Fix All Profiles Test\n\n * Use rs-enumerate-devices with verbose option to fetch necessary data\n * Fix the indices for parsing the Resolution and Frequency\n * Tested with D455 Camera",
+      "files_changed": 1,
+      "additions": 20,
+      "deletions": 10,
+      "commit_type": "code"
+    },
+    {
+      "author": "gwen2018",
+      "date": "2023-12-14T02:05:01Z",
+      "sha": "573d6a76fd4c36d4539bec4d67225a8a6de525f1",
+      "message": "add error handling to avoid crash when asic temperature monitor occasionally fails",
+      "files_changed": 1,
+      "additions": 11,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "hellototoro",
+      "date": "2024-01-01T05:03:34Z",
+      "sha": "d27a3273157f0fe1776ca2b4b2d295b42adebfc4",
+      "message": "to_urdf fun retrun a str, not a BufferedRandom",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "hyunseok-yang",
+      "date": "2023-06-02T03:47:07Z",
+      "sha": "16d49e03beb6c479c043b39df45396d68b76e4ea",
+      "message": "Update rs_launch.py, rs_multi_camera_launch.py\n- Add namespace launch argument",
+      "files_changed": 2,
+      "additions": 24,
+      "deletions": 21,
+      "commit_type": "code"
+    },
+    {
+      "author": "timor-raiman",
+      "date": "2023-08-14T08:01:27Z",
+      "sha": "3b7ab9b07d3df39481d5bc6f785aab7269ee941e",
+      "message": "add .github/workflows/trigger-private-ci.yaml",
+      "files_changed": 1,
+      "additions": 45,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "karina-ranadive",
+      "date": "2023-07-19T19:45:29Z",
+      "sha": "0df17944e69fd40d51d19a569475b3ee12bee3a7",
+      "message": "replaced Deprecated function mktemp to TemporaryFile",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "tonynajjar",
+      "date": "2023-06-14T08:36:56Z",
+      "sha": "0064ae8fb4f07649bb094a3082923a6b00e535c4",
+      "message": "Update README.md",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "danielhonies",
+      "date": "2023-04-25T14:44:02Z",
+      "sha": "8fab7a441cb9efc7c4fae4916230afafb877b7bd",
+      "message": "Update realsense_node_factory.cpp\n\nFixes https://github.com/IntelRealSense/realsense-ros/issues/2711",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "MarqRazz",
+      "date": "2023-04-23T18:41:30Z",
+      "sha": "d7e8792fe9d2de6a8a249b8f6c12205ed9c99b5c",
+      "message": "update mesh path to use file find",
+      "files_changed": 7,
+      "additions": 8,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "nairps",
+      "date": "2023-04-04T10:18:57Z",
+      "sha": "d40d75805198ace85383463c669ea32d9a4d69ed",
+      "message": "Added a pytest util file for sharing common functions",
+      "files_changed": 3,
+      "additions": 92,
+      "deletions": 96,
+      "commit_type": "ci"
+    },
+    {
+      "author": "stwirth",
+      "date": "2019-02-06T05:04:38Z",
+      "sha": "a036d81bcc6890658104a8de1cba24538effd6e3",
+      "message": "Remove gencfg dependency (#581)\n\nNow with ddynamic_reconfigure being the backend for dynamic reconfigurability, the ${PROJECT_NAME}_gencfg target doesn't exist anymore and this dependency can be removed.",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "christian-rauch",
+      "date": "2023-01-13T09:08:31Z",
+      "sha": "e4546d8257183b29342b75d544b0784543741243",
+      "message": "publish point cloud via unique shared pointer",
+      "files_changed": 2,
+      "additions": 25,
+      "deletions": 24,
+      "commit_type": "code"
+    },
+    {
+      "author": "Yadunund",
+      "date": "2023-01-17T08:44:56Z",
+      "sha": "e1a65bbbf9aa833c0ae7926b3ac3708dd3c87b17",
+      "message": "Publish static transformations for intra-process communication\n\nSigned-off-by: Yadunund <yadunund@openrobotics.org>",
+      "files_changed": 2,
+      "additions": 15,
+      "deletions": 13,
+      "commit_type": "docs"
+    },
+    {
+      "author": "tsadarsh",
+      "date": "2022-11-18T00:50:30Z",
+      "sha": "3c6bdf65777c083cbb7994a24896485387b3e783",
+      "message": "Explicit mention of parameter value for `unite_imu_method`\n\nThere is confusion regarding what value needs to be passed to `unite_imu_method`. The `ros2-development` branch expects a different value for the `unite_imu_method` parameter as compared to the `ros2-legacy` and `ros1-legacy` branches. I have added this detail in the README. \r\n\r\nThanks to @Nir-Az for pointing this out in [this](https://github.com/IntelRealSense/realsense-ros/issues/2542#issuecomment-1318831114) issue.",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "hsuys",
+      "date": "2022-11-22T00:15:04Z",
+      "sha": "55ae9b9cd0ae00b8fe55363e37a5ae6a4b2e41ae",
+      "message": "Add D457",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "augustelalande",
+      "date": "2022-11-11T21:03:59Z",
+      "sha": "24e01f1d79ae7cc16d69b76c7aec12ede7efb1e2",
+      "message": "replace deprecated parameter node_name with name",
+      "files_changed": 1,
+      "additions": 11,
+      "deletions": 10,
+      "commit_type": "code"
+    },
+    {
+      "author": "Pranav Dhulipala",
+      "date": "2022-11-09T00:28:42Z",
+      "sha": "c80c924eac34f55df60ff9abef2a67c4b9eaa5c4",
+      "message": "Windows bringup",
+      "files_changed": 2,
+      "additions": 6,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jaiveersinghNV",
+      "date": "2022-11-08T22:29:08Z",
+      "sha": "b9772241d833ec86b3867cc5403c3564086ca66b",
+      "message": "Update stale comment to reflect new branch name\n\nSeems like there's a stale comment referring to the old, `ros2-beta` branch name, when it should instead reference the new, `ros2-development` branch.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "maloel",
+      "date": "2022-03-03T14:07:14Z",
+      "sha": "54f436bb39cd790de4555b5a013e3712f43c7b13",
+      "message": "Update README.md",
+      "files_changed": 1,
+      "additions": 267,
+      "deletions": 267,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jeremy-shannon",
+      "date": "2022-07-07T16:14:47Z",
+      "sha": "a554c7ca937f3bf623186e7585f67a170b29e92c",
+      "message": "Update README.md\n\nupdate rosdep due to Eloquent going EOL",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "sherrysun2018",
+      "date": "2022-04-15T02:53:42Z",
+      "sha": "ac85afd14ae4b18ac4133d1945ca24135cd84cde",
+      "message": "add D430i support",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "doronhi",
+      "date": "2018-07-08T12:41:04Z",
+      "sha": "3dcb7eec0d7a8ecdbf0ff7bb1c69144f41224dce",
+      "message": "Merge pull request #383 from mikolajz/my-development\n\nFix coordinate system transforms so that the pointcloud aligns with camera view",
+      "files_changed": 2,
+      "additions": 20,
+      "deletions": 32,
+      "commit_type": "code"
+    },
+    {
+      "author": "yushijinhun",
+      "date": "2022-02-06T03:50:25Z",
+      "sha": "d548a3655fd27596b14cefd4f325c270967fe9c1",
+      "message": "Fix clang compile errors",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "benlev",
+      "date": "2021-11-24T07:42:26Z",
+      "sha": "1a1786b21188f05492366c3afe09d0c4106a7690",
+      "message": "fixed align_depth parameter name in launch file",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Marco Camurri",
+      "date": "2020-03-14T17:39:13Z",
+      "sha": "b4363754069b00907cf30e098b881242cd925e2e",
+      "message": "correct offset between camera_link and base_link",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "helenol",
+      "date": "2020-06-03T11:17:14Z",
+      "sha": "52452255a8d72732d52a59a73419d424497af2f7",
+      "message": "Add proper output of equidistant distortion model.",
+      "files_changed": 1,
+      "additions": 23,
+      "deletions": 19,
+      "commit_type": "code"
+    },
+    {
+      "author": "Brice",
+      "date": "2020-05-29T09:12:05Z",
+      "sha": "6a0da7791dfba1c765918e3858aea6d5f11fddc6",
+      "message": "change state_publisher into robot_state_publisher",
+      "files_changed": 6,
+      "additions": 6,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "Pedro Machado",
+      "date": "2020-05-26T11:10:05Z",
+      "sha": "4411dc09864cabea2865a8b29983bd627e0ea771",
+      "message": "Update README.md\n\nadded extra comments for installing in ROS melodic.",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "acetousk",
+      "date": "2020-05-08T00:06:58Z",
+      "sha": "da9dfd6fd6548d10fec17f5ee92f6a789141f00f",
+      "message": "Update README.md",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "facontidavide",
+      "date": "2020-03-02T10:47:19Z",
+      "sha": "26e6768055cdfa6a51797ce06e36ec7b9887cfe9",
+      "message": "Reduce memory allocations in BaseRealSenseNode::publishPointCloud()\n\nThere were two missed opportunities for optimization:\n\n- sensor_msgs::PointCloud2 should not be created at any frame, because,\nthat would force memory allocation, that is costly.\n\n- using std::list should be forbidden ;)",
+      "files_changed": 2,
+      "additions": 26,
+      "deletions": 23,
+      "commit_type": "code"
+    },
+    {
+      "author": "sahandy",
+      "date": "2019-11-15T13:21:09Z",
+      "sha": "45d1049c2077715cb143d72db05eef8da285b0e8",
+      "message": "Fix wrong PointField Type for Colored Point Clouds\n\n* Related issue: #680\n* Use `FLOAT32` for `sensor_msgs::PointField` when preparing the point cloud message,\nin case where texture is available and chosen.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "mikepurvis",
+      "date": "2019-10-29T20:38:27Z",
+      "sha": "609c024ad476475a4e92e0aea4650016185b5f59",
+      "message": "Fix USB port regex to work with hub-connected cams.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "aswinkumar2019",
+      "date": "2019-10-24T13:13:47Z",
+      "sha": "0bc36ae29abd7d4e6849fa5a5c2658d6bc623a94",
+      "message": "Update opensource_tracking.launch\n\nFixed a wrong parameter in imufiltermadgwick",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "RenaudeauBrice",
+      "date": "2019-10-23T09:28:12Z",
+      "sha": "d2d38a1e51e90f4c485eb6715927a59b2005e15a",
+      "message": "Allow to use usb port number to connect to devices",
+      "files_changed": 6,
+      "additions": 50,
+      "deletions": 3,
+      "commit_type": "config"
+    },
+    {
+      "author": "saikishor",
+      "date": "2019-10-21T12:46:50Z",
+      "sha": "7ace746d14520c0c50daa21468c16420ba72f3a1",
+      "message": "added support for multiple cameras",
+      "files_changed": 5,
+      "additions": 173,
+      "deletions": 162,
+      "commit_type": "code"
+    },
+    {
+      "author": "jr-bor",
+      "date": "2019-10-14T10:03:56Z",
+      "sha": "f6f8efab0534e4b046ac9a64952c1945581eb28c",
+      "message": "passing camera name as a parameter\n\nthe material has been moved to an specific file so it can be imported from other files",
+      "files_changed": 5,
+      "additions": 171,
+      "deletions": 162,
+      "commit_type": "code"
+    },
+    {
+      "author": "pavloblindnology",
+      "date": "2019-03-11T14:09:22Z",
+      "sha": "e0076b2b608c2fe3df02aa4f2daa45c970275251",
+      "message": "Add dynamic transform support again.\n\nhttps://github.com/intel-ros/realsense/pull/169\nhttps://github.com/intel-ros/realsense/issues/660",
+      "files_changed": 5,
+      "additions": 67,
+      "deletions": 7,
+      "commit_type": "config"
+    },
+    {
+      "author": "kamilritz",
+      "date": "2019-08-13T08:46:36Z",
+      "sha": "68d8dc5c90d7ba4b581c9253349892f63a9a62b3",
+      "message": "Add option to disable odom tf to be published\n\nThis is useful if you want to link your camera to your existing robot tf tree.\ntf can not handle two parents for the camera_pose_frame",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Tyler Kurtz",
+      "date": "2019-08-08T22:06:00Z",
+      "sha": "c04f95d3bd31795fac2b1fad2f23274c89d26118",
+      "message": "See issue 885. Added name tag to 435 xacro. Added multiple camera test launch file. Renamed xacro frames to be consistent with drivers. Added an option to enable static frames in the urdf",
+      "files_changed": 5,
+      "additions": 207,
+      "deletions": 77,
+      "commit_type": "code"
+    },
+    {
+      "author": "peci1",
+      "date": "2019-07-11T18:55:41Z",
+      "sha": "13375ec5a1fcca0faf138fe3069dd711afcaa96e",
+      "message": "Dependency on xacro missing.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "asaba96",
+      "date": "2019-07-04T11:12:31Z",
+      "sha": "c1010ab2992b80ee2aea2ef92757a579b8c02686",
+      "message": "Updated README to include notice of running multiple T265 cameras not being currently supported (#834)",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Nick Giancola",
+      "date": "2019-06-26T03:35:26Z",
+      "sha": "d3867401225ab819fdae1efdb57909f294e99e3e",
+      "message": "Make T265 less noisy in the info log (#823)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "dwisth",
+      "date": "2019-06-11T09:51:35Z",
+      "sha": "fc1fd10d9fb6fa468b974300e639b3dbec9e0bfb",
+      "message": "Fix empty cmake variable and dependency on librealsense (#747)",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "sundermann",
+      "date": "2019-03-26T13:25:59Z",
+      "sha": "9340af09d961c9b0f9bbd104bc2cd3902aeecf15",
+      "message": "Add option to use external nodelet manager\n\nRight now a nodelet manager is always created when running the realsense\nnode. This is not always a wanted behaviour as a nodelet manager might\nalready be running somewhere else in the ROS system. This patch adds a\nparameter to disable launching a new nodelet manager. In this case the\nnodelet manager must be provided using the manager arg. The new\nparameter is set to false by default, so existing behaviour is not\nchanged.",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "baumanta",
+      "date": "2018-09-18T09:40:28Z",
+      "sha": "2958c74d1b036fece9e410bbbb7f95abcb97f488",
+      "message": "new launch parameter for frame distinction in multi camera use",
+      "files_changed": 5,
+      "additions": 51,
+      "deletions": 14,
+      "commit_type": "config"
+    },
+    {
+      "author": "Antoine Hoarau",
+      "date": "2019-06-04T19:43:53Z",
+      "sha": "1eb0d68781964857841ddd54ae6f249f00a65690",
+      "message": "add eigen dependency",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "mayio",
+      "date": "2019-06-02T07:24:21Z",
+      "sha": "b572924755e704ba64f2369df4e18fef71fa8c25",
+      "message": "Added ddynamic_reconfigure installation note (#795)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "Victor Lopez",
+      "date": "2019-03-20T15:51:38Z",
+      "sha": "cfd5d0c9c40f24fbdb24f7c69ad604031b58605c",
+      "message": "Remove copied version of ddynamic_reconfigure",
+      "files_changed": 43,
+      "additions": 0,
+      "deletions": 3792,
+      "commit_type": "config"
+    },
+    {
+      "author": "dorodnic",
+      "date": "2017-09-11T16:05:09Z",
+      "sha": "dd70382dc3947d7b52809fa2f773d96705817f86",
+      "message": "Merge pull request #45 from icarpis/ds5\n\nAlign ROS Wrapper to Realsense SDK",
+      "files_changed": 300,
+      "additions": 1163,
+      "deletions": 467068,
+      "commit_type": "docs"
+    },
+    {
+      "author": "schmidtp1",
+      "date": "2019-03-01T00:30:32Z",
+      "sha": "9e9af3bb6755c5962db32a278d53dbd1a0a90b5f",
+      "message": "Update T265 section of README.md",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Abhijit Majumdar",
+      "date": "2019-04-18T15:42:23Z",
+      "sha": "ce8b6ee500a9192e3591c8dbe8ce350818e0d11e",
+      "message": "add decimation filter at the front of the filter list, before the start of disparity filter",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Allison Thackston",
+      "date": "2019-03-20T17:49:49Z",
+      "sha": "52543ac3d188577b4544ea001c1857ced63f8417",
+      "message": "moved description files into realsense2_description package",
+      "files_changed": 17,
+      "additions": 47,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "efernandez",
+      "date": "2019-03-11T21:16:06Z",
+      "sha": "f002a7b916aed8675620a687b6b888b48db13908",
+      "message": "Set config defaults from ROS param server\n\nfixes #609\n\nOnly if the ROS params are set",
+      "files_changed": 1,
+      "additions": 46,
+      "deletions": 9,
+      "commit_type": "code"
+    },
+    {
+      "author": "antmusco",
+      "date": "2019-03-19T08:19:24Z",
+      "sha": "b7ae88fe7a6ca58533be6b42db2905203d037150",
+      "message": "Fixed distortion coefficients bug. (#662)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Enrique Fernández Perdomo",
+      "date": "2019-03-19T08:07:09Z",
+      "sha": "8c65cc9d7f76377b8cc7d783da683b1da800bf93",
+      "message": "Add dependency on nav_msgs (#674)\n\nthanks.",
+      "files_changed": 2,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "akirayou",
+      "date": "2019-03-19T06:44:00Z",
+      "sha": "19a0c08de26c2accff113648b0cf3ced378e7905",
+      "message": "fix Twist in odometry problem (#676)",
+      "files_changed": 1,
+      "additions": 18,
+      "deletions": 9,
+      "commit_type": "code"
+    },
+    {
+      "author": "oka1125",
+      "date": "2019-02-08T05:44:05Z",
+      "sha": "35e86ced587637a8036c7cd8d58e2dba1bfb0811",
+      "message": "Adjust unit of SR300's depth image into 0.001 meter (same as D435's). This unit adjustment is needed for rgbd_launch package and it's point cloud value.",
+      "files_changed": 1,
+      "additions": 13,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "iliabara",
+      "date": "2019-03-05T22:59:46Z",
+      "sha": "0972949c617b1c569c4775b45d52956eaa1016e7",
+      "message": ":\n\n[Problem]\n\n[Solution]\n\n[Test]\n\n[Links]\nhttps://issues.labcollab.net/browse/",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "CameronDevine",
+      "date": "2019-03-04T10:38:35Z",
+      "sha": "c044ee7eea4a0021d271e8e6969584d5bb5d8aec",
+      "message": "Modified the CMake file so that URDF and mesh files will be installed (#615)",
+      "files_changed": 1,
+      "additions": 10,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jarvisschultz",
+      "date": "2019-03-04T10:37:47Z",
+      "sha": "567b5ba5c12b86c9387fb7539ef5575b657106dc",
+      "message": "Fix #628 - added guards around clang-specific pragmas (#630)\n\nAlso added a guard around an OpenMP pragma",
+      "files_changed": 5,
+      "additions": 22,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "bfulkers-i",
+      "date": "2019-03-01T12:29:06Z",
+      "sha": "f03fd7ade50d465b5fb31f9f5f5771afb46f04f6",
+      "message": "rs_t265.launch: Add a disclaimer about wheel odometry",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Ian Zhang",
+      "date": "2019-02-17T09:05:58Z",
+      "sha": "6e13aa3821220c0364e47a28e47c8f1b79d8c359",
+      "message": "Fix pending messages variable name typo (#608)",
+      "files_changed": 2,
+      "additions": 8,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "socrob",
+      "date": "2019-02-06T05:00:29Z",
+      "sha": "6f42d4b039f89535329f97816cd94db8b38ac7d1",
+      "message": "Remove REQUIRED from find_package to show the correct error message (#592)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "vatbrain",
+      "date": "2019-02-06T04:52:00Z",
+      "sha": "bd45218da481b121b07590310b3cada4789dfb15",
+      "message": "Add filters argument to rs_rgbd.launch (#593)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "hvpandya",
+      "date": "2019-01-24T14:00:08Z",
+      "sha": "ec3a93ec269cc926a463ee2071a984969db992e5",
+      "message": "changed the default gyro_fps and accel_fps to match actual values (#560)",
+      "files_changed": 4,
+      "additions": 16,
+      "deletions": 17,
+      "commit_type": "config"
+    },
+    {
+      "author": "RhysMcK",
+      "date": "2019-01-23T02:05:16Z",
+      "sha": "19110c972578de3ce1f5530bf9e2de0dbc87f02f",
+      "message": "added realsense D415 urdf",
+      "files_changed": 4,
+      "additions": 146,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "atyshka",
+      "date": "2019-01-08T16:27:20Z",
+      "sha": "39a756fd73dfa02831b68c72c12bdbee2df2f9a0",
+      "message": "Fixed different transforms between xacro and driver",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "thiagodefreitas",
+      "date": "2018-12-20T11:28:03Z",
+      "sha": "76b8f821b57298db00ef13eb4b3c29c8b5d77afb",
+      "message": "fix: wrong reference for the gmock dependency (#546)\n\nfix: typo on ddynamic_reconfigure",
+      "files_changed": 2,
+      "additions": 1,
+      "deletions": 3,
+      "commit_type": "config"
+    },
+    {
+      "author": "carlos-wong",
+      "date": "2018-12-17T12:10:44Z",
+      "sha": "06122e0446d5221731d0f7a2bdfc4cb7e730a211",
+      "message": "Fixed: invalid module name format for ROS (#537)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "m-price-softwearinc",
+      "date": "2018-12-06T04:43:17Z",
+      "sha": "96402fd4ebdcf274d165b6d76c8a1efcbfffdf93",
+      "message": "Potential Fix for librealsense2 v2.17.0 Compatilbility (#523)\n\nFix to comply with librealsense v2.17.0.\r\nThanks @m-price-softwearinc",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "ipa-fog",
+      "date": "2018-10-29T06:54:35Z",
+      "sha": "d7bc8bbd9b7a299268200342e2226bb1f5412e20",
+      "message": "added missing dependencies: rgbd_launch (#490)",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "AndyZe",
+      "date": "2018-10-02T14:45:58Z",
+      "sha": "ea178313c8e16d44905e17890126421c531f4e7a",
+      "message": "Adding a dynamic_reconfigure option to toggle ROS publication (issue #477).",
+      "files_changed": 5,
+      "additions": 146,
+      "deletions": 122,
+      "commit_type": "config"
+    },
+    {
+      "author": "yycho0108",
+      "date": "2018-08-06T17:03:02Z",
+      "sha": "259109545b48f525bce7464739d67039fffafacd",
+      "message": "Merge remote-tracking branch 'reset_dev/reset_dev' into development",
+      "files_changed": 2,
+      "additions": 60,
+      "deletions": 30,
+      "commit_type": "code"
+    },
+    {
+      "author": "Shuntaro Yamazaki",
+      "date": "2018-09-27T23:26:53Z",
+      "sha": "f2933265809993ec9e181b3fed7630bdebeb9873",
+      "message": "Set tf_prefix in demo_pointcloud.launch",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "rhaschke",
+      "date": "2018-05-08T10:52:37Z",
+      "sha": "7bbf5662f21f75c7fa67383a048c6a3b3dca9d01",
+      "message": "use locations of realsense2",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "SteveMacenski",
+      "date": "2018-07-24T20:21:11Z",
+      "sha": "e5d1ede55119b50021297cc7cfaa9a2ef0452878",
+      "message": "making camera name configurable, necessity for launching multiple cameras",
+      "files_changed": 3,
+      "additions": 6,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "yayaneath",
+      "date": "2018-07-17T21:24:01Z",
+      "sha": "b604e8a47937b71f8c9c0e2dd8c8f703f37ae675",
+      "message": "Fix the name of the alignment-related parameters when invoking the RealSenseNodeFactory.",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "config"
+    },
+    {
+      "author": "elhayra",
+      "date": "2018-07-08T07:58:24Z",
+      "sha": "15dcf0a18e2d9c043b3e9635bca94a75f83b7944",
+      "message": "Adding rgbd_launch installation",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Ryan Sinnet",
+      "date": "2018-07-08T02:22:05Z",
+      "sha": "6579f49e93d3487dcc1ac167f895a3f078f0be46",
+      "message": "Fixing the length of an array argument in rotationMatrixToQuaternion",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Affonso-Gui",
+      "date": "2018-07-03T04:13:16Z",
+      "sha": "ba08fdb7901e349a7694bde3f0e41ee714690267",
+      "message": "Add mesh and urdf for D435",
+      "files_changed": 4,
+      "additions": 880,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "mikolajz",
+      "date": "2018-05-21T11:04:58Z",
+      "sha": "c5b162ee4fef05e7fc387b12281b048892ca475e",
+      "message": "In coordinate system transforms, fix which extrincits we use and use matrix properly.\n\nTwo bugs which cancel out each other for rotation, but not translation:\n- it seems that ROS and Realsense use different conventions of coordinate\nsystem transformations. In ROS, it is defined as a transformation of child\nfame coordinates to parent frame coordinates (see\nhttp://wiki.ros.org/tf/Overview/Transformations), while in RealSense\nit seems to be transformation of \"from\" frame coordinates to \"to\" frame\ncoordinates. Thus, the order needs to be reversed.\n- the matrix in RealSense extrinsics is stored in column-major format, while\nEigen::Matrix3f expects row-major, causing the matrix to be transposed.\n\nTo see that this is a problem, one can open rviz and add the pointcloud and the\ncolor/image_raw camera. From the camera viewpoint, the images should align, but\ndon't. This patch doesn't yet solve the whole problem, but makes it smaller.",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 7,
+      "commit_type": "code"
+    },
+    {
+      "author": "chachi",
+      "date": "2018-04-24T20:49:00Z",
+      "sha": "c521f4ab71de606a08da63f249b155dfc49d4069",
+      "message": "Fixes librealsense CMake vars.",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "AlanBB277",
+      "date": "2018-04-19T06:20:33Z",
+      "sha": "6c1e58c2107afa7795246f4e7ae878a0d4c3442d",
+      "message": "fix the aligned depth frame unit conversion issue",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 9,
+      "commit_type": "code"
+    },
+    {
+      "author": "icarpis",
+      "date": "2017-05-09T15:04:54Z",
+      "sha": "b00c0ab2ed2224787191aef689f0fca9b5566705",
+      "message": "README.md updated",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "lorenwel",
+      "date": "2018-04-10T08:24:42Z",
+      "sha": "73543a05a4565905a26ca481154c3896d53e4d94",
+      "message": "Assign stream cam info instead of depth",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "josephduchesne",
+      "date": "2018-04-04T12:41:32Z",
+      "sha": "9ab73d060ad57c4b2460f0c8dfc91bac5119b20c",
+      "message": "Fixed typo",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Rein Appeldoorn",
+      "date": "2018-03-28T12:35:33Z",
+      "sha": "0b9df818a79fc194cf8d851aa068b9393642be57",
+      "message": "diagnostic updaters with frequency status for publishers",
+      "files_changed": 5,
+      "additions": 44,
+      "deletions": 9,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Sharron LIU",
+      "date": "2018-01-17T14:48:56Z",
+      "sha": "f1225c33abc2c02d20259bcbd419c2d930b00521",
+      "message": "launch: added launch file for point_cloud_rgbxyz\n\nDepth registered point cloud data (XYZRGB) can be generated by\nleverage ROS image pipeline (http://wiki.ros.org/image_pipeline).\n\nIn the context of ROS image pipeline, retified depth images are\nregistered (projected) into the RGB camera. By this way every depth\npixel is mapped into its corresponding rgb pixel.\n\nPoint cloud data generated in this way avoid those \"out of bound\"\ncolor pixel that could be introduced in the projection way that is\ncurrently implemented.\n\nThis patch adding a launch file to invoke the related nodelets of\nROS image pipeline. It's derived from the rgbd_launch here\n(http://wiki.ros.org/rgbd_launch).\n\nInitially we add these processings:\n1. rgb_processing: rectify color image\n2. depth_registered_processing (sw): register depth image to color camera\n   and generate pointcloud_xyzrgb\n3. depth_registered_processing (hw): generate pointcloud_xyzrgb from depth\n   image aligned to color\n\nTo launch the hw_registered pointcloud_xyzrgb:\n   $ roslaunch realsense_ros_camera rs_rgbd.launch align_depth:=true\n\nTo launch the sw_registered pointcloud_xyzrgb:\n   $ roslaunch realsense_ros_camera rs_rgbd.launch\n\nSigned-off-by: Sharron LIU <sharron.liu@intel.com>",
+      "files_changed": 1,
+      "additions": 193,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Itay Carpis",
+      "date": "2017-05-07T08:48:44Z",
+      "sha": "b5b8185e61c89fb90e1bdfb51b4912172cabcf80",
+      "message": "Added Fisheye & IMU Topics.\n\n(cherry picked from commit 944adb620921c5e94f1863b4388fdbc9e74b4992)",
+      "files_changed": 2,
+      "additions": 376,
+      "deletions": 103,
+      "commit_type": "code"
+    },
+    {
+      "author": "Curfman, Matthew C",
+      "date": "2017-01-27T23:14:44Z",
+      "sha": "12db635bc8392bfcc1d642b08861cedf0ddced99",
+      "message": "Update README.md",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Matt Curfman",
+      "date": "2016-09-13T20:28:13Z",
+      "sha": "afa3839ee4b5fd807138fe398c3569a11c772212",
+      "message": "first commit",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "bhirashi",
+      "date": "2017-02-08T00:56:04Z",
+      "sha": "ba6aa5d8ab777a0e6bfddefad645093774ecd513",
+      "message": "Made use of camelCase consistent in method names.",
+      "files_changed": 2,
+      "additions": 29,
+      "deletions": 29,
+      "commit_type": "code"
+    },
+    {
+      "author": "Gutliansky, Stanislav",
+      "date": "2017-02-07T10:07:39Z",
+      "sha": "35ee2365c04ca24ca7f5b4879b3121d24ecd4c26",
+      "message": "Merge pull request #4 from sgutlian/pt-dev-new\n\nReplace person tracking node (put node from person tracking team)",
+      "files_changed": 69,
+      "additions": 2222,
+      "deletions": 1901,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Stanislav Gutliansky",
+      "date": "2017-02-05T20:21:40Z",
+      "sha": "fd7c7a8a6bb7fdea631b368aa8695e672ba2d99b",
+      "message": "Add updated person tracking node",
+      "files_changed": 70,
+      "additions": 2299,
+      "deletions": 1894,
+      "commit_type": "docs"
+    },
+    {
+      "author": "sshoshan",
+      "date": "2017-01-26T11:28:13Z",
+      "sha": "b61d9e8f437d97d48560b76aabe3bc73f91318b3",
+      "message": "Insert OR first draft",
+      "files_changed": 45,
+      "additions": 3581,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Lu, LuX",
+      "date": "2017-02-07T05:42:22Z",
+      "sha": "4a54d39253d1338c9c3b738d4120b67125b0a0c8",
+      "message": "set header value for stream and imu message",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Lu.LuX",
+      "date": "2017-01-19T05:42:13Z",
+      "sha": "e1f542576f1db8da6a72f95e8d307671476c859c",
+      "message": "delet because diffrent name for instance",
+      "files_changed": 3,
+      "additions": 0,
+      "deletions": 3,
+      "commit_type": "docs"
+    }
+  ]
+}

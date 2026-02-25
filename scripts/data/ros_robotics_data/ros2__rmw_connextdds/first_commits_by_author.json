@@ -1,0 +1,371 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T08:04:01Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros2",
+    "repo": "rmw_connextdds"
+  },
+  "data": [
+    {
+      "author": "fgallegosalido",
+      "date": "2025-03-25T17:16:28Z",
+      "sha": "a08ba6f2a0d17d014eaadca20bf8bc72b04762cb",
+      "message": "Discovery race condition mitigation (#174)\n\n* Include discovery race condition mitigation and remove hardcoded value of max_blocking_time\n\n* Go back to using infinite max_blocking_time\n\n* Use correct logging macros and enable log debug macros\n\n* Fix logging\n\n* Don't print debug messages in default logging mode\n\n* Fix tracepoints in take_request and send_response\n\n* Applied feedback\n\n* Modify take_request and send_response to have the client writer gid in the request header\n\n* Apply more feedback and run uncrustify\n\n* Fixed server compatibility with old clients and other vendors clients\n\n* Apply uncrustify format\n\n---------\n\nCo-authored-by: Juan Carlos Chaves Puertas <juanca@rti.com>",
+      "files_changed": 10,
+      "additions": 459,
+      "deletions": 55,
+      "commit_type": "code"
+    },
+    {
+      "author": "fujitatomoya",
+      "date": "2024-07-29T07:50:46Z",
+      "sha": "baa3f379d44a23016484880f78997ecdd5feb216",
+      "message": "remove rmw_localhost_only_t. (#156)\n\nSigned-off-by: Tomoya Fujita <Tomoya.Fujita@sony.com>",
+      "files_changed": 4,
+      "additions": 6,
+      "deletions": 9,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ahcorde",
+      "date": "2024-07-29T08:09:10Z",
+      "sha": "5f877f8ba254f2579e8e28a5a4eae7c112a6678d",
+      "message": "Changelog\n\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>",
+      "files_changed": 4,
+      "additions": 14,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "leeminju531",
+      "date": "2023-09-29T12:35:42Z",
+      "sha": "3c604d41031136ba7bb4531d44c6506a182a76d4",
+      "message": "Add rmw count clients services impl (#93)\n\n* Add rmw count clients services impl\r\n\r\nSigned-off-by: leeminju531 <dlalswn531@naver.com>",
+      "files_changed": 4,
+      "additions": 127,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "baszalmstra",
+      "date": "2025-11-11T15:28:11Z",
+      "sha": "78ab48e6c43a8040599f0fa97e8e4d39a6121435",
+      "message": "fix: remove superflous `buildtool_export_depend` (#206)\n\nAs far as I understand this package does not expose an build time interface that requires `amend_cmake` so the `buildtool_export_depend` is not needed.\n\nSigned-off-by: Bas Zalmstra <4995967+baszalmstra@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 2,
+      "commit_type": "ci"
+    },
+    {
+      "author": "clalancette",
+      "date": "2021-04-06T00:23:17Z",
+      "sha": "eb2bc6f1e5bb1dea6522779824005bb6a4e34671",
+      "message": "Change index.ros.org -> docs.ros.org. (#23)\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mosfet80",
+      "date": "2025-07-18T20:07:03Z",
+      "sha": "68f61f66114c81ccf96ca170068ee90d4b5ee0bb",
+      "message": "Fix cmake deprecation (#198)\n\ncmake version < then 3.10 is deprecated",
+      "files_changed": 4,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "cottsay",
+      "date": "2025-04-05T05:27:45Z",
+      "sha": "ee5e835c146612abd06b4f072d14186d54f136ab",
+      "message": "Switch buildtool to ament_cmake package (#183)\n\nThese packages don't actually find_package(ament_cmake_ros) at all, so\nthe dependency can be tightened.\n\nSigned-off-by: Scott K Logan <logans@cottsay.net>",
+      "files_changed": 3,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "config"
+    },
+    {
+      "author": "lobolanja",
+      "date": "2025-04-08T03:50:01Z",
+      "sha": "93baabf1d9edeb4f67915f4a3d40952eb3eb3b19",
+      "message": "#177: Update Connext to 7.3.0 (#181)\n\n* #177: change depend to 7.3.0, TODO documentatation.\n\n* 177: minor changes on README to match 7.3.0 update, mark rmw_connextddsmicro deprecated\n\n* #177: Point to new package with '-ros' suffix to avoid collision with RTI evaluation packages\n\n* #177: go back to rti-connext-dds-7.3.0 to match changes in rosdistro repo",
+      "files_changed": 2,
+      "additions": 13,
+      "deletions": 14,
+      "commit_type": "docs"
+    },
+    {
+      "author": "sloretz",
+      "date": "2025-02-10T22:48:05Z",
+      "sha": "4d1cb022b3f3e2f73b7852ce84a13b6d04238cac",
+      "message": "Use target_link_libraries instead of ament_target_dependencies (#169)\n\n* Use target_link_libraries instead of ament_target_dependencies\r\n\r\nSigned-off-by: Shane Loretz <sloretz@intrinsic.ai>\r\n\r\n* Update rmw_connextdds_common/CMakeLists.txt\r\n\r\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>\r\n\r\n* Fix fastcdr linking\r\n\r\nSigned-off-by: Shane Loretz <sloretz@intrinsic.ai>\r\n\r\n---------\r\n\r\nSigned-off-by: Shane Loretz <sloretz@intrinsic.ai>\r\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>\r\nCo-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>",
+      "files_changed": 1,
+      "additions": 15,
+      "deletions": 5,
+      "commit_type": "docs"
+    },
+    {
+      "author": "christophebedard",
+      "date": "2021-05-04T14:29:08Z",
+      "sha": "fb91c10837809e7451cd9a7cabc00f315d9dcf96",
+      "message": "Update includes after rcutils/get_env.h deprecation (#55)\n\nSigned-off-by: Christophe Bedard <bedard.christophe@gmail.com>",
+      "files_changed": 3,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "trubio-rti",
+      "date": "2024-08-23T07:55:08Z",
+      "sha": "500baaa0d9032a51335e349023b363c093680ca0",
+      "message": "fix: \"Failed to parse type hash\" message was overly spammy (ros2-50) (#149)\n\nSigned-off-by: Taxo Rubio <trubio@rti.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "marcoag",
+      "date": "2024-03-28T08:40:45Z",
+      "sha": "87ab6b91b9326522e2900397911733bc58e6a46c",
+      "message": "Changelog.\n\nSigned-off-by: Marco A. Gutierrez <marcogg@marcogg.com>",
+      "files_changed": 4,
+      "additions": 14,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "asorbini",
+      "date": "2020-10-21T06:18:54Z",
+      "sha": "513c0676113a824adffe72884fe9c1104b02e428",
+      "message": "Initial import",
+      "files_changed": 41,
+      "additions": 17511,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "h-suzuki-isp",
+      "date": "2024-04-01T17:11:56Z",
+      "sha": "b8c410c34b385042b3ab3807ba5bfd5dd457f218",
+      "message": "Add: tracepoint for subscribe serialized_message (#145)\n\n* Add: tracepoint for take_serialized_message\r\n\r\nSigned-off-by: h-suzuki <h-suzuki@isp.co.jp>\r\n\r\n* Fix: TRACETOOLS_TRACEPOINT args\r\n\r\nSigned-off-by: h-suzuki <h-suzuki@isp.co.jp>\r\n\r\n* Update rmw_connextdds_common/src/common/rmw_subscription.cpp\r\n\r\nCo-authored-by: Christophe Bedard <bedard.christophe@gmail.com>\r\nSigned-off-by: h-suzuki-isp <146712054+h-suzuki-isp@users.noreply.github.com>\r\n\r\n* Update rmw_connextdds_common/src/common/rmw_subscription.cpp\r\n\r\nCo-authored-by: Christophe Bedard <bedard.christophe@gmail.com>\r\nSigned-off-by: h-suzuki-isp <146712054+h-suzuki-isp@users.noreply.github.com>\r\n\r\n---------\r\n\r\nSigned-off-by: h-suzuki <h-suzuki@isp.co.jp>\r\nSigned-off-by: h-suzuki-isp <146712054+h-suzuki-isp@users.noreply.github.com>\r\nCo-authored-by: Christophe Bedard <bedard.christophe@gmail.com>",
+      "files_changed": 1,
+      "additions": 20,
+      "deletions": 2,
+      "commit_type": "ci"
+    },
+    {
+      "author": "MiguelCompany",
+      "date": "2021-05-11T13:16:35Z",
+      "sha": "721976a825360b260c2b8adc0e6a905a6ee508a9",
+      "message": "Support extended signature for `message_type_support_callbacks_t::max_serialized_size()` from `rosidl_typesupport_fastrtps_cpp` (#14)\n\n* Support extended signature for `message_type_support_callbacks_t::max_serialized_size()` from `rosidl_typesupport_fastrtps_cpp`\r\n\r\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "cwecht",
+      "date": "2023-05-03T12:13:00Z",
+      "sha": "32796eef9b3f6054cc8545fa9dfb369548ff7de8",
+      "message": "Use unified approach for checking the existence of environment variables (#105)\n\nSigned-off-by: Christopher Wecht <cwecht@mailbox.org>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "nuclearsandwich",
+      "date": "2022-02-10T16:46:57Z",
+      "sha": "f4d095f56725188d4f007f9c63fff4ac46c04fda",
+      "message": "Update rti-connext-dds dependency to 6.0.1. (#71)\n\nNow that this package is available in the ROS bootstrap repository for Ubuntu Focal and Jammy we can bump the expected dependency version.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "Chen Lihui",
+      "date": "2022-03-21T15:57:40Z",
+      "sha": "898e57079d39d634e2ce1cffff0e73d0f470bbb1",
+      "message": "add stub for content filtered topic (#77)\n\n* add stub for content filtered topic\r\n\r\nSigned-off-by: Chen Lihui <lihui.chen@sony.com>",
+      "files_changed": 3,
+      "additions": 53,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Yadunund",
+      "date": "2023-04-27T09:42:57Z",
+      "sha": "fefe76bf5382c244887e49459c089b6b2c6d76c6",
+      "message": "0.15.0",
+      "files_changed": 8,
+      "additions": 16,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "methylDragon",
+      "date": "2023-04-08T19:00:00Z",
+      "sha": "b8c3cf4bacc9481b9d0488dbac684a3e57803a4f",
+      "message": "Add stubs for new rmw interfaces (#111)\n\nSigned-off-by: methylDragon <methylDragon@gmail.com>",
+      "files_changed": 2,
+      "additions": 98,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "mxgrey",
+      "date": "2023-04-08T04:35:33Z",
+      "sha": "022cc46cc41812122bd31b33bcf8d0c1a61226f8",
+      "message": "[rmw_connextdds] New RMW discovery options (#108)\n\n* Use the new discovery params\r\n\r\nSigned-off-by: Michael X. Grey <grey@openrobotics.org>\r\n\r\n* Update to latest rmw API\r\n\r\nSigned-off-by: Michael X. Grey <grey@openrobotics.org>\r\n\r\n* Fix typo\r\n\r\nSigned-off-by: Michael X. Grey <grey@openrobotics.org>\r\n\r\n* Fix memory management\r\n\r\nSigned-off-by: Michael X. Grey <grey@openrobotics.org>\r\n\r\n* Make sure NDDS_DISCOVERY_PEERS is not empty when ROS_AUTOMATIC_DISCOVERY_RANGE is LOCALHOST\r\nSigned-off-by: Andrea Sorbini <asorbini@rti.com>\r\n\r\n* fix up finalize logic\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* typo\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* check the return code of ensure_length()\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* fixup use of memcpy when copying a string\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* improve formatting of domain_tag string\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* use c++17 [[fallthrough]] attribute\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* change style of switch statement\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* undo change to request c++17 vs 14 since we're not using fallthrough\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* Handle all discovery options in rmw_context.cpp\r\nSigned-off-by: Andrea Sorbini <asorbini@rti.com>\r\n\r\n* Reset multicast_receive_addresses instead of setting NDDS_DISCOVERY_PEERS\r\nSigned-off-by: Andrea Sorbini <asorbini@rti.com>\r\n\r\n* error when range is NOT_SET\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* fixup review comments\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* fix a zero initialization issue\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* remove redundant break statement\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* Init discovery_options when initializing node options\r\n\r\nSigned-off-by: Shane Loretz <sloretz@google.com>\r\n\r\n* Set maximum participant ID to 32 on localhost\r\n\r\nSigned-off-by: Shane Loretz <sloretz@google.com>\r\n\r\n* Skipping adding peers when automatic_discovery_range is SYSTEM_DEFAULT\r\n\r\nSigned-off-by: Shane Loretz <sloretz@google.com>\r\n\r\n* Try solving los of precision warning on Windows\r\n\r\nSigned-off-by: Shane Loretz <sloretz@google.com>\r\n\r\n* Fix windows warning\r\n\r\nSigned-off-by: Shane Loretz <sloretz@google.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Michael X. Grey <grey@openrobotics.org>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\nSigned-off-by: Shane Loretz <sloretz@google.com>\r\nCo-authored-by: Shane Loretz <sloretz@google.com>\r\nCo-authored-by: Andrea Sorbini <asorbini@rti.com>\r\nCo-authored-by: William Woodall <william@osrfoundation.org>",
+      "files_changed": 5,
+      "additions": 324,
+      "deletions": 81,
+      "commit_type": "docs"
+    },
+    {
+      "author": "emersonknapp",
+      "date": "2023-03-26T12:45:14Z",
+      "sha": "ce5f68306ba13dc23e7f165b14ea3050ab48d1be",
+      "message": "Type hash distribution during discovery (rep2011) (#104)\n\n* Use new type hash APIs\r\n\r\nSigned-off-by: Emerson Knapp <emerson.b.knapp@gmail.com>",
+      "files_changed": 7,
+      "additions": 54,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Barry-Xu-2018",
+      "date": "2021-06-02T16:43:02Z",
+      "sha": "69e91a66fef968856f5c42e96fdd0f9667baea1b",
+      "message": "Add rmw_publisher_wait_for_all_acked support (#20)\n\nSigned-off-by: Barry Xu <barry.xu@sony.com>",
+      "files_changed": 7,
+      "additions": 95,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "mjcarroll",
+      "date": "2023-02-23T14:55:06Z",
+      "sha": "035fbf1ed53ca64a8bc835a4f7f002bd28ac6bfd",
+      "message": "Revert \"Add in implementation of inconsistent topic. (#96)\" (#102)\n\nThis reverts commit 566b6c61231606733301a7e4dfc54fd1d000c7c5.",
+      "files_changed": 3,
+      "additions": 1,
+      "deletions": 122,
+      "commit_type": "code"
+    },
+    {
+      "author": "ihasdapie",
+      "date": "2022-09-23T17:10:16Z",
+      "sha": "aa7e22be6cdcac8b4d5a15ce093d3131d2cf9e10",
+      "message": "Add rmw_get_gid_for_client impl (#92)\n\n* add rmw_get_gid_for_client method\r\n\r\nSigned-off-by: Brian Chen <brian.chen@openrobotics.org>\r\n\r\n* Fix compilation\r\n\r\nA minor change to make the change build successfully.\r\n\r\nSigned-off-by: Jacob Perron <jacob@openrobotics.org>\r\n\r\n* Lint + guard against null gid\r\n\r\nSigned-off-by: Brian Chen <brian.chen@openrobotics.org>\r\nSigned-off-by: Jacob Perron <jacob@openrobotics.org>\r\nCo-authored-by: Jacob Perron <jacob@openrobotics.org>",
+      "files_changed": 5,
+      "additions": 43,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "paudrow",
+      "date": "2022-01-15T00:23:55Z",
+      "sha": "95053f30467daed1d4904046edc4aba4248852c0",
+      "message": "0.8.2\n\nSigned-off-by: Audrow Nash <audrow@hey.com>",
+      "files_changed": 8,
+      "additions": 18,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Michael Jeronimo",
+      "date": "2022-05-17T23:17:36Z",
+      "sha": "7cc033ed15c468c09ae429d53a840419caf18187",
+      "message": "Fix assert statement to allow the seconds field of a DDS_Duration_t to be zero (#88)\n\nSigned-off-by: Michael Jeronimo <michael.jeronimo@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "jacobperron",
+      "date": "2022-01-12T22:25:32Z",
+      "sha": "a5ba18819e178d685eb98990867068135add34f9",
+      "message": "Fix cpplint errors (#69)\n\n* Use static_cast instead of C-style cast\r\n\r\nFixes cpplint error.\r\n\r\nSigned-off-by: Jacob Perron <jacob@openrobotics.org>\r\n\r\n* Update NOLINT category\r\n\r\nRelates to https://github.com/ament/ament_lint/pull/324\r\n\r\nSigned-off-by: Jacob Perron <jacob@openrobotics.org>",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "j-rivero",
+      "date": "2022-05-03T17:34:59Z",
+      "sha": "d267159188db5837ac7acd4a2e4df092d7f7d35e",
+      "message": "Handle 'best_available' QoS policies in common  (#85)\n\nIf users set certain QoS policies to BEST_AVAILABLE, then we query the graph for endpoint info.\r\nThe policy is updated such that it is compatible with all endpoints while maintaining the\r\nhighest possible level of service.\r\n\r\n* Handle best available policies for services and clients\r\n\r\nCo-authored-by: Jacob Perron <jacob@openrobotics.org>\r\nSigned-off-by: Jose Luis Rivero <jrivero@osrfoundation.org>",
+      "files_changed": 3,
+      "additions": 26,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "ivanpauno",
+      "date": "2021-02-22T16:37:54Z",
+      "sha": "68e763f7c77247412792c009978ab5f07e5b19b4",
+      "message": "Add environment variable to not force asynchronous publish mode\n\nSigned-off-by: Ivan Santiago Paunovic <ivanpauno@ekumenlabs.com>",
+      "files_changed": 4,
+      "additions": 27,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "irobot-ros",
+      "date": "2022-02-24T08:31:41Z",
+      "sha": "f57e64e4f0f74cde5ce8008164402e4cb3e4a902",
+      "message": "Add rmw listener apis (#44)\n\n* Add stubs for setting listener callbacks\r\n\r\nSigned-off-by: Mauro Passerino <mpasserino@irobot.com>\r\n\r\n* Address PR suggestions\r\n\r\nSigned-off-by: Mauro Passerino <mpasserino@irobot.com>\r\n\r\n* Fix linter issues\r\n\r\nSigned-off-by: Mauro Passerino <mpasserino@irobot.com>\r\n\r\nCo-authored-by: Mauro Passerino <mpasserino@irobot.com>\r\nCo-authored-by: Alberto Soragna <alberto.soragna@gmail.com>",
+      "files_changed": 5,
+      "additions": 185,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mauropasse",
+      "date": "2021-11-19T20:22:24Z",
+      "sha": "55c73c8bd0c4812aa65ac938d0727567eace8b6b",
+      "message": "Add client/service QoS getters (#67)\n\nSigned-off-by: Mauro Passerino <mpasserino@irobot.com>",
+      "files_changed": 6,
+      "additions": 243,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "hidmic",
+      "date": "2021-09-14T19:46:59Z",
+      "sha": "380ff6f5b53ce43a821104058b6e654fb1e69c08",
+      "message": "Update rmw_context_impl_t definition (#65)\n\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "wjwwood",
+      "date": "2021-04-05T17:16:31Z",
+      "sha": "6f00b1e95e08e9add652264c27531e55f5fc1cde",
+      "message": "Merge pull request #13 from Ericsson/unique_network_flows\n\nIndicate missing support for unique network flows",
+      "files_changed": 8,
+      "additions": 131,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Ananya Muddukrishna",
+      "date": "2021-03-25T15:37:44Z",
+      "sha": "2007717b5968d9da7b3d739538a55d950c3fba60",
+      "message": "Indicate missing support for unique network flows\n\nSigned-off-by: Ananya Muddukrishna <ananya.x.muddukrishna@ericsson.com>",
+      "files_changed": 4,
+      "additions": 61,
+      "deletions": 0,
+      "commit_type": "docs"
+    }
+  ]
+}

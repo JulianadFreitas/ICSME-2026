@@ -1,0 +1,1371 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T01:04:07Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros2",
+    "repo": "rosbag2"
+  },
+  "data": [
+    {
+      "author": "MichaelOrlov",
+      "date": "2021-04-02T16:10:05Z",
+      "sha": "7538370d60a5beb62564a7c0823d4f98b081b204",
+      "message": "Add play_next() API in playback time handling design document (#708)\n\nSigned-off-by: Michael Orlov <michael.orlov@apex.ai>",
+      "files_changed": 1,
+      "additions": 14,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "carlos-apex",
+      "date": "2023-01-06T02:34:59Z",
+      "sha": "327e3603b384f82ead1ab63e679c5a3329f0ebd1",
+      "message": "Add option to specify a message type (#1153)\n\n* Add option to specify a message type\r\n\r\nSigned-off-by: Carlos <carlos.sanvicente@apex.ai>\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\n\r\n* Add rosbag2_performance_benchmarking_msgs\r\n\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\n\r\n* Revert \"Add rosbag2_performance_benchmarking_msgs\"\r\n\r\nThis reverts commit d07f4a845859424a8d029446dc0f37484a63a4ef.\r\n\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\n\r\n* Add sensor_msgs\r\n\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\n\r\n* Add rosbag2_performance_benchmarking_msgs\r\n\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\n\r\n* Address reviewer's comments\r\n\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\n\r\nSigned-off-by: Carlos <carlos.sanvicente@apex.ai>\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>",
+      "files_changed": 17,
+      "additions": 506,
+      "deletions": 56,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Tiryoh",
+      "date": "2026-02-21T17:06:56Z",
+      "sha": "1a940e29368248378046150121bf0e901c72e152",
+      "message": "Update Rosbag2 filename format to index+name+timestamp (#2265)\n\n* Update rosbag2 filename format to index+name+timestamp\n\nChange rosbag2 bag filename format to {counter}_{prefix}_{timestamp}.\nExtract prefix from directory name by removing timestamp pattern,\nand use file creation timestamp instead of directory timestamp\nto avoid duplicate timestamps in filenames.\n\n- Update sequential writer and reindexer to generate filenames with index+name+timestamp format\n- Update and refactor filename testing\n\nSigned-off-by: Daisuke Sato <tiryoh@gmail.com>\n\n* Address review comments\n\n- Consolidate timestamp generation in sequential_writer.cpp\n- Rename reindexer regex members to descriptive names with const/inline init\n- Create shared bag_files_helpers.hpp in rosbag2_test_common\n- Move test helpers into fixture classes (sequential_writer, compression_writer)\n- Remove duplicate/unused helper functions across test files\n- Simplify filename pattern checks by letting helpers handle path stripping\n- Revert test_rosbag2_info_end_to_end.cpp (fixed test resources, no changes needed)\n- Simplify bag file counting and wait_for_storage_file in E2E tests\n\nSigned-off-by: Daisuke Sato <tiryoh@gmail.com>\n\n* Delegate record_fixture wait helpers to shared bag_files_helpers\n\nSigned-off-by: Daisuke Sato <tiryoh@gmail.com>\n\n* Fix flaky split test by waiting for expected number of storage files\n\nThe splitting_bagsize test was stopping the recorder after only 1\nstorage file appeared, before splits could occur. Extract\ncount_storage_files() and generalize wait_for_storage_files(count)\nso the test waits for all expected splits before stopping.\n\nSigned-off-by: Daisuke Sato <tiryoh@gmail.com>\n\n* Fixes after the second round of review from MichaelOrlov\n\n- Mostly minor changes in tests and helper functions to improve code\n readability and maintainability.\n\nSigned-off-by: Michael Orlov <morlovmr@gmail.com>\n\n---------\n\nSigned-off-by: Daisuke Sato <tiryoh@gmail.com>\nSigned-off-by: Michael Orlov <morlovmr@gmail.com>\nCo-authored-by: Michael Orlov <morlovmr@gmail.com>",
+      "files_changed": 13,
+      "additions": 655,
+      "deletions": 209,
+      "commit_type": "docs"
+    },
+    {
+      "author": "fujitatomoya",
+      "date": "2020-10-20T05:22:05Z",
+      "sha": "1daf83341d5dde4d3221e4c8cf84af75b7de91c9",
+      "message": "if cache data exists, it needs to flush the data into the storage before shutdown (#541)\n\nfix #540 \r\n* if cache data exists, it needs to flush the data into the storage before shutdown.\r\n* cache_ needs to reset after writing to storage.\r\n* add reset_cache() method.\r\n\r\nSigned-off-by: Tomoya.Fujita <Tomoya.Fujita@sony.com>",
+      "files_changed": 2,
+      "additions": 16,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "hunter-allen-apexai",
+      "date": "2026-02-15T18:25:00Z",
+      "sha": "6957bb97ebc32a2d584c3a36a58b42be9c685c8e",
+      "message": "Support relative includes for IDL in local message definition (#2241)\n\n* Support relative includes for IDL in local message definition\n\nSigned-off-by: Hunter L. Allen <hunter.allen@apex.ai>\n\n* Add missing message definition\n\nSigned-off-by: Hunter L. Allen <hunter.allen@apex.ai>\n\n* Address linter warning\n\nSigned-off-by: Michael Orlov <morlovmr@gmail.com>\n\n---------\n\nSigned-off-by: Hunter L. Allen <hunter.allen@apex.ai>\nSigned-off-by: Michael Orlov <morlovmr@gmail.com>\nCo-authored-by: Michael Orlov <morlovmr@gmail.com>",
+      "files_changed": 5,
+      "additions": 191,
+      "deletions": 65,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Baranbologur",
+      "date": "2026-02-12T06:46:30Z",
+      "sha": "1a684e2b854a40c12c09d01892d87322f9dde252",
+      "message": "Add missing \"RecordOptions\" fields to the encode/decode functions (#2334)\n\n* Fix YAML decode/encode for ignore_leaf_topics, start_paused and use_sim_time in RecordOptions\n\nSigned-off-by: Baran Bologur <baranbologur@hotmail.com>\n\n* Add missing RecordOptions fields to the encode/decode functions\n\n- Also added a safeguard aka compile time error if someone will\n add or remove a field to the `RecordOption` and forgotten to add it\n to the encode/decode function in future.\n\nSigned-off-by: Michael Orlov <morlovmr@gmail.com>\n\n* Reorder YAML encode/decode assignments to match the RecordOptions struct field order\n\nSigned-off-by: Michael Orlov <morlovmr@gmail.com>\n\n---------\n\nSigned-off-by: Baran Bologur <baranbologur@hotmail.com>\nSigned-off-by: Michael Orlov <morlovmr@gmail.com>\nCo-authored-by: Michael Orlov <morlovmr@gmail.com>",
+      "files_changed": 3,
+      "additions": 137,
+      "deletions": 74,
+      "commit_type": "code"
+    },
+    {
+      "author": "luke-alloy",
+      "date": "2026-02-12T06:44:54Z",
+      "sha": "2fb2bc773368283f17cd325c64420aeaca7abb0a",
+      "message": "Feature: Circular logging by split count (--max-bag-files) (#2218)\n\n* WIP max-record-size and max-record-duration parameters\n\nSigned-off-by: Luke Sy <luke@usealloy.ai>\n\n* Add circular logging by split count\n\n- Add StorageOptions.max_splits (+ YAML/params, Python bindings)\n- CLI: --max-splits (before size/duration)\n- Writer: delete oldest files when exceeding size, duration, or split count\n\nSigned-off-by: Luke Sy <luke@usealloy.ai>\n\n* Code clean up\n\nSigned-off-by: Luke Sy <luke@usealloy.ai>\n\n* Added unit test for sequential_writer, lint fix\n\nSigned-off-by: Luke Sy <luke@usealloy.ai>\n\n* Cleaned test_sequential_writter to fix cpplint test failures\n\nSigned-off-by: Luke Sy <luke@usealloy.ai>\n\n* Fixed _storage.pyi unit test\n\nSigned-off-by: Luke Sy <luke@usealloy.ai>\n\n* removed unnecessary files\n\nSigned-off-by: Luke Sy <luke@usealloy.ai>\n\n* Remove max_record_size and max_record_duration options\n\nSimplify storage options by removing max_record_size and\nmax_record_duration fields and CLI arguments. Circular logging now\nonly supports limiting by split count (max_splits).\n\nSigned-off-by: Luke Sy <luke@usealloy.ai>\n\n* Clean up unused code in sequential_writer\n\nSigned-off-by: Luke Sy <luke@usealloy.ai>\n\n* refactor: rename max_splits to max_bag_files\n\n    Replace max_splits with max_bag_files across all interfaces (CLI, C++,\n    Python, YAML, ROS params) for improved clarity. Addressed suggested code changes\n\nSigned-off-by: Luke Sy <luke@usealloy.ai>\n\n* Simplify delete_oldest_files_if_needed loop logic\n\nRemove redundant size check by directly comparing against max_bag_files\nin the while loop condition.\n\nSigned-off-by: Luke Sy <luke@usealloy.ai>\n\n* Add integration test for max_bag_files file deletion\n\nTest circular deletion with real storage (sqlite3/mcap) to verify\nfiles are actually removed from disk when max_bag_files is exceeded.\n\nSigned-off-by: Luke Sy <luke@usealloy.ai>\n\n* Simplify max_bag_files integration test setup and file extension check. Updated _storage stubs\n\nSigned-off-by: Luke Sy <luke@usealloy.ai>\n\n* Fix message counts not adjusted during circular file deletion\n\nWhen max_bag_files prunes old bag files, message_count and\ntopics_with_message_count were not decremented, showing full session\ntotals instead of only retained files.\n\nAdds per-file per-topic tracking and adjusts counts on deletion.\nUpdates test to verify multi-topic scenario.\n\nSigned-off-by: Luke Sy <luke@usealloy.ai>\n\n* Address PR #2218 review comments from MichaelOrlov\n\n- Move implementation notes to Doxygen header comment\n- Use std::deque instead of std::vector for per_file_topic_message_counts_\n- Call finalize_metadata() before storage_->update_metadata() (2 locations)\n- Use emplace_back() instead of push_back({})\n- Add graceful error handling for fs::remove with std::error_code\n\nSigned-off-by: Luke Sy <luke@usealloy.ai>\n\n* Address latest PR review comments from MichaelOrlov\n\nUse C++ style Doxygen comments (///) for delete_oldest_files_if_needed\nand move metadata adjustment into the else branch so it only runs when\nfile deletion succeeds.\n\nSigned-off-by: Luke Sy <luke@usealloy.ai>\n\n* Fix delete_oldest_files_if_needed to always update metadata tracking\n\nRefactor deletion logic to use a lambda that unconditionally removes\nthe oldest file from tracking (per-topic counts, metadata, file paths)\nafter each loop iteration. This prevents an infinite loop when\nfs::exists returns false (e.g. in mock tests) or fs::remove fails,\nwhile still correctly adjusting metadata regardless of deletion outcome.\n\nCo-developed-by: MichaelOrlov\nSigned-off-by: Luke Sy <luke@usealloy.ai>\n\n* Keep failed-to-delete files in tracking, break to avoid tight loop\n\nWhen fs::remove fails but the file still exists, keep it in metadata\nand break out of the while loop. The deletion will be retried on the\nnext split. When the file doesn't exist on disk, remove from tracking\nso the loop can proceed.\n\nSigned-off-by: Luke Sy <luke@usealloy.ai>\n\n---------\n\nSigned-off-by: Luke Sy <luke@usealloy.ai>",
+      "files_changed": 12,
+      "additions": 269,
+      "deletions": 6,
+      "commit_type": "docs"
+    },
+    {
+      "author": "InvincibleRMC",
+      "date": "2026-02-11T19:45:36Z",
+      "sha": "c924d195601e332b1b09aa80bc1a7dada41df861",
+      "message": "move to build_depend (#2332)\n\nSigned-off-by: Michael Carlstrom <rmc@carlstrom.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "ahcorde",
+      "date": "2020-03-19T16:47:07Z",
+      "sha": "1fd35b50f34f075a3f76a05e3654286176c9637e",
+      "message": "Removed rosidl_generator_cpp in rosbag2_transport because it's not used (#321)\n\nSigned-off-by: ahcorde <ahcorde@gmail.com>",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "idesign0",
+      "date": "2025-11-24T12:40:03Z",
+      "sha": "a8b9c82d8665ffe387b4dc8397e5d6f469eed9f9",
+      "message": "Fix macOS build: Disable thread-safety annotations in locked_priority_queue.hpp (#2245)\n\nSigned-off-by: Dhruv Patel <dhruvpatel2991998@gmail.com>",
+      "files_changed": 1,
+      "additions": 11,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "christophebedard",
+      "date": "2020-10-05T18:31:08Z",
+      "sha": "6e4391291bb1ebb8345141b6283b2840090949b0",
+      "message": "Do not expect empty StorageOptions URI to work in *CompressionWriterTest (#526)\n\nSigned-off-by: Christophe Bedard <bedard.christophe@gmail.com>",
+      "files_changed": 1,
+      "additions": 39,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "mini-1235",
+      "date": "2025-11-12T08:35:44Z",
+      "sha": "3df3700101b8005a510dab43f20bd480ba1fc0cc",
+      "message": "Update subscription callback signatures (#2225)\n\nSigned-off-by: mini-1235 <mauricepurnawan@gmail.com>",
+      "files_changed": 3,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "jncfa",
+      "date": "2025-11-07T19:04:22Z",
+      "sha": "572f98e8d46df02aad32b8a6d02bd8019da1ba57",
+      "message": "Check for nullptrs when pushing new messages to the message cache (#2219)\n\n* fix: add nullptr check when pushing new messages to the message cache\n\nSigned-off-by: Jose Faria <jncfa@pm.me>\n\n* refactor: apply changes from review\n\nSigned-off-by: Jose Faria <jncfa@pm.me>\n\n* nit: update doxygen comments\n\nSigned-off-by: jncfa <20467009+jncfa@users.noreply.github.com>\n\n* Update Doxygen comment for the MessageCacheCircularBuffer::push(msg)\n\nSigned-off-by: Michael Orlov <morlovmr@gmail.com>\n\n---------\n\nSigned-off-by: Jose Faria <jncfa@pm.me>\nSigned-off-by: jncfa <20467009+jncfa@users.noreply.github.com>\nSigned-off-by: Michael Orlov <morlovmr@gmail.com>\nCo-authored-by: Michael Orlov <morlovmr@gmail.com>",
+      "files_changed": 5,
+      "additions": 24,
+      "deletions": 9,
+      "commit_type": "ci"
+    },
+    {
+      "author": "cottsay",
+      "date": "2020-04-30T23:33:19Z",
+      "sha": "60c35d2f186819d083f742337d367dfd27103023",
+      "message": "Don't fail build if lsan isn't available (#397)\n\n* Don't fail build if lsan isn't available\r\n\r\nSince lsan isn't a required dependency for these packages, they\r\nshouldn't fail to build when it isn't present.\r\n\r\nNote that part of using a sanitizer involves additional libraries, so\r\nusing check_cxx_compiler_flag might not fail because it doesn't perform\r\nlinking like check_cxx_source_compiles does.\r\n\r\nSigned-off-by: Scott K Logan <logans@cottsay.net>\r\n\r\n* Remove 32-bit sanitizer logic\r\n\r\nSigned-off-by: Scott K Logan <logans@cottsay.net>\r\n\r\n* Update rosbag2_cpp/CMakeLists.txt\r\n\r\nSigned-off-by: Scott K Logan <logans@cottsay.net>\r\n\r\nCo-authored-by: Karsten Knese <Karsten1987@users.noreply.github.com>\r\n\r\n* Drop sanitizers from rosbag2_compression\r\n\r\nSigned-off-by: Scott K Logan <logans@cottsay.net>\r\n\r\n* Only check for sanitizer if using GCC\r\n\r\nSigned-off-by: Scott K Logan <logans@cottsay.net>\r\n\r\nCo-authored-by: Karsten Knese <Karsten1987@users.noreply.github.com>",
+      "files_changed": 2,
+      "additions": 11,
+      "deletions": 12,
+      "commit_type": "ci"
+    },
+    {
+      "author": "dbwls99706",
+      "date": "2025-08-14T11:10:31Z",
+      "sha": "a2b1684924121df88304559e3366bf3bd37ac34a",
+      "message": "Fix: Add null pointer check for reader_imp in the Reader constructor (#2135)\n\n* Fix: Add null pointer check in Reader::open()\n\nSigned-off-by: yujinhong <yujin@nbyus.com>\nSigned-off-by: yujinhong <yujinhong3@gmail.com>\n\n* Refactor: Add null pointer check in constructor as requested by review\n\nSigned-off-by: yujinhong <yujinhong3@gmail.com>\n\n* Fix: Address uncrustify warnings in reader.cpp\n\nSigned-off-by: yujinhong <yujinhong3@gmail.com>\n\n---------\n\nSigned-off-by: yujinhong <yujin@nbyus.com>\nSigned-off-by: yujinhong <yujinhong3@gmail.com>\nCo-authored-by: yujinhong <yujin@nbyus.com>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Crola1702",
+      "date": "2022-09-12T15:50:38Z",
+      "sha": "e179c79b0d9acee0be58c676ae8b124fd42a3bc6",
+      "message": ":man_farmer: Fixes policy CMP0135 warning for CMake >= 3.24 (#1084)\n\n* Fixes policy CMP0135 warning for CMake >= 3.24\r\n\r\nSigned-off-by: Cristobal Arroyo <cristobal.arroyo@ekumenlabs.com>\r\n\r\n* Sets CMP0135 policy behavior to NEW\r\n\r\nSigned-off-by: Crola1702 <cristobal.arroyo@ekumenlabs.com>\r\n\r\n* Sets CMP0135 policy behavior to NEW for sqlite3 vendor\r\n\r\nSigned-off-by: Crola1702 <cristobal.arroyo@ekumenlabs.com>\r\n\r\nSigned-off-by: Cristobal Arroyo <cristobal.arroyo@ekumenlabs.com>\r\nSigned-off-by: Crola1702 <cristobal.arroyo@ekumenlabs.com>\r\nCo-authored-by: Cristobal Arroyo <cristobal.arroyo@ekumenlabs.com>",
+      "files_changed": 2,
+      "additions": 10,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ChuiVanfleet",
+      "date": "2025-07-30T16:21:11Z",
+      "sha": "8607af5a21352fa51381ff84c2b9f637937655fc",
+      "message": "Fix reindex duration bug when bag file durations overlap (#2036)\n\n* Fix reindex duration bug when bag files overlap.\n\nSigned-off-by: Chui Vanfleet <chui.vanfleet@epiroc.com>\n\n* Set the duration instead of adding it.\n\nSigned-off-by: Chui Vanfleet <chui.vanfleet@epiroc.com>\n\n* Fixing some linting.\n\nSigned-off-by: Chui Vanfleet <chui.vanfleet@epiroc.com>\n\n* Cleanups in test_reindexer.cpp\n\nSigned-off-by: Michael Orlov <morlovmr@gmail.com>\n\n* Attempt to fix Windows build error\n\nFix for error:\n \"test_reindexer.cpp(50,1): error C2679: binary '=': no operator found\n which takes a right-hand operand of type\n 'std::chrono::system_clock::time_point' (or there is no acceptable\n conversion)\n\nSigned-off-by: Michael Orlov <morlovmr@gmail.com>\n\n---------\n\nSigned-off-by: Chui Vanfleet <chui.vanfleet@epiroc.com>\nSigned-off-by: Michael Orlov <morlovmr@gmail.com>\nCo-authored-by: Chui Vanfleet <chui.vanfleet@epiroc.com>\nCo-authored-by: Michael Orlov <morlovmr@gmail.com>",
+      "files_changed": 3,
+      "additions": 142,
+      "deletions": 4,
+      "commit_type": "test"
+    },
+    {
+      "author": "mosfet80",
+      "date": "2024-05-01T00:45:05Z",
+      "sha": "3cc08f37c90af70569185e4935e46af14825dd34",
+      "message": "Update mcap-releases-cpp- into CMakeLists.txt (#1612)\n\nUpdate mcap-releases-cpp- i\r\n\r\nSigned-off-by: mosfet80 <realeandrea@yahoo.it>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "omsv135",
+      "date": "2025-07-03T16:51:09Z",
+      "sha": "bf5686474d896f9c59fd85da48436f8483ed267e",
+      "message": "Add send_timestamp to python interface for reading serialized messages (#2061)\n\n* Add send_timestamp to python interface for reading serialized messages\n\nSigned-off-by: Om Shivam Verma <indian135790@gmail.com>\n\n* Used better identifiers for timestamps in  tests\n\nSigned-off-by: Om Shivam Verma <indian135790@gmail.com>\n\n---------\n\nSigned-off-by: Om Shivam Verma <indian135790@gmail.com>",
+      "files_changed": 6,
+      "additions": 70,
+      "deletions": 38,
+      "commit_type": "code"
+    },
+    {
+      "author": "Barry-Xu-2018",
+      "date": "2020-11-02T16:51:22Z",
+      "sha": "90a67598c90b06a3ce02f92661f2dba38b24b51e",
+      "message": "List all storage plugins in plugin xml file (#554)\n\nSigned-off-by: Barry Xu <barry.xu@sony.com>",
+      "files_changed": 1,
+      "additions": 10,
+      "deletions": 10,
+      "commit_type": "code"
+    },
+    {
+      "author": "hellovuong",
+      "date": "2025-06-21T17:25:27Z",
+      "sha": "f4c2b70fa7700f7609339f6ce5ae123461bd5068",
+      "message": "docs:update README command of playing back multiple bags (#2048)\n\nSigned-off-by: hellovuong <longvuonghathe@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "MaxFleur",
+      "date": "2025-05-24T19:24:07Z",
+      "sha": "1a9e01d38eb070a931e6bea86cbbd37ea9405ee6",
+      "message": "Add examples for compressing bag files (#1956)\n\n* Add compressed bag recorder example (#1945)\n\nSigned-off-by: MaxFleur <bakefish@web.de>\n\n* Add compressed bag rewriter example (#1945)\n\nSigned-off-by: MaxFleur <bakefish@web.de>\n\n---------\n\nSigned-off-by: MaxFleur <bakefish@web.de>\nCo-authored-by: Fleury <m.fleury@nct-dresden.de>",
+      "files_changed": 7,
+      "additions": 206,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "danthony06",
+      "date": "2025-05-23T20:41:51Z",
+      "sha": "e718ae79a43b3143be73083264184ccbbc2c4144",
+      "message": "Backporting Missing cstdint Include (#2008)\n\n* Trying to add mixing include for GCC 15 compatibility\n\nSigned-off-by: David Anthony <djanthony@gmail.com>\n\n* Removing file path\n\nSigned-off-by: David Anthony <djanthony@gmail.com>\n\n* Making CMake apply patches\n\nSigned-off-by: David Anthony <djanthony@gmail.com>\n\n* Removing debugging statements\n\nSigned-off-by: David Anthony <djanthony@gmail.com>\n\n* Avoid sending non-existent cancel requests (#2005)\n\nSigned-off-by: Barry Xu <barry.xu@sony.com>\nSigned-off-by: David Anthony <djanthony@gmail.com>\n\n---------\n\nSigned-off-by: David Anthony <djanthony@gmail.com>\nSigned-off-by: Barry Xu <barry.xu@sony.com>\nCo-authored-by: Barry Xu <barry.xu@sony.com>",
+      "files_changed": 2,
+      "additions": 20,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "berndpfrommer",
+      "date": "2024-04-14T19:33:07Z",
+      "sha": "4882d30fc2d1e5b9305e5d46b8460466f9280d27",
+      "message": "Add option to disable recorder keyboard controls (#1607)\n\n* added option to disable recorder keyboard controls\r\n\r\nSigned-off-by: Bernd Pfrommer <bernd.pfrommer@gmail.com>\r\n\r\n* Fixes per code review for disable keyboard controls for recorder\r\n\r\n- Add CLI option --disable-keyboard-controls for rosbag2 recorder\r\n- Instantiate KeyboardHandler with installed signal handler by default\r\nin the recorded and player constructors to mitigate issues when CTRL+C\r\nnot handled on upper layers as when player and recorder constructed via\r\ncomposition.\r\n- Explicitly construct KeyboardHandler with disabled signal handler from\r\nrosbag2_py layer since we have our own signals handler on that layer.\r\n- Add test coverage for parameters parser for disable_keyboard_controls\r\nparameters.\r\n- Regenerate Python stub files (.pyi) for rosbag2_py package.\r\n\r\nSigned-off-by: Michael Orlov <michael.orlov@apex.ai>\r\n\r\n---------\r\n\r\nSigned-off-by: Bernd Pfrommer <bernd.pfrommer@gmail.com>\r\nSigned-off-by: Michael Orlov <michael.orlov@apex.ai>\r\nCo-authored-by: Michael Orlov <michael.orlov@apex.ai>",
+      "files_changed": 11,
+      "additions": 93,
+      "deletions": 62,
+      "commit_type": "ci"
+    },
+    {
+      "author": "mjcarroll",
+      "date": "2019-05-16T14:25:14Z",
+      "sha": "9d4e258e16b7a2a06395603114b503ade2b07edc",
+      "message": "Update troubleshooting reference to index.ros.org (#120)\n\nSigned-off-by: Michael Carroll <michael@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "DangitBen",
+      "date": "2025-04-25T17:44:56Z",
+      "sha": "9f4a2c5ba56fa9024cbfec3fb248f6d1f8283cc0",
+      "message": "Bugfix: `ros2 bag convert` dropping messages with compression mode message (#1975)\n\n* pass record_options to yaml decode to preserve convert defaults\n\nSigned-off-by: Ben <benjamin.andrew@swri.org>\n\n* fix copy-paste error\n\nSigned-off-by: Ben <benjamin.andrew@swri.org>\n\n* Set compression_queue_size = 0 by default to avoid messages lost\n\n- Also add loging if dropping messages\n\nSigned-off-by: Michael Orlov <morlovmr@gmail.com>\n\n---------\n\nSigned-off-by: Ben <benjamin.andrew@swri.org>\nSigned-off-by: Michael Orlov <morlovmr@gmail.com>\nCo-authored-by: Ben <benjamin.andrew@swri.org>\nCo-authored-by: Michael Orlov <morlovmr@gmail.com>",
+      "files_changed": 3,
+      "additions": 8,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "rodericktaylor",
+      "date": "2025-03-24T18:53:40Z",
+      "sha": "f41a6168fa2e382e93327d09a977ab928cf096c1",
+      "message": "Initialize filter with namespaced updated topics and services.  (rolling) (#1944)\n\n* Initialize filter with namespaced updated topics.\n\nSigned-off-by: Rod Taylor <rod.taylor@csiro.au>\n\n* Revert using options member instead of argument.\n\nSigned-off-by: Rod Taylor <rod.taylor@csiro.au>\n\n---------\n\nSigned-off-by: Rod Taylor <rod.taylor@csiro.au>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "emersonknapp",
+      "date": "2020-02-07T23:33:54Z",
+      "sha": "06de965fdc21ab5040240f2fb517358b136e5549",
+      "message": "Add issue templates (#289)\n\nSigned-off-by: Emerson Knapp <emerson.b.knapp@gmail.com>",
+      "files_changed": 2,
+      "additions": 60,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "YuanYuYuan",
+      "date": "2025-03-14T08:49:22Z",
+      "sha": "a378beb45867005c49c4101b94a2aba2fa0fd227",
+      "message": "fix: QoS incompatibilites are not expected with rmw_zenoh_cpp (#1936)\n\nSigned-off-by: yuanyuyuan <az6980522@gmail.com>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "oysstu",
+      "date": "2025-01-22T02:11:31Z",
+      "sha": "b48354198038fd4e8966035cafc46a7c6e6cb4c9",
+      "message": "Bugfix: Recorder discovery does not restart after being stopped (#1894)\n\n* Invert start discovery condition\r\nRepeated calls to start_discovery should not start additional topics discovery tasks without stop_discovery calls\r\n\r\nSigned-off-by: Øystein Sture <os@skarvtech.com>\r\n\r\n* Rename stop_discovery to discovery_running and change logic accordingly\r\n\r\nSigned-off-by: Øystein Sture <os@skarvtech.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Øystein Sture <os@skarvtech.com>",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "traversaro",
+      "date": "2025-02-28T20:38:19Z",
+      "sha": "5fedfd092d93992c9e0a20ebbccc8f1f4ced58eb",
+      "message": "Remove SHARED from pybind11_add_module (#1929)\n\nSigned-off-by: Silvio Traversaro <silvio@traversaro.it>",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 8,
+      "commit_type": "docs"
+    },
+    {
+      "author": "nicolaloi",
+      "date": "2024-07-23T05:28:22Z",
+      "sha": "22148a7a8efa5e465eb8c88035d29e02c332b327",
+      "message": "Add computation of size contribution to info verb (#1726)\n\n* Add optional computation of size contribution to info verb\r\n\r\nSigned-off-by: Nicola Loi <nicolaloi@outlook.com>\r\n\r\n* Update rosbag2_cpp/src/rosbag2_cpp/info.cpp\r\n\r\nCo-authored-by: Michael Orlov <morlovmr@gmail.com>\r\nSigned-off-by: Nicola Loi <nicolaloi@outlook.com>\r\n\r\n* Fixes for review and failed tests\r\n\r\n- Also update rosbag2_tests\r\n\r\nSigned-off-by: Nicola Loi <nicolaloi@outlook.com>\r\n\r\n* Support services' size\r\n\r\n- Also add new test and update design doc\r\n\r\nSigned-off-by: Nicola Loi <nicolaloi@outlook.com>\r\n\r\n* Fix style divergence\r\n\r\nSigned-off-by: Nicola Loi <nicolaloi@outlook.com>\r\n\r\n* Apply suggestions from code review\r\n\r\nCo-authored-by: Michael Orlov <morlovmr@gmail.com>\r\nSigned-off-by: Nicola Loi <nicolaloi@outlook.com>\r\n\r\n* Update timestamp check for new ros bag info test\r\n\r\nSigned-off-by: Nicola Loi <nicolaloi@outlook.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Nicola Loi <nicolaloi@outlook.com>\r\nCo-authored-by: Michael Orlov <morlovmr@gmail.com>",
+      "files_changed": 11,
+      "additions": 183,
+      "deletions": 52,
+      "commit_type": "docs"
+    },
+    {
+      "author": "roncapat",
+      "date": "2023-06-03T16:08:12Z",
+      "sha": "13f51510342e9f06327ae1146820780baee06c4a",
+      "message": "[bugfix] for parameters not passing to recorder's node from child component (#1360)\n\n* Update recorder.cpp\r\n\r\nSigned-off-by: Patrick Roncagliolo <ronca.pat@gmail.com>\r\n\r\n* Typo\r\n\r\nSigned-off-by: Patrick Roncagliolo <ronca.pat@gmail.com>\r\n\r\n* Regression test\r\n\r\nSigned-off-by: Patrick Roncagliolo <ronca.pat@gmail.com>\r\n\r\n* Fix test for composable recorder with parameter override option\r\n\r\nSigned-off-by: Michael Orlov <michael.orlov@apex.ai>\r\n\r\n---------\r\n\r\nSigned-off-by: Patrick Roncagliolo <ronca.pat@gmail.com>\r\nSigned-off-by: Michael Orlov <michael.orlov@apex.ai>\r\nCo-authored-by: Michael Orlov <michael.orlov@apex.ai>",
+      "files_changed": 3,
+      "additions": 90,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "morlov-apexai",
+      "date": "2021-06-09T20:43:01Z",
+      "sha": "abd42297935548af25f84a7b29195894082e9cf4",
+      "message": "Add callbacks for PlayerClock::jump(time_point) API (#775)\n\n* Add callbacks to the jump API\r\n\r\nSigned-off-by: Michael Orlov <michael.orlov@apex.ai>\r\n\r\n* Add unit tests for TimeControllerClock::jump callbacks\r\n\r\nSigned-off-by: Michael Orlov <michael.orlov@apex.ai>\r\n\r\n* Address some code style issues and renames\r\n\r\nSigned-off-by: Michael Orlov <michael.orlov@apex.ai>\r\n\r\n* Change Doxygen comments to `C` style.\r\n\r\nSigned-off-by: Michael Orlov <michael.orlov@apex.ai>\r\n\r\n* Allow one of the callbacks to be nullptr.\r\n\r\nSigned-off-by: Michael Orlov <michael.orlov@apex.ai>",
+      "files_changed": 4,
+      "additions": 502,
+      "deletions": 11,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Yadunund",
+      "date": "2023-03-13T22:28:49Z",
+      "sha": "76665ad8b977721c059b95d307697b8424fed07d",
+      "message": "Enable document generation using rosdoc2 for ament_python pkgs (#1260)\n\n* Add exec deps for ros2bag\r\n\r\nSigned-off-by: Yadunund <yadunund@openrobotics.org>\r\n\r\n* Move depends to exec_depends\r\n\r\nSigned-off-by: Yadunund <yadunund@openrobotics.org>\r\n\r\n---------\r\n\r\nSigned-off-by: Yadunund <yadunund@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 3,
+      "commit_type": "config"
+    },
+    {
+      "author": "clalancette",
+      "date": "2020-05-28T19:48:07Z",
+      "sha": "c8b8aaa81e71d89c1c08d577b1c45b33db3dbaec",
+      "message": "Shared publisher handle. (#420)\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Sanoronas",
+      "date": "2024-10-17T05:02:46Z",
+      "sha": "25304dd36e51cc0fbccf148fded2dd4ba5ccba35",
+      "message": "Add \"--sort\" CLI option to the \"ros2 bag info\" command (#1804)\n\n* sort info output by topic name\r\n\r\nSigned-off-by: Soenke Prophet <soenke.prophet@gmail.com>\r\n\r\n* add missing imports\r\n\r\nSigned-off-by: Soenke Prophet <soenke.prophet@gmail.com>\r\n\r\n* add sorting to service topics and remove sorting option by serialization format\r\n\r\nSigned-off-by: Soenke Prophet <soenke.prophet@gmail.com>\r\n\r\n* add CLI option for sorting output and move sorting methods to enum\r\n\r\nSigned-off-by: Soenke Prophet <soenke.prophet@gmail.com>\r\n\r\n* add sorting by name to topic only option of info output\r\n\r\nSigned-off-by: Soenke Prophet <soenke.prophet@gmail.com>\r\n\r\n* move InfoSortingMethod and generate sorted idx functions to seprate files; move ServiceInformation and ServiceMetadata struct to storage package for clear include structure\r\n\r\nSigned-off-by: Soenke Prophet <soenke.prophet@gmail.com>\r\n\r\n* move ServiceInformation struct to its own header file and rename to ServiceEventInformation; replace if-else by switch-case for differantiating between sorting methods; bugfix sorting method from string resolution and service info verbose not being sorted\r\n\r\nSigned-off-by: Soenke Prophet <soenke.prophet@gmail.com>\r\n\r\n* add test-cases for sorted info output\r\n\r\nSigned-off-by: Soenke Prophet <soenke.prophet@gmail.com>\r\n\r\n* Fix linker issues\r\n\r\n- Add missing const qualifier for the generate_sorted_idx(..) version\r\nwith rosbag2_cpp::rosbag2_service_info_t\r\n- Small cleanups\r\n\r\nSigned-off-by: Michael Orlov <michael.orlov@apex.ai>\r\n\r\n* Regenerate pyi stub files\r\n\r\nSigned-off-by: Michael Orlov <michael.orlov@apex.ai>\r\n\r\n* Small nitpick for using const reference in the for loop\r\n\r\nSigned-off-by: Michael Orlov <michael.orlov@apex.ai>\r\n\r\n---------\r\n\r\nSigned-off-by: Soenke Prophet <soenke.prophet@gmail.com>\r\nSigned-off-by: Michael Orlov <michael.orlov@apex.ai>\r\nCo-authored-by: Soenke Prophet <soenke.prophet@gmail.com>\r\nCo-authored-by: Michael Orlov <michael.orlov@apex.ai>",
+      "files_changed": 12,
+      "additions": 422,
+      "deletions": 52,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Rayman",
+      "date": "2024-10-03T17:41:35Z",
+      "sha": "e75d6d659fcae243b8486a94173255b237817f22",
+      "message": "Reintroduce `Don't warn for unknown types if topics are not selected` (#1825)\n\nReintroduce the fix from 51a83f4421ff335c2237e6214e9bb7e6ae206a92 which\r\nwas discussed in https://github.com/ros2/rosbag2/issues/1485. This gives\r\na massive CPU improvement.\r\n\r\nSigned-off-by: Ramon Wijnands <ramon.wijnands@nobleo.nl>",
+      "files_changed": 1,
+      "additions": 12,
+      "deletions": 11,
+      "commit_type": "code"
+    },
+    {
+      "author": "r7vme",
+      "date": "2024-02-02T18:29:02Z",
+      "sha": "edda3769ffe0986d75cabe4464597a516f7aa969",
+      "message": "Remove rcpputils::fs dependencies from rosbag2_storages (#1558)\n\n* Remove rcpputils::fs dependencies from rosbag2_storages\r\n\r\nOriginal author: Kenta Yonekura <yoneken@ieee.org>\r\n\r\nSigned-off-by: Roman Sokolkov <rsokolkov@gmail.com>\r\n\r\n* Use path::generic_string() for Windows compatibility\r\n\r\nCo-authored with Kenta Yonekura <yoneken@ieee.org>\r\n\r\nSigned-off-by: Roman Sokolkov <rsokolkov@gmail.com>\r\n\r\n* Fix linter errors in osbag2_storage_sqlite3\r\n\r\nSigned-off-by: Roman Sokolkov <rsokolkov@gmail.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Roman Sokolkov <rsokolkov@gmail.com>\r\nCo-authored-by: Kenta Yonekura <yoneken@ieee.org>",
+      "files_changed": 10,
+      "additions": 68,
+      "deletions": 69,
+      "commit_type": "docs"
+    },
+    {
+      "author": "reinzor",
+      "date": "2024-06-12T21:38:30Z",
+      "sha": "8297cb014fb218ac3b7d610a464bbbf4bc7f199c",
+      "message": "fix(start-offset): allow specifying a start offset of 0 (#1682)\n\nSigned-off-by: Rein Appeldoorn <rein.appeldoorn@nobleo.nl>",
+      "files_changed": 3,
+      "additions": 15,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "coalman321",
+      "date": "2024-06-12T15:11:46Z",
+      "sha": "804432c94da166a79ae4a08bca69d6a3a9915f59",
+      "message": "Propagate \"custom_data\" and \"ros_distro\" in to the metadata.yaml file during re-indexing (#1700)\n\n* propagate custom data and ros_distro during reindexing\r\nSigned-off-by: Cole Tucker\r\n\r\nSigned-off-by: coalman321 <cjtucker321@gmail.com>\r\n\r\n* fix ament uncrustify issue\r\n\r\nSigned-off-by: coalman321 <cjtucker321@gmail.com>\r\n\r\n* only update metadata if size is nonzero\r\n\r\nSigned-off-by: coalman321 <cjtucker321@gmail.com>\r\n\r\n* fix uncrustify issue and switch to empty\r\n\r\nSigned-off-by: coalman321 <cjtucker321@gmail.com>\r\n\r\n* update reindexer test to verify custom data and ros_distro changes\r\n\r\nSigned-off-by: coalman321 <cjtucker321@gmail.com>\r\n\r\n* Convert to use exact clock type for windows CI\r\n\r\nSigned-off-by: coalman321 <cjtucker321@gmail.com>\r\n\r\n---------\r\n\r\nSigned-off-by: coalman321 <cjtucker321@gmail.com>",
+      "files_changed": 2,
+      "additions": 16,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "kosuke55",
+      "date": "2021-07-06T21:37:55Z",
+      "sha": "bd665cb576dfe141da14914c2bb6c0fb0185477a",
+      "message": "Add delay option (#789)\n\n* Add delay option\r\n\r\nSigned-off-by: kosuke55 <kosuke.tnp@gmail.com>",
+      "files_changed": 6,
+      "additions": 98,
+      "deletions": 15,
+      "commit_type": "code"
+    },
+    {
+      "author": "methylDragon",
+      "date": "2024-06-07T18:55:11Z",
+      "sha": "0f216c892d70726bcd2b1ea127953247e5e40656",
+      "message": "Add vscode gitignore rule and remove vscode folder (#1698)\n\nSigned-off-by: methylDragon <methylDragon@gmail.com>",
+      "files_changed": 2,
+      "additions": 1,
+      "deletions": 14,
+      "commit_type": "config"
+    },
+    {
+      "author": "ottojo",
+      "date": "2024-05-21T17:53:46Z",
+      "sha": "938fafa735a5f55378ae21f698a236e62c9765dc",
+      "message": "doc: readme: fix example conversion configs: all -> all_topics (#1661)\n\n* fix example conversion configs: all -> all_topics\r\n\r\nSigned-off-by: Jonas Otto <jonas@jonasotto.com>\r\n\r\n* update topic and service selection arguments in conversion config in readme\r\n\r\nSigned-off-by: Jonas Otto <jonas@jonasotto.com>\r\n\r\n* add all_services: true to first example\r\n\r\nCo-authored-by: Michael Orlov <morlovmr@gmail.com>\r\nSigned-off-by: Jonas Otto <jonas@jonasotto.com>\r\n\r\n* add all_services: true to second example\r\n\r\nCo-authored-by: Michael Orlov <morlovmr@gmail.com>\r\nSigned-off-by: Jonas Otto <jonas@jonasotto.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Jonas Otto <jonas@jonasotto.com>\r\nCo-authored-by: Michael Orlov <morlovmr@gmail.com>",
+      "files_changed": 1,
+      "additions": 12,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "yschulz",
+      "date": "2024-05-06T21:59:57Z",
+      "sha": "20cfc02ede90151a4f7e8859972d4637f8c696c5",
+      "message": "Bugfix for writer not being able to open again after closing (#1599)\n\n* re-applies fixes from #1590 to rolling. Also removes new message definition in sequential writer test for multiple open operations. Also clears topic_names_to_message_definitions_ and handles message_definitions_s underlying container similarly. Lastly, also avoids reset of factory in the compression writer, adds unit test there too.\r\n\r\nSigned-off-by: Yannick Schulz <yschulz854@gmail.com>\r\n\r\n* removes unused compressor_ member from compresser writer class. Also delegates rest of the closing behavior to the base class in close method, as it is handled in the open and write methods of the compression writer\r\n\r\nSigned-off-by: Yannick Schulz <yschulz854@gmail.com>\r\n\r\n* Remove unrelated delta\r\n\r\n- message_definitions_ was intentionally allocated on the stack and\r\nshould persist between writer close() and open() because it represents\r\ncache for message definitions which is not changes.\r\n\r\nSigned-off-by: Michael Orlov <michael.orlov@apex.ai>\r\n\r\n* Don't call virtual methods from destructors\r\n\r\nSigned-off-by: Michael Orlov <michael.orlov@apex.ai>\r\n\r\n* Cleanup 'rosbag2_directory_next' after the test run\r\n\r\nSigned-off-by: Michael Orlov <michael.orlov@apex.ai>\r\n\r\n* Protect Writer::open(..) and Writer::close() with mutex on upper level\r\n\r\n- Rationale: To avoid race conditions if open(..) and close() could be\r\never be called from different threads.\r\n\r\nSigned-off-by: Michael Orlov <michael.orlov@apex.ai>\r\n\r\n* Bugfix for WRITE_SPLIT callback not called for the last compressed file\r\n\r\nSigned-off-by: Michael Orlov <michael.orlov@apex.ai>\r\n\r\n* Bugfix for lost messages from cache when closing compression writer\r\n\r\nSigned-off-by: Michael Orlov <michael.orlov@apex.ai>\r\n\r\n* Use dedicated is_open_ flag instead of relying on storage_\r\n\r\nSigned-off-by: Michael Orlov <michael.orlov@apex.ai>\r\n\r\n---------\r\n\r\nSigned-off-by: Yannick Schulz <yschulz854@gmail.com>\r\nSigned-off-by: Michael Orlov <michael.orlov@apex.ai>\r\nCo-authored-by: Michael Orlov <michael.orlov@apex.ai>",
+      "files_changed": 7,
+      "additions": 118,
+      "deletions": 29,
+      "commit_type": "code"
+    },
+    {
+      "author": "marcoag",
+      "date": "2024-03-28T08:24:14Z",
+      "sha": "a780acb3faede7dbb57bd4c9ee24c0ee9e432ae7",
+      "message": "0.25.0 (#1596)\n\n\r\nSigned-off-by: Marco A. Gutierrez <marcogg@marcogg.com>",
+      "files_changed": 48,
+      "additions": 213,
+      "deletions": 25,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jmachowinski",
+      "date": "2023-12-16T00:20:21Z",
+      "sha": "cea3fb027e52b9445266adde9d7629b9957a3c35",
+      "message": "Add option to set compression threads priority (#1457)\n\n* feat(SequentialCompressionWriter): Added option to set compression thread priority\r\n\r\n\r\nSigned-off-by: Janosch Machowinski <J.Machowinski@cellumation.com>\r\n\r\n* feat: Added compression_threads_priority option\r\n\r\nSigned-off-by: Janosch Machowinski <J.Machowinski@cellumation.com>\r\n\r\n* test: implemented test case for setting priority value\r\n\r\nSigned-off-by: Janosch Machowinski <J.Machowinski@cellumation.com>\r\n\r\n* Redesign test for the case when compression writer sets threads priority\r\n\r\nCo-authored-by: Janosch Machowinski <J.Machowinski@cellumation.com>\r\nSigned-off-by: Michael Orlov <michael.orlov@apex.ai>\r\n\r\n* fix: Fixed inverted check\r\n\r\nSigned-off-by: Janosch Machowinski <J.Machowinski@cellumation.com>\r\n\r\n* chore: made compression_threads_priority an int32_t\r\n\r\nSigned-off-by: Janosch Machowinski <J.Machowinski@cellumation.com>\r\n\r\n* Enable thread priority for Windows\r\n\r\nSigned-off-by: Michael Orlov <michael.orlov@apex.ai>\r\n\r\n* Address grammar in log messages\r\n\r\nSigned-off-by: Michael Orlov <michael.orlov@apex.ai>\r\n\r\n* fix: fixed namespace collision warning in test\r\n\r\nSigned-off-by: Janosch Machowinski <J.Machowinski@cellumation.com>\r\n\r\n* Add compression_threads_priority to the node params parser\r\n\r\nSigned-off-by: Michael Orlov <michael.orlov@apex.ai>\r\n\r\n---------\r\n\r\nSigned-off-by: Janosch Machowinski <J.Machowinski@cellumation.com>\r\nSigned-off-by: Michael Orlov <michael.orlov@apex.ai>\r\nCo-authored-by: Janosch Machowinski <J.Machowinski@cellumation.com>\r\nCo-authored-by: Michael Orlov <michael.orlov@apex.ai>",
+      "files_changed": 14,
+      "additions": 214,
+      "deletions": 13,
+      "commit_type": "test"
+    },
+    {
+      "author": "cwecht",
+      "date": "2024-04-10T17:18:21Z",
+      "sha": "29a8415bcf14f086a0215a6adc9e4e2f59c3f282",
+      "message": "Check existence of a file before passing it to the mcap reader (#1594)\n\n* rosbag2_storage_mcap: check existence of a file before passing it to mcap::FileStreamReader in order to avoid assertion failing\r\n\r\nSigned-off-by: Christopher Wecht <cwecht@mailbox.org>\r\n\r\n* rosbag2_storage_mcap: use rcutils_strerror instead of strerror\r\n\r\nSigned-off-by: Christopher Wecht <cwecht@mailbox.org>\r\n\r\n---------\r\n\r\nSigned-off-by: Christopher Wecht <cwecht@mailbox.org>",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Aposhian",
+      "date": "2023-07-06T17:43:52Z",
+      "sha": "561eacd9f54fd21e47c67a1231510014d19ce95d",
+      "message": "update converter namespace (#1410)",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 7,
+      "commit_type": "docs"
+    },
+    {
+      "author": "wep21",
+      "date": "2023-02-23T05:24:18Z",
+      "sha": "260e20e2c79143b04627032962b37c2028722c19",
+      "message": "Use target_link_libraries instead of ament_target_dependencies (#1202)\n\n* feat: use target link libraries instead of ament target dependencies\r\n\r\nSigned-off-by: Daisuke Nishimatsu <border_goldenmarket@yahoo.co.jp>\r\n\r\n* use exported target for yaml-cpp\r\n\r\nSigned-off-by: Daisuke Nishimatsu <border_goldenmarket@yahoo.co.jp>\r\n\r\n* use exported target for yaml-cpp\r\n\r\nSigned-off-by: Daisuke Nishimatsu <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix invalid target\r\n\r\nSigned-off-by: Daisuke Nishimatsu <border_goldenmarket@yahoo.co.jp>\r\n\r\n* merge two target_link_libraries\r\n\r\nCo-authored-by: Michael Orlov <morlovmr@gmail.com>\r\nSigned-off-by: Daisuke Nishimatsu <border_goldenmarket@yahoo.co.jp>\r\n\r\n---------\r\n\r\nSigned-off-by: Daisuke Nishimatsu <border_goldenmarket@yahoo.co.jp>\r\nCo-authored-by: Michael Orlov <morlovmr@gmail.com>",
+      "files_changed": 12,
+      "additions": 225,
+      "deletions": 177,
+      "commit_type": "docs"
+    },
+    {
+      "author": "uupks",
+      "date": "2024-01-26T19:57:20Z",
+      "sha": "bbbb217e216557649b9333c9dfe34ca5a361770d",
+      "message": "remove unused headers (#1544)\n\nremove filesystem header file since it‘s never been used\r\n\r\nSigned-off-by: uupks <uupks0325@gmail.com>",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "arneboe",
+      "date": "2024-01-20T03:45:21Z",
+      "sha": "931bf541a3547dd7d1bcec119d68cb95d7409a72",
+      "message": "Add default initialization for CompressionOptions (#1539)\n\n* feat: add sane defaults for CompressionOptions\r\n\r\nSigned-off-by: Arne Böckmann <a.boeckmann@cellumation.com>\r\n\r\n* Update rosbag2_compression/include/rosbag2_compression/compression_options.hpp\r\n\r\nCo-authored-by: Tomoya Fujita <Tomoya.Fujita@sony.com>\r\nSigned-off-by: Arne Böckmann <a.boeckmann@cellumation.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Arne Böckmann <a.boeckmann@cellumation.com>\r\nCo-authored-by: Arne Böckmann <a.boeckmann@cellumation.com>\r\nCo-authored-by: Tomoya Fujita <Tomoya.Fujita@sony.com>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "christophfroehlich",
+      "date": "2024-01-15T03:23:23Z",
+      "sha": "317286c98472205593d5b0a791d06fea42613ba3",
+      "message": "Add proper message for --start-paused (#1537)\n\nSigned-off-by: Christoph Froehlich <christoph.froehlich@ait.ac.at>",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "mikaelarguedas",
+      "date": "2019-08-09T16:44:07Z",
+      "sha": "81b8d63e485a96b4dbdb0144824fb9b89aa4cc6a",
+      "message": "install package.xml (#146)\n\nSigned-off-by: Mikael Arguedas <mikael.arguedas@gmail.com>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "wentasah",
+      "date": "2023-11-05T21:07:23Z",
+      "sha": "aa8cc02ecad3d6d19271a9dd303bb169741e9c72",
+      "message": "Add python3-yaml as a dependency (#1490)\n\nVerbs such as `ros2 bag play` import the Python yaml package. This\r\npackage is probably present in most ROS installations, but in some\r\nminimalist ones (e.g. built with the Nix package manager), it can be\r\nmissing.\r\n\r\nHere, we add the dependency to package.xml to ensure that the Python\r\nyaml package is always available.\r\n\r\nSigned-off-by: Michal Sojka <michal.sojka@cvut.cz>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "pfavr2",
+      "date": "2023-09-28T20:26:59Z",
+      "sha": "a80adfda6678185c7605fd3820ab3a67469e2d8d",
+      "message": "ros2 bag convert now excludes messages not in [start_time;end_time] (#1455)\n\n* ros2 bag convert now excludes messages not in [start_time;end_time]\r\nresolves https://github.com/ros2/rosbag2/issues/599\r\n\r\nSigned-off-by: Peter Favrholdt <ros2github@how.dk>\r\n\r\n* fix linelength and whitespace\r\n\r\nSigned-off-by: Peter Favrholdt <ros2github@how.dk>\r\n\r\n* minor fix warning %lld versus long int\r\n\r\nSigned-off-by: Peter Favrholdt <ros2github@how.dk>\r\n\r\n* Minor whitespace uncrustify fix\r\n\r\nSigned-off-by: Peter Favrholdt <ros2github@how.dk>\r\n\r\n* minor cpplint whitespace/indent change\r\n\r\nSigned-off-by: Peter Favrholdt <ros2github@how.dk>\r\n\r\n* minor whitespace fix\r\n\r\nSigned-off-by: Peter Favrholdt <ros2github@how.dk>\r\n\r\n* Remove dependency on rclcpp for sequential_writer by using uint64_t.\r\nMoved timestamp check above Get TopicInformation\r\nAdded parsing test.\r\n\r\nSigned-off-by: Peter Favrholdt <ros2github@how.dk>\r\n\r\n* Remove superfluous dependency on rclcpp.\r\n\r\nSigned-off-by: Peter Favrholdt <ros2github@how.dk>\r\n\r\n* Add note that start_time_ns and end_time_ns are from storage_options.\r\n\r\nSigned-off-by: Peter Favrholdt <ros2github@how.dk>\r\n\r\n* Simplified message_within_accepted_time_range now uses int64_t.\r\n\r\nSigned-off-by: Peter Favrholdt <ros2github@how.dk>\r\n\r\n* whitespace fixes only\r\n\r\nSigned-off-by: Peter Favrholdt <ros2github@how.dk>\r\n\r\n* minor whitespace change\r\n\r\nSigned-off-by: Peter Favrholdt <ros2github@how.dk>\r\n\r\n* remove superfluous dependency on rclcpp from storage_sqlite3\r\n\r\nSigned-off-by: Peter Favrholdt <ros2github@how.dk>\r\n\r\n---------\r\n\r\nSigned-off-by: Peter Favrholdt <ros2github@how.dk>",
+      "files_changed": 6,
+      "additions": 48,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "asymingt",
+      "date": "2023-07-20T15:06:02Z",
+      "sha": "197bb8d672a4b50b34b7402cce3159971f8dce19",
+      "message": "Add support for compression to python API (#1425)\n\n* Add support for compression to python API\r\n\r\nSigned-off-by: Andrew Symington <andrew.c.symington@gmail.com>\r\n\r\n* Add the zstd compression plugin as a test dependency for the python API\r\n\r\nSigned-off-by: Andrew Symington <andrew.c.symington@gmail.com>\r\n\r\n* Add reading to the sequential compression test\r\n\r\nSigned-off-by: Andrew Symington <andrew.c.symington@gmail.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Andrew Symington <andrew.c.symington@gmail.com>",
+      "files_changed": 6,
+      "additions": 203,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "yameatmeyourdead",
+      "date": "2023-06-10T03:14:21Z",
+      "sha": "5f5a583ca2e47f6a2ec1bca6076576a99efaaf73",
+      "message": "Fix missing cstdint include (#1383)\n\nSigned-off-by: yameatmeyourdead <zac71113@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "james-rms",
+      "date": "2022-10-12T20:59:26Z",
+      "sha": "5b8b658b1f70a9f6184e4f6f31a42d50267f0b47",
+      "message": "rosbag2_py: set defaults for config when bag rewriting (#1121)\n\nSigned-off-by: James Smith <james@foxglove.dev>\r\n\r\nSigned-off-by: James Smith <james@foxglove.dev>",
+      "files_changed": 1,
+      "additions": 14,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "DLu",
+      "date": "2023-04-01T00:11:03Z",
+      "sha": "7e91733196a6d0cc84fd0fc21bd93de82325eb22",
+      "message": "Add API samples for Python [rebased] (#1253)\n\n* Add API samples for Python\r\n\r\nSigned-off-by: Geoffrey Biggs <gbiggs@killbots.net>\r\n\r\n* Package Renaming and Move\r\n\r\nSigned-off-by: David V. Lu <davidvlu@gmail.com>\r\n\r\n* linting + copyright\r\n\r\nSigned-off-by: David V. Lu <davidvlu@gmail.com>\r\n\r\n* more linting\r\n\r\nSigned-off-by: David V. Lu <davidvlu@gmail.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Geoffrey Biggs <gbiggs@killbots.net>\r\nSigned-off-by: David V. Lu <davidvlu@gmail.com>\r\nCo-authored-by: Geoffrey Biggs <gbiggs@killbots.net>",
+      "files_changed": 11,
+      "additions": 294,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "sloretz",
+      "date": "2021-02-05T23:04:01Z",
+      "sha": "68897af46750acabb6a5ec9928e554ab0768743a",
+      "message": "Add test_depend ament_cmake_gmock (#639)\n\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "test"
+    },
+    {
+      "author": "audrow",
+      "date": "2023-01-13T20:03:15Z",
+      "sha": "88bfc1e24d14a5c600a1cb9511f8fd44e405c61f",
+      "message": "[rolling] Bump to 0.19.0 (#1232)\n\nSigned-off-by: Audrow Nash <audrow@openrobotics.org>\r\n\r\nSigned-off-by: Audrow Nash <audrow@openrobotics.org>",
+      "files_changed": 44,
+      "additions": 182,
+      "deletions": 23,
+      "commit_type": "docs"
+    },
+    {
+      "author": "rshanor",
+      "date": "2022-10-12T20:58:45Z",
+      "sha": "e6f7fd78bfa9f3fb186236d262729e73dc9fa998",
+      "message": "Add SplitBagfile recording service. (#1115)\n\n* feat(rosbag2_cpp): Add SplitBagfile recording service.\r\n\r\nFixes https://github.com/ros2/rosbag2/issues/1087\r\n\r\nTested from the command line and verified that below command closed one\r\nlog file and opened another.\r\n\r\nros2 service call /rosbag2_recorder/split_bagfile\r\nrosbag2_interfaces/srv/SplitBagfile\r\n\r\nSigned-off-by: Rick Shanor <rickshanor@gmail.com>\r\n\r\n* feat(rosbag2_cpp): Add unit tests for SplitBagfile feature.\r\n\r\nAlso address PR comments from @MichaelOrlov and deal with rebase merge\r\nconflicts.\r\n\r\nSigned-off-by: Rick Shanor <rickshanor@gmail.com>\r\n\r\n* fix(rosbag2_cpp): Remove unnecessary ManualSplitSequentialWriter.\r\n\r\nAfter making split_bagfile public, this class was no longer necessary.\r\n\r\nSigned-off-by: Rick Shanor <rickshanor@gmail.com>\r\n\r\n* ci(rosbag2_transport): Mark test_record_services as xfail.\r\n\r\nSigned-off-by: Rick Shanor <rickshanor@gmail.com>\r\n\r\nSigned-off-by: Rick Shanor <rickshanor@gmail.com>",
+      "files_changed": 13,
+      "additions": 94,
+      "deletions": 15,
+      "commit_type": "docs"
+    },
+    {
+      "author": "KeisukeShima",
+      "date": "2022-05-12T03:01:01Z",
+      "sha": "c8f87ac56721102571cd1b2d0bbf8d161b3e9979",
+      "message": "Add use_sim_time option to record verb (#994)\n\n* add use_sim_time option to record verb\r\n\r\nSigned-off-by: Keisuke Shima <19993104+KeisukeShima@users.noreply.github.com>\r\n\r\n* add default argument\r\n\r\nSigned-off-by: Keisuke Shima <19993104+KeisukeShima@users.noreply.github.com>\r\n\r\n* fix record option\r\n\r\nSigned-off-by: Keisuke Shima <19993104+KeisukeShima@users.noreply.github.com>\r\n\r\n* Update rosbag2_transport/test/rosbag2_transport/test_record_all_use_sim_time.cpp\r\n\r\nSigned-off-by: Keisuke Shima <19993104+KeisukeShima@users.noreply.github.com>\r\n\r\nCo-authored-by: Michael Orlov <morlovmr@gmail.com>\r\n\r\n* Update rosbag2_transport/test/rosbag2_transport/test_record_all_use_sim_time.cpp\r\n\r\nSigned-off-by: Keisuke Shima <19993104+KeisukeShima@users.noreply.github.com>\r\n\r\nCo-authored-by: Michael Orlov <morlovmr@gmail.com>\r\n\r\n* change clock message\r\n\r\nSigned-off-by: Keisuke Shima <19993104+KeisukeShima@users.noreply.github.com>\r\n\r\n* fix test\r\n\r\nSigned-off-by: Keisuke Shima <19993104+KeisukeShima@users.noreply.github.com>\r\n\r\nCo-authored-by: Michael Orlov <morlovmr@gmail.com>",
+      "files_changed": 10,
+      "additions": 122,
+      "deletions": 14,
+      "commit_type": "ci"
+    },
+    {
+      "author": "ricardo-manriquez",
+      "date": "2022-12-10T07:05:17Z",
+      "sha": "b7e6a34babe3ceb455f3119c840b4d3acdef7edd",
+      "message": "Added option to change node name for the recorder from the Python API (#1180)\n\n* Added the option to change the node name for the recorder from the Python API\r\n\r\nSigned-off-by: Ricardo Manríquez <64954533+ricardo-manriquez@users.noreply.github.com>\r\nSigned-off-by: Ricardo Manríquez <ricardo.manriquez+gh@gmail.com>\r\n\r\n* Fixed whitespace problems\r\n\r\nSigned-off-by: Ricardo Manríquez <ricardo.manriquez+gh@gmail.com>\r\n\r\n* Fixed uncrustify problems\r\n\r\nSigned-off-by: Ricardo Manríquez <ricardo.manriquez+gh@gmail.com>\r\n\r\n* Added the option to set node name parameter from CLI\r\n\r\nSigned-off-by: Ricardo Manríquez <ricardo.manriquez+gh@gmail.com>\r\n\r\n* Update rosbag2_py/src/rosbag2_py/_transport.cpp\r\n\r\nCo-authored-by: Emerson Knapp <537409+emersonknapp@users.noreply.github.com>\r\nSigned-off-by: Ricardo Manríquez <ricardo.manriquez+gh@gmail.com>\r\n\r\nSigned-off-by: Ricardo Manríquez <64954533+ricardo-manriquez@users.noreply.github.com>\r\nSigned-off-by: Ricardo Manríquez <ricardo.manriquez+gh@gmail.com>\r\nCo-authored-by: Ricardo Manríquez <ricardo.manriquez+gh@gmail.com>\r\nCo-authored-by: Emerson Knapp <537409+emersonknapp@users.noreply.github.com>",
+      "files_changed": 2,
+      "additions": 11,
+      "deletions": 4,
+      "commit_type": "ci"
+    },
+    {
+      "author": "DasRoteSkelett",
+      "date": "2022-10-06T00:46:42Z",
+      "sha": "e7e7269e4b47db726f3257a8e43b02594c8923e9",
+      "message": "Fix/zstd vendor does not find system zstd (#1111)\n\ncmake did not find the Findzstd.cmake in cmake/Modules\r\n\r\nSince we cannot use pkg-config for some Windows issues, the parsing of\r\nthe version is done by looking for the string in zstd.h.\r\n\r\nSigned-off-by: Matthias Schoepfer <m.schoepfer@rethinkrobotics.com>",
+      "files_changed": 2,
+      "additions": 19,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Ace314159",
+      "date": "2022-10-04T20:31:11Z",
+      "sha": "c92010b00f894418c7b3fed45866f1ef91df706a",
+      "message": "Remove YAML_CPP_DLL define (#964)\n\nSigned-off-by: Akash Munagala <akash.munagala@gmail.com>",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "bertaveira",
+      "date": "2022-09-21T22:57:00Z",
+      "sha": "c2846e5ec6cdc0862f960949ba63e4566f1919e4",
+      "message": "make recorder node composable by inheritance (#1093)\n\n* make recorder node composable by inheritance\r\n\r\nSigned-off-by: Bernardo Taveira <taveira@student.chalmers.se>\r\n\r\n* linting\r\n\r\nSigned-off-by: Bernardo Taveira <taveira@student.chalmers.se>\r\n\r\n* initialise writer in contructor\r\n\r\nSigned-off-by: Bernardo Taveira <taveira@student.chalmers.se>\r\n\r\n* add missing header\r\n\r\nSigned-off-by: Bernardo Taveira <taveira@student.chalmers.se>\r\n\r\n* add back the throw error\r\n\r\nSigned-off-by: Bernardo Taveira <taveira@student.chalmers.se>\r\n\r\n* linting\r\n\r\nSigned-off-by: Bernardo Taveira <taveira@student.chalmers.se>\r\n\r\nSigned-off-by: Bernardo Taveira <taveira@student.chalmers.se>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "DensoADAS",
+      "date": "2019-03-25T21:05:13Z",
+      "sha": "05b9c4cc9e9ff13265e32e5b6be9e5da20319286",
+      "message": "removed dependency to ros1_bridge package (#90)\n\n* removed dependency to ros1_bridge package:\r\n * checking if package is available\r\n * if not skipping (with warnings)\r\n * now rosbag2_tests builds on systems without ros1\r\n\r\n* check ros1 deps correctly on all packages\r\n\r\n* add ros1_bridge to test package\r\n\r\n* silently try to find the bridge",
+      "files_changed": 5,
+      "additions": 30,
+      "deletions": 40,
+      "commit_type": "docs"
+    },
+    {
+      "author": "esteve",
+      "date": "2019-05-06T15:47:39Z",
+      "sha": "8b746c78ecca2a9551ab5f42cde5ef818ddf4e3a",
+      "message": "Pass CMAKE_TOOLCHAIN_FILE if crosscompiling (#112)",
+      "files_changed": 1,
+      "additions": 10,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "kylemarcey",
+      "date": "2022-07-29T00:45:26Z",
+      "sha": "a3b461c058a820ef4b47db480d1c84bf8921214b",
+      "message": "Merge \"Add additional mode of publishing sim time updates (#1036)\" to rolling  (#1050)\n\n* Add new PlayOptions to control new method of /clock publishing\r\n\r\nSigned-off-by: Kyle Marcey <kyle.marcey@apex.ai>\r\n\r\n* Add new arguments to ros2bag frontend to support publishing /clock updates triggered by replayed messages\r\n\r\nSigned-off-by: Kyle Marcey <kyle.marcey@apex.ai>\r\n\r\n* Refactor rosbag2_transport::Player to allow two modes of publishing /clock updates.\r\n\r\nAn additional mode of operation has been added to the Player class to allow for /clock updates. When this mode is active, /clock updates are triggered whenever messages are replayed rather than at a fixed rate. Optionally, a list of triggering topics can be set so that only a subset of replayed messages will trigger the /clock update.\r\n\r\nThis mode is most useful when replaying applications which do some sanity checking or correlation of message data to system timestamps. If the application does not need the sim time to be updated at a consistent rate, this mode can substantially reduce the overhead of having sim time enabled in rosbag2.\r\n\r\nSigned-off-by: Kyle Marcey <kyle.marcey@apex.ai>",
+      "files_changed": 8,
+      "additions": 116,
+      "deletions": 36,
+      "commit_type": "code"
+    },
+    {
+      "author": "EsipovPA",
+      "date": "2022-07-26T16:20:40Z",
+      "sha": "9291bcbf8d0e04b6a95af4fafc1b90d45092df28",
+      "message": "#1043 Writer choices set to list (#1044)\n\n* Set to list: writer_choices: record.py\r\n\r\nSigned-off-by: EsipovPA <esipov.p@mail.ru>\r\n\r\n* Set to list: storage_choices: reindex.py\r\n\r\nSigned-off-by: EsipovPA <esipov.p@mail.ru>",
+      "files_changed": 2,
+      "additions": 5,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "allenh1",
+      "date": "2022-07-07T02:15:47Z",
+      "sha": "5dc9e7f9a7a940815259f1d11785d10a13e14ca7",
+      "message": "Add the ability to record any key/value pair in 'custom' field in metadata.yaml (#1038)\n\n* Revert \"Revert \"Add the ability to record any key/value pair in the 'custom' field in metadata.yaml (#976)\" (#984)\"\r\n\r\nThis reverts commit e7d4975190ba79bc8dde8c479eb574ab295259a4.\r\n\r\nSigned-off-by: Hunter L. Allen <hunter.allen@apex.ai>\r\n\r\n* Ensure writer_ is destructed before intercepted_metadata_\r\n\r\nSigned-off-by: Hunter L. Allen <hunter.allen@apex.ai>",
+      "files_changed": 14,
+      "additions": 391,
+      "deletions": 215,
+      "commit_type": "config"
+    },
+    {
+      "author": "agalbachicar",
+      "date": "2022-06-21T23:24:20Z",
+      "sha": "ff482f00534113f0ee893539c2e3ca7792bfdb94",
+      "message": "Adds play until functionality -- follow up to #962 (#1005)\n\n* Implements play until on top of play for.\r\n\r\nSigned-off-by: Agustin Alba Chicar <ag.albachicar@ekumenlabs.com>\r\n\r\n* Adds python bindings\r\n\r\nSigned-off-by: Agustin Alba Chicar <ag.albachicar@ekumenlabs.com>\r\n\r\n* Adds test for play until.\r\n\r\nSigned-off-by: Agustin Alba Chicar <ag.albachicar@ekumenlabs.com>\r\n\r\n* Fixes variable name.\r\n\r\nSigned-off-by: Agustin Alba Chicar <ag.albachicar@ekumenlabs.com>\r\n\r\n* Adds the same docstring for play_until and play_duration options than in PlayOptions to clarify usage.\r\n\r\nSigned-off-by: Agustin Alba Chicar <ag.albachicar@ekumenlabs.com>\r\n\r\n* Updates the CLI to combine the seconds and nanoseconds part of the playback_until stamp\r\n\r\nSigned-off-by: Agustin Alba Chicar <ag.albachicar@ekumenlabs.com>\r\n\r\n* Changes to play verb parameters:\r\n\r\n- Unifies the use of '-' instead of '_' to split words in arguments.\r\n- Uses mutually exclusive arguments: --playback-until-sec and --playback-until-nsec\r\n  to pass the timestamp.\r\n\r\nSigned-off-by: Agustin Alba Chicar <ag.albachicar@ekumenlabs.com>\r\n\r\n* Solves review comments.\r\n\r\n- Adds test cases to the player.\r\n- Renames play_until and similar occurrences to contain timestamp.\r\n- Renames play_for and similar occurrences to not contain for and include duration.\r\n\r\nSigned-off-by: Agustin Alba Chicar <ag.albachicar@ekumenlabs.com>\r\n\r\n* Solves review comments to tests.\r\n\r\nSigned-off-by: Agustin Alba Chicar <ag.albachicar@ekumenlabs.com>\r\n\r\n* Modifies play_until_is_equal_to_the_total_duration\r\n\r\nThe test body now evaluates a bag whose duration is exactly the same\r\nas given timestamp in PlayOptions.\r\n\r\nSigned-off-by: Agustin Alba Chicar <ag.albachicar@ekumenlabs.com>",
+      "files_changed": 8,
+      "additions": 492,
+      "deletions": 12,
+      "commit_type": "docs"
+    },
+    {
+      "author": "paudrow",
+      "date": "2022-04-06T18:19:48Z",
+      "sha": "8dccf5811834524011f3501ee669f2078f60f7ed",
+      "message": "0.15.0 (#985)\n\nSigned-off-by: Audrow Nash <audrow@hey.com>",
+      "files_changed": 33,
+      "additions": 84,
+      "deletions": 17,
+      "commit_type": "docs"
+    },
+    {
+      "author": "gbiggs",
+      "date": "2021-11-23T19:55:07Z",
+      "sha": "e9686a3c194df39d0688792879d00286cdc62a96",
+      "message": "Expose the QoS object wrapper (#910)\n\n* Expose the Rosbag2QoS class for use\r\n\r\nSigned-off-by: Geoffrey Biggs <gbiggs@killbots.net>\r\nCo-authored-by: Emerson Knapp <eknapp@amazon.com>",
+      "files_changed": 8,
+      "additions": 14,
+      "deletions": 15,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Kaju-Bubanja",
+      "date": "2022-06-17T00:07:50Z",
+      "sha": "ad484baaa3c9cb6f7469087052bc3cbaedda6b11",
+      "message": "fix: splitting by time feature (#1022)\n\nstyle: fix diff\r\n\r\nstyle: remove additional spaces\r\n\r\nstyle: typo\r\n\r\nfix: added missing input parameter\r\n\r\nrefactor: make variable private\r\n\r\nrefactor: fix linting error\r\n\r\nfix: Add missing initialization\r\n\r\nstyle: linter\r\n\r\nrefactor: invert logic\r\n\r\nSigned-off-by: Kaju Bubanja <bubanja.kaju@gmail.com>",
+      "files_changed": 2,
+      "additions": 11,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "ihasdapie",
+      "date": "2022-05-25T22:32:09Z",
+      "sha": "d97e2911e074ec6ab5fd23a546b0ad04950b6750",
+      "message": "Reduce message spam when topics to be recorded do not exist (#1018)\n\n* move topic_filter.hpp to expose to recorder.hpp\r\n\r\nSigned-off-by: Brian Chen <brian.chen@openrobotics.org>\r\n\r\n* fix #1011: persist TopicFilter to avoid warning spam\r\n\r\nSigned-off-by: Brian Chen <brian.chen@openrobotics.org>\r\n\r\n* address pr comments\r\n\r\nSigned-off-by: Brian Chen <brian.chen@openrobotics.org>",
+      "files_changed": 6,
+      "additions": 8,
+      "deletions": 6,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Blast545",
+      "date": "2022-04-04T21:32:43Z",
+      "sha": "e7d4975190ba79bc8dde8c479eb574ab295259a4",
+      "message": "Revert \"Add the ability to record any key/value pair in the 'custom' field in metadata.yaml (#976)\" (#984)\n\nThis reverts commit e156eb9e38c377df33e5075ab7fa48f3b52eaa12.\r\n\r\nSigned-off-by: Jorge Perez <jjperez@ekumenlabs.com>",
+      "files_changed": 12,
+      "additions": 213,
+      "deletions": 386,
+      "commit_type": "config"
+    },
+    {
+      "author": "theseankelly",
+      "date": "2022-05-10T23:37:20Z",
+      "sha": "c6e5290f3f426312d9ba4bdd5a56d0f791a3f079",
+      "message": "Make unpublished topics unrecorded by default (#968)\n\n* Make unpublished topics unrecorded by default\r\n\r\nTopics with no publishers do not offer any QoS profiles. This causes the\r\nrecorder to subscribe with a default QoS, which is often disadvantageous.\r\n\r\nThis change makes subscribing to unpublished topics optional, off by\r\ndefault. Once a publisher is discovered for a topic, discovery picks it\r\nup and adds it to the bag.\r\n\r\nThis addresses #967\r\n\r\nSigned-off-by: Sean Kelly <skelly@seegrid.com>\r\n\r\n* Feedback from review\r\n\r\nSigned-off-by: Sean Kelly <skelly@seegrid.com>\r\n\r\n* Additional review feedback\r\n\r\nSigned-off-by: Sean Kelly <skelly@seegrid.com>\r\n\r\n* Narrow scope of tests and make more deterministic\r\n\r\nSigned-off-by: Sean Kelly <skelly@seegrid.com>\r\n\r\n* Fix test expectation for unpublished topics\r\n\r\nSigned-off-by: Sean Kelly <skelly@seegrid.com>\r\n\r\n* Add ROSBAG2_TRANSPORT_EXPORT for get_requested_or_available_topics()\r\n\r\nThis is needed to try to fix Windows build\r\n\r\nCo-authored-by: Sean Kelly <skelly@seegrid.com>\r\nCo-authored-by: Michael Orlov <morlovmr@gmail.com>",
+      "files_changed": 12,
+      "additions": 202,
+      "deletions": 7,
+      "commit_type": "docs"
+    },
+    {
+      "author": "amacneil",
+      "date": "2021-04-07T19:34:46Z",
+      "sha": "4c3934a00f6f71371d1eb40cb584f5da35b8a601",
+      "message": "Update design doc link (#719)\n\nMore recent version available than what is currently linked.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "t0ny-peng",
+      "date": "2022-03-30T23:51:10Z",
+      "sha": "e156eb9e38c377df33e5075ab7fa48f3b52eaa12",
+      "message": "Add the ability to record any key/value pair in the 'custom' field in metadata.yaml (#976)\n\n* Add the ability to record any key/value pair in the 'custom_data' field in metadata.yaml\r\n\r\nSigned-off-by: Tony Peng <4816327+t0ny-peng@users.noreply.github.com>\r\n\r\n* Move some of the custom convert struct to yaml.hpp\r\n\r\nSigned-off-by: Tony Peng <4816327+t0ny-peng@users.noreply.github.com>\r\n\r\n* Bump the version to 6 in target_metadata/multiple_files/metadata.yaml\r\n\r\nSigned-off-by: Tony Peng <4816327+t0ny-peng@users.noreply.github.com>",
+      "files_changed": 12,
+      "additions": 386,
+      "deletions": 213,
+      "commit_type": "ci"
+    },
+    {
+      "author": "jacobperron",
+      "date": "2019-05-08T05:47:52Z",
+      "sha": "095da144882ca40837385605c47eeda2b5f7c0d1",
+      "message": "Handle message type name with multiple namespace parts (#114)\n\n* Handle message type name with multiple namespace parts\r\n\r\nFor now, it is okay to ignore the middle parts of the namespace, but this should be updated in the future.\r\n\r\nSigned-off-by: Jacob Perron <jacob@openrobotics.org>\r\n\r\n* Update tests\r\n\r\nSigned-off-by: Jacob Perron <jacob@openrobotics.org>\r\n\r\n* Remove extra line\r\n\r\nSigned-off-by: Jacob Perron <jacob@openrobotics.org>",
+      "files_changed": 3,
+      "additions": 17,
+      "deletions": 13,
+      "commit_type": "code"
+    },
+    {
+      "author": "wjwwood",
+      "date": "2019-05-08T21:24:46Z",
+      "sha": "4ed31a0d2951dc15986e78235c59691d5126739b",
+      "message": "changes to avoid deprecated API's (#115)\n\nSigned-off-by: William Woodall <william@osrfoundation.org>",
+      "files_changed": 4,
+      "additions": 10,
+      "deletions": 10,
+      "commit_type": "code"
+    },
+    {
+      "author": "aprotyas",
+      "date": "2021-12-08T22:47:47Z",
+      "sha": "9d3f18532ae4064ad81e6afc509048640c7ca86a",
+      "message": "Add start-offset play option (#931)\n\n* Add `start_offset` field to `PlayOptions`, exposed to CLI as `ros2 bag play --start-offset SECONDS`, which allows for starting playback after the beginning of a bag.\r\n\r\nSigned-off-by: Abrar Rahman Protyasha <aprotyas@u.rochester.edu>",
+      "files_changed": 5,
+      "additions": 72,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "ivanpauno",
+      "date": "2019-07-31T21:17:39Z",
+      "sha": "fd65963fc81bbcb45e8363f01ee7aa640105105f",
+      "message": "disable plugins/tests which need rmw_fastrtps_cpp if unavailable (#137)\n\nSigned-off-by: ivanpauno <ivanpauno@ekumenlabs.com>",
+      "files_changed": 5,
+      "additions": 90,
+      "deletions": 79,
+      "commit_type": "docs"
+    },
+    {
+      "author": "hidmic",
+      "date": "2019-10-21T21:13:23Z",
+      "sha": "57ee61db28c9c394cb04e2b1bb6510534ce144de",
+      "message": "Import rosbag2_transport Python module on demand (#190)\n\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>",
+      "files_changed": 3,
+      "additions": 26,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "lihui815",
+      "date": "2021-08-05T21:12:46Z",
+      "sha": "7407cd7364b7ce1eb2db22e2c3254eefb243f0fe",
+      "message": "fix sequential reader rollover-to-next-file strategy: (#839)\n\n- has_next() - calls recursively until next message OR no next file found\r\n\r\n- read_next() - calls has_next() to ensure necessary rollovers are made\r\n\r\nSigned-off-by: Sonia Jin <diegothemuich@gmail.com>",
+      "files_changed": 4,
+      "additions": 32,
+      "deletions": 32,
+      "commit_type": "code"
+    },
+    {
+      "author": "WJaworskiRobotec",
+      "date": "2021-10-14T00:04:15Z",
+      "sha": "4615fba9d7f3a385c6a8965879504d09e6961057",
+      "message": "Metadata per file info (#870)\n\n* added per-file info to metadata.yaml\r\n\r\nSigned-off-by: Wojciech Jaworski <wojciech.jaworski@robotec.ai>",
+      "files_changed": 11,
+      "additions": 117,
+      "deletions": 23,
+      "commit_type": "config"
+    },
+    {
+      "author": "adamdbrw",
+      "date": "2020-08-05T21:30:58Z",
+      "sha": "d810a4ceaa3c85cf821ac20fb14c7ed15ec2b79a",
+      "message": "performance testing packages (#442)\n\n* Init commit\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* Readme and package dependencies cleaned.\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* Benchmark launch file\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* Dummy warmup publishers and raport gen barebone\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* added todo for system usage\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* Added I/O benchmarking section \r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* config file wip\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* Pc2 worker, bench and raport dirs\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* added benchmark sample config\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* Moved scripts to a dir\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* Simple system monitor\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* Updated readme\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* added notice\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* Update readme.md\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* Mkdir fix\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* Update readme.md\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* plotting WIP script plus an example file with logs\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* Raport gen, monitor with iotop\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* Disk bw fix. Instances in raport fix.\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* Typo fix\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* Fix in memory time axis\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* Another axis fix\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* sqlite.conf for patched version of rosbag2\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* Improved plotting (added message count, count start includes fractions of second, color etc)\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* data examples\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* large examples over 10000 messages\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* Byte array worker, instantiation improvements\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* total captured in raport\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* voyager wip\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* workers refactored\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* launchfile refactor\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* More improvement and voyager case\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* removed some commented out lines\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* Update readme.md\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* moved directories of performance packages into rosbag2_performance folder\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* commented out 1000x1000 case in voyager\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* Update readme.md\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* added html template to exported files\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* First version of no-transport benchmarking\r\n- Scalable with number of producer threads\r\n- Uses queues to simulate message loss in callback queues. Unlike some other implementations allows to count loss messages.\r\n- ASCII visualisation of work (better than it sounds).\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* Improved parameters and added scripting to run batches. These were used to acquire first results\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* Update readme.md\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* Changes towards resolving WIP status\r\n- Added copyright and license to files\r\n- Split and updated READMEs\r\n- Refactored writer_benchmarking, splitting classes into separate files\r\n- added ctrl-c handling to writer_benchmarking, in script and in producers\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* lint changes\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* Removed large files from repo\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* PEP8 issues refactor, rosbag2_benchmarking package info updated.\r\n\r\nSigned-off-by: Piotr Jaroszek <piotr.jaroszek@robotec.ai>\r\n\r\n* fixed an issue with SQLite crash with cache>1 due to released message memory\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* uncrustify\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* Introduced BUILD_PERFORMANCE flag to control the package build. Use colcon build --cmake-args -DBUILD_PERFORMANCE=1.\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* linter changes and missingcopyrights\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* Update README.md\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* Removed unnecessary wording\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* Fixed bad spelling raport->report\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* Report stats from time 0\r\n\r\nSigned-off-by: Piotr Jaroszek <piotr.jaroszek@robotec.ai>\r\n\r\n* minor cleaning of writer_benchmarking package\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* removed other performance packages from PR. These will be added later and reviewed separately\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* removed accidental change\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* Applied review changes\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* enforced shared pointer in queue api, added whitespaces\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* mVar -> _var, camelCase -> snake_case\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* writing results to a csv file\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* style touchups and linters\r\n\r\nSigned-off-by: Karsten Knese <karsten@openrobotics.org>\r\n\r\n* A fix in fio command, thanks to Karsten Knese\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* Added spinning (in thread) to handle parameters\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* Typo fix\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* Applied review remarks\r\n- node name changed to reflect package name\r\n- value now in main and constructor takes name argument\r\n- benchmark folder management adjusted to changes after rebase\r\n- benchmark now remaps node (adding \"_batch\").\r\n- removed unnecessary find on rosbag2_transport\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* portable auto type to remove Windows warning. Thanks KK\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\nCo-authored-by: Piotr Jaroszek <jaroszekpiotr@gmail.com>\r\nCo-authored-by: Piotr Jaroszek <piotr.jaroszek@robotec.ai>\r\nCo-authored-by: Adam Dąbrowski <1961316-adamdbrw@users.noreply.gitlab.com>\r\nCo-authored-by: Karsten Knese <karsten@openrobotics.org>",
+      "files_changed": 10,
+      "additions": 654,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "bastianhjaeger",
+      "date": "2021-10-09T18:46:56Z",
+      "sha": "4184fe08c1a0973cf8007e52eaae721e8dda4f70",
+      "message": "Fix typo (#880)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "camm73",
+      "date": "2021-08-02T20:38:55Z",
+      "sha": "10064b157731a9d9b513e69fc409889db8e57d23",
+      "message": "Load compression and serialization choices via plugin query (#827)\n\n* For the `ros2 bag record` CLI - don't hardcode available choices, instead query for what is installed\r\n\r\nSigned-off-by: Cameron Miller <cammlle@amazon.com>",
+      "files_changed": 16,
+      "additions": 151,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "afonsofonbraga",
+      "date": "2021-09-14T18:34:44Z",
+      "sha": "4befbfa6a52fb5df70a724d43ff2d767905cfe7a",
+      "message": "Add stopRecording into rosbag2_py (#854)\n\n* Allow rosbag2_py Recorder to cancel recording - does not block Python GIL while running\r\n\r\nSigned-off-by: Emerson Knapp <eknapp@amazon.com>\r\nSigned-off-by: Afonso da Fonseca Braga <afonso.braga@engenharia.ufjf.br>",
+      "files_changed": 3,
+      "additions": 82,
+      "deletions": 10,
+      "commit_type": "code"
+    },
+    {
+      "author": "llapx",
+      "date": "2021-08-26T23:20:50Z",
+      "sha": "891e08128e2d6ff36452871abda2cd776b8a1566",
+      "message": "Fix discovery silently stops after unknown msg type is found. (#848)\n\n* Discovery silently stops after unknown msg type is found.\r\n\r\nSigned-off-by: Lei Liu <Lei.Liu.AP@sony.com>",
+      "files_changed": 6,
+      "additions": 73,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Abrar Rahman Protyasha",
+      "date": "2021-08-24T17:59:38Z",
+      "sha": "4b71b14d9da7e6441d5f89b56e613029ed072145",
+      "message": "Fixing deprecated subscriber callback warnings (#852)\n\nSigned-off-by: Abrar Rahman Protyasha <abrar@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "chapulina",
+      "date": "2021-06-30T23:51:11Z",
+      "sha": "2b77bebfe6f6bfc39d828b4cc6603b64f6d1fc27",
+      "message": "test_play_services: fail gracefully on future error (#798)\n\nSigned-off-by: Louise Poubel <louise@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 1,
+      "commit_type": "test"
+    },
+    {
+      "author": "pijaro",
+      "date": "2021-01-28T22:03:35Z",
+      "sha": "91bf0e63c54197a1dec00cbb03b65fa8259ef1e4",
+      "message": "Regex and exclude fix for rosbag recorder (#620)\n\n* Regex and exclude fix for rosbag recorder\r\n\r\nSigned-off-by: Piotr Jaroszek <piotr.jaroszek@robotec.ai>",
+      "files_changed": 2,
+      "additions": 64,
+      "deletions": 9,
+      "commit_type": "code"
+    },
+    {
+      "author": "tfoote",
+      "date": "2021-05-15T01:20:38Z",
+      "sha": "e4ba8ee4af5303f44d257d72509ace800e1f0ff6",
+      "message": "Add DCO to CONTRIBUTING.md (#770)\n\nThe DCO App was installed and validating but it wasn't documented.\r\n\r\nSigned-off-by: Tully Foote <tfoote@osrfoundation.org>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Karsten1987",
+      "date": "2018-03-29T14:54:58Z",
+      "sha": "6b51b8dd8729be47f7029200133fc51b479c3cfc",
+      "message": "Initial commit",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jhdcs",
+      "date": "2020-07-10T07:26:48Z",
+      "sha": "19946e100dc19ae631966cd61fe1bb1d88c7080d",
+      "message": "Add split by time to recording (#409)\n\n* First attempt at time splitting logic\r\nDistro A, OPSEC #2893\r\n\r\nSigned-off-by: Jacob Hassold <jhassold@dcscorp.com>\r\n\r\n* Give default value for max duration\r\nDistro A, OPSEC #2893\r\n\r\nSigned-off-by: Jacob Hassold <jhassold@dcscorp.com>\r\n\r\n* Added bagfile duration as a storage option\r\nDistro A, OPSEC #2893\r\n\r\nSigned-off-by: Jacob Hassold <jhassold@dcscorp.com>\r\n\r\n* Initialize duration off of storage optios\r\nDistro A, OPSEC #2893\r\n\r\nSigned-off-by: Jacob Hassold <jhassold@dcscorp.com>\r\n\r\n* Switch duration in StorageOptions to take int\r\nDistro A, OPSEC #2893\r\n\r\nSigned-off-by: Jacob Hassold <jhassold@dcscorp.com>\r\n\r\n* Add duration to command line interface\r\nDistro A, OPSEC #2893\r\n\r\nSigned-off-by: Jacob Hassold <jhassold@dcscorp.com>\r\n\r\n* Suppress lint warning\r\nDistro A, OPSEC #2893\r\n\r\nSigned-off-by: Jacob Hassold <jhassold@dcscorp.com>\r\n\r\n* Add missing K parameter to the parsing string\r\nDistro A, OPSEC #2893\r\n\r\nSigned-off-by: Jacob Hassold <jhassold@dcscorp.com>\r\n\r\n* Fix typo\r\nDistro A, OPSEC #2893\r\n\r\nSigned-off-by: Jacob Hassold <jhassold@dcscorp.com>\r\n\r\n* Switch duration measurement to seconds\r\nDistro A, OPSEC #2893\r\n\r\nSigned-off-by: Jacob Hassold <jhassold@dcscorp.com>\r\n\r\n* Get project to compile again\r\nDistro A, OPSEC #2893\r\n\r\nSigned-off-by: Jacob Hassold <jhassold@dcscorp.com>\r\n\r\n* Change logic to allow simultaneous split modes\r\nDistro A, OPSEC #2893\r\n\r\nSigned-off-by: Jacob Hassold <jhassold@dcscorp.com>\r\n\r\n* Clarifying help comments on splitting behavior\r\nDistro A, OPSEC #2893\r\n\r\nSigned-off-by: Jacob Hassold <jhassold@dcscorp.com>\r\n\r\n* Fix typo\r\nDistro A, OPSEC #2893\r\n\r\nSigned-off-by: Jacob Hassold <jhassold@dcscorp.com>\r\n\r\n* Properly split by time\r\nDistro A, OPSEC #2893\r\n\r\nSigned-off-by: Jacob Hassold <jhassold@dcscorp.com>\r\n\r\n* Initial implementation of duration split test\r\nDistro A, OPSEC #2893\r\n\r\nSigned-off-by: Jacob Hassold <jhassold@dcscorp.com>\r\n\r\n* Linting whitespace\r\nDistro A, OPSEC #2893\r\n\r\nSigned-off-by: Jacob Hassold <jhassold@dcscorp.com>\r\n\r\n* Move curly brace for lint\r\nDistro A, OPSEC #2893\r\n\r\nSigned-off-by: Jacob Hassold <jhassold@dcscorp.com>\r\n\r\n* Remove magic constant\r\nDistro A, OPSEC #2893\r\n\r\nSigned-off-by: Jacob Hassold <jhassold@dcscorp.com>\r\n\r\n* Finally found and fixed unit error\r\nDistro A, OPSEC #2893\r\n\r\nSigned-off-by: Jacob Hassold <jhassold@dcscorp.com>\r\n\r\n* Force starting_time to be a system_clock time_point\r\nDistro A, OPSEC #2893\r\n\r\nSigned-off-by: Jacob Hassold <jhassold@dcscorp.com>\r\n\r\n* Change another high_resolution clock instance\r\nDistro A, OPSEC #2893\r\n\r\nSigned-off-by: Jacob Hassold <jhassold@dcscorp.com>\r\n\r\n* Convert everything to steady_clock\r\nDistro A, OPSEC #2893\r\n\r\nSigned-off-by: Jacob Hassold <jhassold@dcscorp.com>\r\n\r\n* Convert everything to use high_resolution_clock\r\nDistro A, OPSEC #2893\r\n\r\nSigned-off-by: Jacob Hassold <jhassold@dcscorp.com>\r\n\r\n* Switch Windows testing code to newer version\r\nDistro A, OPSEC #2893\r\n\r\nSigned-off-by: Jacob Hassold <jhassold@dcscorp.com>",
+      "files_changed": 8,
+      "additions": 110,
+      "deletions": 5,
+      "commit_type": "docs"
+    },
+    {
+      "author": "asorbini",
+      "date": "2021-03-11T17:50:03Z",
+      "sha": "f5a5a48c63ec4beb181b7ce5ed9963aa5cdb523f",
+      "message": "Add support for rmw_connextdds (#671)\n\nSigned-off-by: Andrea Sorbini <asorbini@rti.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "hexonxons",
+      "date": "2021-02-12T18:54:35Z",
+      "sha": "ffb73b177ec36f598fb1dc0941c50ee072163589",
+      "message": "Fix --topics flag for ros2 bag play being ignored for all bags after the first one. (#619)\n\n* Fix --topics flag for ros2 bag play being ignored for all bags after the first one.\r\n\r\nSigned-off-by: Aleksandr Rozhdestvenskii <hexonxons@gmail.com>",
+      "files_changed": 3,
+      "additions": 67,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "pjreed",
+      "date": "2020-07-13T22:51:25Z",
+      "sha": "9856f5bdc7db1fe9a40d40592ba5a38fed22aab3",
+      "message": "Add per-message ZSTD compression (#418)\n\n* Add per-message ZSTD compression\r\n\r\nThis implements the per-messages compression and decompression\r\nfunctions for the ZSTD compressor and also adds unit tests\r\nfor them.\r\n\r\nDistro A, OPSEC #2893\r\n\r\nSigned-off-by: P. J. Reed <preed@swri.org>",
+      "files_changed": 5,
+      "additions": 213,
+      "deletions": 15,
+      "commit_type": "code"
+    },
+    {
+      "author": "jdlangs",
+      "date": "2021-01-05T01:16:12Z",
+      "sha": "64a39abef5c5a512be5a29b3c9539db368eea2a2",
+      "message": "Use std::filesystem compliant non-member `exists` function for path object (#593)\n\nSigned-off-by: Josh Langsfeld <josh.langsfeld@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Chen Lihui",
+      "date": "2020-12-29T23:54:25Z",
+      "sha": "f53435fe7304840d83e8b6fc7213b54d35a4932c",
+      "message": "Fixed playing if unknown message types exist (#592)\n\n1. play a specific known message type even if some unknown types exist.\r\n2. add a warning message while a message type library not exist.\r\n\r\nSigned-off-by: Chen Lihui <lihui.chen@sony.com>",
+      "files_changed": 3,
+      "additions": 201,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "Michael Jeronimo",
+      "date": "2020-10-07T23:28:59Z",
+      "sha": "3dc568bce157b872137e46eb1fb3aff388157096",
+      "message": "Update the package.xml files with the latest Open Robotics maintainers (#535)\n\nSigned-off-by: Michael Jeronimo <michael.jeronimo@openrobotics.org>",
+      "files_changed": 15,
+      "additions": 20,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "Stapelzeiger",
+      "date": "2020-10-21T18:44:17Z",
+      "sha": "700817c42f1bbc26ced79aca2186094350c8d1be",
+      "message": "Mutex around writer access in recorder (#491)\n\n* Mutex around writer access in recorder\r\n\r\nSigned-off-by: Patrick Spieler <stapelzeiger@gmail.com>\r\n\r\n* mutex in rosbag2_cpp writer for storage access\r\n\r\nSigned-off-by: Patrick Spieler <stapelzeiger@gmail.com>\r\n\r\n* Revert \"Mutex around writer access in recorder\"\r\n\r\nThis reverts commit 714141c338699dd546d4d607bc6edfaaa6c96aa8.\r\n\r\nSigned-off-by: Patrick Spieler <stapelzeiger@gmail.com>\r\n\r\n* alphabetical include order\r\n\r\nSigned-off-by: Patrick Spieler <stapelzeiger@gmail.com>",
+      "files_changed": 2,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "jaisontj",
+      "date": "2020-09-22T23:53:01Z",
+      "sha": "9b72b4aacf0971cc9edd1771ad95b68e71e84568",
+      "message": "[ros2bag test_record] Gets rid of time.sleep and move to using command.wait_for_output (#525)\n\n* Uses bag_command.wait_for_output with expected string instead of\r\ntime.sleep in tests\r\n\r\nSigned-off-by: Jaison Titus <jaisontj@amazon.com>\r\n\r\n* Fixes code style errors\r\n\r\nSigned-off-by: Jaison Titus <jaisontj@amazon.com>\r\n\r\n* Moves to asserting expected output match outside of the process context\r\nto account for cases where wait_for_output is maybe called after the\r\nexpected output is already printed.\r\n\r\nSigned-off-by: Jaison Titus <jaisontj@amazon.com>\r\n\r\n* Defines timeout with variables and better error messages for failed\r\ntests.\r\n\r\nSigned-off-by: Jaison Titus <jaisontj@amazon.com>\r\n\r\n* Fixes flake8 errors\r\n\r\nSigned-off-by: Jaison Titus <jaisontj@amazon.com>",
+      "files_changed": 1,
+      "additions": 36,
+      "deletions": 18,
+      "commit_type": "test"
+    },
+    {
+      "author": "dirk-thomas",
+      "date": "2019-05-03T00:09:41Z",
+      "sha": "ed5a1bcc5f0ddf584a88287173517b71b6bbc7e4",
+      "message": "fix logging signature (#107)\n\nSigned-off-by: Dirk Thomas <dirk-thomas@users.noreply.github.com>",
+      "files_changed": 5,
+      "additions": 20,
+      "deletions": 20,
+      "commit_type": "ci"
+    },
+    {
+      "author": "Anas Abou Allaban",
+      "date": "2019-11-26T17:53:02Z",
+      "sha": "adf4abfdd71a7821e03e9d6ba68f3f1cd47fae76",
+      "message": "Create new compression package\n\nSigned-off-by: Anas Abou Allaban <allabana@amazon.com>",
+      "files_changed": 2,
+      "additions": 43,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "dabonnie",
+      "date": "2020-08-05T17:38:20Z",
+      "sha": "a5b44ebeb0bfbd029681c0b6590089f65bc627cc",
+      "message": "Fix exception thrown given invalid arguments with compression enabled (#488)\n\n* Remove exception throw in dtor\r\nUpdate logging errors to avoid duplication\r\n\r\nSigned-off-by: Devin Bonnie <dbbonnie@amazon.com>\r\n\r\n* Cleanup reset logic\r\nAdd reset documentation\r\n\r\nSigned-off-by: Devin Bonnie <dbbonnie@amazon.com>\r\n\r\n* Fix cpplint error\r\n\r\nSigned-off-by: Devin Bonnie <dbbonnie@amazon.com>\r\n\r\n* Fix docstring\r\n\r\nSigned-off-by: Devin Bonnie <dbbonnie@amazon.com>",
+      "files_changed": 3,
+      "additions": 9,
+      "deletions": 8,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mabelzhang",
+      "date": "2020-03-19T19:36:10Z",
+      "sha": "bd7cf428052679985302c5d4545875d5d50a7c73",
+      "message": "Add playback rate command line arg (#304)\n\n* add playback rate command line arg\r\n\r\nSigned-off-by: Mabel Zhang <mabel@openrobotics.org>\r\n\r\n* uncrustify\r\n\r\nSigned-off-by: Mabel Zhang <mabel@openrobotics.org>\r\n\r\n* add range check for rate; rename rate flag; add tests\r\n\r\nSigned-off-by: Mabel Zhang <mabel@openrobotics.org>\r\n\r\n* fix flake8\r\n\r\nSigned-off-by: Mabel Zhang <mabel@openrobotics.org>\r\n\r\n* fix uncrustify\r\n\r\nSigned-off-by: Mabel Zhang <mabel@openrobotics.org>\r\n\r\n* fix windows msbuild warning\r\n\r\nSigned-off-by: Mabel Zhang <mabel@openrobotics.org>",
+      "files_changed": 6,
+      "additions": 128,
+      "deletions": 11,
+      "commit_type": "code"
+    },
+    {
+      "author": "jikawa-az",
+      "date": "2020-08-05T03:07:36Z",
+      "sha": "97bf49b00404a2a6ed2a1002b89a07003caac08b",
+      "message": "Validate QoS profile values are not negative. (#483)\n\n* add negative check to init py\r\n\r\nSigned-off-by: Jesse Ikawa <jikawa@amazon.com>\r\n\r\n* add unit test\r\n\r\nSigned-off-by: Jesse Ikawa <jikawa@amazon.com>\r\n\r\n* modify unit test\r\n\r\nSigned-off-by: Jesse Ikawa <jikawa@amazon.com>\r\n\r\n* revert test_play\r\n\r\nSigned-off-by: Jesse Ikawa <jikawa@amazon.com>\r\n\r\n* typo string to int\r\n\r\nSigned-off-by: Jesse Ikawa <jikawa@amazon.com>\r\n\r\n* add history value to unit tests\r\n\r\nSigned-off-by: Jesse Ikawa <jikawa@amazon.com>\r\n\r\n* add validation to duration keys\r\n\r\nSigned-off-by: Jesse Ikawa <jikawa@amazon.com>\r\n\r\n* modify duration validation\r\n\r\nSigned-off-by: Jesse Ikawa <jikawa@amazon.com>\r\n\r\n* fix syntax\r\n\r\nSigned-off-by: Jesse Ikawa <jikawa@amazon.com>\r\n\r\n* modify duration validation\r\n\r\nSigned-off-by: Jesse Ikawa <jikawa@amazon.com>\r\n\r\n* fix syntax\r\n\r\nSigned-off-by: Jesse Ikawa <jikawa@amazon.com>\r\n\r\n* modify comparison\r\n\r\nSigned-off-by: Jesse Ikawa <jikawa@amazon.com>\r\n\r\n* fix syntax\r\n\r\nSigned-off-by: Jesse Ikawa <jikawa@amazon.com>\r\n\r\n* modify style\r\n\r\nSigned-off-by: Jesse Ikawa <jikawa@amazon.com>\r\n\r\n* modify style\r\n\r\nSigned-off-by: Jesse Ikawa <jikawa@amazon.com>",
+      "files_changed": 2,
+      "additions": 19,
+      "deletions": 0,
+      "commit_type": "test"
+    },
+    {
+      "author": "Marwan99",
+      "date": "2020-07-21T22:04:57Z",
+      "sha": "d460c1f837a0a3030c26c45c9f563ee966ddb568",
+      "message": "Adding db directory creation to rosbag2_cpp (#450)\n\n* added db directory creation to storage factory\r\n\r\nSigned-off-by: Marwan Taher <marokhaled99@gmail.com>\r\n\r\n* moved db directory creation to rosbag2_cpp\r\n\r\nSigned-off-by: Marwan Taher <marokhaled99@gmail.com>\r\n\r\n* rasing exception if dir already exists\r\n\r\nSigned-off-by: Marwan Taher <marokhaled99@gmail.com>\r\n\r\n* removed dir creation from record.py, added dir creation to sequential_compression_writer and refactored dir creation in sequential_writer\r\n\r\nSigned-off-by: Marwan Taher <marokhaled99@gmail.com>\r\n\r\n* fixed failing tests\r\n\r\nSigned-off-by: Marwan Taher <marokhaled99@gmail.com>\r\n\r\n* fixing review comments\r\n\r\nSigned-off-by: Marwan Taher <marokhaled99@gmail.com>\r\n\r\n* Apply suggestions from code review\r\n\r\nCo-authored-by: Karsten Knese <Karsten1987@users.noreply.github.com>",
+      "files_changed": 5,
+      "additions": 39,
+      "deletions": 5,
+      "commit_type": "ci"
+    },
+    {
+      "author": "zmichaels11",
+      "date": "2019-10-08T19:52:24Z",
+      "sha": "ced66c6741cc9769dbddcad6a67143f69c324a54",
+      "message": "Add error checking on SqliteWrapper deconstructor (#169)\n\n* Add error checking on SqliteWrapper deconstructor\r\n\r\nSigned-off-by: Zachary Michaels <zmichaels11@gmail.com>\r\n\r\n* Change + to << for log error and add const to rc\r\n\r\nSigned-off-by: Zachary Michaels <zmichaels11@gmail.com>\r\n\r\n* Add database URI to error logging if database cannot be closed.\r\n\r\nSigned-off-by: Zachary Michaels <zmichaels11@gmail.com>\r\n\r\n* Fix indentation for uncrustify\r\n\r\nSigned-off-by: Zachary Michaels <zmichaels11@gmail.com>\r\n\r\n* Remove usage std::string from class definition\r\n\r\nSigned-off-by: Zachary Michaels <zmichaels11@gmail.com>",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "thomas-moulard",
+      "date": "2019-10-23T03:37:25Z",
+      "sha": "816d45ddaaab6967fcfceafa59e6f11d1d644b2f",
+      "message": "Fix flake8 errors and add missing lint tests (#194)\n\nSigned-off-by: Thomas Moulard <tmoulard@amazon.com>",
+      "files_changed": 4,
+      "additions": 73,
+      "deletions": 7,
+      "commit_type": "code"
+    },
+    {
+      "author": "ketatam",
+      "date": "2020-04-20T19:02:38Z",
+      "sha": "12c0cc6d783970d2e7570cc5d25d2b49695d411c",
+      "message": "Add loop option to rosbag play (#361)\n\n* add loop option to rosbag play\r\n\r\nSigned-off-by: ketatam <mohamed.amine.ketata@tngtech.com>",
+      "files_changed": 9,
+      "additions": 156,
+      "deletions": 26,
+      "commit_type": "docs"
+    },
+    {
+      "author": "sriramster",
+      "date": "2019-05-21T00:06:38Z",
+      "sha": "dcd65a667508f9012fb872e1708c129b0926796d",
+      "message": "Fixes an init race condition (#93)\n\n* This could probably be a race condition, for ex: When we've create a subscriber in the API, and the subscriber has the data already available in the callback (Cause of existing publishers) the db entry for the particular topic would not be availalble, which in turn returns an SqliteException. This is cause write_->create_topic() call is where we add the db entry for a particular topic. And, this leads to crashing before any recording.\r\n\r\nLocally I solved it by adding the db entry first, and if\r\ncreate_subscription fails, remove the topic entry from the db and also\r\nerase the subscription.\r\n\r\nSigned-off-by: Sriram Raghunathan <rsriram7@visteon.com>\r\n\r\n* Fix comments for pull request https://github.com/ros2/rosbag2/pull/93\r\n\r\nSigned-off-by: Sriram Raghunathan <rsriram7@visteon.com>\r\n\r\n* Added unit test case for remove_topics from db\r\n\r\nSigned-off-by: Sriram Raghunathan <rsriram7@visteon.com>\r\n\r\n* Fix unit tests failing by adding dependent test macros\r\n\r\nSigned-off-by: Sriram Raghunathan <rsriram7@visteon.com>\r\n\r\n* Fixes the linter errors",
+      "files_changed": 10,
+      "additions": 67,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "brawner",
+      "date": "2020-03-18T00:41:53Z",
+      "sha": "4bef4554bc3d09f89bd3d3c12c4c2fbbde6b3bb9",
+      "message": "Add project() to sqlite3_cmakelists.txt (#324)\n\n* Add project() to sqlite3_cmakelists.txt\r\n\r\nSigned-off-by: Stephen Brawner <brawner@gmail.com>\r\n\r\n* PR fixup\r\n\r\nSigned-off-by: Stephen Brawner <brawner@gmail.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "carlossvg",
+      "date": "2020-03-09T17:57:47Z",
+      "sha": "dc364ae3d0dadfa0adc8393f28de02fcc460ed53",
+      "message": "Fix race condition in transport recorder (#303)\n\n* Fix race condition in transport recorder\r\n\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\nCo-authored-by: Michael Orlov <orlovml@mail.ru>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "cardboardcode",
+      "date": "2020-01-31T16:05:04Z",
+      "sha": "430c4e5d50da96fba10208c8db9d837aeefb7d39",
+      "message": "Fixed #266 with updated documentation (#272)\n\nSigned-off-by: Bey Hao Yun <beyhy@artc.a-star.edu.sg>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Prajakta Gokhale",
+      "date": "2019-07-18T18:00:29Z",
+      "sha": "4bb9d892154c15fc2670891178ede003f82c6a46",
+      "message": "Fix test failures on armhf (#135)\n\n* Fix test failures on armhf\r\n\r\nFixes for unit test failures from armhf builds.\r\n\r\nSigned-off-by: Prajakta Gokhale <prajaktg@amazon.com>\r\n\r\n* Fix rosbag2_tests test failures on armhf\r\n\r\nSigned-off-by: Prajakta Gokhale <prajaktg@amazon.com>\r\n\r\n* Change message_count and bag_size to uint64_t\r\n\r\nSigned-off-by: Prajakta Gokhale <prajaktg@amazon.com>",
+      "files_changed": 5,
+      "additions": 16,
+      "deletions": 16,
+      "commit_type": "code"
+    },
+    {
+      "author": "BMarchi",
+      "date": "2019-11-18T17:50:35Z",
+      "sha": "c610c93b4fce6edef62b870d08880a1b5740e5f3",
+      "message": "Delay subscriber asynchronous creation for opensplice in test_rosbag2_node (#196)\n\nSigned-off-by: Brian Ezequiel Marchi <brian.marchi65@gmail.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "test"
+    },
+    {
+      "author": "rotu",
+      "date": "2019-10-21T23:22:15Z",
+      "sha": "1e3ba4b472dce525878a42b13bb7d9f8f097c11a",
+      "message": "Only fail on unexpected `/string_topic` messages (#178)\n\nI found that this test was failing on CycloneDDS because some unrelated node was publishing on the `parameter_events` topic, and these were getting caught up in the bag, and failing the test.\r\n\r\nSigned-off-by: Dan Rose <dan@digilabs.io>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "alsora",
+      "date": "2019-10-21T20:47:40Z",
+      "sha": "b099801d13b38d614d7036add90860a930d06b48",
+      "message": "Fix API for new Intra-Process Communication (#143)\n\n* fix api for new ipc\r\n\r\nSigned-off-by: Soragna, Alberto <alberto.soragna@gmail.com>\r\n\r\n* Update generic_publisher.hpp\r\n\r\nSigned-off-by: Soragna, Alberto <alberto.soragna@gmail.com>\r\n\r\n* added missing semicolumn\r\n\r\nSigned-off-by: Soragna, Alberto <alberto.soragna@gmail.com>\r\n\r\n* fix due to change in rclcpp's API\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* remove vestigial comment\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>",
+      "files_changed": 4,
+      "additions": 6,
+      "deletions": 26,
+      "commit_type": "docs"
+    },
+    {
+      "author": "evshary",
+      "date": "2019-10-20T04:48:45Z",
+      "sha": "6a5c50e45cefe78dd310b90ccc3231de2906b96c",
+      "message": "Fix the test failure of wrong messages count (#165)\n\nGenerate rclcpp::Node before start_recording since rclcpp::Node will set\r\nparameters of use_sim_time and publish message to parameter_events.\r\nThis will cause the wrong messages count in the test.\r\n\r\nSigned-off-by: evshary <evshary@gmail.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "ruffsl",
+      "date": "2019-09-15T16:49:10Z",
+      "sha": "0b182f16224e672763bd268eed1db0eca8c590e6",
+      "message": "install package manifest (#161)\n\nSigned-off-by: ruffsl <roxfoxpox@gmail.com>",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "davidhodo",
+      "date": "2019-06-11T03:48:07Z",
+      "sha": "2ad74a4d7a81bcb82e084d5d26c60415c644766e",
+      "message": "Add support for parsing middle module name from type (#128)\n\n* Add support for parsing middle module name from type\r\nAllows support for message types generated from both msg and idl files.\r\n\r\nSigned-off-by: David Hodo <david.hodo@is4s.com>\r\n\r\n* test fixups and default behavior\r\n\r\nSigned-off-by: Karsten Knese <karsten@openrobotics.org>\r\n\r\n* deprecate legacy type extraction and add new\r\n\r\nSigned-off-by: David Hodo <david.hodo@is4s.com>\r\n\r\n* use pragma to avoid deprecation in test\r\n\r\nSigned-off-by: Karsten Knese <karsten@openrobotics.org>",
+      "files_changed": 3,
+      "additions": 79,
+      "deletions": 11,
+      "commit_type": "code"
+    },
+    {
+      "author": "Felix-El",
+      "date": "2019-05-21T00:08:28Z",
+      "sha": "c9a183cdb24948fa0c76a1d53be57dd3dee9cafa",
+      "message": "Indexing of messages.timestamp to avoid runtime-copy. (#121)\n\nExtended SqliteStorage::initialize() to add an index for the message table's timestamp column.\r\nWithout this, the ORDER BY query in prepare_for_reading() causes expensive table duplication,\r\nwhich also has potential for out-of-disk or out-of-memory errors.",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "sagniknitr",
+      "date": "2019-05-03T00:36:20Z",
+      "sha": "241fcdd1afdbe889de6209a2ed7af065fccfd7de",
+      "message": "Fix issue with ros2bag record python frontend (#100)\n\n* Update record.py\r\n\r\nAdd _subparser member variable ( which is being called at line number 94). Otherwise it causes segmentation fault on calling ros2 bag record.\r\n\r\nSigned-off-by: Sagnik <basusagnik1995@gmail.com>\r\n\r\n* Update record.py\r\n\r\nAdd type info to parser\r\n\r\nSigned-off-by: Sagnik <basusagnik1995@gmail.com>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "AAlon",
+      "date": "2019-02-12T19:07:36Z",
+      "sha": "3397b4675650595ed36e1dbd4b5569a4710bfc24",
+      "message": "Consistent node naming across ros2cli tools (#60)\n\n* Passing CLI_NODE_NAME_PREFIX from ros2cli and using it to start the nodes with appropriate naming.\r\n\r\n* Passing CLI_NODE_NAME_PREFIX from ros2cli and using it to start the nodes with appropriate naming.\r\n\r\n* Fixing linter errors.\r\n\r\n* Renaming CLI_NODE_NAME_PREFIX -> NODE_NAME_PREFIX",
+      "files_changed": 7,
+      "additions": 29,
+      "deletions": 10,
+      "commit_type": "code"
+    },
+    {
+      "author": "anhosi",
+      "date": "2018-09-05T16:39:43Z",
+      "sha": "c23d188a664f7328d576692593b0d709d6e8598b",
+      "message": "Record and play multiple topics (#27)\n\n* GH-61 Read topic directly from message when playing and allow to play multiple topics\r\n\r\n* GH-61 Add test for SqliteStorage and update old ones\r\n\r\n* GH-62 Extend function to poll for any number of specified topics\r\n\r\n* GH-62 Allow subscription to several topics\r\n\r\n* GH-61 Obtain the topic name directly from the database\r\n\r\n- Uses a JOIN instead of mapping the topic_id to the name in code\r\n\r\n* GH-61 Cache read row in result iterator\r\n\r\nThis allows repeated dereferencing on same row without quering the\r\ndatabase again.\r\n\r\n* GH-62 Change demo-record to allow specifying multiple topics\r\n\r\n* GH-62 Add test to write non-string topic + refactoring\r\n\r\n* GH-62 Add test for subscription to multiple topics\r\n\r\n* GH-62 Cleanup\r\n\r\n* GH-62 Simplify test setup\r\n\r\n* GH-61 Cleanup\r\n\r\n* GH-61 consolidate storage integration test\r\n\r\n* GH-62 Consolidate write integration tests\r\n\r\n* GH-61 enhance read integration test to check multiple topics\r\n\r\n* GH-62 Improve rosbag integration test\r\n\r\n* GH-62: Polish rosbag2_rosbag_node_test\r\n\r\n* GH-62 Fix cpplint\r\n\r\n* GH-62 Fix memory leak in rosbag helper\r\n\r\n* GH-62 Cleanup of subscriptions\r\n\r\n* GH-62 do not use flaky timers in rosbag2_write_integration_test\r\n\r\n* GH-62 Use rmw_serialize_message_t consistently in test helper classes\r\n\r\n* GH-73 Use test_msgs in read_integration_test\r\n\r\n* GH-26 Cleanup: fix alphabetic orderung",
+      "files_changed": 23,
+      "additions": 629,
+      "deletions": 395,
+      "commit_type": "test"
+    },
+    {
+      "author": "Martin-Idel-SI",
+      "date": "2018-09-03T23:28:17Z",
+      "sha": "3f77b33a4a7e54078c56f189eebeb60e6cb6fef4",
+      "message": "Use serialized message directly (#24)\n\n* Adapt new interface\r\n\r\n* Try to write and read rcutils_char_array_t BLOBs in sqlite\r\n\r\n* Add simple test for arbitrary char ptr\r\n\r\n* Refactor SqliteWrapper and add tests\r\n\r\n* Write and read actual timestamp from serialized message and add relative tests\r\n\r\n* Add SqliteStatementWrapper class and refactor SqliteStorage and SqliteWrapper\r\n\r\n* Refactor test fixture\r\n\r\n* GH-50 Assert message content in write_integration_test, and remove TODOs\r\n\r\n* GH-50 Remove sqlite_storage_plugin unit tests\r\n\r\n* GH-50 Refactor SqliteStatements and SqliteStorage\r\n\r\n* GH-50 Fix build after rebase\r\n\r\n* GH-50 Make has_next() method no more const\r\n\r\n* GH-52 Extend statement wrapper with a generic bind\r\n\r\n* GH-50 Refactor after rebase\r\n\r\n* GH-59 cleanup db interface\r\n\r\n- Remove virtual on methods as this was added only for unit tests. We\r\n  decided to use only integration tests for the sqlite plugins.\r\n- Changes semantics of SqliteStatement: represents always a prepared\r\n  statement if not null.\r\n- Ensures that a SqliteStatementWrapper cannot be copied and does not\r\n  publicly expose its sqlite_stmt as this would cause memory corruption.\r\n\r\n* GH-59 Introduce general read interface for sqlite statements\r\n\r\n- Uses a std::tuple for row data\r\n- Exposes an iterator interface for the query result\r\n\r\n* GH-59 Cleanup: remove unused files\r\n\r\n* GH-59 make sqlite interface fluent\r\n\r\n* GH-59 move creation of serialized message to rosbag2_storage\r\n\r\nThis is not storage plugin specific but will be needed by most (if\r\nnot all) plugins.\r\n\r\n* Change rcutil_char_array_t to rmw_serialized_message_t in subscriber\r\n\r\n* Remove debugging output in test",
+      "files_changed": 25,
+      "additions": 940,
+      "deletions": 201,
+      "commit_type": "docs"
+    },
+    {
+      "author": "botteroa-si",
+      "date": "2018-07-25T00:32:38Z",
+      "sha": "5876645c5e750b0e4a68ca3a703e12d9c2191360",
+      "message": "(demo, sqlite3) First working rosbag2 implementation (#6)\n\n* First implementation of writer\r\n\r\n* Extract storage interface and sqlite3 implementation\r\n\r\n* Add test for sqlite storage\r\n\r\n* Split main() and rosbag2::record()\r\n\r\n* Add close() method to Storage\r\n\r\n* Add getMessage() method and refactor test\r\n\r\n* Refactor SqliteStorage constructor and open()\r\n\r\n* Add linters\r\n\r\n* Fix uncrustify\r\n\r\n* Fix cpplint\r\n\r\n* Specify test working directory\r\n\r\n* Better error handling\r\n\r\n* Use gmock matchers for assertions\r\n\r\n* Add test fixture for SqliteStorage tests\r\n\r\n* Extract message retrieval in tests into separate method\r\n\r\n* Add integration test for rosbag2::record()\r\n\r\n* Add ignore files for empty packages\r\n\r\n* Introduce create() method and refactor open()\r\n\r\n* Use shared pointer of Storage instead of SqliteStorage\r\n\r\n* Remove getDatabaseHandle() method\r\n\r\n* Fix uncrustify\r\n\r\n* Improve storage interface and add storage factory\r\n\r\n* Remove need of sleep() from integration test by usage of std::future\r\n\r\n* Move deletion of test database from fixture constructor to destructor\r\n\r\n* Use sqlite3 directly in intergration test instead of own sqlite wrapper\r\n\r\n* Move rosbag2::record() into Rosbag2 class\r\n\r\n* Use the test name as database file name\r\n\r\n* Add build instructions to README\r\n\r\n* GH-37 Rename camelCase methods to snake_case\r\n\r\n* Use common test fixture\r\n\r\n* Add RAII wrapper for sqlite API\r\n\r\n* Mock away sqlite from sqlite_storage test\r\n\r\n* Use more reasonable assert\r\n\r\n* Add test\r\n\r\n* Add virtual destructor to WritableStorage\r\n\r\n* Use file_name instead of database_name in StorageFactory\r\n\r\n* Implement saving of test files in a tmp directory for linux/Mac\r\n\r\n* Try to implement saving of test files in a tmp directory for Windows\r\n\r\n* Write and use proper gmock SqliteWrappe mock\r\n\r\n* Refactor integration test and get rid of promise/future where possible\r\n\r\n* Throw exception in resource aquisition constructors\r\n\r\n* Make SqliteWrapper destructor virtual\r\n\r\n* Refactor test fixture and update SqliteWrapper mock\r\n\r\n* Fix warning when moving a temporary object\r\n\r\n* GH-38 Refactor integration test\r\n\r\n* GH-38 Get rid of superfluous string constructor in emplace_back()\r\n\r\n* GH-38 Assert also execute_query() argument in sqlite_storage_test\r\n\r\n* GH-38 add StorageFactory test\r\n\r\n* GH-38 Refactor rosbag2 Test Fixture\r\n\r\n* GH-40 Add first implementation of a rosbag reader and publisher\r\n\r\n* GH-40 Add StorageFactory test when reading non-existing file\r\n\r\n* GH-40 Fix uncrustify\r\n\r\n* GH-40 Minor cleanup of CMakeLists\r\n\r\n* GH-40 Wrap sqlite statements\r\n\r\n* GH-40 Remove superfluous import\r\n\r\n* GH-40 Use better include\r\n\r\n* GH-40 Add play integration test\r\n\r\n* GH-40 Fix Warning when moving a temporary object in reading\r\n\r\n* GH-40 Initialize database pointer to nullpointer\r\n\r\n* GH-40 Fix reader integration test\r\n\r\n* GH-40 Polish storage wrapper\r\n\r\n* Revert \"GH-40: Wrap sqlite statements\"\r\n\r\n* GH-38 Fix Test Fixture after rebase\r\n\r\n* GH-38 Refactor read_integration_test and refix Windows conversion warning\r\n\r\n* GH-38 Add StorageFactory test\r\n\r\n* Simplify storage factory test\r\n\r\n* GH-38 Try to fix flaky test\r\n\r\n* GH-38 Move rclcpp::shutdown() at the end\r\n\r\n* GH-41 Fix windows warning due to virtual explicit operator bool\r\n\r\n* GH-41 Use sqlite3 vendor package in rosbag2\r\n\r\n* GH-41 Stop linking tests to sqlite\r\n\r\n* GH-41 Fix test fixture on Windows\r\n\r\n* GH-41 Cleanup test fixture includes\r\n\r\n* GH-41 Print test database name\r\n\r\n* GH-41 Correctly determine temp dir on Windows\r\n\r\n* GH-41 Show error message on sqlite_open failure\r\n\r\n* GH-41 Actually create temp dir on Windows\r\n\r\n* GH-41 Fix bool conversion warning in VS2015 build\r\n\r\n* Fix CMakeLists.txt after rebase\r\n\r\n* GH-40 Implement workouround to fix flaky test\r\n\r\n* Update package.xml\r\n\r\n* Add gtest test dependencies to package.xml\r\n\r\n* GH-40 Move to sqlite3_storage_plugin folder\r\n\r\n- The separation into the intended structure and plugin apis is not\r\n  there yet. However, most code will stay in the storage plugin for\r\n  sqlite3 file.\r\n- Proper separation of this code into storage plugin and rosbag layer\r\n  will be done in https://github.com/bsinno/aos-rosbag2/issues/5.\r\n\r\n* GH-40 Add TODO comments and small cleanup",
+      "files_changed": 25,
+      "additions": 1261,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "greimela-si",
+      "date": "2018-10-17T21:48:23Z",
+      "sha": "e395391629c5fbf1002106b46b1d7584f0970f15",
+      "message": "Use directory as bagfile and add additonal record options (#43)\n\n* Use directory instead of file to reference bag files\r\n\r\n* Extract process execution helper from e2e tests\r\n\r\n* Prefix autogenerated bag name with `rosbag2_`\r\n\r\n* GH-109 Improve e2e-test process handling on linux\r\n\r\n- Use SIGINT instead of SIGTERM which is the correct equivalent to\r\n  pressing Ctrl-C within a shell\r\n- Use exec instead of system inside the forked test child process.\r\n- Check the return code of the child after the waitpid instead of\r\n  after the call to system.\r\nUsing system inside a child process is unnecessary as system forks\r\nagain. Whether the actual \"ros2 bag\" process was put in the same\r\nprocess group seemed to be shell dependent. Exec avoids these issues.",
+      "files_changed": 22,
+      "additions": 556,
+      "deletions": 161,
+      "commit_type": "docs"
+    },
+    {
+      "author": "René Scheibe",
+      "date": "2018-05-16T19:12:07Z",
+      "sha": "779eaaedd80dcd8384bacd8004c14898e7e1611a",
+      "message": "Benchmarks for SQLite write performance (#1)",
+      "files_changed": 39,
+      "additions": 2892,
+      "deletions": 52,
+      "commit_type": "docs"
+    }
+  ]
+}

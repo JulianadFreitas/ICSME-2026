@@ -1,0 +1,71 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T15:38:13Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "husarion",
+    "repo": "husarion_components_description"
+  },
+  "data": [
+    {
+      "author": "KmakD",
+      "date": "2025-06-09T09:56:01Z",
+      "sha": "de57d4ce172bba51360f00f3c3c63203b1ba9440",
+      "message": "Move code from ros_components_description (#1)\n\n* Move code from ros_components_description\n\n* rename file\n\n* add workflows",
+      "files_changed": 65,
+      "additions": 7309,
+      "deletions": 1,
+      "commit_type": "ci"
+    },
+    {
+      "author": "delihus",
+      "date": "2025-10-29T10:30:58Z",
+      "sha": "3aa05277702e750a6d0f3800879aebb8dfc3f6e4",
+      "message": "Replace / with _ in bridge node name (#11)\n\nSigned-off-by: Jakub Delicat <jakub.delicat@husarion.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "rafal-gorecki",
+      "date": "2025-06-26T11:04:20Z",
+      "sha": "3495ff0933cabc1437d85b152af4ffc2c77ef866",
+      "message": "Zed add CAM05 and update ZED urdf (#5)\n\n* Zed add CAM05 and update ZED urdf\n\n* pre-commit\n\n* Fix test",
+      "files_changed": 6,
+      "additions": 229,
+      "deletions": 119,
+      "commit_type": "code"
+    },
+    {
+      "author": "husarafal",
+      "date": "2025-09-18T10:19:36Z",
+      "sha": "98d0899d9a1165a0ec5061d6fba62d2919b5c6af",
+      "message": "Big clean up +  frame standarization (#9)\n\n* readme: add disclaimer that manipulators are only supported in sim\n\n* readme: add DEVs to sensor table\n\n* code style: align sensor table rows\n\n* fix teltonika URDF crash\n\n* rename unused \"name\" param in kinova to avoid confusion with component names\n\n* urdf: rename namespace arg to robot_namespace\n\n* remove all existing occurences of \"component_name\"; component_name -> component_model_name\n\n* components.urdf: remove default component names\n\n* device_namespace -> component_name\n\n* readme: update xacro params list\n\n* component-specific urdfs: remove default component names\n\n* main urdf: ns -> robot_namespace_value\n\n* macros: rename prefixes:\nns -> robot_namespace_slash\nprefix -> component_name_underscore\ndevice_ns -> component_name_slash\n\n* macros: replace the uses of ${robot_namespace}/ and ${component_name}_ or with / at the end\n\n* kinova: add robot_namespace_slash gz_frame_id prefix\n\n* macros: add default component names\n\n* REVIEWME: standarize frame names\n\n* device_namespace_prefix -> component_name_gz_prefix\n\n* remove ros2_control bug workaround\nhttps://github.com/ros-controls/ros2_control/issues/1506\n\n* replace leftover device_namespace -> component_name\n\n* main urdf: remove robot_namespace_value\n\n* kinova urdf: remove robot_name\n\n* urdfs: set default d435 and astra names to \"camera\"\n\n* Remove extra robotiq_ in name\n\n* urdf default name teltonika -> gps\n\n* revert ouster/velodyne/rplidar/zed reading frame changes\n\n* standarize astra and zed gz sensor names\n\n* fix unit tests\n\n* remove unused imports\n\n* rename teltonika frame",
+      "files_changed": 39,
+      "additions": 594,
+      "deletions": 586,
+      "commit_type": "docs"
+    },
+    {
+      "author": "BOOTCFG",
+      "date": "2025-08-06T08:38:59Z",
+      "sha": "ffc571b9fab31d87179957f4929b2f22b6ac83cd",
+      "message": "Added changelog",
+      "files_changed": 1,
+      "additions": 13,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "DominikN",
+      "date": "2025-05-19T11:04:27Z",
+      "sha": "79d60e41eb061adce1cc3376d339f615853b3945",
+      "message": "Initial commit",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "docs"
+    }
+  ]
+}

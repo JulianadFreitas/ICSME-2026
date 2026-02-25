@@ -1,0 +1,51 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T15:15:30Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "tier4",
+    "repo": "heaphook"
+  },
+  "data": [
+    {
+      "author": "chihungtzeng",
+      "date": "2024-05-28T13:35:36Z",
+      "sha": "c0b5f60a16dc204d17717c11763c30ea06a237cc",
+      "message": "Trace the call sites that make malloc/new operations. (#11)\n\nmalloc/new operations introduce indeterminism to execution time as kernel need to\r\nhandle dynamic memory allocation. This patch reveals the call sites that made\r\nthe most malloc/new. An additional python script is also created to reveal\r\ndetailed filenames and line numbers of the callers if such information is available.\r\n\r\nCo-authored-by: chtseng <chtseng@itri.org.tw>",
+      "files_changed": 4,
+      "additions": 370,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ruth561",
+      "date": "2023-11-06T06:35:32Z",
+      "sha": "22c8536bbb497c1089baa88dfdf8d36fc33812c4",
+      "message": "Separated policy and mechanism (#7)\n\n* Created the basis for replacing the GLIBC allocator\r\n\r\n* Add a usage description to the README.md\r\n\r\n* Added GlobalAllocator documents in README.md\r\n\r\n* Added description about heap tracer\r\n\r\nmodified heap tracer a little.\r\n\r\n* remove some files\r\n\r\n* put title in heaptrack graph\r\n\r\n* Add the description about test in README.md\r\n\r\n* add memalign test\r\n\r\n* make test simple\r\n\r\ndevide into test_heaphook and test_glibc\r\n\r\n* add calloc test\r\n\r\n* add posix_memalign test\r\n\r\n* add memalign test\r\n\r\n* add aligned_alloc test\r\n\r\n* add valloc test and pvalloc test\r\n\r\n* add realloc test\r\n\r\n* modified alloc_test in allocator_test\r\n\r\n* modified alloc_zeroed test in test_allocator.cpp\r\n\r\n* add realloc test in test_allocator.cpp\r\n\r\n* split CMakeLists.txt into project_utils.cmake\r\n\r\n* add multi-thread test in test_allocator.cpp\r\n\r\n* modified project_utils.cmake\r\n\r\n* implements do_get_block_size in TlsfAllocator\r\n\r\n* Implements do_alloc_zeroed in TlsfAllocator\r\n\r\n* comment out invalid args test\r\n\r\n* some outputs turned off\r\n\r\n* python3 code made flake8 compliant\r\n\r\n* Format files to pass lint test.",
+      "files_changed": 23,
+      "additions": 2321,
+      "deletions": 983,
+      "commit_type": "docs"
+    },
+    {
+      "author": "wep21",
+      "date": "2023-05-17T09:52:45Z",
+      "sha": "414575ef89f0b834ab1c44d42a208fde5a9ffba1",
+      "message": "style: apply lint (#1)\n\n* apply lint\r\n\r\nSigned-off-by: wep21 <daisuke.nishimatsu1021@gmail.com>\r\n\r\n* refactor package.xml\r\n\r\nSigned-off-by: wep21 <daisuke.nishimatsu1021@gmail.com>\r\n\r\n---------\r\n\r\nSigned-off-by: wep21 <daisuke.nishimatsu1021@gmail.com>",
+      "files_changed": 5,
+      "additions": 236,
+      "deletions": 158,
+      "commit_type": "config"
+    },
+    {
+      "author": "sykwer",
+      "date": "2023-01-15T17:21:46Z",
+      "sha": "6b7b02864906766b07a254a7ef6b7280e55784b1",
+      "message": "First malloc hook",
+      "files_changed": 4,
+      "additions": 61,
+      "deletions": 0,
+      "commit_type": "code"
+    }
+  ]
+}

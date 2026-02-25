@@ -1,0 +1,171 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T01:44:00Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "kroshu",
+    "repo": "kuka_robot_descriptions"
+  },
+  "data": [
+    {
+      "author": "pasztork",
+      "date": "2025-04-14T12:09:49Z",
+      "sha": "dcf0707cba15acac0b8ec3dca3939a7c7f2940e4",
+      "message": "Add controller_ip parameter to all KSS robots (#73)",
+      "files_changed": 21,
+      "additions": 42,
+      "deletions": 29,
+      "commit_type": "code"
+    },
+    {
+      "author": "Svastits",
+      "date": "2022-06-27T13:02:32Z",
+      "sha": "13f8ee265ae00d1ab0eee6c4f1f6e275c939b54c",
+      "message": "fix hardware interface name",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "Karnitscher",
+      "date": "2025-11-04T11:55:31Z",
+      "sha": "62257a2444689de01e1e4c691aba86832a4ada4b",
+      "message": "Gazebo support CI testing (#116)\n\n* Gazebo support CI testing\n\n* Python format correction\n\n* Python format change\n\n* Removed dependency from demo_nodes_cpp\n\n* Added test description\n\n* first review fixes\n\n* file path fixes\n\n* before_test_hook fix\n\n* changed hook to after build\n\n* before test hook added\n\n* Using another hook\n\n* syntax fix\n\n* ici hook fix\n\n* Added hook to env matrix\n\n* hook script fixes\n\n* ci hook test fix\n\n* ici hook ros fix\n\n* Python script istead of ros2 run\n\n* ros2 run different setup\n\n* pre test file relocated to src\n\n* logging for debugging\n\n* added CI logging\n\n* more detailed logging for error recognition\n\n* trying to launch gazebo in CI\n\n* trying ros2 run\n\n* different folder execution\n\n* logging changes\n\n* execution in target ws\n\n* adapting test for github CI\n\n* destined to fail\n\n* added virtual display\n\n* trying to set up a virtual display\n\n* Virtual display through CI\n\n* Trying it without gz client\n\n* added bridge config yaml\n\n* Cmake list install\n\n* Added test dependencies\n\n* should fail\n\n* README update\n\n* File fixes and comments\n\n* Format fix",
+      "files_changed": 11,
+      "additions": 615,
+      "deletions": 6,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Groebehavn",
+      "date": "2025-08-06T14:33:08Z",
+      "sha": "5fdb6668a66b8607bad1eff8f015224bd28780d8",
+      "message": "KR240-R3330 Support (#93)\n\n* KR240_R3330_Support\n\n* Add meshes\n\n* Launch file for KR240\n\n* Joint limits config\n\n* Update package.xml with maintainer\n\n* Update kr240_r3330_macro.xacro\n\n* Update README.md\n\n* Update kr240_r3330.urdf.xacro to kroshu convention\n\n* EoF corrections\n\n* Inserted to MoveIt CMakeLists.txt",
+      "files_changed": 21,
+      "additions": 2970,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "altex111",
+      "date": "2022-12-20T09:26:17Z",
+      "sha": "50f1cd28b1cdcc74685747fbdc38bf858eb3cf10",
+      "message": "remove old iisy urdf",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 291,
+      "commit_type": "code"
+    },
+    {
+      "author": "naslevente",
+      "date": "2025-06-27T08:45:39Z",
+      "sha": "506eba4c59b95313dd56fd7ae50a9aeee006cd11",
+      "message": "Add Gazebo support for Jazzy (#82)\n\n* add gazebo support for jazzy\n\n* update table and add additional instructions\n\n* add description, license, and dependencies to package xml\n\n* add kr150 r3100 robot support\n\n* update mode checks in xacro files\n\n* add kuka_gazebo dependencies\n\n* update xacros to only include gazebo file if simulation mode\n\n* fix formatting\n\n* add copyright info\n\n* pre-commit formatting fix\n\n* update unless to if in iiwa control xacro\n\n* combine gazebo mode conditionals in xacros\n\n---------\n\nCo-authored-by: levente.nas@gmail.com <sanyi.komaromi@gmail.com>",
+      "files_changed": 89,
+      "additions": 5453,
+      "deletions": 126,
+      "commit_type": "docs"
+    },
+    {
+      "author": "thettasch",
+      "date": "2025-01-28T07:42:43Z",
+      "sha": "6239c457d854479e1f2072eb266e17ee605c65f0",
+      "message": "Fix iiwa 14 dimensions (#70)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "PetoAdam",
+      "date": "2024-09-02T09:45:08Z",
+      "sha": "9825092ee9e02a965bbb10f9de8d1552a846b8ea",
+      "message": "Migrating master to Jazzy (#62)\n\n* example moveit config update for jazzy\r\n\r\n* added updated planning pipeline yamls. Note: some planning pipelines don't work without setting joint acceleration limits in the robots' joint_limits.yaml file.\r\n\r\n* updated readme, fixed trailing whitespaces on chomp_planning.yamls.\r\n\r\n* fix scaling factor typo in readme\r\n\r\n* added joint acceleration limits for all robots except for the iiwa\r\n\r\n* add updated velocity limit on joint_1 for kr210_r2700_2 in urdf\r\n\r\n* fix joint2 velocity limit for kr210r2700-2\r\n\r\n---------\r\n\r\nCo-authored-by: Áron Svastits <49677296+Svastits@users.noreply.github.com>",
+      "files_changed": 17,
+      "additions": 201,
+      "deletions": 113,
+      "commit_type": "ci"
+    },
+    {
+      "author": "Aron Svastits",
+      "date": "2023-02-20T16:07:20Z",
+      "sha": "5c1480973616656390d656ec7a15fc31eee8c4ce",
+      "message": "rviz config rename + move xacro file",
+      "files_changed": 6,
+      "additions": 47,
+      "deletions": 8,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Eugenio Bernardi",
+      "date": "2024-01-10T07:15:09Z",
+      "sha": "d9454551d8f8abb99997c6daa5e592d1879dbd5c",
+      "message": " Added a new robot model for the KUKA FORTEC family (#42)\n\n* added fortec support\r\n\r\n* update readme\r\n\r\n* moveit settings\r\n\r\n* renaming xacros\r\n\r\n* moveit xacros done\r\n\r\n* changed file path ref\r\n\r\n* renaming file\r\n\r\n* Fix flange transform in kr560_r3100_2_macro.xacro\r\n\r\nAdded a new robot model for the KUKA FORTEC family\r\n#42\r\n\r\nhttps://github.com/kroshu/kuka_robot_descriptions/pull/42#discussion_r1440587691\r\n\r\nCo-authored-by: Svastits <49677296+Svastits@users.noreply.github.com>\r\n\r\n* tool0 frame should be equivalent to the TCP\r\n\r\nFix PR comment \r\n\r\nhttps://github.com/kroshu/kuka_robot_descriptions/pull/42#discussion_r1440516921\r\n\r\nCo-authored-by: Svastits <49677296+Svastits@users.noreply.github.com>\r\n\r\n* revert rviz config\r\n\r\nReverting to using kuka_resources pkg to load rviz2 default configs: https://github.com/kroshu/kuka_robot_descriptions/pull/42#discussion_r1440507033\r\n\r\n* mesh folder rename\r\n\r\nhttps://github.com/kroshu/kuka_robot_descriptions/pull/42#discussion_r1440520754\r\n\r\n* using joint_state_publisher_gui\r\n\r\nsolving:\r\n- https://github.com/kroshu/kuka_robot_descriptions/pull/42#discussion_r1440508434\r\n- https://github.com/kroshu/kuka_robot_descriptions/pull/42#discussion_r1440508710\r\n\r\n* add ips as xacro arg\r\n\r\n* remove prefix from base_link\r\n\r\n* fix origin\r\n\r\n* add all dofs to all iisys\r\n\r\n* fix 11\r\n\r\n* add qos config file arg\r\n\r\n* syntax fix\r\n\r\n* rename file\r\n\r\n* remove pre-commit mod\r\n\r\n* kr ros2_control+ urdf.xacro rework\r\n\r\n* change manipulator base_link\r\n\r\n* kr macro rework\r\n\r\n* remove duplicate default\r\n\r\n* iiwa fix\r\n\r\n* format\r\n\r\n* add missing args\r\n\r\n* workaround for  kuka_iiqka_eac_driver\r\n\r\n* base_link->world\r\n\r\n* base_link_inertia->base_link\r\n\r\n* rviz config names\r\n\r\n* update md\r\n\r\n* format\r\n\r\n* rviz config cleanup\r\n\r\n* 7axis planning scene rviz config\r\n\r\n* fix after merge\r\n\r\n---------\r\n\r\nCo-authored-by: Svastits <49677296+Svastits@users.noreply.github.com>\r\nCo-authored-by: Aron Svastits <svastits1@gmail.com>",
+      "files_changed": 63,
+      "additions": 2161,
+      "deletions": 1295,
+      "commit_type": "ci"
+    },
+    {
+      "author": "bmagyar",
+      "date": "2023-11-10T16:13:28Z",
+      "sha": "74a701268a53054ea994bf0d52e930cc0cced9ad",
+      "message": "Fix whitespaces and typos (#36)",
+      "files_changed": 39,
+      "additions": 97,
+      "deletions": 101,
+      "commit_type": "docs"
+    },
+    {
+      "author": "gavanderhoorn",
+      "date": "2023-11-09T14:04:43Z",
+      "sha": "8c911ccde86793b9049dc53829a1ee2e83b2616f",
+      "message": "readme: repository changed name (#29)",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "sea-bass",
+      "date": "2023-06-20T13:48:35Z",
+      "sha": "46bc82a26c00035190fce5eff68ce1c0ca814d00",
+      "message": "Add mock hardware option to LBR iisy ros2_control file",
+      "files_changed": 3,
+      "additions": 22,
+      "deletions": 11,
+      "commit_type": "code"
+    },
+    {
+      "author": "VX792",
+      "date": "2023-02-08T10:55:38Z",
+      "sha": "aa37fe9b4e74b7c815afb034275d4c8b455eff40",
+      "message": "remove unused file",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 11,
+      "commit_type": "code"
+    },
+    {
+      "author": "kovacsge11",
+      "date": "2022-12-16T09:39:01Z",
+      "sha": "89b4834083095a8c7ddf31fa4e8bf43f2d2cdf28",
+      "message": "add stiffness and damping IFs",
+      "files_changed": 1,
+      "additions": 12,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "oprezz",
+      "date": "2022-06-14T15:30:43Z",
+      "sha": "de0c3b06ceefa1f76458d02f8be0f638f50f11bf",
+      "message": "Initial commit",
+      "files_changed": 2,
+      "additions": 202,
+      "deletions": 0,
+      "commit_type": "docs"
+    }
+  ]
+}

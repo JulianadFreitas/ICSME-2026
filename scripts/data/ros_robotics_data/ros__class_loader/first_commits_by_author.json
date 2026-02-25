@@ -1,0 +1,421 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T12:52:35Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros",
+    "repo": "class_loader"
+  },
+  "data": [
+    {
+      "author": "ahcorde",
+      "date": "2020-04-08T18:25:52Z",
+      "sha": "fe6fa9f32b6776aa562a67e00313e8732e07cf1d",
+      "message": "Removed poco dependency (#139)\n\n* removed poco\r\n\r\nSigned-off-by: Alejandro Hernández <ahcorde@gmail.com>\r\n\r\n* ament export dependencies rcutils\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* update rcutils shared library\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* removed some traces and fixed string copy\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Adapted to rcutils\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Removed comment\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* fixed allocator\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* error when dynamic library suffix is unknown\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* fixed rcutils_unload_shared_library function name\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Used new and delete\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Updated to use rcpputils\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Alphabetize includes\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* catch bad alloc exception\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Fixed doc\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* package.xml following the schema order\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Using rcpputil function to get library name\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Removed redundant target_link_libraries\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Fixed failure in macos\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Fixed appveyor\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Fixed Travis\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Fixed travis and appveyor\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Fixed travis and appveyor\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Another try to fix travis\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Restore try catch when unload_library\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* updated travis to bionic\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* wakey wakey GitHub Actions\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>",
+      "files_changed": 11,
+      "additions": 72,
+      "deletions": 105,
+      "commit_type": "ci"
+    },
+    {
+      "author": "pum1k",
+      "date": "2026-02-20T08:55:13Z",
+      "sha": "5c279488cb9fd4b168502c5ffdd533fabab20168",
+      "message": "Add support for passing arguments to constructors (#223)\n\n- added InterfaceTraits type trait that can be used to define the\n  constructor arguments used by the derived classes\n- changed class loaders to pass arguments to the derived classes based\n  on the information stored in InterfaceTraits\n\nSigned-off-by: pum1k <55055380+pum1k@users.noreply.github.com>",
+      "files_changed": 10,
+      "additions": 533,
+      "deletions": 76,
+      "commit_type": "ci"
+    },
+    {
+      "author": "tylerjw",
+      "date": "2025-10-09T12:00:12Z",
+      "sha": "07376d3dfa32aa0b8269db8ac669f5d1134a7b38",
+      "message": "Thread and Address Sanitizer CI (#198)\n\nSigned-off-by: Tyler Weaver <tylerjw@gmail.com>\nSigned-off-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>\nCo-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>",
+      "files_changed": 3,
+      "additions": 125,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "mosfet80",
+      "date": "2025-10-03T08:02:41Z",
+      "sha": "84be69ee9280a368ae0aa5746450a68f52d97a09",
+      "message": "Update cmake requirement",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "cottsay",
+      "date": "2014-02-06T20:32:16Z",
+      "sha": "96ed2e454315b305d5a423ad8fc60f300ba1b5d0",
+      "message": "Serialize initial library loads\n\nclass_loader_core uses static entities to create global objects. Well it turns out that the loadLibrary function can be called multiple times simultaneously, and because of the static objects, we end up starting a new load before another finishes, causing a persistent failure when loading the first library.\n\nThis commit adds a mutex to ensure that this critical section of the loadLibrary function is not interrupted by another library load.",
+      "files_changed": 1,
+      "additions": 28,
+      "deletions": 22,
+      "commit_type": "code"
+    },
+    {
+      "author": "marcoag",
+      "date": "2024-04-26T14:29:31Z",
+      "sha": "b29683afef4a310eb70184b574945f0655c9922d",
+      "message": "Changelog.\n\nSigned-off-by: Marco A. Gutierrez <marcogg@marcogg.com>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "clalancette",
+      "date": "2019-12-19T19:59:30Z",
+      "sha": "3b51870afaf71815f88be2d7e2458aa9ccf43610",
+      "message": "Use .empty() to check for an empty string. (#132)\n\nThis is essentially a port of PR #69 to ROS 2 so that clang-tidy\r\nwill stop complaining about it.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Chen Lihui",
+      "date": "2022-10-03T22:55:46Z",
+      "sha": "c427a50f0e304d61a8264252547909c0136dae61",
+      "message": "make the meta-object alive in the lifecycle of the registered plugin (#201)\n\n* make the meta-object alive only in the lifecycle of the registered plugin\r\n\r\nSigned-off-by: Chen Lihui <lihui.chen@sony.com>\r\n\r\n* remove unuseful variable passed in the lambda\r\n\r\nSigned-off-by: Chen Lihui <lihui.chen@sony.com>\r\n\r\n* add extra tests to make test cases exists in both unique ptr test and utest\r\n\r\nSigned-off-by: Chen Lihui <lihui.chen@sony.com>\r\n\r\n* use the original mutex rather than import a new mutex\r\n\r\nSigned-off-by: Chen Lihui <lihui.chen@sony.com>\r\n\r\n* update document comment\r\n\r\nSigned-off-by: Chen Lihui <lihui.chen@sony.com>\r\n\r\n* symbol visibility for Windows\r\n\r\nSigned-off-by: Chen Lihui <lihui.chen@sony.com>\r\n\r\n* add extra document comment\r\n\r\nSigned-off-by: Chen Lihui <lihui.chen@sony.com>\r\n\r\n* update doc\r\n\r\nSigned-off-by: Chen Lihui <lihui.chen@sony.com>\r\n\r\nSigned-off-by: Chen Lihui <lihui.chen@sony.com>",
+      "files_changed": 5,
+      "additions": 127,
+      "deletions": 42,
+      "commit_type": "docs"
+    },
+    {
+      "author": "audrow",
+      "date": "2022-11-16T16:18:05Z",
+      "sha": "9790600ac3e54625369ed469085dc4f6caf14328",
+      "message": "[rolling] Update maintainers - 2022-11-07 (#206)",
+      "files_changed": 2,
+      "additions": 3,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "paudrow",
+      "date": "2021-11-23T18:43:25Z",
+      "sha": "e66d70369f3e7e1debc02b95948c74f12d2350ff",
+      "message": "Update maintainers to Geoffrey Biggs and Michael Carroll (#190)\n\nSigned-off-by: Audrow Nash <audrow@hey.com>",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "jacobperron",
+      "date": "2022-01-12T22:23:55Z",
+      "sha": "99c0d03d62c74c6149d05c19ed1d3aa9dfd19085",
+      "message": "Fix include order for cpplint (#192)\n\n* Fix include order for cpplint\r\n\r\nRelates to https://github.com/ament/ament_lint/pull/324\r\n\r\nSigned-off-by: Jacob Perron <jacob@openrobotics.org>\r\n\r\n* Use double-quotes for backwards compatibility\r\n\r\nSigned-off-by: Jacob Perron <jacob@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "sloretz",
+      "date": "2019-07-26T18:30:20Z",
+      "sha": "e4e1b0289e0676c618f5efcea02b0661c9812e04",
+      "message": "Export library after target exists (#129)\n\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "DLu",
+      "date": "2021-06-25T13:27:31Z",
+      "sha": "41293767013aee10e7fbc131dbfd87c13737cda9",
+      "message": "Fix spelling mistake (#184)\n\nSigned-off-by: David V. Lu <davidvlu@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "brawner",
+      "date": "2020-06-11T21:31:28Z",
+      "sha": "7473956be3cc4fc5b3aa3e531242630068227a9c",
+      "message": "Increase coverage with a graveyard behavior test and unmanaged instance test (#159)",
+      "files_changed": 4,
+      "additions": 170,
+      "deletions": 2,
+      "commit_type": "ci"
+    },
+    {
+      "author": "hidmic",
+      "date": "2020-06-26T20:37:05Z",
+      "sha": "dfab32ed9675eeba47f4e5894cd6c3baaa970d38",
+      "message": "Update Quality Declaration to reflect QL 2 (#160).",
+      "files_changed": 2,
+      "additions": 13,
+      "deletions": 11,
+      "commit_type": "docs"
+    },
+    {
+      "author": "dirk-thomas",
+      "date": "2012-09-23T21:05:04Z",
+      "sha": "ba60b8b9f6ecc9d993f5b483a5572df8c7eabd4e",
+      "message": "catkinized",
+      "files_changed": 2,
+      "additions": 42,
+      "deletions": 42,
+      "commit_type": "docs"
+    },
+    {
+      "author": "tfoote",
+      "date": "2020-05-21T06:43:46Z",
+      "sha": "d01e02e973f0d7d52ba48dea264e17ce5bc05f01",
+      "message": "fix copy and paste error (#154)\n\nSigned-off-by: Tully Foote <tfoote@osrfoundation.org>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "nuclearsandwich",
+      "date": "2018-11-16T20:11:49Z",
+      "sha": "4171d059400cc385f914bf082cbd53360174d385",
+      "message": "1.2.0",
+      "files_changed": 2,
+      "additions": 10,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Blast545",
+      "date": "2020-02-18T23:36:29Z",
+      "sha": "11982ab3efc390608f10f2db1e97edf4037afec5",
+      "message": "Add missing LICENSE file, matching 3-clause BSD (#137)\n\nSigned-off-by: Jorge J. Perez <jjperez@ekumenlabs.com>",
+      "files_changed": 1,
+      "additions": 25,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "bpwilcox",
+      "date": "2019-09-13T19:25:55Z",
+      "sha": "d51634f7d1a6fcc72cdcaab802996b74527e961f",
+      "message": "Set AbstractMetaObjectBase base class typeid (#127)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "emersonknapp",
+      "date": "2019-07-02T21:02:36Z",
+      "sha": "597989059d8ed2faba743a1c321a97db8a35a958",
+      "message": "Reduce number of threads spun up on ARMHF platforms in stress te… (#128)\n\n* Reduce number of threads spawned on arm32 in stress test\r\n\r\nSigned-off-by: Emerson Knapp <eknapp@amazon.com>\r\n\r\n* Generalize stress test thread limit to unique_ptr_test\r\n\r\nSigned-off-by: Emerson Knapp <eknapp@amazon.com>\r\n\r\n* Use 500 threads for all platforms in stress test\r\n\r\n* Use the reduced number of threads for the stress test on all platforms",
+      "files_changed": 3,
+      "additions": 6,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "mjcarroll",
+      "date": "2019-05-08T23:29:02Z",
+      "sha": "bcaae90f6bbf74ebceb80f885f868c4e7d9e367d",
+      "message": "1.3.1\n\nSigned-off-by: Michael Carroll <michael@openrobotics.org>",
+      "files_changed": 2,
+      "additions": 6,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ivanpauno",
+      "date": "2019-03-19T12:50:18Z",
+      "sha": "687424f6112067cd236c0c8f5e7de2300403588a",
+      "message": "Use ament_target_dependencies where possible (#121)\n\n* Use ament_target_dependencies where possible\r\n\r\nSigned-off-by: ivanpauno <ivanpauno@ekumenlabs.com>\r\nSigned-off-by: Steven! Ragnarök <steven@nuclearsandwich.com>",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jpsamper2009",
+      "date": "2019-04-12T17:37:59Z",
+      "sha": "a9b044c337cf5c4b131f6059b9032392391ac095",
+      "message": "Check copyright of files where possible: (#123)\n\n- This serves as an example for the EXCLUDE option of\r\nament_lint_auto_find_test_dependencies, allowing to\r\nexclude the default ament_copyright configuration and\r\nrunning with a custom configuration\r\n- See https://github.com/ament/ament_lint/pull/133 and https://github.com/ament/ament_cmake/pull/165",
+      "files_changed": 1,
+      "additions": 10,
+      "deletions": 1,
+      "commit_type": "test"
+    },
+    {
+      "author": "mikaelarguedas",
+      "date": "2017-07-06T20:20:51Z",
+      "sha": "65a47715e03ab502c6fb4d89f576600de2b7ff72",
+      "message": "use cmake_x_standard like other packages (#50)",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "yechun1",
+      "date": "2018-09-14T16:48:36Z",
+      "sha": "189aa8ac9dcdb278747fb22e92976879185eeb91",
+      "message": "free impl_ in AbstractMetaObjectBase destructor (#103)\n\nThe constructor allocates field impl_ of class_loader::impl::AbstractMetaObjectBase but the destructor and whatever functions it calls do not free it.\r\n\r\nSigned-off-by: Chris Ye <chris.ye@intel.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "wjwwood",
+      "date": "2012-12-19T03:30:38Z",
+      "sha": "872a1736a1b1d8b36c67c9dbe0526ffce7f7ceac",
+      "message": "Fixed a clang compile error.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "esteve",
+      "date": "2014-02-14T18:15:10Z",
+      "sha": "bfa902e4c6239bd82cada5565e954eddcff32b7e",
+      "message": "Update maintainer field",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "bponsler",
+      "date": "2017-07-14T03:30:11Z",
+      "sha": "7d7bf4e0495e3599e37203697b7acb4ab193fa70",
+      "message": "Fully resolved placeholder to avoid confusion (#57)\n\nUpdated the use of the _1 placeholder to use the fully resolved namespace to avoid confusing the compiler in the event that boost/function.hpp was included.\r\n\r\nThere are some headers that include boost function (e.g., OgreMeshManager.h) that cause a conflict when the placeholder is specified without its namespace. This keeps that from happening.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "goldhoorn",
+      "date": "2015-01-29T14:51:37Z",
+      "sha": "f9c771e1876816b472b3a4e6b7e3858d885c21b4",
+      "message": "Fixed wrong handling of false statement (pkg-config was not installed)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Esteve Fernandez",
+      "date": "2014-03-04T18:19:19Z",
+      "sha": "110f778cc93682bf99638e124ca005e877fce5b4",
+      "message": "0.2.5",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Janosch Machowinski",
+      "date": "2015-01-22T08:37:40Z",
+      "sha": "3e2619dd078f7bb87dbf9b47513a962e66d571fc",
+      "message": "Make catkin optional again",
+      "files_changed": 3,
+      "additions": 251,
+      "deletions": 8,
+      "commit_type": "docs"
+    },
+    {
+      "author": "garyservin",
+      "date": "2014-11-11T18:56:23Z",
+      "sha": "c50567258558c94cc33a863e705b291d1219adaf",
+      "message": "Remove hard-coded SHARED library type",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "davetcoleman",
+      "date": "2014-02-13T09:05:16Z",
+      "sha": "4d7e6e13620e43be861a7db63fe96596c61bb4d2",
+      "message": "Improved debug output\n\nFixed find-replace-all mistake\n\nFixed more log messages to new format\n\nFixed more log messages to new format",
+      "files_changed": 4,
+      "additions": 29,
+      "deletions": 29,
+      "commit_type": "code"
+    },
+    {
+      "author": "sksavant",
+      "date": "2014-01-28T21:16:47Z",
+      "sha": "fde46be774a325bba57391173adb5afd892c5239",
+      "message": "If test is not added (due to no gtest present), dont try to link or add dependencies",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "eacousineau",
+      "date": "2013-08-21T17:19:45Z",
+      "sha": "262bad233ee5801e09de85a63fc83567f36c4fe0",
+      "message": "class_loader_core.h: Added class_name as argument to logWarn sprintf call",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "v4hn",
+      "date": "2013-05-22T16:38:23Z",
+      "sha": "6590baa6948d22ef2e4c537551a2b14ce608741d",
+      "message": "Poco detection is too confident when seeing /usr/include/Foundation\n\nThat folder is also provided by gnustep-base.\nUbuntu encapsulates the gnustep headers in a GNUstep folder,\nhowever the project itself installs to /usr/include/Foundation\nand other linux distributions(Archlinux, Gentoo, Lunar-Linux, ...)\nrespect this.",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "mirzashah",
+      "date": "2012-09-20T21:19:48Z",
+      "sha": "8629887cf514bacffa083ee2f3049f57daacd204",
+      "message": "Started unit tests",
+      "files_changed": 3,
+      "additions": 31,
+      "deletions": 8,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Mirza Shah",
+      "date": "2012-08-31T20:50:17Z",
+      "sha": "ec24a57f13349995cd5488d3cf60c2bdc5d4e9a6",
+      "message": "Initial version of plugin sytem.",
+      "files_changed": 10,
+      "additions": 1056,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Ioan Sucan",
+      "date": "2012-11-06T18:34:45Z",
+      "sha": "4aaec9457bdebcb38b964c5da05026b6352dc0f4",
+      "message": "add forgotten return",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "vrabaud",
+      "date": "2012-11-04T19:47:08Z",
+      "sha": "17b09871b1c886e258fe4e27d79b0519f5af2986",
+      "message": "fix compilation error happening with stricter gcc 4.7",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    }
+  ]
+}

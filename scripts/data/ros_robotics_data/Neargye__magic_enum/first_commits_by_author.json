@@ -1,0 +1,781 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T17:56:51Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "Neargye",
+    "repo": "magic_enum"
+  },
+  "data": [
+    {
+      "author": "Neargye",
+      "date": "2019-03-30T21:24:36Z",
+      "sha": "ac6444fae5846f93524fa0dc521acd5ab05a918b",
+      "message": "v0.1.0",
+      "files_changed": 13,
+      "additions": 15671,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "WtDMaO0",
+      "date": "2026-02-05T10:44:40Z",
+      "sha": "905ba74eaa6be8009c8ea25e07a85e70025da012",
+      "message": "[issue Neargye#441] fix(magic_enum): fix enum_integer return value deduction on unsupported compilers. (#442)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "dependabot[bot]",
+      "date": "2024-01-12T11:23:40Z",
+      "sha": "d3f466bf0c5651ac41780be07f30eda4fbfe697f",
+      "message": "Bump the github-actions group with 4 updates (#331)",
+      "files_changed": 4,
+      "additions": 7,
+      "deletions": 7,
+      "commit_type": "config"
+    },
+    {
+      "author": "ChristopherCanfield",
+      "date": "2026-01-25T08:42:09Z",
+      "sha": "5b6e12fa1b43f24a124fc1eaee5a5a2a3fa4dda4",
+      "message": "Fix redefinition errors in module (regression fix) (#439)\n\nFixes type redefinition errors when compiling magic_enum as a module with the MAGIC_ENUM_USE_STD_MODULE preprocessor variable defined.",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "zaucy",
+      "date": "2023-04-26T16:16:08Z",
+      "sha": "48054f64abcfc83f58d9aa2efbbd21604f93aca4",
+      "message": "add bzlmod support (#254)",
+      "files_changed": 18,
+      "additions": 134,
+      "deletions": 63,
+      "commit_type": "config"
+    },
+    {
+      "author": "CrackedMatter",
+      "date": "2025-11-21T15:21:54Z",
+      "sha": "2e6e8bfff361c2c40990426c462b44af6c27820b",
+      "message": "Support fmt and std::format in C++20 module (#394)",
+      "files_changed": 1,
+      "additions": 12,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "frankier",
+      "date": "2025-10-08T18:29:29Z",
+      "sha": "83ab7f4f578bd00e1026a7cd9f7baa4f1a62cbeb",
+      "message": "Replace test option with not building tests by default (#430)\n\nCo-authored-by: Frankie Robertson <frankie@robertson.name>",
+      "files_changed": 3,
+      "additions": 2,
+      "deletions": 10,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ZXShady",
+      "date": "2025-06-11T17:00:01Z",
+      "sha": "d642b05dcbb4825470cf5afb4de2d36cafedf7b1",
+      "message": "Add adl_ranges (#413)\n\nCo-authored-by: lsemprini <17140216+lsemprini@users.noreply.github.com>",
+      "files_changed": 5,
+      "additions": 174,
+      "deletions": 14,
+      "commit_type": "ci"
+    },
+    {
+      "author": "jediry",
+      "date": "2025-06-27T11:25:18Z",
+      "sha": "ecdeb1cea54d87b09bafe9999faf56654646209d",
+      "message": "Fix __FUNCSIG__ parsing on x86 by explicitly declaring the calling convention (#405)",
+      "files_changed": 1,
+      "additions": 11,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "Flinner",
+      "date": "2025-06-24T13:11:50Z",
+      "sha": "be00112dda83d3bf4f0d06f0971cfd877388a643",
+      "message": "Fix GIT_TAG for CMake's `CPAMAddPackage` (#416)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "helynranta",
+      "date": "2025-06-11T16:47:09Z",
+      "sha": "aa724339dcc2eb662f38757220678fa94fcfa78c",
+      "message": "fix: warnings about included file in module purview in MSVC (#407)",
+      "files_changed": 1,
+      "additions": 11,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "elykwilliams",
+      "date": "2025-06-11T16:38:33Z",
+      "sha": "c726051c5cbf9526877c53c2a91f9c25a4fae05c",
+      "message": "doc: Fixes typo in README (#406)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "tkhyn",
+      "date": "2025-02-20T08:38:17Z",
+      "sha": "a413fcc9c46a020a746907136a384c227f3cd095",
+      "message": "fix: use `inline` instead of `static` for constexpr in header file (#401)\n\nUsing `static constexpr` in a header file does not seem to be correct - see [1] - and generates a bug when building the magic_enum module with GCC 15\n\n[1] https://isocpp.org/blog/2018/05/quick-q-use-of-constexpr-in-header-file",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "frederick-vs-ja",
+      "date": "2025-02-20T08:34:09Z",
+      "sha": "2ec43969d87016703aa0acbaff06cc4d8018a815",
+      "message": "More reliable value validness detection towards CWG1766 (#398)\n\nCWG1766 made out-of-range cast to enumeration without fixed underlying\ntype raise undefined behavior. Such UB arguably also applies to\n`bit_cast`, although it's not required that UB in `bit_cast` makes the\nexpression non-constant.\n\nCurrently, only Clang has implemented CWG1766, while Clang's underlying\n`__builtin_bit_cast` happens to be a workaround. However, it's more\nreliable to me to rely on the guarantee that core language UB causes\nconstant evaluation failure.\n\nThe approach in this patch effectively detects whether\n`std::integral_constant<E, static_cast<E>(V)>` is a valid type, which is\nequivalent to whether `static_cast<E>(V)` is a constant expression. When\nthe answer is `false`, value `V` can't be an enumerator of `E`.",
+      "files_changed": 1,
+      "additions": 25,
+      "deletions": 14,
+      "commit_type": "code"
+    },
+    {
+      "author": "Skjelsbek",
+      "date": "2024-11-23T16:07:10Z",
+      "sha": "1a1824df7ac798177a521eed952720681b0bf482",
+      "message": "Using CMAKE_INSTALL_INCLUDEDIR for installing includes. (#391)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "emmanuel-ferdman",
+      "date": "2024-11-23T16:07:03Z",
+      "sha": "85e05c8e76a59629873ce2f5464d71f3af968fd3",
+      "message": "fix:  `magic_enum.hpp` reference (#390)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "fliiiix",
+      "date": "2024-11-18T11:30:32Z",
+      "sha": "715b442682f3cac6e04636d8beaf4104c20bac23",
+      "message": "Only prepend $prefix for relative paths (#389)",
+      "files_changed": 1,
+      "additions": 17,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "Bastian Schmitz",
+      "date": "2024-11-13T23:04:44Z",
+      "sha": "15a085f234da152c11bddc224e6f1c0c0a22956c",
+      "message": "fix enum_fuse shift value calculation (Neargye#386) (#387)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "stephanlachnit",
+      "date": "2024-02-10T12:13:25Z",
+      "sha": "66e5a46094e4d2e743617354a91b8963e11059b2",
+      "message": "example_switch.cpp: properly return 0 (#336)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Arniiiii",
+      "date": "2024-10-14T15:05:55Z",
+      "sha": "a72a0536c716fdef4f029fb43e1fd7e7b3d9ac9b",
+      "message": "fix installing via cmake (#374)",
+      "files_changed": 25,
+      "additions": 478,
+      "deletions": 186,
+      "commit_type": "config"
+    },
+    {
+      "author": "ricardofdc",
+      "date": "2024-07-25T08:29:56Z",
+      "sha": "ec8b0e985f2595858a38c0a8d746924a0efb7b44",
+      "message": "Update comments regarding max and min (#369)\n\nThe comments in the code regarding MAGIC_ENUM_RANGE_MIN and MAGIC_ENUM_RANGE_MAX values were not updated according to the latest changes on those default values.",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "asolwa",
+      "date": "2024-07-19T12:51:58Z",
+      "sha": "9a9308fd5477d2a44f4e491d5a712546d4a2b3e4",
+      "message": "fix bitset constructor (#367)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "ArtfulVampire",
+      "date": "2024-07-08T17:37:57Z",
+      "sha": "664ee62c12570948b0e025d15b42d641fba8d54a",
+      "message": "Parameterize formatter::format to use with FMT_COMPILE (#365)",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "ShaharHD",
+      "date": "2024-06-09T20:06:15Z",
+      "sha": "bf3c74ab7eded2a7183a3729f5cd36bc367edb08",
+      "message": "Add better support for Yocto/PetaLinux (#360)\n\nAdded a new option of MAGIC_ENUM_OPT_INSTALL_PACKAGE_XML to allow disabling the package.xml file",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "stripe2933",
+      "date": "2024-05-08T21:02:49Z",
+      "sha": "7afc57b194dd08631d5e96e42b217bb52933828f",
+      "message": "Support C++20 module. (#343)",
+      "files_changed": 1,
+      "additions": 56,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "svew",
+      "date": "2024-01-21T10:13:49Z",
+      "sha": "40ecd7dfb428546f5091b1a039d1483ba4938905",
+      "message": "Tidy up Limitations page (#332)",
+      "files_changed": 1,
+      "additions": 82,
+      "deletions": 73,
+      "commit_type": "docs"
+    },
+    {
+      "author": "diogoteles08",
+      "date": "2023-03-07T21:57:54Z",
+      "sha": "73e91dc28c2993aef62702a8d949c0fb02e2231c",
+      "message": "ci: set minimal permissions on workflows (#248)",
+      "files_changed": 3,
+      "additions": 6,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "cpsauer",
+      "date": "2023-11-14T17:07:33Z",
+      "sha": "3437129f30c926e740ae5943cef27cd0b836c4be",
+      "message": "Bazel: Make include directories consistent (#311)\n\nAddresses Bazel part of https://github.com/Neargye/magic_enum/issues/310",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "justinboswell",
+      "date": "2023-12-06T07:46:57Z",
+      "sha": "804738ba8a33b7f5b14d1f4ea873c80e6588dcd9",
+      "message": "Add support for overriding MAGIC_ENUM_ASSERT (#322)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "IvanArkhipov1999",
+      "date": "2023-11-15T18:25:49Z",
+      "sha": "56dcb011c237390abf80fb1342d0cce291ed603f",
+      "message": "Put `get` to `magic_enum::containers` namespace (#316)",
+      "files_changed": 5,
+      "additions": 24,
+      "deletions": 28,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Ry-DS",
+      "date": "2023-11-12T13:30:10Z",
+      "sha": "cd5fd2c34315cb1b985d491788722cbf9a910c03",
+      "message": "Fix set erase function (#308)",
+      "files_changed": 2,
+      "additions": 7,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "vt4a2h",
+      "date": "2023-11-09T10:09:37Z",
+      "sha": "5523803cfc0590e78a289c1a886cae46e7e0b4b8",
+      "message": "Explicitly mark the result of detail::names as constexpr (#305)\n\nIt might make no sense, but on MSVC it can generate a compile-time\r\nerror, especially if an enumerator's value is out of range.\r\n\r\nExample:\r\nerror C3615: constexpr function 'magic_enum::detail::names' cannot\r\nresult in a constant expression\r\n...\r\nnote: failure was caused by call of undefined function or one not\r\ndeclared 'constexpr'\r\n...\r\nnote: see usage of '__builtin_array_init_helper'",
+      "files_changed": 2,
+      "additions": 14,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "RalphSteinhagen",
+      "date": "2023-11-09T10:07:16Z",
+      "sha": "5cf4eb3a535c88c2d9ee34f1ee449ee6ccfaf939",
+      "message": "fixes 'std::ptrdiff_t' to 'std::size_t' casting error and suppresses `-Wuseless-cast` warning for gcc and clang (#306)\n\n* fixes 'std::ptrdiff_t' to 'std::size_t' casting error\r\n\r\naddresses this compiler warning:\r\n\r\n```text\r\n[..]/magic_enum_utility.hpp:101:31: warning: conversion to ‘std::size_t’ {aka ‘long unsigned int’} from ‘std::ptrdiff_t’ {aka ‘long int’} may change the sign of the result [-Wsign-conversion]\r\n  101 |       return enum_value<D, S>(index);\r\n      |                               ^~~~~\r\n```\r\n\r\n* suppresses `-Wuseless-cast` for static_cast<char_type>('\\0')\r\n\r\nneeded in case 'char_type' is 'char' (common on Linux but rare on Windows?)\r\n\r\n```text\r\n[..]/magic_enum.hpp:275:114: warning: useless cast to type ‘using magic_enum::char_type = using std::basic_string_view<char>::value_type = char’ {aka ‘char’} [-Wuseless-cast]\r\n  275 |   constexpr static_str(string_view str, std::integer_sequence<std::uint16_t, I...>) noexcept : chars_{str[I]..., static_cast<char_type>('\\0')} {}\r\n      |                                                                                                                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n```",
+      "files_changed": 2,
+      "additions": 6,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "RaceTheMaSe",
+      "date": "2023-10-18T22:53:37Z",
+      "sha": "49bb72da8eb6b7abea4cf6b7c7a9165635363f42",
+      "message": "Remove superfluous semicolon (#304)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "RAnders00",
+      "date": "2023-10-09T07:33:54Z",
+      "sha": "a7926c63d4a3203531e9aaa9f044c602b9a20d72",
+      "message": "Fix link to Conan in README (#301)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "v1993",
+      "date": "2023-04-24T19:36:25Z",
+      "sha": "fc88b4936a95bdb8c32980283aa4e04b3869bb18",
+      "message": "meson: add options and tests (#255)",
+      "files_changed": 4,
+      "additions": 58,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "rupprecht",
+      "date": "2023-06-06T09:22:49Z",
+      "sha": "8a26b3dc428cac74fbdacaa3981b9d71ac7cc4e4",
+      "message": "Re-enable Wenum-constexpr-conversion clang fix (#279)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "tmayoff",
+      "date": "2023-05-30T08:29:52Z",
+      "sha": "930bcf0ba2f1c900f86be96c0348737125b7fe18",
+      "message": "fixed meson build for the tests (#275)",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "schaumb",
+      "date": "2020-11-19T13:23:20Z",
+      "sha": "1b587718b7455d5873b1c11bedb0baa1cceb9560",
+      "message": "Compile fix for gcc 7.5 (#62)",
+      "files_changed": 1,
+      "additions": 12,
+      "deletions": 9,
+      "commit_type": "code"
+    },
+    {
+      "author": "embeddedpenguin",
+      "date": "2023-05-21T00:20:14Z",
+      "sha": "f40a6215284d9f7574352bb799cd7b53c89b47c2",
+      "message": "switched to using idiomatic cmake set standard (#240)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ecatmur",
+      "date": "2023-05-13T09:15:23Z",
+      "sha": "5367f5183c38ed64231e0667d76a6c52e54d21b9",
+      "message": "Support gcc -fno-pretty-templates (#258)\n\nhttps://gcc.gnu.org/onlinedocs/gcc/C_002b_002b-Dialect-Options.html#index-fno-pretty-templates\r\n\r\nThe gcc option -fno-pretty-templates changes the __PRETTY_FUNCTION__ from e.g.\r\n\"auto n() [with E = E]\" to \"auto n<E>()\" (more like MSVC).\r\n\r\nPass the entire __PRETTY_FUNCTION__ / __FUNCSIG__ to pretty_name(), and truncate it there, checking the last character if necessary to determine the format used.",
+      "files_changed": 2,
+      "additions": 11,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "talisein",
+      "date": "2023-05-12T23:43:06Z",
+      "sha": "d6fef8b171a93dd0f98aeeb40f54c742a8d9a789",
+      "message": "Add const to std::formatter method (#260)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "ts826848",
+      "date": "2023-03-29T12:03:50Z",
+      "sha": "95c71dab42acb62bf5d4a781e8f29982f7f3046e",
+      "message": "Include <functional> (#252)\n\nThis is necessary to avoid compilation errors using recent libc++\r\nversions with C++23 due to libc++ taking steps to remove transitive\r\nincludes in newer C++ versions [0].\r\n\r\nFor a more concrete example, this program builds using Clang 16.0.0 and\r\nC++20, but fails to build with C++23:\r\n\r\n    #include <magic_enum.hpp>\r\n    enum class ec { RED };\r\n    template <>\r\n    constexpr auto magic_enum::customize::enum_name(ec val) noexcept\r\n        -> magic_enum::customize::customize_t {\r\n      switch (val) {\r\n      case ec::RED: return \"Red\";\r\n      };\r\n      return invalid_tag;\r\n    }\r\n\r\nThe compiler hits the \"too many errors\" threshold when building with\r\nC++23, but I believe this is due to compiling failing to recover after\r\nthe first error. The error message starts with:\r\n\r\n    include % /usr/local/opt/llvm/bin/clang++ -std=c++2b -c test.cpp\r\n    In file included from test.cpp:1:\r\n    ./magic_enum.hpp:324:61: error: no member named 'equal_to' in namespace 'std'\r\n      return std::is_same_v<std::decay_t<BinaryPredicate>, std::equal_to<string_view::value_type>> ||\r\n                                                           ~~~~~^\r\n    ./magic_enum.hpp:324:93: error: expected '(' for function-style cast or type construction\r\n      return std::is_same_v<std::decay_t<BinaryPredicate>, std::equal_to<string_view::value_type>> ||\r\n                                                                         ~~~~~~~~~~~~~~~~~~~~~~~^\r\n    ./magic_enum.hpp:324:96: error: expected expression\r\n      return std::is_same_v<std::decay_t<BinaryPredicate>, std::equal_to<string_view::value_type>> ||\r\n                                                                                                   ^\r\n\r\nstd::equal_to is defined in <functional>, but <functional> is not\r\ndirectly included by magic_enum.hpp. <string> [1] and <string_view> [2]\r\nboth include <functional> for C++20 and earlier, but they no longer\r\ninclude <functional> in C++23 and later, so a definition for\r\nstd::equal_to is no longer visible, leading to the above error.\r\n\r\nDirectly including <functional> fixes this error, but I'm not sure there\r\naren't similar errors.\r\n\r\n[0]: https://github.com/llvm/llvm-project/commit/8ff2d6af6906261567d8c10be62711ce899fb485\r\n\r\n[1]: https://github.com/llvm/llvm-project/blob/llvmorg-16.0.0/libcxx/include/string#L4625\r\n\r\n[2]: https://github.com/llvm/llvm-project/blob/llvmorg-16.0.0/libcxx/include/string_view#L1027\r\n\r\nCo-authored-by: Alex Wang <ts826848@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "KOLANICH",
+      "date": "2023-01-17T14:52:59Z",
+      "sha": "2a7658d0840079667b690152763f3cfcc0114540",
+      "message": "Implemented packaging using CPack. (#202)",
+      "files_changed": 5,
+      "additions": 417,
+      "deletions": 21,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Smertig",
+      "date": "2022-09-02T10:30:16Z",
+      "sha": "1b1194bcd5e0f62047a43161689bae593b12e607",
+      "message": "Remove redundant instantiation (#211)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "striezel",
+      "date": "2023-01-31T13:36:01Z",
+      "sha": "2d9fb26c46da651310156632d6335806b987a7dc",
+      "message": "Update actions/checkout in GitHub Actions workflows to v3 (#236)",
+      "files_changed": 3,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "ci"
+    },
+    {
+      "author": "AntonShalgachev",
+      "date": "2022-12-20T09:24:01Z",
+      "sha": "d5e8530191c41416bfdfbe4ffb3d7a39f09f8fbe",
+      "message": "simplify pretty_name to speed up constexpr evaluation (#227)",
+      "files_changed": 1,
+      "additions": 17,
+      "deletions": 10,
+      "commit_type": "code"
+    },
+    {
+      "author": "ilobilo",
+      "date": "2022-11-04T19:46:37Z",
+      "sha": "596f00c0db4977f5a6bcc6314c7d4dcc75c5deb2",
+      "message": "make streams and exceptions optional (#218)\n\n* magic_enum: make streams optional\r\nthis commit adds support to disable streams\r\nwith macro MAGIC_ENUM_NO_STREAMS\r\n\r\n* magic_enum_format: add support to disable exceptions\r\nthis commit adds support to disable exceptions\r\nwith macro MAGIC_ENUM_NO_EXCEPTIONS",
+      "files_changed": 2,
+      "additions": 15,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "nektonick",
+      "date": "2022-08-20T13:57:30Z",
+      "sha": "1a57977ea3a286206b800e3e3fd79faa6f6e7404",
+      "message": "Typo fixed (#210)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "bamo-volue",
+      "date": "2022-05-28T18:55:51Z",
+      "sha": "6956c560330e21c7673ba8d5e43d53b71a7fce48",
+      "message": "Fix compilation error, when including magic_enum after windows.h (#189)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "abdes",
+      "date": "2022-03-31T13:48:27Z",
+      "sha": "5e6637ecde5771cb5210c3ec37eaa9d6679dc432",
+      "message": "fix: GCC warning [-Werror=sign-conversion] (#176)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Timple",
+      "date": "2022-03-12T18:04:42Z",
+      "sha": "948c7609394958bf617496719e202dc438eff755",
+      "message": "Add support for the ROS build system (#161)",
+      "files_changed": 3,
+      "additions": 35,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "pavelkryukov",
+      "date": "2022-02-10T17:58:59Z",
+      "sha": "1f8e29b140f57ce3dd2a12e46e6b40a1da027aa4",
+      "message": "Add enum fusing function (#127)",
+      "files_changed": 4,
+      "additions": 87,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "v1nh1shungry",
+      "date": "2022-02-06T19:59:53Z",
+      "sha": "22242a613a09edac796f8177862539d27dd24924",
+      "message": "fix enum_type_name (#129)",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "rpatters1",
+      "date": "2022-01-25T18:14:23Z",
+      "sha": "a8c9e57fbe1aac0c66cdc810d60308e9dbf1e357",
+      "message": "fix #122 add static_assert to limit size of N in static_string (#123)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "gpollo",
+      "date": "2021-12-02T21:27:44Z",
+      "sha": "7ba70d48b442d38ea3e403393adba5a96cdf6622",
+      "message": "Add simple meson.build to make this repository as a subproject (#113)",
+      "files_changed": 1,
+      "additions": 11,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "florianbecker",
+      "date": "2020-10-21T15:02:40Z",
+      "sha": "bb32605276a5a31e80fb0725d5af66739a2daa01",
+      "message": "Fix extra-semi-stmt (#60)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "uruha-komachin",
+      "date": "2021-08-09T14:44:30Z",
+      "sha": "38f86e4d093cfc9034a140d37de2168e3951bef3",
+      "message": "Added support for non-ASCII characters (UNIX/Linux) (#95)",
+      "files_changed": 8,
+      "additions": 393,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "alexkaratarakis",
+      "date": "2019-10-03T07:02:39Z",
+      "sha": "3f0aad9f746381e71aab75d126ce9b3ac0a0b6cb",
+      "message": "Fix regression of enum_cast<>() when used with refs (EnumT& vs EnumT) (#16)",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "sajimon",
+      "date": "2021-06-17T13:06:27Z",
+      "sha": "081a77b96ace137c7474a05d3b1ea1d97980e261",
+      "message": "Add ability to include external configuration header (#86)\n\n* Add ability to include external configuration header\r\n\r\n* Add documentation regarding MAGIC_ENUM_CONFIG_FILE",
+      "files_changed": 2,
+      "additions": 20,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Flow86",
+      "date": "2021-05-27T09:08:01Z",
+      "sha": "8c130658e1759fe6968ad0541bf965441c313698",
+      "message": "Add ARCH_INDEPENDENT so the generated cmake config files are really arch independent (#84)\n\ncloses #83",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jimmyorourke",
+      "date": "2021-05-07T08:16:24Z",
+      "sha": "8deb7f96e74e62cd1d9fd8920debfbe27f4bb8d1",
+      "message": "fix typo in comment (#81)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Wmbat",
+      "date": "2021-03-22T15:15:04Z",
+      "sha": "c5b5eea3bd1c61d12f05cd163c6a238568af56d4",
+      "message": "Added build2 support information (#78)",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "gjasny",
+      "date": "2021-02-22T16:10:47Z",
+      "sha": "c1e7c1475a3db038380a2102cc4ac9c1774b911c",
+      "message": "chore: update catch2 to 2.13.4 for Apple Silicon support (#75)",
+      "files_changed": 5,
+      "additions": 1090,
+      "deletions": 570,
+      "commit_type": "docs"
+    },
+    {
+      "author": "pepsiman",
+      "date": "2021-02-09T17:33:32Z",
+      "sha": "58833fa067361a769892149b27b06cf60d89bf46",
+      "message": "Fix typo (#72)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "bjacklyn",
+      "date": "2021-01-10T12:43:47Z",
+      "sha": "36ab9fa1a43a43615539e0302fa3f75988a34d68",
+      "message": "Detect values out of range and fail compilation (#70)\n\nThis checks for a value at (range_min - 1) and (range_max + 1) for numerical enums\r\n(i.e. not flag enums) and fails compilation with a static_assert if any value is found\r\n\r\nCo-authored-by: Brandon Jacklyn <bjacklyn@tesla.com>",
+      "files_changed": 1,
+      "additions": 19,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "nackdai",
+      "date": "2020-11-29T13:29:17Z",
+      "sha": "e24befa5fdf47e82e1d97f33829750fde08fad28",
+      "message": "fix typo (#66)",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "tim-lyon-arup",
+      "date": "2020-10-22T12:48:26Z",
+      "sha": "caa2f9e6ef882671bc8be84dd98a225ad12d62bf",
+      "message": "Fix typo in readme (#61)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "HackAttack",
+      "date": "2020-10-17T13:45:16Z",
+      "sha": "4623301e1a7a13f48be7d1f73dc07230a6114ff5",
+      "message": "Exercise Bazel build in CI (#59)",
+      "files_changed": 1,
+      "additions": 29,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "FelixDuvalletKodiak",
+      "date": "2020-10-08T07:10:15Z",
+      "sha": "f3b4a01ce24751da7a27d73db7a973e413ece88c",
+      "message": "Add support for bazel (#56)\n\n* Add support for bazel\r\n\r\nBazel support for the magic_enum repository would help others using\r\nbazel integrate this library into their projects.\r\n\r\nThis PR adds a BUILD file which enables magic_enum to be imported\r\nseamlessly into other WORKSPACE files without having to write a custom\r\nBUILD file.\r\n\r\nIt also adds bazel binaries & tests to enable running them via bazel\r\nlocally:\r\n\r\n   export CC=clang ; bazel build //... ; bazel test //... ; bazel run //:example\r\n\r\nFinally, bazel compilation artifacts are added to the gitignore file.\r\n\r\n* Update BUILD file & specify http_archive in README\r\n\r\n* Lint BUILD file",
+      "files_changed": 4,
+      "additions": 83,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "krypty",
+      "date": "2020-09-24T13:55:57Z",
+      "sha": "7063621bce226c8925905c5643650b680e3a4b3b",
+      "message": "Add MAGIC_ENUM_OPT_INSTALL option in CMakeLists.txt (#54)\n\nThis option allows to skip install target which can be useful when\r\nvendoring magic_enum.\r\n\r\nCo-authored-by: Gary Marigliano <gary.marigliano@ecorobotix.com>",
+      "files_changed": 1,
+      "additions": 12,
+      "deletions": 9,
+      "commit_type": "docs"
+    },
+    {
+      "author": "oficsu",
+      "date": "2020-03-12T06:28:09Z",
+      "sha": "1e6c9a5a5a44184c771df1f7d8f3563fe01960c4",
+      "message": "replace C-style cast with static_cast",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "pck",
+      "date": "2020-01-31T09:55:50Z",
+      "sha": "2f0a3bcae7e666d9d10de509306b6d22efc132dc",
+      "message": "improve conan compiler version check (#24)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "knatten",
+      "date": "2019-08-14T06:56:00Z",
+      "sha": "f5ef718120d5937d9051c7e9f7d48a4cc5b6b6df",
+      "message": "fix minor typo (#8)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "GameForPeople",
+      "date": "2019-07-13T14:11:39Z",
+      "sha": "58c0b9ac59ca847fdb1d9fba5b8f992be17d1b9a",
+      "message": "Fixing Syntax Error caused by \"Windows.h\" (#7)\n\nOMG! Windows.h define wack macro...max() min()!",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "SuperWig",
+      "date": "2019-06-07T17:45:24Z",
+      "sha": "4dfaa4b7b4814c2cf85b08ad3084fc28c8b129c6",
+      "message": "Fix CMakeLists.txt (#5)",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 7,
+      "commit_type": "docs"
+    },
+    {
+      "author": "abelfodil",
+      "date": "2019-04-21T22:26:21Z",
+      "sha": "e10ba181f1883ea46321afd6836725aa05b8517b",
+      "message": "CMake enhancements\n\n* Add magic_enum as an interface library\r\n* Enable tests and examples only if is top project\r\n* Use more modern approach to include directories\r\n* Add install target",
+      "files_changed": 4,
+      "additions": 47,
+      "deletions": 11,
+      "commit_type": "docs"
+    }
+  ]
+}

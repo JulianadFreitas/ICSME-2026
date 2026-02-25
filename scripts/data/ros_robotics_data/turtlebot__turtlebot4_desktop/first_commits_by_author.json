@@ -1,0 +1,51 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T11:00:45Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "turtlebot",
+    "repo": "turtlebot4_desktop"
+  },
+  "data": [
+    {
+      "author": "civerachb-cpr",
+      "date": "2024-09-03T21:40:46Z",
+      "sha": "e718bad133b5be24c920c0fee5f99187ec5cf222",
+      "message": "Initial Jazzy implementation (#9)\n\n* Change default fixed frame to odom instead of map, turn off the tf visualization by default\r\n\r\n* Revert \"Change default fixed frame to odom instead of map, turn off the tf visualization by default\"\r\n\r\nThis reverts commit 0f7b6413767b6738d0fe75858454431548c7432b.\r\n\r\n* Separate model-view & navigation-view into separate launch files. Start updating the rviz parameters\r\n\r\n* Update the model rviz config\r\n\r\n* Update the navigation view; add the map layer, set fixed frame to odom, set camera to top-down ortho\r\n\r\n* Add tf to the left-side menu\r\n\r\n* Remove the model parameter from the navigation viewer\r\n\r\n* Remove the Nav2 plugin from view_robot, add to view_navigation\r\n\r\n* Remove navigation-oriented plugins from view_robot\r\n\r\n* Revert to the old navigation viz setup; hide TF by default to make things less cluttered\r\n\r\n* Update github CI, issue templates\r\n\r\n* Linter fixes",
+      "files_changed": 7,
+      "additions": 1118,
+      "deletions": 484,
+      "commit_type": "config"
+    },
+    {
+      "author": "hilary-luo",
+      "date": "2023-12-27T18:05:22Z",
+      "sha": "f0a68f0b5dfbcd8e23d6736d5fd6c53bcc644620",
+      "message": "Updated issue templates to forms and redirected troubleshooting to turtlebot4 repo",
+      "files_changed": 6,
+      "additions": 151,
+      "deletions": 44,
+      "commit_type": "config"
+    },
+    {
+      "author": "roni-kreinin",
+      "date": "2022-02-11T19:06:17Z",
+      "sha": "29421940b5638ff03be53ca3c97a0c011a15eec2",
+      "message": "Initial commit",
+      "files_changed": 11,
+      "additions": 1385,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "tonybaltovski",
+      "date": "2022-12-05T20:32:08Z",
+      "sha": "f2e8b6ad62c306c86460be5e0186b04a0d341840",
+      "message": "Updated Github CI for ROS2 Humble.",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 5,
+      "commit_type": "config"
+    }
+  ]
+}

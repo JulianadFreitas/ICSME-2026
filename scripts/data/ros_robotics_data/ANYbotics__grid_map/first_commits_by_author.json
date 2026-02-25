@@ -1,0 +1,571 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T01:31:07Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ANYbotics",
+    "repo": "grid_map"
+  },
+  "data": [
+    {
+      "author": "magnus",
+      "date": "2026-01-12T08:22:47Z",
+      "sha": "cdd0ea25724723302fa7c1a2e30e3fb8b0a578f4",
+      "message": "manual squash to master, see https://git.anybotics.com/anybotics/anybotics/-/merge_requests/23700\n\nGitOrigin-RevId: 322976fc0a0f6f0fa01864a1858143e250201b16",
+      "files_changed": 14,
+      "additions": 31,
+      "deletions": 31,
+      "commit_type": "config"
+    },
+    {
+      "author": "ANYZichong",
+      "date": "2025-09-12T11:15:25Z",
+      "sha": "d467025f1e2c1a3b4747cba857332aca126d1e6d",
+      "message": "Merge branch 'feature/reverted_grid_map_msgs_port' into 'master'\n\n[grid_map_msgs] Reverted the ROS2 port\n\nGitOrigin-RevId: fe90ce335373d15491c2b584b38df5a0994366a9",
+      "files_changed": 2,
+      "additions": 10,
+      "deletions": 51,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mgaertneratanybotics",
+      "date": "2020-09-11T16:46:35Z",
+      "sha": "d85153c2e5b199d30c73942f96e96d0823d329e7",
+      "message": "Merge branch 'feature/median_fill_filter' into 'master'\n\n[grid_map_filters] Additional Filter - Median Fill Filter\n\nGitOrigin-RevId: 5d9ee2fba06eecd15180eec8d2186b6d1bc4cfd5",
+      "files_changed": 9,
+      "additions": 362,
+      "deletions": 9,
+      "commit_type": "docs"
+    },
+    {
+      "author": "fvina-anybotics",
+      "date": "2022-06-27T16:23:33Z",
+      "sha": "4249a9dc947bcdd0f1cae735bdd723089c41d573",
+      "message": "Merge branch 'fix/grid_map_core_version' into 'master'\n\n[grid_map] Fix package version\n\nGitOrigin-RevId: cec3640405f00ade48b5426a54597f632699b8e4",
+      "files_changed": 14,
+      "additions": 14,
+      "deletions": 14,
+      "commit_type": "config"
+    },
+    {
+      "author": "Armen Poghosov",
+      "date": "2025-01-30T20:05:27Z",
+      "sha": "34f1ff80169fe69e62d0973f623ac3828ec86266",
+      "message": "Merge branch 'fix/removed_const_map_from_a_header' into 'master'\n\nRemoved const std::map from a header file\n\nGitOrigin-RevId: d1dc994f656a9745d4a28c0b37d23a8599023ab4",
+      "files_changed": 3,
+      "additions": 50,
+      "deletions": 38,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Jonas Junger",
+      "date": "2024-10-18T12:29:44Z",
+      "sha": "be3bbc9afbcebd6a5cadcb091211916a79d3dc14",
+      "message": "Merge branch 'release-24.11'\n\nGitOrigin-RevId: f69bd332ed6125a529d3818f372d0bddcbdd9942",
+      "files_changed": 14,
+      "additions": 14,
+      "deletions": 14,
+      "commit_type": "config"
+    },
+    {
+      "author": "maximilianwulf",
+      "date": "2020-01-22T15:26:42Z",
+      "sha": "1f509a51b21f4f393d5a8cb8fe77c03a594d2152",
+      "message": "Merge branch 'anymal_research/rsl/fix/line_iterator' into 'master'\n\nrsl/fix/line_iterator\n\nThe line iterator my not be initialized after construction. This can lead to segfault when using the iterator later on.\n\nHere an example I cached:\n\nstartPos = [1.96 0.170931];\nendPos = [0.01, -0.0190691]\nGrid size = [91 x 91]\nGrid resolution: 0.02\n\nThe output from gdb:\n\nGITLAB_ISSUE_0  0x00007fffca27123b in **grid_map::GridMap::at**(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, Eigen::Array<int, 2, 1, 0, 2, 1> const&) const ()\n   from /home/fabianje/catkin_ws/devel/lib/libgrid_map_core.so\n\nGITLAB_ISSUE_1  0x00007fffca271372 in grid_map::GridMap::isValid(Eigen::Array<int, 2, 1, 0, 2, 1> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const ()\n   from /home/fabianje/catkin_ws/devel/lib/libgrid_map_core.so\n\nGITLAB_ISSUE_2  ...\n\nThis MR does not fix the issue, but at least let people know what is going wrong.\n\n@perception\n@motion-control (for those who use grid map)\n\nSquashed commit:\n\nImport change set of branch rsl/fix/line_iterator.\n\nCommits:\n--\nChange 1 of 5 by Maximilian Wulf <mwulf@anybotics.com>:\n\n[grid_map_core] Update unit test for exception handling\n\n--\nChange 2 of 5 by Maximilian Wulf <mwulf@anybotics.com>:\n\n[grid_map_core] Update unit test for constructor exception throw\n\n--\nChange 3 of 5 by fabianje <fabian.jenelten@mavt.ethz.ch>:\n\nremove test.\n\n--\nChange 4 of 5 by fabianje <fabian.jenelten@mavt.ethz.ch>:\n\nadded dox.\n\n--\nChange 5 of 5 by fabianje <fabian.jenelten@mavt.ethz.ch>:\n\nadded throw.\n\nAuthors:\n\nCo-authored-by: Maximilian Wulf <mwulf@anybotics.com>\n\nCo-authored-by: Maximilian Wulf <mwulf@anybotics.com>\n\nCo-authored-by: fabianje <fabian.jenelten@mavt.ethz.ch>\n\nCo-authored-by: fabianje <fabian.jenelten@mavt.ethz.ch>\n\nCo-authored-by: fabianje <fabian.jenelten@mavt.ethz.ch>\n\n **Related ANYmal Research MR:** https://code.anymal.com/anymal-research/anymal_research/merge_requests/140\n\nAuthored by: Fabian Jenelten\n\n*Note: The MR in ANYmal Research has to be closed manually.*\n\nANYmal Research issues closed\n\nGitOrigin-RevId: 6aa0941d89f59b4bec5500def823a2b7ca56d58b",
+      "files_changed": 3,
+      "additions": 12,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "samuelba",
+      "date": "2019-02-27T08:50:06Z",
+      "sha": "95a167fb42be31cfa561edf8485beb951454523e",
+      "message": "Merge pull request #202 from ANYbotics/fix/tf_for_indigo_and_kinetic\n\nFix/tf for indigo and kinetic",
+      "files_changed": 2,
+      "additions": 39,
+      "deletions": 7,
+      "commit_type": "code"
+    },
+    {
+      "author": "domingoesteban",
+      "date": "2022-02-02T21:02:41Z",
+      "sha": "d6d465035745553dcd5c59c3df80be57a67c206d",
+      "message": "Merge remote-tracking branch 'origin/release-22.01'\n\nGitOrigin-RevId: 8802aa04b996f593798b40ed4e9ef008a4628953",
+      "files_changed": 14,
+      "additions": 14,
+      "deletions": 14,
+      "commit_type": "config"
+    },
+    {
+      "author": "remod",
+      "date": "2014-12-10T15:15:31Z",
+      "sha": "c0d301d9b0042425dad4879895ec617acab66295",
+      "message": "improved add function, added empty constructor",
+      "files_changed": 4,
+      "additions": 27,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "Javier De Velasco Oriol",
+      "date": "2024-07-05T13:23:03Z",
+      "sha": "46accc26341a9d93d7c543a10cba637d02a19765",
+      "message": "Merge remote-tracking branch 'origin/release-24.07'\n\nGitOrigin-RevId: 4659135876c455d1a51007d61976fa596c7df57d",
+      "files_changed": 14,
+      "additions": 14,
+      "deletions": 14,
+      "commit_type": "config"
+    },
+    {
+      "author": "hogabrie",
+      "date": "2019-05-20T11:25:04Z",
+      "sha": "6929b5e27907ce4d9c79d832a05741f68662b65d",
+      "message": "Merge branch 'fix/rm_jenkins_files' into 'master'\n\n[all-pkgs] Removed jenkins-pipeline files\n\nSee merge request anybotics/anybotics!4\n\nGitOrigin-RevId: 898c378cf068522c056f69284d9d2a7e8560e845",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "PrajishKumar",
+      "date": "2023-10-06T14:07:55Z",
+      "sha": "da3ee2e6dc8ea4baa4ae709b0fa907d3ffd95e27",
+      "message": "Merge release-23.10 into master.\n\nGitOrigin-RevId: 19d842eb6c5de548cd2d1a599b11318fe3aed34f",
+      "files_changed": 14,
+      "additions": 14,
+      "deletions": 14,
+      "commit_type": "config"
+    },
+    {
+      "author": "rororov",
+      "date": "2023-11-15T12:36:12Z",
+      "sha": "53340cd2f1e9e1007893db7eb8803e55ea9df5fa",
+      "message": "Merge branch 'fix/perception_code_cpp17' into 'master'\n\n[anymal_state_estimator_tsif, others] Move to C++17\n\nGitOrigin-RevId: 448a39e47a525da90edcb2a8babbc449a4ab6169",
+      "files_changed": 3,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "pleemann",
+      "date": "2019-08-14T10:43:48Z",
+      "sha": "c1416e07c8ef127fe7904ea53959cd119cd35bf1",
+      "message": "Merge branch 'pre-release' into 'master'\n\nSync master with pre-release\n\nGitOrigin-RevId: e46227ca2cab96f0088d927f05d5e7127ec77d5b",
+      "files_changed": 1,
+      "additions": 10,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "FGiraldez",
+      "date": "2023-05-12T10:02:36Z",
+      "sha": "80863e909f150685cf4bd744030e2fe27595736d",
+      "message": "Merge branch 'release-23.05' of git.anybotics.com:anybotics/anybotics\n\nGitOrigin-RevId: cbd1bb5a9a24e1be6ef8df9255212d6c7297e75c",
+      "files_changed": 14,
+      "additions": 14,
+      "deletions": 14,
+      "commit_type": "config"
+    },
+    {
+      "author": "Aravind Vijayan",
+      "date": "2020-05-14T09:03:03Z",
+      "sha": "28a20fa4efde28fc3008c2b79f49f4d331f9deac",
+      "message": "Merge branch 'fix/reduce_highlevel_verbosity' into 'master'\n\n[motion_control] Reduce verbosity of highlevel controller on startup\n\nGitOrigin-RevId: 7ab3f45d46fe8da0086802c47d79a8b2a7289a7d",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "YoshuaNava",
+      "date": "2022-10-10T08:26:22Z",
+      "sha": "fd4034b53094429b10708a8c545a56bfac36a96d",
+      "message": "Merge branch 'release-22.10' into master\n\nGitOrigin-RevId: 81716deb102b79af979516e3bbf1502e5d3f7714",
+      "files_changed": 14,
+      "additions": 14,
+      "deletions": 14,
+      "commit_type": "config"
+    },
+    {
+      "author": "harmishhk",
+      "date": "2022-05-16T08:39:47Z",
+      "sha": "a15f50c9d1c00c0e3bb5db14d41c5a91e53a42f8",
+      "message": "Merge branch 'fix/grid_map_remove_unused_code' into 'master'\n\nRemoving some unused code\n\nGitOrigin-RevId: 69dc660e00b1d6c288525830499b9623475da005",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "hwyss-anybotics",
+      "date": "2022-04-13T10:39:27Z",
+      "sha": "c23dcde8f0fc5ead0a30d24179344d71a7eba163",
+      "message": "Merge remote-tracking branch 'origin/feature/merge/release-22.04-into-master'\n\nGitOrigin-RevId: 727517bf53e57d4e7398ae6f8176859a82c33733",
+      "files_changed": 14,
+      "additions": 14,
+      "deletions": 14,
+      "commit_type": "config"
+    },
+    {
+      "author": "Kaixian Qu",
+      "date": "2022-02-16T10:33:57Z",
+      "sha": "6ad3affd501588e78be4a4dfc6725289916485ef",
+      "message": "Merge branch 'fix/threshold_obstacle_frame' into 'master'\n\n[obstacle_pipelines] Use the correct frameId for LiDAR's height-based obstacle detection (threshold_obstacle)\n\nGitOrigin-RevId: 8721bd531c018981d5c56feb44b3c9226dac4c41",
+      "files_changed": 3,
+      "additions": 35,
+      "deletions": 58,
+      "commit_type": "code"
+    },
+    {
+      "author": "jelavice",
+      "date": "2019-11-27T15:25:54Z",
+      "sha": "16673339229f9669aab407d60324515e2459281b",
+      "message": "Merge branch 'anymal_research/rsl/feature/map_from_raw_pointcloud' into 'master'\n\nRsl/feature/map from raw pointcloud\n\nPiece of code that will generate an elevation map from a raw pointcloud.\n\nTo reproduce the results you can download the pointclouds from here:\nhttps://drive.google.com/drive/folders/1TxIN6Ox3JybccqpbKr6KhatylUNDPbRK?usp=sharing\n\nThere is a pointcloud from Hoenggerberg field, forest patch and the H floor in LEE building.\n\nTo run the node, create a data folder inside the package:\ngrid_map_pcl/data\n\ncopy the pointcloud files into the \"data\" folder. Change the name in the launch file (the only launch file) and run. Piontclouds are big, so it takes about 5-10 min to get the final result. Once the computation has finished (you will see the total time elapsed), you can run the rviz in another terminal to visualize the map.\n\nYou can see an example elevation map of a forest, created from raw pointcloud in the images attached.\n\n![forest_pointcloud](/uploads/2fcd70d0b120b1d414ef8bae26ecef8e/forest_pointcloud.png)![forest](/uploads/5e2c71ddd79968b7c5f6f770f3557a01/forest.png)\n\nSquashed commit:\n\nImport change set of branch rsl/feature/map_from_raw_pointcloud.\n\nCommits:\n--\nChange 1 of 69 by jelavice <edo.jelavic@gmail.com>:\n\nRemove the clouds that are generated when you run the tests. Edit the readme.\n\n--\nChange 2 of 69 by Edo Jelavic <jelavice@ethz.ch>:\n\nUpdate README.md\n--\nChange 3 of 69 by Edo Jelavic <jelavice@ethz.ch>:\n\nUpdate README.md\n--\nChange 4 of 69 by Edo Jelavic <jelavice@ethz.ch>:\n\nUpdate README.md\n--\nChange 5 of 69 by jelavice <edo.jelavic@gmail.com>:\n\nFix the wrong name. Add system clause to Cmake lists include directories\n\n--\nChange 6 of 69 by jelavice <edo.jelavic@gmail.com>:\n\nFix the affiliation and includes\n\n--\nChange 7 of 69 by jelavice <edo.jelavic@gmail.com>:\n\nAdd some comments about the terrain creation\n\n--\nChange 8 of 69 by jelavice <edo.jelavic@gmail.com>:\n\nSort out the includes a bit\n\n--\nChange 9 of 69 by jelavice <edo.jelavic@gmail.com>:\n\nFix tests\n\n--\nChange 10 of 69 by jelavice <edo.jelavic@gmail.com>:\n\nFactor out point cloud processing\n\n--\nChange 11 of 69 by jelavice <edo.jelavic@gmail.com>:\n\nFactor out some functions from the Grid Map pcl loader\n\n--\nChange 12 of 69 by jelavice <edo.jelavic@gmail.com>:\n\nremove the dependency on std_utils\n\n--\nChange 13 of 69 by jelavice <edo.jelavic@gmail.com>:\n\nRemove the dependency on yaml tools\n\n--\nChange 14 of 69 by jelavice <edo.jelavic@gmail.com>:\n\nRemove the gtest from the pcl loader code\n\n--\nChange 15 of 69 by jelavice <edo.jelavic@gmail.com>:\n\nAdd all the tests\n\n--\nChange 16 of 69 by jelavice <edo.jelavic@gmail.com>:\n\nAdd all the tests\n\n--\nChange 17 of 69 by jelavice <edo.jelavic@gmail.com>:\n\nAdd another test\n\n--\nChange 18 of 69 by jelavice <edo.jelavic@gmail.com>:\n\nCleaning tests\n\n--\nChange 19 of 69 by jelavice <edo.jelavic@gmail.com>:\n\nMove the functions outside as yoshua requested\n\n--\nChange 20 of 69 by jelavice <edo.jelavic@gmail.com>:\n\nAdd more tests\n\n--\nChange 21 of 69 by jelavice <edo.jelavic@gmail.com>:\n\nRemove verbose outputs\n\n--\nChange 22 of 69 by jelavice <edo.jelavic@gmail.com>:\n\ntrying to clean up the tests\n\n--\nChange 23 of 69 by jelavice <ej@example.com>:\n\nAdd randomness into the test\n\n--\nChange 24 of 69 by jelavice <ej@example.com>:\n\nFix\n\n--\nChange 25 of 69 by jelavice <ej@example.com>:\n\nWIP\n\n--\nChange 26 of 69 by jelavice <ej@example.com>:\n\nWIP\n\n--\nChange 27 of 69 by Edo Jelavic <jelavice@ethz.ch>:\n\nApply suggestion to tools/data_structure/grid_map/grid_map_pcl/CMakeLists.txt\n--\nChange 28 of 69 by Edo Jelavic <jelavice@ethz.ch>:\n\nApply suggestion to tools/data_structure/grid_map/grid_map_pcl/src/GridMapPclLoader.cpp\n--\nChange 29 of 69 by jelavice <ej@example.com>:\n\nAdding tests. WIP\n\n--\nChange 30 of 69 by jelavice <ej@example.com>:\n\ntest/FlatGroundTest.cpp\n\n--\nChange 31 of 69 by jelavice <ej@example.com>:\n\nAdd the multiple planes test\n\n--\nChange 32 of 69 by jelavice <ej@example.com>:\n\nAdd somem ghetto tests. WIP\n\n--\nChange 33 of 69 by jelavice <ej@example.com>:\n\nAdd the test\n\n--\nChange 34 of 69 by jelavice <ej@example.com>:\n\nadd docs\n\n--\nChange 35 of 69 by jelavice <ej@example.com>:\n\nSeparate parameter handling from the loader\n\n--\nChange 36 of 69 by jelavice <ej@example.com>:\n\nAdding the file loader class\n\n--\nChange 37 of 69 by jelavice <ej@example.com>:\n\nAdding google tests\n\n--\nChange 38 of 69 by jelavice <edo.jelavic@gmail.com>:\n\nAdd the comments requested by Max\n\n--\nChange 39 of 69 by Edo Jelavic <jelavice@ethz.ch>:\n\nApply suggestion to tools/data_structure/grid_map/grid_map_pcl/src/GridMapPclLoader.cpp\n--\nChange 40 of 69 by Edo Jelavic <jelavice@ethz.ch>:\n\nApply suggestion to tools/data_structure/grid_map/grid_map_pcl/src/GridMapPclLoader.cpp\n--\nChange 41 of 69 by Edo Jelavic <jelavice@ethz.ch>:\n\nApply suggestion to tools/data_structure/grid_map/grid_map_pcl/src/GridMapPclLoader.cpp\n--\nChange 42 of 69 by Edo Jelavic <jelavice@ethz.ch>:\n\nApply suggestion to tools/data_structure/grid_map/grid_map_pcl/src/GridMapPclLoader.cpp\n--\nChange 43 of 69 by Edo Jelavic <jelavice@ethz.ch>:\n\nApply suggestion to tools/data_structure/grid_map/grid_map_pcl/src/GridMapPclLoader.cpp\n--\nChange 44 of 69 by Edo Jelavic <jelavice@ethz.ch>:\n\nApply suggestion to tools/data_structure/grid_map/grid_map_pcl/src/GridMapPclLoader.cpp\n--\nChange 45 of 69 by Edo Jelavic <jelavice@ethz.ch>:\n\nApply suggestion to tools/data_structure/grid_map/grid_map_pcl/src/GridMapPclLoader.cpp\n--\nChange 46 of 69 by Edo Jelavic <jelavice@ethz.ch>:\n\nApply suggestion to tools/data_structure/grid_map/grid_map_pcl/include/grid_map_pcl/GridMapPclLoader.hpp\n--\nChange 47 of 69 by Edo Jelavic <jelavice@ethz.ch>:\n\nApply suggestion to tools/data_structure/grid_map/grid_map_pcl/include/grid_map_pcl/GridMapPclLoader.hpp\n--\nChange 48 of 69 by Edo Jelavic <jelavice@ethz.ch>:\n\nApply suggestion to tools/data_structure/grid_map/grid_map_pcl/include/grid_map_pcl/GridMapPclLoader.hpp\n--\nChange 49 of 69 by Edo Jelavic <jelavice@ethz.ch>:\n\nApply suggestion to tools/data_structure/grid_map/grid_map_pcl/include/grid_map_pcl/GridMapPclLoader.hpp\n--\nChange 50 of 69 by jelavice <edo.jelavic@gmail.com>:\n\nAdd links in the readme files\n\n--\nChange 51 of 69 by Edo Jelavic <jelavice@ethz.ch>:\n\nUpdate README.md\n--\nChange 52 of 69 by jelavice <edo.jelavic@gmail.com>:\n\nAdding docs\n\n--\nChange 53 of 69 by Edo Jelavic <jelavice@ethz.ch>:\n\nSome progress on the readme\n--\nChange 54 of 69 by jelavice <edo.jelavic@gmail.com>:\n\nAdding readme\n\n--\nChange 55 of 69 by jelavice <edo.jelavic@gmail.com>:\n\nChange the default topic name. It can be remapped now\n\n--\nChange 56 of 69 by jelavice <edo.jelavic@gmail.com>:\n\nAdd all the docs\n\n--\nChange 57 of 69 by jelavice <edo.jelavic@gmail.com>:\n\nAdding docs. Long long way.\n\n--\nChange 58 of 69 by jelavice <edo.jelavic@gmail.com>:\n\nsort out the includes. Handle the case when openmp is not found\n\n--\nChange 59 of 69 by jelavice <edo.jelavic@gmail.com>:\n\nAddress some comments from PR\n\n--\nChange 60 of 69 by jelavice <edo.jelavic@gmail.com>:\n\nfix the launch file indents\n\n--\nChange 61 of 69 by jelavice <edo.jelavic@gmail.com>:\n\nAddressing PR comments\n\n--\nChange 62 of 69 by Edo Jelavic <jelavice@ethz.ch>:\n\nApply suggestion to tools/data_structure/grid_map/grid_map_pcl/CMakeLists.txt\n--\nChange 63 of 69 by jelavice <edo.jelavic@gmail.com>:\n\nAdd the working folder path\n\n--\nChange 64 of 69 by jelavice <edo.jelavic@gmail.com>:\n\nRemove comments\n\n--\nChange 65 of 69 by Edo Jelavic <jelavice@ethz.ch>:\n\nApply suggestion to tools/data_structure/grid_map/grid_map_pcl/launch/grid_map_pcl_loader_node.launch\n--\nChange 66 of 69 by jelavice <edo.jelavic@gmail.com>:\n\nAdd some docs\n\n--\nChange 67 of 69 by jelavice <edo.jelavic@gmail.com>:\n\nAdd the launch file. tweak gitignore\n\n--\nChange 68 of 69 by jelavice <edo.jelavic@gmail.com>:\n\nAdd publisher\n\n--\nChange 69 of 69 by jelavice <edo.jelavic@gmail.com>:\n\nCompiles\n\nAuthors:\n\nCo-authored-by: jelavice <edo.jelavic@gmail.com>\n\nCo-authored-by: Edo Jelavic <jelavice@ethz.ch>\n\nCo-authored-by: Edo Jelavic <jelavice@ethz.ch>\n\nCo-authored-by: Edo Jelavic <jelavice@ethz.ch>\n\nCo-authored-by: jelavice <edo.jelavic@gmail.com>\n\nCo-authored-by: jelavice <edo.jelavic@gmail.com>\n\nCo-authored-by: jelavice <edo.jelavic@gmail.com>\n\nCo-authored-by: jelavice <edo.jelavic@gmail.com>\n\nCo-authored-by: jelavice <edo.jelavic@gmail.com>\n\nCo-authored-by: jelavice <edo.jelavic@gmail.com>\n\nCo-authored-by: jelavice <edo.jelavic@gmail.com>\n\nCo-authored-by: jelavice <edo.jelavic@gmail.com>\n\nCo-authored-by: jelavice <edo.jelavic@gmail.com>\n\nCo-authored-by: jelavice <edo.jelavic@gmail.com>\n\nCo-authored-by: jelavice <edo.jelavic@gmail.com>\n\nCo-authored-by: jelavice <edo.jelavic@gmail.com>\n\nCo-authored-by: jelavice <edo.jelavic@gmail.com>\n\nCo-authored-by: jelavice <edo.jelavic@gmail.com>\n\nCo-authored-by: jelavice <edo.jelavic@gmail.com>\n\nCo-authored-by: jelavice <edo.jelavic@gmail.com>\n\nCo-authored-by: jelavice <edo.jelavic@gmail.com>\n\nCo-authored-by: jelavice <edo.jelavic@gmail.com>\n\nCo-authored-by: jelavice <ej@example.com>\n\nCo-authored-by: jelavice <ej@example.com>\n\nCo-authored-by: jelavice <ej@example.com>\n\nCo-authored-by: jelavice <ej@example.com>\n\nCo-authored-by: Edo Jelavic <jelavice@ethz.ch>\n\nCo-authored-by: Edo Jelavic <jelavice@ethz.ch>\n\nCo-authored-by: jelavice <ej@example.com>\n\nCo-authored-by: jelavice <ej@example.com>\n\nCo-authored-by: jelavice <ej@example.com>\n\nCo-authored-by: jelavice <ej@example.com>\n\nCo-authored-by: jelavice <ej@example.com>\n\nCo-authored-by: jelavice <ej@example.com>\n\nCo-authored-by: jelavice <ej@example.com>\n\nCo-authored-by: jelavice <ej@example.com>\n\nCo-authored-by: jelavice <ej@example.com>\n\nCo-authored-by: jelavice <edo.jelavic@gmail.com>\n\nCo-authored-by: Edo Jelavic <jelavice@ethz.ch>\n\nCo-authored-by: Edo Jelavic <jelavice@ethz.ch>\n\nCo-authored-by: Edo Jelavic <jelavice@ethz.ch>\n\nCo-authored-by: Edo Jelavic <jelavice@ethz.ch>\n\nCo-authored-by: Edo Jelavic <jelavice@ethz.ch>\n\nCo-authored-by: Edo Jelavic <jelavice@ethz.ch>\n\nCo-authored-by: Edo Jelavic <jelavice@ethz.ch>\n\nCo-authored-by: Edo Jelavic <jelavice@ethz.ch>\n\nCo-authored-by: Edo Jelavic <jelavice@ethz.ch>\n\nCo-authored-by: Edo Jelavic <jelavice@ethz.ch>\n\nCo-authored-by: Edo Jelavic <jelavice@ethz.ch>\n\nCo-authored-by: jelavice <edo.jelavic@gmail.com>\n\nCo-authored-by: Edo Jelavic <jelavice@ethz.ch>\n\nCo-authored-by: jelavice <edo.jelavic@gmail.com>\n\nCo-authored-by: Edo Jelavic <jelavice@ethz.ch>\n\nCo-authored-by: jelavice <edo.jelavic@gmail.com>\n\nCo-authored-by: jelavice <edo.jelavic@gmail.com>\n\nCo-authored-by: jelavice <edo.jelavic@gmail.com>\n\nCo-authored-by: jelavice <edo.jelavic@gmail.com>\n\nCo-authored-by: jelavice <edo.jelavic@gmail.com>\n\nCo-authored-by: jelavice <edo.jelavic@gmail.com>\n\nCo-authored-by: jelavice <edo.jelavic@gmail.com>\n\nCo-authored-by: jelavice <edo.jelavic@gmail.com>\n\nCo-authored-by: Edo Jelavic <jelavice@ethz.ch>\n\nCo-authored-by: jelavice <edo.jelavic@gmail.com>\n\nCo-authored-by: jelavice <edo.jelavic@gmail.com>\n\nCo-authored-by: Edo Jelavic <jelavice@ethz.ch>\n\nCo-authored-by: jelavice <edo.jelavic@gmail.com>\n\nCo-authored-by: jelavice <edo.jelavic@gmail.com>\n\nCo-authored-by: jelavice <edo.jelavic@gmail.com>\n\nCo-authored-by: jelavice <edo.jelavic@gmail.com>\n\n **Related ANYmal Research MR:** https://code.anymal.com/anymal-research/anymal_research/merge_requests/98\n\nAuthored by: Edo Jelavic\n\n*Note: The MR in ANYmal Research has to be closed manually.*\n\nANYmal Research issues closed\n\nGitOrigin-RevId: 342063036189362f0495475d864e954df724a446",
+      "files_changed": 30,
+      "additions": 2343,
+      "deletions": 19,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Emilk Roy Sempertegui Aveiga",
+      "date": "2021-03-30T14:58:10Z",
+      "sha": "0c0724f91ee08357837b4f753564cc25f69f65f4",
+      "message": "Merge branch 'fix/grid_map_cv_remove_compiler_warnings' into 'master'\n\n[grid_map_cv] remove compiler warnings\n\nGitOrigin-RevId: aff370684d379c900b0522161db5987a75d102c3",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "Guoxiang Zhou",
+      "date": "2021-01-13T08:14:26Z",
+      "sha": "381b30ecefd261cbfc8f1d296dac6b587a062c28",
+      "message": "Merge branch 'feature/update_readme_grid_map' into 'master'\n\n[grid_map] Update build status links in readme\n\nGitOrigin-RevId: e52b27ba586a886def50e1a318921253a4b291bc",
+      "files_changed": 1,
+      "additions": 22,
+      "deletions": 20,
+      "commit_type": "docs"
+    },
+    {
+      "author": "YoshuaNavaANYbotics",
+      "date": "2020-07-30T07:59:22Z",
+      "sha": "270a9cc7f4551fc4b4488a5d3a8c98f7c42b9269",
+      "message": "Merge branch 'fix/grid_map_code_coverage' into 'master'\n\n[grid_map_*] Added test coverage macros\n\nGitOrigin-RevId: bf45cb1ee9c9c52707e7316070ef191116c438fa",
+      "files_changed": 14,
+      "additions": 89,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "Enea Scioni",
+      "date": "2020-07-15T14:14:18Z",
+      "sha": "02c5874deddfbf038241e6dc2438ef7b33f382ef",
+      "message": "Merge branch 'fix/update-cmake-minimum-version' into 'master'\n\nupdate cmake minimum version from 2.8.3 to 3.5.1\n\nGitOrigin-RevId: 3719820fca7758e5ce1feee3409a3cc6b0af17a3",
+      "files_changed": 14,
+      "additions": 14,
+      "deletions": 14,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Simone Arreghini",
+      "date": "2020-03-18T10:21:45Z",
+      "sha": "d5e37fc8ce00c261e50fe67f7ac5a51791dd2dec",
+      "message": "Merge branch 'feature/grid_map_raster_based_normals' into 'master'\n\n[grid_map] Implemented raster normal computation\n\nCloses #UNKNOWN\n\nGitOrigin-RevId: 6930d59bb7d84467aca4cce12604e207d1b26c63",
+      "files_changed": 24,
+      "additions": 1126,
+      "deletions": 133,
+      "commit_type": "docs"
+    },
+    {
+      "author": "rubengrandia",
+      "date": "2020-02-07T12:36:04Z",
+      "sha": "68dde279033dde0d5c382324007bf4ec1586a6a7",
+      "message": "Merge branch 'anymal_research/rsl/feature/refactor_gridmap_isvalid' into 'master'\n\n[grid_map] refactor isValid\n\nDuring a position3() call, data would be looked up first to check validity, and again afterwards to assign.\n\n- Add an isValid for the value type directly, so we can prevent the double data lookup.\n- Called the new function from the other isValid implementations to prevent duplication.\n\n@perception/localization-and-mapping\n\nSquashed commit:\n\nImport change set of branch rsl/feature/refactor_gridmap_isvalid.\n\nCommits:\n--\nChange 1 of 3 by rgrandia <rubengrandia@gmail.com>:\n\napplied clang-format\n\n--\nChange 2 of 3 by rgrandia <rubengrandia@gmail.com>:\n\nDo lookup explicitly instead of looping over names\n\n--\nChange 3 of 3 by rgrandia <rubengrandia@gmail.com>:\n\nprevent double look-up of value due to isValid\n\nAuthors:\n\nCo-authored-by: rgrandia <rubengrandia@gmail.com>\n\nCo-authored-by: rgrandia <rubengrandia@gmail.com>\n\nCo-authored-by: rgrandia <rubengrandia@gmail.com>\n\n **Related ANYmal Research MR:** https://code.anymal.com/anymal-research/anymal_research/merge_requests/150\n\nAuthored by: Ruben Grandia\n\n*Note: The MR in ANYmal Research has to be closed manually.*\n\nANYmal Research issues closed\n\nGitOrigin-RevId: 2e51cf4308eef7e0c7dbcc7e5fe028cabfc45ad3",
+      "files_changed": 2,
+      "additions": 212,
+      "deletions": 241,
+      "commit_type": "code"
+    },
+    {
+      "author": "fabianje",
+      "date": "2019-06-24T15:59:13Z",
+      "sha": "68ecf21112314e4ad5df8903dcf2bbe5a49443d8",
+      "message": "Merge branch 'anymal_research/rsl/feature/transform_map' into 'master'\n\nAdded function to transform a grid map.\n\nBased on this [feature](https://github.com/ANYbotics/grid_map/tree/feature/grid_map_transformation) implemented by Takahiro.\n\nSquashed commit:\n\nImport change set of branch rsl/feature/transform_map.\n\nCommits:\n  - Use Isometry3d instead of Affine3d. by fabianje <fabian.jenelten@mavt.ethz.ch>\n  - removed comment. by fabianje <fabian.jenelten@mavt.ethz.ch>\n  - fixed other typo. by fabianje <fabian.jenelten@mavt.ethz.ch>\n  - fixed typo. by fabianje <fabian.jenelten@mavt.ethz.ch>\n  - isValid is already check in getPosition3 function. by fabianje <fabian.jenelten@mavt.ethz.ch>\n  - use out_of_range. by fabianje <fabian.jenelten@mavt.ethz.ch>\n  - fixed names. by fabianje <fabian.jenelten@mavt.ethz.ch>\n  - precompute division. by fabianje <fabian.jenelten@mavt.ethz.ch>\n  - fixed naming. by fabianje <fabian.jenelten@mavt.ethz.ch>\n  - fixed typo. by fabianje <fabian.jenelten@mavt.ethz.ch>\n  - Changed name. by fabianje <fabian.jenelten@mavt.ethz.ch>\n  - move declaration. by fabianje <fabian.jenelten@mavt.ethz.ch>\n  - Explain sample_ration. by fabianje <fabian.jenelten@mavt.ethz.ch>\n  - Improved comments. by fabianje <fabian.jenelten@mavt.ethz.ch>\n  - Throw error if height layer is missing. by fabianje <fabian.jenelten@mavt.ethz.ch>\n  - Added unit test. by fabianje <fabian.jenelten@mavt.ethz.ch>\n  - fixed typo. by fabianje <fabian.jenelten@mavt.ethz.ch>\n  - compute new grid size from data. by fabianje <fabian.jenelten@mavt.ethz.ch>\n  - (1) added comments. (2) added frame index, (3) allow to d... by fabianje <fabian.jenelten@mavt.ethz.ch>\n  - Added function to transform a grid map. by fabianje <fabian.jenelten@mavt.ethz.ch>\n\nAuthors:\n\nCo-authored-by: fabianje <fabian.jenelten@mavt.ethz.ch>\n\nCo-authored-by: fabianje <fabian.jenelten@mavt.ethz.ch>\n\nCo-authored-by: fabianje <fabian.jenelten@mavt.ethz.ch>\n\nCo-authored-by: fabianje <fabian.jenelten@mavt.ethz.ch>\n\nCo-authored-by: fabianje <fabian.jenelten@mavt.ethz.ch>\n\nCo-authored-by: fabianje <fabian.jenelten@mavt.ethz.ch>\n\nCo-authored-by: fabianje <fabian.jenelten@mavt.ethz.ch>\n\nCo-authored-by: fabianje <fabian.jenelten@mavt.ethz.ch>\n\nCo-authored-by: fabianje <fabian.jenelten@mavt.ethz.ch>\n\nCo-authored-by: fabianje <fabian.jenelten@mavt.ethz.ch>\n\nCo-authored-by: fabianje <fabian.jenelten@mavt.ethz.ch>\n\nCo-authored-by: fabianje <fabian.jenelten@mavt.ethz.ch>\n\nCo-authored-by: fabianje <fabian.jenelten@mavt.ethz.ch>\n\nCo-authored-by: fabianje <fabian.jenelten@mavt.ethz.ch>\n\nCo-authored-by: fabianje <fabian.jenelten@mavt.ethz.ch>\n\nCo-authored-by: fabianje <fabian.jenelten@mavt.ethz.ch>\n\nCo-authored-by: fabianje <fabian.jenelten@mavt.ethz.ch>\n\nCo-authored-by: fabianje <fabian.jenelten@mavt.ethz.ch>\n\nCo-authored-by: fabianje <fabian.jenelten@mavt.ethz.ch>\n\nCo-authored-by: fabianje <fabian.jenelten@mavt.ethz.ch>\n\n **Related ANYmal Research MR:** https://code.anymal.com/anymal_research/anymal_research/merge_requests/32\n\nAuthored by: Fabian Jenelten\n\n*Note: The MR in ANYmal Research has to be closed manually.*\n\nSee merge request anybotics/anybotics!183\n\nGitOrigin-RevId: 15bd551a3c367dafe7b15fc12b68e060b8d34eb7",
+      "files_changed": 3,
+      "additions": 165,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "djud",
+      "date": "2016-04-15T15:49:19Z",
+      "sha": "1977d8d0cca1a592b00bb5da6d65c9323c056566",
+      "message": "added initializeFromImage() to GridMapCvConverter",
+      "files_changed": 2,
+      "additions": 33,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "pfankhauser",
+      "date": "2014-09-11T17:17:59Z",
+      "sha": "3c4b6c699fff120af65b7ffda089bdbeaf226b58",
+      "message": "Initial commit",
+      "files_changed": 1,
+      "additions": 28,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "yvaind",
+      "date": "2019-03-29T17:48:51Z",
+      "sha": "98b077f9bad462b8e68cf3d014ada9caa3af58a3",
+      "message": "Fixed some compiler warnings.",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "MarcoSuetterlin",
+      "date": "2019-01-23T14:42:22Z",
+      "sha": "c49342ceeae52106e6ed32d084f6afbb2150dfdf",
+      "message": "Update to tf2 MessageFilters",
+      "files_changed": 3,
+      "additions": 8,
+      "deletions": 6,
+      "commit_type": "config"
+    },
+    {
+      "author": "marco-tranzatto",
+      "date": "2019-01-24T11:19:22Z",
+      "sha": "cf7607cc9cf5db4ae8c5f68bf1962776cd848891",
+      "message": "Extend ProcessFile.srv to include topic_name field.",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Peter Fankhauser",
+      "date": "2014-09-11T17:21:07Z",
+      "sha": "a76c4587090a610b5b99db0fab8b35431707659e",
+      "message": "Initial commit, movig files from elevation_mapping repository.",
+      "files_changed": 23,
+      "additions": 2811,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Sascha Wirges",
+      "date": "2017-11-22T16:51:23Z",
+      "sha": "5750889a4a9aec1d7a6053c23e7427ba15ff68d6",
+      "message": "Resolve for more ignored qualifiers",
+      "files_changed": 3,
+      "additions": 4,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "pierrefranklin",
+      "date": "2017-03-21T18:30:30Z",
+      "sha": "016a23282ad1e81e0974926a9a6476f343e57e8f",
+      "message": "Fixes transparency issue, where robots and other markers could not be seen through a transparent Grid_map",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "wsascha",
+      "date": "2017-04-13T11:31:29Z",
+      "sha": "b57db09dfbaea8897ab9b7facd37dd6eab68f0bd",
+      "message": "fix: Return in getQuadrant member fct",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "mktk1117",
+      "date": "2017-08-04T23:58:37Z",
+      "sha": "54193776e31b8dfa83c166c573face581917a7b7",
+      "message": "Add test for LineIterator with using move function",
+      "files_changed": 1,
+      "additions": 68,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Le-Fix",
+      "date": "2017-07-27T14:41:22Z",
+      "sha": "6e02aafcae233996a2ffad6a90e4fad3418e027b",
+      "message": "Fixed: Clamp changes were disregarded",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "2scholz",
+      "date": "2017-07-26T15:32:36Z",
+      "sha": "c12f7b0ff14004ffe78c5047e8e33d10fd7ba699",
+      "message": "SpiralIterator Test, for center out of bounds\n\nThe test was created because initializing a SpiralIterator with a center that is\noutside of the map was leading to a segmentation fault when accessing the iterator.\n\nThe test creates a SpiralIterator with a center that is outside of the map with\na radius chosen, so that the iterator will reach the map.\nThen the created iterator is used to get the corresponding position on the map\nand it is verified that the returned position is actually inside the map.",
+      "files_changed": 2,
+      "additions": 43,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "alexmillane",
+      "date": "2017-06-14T16:55:02Z",
+      "sha": "f848a2ed8c6e0b31dc77ba14c4609e6aabdd4fca",
+      "message": "Both submap and polygon iterators tested here. Swapping to submap only.",
+      "files_changed": 2,
+      "additions": 194,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "martiwer",
+      "date": "2015-03-16T15:49:43Z",
+      "sha": "65c5bec2c5e889408b3a38950f080f038b9232b7",
+      "message": "Added weighted sum filter",
+      "files_changed": 4,
+      "additions": 113,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "Tanja Baumann",
+      "date": "2017-05-03T11:21:32Z",
+      "sha": "dcc3348a949a3f8aa40f55ecfbee4ac8fda9ba02",
+      "message": "add minInRadius filter\nadd meanInRadius filter",
+      "files_changed": 6,
+      "additions": 360,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Stefan Fabian",
+      "date": "2017-06-23T10:06:18Z",
+      "sha": "ea76e8a1a208418211db3750b0b8f9d275130099",
+      "message": "Updated visualization to support triangles in all directions.",
+      "files_changed": 1,
+      "additions": 58,
+      "deletions": 63,
+      "commit_type": "code"
+    },
+    {
+      "author": "jeffdelmerico",
+      "date": "2017-05-02T12:06:40Z",
+      "sha": "9b41a2822d73873b74dac343eb43ba7dfc6e7833",
+      "message": "Initial commit of octomap converter.\n\nWIP: Skeleton converter class + basic unit test.",
+      "files_changed": 7,
+      "additions": 301,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "thomasemter",
+      "date": "2017-03-31T08:17:00Z",
+      "sha": "0d65a9edfb585ca84b495b426d4206cd4e639b48",
+      "message": "fixed eigen alignment in GridMap class",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "todorangrg",
+      "date": "2017-01-20T08:31:10Z",
+      "sha": "858378a8975442605721f95ed5f669eba62f75fb",
+      "message": "re-implemented interpolation methods more efficiently",
+      "files_changed": 1,
+      "additions": 45,
+      "deletions": 35,
+      "commit_type": "code"
+    },
+    {
+      "author": "stonier",
+      "date": "2016-01-31T09:58:50Z",
+      "sha": "aa95477f4463a3a450547c6a9db16a2b517e99b8",
+      "message": "install the image publisher script into the runtime directory",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "kruesip",
+      "date": "2016-08-04T14:00:31Z",
+      "sha": "2ef85e140179f371a14fab7170626491d94c3692",
+      "message": "added grid map rviz plugin",
+      "files_changed": 11,
+      "additions": 1742,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "bit-pirate",
+      "date": "2016-04-07T02:10:19Z",
+      "sha": "f4584bcd6ae4efd2d23a43ed3d7c28403fdcbef1",
+      "message": "[grid_map_core] makes the isInside checks const",
+      "files_changed": 10,
+      "additions": 10,
+      "deletions": 10,
+      "commit_type": "code"
+    },
+    {
+      "author": "czalidis",
+      "date": "2016-02-11T19:36:02Z",
+      "sha": "aceb9a6164d12a20b8ee76f0d9aa1ddc8e4d2933",
+      "message": "Fix conversion to OccupancyGrid msg\n\n* Use the unwrapped index when converting to one dimensional matrix indexing.\n* Add a test case that demonstrates the above situation. The test should fail\n  if used without the unwrapped index.",
+      "files_changed": 2,
+      "additions": 25,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "elenastumm",
+      "date": "2015-09-22T08:27:13Z",
+      "sha": "d44f667b38e9dd7dcdad76e7d022c87cfc3cba9d",
+      "message": "adding a new function to convert gridmaps to images, and a gridmap registration demo",
+      "files_changed": 8,
+      "additions": 326,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Wermelinger Martin",
+      "date": "2015-09-07T09:15:30Z",
+      "sha": "a538ab5883a5ac0f5da3ca0ea245f8a36a521e90",
+      "message": "Merge pull request #23 from ethz-asl/feature/image_position\n\nSet position of image.",
+      "files_changed": 2,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "kralf",
+      "date": "2014-10-22T14:21:20Z",
+      "sha": "d33dba42dad655902e46d9fc4d95b7073520b438",
+      "message": "* Added occupance grid conversion\n* Added frame id argument to GetGridMap service call",
+      "files_changed": 7,
+      "additions": 63,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Péter Fankhauser",
+      "date": "2014-09-13T00:19:28Z",
+      "sha": "77eaf8b8f8a5fab7f31c194d3bea4f5c9a66100f",
+      "message": "Updated screenshot.",
+      "files_changed": 3,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    }
+  ]
+}

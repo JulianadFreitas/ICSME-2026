@@ -1,0 +1,2231 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T06:21:59Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros2",
+    "repo": "rclcpp"
+  },
+  "data": [
+    {
+      "author": "JEnoch",
+      "date": "2026-02-21T07:49:21Z",
+      "sha": "87be5fbfd40deb0329c8e296fc41b6631358734f",
+      "message": "Add tests isolation (#3081)\n\nSigned-off-by: Julien Enoch <julien.e@zettascale.tech>",
+      "files_changed": 1,
+      "additions": 104,
+      "deletions": 104,
+      "commit_type": "docs"
+    },
+    {
+      "author": "fujitatomoya",
+      "date": "2019-08-20T12:24:59Z",
+      "sha": "65188b021da5879ec95a9a4fc0ca93ff79cc4e5f",
+      "message": "Delete unnecessary call for get_node_by_group (#823)\n\nSigned-off-by: Tomoya.Fujita <Tomoya.Fujita@sony.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "pum1k",
+      "date": "2026-02-19T09:03:08Z",
+      "sha": "fc1afcb3bc2c4f9c7113d8ae324f1cbda5f610cd",
+      "message": "Fix component registering in subdirectories (#3064)\n\nSigned-off-by: pum1k <55055380+pum1k@users.noreply.github.com>",
+      "files_changed": 4,
+      "additions": 32,
+      "deletions": 11,
+      "commit_type": "ci"
+    },
+    {
+      "author": "jmachowinski",
+      "date": "2023-09-07T21:37:35Z",
+      "sha": "e103b8d37ed14216b495b75c72dda82cb7f98c6f",
+      "message": "fix(ClientGoalHandle): Made mutex recursive to prevent deadlocks (#2267)\n\n* fix(ClientGoalHandle): Made mutex recursive to prevent deadlocks\r\n\r\nThis prevents deadlocks in cases, were e.g. get_status() would\r\nbe called on the handle in a callback of the handle.\r\n\r\n* test(rclcpp_action): Added test for deadlocks during access of a goal handle\r\n\r\nThis test checks, if the code deadlocks, if methods on the goal handle are\r\ncalled from the callbacks.\r\n\r\nSigned-off-by: Janosch Machowinski <J.Machowinski@cellumation.com>\r\nCo-authored-by: Tomoya Fujita <Tomoya.Fujita@sony.com>",
+      "files_changed": 3,
+      "additions": 92,
+      "deletions": 12,
+      "commit_type": "code"
+    },
+    {
+      "author": "ahcorde",
+      "date": "2020-02-27T07:39:11Z",
+      "sha": "090e1cbec384f670a0dee227f98821f6ee52a38a",
+      "message": "[rclcpp lifecycle] removed rmw_implementation from package.xml (#991)\n\n* rclcpp lifecycle removed rmw_implementation from package.xml\r\n\r\nSigned-off-by: Alejandro Hernández <ahcorde@gmail.com>\r\n\r\n* rclcpp lifecycle added rmw depend in package.xml\r\n\r\nSigned-off-by: Alejandro Hernández <ahcorde@gmail.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "SuperJappie08",
+      "date": "2026-02-04T00:10:38Z",
+      "sha": "bddd6105c2858f239337096494645940f6c3a9a0",
+      "message": "Compatiblity with 'Populate Transitions' ros2/rcl#1269 (#2967)\n\nSigned-off-by: SuperJappie08 <36795178+SuperJappie08@users.noreply.github.com>",
+      "files_changed": 3,
+      "additions": 14,
+      "deletions": 4,
+      "commit_type": "ci"
+    },
+    {
+      "author": "dbwls99706",
+      "date": "2026-02-02T13:29:47Z",
+      "sha": "38cfc4c215e35b6b050700afbd6bca8cf57c272f",
+      "message": "Add library dependency to node executable in rclcpp_components_register_node (#3047)\n\nFixes #2868\n\nThe executable created by rclcpp_components_register_node now depends on\nthe library target, ensuring the library is rebuilt when the executable\nis rebuilt.\n\nAdded SKIP_LIBRARY_DEPENDENCY option for cases where the plugin is\nprovided by a different package.\n\nSigned-off-by: dbwls99706 <yujinhong3@gmail.com>",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "rahatchd",
+      "date": "2026-01-21T13:24:10Z",
+      "sha": "cd86362f75c730b5ec077befda108019c2bdff35",
+      "message": "construct wait set with passed in context (#3021)",
+      "files_changed": 2,
+      "additions": 30,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "mjcarroll",
+      "date": "2018-03-27T21:57:23Z",
+      "sha": "ef17ec624849d269429166fc4b7dca4d93d15895",
+      "message": "Remove ros arguments (#454)\n\n* Mark arguments vector as const.\r\n\r\n* Add C++ version of rcl_remove_ros_arguments",
+      "files_changed": 4,
+      "additions": 141,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "AndreiCostinescu",
+      "date": "2026-01-20T08:57:19Z",
+      "sha": "6397047d4795f594cf65dd360d70f5c9c3618700",
+      "message": "Update exception documentation for goal cancellation in ServerGoalHandle (#3019)\n\n* Update exception documentation for goal cancellation\n\nThe documentation for the canceled function is misleading.\nPreviously, the description said: \n1. \"Only call this if the goal is canceling.\" and \n2. \"\\throws rclcpp::exceptions::RCLError If the goal is in any state besides executing.\"\nThis is a contradiction.\nExperimentally verified that if the goal is executing and this method is called, an error is thrown. This makes the second statement wrong => correct the statement in the documentation.\n\nSigned-off-by: Andrei Costinescu <AndreiCostinescu@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "ci"
+    },
+    {
+      "author": "Barry-Xu-2018",
+      "date": "2019-12-02T21:38:41Z",
+      "sha": "3288bdd2c5d2923c79af355a70ab69d99d59bacd",
+      "message": "Use weak_ptr to store context in GraphListener (#906)\n\n* Use weak_ptr to store context in graph listener\r\n\r\nSigned-off-by: Barry Xu <Barry.Xu@sony.com>",
+      "files_changed": 2,
+      "additions": 19,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "mini-1235",
+      "date": "2025-12-26T16:03:47Z",
+      "sha": "c85ff926d2ea6c3fb8b8075e28b93632a791fd5c",
+      "message": "Deprecate the shared_ptr<MessageT> subscription callback signatures (#2975)\n\nSigned-off-by: mini-1235 <mauricepurnawan@gmail.com>",
+      "files_changed": 3,
+      "additions": 77,
+      "deletions": 11,
+      "commit_type": "code"
+    },
+    {
+      "author": "fabianhirmann",
+      "date": "2025-12-16T09:24:41Z",
+      "sha": "825b4e465080fb44f7c6119a77f05233266635be",
+      "message": "Unified Node Interfaces: Add const version of get_node_x_interface() (#3006)\n\nSigned-off-by: Fabian Hirmann <f.hirmann@arti-robots.com>",
+      "files_changed": 2,
+      "additions": 68,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "CursedRock17",
+      "date": "2023-08-04T20:25:26Z",
+      "sha": "e2965831d51e9be03470cb07f8721012afcade9b",
+      "message": "Adding Missing Group Exceptions (#2256)\n\n* Adding Missing Group Exceptions\r\n\r\nSigned-off-by: CursedRock17 <mtglucas1@gmail.com>\r\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>\r\nCo-authored-by: Tomoya Fujita <Tomoya.Fujita@sony.com>",
+      "files_changed": 8,
+      "additions": 18,
+      "deletions": 15,
+      "commit_type": "code"
+    },
+    {
+      "author": "Splinter1984",
+      "date": "2025-12-01T12:35:41Z",
+      "sha": "87a4cefb836d6ec81d15fec7daed76ecefeeb675",
+      "message": "update policy_name_from_kind && test_qos (#2156)\n\nSigned-off-by: Splinter1984 <rom.andrianov1984@gmail.com>\nCo-authored-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>",
+      "files_changed": 2,
+      "additions": 18,
+      "deletions": 0,
+      "commit_type": "test"
+    },
+    {
+      "author": "MichaelOrlov",
+      "date": "2023-11-02T17:26:33Z",
+      "sha": "8a02e3934c74b6c3355d24af76d1f035ce15573f",
+      "message": "Use message_info in SubscriptionTopicStatistics instead of typed message (#2337)\n\n* Use message_info in SubscriptionTopicStatistics instead of typed message\r\n\r\n- Untemplatize the rclcpp::topic_statistics::SubscriptionTopicStatistics\r\nclass. Now we will be using message_info instead of typed deserialized\r\nmessages in the handle_message callbacks.\r\n\r\n* Fix test_receive_stats_include_window_reset by using publisher emulator\r\n\r\n- Emulate publishing messages by directly calling\r\nrclcpp::Subscription::handle_message(msg_shared_ptr, message_info) and\r\nsettling up needed message_info.source_timestamp\r\n\r\nSigned-off-by: Michael Orlov <michael.orlov@apex.ai>\r\nCo-authored-by: Tomoya Fujita <Tomoya.Fujita@sony.com>",
+      "files_changed": 5,
+      "additions": 95,
+      "deletions": 270,
+      "commit_type": "test"
+    },
+    {
+      "author": "Yadunund",
+      "date": "2023-04-03T16:53:49Z",
+      "sha": "71a06985af7b4b143025dd73938fdb61f1b1ab3a",
+      "message": "Minor grammar fix (#2149)\n\nSigned-off-by: Yadunund <yadunund@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Yuchen966",
+      "date": "2025-11-17T14:51:23Z",
+      "sha": "354413c0606dd66739054806cafc49dcd08db0e9",
+      "message": "correct test function descriptions (#2970)\n\nSigned-off-by: Yuchen Liu <lyuchen9696@gmail.com>",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "leeminju531",
+      "date": "2023-09-18T21:13:11Z",
+      "sha": "c42745c5baea249ec6159f1100a9a0d745510872",
+      "message": "fix the depth to relative in list_parameters (#2300)\n\n* fix the depth to relative in list_parameters\r\n\r\nSigned-off-by: leeminju531 <dlalswn531@naver.com>",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "Timple",
+      "date": "2024-02-29T13:08:55Z",
+      "sha": "b007204fd83828c11f80bf4712d237bfb2431f6e",
+      "message": "Rule of five: implement move operators (#2425)\n\nSigned-off-by: Tim Clephas <tim.clephas@nobleo.nl>",
+      "files_changed": 2,
+      "additions": 18,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "Maverobot",
+      "date": "2025-11-07T11:24:01Z",
+      "sha": "eb49444c3229f03255083d7992564b83ec2d9e2c",
+      "message": "Add get_parameter_or overload returning value or alternative (#2973)\n\nSigned-off-by: Zheng Qu <quzhengrobot@gmail.com>",
+      "files_changed": 3,
+      "additions": 41,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "iv461",
+      "date": "2025-10-20T07:14:36Z",
+      "sha": "8499404709c10b6e3dd993b4a2086309288ffbf7",
+      "message": "Added static assert asserting custom types have no overloaded operator new (#2954)\n\nSigned-off-by: Ivo Ivanov <ivo.ivanov@tha.de>",
+      "files_changed": 2,
+      "additions": 26,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "skyegalaxy",
+      "date": "2025-10-09T01:09:39Z",
+      "sha": "715a983c9fe31497317bc4545625d13a0142553e",
+      "message": "Store graph listener inside the context instead of the node graph (#2952)\n\n* factor shutdown hook registration into its own method\n\nSigned-off-by: Skyler Medeiros <smedeiros@irobot.com>\n\n* run ament_uncrustify\n\nSigned-off-by: Skyler Medeiros <smedeiros@irobot.com>\n\n* consistent use of is_shutdown in graph-listener\n\nSigned-off-by: Skyler Medeiros <smedeiros@irobot.com>\n\n* this doesn't actually need to be a separate function\n\nSigned-off-by: Skyler Medeiros <smedeiros@irobot.com>\n\n* whitespace\n\nSigned-off-by: Skyler Medeiros <smedeiros@irobot.com>\n\n* fix typo\n\nSigned-off-by: Skyler Medeiros <smedeiros@irobot.com>\n\n* move graph listener into the context\n\nSigned-off-by: Skyler Medeiros <smedeiros@irobot.com>\n\n* make cpplint happy\n\nSigned-off-by: Skyler Medeiros <smedeiros@irobot.com>\n\n* Update rclcpp/src/rclcpp/context.cpp\n\nSigned-off-by: Skyler Medeiros <smedeiros@irobot.com>\n\n---------\n\nSigned-off-by: Skyler Medeiros <smedeiros@irobot.com>",
+      "files_changed": 7,
+      "additions": 63,
+      "deletions": 37,
+      "commit_type": "code"
+    },
+    {
+      "author": "ilarioazzollini",
+      "date": "2025-09-16T04:43:19Z",
+      "sha": "38f40734741e28d701d8bd2bb8e1125b4ccf0e66",
+      "message": "update Time documentation (#2955)\n\nSigned-off-by: ilarioazzollini <ilario.azzollini92@gmail.com>",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 8,
+      "commit_type": "docs"
+    },
+    {
+      "author": "alsora",
+      "date": "2018-12-20T20:41:45Z",
+      "sha": "eb2081bb25867da932a6c09b7729aced4f5f182e",
+      "message": "Added new constructors for SyncParameterClient (#612)\n\n* added new constructors for sync parameter client\r\n\r\n* sync param client now has raw ptr member instead of shared ptr\r\n\r\n* fixed pointer style\r\n\r\n* allow objects which do not inherit from node to create a sync parameters client",
+      "files_changed": 2,
+      "additions": 81,
+      "deletions": 9,
+      "commit_type": "code"
+    },
+    {
+      "author": "peter-mitrano-ar",
+      "date": "2025-08-12T13:01:53Z",
+      "sha": "37677791ca42730952ab0336a4b274299362192c",
+      "message": "Clearer warning message, the old one lacked information and was perhaps misleading (#2927)\n\n* change misleading warning message, making it more correct and informative\n\nSigned-off-by: Peter Mitrano (AR) <peter.mitrano@agile-robots.com>\n\n* Fix compile error. Needed to also build rcl from source.\n\nSigned-off-by: Peter Mitrano (AR) <peter.mitrano@agile-robots.com>\n\n* explicitely initialize pointer as null, to adhere to best practice\n\nSigned-off-by: Peter Mitrano (AR) <peter.mitrano@agile-robots.com>\n\n---------\n\nSigned-off-by: Peter Mitrano (AR) <peter.mitrano@agile-robots.com>",
+      "files_changed": 1,
+      "additions": 12,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "clalancette",
+      "date": "2017-06-21T13:24:01Z",
+      "sha": "b8d72d682a9bd345e32df7395b603873b11060dd",
+      "message": "Remove a constructor that we can't test. (#340)\n\nThere are currently no paths that lead to it, and it has\r\na bug anyway; if a large enough value is passed into sec,\r\nthen we will overflow sec on the multiply.  Just remove it\r\nsince we can't reach the code anyway.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "mleegwt",
+      "date": "2025-07-29T16:50:32Z",
+      "sha": "1f2adc982935cb3ebec565ec4da00b0bd5db0182",
+      "message": "Fix: improve exception context for parameter_value_from (#2917)\n\nSigned-off-by: Michiel Leegwater <mleegwt@users.noreply.github.com>\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>\nCo-authored-by: Tomoya Fujita <Tomoya.Fujita@sony.com>\nCo-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 1,
+      "commit_type": "ci"
+    },
+    {
+      "author": "mosfet80",
+      "date": "2025-07-24T06:57:47Z",
+      "sha": "6392ee51873fbee3105fd65f79b10caabd2bf277",
+      "message": "fix cmake deprecation (#2914)\n\ncmake version < then 3.10 is deprecated\n\nSigned-off-by: Mos <realeandrea@yahoo.it>",
+      "files_changed": 3,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "roncapat",
+      "date": "2024-12-04T17:24:50Z",
+      "sha": "a7f05a904ac499b55ca1b13ac30bc08f03c6900c",
+      "message": "Update docstring for `rclcpp::Node::now()` (#2696)\n\nSigned-off-by: Patrick Roncagliolo <ronca.pat@gmail.com>",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "ghanta1996",
+      "date": "2025-07-16T07:57:12Z",
+      "sha": "2fcef70ea78c2c3a45391e59aebb265c05113050",
+      "message": "Add qos parameter for wait_for_message function (#2903)\n\nSigned-off-by: Sriharsha Ghanta <ghanta1996@gmail.com>\nSigned-off-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>\nCo-authored-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>",
+      "files_changed": 2,
+      "additions": 33,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "christophebedard",
+      "date": "2019-11-19T00:53:02Z",
+      "sha": "1f79bdb3f72e3a100bb1be17591018c451ce46ea",
+      "message": "Put subscription callback tracepoints in intraprocess subscription too (#918)\n\n* Put subscription callback tracepoints in intraprocess subscription too\r\n\r\nSigned-off-by: Christophe Bedard <christophe.bedard@apex.ai>\r\n\r\n* Add missing tracetools header\r\n\r\nSigned-off-by: Christophe Bedard <christophe.bedard@apex.ai>\r\n\r\n* Move Subscription tracepoints back to outside of intra-process condition\r\n\r\nSigned-off-by: Christophe Bedard <christophe.bedard@apex.ai>\r\n\r\n* Revert API change by adding new tracepoint as an intermediate\r\n\r\nSigned-off-by: Christophe Bedard <christophe.bedard@apex.ai>",
+      "files_changed": 2,
+      "additions": 19,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "mihirr-NV",
+      "date": "2025-06-28T21:48:20Z",
+      "sha": "5122c312d484dff90153522d805ac18742f25c5f",
+      "message": "NEW PR: Add component_container for EventsExecutor (#2885)\n\n* Add component_container for EventsExecutor\n\nSigned-off-by: Mihir Rao <mihirr@nvidia.com>\n\n* Fix build error\n\nSigned-off-by: Mihir Rao <mihirr@nvidia.com>\n\n---------\n\nSigned-off-by: Mihir Rao <mihirr@nvidia.com>",
+      "files_changed": 2,
+      "additions": 37,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Aposhian",
+      "date": "2024-02-13T22:18:15Z",
+      "sha": "091f29fcd38461046520e3f5cabd396777df88f6",
+      "message": "crash on no class found (#2415)\n\n* crash on no class found\r\n\r\n* error on no class found instead of no callback groups\r\n\r\nSigned-off-by: Adam Aposhian <adam.aposhian@fireflyautomatix.com>\r\nCo-authored-by: Chris Lalancette <clalancette@gmail.com>",
+      "files_changed": 1,
+      "additions": 31,
+      "deletions": 25,
+      "commit_type": "code"
+    },
+    {
+      "author": "keeponoiro",
+      "date": "2025-05-29T22:29:57Z",
+      "sha": "db8d917a12d640b832cf2ee773e338b98b69e191",
+      "message": "Replace std::default_random_engine with std::mt19937 (rolling) (#2843)\n\nSigned-off-by: keeponoiro <keeeeeeep@gmail.com>",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "agyoungs",
+      "date": "2025-05-05T12:39:12Z",
+      "sha": "7bd14d812c0bdf38b666d83cbe9db210513a52bd",
+      "message": "Add range constraints for applicable array parameters (#2828)\n\nSigned-off-by: Alex Youngs <alexyoungs@hatchbed.com>",
+      "files_changed": 2,
+      "additions": 476,
+      "deletions": 35,
+      "commit_type": "code"
+    },
+    {
+      "author": "InvincibleRMC",
+      "date": "2025-05-04T19:49:21Z",
+      "sha": "e97d569f75708850bb2f70722def5d40c0233810",
+      "message": "Update RingBufferImplementation to clear internal data. (#2837)\n\n* Fix clear()\n\nSigned-off-by: Michael Carlstrom <rmc@carlstrom.com>\n\n* Update rclcpp/include/rclcpp/experimental/buffers/ring_buffer_implementation.hpp\n\nCo-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>\nSigned-off-by: Michael Carlstrom <rmc@carlstrom.com>\n\n---------\n\nSigned-off-by: Michael Carlstrom <rmc@carlstrom.com>\nCo-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>",
+      "files_changed": 3,
+      "additions": 38,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "cottsay",
+      "date": "2019-06-24T22:55:15Z",
+      "sha": "dff36c2f67f7192f95f493c8b9b3b68574e6b255",
+      "message": "Use params from node '/**' from parameter YAML file (#762)\n\nThe short-term goal of this change is to enable the creation of a\r\nparameter YAML file which is applied to each node, regardless of node\r\nname or namespace.\r\n\r\nFuture work is to support all wildcard syntax in node names in\r\nparameter YAML files.\r\n\r\nSigned-off-by: Scott K Logan <logans@cottsay.net>",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "pedroazeredo04",
+      "date": "2025-04-18T20:31:36Z",
+      "sha": "8e49befce97cb053c24fe0fd00e34b6aae24cf4b",
+      "message": "Fix race condition (#2819)\n\nSigned-off-by: pedroazeredo04 <pedro_azeredo@usp.br>\nSigned-off-by: Pedro Nogueira <pedro_azeredo@usp.br>",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "izzaaaatanishq",
+      "date": "2025-04-14T21:37:54Z",
+      "sha": "f78ed952b27acc63ef8022d78cb816c309a9ca3d",
+      "message": "remove redundant typesupport check in serialization module (#2808)\n\nSigned-off-by: Tanishq Chaudhary <tanishqchaudhary101010@gmail.com>",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "leander-dsouza",
+      "date": "2025-04-04T03:33:36Z",
+      "sha": "011b878554ef76cbc05bfd5f024181dadd0307d1",
+      "message": "Removed trailing whitespace from the codebase. (#2791)\n\nSigned-off-by: Leander Stephen D'Souza <leanderdsouza1234@gmail.com>",
+      "files_changed": 6,
+      "additions": 6,
+      "deletions": 10,
+      "commit_type": "docs"
+    },
+    {
+      "author": "abhishek47kashyap",
+      "date": "2025-03-30T18:32:05Z",
+      "sha": "1dfefe5b63da16d772361df997f3661f56b14484",
+      "message": "Expanded docstring of `get_rmw_qos_profile()` (#2787)\n\n* expanded docstring to include info on profile\n\nSigned-off-by: Abhishek Kashyap <abhishek47kashyap@gmail.com>\n\n* more succinct docstring, also restores one-line summary\n\nSigned-off-by: Abhishek Kashyap <abhishek47kashyap@gmail.com>\n\n---------\n\nSigned-off-by: Abhishek Kashyap <abhishek47kashyap@gmail.com>",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "mergify[bot]",
+      "date": "2025-03-11T15:35:49Z",
+      "sha": "387bf7bb5166fca130a9f1f2e28cad501095cf2c",
+      "message": "add NO_UNDEFINED_SYMBOLS to rclcpp_components_register_node cmake macro (#2746) (#2764)\n\nSigned-off-by: Jonas Otto <jonas.otto@ipa.fraunhofer.de>\nSigned-off-by: Jonas Otto <jonas@jonasotto.com>\n(cherry picked from commit c31daa608db32a11db756489db57f64771d87a85)\n\nCo-authored-by: Jonas Otto <jonas@jonasotto.com>",
+      "files_changed": 1,
+      "additions": 23,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "YuanYuYuan",
+      "date": "2025-01-14T18:32:17Z",
+      "sha": "2d1b770e858fdb20e9c25913341fb388100dd19e",
+      "message": "fix: make the loop condition align with the description (#2726)\n\nSigned-off-by: yuanyuyuan <az6980522@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "jefferyyjhsu",
+      "date": "2022-12-13T17:11:09Z",
+      "sha": "432bf21f0261bab209b37ccfe6da550f02751a22",
+      "message": "Add clock type to node_options (#1982)\n\n* add clock type to node_options and change node/lifecycle_node constructor accordingly\r\n\r\nSigned-off-by: Jeffery Hsu <jefferyyjhsu@gmail.com>\r\n\r\n* Modify TimeSource::NodeState class to work with different clock types. Add test cases.\r\n\r\nSigned-off-by: Jeffery Hsu <jefferyyjhsu@gmail.com>\r\n\r\n* Change on_parameter_event to output RCLCPP_ERROR and check\r\nros_time_active_ in ClocksState::attachClock()\r\n\r\nSigned-off-by: Jeffery Hsu <jefferyyjhsu@gmail.com>\r\n\r\n* Remove a redundant include\r\n\r\nSigned-off-by: Jeffery Hsu <jefferyyjhsu@gmail.com>\r\n\r\n* Disallow setting use_sim_time to true if a clock_type can't support it.\r\nFollowing the reasoning in c54a6f1cd2b5bfbe530c362ad7e8fa22f753e325, on_set_parameters doesn't try to enforce use_sim_time to be of boolean type explicitly.\r\n\r\nSigned-off-by: Jeffery Hsu <jefferyyjhsu@gmail.com>\r\n\r\n* minior style change\r\n\r\nSigned-off-by: Jeffery Hsu <jefferyyjhsu@gmail.com>\r\n\r\n* remove reason string for successful result\r\n\r\nSigned-off-by: Jeffery Hsu <jefferyyjhsu@gmail.com>\r\n\r\nSigned-off-by: Jeffery Hsu <jefferyyjhsu@gmail.com>",
+      "files_changed": 10,
+      "additions": 222,
+      "deletions": 28,
+      "commit_type": "code"
+    },
+    {
+      "author": "SteveMacenski",
+      "date": "2019-10-17T01:31:36Z",
+      "sha": "d83a947c261cdc97ede46071feec69add63f551d",
+      "message": "template node type for rclcpp action server and clients (#892)\n\nSigned-off-by: stevemacenski <stevenmacenski@gmail.com>",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "rcp1",
+      "date": "2024-12-13T14:18:41Z",
+      "sha": "aad8cb53ad263ce40125af9916f25b6c11fd85cd",
+      "message": "Add parsing for rest of obvious boolean extra arguments and throw for unsupported ones (#2685)\n\nSigned-off-by: Robin Petereit <robin.petereit@tum.de>",
+      "files_changed": 2,
+      "additions": 115,
+      "deletions": 97,
+      "commit_type": "code"
+    },
+    {
+      "author": "nwn",
+      "date": "2023-03-02T12:45:22Z",
+      "sha": "399f4df7396d67b42ccaea651bbd87d66b0d62b3",
+      "message": "Fix the GoalUUID to_string representation (#1999)\n\n* Fix expected results of the goal_uuid_to_string test\r\n\r\nSigned-off-by: Nathan Wiebe Neufeldt <nwiebeneufeldt@clearpath.ai>\r\nCo-authored-by: Chris Lalancette <clalancette@gmail.com>",
+      "files_changed": 3,
+      "additions": 21,
+      "deletions": 13,
+      "commit_type": "code"
+    },
+    {
+      "author": "scrooge1987",
+      "date": "2024-11-10T15:54:41Z",
+      "sha": "1e6767ac13670ec9d2dffeb9b403b8a69d58e172",
+      "message": "Fix documentation typo in server_goal_handle.hpp (#2669)\n\nSigned-off-by: Yurii Rovinskyi <yurii.rovinskyi.19@pnu.edu.ua>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "rdesille",
+      "date": "2024-10-30T11:45:19Z",
+      "sha": "9b654942f99f17850e0e95480958abdbb508bc00",
+      "message": "Fix NodeOptions assignment operator (#2656)\n\n* Fix NodeOptions assignment operator\r\n\r\nAlso copy the enable_logger_service_ member during the assignment operation\r\n\r\n* Add more checks for NodeOptions copy test\r\n\r\n* Set non default values by avoiding the copy-assignement\r\n\r\nSigned-off-by: Romain DESILLE <r.desille@gmail.com>\r\nCo-authored-by: Christophe Bedard <bedard.christophe@gmail.com>",
+      "files_changed": 2,
+      "additions": 52,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "EwingKang",
+      "date": "2024-08-22T13:46:50Z",
+      "sha": "ee94bc63e4ce47a502891480a2796b53d54fcdfc",
+      "message": "Minor naming fixes for ParameterValue to_string() function (#2609)\n\nMore appropriate function argument naming.\r\nRefer to: \r\nhttps://github.com/ros2/rclcpp/blob/rolling/rclcpp/src/rclcpp/parameter_value.cpp#L83\r\n\r\nSigned-off-by: Kang, Hsin-Yi <f039281310@yahoo.com.tw>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "apojomovsky",
+      "date": "2024-08-08T01:15:08Z",
+      "sha": "496c45549bf5793482d554d32b76fb114667869c",
+      "message": "Fix bug in timers lifecycle for events executor (#2586)\n\n* Remove expired timers before updating the collection\r\n\r\nSigned-off-by: Alexis Pojomovsky <apojomovsky@ekumenlabs.com>\r\n\r\n* Add regression test for reinitialized timers bug\r\n\r\nSigned-off-by: Alexis Pojomovsky <apojomovsky@ekumenlabs.com>\r\n\r\n* Add missing includes\r\n\r\nSigned-off-by: Alexis Pojomovsky <apojomovsky@ekumenlabs.com>\r\n\r\n* Relocate test under the executors directory\r\n\r\nSigned-off-by: Alexis Pojomovsky <apojomovsky@ekumenlabs.com>\r\n\r\n* Extend test to run with all supported executors\r\n\r\nSigned-off-by: Alexis Pojomovsky <apojomovsky@ekumenlabs.com>\r\n\r\n* Adjust comment in fix to make it more generic\r\n\r\nSigned-off-by: Alexis Pojomovsky <apojomovsky@ekumenlabs.com>\r\n\r\n* Apply ament clang format to test\r\n\r\nSigned-off-by: Alexis Pojomovsky <apojomovsky@ekumenlabs.com>\r\n\r\n* Fix uncrustify findings\r\n\r\nSigned-off-by: Alexis Pojomovsky <apojomovsky@ekumenlabs.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Alexis Pojomovsky <apojomovsky@ekumenlabs.com>\r\nCo-authored-by: Alexis Pojomovsky <apojomovsky@ekumenlabs.com>",
+      "files_changed": 3,
+      "additions": 104,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "wjwwood",
+      "date": "2014-08-13T02:22:20Z",
+      "sha": "2b8e19c88db54e74e9b2a0171f14d269be34b786",
+      "message": "subscriber: added implementation using ros_middleware_interface",
+      "files_changed": 3,
+      "additions": 166,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "marcoag",
+      "date": "2024-03-28T08:53:31Z",
+      "sha": "1e34abd4b5a89c10f4412cfed8985630d62a3c31",
+      "message": "Changelog.\n\nSigned-off-by: Marco A. Gutierrez <marcogg@marcogg.com>",
+      "files_changed": 4,
+      "additions": 77,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "sharminramli",
+      "date": "2024-04-23T20:47:56Z",
+      "sha": "de666d2bf41806d150744d7c5dcd7a07ad3ffcd0",
+      "message": "Check for negative time in rclcpp::Time(int64_t nanoseconds, ...) constructor (#2510)\n\nSigned-off-by: Nursharmin Ramli <nursharminramli@gmail.com>",
+      "files_changed": 3,
+      "additions": 17,
+      "deletions": 76,
+      "commit_type": "code"
+    },
+    {
+      "author": "homalozoa",
+      "date": "2024-04-08T13:17:46Z",
+      "sha": "63c2e2ef6f7367b4420e4fd0eab5d78b551cb794",
+      "message": "fix: init concatenated_vector with begin() & end() (#2492)\n\n*. this commit will fix the warning [-Wstringop-overflow=] #2461\r\n\r\nSigned-off-by: homalozoa <nx.tardis@gmail.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "HansRobo",
+      "date": "2024-04-06T15:23:50Z",
+      "sha": "ea4c98c43fa9c3a1274d37afb8326aaadc4ca196",
+      "message": "Use the same context for the specified node in rclcpp::spin functions (#2433)\n\n* Use the same conext for the specified node in rclcpp::spin_xx functions\r\n\r\nSigned-off-by: GitHub <noreply@github.com>\r\n\r\n* Add test for spinning with non-default-context\r\n\r\nSigned-off-by: Kotaro Yoshimoto <pythagora.yoshimoto@gmail.com>\r\n\r\n* Format code\r\n\r\nSigned-off-by: Kotaro Yoshimoto <pythagora.yoshimoto@gmail.com>\r\n\r\n---------\r\n\r\nSigned-off-by: GitHub <noreply@github.com>\r\nSigned-off-by: Kotaro Yoshimoto <pythagora.yoshimoto@gmail.com>",
+      "files_changed": 3,
+      "additions": 42,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "h-suzuki-isp",
+      "date": "2024-04-01T17:07:45Z",
+      "sha": "f510db152957fa284685b6a468fa38f7575a61a1",
+      "message": "Add tracepoint for generic publisher/subscriber (#2448)\n\nSigned-off-by: h-suzuki <h-suzuki@isp.co.jp>",
+      "files_changed": 4,
+      "additions": 25,
+      "deletions": 11,
+      "commit_type": "code"
+    },
+    {
+      "author": "mauropasse",
+      "date": "2021-01-20T20:24:02Z",
+      "sha": "f38cd8a8bbc83c4f526eb16b705f73157c4f210b",
+      "message": "Fix error when using IPC with StaticSingleThreadExecutor (#1520)\n\nSigned-off-by: Mauro Passerino <mpasserino@irobot.com>",
+      "files_changed": 2,
+      "additions": 5,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "mrjogo",
+      "date": "2024-02-29T13:01:16Z",
+      "sha": "64f9aa158b39054d4f94ae24f897d096cc38bea6",
+      "message": "Add EXECUTOR docs (#2440)\n\nSigned-off-by: Ruddick Lawrence <679360+mrjogo@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "ottojo",
+      "date": "2024-02-20T18:09:44Z",
+      "sha": "1981e1f12acfcbdc5d9202cd3e636cb692621971",
+      "message": "fix doxygen syntax for NodeInterfaces (#2428)\n\nSigned-off-by: Jonas Otto <jonas@jonasotto.com>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "HuaTsai",
+      "date": "2024-02-13T19:08:16Z",
+      "sha": "38bcda4b765e3037d4ac7c4cbd1d265c4e75b883",
+      "message": "feat: add/minus for msg::Time and rclcpp::Duration (#2419)\n\n* feat: add/minus for msg::Time and rclcpp::Duration\r\n\r\nSigned-off-by: HuaTsai <huatsai.eed07g@nctu.edu.tw>",
+      "files_changed": 5,
+      "additions": 111,
+      "deletions": 11,
+      "commit_type": "code"
+    },
+    {
+      "author": "mwcondino",
+      "date": "2024-01-30T14:16:37Z",
+      "sha": "99f0fc938b2d0c441787113a3920c16d3614a197",
+      "message": "[events executor] - Fix Behavior with Timer Cancel (#2375)\n\n* fix\r\n\r\nSigned-off-by: Matt Condino <mwcondino@gmail.com>\r\n\r\n* add timer cancel tests\r\n\r\nSigned-off-by: Matt Condino <mwcondino@gmail.com>\r\n\r\n* cleanup header include\r\n\r\nSigned-off-by: Matt Condino <mwcondino@gmail.com>\r\n\r\n* reverting change to timer_greater function\r\n\r\nSigned-off-by: Gus Brigantino <gusbrig97@gmail.com>\r\n\r\n* use std::optional, and handle edgecase of 1 cancelled timer\r\n\r\nSigned-off-by: Matt Condino <mwcondino@gmail.com>\r\n\r\n* clean up run_timers func\r\n\r\nSigned-off-by: Gus Brigantino <gusbrig97@gmail.com>\r\n\r\n* some fixes and added tests for cancel then reset of timers.\r\n\r\nSigned-off-by: Matt Condino <mwcondino@gmail.com>\r\n\r\n* refactor and clean up. remove cancelled timer tracking.\r\n\r\nSigned-off-by: Matt Condino <mwcondino@gmail.com>\r\n\r\n* remove unused method for size()\r\n\r\nSigned-off-by: Matt Condino <mwcondino@gmail.com>\r\n\r\n* linting\r\n\r\nSigned-off-by: Matt Condino <mwcondino@gmail.com>\r\n\r\n* relax timing constraints in tests\r\n\r\nSigned-off-by: Matt Condino <mwcondino@gmail.com>\r\n\r\n* further relax timing constraints to ensure windows tests are not flaky.\r\n\r\nSigned-off-by: Matt Condino <mwcondino@gmail.com>\r\n\r\n* use sim clock for tests, pub clock at .25 realtime rate.\r\n\r\nSigned-off-by: Matt Condino <mwcondino@gmail.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Matt Condino <mwcondino@gmail.com>\r\nSigned-off-by: Gus Brigantino <gusbrig97@gmail.com>\r\nCo-authored-by: Gus Brigantino <gusbrig97@gmail.com>",
+      "files_changed": 5,
+      "additions": 468,
+      "deletions": 21,
+      "commit_type": "code"
+    },
+    {
+      "author": "Blast545",
+      "date": "2020-09-09T21:28:42Z",
+      "sha": "d66cd96f254648de5fa68f6c28a34968563294fb",
+      "message": "Adding tests basic getters (#1291)\n\n* Add tests serialize functions\r\n* Add test getter const get_service_handle\r\n* Add basic tests getters publisher\r\n* Add == operator tests\r\n* Improve check on QOS depth\r\n* Remove extra line, copy directly string\r\n* Expect specific error throws\r\n\r\nSigned-off-by: Jorge Perez <jjperez@ekumenlabs.com>",
+      "files_changed": 4,
+      "additions": 188,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "DensoADAS",
+      "date": "2020-04-17T16:52:28Z",
+      "sha": "ee6ab95cfc8ecab353d4cf1efdb81de237424f11",
+      "message": "Export component manager (#1070)\n\n* Export component manager library\r\n\r\nSigned-off-by: Fabian König <f.koenig@eu.denso.com>\r\n\r\n* Export composition interfaces dependency\r\n\r\nSigned-off-by: Fabian König <f.koenig@eu.denso.com>\r\n\r\nCo-authored-by: Fabian König <f.koenig@eu.denso.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Chen Lihui",
+      "date": "2020-09-11T18:55:53Z",
+      "sha": "7b2d983734ed186e5f05bfcabd8c0e80d43d83bb",
+      "message": "Add set_level for rclcpp::Logger (#1284)\n\n* Add set_logger_level for rclcpp::Logger\r\n\r\nSigned-off-by: Chen Lihui <Lihui.Chen@sony.com>\r\n\r\n* Update based on suggestions\r\n\r\nSigned-off-by: Chen Lihui <Lihui.Chen@sony.com>\r\nCo-authored-by: Tomoya.Fujita <Tomoya.Fujita@sony.com>\r\n\r\nCo-authored-by: Tomoya.Fujita <Tomoya.Fujita@sony.com>",
+      "files_changed": 3,
+      "additions": 150,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "wep21",
+      "date": "2021-12-13T17:40:16Z",
+      "sha": "ee20dd31e676c4803e2393bc86ce76f0a21f9b73",
+      "message": "Add parameter to configure number of thread (#1708)\n\n* Add parameter to configure number of thread\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>",
+      "files_changed": 3,
+      "additions": 38,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "xmfcx",
+      "date": "2023-11-09T20:09:18Z",
+      "sha": "9c098e544ecf191b7c61f63f7f4fac6f6449cedd",
+      "message": "fix(rclcpp_components): increase the service queue sizes in component_container (#2363)\n\n* fix(rclcpp_components): increase the service queue sizes in component_container\r\n\r\nSigned-off-by: M. Fatih Cırıt <mfc@leodrive.ai>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Zard-C",
+      "date": "2023-11-05T19:28:17Z",
+      "sha": "d407a5e3313d90642f1dd7b1de2e95b833242ff7",
+      "message": "fix (signal_handler.hpp): spelling (#2356)\n\nSigned-off-by: Zard-C <patrick.zhang5233@gmail.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Manchey",
+      "date": "2023-08-29T17:22:51Z",
+      "sha": "43cf0be15c9c284fc0b434a111e8237523b3d397",
+      "message": "Correct the position of a comment. (#2290)\n\nSigned-off-by: Jiaqi Li <ljq0831@qq.com>",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "AlexeyMerzlyakov",
+      "date": "2023-08-31T19:50:40Z",
+      "sha": "bc435776a257fcf76c5b0124bec26f6824342e34",
+      "message": "Make Rate to select the clock to work with (#2123)\n\n* Make Rate to select the clock to work with\r\nAdd ROSRate respective with ROS time\r\n\r\n* Make GenericRate class to be deprecated\r\n\r\n* Adjust test cases for new rates\r\n\r\nis_steady() to be deprecated\r\n\r\nSigned-off-by: Alexey Merzlyakov <alexey.merzlyakov@samsung.com>\r\nCo-authored-by: Chris Lalancette <clalancette@gmail.com>",
+      "files_changed": 4,
+      "additions": 512,
+      "deletions": 14,
+      "commit_type": "docs"
+    },
+    {
+      "author": "nachovizzo",
+      "date": "2023-10-04T12:18:21Z",
+      "sha": "d6bd8baac5bc050ab31e4e7e8ee8b482fd469c14",
+      "message": "Add missing header required by the rclcpp::NodeOptions type (#2324)\n\nSigned-off-by: Ignacio Vizzo <ignacio@dexory.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "tfoote",
+      "date": "2015-08-04T22:33:17Z",
+      "sha": "442d1e5e0af5eb4214b66dcb95f74538e9d83063",
+      "message": "adding char * constructor for ParameterVarient fixes #75 using delegated constructor",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "AiVerisimilitude",
+      "date": "2023-09-02T00:17:00Z",
+      "sha": "fa732b9ee8000714831568e14486099f2714003d",
+      "message": "Fix C++20 allocator construct deprecation (#2292)\n\nSigned-off-by: Guilherme Rodrigues <guilherme.rodrigues@ait.ac.at>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "emersonknapp",
+      "date": "2019-03-12T22:32:41Z",
+      "sha": "83beaf8a3f9c6ac417fcb170b24712f95c67c5c2",
+      "message": "Don't hardcode int64_t for duration type representations (#648)\n\nIn LLVM's `libcxx`, `int64_t` doesn't match chrono literals. See example below. To compile, run  `clang++-6.0 -stdlib=libc++ -std=c++14 TEST.cpp`\r\n\r\n```\r\nusing namespace std::chrono_literals;\r\n\r\ntemplate<typename RatioT = std::milli>\r\nbool\r\nwait_for_service(\r\n   std::chrono::duration<int64_t, RatioT> timeout\r\n)\r\n{\r\n   return timeout == std::chrono::nanoseconds(0);\r\n}\r\n\r\nint main() {\r\n   wait_for_service(2s);\r\n   return 0;\r\n}\r\n\r\n```\r\n\r\nResult of compilation\r\n```\r\nTEST.cpp:6:1: note: candidate template ignored: could not match 'long' against 'long long'\r\nwait_for_service(\r\n```\r\n\r\nSigned-off-by: Emerson Knapp <eknapp@amazon.com>\r\nSigned-off-by: Steven! Ragnarök <steven@nuclearsandwich.com>",
+      "files_changed": 9,
+      "additions": 32,
+      "deletions": 30,
+      "commit_type": "code"
+    },
+    {
+      "author": "tonynajjar",
+      "date": "2023-08-08T21:38:13Z",
+      "sha": "a17d26b20ac41cc9d5bf3583de8475bb7c18bb1e",
+      "message": "Add spin_all shortcut (#2246)\n\nSigned-off-by: Tony Najjar <tony.najjar@logivations.com>",
+      "files_changed": 5,
+      "additions": 92,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "luca-della-vedova",
+      "date": "2019-09-10T03:30:42Z",
+      "sha": "925460dcfbfb2c2ba57ca73ee7d9bed45306e119",
+      "message": "Fix typo in deprecated warning. (#848)\n\n\"it's\" instead of its\r\n\r\nSigned-off-by: Luca Della Vedova <luca@openrobotics.org>",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Voldivh",
+      "date": "2023-06-21T14:47:14Z",
+      "sha": "005f6aefe96b7857fd08c99c04a751c5e2f93528",
+      "message": "Modifies timers API to select autostart state (#2005)\n\n* Modifies timers API to select autostart state\r\n\r\n* Removes unnecessary variables\r\n\r\n* Adds autostart documentation and expands some timer test\r\n\r\nSigned-off-by: Voldivh <eloyabmfcv@gmail.com>",
+      "files_changed": 7,
+      "additions": 96,
+      "deletions": 20,
+      "commit_type": "docs"
+    },
+    {
+      "author": "cwecht",
+      "date": "2023-04-03T14:01:39Z",
+      "sha": "73d555b4026fec0c4350e8589571fb58f0e58651",
+      "message": "Fix unnecessary allocations in executor.cpp (#2135)\n\nSigned-off-by: Christopher Wecht <cwecht@mailbox.org>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "oysstu",
+      "date": "2023-05-04T19:48:20Z",
+      "sha": "86c77143c96d85711a87f2a5adcc4d7f0fb0dbeb",
+      "message": "Add missing stdexcept include (#2186)\n\nSigned-off-by: Øystein Sture <os@skarvtech.com>",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "methylDragon",
+      "date": "2022-12-06T19:19:40Z",
+      "sha": "338eed0c060ab58608fc6e44c6936bde2c4e061e",
+      "message": "Remove templating on to_rcl_subscription_options (#2056)",
+      "files_changed": 4,
+      "additions": 4,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "llapx",
+      "date": "2022-12-02T02:17:43Z",
+      "sha": "66b19448b0520b15a9e6c28483863b2a4351c2f6",
+      "message": "Fix SharedFuture from async_send_request never becomes valid (#2044)\n\nSigned-off-by: Lei Liu <Lei.Liu.AP@sony.com>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "michaelbabenko",
+      "date": "2023-04-14T17:15:03Z",
+      "sha": "6ffd54d61d1ba3f92a32e06d0be810745f359b37",
+      "message": "Support publishing loaned messages in LifecyclePublisher (#2159)\n\n* Support loaned messages in LifecyclePublisher\r\n\r\nSigned-off-by: Michael Babenko <mbabenko@wayve.ai>",
+      "files_changed": 2,
+      "additions": 34,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "ymski",
+      "date": "2023-04-13T19:44:02Z",
+      "sha": "82a693e02862eb9aa6642e5607a723b222fb76c9",
+      "message": "applied tracepoints for ring_buffer (#2091)\n\napplied tracepoints for intra_publish\r\nadd tracepoints for linking buffer and subscription\r\n\r\nSigned-off-by: Kodai Yamasaki <114902604+ymski@users.noreply.github.com>",
+      "files_changed": 4,
+      "additions": 40,
+      "deletions": 1,
+      "commit_type": "ci"
+    },
+    {
+      "author": "ihasdapie",
+      "date": "2022-08-29T19:14:09Z",
+      "sha": "dab9f5e0a331b9694c4b5aceb8263d49aa052ecb",
+      "message": "[docs] add note about callback lifetime for {on, post}_set_parameter_callback (#1981)\n\n[docs] add note about {on, post, pre}_set_parameter_callback lifetime\r\n\r\nSigned-off-by: Brian Chen <brian.chen@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "MiguelCompany",
+      "date": "2021-04-14T00:53:02Z",
+      "sha": "1c2bd84725f009ab75dc63ddbd5040580bac4ed1",
+      "message": "Avoid returning loan when none was obtained. (#1629)\n\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>",
+      "files_changed": 1,
+      "additions": 11,
+      "deletions": 9,
+      "commit_type": "code"
+    },
+    {
+      "author": "traversaro",
+      "date": "2023-02-16T21:32:10Z",
+      "sha": "28e4b1bd738c23e3ede2c70bf35786ce829ae910",
+      "message": "Fix documentation of Context class (#2107)\n\nSigned-off-by: Silvio Traversaro <silvio@traversaro.it>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "sloretz",
+      "date": "2017-09-28T02:09:20Z",
+      "sha": "e1f4568bc7d766a1320a93db523ec109e2cf5cc7",
+      "message": "Fix static assertion on xcode 9 (#379)\n\n* Change allocator type to match map key",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "ahans",
+      "date": "2023-01-17T19:50:44Z",
+      "sha": "37adc03c11171f67c213ee72f7ce43fdcbda7b9e",
+      "message": "Fix -Wmaybe-uninitialized warning (#2081)\n\n* Fix -Wmaybe-uninitialized warning\r\n\r\ngcc 12 warned about `callback_list_ptr` potentially being uninitialized\r\nwhen compiling in release mode (i.e., with `-O2`). Since `shutdown_type`\r\nis a compile-time parameter, we fix the warning by enforcing the\r\ndecision at compile time.\r\n\r\nSigned-off-by: Alexander Hans <ahans@users.noreply.github.com>",
+      "files_changed": 2,
+      "additions": 54,
+      "deletions": 65,
+      "commit_type": "ci"
+    },
+    {
+      "author": "jrutgeer",
+      "date": "2022-12-23T13:27:42Z",
+      "sha": "c5491a4e58a6d4ee41ee52b2feaeb67182da8a4a",
+      "message": "API url info fix (#2071)\n\n* Fixed API url info.\r\n\r\nSigned-off-by: jrutgeer <johan.rutgeerts@lancewood.eu>\r\n\r\n* Fix api url info in README\r\n\r\nSigned-off-by: jrutgeer <johan.rutgeerts@lancewood.eu>\r\n\r\nSigned-off-by: jrutgeer <johan.rutgeerts@lancewood.eu>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "msz-rai",
+      "date": "2022-12-13T18:40:38Z",
+      "sha": "86335dd4acd91d5dd973c4e4e97014e5e8a916bc",
+      "message": "Fix logging macros to build with msvc and cpp20 (#2063)\n\nSigned-off-by: Mateusz Szczygielski <mateusz.szczygielski@robotec.ai>\r\n\r\nSigned-off-by: Mateusz Szczygielski <mateusz.szczygielski@robotec.ai>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "akela1101",
+      "date": "2022-12-13T13:31:14Z",
+      "sha": "1ac37b692c4cce54f0ffeaad1f4fe3d5688322bd",
+      "message": "fix nullptr dereference in prune_requests_older_than (#2008)\n\n* fix nullptr dereference in prune_requests_older_than\r\n\r\nSigned-off-by: akela1101 <akela1101@gmail.com>\r\n\r\n* add tests for prune_requests_older_than\r\n\r\nSigned-off-by: akela1101 <akela1101@gmail.com>\r\n\r\n* Update rclcpp/test/rclcpp/test_client.cpp\r\n\r\nCo-authored-by: Chen Lihui <lihui.chen@sony.com>\r\nSigned-off-by: akela1101 <akela1101@gmail.com>\r\n\r\nSigned-off-by: akela1101 <akela1101@gmail.com>\r\nCo-authored-by: Chen Lihui <lihui.chen@sony.com>",
+      "files_changed": 2,
+      "additions": 24,
+      "deletions": 1,
+      "commit_type": "test"
+    },
+    {
+      "author": "audrow",
+      "date": "2020-07-14T15:48:40Z",
+      "sha": "751727652d1620a04d8247a5a375b887fa80abe7",
+      "message": "Make ring buffer thread-safe (#1213)\n\n* Add recursive mutexs to ring buffer to avoid race conditions\r\n\r\nSigned-off-by: Audrow <audrow.nash@gmail.com>\r\n\r\n* Replace recursive_mutex with shared_timed_mutex\r\n\r\nSigned-off-by: Audrow <audrow.nash@gmail.com>\r\n\r\n* Replace shared_timed_mutex with regular mutex\r\n\r\nSigned-off-by: Audrow <audrow.nash@gmail.com>\r\n\r\n* Document the ring buffer\r\n\r\nSigned-off-by: Audrow <audrow.nash@gmail.com>\r\n\r\n* Remove trailing whitespace\r\n\r\nSigned-off-by: Audrow <audrow.nash@gmail.com>\r\n\r\n* Fix typo in has_data() document string\r\n\r\nSigned-off-by: Audrow <audrow.nash@gmail.com>",
+      "files_changed": 1,
+      "additions": 84,
+      "deletions": 10,
+      "commit_type": "code"
+    },
+    {
+      "author": "AlexisTM",
+      "date": "2022-10-25T17:33:14Z",
+      "sha": "85c0af4fa06264a6b92a519197774c0e10b9606e",
+      "message": "Set the minimum number of threads of the Multithreaded executor to 2 (#2030)\n\n* Set the minimum number of threads of the Multithreaded executor to 2\r\n\r\nSigned-off-by: Alexis Paques <paa1ti@bosch.com>",
+      "files_changed": 1,
+      "additions": 10,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "uupks",
+      "date": "2022-10-13T12:30:02Z",
+      "sha": "b9b1468d15c7ddc697c079e6934d54f183294280",
+      "message": "check thread whether joinable before join (#2019)\n\nSigned-off-by: uupks <uupks0325@gmail.com>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Crola1702",
+      "date": "2022-10-10T13:17:24Z",
+      "sha": "3aca271ef5d25c1b8c12e67ecf85166856a88000",
+      "message": "Set cpplint test timeout to 3 minutes (#2022)\n\nSigned-off-by: Crola1702 <cristobal.arroyo@ekumenlabs.com>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "tylerjw",
+      "date": "2022-09-02T17:58:56Z",
+      "sha": "ea8daa37845e6137cba07a18eb653d97d87e6174",
+      "message": "operator+= and operator-= for Duration (#1988)\n\n* operator+= and operator-= for Duration\r\n\r\nSigned-off-by: Tyler Weaver <maybe@tylerjw.dev>",
+      "files_changed": 3,
+      "additions": 42,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "ivanpauno",
+      "date": "2019-02-21T17:18:06Z",
+      "sha": "8743bcb0a1ef06d6eea5ebbd247e019f9dbb1e10",
+      "message": "Added count matching api and intra-process subscriber count (#628)\n\n* Added count matching api to publishers. Also, internal method to count intra-process subscriptions\r\n\r\nSigned-off-by: ivanpauno <ivanpauno@ekumenlabs.com>\r\n\r\n* Addressed PR comments\r\n\r\nSigned-off-by: ivanpauno <ivanpauno@ekumenlabs.com>\r\n\r\n* Corrected error checking in publisher interprocess subscription count api. Minimal modifications in test\r\n\r\nSigned-off-by: ivanpauno <ivanpauno@ekumenlabs.com>\r\n\r\n* Moved intraprocess subscription count api to public. Started removing publishers and subscribers from ipm.\r\n\r\nSigned-off-by: ivanpauno <ivanpauno@ekumenlabs.com>\r\n\r\n* Added publisher count api in subscription class\r\n\r\nSigned-off-by: ivanpauno <ivanpauno@ekumenlabs.com>\r\n\r\n* Addressed PR comments\r\n\r\nSigned-off-by: ivanpauno <ivanpauno@ekumenlabs.com>\r\n\r\n* Addressed PR comments\r\n\r\nSigned-off-by: ivanpauno <ivanpauno@ekumenlabs.com>\r\n\r\n* Solved Wreorder\r\n\r\nSigned-off-by: ivanpauno <ivanpauno@ekumenlabs.com>",
+      "files_changed": 12,
+      "additions": 508,
+      "deletions": 5,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jasonbeach",
+      "date": "2022-08-31T12:40:11Z",
+      "sha": "93222cc2cde3e05f89673a4a8450575300c9c33a",
+      "message": "force compiler warning if callback handles not captured (#2000)\n\nclarify documentation to show that not capturing returned handles\r\nwill result in callbacks immediately being unregistered\r\n\r\nSigned-off-by: Jason Beach <jason.m.beach@gmail.com>",
+      "files_changed": 1,
+      "additions": 19,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "asymingt",
+      "date": "2022-08-30T13:10:11Z",
+      "sha": "6167a575b3eb85c90240e20736f4e5823ac4c681",
+      "message": "Add a `create_timer` method to `Node` and `LifecycleNode` classes (#1975)\n\nSigned-off-by: Andrew Symington <andrew.c.symington@gmail.com>",
+      "files_changed": 9,
+      "additions": 394,
+      "deletions": 119,
+      "commit_type": "code"
+    },
+    {
+      "author": "deepanshubansal01",
+      "date": "2022-07-14T22:22:48Z",
+      "sha": "b953bdddf8de213b4a051ecf2d668dad65ff9f89",
+      "message": "Support pre-set and post-set parameter callbacks in addition to on-set-parameter-callback. (#1947)\n\n* Support add_pre_set_parameter and add_post_set_parameter callbacks in addition to add_on_set_parameter_callback in Node API\r\n\r\nSigned-off-by: deepanshu <deepanshubansal01@gmail.com>",
+      "files_changed": 11,
+      "additions": 991,
+      "deletions": 60,
+      "commit_type": "docs"
+    },
+    {
+      "author": "paudrow",
+      "date": "2022-04-05T21:17:00Z",
+      "sha": "85a7046ac39bfc0d787ed2bbe62574424e31b871",
+      "message": "15.4.0\n\nSigned-off-by: Audrow Nash <audrow@hey.com>",
+      "files_changed": 8,
+      "additions": 21,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "hliberacki",
+      "date": "2022-06-24T07:33:29Z",
+      "sha": "3c8e89d17c5638450f55162a959307014385cbd2",
+      "message": "Introduce executors new spin_for method, replace spin_until_future_complete with spin_until_complete. (#1821) (#1874)",
+      "files_changed": 22,
+      "additions": 421,
+      "deletions": 240,
+      "commit_type": "code"
+    },
+    {
+      "author": "nnmm",
+      "date": "2021-01-07T23:30:38Z",
+      "sha": "bcceecb24bf625d7eb7c2524998e822cc6172bfb",
+      "message": "Better documentation for the QoS class (#1508)\n\n* Better documentation for the QoS class\r\n\r\nSigned-off-by: Nikolai Morin <nikolai.morin@apex.ai>\r\n\r\n* PR Review suggestions\r\n\r\nCo-authored-by: William Woodall <william+github@osrfoundation.org>\r\nSigned-off-by: Nikolai Morin <nikolai.morin@apex.ai>\r\n\r\n* Shorter brief\r\n\r\nSigned-off-by: nnmm <nnmmgit@gmail.com>\r\n\r\nCo-authored-by: William Woodall <william+github@osrfoundation.org>",
+      "files_changed": 1,
+      "additions": 28,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "dreuter",
+      "date": "2022-06-07T15:56:57Z",
+      "sha": "38581cc860fc98509c8c6654ab89a79c7dc045c0",
+      "message": "Fix documentation of `RCLCPP_[INFO,WARN,...]` (#1943)\n\nIn the pull request https://github.com/ros2/rclcpp/pull/1442 the ability\r\nto use `std::string` as the first argument to the logging functions was\r\n(rightfully) removed.\r\n\r\nThis commit just corrects the documentation of the macro, since it\r\nconfused me a bit ;)\r\n\r\nSigned-off-by: Daniel Reuter <daniel.robin.reuter@googlemail.com>",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jspricke",
+      "date": "2022-05-13T02:08:34Z",
+      "sha": "02802bcc385c3d6d814add93618f3388d44adec7",
+      "message": "Drop wrong template specialization (#1926)\n\nThis fails with g++ -std=gnu++20.\r\n\r\nSigned-off-by: Jochen Sprickerhof <git@jochen.sprickerhof.de>",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "jacobperron",
+      "date": "2018-11-20T19:02:13Z",
+      "sha": "f212d7341379e3f714fbcd123cb65e4a6d16210f",
+      "message": "Update rcl_wait_set_add_* calls (#586)\n\nNow the functions take an optional output index argument.\r\nRefactored the graph listener usage of rcl_wait_set_add_guard_condition() to take advantage of the new API.",
+      "files_changed": 2,
+      "additions": 23,
+      "deletions": 22,
+      "commit_type": "code"
+    },
+    {
+      "author": "aprotyas",
+      "date": "2021-10-25T18:27:12Z",
+      "sha": "c59793618a97132f5a5c93d8db2d5c7745c9cc0b",
+      "message": "Take message ownership from moved LoanedMessage (#1808)\n\n* Take message ownership from moved LoanedMessage\r\n\r\nOtherwise, since the rvalue reference passed into the move\r\nconstructor of `LoanedMessage` was not set to `nullptr`, the\r\nunderlying message would be double-free'd.\r\n\r\nSigned-off-by: Abrar Rahman Protyasha <aprotyas@u.rochester.edu>\r\n\r\n* Add unit test for LoanedMessage move construction\r\n\r\nSigned-off-by: Abrar Rahman Protyasha <aprotyas@u.rochester.edu>\r\n\r\n* Include <utility> header to satisfy cpplint\r\n\r\n`std::move` was being used without including said header,\r\nwhich made cpplint unhappy.\r\n\r\nSigned-off-by: Abrar Rahman Protyasha <aprotyas@u.rochester.edu>",
+      "files_changed": 2,
+      "additions": 20,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "galou",
+      "date": "2022-03-28T13:23:11Z",
+      "sha": "eac006317692b7eff3aed671eadbff3d72cca098",
+      "message": "Add test-dep ament_cmake_google_benchmark (#1904)\n\nSigned-off-by: Gaël Écorchard <gael.ecorchard@cvut.cz>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "asorbini",
+      "date": "2021-03-11T14:17:25Z",
+      "sha": "37ee1ff3090d7c08a0c6da66bf900b524a1ffdd3",
+      "message": "Add support for rmw_connextdds (#1574)\n\n* Replace stale reference to Connext\r\n\r\n* Restore exceptions for ros2/rmw_connext to ease transition to rticommunity/rmw_connextdds\r\n\r\nSigned-off-by: Andrea Sorbini <asorbini@rti.com>\r\nCo-authored-by: Chris Lalancette <clalancette@gmail.com>",
+      "files_changed": 7,
+      "additions": 2,
+      "deletions": 25,
+      "commit_type": "code"
+    },
+    {
+      "author": "HiroIshida",
+      "date": "2022-03-18T20:42:06Z",
+      "sha": "9ae35e347ead6394d39fc573a1f9af999b5e72a7",
+      "message": "Select executor in node registration (#1898)\n\n* Select executor\r\n\r\nSigned-off-by: Hirokazu Ishida <h-ishida@jsk.imi.i.u-tokyo.ac.jp>\r\n\r\n* Fix indent\r\n\r\nSigned-off-by: Hirokazu Ishida <h-ishida@jsk.imi.i.u-tokyo.ac.jp>",
+      "files_changed": 2,
+      "additions": 9,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "irobot-ros",
+      "date": "2022-02-24T08:32:17Z",
+      "sha": "d8e1aed520047b5da28d65cbfbdf781358c14fc6",
+      "message": "Add RMW listener APIs (#1579)\n\n* Add RMW listener APIs\r\n\r\nSigned-off-by: Alberto Soragna <asoragna@irobot.com>\r\n\r\n* split long log into two lines\r\n\r\nSigned-off-by: Alberto Soragna <asoragna@irobot.com>\r\n\r\n* Remove use_previous_event\r\n\r\nSigned-off-by: Mauro Passerino <mpasserino@irobot.com>\r\n\r\n* Do not set gc listener callback\r\n\r\nSigned-off-by: Mauro Passerino <mpasserino@irobot.com>\r\n\r\n* significant refactor to make callbacks type safe\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* Add on_ready callback to waitables, add clear_* functions, add unit-tests\r\n\r\nSigned-off-by: Alberto Soragna <alberto.soragna@gmail.com>\r\n\r\n* add mutex to set and clear listener APIs\r\n\r\nSigned-off-by: Alberto Soragna <alberto.soragna@gmail.com>\r\n\r\n* allow to set ipc sub callback from regular subscription\r\n\r\nSigned-off-by: Alberto Soragna <alberto.soragna@gmail.com>\r\n\r\n* fix minor failures\r\n\r\nSigned-off-by: Alberto Soragna <alberto.soragna@gmail.com>\r\n\r\n* fix typos and errors in comments\r\n\r\nSigned-off-by: Alberto Soragna <alberto.soragna@gmail.com>\r\n\r\n* fix comments\r\n\r\nSigned-off-by: Alberto Soragna <alberto.soragna@gmail.com>\r\n\r\n* expose qos listener APIs from pub and sub; add unit-tests\r\n\r\nSigned-off-by: Alberto Soragna <alberto.soragna@gmail.com>\r\n\r\n* add qos event unit-test for invalid callbacks\r\n\r\nSigned-off-by: Alberto Soragna <alberto.soragna@gmail.com>\r\n\r\n* Use QoS depth to limit callbacks count\r\n\r\nSigned-off-by: Mauro Passerino <mpasserino@irobot.com>\r\n\r\n* fix ipc-subscription\r\n\r\nSigned-off-by: Alberto Soragna <alberto.soragna@gmail.com>\r\n\r\n* Rename CallbackMessageT -> ROSMessageType\r\n\r\nSigned-off-by: Mauro Passerino <mpasserino@irobot.com>\r\n\r\n* Set callbacks to Actions\r\n\r\nSigned-off-by: Mauro Passerino <mpasserino@irobot.com>\r\n\r\n* changes from upstream\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* Unset callback on entities destruction\r\n\r\nSigned-off-by: Mauro Passerino <mpasserino@irobot.com>\r\n\r\n* fix rebase errors\r\n\r\nSigned-off-by: Alberto Soragna <alberto.soragna@gmail.com>\r\n\r\n* fix unit-tests\r\n\r\nSigned-off-by: Alberto Soragna <alberto.soragna@gmail.com>\r\n\r\n* Add GuardCondition on trigger callback\r\n\r\nSigned-off-by: Mauro Passerino <mpasserino@irobot.com>\r\n\r\n* Add tests for new GuardCondition APIs\r\n\r\nSigned-off-by: Mauro Passerino <mpasserino@irobot.com>\r\n\r\n* Fix windows CI\r\n\r\nSigned-off-by: Mauro Passerino <mpasserino@irobot.com>\r\n\r\n* Action unset callbacks only if were set\r\n\r\nSigned-off-by: Mauro Passerino <mpasserino@irobot.com>\r\n\r\n* add missing include rcl event callback include directive\r\n\r\nSigned-off-by: Alberto Soragna <alberto.soragna@gmail.com>\r\n\r\n* typos\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* remove listener reference\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* remove references to listener and move a method closer to impl\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* cpplint\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* Fix qos history check in subscription_intra_process.hpp\r\n\r\nCo-authored-by: Mauro Passerino <mpasserino@irobot.com>\r\nCo-authored-by: William Woodall <william@osrfoundation.org>\r\nCo-authored-by: Alberto Soragna <alberto.soragna@gmail.com>",
+      "files_changed": 33,
+      "additions": 1942,
+      "deletions": 49,
+      "commit_type": "docs"
+    },
+    {
+      "author": "kenji-miyake",
+      "date": "2022-02-04T14:23:17Z",
+      "sha": "2520d398c7645361e37a312df7f523033501b7e5",
+      "message": "Add return value version of get_parameter_or (#1813)\n\n* Add return value version of get_parameter_or\r\n\r\n* Add test case\r\n\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\nCo-authored-by: Abrar Rahman Protyasha <aprotyas@u.rochester.edu>",
+      "files_changed": 3,
+      "additions": 56,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "gezp",
+      "date": "2021-12-07T17:24:53Z",
+      "sha": "321c74c2b3ae0336528f561a039fd554a28f4543",
+      "message": "create component_container_isolated (#1781)\n\nSigned-off-by: zhenpeng ge <zhenpeng.ge@qq.com>",
+      "files_changed": 6,
+      "additions": 218,
+      "deletions": 10,
+      "commit_type": "docs"
+    },
+    {
+      "author": "smith-doug",
+      "date": "2022-01-11T22:52:52Z",
+      "sha": "5e314c253e72f5e11a6e66d004bed3d26baa199e",
+      "message": "Rename stringstream in macros to a more unique name (#1862)\n\n* Rename stringstream in macros to a more unique name\r\n\r\nSigned-off-by: Doug Smith <douglas.smith@swri.org>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "gonzodepedro",
+      "date": "2022-01-07T19:45:06Z",
+      "sha": "6b321edb4fabcc57f666f77a4dc091e95948070b",
+      "message": "Add non transform capabilities for intra-process (#1849)\n\nThat is, make it so that if both a publisher and a subscriber using intra-process\r\nand using TypeAdaptation are the same type, we don't need to convert to\r\na ROS Message type on the publisher and from a ROS Message type before\r\ndelivering to the subscriber.  Instead, we store the original message type\r\nin the subscription buffer, and deliver it straight through to the subscriber.\r\n\r\nThis has two main benefits:\r\n1. It is better for performance; we are eliding unnecessary work.\r\n2. We can use TypeAdaptation to pass custom handles (like hardware accelerator\r\n    handles) between a publisher and subscriber.  That means we can avoid\r\n    unnecessary overhead when using a hardware accelerator, like synchronizing\r\n    between the hardware accelerator and the main CPU.\r\n\r\nThe main way this is accomplished is by causing the SubscriptionIntraProcessBuffer\r\nto store messages of the Subscribed Type (which in the case of a ROS message type\r\nsubscriber is a ROS message type, but in the case of a TypeAdapter type is the\r\ncustom type).  When a publish with a Type Adapted type happens, it delays conversion\r\nof the message, and passes the message type from the user down into the IntraProcessManager.\r\n\r\nThe IntraProcessManager checks to see if it can cast the SubscriptionBuffer\r\nto the custom type being published first.  If it can, then it knows it can deliver the message directly\r\ninto the SubscriptionBuffer with no conversion necessary.  If it can't, it then sees if\r\nthe SubscriptionBuffer is of a ROS message type.  If it is, then it performs the conversion\r\nas necessary, and then stores it.  In all cases, the Subscription is then triggered underneath\r\nso that the message will eventually be delivered by an executor.\r\n\r\nWe also add tests to ensure that in the case where the publisher and subscriber\r\nand using the same type adapter, no conversion happens when delivering the\r\nmessage.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\nSigned-off-by: Gonzalo de Pedro <gonzalo@depedro.com.ar>",
+      "files_changed": 13,
+      "additions": 1603,
+      "deletions": 217,
+      "commit_type": "docs"
+    },
+    {
+      "author": "hidmic",
+      "date": "2018-12-05T22:51:23Z",
+      "sha": "91167393ea4ac97ea7d561d563f303c70c6d9fc7",
+      "message": "[rclcpp_action] Action client implementation (#594)\n\n* WIP\r\n\r\n* Removed async_cancel from action ClintGoalHandle API\r\n\r\n* Added status handler to action client goal handler\r\n\r\n* Added result handler to action client goal handler\r\n\r\n* Identation fix\r\n\r\n* Added get/set for action client goal handler\r\n\r\n* Changed action client goal handler attrs from rcl to cpp versions\r\n\r\n* Added check methods to action client goal handler\r\n\r\n* Removed rcl_client pointer from action client goal handler\r\n\r\n* Added basic waitable interface to action client\r\n\r\n* Updated waitable execute from action client\r\n\r\n* Added throw for rcl calls in action client\r\n\r\n* Removed duplicated ready flags from action client\r\n\r\n* Minor fix\r\n\r\n* Added header to action ClientBaseImpl execute\r\n\r\n* Mich's update to action client interface\r\n\r\n* Added trailing suffix to client pimpl attrs\r\n\r\n* Towards a consistent action client\r\n\r\n* Misc fixes for the action client\r\n\r\n* Yet more misc fixes for the action client\r\n\r\n* Few more fixes and shortcuts to deal with missing type support.\r\n\r\n* Fixed lint errors in action headers and client\r\n\r\n* Fixes to action client internal workflow.\r\n\r\n* Misc fixes to get client example to build\r\n\r\n* More misck client fixes\r\n\r\n* Remove debug print\r\n\r\n* replace logging with throw_from_rcl_error\r\n\r\n* Wrap result object given by client to user\r\n\r\n* Fix a couple bugs trying to cancel goals\r\n\r\n* Use unique_indentifier_msgs\r\n\r\n* create_client accepts group and removes waitable\r\n\r\n* Uncrustify fixes\r\n\r\n* [rclcpp_action] Adds tests for action client.\r\n\r\n* [WIP] Failing action client tests.\r\n\r\n* [rclcpp_action] Action client tests passing.\r\n\r\n* Spin both executors to make tests pass on my machine\r\n\r\n* Feedback callback uses shared pointer\r\n\r\n* comment about why make_result_aware is called\r\n\r\n* Client documentation\r\n\r\n* Execute one thing at a time\r\n\r\n* Return nullptr instead of throwing RejectedGoalError\r\n\r\n* ClientGoalHandle worries about feedback awareness\r\n\r\n* cpplint + uncrustify\r\n\r\n* Use node logging interface\r\n\r\n* ACTION -> ActionT\r\n\r\n* Make ClientBase constructor protected\r\n\r\n* Return types on different line\r\n\r\n* Avoid passing const reference to temporary\r\n\r\n* Child logger rclcpp_action\r\n\r\n* Child logger rclcpp_action\r\n\r\n* possible windows fixes\r\n\r\n* remove excess space\r\n\r\n* swap argument order\r\n\r\n* Misc test additions\r\n\r\n* Windows independent_bits_engine can't do uint8_t\r\n\r\n* Windows link issues",
+      "files_changed": 8,
+      "additions": 1498,
+      "deletions": 79,
+      "commit_type": "ci"
+    },
+    {
+      "author": "m2-farzan",
+      "date": "2021-12-24T06:28:46Z",
+      "sha": "7a2ee2328151ebbc29ea3aed611b231eacbd51d8",
+      "message": "Use UninitializedStaticallyTypedParameterException (#1689)\n\n* Use UninitializedStaticallyTypedParameterException\r\n\r\nSigned-off-by: Mohammad Farzan <m2_farzan@yahoo.com>\r\nCo-authored-by: Ivan Santiago Paunovic <ivanpauno@ekumenlabs.com>",
+      "files_changed": 3,
+      "additions": 33,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "Bi0T1N",
+      "date": "2021-12-20T19:56:46Z",
+      "sha": "152dbc6e38e18c18a5883b51c33162d237f891e0",
+      "message": "Add tests for function templates of declare_parameter (#1747)\n\n* Add function template tests for all defined types of declare_parameter\r\n\r\nSigned-off-by: Nico Neumann <nico.neumann@iosb.fraunhofer.de>",
+      "files_changed": 1,
+      "additions": 157,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "mxgrey",
+      "date": "2021-11-01T19:29:03Z",
+      "sha": "94264320b4a2fde8999b895824d2c85cf0e4d2ac",
+      "message": "Fix lifetime of context so it remains alive while its dependent node handles are still in use (#1754)\n\n* Fix lifetime of context so it remains alive while its dependent node handles are still in use\r\n\r\nSigned-off-by: Michael X. Grey <grey@openrobotics.org>\r\n\r\n* Explicitly delete moving and assigning\r\n\r\nSigned-off-by: Michael X. Grey <grey@openrobotics.org>\r\n\r\n* Satisfy uncrustify\r\n\r\nSigned-off-by: Michael X. Grey <grey@openrobotics.org>\r\n\r\n* Fix more spacing complaints\r\n\r\nSigned-off-by: Michael X. Grey <grey@openrobotics.org>\r\n\r\n* Fixing style\r\n\r\nSigned-off-by: Michael X. Grey <grey@openrobotics.org>\r\n\r\n* Provide a safe move constructor to avoid double-allocation\r\n\r\nSigned-off-by: Michael X. Grey <grey@openrobotics.org>\r\n\r\n* Fix uncrustify\r\n\r\nSigned-off-by: Michael X. Grey <grey@openrobotics.org>",
+      "files_changed": 2,
+      "additions": 114,
+      "deletions": 14,
+      "commit_type": "code"
+    },
+    {
+      "author": "gbiggs",
+      "date": "2016-11-17T17:59:50Z",
+      "sha": "aa2d0a395486d46cd80ec26518aa4fc63a9cd21e",
+      "message": "Fix has_invalid_weak_nodes (#266)\n\n* Fix #264\r\n\r\n* Corrected test comment",
+      "files_changed": 3,
+      "additions": 84,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "livanov93",
+      "date": "2021-09-14T00:36:11Z",
+      "sha": "2801553d61c5a30a0327d5cbc8d28bcd74e9703d",
+      "message": "Improve documentation for auto declaration from overrides (#1751)\n\n* Improve documentation for auto declaration from overrides.\r\n\r\nSigned-off-by: voodoo <lovro.ivanov@gmail.com>\r\n\r\n* Fix spelling.\r\n\r\nSigned-off-by: voodoo <lovro.ivanov@gmail.com>\r\n\r\n* Extend description.\r\n\r\nSigned-off-by: voodoo <lovro.ivanov@gmail.com>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "zouyonghao",
+      "date": "2021-09-13T13:25:06Z",
+      "sha": "001f0fb620f544c78b0645919ee55f99d175f000",
+      "message": "Replace recursion with do-while (#1765)\n\nto avoid potential stack-overflow.\r\n\r\nSigned-off-by: zouyonghao <yonghaoz1994@gmail.com>",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 10,
+      "commit_type": "code"
+    },
+    {
+      "author": "Abrar Rahman Protyasha",
+      "date": "2021-08-26T22:33:03Z",
+      "sha": "ecb81ef2c35a3e605b7c501ace4ef1baf4755bf9",
+      "message": "Deprecate the `void shared_ptr<MessageT>` subscription callback signatures (#1713)\n\n* Deprecated `shared_ptr<MessageT>` sub callbacks\r\n\r\nAddresses #1619.\r\n\r\nSigned-off-by: Abrar Rahman Protyasha <abrar@openrobotics.org>\r\n\r\n* Resolve deprecated subscription callbacks in tests\r\n\r\nSpecifically, `void shared_ptr<MessageT>` subscription callbacks have\r\nbeen migrated to `void shared_ptr<const MessageT>` subscription\r\ncallbacks.\r\n\r\nThis change has been performed only on the test files that do\r\nnot actually house unit tests for the `AnySubscriptionCallback` class.\r\nFor unit tests that actually target the deprecated `set` functions,\r\nthe deprecation warnings have to be avoided. This patch will be\r\nintroduced in a separate commit.\r\n\r\nSigned-off-by: Abrar Rahman Protyasha <abrar@openrobotics.org>\r\n\r\n* Suppress deprecation warnings in unit tests\r\n\r\nThis commit specifically introduces suppression of the deprecation\r\nwarnings produced while compiling unit tests for the\r\n`AnySubscriptionCallback` class.\r\n\r\nThe macro mechanics to conditionally include the `deprecated` attribute\r\nis not ideal, but the diagnostic pragma solution (`# pragma GCC\r\ndiagnostic ignored`) did not work for these unit tests, possibly because\r\nof the way gtest is initializing the necessary `InstanceContext`\r\nobjects.\r\n\r\nA `TODO` directive has been left to figure out a better way to address\r\nthis warning suppression.\r\n\r\nSigned-off-by: Abrar Rahman Protyasha <abrar@openrobotics.org>\r\n\r\n* Fix shared ptr callback in wait_for_message\r\n\r\nMoving away from deprecated signatures.\r\n\r\nSigned-off-by: Abrar Rahman Protyasha <abrar@openrobotics.org>\r\n\r\n* `rclcpp_action`: Fix deprecated subscr. callbacks\r\n\r\nSigned-off-by: Abrar Rahman Protyasha <abrar@openrobotics.org>\r\n\r\n* `rclcpp_lifecycle`: Fix deprecated sub callbacks\r\n\r\nSigned-off-by: Abrar Rahman Protyasha <abrar@openrobotics.org>",
+      "files_changed": 8,
+      "additions": 29,
+      "deletions": 25,
+      "commit_type": "code"
+    },
+    {
+      "author": "asobhy-qnx",
+      "date": "2021-08-23T14:19:05Z",
+      "sha": "2dd09ae274ad5073cf875d98ccc2c97aa26f2d41",
+      "message": "remove can_be_nullptr assignment check for QNX case (#1752)\n\nSigned-off-by: Ahmed Sobhy <asobhy@blackberry.com>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Mauro Passerino",
+      "date": "2021-06-09T14:08:40Z",
+      "sha": "d7764b4322d83162c94e0c68d42158905f582ef2",
+      "message": "Fix bug: Add node while spinning\n\nSigned-off-by: Mauro Passerino <mpasserino@irobot.com>",
+      "files_changed": 5,
+      "additions": 35,
+      "deletions": 39,
+      "commit_type": "code"
+    },
+    {
+      "author": "devrite",
+      "date": "2021-08-04T15:02:51Z",
+      "sha": "3cddb4edab317758dc8a8cac94b90794641c7488",
+      "message": "Fix returning invalid namespace if sub_namespace is empty (#1658)\n\n* Create valid effective namespace when sub-namespace is empty\r\n\r\nFix #1656.\r\n\r\nSigned-off-by: Markus Hofstaetter <markus.hofstaetter@ait.ac.at>\r\n\r\n* Add regression test for effective namespace and empty sub-namespace\r\n\r\nAdds regression test for #1656.\r\n\r\nSigned-off-by: Markus Hofstaetter <markus.hofstaetter@ait.ac.at>",
+      "files_changed": 2,
+      "additions": 24,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Karsten1987",
+      "date": "2016-11-01T22:07:58Z",
+      "sha": "7f714a86010d3e2ce494f8810240e0b797659b80",
+      "message": "open Node/Publisher API for allowing inheritance (#258)\n\n* (dev) template create_publisher with publisher type\r\n\r\n* (dev) template publisher type for dynamic publisher type instantiation\r\n\r\n* (dev) make Publisher::publish function virtual\r\n\r\n* (fix) uncrustify\r\n\r\n* different indentation of long template declaration",
+      "files_changed": 3,
+      "additions": 19,
+      "deletions": 16,
+      "commit_type": "code"
+    },
+    {
+      "author": "adityapande-1995",
+      "date": "2021-07-26T21:04:29Z",
+      "sha": "0c01a43a4f2643cce7d2f30767eb783e998ce363",
+      "message": "Updated CHANGELOG.rst\n\nSigned-off-by: Aditya Pande <aditya050995@gmail.com>",
+      "files_changed": 4,
+      "additions": 41,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "rebecca-butler",
+      "date": "2021-07-07T12:46:20Z",
+      "sha": "dbb717cd6ee838be4cb9b2f72b1804d071c6515f",
+      "message": "Add hook to generate node options in ComponentManager (#1702)\n\n* Add domain bridge container and `domain` argument for components\r\n\r\nSigned-off-by: Rebecca Butler <rebecca@openrobotics.org>\r\n\r\n* Fix linter errors\r\n\r\nSigned-off-by: Rebecca Butler <rebecca@openrobotics.org>\r\n\r\n* Move domain_bridge_container to domain_bridge package\r\n\r\nSigned-off-by: Rebecca Butler <rebecca@openrobotics.org>\r\n\r\n* Remove domain id argument and add getters/setters to ComponentManager\r\n\r\nSigned-off-by: Rebecca Butler <rebecca@openrobotics.org>\r\n\r\n* Add SetNodeOptions function\r\n\r\nSigned-off-by: Rebecca Butler <rebecca@openrobotics.org>\r\n\r\n* Rename SetNodeOptions -> CreateNodeOptions and refactor\r\n\r\nSigned-off-by: Rebecca Butler <rebecca@openrobotics.org>",
+      "files_changed": 2,
+      "additions": 55,
+      "deletions": 39,
+      "commit_type": "code"
+    },
+    {
+      "author": "pettni",
+      "date": "2021-05-27T02:40:45Z",
+      "sha": "39bfb30eb0eea70a5863de1aeaa8eb43177ff0f3",
+      "message": "Remove use of std::allocator<>::rebind (#1678)\n\nrebind is deprecated in c++17 and removed in c++20\r\n\r\nSigned-off-by: Petter Nilsson <pettni@umich.edu>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "KavenYau",
+      "date": "2021-04-25T07:32:30Z",
+      "sha": "fba080cf34256243705e45b1eadc1c49057b5896",
+      "message": "Fix action server deadlock issue that caused by other mutexes locked in CancelCallback (#1635)\n\n* Fix deadlock issue that caused by other mutexes locked in CancelCallback\r\n\r\nSigned-off-by: Kaven Yau <love29881460@qq.com>\r\n\r\n* Add unit test for rclcpp action server deadlock\r\n\r\nSigned-off-by: Kaven Yau <love29881460@qq.com>\r\n\r\n* Update rclcpp_action/test/test_server.cpp\r\n\r\nCo-authored-by: William Woodall <william+github@osrfoundation.org>\r\n\r\nCo-authored-by: Kaven Yau <love29881460@qq.com>\r\nCo-authored-by: Jacob Perron <jacob@openrobotics.org>\r\nCo-authored-by: William Woodall <william+github@osrfoundation.org>",
+      "files_changed": 2,
+      "additions": 27,
+      "deletions": 10,
+      "commit_type": "test"
+    },
+    {
+      "author": "anamud",
+      "date": "2021-04-05T17:16:46Z",
+      "sha": "6af478d0bade3bd9c309f3e0e6424ac0ef2369e4",
+      "message": "Unique network flows (#1496)\n\n* Add option to enable unique network flow\r\n\r\n- Option enabled for publishers and subscriptions\r\n- TODO: Discuss error handling if not supported\r\n\r\nSigned-off-by: Ananya Muddukrishna <ananya.x.muddukrishna@ericsson.com>\r\n\r\n* Get network flows of publishers and subscriptions\r\n\r\nSigned-off-by: Ananya Muddukrishna <ananya.x.muddukrishna@ericsson.com>\r\n\r\n* Use new unique network flow option\r\n\r\nSigned-off-by: Ananya Muddukrishna <ananya.x.muddukrishna@ericsson.com>\r\n\r\n* Rename files for clarity\r\n\r\nSigned-off-by: Ananya Muddukrishna <ananya.x.muddukrishna@ericsson.com>\r\n\r\n* Rename API for clarity and add DSCP option\r\n\r\nSigned-off-by: Ananya Muddukrishna <ananya.x.muddukrishna@ericsson.com>\r\n\r\n* Convert integer to string prior to streaming\r\n\r\nSigned-off-by: Ananya Muddukrishna <ananya.x.muddukrishna@ericsson.com>\r\n\r\n* Uncrustify\r\n\r\nSigned-off-by: Ananya Muddukrishna <ananya.x.muddukrishna@ericsson.com>\r\n\r\n* Fix linkage error thrown by MSVC compiler\r\n\r\nSigned-off-by: Ananya Muddukrishna <ananya.x.muddukrishna@ericsson.com>\r\n\r\n* Use updated rmw interface\r\n\r\nSigned-off-by: Ananya Muddukrishna <ananya.x.muddukrishna@ericsson.com>\r\n\r\n* Improve readability\r\n\r\nSigned-off-by: Ananya Muddukrishna <ananya.x.muddukrishna@ericsson.com>\r\n\r\n* Forward declare friend functions\r\n\r\nSigned-off-by: Ananya Muddukrishna <ananya.x.muddukrishna@ericsson.com>\r\n\r\nCo-authored-by: Ananya Muddukrishna <ananya.x.muddukrishna@ericsson.com>",
+      "files_changed": 11,
+      "additions": 372,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "BriceRenaudeau",
+      "date": "2021-03-25T21:10:59Z",
+      "sha": "92ece94ca323e4e39d45ac5b043b200ec4d97b04",
+      "message": "add automatically_add_executor_with_node option (#1594)\n\n* add automatically_add_executor_with_node option\r\n\r\nSigned-off-by: Brice <brice.renaudeau@wyca.fr>\r\n\r\n* Fix typo\r\n\r\nSigned-off-by: Brice <brice.renaudeau@wyca.fr>\r\n\r\n* add option usage in test\r\n\r\nSigned-off-by: Brice <brice.renaudeau@wyca.fr>\r\n\r\n* Document parameter\r\n\r\nSigned-off-by: Brice <brice.renaudeau@wyca.fr>",
+      "files_changed": 3,
+      "additions": 10,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "shonigmann",
+      "date": "2021-04-02T06:39:08Z",
+      "sha": "70dfa2e778aba0196d871f907d34ff07b80198d3",
+      "message": "updating quality declaration links (re: ros2/docs.ros2.org#52) (#1615)\n\nSigned-off-by: Simon Honigmann <shonigmann@blueorigin.com>\r\n\r\nCo-authored-by: Simon Honigmann <shonigmann@blueorigin.com>",
+      "files_changed": 4,
+      "additions": 36,
+      "deletions": 36,
+      "commit_type": "docs"
+    },
+    {
+      "author": "anaelle-sw",
+      "date": "2021-03-29T22:45:19Z",
+      "sha": "bc8c71b63f60f5df4796a42b3d9c246c9e6f2b09",
+      "message": "Clock subscription callback group spins in its own thread (#1556)\n\n* Clock subscription callback group spins in its own thread\r\n\r\nSigned-off-by: anaelle-sw <anaelle.sarazin@wyca.fr>\r\n\r\n* fix line length\r\n\r\nSigned-off-by: anaelle-sw <anaelle.sarazin@wyca.fr>\r\n\r\n* fix code style divergence\r\n\r\nSigned-off-by: anaelle-sw <anaelle.sarazin@wyca.fr>\r\n\r\n* fix code style divergence\r\n\r\nSigned-off-by: anaelle-sw <anaelle.sarazin@wyca.fr>\r\n\r\n* Initialize only once clock_callbackgroup\r\n\r\nSigned-off-by: anaelle-sw <anaelle.sarazin@wyca.fr>\r\n\r\n* Check if thread joinable before start a new thread\r\n\r\nSigned-off-by: anaelle-sw <anaelle.sarazin@wyca.fr>\r\n\r\n* Cancel executor and join thread in destroy_clock_sub\r\n\r\nSigned-off-by: anaelle-sw <anaelle.sarazin@wyca.fr>\r\n\r\n* Check if clock_thread_ is joinable before cancel executor and join\r\n\r\nSigned-off-by: anaelle-sw <anaelle.sarazin@wyca.fr>\r\n\r\n* Add use_clock_thread as an option\r\n\r\nSigned-off-by: anaelle-sw <anaelle.sarazin@wyca.fr>\r\n\r\n* Fix code style divergence\r\n\r\nSigned-off-by: anaelle-sw <anaelle.sarazin@wyca.fr>\r\n\r\n* Fix code style divergence\r\n\r\nSigned-off-by: anaelle-sw <anaelle.sarazin@wyca.fr>\r\n\r\n* Fix code style divergence\r\n\r\nSigned-off-by: anaelle-sw <anaelle.sarazin@wyca.fr>\r\n\r\n* Add TimeSource tests\r\n\r\nSigned-off-by: anaelle-sw <anaelle.sarazin@wyca.fr>\r\n\r\n* update use_clock_thread value in function attachNode\r\n\r\nSigned-off-by: anaelle <anaelle.sarazin@wyca.fr>\r\n\r\n* join clock thread in function detachNode\r\n\r\nSigned-off-by: anaelle <anaelle.sarazin@wyca.fr>\r\n\r\n* TimeSource tests: fixes + comments + more tested cases\r\n\r\nSigned-off-by: anaelle <anaelle.sarazin@wyca.fr>\r\n\r\n* clean destroy_clock_sub()\r\n\r\nSigned-off-by: anaelle <anaelle.sarazin@wyca.fr>\r\n\r\n* flag to ensure clock_executor is cancelled\r\n\r\nSigned-off-by: anaelle <anaelle.sarazin@wyca.fr>\r\n\r\n* Always re-init clock_callback_group when creating a new clock sub\r\n\r\nSigned-off-by: anaelle <anaelle.sarazin@wyca.fr>\r\n\r\n* spin_until_future_complete() to cleanly cancel executor\r\n\r\nSigned-off-by: anaelle <anaelle.sarazin@wyca.fr>\r\n\r\n* fix tests warnings\r\n\r\nSigned-off-by: anaelle <anaelle.sarazin@wyca.fr>\r\n\r\n* fix test error: cancel clock executor\r\n\r\nSigned-off-by: anaelle <anaelle.sarazin@wyca.fr>\r\n\r\n* clean comments\r\n\r\nSigned-off-by: anaelle <anaelle.sarazin@wyca.fr>\r\n\r\n* fix precision loss\r\n\r\nSigned-off-by: anaelle <anaelle.sarazin@wyca.fr>",
+      "files_changed": 9,
+      "additions": 319,
+      "deletions": 12,
+      "commit_type": "docs"
+    },
+    {
+      "author": "suab321321",
+      "date": "2021-03-19T22:53:01Z",
+      "sha": "f5afe380d5f2af5b84b2e64ec54d9afe22ceda99",
+      "message": "Made 'Context::shutdown_reason' function a const function (#1578)\n\nSigned-off-by: Abhinav Singh <singhabhinav9051571833@gmail.com>",
+      "files_changed": 2,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "nuclearsandwich",
+      "date": "2018-11-19T15:47:26Z",
+      "sha": "c8f3fd3b0e424f4154dd7aee80fb26677ee852da",
+      "message": "0.6.0",
+      "files_changed": 4,
+      "additions": 50,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "bpwilcox",
+      "date": "2018-12-04T22:24:48Z",
+      "sha": "9d7b50e4f7ad48846eccafd22a0d0ea4fe885172",
+      "message": "adding node path and time stamp to parameter event message (#584)\n\nmodify adding clock for rclcpp_lifestyle",
+      "files_changed": 6,
+      "additions": 32,
+      "deletions": 21,
+      "commit_type": "code"
+    },
+    {
+      "author": "guru-florida",
+      "date": "2021-03-02T13:27:50Z",
+      "sha": "b9ffd72f42ae44352256f2eab585299bf85c6346",
+      "message": "Fix SEGV caused by order of destruction of Node sub-interfaces (#1469)\n\n* added tear-down of node sub-interfaces in reverse order of their creation (#1469)\r\n\r\nSigned-off-by: Colin MacKenzie <colin@flyingeinstein.com>\r\n\r\n* added name of service to log message for leak detection. Previously it gave no indication of what node is causing the memory leak (#1469)\r\n\r\nSigned-off-by: Colin MacKenzie <colin@flyingeinstein.com>",
+      "files_changed": 3,
+      "additions": 28,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "hsgwa",
+      "date": "2021-01-07T18:04:18Z",
+      "sha": "7ed61e52feaf4c173c7c12ec48da9fbd1fa04326",
+      "message": "Modify excluding callback duration from topic statistics (#1492)\n\nSigned-off-by: hsgwa <hasegawa@isp.co.jp>",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "y-okumura-isp",
+      "date": "2021-01-26T02:44:35Z",
+      "sha": "4da9a0c2cdc96b3b8a07e6208be8974cba802ab7",
+      "message": "Fix #1526. (#1527)\n\n* Fix #1526.\r\n\r\nAs action_server_ depends on clock_, we declare clock_ first.\r\nThen the order of deletion becomes action_server_, clock_.\r\n\r\nSigned-off-by: y-okumura-isp <y-okumura@isp.co.jp>\r\n\r\n* Add comments about declaration order (#1526)\r\n\r\nSigned-off-by: y-okumura-isp <y-okumura@isp.co.jp>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "daisukes",
+      "date": "2020-08-13T20:14:04Z",
+      "sha": "df3cfa7e4f41c854c3a9dc5a0b17198042fcc4f8",
+      "message": "Fix clock thread issue (#1266) (#1267)\n\n* lock before rcl_set_ros_time_override\r\n\r\nSigned-off-by: Daisuke Sato <daisukes@cmu.edu>",
+      "files_changed": 2,
+      "additions": 12,
+      "deletions": 22,
+      "commit_type": "code"
+    },
+    {
+      "author": "eboasson",
+      "date": "2021-01-13T20:02:45Z",
+      "sha": "8d2c682c097f94c09244f799010518dc196f4a3a",
+      "message": "Call rclcpp::shutdown in test_node for clean shutdown on Windows (#1515)\n\nThe graph_listener thread is started in the background in some of the tests and\r\nthis thread is killed by Windows prior to executing global destructors if it is\r\nstill running when leaving main().  This then corrupts state because the RMW\r\nlayer is blocking in a waitset and causes Cyclone to hang trying to destroy the\r\nwaitset.\r\n\r\nSigned-off-by: Erik Boasson <eb@ilities.com>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "test"
+    },
+    {
+      "author": "jdlangs",
+      "date": "2021-01-05T16:18:46Z",
+      "sha": "b9ef1fedfa409c966658a747d653f84cce7357c3",
+      "message": "Use std compliant non-method std::filesystem::exists function (#1502)\n\nSigned-off-by: Josh Langsfeld <josh.langsfeld@gmail.com>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "brawner",
+      "date": "2020-01-13T22:23:41Z",
+      "sha": "9dbd124f1d0db159910a9bbca19d28c41b04b72c",
+      "message": "Assigning make_shared result to variables in test (#963)\n\n* Assigning make_shared result to variables in test\r\nSigned-off-by: Stephen Brawner <brawner@gmail.com>\r\n\r\n* PR fixup\r\n\r\nSigned-off-by: Stephen Brawner <brawner@gmail.com>",
+      "files_changed": 2,
+      "additions": 12,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "chapulina",
+      "date": "2018-07-26T20:17:33Z",
+      "sha": "fba891c0dff58b04eace926277cd9e49d96ca630",
+      "message": "Implement rclcpp::is_initialized() (#522)\n\n* Implement rclcpp::is_initialized()\r\n\r\n* linter",
+      "files_changed": 6,
+      "additions": 53,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mbuijs",
+      "date": "2020-06-26T15:41:23Z",
+      "sha": "c23572fa14d881607639987500a860c251446605",
+      "message": "Include original exception in ComponentManagerException (#1157)\n\n* Include original exception in ComponentManagerException\r\n\r\nSigned-off-by: Martijn Buijs <martijn.buijs@gmail.com>\r\n\r\n* Update rclcpp_components/src/component_manager.cpp\r\n\r\nCo-authored-by: tomoya <Tomoya.Fujita@sony.com>\r\nSigned-off-by: Martijn Buijs <martijn.buijs@gmail.com>\r\n\r\nCo-authored-by: tomoya <Tomoya.Fujita@sony.com>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Ada-King",
+      "date": "2020-09-24T17:27:30Z",
+      "sha": "31ae9c6a600f77d1566e58fb7fe796be08ab7898",
+      "message": "Expose qos setting for /rosout (#1247)\n\n* Expose qos setting for /rosout\r\n\r\nSigned-off-by: Ada-King <Bingtao.Du@sony.com>\r\n\r\n* For re-trigger CI job\r\n\r\nSigned-off-by: Ada-King <Bingtao.Du@sony.com>\r\n\r\n* Modify code based on comments\r\n\r\nSigned-off-by: Ada-King <Bingtao.Du@sony.com>\r\n\r\n* Remove redundant parameter\r\n\r\nSigned-off-by: Ada-King <Bingtao.Du@sony.com>\r\n\r\n* Simplify Test\r\n\r\nSigned-off-by: Ada-King <Bingtao.Du@sony.com>\r\n\r\n* Modify Test as suggested\r\n\r\nSigned-off-by: Ada-King <Bingtao.Du@sony.com>",
+      "files_changed": 6,
+      "additions": 143,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "codebot",
+      "date": "2016-12-13T22:41:22Z",
+      "sha": "d241a730fedc940f7cfbdbeb80d2bf69a2e25f16",
+      "message": "c++14 (#287)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "peterpena",
+      "date": "2020-09-02T03:40:38Z",
+      "sha": "01d6f52e3281f6df2c191690527f9208006a5c50",
+      "message": "Adding callback groups in executor (#1218)\n\n* Initial version of callback-group-based Executor.\r\n\r\nSigned-off-by: Ralph Lange <ralph.lange@de.bosch.com>\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* removed RealTimeClass\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* can add multiple cbgs and check if callback is owned by another exec before adding\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* cbg var for option to add to executor\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* getter for callback groups in executor\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* test\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* add many nodes and callback groups together\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* test for map of callback groups and nodes\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* added a test for map and callback group duplication\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* add cbg that are not assign and allow to do so, only iterate through groups in maps\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* memory strat should only add handles that belong to it\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* fixed executor deconstructor seg fault bug\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* fixed remove node and guard condition bug\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* fixed uncrustify\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* cpplint\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* remove line break and add static executor in cmakelist\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* enabled static executor and added add callback group feature\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* fixed test_allocator_memory_strategy\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* test allocator\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* test mem strat with cbg feat\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* remove cbg in static executor\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* adapted guard conditions\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* collector deconstructor and remove cbg when remove node in static\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* fixed invalid group ptr seg fault introduced in wait for work\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* passes the test allocator mem strat\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* added weak node check in memory strategy; passes brawner unit tests\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* uncrustify for tests\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* lint and uncrustify\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* exposed allowable state at the node level and added unit tests\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* unit test to add one node mult executors\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* frixed allow executor reset bug\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* code block for callback group and executor\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* add code block for add/remove cbg\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* add comments for add/remove callback group\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* changed from atomic to const\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* fixed test different cbgs for nodes\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* lint\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* added disabled nodes in services and map\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* changed var name to suggestion\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* comment for callback group constructor\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* header ordering\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* Update rclcpp/include/rclcpp/executor.hpp\r\n\r\nCo-authored-by: William Woodall <william@osrfoundation.org>\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* removed const ref and made protected\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* removing internals in comments\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* Apply suggestions from code review\r\n\r\ngeneral fixes\r\n\r\nCo-authored-by: William Woodall <william@osrfoundation.org>\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* remove white space\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* Apply suggestions from code review\r\n\r\ngeneral fix\r\n\r\nCo-authored-by: William Woodall <william@osrfoundation.org>\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* fix comments\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* Update rclcpp/include/rclcpp/executor.hpp\r\n\r\nCo-authored-by: William Woodall <william@osrfoundation.org>\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* fix comments\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* fix comments\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* general fixes\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* clang tidy and llvm deprecation and overriden fixes\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* made typedtests\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* add has callback method for static executor\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* removed map function and added comment about remove callback group\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* adding two different data structures for add_node and add_callback_group\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* nitpick changes to documentation\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* move implementation out of header\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* use const &\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* splitting add node and add cbg in static executro\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* get cbgs for static executor and collector\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* add weak nodes for nodes\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* get next ready executable with two maps\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* passes tests\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* Apply suggestions from code review\r\n\r\nCo-authored-by: William Woodall <william@osrfoundation.org>\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* fixed has node function\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* fixed collect entities\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* added unit tests for removal and added 3rd data struct\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* eliminated cbs vector\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* reusing same functions and added comments\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* documentation, more exceptions, and name changes\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* Apply suggestions from code review\r\n\r\nchanges for review\r\n\r\nCo-authored-by: William Woodall <william@osrfoundation.org>\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* fixed deconstructor, first remove cbgs, then nodes\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* Apply suggestions from code review\r\n\r\nCo-authored-by: William Woodall <william@osrfoundation.org>\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* fixed remove node issue\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* throw an exception in remove node of collector\r\n\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* Update rclcpp/include/rclcpp/executor.hpp\r\n\r\nCo-authored-by: William Woodall <william@osrfoundation.org>\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\n* Update rclcpp/include/rclcpp/executor.hpp\r\n\r\nCo-authored-by: William Woodall <william@osrfoundation.org>\r\nSigned-off-by: Pedro Pena <peter.a.pena@gmail.com>\r\n\r\nCo-authored-by: Ralph Lange <ralph.lange@de.bosch.com>\r\nCo-authored-by: William Woodall <william@osrfoundation.org>",
+      "files_changed": 21,
+      "additions": 2080,
+      "deletions": 644,
+      "commit_type": "docs"
+    },
+    {
+      "author": "dabonnie",
+      "date": "2019-04-18T21:29:38Z",
+      "sha": "ddcc1ec553ad9a338025758fdb1c6bc1ee7360a0",
+      "message": "Add method to read timer cancellation (#697)\n\n* Add method to read timer cancellation\r\n\r\nSigned-off-by: Devin Bonnie <dbbonnie@amazon.com>\r\n\r\n* Add improved documentation\r\nAdd improved and more unit tests\r\n\r\nSigned-off-by: Devin Bonnie <dbbonnie@amazon.com>\r\n\r\n* Add missing include\r\nAdd override for inherited methods\r\n\r\nSigned-off-by: Devin Bonnie <dbbonnie@amazon.com>\r\n\r\n* Addressed review comments\r\n\r\nSigned-off-by: Devin Bonnie <dbbonnie@amazon.com>",
+      "files_changed": 4,
+      "additions": 183,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Jannik Abbenseth",
+      "date": "2020-08-14T13:10:15Z",
+      "sha": "3270aad95eda0bc5ac7a3a79d4b1e07273154340",
+      "message": "add operator!= for duration (#1236)\n\nSigned-off-by: Jannik Abbenseth <jannik.abbenseth@ipa.fraunhofer.de>",
+      "files_changed": 3,
+      "additions": 10,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "dirk-thomas",
+      "date": "2014-07-31T00:54:12Z",
+      "sha": "a226aecd96471dfafd0b7fbaaeb10858ee6021a4",
+      "message": "add license",
+      "files_changed": 1,
+      "additions": 202,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "claireyywang",
+      "date": "2020-05-26T18:47:53Z",
+      "sha": "b3e526ce3cf8dddaa2f8bcae1a7410b7057c0462",
+      "message": "add add_on and remove_on\n\nSigned-off-by: claireyywang <22240514+claireyywang@users.noreply.github.com>",
+      "files_changed": 2,
+      "additions": 31,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "meyerj",
+      "date": "2020-06-29T13:47:23Z",
+      "sha": "c0b96616bb2f24d1c75dc26c4f2ff7927ebfb74c",
+      "message": "Fix implementation of NodeOptions::use_global_arguments() (#1176)\n\n`this->node_options_` might still be `nullptr` for a default initialized NodeOptions instance.\r\n`use_global_arguments()` must return `this->use_global_arguments_`, in analogy to `NodeOptions::enable_rosout()`.\r\n\r\nSigned-off-by: Johannes Meyer <johannes@intermodalics.eu>",
+      "files_changed": 2,
+      "additions": 33,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "DongheeYe",
+      "date": "2020-03-09T20:58:23Z",
+      "sha": "d508ce349257e973e25df67370bebacbbdd86d75",
+      "message": "Fix get_parameter_tyeps of AsyncPrameterClient results are always empty (#1019)\n\nSigned-off-by: Donghee Ye <donghee.ye@samsung.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "naiveHobo",
+      "date": "2020-06-08T19:39:46Z",
+      "sha": "898a30e0e25ddb0742436c71f5eb18681280aad3",
+      "message": "Allow spin_until_future_complete to accept std::future (#1113)\n\nSigned-off-by: Sarthak Mittal <sarthakmittal2608@gmail.com>",
+      "files_changed": 4,
+      "additions": 58,
+      "deletions": 10,
+      "commit_type": "code"
+    },
+    {
+      "author": "evshary",
+      "date": "2020-05-22T20:14:48Z",
+      "sha": "4f345628784a7c80940947c7ba4e0fae566355df",
+      "message": "Make sure rmw_publisher_options is initialized in to_rcl_publisher_options. (#1099)\n\nSigned-off-by: ChenYing Kuo <evshary@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Prajakta Gokhale",
+      "date": "2019-05-15T04:08:33Z",
+      "sha": "b17bbf31b36f5d4d7363707facd9db57fabe5334",
+      "message": "Fix heap-use-after-free and memory leaks reported from test_node.cpp (#719)\n\nFix AddressSanitizer errors reported by test_node.cpp unit test.\r\n\r\nSigned-off-by: Prajakta Gokhale <prajaktg@amazon.com>",
+      "files_changed": 2,
+      "additions": 5,
+      "deletions": 2,
+      "commit_type": "test"
+    },
+    {
+      "author": "mm318",
+      "date": "2019-04-16T00:44:44Z",
+      "sha": "70f48d68b9a8171c2033a5e08ed468ea84bb81a9",
+      "message": "correct initialization of rmw_qos_profile_t struct instances (#691)\n\nSigned-off-by: Miaofei <miaofei@amazon.com>",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 7,
+      "commit_type": "code"
+    },
+    {
+      "author": "jaisontj",
+      "date": "2020-04-01T15:17:20Z",
+      "sha": "01a6befdde7f78b6f7788e6180cc5ed38390e955",
+      "message": "Support for ON_REQUESTED_INCOMPATIBLE_QOS and ON_OFFERED_INCOMPATIBLE_QOS events (#924)\n\nSigned-off-by: Jaison Titus <jaisontj92@gmail.com>\r\nSigned-off-by: Miaofei <miaofei@amazon.com>\r\nCo-authored-by: Miaofei <miaofei@amazon.com>",
+      "files_changed": 6,
+      "additions": 216,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "rotu",
+      "date": "2019-08-07T15:33:06Z",
+      "sha": "4a5eed968ca6fa4979214db8ac945fb163919326",
+      "message": "Add line break after first open paren in multiline function call (#785)\n\n* Add line break after first open paren in multiline function call\r\n\r\nas per developer guide:\r\nhttps://index.ros.org/doc/ros2/Contributing/Developer-Guide/#open-versus-cuddled-braces\r\nsee https://github.com/ament/ament_lint/pull/148\r\n\r\nSigned-off-by: Dan Rose <dan@digilabs.io>\r\n\r\nFix dedent when first function argument starts with a brace\r\n\r\nSigned-off-by: Dan Rose <dan@digilabs.io>\r\n\r\nLine break with multiline if condition\r\nRemove line breaks where allowed.\r\n\r\nSigned-off-by: Dan Rose <dan@digilabs.io>\r\n\r\nFixup after rebase\r\n\r\nSigned-off-by: Dan Rose <dan@digilabs.io>\r\n\r\nFixup again after reverting indent_paren_open_brace\r\n\r\nSigned-off-by: Dan Rose <dan@digilabs.io>\r\n\r\n* Revert comment spacing change, condense some lines\r\n\r\nSigned-off-by: Dan Rose <dan@digilabs.io>",
+      "files_changed": 41,
+      "additions": 588,
+      "deletions": 367,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mschickler",
+      "date": "2020-01-28T17:08:00Z",
+      "sha": "3ec882cd2db97d84330197bb946bd31572215489",
+      "message": "Allow node clock use in logging macros (#969) (#970)\n\nCapturing a cached reference allows a clock object that is not a local\r\n(e.g. the one returned by Node::get_clock()) to be passed to the throttle\r\nlogging macro.\r\n\r\nSigned-off-by: Matt Schickler <mschickler@gmail.com>\r\nCo-Authored-By: Ivan Santiago Paunovic <ivanpauno@ekumenlabs.com>",
+      "files_changed": 2,
+      "additions": 40,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "theseankelly",
+      "date": "2020-01-21T18:16:32Z",
+      "sha": "54ad49703a12ebcabe2d3c7e549b39259b740d4e",
+      "message": "Don't specify calling convention in std::_Binder template (#952)\n\nFix for a build error on 32-bit Windows. Member functions use the\r\n__thiscall convention by default which is incompatible with __cdecl.\r\n\r\nSigned-off-by: Sean Kelly <sean@seankelly.dev>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "hdino",
+      "date": "2020-01-17T00:00:00Z",
+      "sha": "9037bba7f1bef2a550a0f3e966f6ed0e75dd50a2",
+      "message": "logging.hpp: Added missing include (#964)\n\nSigned-off-by: Dino Hüllmann <dino.huellmann@bam.de>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "mikaelarguedas",
+      "date": "2016-10-28T02:02:35Z",
+      "sha": "a71ce25a5a81a92abc85093cc42560f6a98950c5",
+      "message": "Zero init topic names and types (#260)\n\n* use zero init topic_names_and_type struct\r\n\r\n* use the right arguments\r\n\r\n* line length",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "maryaB-osr",
+      "date": "2019-12-11T16:39:06Z",
+      "sha": "26bc60704c6c5ebc1e5f5599990ec191ccb82eb1",
+      "message": "New README (#942)\n\n* New README\r\n\r\n* dashing to eloquent for api docs\r\n\r\n* remove \"accepted\"\r\n\r\nCo-Authored-By: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* components > APIs\r\n\r\nCo-Authored-By: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 17,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "zmichaels11",
+      "date": "2019-12-06T19:25:58Z",
+      "sha": "6ba0f59fed79c3fe669aac9dbe419a0e029cec6d",
+      "message": "Fix asserts on shared_ptr::use_count; expects long, got uint32 (#936)\n\n* Fix asserts on shared_ptr::use_count; expects long, got uint32\r\n\r\nSigned-off-by: Zachary Michaels <zmichaels11@gmail.com>\r\n\r\n* Add suffix to integer literals to make them longs\r\n\r\nSigned-off-by: Zachary Michaels <zmichaels11@gmail.com>\r\n\r\n* Add missing L\r\n\r\nSigned-off-by: Zachary Michaels <zmichaels11@gmail.com>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "Claire Wang",
+      "date": "2019-12-02T22:22:25Z",
+      "sha": "e2efb7647722d3d468bd6eabf0abddf9f3fcc9be",
+      "message": "Merge pull request #897 from monidzik/upstream-apex-changes\n\nRemoving \"virtual\", adding \"override\" keywords in the package",
+      "files_changed": 11,
+      "additions": 103,
+      "deletions": 103,
+      "commit_type": "code"
+    },
+    {
+      "author": "malsbat",
+      "date": "2019-08-30T17:38:51Z",
+      "sha": "f153cf7173dc2b6bac1f856e52d9813b209c3757",
+      "message": "Fix hang with timers in MultiThreadedExecutor (#835) (#836)\n\nSigned-off-by: Todd Malsbary <todd.malsbary@intel.com>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "monidzik",
+      "date": "2019-11-22T18:23:55Z",
+      "sha": "88a342db294c370b103b7328e353e84f08f27584",
+      "message": "Type conversions fixes (#901)\n\n* Fix type conversions\r\n\r\nSigned-off-by: Monika Idzik <monika.idzik@apex.ai>\r\n\r\n* Add static_casts\r\n\r\nSigned-off-by: Monika Idzik <monika.idzik@apex.ai>\r\n\r\n* Address PR comments\r\n\r\nSigned-off-by: Monika Idzik <monika.idzik@apex.ai>\r\n\r\n* Remove one time use variable\r\n\r\nSigned-off-by: Monika Idzik <monika.idzik@apex.ai>",
+      "files_changed": 9,
+      "additions": 37,
+      "deletions": 33,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Monika Idzik",
+      "date": "2019-10-16T12:40:41Z",
+      "sha": "ef529538244c566f6869ffb50e9c1cae639c430d",
+      "message": "Remove unnecessary virtual keywords\n\nSigned-off-by: Monika Idzik <monika.idzik@apex.ai>",
+      "files_changed": 8,
+      "additions": 44,
+      "deletions": 44,
+      "commit_type": "code"
+    },
+    {
+      "author": "roger-strain",
+      "date": "2019-11-22T16:19:47Z",
+      "sha": "b1dc6f36b9418e90ba8c1144222b12f81bd1633f",
+      "message": "Only check for new work once in spin_some (#471) (#844)\n\nTo prevent the Executor::spin_some() method for potentially running\r\nindefinitely long.\r\n\r\nDistribution Statement A; OPSEC #2893\r\n\r\nSigned-off-by: Roger Strain <rstrain@swri.org>",
+      "files_changed": 1,
+      "additions": 48,
+      "deletions": 37,
+      "commit_type": "code"
+    },
+    {
+      "author": "astere-cpr",
+      "date": "2019-11-19T19:09:41Z",
+      "sha": "ecc39cace61166032cca6d384b7caddfffe1b6da",
+      "message": "issue-919 Fixed \"memory leak\" in action clients (#920)\n\nWhenever a call is made to `rclcpp_action::Client::wait_for_action_server`\r\na weak pointer to an Event object gets added to the graph_event_ vector\r\nof the NodeGraph interface. This vector will be cleared on a node graph\r\nchange event, but if no such event occurs the weak pointer will be stuck\r\nin the vector.  Furthermore, if client code issues repeated calls to\r\n`wait_for_action_server` the vector will keep growing.\r\n\r\nThe fix moves the Event object creation right after the early return from\r\n`wait_for_action_server` so that the Event object is not created in the\r\ncase that the server is known to be present and therefore there is no\r\nneed to wait for a node graph change event to occur.\r\n\r\nSigned-off-by: Adrian Stere <astere@clearpath.ai>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "alexfneves",
+      "date": "2019-11-19T00:45:39Z",
+      "sha": "5254e6abc3c5b34a7559039e42c5ac6cbef43360",
+      "message": "Bug fix on shutdown_on_sigint (not set on InitOptions constructors) (#850)\n\nSigned-off-by: Alex Fernandes Neves <alexfneves@gmail.com>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "piraka9011",
+      "date": "2019-10-30T03:50:17Z",
+      "sha": "2ed445647400bacbff6420cfb8ccc7bee86ee469",
+      "message": "Relax multithreaded test constraint (#907)\n\nSigned-off-by: Anas Abou Allaban <aabouallaban@pm.me>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "BMarchi",
+      "date": "2019-10-01T13:14:55Z",
+      "sha": "9723576821304add8993c7e9a3057fa284c1146f",
+      "message": "Add callback handler for use_sim_time parameter #802 (#875)\n\n* Add callback handler for use_sim_time parameter #802\r\n\r\nSigned-off-by: Brian Ezequiel Marchi <brian.marchi65@gmail.com>",
+      "files_changed": 3,
+      "additions": 30,
+      "deletions": 7,
+      "commit_type": "code"
+    },
+    {
+      "author": "iluetkeb",
+      "date": "2019-10-18T22:28:04Z",
+      "sha": "8fd9a0a00ccf0f9d4999f8f025ed07bee83b2a20",
+      "message": "Instrumentation update (#789)\n\n* Add initial instrumentation\r\n* Rename function registration method and elaborate on object copy issue\r\n* Rely on get_symbol overload instead of using enable_if\r\n\r\nSigned-off-by: Christophe Bedard <fixed-term.christophe.bourquebedard@de.bosch.com>\r\nSigned-off-by: Christophe Bedard <christophe.bedard@apex.ai>\r\nSigned-off-by: Ingo Luetkebohle <ingo.luetkebohle@de.bosch.com>",
+      "files_changed": 7,
+      "additions": 76,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "allenh1",
+      "date": "2017-11-20T20:54:53Z",
+      "sha": "9be9d66da52251f53e13051095585ffd90b4f326",
+      "message": "Remove const modifier to prevent compiler error for GCC 8. (#403)",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "guillaumeautran",
+      "date": "2018-02-24T01:24:37Z",
+      "sha": "0e79842b6bfdb49c36cc0f16ff016fbc7e4e1a14",
+      "message": "rclcpp logging still uses fprintf all over the place. (#439)\n\n* rclcpp logging still uses fprintf all over the place.\r\n\r\nRemove all printf log lines and replace with RCLUTILS_LOG_XXX macros.\r\n\r\nIssue: #438\r\n\r\n* fixup include order",
+      "files_changed": 9,
+      "additions": 88,
+      "deletions": 44,
+      "commit_type": "code"
+    },
+    {
+      "author": "Siddharth Kucheria",
+      "date": "2019-07-24T16:15:37Z",
+      "sha": "b214324bf268e6342c366e50c986844211597859",
+      "message": "Cmake infrastructure for creating components (#784)\n\n*cmake macro to create components for libraries with multiple nodes\r\n\r\nSigned-off-by: Siddharth Kucheria <kucheria@usc.edu>",
+      "files_changed": 4,
+      "additions": 127,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "yathartha3",
+      "date": "2019-07-11T18:25:21Z",
+      "sha": "207bcc5de3f4d1988d0734f6c3e12d838c43d4ac",
+      "message": "Fixe error messages not printing to terminal (#777)\n\n* Uncommented catch exception code to print error\r\n\r\nSigned-off-by: Yathartha Tuladhar <yathartha3@gmail.com>\r\n\r\n* put back the e\r\n\r\nSigned-off-by: Yathartha Tuladhar <yathartha3@gmail.com>\r\n\r\n* uncommented error printing in exception handling\r\n\r\nSigned-off-by: Yathartha Tuladhar <yathartha3@gmail.com>\r\n\r\n* Removed \"/n\" characters.\r\nUpdate lifecycle_node_interface_impl.hpp\r\n\r\nSigned-off-by: Yathartha Tuladhar <yathartha3@gmail.com>\r\n\r\n* Fix CI issue and remove TODO\r\n\r\nSigned-off-by: Jacob Perron <jacob@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 8,
+      "commit_type": "docs"
+    },
+    {
+      "author": "esteve",
+      "date": "2015-01-17T00:34:23Z",
+      "sha": "2ae1339ebac07d3c8ad8f0058b17261e31cf3e3b",
+      "message": "Merge pull request #7 from ros2/request_reply\n\nAdded support for services",
+      "files_changed": 6,
+      "additions": 726,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Carl Delsey",
+      "date": "2019-06-28T16:43:09Z",
+      "sha": "0ccac1e3bd0f4314e11c86202c0c3ade57aed8ed",
+      "message": "Adding a factory method to create a Duration from seconds (#567)\n\n* Adding a factory method to create a Duration from seconds\r\n\r\nThere are many places in the ROS codebase where a time duration is\r\nspecified as a floating point number of seconds. A factory function\r\nto create a Duration object from these values makes the code a\r\nbit simpler in many cases.\r\n\r\nSigned-off-by: Carl Delsey <carl.r.delsey@intel.com>\r\n\r\n* Adding some comments to clarify which constructors get matched.\r\n\r\nSigned-off-by: Carl Delsey <carl.r.delsey@intel.com>",
+      "files_changed": 3,
+      "additions": 29,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "roderick-koehle",
+      "date": "2019-05-29T18:15:50Z",
+      "sha": "d2b2f9124ece53dbab255f5889b42ff498035775",
+      "message": "Bionic use of strerror_r (#742)\n\nSince API 23 Android Bionic uses the GNU convention for strerror_r.\r\nFollowing bionic/libc line 96,\r\n  https://android.googlesource.com/platform/bionic.git/+/refs/heads/master/libc/include/string.h\r\n\r\nSigned-off-by: roderick-koehle <50633232+roderick-koehle@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 1,
+      "commit_type": "ci"
+    },
+    {
+      "author": "Michael Jeronimo",
+      "date": "2019-03-06T21:12:38Z",
+      "sha": "d2d9ad8796cb0528351482b1f55ba36fffaa9728",
+      "message": "Add a method to the LifecycleNode class to get the logging interface (#652)\n\nThere are getters for the other interfaces, but the logging interface\r\nappears to have been overlooked.\r\n\r\nSigned-off-by: Michael Jeronimo <michael.jeronimo@intel.com>",
+      "files_changed": 2,
+      "additions": 11,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "jhdcs",
+      "date": "2019-04-16T18:25:25Z",
+      "sha": "713dd0c18411623ea82af1255f583a00c3c5970b",
+      "message": "[WIP] Exception Generator function for implementing \"from_rcl_error\" (#678)\n\n* Created function to generate exception objects\r\n\r\nSigned-off-by: Jacob Hassold <jhassold@dcscorp.com>\r\n\r\n* Created function to generate exception objects\r\n\r\nSigned-off-by: Jacob Hassold <jhassold@dcscorp.com>\r\n\r\n* Fixed typo\r\n\r\nSigned-off-by: Jacob Hassold <jhassold@dcscorp.com>\r\n\r\n* Fixed typo\r\n\r\nSigned-off-by: Jacob Hassold <jhassold@dcscorp.com>\r\n\r\n* Throw exceptions not created by ret\r\n\r\nSigned-off-by: Jacob Hassold <jhassold@dcscorp.com>\r\n\r\n* Throw exceptions not created by ret\r\n\r\nSigned-off-by: Jacob Hassold <jhassold@dcscorp.com>\r\n\r\n* convert throw_from_rcl_error to use from_rcl_error\r\n\r\nMostly just a convenience function\r\nSigned-off-by: Jacob Hassold <jhassold@dcscorp.com>\r\n\r\n* Updated .gitignore\r\n\r\nPlease ignore\r\nSigned-off-by: Jacob Hassold <jhassold@dcscorp.com>\r\n\r\n* Re-ordered functions to allow compilation\r\n\r\nSigned-off-by: Jacob Hassold <jhassold@dcscorp.com>\r\n\r\n* Revert \"Updated .gitignore\"\r\n\r\nThis reverts commit bee0ee13ce687bc56bdc7ad1e8382506d9aef428.\r\nSigned-off-by: Jacob Hassold <jhassold@dcscorp.com>\r\n\r\n* restore .gitignore to original state\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* oops, actually restore .gitignore\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>",
+      "files_changed": 1,
+      "additions": 21,
+      "deletions": 7,
+      "commit_type": "code"
+    },
+    {
+      "author": "dorezyuk",
+      "date": "2019-04-19T23:19:17Z",
+      "sha": "ddf4d345b3fcaddd1f7754084af078043c837f10",
+      "message": "Fixup utilities (#692)\n\n* Fixed dependencies in the utility.hpp/cpp\r\n\r\nSigned-off-by: Dmitrij Dorezyuk <dmitrij.dorezyuk@hotmail.de>\r\n\r\n* Add missing documentation for exceptions in utility.hpp\r\n\r\nSigned-off-by: Dmitrij Dorezyuk <dmitrij.dorezyuk@hotmail.de>\r\n\r\n* Add rclcpp namespace to the utility.cpp\r\n\r\nSigned-off-by: Dmitrij Dorezyuk <dmitrij.dorezyuk@hotmail.de>\r\n\r\n* Add check for a non-negative nonros_argc value\r\n\r\nSigned-off-by: Dmitrij Dorezyuk <dmitrij.dorezyuk@hotmail.de>\r\n\r\n* Simplify syntax for the return_arguments\r\n\r\nSigned-off-by: Dmitrij Dorezyuk <dmitrij.dorezyuk@hotmail.de>\r\n\r\n* Incorporate Review\r\n\r\nSigned-off-by: Dmitrij Dorezyuk <dmitrij.dorezyuk@hotmail.de>",
+      "files_changed": 2,
+      "additions": 42,
+      "deletions": 38,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Víctor Mayoral Vilches",
+      "date": "2019-04-15T18:42:07Z",
+      "sha": "fcfe94e404b78f1e1745e4f63c8b91bc56d63cff",
+      "message": "logging, remove_const before comparison (#680)\n\n* logging, remove_const before comparison\r\n\r\nThis change removes the const value from the logger before\r\ncomparing with std::is_same.\r\n\r\nSigned-off-by: Víctor Mayoral Vilches <v.mayoralv@gmail.com>\r\n\r\n* logging template, replace remove_const by remove_cv\r\n\r\nSigned-off-by: Víctor Mayoral Vilches <v.mayoralv@gmail.com>\r\n\r\n* Append typename\r\n\r\nLocated after compiling rclcpp_action from source\r\n\r\nSigned-off-by: Víctor Mayoral Vilches <v.mayoralv@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "vinnamkim",
+      "date": "2019-03-26T23:24:20Z",
+      "sha": "b352d450319e84dd28aed78b800ab40938cec5c2",
+      "message": "Fix use_sim_time issue on LifeCycleNode (#651)\n\nSigned-off-by: vinnamkim <vinnam.kim@gmail.com>",
+      "files_changed": 2,
+      "additions": 23,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "durko",
+      "date": "2019-03-23T07:18:43Z",
+      "sha": "0a44344f4332f3a8818291dc46c5491192b41c78",
+      "message": "Avoid race that triggers timer too often (#621)\n\nThe two distinct operations of acquiring and subsequent checking of a\r\ntimer have to be protected by one lock_guard against races with other\r\nthreads. The releasing of a timer has to be protected by the same lock.\r\n\r\nGiven this requirement there is no use for a second mutex.\r\n\r\nSigned-off-by: Marko Durkovic <marko@ternaris.com>",
+      "files_changed": 2,
+      "additions": 1,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "reed-lau",
+      "date": "2019-03-15T16:55:53Z",
+      "sha": "284d0c1c70c69e8378de3a185d6f324ae5abe04e",
+      "message": "fix wait for service memory leak bug (#656)\n\n* when call wait for service in an while loop, the event will be make forever and never release\r\n* fix it by: creating it when we need\r\n\r\nSigned-off-by: reed-lau <geoliuwei@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "pbaughman",
+      "date": "2019-03-13T17:45:05Z",
+      "sha": "ec64b40a9de211166057e10573901a82bc3fd21d",
+      "message": "Fix test_time_source test (#639)\n\n* Fix flakey test\r\n\r\nSigned-off-by: Pete Baughman <pete.baughman@apex.ai>\r\n\r\n* Fix lint and uncrustify issues\r\n\r\nSigned-off-by: Pete Baughman <pete.baughman@apex.ai>",
+      "files_changed": 1,
+      "additions": 115,
+      "deletions": 35,
+      "commit_type": "test"
+    },
+    {
+      "author": "fmrico",
+      "date": "2018-10-25T22:49:38Z",
+      "sha": "b600c18121e4c6281d0a339106b4b14e6795fc6b",
+      "message": "Providing logging macro signature that accepts std::string (#573)\n\n* Providing logging macro signature that accepts std::string\r\n\r\n* - RCLCPP_ prefix to macros Add\r\n- New tests added\r\n\r\n* - Added doc to the functions and macros\r\n- Functions declared as RCLCPP_PUBLIC\r\n\r\n* - Small typo in doc corrected\r\n\r\n* Fixed error when compiling with clang\r\n\r\n* touch up docs",
+      "files_changed": 4,
+      "additions": 60,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "youtalk",
+      "date": "2019-02-13T02:02:29Z",
+      "sha": "10d7b7c72bc243e4e6da0546f9d17e39460df55c",
+      "message": "replace 'auto' to 'const auto &' (#630)\n\nSigned-off-by: Yutaka Kondo <yutaka.kondo@youtalk.jp>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "rarvolt",
+      "date": "2019-02-07T07:04:53Z",
+      "sha": "4046563de67d6d24dce593cc6a372b1c4a8afbaf",
+      "message": "Set Parameter Event Publisher settings #591 (#614)\n\n* Add ability to disable Parameter Event Publisher and change its QoS settings\r\n\r\nSigned-off-by: RARvolt <rarvolt@gmail.com>\r\n\r\n* address review comments\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* use NodeOptions struct\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* remove vestigial doc strings and improve docs\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* fix lifecycle node constructor\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>",
+      "files_changed": 6,
+      "additions": 118,
+      "deletions": 13,
+      "commit_type": "docs"
+    },
+    {
+      "author": "kuzai",
+      "date": "2019-01-14T22:31:57Z",
+      "sha": "1e91face3933f7af09099946cd50f1f955bcff5a",
+      "message": "Bind is no longer in std::__1 (#618)\n\nSigned-off-by: kuzai <kuzai@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "ci"
+    },
+    {
+      "author": "cho3",
+      "date": "2018-10-12T00:33:41Z",
+      "sha": "144c24c8fd15d57382fa994c7ecf00b847b1c339",
+      "message": "Add SMART_PTRS_DEF to LifecyclePublisher (#569)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "aladram",
+      "date": "2018-10-02T07:49:17Z",
+      "sha": "eb439ddc73c7f57ef59bb4919b02c4dd00d6ffec",
+      "message": "Removing std::binary_function usage (#561)\n\nDeprecated in C++11, removed in C++17",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "dhood",
+      "date": "2016-05-17T22:35:44Z",
+      "sha": "458019bdff9faaecb7711f0924a2ca19a4c4b3bd",
+      "message": "Regression test for #213",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "sagniknitr",
+      "date": "2018-08-27T18:44:25Z",
+      "sha": "18ad26e6543bc1467fec6d053ed4e2b7ca90627c",
+      "message": "Add TIME_MAX and DURATION_MAX functions (#538)\n\n* Add TIME_MAX and DURATION_MAX functions\r\n\r\n* Fix Linting Errors\r\n\r\n* change funtion name as per coding style\r\n\r\n* change function name as per coding style\r\n\r\n* Update duration.cpp\r\n\r\n* Update time.cpp\r\n\r\n* Update test_duration.cpp\r\n\r\n* Update time.hpp\r\n\r\n* remove extra empty line",
+      "files_changed": 5,
+      "additions": 27,
+      "deletions": 0,
+      "commit_type": "test"
+    },
+    {
+      "author": "sriramster",
+      "date": "2017-12-20T03:45:58Z",
+      "sha": "2bf688827ba8d69e979b3ab9d69b45ef168aeb7f",
+      "message": "Change rmw_count_publishers API, to rcl equivalent rcl_count_publishe… (#425)\n\n* Change rmw_count_publishers API, to rcl equivalent rcl_count_publishers and remove the TODO line.\r\n\r\nSigned-off-by: Sriram Raghunathan <rsriram7@visteon.com>\r\n\r\n* Remove rmw_handle and refer to rcl_node_handle, change the API signature to topic_names.\r\n\r\nSigned-off-by: Sriram Raghunathan <rsriram7@visteon.com>\r\n\r\n* Use rcl_* specific functions to derive the fully qualified topic name.\r\n\r\nSigned-off-by: Sriram Raghunathan <rsriram7@visteon.com>\r\n\r\n* [nitpick] remove unnecessary variable storage",
+      "files_changed": 1,
+      "additions": 10,
+      "deletions": 10,
+      "commit_type": "code"
+    },
+    {
+      "author": "ernestmc",
+      "date": "2018-05-30T23:32:08Z",
+      "sha": "d6057270f2c384361ac67b4804d569506b2ce598",
+      "message": "Use rosgraph_msgs/Clock for /clock topic. (#474)\n\n* Use rosgraph_msgs/Clock for /clock topic.\r\n\r\n* Update the test cases.",
+      "files_changed": 5,
+      "additions": 29,
+      "deletions": 25,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ayrton04",
+      "date": "2018-05-10T23:05:52Z",
+      "sha": "15d505ec1fc712df76c125e656e2005bc8e3c48f",
+      "message": "Adding parameter array support (#443)\n\n* Adding parameter array support\r\n\r\n* PR feedback\r\n\r\n* Matching changes in upstream branch\r\n\r\n* EXPECT_EQ takes expected value a first argument and actual as second",
+      "files_changed": 4,
+      "additions": 1003,
+      "deletions": 42,
+      "commit_type": "docs"
+    },
+    {
+      "author": "matt-attack",
+      "date": "2018-03-30T00:18:00Z",
+      "sha": "fa81d95e3389ddaf6893b7b0cb8235e98d455a21",
+      "message": "Add argument for thread count to multithreaded executor (#442)",
+      "files_changed": 2,
+      "additions": 6,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "jwang11",
+      "date": "2018-01-19T02:49:52Z",
+      "sha": "e08c80052a4a67a20b6b95e9d64a4b953d9e710f",
+      "message": "Move clear wait set from after rcl_wait to ahead (#427)\n\n* Move clear wait set from after rcl_wait to ahead\r\n\r\nCurrent code clear wait set after rcl_wait, it is not respond latency\r\nfriendly. In fact, clear wait set operation is not urgent, making sure it is\r\ndone before next rcl_wait should be fine.\r\n\r\nSigned-off-by: jwang <jing.j.wang@intel.com>\r\n\r\n* remove trailing whitespace",
+      "files_changed": 1,
+      "additions": 16,
+      "deletions": 15,
+      "commit_type": "code"
+    },
+    {
+      "author": "deng02",
+      "date": "2018-03-12T18:26:11Z",
+      "sha": "36526469c7ef1a760ea4f236a7ba51ddcdb1272a",
+      "message": "Store the subscriber, client, service and timer (#431)\n\n* Convert all rcl_*_t types to shared pointers\r\n\r\nConverts all rcl_*_t types in the memory allocation strategy to shared pointers to prevent crash happening when a subscriber is reset.\r\n\r\nIssue: #349\r\n\r\n* fixup! Convert all rcl_*_t types to shared pointers\r\n\r\n* fix { use on function definitions\r\n\r\nWe always put the { on a new line for function definitions and class declarations.",
+      "files_changed": 13,
+      "additions": 177,
+      "deletions": 109,
+      "commit_type": "docs"
+    },
+    {
+      "author": "serge-nikulin",
+      "date": "2018-02-01T21:50:33Z",
+      "sha": "3a503685bf83280ffcde3ecb2d33a7d8de7dade2",
+      "message": "change rcutils_time_point_value_t type from uint64_t to int64_t (#429)\n\n* change rcutils_time_point_value_t type from uint64_t to int64_t\r\n\r\n* small style changes\r\n\r\n* fix test time datatype\r\n\r\n* Update time primatives to int64_t\r\n\r\n* change time primitive datatype to signed\r\n\r\n* A few more instances of UL to L",
+      "files_changed": 6,
+      "additions": 191,
+      "deletions": 40,
+      "commit_type": "code"
+    },
+    {
+      "author": "gaoethan",
+      "date": "2017-12-19T21:39:56Z",
+      "sha": "199a26984df3f1bb4d2cd1d00695e41a1358e592",
+      "message": "Fix the potential application crash issues (#426)\n\n* err msg\r\n\r\n* err msg\r\n\r\n* Fix the potential application crash issues\r\n\r\nSigned-off-by: Ethan Gao <ethan.gao@linux.intel.com>\r\n\r\n* minor tweak the code structure\r\n\r\nSigned-off-by: Ethan Gao <ethan.gao@linux.intel.com>",
+      "files_changed": 2,
+      "additions": 13,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "gavanderhoorn",
+      "date": "2017-10-13T13:25:20Z",
+      "sha": "c182f5805e80daeb05edf39bb1a8e4bc268a99f4",
+      "message": "lifecycle: fix minor typo in LC pub Doxygen (#384)",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "csukuangfj",
+      "date": "2017-09-04T14:10:45Z",
+      "sha": "de14d543227942aabb9256f45de040892ed22c5a",
+      "message": "fix a typo.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "gerkey",
+      "date": "2015-08-18T21:33:56Z",
+      "sha": "b9bf46ebd428cfb62383469fe1a9969337f91cf1",
+      "message": "Merge pull request #90 from ros2/parameter_cleanup\n\nThis fixes the order of parameters returned",
+      "files_changed": 2,
+      "additions": 12,
+      "deletions": 14,
+      "commit_type": "code"
+    },
+    {
+      "author": "rohbotics",
+      "date": "2016-07-29T01:01:24Z",
+      "sha": "1402715d76567bee55b019036b6447fb2f537798",
+      "message": "Added basic hook for parameter changes (#244)\n\n* Added basic hook for parameter changes\r\n\r\n* Rename hook and add docblock",
+      "files_changed": 3,
+      "additions": 30,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "Sarcasm",
+      "date": "2016-12-17T10:16:43Z",
+      "sha": "d00a441195e8de7d0f591a582b029ebc10eda532",
+      "message": "move user-defined literals in their own namespace (#284)\n\n* isolate chrono literals in literals.hpp\r\n\r\n* rclcpp.hpp: remove 'using namespace rclcpp::literals'\r\n\r\nThe examples have been migrated to the new namespace.\r\n\r\n* literals: constexpr, make return types consistent with function body\r\n\r\n_ms returned nanoseconds instead of milliseconds.\r\n\r\nA few return types where using integral return type\r\nfor floating point literals.\r\n\r\n* remove literals in favor of std::chrono_literals",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 33,
+      "commit_type": "code"
+    },
+    {
+      "author": "geoffviola",
+      "date": "2016-11-28T22:11:22Z",
+      "sha": "a987f8d01515562f5727158eb25a957150db4e45",
+      "message": "removed extra semi-colon (#253)\n\n* removed extra semi-colon\r\n\r\n* added -Wpedantic flag for GCC\r\n\r\n* added same warnings for clang\r\n\r\n* simplified CMake command",
+      "files_changed": 27,
+      "additions": 58,
+      "deletions": 58,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Rafał Kozik",
+      "date": "2016-10-28T22:59:46Z",
+      "sha": "d158dd46dbf8e6263281fcb287f9535c287745f8",
+      "message": "CallbackGroup keeps now WeakPtrs to Services. (#261)\n\nIt was not possible to shutdown a service when there\r\nwas a shared pointer preventing destructor from being called.",
+      "files_changed": 4,
+      "additions": 11,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "SantiagoMunoz",
+      "date": "2016-07-20T14:56:33Z",
+      "sha": "2401c0f1971e89b9fd1afe0a9733a0153a0d56c9",
+      "message": "Added missing variable initialization in Node constructor",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "jacquelinekay",
+      "date": "2015-07-15T16:47:24Z",
+      "sha": "5a426d3064c020804e133f0ac1c4c7b0c28d4388",
+      "message": "Merge pull request #56 from ros2/memory_dependency_injection\n\nAdd \"MemoryStrategy\" to Executor with dep. injection",
+      "files_changed": 7,
+      "additions": 395,
+      "deletions": 53,
+      "commit_type": "code"
+    },
+    {
+      "author": "Jackie Kay",
+      "date": "2015-07-13T19:01:36Z",
+      "sha": "ba91c8d34267a6d06b137f98d1fce9aa4ff88e00",
+      "message": "First pass at dependency injection of memory strategy objects",
+      "files_changed": 5,
+      "additions": 352,
+      "deletions": 25,
+      "commit_type": "code"
+    },
+    {
+      "author": "Jenkins @ ROS 2",
+      "date": "2015-12-31T23:19:52Z",
+      "sha": "be0be759ec9040372a79a80c0b991c200cbe4074",
+      "message": "fix rate test",
+      "files_changed": 1,
+      "additions": 13,
+      "deletions": 13,
+      "commit_type": "code"
+    },
+    {
+      "author": "Esteve Fernandez",
+      "date": "2014-12-12T01:07:36Z",
+      "sha": "81040198e18e79e3a94e85d9c62a6422a0695d91",
+      "message": "Added support for services",
+      "files_changed": 6,
+      "additions": 436,
+      "deletions": 1,
+      "commit_type": "code"
+    }
+  ]
+}

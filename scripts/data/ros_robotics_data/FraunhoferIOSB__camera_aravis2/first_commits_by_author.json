@@ -1,0 +1,41 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T08:36:36Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "FraunhoferIOSB",
+    "repo": "camera_aravis2"
+  },
+  "data": [
+    {
+      "author": "boitumeloruf",
+      "date": "2023-12-07T10:43:09Z",
+      "sha": "1c7eee6d6779f464097bd68146c4824765f3b535",
+      "message": "Adjusted FindAravis to aravis-0.8",
+      "files_changed": 1,
+      "additions": 20,
+      "deletions": 25,
+      "commit_type": "code"
+    },
+    {
+      "author": "rursprung",
+      "date": "2024-12-02T15:47:35Z",
+      "sha": "f43ea4a4b2f4982e3775407787bb5b6ccae730ed",
+      "message": "fix calculation of ROS topic subscriber count\n\nif a subscriber disconnected the node never noticed this since it always\ndoes an `std::max` on the current value and the subscriber count of each\nstream. this is meant to find the largest amount of subscribers over all\nstream but incorrectly never resets it to a lower value if the stream\nwith the highest subscriber count had the now disconnected subscriber.\n\nthis is easiest to reproduce by having a single camera with a single\nstream and connecting to it with `image_view`: upon first launch the\n`camera_aravis2` node will write the debug message `Acquisition\nstarted`, after stopping `image_view` it logs `Acquisition stopped`.\nbut when starting again `image_view` it no longer logs `Acquisition\nstart` without this fix and no image is written to the ROS topic.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "kledom",
+      "date": "2022-06-10T13:48:17Z",
+      "sha": "1882acf053331de7f6ce4020056c5e761843ad6b",
+      "message": "Initial commit",
+      "files_changed": 2,
+      "additions": 555,
+      "deletions": 0,
+      "commit_type": "code"
+    }
+  ]
+}

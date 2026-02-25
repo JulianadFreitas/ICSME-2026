@@ -1,0 +1,231 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T00:57:15Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "aerostack2",
+    "repo": "aerostack2"
+  },
+  "data": [
+    {
+      "author": "RPS98",
+      "date": "2022-12-14T15:32:59Z",
+      "sha": "70d7af78def63fbae6381e9cdd73ebae3500c64d",
+      "message": "Fix CMakeList node name",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 6,
+      "commit_type": "docs"
+    },
+    {
+      "author": "rdasilva01",
+      "date": "2023-04-11T08:57:34Z",
+      "sha": "467fa5b0a1f291731e07a19c0915a5de8f4e08cb",
+      "message": "add reset functionality",
+      "files_changed": 1,
+      "additions": 15,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "carmendrpr",
+      "date": "2024-10-14T11:01:17Z",
+      "sha": "32bc20fe43cb8c849b2e410994f3e4902074be93",
+      "message": "initial swarm behavior and msgs",
+      "files_changed": 12,
+      "additions": 827,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "GPatiA2",
+      "date": "2025-03-26T16:42:11Z",
+      "sha": "d296922606d717927163f9307a1722e8a2ef97e0",
+      "message": "Enums and dataclasses to set rviz config up",
+      "files_changed": 1,
+      "additions": 43,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "pariaspe",
+      "date": "2022-12-14T15:01:20Z",
+      "sha": "5890d4aa49a7bfa324bd08fd013456bfd79aa1d6",
+      "message": "added as2_behavior dependency",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "alvgaona",
+      "date": "2025-10-28T09:25:53Z",
+      "sha": "e7e15992bf81d6f7721bc78e6d40407fbc14eae8",
+      "message": "Fix incorrect bitmask for yaw mode detection in control_mode_utils\n\nThe yaw mode detection was using mask 0x06 (bits 2,1) instead of 0x0C (bits 3,2),\ncausing NONE yaw mode to never be detected. This fix aligns the mask with the\nactual bit encoding where yaw modes use bits [3:2].\n\n- Line 195: Change mask from 0b00000110 to 0b00001100 for YAW_ANGLE\n- Line 197: Change mask from 0b00000110 to 0b00001100 for NONE\n\nFixes the warning: \"bitwise comparison always evaluates to false\"",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "luccagandra",
+      "date": "2025-03-12T13:21:23Z",
+      "sha": "38c52a228582879689fad32e0d69680a4c498e57",
+      "message": "declare wait_for_service_timeout parameter",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "miferco97",
+      "date": "2022-12-09T10:04:55Z",
+      "sha": "e3dc1ca2e4bc88e8c4661906a3cfbb47cc52f3df",
+      "message": " First commit",
+      "files_changed": 300,
+      "additions": 64609,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "robin-mueller",
+      "date": "2025-10-10T19:24:15Z",
+      "sha": "88feb81d78de1e9bad1a0737f0b9e8c69cd1d785",
+      "message": "Allow for extra models from downstream packages when evaluating drone jinja template",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "javilinos",
+      "date": "2022-12-15T12:48:53Z",
+      "sha": "7f025b9a546d17beb5fa269830d5b7f70fc77e50",
+      "message": "Merge pull request #8 from aerostack2/7-misssing-parent-class-in-motion-reference-handler-module\n\n[as2_python_interface] Added missing parent",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "magdalena-trivina",
+      "date": "2025-10-26T06:33:34Z",
+      "sha": "aeddf050a6feb3e2b279c1a5c2ca7e8676d0d07d",
+      "message": "[fix] typo in parameter path_length",
+      "files_changed": 3,
+      "additions": 14,
+      "deletions": 14,
+      "commit_type": "config"
+    },
+    {
+      "author": "lscarton",
+      "date": "2025-09-08T12:31:39Z",
+      "sha": "4e66836afb89cc32cf6bb598e78e4d81e7acc30e",
+      "message": "Update gps_module.py\n\nThe `__call__` method is required from the abstract class",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "alejodosr",
+      "date": "2025-04-01T16:23:19Z",
+      "sha": "a547b54e4a0f1d07fdf41823b399ff503a8438fd",
+      "message": "added body pose mode for position controller by projecting the point in earth mode based on yaw orientation",
+      "files_changed": 4,
+      "additions": 117,
+      "deletions": 21,
+      "commit_type": "code"
+    },
+    {
+      "author": "fjanguita",
+      "date": "2024-05-28T12:31:39Z",
+      "sha": "759ab52206d07f0f0eb7d813a3c2ffaaf3174c81",
+      "message": "Pkg modified to pass every test except cpplint.",
+      "files_changed": 23,
+      "additions": 792,
+      "deletions": 473,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Sakura286",
+      "date": "2024-06-06T23:48:14Z",
+      "sha": "1708fde207cb59da96dd6fe5acaa18e2e71441bb",
+      "message": "update deprecated api from cv::aruco::drawAxis to cv::drawFrameAxes",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "cvar-developers",
+      "date": "2022-12-20T16:31:47Z",
+      "sha": "2cd495e2c168848fc51f75d9ca2c738aa4393f71",
+      "message": "Dependency removed",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "mhl787156",
+      "date": "2024-03-03T16:52:09Z",
+      "sha": "88b0b907068a12120f55e9d0d9eaecaef431daef",
+      "message": "Crazyflie Model Fixes",
+      "files_changed": 2,
+      "additions": 23,
+      "deletions": 21,
+      "commit_type": "code"
+    },
+    {
+      "author": "perezsaura-david",
+      "date": "2022-12-15T16:22:33Z",
+      "sha": "0549cf923a632167bfe61b3a1acb0eb9060cb9e5",
+      "message": "Add realsense_interface to as2 repository",
+      "files_changed": 17,
+      "additions": 1283,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "pawanw17",
+      "date": "2023-09-04T19:32:50Z",
+      "sha": "c37f8563ad2e491d8dbf6fc0594220be65b4abb2",
+      "message": "runs px4 in foreground if gzclient is disabled (HEADLESS)",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Adrimapo",
+      "date": "2023-11-12T22:11:51Z",
+      "sha": "3d64f7d3c38f2006bd469015d033ba235a2aca34",
+      "message": "Load custom world in gazebo 11",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "drfenixion",
+      "date": "2023-06-20T14:54:57Z",
+      "sha": "f43f497f32e1da2bfa62d56f9ac880cb5bb88a20",
+      "message": "Add dockerfile and start script",
+      "files_changed": 3,
+      "additions": 38,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Javilinos",
+      "date": "2022-12-16T12:13:50Z",
+      "sha": "713a2cd1f81bc24aa3f5b5e26837e08f604d241b",
+      "message": "old geofencing alert deleted, new type field in geofence msg",
+      "files_changed": 3,
+      "additions": 3,
+      "deletions": 7,
+      "commit_type": "docs"
+    }
+  ]
+}

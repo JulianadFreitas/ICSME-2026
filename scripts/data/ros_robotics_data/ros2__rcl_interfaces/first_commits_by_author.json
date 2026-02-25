@@ -1,0 +1,411 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T02:38:41Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros2",
+    "repo": "rcl_interfaces"
+  },
+  "data": [
+    {
+      "author": "ahcorde",
+      "date": "2024-04-16T13:40:56Z",
+      "sha": "5f9726eeb9849ec039192efd7f293539e28e98c0",
+      "message": "Changelog\n\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>",
+      "files_changed": 10,
+      "additions": 33,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "SuperJappie08",
+      "date": "2026-02-04T00:10:32Z",
+      "sha": "8b9e8389521d2b68f3a97f84b6d7c9c856ddd9d1",
+      "message": "Use builtin_interfaces/Time for TransitionEvent stamp (#185)\n\nSigned-off-by: SuperJappie08 <36795178+SuperJappie08@users.noreply.github.com>",
+      "files_changed": 3,
+      "additions": 6,
+      "deletions": 1,
+      "commit_type": "ci"
+    },
+    {
+      "author": "clalancette",
+      "date": "2020-05-26T19:44:49Z",
+      "sha": "ff8a61edfd76f60c8a5019315f19b85d66e24cce",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 8,
+      "additions": 39,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mosfet80",
+      "date": "2025-07-07T08:21:43Z",
+      "sha": "57418190b34436b3ae6339a169b50defaaebe903",
+      "message": "Fix cmake deprecation (#180)\n\ncmake version <then 3.10 is deprecated\n\nSigned-off-by: mosFet <realeandrea@yahoo.it>",
+      "files_changed": 10,
+      "additions": 11,
+      "deletions": 11,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jimmy-mcelwain",
+      "date": "2025-05-09T11:05:41Z",
+      "sha": "355006bb4f60f99defba0c6c010950ed45e4911c",
+      "message": "Add info to duration message and time message comments (#176)\n\nSigned-off-by: jimmy-mcelwain <jimmy.mcelwain@motoman.com>",
+      "files_changed": 2,
+      "additions": 9,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "cottsay",
+      "date": "2024-06-22T05:21:30Z",
+      "sha": "4959b5d670af83fd4389693c1e532c1d9ae3db24",
+      "message": "Add missing build_export_depend on rosidl_core_runtime (#165)\n\nThese four packages all export a dependency on rosidl_core_runtime in\r\ntheir CMakeLists.txt. They have an exec_depend, but since the dependency\r\nis needed for downstream packages to be built, it should also be a\r\nbuild_export_depend.\r\n\r\nSigned-off-by: Scott K Logan <logans@cottsay.net>",
+      "files_changed": 4,
+      "additions": 8,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "fgallegosalido",
+      "date": "2025-04-07T19:48:18Z",
+      "sha": "dcc6c0c6d5d3e10f710e75e0fa26dce99fd43087",
+      "message": "Added test messages with keys (#173)\n\n* Added messages with key to test_msgs.\n\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>\n\n* Add KeyedString to message fixtures\n\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>\n\n* Add NonKeyedWithNestedKey to message fixtures\n\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>\n\n* Add ComplexNestedKey to message fixtures\n\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>\n\n* Added KeyedLong message\n\nSigned-off-by: Francisco Gallego Salido <fgallego@rti.com>\n\n* Fix linter issues\n\nSigned-off-by: Francisco Gallego Salido <fgallego@rti.com>\n\n---------\n\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>\nSigned-off-by: Francisco Gallego Salido <fgallego@rti.com>\nCo-authored-by: Miguel Company <miguelcompany@eprosima.com>",
+      "files_changed": 7,
+      "additions": 183,
+      "deletions": 0,
+      "commit_type": "test"
+    },
+    {
+      "author": "fujitatomoya",
+      "date": "2025-03-31T20:42:40Z",
+      "sha": "7a2f9b7cd39900f520f5737ae21b4a435adb8ed1",
+      "message": "remove .github/ISSUE_TEMPLATE.md (old version of templates) (#174)\n\nSigned-off-by: Tomoya Fujita <Tomoya.Fujita@sony.com>",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 45,
+      "commit_type": "ci"
+    },
+    {
+      "author": "marcoag",
+      "date": "2024-04-26T16:47:20Z",
+      "sha": "263467f9b27369e93f2e0689888adbe64ad8b843",
+      "message": "Changelog.\n\nSigned-off-by: Marco A. Gutierrez <marcogg@marcogg.com>",
+      "files_changed": 10,
+      "additions": 30,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "AiVerisimilitude",
+      "date": "2023-09-14T17:12:09Z",
+      "sha": "7f4d0d6b0509452b0d76af6122cdf5251919ecc9",
+      "message": "Fix for invalid conversion from const char8_t* to char for C++20 (#160)\n\nSigned-off-by: Guilherme Rodrigues <guilherme.rodrigues@ait.ac.at>",
+      "files_changed": 1,
+      "additions": 24,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Yadunund",
+      "date": "2023-04-27T08:38:44Z",
+      "sha": "f03ee90089b96e9d6aa699019f43f17e1b0ac291",
+      "message": "1.7.0",
+      "files_changed": 20,
+      "additions": 40,
+      "deletions": 10,
+      "commit_type": "docs"
+    },
+    {
+      "author": "llapx",
+      "date": "2023-04-17T19:53:58Z",
+      "sha": "fda88650a426484cd56e5bb765847e83d06f8a17",
+      "message": "Add interfaces for logging service. (#154)\n\n* Add interfaces for logging service.\r\n\r\nSigned-off-by: Lei Liu <Lei.Liu.AP@sony.com>\r\nSigned-off-by: Barry Xu <barry.xu@sony.com>",
+      "files_changed": 6,
+      "additions": 44,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "emersonknapp",
+      "date": "2023-03-23T18:10:24Z",
+      "sha": "aafd90e360208d620761e0d813c96a217278c435",
+      "message": "Add GetTypeDescription.srv (rep2011) (#153)\n\n* Add GetTypeDescription.srv\r\n\r\nSigned-off-by: Emerson Knapp <emerson.b.knapp@gmail.com>",
+      "files_changed": 5,
+      "additions": 56,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "wjwwood",
+      "date": "2015-04-13T20:39:18Z",
+      "sha": "437f5b25539ccd2226b4a36c731d74f7446a4601",
+      "message": "Update README.md",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ihasdapie",
+      "date": "2023-02-02T14:34:42Z",
+      "sha": "466e0855f9b4b87c8e57571aa5c81b02012e95db",
+      "message": "Add service_msgs package (#143)\n\n* add service msgs package\r\n\r\nSigned-off-by: Brian Chen <brian.chen@openrobotics.org>\r\nSigned-off-by: Jacob Perron <jacob@openrobotics.org>\r\nSigned-off-by: Ivan Santiago Paunovic <ivanpauno@ekumenlabs.com>\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 6,
+      "additions": 217,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "audrow",
+      "date": "2021-11-19T16:55:05Z",
+      "sha": "9c9f5935cff0eeeffe7e3eb31beba396cb22dd1a",
+      "message": "Update maintainers to Chris Lalancette (#130)\n\nSigned-off-by: Audrow Nash <audrow@hey.com>",
+      "files_changed": 8,
+      "additions": 33,
+      "deletions": 9,
+      "commit_type": "config"
+    },
+    {
+      "author": "gavanderhoorn",
+      "date": "2022-11-03T00:55:14Z",
+      "sha": "4bcbc32c800b6ffc780e28d742c457c070cfd36c",
+      "message": "lifecycle_msgs: remove non-ASCII chars from field comments (#147)\n\nBreaks compilation on older platforms, and there is a perfectly good ASCII alternative for the apostrophe.\r\n\r\nSigned-off-by: gavanderhoorn <g.a.vanderhoorn@tudelft.nl>",
+      "files_changed": 2,
+      "additions": 5,
+      "deletions": 5,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jacobperron",
+      "date": "2018-10-25T20:06:41Z",
+      "sha": "31e1874154e96f4ca2941a60de73dd3089456daa",
+      "message": "Add test message for dynamic array of static arrays (#43)",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "paudrow",
+      "date": "2022-04-30T00:38:23Z",
+      "sha": "c0cd6059f50e208631f268c73f5b6cdcb6228ebf",
+      "message": "1.3.0\n\nSigned-off-by: Audrow Nash <audrow@hey.com>",
+      "files_changed": 16,
+      "additions": 32,
+      "deletions": 8,
+      "commit_type": "docs"
+    },
+    {
+      "author": "tfoote",
+      "date": "2015-04-07T00:06:46Z",
+      "sha": "36ff50986070db680107142ed1f35483800de8aa",
+      "message": "first commit of structure of rcl_interfaces",
+      "files_changed": 6,
+      "additions": 277,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "sloretz",
+      "date": "2018-11-09T22:07:07Z",
+      "sha": "6cff4c3377b1935f4de365000cd4da6aa4d585bf",
+      "message": "Hardcoded typesupport for Fibonacci action (#47)\n\n* msg and srv in actions folder\r\n\r\n* Add uniquely named messages and services\r\n\r\n* Add hand made action typesupport\r\n\r\n* respose -> result request\r\n\r\n* respose -> response\r\n\r\n* Use goal info in more places\r\n\r\n* Fix feedback symbol\r\n\r\n* Generate from .action file\r\n\r\n* Hardcoded typesupport works with generated msg and srv\r\n\r\n* C typesupport returns rcl_action_type_support_t\r\n\r\n* Function to get typsupport struct from C++ typesupport\r\n\r\n* rosidl_typesupport_cpp namespace\r\n\r\n* Fix include guard\r\n\r\n* Fix linter test failures\r\n\r\n* Fix dll linkage on Windows\r\n\r\n* Fix windows linking issue by having separate visibility macro",
+      "files_changed": 10,
+      "additions": 381,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "hidmic",
+      "date": "2019-05-09T21:05:03Z",
+      "sha": "0aba5a142878c2077d7a03977087e7d74d40ee68",
+      "message": "Add UTF-8 BOM to message_fixtures.hpp file (#79)\n\n* Add UTF-8 BOM to message_fixtures.hpp file\r\n\r\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>\r\n\r\n* add cpplint ignore / note about the BOM for visibility\r\n\r\nSigned-off-by: Dirk Thomas <dirk-thomas@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "MiguelCompany",
+      "date": "2021-08-04T18:30:13Z",
+      "sha": "5e5ae6f98ad8eb711e47c0f2c49ac3f4fc8c28e9",
+      "message": "Added BoundedPlainSequences to test_msgs (#123)\n\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>",
+      "files_changed": 1,
+      "additions": 29,
+      "deletions": 0,
+      "commit_type": "test"
+    },
+    {
+      "author": "shonigmann",
+      "date": "2021-03-26T21:38:25Z",
+      "sha": "86fa36a450ddf8164dfd4ca44060039ff87778fd",
+      "message": "Update README.md (#119)\n\nUpdating README to QL1\r\n\r\nSigned-off-by: Simon Honigmann <shonigmann@blueorigin.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ivanpauno",
+      "date": "2021-02-22T20:51:30Z",
+      "sha": "0cb918204a17cf390e56fe060a49e05a77885ea7",
+      "message": "Enforce static parameter typing (#118)\n\nSigned-off-by: Ivan Santiago Paunovic <ivanpauno@ekumenlabs.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "brawner",
+      "date": "2020-03-20T19:36:51Z",
+      "sha": "c8a34e3d83d3102c3f248fdf735e12ed3522c00c",
+      "message": "Remove unused IntraProcessMessage (#89)\n\nSigned-off-by: Stephen Brawner <brawner@gmail.com>",
+      "files_changed": 2,
+      "additions": 0,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "dirk-thomas",
+      "date": "2015-05-18T23:44:01Z",
+      "sha": "4b3d3d4549960fbe5a9d1f4bb68994fa4e168016",
+      "message": "add generic tests for pub/sub and req/rep, add two message and service types for now",
+      "files_changed": 4,
+      "additions": 238,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Prajakta Gokhale",
+      "date": "2020-04-17T00:37:08Z",
+      "sha": "bd4e491b2d3b43f25d0712006f2f698235c609c9",
+      "message": "Add new messages for topic statistics (#98)\n\n* Add new msgs for topic statistics\r\n\r\nSigned-off-by: Prajakta Gokhale <prajaktg@amazon.com>\r\n\r\n* Change float32 to float64 to avoid build WARNINGs\r\n\r\nSigned-off-by: Prajakta Gokhale <prajaktg@amazon.com>\r\n\r\n* Update package.xml\r\n\r\nSigned-off-by: Prajakta Gokhale <prajaktg@amazon.com>",
+      "files_changed": 6,
+      "additions": 163,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mjcarroll",
+      "date": "2019-03-05T19:29:15Z",
+      "sha": "e631d8f93a48f2aeaa192ecc8ed9bf218330c69a",
+      "message": "Correct minor typo (#65)\n\nSigned-off-by: Michael Carroll <michael@openrobotics.org>",
+      "files_changed": 2,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "juanrh",
+      "date": "2019-05-16T15:37:37Z",
+      "sha": "68e0732ffc8681a2896c3402d299e5974a26a97e",
+      "message": "Add mapping file for ROS 1 bridge (#67)\n\n* Add mapping file for ROS 1 bridge\r\n\r\nSigned-off-by: Juan Rodriguez Hortala <hortala@amazon.com>\r\n\r\n* remove trailing spaces\r\n\r\nSigned-off-by: Dirk Thomas <dirk-thomas@users.noreply.github.com>",
+      "files_changed": 3,
+      "additions": 16,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "nuclearsandwich",
+      "date": "2017-09-12T04:10:47Z",
+      "sha": "790c7f7bb9bdf3cdf905e83b47dba7de1976a9a6",
+      "message": "Version numbers in repos must be consisistent across packages.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "bpwilcox",
+      "date": "2018-12-04T22:24:08Z",
+      "sha": "b0bc045946c939a72e5f87af15a43e7e6731e14a",
+      "message": "adding node path and timestamp fields to event msg (#51)",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "apojomovsky",
+      "date": "2018-12-04T19:05:12Z",
+      "sha": "ed5a129b9ffba3e000944abd610762318fd44468",
+      "message": "Change UUID type in action_msgs (#54)\n\n* Change UUID type in action_msgs\r\n\r\n* Added unique_identifier_msgs dependency to action_msgs",
+      "files_changed": 4,
+      "additions": 6,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "nburek",
+      "date": "2018-11-28T21:48:26Z",
+      "sha": "c12706ab314a879fbf28ee2889948f5fd3c0c3a4",
+      "message": "Adding a message type for Log messages that will be sent out over the… (#53)\n\nAdding a message type for Log messages that will be sent out over the rosout topic.",
+      "files_changed": 3,
+      "additions": 24,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Karsten1987",
+      "date": "2016-12-14T17:28:05Z",
+      "sha": "199e461d114d786cd240b1c5ad85e524db09123b",
+      "message": "add lifecycle msgs\n\n*  (transfer) initial import from common_interfaces\r\n\r\n* get_state returns complete state\r\n\r\n* new service msgs\r\n\r\n* refactor new state machine\r\n\r\n* address review comments\r\n\r\n* c++14",
+      "files_changed": 10,
+      "additions": 139,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mikaelarguedas",
+      "date": "2016-05-25T23:35:24Z",
+      "sha": "658a84e11b19a9ecfe7deebf1bf47c9c10192ec3",
+      "message": "working towards testing python communication along cpp one\n\nConflicts:\n\ttest_communication/test/message_fixtures.hpp",
+      "files_changed": 4,
+      "additions": 12,
+      "deletions": 12,
+      "commit_type": "test"
+    },
+    {
+      "author": "esteve",
+      "date": "2015-05-04T20:42:28Z",
+      "sha": "9c5046727d2a601d2dda8261ac8b42fbd175c6ac",
+      "message": "Merge pull request #3 from ros2/result-messages\n\nRename *Result messages",
+      "files_changed": 6,
+      "additions": 5,
+      "deletions": 5,
+      "commit_type": "docs"
+    },
+    {
+      "author": "dhood",
+      "date": "2016-05-28T01:14:20Z",
+      "sha": "bca4c95a04da336928ff753397ecd96c7de39d5e",
+      "message": "Get rosidl to add linter tests for generated interface code (#16)",
+      "files_changed": 2,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "codebot",
+      "date": "2016-12-13T22:41:44Z",
+      "sha": "25ad37161df83055ca82926976f4ea395b65f58d",
+      "message": "c++14 (#12)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Esteve Fernandez",
+      "date": "2015-04-10T23:52:18Z",
+      "sha": "9e80c32742fe924aeb4dbcd69a63d9f473a41781",
+      "message": "Added HasParam",
+      "files_changed": 2,
+      "additions": 10,
+      "deletions": 0,
+      "commit_type": "docs"
+    }
+  ]
+}

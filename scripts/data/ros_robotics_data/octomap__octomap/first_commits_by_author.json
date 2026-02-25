@@ -1,0 +1,701 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T07:14:02Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "octomap",
+    "repo": "octomap"
+  },
+  "data": [
+    {
+      "author": "SeanCurtis-TRI",
+      "date": "2026-02-08T21:31:25Z",
+      "sha": "f012f5f0a4f58cad19501833f9c0ea9d864427b6",
+      "message": "Correct for clang warnings (#446)\n\n1. -Wunused-parameter: implementations in .hxx files that don't make use\n   of the parameter names have the names removed. The proper names still\n   exist in the .h file.\n2. Explicit declaration of (unnecessary) copy constructor in OcTreeIterator\n   implicitly deleted copy assignment. Deletion of explicit constructor\n   allows the implict creation of both.",
+      "files_changed": 3,
+      "additions": 8,
+      "deletions": 15,
+      "commit_type": "code"
+    },
+    {
+      "author": "ahornung",
+      "date": "2015-02-20T15:58:59Z",
+      "sha": "be35e8cc24c48f10415af58d6e3ab8d035c5f315",
+      "message": "Merge pull request #78 from fferri/graph2tree-g\n\nadd a flag (-g) to graph2tree to indicate that the nodes are already transformed in global coordinates",
+      "files_changed": 1,
+      "additions": 12,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "xinyiz",
+      "date": "2025-12-30T19:48:20Z",
+      "sha": "d04245b92ced44fe2a9f8bfe0cdf7fbda94ac8d8",
+      "message": "Fix memory cleanup of children[] array in deleteNodeRecurs(...)   (#288)\n\nFix children[] array not properly deleted in deleteNodeRecurs function. (#288)\nFixes children == __null assertion fail after calling deleteNode",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "roehling",
+      "date": "2025-10-23T18:26:56Z",
+      "sha": "6f5d1ac902b706e93342bded18e9d4812bd1a57c",
+      "message": "Modernize CMake scripts and update QGLViewer to 2.9.1 (#439)\n\nThis is a rewrite of the CMake configuration that removes a lot of\nlegacy code which is no longer needed and makes the build system more\nconvoluted than necessary.\n\nBy switching to modern CMake semantics, we gain the following\nadvantages:\n\n* Include directories and dependent libraries are associated with the\nexported target, no additional configuration beyond\ntarget_link_libraries() required.\n\n* Built-in Qt MOC and UIC handling\n\n* Proper separation of build and install interface; this also makes\nRPATH just work out of the box without additional configuration.\n\n* Native build of vendored QGLViewer library, no need to call qmake and\nimport the result.\n\n* Proper handling and versioning of dependencies. No hard-coded build\npaths showing up in unexpected places.\n\nAdditional changes: \n* Update vendored copy of QGLViewer to version 2.9.1\n* Prefer system install of QGLViewer\n* Auto-detect matchin Qt Version 5 or 6 (switchable)\n\nSigned-off-by: Timo Röhling <timo.roehling@fkie.fraunhofer.de>\n\n\nThis is needed for Qt6 support.\n\nSigned-off-by: Timo Röhling <timo.roehling@fkie.fraunhofer.de>\n\n* Try harder to pick matching Qt and QGLViewer libraries\n\nSigned-off-by: Timo Röhling <timo.roehling@fkie.fraunhofer.de>\n\n* Add option to make octovis build optional\n\nSigned-off-by: Timo Röhling <timo.roehling@fkie.fraunhofer.de>\n\n* Fix increase_version.py to deal with new CMakeLists.txt files\n\nSigned-off-by: Timo Röhling <timo.roehling@fkie.fraunhofer.de>\n\n* Add missing return()\n\nSigned-off-by: Timo Röhling <timo.roehling@fkie.fraunhofer.de>\n\n---------\n\nSigned-off-by: Timo Röhling <timo.roehling@fkie.fraunhofer.de>",
+      "files_changed": 79,
+      "additions": 13471,
+      "deletions": 12985,
+      "commit_type": "docs"
+    },
+    {
+      "author": "PPN-SD",
+      "date": "2025-03-29T19:21:27Z",
+      "sha": "79cd7fddd3d0b7448e2a1ee0524ca89b292485d3",
+      "message": "Set minimum required cmake version to 3.10 (prepare cmake-4)",
+      "files_changed": 4,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Spinkoo",
+      "date": "2025-09-25T18:26:43Z",
+      "sha": "9fbe15c189fe7c1d692015884349d2c5cb31a226",
+      "message": "Remove unnecessary bool init exampleEDTOctomap.cpp (#438)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "ssaigarimella",
+      "date": "2025-07-30T19:57:04Z",
+      "sha": "b03549ec601f5e9ab309a327185f473e5c82f4a4",
+      "message": "Robust binvox -> OctoMap pipeline: Correct offsets and vertical stacking + safe merge of BT layers (#437)\n\n* binvox to bt with unique offsets\n\n* merge_octomaps: union only occupied leaves to avoid floating voxels\n\n- Filter incoming leaves by occupancy threshold before updateNode()\n- Recompute inner occupancy after merge\n- Add usage block at top of file",
+      "files_changed": 4,
+      "additions": 440,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "arianizadi",
+      "date": "2025-04-20T08:52:07Z",
+      "sha": "c5c714139a82969915b84cd5548dedcd257ebf1e",
+      "message": "Add PCD Reading to Pointcloud (#430)",
+      "files_changed": 5,
+      "additions": 197,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jiayuehua",
+      "date": "2024-04-01T14:32:35Z",
+      "sha": "eff7d05c23f95d1b1492d6e79523e74e64adc87f",
+      "message": "fix isnan on _msvc_LANG>= 201103L (#417)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "toge",
+      "date": "2024-04-01T14:31:40Z",
+      "sha": "3c268e83370542e57ea0ba345774dd51ce8d385d",
+      "message": "CMakLists.txt: always enable C++11 (#416)\n\nFix for older gcc (5.4)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "clalancette",
+      "date": "2024-03-17T21:40:43Z",
+      "sha": "e5227fdb75074616d8c326706b729c9316b33360",
+      "message": "Updates to compile cleanly on ROS 2 Rolling on Ubuntu 24.04 (#415)\n\n* Update minimum to CMake 3.5.\r\n\r\nNewer CMake complains about anything older than that,\r\nand CMake 3.5 was released in 2016.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>\r\n\r\n* Cleanup stderr output from CMake.\r\n\r\nCalling message(\"mystring\") in CMake, by default,\r\noutputs to stderr.  Since these are generally informational\r\nmessages, change this to message(STATUS \"mystring\"), which\r\nprints to stdout instead.  This should quite down warnings\r\nwhen building with colcon (and on the ROS 2 buildfarm).\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>\r\n\r\n* Add in a variable to control how OpenGL is found.\r\n\r\nNewer versions of CMake have changed how finding OpenGL\r\nworks.  If you don't specify anything at all, they will\r\ncomplain that you haven't told them how to find OpenGL.\r\n\r\nWork around this by explicitly setting OpenGL_GL_PREFERENCE\r\nto LEGACY, which tells CMake how you want to find OpenGL.\r\nThis quiets the warning.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>\r\n\r\n* Switch away from 0 for Qt::WindowFlags.\r\n\r\nApparently modern Qt has deprecated using an integer\r\nto initialize Qt::Flags objects.  Instead, use the\r\ndefault constructor which should do the same thing.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>",
+      "files_changed": 7,
+      "additions": 15,
+      "deletions": 14,
+      "commit_type": "docs"
+    },
+    {
+      "author": "whoenig",
+      "date": "2024-03-17T21:38:25Z",
+      "sha": "af240da1b2d8e9e43fdb9b967191d6a0bf2490d3",
+      "message": "Octovis: fix issue with saving not showing any dialog (#414)\n\nSee https://stackoverflow.com/questions/31983412/code-freezes-on-trying-to-open-qdialog",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "wxmerkt",
+      "date": "2019-11-23T20:40:12Z",
+      "sha": "a95100f6dbc3424f47bce741dcab21ec044b7cdb",
+      "message": "Update package.xml to remove catkin dependency (#263)\n\nImproves ROS2 compatibility with updated package.xml format",
+      "files_changed": 3,
+      "additions": 14,
+      "deletions": 26,
+      "commit_type": "config"
+    },
+    {
+      "author": "cottsay",
+      "date": "2024-03-17T21:06:46Z",
+      "sha": "5745643cce89cb308eb83779790d254c5d3b079d",
+      "message": "Declare missing octovis dependency on opengl (#408)\n\nIt appears that libGLU is an indirect dependency on Ubuntu, but not on\r\nRHEL/Fedora.",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "oliviasculley",
+      "date": "2023-12-09T17:51:56Z",
+      "sha": "3649ccbad7f6bade1021305a84912bec89972958",
+      "message": "CMake: Fix duplicate uninstall target (#406)\n\n* fix whitespace in CMakeLists\r\n* fix uninstall targets",
+      "files_changed": 4,
+      "additions": 35,
+      "deletions": 35,
+      "commit_type": "docs"
+    },
+    {
+      "author": "SpaceIm",
+      "date": "2023-05-23T19:04:12Z",
+      "sha": "8178b4f28c72a8c7b84ece25bda7a59df8d14eb8",
+      "message": "Fix errors with recent compilers and C++17/20 standard (#394)\n\n- fix definition of OcTreeBase(double res) constructor (it fixes gcc12/C++20 compilation errors)\r\n- more robust detection of C++11 for Visual Studio (it fixes Visual Studio2022/C++17 compilation errors)\r\n- remove several illegal semicolon (unlikely the reason of compilation errors, but it's neater to fix that)",
+      "files_changed": 19,
+      "additions": 56,
+      "deletions": 56,
+      "commit_type": "code"
+    },
+    {
+      "author": "eladm-ultrawis",
+      "date": "2023-05-21T18:44:10Z",
+      "sha": "5a54ff4ab82534da9ca0eb9a16afdb53eb7cfcc5",
+      "message": "Fix ScanGraph.h c++20 compilation error (#398)\n\nThis fixes the following error on latest msvc compiler:\r\n\r\nerror C2666: 'octomap::ScanNode::operator ==': overloaded functions have similar conversions\r\nmessage : could be 'bool octomap::ScanNode::operator ==(const octomap::ScanNode &)'\r\nmessage : or 'bool octomap::ScanNode::operator ==(const octomap::ScanNode &)' [synthesized expression 'y == x']\r\nmessage : while trying to match the argument list '(octomap::ScanNode, octomap::ScanNode)'",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "mohamedsayed18",
+      "date": "2023-05-18T19:14:25Z",
+      "sha": "09f3b4b85332d30ccac174d9b45aebf35c2190c0",
+      "message": "smaller than operator (#330)\n\nsmaller than operator for 3d points",
+      "files_changed": 1,
+      "additions": 12,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "FrankXie05",
+      "date": "2022-09-04T19:46:40Z",
+      "sha": "92a9f14cafa5f567c47b58cbe91137c9a6ba1b0c",
+      "message": "Add vcpkg installation instructions to Readme (#382)",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "nim65s",
+      "date": "2022-05-30T16:13:52Z",
+      "sha": "9e7cdb76ccac398987e5e12aef6f88db98e0cea3",
+      "message": "Fix test dependencies in CMakeLists (#374)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "acxz",
+      "date": "2022-05-24T20:27:59Z",
+      "sha": "b7118e096abb223fe3ce2af70e6f8c751989fe1d",
+      "message": "replace deprecated std::iterator by defining required types (#373)\n\nSolves #372, enables Cxx17 compatibility",
+      "files_changed": 1,
+      "additions": 22,
+      "deletions": 15,
+      "commit_type": "code"
+    },
+    {
+      "author": "rozliv",
+      "date": "2022-02-07T15:24:56Z",
+      "sha": "7640e7673a3892297902936f57975cfe5febe76c",
+      "message": "fixed overflow problem in binvox2bt",
+      "files_changed": 1,
+      "additions": 12,
+      "deletions": 12,
+      "commit_type": "code"
+    },
+    {
+      "author": "kjulian3",
+      "date": "2022-01-30T20:26:48Z",
+      "sha": "56b605ab1d0e3c8ebc9e0bb7fcd3ddfdb1c7e8c0",
+      "message": "Fix to freespace update when bbx is set. (#360)\n\n* Update freespace when bbx is set and the point is outside the box or exceeds the maxrange.\r\n* Add parentheses around test macro arguments.\r\n\r\nFixes #358",
+      "files_changed": 4,
+      "additions": 87,
+      "deletions": 15,
+      "commit_type": "docs"
+    },
+    {
+      "author": "lauralindzey",
+      "date": "2021-09-28T19:55:50Z",
+      "sha": "10dc9f444605027dbc2cced322607dc805fde24d",
+      "message": "Update all URLs to use github.io (#352)\n\nAt some point, Github pages switched from being octomap.github.com\r\nto being at octomap.github.io. This commit simply updates documentation\r\nin the code to reflect that.",
+      "files_changed": 60,
+      "additions": 61,
+      "deletions": 61,
+      "commit_type": "ci"
+    },
+    {
+      "author": "v4hn",
+      "date": "2021-09-12T20:12:15Z",
+      "sha": "9318b176fa55f88104f88ee2929079a46a59d0e9",
+      "message": "make setBBXMin/Max parameters const (#348)",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "nuclearsandwich",
+      "date": "2021-05-20T22:57:15Z",
+      "sha": "d68cd0c570b83ca132bb83e0856fe64ae3243b82",
+      "message": "Remove unused ament_cmake dependency.\n\nREP-136 recommends that third-party (non-ROS) packages add a runtime\ndependency on catkin so that the setup scripts provided by the catkin\npackage which set up a ROS environment are installed along with that\npackage. In ROS 2, those scripts are provided by the ros_workspace\npackage and bloom transparently injects a dependency on ros_workspace\ninto every released package.\n\nIt would be possible to use ament_cmake (or more likely the individual\nament_cmake_core package to optionally provide the package.xml and\nament resource index registration but since what you have is working\nfine I think just removing the unecessary dependency is a good next\nstep. As mentioned in\nhttps://github.com/flexible-collision-library/fcl/pull/536#issuecomment-845533649\nwe haven't produced a definitive recommendation for third party packages\nin ROS 2 but I've added it to a meeting agenda and we'll document the\nconclusions of that discussion and share them as well.",
+      "files_changed": 3,
+      "additions": 1,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "martivilella",
+      "date": "2021-05-10T20:45:48Z",
+      "sha": "61b786a0510714a348ddee4a1d38998ed179533d",
+      "message": "Link dependencies in octovis-static library (#340)",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "al-tu",
+      "date": "2020-12-13T19:18:47Z",
+      "sha": "85bbd66360290461a9a80927761bf197f6511f6a",
+      "message": "Warnings as errors fixes (#312)\n\nstrict warnings_as_errors compiler options and corresponding fixes",
+      "files_changed": 16,
+      "additions": 22,
+      "deletions": 15,
+      "commit_type": "code"
+    },
+    {
+      "author": "hfinger",
+      "date": "2020-06-18T10:47:25Z",
+      "sha": "f053e03f33eaaca5734ee399cc8c4e9216368443",
+      "message": "fix qmake command to build libQGLViewer with Qt5.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "expeditioneer",
+      "date": "2020-06-09T04:32:53Z",
+      "sha": "43bcc2c5f4649280f5af1992e9fc63eefeae9a83",
+      "message": "adapted code to be compatible with libQGLViewer >= 2.7.0",
+      "files_changed": 2,
+      "additions": 22,
+      "deletions": 27,
+      "commit_type": "code"
+    },
+    {
+      "author": "timonegk",
+      "date": "2020-05-21T10:41:29Z",
+      "sha": "845e79fe1bfd3ee8e4ad1817f89c9ee3075dd31f",
+      "message": "octovis: use -fPIC with all compilers",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "gleichdick",
+      "date": "2020-04-17T11:42:32Z",
+      "sha": "ea9d7073b9707958d0db28bebd78dc8c69c6e27a",
+      "message": "fix ifstream >> byte with c++17\n\nstd::byte can't be read from a file (no overload of operator >>\navailable), fall back to typedef'fing it to unsigned char again.\n\nRelated: #240",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 7,
+      "commit_type": "code"
+    },
+    {
+      "author": "sloretz",
+      "date": "2020-03-11T00:28:58Z",
+      "sha": "a722c5192f2d8022cf8f388543995b8b082acccf",
+      "message": "Bump CMake version to avoid CMP0048\n\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>",
+      "files_changed": 4,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jnumm",
+      "date": "2020-01-21T13:28:38Z",
+      "sha": "a330c3cabd9c9c5104e89764aab19c0d3836d6c4",
+      "message": "Support configurable libdir\n\nStill defaults to PREFIX/lib but e.g. Debian or Fedora packagers\ncan easily set it to lib/x86_64-linux-gnu or lib64 respectively.",
+      "files_changed": 9,
+      "additions": 50,
+      "deletions": 47,
+      "commit_type": "docs"
+    },
+    {
+      "author": "RoboticsYY",
+      "date": "2019-12-26T09:15:59Z",
+      "sha": "985cdbe010cec96443e5003a105bb83dc26065be",
+      "message": "Fix -Wpedantic warnings (#275)",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Bo98",
+      "date": "2019-12-08T10:30:33Z",
+      "sha": "31af07e5bacc210cbf3c32929acf50338c108123",
+      "message": "Removed problematic INSTALL_NAME_DIR (#262)\n\nWorkaround for RPath on macOS no longer necessary",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "rhaschke",
+      "date": "2019-11-28T17:37:26Z",
+      "sha": "4e1e818529c2f3d0872f5ba7c8383e25752aba7e",
+      "message": "fix unused-parameter warning (#267)\n\nFix unused parameter warning in OccupancyOcTreeBase<NODE>::insertPointCloudRays",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "jcarpent",
+      "date": "2019-08-15T18:09:30Z",
+      "sha": "c921775fbe57980048309c086afa20a0b5a895fe",
+      "message": "Fix issue with byte typedef when compiling using C++17 (#240)\n\nbyte is defined in <cstddef> since C++17",
+      "files_changed": 2,
+      "additions": 6,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Jamie Snape",
+      "date": "2016-09-15T15:30:45Z",
+      "sha": "cb9768a30f34e432ec4c32ab84b5d36570258248",
+      "message": "Enable rpath on OS X when the CMake version supports it",
+      "files_changed": 3,
+      "additions": 12,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jslee02",
+      "date": "2018-07-08T19:57:45Z",
+      "sha": "7861efe8e605c609e7cf63d66d940fc083fbc210",
+      "message": "Add missing typename keyword",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "jlblancoc",
+      "date": "2017-08-13T00:49:03Z",
+      "sha": "0ee848bacb2431ae8b4987669ee8fe7a799ad78a",
+      "message": "Fix octomap-static dependency on octomath-static",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "fmder",
+      "date": "2013-04-26T17:46:09Z",
+      "sha": "f0544e3e66bb2fad830657ce08ef44b772058ec9",
+      "message": "Added a marching cubes algorithm to retreive normals induced by occupied/free voxels surrounding a given voxel.",
+      "files_changed": 3,
+      "additions": 419,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "wkentaro",
+      "date": "2017-06-16T22:51:10Z",
+      "sha": "47207db4e0bb80a7c1600d6e9af53d4ed921e3ae",
+      "message": "Fix segv of CountingOcTree by checking root == NULL",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "leavesnight",
+      "date": "2017-04-28T19:24:28Z",
+      "sha": "5355bbc46af6f0da874cd12f81a323a2de0b0235",
+      "message": "Minimal workaround for ColorOcTree in octovis with VS2012 (#167)\n\na minimal workaround for the ColorOcTree type register issue on the visual studio 2012 platform of windows 8\r\na redundant object definition to ensure VS2012 not to drop the the constructor of the member static class called StaticMemberInitializer, causing the ColorOcTree failing to register.",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "cehberlin",
+      "date": "2017-02-08T20:14:07Z",
+      "sha": "84bd2268b10bbf14ad7231fefeb8180eb2698104",
+      "message": "Improve build by specifically targeting local includes in case of available system includes (#155)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "aecins",
+      "date": "2015-10-01T18:39:26Z",
+      "sha": "efb26c807d992129be0712a28a4c57948b033f4f",
+      "message": "Updated getUnknownLeafCenters function to allow queries at a specified tree depth",
+      "files_changed": 2,
+      "additions": 12,
+      "deletions": 7,
+      "commit_type": "code"
+    },
+    {
+      "author": "felixendres",
+      "date": "2016-10-06T19:49:32Z",
+      "sha": "545302a3e17d8f085de6bc31dc8e93afc58bf154",
+      "message": "Command line param for the initial tree depth cutoff (#122)\n\nAdd octovis cmd line param for the initial tree depth cutoff \r\n(renders faster right after startup)",
+      "files_changed": 5,
+      "additions": 17,
+      "deletions": 7,
+      "commit_type": "code"
+    },
+    {
+      "author": "jacquelinekay",
+      "date": "2016-08-28T12:21:32Z",
+      "sha": "e19c1f33f92495e546175d64eb88fc40f16b62da",
+      "message": "use static_cast in KeyHash (#128)",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "2maz",
+      "date": "2016-07-12T17:26:58Z",
+      "sha": "928ba9bb6bda0146e70851c23d79dea70dec59b4",
+      "message": "Disambiguate isnan (#125)\n\nAllow octomap to build with c++11",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "jvgomez",
+      "date": "2016-05-02T20:20:21Z",
+      "sha": "f68bf52a801c8bebf220e05ae40c5e90c3304cf6",
+      "message": "Improve the generation of config.cmake and version.cmake files\n\nImprove the generation of config.cmake and version.cmake files, relocatable via CONFIGURE_PACKAGE_CONFIG_FILE. Upgrades the Travis build farm requirements to Ubuntu Trusty.",
+      "files_changed": 11,
+      "additions": 100,
+      "deletions": 85,
+      "commit_type": "config"
+    },
+    {
+      "author": "Christoph",
+      "date": "2016-03-26T13:34:10Z",
+      "sha": "9887ea9d4d41c0242b44644738c9ba8548872cca",
+      "message": "adding debug output for dynamic_edt CMakeLists.txt",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "patmarion",
+      "date": "2016-02-09T15:44:30Z",
+      "sha": "57d2db5e5024fd2697f98177d6902f23dc27968e",
+      "message": "remove qglviewer.h header dependency from some public headers\n\nSome octovis headers include qglviewer.h unnecessarily.  By removing\nthe header dependency it is easier to include octovis headers without\nrequiring an include path for qglviewer.\n\nThis commit could break user code that relies on the header, but those\ncompile errors will be easy to fix.",
+      "files_changed": 4,
+      "additions": 3,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "dornhege",
+      "date": "2016-01-28T13:27:45Z",
+      "sha": "a2e9d1532ec0785423e5e526f3728c4279a61f12",
+      "message": "fix doc of setNodeValue",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "arntanguy",
+      "date": "2015-10-15T08:02:34Z",
+      "sha": "e522cd6e99f4f68aab56c01afa23af88f397b9ed",
+      "message": "Fix -Wredeclared-class-member warnings",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "nicolaje",
+      "date": "2015-09-11T15:29:52Z",
+      "sha": "8756c69fbb699c8e988ac618906390f011f156ac",
+      "message": "Added #include <algorithm> to fix #86",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "TheBrewCrew",
+      "date": "2015-08-12T22:03:25Z",
+      "sha": "a030b68d9dde2eda2cdfbbb21a8237db647a9fd0",
+      "message": "A few functions for calculating diffs",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "wohe",
+      "date": "2015-07-03T12:04:36Z",
+      "sha": "094c1039e3d9c22313f16e0a39e58e9496a36dbd",
+      "message": "Fix invalid shifts.\n\nShift by a negative value has undefined behavior.",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "fferri",
+      "date": "2015-02-19T12:13:07Z",
+      "sha": "8b43d50739d390f7f78b2a9767612f7f23d5ed05",
+      "message": "add a flag (-g) to graph2tree to indicate that the nodes are already transformed in global coordinates",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Armin Hornung",
+      "date": "2009-09-21T08:01:07Z",
+      "sha": "a4f3c30335f60ae5c683adfc94f6b588f4ba2ffa",
+      "message": "Added some missing files / dirs",
+      "files_changed": 16,
+      "additions": 197,
+      "deletions": 28,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Federico Boniardi",
+      "date": "2014-12-12T17:19:16Z",
+      "sha": "dac397591e77b5b3f02396f5189942e3a7fdcfda",
+      "message": "test and fix for bbx iterators for empty octrees",
+      "files_changed": 2,
+      "additions": 92,
+      "deletions": 83,
+      "commit_type": "code"
+    },
+    {
+      "author": "federico-b",
+      "date": "2014-11-11T12:24:02Z",
+      "sha": "3dfa687a0c6b2a1710db0036169ff351a41df271",
+      "message": "added a file",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "csprunk",
+      "date": "2011-11-10T15:30:25Z",
+      "sha": "883b74d318fad29a32b68fe5894fd74ff0fad370",
+      "message": "removing an empty line",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Caspar Reist",
+      "date": "2014-07-03T09:37:22Z",
+      "sha": "c7aef990432242b2dbd8db6192d29e8487f5db9b",
+      "message": "Adding option to choose if octovis&dynamicEDT3D are built\n\nAs suggested in an issue I added the option to the main cmakelists :\nBUILD_OCTOVIS_SUBPROJECT.\nIf it's ON (default) everything remains the same, if it's turned off the\noctomap project can be built even if no QGLViewer and/or OpenGL are\nfound on the system.\nIt also can be used when octomap is used as an external project in a\ncmake-project, the option can be passed in the cmake_args.",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "doudou",
+      "date": "2014-03-06T09:10:59Z",
+      "sha": "4e36c70302361b5a04c67b1a53990e36763f389b",
+      "message": "add missing includes\n\nThis is required on QGLViewer > 2.5 as the other headers only have forward\nreferences on ManipulatedFrame and ManipulatedCameraFrame. Since the added\nheaders exist on older versions of QGLViewer, it should not be an issue on older\nversions of the library.",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "jensenb",
+      "date": "2013-11-13T17:28:57Z",
+      "sha": "b7aec9182e102da32f0f210197a55b827e0ae894",
+      "message": "Fix issues when building on systems with libc++ (OS X 10.9 Mavericks)",
+      "files_changed": 3,
+      "additions": 34,
+      "deletions": 19,
+      "commit_type": "code"
+    },
+    {
+      "author": "tmdiv",
+      "date": "2013-09-05T09:20:50Z",
+      "sha": "2dfab68bef980ca3887636e3ba2b2cdf02cc5e55",
+      "message": "VC++ compatibility of isnan",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Christian Dornhege",
+      "date": "2013-03-06T16:30:56Z",
+      "sha": "ff58441dcc125cd5f259a316577a87a9bb894a14",
+      "message": "Add editing options to fill/clear only unknown cells",
+      "files_changed": 3,
+      "additions": 71,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Joerg Mueller",
+      "date": "2010-03-25T16:31:18Z",
+      "sha": "e7f9471595b46881d20947f0971ae51b9fd89da3",
+      "message": "* added OcTreeBase::getMetricMin/Max as const without size caching\n* fixed size calculation when tree shrinked\n* changed OcTreeDrawer::setMap to use a const map",
+      "files_changed": 4,
+      "additions": 55,
+      "deletions": 12,
+      "commit_type": "code"
+    },
+    {
+      "author": "Kai Wurm",
+      "date": "2009-09-21T07:34:47Z",
+      "sha": "df04d9f77815b7f4216cb2747362e9c0ea682759",
+      "message": "initial ci.",
+      "files_changed": 94,
+      "additions": 34378,
+      "deletions": 0,
+      "commit_type": "docs"
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T00:58:34Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "stonier",
+    "repo": "ecl_core"
+  },
+  "data": [
+    {
+      "author": "Matthias Schoepfer",
+      "date": "2024-04-15T12:46:18Z",
+      "sha": "7bcdf804237486740071011900f3f5a55a70a9cd",
+      "message": "Replacing BSD with BSD-3-Clause in package.xml\n\nUpdating the package.xml license tags to hold valid SPDX qualifiers.\nThe rationale behind this is, that with\n[meta-ros](https://github.com/ros/meta-ros) and\n[superflore](https://github.com/ros-infrastructure/superflore)\nrecipes get generated for the OpenEmbedded Linux build system.\nIt will fetch the license tag and copy it over into the recipe. If\nno valid SPDX identifiers get found, it will issue an error, and a\nmanual step to fix this is needed.\n\nSee the SPDX identifiers\n[BSD-3-Clause](https://spdx.org/licenses/BSD-3-Clause.html)\n\nSigned-off-by: Matthias Schoepfer <m.schoepfer@rethinkrobotics.com>",
+      "files_changed": 25,
+      "additions": 25,
+      "deletions": 25,
+      "commit_type": "config"
+    },
+    {
+      "author": "sundermann",
+      "date": "2022-12-09T16:06:22Z",
+      "sha": "9d1c49c882c57668f3c46adb2a1a38c2d0957e59",
+      "message": "Fix unused variable errors",
+      "files_changed": 6,
+      "additions": 16,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "stonier",
+      "date": "2012-11-17T12:53:14Z",
+      "sha": "49b9bf15b2f586fca7ef5284669b2d718a48a0a5",
+      "message": "Initial commit",
+      "files_changed": 2,
+      "additions": 17,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Karsten1987",
+      "date": "2019-08-11T20:02:53Z",
+      "sha": "35b5ad4fb70bdae450ba75f080df40987dfae46d",
+      "message": "default to c++14 standard\n\nSigned-off-by: Karsten Knese <karsten@openrobotics.org>",
+      "files_changed": 2,
+      "additions": 8,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "clalancette",
+      "date": "2018-05-08T16:00:58Z",
+      "sha": "c29e0ef83fc68f42643adc2bfdd3a2378b9b3b6e",
+      "message": "Make sure to ament_export_libraries. (#73)\n\nament_export_libraries() ends up generating a setup.sh file\r\nfor each library that exports LD_LIBRARY_PATH.  This is\r\nimportant when building in isolated mode so that downstream\r\nconsumers of the libraries can find the library at runtime.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 12,
+      "additions": 12,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "bfjelds",
+      "date": "2017-10-13T21:22:30Z",
+      "sha": "19a2378e8cd88fa536973e4dd9d4819095abe062",
+      "message": "Make ecl_core build for ros2 (on windows 10)",
+      "files_changed": 137,
+      "additions": 1154,
+      "deletions": 786,
+      "commit_type": "docs"
+    },
+    {
+      "author": "rojkov",
+      "date": "2017-06-26T22:55:29Z",
+      "sha": "a87d76e070926ac63df3a857c37e5070c49b57d1",
+      "message": "[ecl_containers] Fix gcc v7.1 compilation issue (#58)\n\nWhen built with gcc v7.1 compilation fails with an error message\r\nabout using an expression as a function when updating\r\nthe private attribute FloatContainerFormatter.prm_width.\r\n\r\nThe patch uses assignment to update the attribute.\r\n\r\nSigned-off-by: Dmitry Rozhkov <dmitry.rozhkov@linux.intel.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "gerkey",
+      "date": "2016-04-13T05:18:57Z",
+      "sha": "a23642db892a1a4eafcebfae69d26df77fc1ac35",
+      "message": "Various compile fixes for OSX",
+      "files_changed": 3,
+      "additions": 18,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Tom Moore",
+      "date": "2015-12-17T20:41:51Z",
+      "sha": "efa3db73f0c21d7ea30a5198758d6ffa54e89ddc",
+      "message": "Checking for array sizes of < 2 in C2CubicSpline",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "bit-pirate",
+      "date": "2015-06-19T05:29:51Z",
+      "sha": "932ae44b1553ce7cf8003a78d93e059a1ae95512",
+      "message": "removes baudrates not supported by termios",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "jakan2",
+      "date": "2013-04-01T09:55:08Z",
+      "sha": "61eee9099798c9cfbeefb61d3cc3a753f9e0bdd8",
+      "message": "we can use the eigne 3.1.2",
+      "files_changed": 18,
+      "additions": 38,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Yeong-il Choe",
+      "date": "2013-04-03T05:43:53Z",
+      "sha": "f81d08937eca57e08a6bca668d91b5fc9a520fec",
+      "message": "win32 porting for ecl_time",
+      "files_changed": 20,
+      "additions": 1024,
+      "deletions": 34,
+      "commit_type": "docs"
+    }
+  ]
+}

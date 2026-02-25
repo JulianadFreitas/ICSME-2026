@@ -1,0 +1,851 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T03:54:50Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros-perception",
+    "repo": "image_common"
+  },
+  "data": [
+    {
+      "author": "eigendude",
+      "date": "2026-02-09T09:28:18Z",
+      "sha": "8ae6eb647c5eb46a32d39a0cb4bd591c93cee65d",
+      "message": "Update BSD licenses to SPDX identifier (#389)\n\nCo-authored-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>",
+      "files_changed": 7,
+      "additions": 7,
+      "deletions": 7,
+      "commit_type": "config"
+    },
+    {
+      "author": "ahcorde",
+      "date": "2020-10-14T15:58:19Z",
+      "sha": "872a6de7b0efffb188e12f9a16ebc9a3b6ecc67e",
+      "message": "Update maintainers (#173)\n\nSigned-off-by: ahcorde <ahcorde@gmail.com>",
+      "files_changed": 3,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "fujitatomoya",
+      "date": "2025-12-16T13:17:18Z",
+      "sha": "810c5b6f85f4237e6be6e16500af083423e08061",
+      "message": "properly shut down rclcpp after all tests complete. (#384)\n\nSigned-off-by: Tomoya Fujita <Tomoya.Fujita@sony.com>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "clalancette",
+      "date": "2021-05-21T12:05:01Z",
+      "sha": "0c159bc5d64085834ccfb2633586b0ed310b91c4",
+      "message": "Make sure to mark overridden methods as 'override'. (#192)\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "mosfet80",
+      "date": "2025-07-04T07:42:13Z",
+      "sha": "dc66b2e80fbf7b47d2015f7bbfc9de490bdcd69b",
+      "message": "fix setuptools deprecation (#366)\n\nCo-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "atyshka",
+      "date": "2025-06-27T15:48:11Z",
+      "sha": "c804ba5a8dce79d0141c40810b9e901b8eb2e98d",
+      "message": "Fix topic resolution for plugins (#365)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Rick-v-E",
+      "date": "2025-06-11T09:52:43Z",
+      "sha": "36bd558ea77118c28a8931fc31d7253f0e09062a",
+      "message": "Fix CameraInfo distortion coefficients and logger (#360)",
+      "files_changed": 2,
+      "additions": 40,
+      "deletions": 38,
+      "commit_type": "code"
+    },
+    {
+      "author": "cottsay",
+      "date": "2025-04-28T19:51:17Z",
+      "sha": "dec8cc6d54f9a43fcd202065f916431aa1ff8b4a",
+      "message": "6.1.1",
+      "files_changed": 13,
+      "additions": 31,
+      "deletions": 7,
+      "commit_type": "docs"
+    },
+    {
+      "author": "YuanYuYuan",
+      "date": "2025-03-04T14:00:50Z",
+      "sha": "0cc6ab2de0b1a600d2d6a69108cf2131d778ec56",
+      "message": "fix: add `rclcpp::shutdown` (#347)\n\nCo-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "tfoote",
+      "date": "2012-09-18T09:02:51Z",
+      "sha": "5e39fcf519a5dac6574001d1a772cb25621baaf9",
+      "message": "Removing common_rosdeps as a dependency\n\nAlso cleaning up unused platform tags. ",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 4,
+      "commit_type": "config"
+    },
+    {
+      "author": "sloretz",
+      "date": "2021-12-24T01:43:41Z",
+      "sha": "6d777b5d5ddda66764f65bc3a818b01d9613d7ce",
+      "message": "Export a modern CMake target instead of variables and install includes to include/${PROJECT_NAME} (#218)\n\n* Export a modern CMake target instead of variables\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* more modern CMake and install to include/${PROJECT_NAME}\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* Misc fixes\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* pluginlin -> pluginlib\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* pluginlin -> pluginlib\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* export -> export_\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* Convert depends on rclcpp\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* Add missing )\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* camera_calibration_parser -> camera_calibration_parsers\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* Republish depends on pluginlib\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* list_transports depends on pluginlib\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>",
+      "files_changed": 3,
+      "additions": 51,
+      "deletions": 53,
+      "commit_type": "docs"
+    },
+    {
+      "author": "tfoldi",
+      "date": "2024-10-09T16:00:28Z",
+      "sha": "c2952b0725a1a4e16103243e7249d666d6622fe2",
+      "message": "feat: python bindings for image_transport and publish (#323)\n\nCo-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>",
+      "files_changed": 10,
+      "additions": 867,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "bjsowa",
+      "date": "2024-05-16T07:50:51Z",
+      "sha": "fd51363e2b8f8cd99e9a77970c1d49eb86c1480f",
+      "message": "Support zero-copy intra-process publishing (#306)",
+      "files_changed": 7,
+      "additions": 188,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "jasiex01",
+      "date": "2024-09-25T19:42:33Z",
+      "sha": "3b0a1b64b489949e5691642a04fc050e159a8ffe",
+      "message": "Add optional namespace to /set_camera_info service in CameraInfoManager (#324)",
+      "files_changed": 2,
+      "additions": 27,
+      "deletions": 9,
+      "commit_type": "code"
+    },
+    {
+      "author": "wentasah",
+      "date": "2024-09-13T07:48:05Z",
+      "sha": "ea6a9e47c259cc875b7a4545e07359b63bd27f60",
+      "message": "Fix node name (#321)\n\nNode name appears in logs and confuses readers.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "CursedRock17",
+      "date": "2024-06-06T14:17:08Z",
+      "sha": "1dd7a60a8f98555b0a9870f32a39dd08d71d0179",
+      "message": "Preparing for qos deprecation (#315)\n\nSigned-off-by: CursedRock17 <mtglucas1@gmail.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "tonynajjar",
+      "date": "2024-05-15T12:05:33Z",
+      "sha": "74d9e8edb02eaf13771ee4d12a558d68279cbf44",
+      "message": "Add missing sub and pub options (#308)\n\nCo-authored-by: Angsa Deployment Team <team@angsa-robotics.com>",
+      "files_changed": 1,
+      "additions": 17,
+      "deletions": 15,
+      "commit_type": "code"
+    },
+    {
+      "author": "marcoag",
+      "date": "2024-04-16T09:08:43Z",
+      "sha": "3b7c629663dea5de6cb09116a7ea3c98a9df01f6",
+      "message": "Changelog.\n\nSigned-off-by: Marco A. Gutierrez <marcogg@marcogg.com>",
+      "files_changed": 4,
+      "additions": 14,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "christophebedard",
+      "date": "2024-02-27T08:41:36Z",
+      "sha": "feab1730aab853dada9811717732f2a44889b9c6",
+      "message": "Switch from rcpputils::fs to std::filesystem (#300)\n\nSigned-off-by: Christophe Bedard <christophe.bedard@apex.ai>",
+      "files_changed": 8,
+      "additions": 20,
+      "deletions": 25,
+      "commit_type": "docs"
+    },
+    {
+      "author": "charlielito",
+      "date": "2024-01-22T18:27:22Z",
+      "sha": "7049db52dc795131de70feb7c28a07559d1a33be",
+      "message": "Add QoS option reliability to republisher qos params (#296)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "mikeferguson",
+      "date": "2020-06-26T15:44:12Z",
+      "sha": "7d15fb104fa5399c49071114ae7b9fe5f8d8a57a",
+      "message": "make CameraPublisher::getNumSubscribers() work (#163)",
+      "files_changed": 2,
+      "additions": 3,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "s-hall",
+      "date": "2024-01-19T11:39:22Z",
+      "sha": "27dd6e0c7835daebd1ce7af8b338b20dc2b9bdcf",
+      "message": "Add missing definition for CameraPublisher::publish overload (#278)",
+      "files_changed": 2,
+      "additions": 22,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "wep21",
+      "date": "2022-05-05T06:23:01Z",
+      "sha": "9a9dd644c19162ff19d89941d8c60ad0601f9d81",
+      "message": "Add qos option to override qos (#208)\n\n* feat: add PublisherOptions arg\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* test: add qos override test\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* test: add without options test\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* remove unused using\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* separate tests\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* separate qos override test\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>",
+      "files_changed": 11,
+      "additions": 226,
+      "deletions": 18,
+      "commit_type": "test"
+    },
+    {
+      "author": "adityapande-1995",
+      "date": "2023-07-17T07:34:41Z",
+      "sha": "e08707311226ba77cd4f6e4cde260edeb6ad5fd3",
+      "message": "Expose option to set callback groups (#274)\n\nSigned-off-by: Aditya Pande <adityapande@google.com>",
+      "files_changed": 3,
+      "additions": 74,
+      "deletions": 9,
+      "commit_type": "code"
+    },
+    {
+      "author": "mjcarroll",
+      "date": "2018-08-21T15:09:25Z",
+      "sha": "2aaa97034b9e490e2972dd6fa4151f6734d4c133",
+      "message": "Image Transport rework port in progress for review (#84)\n\n* Remove boost where possible.\r\n\r\n* ros::VoidPtr to std::shared_ptr<void>\r\n\r\n* Conversions around boost where necessary.\r\n\r\n* Ignore other packages for now.\r\n\r\n* Basic ament_cmake port.\r\n\r\n* Port camera_common.\r\n\r\n* Port publisher.\r\n\r\n* Convert subscriber.\r\n\r\n* Port single_subscriber_publisher.\r\n\r\n* Type updates.\r\n\r\nVoidPtr -> std::shared_ptr<void>\r\nsensor_msgs::Image -> sensor_msgs::msg::Image\r\nsensor_msgs::ImageConstPtr -> sensor_msgs::msg::Image::ConstSharedPtr\r\n\r\n* Replace queue_size and latch with qos.\r\n\r\n* Implement simple subscriber and publisher.\r\n\r\n* Refactor.\r\n\r\n* Restore comments and naming.\r\n\r\n* Fixup transport and add republisher back in.\r\n\r\n* Add library export.\r\n\r\n* Address reviewer feedback.\r\n\r\n* Clean up a few warnings, remove boost headers.\r\n\r\n* compile_definitions -> compile_options\r\n\r\n* Reviewer feedback on necessary includes.\r\n\r\n* Address comments about CMakeLists and package.\r\n\r\n* Switch to RCLCPP loggers.\r\n\r\n* ERROR -> FATAL where asserts were used.\r\n\r\n* Add TODOs for ROS2 assert equivalents back.\r\n\r\n* Added a TODO for getNumPublishers.",
+      "files_changed": 40,
+      "additions": 1461,
+      "deletions": 1090,
+      "commit_type": "docs"
+    },
+    {
+      "author": "gbiggs",
+      "date": "2022-03-25T05:54:05Z",
+      "sha": "e894ede778a28b6fc4dcdd6c7a88abb5e336c44e",
+      "message": "Changelog\n\nSigned-off-by: Geoffrey Biggs <gbiggs@killbots.net>",
+      "files_changed": 4,
+      "additions": 16,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "RFRIEDM-Trimble",
+      "date": "2022-11-14T22:48:17Z",
+      "sha": "2edae7c4c8de390ded151a94b094a1746d84b86d",
+      "message": "Add alias library targets for all libraries (#259)",
+      "files_changed": 4,
+      "additions": 8,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "AndreasR30",
+      "date": "2022-09-20T22:44:16Z",
+      "sha": "db76095d4631ae6cc01efd1acb594f51c07a3bec",
+      "message": "Add support for missing ROI and binning fields (#254)",
+      "files_changed": 3,
+      "additions": 122,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Rayman",
+      "date": "2022-09-01T07:16:45Z",
+      "sha": "24e341a910b6a37989a3b38e6c9f905a4c6f7aec",
+      "message": "Add lifecycle node compatibility to camera_info_manager (#190)\n\n* Add lifecycle node compatibility to camera_info_manager\r\n\r\n* Add additional lifecycle constructor\r\n\r\n* Fix CI",
+      "files_changed": 4,
+      "additions": 44,
+      "deletions": 9,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jacobperron",
+      "date": "2020-04-02T14:07:09Z",
+      "sha": "8c492586dc56469da67872ea8a4256159686bf14",
+      "message": "Fix QoS initialization from RMW QoS profile (#158)\n\nPassing the RMW QoS struct to rclcpp::QoSInitialization::from_rmw does not copy\r\nall of the QoS settings. Instead, it only copies the settings required for\r\ninitialization. To properly initialize with all custom QoS settings, pass the\r\nRMW struct as the second argument.\r\n\r\nSigned-off-by: Jacob Perron <jacob@openrobotics.org>",
+      "files_changed": 3,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "ijnek",
+      "date": "2022-07-27T14:10:51Z",
+      "sha": "8bd10484b2849737a9bd577b2907846f98d27fbd",
+      "message": "Deprecate impl without options (#249)\n\n* deprecate advertiseImpl without options\r\n\r\nSigned-off-by: Kenji Brameld <kenjibrameld@gmail.com>\r\n\r\n* force overriding methods to reimplement advertiseImpl with four parameters\r\n\r\nSigned-off-by: Kenji Brameld <kenjibrameld@gmail.com>\r\n\r\n* update deprecated message\r\n\r\nSigned-off-by: Kenji Brameld <kenjibrameld@gmail.com>\r\n\r\n* remove final qualifier from advertiseimpl override in simple_publisher_plugin.hpp\r\n\r\nSigned-off-by: Kenji Brameld <kenjibrameld@gmail.com>\r\n\r\n* deprecate implWithOptions\r\n\r\nSigned-off-by: Kenji Brameld <kenjibrameld@gmail.com>\r\n\r\n* fix uncrustify error\r\n\r\nSigned-off-by: Kenji Brameld <kenjibrameld@gmail.com>\r\n\r\n* move non-deprecated methods above deprecated ones\r\n\r\nSigned-off-by: Kenji Brameld <kenjibrameld@gmail.com>",
+      "files_changed": 6,
+      "additions": 55,
+      "deletions": 61,
+      "commit_type": "code"
+    },
+    {
+      "author": "paudrow",
+      "date": "2021-05-19T17:52:06Z",
+      "sha": "b272bfb062d6c27291cc0705c87b0e2dc906736b",
+      "message": "Expose subscription options (#186)\n\n* Expose subscription options to subscriber\r\n\r\nSigned-off-by: Audrow Nash <audrow@hey.com>\r\n\r\n* Use subscription options in test\r\n\r\nSigned-off-by: Audrow Nash <audrow@hey.com>\r\n\r\n* Fix spacing\r\n\r\nSigned-off-by: Audrow Nash <audrow@hey.com>\r\n\r\n* Use rclcpp::SubscriptionOptions\r\n\r\nSigned-off-by: Audrow Nash <audrow@hey.com>\r\n\r\n* Undo default test subscriber\r\n\r\nSigned-off-by: Audrow Nash <audrow@hey.com>\r\n\r\n* Avoid changing API\r\n\r\nSigned-off-by: Audrow Nash <audrow@hey.com>\r\n\r\n* Use override and not virtual\r\n\r\nSigned-off-by: Audrow Nash <audrow@hey.com>\r\n\r\nCo-authored-by: Ivan Santiago Paunovic <ivanpauno@ekumenlabs.com>\r\n\r\nCo-authored-by: Ivan Santiago Paunovic <ivanpauno@ekumenlabs.com>",
+      "files_changed": 7,
+      "additions": 49,
+      "deletions": 16,
+      "commit_type": "code"
+    },
+    {
+      "author": "ihasdapie",
+      "date": "2022-06-14T19:44:41Z",
+      "sha": "12a7f52363b567887428aa6a3147b86110d30680",
+      "message": "opt-in to qos overriding for publisher (#246)\n\nSigned-off-by: Brian Chen <brian.chen@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 17,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "robotechvision",
+      "date": "2022-02-19T02:45:04Z",
+      "sha": "d1082d3ab454981842c4d6687f29ce366496bb18",
+      "message": "Simple IT plugins shutdown (#225)\n\n* implemented shutdown() for simple publisher and subscriber plugin\r\n\r\n* added tests for simple publisher/subscriber shutdown\r\n\r\n* Removed unneeded lines in publisher shutdown test\r\n\r\nCo-authored-by: Matej Vargovcik <vargovcik@robotechvision.com>",
+      "files_changed": 4,
+      "additions": 19,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "Ace314159",
+      "date": "2022-02-21T08:03:32Z",
+      "sha": "b76528a28d538b42287accd13b5c959aac40c5c7",
+      "message": "Remove YAML_CPP_DLL define (#231)",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "SteveMacenski",
+      "date": "2021-11-30T15:44:57Z",
+      "sha": "4943b9a73be093b09ad9850b2146b3c2e455c72e",
+      "message": "uncrustify linting (#160)",
+      "files_changed": 52,
+      "additions": 1797,
+      "deletions": 1867,
+      "commit_type": "docs"
+    },
+    {
+      "author": "youliangtan",
+      "date": "2021-11-11T19:19:35Z",
+      "sha": "0f8c00a9a40f209b0ab8ab81ad4fe307c7f481bd",
+      "message": "Fix `camera_publisher`Typo (#204)\n\nFix `camera_publisher`Typo",
+      "files_changed": 0,
+      "additions": 0,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "aprotyas",
+      "date": "2021-11-11T16:27:08Z",
+      "sha": "a90cedf3693c3d3dccd19ae6425babb83189cf9b",
+      "message": "Fix renamed `rcpputils` header (#211)\n\nSigned-off-by: Abrar Rahman Protyasha <aprotyas@u.rochester.edu>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "rebecca-butler",
+      "date": "2021-07-29T16:02:47Z",
+      "sha": "8cef3db2234a0bc4b8ede533828ee1adc1ff8feb",
+      "message": "Image transport tutorial (#197)\n\nFixes #193\r\n\r\nThis PR ports the existing image_transport tutorials from ROS 1 to ROS 2.\r\n\r\nThe tutorial code now lives in a dedicated image_transport_tutorial package. The content from http://wiki.ros.org/image_transport/Tutorials is presented in the README and has been updated to work for ROS 2.\r\n\r\nSigned-off-by: Rebecca Butler <rebecca@openrobotics.org>",
+      "files_changed": 22,
+      "additions": 753,
+      "deletions": 224,
+      "commit_type": "docs"
+    },
+    {
+      "author": "chapulina",
+      "date": "2019-10-22T21:37:34Z",
+      "sha": "9efe10bf37f998a6bbd924f25a943ea6b8d93cee",
+      "message": "[ros2] image_common metapackage (#129)\n\n* [ros2] image_common metapackage\r\n\r\n* remove TODO\r\n\r\nSigned-off-by: Louise Poubel <louise@openrobotics.org>",
+      "files_changed": 3,
+      "additions": 26,
+      "deletions": 15,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ivanpauno",
+      "date": "2021-06-29T16:06:41Z",
+      "sha": "7ab9f33804bc1555c39affa90de6be481520217a",
+      "message": "Fix SimpleSubscriberPlugin (#195)\n\n* * [SimpleSubscriberPlugin] Do not override the subscribeImpl method taking a rclcpp::SubscriptionOptions object.\r\n  Plugins that were not overriding it before won't notice that they have to be update.\r\n\r\n* Allocate a SimpleSubscriberPlugin::Impl on construction.\r\n\r\nSigned-off-by: Ivan Santiago Paunovic <ivanpauno@ekumenlabs.com>\r\n\r\n* Revert changes so code looks closer than the original one\r\n\r\nSigned-off-by: Ivan Santiago Paunovic <ivanpauno@ekumenlabs.com>\r\n\r\n* * Add subscribeImplWithOptions() helper method to SimpleSubscriberPlugin.\r\n* Override subscribeImpl() method taking a rclcpp::SubscriptionOptions in all classes inheriting from SimpleSubscriberPlugin.\r\n\r\nSigned-off-by: Ivan Santiago Paunovic <ivanpauno@ekumenlabs.com>",
+      "files_changed": 4,
+      "additions": 38,
+      "deletions": 12,
+      "commit_type": "code"
+    },
+    {
+      "author": "HPaper",
+      "date": "2020-11-20T14:05:41Z",
+      "sha": "4c5053ecf703a58c25a712d1d4a80012f5076a1f",
+      "message": "fix mistyping 'cammera_publisher.hpp -> camera_publisher.hpp' (#177)\n\n* fix mistyping\r\n\r\n* fix mistyping",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Martin-Idel",
+      "date": "2020-05-27T21:08:46Z",
+      "sha": "e06cfdca4ea51623960cf0ce138e9e862aa480f8",
+      "message": "Fix formatting and include paths for linters (#157)\n\n* Fix uncrustify\r\n* Add deprecation notes\r\n* Try to remove filesystem helper\r\n* Change method return type to size_t\r\n* Fix MSVC warning for getenv\r\n* Rename .h files to .hpp + formatting fixes\r\n- fix include guards to cpplint style\r\n- fix order of includes to match ros guide\r\n* Add back deprecated .h headers\r\n* Change all getNumSubscriber/Publisher signatures to size_t\r\n* Fix leaky windows workaround for getenv\r\n* Fixes to ament dependencies.\r\n* Use rcpputils::get_env_var rather than custom\r\n* Address reviewer feedback\r\n* Re-add rcpputils for get_env_var\r\n* Change to new style remapping\r\n* Move dllimport/export locations",
+      "files_changed": 78,
+      "additions": 3143,
+      "deletions": 2381,
+      "commit_type": "docs"
+    },
+    {
+      "author": "seanyen",
+      "date": "2019-10-17T15:23:38Z",
+      "sha": "e4538a8312cf3f5cbdfe6ae37495d5f6c0fbe887",
+      "message": "[Windows][ros2] Avoid build break for Visual Studio 2019 v16.3 (#135)\n\n* Avoid build break for Visual Studio 2019 v16.3\r\n\r\n* cpplint fix.",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "klintan",
+      "date": "2019-10-22T22:16:58Z",
+      "sha": "00bed6344fb380ae7e4daee3cf3a84c017b16422",
+      "message": "ROS2 Using the filesystem helper in rcpputils (#133)\n\n* using the filesystem helper in rcpputils\r\n\r\n* fixed for updated rcpputils\r\n\r\n* Fix include types/ordering\r\n\r\nSigned-off-by: Michael Carroll <michael@openrobotics.org>",
+      "files_changed": 8,
+      "additions": 22,
+      "deletions": 323,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mikaelarguedas",
+      "date": "2017-10-27T01:05:49Z",
+      "sha": "055d4404157520d7b151e398643bf977debb1b19",
+      "message": "update to use non deprecated pluginlib macro",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "schornakj",
+      "date": "2019-10-22T21:38:47Z",
+      "sha": "033d111363396918781fe0cc86010cfa271523c5",
+      "message": "Fix abort criteria for setCameraInfoService callback (#132)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Karsten1987",
+      "date": "2019-05-21T17:51:57Z",
+      "sha": "dd94ea7172b964e580a7f6404076cc85f1e1b75c",
+      "message": "use latest ros2 API (#127)\n\nSigned-off-by: Karsten Knese <karsten@openrobotics.org>",
+      "files_changed": 3,
+      "additions": 9,
+      "deletions": 7,
+      "commit_type": "code"
+    },
+    {
+      "author": "Carl Delsey",
+      "date": "2019-03-25T17:12:19Z",
+      "sha": "b86edf5723e0a4ab15f770c685a6001717f84205",
+      "message": "Update ROS2 branch to account for new NodeOptions interface (#120)",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 7,
+      "commit_type": "code"
+    },
+    {
+      "author": "yechun1",
+      "date": "2018-12-07T22:23:51Z",
+      "sha": "e8c136bf2f795eb730ab5f98c82da8ee9c48bd27",
+      "message": "switch from SharedPtr to pointer (#106)",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "vrabaud",
+      "date": "2012-01-10T23:43:43Z",
+      "sha": "45e0427b9d257fcf232d6707a577f6846f1319dc",
+      "message": "Link against ros, needed on unstable",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "lucasw",
+      "date": "2017-11-05T16:11:48Z",
+      "sha": "316bbb216d39acbdf8703c487a379586ff251045",
+      "message": "Disable image publisher plugins by name (#60)\n\n* Disable publisher plugins by name\r\n\r\n* Now have per publisher blacklist instead of image_transport wide.",
+      "files_changed": 2,
+      "additions": 16,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "comkieffer",
+      "date": "2017-10-06T09:35:58Z",
+      "sha": "79e74de9bd14738d6db16ff3fce5760fab8065b6",
+      "message": "Extend documentation of `getCameraInfoTopic`\n\nDocument the fact that the `base_topic` argument must be resolved in order to build the correct camera info topic.",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "aadityasaraiya",
+      "date": "2017-08-23T19:54:36Z",
+      "sha": "8a6a7f3a7a9953f0005048297f1f01b0970f1de9",
+      "message": "Added cv::waitkey(10) for blank popup\n\nWithout the cv::waitkey(10), it results in a blank popup which crashes/ leads to a black popup. This change corrects that problem.\r\n\r\nROS Kinetic, Ubuntu 16.04.3",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "kartikmohta",
+      "date": "2017-06-01T03:26:30Z",
+      "sha": "52eacbd74b2164f16cb7623eca9624d0215b5e92",
+      "message": "Use Boost_LIBRARIES instead of Boost_PYTHON_LIBRARY\n\nThis was causing issues when building with python3 since then\n`Boost_PYTHON_LIBRARY` is not set, instead cmake sets\n`Boost_PYTHON3_LIBRARY`. So instead of adding each library separately,\nusing `Boost_LIBRARIES` seems to be better. For reference, from the\ncmake docs:\n```\nBoost_LIBRARIES        - Boost component libraries to be linked\nBoost_<C>_LIBRARY      - Libraries to link for component <C>\n```",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mxsrc",
+      "date": "2017-05-04T14:42:02Z",
+      "sha": "f421d31b006b2072d17f599cf420c0ed50d989dd",
+      "message": "Add camera_calibration_parsers dependency to camera_info_manager",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mintar",
+      "date": "2016-11-25T14:32:00Z",
+      "sha": "3a9a0b479c54bdf8105175c23fe961c9733bc027",
+      "message": "image_transport/tutorial: Add missing catkin_INCLUDE_DIRS\n\nWithout this, compilation files on Kinetic because ros.h cannot be found.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Enrique Fernandez",
+      "date": "2016-09-23T14:59:40Z",
+      "sha": "972022f1c16202941d9fbdd959683b68c52c5751",
+      "message": "Return empty CameraInfo when !ros::ok()",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "bulwahn",
+      "date": "2013-10-12T05:48:25Z",
+      "sha": "d5a4a37e0c5eee51f183057b156a4a3ac017070c",
+      "message": "check for CATKIN_ENABLE_TESTING",
+      "files_changed": 2,
+      "additions": 10,
+      "deletions": 8,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jspricke",
+      "date": "2015-11-30T16:37:35Z",
+      "sha": "cd7bb9a28371819c5d156c94b83906501688c049",
+      "message": "Use $catkin_EXPORTED_TARGETS",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "herr-biber",
+      "date": "2016-01-03T13:57:58Z",
+      "sha": "9829b02b48bae412a087e2183b3fd2c94fb16f26",
+      "message": "Add python wrapper for readCalibration.\n\nReads .ini or .yaml calibration file and returns camera name and sensor_msgs/cameraInfo.",
+      "files_changed": 7,
+      "additions": 179,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "helenol",
+      "date": "2015-10-21T15:32:57Z",
+      "sha": "1e08533153c4ba7a01d507253a5a87e04b533107",
+      "message": "Remove no-longer-neccessary flags to allow OS X to use 0.3 and 0.5 of yaml-cpp.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 6,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Isaac IY Saito",
+      "date": "2015-07-15T00:48:46Z",
+      "sha": "10b184827eafe61329d7684608ee20473c4d23d6",
+      "message": "[camera_calibration_parsers] Better error message when calib file can't be written",
+      "files_changed": 4,
+      "additions": 17,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "garyservin",
+      "date": "2014-12-16T18:36:35Z",
+      "sha": "a94504c96de78840d0947e10492dbba08a2641cb",
+      "message": "Make function inline to avoid duplicated names when linking statically",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "xqms",
+      "date": "2015-04-30T19:06:02Z",
+      "sha": "58c0c0217b5758d69e54c6f0e45a8e546ecb84a6",
+      "message": "image_transport: fix CameraSubscriber shutdown (circular shared_ptr ref)\n\nCameraSubscriber uses a private boost::shared_ptr to share an impl object\nbetween copied instances. In CameraSubscriber::CameraSubscriber(), it\nhanded this shared_ptr to boost::bind() and saved the created wall timer\nin the impl object, thus creating a circular reference. The impl object\nwas therefore never freed.\n\nFix that by passing a plain pointer to boost::bind().",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "njzhangyifei",
+      "date": "2015-02-14T23:07:24Z",
+      "sha": "a30389629edd2a16f02b93803e25d9263f7e6a6d",
+      "message": "Fix catkin_make failure (due to yaml-cpp deps) for mac os",
+      "files_changed": 1,
+      "additions": 20,
+      "deletions": 5,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jack-oquin",
+      "date": "2013-02-02T22:31:47Z",
+      "sha": "a06565407770bd2973ad80c5c71daad4be295431",
+      "message": "camera_info_manager: fix unit test dependencies",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "jbohren",
+      "date": "2013-10-31T04:01:13Z",
+      "sha": "1bac114804e40c415885ef397c13b860ac137666",
+      "message": "camera_info_manager: Adding public member function to manually set camera info",
+      "files_changed": 2,
+      "additions": 25,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "ktossell",
+      "date": "2013-10-10T06:57:19Z",
+      "sha": "715737df038e84ffd831a04b830238087645fc12",
+      "message": "Detect yaml-cpp >= 0.5 and use the new API.\n\nThe current release of yaml-cpp, 0.5[.1], has an incompatible API.\nThere is no version information in the headers, so I'm using the\nversion from pkg-config to figure out which API is appropriate.",
+      "files_changed": 2,
+      "additions": 30,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Aaron Blasdel",
+      "date": "2012-12-21T23:20:34Z",
+      "sha": "99f877380128becffa7796e36fc837d8acea6141",
+      "message": "added license headers to various cpp and h files",
+      "files_changed": 27,
+      "additions": 916,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "dirk-thomas",
+      "date": "2013-01-13T07:22:28Z",
+      "sha": "d1322e930e85f24dc27b6ecaf8199b6b9da24573",
+      "message": "use CATKIN_DEVEL_PREFIX instead of obsolete CATKIN_BUILD_PREFIX",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "wjwwood",
+      "date": "2012-12-05T01:47:17Z",
+      "sha": "21c4b97c589417f7959c2307f36d77297e767047",
+      "message": "Updated the CMakeLists.txt to work from source.",
+      "files_changed": 1,
+      "additions": 23,
+      "deletions": 21,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mirzashah",
+      "date": "2012-12-14T21:36:01Z",
+      "sha": "5630ca07787d3e9212477e3d9145d94953e08785",
+      "message": "Updated package.xml file(s) to handle new catkin buildtool_depend requirement",
+      "files_changed": 4,
+      "additions": 8,
+      "deletions": 4,
+      "commit_type": "config"
+    },
+    {
+      "author": "Mirza Shah",
+      "date": "2012-11-07T01:57:36Z",
+      "sha": "290cfb92d395b40598c892c3cd56a34d3d66188e",
+      "message": "Isolated plugins into their own library to follow new class_loader/pluginlib guidelines.",
+      "files_changed": 2,
+      "additions": 9,
+      "deletions": 7,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mihelich",
+      "date": "2009-09-09T00:28:41Z",
+      "sha": "cfdcd570b5b690107a0ab3846c0662df65317028",
+      "message": "image_transport: Restoring commit lost in repo switch. Can now override transports used by ImagePublisher and their topics. Added transform utility for republishing an image topic in alternate form.",
+      "files_changed": 5,
+      "additions": 44,
+      "deletions": 23,
+      "commit_type": "docs"
+    },
+    {
+      "author": "gerkey",
+      "date": "2009-09-02T03:00:31Z",
+      "sha": "996c4b31631955915bf0808d151ae7ebc3d1e7fd",
+      "message": "Small tweaks to stack.xml",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 6,
+      "commit_type": "config"
+    },
+    {
+      "author": "joq",
+      "date": "2010-12-08T00:18:34Z",
+      "sha": "aa734970c5c28c9236c6349dcdf71aafbfea56b3",
+      "message": "Add support for \"package://\" URLs.\nAdd more unit tests.",
+      "files_changed": 4,
+      "additions": 203,
+      "deletions": 39,
+      "commit_type": "config"
+    },
+    {
+      "author": "kwc",
+      "date": "2009-09-04T23:10:08Z",
+      "sha": "d115318b9bd5a3701e791a0923c9e1162cd21e37",
+      "message": "migration part 1",
+      "files_changed": 0,
+      "additions": 0,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "straszheim",
+      "date": "2011-07-13T21:56:30Z",
+      "sha": "d00684fe7b89ea91cc567947b25a75995279eeae",
+      "message": "Dont' need ros::Message.  We know M already.  Update for removal of ros::Message.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "blaise",
+      "date": "2010-11-03T16:00:49Z",
+      "sha": "c13a5da65386c3c4c0269baf3e370aaae01f2e13",
+      "message": "Moved image_common from camera_drivers to image_common.",
+      "files_changed": 10,
+      "additions": 1074,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "eitan",
+      "date": "2009-12-16T21:24:58Z",
+      "sha": "fcf97678a9d00063f51a87d76eaeab5b479fe48a",
+      "message": "Adding a missing include required to get image_common building on Karmic",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "pmihelich",
+      "date": "2009-09-01T03:05:42Z",
+      "sha": "d7edd5596c0198653f9d4bd4fb6c982f2c27f222",
+      "message": "image_common: Committing just new directory, SVN is killing me right now.",
+      "files_changed": 0,
+      "additions": 0,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "sfkwc",
+      "date": "2009-09-02T02:45:10Z",
+      "sha": "70eb3ba28ab62f4436a1fc3c16be7a2d7e94217b",
+      "message": "prepping 0.1.0",
+      "files_changed": 3,
+      "additions": 25,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "goodfellow",
+      "date": "2009-09-02T00:26:30Z",
+      "sha": "198f6705979de0dc87ac7b1142666694bb0f6c8d",
+      "message": "add #include <cstring> to parse_yml.cpp so it will build under gcc 4.3",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T10:26:57Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "osrf",
+    "repo": "ros2launch_security"
+  },
+  "data": [
+    {
+      "author": "wjwwood",
+      "date": "2021-08-10T18:32:10Z",
+      "sha": "6e1d3b0b4c6b5215576f07ab1343b6a1fbc499e8",
+      "message": "End to end test (#4)\n\n* move ros2launch_security into a subdirectory\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* add example\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* adding automated test for example\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* adding test that uses ros2 launch --secure\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* linters\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* fix typos\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* review feedback\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* remove vestigial fix from test I copied from\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>",
+      "files_changed": 28,
+      "additions": 704,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "Abrar Rahman Protyasha",
+      "date": "2021-08-10T19:57:35Z",
+      "sha": "45a028debc059c34bbc560dafc3b56b8c286371a",
+      "message": "Integration test with `nodl_to_policy` and middleware-specific XML permissions files (#9)\n\n* Introducing test dependencies on nodl/policy packages\r\n\r\nSigned-off-by: Abrar Rahman Protyasha <abrar@openrobotics.org>\r\n\r\n* Generating explicit permissions for each NoDL description in the package\r\n\r\nSigned-off-by: Abrar Rahman Protyasha <abrar@openrobotics.org>\r\n\r\n* Adding new launch test to CMakeLists.txt\r\n\r\nSigned-off-by: Abrar Rahman Protyasha <abrar@openrobotics.org>\r\n\r\n* Adding end-to-end test using `nodl_to_policy`\r\n\r\nThis commit fixes the launch test where a secure launch\r\ndescription is created, in which permission artifacts\r\nare generated using the converted policies provided by\r\n`nodl_to_policy` package.\r\n\r\nBroadly, it serves as a bigger example for integration of\r\n`nodl_to_policy`.\r\n\r\nSigned-off-by: Abrar Rahman Protyasha <abrar@openrobotics.org>\r\n\r\n* Add documentation to nodl_to_policy test script\r\n\r\nSigned-off-by: Abrar Rahman Protyasha <abrar@openrobotics.org>",
+      "files_changed": 3,
+      "additions": 158,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "hidmic",
+      "date": "2021-04-05T18:23:09Z",
+      "sha": "9c6cbd9bf3b52c2cd6eb9ae7c8978480280ae95d",
+      "message": "Fix failing tests\n\n- Target sros2.keystore._keystore, not sros2.api._keystore\n- Target nodl module, not launch_ros.actions.node.nodl\n- Patch nodl.get_node_by_executable() properly\n- Lookup enclave in Node.cmd attribute\n- Add demo_nodes_py as test dependency\n\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>",
+      "files_changed": 5,
+      "additions": 36,
+      "deletions": 32,
+      "commit_type": "config"
+    },
+    {
+      "author": "gbiggs",
+      "date": "2021-01-26T01:06:01Z",
+      "sha": "7c92021d7fe71052553f74d5e6499a2ca0b57295",
+      "message": "Initial commit\n\nSigned-off-by: Geoffrey Biggs <gbiggs@killbots.net>",
+      "files_changed": 2,
+      "additions": 220,
+      "deletions": 0,
+      "commit_type": "docs"
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T06:57:40Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "Ekumen-OS",
+    "repo": "beluga"
+  },
+  "data": [
+    {
+      "author": "JesusSilvaUtrera",
+      "date": "2025-01-13T13:02:24Z",
+      "sha": "f035e0f2044b0cc9fbdd755ac11af53d9848c324",
+      "message": "Fix link to DEVELOPING.md (#457)\n\n### Proposed changes\r\n\r\nThis PR just changes a broken link on the docs that was pointing to a\r\n`GETTING_STARTED.md` file that doesn't exist anymore. The Table of\r\nContent of the file was updated automatically when saving.\r\n\r\nSigned-off-by: JesusSilvaUtrera <jsilvautrera@gmail.com>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "LaBruma",
+      "date": "2025-07-03T14:01:32Z",
+      "sha": "080ffa58f914ade44490267155a9db63933743e0",
+      "message": "Add ROS Kilted Kaiju support (#485)\n\n### Proposed changes\n\nAdding ROS2 kilted version support to Beluga\n\n#### Type of change\n\n- [ ] 🐛 Bugfix (change which fixes an issue)\n- [x] 🚀 Feature (change which adds functionality)\n- [ ] 📚 Documentation (change which fixes or extends documentation)\n\n### Checklist\n\n_Put an `x` in the boxes that apply. This is simply a reminder of what\nwe will require before merging your code._\n\n- [ ] Lint and unit tests (if any) pass locally with my changes\n- [ ] I have added tests that prove my fix is effective or that my\nfeature works\n- [ ] I have added necessary documentation (if appropriate)\n- [ ] All commits have been signed for\n[DCO](https://developercertificate.org/)\n\n### Additional comments\n\n---------\n\nSigned-off-by: Bruma <andres.brumovsky@ekumenlabs.com>\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>\nCo-authored-by: Michel Hidalgo <michel@ekumenlabs.com>",
+      "files_changed": 23,
+      "additions": 328,
+      "deletions": 128,
+      "commit_type": "docs"
+    },
+    {
+      "author": "dependabot[bot]",
+      "date": "2025-01-29T12:06:24Z",
+      "sha": "4774a98d1c4f40728cef6ce91213df52871d0721",
+      "message": ":seedling: Bump codecov/codecov-action from 3 to 5 (#462)\n\nBumps\r\n[codecov/codecov-action](https://github.com/codecov/codecov-action) from\r\n3 to 5.\r\n<details>\r\n<summary>Release notes</summary>\r\n<p><em>Sourced from <a\r\nhref=\"https://github.com/codecov/codecov-action/releases\">codecov/codecov-action's\r\nreleases</a>.</em></p>\r\n<blockquote>\r\n<h2>v5.0.0</h2>\r\n<h2>v5 Release</h2>\r\n<p><code>v5</code> of the Codecov GitHub Action will use the <a\r\nhref=\"https://github.com/codecov/wrapper\">Codecov Wrapper</a> to\r\nencapsulate the <a\r\nhref=\"https://github.com/codecov/codecov-cli\">CLI</a>. This will help\r\nensure that the Action gets updates quicker.</p>\r\n<h3>Migration Guide</h3>\r\n<p>The <code>v5</code> release also coincides with the opt-out feature\r\nfor tokens for public repositories. In the <code>Global Upload\r\nToken</code> section of the settings page of an organization in\r\ncodecov.io, you can set the ability for Codecov to receive a coverage\r\nreports from any source. This will allow contributors or other members\r\nof a repository to upload without needing access to the Codecov token.\r\nFor more details see <a\r\nhref=\"https://docs.codecov.com/docs/codecov-tokens#uploading-without-a-token\">how\r\nto upload without a token</a>.</p>\r\n<blockquote>\r\n<p>[!WARNING]<br />\r\n<strong>The following arguments have been changed</strong></p>\r\n<ul>\r\n<li><code>file</code> (this has been deprecated in favor of\r\n<code>files</code>)</li>\r\n<li><code>plugin</code> (this has been deprecated in favor of\r\n<code>plugins</code>)</li>\r\n</ul>\r\n</blockquote>\r\n<p>The following arguments have been added:</p>\r\n<ul>\r\n<li><code>binary</code></li>\r\n<li><code>gcov_args</code></li>\r\n<li><code>gcov_executable</code></li>\r\n<li><code>gcov_ignore</code></li>\r\n<li><code>gcov_include</code></li>\r\n<li><code>report_type</code></li>\r\n<li><code>skip_validation</code></li>\r\n<li><code>swift_project</code></li>\r\n</ul>\r\n<p>You can see their usage in the <code>action.yml</code> <a\r\nhref=\"https://github.com/codecov/codecov-action/blob/main/action.yml\">file</a>.</p>\r\n<h2>What's Changed</h2>\r\n<ul>\r\n<li>chore(deps): bump to eslint9+ and remove eslint-config-google by <a\r\nhref=\"https://github.com/thomasrockhu-codecov\"><code>@​thomasrockhu-codecov</code></a>\r\nin <a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/pull/1591\">codecov/codecov-action#1591</a></li>\r\n<li>build(deps-dev): bump <code>@​octokit/webhooks-types</code> from\r\n7.5.1 to 7.6.1 by <a\r\nhref=\"https://github.com/dependabot\"><code>@​dependabot</code></a> in <a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/pull/1595\">codecov/codecov-action#1595</a></li>\r\n<li>build(deps-dev): bump typescript from 5.6.2 to 5.6.3 by <a\r\nhref=\"https://github.com/dependabot\"><code>@​dependabot</code></a> in <a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/pull/1604\">codecov/codecov-action#1604</a></li>\r\n<li>build(deps-dev): bump <code>@​typescript-eslint/parser</code> from\r\n8.8.0 to 8.8.1 by <a\r\nhref=\"https://github.com/dependabot\"><code>@​dependabot</code></a> in <a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/pull/1601\">codecov/codecov-action#1601</a></li>\r\n<li>build(deps): bump <code>@​actions/core</code> from 1.11.0 to 1.11.1\r\nby <a href=\"https://github.com/dependabot\"><code>@​dependabot</code></a>\r\nin <a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/pull/1597\">codecov/codecov-action#1597</a></li>\r\n<li>build(deps): bump github/codeql-action from 3.26.9 to 3.26.11 by <a\r\nhref=\"https://github.com/dependabot\"><code>@​dependabot</code></a> in <a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/pull/1596\">codecov/codecov-action#1596</a></li>\r\n<li>build(deps-dev): bump <code>@​typescript-eslint/eslint-plugin</code>\r\nfrom 8.8.0 to 8.8.1 by <a\r\nhref=\"https://github.com/dependabot\"><code>@​dependabot</code></a> in <a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/pull/1600\">codecov/codecov-action#1600</a></li>\r\n<li>build(deps-dev): bump eslint from 9.11.1 to 9.12.0 by <a\r\nhref=\"https://github.com/dependabot\"><code>@​dependabot</code></a> in <a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/pull/1598\">codecov/codecov-action#1598</a></li>\r\n<li>build(deps): bump github/codeql-action from 3.26.11 to 3.26.12 by <a\r\nhref=\"https://github.com/dependabot\"><code>@​dependabot</code></a> in <a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/pull/1609\">codecov/codecov-action#1609</a></li>\r\n<li>build(deps): bump actions/checkout from 4.2.0 to 4.2.1 by <a\r\nhref=\"https://github.com/dependabot\"><code>@​dependabot</code></a> in <a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/pull/1608\">codecov/codecov-action#1608</a></li>\r\n<li>build(deps): bump actions/upload-artifact from 4.4.0 to 4.4.3 by <a\r\nhref=\"https://github.com/dependabot\"><code>@​dependabot</code></a> in <a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/pull/1607\">codecov/codecov-action#1607</a></li>\r\n<li>build(deps-dev): bump <code>@​typescript-eslint/parser</code> from\r\n8.8.1 to 8.9.0 by <a\r\nhref=\"https://github.com/dependabot\"><code>@​dependabot</code></a> in <a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/pull/1612\">codecov/codecov-action#1612</a></li>\r\n<li>build(deps-dev): bump <code>@​typescript-eslint/eslint-plugin</code>\r\nfrom 8.8.1 to 8.9.0 by <a\r\nhref=\"https://github.com/dependabot\"><code>@​dependabot</code></a> in <a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/pull/1611\">codecov/codecov-action#1611</a></li>\r\n<li>build(deps-dev): bump <code>@​typescript-eslint/eslint-plugin</code>\r\nfrom 8.9.0 to 8.10.0 by <a\r\nhref=\"https://github.com/dependabot\"><code>@​dependabot</code></a> in <a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/pull/1615\">codecov/codecov-action#1615</a></li>\r\n<li>build(deps-dev): bump eslint from 9.12.0 to 9.13.0 by <a\r\nhref=\"https://github.com/dependabot\"><code>@​dependabot</code></a> in <a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/pull/1618\">codecov/codecov-action#1618</a></li>\r\n<li>build(deps): bump github/codeql-action from 3.26.12 to 3.26.13 by <a\r\nhref=\"https://github.com/dependabot\"><code>@​dependabot</code></a> in <a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/pull/1617\">codecov/codecov-action#1617</a></li>\r\n<li>build(deps-dev): bump <code>@​typescript-eslint/parser</code> from\r\n8.9.0 to 8.10.0 by <a\r\nhref=\"https://github.com/dependabot\"><code>@​dependabot</code></a> in <a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/pull/1614\">codecov/codecov-action#1614</a></li>\r\n<li>build(deps-dev): bump <code>@​typescript-eslint/eslint-plugin</code>\r\nfrom 8.10.0 to 8.11.0 by <a\r\nhref=\"https://github.com/dependabot\"><code>@​dependabot</code></a> in <a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/pull/1620\">codecov/codecov-action#1620</a></li>\r\n<li>build(deps-dev): bump <code>@​typescript-eslint/parser</code> from\r\n8.10.0 to 8.11.0 by <a\r\nhref=\"https://github.com/dependabot\"><code>@​dependabot</code></a> in <a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/pull/1619\">codecov/codecov-action#1619</a></li>\r\n<li>build(deps-dev): bump <code>@​types/jest</code> from 29.5.13 to\r\n29.5.14 by <a\r\nhref=\"https://github.com/dependabot\"><code>@​dependabot</code></a> in <a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/pull/1622\">codecov/codecov-action#1622</a></li>\r\n<li>build(deps): bump actions/checkout from 4.2.1 to 4.2.2 by <a\r\nhref=\"https://github.com/dependabot\"><code>@​dependabot</code></a> in <a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/pull/1625\">codecov/codecov-action#1625</a></li>\r\n<li>build(deps): bump github/codeql-action from 3.26.13 to 3.27.0 by <a\r\nhref=\"https://github.com/dependabot\"><code>@​dependabot</code></a> in <a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/pull/1624\">codecov/codecov-action#1624</a></li>\r\n<li>build(deps-dev): bump <code>@​typescript-eslint/eslint-plugin</code>\r\nfrom 8.11.0 to 8.12.1 by <a\r\nhref=\"https://github.com/dependabot\"><code>@​dependabot</code></a> in <a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/pull/1626\">codecov/codecov-action#1626</a></li>\r\n<li>build(deps-dev): bump <code>@​typescript-eslint/eslint-plugin</code>\r\nfrom 8.12.1 to 8.12.2 by <a\r\nhref=\"https://github.com/dependabot\"><code>@​dependabot</code></a> in <a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/pull/1629\">codecov/codecov-action#1629</a></li>\r\n</ul>\r\n<!-- raw HTML omitted -->\r\n</blockquote>\r\n<p>... (truncated)</p>\r\n</details>\r\n<details>\r\n<summary>Changelog</summary>\r\n<p><em>Sourced from <a\r\nhref=\"https://github.com/codecov/codecov-action/blob/main/CHANGELOG.md\">codecov/codecov-action's\r\nchangelog</a>.</em></p>\r\n<blockquote>\r\n<h3>v5 Release</h3>\r\n<p><code>v5</code> of the Codecov GitHub Action will use the <a\r\nhref=\"https://github.com/codecov/wrapper\">Codecov Wrapper</a> to\r\nencapsulate the <a\r\nhref=\"https://github.com/codecov/codecov-cli\">CLI</a>. This will help\r\nensure that the Action gets updates quicker.</p>\r\n<h3>Migration Guide</h3>\r\n<p>The <code>v5</code> release also coincides with the opt-out feature\r\nfor tokens for public repositories. In the <code>Global Upload\r\nToken</code> section of the settings page of an organization in\r\ncodecov.io, you can set the ability for Codecov to receive a coverage\r\nreports from any source. This will allow contributors or other members\r\nof a repository to upload without needing access to the Codecov token.\r\nFor more details see <a\r\nhref=\"https://docs.codecov.com/docs/codecov-tokens#uploading-without-a-token\">how\r\nto upload without a token</a>.</p>\r\n<blockquote>\r\n<p>[!WARNING]\r\n<strong>The following arguments have been changed</strong></p>\r\n<ul>\r\n<li><code>file</code> (this has been deprecated in favor of\r\n<code>files</code>)</li>\r\n<li><code>plugin</code> (this has been deprecated in favor of\r\n<code>plugins</code>)</li>\r\n</ul>\r\n</blockquote>\r\n<p>The following arguments have been added:</p>\r\n<ul>\r\n<li><code>binary</code></li>\r\n<li><code>gcov_args</code></li>\r\n<li><code>gcov_executable</code></li>\r\n<li><code>gcov_ignore</code></li>\r\n<li><code>gcov_include</code></li>\r\n<li><code>report_type</code></li>\r\n<li><code>skip_validation</code></li>\r\n<li><code>swift_project</code></li>\r\n</ul>\r\n<p>You can see their usage in the <code>action.yml</code> <a\r\nhref=\"https://github.com/codecov/codecov-action/blob/main/action.yml\">file</a>.</p>\r\n<h2>What's Changed</h2>\r\n<ul>\r\n<li>chore(deps): bump to eslint9+ and remove eslint-config-google by <a\r\nhref=\"https://github.com/thomasrockhu-codecov\"><code>@​thomasrockhu-codecov</code></a>\r\nin <a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/pull/1591\">codecov/codecov-action#1591</a></li>\r\n<li>build(deps-dev): bump <code>@​octokit/webhooks-types</code> from\r\n7.5.1 to 7.6.1 by <a\r\nhref=\"https://github.com/dependabot\"><code>@​dependabot</code></a> in <a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/pull/1595\">codecov/codecov-action#1595</a></li>\r\n<li>build(deps-dev): bump typescript from 5.6.2 to 5.6.3 by <a\r\nhref=\"https://github.com/dependabot\"><code>@​dependabot</code></a> in <a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/pull/1604\">codecov/codecov-action#1604</a></li>\r\n<li>build(deps-dev): bump <code>@​typescript-eslint/parser</code> from\r\n8.8.0 to 8.8.1 by <a\r\nhref=\"https://github.com/dependabot\"><code>@​dependabot</code></a> in <a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/pull/1601\">codecov/codecov-action#1601</a></li>\r\n<li>build(deps): bump <code>@​actions/core</code> from 1.11.0 to 1.11.1\r\nby <a href=\"https://github.com/dependabot\"><code>@​dependabot</code></a>\r\nin <a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/pull/1597\">codecov/codecov-action#1597</a></li>\r\n<li>build(deps): bump github/codeql-action from 3.26.9 to 3.26.11 by <a\r\nhref=\"https://github.com/dependabot\"><code>@​dependabot</code></a> in <a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/pull/1596\">codecov/codecov-action#1596</a></li>\r\n<li>build(deps-dev): bump <code>@​typescript-eslint/eslint-plugin</code>\r\nfrom 8.8.0 to 8.8.1 by <a\r\nhref=\"https://github.com/dependabot\"><code>@​dependabot</code></a> in <a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/pull/1600\">codecov/codecov-action#1600</a></li>\r\n<li>build(deps-dev): bump eslint from 9.11.1 to 9.12.0 by <a\r\nhref=\"https://github.com/dependabot\"><code>@​dependabot</code></a> in <a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/pull/1598\">codecov/codecov-action#1598</a></li>\r\n<li>build(deps): bump github/codeql-action from 3.26.11 to 3.26.12 by <a\r\nhref=\"https://github.com/dependabot\"><code>@​dependabot</code></a> in <a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/pull/1609\">codecov/codecov-action#1609</a></li>\r\n<li>build(deps): bump actions/checkout from 4.2.0 to 4.2.1 by <a\r\nhref=\"https://github.com/dependabot\"><code>@​dependabot</code></a> in <a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/pull/1608\">codecov/codecov-action#1608</a></li>\r\n<li>build(deps): bump actions/upload-artifact from 4.4.0 to 4.4.3 by <a\r\nhref=\"https://github.com/dependabot\"><code>@​dependabot</code></a> in <a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/pull/1607\">codecov/codecov-action#1607</a></li>\r\n<li>build(deps-dev): bump <code>@​typescript-eslint/parser</code> from\r\n8.8.1 to 8.9.0 by <a\r\nhref=\"https://github.com/dependabot\"><code>@​dependabot</code></a> in <a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/pull/1612\">codecov/codecov-action#1612</a></li>\r\n<li>build(deps-dev): bump <code>@​typescript-eslint/eslint-plugin</code>\r\nfrom 8.8.1 to 8.9.0 by <a\r\nhref=\"https://github.com/dependabot\"><code>@​dependabot</code></a> in <a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/pull/1611\">codecov/codecov-action#1611</a></li>\r\n<li>build(deps-dev): bump <code>@​typescript-eslint/eslint-plugin</code>\r\nfrom 8.9.0 to 8.10.0 by <a\r\nhref=\"https://github.com/dependabot\"><code>@​dependabot</code></a> in <a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/pull/1615\">codecov/codecov-action#1615</a></li>\r\n<li>build(deps-dev): bump eslint from 9.12.0 to 9.13.0 by <a\r\nhref=\"https://github.com/dependabot\"><code>@​dependabot</code></a> in <a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/pull/1618\">codecov/codecov-action#1618</a></li>\r\n<li>build(deps): bump github/codeql-action from 3.26.12 to 3.26.13 by <a\r\nhref=\"https://github.com/dependabot\"><code>@​dependabot</code></a> in <a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/pull/1617\">codecov/codecov-action#1617</a></li>\r\n<li>build(deps-dev): bump <code>@​typescript-eslint/parser</code> from\r\n8.9.0 to 8.10.0 by <a\r\nhref=\"https://github.com/dependabot\"><code>@​dependabot</code></a> in <a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/pull/1614\">codecov/codecov-action#1614</a></li>\r\n<li>build(deps-dev): bump <code>@​typescript-eslint/eslint-plugin</code>\r\nfrom 8.10.0 to 8.11.0 by <a\r\nhref=\"https://github.com/dependabot\"><code>@​dependabot</code></a> in <a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/pull/1620\">codecov/codecov-action#1620</a></li>\r\n<li>build(deps-dev): bump <code>@​typescript-eslint/parser</code> from\r\n8.10.0 to 8.11.0 by <a\r\nhref=\"https://github.com/dependabot\"><code>@​dependabot</code></a> in <a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/pull/1619\">codecov/codecov-action#1619</a></li>\r\n<li>build(deps-dev): bump <code>@​types/jest</code> from 29.5.13 to\r\n29.5.14 by <a\r\nhref=\"https://github.com/dependabot\"><code>@​dependabot</code></a> in <a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/pull/1622\">codecov/codecov-action#1622</a></li>\r\n<li>build(deps): bump actions/checkout from 4.2.1 to 4.2.2 by <a\r\nhref=\"https://github.com/dependabot\"><code>@​dependabot</code></a> in <a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/pull/1625\">codecov/codecov-action#1625</a></li>\r\n<li>build(deps): bump github/codeql-action from 3.26.13 to 3.27.0 by <a\r\nhref=\"https://github.com/dependabot\"><code>@​dependabot</code></a> in <a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/pull/1624\">codecov/codecov-action#1624</a></li>\r\n<li>build(deps-dev): bump <code>@​typescript-eslint/eslint-plugin</code>\r\nfrom 8.11.0 to 8.12.1 by <a\r\nhref=\"https://github.com/dependabot\"><code>@​dependabot</code></a> in <a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/pull/1626\">codecov/codecov-action#1626</a></li>\r\n<li>build(deps-dev): bump <code>@​typescript-eslint/eslint-plugin</code>\r\nfrom 8.12.1 to 8.12.2 by <a\r\nhref=\"https://github.com/dependabot\"><code>@​dependabot</code></a> in <a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/pull/1629\">codecov/codecov-action#1629</a></li>\r\n<li>build(deps-dev): bump <code>@​typescript-eslint/parser</code> from\r\n8.11.0 to 8.12.2 by <a\r\nhref=\"https://github.com/dependabot\"><code>@​dependabot</code></a> in <a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/pull/1628\">codecov/codecov-action#1628</a></li>\r\n</ul>\r\n<!-- raw HTML omitted -->\r\n</blockquote>\r\n<p>... (truncated)</p>\r\n</details>\r\n<details>\r\n<summary>Commits</summary>\r\n<ul>\r\n<li><a\r\nhref=\"https://github.com/codecov/codecov-action/commit/13ce06bfc6bbe3ecf90edbbf1bc32fe5978ca1d3\"><code>13ce06b</code></a>\r\nchore(release): bump to 5.3.1</li>\r\n<li><a\r\nhref=\"https://github.com/codecov/codecov-action/commit/3e260409808a9d6e480e7d31aed41224fbcbf201\"><code>3e26040</code></a>\r\nfix: add docs and copy over dist (<a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/issues/1752\">#1752</a>)</li>\r\n<li><a\r\nhref=\"https://github.com/codecov/codecov-action/commit/0da7aa657d958d32c117fc47e1f977e7524753c7\"><code>0da7aa6</code></a>\r\nchore(release): 5.3.0 (<a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/issues/1751\">#1751</a>)</li>\r\n<li><a\r\nhref=\"https://github.com/codecov/codecov-action/commit/1ca7ce65df9d8b02c16d05c1749d031b9b0627b4\"><code>1ca7ce6</code></a>\r\nchore(release): wrapper -0.1.0 (<a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/issues/1750\">#1750</a>)</li>\r\n<li><a\r\nhref=\"https://github.com/codecov/codecov-action/commit/65baa5fcb69d85c3bba6323fd1fbc7598857b44f\"><code>65baa5f</code></a>\r\nUpdate README with reqs (<a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/issues/1749\">#1749</a>)</li>\r\n<li><a\r\nhref=\"https://github.com/codecov/codecov-action/commit/5a605bd92782ce0810fa3b8acc235c921b497052\"><code>5a605bd</code></a>\r\nchore(release): bump to 5.2.0 (<a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/issues/1748\">#1748</a>)</li>\r\n<li><a\r\nhref=\"https://github.com/codecov/codecov-action/commit/5825942583afb2414b3c7097ffae795c7cb4c042\"><code>5825942</code></a>\r\nFix typo in README (<a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/issues/1747\">#1747</a>)</li>\r\n<li><a\r\nhref=\"https://github.com/codecov/codecov-action/commit/b1a63834ce744b09ffd721206f6874b967bd8a07\"><code>b1a6383</code></a>\r\nTh/add commands (<a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/issues/1745\">#1745</a>)</li>\r\n<li><a\r\nhref=\"https://github.com/codecov/codecov-action/commit/6c5b693a58b15cefda3a7403bf51de71c223ef00\"><code>6c5b693</code></a>\r\nuse correct audience when requesting oidc token (<a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/issues/1744\">#1744</a>)</li>\r\n<li><a\r\nhref=\"https://github.com/codecov/codecov-action/commit/ad45165bd4a83d2b1f3765391b25169a62face76\"><code>ad45165</code></a>\r\nbuild(deps): bump github/codeql-action from 3.27.9 to 3.28.1 (<a\r\nhref=\"https://redirect.github.com/codecov/codecov-action/issues/1742\">#1742</a>)</li>\r\n<li>Additional commits viewable in <a\r\nhref=\"https://github.com/codecov/codecov-action/compare/v3...v5\">compare\r\nview</a></li>\r\n</ul>\r\n</details>\r\n<br />\r\n\r\n\r\n[![Dependabot compatibility\r\nscore](https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=codecov/codecov-action&package-manager=github_actions&previous-version=3&new-version=5)](https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compatibility-scores)\r\n\r\nDependabot will resolve any conflicts with this PR as long as you don't\r\nalter it yourself. You can also trigger a rebase manually by commenting\r\n`@dependabot rebase`.\r\n\r\n[//]: # (dependabot-automerge-start)\r\n[//]: # (dependabot-automerge-end)\r\n\r\n---\r\n\r\n<details>\r\n<summary>Dependabot commands and options</summary>\r\n<br />\r\n\r\nYou can trigger Dependabot actions by commenting on this PR:\r\n- `@dependabot rebase` will rebase this PR\r\n- `@dependabot recreate` will recreate this PR, overwriting any edits\r\nthat have been made to it\r\n- `@dependabot merge` will merge this PR after your CI passes on it\r\n- `@dependabot squash and merge` will squash and merge this PR after\r\nyour CI passes on it\r\n- `@dependabot cancel merge` will cancel a previously requested merge\r\nand block automerging\r\n- `@dependabot reopen` will reopen this PR if it is closed\r\n- `@dependabot close` will close this PR and stop Dependabot recreating\r\nit. You can achieve the same result by closing it manually\r\n- `@dependabot show <dependency name> ignore conditions` will show all\r\nof the ignore conditions of the specified dependency\r\n- `@dependabot ignore this major version` will close this PR and stop\r\nDependabot creating any more for this major version (unless you reopen\r\nthe PR or upgrade to it yourself)\r\n- `@dependabot ignore this minor version` will close this PR and stop\r\nDependabot creating any more for this minor version (unless you reopen\r\nthe PR or upgrade to it yourself)\r\n- `@dependabot ignore this dependency` will close this PR and stop\r\nDependabot creating any more for this dependency (unless you reopen the\r\nPR or upgrade to it yourself)\r\n\r\n\r\n</details>\r\n\r\nSigned-off-by: dependabot[bot] <support@github.com>\r\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>\r\nCo-authored-by: Michel Hidalgo <michel@ekumenlabs.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "ci"
+    },
+    {
+      "author": "PaulVerhoeckx",
+      "date": "2026-01-09T11:44:37Z",
+      "sha": "f97aeb731b2fcd2a963076b7f5868e4ce5206f7b",
+      "message": "Add random probability term to landmark sensor model (#544)\n\nSigned-off-by: Paul Verhoeckx <paul.verhoeckx@nobleo.nl>",
+      "files_changed": 2,
+      "additions": 19,
+      "deletions": 7,
+      "commit_type": "code"
+    },
+    {
+      "author": "nahueespinosa",
+      "date": "2022-10-24T12:53:55Z",
+      "sha": "2b24b3a08b6b283f4c25dd95112713bf413d5c50",
+      "message": "First commit",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "hidmic",
+      "date": "2023-05-05T13:26:28Z",
+      "sha": "70a6815a4302fa474b99427ee9820e4920062416",
+      "message": "Extend development containers (#173)\n\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>",
+      "files_changed": 4,
+      "additions": 97,
+      "deletions": 6,
+      "commit_type": "docs"
+    },
+    {
+      "author": "xaru8145",
+      "date": "2025-08-21T11:07:33Z",
+      "sha": "78afcd2de1278417480b33a589b8716038503a3b",
+      "message": "Add missing backtick in ROS 2 documentation (#495)\n\n### Proposed changes\n\nThis PR fixes a ROS 2 documentation issue with the visualization of\n`lambda_short` parameter by adding a missing backtick.\n\nIssue: \n<img width=\"598\" height=\"123\" alt=\"image\"\nsrc=\"https://github.com/user-attachments/assets/a291b751-2afe-4594-aed3-b3bd3363d2d5\"\n/>\n\n#### Type of change\n\n- [x] 🐛 Bugfix (change which fixes an issue)\n- [ ] 🚀 Feature (change which adds functionality)\n- [ ] 📚 Documentation (change which fixes or extends documentation)\n\n💥 **Breaking change!** _Explain why a non-backwards compatible change is\nnecessary or remove this line entirely if not applicable._\n\n### Checklist\n\n_Put an `x` in the boxes that apply. This is simply a reminder of what\nwe will require before merging your code._\n\n- [ ] Lint and unit tests (if any) pass locally with my changes\n- [ ] I have added tests that prove my fix is effective or that my\nfeature works\n- [ ] I have added necessary documentation (if appropriate)\n- [x] All commits have been signed for\n[DCO](https://developercertificate.org/)\n\n### Additional comments\n\n_Anything worth mentioning to the reviewers._\n\nSigned-off-by: Xavier Ruiz <xavier.ruiz@ekumenlabs.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "DPR00",
+      "date": "2024-08-13T01:59:22Z",
+      "sha": "669662e773d9671831f0fa3d3f82f1511e40ddba",
+      "message": "Add a reminder in docs/installation: source the environment (#423)\n\n### Proposed changes\r\n\r\nI added a little reminder about sourcing the environment after building\r\nthe workspace in docs/installation.md.\r\n\r\n#### Type of change\r\n\r\n- [ ] 🐛 Bugfix (change which fixes an issue)\r\n- [ ] 🚀 Feature (change which adds functionality)\r\n- [x] 📚 Documentation (change which fixes or extends documentation)\r\n\r\n### Checklist\r\n\r\n- [ ] Lint and unit tests (if any) pass locally with my changes\r\n- [ ] I have added tests that prove my fix is effective or that my\r\nfeature works\r\n- [ ] I have added necessary documentation (if appropriate)\r\n- [ ] All commits have been signed for\r\n[DCO](https://developercertificate.org/)\r\n\r\n### Additional comments\r\n\r\nI noticed that `DEVELOPING.md` is not in the documentation webpage. Is\r\nthere any reason for this? If not, I could add it.",
+      "files_changed": 1,
+      "additions": 18,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "fbattocchia",
+      "date": "2025-04-24T15:11:17Z",
+      "sha": "876fc117c7de47cfc7692b8c0f61e09257418189",
+      "message": "Add likelihood prob sensor model and enable Beluga's flavour of clustering (#476)\n\n### Proposed changes\n\nThe `LikelihoodFieldProb` sensor model is incorporated, based on the\nimplementation presented in the book Probabilistic Robotics. To achieve\nthis, the `LikelihoodFieldModelCommon` class is created, which\nimplements the Likelihood Field shared by both the `LikelihoodFieldProb`\nand `LikelihoodField` models.\n\nThe `LikelihoodFieldProb` model, in addition to following the book's\nimplementation, includes the summation of the logarithm of probabilities\nto prevent underflow when multiplying numerous small probabilities.\nAdditionally, the Cluster-Based Estimation algorithm is integrated,\nenhancing the model's robustness against unmapped objects.\n\nFurthermore, unit tests are implemented for the `LikelihoodFieldProb`\nsensor model.\n\n#### Type of change\n\n- [ ] 🐛 Bugfix (change which fixes an issue)\n- [x] 🚀 Feature (change which adds functionality)\n- [ ] 📚 Documentation (change which fixes or extends documentation)\n\n### Checklist\n\n_Put an `x` in the boxes that apply. This is simply a reminder of what\nwe will require before merging your code._\n\n- [x] Lint and unit tests (if any) pass locally with my changes\n- [ ] I have added tests that prove my fix is effective or that my\nfeature works\n- [ ] I have added necessary documentation (if appropriate)\n- [ ] All commits have been signed for\n[DCO](https://developercertificate.org/)\n\nSigned-off-by: Pablo Vela <pablovela@naver.com>",
+      "files_changed": 12,
+      "additions": 553,
+      "deletions": 147,
+      "commit_type": "docs"
+    },
+    {
+      "author": "pvela2017",
+      "date": "2024-10-01T20:57:36Z",
+      "sha": "3135ee369e97393b5c7f4f8fd784717b5f0d310d",
+      "message": "Add pointcloud API contract and ROS interface (#431)\n\n### Proposed changes\r\n\r\nAdded a ROS point cloud interface for float data type and it respective\r\ntestcase\r\n\r\n#### Type of change\r\n\r\n- [ ] 🐛 Bugfix (change which fixes an issue)\r\n- [x] 🚀 Feature (change which adds functionality)\r\n- [ ] 📚 Documentation (change which fixes or extends documentation)\r\n\r\n\r\n### Checklist\r\n\r\n_Put an `x` in the boxes that apply. This is simply a reminder of what\r\nwe will require before merging your code._\r\n\r\n- [x] Lint and unit tests (if any) pass locally with my changes\r\n- [x] I have added tests that prove my fix is effective or that my\r\nfeature works\r\n- [x] I have added necessary documentation (if appropriate)\r\n- [x] All commits have been signed for\r\n[DCO](https://developercertificate.org/)\r\n\r\n---------\r\n\r\nSigned-off-by: Pablo Vela <pablovela@naver.com>\r\nCo-authored-by: Michel Hidalgo <michel@ekumenlabs.com>",
+      "files_changed": 11,
+      "additions": 1240,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "glpuga",
+      "date": "2023-01-16T19:54:03Z",
+      "sha": "a3866ebdef7716d903a7a5bf2d4ea6b892b0ade8",
+      "message": "Export AMCL as a loadable component (#63)\n\n- Complete configuration in CMakeList to export the node as a component.\r\n- Add an example launchfile to launch as a component.\r\n\r\nSigned-off-by: Gerardo Puga <glpuga@ekumenlabs.com>",
+      "files_changed": 2,
+      "additions": 124,
+      "deletions": 5,
+      "commit_type": "docs"
+    },
+    {
+      "author": "marcoshuck",
+      "date": "2025-01-27T18:11:57Z",
+      "sha": "bf8731ac932b5ad746e50a19ef26627611d343b7",
+      "message": "Add dependabot config for github actions (#459)\n\n### Proposed changes\r\n\r\nOutdated GitHub Actions are causing pipeline failures. This commit\r\nintroduces dependabot to automatically alert us of available updates,\r\nensuring our workflows remain stable and secure.\r\n\r\n\r\n#### Type of change\r\n\r\n- [ ] 🐛 Bugfix (change which fixes an issue)\r\n- [x] 🚀 Feature (change which adds functionality)\r\n- [ ] 📚 Documentation (change which fixes or extends documentation)\r\n\r\n\r\n### Checklist\r\n\r\n_Put an `x` in the boxes that apply. This is simply a reminder of what\r\nwe will require before merging your code._\r\n\r\n- [ ] Lint and unit tests (if any) pass locally with my changes\r\n- [ ] I have added tests that prove my fix is effective or that my\r\nfeature works\r\n- [ ] I have added necessary documentation (if appropriate)\r\n- [ ] All commits have been signed for\r\n[DCO](https://developercertificate.org/)\r\n\r\n---------\r\n\r\nSigned-off-by: Marcos Huck <marcoshuck@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "Fernando-Sanz",
+      "date": "2025-01-23T17:11:42Z",
+      "sha": "707b86487cd77ee3223c4d44f5fb55e654276569",
+      "message": "Ndt map visualization (#453)\n\n### Proposed changes\r\n\r\nNDT map visualization publisher. It uses ellipsoids to represent\r\nobstacles placed using the mean and the covariance matrix of each cell.\r\n\r\n\r\n![ndt_map_visualization_enlarged](https://github.com/user-attachments/assets/a0cf6859-3862-47a1-8e14-ee4f72705938)\r\n>Obstacle representation made with green ellipsoids (scale factor is\r\nused).\r\n\r\n#### Type of change\r\n\r\n- [ ] 🐛 Bugfix (change which fixes an issue)\r\n- [x] 🚀 Feature (change which adds functionality)\r\n- [ ] 📚 Documentation (change which fixes or extends documentation)\r\n\r\n### Checklist\r\n\r\n- [ ] Lint and unit tests (if any) pass locally with my changes\r\n- [ ] I have added tests that prove my fix is effective or that my\r\nfeature works\r\n- [x] I have added necessary documentation (if appropriate)\r\n- [x] All commits have been signed for\r\n[DCO](https://developercertificate.org/)\r\n\r\n---------\r\n\r\nSigned-off-by: Fernando <sanz.fernando172@gmail.com>\r\nSigned-off-by: Fernando-Sanz <sanz.fernando172@gmail.com>",
+      "files_changed": 6,
+      "additions": 285,
+      "deletions": 12,
+      "commit_type": "docs"
+    },
+    {
+      "author": "serraramiro1",
+      "date": "2023-03-20T13:38:32Z",
+      "sha": "20232d93fdd9a825d15cb6bd7c25b7c5aa21ea54",
+      "message": "Add strong typedef for particle properties (#144)\n\nFixes #136 \r\n\r\nSummary\r\n\r\n- Adds strong typedef helper\r\n- Both Cluster and Weights are unique types\r\n\r\nSigned-off-by: Ramiro Serra <serraramiro@ekumenlabs.com>",
+      "files_changed": 10,
+      "additions": 178,
+      "deletions": 33,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Alondruck",
+      "date": "2024-05-23T11:47:11Z",
+      "sha": "91347918b38cc17fc7cec080aa2d4bd0a5f32d81",
+      "message": "Add 1D particle filter tutorial code (#362)\n\n### Proposed changes\r\n\r\nRelated to #305, split from #340. \r\n\r\n#### Type of change\r\n\r\n- [ ] 🐛 Bugfix (change which fixes an issue)\r\n- [x] 🚀 Feature (change which adds functionality)\r\n- [ ] 📚 Documentation (change which fixes or extends documentation)\r\n\r\n### Checklist\r\n\r\n- [x] Lint and unit tests (if any) pass locally with my changes\r\n- [x] I have added tests that prove my fix is effective or that my\r\nfeature works\r\n- [x] I have added necessary documentation (if appropriate)\r\n- [x] All commits have been signed for\r\n[DCO](https://developercertificate.org/)\r\n\r\n---------\r\n\r\nSigned-off-by: Alon Druck <alon.druck@ekumenlabs.com>",
+      "files_changed": 6,
+      "additions": 429,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "olmerg",
+      "date": "2023-02-13T14:23:42Z",
+      "sha": "7c8dcefc2a748b9f09a17eaa8ad67546904f4479",
+      "message": "Broadcast map-to-odom transform (#81)\n\nRelated to #40.\r\n\r\nSigned-off-by: Nahuel Espinosa <nespinosa@ekumenlabs.com>\r\nCo-authored-by: Nahuel Espinosa <nespinosa@ekumenlabs.com>",
+      "files_changed": 3,
+      "additions": 12,
+      "deletions": 3,
+      "commit_type": "config"
+    },
+    {
+      "author": "AlejoAsd",
+      "date": "2023-05-10T16:03:47Z",
+      "sha": "15e2e5785e2931a77d9702c1540b399611a167a6",
+      "message": "Update CONTRIBUTING.md (#180)\n\nMinor grammar and wording changes to the CONTRIBUTING\r\nguidelines.\r\n\r\nSigned-off-by: Alejo Carballude <alejocarballude@gmail.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "manzato",
+      "date": "2023-05-09T21:00:45Z",
+      "sha": "1e05bda6c073e39e878da68cdf8a5a2555ced6f8",
+      "message": "Update pre-commit hooks (#178)\n\nSigned-off-by: Guillermo Manzato <manzato@ekumenlabs.com>",
+      "files_changed": 3,
+      "additions": 13,
+      "deletions": 14,
+      "commit_type": "config"
+    },
+    {
+      "author": "ivanpauno",
+      "date": "2023-01-06T22:04:01Z",
+      "sha": "7c5adb5101c486d0d90c7514f54a259ec832e61a",
+      "message": "Add doxygen docs for particle_filter.hpp (#47)\n\nAlso adds Doxyfile to generate docs for the `beluga` package.\r\n\r\nSigned-off-by: Ivan Santiago Paunovic <ivanpauno@ekumenlabs.com>\r\nCo-authored-by: Nahuel Espinosa <nespinosa@ekumenlabs.com>",
+      "files_changed": 5,
+      "additions": 157,
+      "deletions": 0,
+      "commit_type": "docs"
+    }
+  ]
+}

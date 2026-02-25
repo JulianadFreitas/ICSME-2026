@@ -1,0 +1,651 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T04:07:42Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros-drivers",
+    "repo": "joystick_drivers"
+  },
+  "data": [
+    {
+      "author": "JWhitleyWork",
+      "date": "2023-06-21T18:59:47Z",
+      "sha": "9b9f42ffb1bd76e8c6928e975d87f118516667eb",
+      "message": "Update CI to build for rolling and latest release on ros2 branch.",
+      "files_changed": 2,
+      "additions": 43,
+      "deletions": 5,
+      "commit_type": "config"
+    },
+    {
+      "author": "HopeCollector",
+      "date": "2024-01-04T03:28:05Z",
+      "sha": "3fbbdd01d393b9c1edbeeb53df2ab93660daaa53",
+      "message": "update readme about install dependencies (#277)",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "clalancette",
+      "date": "2018-08-07T16:25:15Z",
+      "sha": "a9e916e069a5621e39e684f850df855ddcae9845",
+      "message": "Put brackets around ROS_* macros.\n\nIn some circumstances they may be defined to empty, so we need\nto have brackets to ensure that they are syntactically valid.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "meyerj",
+      "date": "2023-10-23T16:27:19Z",
+      "sha": "a5adee5e1e997269e38feebef7ca888b23d69a73",
+      "message": "Fix compatibility with SDL versions below 2.0.18 (#273)\n\nSDL_GameControllerHasRumble() was introduced in SDL 2.0.18 only (https://github.com/libsdl-org/SDL/pull/4943).\r\n\r\nSigned-off-by: Johannes Meyer <johannes@intermodalics.eu>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "roncapat",
+      "date": "2023-10-12T21:25:10Z",
+      "sha": "f2ffeec1044e7c8b73036384053eced8be16bb19",
+      "message": "Upgrade to SDL2.0.20 (#270)\n\n* Upgrade to SDL2.0.20\r\n\r\nSigned-off-by: Patrick Roncagliolo <ronca.pat@gmail.com>",
+      "files_changed": 2,
+      "additions": 7,
+      "deletions": 10,
+      "commit_type": "docs"
+    },
+    {
+      "author": "rodericktaylor",
+      "date": "2023-09-18T16:54:21Z",
+      "sha": "b0bc9d7faace869767f1121174838fea831b2ab7",
+      "message": "Use the SDL2 Game Controller API (#258)\n\n* Use the SDL2 Game Controller API\r\n\r\nSigned-off-by: Rod Taylor <Rod.Taylor@csiro.au>\r\n\r\n* CMakeLists.txt for game_controller.\r\n\r\nSigned-off-by: Rod Taylor <Rod.Taylor@csiro.au>\r\n\r\n* Add xbox wirelss controller udev rule file.\r\n\r\nSigned-off-by: Rod <Rod.Taylor@csiro.au>\r\n\r\n---------\r\n\r\nSigned-off-by: Rod Taylor <Rod.Taylor@csiro.au>\r\nSigned-off-by: Rod <Rod.Taylor@csiro.au>",
+      "files_changed": 7,
+      "additions": 622,
+      "deletions": 19,
+      "commit_type": "docs"
+    },
+    {
+      "author": "marcbone",
+      "date": "2023-09-14T16:23:59Z",
+      "sha": "e086fb629f7ff8773ed08044eaeb196bac3ff99e",
+      "message": "fix autorepeat not being triggered when inside deadzone (#261)\n\nwhen the joystick is moved there is an SDL_Event, but when inside the deadzone the position of the joystick will not be updated. In this case should_publish remains false. However, before this commit we would not trigger the autorepeat functionality in this case.\r\n\r\nNow we trigger the autorepeat functionality everytime where we didnt update the joystick (due to deadzone) or when there was no SDL_Event.",
+      "files_changed": 1,
+      "additions": 10,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "borongyuan",
+      "date": "2023-09-14T15:59:01Z",
+      "sha": "1bc08a5c867ab04df4856dbc773e0f3f5ec63f65",
+      "message": "add option to use TwistStamped (#251)\n\nSigned-off-by: Borong Yuan <yuanborong@hotmail.com>",
+      "files_changed": 3,
+      "additions": 28,
+      "deletions": 15,
+      "commit_type": "docs"
+    },
+    {
+      "author": "chriseichmann",
+      "date": "2022-02-14T22:57:19Z",
+      "sha": "8f27d12f8fe3f078994057c0f56e5f1b274b39ec",
+      "message": "Installing libspacenav.so to lib/ for spacenav_node execution via ros2 run (#229)\n\nFixed #221\r\n\r\nSigned-off-by: Christian Eichmann <eichmann@fzi.de>",
+      "files_changed": 2,
+      "additions": 5,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "tonynajjar",
+      "date": "2023-06-16T19:57:17Z",
+      "sha": "8fff1f74b0a9ca09d20b8d318180120c70e8d0a1",
+      "message": "fix high CPU usage (#247)\n\nCo-authored-by: Testing <testing@pixel-robotics.eu>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 9,
+      "commit_type": "code"
+    },
+    {
+      "author": "stefanscherzinger",
+      "date": "2022-12-04T21:18:33Z",
+      "sha": "f4bdd5627b109eae418d512ba3b7517b4ffeb8ab",
+      "message": "Fix from-source build with missing dependencies (#242)\n\nUsing a variable for dependencies is cleaner for linking and\r\nexport.\r\n\r\nFixes this build error:\r\n```bash\r\n--- stderr: spacenav\r\nCMake Error at CMakeLists.txt:22 (add_library):\r\n  Target \"spacenav\" links to target \"rclcpp_components::component\" but the\r\n  target was not found.  Perhaps a find_package() call is missing for an\r\n  IMPORTED target, or an ALIAS target is missing?\r\n\r\n```",
+      "files_changed": 1,
+      "additions": 21,
+      "deletions": 13,
+      "commit_type": "docs"
+    },
+    {
+      "author": "sloretz",
+      "date": "2022-01-28T21:12:11Z",
+      "sha": "6e67b78c45d397efc9fd18340d4f1ef412b5a28a",
+      "message": "Install includes to include/ and misc CMake fixes (#225)\n\n* Install includes to include/ and misc CMake fixes\r\n\r\nMake sure to really declare and find all dependencies.\r\n\r\nCo-authored-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 5,
+      "additions": 152,
+      "deletions": 70,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Tiger Sachse",
+      "date": "2021-09-04T14:57:15Z",
+      "sha": "fd391501f8eb1f2824f3f8cb0e230ff7858f09bc",
+      "message": "Override device_id when device_name is provided. (#199) (#211)",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "schnili",
+      "date": "2021-02-24T21:28:21Z",
+      "sha": "0bff20a3687976df2a4c65d9ef11eceb557369e0",
+      "message": "spacenav node changed for ros2 (#194)\n\n* spacenav node changed for ros2\r\n\r\nCo-authored-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 18,
+      "additions": 668,
+      "deletions": 395,
+      "commit_type": "docs"
+    },
+    {
+      "author": "cottsay",
+      "date": "2014-04-28T06:41:36Z",
+      "sha": "ce96372bc49b67033113e08edeb977fcab7914e6",
+      "message": "Remove stray architechture_independent flags\n\nThis flag should be used for packages which do not contain\narchitecture-specific files. Compiled binaries are such a file, and\nthese packages contain them.",
+      "files_changed": 3,
+      "additions": 0,
+      "deletions": 9,
+      "commit_type": "config"
+    },
+    {
+      "author": "Kurtoid",
+      "date": "2021-02-16T19:55:32Z",
+      "sha": "d8d8b02a083e6f237c6d64d4ef277f9bf47fef63",
+      "message": "fix compile error caused by missing include (#197)\n\n* fix compile error caused by missing include\r\n\r\n`stat_vector_3d.cpp` uses `std::runtime_error`, which is included in `stdexcept`",
+      "files_changed": 2,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "aaronaaronson98",
+      "date": "2020-11-27T19:05:12Z",
+      "sha": "7560198e5253781763e87194b2f071552b7669e2",
+      "message": "Update joy_linux_node.cpp (#189)\n\nSwitch logger to warning for non-severe diagnostic reporting",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "blacksoul000",
+      "date": "2020-08-11T19:52:25Z",
+      "sha": "d8b7494a3a0f74a36170a2456a431a71f873952d",
+      "message": "Reenable diagnostics (#181)\n\nCo-authored-by: Бондарь Виталий Александрович <bondar@elins.ru>",
+      "files_changed": 3,
+      "additions": 76,
+      "deletions": 75,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Joshua Whitley",
+      "date": "2018-06-11T17:31:02Z",
+      "sha": "05c5bbd4b12c5dd5ff63551da0b4d9663177b1da",
+      "message": "Cleaning up and updating Travis.",
+      "files_changed": 1,
+      "additions": 13,
+      "deletions": 18,
+      "commit_type": "config"
+    },
+    {
+      "author": "knatsuki",
+      "date": "2020-07-07T06:18:22Z",
+      "sha": "d2ee107154a667c5c74d1d8be4c2d53714229a4e",
+      "message": "Port over Wiimote to ROS2 Foxy (#175)\n\n* Port over Wiimote to ROS2 Foxy\r\n\r\n* update PR based on feedbacks",
+      "files_changed": 37,
+      "additions": 2519,
+      "deletions": 4599,
+      "commit_type": "docs"
+    },
+    {
+      "author": "zchen24",
+      "date": "2019-12-03T23:12:21Z",
+      "sha": "1d8d9791430e4fcf485a9b10f658336f0b1649a1",
+      "message": "Minor: moved default to right indent level",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Michael Stoll",
+      "date": "2018-08-22T08:25:45Z",
+      "sha": "58f50dd3c56be7fa15b6bdce0f971ce2f3757cf1",
+      "message": "Check if wiimote is still connected.",
+      "files_changed": 2,
+      "additions": 21,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "furushchev",
+      "date": "2018-05-22T09:43:51Z",
+      "sha": "e6508a15287f1358a67e982adc48844b74b4cdbb",
+      "message": "add joy_remap and its sample",
+      "files_changed": 4,
+      "additions": 125,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "lbucklandAS",
+      "date": "2018-07-11T23:13:13Z",
+      "sha": "8cb2cbebafefd34a2a126aa12790912d65c590d5",
+      "message": "Add timestamp to all joy messages\nPrior to this commit there were some joy messages getting published that were not getting timestamps. This commit adds functionality so that all messages are published with timestamps.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "cclauss",
+      "date": "2018-07-12T21:13:07Z",
+      "sha": "0c25ab3cb3ed0669a14fdaf45d0e6159b392bbc1",
+      "message": "Modernize Python 2 code to get ready for Python 3",
+      "files_changed": 9,
+      "additions": 298,
+      "deletions": 275,
+      "commit_type": "code"
+    },
+    {
+      "author": "matt-attack",
+      "date": "2018-06-12T14:41:17Z",
+      "sha": "74d47872fdacb1b04bf91058a668d87d64cae430",
+      "message": "Merge branch 'master' into indigo-devel",
+      "files_changed": 12,
+      "additions": 185,
+      "deletions": 127,
+      "commit_type": "config"
+    },
+    {
+      "author": "Naoki Mizuno",
+      "date": "2018-04-14T18:20:18Z",
+      "sha": "00f710b9fac369b827eb8db47954c0ff99f39352",
+      "message": "Clean up whitespaces",
+      "files_changed": 1,
+      "additions": 103,
+      "deletions": 103,
+      "commit_type": "code"
+    },
+    {
+      "author": "Matthew Bries",
+      "date": "2017-08-01T22:15:40Z",
+      "sha": "65b4139aad9e7b17a0bde0ad5755a935c6d3027b",
+      "message": "Add basic force feedback over usb\n\nAddresses #89",
+      "files_changed": 1,
+      "additions": 68,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "jbohren",
+      "date": "2012-08-09T15:50:37Z",
+      "sha": "ce6cdc63a82bca155e16cffb9801acf4dddf0ad5",
+      "message": "smarter deadband behavior in spacenav_node",
+      "files_changed": 4,
+      "additions": 57,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "jbohren-hbr",
+      "date": "2017-06-28T14:19:33Z",
+      "sha": "256fad9bcc734719a94bb1fc7a39389a532ec1d1",
+      "message": "Delete mainpage.dox",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 9,
+      "commit_type": "code"
+    },
+    {
+      "author": "alab288",
+      "date": "2017-06-12T18:00:36Z",
+      "sha": "00ed9cbee83a089e3172fa1c05901256da6262f3",
+      "message": "Create README\n\nInformation about the bluez package bluez-5.37 was added. \r\nInformation about restarting bluez was also added.",
+      "files_changed": 1,
+      "additions": 10,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Dino Hüllmann",
+      "date": "2017-07-04T14:16:24Z",
+      "sha": "a4b56e4bce9bdf57a6498e37d901e7724be53ace",
+      "message": "Added dev_name parameter to select joystick by name",
+      "files_changed": 1,
+      "additions": 71,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "jprod123",
+      "date": "2017-06-23T15:58:57Z",
+      "sha": "b2b7b680d9a0523de8ec537ffdbc9a90cfadba56",
+      "message": "Changed messaging to better reflect what the script is doing\n\nFixed minor string error\n\nChanged tabs to spaces",
+      "files_changed": 2,
+      "additions": 10,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "Felix Kolbe",
+      "date": "2014-01-14T11:40:13Z",
+      "sha": "6251b910daeb4f297eedee2e670cd97eca373154",
+      "message": "Remove quit on failed root level check, part one of issue #53",
+      "files_changed": 2,
+      "additions": 10,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "130s",
+      "date": "2017-02-11T01:55:03Z",
+      "sha": "89857ccf8e9f4932363b768986d52ccdd14a3017",
+      "message": "Add CI config.",
+      "files_changed": 1,
+      "additions": 35,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "psimona",
+      "date": "2017-06-23T15:43:14Z",
+      "sha": "9ceda9dc9f482aac165fc400341ee876279431bc",
+      "message": "Added sticky buttons\n\nFixed indentation\n\nAdded CI config\n\nAdded sticky buttons\n\nChanged messaging to better reflect what the script is doing\n\nAdded wiimote testing script\n\nChanged package xml to format 2\n\nFixed Indentation\n\nFixed indentation\n\nCleaned up code block\n\nEditted argc check block\n\nRemoved unnesesary comment\n\nFormatted conditional block\n\nFixed small errors\n\nAdded comments decribing variables\n\nRemoved blank line\n\nFixed formatting issues\n\nAdd CI config.\n\nAdd CI config.",
+      "files_changed": 2,
+      "additions": 76,
+      "deletions": 34,
+      "commit_type": "docs"
+    },
+    {
+      "author": "martonmiklos",
+      "date": "2017-04-30T22:23:09Z",
+      "sha": "4c75da953911f89f3f24014025118027614518de",
+      "message": "Fixed issue when the joystick data did not got send until changed.\n\nMade the fix to error 91 an optional behavior",
+      "files_changed": 1,
+      "additions": 40,
+      "deletions": 19,
+      "commit_type": "code"
+    },
+    {
+      "author": "mvollrath",
+      "date": "2017-06-22T18:29:56Z",
+      "sha": "2deae9d94fbf72781a53f9e09dbec83115d0f867",
+      "message": "Add pairing params to wiimote_node\n\n* bluetooth_addr\n* pair_timeout",
+      "files_changed": 2,
+      "additions": 19,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mdhorn",
+      "date": "2016-02-01T18:01:25Z",
+      "sha": "7920ba5a71ea89979b86e1a823487adef5e607d3",
+      "message": "Add queue_size to remove ROS Warning\n\nAs of Indigo not passing the keyword argument queue_size will result\nin a warning being printed to the console.\n\nhttp://wiki.ros.org/rospy/Overview/Publishers%20and%20Subscribers#queue_size_Omitted",
+      "files_changed": 2,
+      "additions": 6,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "Marynel Vazquez",
+      "date": "2015-07-13T01:07:26Z",
+      "sha": "122c97a32d87f5853cb7153b75e7f4c7b590ed26",
+      "message": "fixed joy/Cmakelists for osx",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mikeferguson",
+      "date": "2014-06-27T06:50:02Z",
+      "sha": "14ea10f05df04a9a7174ebfa614da5bc9543c4b3",
+      "message": "add changelogs",
+      "files_changed": 5,
+      "additions": 38,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Gaël Ecorchard",
+      "date": "2015-02-05T14:07:06Z",
+      "sha": "3f962674abcbe3c0b1505b5a8814dac0b23f7481",
+      "message": "spacenav_node: add a scale parameter to each axis\n\nDo not apply the scale to the joy topic.",
+      "files_changed": 1,
+      "additions": 58,
+      "deletions": 30,
+      "commit_type": "code"
+    },
+    {
+      "author": "galou",
+      "date": "2014-11-20T11:09:31Z",
+      "sha": "4a9959291c36b2d5ba1b90cebb9633c8ddd35f58",
+      "message": "Add full_scale parameter and apply to offset",
+      "files_changed": 1,
+      "additions": 21,
+      "deletions": 15,
+      "commit_type": "code"
+    },
+    {
+      "author": "dawonn",
+      "date": "2013-02-28T16:03:21Z",
+      "sha": "551fb001616e14aedb2d499dbaab111ae4807bcd",
+      "message": "Prompt for sudo password when required\n\nTested on U12.10 ROS-G",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "dirk-thomas",
+      "date": "2012-12-21T01:18:08Z",
+      "sha": "5c0ebdf32188078a0acc8e3e771b38c47417a198",
+      "message": "add missing install of ps3joy scripts",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mirzashah",
+      "date": "2012-12-14T22:39:10Z",
+      "sha": "005fa9ee10a215c1de385fb31ac96724ef817e88",
+      "message": "Added in <buildtool_depend>catkin</buildtool_depend> requirement for package.xml files",
+      "files_changed": 4,
+      "additions": 8,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "vrabaud",
+      "date": "2011-10-23T22:23:06Z",
+      "sha": "ae90be063a86d3c06b5f04883406002b5e2051b8",
+      "message": "fix compilation on Oneiric\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@38086 eb33c2ac-9c88-4c90-87e0-44a10359b0c3",
+      "files_changed": 1,
+      "additions": 52,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "chadrockey",
+      "date": "2012-09-17T18:01:00Z",
+      "sha": "38c011680278ff024a94e54c4b0e890d197b932e",
+      "message": "Continuous output of accelerometer values.",
+      "files_changed": 1,
+      "additions": 10,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "mmwise",
+      "date": "2009-08-18T02:04:59Z",
+      "sha": "89b89689c5147d7b9ed99cbe6b88395f7a5b2bf0",
+      "message": "changing print statement to be more user friendly\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@22094 eb33c2ac-9c88-4c90-87e0-44a10359b0c3",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "kwc",
+      "date": "2009-09-04T23:10:08Z",
+      "sha": "735cf7c778cd73bf35d110a8a3338e826ff0ed5f",
+      "message": "migration part 1\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@23884 eb33c2ac-9c88-4c90-87e0-44a10359b0c3",
+      "files_changed": 0,
+      "additions": 0,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "mquigley",
+      "date": "2010-04-26T19:49:33Z",
+      "sha": "22534c2179f887a8c4f635692e5269eca0667908",
+      "message": "add ubuntu lucid rosdep for bluez\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@29100 eb33c2ac-9c88-4c90-87e0-44a10359b0c3",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "paepcke",
+      "date": "2009-09-01T00:51:52Z",
+      "sha": "b66a9ab5fcaabfe0b51c34007dd66b7965db7094",
+      "message": "\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@23440 eb33c2ac-9c88-4c90-87e0-44a10359b0c3",
+      "files_changed": 8,
+      "additions": 6761,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "blaise",
+      "date": "2009-11-06T20:44:03Z",
+      "sha": "17115bd2da1084a208fc6ab0dbd84f763a1a4a9b",
+      "message": "Updated ps3joy.py so that axes aren't railed at startup. But because of kernel bugs this isn't a complete fix.\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@25528 eb33c2ac-9c88-4c90-87e0-44a10359b0c3",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "gerkey",
+      "date": "2009-08-26T21:10:52Z",
+      "sha": "5fe9ace09c86c858de22cd4d3347ec4f08d48d62",
+      "message": "Added dependency comment\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@23026 eb33c2ac-9c88-4c90-87e0-44a10359b0c3",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "tfoote",
+      "date": "2009-06-23T22:39:11Z",
+      "sha": "9b725a5e5e15eadff09b629e3c644f81bf812434",
+      "message": "creating joystick_drivers stack and populating\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@17568 eb33c2ac-9c88-4c90-87e0-44a10359b0c3",
+      "files_changed": 6,
+      "additions": 196,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "wheeler",
+      "date": "2009-12-01T01:15:47Z",
+      "sha": "d2426c9d0afdde35ecf2b02e5607951e96023eb8",
+      "message": "Remove use of deprecated rosbuild macros\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@25974 eb33c2ac-9c88-4c90-87e0-44a10359b0c3",
+      "files_changed": 3,
+      "additions": 12,
+      "deletions": 12,
+      "commit_type": "docs"
+    },
+    {
+      "author": "cmeyers",
+      "date": "2009-10-14T02:06:25Z",
+      "sha": "5174b0492f6e207b34b2734192cbb1f011d89e50",
+      "message": "Added bluez to ubuntu 9.10\n\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@25158 eb33c2ac-9c88-4c90-87e0-44a10359b0c3",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "blaisegassend",
+      "date": "2009-07-27T08:27:45Z",
+      "sha": "2df7ef2a886475d60db3d1118e14ad08b626918e",
+      "message": "Initial checkin.\n\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@19708 eb33c2ac-9c88-4c90-87e0-44a10359b0c3",
+      "files_changed": 6,
+      "additions": 360,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "watts",
+      "date": "2009-09-16T00:17:56Z",
+      "sha": "0d2724a8f377e64264e7572c8a8ec2954f4ba785",
+      "message": "txjoy now polls for port opening, and detects when joystick is closed\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@24080 eb33c2ac-9c88-4c90-87e0-44a10359b0c3",
+      "files_changed": 1,
+      "additions": 47,
+      "deletions": 20,
+      "commit_type": "code"
+    },
+    {
+      "author": "eitan",
+      "date": "2009-09-10T02:54:52Z",
+      "sha": "01efd74369bb7f268acf961e678bfde16fc2a0b3",
+      "message": "Commenting out bluez dependency until it is properly added to rosdep.yaml\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/stacks/joystick_drivers/trunk@23982 eb33c2ac-9c88-4c90-87e0-44a10359b0c3",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "morgan_quigley",
+      "date": "2009-06-24T06:20:10Z",
+      "sha": "2f36c46144401be3ba9d92536b10ef5fb1598013",
+      "message": "describe what the files are in the joy package in the manifest\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@17597 eb33c2ac-9c88-4c90-87e0-44a10359b0c3",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "wattsk",
+      "date": "2009-07-28T01:18:00Z",
+      "sha": "8023630384adae009335daab87d0ed326196e1ab",
+      "message": "Made new driver for PS3 joystick and converted joy.cpp to NodeHandle API\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@19788 eb33c2ac-9c88-4c90-87e0-44a10359b0c3",
+      "files_changed": 3,
+      "additions": 280,
+      "deletions": 15,
+      "commit_type": "docs"
+    },
+    {
+      "author": "sfkwc",
+      "date": "2009-07-16T02:24:28Z",
+      "sha": "ced332ab9231bd8e9d74ba807524dea734307b66",
+      "message": "svn ignores\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@18951 eb33c2ac-9c88-4c90-87e0-44a10359b0c3",
+      "files_changed": 0,
+      "additions": 0,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "ehberger",
+      "date": "2009-08-05T18:20:13Z",
+      "sha": "d6a3fe42e24ad768937dd50d346e41e23e050f27",
+      "message": "Creating stack.xml for stacks that are missing them\n\ngit-svn-id: https://code.ros.org/svn/ros-pkg/pkg/trunk/stacks/joystick_drivers@20799 eb33c2ac-9c88-4c90-87e0-44a10359b0c3",
+      "files_changed": 1,
+      "additions": 13,
+      "deletions": 0,
+      "commit_type": "config"
+    }
+  ]
+}

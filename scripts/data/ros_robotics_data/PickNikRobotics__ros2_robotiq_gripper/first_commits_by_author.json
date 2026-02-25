@@ -1,0 +1,201 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T10:22:54Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "PickNikRobotics",
+    "repo": "ros2_robotiq_gripper"
+  },
+  "data": [
+    {
+      "author": "mosfet80",
+      "date": "2025-12-06T21:21:27Z",
+      "sha": "630ed383916e347701dad750f28e362ca7849228",
+      "message": "Update ci-format.yml (#99)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "sea-bass",
+      "date": "2023-01-03T20:10:54Z",
+      "sha": "167e85af158bb5c268dfddb137b710d930595590",
+      "message": "Add Ignition Gazebo switches to ROS2 control sim config (#8)\n\n* Add Ignition Gazebo switches to ROS2 control sim config\r\n\r\n* Fixes after testing\r\n\r\n* PR comments",
+      "files_changed": 1,
+      "additions": 53,
+      "deletions": 25,
+      "commit_type": "docs"
+    },
+    {
+      "author": "nbbrooks",
+      "date": "2025-11-29T20:19:48Z",
+      "sha": "0230e844aa8f1eb7c48c51e1aecb88021695c091",
+      "message": "Replace 'gripper_controllers' package that was removed in Kilted+ with 'parallel_gripper_controller' available in Jazzy+. (#103)\n\nUpdate ros2_controllers.yaml file to use Jazzy+ parallel_gripper_controller controller",
+      "files_changed": 2,
+      "additions": 17,
+      "deletions": 5,
+      "commit_type": "config"
+    },
+    {
+      "author": "kimoktm",
+      "date": "2025-03-14T20:18:57Z",
+      "sha": "12e623212e6891a5fcc9af94d67b07e640916394",
+      "message": "Include <algorithm> to avoid complier issues (#82)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "JafarAbdi",
+      "date": "2023-10-13T16:36:38Z",
+      "sha": "8e4025879957a7568afd870c1063010464bd3249",
+      "message": "Add robotiq f2 140 support (#18)\n\n* Move f2_85 visual/collision files to a seperate directory\r\n* Update meshes's file paths\r\n* Add f2_140 meshes and urdf files\r\n* Rename robotiq_gripper.ros2_control.xacro to f2_85.ros2_control.xacro\r\n* Fix typo f2 -> 2f\r\n* Add 2f_140 ros2_control file\r\n* Fix closed position value for 2f 140\r\n* Fix path to visual meshes for 2f_85 model\r\n* update 140 to match 85 gripper (#1)\r\n* add dummy link to rotate 2f-140 to match 2f-85\r\n\r\n---------\r\n\r\nCo-authored-by: Marq Rasmussen <marq.razz@gmail.com>",
+      "files_changed": 39,
+      "additions": 441,
+      "deletions": 21,
+      "commit_type": "code"
+    },
+    {
+      "author": "jcarpinelli-bdai",
+      "date": "2025-03-04T19:02:16Z",
+      "sha": "bb68ae57715453786ceb1ef7b48b3b2728416417",
+      "message": "Add com_port launch & xacro arguments (#75)",
+      "files_changed": 3,
+      "additions": 15,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "panagelak",
+      "date": "2024-10-18T19:34:52Z",
+      "sha": "77e60927cd5cdcc7c75b8837ac3104b826a4bb99",
+      "message": "update urdf mesh filenames to use package path (#50)\n\nCo-authored-by: Chance Cardona <41308677+chancecardona@users.noreply.github.com>",
+      "files_changed": 3,
+      "additions": 28,
+      "deletions": 28,
+      "commit_type": "ci"
+    },
+    {
+      "author": "sjahr",
+      "date": "2024-08-08T15:26:02Z",
+      "sha": "27ecc36c1fa0db53a14f814d3b1008ae2874c039",
+      "message": "Replace fake_sensor_commands with 'mock_sensor_commands (#61)",
+      "files_changed": 4,
+      "additions": 8,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "adlarkin",
+      "date": "2024-03-04T18:42:18Z",
+      "sha": "b6136bdc866a929bfb096890ca61dde1335ffd30",
+      "message": "Revert robotiq_gripper_controller type until antipodal controller becomes available (#48)\n\n* Revert robotiq_gripper_controller type until antipodal controller becomes available\r\n\r\n* init doubles to 0.0",
+      "files_changed": 2,
+      "additions": 9,
+      "deletions": 9,
+      "commit_type": "config"
+    },
+    {
+      "author": "pac48",
+      "date": "2024-02-15T03:07:02Z",
+      "sha": "d73938272fe9dc26c11ebcfa79955fbf9ef5ef3c",
+      "message": "Add force and velocity hardware interfaces (#44)\n\n* add velocity interface\r\n\r\nSigned-off-by: Paul Gesel <paulgesel@gmail.com>\r\n\r\n* export new interfaces for force and velocity\r\n\r\nSigned-off-by: Paul Gesel <paulgesel@gmail.com>\r\n\r\n* fix units for commands\r\n\r\nSigned-off-by: Paul Gesel <paulgesel@gmail.com>\r\n\r\n* update config\r\n\r\nSigned-off-by: Paul Gesel <paulgesel@gmail.com>\r\n\r\n* update interface names\r\n\r\nSigned-off-by: Paul Gesel <paulgesel@gmail.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Paul Gesel <paulgesel@gmail.com>",
+      "files_changed": 3,
+      "additions": 28,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "moriarty",
+      "date": "2023-06-16T16:10:42Z",
+      "sha": "58eda4b7f58052c427e79cec09bd4b302dcdd3cb",
+      "message": "Update Maintainers (#24)",
+      "files_changed": 3,
+      "additions": 9,
+      "deletions": 3,
+      "commit_type": "config"
+    },
+    {
+      "author": "Erik Holum",
+      "date": "2023-03-31T13:10:53Z",
+      "sha": "f419f7bf5daaab349fb93bde5057f46e62cf538e",
+      "message": "Link atomic and include in header",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "MarqRazz",
+      "date": "2022-11-14T20:06:39Z",
+      "sha": "878b636716778df83d1ae77bc5e40ee4b3b1d6d6",
+      "message": "Add sim_isaac ros2_control xacro arg",
+      "files_changed": 1,
+      "additions": 15,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "kineticsystem",
+      "date": "2023-10-31T13:41:45Z",
+      "sha": "29ce3986c9ff66d597e78a2f8d699fcd5446dd79",
+      "message": "Refactor driver library to follow patterns from PickNikRobotics/ros2_epick_gripper (#34)",
+      "files_changed": 52,
+      "additions": 3236,
+      "deletions": 892,
+      "commit_type": "config"
+    },
+    {
+      "author": "abake48",
+      "date": "2023-04-10T15:27:35Z",
+      "sha": "d48a55f40d26b1b184504086e5e9be627436ec4c",
+      "message": "Fix for updateStatus segfault  (#14)",
+      "files_changed": 11,
+      "additions": 359,
+      "deletions": 192,
+      "commit_type": "config"
+    },
+    {
+      "author": "EzraBrooks",
+      "date": "2023-05-30T17:44:30Z",
+      "sha": "22bd0a117ff971b7958c8afafe4475526e787061",
+      "message": "Merge pull request #13 from eholum/fix-atomic-clang-build\n\nFix Transitive Includes and Linking for Atomic when Building with Clang",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "chancecardona",
+      "date": "2023-04-05T21:29:57Z",
+      "sha": "40e95d4fd21edb32c88d928a43a146ae3875965d",
+      "message": "Added some friction parameters to the grippers for better interaction in simulation (#15)",
+      "files_changed": 1,
+      "additions": 36,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "skhbk",
+      "date": "2022-09-15T20:16:49Z",
+      "sha": "5c30eccb91a358fe381b8b4b465079b8cc463904",
+      "message": "Fix missing prefix for mimic joints. (#1)",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "corycrean",
+      "date": "2022-06-22T20:08:25Z",
+      "sha": "f07cc42bc7da62a2cd4f10d3779481bf72dc90d9",
+      "message": "Initial commit",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "docs"
+    }
+  ]
+}

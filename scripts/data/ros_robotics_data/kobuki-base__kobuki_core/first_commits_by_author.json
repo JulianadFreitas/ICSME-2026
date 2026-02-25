@@ -1,0 +1,241 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T16:05:18Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "kobuki-base",
+    "repo": "kobuki_core"
+  },
+  "data": [
+    {
+      "author": "slivingston",
+      "date": "2025-05-20T19:16:37Z",
+      "sha": "3e0652dc4006d8345a86298ac05d82049747bc7f",
+      "message": "[readme] point to current Kobuki site (#53)\n\nNote that the original Yujin Robot website is archived at\nhttps://web.archive.org/web/20230204122331/https://kobuki.yujinrobot.com/",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "clalancette",
+      "date": "2020-01-09T15:47:57Z",
+      "sha": "7148901b01da56821c17bf74c26ca7cc52cff593",
+      "message": "Port to ROS 2 Dashing and Eloquent (#46)\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 31,
+      "additions": 69,
+      "deletions": 56,
+      "commit_type": "docs"
+    },
+    {
+      "author": "stonier",
+      "date": "2012-02-02T05:29:49Z",
+      "sha": "f2a09996083cb53e9892338df6af3c6bbdfeaadc",
+      "message": "first commit",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "corot",
+      "date": "2012-06-01T05:42:24Z",
+      "sha": "a4f771d9758a88f6e080d12b5defe24ec0eb1588",
+      "message": "Initial version",
+      "files_changed": 1,
+      "additions": 24,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "mdhorn",
+      "date": "2017-04-02T16:52:02Z",
+      "sha": "ed4a90a4d34b2acb943ba1a7e974294f5fb0390c",
+      "message": "Install udev rule as part of Debian pkg install (#28)\n\nInstead of requiring the user of the package to run a script, have\r\nthe udev rule installed as part of the package.\r\n\r\nThe udev will be installed as\r\n    /lib/udev/rules.d/60-ros-<rosdistro>-kobuki-ftdi.rules\r\nIf more than one ROS distribution is installed on the same system,\r\nthe older distribution udev rules file will be used as the :=\r\noperator is used.\r\nSee: https://www.kernel.org/pub/linux/utils/kernel/hotplug/udev/udev.html\r\n\r\nAdditional References:\r\n    http://www.reactivated.net/writing_udev_rules.html\r\n    http://manpages.ubuntu.com/manpages/xenial/man1/dh_installudev.1.html",
+      "files_changed": 2,
+      "additions": 68,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "woshidag",
+      "date": "2016-03-10T01:35:34Z",
+      "sha": "3a384a7bd9257e8a3e3b770f881d332e222342ea",
+      "message": "Update cliff.hpp\n\nsizeof (enum Header::Cliff) is sizeof(int) , not sizeof(unsigned char);\r\n\r\nSize of data field is byte;",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "jihoonl",
+      "date": "2012-10-19T00:46:56Z",
+      "sha": "8a6a36e0b56cfcd07377d3a517225577976b3863",
+      "message": "updating apps repo location",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "NikolausDemmel",
+      "date": "2014-05-28T10:33:03Z",
+      "sha": "998708463f881bda33e5417d4c4f18364aa866dc",
+      "message": "Fix compilation.\n\n - fix the names of the pkg-config libraries of libusb and libftdi. I checked on Ubuntu and OS X.\n - ftdi-eeprom is not a library and has no pkg-config file.",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "yhju",
+      "date": "2012-05-18T10:54:14Z",
+      "sha": "8f0312c72d691c7fd617c37854b7baf54e449b55",
+      "message": "kobuki_node : Updated laptop battery state publisher to support some laptop have BAT0 instead of BAT1.",
+      "files_changed": 1,
+      "additions": 13,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "Yujin",
+      "date": "2013-12-02T01:51:13Z",
+      "sha": "c45527f74ecee6a1c26f5ef3a2fa7cbd78745a98",
+      "message": "new state transition",
+      "files_changed": 3,
+      "additions": 112,
+      "deletions": 23,
+      "commit_type": "code"
+    },
+    {
+      "author": "bit-pirate",
+      "date": "2012-04-20T10:03:37Z",
+      "sha": "e5d0c4212da57ff0fd9c52c6de6f308955a120c2",
+      "message": "adds missing zeroconf dependency",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "yujin",
+      "date": "2013-05-20T01:16:50Z",
+      "sha": "c56487e2a7d4f9885b3e9084b0aa0bd711a57437",
+      "message": "Issue #258: publish stamped pointcloud",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Yeong-il Choe",
+      "date": "2013-04-30T08:18:02Z",
+      "sha": "ec1d0d5341455f9e0ac872f00ff68d437ba90729",
+      "message": "win32 porting for kobuki_driver.",
+      "files_changed": 12,
+      "additions": 75,
+      "deletions": 16,
+      "commit_type": "code"
+    },
+    {
+      "author": "vrabaud",
+      "date": "2013-01-12T11:38:31Z",
+      "sha": "373138659f302e717998ff1f1634babe0aacfc95",
+      "message": "fix the undefined symbol",
+      "files_changed": 2,
+      "additions": 9,
+      "deletions": 16,
+      "commit_type": "code"
+    },
+    {
+      "author": "zklapow",
+      "date": "2012-12-21T18:31:40Z",
+      "sha": "7f3ae825c786beaaa648093dd1f52bc49c13defc",
+      "message": "Update nodelets to use the nre pluginlib API.",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "jakan2",
+      "date": "2012-12-09T09:43:52Z",
+      "sha": "78f2fbc4af2851ce5eb0bbbdb5e5886a17da232f",
+      "message": "Update kobuki_driver/firmware.changelog",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Kobuki Brain No. 3",
+      "date": "2012-10-23T04:37:39Z",
+      "sha": "8b2b1328ed4e5bc7acc0fb1beb58bcb12ab255ae",
+      "message": "Header comments addapted to turtlebot-kobuki fussion",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 7,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mskim8717",
+      "date": "2012-07-11T05:34:01Z",
+      "sha": "4fda23de88993bc4772745271206efdd2fa78436",
+      "message": "bugfix unison installation.",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Kim Min Soo",
+      "date": "2012-07-05T00:16:40Z",
+      "sha": "e65b716345c969a36df33f69784b7f8cf5cedeb6",
+      "message": "kobuki_node : about to start onthe test translation program.",
+      "files_changed": 2,
+      "additions": 77,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Younghun Ju",
+      "date": "2012-05-18T10:33:44Z",
+      "sha": "96f4c892f0e1422b0515dcddf805cc9543c43d38",
+      "message": "kobuki_node : Added laptop battery state publisher.",
+      "files_changed": 1,
+      "additions": 250,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Marcus Liebhardt",
+      "date": "2012-04-04T06:51:53Z",
+      "sha": "610936319d7cbb56b55a7c554104870d4ae08ffa",
+      "message": "inital commit of the kobuki stack",
+      "files_changed": 167,
+      "additions": 10259,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jorge",
+      "date": "2012-04-05T06:02:41Z",
+      "sha": "f645523c6bbd0367db753f6cf47ae0be09a82dd3",
+      "message": "Initial version.",
+      "files_changed": 20,
+      "additions": 212,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "turtlebot",
+      "date": "2012-04-17T18:34:42Z",
+      "sha": "eeb6838c0415ee3b4cc3d46cc67d2a52cdcd3b87",
+      "message": "fix typo in the launcher.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    }
+  ]
+}

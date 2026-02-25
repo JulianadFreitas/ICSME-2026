@@ -1,0 +1,241 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T17:31:07Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros2",
+    "repo": "libyaml_vendor"
+  },
+  "data": [
+    {
+      "author": "ahcorde",
+      "date": "2020-07-02T13:03:14Z",
+      "sha": "af843d4e30c82603e07c4c978b2a766e6f7c8d0c",
+      "message": "Bump QD to 3 and some minor style fixes (#19)\n\n* Bump QD to 3 and some minor fixed\r\n* Added feedback\r\n* Sentences on separate lines to help minimize diffs\r\n* Added feedback\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>",
+      "files_changed": 2,
+      "additions": 40,
+      "deletions": 30,
+      "commit_type": "docs"
+    },
+    {
+      "author": "cottsay",
+      "date": "2021-02-11T18:45:21Z",
+      "sha": "910839611cf2b9aad19b7b3beb2073605a7d634b",
+      "message": "Always preserve source permissions in vendor packages (#31)\n\nIn vendor packages where we're installing an executable, we use\r\nUSE_SOURCE_PERMISSIONS to make sure that the executable permissions on\r\nthe binaries are maintained when the external project's staging\r\ndirectory is recursively installed to the final installation directory.\r\n\r\nIn most of our vendor packages, we aren't using that flag where we don't\r\nexpect an executable binary to be installed. However, for reasons I\r\nwon't go into here, some systems use executable permissions on shared\r\nobject libraries as well. The linker seems to handle this on our behalf,\r\nbut we're losing the permissions during the recursive copy operation if\r\nwe don't use this flag.\r\n\r\nSigned-off-by: Scott K Logan <logans@cottsay.net>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "clalancette",
+      "date": "2020-05-29T20:49:23Z",
+      "sha": "52a6bcbd95ceba7f2ba3a3d4a29d905cd7f04a70",
+      "message": "Add Security Vulnerability Policy pointing to REP-2006. (#18)\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "marcoag",
+      "date": "2024-04-26T16:07:00Z",
+      "sha": "ff426918e266366f343c327cb09c1f2c791dc553",
+      "message": "Changelog.\n\nSigned-off-by: Marco A. Gutierrez <marcogg@marcogg.com>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "christophebedard",
+      "date": "2024-02-28T12:57:17Z",
+      "sha": "cca2f1431f37a70bde64716632b8979c0b89a5f1",
+      "message": "Update quality declaration documents (#62)\n\nSigned-off-by: Christophe Bedard <christophe.bedard@apex.ai>",
+      "files_changed": 2,
+      "additions": 17,
+      "deletions": 15,
+      "commit_type": "docs"
+    },
+    {
+      "author": "yoneken",
+      "date": "2023-10-06T13:13:20Z",
+      "sha": "6a42ed69fc771190a7d6806f8230ff91ffc9b7d6",
+      "message": "remove rcpputils and rcutils dependency (#61)\n\nSigned-off-by: Kenta Yonekura <yoneken@ieee.org>",
+      "files_changed": 4,
+      "additions": 10,
+      "deletions": 14,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Yadunund",
+      "date": "2023-04-27T08:00:16Z",
+      "sha": "db9428a3012ac09ee0cfe59443508fe13aaacd86",
+      "message": "1.6.0",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "audrow",
+      "date": "2021-11-18T19:59:32Z",
+      "sha": "73c8ea6cec14474d9b256c61fc6a2d9af9e5dcbb",
+      "message": "Merge pull request #43 from ros2/update-maintainers\n\nUpdate maintainers",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "traversaro",
+      "date": "2022-10-21T18:10:58Z",
+      "sha": "a5877ba93987633501ebe943ab54b306842c529c",
+      "message": "check if libyaml is already present before building it (take 2) (#45)\n\n* check if libyaml is already present before building it\r\n\r\nSigned-off-by: Alberto Soragna <alberto.soragna@gmail.com>\r\nSigned-off-by: Silvio <silvio@traversaro.it>\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 5,
+      "additions": 100,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "paudrow",
+      "date": "2021-11-18T19:23:30Z",
+      "sha": "674ef5b1073eefb9629a459e66859e74f57ea287",
+      "message": "Update maintainers to Audrow Nash\n\nSigned-off-by: Audrow Nash <audrow@hey.com>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "ooeygui",
+      "date": "2022-05-09T18:20:27Z",
+      "sha": "dbadd0c652bab4fe0fc601d350d5378aaa05cfac",
+      "message": "Support WindowsStore builds for ROS2 (#50)\n\n* libyaml for uwp\r\n\r\nSigned-off-by: Lou Amadio <lamadio@microsoft.com>",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "nuclearsandwich",
+      "date": "2022-03-31T13:10:22Z",
+      "sha": "73b65539eec8c1eb875a2fa7ce93bde0495531d9",
+      "message": "Add a buildtool dependency on git. (#48)\n\nGit is required to fetch this vendor package.\r\nSince our usual development setup installs git anyway this dependency is\r\nhard to spot unless you're doing arcane things with containers.\r\n\r\nSigned-off-by: Steven! Ragnarök <steven@nuclearsandwich.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "sloretz",
+      "date": "2020-03-26T23:03:16Z",
+      "sha": "3de661c331056c07b7f968d4f060ec61b9096452",
+      "message": "Only propagate CMAKE_BUILD_TYPE for single configuration generators (#13)\n\n* Only propagate CMAKE_BUILD_TYPE for single configuration generators\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* Undo whitespace change\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* Bump CMake version to get GENERATOR_IS_MULTI_CONFIG\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "shonigmann",
+      "date": "2021-04-02T06:30:09Z",
+      "sha": "a98ad5023d3e7e8dd00ce5b0b937ca02a83af481",
+      "message": "updating quality declaration links (re: ros2/docs.ros2.org#52) (#38)\n\nSigned-off-by: Simon Honigmann <shonigmann@blueorigin.com>\r\n\r\nCo-authored-by: Simon Honigmann <shonigmann@blueorigin.com>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 5,
+      "commit_type": "docs"
+    },
+    {
+      "author": "hidmic",
+      "date": "2020-10-08T19:18:41Z",
+      "sha": "b93ad6998f96e76f912dc9c0674b66629cd40707",
+      "message": "Update package maintainers. (#22)\n\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "Blast545",
+      "date": "2020-01-30T19:16:46Z",
+      "sha": "931def9286645297eccf8658bb9b14d4be0c9ce7",
+      "message": "Add missing LICENSE file, apache2 (#7)\n\nSigned-off-by: Jorge J. Perez <jjperez@ekumenlabs.com>",
+      "files_changed": 1,
+      "additions": 202,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "jacobperron",
+      "date": "2020-05-07T22:14:24Z",
+      "sha": "b231cd00df35f73f2d4ef21eaaef3c72a7d88dbf",
+      "message": "1.0.2",
+      "files_changed": 2,
+      "additions": 8,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "dirk-thomas",
+      "date": "2020-04-22T22:14:55Z",
+      "sha": "3dabd86b1d4daa3b4f9b9e5b9c40f26de2d4fe3b",
+      "message": "add missing export of yaml (#15)\n\nSigned-off-by: Dirk Thomas <dirk-thomas@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "claireyywang",
+      "date": "2020-04-24T19:51:42Z",
+      "sha": "a7466328d1d2629aedabf21ccfe5ebbc38cb6a0f",
+      "message": "add changelog\n\nSigned-off-by: claireyywang <clairewang@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 25,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "wjwwood",
+      "date": "2018-06-25T21:54:27Z",
+      "sha": "c69f385ebb8c971b9bdd2a87fc983c5a12b12811",
+      "message": "1.0.0",
+      "files_changed": 0,
+      "additions": 0,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "mikaelarguedas",
+      "date": "2018-05-10T23:55:59Z",
+      "sha": "b67623119a2505a1d117d8ebbab57581fe43c712",
+      "message": "Initial commit",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "dhood",
+      "date": "2018-06-18T10:24:16Z",
+      "sha": "92e67bd561c3c0bbb03fdd9653eae13f86fa17ec",
+      "message": "Export libyaml library (#4)\n\n* Export libyaml library\r\n\r\n* Remove lib prefix",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Theosakamg",
+      "date": "2018-06-11T04:36:02Z",
+      "sha": "66f9be644a8bc3bbb68b3839fe9e0d0460a91832",
+      "message": "Added support for Android (#2)",
+      "files_changed": 1,
+      "additions": 26,
+      "deletions": 0,
+      "commit_type": "docs"
+    }
+  ]
+}

@@ -1,0 +1,441 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T05:26:33Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros",
+    "repo": "executive_smach"
+  },
+  "data": [
+    {
+      "author": "130s",
+      "date": "2017-06-03T00:11:45Z",
+      "sha": "d91bd13fd0479bb6759a691cd560603f7241e445",
+      "message": "[CI] Update to check ROS IJKL distros.",
+      "files_changed": 1,
+      "additions": 32,
+      "deletions": 117,
+      "commit_type": "config"
+    },
+    {
+      "author": "reinzor",
+      "date": "2024-06-14T13:19:30Z",
+      "sha": "bc39b3836891738bff327e0b70cad18482a215e1",
+      "message": "fix: python to python3",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Richardvdketterij",
+      "date": "2024-02-12T13:35:04Z",
+      "sha": "f997cdeedf781ade325804192fffd99205fbf41d",
+      "message": "Implement canceling of goals, fix the execution and preemption timeout timers, make 'outcomes' a param, add extra intermediate internal state and use state enum instead of global var, add function to wait for cancelation request response",
+      "files_changed": 1,
+      "additions": 202,
+      "deletions": 105,
+      "commit_type": "code"
+    },
+    {
+      "author": "gerardcanal",
+      "date": "2023-06-14T09:00:19Z",
+      "sha": "4401536013f984ecdad5ef8aa715c5ddf1c23538",
+      "message": "Fix #92",
+      "files_changed": 3,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "yikben-wong-dx",
+      "date": "2023-04-24T11:47:29Z",
+      "sha": "b4473d72a8287d9cdfc53b7b79215db04d76c462",
+      "message": "fix(smach): fix for humble",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "matias-pavez-dx",
+      "date": "2022-12-28T02:12:30Z",
+      "sha": "e8b1159aef0fdc6a8bebe5bc122c766c7dce5e3f",
+      "message": "Fix broken package.xml files (#3)",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "InigoMoreno",
+      "date": "2021-08-05T08:15:12Z",
+      "sha": "ee3e1eea0ecf34382d88205e958365596dd0ebb4",
+      "message": "Fix state machines cannot be pickled #85\n\nFix for #85",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "LoyVanBeek",
+      "date": "2015-10-30T21:26:33Z",
+      "sha": "5df1483d6dfb58d7a018368a330a70534acf6e2b",
+      "message": "SimpleActionState will no longer wait forever\n\nfor a missing ActionServer",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "nandishjpatel",
+      "date": "2021-04-07T08:23:32Z",
+      "sha": "c2539e15b398d7a30371ce0b1c6f12625315186c",
+      "message": "[remove] travis config file",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 38,
+      "commit_type": "config"
+    },
+    {
+      "author": "wongyikben",
+      "date": "2021-06-17T07:00:56Z",
+      "sha": "fa015413334013b9fd813a9265ef982426aaba99",
+      "message": "[migrate] modified action_server_wrapper.py",
+      "files_changed": 2,
+      "additions": 62,
+      "deletions": 57,
+      "commit_type": "code"
+    },
+    {
+      "author": "at-wat",
+      "date": "2021-06-18T05:07:40Z",
+      "sha": "8b6990ec078dacb8df2daf83d9904f5e608d929f",
+      "message": "Fix Python 3.9 compatibility\n\nThread.isAlive is removed on Python 3.9.\r\nThread.is_alive is available since Python 2.6.\r\nref: https://docs.python.org/2/library/threading.html#threading.Thread.isAlive",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "TYDAN923",
+      "date": "2021-04-22T02:47:25Z",
+      "sha": "01b0465a9fcba1581a3c5cda55623bbd73d91543",
+      "message": "[fix] silly bug in ConditionState",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "mikaelarguedas",
+      "date": "2020-10-14T08:34:13Z",
+      "sha": "0a305e6faeea90f0107fbcd5fb713b0090f0f646",
+      "message": "declaread -> declared\n\nSigned-off-by: Mikael Arguedas <mikael.arguedas@gmail.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "sloretz",
+      "date": "2020-05-13T03:45:29Z",
+      "sha": "a6835a71a7a0e0a4e7c851e5b9e241dd3ab198d0",
+      "message": "Fix pickle to str conversion with b64\n\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "Rayman",
+      "date": "2020-05-14T14:31:07Z",
+      "sha": "c98b217c501a513b28491318cd0a8d7801d8a435",
+      "message": "Add .gitignore",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "lesire",
+      "date": "2020-03-26T09:35:05Z",
+      "sha": "7dd517a91b477cbf6ec96360c2a32ed033106dc4",
+      "message": "ROS2 compliant package.xml and python setups",
+      "files_changed": 17,
+      "additions": 114,
+      "deletions": 68,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ahcorde",
+      "date": "2020-04-02T14:46:59Z",
+      "sha": "65440515d9663a0179897395a85ba99284941a50",
+      "message": "Bump CMake version to avoid CMP0048 warning\n\nSigned-off-by: ahcorde <ahcorde@gmail.com>",
+      "files_changed": 4,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jorgenfb",
+      "date": "2019-05-06T20:15:32Z",
+      "sha": "4e5b0066c3e5ce9dad37663d6dce8e6800f70bad",
+      "message": "Fixes issue with response_slots when action goal is lost\n\nSimpleActionState would crash when trying to extract result_slots after\ngoal was lost since the `_goal_result` would be `None`. This fix simply\nchecks if the `_goal_result` property is not `None` before trying to\nextract result_slots.",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Joseph Coombe",
+      "date": "2018-04-13T17:48:08Z",
+      "sha": "fa56b6a5dd6b5c9155484ed1925af83ed57280fa",
+      "message": "Update state.py\n\nChange array -> list\r\nChange string -> str",
+      "files_changed": 1,
+      "additions": 12,
+      "deletions": 12,
+      "commit_type": "code"
+    },
+    {
+      "author": "cclauss",
+      "date": "2018-03-24T01:57:19Z",
+      "sha": "021615b85fe3214d39eb21365497539dd8dba80e",
+      "message": "Typo set_shutdown_cb() --> set_shutdown_check()",
+      "files_changed": 1,
+      "additions": 26,
+      "deletions": 17,
+      "commit_type": "code"
+    },
+    {
+      "author": "bulwahn",
+      "date": "2017-04-04T09:43:26Z",
+      "sha": "0e054108c7bdcfebd0e5aa0212e3590d7d714e83",
+      "message": "make rostest in CMakeLists optional (ros/rosdistro#3010)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Nils Berg",
+      "date": "2014-12-05T20:01:15Z",
+      "sha": "874191aa9bf473880f7ce0603ebc2d49031a95bf",
+      "message": "increment n_checks only *after* checking\n\notherwise, setting max_checks=1 results in a MonitorState that returns the 'valid' outcome for any message",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "contradict",
+      "date": "2014-09-27T20:23:19Z",
+      "sha": "72f5d1e49bde8b8fd1a5be2ced1df18cfee4c380",
+      "message": "Specify queue sizes for introspection publishers",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "jbohren",
+      "date": "2010-07-28T22:32:46Z",
+      "sha": "2d27b5c54b5a686da7bc52c0798beae3944911ed",
+      "message": "No longer needed",
+      "files_changed": 2,
+      "additions": 1,
+      "deletions": 69,
+      "commit_type": "code"
+    },
+    {
+      "author": "T045T",
+      "date": "2014-12-02T17:55:18Z",
+      "sha": "d7fb5e45badec552ec9835171b21e26ab38ed05e",
+      "message": "make ServiceState more robust to termination while waiting for service",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Hendrik Wiese",
+      "date": "2013-11-04T21:41:07Z",
+      "sha": "ec8710f60369611819ccbfb9499cf11c1254369b",
+      "message": "Listing available goal slots in case of specifying wrong ones",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "cburbridge",
+      "date": "2013-11-26T17:23:06Z",
+      "sha": "56766b1b95a7da4a2da5e0f01e19decb6c9eb01e",
+      "message": "Adding event for thread synchronization in concurrence and using event not condition in monitor state",
+      "files_changed": 2,
+      "additions": 20,
+      "deletions": 15,
+      "commit_type": "code"
+    },
+    {
+      "author": "Felix Kolbe",
+      "date": "2013-12-16T16:35:01Z",
+      "sha": "72054fafe6b9bffa5500485c7350235ca1e3082b",
+      "message": "Fix syntax errors, doc typos and indentations glitches",
+      "files_changed": 10,
+      "additions": 136,
+      "deletions": 111,
+      "commit_type": "code"
+    },
+    {
+      "author": "Piotr Orzechowski",
+      "date": "2013-12-13T18:44:46Z",
+      "sha": "c496258f1434104a689daf38c35551ebfb13c1b7",
+      "message": "Fixed invalid exception type in concurrence.py",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "bgromov",
+      "date": "2013-09-25T02:35:53Z",
+      "sha": "be5b89364e1da45a8800e67187a2251292524004",
+      "message": "[MonitorState] Make exception handler more verbose",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "BFALacerda",
+      "date": "2013-07-31T17:11:03Z",
+      "sha": "4dd0b0f29d94550c3a614b4c4e66372eedb81c5c",
+      "message": "Merge pull request #1 from BFALacerda/groovy-devel\n\nedited monitor state to allow input and output keys",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "Bruno Lacerda",
+      "date": "2013-07-30T18:43:27Z",
+      "sha": "8c2a27f2292ef10601ac93d27bd29a7a37909e47",
+      "message": "edited monitor state to allow input and output keys",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "Johannes Meyer",
+      "date": "2013-07-22T17:33:11Z",
+      "sha": "f17c9a55748050d11ca98f3dc46c056a0bdca354",
+      "message": "added missing catkin_package() calls in CMakeLists.txt files of packages smach and smach_ros",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jihoonl",
+      "date": "2013-04-16T00:45:17Z",
+      "sha": "da16c4acf5f957d666699e1f429d783db1eb01ec",
+      "message": "adding buildtool depend in metapackage. adding cmakelist",
+      "files_changed": 2,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mikeferguson",
+      "date": "2013-03-20T00:27:47Z",
+      "sha": "cd68295f77da4e452b096652e89c1493c788a1f3",
+      "message": "(meta)package.xml should not depend on catkin\n\nDoing so makes this page go crazy: http://ros.org/wiki/catkin",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "Aaron Blasdel",
+      "date": "2013-02-16T00:43:38Z",
+      "sha": "4bcaf4a6e766b2f894362972642bfb650cc5b870",
+      "message": "1.2.1",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Bhaskara Marthi",
+      "date": "2012-02-21T20:42:36Z",
+      "sha": "780d6e387375c720f59efa9860831bf5cdc87160",
+      "message": "temporary fix to error spewage in action_server_wrapper due to missing feedback key in userdata",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Wim Meeussen",
+      "date": "2011-02-08T17:05:14Z",
+      "sha": "9ce41d9a75d32967fe395f2a62966e47bf00914f",
+      "message": "remove dependency on rx by moving visualization into new stack",
+      "files_changed": 9,
+      "additions": 1,
+      "deletions": 1122,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Ken Conley",
+      "date": "2011-10-05T21:00:47Z",
+      "sha": "3dd60e3ead3678de816779fdf89257afea3dee18",
+      "message": "removing patch for get/setstate.  Necessary due to genmsg refactoring",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 13,
+      "commit_type": "code"
+    },
+    {
+      "author": "tfoote",
+      "date": "2011-10-19T01:31:43Z",
+      "sha": "f285c1630207fd43a52661d35546e37fe7ba6d45",
+      "message": "osx homebrew on lion patch from wjwwood",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "wim",
+      "date": "2010-07-28T21:37:48Z",
+      "sha": "88ce8049e6d5d0f52ad59134b60026def0218041",
+      "message": "import from https://code.ros.org/svn/wg-ros-pkg/branches/jbohren/executive_smach, which is the restructured code from the executive_python stack",
+      "files_changed": 58,
+      "additions": 5641,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "kwc",
+      "date": "2010-11-20T04:29:16Z",
+      "sha": "53d56141060d24e773af0819d17f606459b89f35",
+      "message": "0.4.2 ros_comm dep",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "blaise",
+      "date": "2010-09-07T15:47:58Z",
+      "sha": "7240e1b7d5ba5edc5716268cf1a5ec179575c48c",
+      "message": "Renamed smach's logging module to log. #4403",
+      "files_changed": 2,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    }
+  ]
+}

@@ -1,0 +1,361 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T09:29:21Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros",
+    "repo": "resource_retriever"
+  },
+  "data": [
+    {
+      "author": "ahcorde",
+      "date": "2020-04-22T14:16:40Z",
+      "sha": "9f029080c762c1862133c0c5f95d8bc9eeee369a",
+      "message": "Towards Quality Level 1 - Added common_linters and fixed tests  (#43)\n\n* Added common_linters and fixed tests\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Removed test/CMakeLists.txt\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Update resource_retriever/test/test.cpp\r\n\r\nCo-Authored-By: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Const exceptions\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Added message when throws an exception\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* combine file plut error\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Removed trace when the test is right\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Installing only the test.txt file when BUILD_TESTING is active\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* no need to check for target in test\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Attemp to fix windows path\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Fixed warning on Windows\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\nCo-authored-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 9,
+      "additions": 264,
+      "deletions": 256,
+      "commit_type": "docs"
+    },
+    {
+      "author": "clalancette",
+      "date": "2017-03-27T18:47:59Z",
+      "sha": "366c0a4a0f36ad78e393ee9b04f9a687f66c3bee",
+      "message": "Make Shane and Chris the maintainers.\n\nSigned-off-by: Chris Lalancette <clalancette@osrfoundation.org>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "mosfet80",
+      "date": "2025-03-06T12:22:11Z",
+      "sha": "168300fba1c4f507d1e3bea0c4f97d468cbad477",
+      "message": "uniform  MinCMakeVersion (#108)\n\nSigned-off-by: mosfet80 <realeandrea@yahoo.it>\nSigned-off-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>\nCo-authored-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "cottsay",
+      "date": "2020-04-08T19:06:58Z",
+      "sha": "dd142bbe27ef3f3704108ed4c081d19e39e6ba36",
+      "message": "Ignore broken curl-config.cmake (#40)\n\n* Ignore broken curl-config.cmake\r\n\r\nThis flag was introduced to maintain existing behavior in CMake 3.17 and\r\nnewer, where FindCURL.cmake was changed to use curl-config.cmake if it\r\nis found.\r\n\r\nIt appears that the curl-config.cmake that comes with the current\r\nversion of curl that this package includes does not work properly. Until\r\nwe target a version of curl that has a working curl-config.cmake on\r\nWindows, we should continue with the CMake behavior prior to 3.17 by\r\nspecifying CURL_NO_CURL_CMAKE.\r\n\r\nSigned-off-by: Scott K Logan <logans@cottsay.net>\r\n\r\n* Only ignore curl-config.cmake for vendor-built curl",
+      "files_changed": 2,
+      "additions": 6,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mjcarroll",
+      "date": "2024-04-12T15:14:13Z",
+      "sha": "b0c989d446350f667921536fd41844c7e4fe5f0d",
+      "message": "Revert \"Stop using python_cmake_module. (#90)\" (#93)\n\nThis reverts commit 5f4f2c0df0b6c325b5b9bc8462369d56c07e9f4b.\r\n\r\nSigned-off-by: Michael Carroll <mjcarroll@intrinsic.ai>",
+      "files_changed": 2,
+      "additions": 14,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "marcoag",
+      "date": "2024-04-16T09:42:28Z",
+      "sha": "feeb023d860a9a2ee42c1b3ab4e05fd24f786939",
+      "message": "Changelog.\n\nSigned-off-by: Marco A. Gutierrez <marcogg@marcogg.com>",
+      "files_changed": 2,
+      "additions": 9,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jasonbeach",
+      "date": "2022-10-19T20:31:26Z",
+      "sha": "958589636d0d72a8e4161ccf00b2d7d171a51875",
+      "message": "merge libcurl_vendor build instructions (#81)\n\n* merge libcurl_vendor build instructions\r\n\r\nCo-authored-by: Jason Beach <jason.beach@ssci.com>\r\nCo-authored-by: Chris Lalancette <clalancette@gmail.com>",
+      "files_changed": 1,
+      "additions": 16,
+      "deletions": 39,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Crola1702",
+      "date": "2022-09-09T20:26:34Z",
+      "sha": "81103e56dd225272b0cac7612d5d05723af9adc3",
+      "message": "Fixes policy CMP0135 warning for CMake >= 3.24\n\nSigned-off-by: Crola1702 <cristobal.arroyo@ekumenlabs.com>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "paudrow",
+      "date": "2021-11-19T18:54:11Z",
+      "sha": "716c76288d33e9cd01b7552d3a62b2fa900c6d6f",
+      "message": "Update maintainers (#66)\n\n* Update maintainers to Alejandro Hernandez Cordero\r\n\r\nSigned-off-by: Audrow Nash <audrow@hey.com>\r\n\r\n* Remove Alex from author\r\n\r\nSigned-off-by: Audrow Nash <audrow@hey.com>",
+      "files_changed": 2,
+      "additions": 6,
+      "deletions": 4,
+      "commit_type": "config"
+    },
+    {
+      "author": "sloretz",
+      "date": "2019-11-21T22:00:01Z",
+      "sha": "27d70a0e976a8851db0b2aef2ffbadc3011072a6",
+      "message": "Catch ament_index_cpp::PackageNotFoundError (#32)\n\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "jacobperron",
+      "date": "2020-10-16T00:27:03Z",
+      "sha": "e4d26c98de484fdf5ce29db3d678406fe06c6458",
+      "message": "Throw exception if package name is empty (#54)\n\nOtherwise, ament_index_cpp will throw a std::runtime_error.\r\nThrowing an exception from resource_retriever instead makes for a more useful error message.\r\n\r\nSigned-off-by: Jacob Perron <jacob@openrobotics.org>",
+      "files_changed": 2,
+      "additions": 11,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "dirk-thomas",
+      "date": "2012-09-04T16:55:56Z",
+      "sha": "6098be245521f62467d152672cf998021de44b84",
+      "message": "fixed gtest usage",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "nbbrooks",
+      "date": "2020-02-03T23:41:15Z",
+      "sha": "98a87917df4afb96311ba1ed391dd3265999f637",
+      "message": "Update curl reference from 7.57 to 7.58 (#36)\n\nPulls in curl fix curl/curl#2154 to fix resource retrieval in Windows",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 6,
+      "commit_type": "docs"
+    },
+    {
+      "author": "wjwwood",
+      "date": "2012-12-14T22:31:16Z",
+      "sha": "b505b8a99e52c5860f02f67f291e8c76a62b3640",
+      "message": "buildtool_depend on catkin",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 12,
+      "commit_type": "config"
+    },
+    {
+      "author": "nuclearsandwich",
+      "date": "2019-03-15T20:20:49Z",
+      "sha": "66d5b00cfebf8b923a1e505fd45d22026d66fb61",
+      "message": "Export resource retriever to enable hooks. (#26)\n\n* Export resource retriever to enable hooks.\r\n\r\n* Replaces ament_export_libraries with HAS_LIBRARY_TARGET option.\r\n\r\nSigned-off-by: Steven! Ragnarök <steven@nuclearsandwich.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mikaelarguedas",
+      "date": "2017-12-09T01:24:54Z",
+      "sha": "04a2512ec4b583fb8a1eb4aa8f543e8a451c5e2d",
+      "message": "2.0.0",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "mikepurvis",
+      "date": "2016-09-21T19:45:19Z",
+      "sha": "41a4297ae8a756a6553e6c0a3ce943183f2c4d0c",
+      "message": "Update URL in http test to something which exists (#8)\n\n* Update URL in http test to something which exists",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Ruben Smits",
+      "date": "2017-02-13T17:02:23Z",
+      "sha": "0124b46f273bc5d3812ad2923a0bba7b563fddba",
+      "message": "Python3 compatibility (#10)\n\n* Replace urlgrabber with urllib[2]\r\n\r\nAs urlgrabber is not supported for Python 3 replace it with either the built-in urllib (Python 2) or urllib2 (Python 3)\r\n\r\n* Use rospkg instead of system call for rospack\r\n\r\n* Add test for python functionality\r\n\r\n* Fix rospkg dependency definition",
+      "files_changed": 4,
+      "additions": 53,
+      "deletions": 13,
+      "commit_type": "config"
+    },
+    {
+      "author": "jacquelinekay",
+      "date": "2016-05-23T16:22:38Z",
+      "sha": "3a0ddefa5c053e0491c9411b849a978668f6306d",
+      "message": "Merge pull request #4 from DLu/kinetic-devel\n\nAdd c++11 flag",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "scpeters",
+      "date": "2016-06-10T17:26:23Z",
+      "sha": "0edc66f642ad66cdb110c19cfe0f7378ae2144bb",
+      "message": "Fix warnings in test (#5)\n\nadd spaces around ROS_PACKAGE_NAME",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "DLu",
+      "date": "2016-05-23T13:39:34Z",
+      "sha": "bf09c86b92eb61330af1db8ba54afbd881392752",
+      "message": "Add c++11 flag",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Jackie Kay",
+      "date": "2016-03-22T16:47:06Z",
+      "sha": "4d71f0ee2e1421c91621ded79d7c4e69e7b7e7ff",
+      "message": "Delete default copy constructor",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "isucan",
+      "date": "2013-07-02T05:41:29Z",
+      "sha": "0d0bd8bd473ce3fc575d61379047717c6be89fc7",
+      "message": "1.10.12",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "jbohren",
+      "date": "2015-03-18T14:35:38Z",
+      "sha": "8e44e44818127f003008444715c690ec16537476",
+      "message": "resource_retriever: adding missing dep\n\nUsing the python resource_retriever requires the `python-urlgrabber` system dependency: http://rosindex.github.io/d/python-urlgrabber/",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "tfoote",
+      "date": "2012-10-07T02:20:12Z",
+      "sha": "3ed63c89f3e7c7be0efa37cd956f05edb9369a4e",
+      "message": "updated to new version of catkin with package.xml",
+      "files_changed": 3,
+      "additions": 42,
+      "deletions": 26,
+      "commit_type": "docs"
+    },
+    {
+      "author": "bulwahn",
+      "date": "2013-09-15T12:35:12Z",
+      "sha": "1e0f5c9c81f702931c37f60683351e8f57c0440a",
+      "message": "check for CATKIN_ENABLE_TESTING",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Ioan Sucan",
+      "date": "2012-08-03T00:51:31Z",
+      "sha": "a76c29aa37da9b82b7476a04013d5aeda31d68f9",
+      "message": "switching to catkin",
+      "files_changed": 2,
+      "additions": 18,
+      "deletions": 26,
+      "commit_type": "docs"
+    },
+    {
+      "author": "William Woodall",
+      "date": "2012-12-19T00:59:48Z",
+      "sha": "1f08972607b4911d36989bf43133c3df58f863bd",
+      "message": "1.9.31",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "vrabaud",
+      "date": "2012-10-30T05:49:32Z",
+      "sha": "76531aa43270352726e41240f3b495f3ae2b46cd",
+      "message": "1.9.25",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "davidlu",
+      "date": "2012-06-09T23:29:46Z",
+      "sha": "fa9f66d8ec740a364ec39c7d1ee11b38107e1953",
+      "message": "Updates to simmechanics_to_urdf and resource_retriever",
+      "files_changed": 2,
+      "additions": 36,
+      "deletions": 31,
+      "commit_type": "code"
+    },
+    {
+      "author": "Wim Meeussen",
+      "date": "2011-06-16T16:35:29Z",
+      "sha": "45819720e771d49f86ca6f2877af24a9a1d7dd28",
+      "message": "add David to author list",
+      "files_changed": 2,
+      "additions": 31,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "gerkey",
+      "date": "2010-05-19T20:26:42Z",
+      "sha": "1da41a617fd61a86552a67f6a7288e128fc72b90",
+      "message": "Added Ubuntu platform tags to manifest",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "wheeler",
+      "date": "2009-12-01T01:23:38Z",
+      "sha": "fc46066e7c56e534c85a6ae50b0ba00b4ef67383",
+      "message": "Remove use of deprecated rosbuild macros",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "meeussen",
+      "date": "2009-10-06T19:00:13Z",
+      "sha": "5fb94e3e2137697cbda1beee169ba0014c182ba2",
+      "message": "doc review of resource retriever",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 3,
+      "commit_type": "config"
+    },
+    {
+      "author": "kwc",
+      "date": "2009-09-04T23:10:08Z",
+      "sha": "725c377df2450c8ab363fcaabc50f2e873c000f5",
+      "message": "migration part 1",
+      "files_changed": 9,
+      "additions": 448,
+      "deletions": 0,
+      "commit_type": "docs"
+    }
+  ]
+}

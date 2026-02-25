@@ -1,0 +1,1421 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T02:29:42Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros-controls",
+    "repo": "ros2_control"
+  },
+  "data": [
+    {
+      "author": "christophfroehlich",
+      "date": "2022-12-02T07:44:42Z",
+      "sha": "efcdcc4265d8a313b0e71af51feef722df6fade8",
+      "message": "Fix hardware interface CLI description (#864)",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "MarqRazz",
+      "date": "2025-05-19T10:39:14Z",
+      "sha": "cdd7c74dbfd97315f59e2c3bc64b22274f073725",
+      "message": "[CM] Add option to avoid shutting down on hardware initial state failure (#2230)\n\n---------\n\nCo-authored-by: Sai Kishor Kothakota <sai.kishor@pal-robotics.com>\nCo-authored-by: Christoph Froehlich <christoph.froehlich@ait.ac.at>",
+      "files_changed": 3,
+      "additions": 33,
+      "deletions": 8,
+      "commit_type": "config"
+    },
+    {
+      "author": "destogl",
+      "date": "2020-07-02T06:06:13Z",
+      "sha": "64b91a29bdcbe6d0b9a2f76df8cd53d29ce8ebc5",
+      "message": "Change Hardware return type to enum class (#114)\n\n* Change hw_ret_type to enum class\r\n* Remove HW_RET_ prefix from enum class constants\r\n* Enum class for controller_interface::return_type\r\n* Remove controller_interface_ret_t alias\r\n* hardware_interface_ret_t -> hardware_interface::return_type\r\nCo-authored-by: Bence Magyar <bence.magyar.robotics@gmail.com>",
+      "files_changed": 17,
+      "additions": 149,
+      "deletions": 129,
+      "commit_type": "docs"
+    },
+    {
+      "author": "github-actions[bot]",
+      "date": "2024-03-11T07:06:20Z",
+      "sha": "0301331d548a771271a68e9d26771fe38c1bebb2",
+      "message": "Auto-update with pre-commit (#1430)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "saikishor",
+      "date": "2023-05-30T07:05:26Z",
+      "sha": "0637782ea436decbe46a1a42d582bd60fe8d51ef",
+      "message": "enable ReflowComments to also use ColumnLimit on comments (#1037)\n\n* enable ReflowComments to also use ColumnLimit on comments\r\n\r\n* apply the formatting changes of clang format : ReflowComments\r\n\r\n---------\r\n\r\nCo-authored-by: Bence Magyar <bence.magyar.robotics@gmail.com>",
+      "files_changed": 19,
+      "additions": 289,
+      "deletions": 255,
+      "commit_type": "docs"
+    },
+    {
+      "author": "wig-nesh",
+      "date": "2026-01-27T15:11:16Z",
+      "sha": "0cc99d20fd9a15a1a249565c66f9718796084e8d",
+      "message": "Replace std::for_each with idiomatic container operations (#2986)",
+      "files_changed": 2,
+      "additions": 18,
+      "deletions": 21,
+      "commit_type": "code"
+    },
+    {
+      "author": "bmagyar",
+      "date": "2017-09-09T17:11:58Z",
+      "sha": "7b7a8f4b88ec03feff18a97fa4d5be3a01f32af1",
+      "message": "Initial commit",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "soham2560",
+      "date": "2024-02-29T16:51:33Z",
+      "sha": "0711cd6274eace78dde90f56b7994e60edba7697",
+      "message": "Added spawner colours to `list_controllers` depending upon active or inactive (#1409)",
+      "files_changed": 1,
+      "additions": 10,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "idesign0",
+      "date": "2025-07-15T21:10:25Z",
+      "sha": "c588879194dfcce95bf25d4d7bb4a6691b456cb0",
+      "message": "Fix controller activation crash on macOS (Fixes #604) (#2391)",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "kuralme",
+      "date": "2025-11-28T21:43:45Z",
+      "sha": "380622fd3bb7e6390a33bb647cc1fe0116267563",
+      "message": "Add tf prefix helper and test (#2803)",
+      "files_changed": 4,
+      "additions": 139,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "dependabot[bot]",
+      "date": "2023-01-13T20:16:17Z",
+      "sha": "6389d4fe572ff6d8eb834115dbfb03d706354c40",
+      "message": "Bump ros-tooling/action-ros-ci from 0.2.6 to 0.2.7 (#899)\n\nBumps [ros-tooling/action-ros-ci](https://github.com/ros-tooling/action-ros-ci) from 0.2.6 to 0.2.7.\r\n- [Release notes](https://github.com/ros-tooling/action-ros-ci/releases)\r\n- [Commits](https://github.com/ros-tooling/action-ros-ci/compare/0.2.6...0.2.7)\r\n\r\n---\r\nupdated-dependencies:\r\n- dependency-name: ros-tooling/action-ros-ci\r\n  dependency-type: direct:production\r\n  update-type: version-update:semver-patch\r\n...\r\n\r\nSigned-off-by: dependabot[bot] <support@github.com>\r\n\r\nSigned-off-by: dependabot[bot] <support@github.com>\r\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "ci"
+    },
+    {
+      "author": "J-Cowsert",
+      "date": "2025-11-19T11:21:35Z",
+      "sha": "1757bd1da450569f4275db235ed5d1b14d03ae3d",
+      "message": "Avoid C++20 structured binding capture (#2832)",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Noel215",
+      "date": "2023-02-28T09:52:31Z",
+      "sha": "fb89ad3aa00d352c7415b1c659d2a6cde2294199",
+      "message": "fix AttributeError: Parameter object attribute name is read-only (#957)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "jordan-palacios",
+      "date": "2020-02-11T20:42:54Z",
+      "sha": "6d9213bbde0455962ee8ff978bff2d228362fa8d",
+      "message": "Use pluginlib instead of class_loader for loading controllers (#41)\n\n* Use pluginlib instead of class_loader for loading controllers\r\n\r\n* Removed unncessary parse_library_path helper function\r\n\r\n* Removed unnecessary controller_manager_register_controller.cmake\r\n\r\n* Can now register multiple controller loaders\r\n\r\n* Controller loading is now abstracted\r\n\r\n* Don't use boost in pluginlib\r\n\r\n* uncrustify\r\n\r\nSigned-off-by: Karsten Knese <karsten@openrobotics.org>\r\n\r\nCo-authored-by: Karsten Knese <Karsten1987@users.noreply.github.com>",
+      "files_changed": 12,
+      "additions": 279,
+      "deletions": 206,
+      "commit_type": "ci"
+    },
+    {
+      "author": "saumanraaj",
+      "date": "2025-11-07T07:38:13Z",
+      "sha": "38110f499f47a57e1e49267ca1a80b37c4b3adb9",
+      "message": "Fix ANSI escape code pollution in log output (#2741)",
+      "files_changed": 5,
+      "additions": 52,
+      "deletions": 17,
+      "commit_type": "docs"
+    },
+    {
+      "author": "urfeex",
+      "date": "2025-10-17T20:37:04Z",
+      "sha": "c99442e8c365c0b451fa3774b24f3bc28602d23d",
+      "message": "[GenericSystem] Initialize joint_control_mode_ in on_configure (#2693)",
+      "files_changed": 2,
+      "additions": 12,
+      "deletions": 3,
+      "commit_type": "config"
+    },
+    {
+      "author": "eholum",
+      "date": "2025-10-13T08:32:04Z",
+      "sha": "c993e5b35be3ebc6127372a43d41620f62e6c53e",
+      "message": "Move clock availability check to controller manager thread (#2654)",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "Amronos",
+      "date": "2024-11-07T19:23:02Z",
+      "sha": "93a2a68f6ab4110b7e5816bce134437780ba3bf3",
+      "message": "Add Support for SDF (#1763)\n\n---------\n\nSigned-off-by: Aarav Gupta <134804732+Amronos@users.noreply.github.com>\nCo-authored-by: Christoph Fröhlich <christophfroehlich@users.noreply.github.com>\nCo-authored-by: Bence Magyar <bence.magyar.robotics@gmail.com>",
+      "files_changed": 5,
+      "additions": 273,
+      "deletions": 4,
+      "commit_type": "ci"
+    },
+    {
+      "author": "bijoua29",
+      "date": "2022-07-16T14:17:14Z",
+      "sha": "b3e601a535ff2c875af0d1f2aa3c8ea01472176f",
+      "message": "Fix bug in spawner with getter for node's logger (#776)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "vvel-tracpilot",
+      "date": "2025-08-26T18:48:26Z",
+      "sha": "3f28e936216f925763e1f7c86fbb88cc632943dd",
+      "message": "Fix runtime variant access bug in `HardwareComponentInterface::get_command` helper method (#2491)",
+      "files_changed": 1,
+      "additions": 34,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Danish-588",
+      "date": "2025-08-24T07:24:46Z",
+      "sha": "59a331eace88251c873d1d9fdd2cc6e55d452f00",
+      "message": "Remove extra semicolons (#2478)",
+      "files_changed": 2,
+      "additions": 5,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "rishitej04",
+      "date": "2025-08-20T10:39:22Z",
+      "sha": "605718cc2c489df4c804e03d4f20b6b579c42e9c",
+      "message": "Docs: clarify getter comments to reference HardwareComponentInterface (#2471)",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 8,
+      "commit_type": "docs"
+    },
+    {
+      "author": "huemerj",
+      "date": "2025-08-10T06:53:00Z",
+      "sha": "f353d1b8cf5e36960aadd7eb7f6b8b23a815caf6",
+      "message": "Update doc to clarify BEST_EFFORT behavior when switching controllers (#2448)",
+      "files_changed": 1,
+      "additions": 11,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "peter-mitrano-ar",
+      "date": "2025-08-07T06:41:15Z",
+      "sha": "59903e051bb2fbf3767c37fdc15739812b3455a5",
+      "message": "Fix typos in the documentation of SwitchController strictness (#2445)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "nim65s",
+      "date": "2025-07-31T07:31:01Z",
+      "sha": "558ba01649a82d0adcd193be121c428feb6d7dd9",
+      "message": "Fix missing include for std::find (#2425)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "fmauch",
+      "date": "2022-07-27T10:43:00Z",
+      "sha": "65a3a823e7f006c033af19f604e385394666e42f",
+      "message": "spawner.py: Fix python logging on deprecation warning (#787)\n\nThis was an error introduced in abd5d6e6c8264706b58dddc877063f884cf34a58",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "mosfet80",
+      "date": "2023-05-14T09:42:44Z",
+      "sha": "f0e72f8b6342b985198513e246c10e4c12c48443",
+      "message": "Update precommit libraries(#1020)",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "config"
+    },
+    {
+      "author": "SuperJappie08",
+      "date": "2025-07-11T20:49:14Z",
+      "sha": "4fb402c220f82c3fd686269ed260affe10437078",
+      "message": "[spawner] Fix Lock timeout error crashes (#2386)",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Eldgar",
+      "date": "2025-06-05T08:07:15Z",
+      "sha": "f5e8ba6823a75cd4f179b2b2945efb4a6e333a46",
+      "message": "hardware_interface: optimise & rename find_common_hardware_interfaces (#2294)",
+      "files_changed": 1,
+      "additions": 23,
+      "deletions": 9,
+      "commit_type": "code"
+    },
+    {
+      "author": "wep21",
+      "date": "2025-06-05T07:49:37Z",
+      "sha": "c67f2eb7e0d57f86f41ac2fb099b98f257ead63d",
+      "message": "also use std::mutex on macOS (#2313)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "BartlomiejK2",
+      "date": "2025-05-24T10:37:40Z",
+      "sha": "f70a4c10eecc54c2cf5c9234ff59a2248c47912a",
+      "message": "Fix fourbarlinkage (#1837)",
+      "files_changed": 2,
+      "additions": 13,
+      "deletions": 14,
+      "commit_type": "code"
+    },
+    {
+      "author": "mini-1235",
+      "date": "2025-05-19T08:51:01Z",
+      "sha": "73d5dcac6f7109abd0c18319caf3fac972dbd097",
+      "message": "Statically allocate string concatenations using FMT formatting (#2205)\n\n\n---------\n\nSigned-off-by: mini-1235 <mauricepurnawan@gmail.com>\nCo-authored-by: Sai Kishor Kothakota <sai.kishor@pal-robotics.com>\nCo-authored-by: Bence Magyar <bence.magyar.robotics@gmail.com>\nCo-authored-by: Christoph Fröhlich <christophfroehlich@users.noreply.github.com>",
+      "files_changed": 25,
+      "additions": 430,
+      "deletions": 256,
+      "commit_type": "ci"
+    },
+    {
+      "author": "peci1",
+      "date": "2025-04-17T15:12:47Z",
+      "sha": "14ea4a601bb23a82d0872630dc871930f850c2c3",
+      "message": "doc: Added explanation of preceding/following controllers (#2192)",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Juliaj",
+      "date": "2025-03-12T21:32:34Z",
+      "sha": "daf5fb0605e312b3025d90b7c24253d313e7fd39",
+      "message": "Update doc: async update support for controller (#2096)",
+      "files_changed": 1,
+      "additions": 48,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "danielcostanzi18",
+      "date": "2025-03-28T18:30:49Z",
+      "sha": "3fddf8a62367683a5bcb3d8a62285478e7b7377b",
+      "message": "Fix generate_controllers_spawner_launch_description_from_dict (#2146)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Mehul0x",
+      "date": "2025-03-28T13:11:58Z",
+      "sha": "c4aca5f82f4875e5d220f68a7e9b28181664df6e",
+      "message": "[RM] Add error handling for missing `plugin` tags in URDF parsing (#2138)",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "RobertWilbrandt",
+      "date": "2024-10-09T15:08:43Z",
+      "sha": "8cdded3a4a7fed085dc824bbebe4960f80cdf2b9",
+      "message": "Add `PoseSensor` semantic component (#1775)",
+      "files_changed": 6,
+      "additions": 279,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "KmakD",
+      "date": "2025-02-24T11:53:09Z",
+      "sha": "bfb57361a548893d616301adefa18bd5f989b493",
+      "message": "Update memlock values in doc (#2066)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Wiktor-99",
+      "date": "2024-12-22T20:10:38Z",
+      "sha": "03bf0e8ff13695a9b6e862fdbaba358ee6b1941c",
+      "message": "Semantic components cleanup (#1940)\n\n---------\n\nCo-authored-by: Christoph Fröhlich <christophfroehlich@users.noreply.github.com>\nCo-authored-by: Sai Kishor Kothakota <saisastra3@gmail.com>",
+      "files_changed": 5,
+      "additions": 135,
+      "deletions": 166,
+      "commit_type": "ci"
+    },
+    {
+      "author": "tpoignonec",
+      "date": "2025-02-03T10:33:37Z",
+      "sha": "2dc37252af4b0b6ad4902bffab3458066dc7d376",
+      "message": "add a semantic command interface to \"semantic_components\" (#1945)",
+      "files_changed": 8,
+      "additions": 493,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "traversaro",
+      "date": "2024-02-09T19:46:03Z",
+      "sha": "b3912f95663f187566278c4a360ac80af4af3ddf",
+      "message": "Add missing export macros in lexical_casts.hpp (#1382)",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "domire8",
+      "date": "2025-01-08T11:25:16Z",
+      "sha": "940cf5318413bebcfef4e8fe7560bb6d134f849d",
+      "message": "Initialize robot description in ControllerManager (#1983)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "nakul-py",
+      "date": "2025-01-07T06:41:22Z",
+      "sha": "6e1059c9dfe3312f5b4d2f45c9d3d19d59685ee5",
+      "message": "Using urdf/model.hpp for rolling (#1978)",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "imsudiproy",
+      "date": "2024-12-23T15:34:38Z",
+      "sha": "52a2ffd4343747af1c5da5c4c49535e3ecc94fc7",
+      "message": "Fix deprecated usage of lock_memory API (#1970)",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "kumar-sanjeeev",
+      "date": "2024-12-20T19:18:06Z",
+      "sha": "4439bc772b1cf85da3e11fc71837b7dbb04d66c2",
+      "message": "Reuse `TriggerType` enum in hardware components (#1962)",
+      "files_changed": 3,
+      "additions": 30,
+      "deletions": 10,
+      "commit_type": "code"
+    },
+    {
+      "author": "TakashiSato",
+      "date": "2024-11-27T16:07:34Z",
+      "sha": "e284af2171087fa6d2fca58fadcbd404dc7e0fb0",
+      "message": "Fix missing virtual of on_export_[state|command]_interfaces methods (#1888)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "louietouie",
+      "date": "2024-12-11T07:34:23Z",
+      "sha": "c37b9d91ef3c791e3ff9851edb4dc00cdf86bdce",
+      "message": "Fixed typo. Added s to state_interfaces_ (#1930)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Tony Najjar",
+      "date": "2022-09-29T08:15:03Z",
+      "sha": "b1f31a158930b989bcbb1da0ce28ab2205a8f7f4",
+      "message": "Add diagnostics for controllers activity (#820)",
+      "files_changed": 4,
+      "additions": 42,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "BarisYazici",
+      "date": "2024-11-04T16:18:19Z",
+      "sha": "be0a339ac447cf259b560f13f634dd0ced6028ff",
+      "message": "fix: typo use thread_priority (#1844)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "SantoshGovindaraj",
+      "date": "2024-09-17T12:10:49Z",
+      "sha": "84e85f9f0bbd67af9eebbe40bf5eef89792945ff",
+      "message": "Add test coverage for `params_file` parameter in spawner/unspawner tests (#1754)",
+      "files_changed": 1,
+      "additions": 34,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "Manuel Muth",
+      "date": "2024-08-15T12:34:02Z",
+      "sha": "eb4316b1dc65d9a93a2463b4f2b22f3510f0ab1b",
+      "message": "Preparation of Handles for Variant Support (#1678)",
+      "files_changed": 2,
+      "additions": 45,
+      "deletions": 43,
+      "commit_type": "code"
+    },
+    {
+      "author": "mamueluth",
+      "date": "2022-10-07T12:51:01Z",
+      "sha": "4584f96c64260a5b4cb71e416967b1aa1f9a033a",
+      "message": "fix broken links (issue #831) (#833)\n\n* fix broken lins in https://control.ros.org/master/doc/ros2_control/hardware_interface/doc/writing_new_hardware_interface.html\r\n\r\n* Apply suggestions from code review\r\n\r\nCo-authored-by: Bence Magyar <bence.magyar.robotics@gmail.com>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "sgmurray",
+      "date": "2023-01-18T16:04:45Z",
+      "sha": "70a156e69026044c7f374438a90dad5a65d1e915",
+      "message": "Test fix: don't keep reference to the controller in the test when it should be destroyed in the controller manager (#883)",
+      "files_changed": 1,
+      "additions": 41,
+      "deletions": 10,
+      "commit_type": "code"
+    },
+    {
+      "author": "firesurfer",
+      "date": "2023-12-04T10:00:45Z",
+      "sha": "c9bd3d81c3312f08c191163b4922762af6c023b2",
+      "message": "Report inactive controllers as a diagnostics ok instead of an error (#1184)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "henrygerardmoore",
+      "date": "2024-07-21T08:56:09Z",
+      "sha": "6631270667ceaf3c26f55bc24788589633e9f859",
+      "message": "Unused header cleanup (#1627)",
+      "files_changed": 84,
+      "additions": 40,
+      "deletions": 598,
+      "commit_type": "code"
+    },
+    {
+      "author": "Parker-Drouillard",
+      "date": "2024-07-16T11:30:49Z",
+      "sha": "1f8ca08923ee53f75f86b4f8298c337d46a861e7",
+      "message": "Fix typos in test_resource_manager.cpp (#1609)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "test"
+    },
+    {
+      "author": "adriaroig",
+      "date": "2024-05-09T11:23:46Z",
+      "sha": "edfb971c55f54f26272fbe38ee134859d7938d41",
+      "message": "Parse URDF soft_limits into the HardwareInfo structure (#1488)",
+      "files_changed": 5,
+      "additions": 124,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "VX792",
+      "date": "2021-09-05T06:40:28Z",
+      "sha": "bb6f1512e77a346c3a2f24f56fceed3663903b0d",
+      "message": "rename get_current_state() to get_state() (#512)",
+      "files_changed": 8,
+      "additions": 71,
+      "deletions": 113,
+      "commit_type": "code"
+    },
+    {
+      "author": "clalancette",
+      "date": "2024-03-26T08:52:35Z",
+      "sha": "52e6070af08162f6374c2f539eac8a088e862818",
+      "message": "Replace random_shuffle with shuffle. (#1446)\n\nIn C++14 and newer, std::random_shuffle is deprecated.  Here,\r\nswitch to using std::shuffle instead with a random number\r\ngenerator of our choosing.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "mateusmenezes95",
+      "date": "2024-02-09T10:37:21Z",
+      "sha": "55eeb09ef64e831c9a6d15049cf7f6fa64109b53",
+      "message": "Move hardware interface README content to sphinx documentation (#1342)",
+      "files_changed": 3,
+      "additions": 173,
+      "deletions": 129,
+      "commit_type": "docs"
+    },
+    {
+      "author": "bailaC",
+      "date": "2021-09-07T15:22:22Z",
+      "sha": "05718bcbc9918de46ac5257895edec5945603a0c",
+      "message": "Methods controlling the lifecycle of controllers all have on_ prefix\n\nSolving ros2_control#489\r\nCo-authored-by: Denis Štogl <denis@stogl.de>",
+      "files_changed": 9,
+      "additions": 61,
+      "deletions": 19,
+      "commit_type": "code"
+    },
+    {
+      "author": "taDachs",
+      "date": "2023-12-20T19:11:40Z",
+      "sha": "e92b6c2c84946c8dab44146a5b4a666390543d61",
+      "message": "Improve transmission tests (#1238)\n\n* [transmission_interface] relaxes float tolerance in tests\r\n\r\n* [transmission_interface] replaces EXPECT_EQ for floats with EXPECT_THAT(..., DoubleNear(...))",
+      "files_changed": 6,
+      "additions": 106,
+      "deletions": 92,
+      "commit_type": "code"
+    },
+    {
+      "author": "yashi",
+      "date": "2023-12-27T09:15:31Z",
+      "sha": "0a7b14934d121d945dffda56e161522df1cada61",
+      "message": "controller_manager: Add space to string literal concatenation (#1245)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "stephanie-eng",
+      "date": "2023-12-14T17:50:48Z",
+      "sha": "9055b5b7dbe609eb3b8e351fa8e24bd399c4a7cc",
+      "message": "Fix typo in docs (#1219)\n\nCo-authored-by: Dr. Denis <denis@stoglrobotics.de>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "duringhof",
+      "date": "2023-12-13T17:34:45Z",
+      "sha": "836354681b242dd222b34a0c450c1167766a356b",
+      "message": "Update reviewer-lottery.yml (#1220)",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "cwecht",
+      "date": "2022-12-06T11:57:34Z",
+      "sha": "89e6598ad284ff69a4ab39bf6dda317cf4832f55",
+      "message": "ResourceManager doesn't always log an error on shutdown anymore (#867)\n\n\r\nCo-authored-by: Christopher Wecht <christopher.wecht@itk-engineering.com>\r\nCo-authored-by: Denis Štogl <denis@stoglrobotics.de>",
+      "files_changed": 2,
+      "additions": 16,
+      "deletions": 14,
+      "commit_type": "code"
+    },
+    {
+      "author": "olivier-stasse",
+      "date": "2023-06-21T07:34:49Z",
+      "sha": "db34dfaf2d79fc8afcd460d9ae16f02c43265a2a",
+      "message": "Ensure instantiation of hardware classes work for python bindings (#1058)",
+      "files_changed": 3,
+      "additions": 40,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "flochre",
+      "date": "2023-01-11T21:43:37Z",
+      "sha": "6aae3e1b30c2e3e2d4ed2db2bd9c322dc25d9cd2",
+      "message": "Update imu_sensor.hpp (#893)\n\nCovariances values should come from the IMU_Broadcaster, like the frame_id or the time",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "gwalck",
+      "date": "2023-06-13T14:57:37Z",
+      "sha": "1b83a5b5c06fa491a96f67ac338a0c16a8112987",
+      "message": "Add -Wconversion flag to protect future developments (#1053)",
+      "files_changed": 7,
+      "additions": 10,
+      "deletions": 8,
+      "commit_type": "docs"
+    },
+    {
+      "author": "moriarty",
+      "date": "2023-06-02T12:44:57Z",
+      "sha": "3b8616e1298d352408aa17458b1c5693651858a2",
+      "message": "[EOL] Foxy & Galactic (#1044)\n\n* [EOL] Foxy & Galactic\r\n\r\n- Foxy EOL date is May 2023\r\n- Galactic EOL date was Dec 9 2022\r\nhttps://docs.ros.org/en/rolling/Releases.html\r\n\r\nSigned-off-by: Alex Moriarty <alex.moriarty@picknik.ai>\r\n\r\n* fix typo\r\n\r\n---------\r\n\r\nSigned-off-by: Alex Moriarty <alex.moriarty@picknik.ai>\r\nCo-authored-by: Bence Magyar <bence.magyar.robotics@gmail.com>",
+      "files_changed": 17,
+      "additions": 4,
+      "deletions": 222,
+      "commit_type": "docs"
+    },
+    {
+      "author": "GreatAlexander",
+      "date": "2023-05-10T22:19:00Z",
+      "sha": "c9709f3ce2ebf31ab5ea2c25829c422f7465f0d7",
+      "message": "Implement parse_bool and refactor a few (#1014)",
+      "files_changed": 3,
+      "additions": 13,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "cottsay",
+      "date": "2023-04-14T06:47:03Z",
+      "sha": "437d37b6b395d0fa29c35bb50716103275f80dae",
+      "message": "Add missing build_export_depends to controller_interface (#989)",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "EXPX3",
+      "date": "2023-03-28T17:40:48Z",
+      "sha": "fea2d8a398c317cd49b103ed4f716440536db5d6",
+      "message": "[Controller Interface] Add time and period paramters to update_reference_from_subscribers() (#846) #API-break\n\n* Add Migration file for API breaking changes.\r\n\r\nCo-authored-by: Denis Štogl <denis@stoglrobotics.de>",
+      "files_changed": 6,
+      "additions": 21,
+      "deletions": 5,
+      "commit_type": "docs"
+    },
+    {
+      "author": "methylDragon",
+      "date": "2023-02-20T17:26:48Z",
+      "sha": "3a09fb316a0048838f78829b43bfc219400db6f7",
+      "message": "Expose node options to controller manager (#942)\n\nSigned-off-by: methylDragon <methylDragon@gmail.com>",
+      "files_changed": 5,
+      "additions": 39,
+      "deletions": 6,
+      "commit_type": "docs"
+    },
+    {
+      "author": "tylerjw",
+      "date": "2021-02-12T18:58:04Z",
+      "sha": "8aa12c8a1f90df1cb2df13ba23e8f2572f5d4f35",
+      "message": "Add rosdep step to source build instructions in readme. (#328)\n\n* Add rosdep step to source build instructions in readme.\r\n\r\nSigned-off-by: Tyler Weaver <tylerjw@gmail.com>\r\n\r\n* Update README.md\r\n\r\nCo-authored-by: Bence Magyar <bence.magyar.robotics@gmail.com>\r\n\r\nCo-authored-by: Bence Magyar <bence.magyar.robotics@gmail.com>",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mcevoyandy",
+      "date": "2023-01-06T12:41:45Z",
+      "sha": "570bbb8aa9798baf644009fb69f50829eb99478f",
+      "message": "Fix QoS deprecation warnings (#879)\n\nCo-authored-by: Bence Magyar <bence.magyar.robotics@gmail.com>\r\nCo-authored-by: Denis Štogl <denis@stoglrobotics.de>",
+      "files_changed": 1,
+      "additions": 20,
+      "deletions": 26,
+      "commit_type": "code"
+    },
+    {
+      "author": "henningkayser",
+      "date": "2023-01-24T17:56:41Z",
+      "sha": "78bb0cacb4434006f4e6ed13a94a77bf2261a489",
+      "message": "Make double parsing locale independent (#921)",
+      "files_changed": 3,
+      "additions": 57,
+      "deletions": 15,
+      "commit_type": "code"
+    },
+    {
+      "author": "sp-sophia-labs",
+      "date": "2022-12-04T09:52:24Z",
+      "sha": "30131b42f082a06032507040840c7ca4c48a6241",
+      "message": "Namespace Loaded Controllers (#852)\n\n* ci: :construction_worker: Add ABI check to ros_indiustrial ci (#597)\r\n\r\n* ci: :construction_worker: Add ABI check to ros_indiustrial ci\r\n\r\nrefs: #583\r\n\r\n* ci: :construction_worker: change notation of ci\r\n\r\n* ci: :construction_worker: change branch reference\r\n\r\n* ci: :construction_worker: address PR comments\r\n\r\n* move abi check to spearate workflow\r\n* check abi against base ref\r\n* PR against galactic branch\r\n\r\n* No need to get angles from source anymore, causes issues now (backport #616) (#617)\r\n\r\n* No need to get angles from source anymore, causes issues now (#616)\r\n\r\n(cherry picked from commit 2275f06281f297be972af2bb778efb1243f84e3f)\r\n\r\n* fix spelling\r\n\r\n* Apply suggestions from code review\r\n\r\nCo-authored-by: Bence Magyar <bence.magyar.robotics@gmail.com>\r\n\r\n* first commit\r\n\r\n* namespace support for load_controller in controller_manager\r\n\r\n* cleaning up, renaming variables and other small fixes\r\n\r\n* renaming namespace to manager_namespace to avoid errors\r\n\r\n* removing namespaced param\r\n\r\n* add gitignore for __pycache__ folders\r\n\r\n* remove pycache ignore\r\n\r\n* run 'pre-commit run --all' and fix flake8 errors\r\n\r\n* switch init declaration (revert)\r\n\r\n* remove the need to modify hardware interface\r\n\r\n* remove useless function arguments\r\n\r\n* removing namespace argument from manager services\r\n\r\n* remove namespace from service messages\r\n\r\n* namespaced->prefixed + minor changes for readability\r\n\r\n* fix forgotten rebase conflicts\r\n\r\n* remove galactic related files\r\n\r\n* revert controller_manager constructor changes\r\n\r\nCo-authored-by: Jaron <13423952+jaron-l@users.noreply.github.com>\r\nCo-authored-by: mergify[bot] <37929162+mergify[bot]@users.noreply.github.com>\r\nCo-authored-by: Bence Magyar <bence.magyar.robotics@gmail.com>\r\nCo-authored-by: badr.moutalib <badr.moutalib@accenture.com>\r\nCo-authored-by: Hoang David HA <hoang.david.ha@accenture.com>",
+      "files_changed": 1,
+      "additions": 17,
+      "deletions": 11,
+      "commit_type": "ci"
+    },
+    {
+      "author": "AndyZe",
+      "date": "2020-09-24T19:41:14Z",
+      "sha": "75f92fe7769fba694ddacb6911974a5129cd2020",
+      "message": "Add test instructions to CONTRIBUTING.md (#161)\n\n* Add test instructions to CONTRIBUTING.md",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ijnek",
+      "date": "2022-11-17T15:48:18Z",
+      "sha": "de3a01eeda7673a570b38974679732496ff0e0de",
+      "message": "rqt controller manager ros 2 port (#813)\n\n* add rqt_controller_manager\r\n\r\nSigned-off-by: Kenji Brameld <kenjibrameld@gmail.com>\r\n\r\n* port rqt_controller_manager package.xml from ros1\r\n\r\nSigned-off-by: Kenji Brameld <kenjibrameld@gmail.com>\r\n\r\n* add controller_manager_utils package\r\n\r\nSigned-off-by: Kenji Brameld <kenjibrameld@gmail.com>\r\n\r\n* copy utils.py from ros1\r\n\r\nSigned-off-by: Kenji Brameld <kenjibrameld@gmail.com>\r\n\r\n* override utils.py with one from rqt_joint_trajectory_controlle\r\n\r\nSigned-off-by: Kenji Brameld <kenjibrameld@gmail.com>\r\n\r\n* updates for ros2\r\n\r\nSigned-off-by: Kenji Brameld <kenjibrameld@gmail.com>\r\n\r\n* got controllers loading and unloading\r\n\r\nSigned-off-by: Kenji Brameld <kenjibrameld@gmail.com>\r\n\r\n* fix up state transition\r\n\r\nSigned-off-by: Kenji Brameld <kenjibrameld@gmail.com>\r\n\r\n* don't skip copyright check\r\n\r\nSigned-off-by: Kenji Brameld <kenjibrameld@gmail.com>\r\n\r\n* fill maintainer tag\r\n\r\nSigned-off-by: Kenji Brameld <kenjibrameld@gmail.com>\r\n\r\n* got loading controller names from parameters somewhat working\r\n\r\nSigned-off-by: Kenji Brameld <kenjibrameld@gmail.com>\r\n\r\n* rename get_rosparam_controller_names to get_parameter_controller_names\r\n\r\nSigned-off-by: Kenji Brameld <kenjibrameld@gmail.com>\r\n\r\n* change logic to use node names rather than namespaces\r\n\r\nSigned-off-by: Kenji Brameld <kenjibrameld@gmail.com>\r\n\r\n* allow activation of controller from rqt_controller_manager\r\n\r\nSigned-off-by: Kenji Brameld <kenjibrameld@gmail.com>\r\n\r\n* fix up imports\r\n\r\nSigned-off-by: Kenji Brameld <kenjibrameld@gmail.com>\r\n\r\n* use services from controller_manager_services instead of setting up service clients\r\n\r\nSigned-off-by: Kenji Brameld <kenjibrameld@gmail.com>\r\n\r\n* clean up cm_name\r\n\r\nSigned-off-by: Kenji Brameld <kenjibrameld@gmail.com>\r\n\r\n* clean up,  change \"stop\" to \"deactivate\"\r\n\r\nSigned-off-by: Kenji Brameld <kenjibrameld@gmail.com>\r\n\r\n* remove controller_manager_utils, and port necessary functionality into controller_manager.py\r\n\r\nSigned-off-by: Kenji Brameld <kenjibrameld@gmail.com>\r\n\r\n* fix format and copyright to pass tests\r\n\r\nSigned-off-by: Kenji Brameld <kenjibrameld@gmail.com>\r\n\r\n* change license of rqt_controller_manager\r\n\r\nSigned-off-by: Kenji Brameld <kenjibrameld@gmail.com>\r\n\r\n* update plugin.xml\r\n\r\nSigned-off-by: Kenji Brameld <kenjibrameld@gmail.com>\r\n\r\n* remove redundant dependency\r\n\r\nSigned-off-by: Kenji Brameld <kenjibrameld@gmail.com>\r\n\r\n* stretch last section in rqt_controller_manager table\r\n\r\nSigned-off-by: Kenji Brameld <kenjibrameld@gmail.com>\r\n\r\n* update docstring\r\n\r\nSigned-off-by: Kenji Brameld <kenjibrameld@gmail.com>\r\n\r\n* Update rqt_controller_manager/rqt_controller_manager/update_combo.py\r\n\r\nCo-authored-by: Erick G. Islas-Osuna <erickisos653@gmail.com>\r\n\r\n* Apply suggestions from code review\r\n\r\nCo-authored-by: Erick G. Islas-Osuna <erickisos653@gmail.com>\r\n\r\n* Updated to work on rolling.\r\n\r\n* Fixup formatting.\r\n\r\n* Update maintainers in rqt_controller_manager/package.xml\r\n\r\nCo-authored-by: Denis Štogl <denis@stoglrobotics.de>\r\n\r\n* update maintainers, and remove ijnek\r\n\r\nSigned-off-by: Kenji Brameld <kenjibrameld@gmail.com>\r\n\r\n* remove tests, since they're covered in CI\r\n\r\nSigned-off-by: Kenji Brameld <kenjibrameld@gmail.com>\r\n\r\nSigned-off-by: Kenji Brameld <kenjibrameld@gmail.com>\r\nCo-authored-by: Erick G. Islas-Osuna <erickisos653@gmail.com>\r\nCo-authored-by: Denis Štogl <denis@stoglrobotics.de>\r\nCo-authored-by: Bence Magyar <bence.magyar.robotics@gmail.com>",
+      "files_changed": 15,
+      "additions": 741,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "bgill92",
+      "date": "2022-11-08T09:35:18Z",
+      "sha": "b1c9c571e106b30094bad227fbc1d7f994bb4637",
+      "message": "Adding activation/deactivation tests for chain controllers (#809)",
+      "files_changed": 1,
+      "additions": 370,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "light-tech",
+      "date": "2022-11-04T07:42:05Z",
+      "sha": "ec2ba9100feefdfdbe6b1bb4b8ee16e06f63705b",
+      "message": "Fix const-ness in std::chrono::time_point construction and explicitly use std::chrono::nanoseconds as std::chrono::time_point template parameter to help compilation on macOS as its std::chrono::system_clock::time_point defaults to std::chrono::milliseconds for duration type (#848)",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "AdrianZw",
+      "date": "2022-10-21T21:54:09Z",
+      "sha": "fed74a9053ebc5d509629fa15fa54cba40566986",
+      "message": "[ControllerManager] Fix wrong initialization order and avoid compiler warnings (#836)",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "kvkpraneeth",
+      "date": "2022-06-16T14:10:09Z",
+      "sha": "ebef6e7675fa9aa0d3f3b24d61f2e2dcd993d234",
+      "message": "Refactored error handling when hardware name is duplicated (#724)",
+      "files_changed": 1,
+      "additions": 20,
+      "deletions": 14,
+      "commit_type": "code"
+    },
+    {
+      "author": "tonynajjar",
+      "date": "2022-09-28T18:38:55Z",
+      "sha": "1088ac2b6cfafe1a81258356600d946ac18fb44f",
+      "message": "Search for controller manager in the same namespace as spawner (#810)",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "jaron-l",
+      "date": "2021-07-27T21:15:50Z",
+      "sha": "d5949f7625d443abbc2465770830634015345c86",
+      "message": "Bug, feature request, and pull request GitHub templates (#470)\n\n* Initial bug report commit\r\n\r\n* Used default GitHub template but modified environment to better reflect CONTRIBUTING.md\r\n\r\nFixes #415\r\n\r\n* Initial feature request template commit\r\n\r\n* Default GitHub feature request template\r\n\r\nFixes #415\r\n\r\n* Initial commit for pull request GitHub template\r\n\r\n* Based on CONTRIBUTING.md\r\n* Just copied the Pull Request section and made the points checkboxes\r\n\r\nFixes #415",
+      "files_changed": 3,
+      "additions": 77,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "sachinkum0009",
+      "date": "2022-09-19T12:15:30Z",
+      "sha": "fe1d47cb7ccb0d4077004cffa3d75dbdf1e16696",
+      "message": "pygraphviz functions updated (#812)",
+      "files_changed": 2,
+      "additions": 17,
+      "deletions": 16,
+      "commit_type": "config"
+    },
+    {
+      "author": "pac48",
+      "date": "2022-07-30T07:13:39Z",
+      "sha": "94d1e9a9f07c92094992d26c44ac8d9e0a3c9103",
+      "message": "Add chained controllers information in list controllers service #abi-braking (#758)\n\n* add chained controllers in ros2controlcli\r\n* remove controller_group from service\r\n* added comments to ControllerState message\r\n* added comments to ChainedConnection message",
+      "files_changed": 9,
+      "additions": 252,
+      "deletions": 44,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Interactics",
+      "date": "2022-08-16T06:26:02Z",
+      "sha": "df562383f99cd86d2e62334e06e9501b4d6680b7",
+      "message": "Corrected the site link to a valid one. (#801)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "leander-dsouza",
+      "date": "2022-06-30T16:13:32Z",
+      "sha": "e2697ea9551d7f314400861058cf4d7ca80aa9e9",
+      "message": "Add available status and moved to fstrings when listing hardware interfaces (#739)",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "livanov93",
+      "date": "2021-08-28T08:31:53Z",
+      "sha": "5a75f94fd71985b90d3d10b90654b79bdb5392f0",
+      "message": "Automatic parameter declaration - enable existence of undeclared parameters from overrides (#504)\n\n* Add automatic parameter declaration\r\n\r\n* Pre-commit changes.",
+      "files_changed": 2,
+      "additions": 27,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "Schulze18",
+      "date": "2022-07-02T21:55:51Z",
+      "sha": "d46bd5885121ae08e3ad15e8ecd03d8e2094f254",
+      "message": "[Interfaces] Improved ```get_name()``` method of hardware interfaces #api-breaking (#737)",
+      "files_changed": 12,
+      "additions": 74,
+      "deletions": 37,
+      "commit_type": "config"
+    },
+    {
+      "author": "mcbed",
+      "date": "2022-06-27T22:16:47Z",
+      "sha": "bcfe8b5952901147f8c398f536de6a269f3694e5",
+      "message": "fixed period always 0 (#738)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Jack",
+      "date": "2022-02-16T21:50:11Z",
+      "sha": "4d2bce84b7d85882b33287e986e4afb2c78854e3",
+      "message": "added a fixed control period to loop (#647)\n\n* added a fixed control period to loop\r\n\r\n* fixe formatting\r\n\r\n* Improvements to naming convention and readability\r\n\r\nCo-authored-by: Denis Štogl <destogl@users.noreply.github.com>\r\n\r\n* Removed unnecessary code missed in last commit\r\n\r\nCo-authored-by: Denis Štogl <destogl@users.noreply.github.com>\r\n\r\n* updated variable begin to current_time\r\n\r\nCo-authored-by: Denis Štogl <destogl@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 13,
+      "deletions": 10,
+      "commit_type": "ci"
+    },
+    {
+      "author": "rcywongaa",
+      "date": "2022-04-20T09:22:15Z",
+      "sha": "bb8eab188a524ff2c26dbd0a63e5c8f0f2e3d0d5",
+      "message": "Add controller_manager_msgs dependency to test_hardware_management_srvs (#702)",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 1,
+      "commit_type": "test"
+    },
+    {
+      "author": "LukasMacha97",
+      "date": "2022-03-17T16:04:09Z",
+      "sha": "97d90e374b051dd992794f7347a93fc8e939d213",
+      "message": "added my username lm2292 to reviewer-lottery (#680)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "mergify[bot]",
+      "date": "2022-03-15T06:43:36Z",
+      "sha": "134f5f235dccb6c95f6adb74de17bed5970c6e6e",
+      "message": "Require lifecycle-msgs in hardware_interface package (#675) (#678)\n\n(cherry picked from commit 3449d824436b4fc15c8d67f0ada41a04d0e88127)\r\n\r\nCo-authored-by: Martin Wudenka <Martin.Wudenka@gmx.de>",
+      "files_changed": 2,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Vatan Aksoy Tezer",
+      "date": "2021-04-23T17:56:10Z",
+      "sha": "55bd249c800b46a63ffc6b1ed326db78cbc43163",
+      "message": "Remove empty argument (#390)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "aprotyas",
+      "date": "2022-03-03T10:24:27Z",
+      "sha": "8b81156d07c03bde6878584c27d44fe6844d78ab",
+      "message": "[CI] Replace colcon-mixin-name with colcon-defaults (#657)\n\n* CI: Replace colcon-mixin-name with colcon-defaults\r\n\r\nThe former is not a valid option in action-ros-ci@v0.2.\r\n\r\nSigned-off-by: Abrar Rahman Protyasha <aprotyas@u.rochester.edu>\r\n\r\n* Rename colcon-mixin-name option to colcon-defaults\r\n\r\nSigned-off-by: Abrar Rahman Protyasha <aprotyas@u.rochester.edu>",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 1,
+      "commit_type": "ci"
+    },
+    {
+      "author": "wmmc88",
+      "date": "2021-12-03T07:56:23Z",
+      "sha": "3f4a55bd898d5ae16fbefb6b19822dce0dbeba2a",
+      "message": "fix get_update_rate visibility in windows (#586)",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Xi-HHHM",
+      "date": "2021-10-30T06:57:37Z",
+      "sha": "709cfdbb58b9b662d4d604654a5f725cc46eeb35",
+      "message": "Add verbose flag to CLI command list_controllers (#569)",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "fmros",
+      "date": "2021-08-20T07:09:09Z",
+      "sha": "580bb32cf4bfb67c00adc64b7ab25c71235ffce6",
+      "message": "fix link to point to read-the-docs (#496)\n\nthe current reference was not working.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "niiquaye",
+      "date": "2021-11-12T12:09:36Z",
+      "sha": "1dc970b3a56913a7ac978b89ae000eeb33550a29",
+      "message": "simple transmission configure multiple definition fix (#571)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "ahcorde",
+      "date": "2021-11-02T12:19:24Z",
+      "sha": "c4cdbee6c9139f9e85c9d03d62d05ca683cc83a8",
+      "message": "Import and Initialize components (#566)\n\nSigned-off-by: ahcorde <ahcorde@gmail.com>",
+      "files_changed": 2,
+      "additions": 116,
+      "deletions": 30,
+      "commit_type": "code"
+    },
+    {
+      "author": "jackcenter",
+      "date": "2021-10-15T07:48:03Z",
+      "sha": "8478f6eec7caf351e7b9876b5306eb99f086e38e",
+      "message": "Added timeout argument for service_caller timeout (#552)\n\n* Update output to format strings.\r\n\r\nCo-authored-by: Denis Štogl <denis@stogl.de>",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "JafarAbdi",
+      "date": "2020-03-09T14:57:40Z",
+      "sha": "55105d2d1e19d94bb5a8ffc6961e1dfb77c51289",
+      "message": "Replace RCUTILS_ with RCLCPP_ for logging (#62)",
+      "files_changed": 12,
+      "additions": 56,
+      "deletions": 41,
+      "commit_type": "docs"
+    },
+    {
+      "author": "NourS-d",
+      "date": "2021-10-08T21:09:17Z",
+      "sha": "9d6b9c203d902b324afedd3fd9899d99c0bc79d0",
+      "message": "Clean up test_load_controller (#532)\n\nCloses Issue #493\r\n\r\nSigned-off-by: Nour Saeed <nour.saeed95@gmail.com>",
+      "files_changed": 1,
+      "additions": 197,
+      "deletions": 350,
+      "commit_type": "test"
+    },
+    {
+      "author": "schornakj",
+      "date": "2021-09-27T19:49:37Z",
+      "sha": "d5c9d660c32f71d6a1c1f2303201e0eebeb099a3",
+      "message": "Use ControllerManager node clock for control loop timepoints (#542)",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 10,
+      "commit_type": "code"
+    },
+    {
+      "author": "dignakov",
+      "date": "2021-09-20T06:47:45Z",
+      "sha": "ac3b10ea20104660f9ebf25b66ec04091773e086",
+      "message": "added dt to controller interface and controller manager #438 (#520)\n\n* added dt to controller interface and controller manager, and some rough changes to the tests\r\n* broke up statements to keep line length < 100\r\n* switched from using Duration::from_nanoseconds to Duration::from_seconds\r\n* dt is timed instead of using theoretical update_rate\r\n* update() signature changed to include both time and period\r\n* split some lines to be under 100 chars.\r\n\r\nCo-authored-by: Denis Štogl <denis@stogl.de>",
+      "files_changed": 15,
+      "additions": 48,
+      "deletions": 22,
+      "commit_type": "code"
+    },
+    {
+      "author": "dzywater",
+      "date": "2021-09-07T09:09:47Z",
+      "sha": "3b3898ad8451d3fb6693d00da230866e88f82735",
+      "message": "add M_PI macro for windows in test_component_parser.cpp (#502)\n\n* add M_PI macro for windows in test_component_parser.cpp\r\n\r\n* Update hardware_interface/test/test_component_parser.cpp\r\n\r\nCo-authored-by: Your Name <you@example.com>\r\nCo-authored-by: Bence Magyar <bence.magyar.robotics@gmail.com>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "test"
+    },
+    {
+      "author": "mahaarbo",
+      "date": "2021-03-19T05:22:39Z",
+      "sha": "29efb0beaffdc86ea074b5b8d9dcb890cfa5d489",
+      "message": "release_interfaces when stopping controller (#343)\n\n* release_interfaces when stopping controller\r\n\r\n* Moved release_interfaces after deactivate\r\n\r\n* First attempt at test_release_interfaces\r\n\r\n* Switched to std::async with cm_->update\r\n\r\n* Comment on resource conflict + remove old bit\r\n\r\n* Minor nitpick\r\n\r\n* add more test criteria\r\n\r\nSigned-off-by: Karsten Knese <Karsten1987@users.noreply.github.com>\r\n\r\nCo-authored-by: Karsten Knese <Karsten1987@users.noreply.github.com>",
+      "files_changed": 6,
+      "additions": 413,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "Timple",
+      "date": "2021-08-31T10:23:20Z",
+      "sha": "245081e82a973c942a91dd4a431785d614c8b349",
+      "message": "Remove extensions from executable nodes (#453)\n\n* Remove extensions from executable nodes\r\n\r\n* Fix brackets\r\n\r\n* Update own launchfiles already\r\n\r\n* Shorter line-length",
+      "files_changed": 6,
+      "additions": 55,
+      "deletions": 6,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Karsten1987",
+      "date": "2017-09-15T02:26:35Z",
+      "sha": "213a240833dcef40515569e7026436e42fe4302d",
+      "message": "import controller_interface",
+      "files_changed": 6,
+      "additions": 320,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "shonigmann",
+      "date": "2021-07-22T09:13:47Z",
+      "sha": "0393d5988788d39894dd0082b16e5daa3b426d07",
+      "message": "Make controller_manager set controller's use_sim_time param when use_sim_time=True (#468)\n\n* potential solution to controller_manager use_sim_time sharing issue\r\n\r\n* removed debug print statements\r\n\r\n* fixed cpplint and uncrustify errors\r\n\r\n* added INFO message to warn user that use_sim_time is being set automatically\r\n\r\nCo-authored-by: Simon Honigmann <shonigmann@blueorigin.com>",
+      "files_changed": 2,
+      "additions": 11,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Ace314159",
+      "date": "2021-07-02T16:03:40Z",
+      "sha": "63282002c9e79251083f92f7bbc49428986de4de",
+      "message": "Fixes for windows (#443)\n\n* Fix building on windows\r\n* Fix MSVC linker error when building tests\r\n* Fix hang when loading controller on windows\r\n* Use better log for configuring controller\r\n* Be consistent with visibility control\r\n* Use try_lock throw exception on failure",
+      "files_changed": 4,
+      "additions": 14,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "lukicdarkoo",
+      "date": "2021-06-21T20:15:59Z",
+      "sha": "630b61099f8bbd473de6727c9aa351833ae5de30",
+      "message": "Add an argument to define controller manager timeout (#444)\n\n* Add argument to define controller manager timeout\r\n\r\n* Fix line length",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "jonatanolofsson",
+      "date": "2021-06-07T14:57:27Z",
+      "sha": "ba77989c6eef5bb815d72db4e3aef19f1e700d97",
+      "message": "Use namespace in controller_manager (#435)\n\nCo-authored-by: Jonatan Olofsson <jonatan.olofsson@saabgroup.com>",
+      "files_changed": 2,
+      "additions": 10,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "andrewlycas",
+      "date": "2021-06-06T19:35:04Z",
+      "sha": "98650ab73110a751e81f423e0c4fa4931d905799",
+      "message": "Updated arg reference to set_state from state since the argument name has been changed (#433)\n\nCo-authored-by: Andrew Lycas <andrew.lycas@stratom.com>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "v-lopez",
+      "date": "2020-06-10T16:35:12Z",
+      "sha": "8402faf2d0f05340a1384dbe24a89b1c68ecd140",
+      "message": "Fix JointCommandHandle description (#96)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "ejalaa12",
+      "date": "2021-04-11T17:41:54Z",
+      "sha": "e8a9f0158dedeedfad3d998e933ff3dce5dbe7c0",
+      "message": "add deprecation note for with_value_ptr (#378)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "AugusteBourgois",
+      "date": "2021-04-21T09:03:32Z",
+      "sha": "29ea0328ac75f9b2f2f0bb31e2f1b5a7a7e36619",
+      "message": "Do not throw when controller type is not found, return nullptr instead (#387)\n\n* Return nullptr instead of throwing exception when controller type is unkown\r\n\r\n* Add unit test",
+      "files_changed": 2,
+      "additions": 12,
+      "deletions": 12,
+      "commit_type": "code"
+    },
+    {
+      "author": "NovusEdge",
+      "date": "2021-04-29T10:24:04Z",
+      "sha": "c0824d7010d4fcfa4e2737023565dbf5b7b86169",
+      "message": "[python] Update files in ros2controlcli to use format strings (#358)\n\n* changed the format string at line 39\r\n\r\n* changed format string at lines: 46, 50, 56, 60, 71, 75, 87\r\n\r\n* changed format string at line 37\r\n\r\n* changed format string at line 37\r\n\r\n* changed format string at lines: 45 and 65\r\n\r\n* changed format string at line 36\r\n\r\n* changed format string at line 36\r\n\r\n* changed format string at line 37\r\n\r\n* changed format string at line 39\r\n\r\n* changed format string at lines: 35, 40, 43, 60, 67, 74\r\n\r\n* Updated format strings\r\n\r\n* fixed the format strings\r\n\r\n* Fix Python\r\n\r\n* black --skip-string-normalization --line-length=99\r\n\r\n* Fix ament_flake8 errors\r\n\r\n* single quote format strings\r\n\r\n* fixup\r\n\r\nCo-authored-by: Bence Magyar <bence.magyar.robotics@gmail.com>",
+      "files_changed": 15,
+      "additions": 122,
+      "deletions": 118,
+      "commit_type": "code"
+    },
+    {
+      "author": "matthew-reynolds",
+      "date": "2020-04-09T04:54:46Z",
+      "sha": "cb4d4b45dfd835eff73733e1a338e6ce6ab83a2f",
+      "message": "Remove test_depend from metapackage (#75)",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 2,
+      "commit_type": "test"
+    },
+    {
+      "author": "mateus-amarante",
+      "date": "2020-10-22T23:01:22Z",
+      "sha": "5304e306bf5ab40aae83cd2d8ad0c48e89a9773b",
+      "message": "Replace rclcpp by rcutils logging tools in hardware_interface pkg (#205)",
+      "files_changed": 3,
+      "additions": 24,
+      "deletions": 38,
+      "commit_type": "docs"
+    },
+    {
+      "author": "christophebedard",
+      "date": "2021-04-07T13:52:10Z",
+      "sha": "7ab77e3b640fb16bf0e94c961cce1e42be2d234d",
+      "message": "Make Foxy source job actually build everything from source (#373)\n\nSigned-off-by: Christophe Bedard <bedard.christophe@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "youtalk",
+      "date": "2020-04-24T05:47:53Z",
+      "sha": "3f85d28087a48520cb30235193eb7b7f477ee2df",
+      "message": "fix typo (#77)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "suab321321",
+      "date": "2021-03-11T07:32:54Z",
+      "sha": "a930c8fc43c8765049fef07287088dd2fe374c61",
+      "message": "Capatalized error message and put the controllers name and resource name inside quote (#338)\n\nSigned-off-by: Abhinav Singh <singhabhinav9051571833@gmail.com>",
+      "files_changed": 2,
+      "additions": 12,
+      "deletions": 12,
+      "commit_type": "code"
+    },
+    {
+      "author": "mathias-luedtke",
+      "date": "2021-02-02T08:03:35Z",
+      "sha": "40cc1085561bc400bbdbab26804e7ebb81f31b3d",
+      "message": "Revert \"run apt update && upgrade (#158)\" (#313)\n\nThis reverts commit 91fb204878cc2b76ddc40ac953659af3193bca3d.",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "BorgesJVT",
+      "date": "2021-01-28T17:18:43Z",
+      "sha": "a12c69fbb264f8257a9c69f1ec1b551a370b2047",
+      "message": "update doxygen style according to ros2 core standard (#300)\n\n* update doxygen style according to ros2 core standard\r\n\r\n* fix lint\r\n\r\n* remove <type> from style\r\n\r\n* fix lint: line size too long\r\n\r\n* Apply suggestions from code review\r\n\r\nCo-authored-by: Karsten Knese <Karsten1987@users.noreply.github.com>",
+      "files_changed": 19,
+      "additions": 188,
+      "deletions": 233,
+      "commit_type": "ci"
+    },
+    {
+      "author": "ShotaAk",
+      "date": "2021-01-28T07:01:50Z",
+      "sha": "654c51d29eabae2a0e61c6f7cb0b95c80530e10a",
+      "message": "Inverse the response of cli commands to return correct exit-status. (#308)\n\n* Inverse the response of cli commands to return correct exit-status.\r\n\r\n* list verbs return exit-status 0",
+      "files_changed": 11,
+      "additions": 11,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "Achinta-Choudhury",
+      "date": "2021-01-27T22:55:58Z",
+      "sha": "2cbed1436fdfab410a54cb211bbecfe84906db36",
+      "message": "Capitalized messages in controller_manager.cpp upto line669 (#285)\n\n* Capitalized messages in controller_manager.cpp up to line669\r\n\r\nCo-authored-by: Bence Magyar <bence.magyar.robotics@gmail.com>\r\nCo-authored-by: Denis Štogl <destogl@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 23,
+      "deletions": 22,
+      "commit_type": "ci"
+    },
+    {
+      "author": "Rayman",
+      "date": "2021-01-06T18:38:40Z",
+      "sha": "f59ca44b01e346deeda2f6daf1a7ffd5a9677cf7",
+      "message": "Fix update rate issues by working around MutliThreadedExecutor (#275)\n\n* Fix update rate issues by working around MutliThreadedExecutor\r\n\r\nCurrently the MutliThreadedExecutor performance is very bad. This leads\r\nto controllers not meeting their update rate. This PR is a temporary\r\nworkaround for these issues.\r\n\r\nThe current approach uses a `rclcpp` timer to execute the control loop.\r\nWhen used in combination with the `MutliThreadedExecutor`, the timers\r\nare not execute at their target frequency. I've converted the control\r\nloop to a while loop on a separate thread that uses `nanosleep` to\r\nexecute the correct update rate. This means that `rclcpp` is not\r\ninvolved in the execution and leads to much better performance.\r\n\r\n* Address review comments by rewriting several comments",
+      "files_changed": 3,
+      "additions": 29,
+      "deletions": 18,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ckenwood",
+      "date": "2020-11-10T20:43:31Z",
+      "sha": "04e6531d04bc6a55c802c0ffdcfbedfcb698b7b7",
+      "message": "Add urdf dependency to urdf test (#233)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "guru-florida",
+      "date": "2020-10-10T09:53:06Z",
+      "sha": "6ae1976974e49026b5d455799fed7d17dca3517d",
+      "message": "Ahcorde/add/joint limit interface (#181)\n\n* Added joint_limits_interface - Direct port from ROS 1\r\n* Follow ros2 styles and added tests\r\n* Added missing dependencies in package.xml\r\n* updated joint limits interface exception to nothrow and match base override\r\n* converted joint limit interfaces to use new JointHandles (no more JointStateHandle or JointCommandHandle). Refactored common functionality into base JointSaturationLimitHandle and JointSoftLimitsHandle classes.\r\n* updated joint limits tests to use new JointHandles\r\n* updated package version from 2 to 3\r\n* added memory include as suggested by ros_industrial test\r\n* uncrustify fixes\r\n* removing changelog from ROS1\r\n* Reset version and fix links\r\n* Update maintainers\r\n\r\nCo-authored-by: ddengster <ed.fan@osrfoundation.org>\r\nCo-authored-by: ahcorde <ahcorde@gmail.com>\r\nCo-authored-by: Bence Magyar <bence.magyar.robotics@gmail.com>\r\nCo-authored-by: Colin MacKenzie guru-florida",
+      "files_changed": 14,
+      "additions": 2656,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mattnds",
+      "date": "2020-10-12T22:15:34Z",
+      "sha": "375999653b8d4a27cf581e1545cba3bf40cb8d92",
+      "message": "Rename `hardware_interface::status` issue 179 (#195)",
+      "files_changed": 11,
+      "additions": 47,
+      "deletions": 47,
+      "commit_type": "code"
+    },
+    {
+      "author": "piraka9011",
+      "date": "2020-01-24T00:20:48Z",
+      "sha": "a20f6c64b1ed829a1b51ed03dd89d2e0646a10e8",
+      "message": "Add ros2_control metapackage\n\nSigned-off-by: Anas Abou Allaban <aabouallaban@pm.me>",
+      "files_changed": 3,
+      "additions": 34,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "klintan",
+      "date": "2020-08-18T12:51:06Z",
+      "sha": "0fb501481a5331fdfd84482f462186a0ce56f70c",
+      "message": "fixed logging issue and update readme (#126)",
+      "files_changed": 2,
+      "additions": 12,
+      "deletions": 13,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Anas Abou Allaban",
+      "date": "2020-01-23T18:05:07Z",
+      "sha": "719cb6ca5d15d77e0a765546545a5807771697a2",
+      "message": "Add Github actions workflow for testing and linting\n\nSigned-off-by: Anas Abou Allaban <allabana@amazon.com>",
+      "files_changed": 2,
+      "additions": 69,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "mikaelarguedas",
+      "date": "2019-07-17T18:48:13Z",
+      "sha": "e651cc801852c3a16d3cf0b57fc551c4aa18a724",
+      "message": "use ros2ci (#16)\n\nSigned-off-by: Mikael Arguedas <mikael.arguedas@gmail.com>",
+      "files_changed": 3,
+      "additions": 13,
+      "deletions": 93,
+      "commit_type": "config"
+    },
+    {
+      "author": "betab0t",
+      "date": "2019-05-07T09:11:01Z",
+      "sha": "38693a93e58922d14e20dfd1daf397bcc36ee3ae",
+      "message": "Update README.md\n\nfix broken links",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "parthc-rob",
+      "date": "2018-06-12T17:17:25Z",
+      "sha": "ac926c4686446e129d7fedfa974de1235e1f2fb8",
+      "message": "rclcpp 0.4.0 changes",
+      "files_changed": 9,
+      "additions": 13,
+      "deletions": 13,
+      "commit_type": "code"
+    }
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T02:09:33Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "locusrobotics",
+    "repo": "fuse"
+  },
+  "data": [
+    {
+      "author": "garyservin",
+      "date": "2018-12-20T15:15:54Z",
+      "sha": "4fd9dca432c62c67cc67da56454dc03ea9a20fcf",
+      "message": "Fix tests for bionic (#34)",
+      "files_changed": 4,
+      "additions": 22,
+      "deletions": 22,
+      "commit_type": "code"
+    },
+    {
+      "author": "DavidLocus",
+      "date": "2024-05-24T13:58:18Z",
+      "sha": "a98e9ae8d8df3ad34bbcac703ba812ed3541d40d",
+      "message": "Adding stop and start functionality to the fixed lag smoother (#362)\n\n* Adding a pause\r\n\r\n* Pr feedback\r\n\r\n* Pr Feedback:Adding start stop to batch optimizer\r\n\r\n* Removing a debug log I forgot about\r\n\r\n* Fixing lint errors",
+      "files_changed": 6,
+      "additions": 142,
+      "deletions": 10,
+      "commit_type": "code"
+    },
+    {
+      "author": "needphpsql",
+      "date": "2025-07-01T19:07:15Z",
+      "sha": "095de2441ea290f4c3cd32856a8c6089a80b197c",
+      "message": "add user configurable diag mapping support of termination types. (#410)\n\n* add user configurable diag mapping support of termination types.\n\n* missing return.\n\n* replace the entire block for diag.\n\n* add unit test.\n\n* Update fuse_optimizers/src/fixed_lag_smoother.cpp\n\nCo-authored-by: Stephen Williams <swilliams@locusrobotics.com>\n\n---------\n\nCo-authored-by: Stephen Williams <swilliams@locusrobotics.com>",
+      "files_changed": 6,
+      "additions": 246,
+      "deletions": 14,
+      "commit_type": "docs"
+    },
+    {
+      "author": "svwilliams",
+      "date": "2018-07-01T16:21:44Z",
+      "sha": "17d9121f6bd848ca662d7ba1eab76e1efb1db223",
+      "message": "Initial commit",
+      "files_changed": 2,
+      "additions": 34,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jakemclaughlin6",
+      "date": "2024-03-21T02:25:18Z",
+      "sha": "415971ac515c1d7a39cc40c177eb4ea4844521b6",
+      "message": "Add a reset service to the batch optimizer, similar to the fixed-lag smoother (#360)",
+      "files_changed": 3,
+      "additions": 78,
+      "deletions": 17,
+      "commit_type": "code"
+    },
+    {
+      "author": "d3murphy",
+      "date": "2025-04-16T03:03:39Z",
+      "sha": "e83a09287787ad10b27027e8a08f834594a7b7e8",
+      "message": "Imu2D: Use transformed twist when computing covariance (#394)\n\n* Fix Imu2D to use transformed twist in covariance\n\n---------\n\nCo-authored-by: Dan Murphy <dmurphy@ottomotors.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "carlos-m159",
+      "date": "2025-03-03T18:35:32Z",
+      "sha": "ab1fc6bf8e1f040b3fdd97ce311c8c2be96e0b86",
+      "message": "Prevent optimization thread from doing its work when a stop was requested (#391)",
+      "files_changed": 2,
+      "additions": 19,
+      "deletions": 7,
+      "commit_type": "code"
+    },
+    {
+      "author": "ayrton04",
+      "date": "2018-07-06T12:33:51Z",
+      "sha": "81f391b78bdb2bfd733fbd5fdead405f1f73286b",
+      "message": "Adding 3D orientation variable and tests",
+      "files_changed": 5,
+      "additions": 449,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "efernandez",
+      "date": "2019-06-14T13:05:10Z",
+      "sha": "7cf179f6a3ee0a1921dcdf612f38439cdc584a6e",
+      "message": "Store ros::Subscriber in sensor model attribute (#3)\n\nStore ros::Subscriber in sensor model attribute",
+      "files_changed": 8,
+      "additions": 12,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "paulbovbel",
+      "date": "2019-01-16T16:27:11Z",
+      "sha": "c59760bac28edfede2fcd577738b9d354656f37c",
+      "message": "0.2.0",
+      "files_changed": 14,
+      "additions": 21,
+      "deletions": 21,
+      "commit_type": "docs"
+    },
+    {
+      "author": "locus-services",
+      "date": "2018-08-03T20:41:55Z",
+      "sha": "1f20154aa38e59374d5cbb9febdaa868dc807a7d",
+      "message": "Tailor: Creating Jenkinsfile",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "oscarmendezm",
+      "date": "2023-12-05T15:26:34Z",
+      "sha": "75ea820017b840c15790b32c3714363b3f80c148",
+      "message": "Vision constraints (#349)\n\n* FIrst commit for pose estimation from fixed 3D\r\nlandmarks. Includes a pinhole camera model\r\n(no distortion), along with a fixed version and unit tests.\r\nAlso includes a fixed landmark constraint which optimizes\r\nfor pose and optionally calibration, along with unit tests.\r\n\r\n* Updating camera variables, tests and constraints to\r\nallow initialisation from a set of 3D points to support\r\nmulti-marker configurations.\r\n\r\n* Fixes from PR review.\r\n\r\n* Adding validations for pts3d_ in cost functor.",
+      "files_changed": 12,
+      "additions": 2679,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "fabianhirmann",
+      "date": "2023-07-10T13:33:40Z",
+      "sha": "ed21f991e752d3ac3f08fc081795ff2eed09069b",
+      "message": "add missing tf timeout at differential mode of IMU, odometry, and pose sensor model (#322)",
+      "files_changed": 3,
+      "additions": 5,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "facontidavide",
+      "date": "2019-11-20T23:31:24Z",
+      "sha": "8e93d84b5e31a3e31fad7464103016b472344a82",
+      "message": "fix compilation in Kinetic (#112)",
+      "files_changed": 10,
+      "additions": 9,
+      "deletions": 12,
+      "commit_type": "docs"
+    },
+    {
+      "author": "sjphilli",
+      "date": "2019-07-17T16:44:30Z",
+      "sha": "c8277d15bd8483055c687957dcc7778b56080a3a",
+      "message": "Fix typo in processAbsolutePoseWithCovariance (#23)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Enrique Fernandez Perdomo",
+      "date": "2019-06-30T23:11:37Z",
+      "sha": "daba960809e0904b9b3f8f926207c4536f826aed",
+      "message": "Default to private ~reset and ~set_pose names (#14)",
+      "files_changed": 2,
+      "additions": 8,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "Enrique Fernández Perdomo",
+      "date": "2019-06-14T13:06:27Z",
+      "sha": "7f07d170308c88a1df5b6c796b97b061371ab434",
+      "message": "Fix appendPartialMeasurement assignments (#4)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    }
+  ]
+}

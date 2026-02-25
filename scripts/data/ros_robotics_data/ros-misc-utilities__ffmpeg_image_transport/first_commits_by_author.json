@@ -1,0 +1,101 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T14:22:57Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros-misc-utilities",
+    "repo": "ffmpeg_image_transport"
+  },
+  "data": [
+    {
+      "author": "berndpfrommer",
+      "date": "2023-02-16T21:58:23Z",
+      "sha": "1049abddd08578388f6a57435efc2e145918ebe2",
+      "message": "initial commit",
+      "files_changed": 20,
+      "additions": 1786,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ahcorde",
+      "date": "2025-05-28T11:31:25Z",
+      "sha": "eb55e086f54c8b158d138c6f6229ecc01f17a4e1",
+      "message": "Replaced deprecated code\n\nSigned-off-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>",
+      "files_changed": 2,
+      "additions": 5,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "shtern",
+      "date": "2024-11-05T13:02:29Z",
+      "sha": "ab76dd84375471bf8473bde0a714a367fe665165",
+      "message": "Configurable CRF (#34)\n\n* Added CRF support\r\n\r\n* fixed gop parameter in the README examples\r\n\r\n* PR review fixes\r\n\r\n---------\r\n\r\nCo-authored-by: Alexey Shtern <alexey.shtern@xtend.me>",
+      "files_changed": 3,
+      "additions": 7,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "wentasah",
+      "date": "2023-08-01T08:23:52Z",
+      "sha": "307b125684c5381b0212463e07e78cdf99e405a4",
+      "message": "Fix invalid conversion from 'const AVCodec*' to 'AVCodec*'\n\nWhen compiling with libavcodec version 59.37.100 and GCC 12.3.0 I get\nthe following error message:\n\n    src/ffmpeg_encoder.cpp: In member function 'bool ffmpeg_image_transport::FFMPEGEncoder::openCodec(int, int)':\n    src/ffmpeg_encoder.cpp:97:51: error: invalid conversion from 'const AVCodec*' to 'AVCodec*' [-fpermissive]\n\nThe change in libavcodec that causes this was introduced in\nhttps://github.com/FFmpeg/FFmpeg/commit/626535f6a169e2d821b969e0ea77125ba7482113,\nand appeared first in version 59.0.100.\n\nThis commit fixes the error.\n\nCo-authored-by: Jan Randa <randaja4@fel.cvut.cz>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "danil-tolkachev",
+      "date": "2024-06-24T13:54:54Z",
+      "sha": "09c09cbdc8d662e65a537014f7be09c1d82960b5",
+      "message": "fix typo in link",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "buckleytoby",
+      "date": "2023-12-23T00:11:52Z",
+      "sha": "227ae6847d1e3b9032968c6a0338279a2eb31259",
+      "message": "changed install directory so other pkgs can ament_target_depend on this library",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "fferroni",
+      "date": "2023-09-06T05:22:49Z",
+      "sha": "d10859d4cea7d3ee700d1dd2528f949967cd8d43",
+      "message": "Update package.xml",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "akssri",
+      "date": "2023-05-12T06:02:57Z",
+      "sha": "6f197c99839fd37594a2547e134f94c105b2e07c",
+      "message": "src/ffmpeg_decoder.cpp:\n- check if hwdevice_ctx returns; else default to AV_HWDEVICE_TYPE_NONE.\n- use SWS_ACCURATE_RND flag for non-aligned frames.\n\nsrc/ffmpeg_encoder.cpp:\n- use strided copy for non-aligned frame.",
+      "files_changed": 2,
+      "additions": 42,
+      "deletions": 12,
+      "commit_type": "code"
+    },
+    {
+      "author": "Akshay Srinivasan",
+      "date": "2023-05-16T01:18:16Z",
+      "sha": "48b3f16cdf8d897ee12d5274de1446e3771b5a0a",
+      "message": "fix formatting",
+      "files_changed": 2,
+      "additions": 16,
+      "deletions": 23,
+      "commit_type": "code"
+    }
+  ]
+}

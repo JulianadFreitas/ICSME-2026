@@ -1,0 +1,451 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T08:31:39Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "autowarefoundation",
+    "repo": "autoware_lanelet2_extension"
+  },
+  "data": [
+    {
+      "author": "sarun-hub",
+      "date": "2025-11-19T05:10:56Z",
+      "sha": "9651b76f258cd3cc753a6398a02e3c1fdccdfdbe",
+      "message": "feat(lanelet2_extension): deprecate ported functions in lanelet2_extension (#81)\n\nSigned-off-by: Sarun Mukdapitak <sarun.mukda@gmail.com>",
+      "files_changed": 8,
+      "additions": 219,
+      "deletions": 16,
+      "commit_type": "code"
+    },
+    {
+      "author": "soblin",
+      "date": "2022-10-28T15:17:54Z",
+      "sha": "a13a7e0b3c4d75fe42ec91c11c38f6eb6b285c1c",
+      "message": "feat(lanelet2_extension): add RightOfWay checker (#114)\n\n* read osm, extract right_of_ways, and checking its conflict with yield\r\n\r\nSigned-off-by: Mamoru Sobue <mamoru.sobue@tier4.jp>\r\n\r\n* using range-v3\r\n\r\nSigned-off-by: Mamoru Sobue <mamoru.sobue@tier4.jp>\r\n\r\n* does not compile\r\n\r\nSigned-off-by: Mamoru Sobue <mamoru.sobue@tier4.jp>\r\n\r\n* adding document and image\r\n\r\nSigned-off-by: Mamoru Sobue <mamoru.sobue@tier4.jp>\r\n\r\n* fixed\r\n\r\nSigned-off-by: Mamoru Sobue <mamoru.sobue@tier4.jp>\r\n\r\n* fixed spell check\r\n\r\nSigned-off-by: Mamoru Sobue <mamoru.sobue@tier4.jp>\r\n\r\n* ci(pre-commit): autofix\r\n\r\n* fixed spell check\r\n\r\nSigned-off-by: Mamoru Sobue <mamoru.sobue@tier4.jp>\r\n\r\nSigned-off-by: Mamoru Sobue <mamoru.sobue@tier4.jp>\r\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>",
+      "files_changed": 6,
+      "additions": 131,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "awf-autoware-bot[bot]",
+      "date": "2022-11-22T04:10:07Z",
+      "sha": "3aabe49e9db411778f0a6886314d7f464f0a603b",
+      "message": "chore: sync files of reverse references (#131)\n\n* chore: sync files of reverse references\r\n\r\nSigned-off-by: GitHub <noreply@github.com>\r\n\r\n* ci(pre-commit): autofix\r\n\r\nSigned-off-by: GitHub <noreply@github.com>\r\nCo-authored-by: kenji-miyake <kenji-miyake@users.noreply.github.com>\r\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>",
+      "files_changed": 3,
+      "additions": 552,
+      "deletions": 3,
+      "commit_type": "ci"
+    },
+    {
+      "author": "yuki-takagi-66",
+      "date": "2026-02-16T09:57:53Z",
+      "sha": "96d9e7a0eb430366db3aea8bf3e2ab2dde6e75fd",
+      "message": "feat(visualzer): add new maker type (#96)\n\n* add new maker\n* add docs\n* fix spell\n---------\nSigned-off-by: yuki-takagi-66 <yuki.takagi@tier4.jp>",
+      "files_changed": 3,
+      "additions": 32,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "veqcc",
+      "date": "2026-01-27T10:00:20Z",
+      "sha": "95eec1ef8aa53003f84a20c2e6e07b35d402e866",
+      "message": "fix(autoware_lanelet2_extension): remove unused variables (#92)\n\nfix(autoware_lanelet2_extension): remove unused variables in visualization.cpp\n\nRemove unused 'point' and 'color' variables that were declared but never used.\nThe code directly assigns to marker->pose.position and marker->color\nwithout using these local variables.\n\nDetected by Facebook Infer static analyzer (DEAD_STORE).\n\nSigned-off-by: Ryuta Kambe <ryuta.kambe@tier4.jp>",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Owen-Liuyuxuan",
+      "date": "2025-12-22T04:16:12Z",
+      "sha": "e327e0cb2b08d425c86e295cffa832872afdc3b0",
+      "message": "feat: add tmp to python API (#90)\n\n* feat: add TMProjector in python API\n\nAlso add code docs for easier usage in IDE.\n\n* Rename import for boost python projection module",
+      "files_changed": 1,
+      "additions": 13,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "maxime-clem",
+      "date": "2023-02-13T08:38:14Z",
+      "sha": "9043b786413c1d281d7d7bb84650943e09b497a5",
+      "message": "feat(lanelet2_extension): copy the z values in getExpandedLanelet (#141)\n\n* feat(lanelet2_extension): copy the z values in getExpandedLanelet\r\n\r\nSigned-off-by: Maxime CLEMENT <maxime.clement@tier4.jp>\r\n\r\n* Make templated function and add tests\r\n\r\nSigned-off-by: Maxime CLEMENT <maxime.clement@tier4.jp>\r\n\r\n* Fix clang-tidy warning for new gtest\r\n\r\nSigned-off-by: Maxime CLEMENT <maxime.clement@tier4.jp>\r\n\r\n* Fix clang-tidy warnings caused by gtest asserts\r\n\r\nSigned-off-by: Maxime CLEMENT <maxime.clement@tier4.jp>\r\n\r\n---------\r\n\r\nSigned-off-by: Maxime CLEMENT <maxime.clement@tier4.jp>",
+      "files_changed": 3,
+      "additions": 78,
+      "deletions": 10,
+      "commit_type": "code"
+    },
+    {
+      "author": "liuXinGangChina",
+      "date": "2025-09-27T12:01:37Z",
+      "sha": "177078274bdde7f13116a57249dea430f2490fbf",
+      "message": "chore: add build option -Wno-error=maybe-uninitialized (#79)\n\nbuild::jazzy-porting::add build option -Wno-error=maybe-uninitialized to surpress compile error caused by boost-geometry library, v0.0\n\nSigned-off-by: liuXinGangChina <lxg19892021@gmail.com>",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "kosuke55",
+      "date": "2022-11-30T01:47:01Z",
+      "sha": "824e02f6ab893aba138f101a66ab855d838a0e89",
+      "message": "feat!: replace HADMap with Lanelet (#133)\n\n* feat!: replace HADMap with Lanelet\r\n\r\nSigned-off-by: kosuke55 <kosuke.tnp@gmail.com>\r\n\r\n* add autoware_msgs to build depends\r\n\r\nSigned-off-by: kosuke55 <kosuke.tnp@gmail.com>\r\n\r\nSigned-off-by: kosuke55 <kosuke.tnp@gmail.com>",
+      "files_changed": 4,
+      "additions": 13,
+      "deletions": 12,
+      "commit_type": "config"
+    },
+    {
+      "author": "zusizusi",
+      "date": "2025-08-04T04:30:36Z",
+      "sha": "d48324f37359c622e2ee6cdbfb63de8423ddbd1f",
+      "message": "feat: add roundabout regulatory element (#75)\n\n* feat: add roundabout regulatory element implementation\n\nSigned-off-by: Sho Iwasawa <sho.iwasawa.2@tier4.jp>\n\n* feat: add entry and exit lanelet checks for roundabouts\n\nSigned-off-by: Sho Iwasawa <sho.iwasawa.2@tier4.jp>\n\n* feat: enhance roundabout functionality with lanelet ID caching and checks\n\nSigned-off-by: Sho Iwasawa <sho.iwasawa.2@tier4.jp>\n\n* feat: update roundabout lanelet checks to use lanelet IDs\n\nSigned-off-by: Sho Iwasawa <sho.iwasawa.2@tier4.jp>\n\n* style(pre-commit): autofix\n\n* fix: include unordered_set for improved functionality\n\nSigned-off-by: Sho Iwasawa <sho.iwasawa.2@tier4.jp>\n\n* style(pre-commit): autofix\n\n* fix: remove unnecessary include\n\nCo-authored-by: Yukinari Hisaki <42021302+yhisaki@users.noreply.github.com>\n\n---------\n\nSigned-off-by: Sho Iwasawa <sho.iwasawa.2@tier4.jp>\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>\nCo-authored-by: Yukinari Hisaki <42021302+yhisaki@users.noreply.github.com>",
+      "files_changed": 4,
+      "additions": 339,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "zulfaqar-azmi-t4",
+      "date": "2025-07-22T07:32:52Z",
+      "sha": "58b823b8acf6e5624ea490047cba677d26fefb72",
+      "message": "feat: add linestring with type getter (#73)\n\nSigned-off-by: Zulfaqar Azmi <zulfaqar.azmi@tier4.jp>",
+      "files_changed": 2,
+      "additions": 17,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "mitsudome-r",
+      "date": "2024-07-02T05:37:49Z",
+      "sha": "08afed3e059c1a5ac13d40ed12d5d42a4ca7291b",
+      "message": "chore(ci): fix cpplint errors from pre-commit ci (#15)\n\nSigned-off-by: Ryohsuke Mitsudome <ryohsuke.mitsudome@tier4.jp>",
+      "files_changed": 1,
+      "additions": 26,
+      "deletions": 13,
+      "commit_type": "code"
+    },
+    {
+      "author": "sasakisasaki",
+      "date": "2025-06-03T12:14:24Z",
+      "sha": "82ea5f0ddf98681070da99bdfcde510ffcbf0416",
+      "message": "feat(workflow): add workflows for version control automation (#68)\n\nSigned-off-by: Junya Sasaki <junya.sasaki@tier4.jp>",
+      "files_changed": 2,
+      "additions": 74,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "youtalk",
+      "date": "2024-04-25T13:11:16Z",
+      "sha": "ea230aba28d8eeca08614f4b8d5d45526c2c6df9",
+      "message": "Initial commit",
+      "files_changed": 2,
+      "additions": 203,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "firemark",
+      "date": "2025-05-14T00:56:17Z",
+      "sha": "ba923390043ee62eb030451f2120006c413a1b21",
+      "message": "fix(autoware_lanelet2_extension): point on the edge of a triangle was  not treated as inside the triangle (#66)\n\nfix(autoware_lanelet2_extension): point on the edge of a triangle was not treated as inside the triangle\n\nSigned-off-by: Marek Piechula <mpiechula@autonomous-systems.pl>\nCo-authored-by: Marek Piechula <mpiechula@autonomous-systems.pl>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "mehmetdogru",
+      "date": "2022-08-23T16:01:02Z",
+      "sha": "ff8f8854acdff44601fc95f8162cf7754cb1ba3b",
+      "message": "docs(lanelet2_extension): add crosswalk safety slow down annotation instructions (#93)\n\n* docs(lanelet2_extension): add crosswalk safety slow down annotation instructions\r\n\r\nSigned-off-by: Mehmet Dogru <42mehmetdogru42@gmail.com>\r\n\r\n* ci(pre-commit): autofix\r\n\r\nSigned-off-by: Mehmet Dogru <42mehmetdogru42@gmail.com>\r\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 24,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "YamatoAndo",
+      "date": "2025-04-04T12:46:47Z",
+      "sha": "3a968894143f51dec3c431d2976a30d9424619fd",
+      "message": "feat(projection): add_scale_factor (#54)\n\n* add_scale_factor\n\nSigned-off-by: Yamato Ando <yamato.ando@tier4.jp>\n\n* style(pre-commit): autofix\n\n---------\n\nSigned-off-by: Yamato Ando <yamato.ando@tier4.jp>\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>",
+      "files_changed": 2,
+      "additions": 16,
+      "deletions": 9,
+      "commit_type": "ci"
+    },
+    {
+      "author": "Motsu-san",
+      "date": "2024-01-18T09:34:11Z",
+      "sha": "1f6a2c17baaaf2bb2182b03769e0ac75ffaed24c",
+      "message": "chore(lanelet2_extension): add maintainer in lanelet2_extension (#226)\n\nchore: add maintener in lanelet2_extension\r\n\r\nSigned-off-by: Motsu-san <masahiro.sakamoto@tier4.jp>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "HansOersted",
+      "date": "2025-01-06T00:34:59Z",
+      "sha": "21a3d9b341e0d41fadb99ad492b04e0dce566ef3",
+      "message": "feat: add the lanelet length test (#39)\n\n* lanelet length test added.\r\n\r\nSigned-off-by: Zhe Shen <lucidshenzhe@gmail.com>\r\n\r\n* style(pre-commit): autofix\r\n\r\n* compare the precise values\r\n\r\nSigned-off-by: Zhe Shen <lucidshenzhe@gmail.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Zhe Shen <lucidshenzhe@gmail.com>\r\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>\r\nCo-authored-by: Yutaka Kondo <yutaka.kondo@youtalk.jp>",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "dependabot[bot]",
+      "date": "2024-05-08T05:08:24Z",
+      "sha": "1fd04d364264dffdb0df41137ce06180c77f90a5",
+      "message": "build(deps): bump tj-actions/changed-files from 42 to 44 (#5)\n\nBumps [tj-actions/changed-files](https://github.com/tj-actions/changed-files) from 42 to 44.\r\n- [Release notes](https://github.com/tj-actions/changed-files/releases)\r\n- [Changelog](https://github.com/tj-actions/changed-files/blob/main/HISTORY.md)\r\n- [Commits](https://github.com/tj-actions/changed-files/compare/v42...v44)\r\n\r\n---\r\nupdated-dependencies:\r\n- dependency-name: tj-actions/changed-files\r\n  dependency-type: direct:production\r\n  update-type: version-update:semver-major\r\n...\r\n\r\nSigned-off-by: dependabot[bot] <support@github.com>\r\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "ci"
+    },
+    {
+      "author": "xmfcx",
+      "date": "2022-11-28T14:50:59Z",
+      "sha": "ff146c6d8d5ff341c89481fc8f3d042e7b94fe0f",
+      "message": "fix(lanelet2_extension): traffic light id marker array visualization (#134)\n\nSigned-off-by: M. Fatih Cırıt <mfc@leodrive.ai>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "esteve",
+      "date": "2024-12-11T13:33:30Z",
+      "sha": "bcdd36da32b64a42cac6c5bff143941e99ef73bd",
+      "message": "fix(autoware_lanelet2_extension): fix links to issues in CHANGELOG.rst files (#40)\n\nSigned-off-by: Esteve Fernandez <esteve@apache.org>",
+      "files_changed": 2,
+      "additions": 8,
+      "deletions": 8,
+      "commit_type": "docs"
+    },
+    {
+      "author": "a-maumau",
+      "date": "2024-11-21T07:13:20Z",
+      "sha": "bc154471e30bfe040c0387dc703fc3a48b6ba588",
+      "message": "fix: update the github link of map_loader (#31)\n\nadd autoware prefix to map_loader\r\n\r\nSigned-off-by: a-maumau <maumaumaumaumaumaumaumaumaumau@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "kenji-miyake",
+      "date": "2022-08-03T13:20:22Z",
+      "sha": "82a55238e52c58016c512553f6de851a6cb8a12a",
+      "message": "feat: move lanelet2_extension from autoware.universe (#90)\n\n* feat: add map packages (#8)\r\n\r\n* release v0.4.0\r\n\r\n* add resolution param in lanelet2_extension (#760)\r\n\r\n* Fix/extend drivable area beyond goal (#781)\r\n\r\n* update llt2 extention query func\r\n\r\nSigned-off-by: Kosuke Murakami <kosuke.murakami@tier4.jp>\r\n\r\n* extend drivable area over goal point\r\n\r\nSigned-off-by: Kosuke Murakami <kosuke.murakami@tier4.jp>\r\n\r\n* apply clang\r\n\r\nSigned-off-by: Kosuke Murakami <kosuke.murakami@tier4.jp>\r\n\r\n* update get preeceeding func\r\n\r\nSigned-off-by: Kosuke Murakami <kosuke.murakami@tier4.jp>\r\n\r\n* update preceeding func in lanechange\r\n\r\nSigned-off-by: Kosuke Murakami <kosuke.murakami@tier4.jp>\r\n\r\n* update comment\r\n\r\nSigned-off-by: Kosuke Murakami <kosuke.murakami@tier4.jp>\r\n\r\n* Fix intersection preceeding lane query (#807)\r\n\r\n* modified interseciton module to add lanelets in intersection to objective lanelets due to change in getPreceedingLaneletSequences()\r\n\r\nSigned-off-by: mitsudome-r <ryohsuke.mitsudome@tier4.jp>\r\n\r\n* update comment\r\n\r\nSigned-off-by: mitsudome-r <ryohsuke.mitsudome@tier4.jp>\r\n\r\n* Install executables in lanelet2_map_preprocessor (#834)\r\n\r\nSigned-off-by: mitsudome-r <ryohsuke.mitsudome@tier4.jp>\r\n\r\n* remove ROS1 packages temporarily\r\n\r\nSigned-off-by: mitsudome-r <ryohsuke.mitsudome@tier4.jp>\r\n\r\n* Revert \"remove ROS1 packages temporarily\"\r\n\r\nThis reverts commit 3290a8b9e92c9eae05d9159c8b9fd56ca8935c01.\r\n\r\nSigned-off-by: mitsudome-r <ryohsuke.mitsudome@tier4.jp>\r\n\r\n* add COLCON_IGNORE to ros1 packages\r\n\r\nSigned-off-by: mitsudome-r <ryohsuke.mitsudome@tier4.jp>\r\n\r\n* Rename launch files to launch.xml (#28)\r\n\r\n* port map_tf_generator (#32)\r\n\r\n* port map_tf_generator\r\n\r\nSigned-off-by: Takamasa Horibe <horibe.takamasa@gmail.com>\r\n\r\n* add missing dependency\r\n\r\nSigned-off-by: Takamasa Horibe <horibe.takamasa@gmail.com>\r\n\r\n* fix pointor, tf_broadcaster, add compile option\r\n\r\nSigned-off-by: Takamasa Horibe <horibe.takamasa@gmail.com>\r\n\r\n* use ament_auto\r\n\r\nSigned-off-by: Takamasa Horibe <horibe.takamasa@gmail.com>\r\n\r\n* Port lanelet2 extension (#36)\r\n\r\n* remove COLCON_IGNORE\r\n\r\nSigned-off-by: mitsudome-r <ryohsuke.mitsudome@tier4.jp>\r\n\r\n* port to ROS2\r\n\r\nSigned-off-by: mitsudome-r <ryohsuke.mitsudome@tier4.jp>\r\n\r\n* minor fix\r\n\r\nSigned-off-by: mitsudome-r <ryohsuke.mitsudome@tier4.jp>\r\n\r\n* fix CI\r\n\r\nSigned-off-by: mitsudome-r <ryohsuke.mitsudome@tier4.jp>\r\n\r\n* remove unnecessary semi-colon\r\n\r\nSigned-off-by: mitsudome-r <ryohsuke.mitsudome@tier4.jp>\r\n\r\n* fix library to executable for lanelet2_extension_sample and autoware_lanelet2_validation\r\n\r\nSigned-off-by: mitsudome-r <ryohsuke.mitsudome@tier4.jp>\r\n\r\n* fix usage for ROS2\r\n\r\nSigned-off-by: mitsudome-r <ryohsuke.mitsudome@tier4.jp>\r\n\r\n* fix usage message and parameter declaration\r\n\r\nSigned-off-by: mitsudome-r <ryohsuke.mitsudome@tier4.jp>\r\n\r\n* fix getting map_file parameter\r\n\r\nSigned-off-by: mitsudome-r <ryohsuke.mitsudome@tier4.jp>\r\n\r\n* Port map loader (#44)\r\n\r\n* port map_loader to ROS2\r\n\r\nSigned-off-by: mitsudome-r <ryohsuke.mitsudome@tier4.jp>\r\n\r\n* fix unintended change\r\n\r\nSigned-off-by: mitsudome-r <ryohsuke.mitsudome@tier4.jp>\r\n\r\n* Update map/map_loader/CMakeLists.txt\r\n\r\nCo-authored-by: Takamasa Horibe <horibe.takamasa@gmail.com>\r\n\r\nCo-authored-by: Takamasa Horibe <horibe.takamasa@gmail.com>\r\n\r\n* Add geometry2 to repos (#76)\r\n\r\n* add geometry2 package temporarily until new release\r\n\r\nSigned-off-by: mitsudome-r <ryohsuke.mitsudome@tier4.jp>\r\n\r\n* trigger-ci\r\n\r\nSigned-off-by: mitsudome-r <ryohsuke.mitsudome@tier4.jp>\r\n\r\n* add tf2 dependency to the packages that use tf2_geometry_msgs\r\n\r\nSigned-off-by: mitsudome-r <ryohsuke.mitsudome@tier4.jp>\r\n\r\n* Revert \"Add geometry2 to repos (#76)\" (#96)\r\n\r\n* Revert \"Add geometry2 to repos (#76)\"\r\n\r\nThis reverts commit 7dbe25ed5ff7d5f413fda567dcc77a70c79a7826.\r\n\r\n* Re-add tf2 dependencies\r\n\r\n* Revert \"Re-add tf2 dependencies\"\r\n\r\nThis reverts commit e23b0c8b0826cf9518924d33349f9de34b4975df.\r\n\r\n* Debug CI pipeline\r\n\r\n* Revert \"Debug CI pipeline\"\r\n\r\nThis reverts commit 58f1eba550360d82c08230552abfb64b33b23e0f.\r\n\r\n* Explicitly install known versions of the geometry packages\r\n\r\n* No need to skip tf2 packages anymore\r\n\r\nCo-authored-by: Esteve Fernandez <esteve@apache.org>\r\n\r\n* Rename h files to hpp (#142)\r\n\r\n* Change includes\r\n\r\n* Rename files\r\n\r\n* Adjustments to make things compile\r\n\r\n* Other packages\r\n\r\n* Adjust copyright notice on 532 out of 699 source files (#143)\r\n\r\n* Use quotes for includes where appropriate (#144)\r\n\r\n* Use quotes for includes where appropriate\r\n\r\n* Fix lint tests\r\n\r\n* Make tests pass hopefully\r\n\r\n* Run uncrustify on the entire Pilot.Auto codebase (#151)\r\n\r\n* Run uncrustify on the entire Pilot.Auto codebase\r\n\r\n* Exclude open PRs\r\n\r\n* fixing trasient_local in ROS2 packages (#160)\r\n\r\n* added linters to lanelet1_extension (#170)\r\n\r\n* adding linters to map_loader (#171)\r\n\r\n* adding linters to map_tf_generator (#172)\r\n\r\n* apply env_var to  use_sim_time (#222)\r\n\r\n* Ros2 v0.8.0 map loader and lanelet2 extension (#279)\r\n\r\n* Ros2 v0.8 fix typo of \"preceding\" (#323)\r\n\r\n* Fix typo of getPrecedingLaneletSequences\r\n\r\n* Fix comment\r\n\r\n* Fix rviz2 low FPS (#390)\r\n\r\n* add nullptr check when publish concatenate data (#369)\r\n\r\n* Add warning msg when concat pointcloud is not published (#388)\r\n\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\n\r\n* Change lineString2Marker\r\n\r\nSigned-off-by: Takagi, Isamu <isamu.takagi@tier4.jp>\r\n\r\n* Change trafficLight2TriangleMarker\r\n\r\nSigned-off-by: Takagi, Isamu <isamu.takagi@tier4.jp>\r\n\r\n* Change laneletDirectionAsMarker\r\n\r\nSigned-off-by: Takagi, Isamu <isamu.takagi@tier4.jp>\r\n\r\n* Remove debug code\r\n\r\nSigned-off-by: Takagi, Isamu <isamu.takagi@tier4.jp>\r\n\r\n* Fix linter problems\r\n\r\nSigned-off-by: Takagi, Isamu <isamu.takagi@tier4.jp>\r\n\r\nCo-authored-by: Taichi Higashide <taichi.higashide@tier4.jp>\r\nCo-authored-by: Kenji Miyake <31987104+kenji-miyake@users.noreply.github.com>\r\n\r\n* [map_loader] modify colors for lane markers for better visualization (#398)\r\n\r\nSigned-off-by: mitsudome-r <ryohsuke.mitsudome@tier4.jp>\r\n\r\n* fix empty marker (#423)\r\n\r\n* Fix typo in map module (#437)\r\n\r\n* add license (#443)\r\n\r\nSigned-off-by: Kosuke Murakami <kosuke.murakami@tier4.jp>\r\n\r\n* avoid pushing empty marker (#441)\r\n\r\n* avoid pushing empty marker\r\n\r\n* size0 -> empty\r\n\r\n* add use_sim-time option (#454)\r\n\r\n* Sync public repo (#1228)\r\n\r\n* [simple_planning_simulator] add readme (#424)\r\n\r\n* add readme of simple_planning_simulator\r\n\r\nSigned-off-by: Takamasa Horibe <horibe.takamasa@gmail.com>\r\n\r\n* Update simulator/simple_planning_simulator/README.md\r\n\r\n* set transit_margin_time to intersect. planner (#460)\r\n\r\n* Fix pose2twist (#462)\r\n\r\nSigned-off-by: Takagi, Isamu <isamu.takagi@tier4.jp>\r\n\r\n* Ros2 vehicle info param server (#447)\r\n\r\n* add vehicle_info_param_server\r\n\r\n* update vehicle info\r\n\r\n* apply format\r\n\r\n* fix bug\r\n\r\n* skip unnecessary search\r\n\r\n* delete vehicle param file\r\n\r\n* fix bug\r\n\r\n* Ros2 fix topic name part2 (#425)\r\n\r\n* Fix topic name of traffic_light_classifier\r\n\r\nSigned-off-by: Takagi, Isamu <isamu.takagi@tier4.jp>\r\n\r\n* Fix topic name of traffic_light_visualization\r\n\r\nSigned-off-by: Takagi, Isamu <isamu.takagi@tier4.jp>\r\n\r\n* Fix topic name of traffic_light_ssd_fine_detector\r\n\r\nSigned-off-by: Takagi, Isamu <isamu.takagi@tier4.jp>\r\n\r\n* Fix topic name of traffic_light_map_based_detector\r\n\r\nSigned-off-by: Takagi, Isamu <isamu.takagi@tier4.jp>\r\n\r\n* Fix lint traffic_light_recognition\r\n\r\nSigned-off-by: Takagi, Isamu <isamu.takagi@tier4.jp>\r\n\r\n* Fix lint traffic_light_ssd_fine_detector\r\n\r\nSigned-off-by: Takagi, Isamu <isamu.takagi@tier4.jp>\r\n\r\n* Fix lint traffic_light_classifier\r\n\r\nSigned-off-by: Takagi, Isamu <isamu.takagi@tier4.jp>\r\n\r\n* Fix lint traffic_light_classifier\r\n\r\nSigned-off-by: Takagi, Isamu <isamu.takagi@tier4.jp>\r\n\r\n* Fix lint traffic_light_ssd_fine_detector\r\n\r\nSigned-off-by: Takagi, Isamu <isamu.takagi@tier4.jp>\r\n\r\n* Fix issues in hdd_reader (#466)\r\n\r\n* Fix some issues detected by Coverity Scan and Clang-Tidy\r\n\r\n* Update launch command\r\n\r\n* Add more `close(new_sock)`\r\n\r\n* Simplify the definitions of struct\r\n\r\n* fix: re-construct laneletMapLayer for reindex RTree (#463)\r\n\r\n* Rviz overlay render fix (#461)\r\n\r\n* Moved painiting in SteeringAngle plugin to update()\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* super class now back to MFD\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* uncrustified\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* acquire data in mutex\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* back to RTD as superclass\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* Rviz overlay render in update (#465)\r\n\r\n* Moved painiting in SteeringAngle plugin to update()\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* super class now back to MFD\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* uncrustified\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* acquire data in mutex\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* removed unnecessary includes and some dead code\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* Adepted remaining vehicle plugin classes to render-in-update concept. Returned to MFD superclass\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\n* restored RTD superclass\r\n\r\nSigned-off-by: Adam Dabrowski <adam.dabrowski@robotec.ai>\r\n\r\nCo-authored-by: Takamasa Horibe <horibe.takamasa@gmail.com>\r\nCo-authored-by: tkimura4 <tomoya.kimura@tier4.jp>\r\nCo-authored-by: Takagi, Isamu <43976882+isamu-takagi@users.noreply.github.com>\r\nCo-authored-by: Kazuki Miyahara <kmiya@outlook.com>\r\nCo-authored-by: Makoto Tokunaga <vios-fish@users.noreply.github.com>\r\nCo-authored-by: Adam Dąbrowski <adam.dabrowski@robotec.ai>\r\n\r\n* Revert \"fix: re-construct laneletMapLayer for reindex RTree (#463)\" (#1229)\r\n\r\nThis reverts commit d2ecdfe4c58cb4544c9a3ee84947b36b7ee54421.\r\n\r\n* add pcd file check (#1232)\r\n\r\n* add pcd file check\r\n\r\n* add space\r\n\r\n* add &\r\n\r\n* use namespace\r\n\r\n* Unify Apache-2.0 license name (#1242)\r\n\r\n* Remove use_sim_time for set_parameter (#1260)\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* Map components (#1311)\r\n\r\n* Make pointcloud map loader component\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* Make lanelet2 map loader component\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* Make map tf generator component\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* Apply lint\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* Rename parameter for lanelet2 map path\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* Fix license\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* Add comment for filesystem\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* Fix variable name for glob\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* Fix dependency for query (#1519)\r\n\r\n* Fix a small bug (#1644)\r\n\r\n* Fix minor flaws detected by Clang-Tidy (#1647)\r\n\r\n- misc-throw-by-value-catch-by-reference\r\n- cppcoreguidelines-init-variables\r\n- readability-isolate-declaration\r\n\r\n* Add pre-commit (#1560)\r\n\r\n* add pre-commit\r\n\r\n* add pre-commit-config\r\n\r\n* add additional settings for private repository\r\n\r\n* use default pre-commit-config\r\n\r\n* update pre-commit setting\r\n\r\n* Ignore whitespace for line breaks in markdown\r\n\r\n* Update .github/workflows/pre-commit.yml\r\n\r\nCo-authored-by: Kazuki Miyahara <kmiya@outlook.com>\r\n\r\n* exclude svg\r\n\r\n* remove pretty-format-json\r\n\r\n* add double-quote-string-fixer\r\n\r\n* consider COLCON_IGNORE file when seaching modified package\r\n\r\n* format file\r\n\r\n* pre-commit fixes\r\n\r\n* Update pre-commit.yml\r\n\r\n* Update .pre-commit-config.yaml\r\n\r\nCo-authored-by: Kazuki Miyahara <kmiya@outlook.com>\r\nCo-authored-by: pre-commit <pre-commit@example.com>\r\nCo-authored-by: Kenji Miyake <31987104+kenji-miyake@users.noreply.github.com>\r\n\r\n* Porting traffic light viz (#1284)\r\n\r\n* Feature/traffic light viz (#1001)\r\n\r\n* add tl map viz\r\n\r\n* bug fix\r\n\r\n* update map visualizer\r\n\r\n* add launch\r\n\r\n* add install in cmake\r\n\r\n* remove unused file\r\n\r\n* fix build error\r\n\r\n* Fix lint\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* Fix typo\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* Fix topic name and qos\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* Replace deprecated duration api\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\nCo-authored-by: Yukihiro Saito <yukky.saito@gmail.com>\r\nCo-authored-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* Add markdownlint and prettier (#1661)\r\n\r\n* Add markdownlint and prettier\r\n\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\n\r\n* Ignore .param.yaml\r\n\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\n\r\n* Apply format\r\n\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\n\r\n* Feature/compare elevation map (#1488)\r\n\r\n* suppress warnings for declare parameters (#1724)\r\n\r\n* fix for lanelet2_extension\r\n\r\n* fix for traffic light ssd fine detector\r\n\r\n* fix for topic_state_monitor\r\n\r\n* fix for dummy diag publisher\r\n\r\n* fix for remote cmd converter\r\n\r\n* fix for vehicle_info_util\r\n\r\n* fix for multi object tracker\r\n\r\n* fix for freespace planner\r\n\r\n* fix for autoware_error_monitor\r\n\r\n* add Werror for multi object tracker\r\n\r\n* fix for multi object tracker\r\n\r\n* add Werror for liraffic light ssd fine detector\r\n\r\n* add Werror for topic state monitor\r\n\r\n* add Werror\r\n\r\n* add Werror\r\n\r\n* add Werror\r\n\r\n* add Werror\r\n\r\n* fix style\r\n\r\n* suppress warnings for map (#1773)\r\n\r\n* add compile option\r\n\r\n* fix error\r\n\r\n* add compile option\r\n\r\n* add maybe unused\r\n\r\n* fix sign-compare\r\n\r\n* delete unused\r\n\r\n* add parentheses\r\n\r\n* fix for uncrusify\r\n\r\n* Fix typo\r\n\r\n* use U\r\n\r\n* use U\r\n\r\nCo-authored-by: Kenji Miyake <31987104+kenji-miyake@users.noreply.github.com>\r\n\r\n* Fix clang warnings (#1859)\r\n\r\n* Fix -Wreturn-std-move\r\n\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\n\r\n* Fix -Wunused-private-field\r\n\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\n\r\n* Ignore -Wnonportable-include-path for mussp\r\n\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\n\r\n* Fix -Wunused-const-variable\r\n\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\n\r\n* Fix \"can not be used when making a shared object\"\r\n\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\n\r\n* Sync v1.3.0 (#1909)\r\n\r\n* Add elevation_map to autoware_state_monitor (#1907)\r\n\r\nSigned-off-by: kosuke55 <kosuke.tnp@gmail.com>\r\n\r\n* Disable saving elevation map temporarily (#1906)\r\n\r\nSigned-off-by: kosuke55 <kosuke.tnp@gmail.com>\r\n\r\n* Fix typos in README of map_loader (#1923)\r\n\r\n* Fix typos in README of map_loader\r\n\r\n* Apply Prettier\r\n\r\n* fix some typos (#1941)\r\n\r\n* fix some typos\r\n\r\n* fix typo\r\n\r\n* Fix typo\r\n\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\n\r\nCo-authored-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\n\r\n* Add autoware api (#1979)\r\n\r\n* Invoke code formatter at pre-commit (#1935)\r\n\r\n* Run ament_uncrustify at pre-commit\r\n\r\n* Reformat existing files\r\n* Fix copyright and cpplint errors\r\n\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\nCo-authored-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\n\r\n* Save elevation_map with pcd md5sum (#1988)\r\n\r\n* Save elevation_map with pcd md5sum\r\n\r\nSigned-off-by: kosuke55 <kosuke.tnp@gmail.com>\r\n\r\n* Update sample launch\r\n\r\n* Fix cpplint\r\n\r\n* Use hash-library instead of openssl\r\n\r\n* Use call by reference\r\n\r\n* Apply format\r\n\r\n* Set CMAKE_CXX_STANDARD 17\r\n\r\n* Save input_pcd.json and shorten directory name when loading multiple pcd\r\n\r\n* Remove erasing last _\r\n\r\n* Modify concatenating file path\r\n\r\n* Apply Format\r\n\r\n* Add hash_library_vendor to build_depends.repos\r\n\r\n* Modify include way\r\n\r\n* Change function and variable names\r\n\r\n* Use return\r\n\r\n* Remove unnecessary input variable\r\n\r\n* Use unique_ptr\r\n\r\n* Rename digestMd5 to digest_md5\r\n\r\n* Modify variable name\r\n\r\n* Remove file.close()\r\n\r\n* Use hash of json\r\n\r\n* Read hash of json directory\r\n\r\n* Add newline to package.xml\r\n\r\n* Add isPcdFile\r\n\r\n* Fix pre-commit\r\n\r\n* Use icPcdFile when giving file of pcd\r\n\r\n* Feature/add virtual traffic light planner (#1588)\r\n\r\n* Fix deprecated constant of transient local (#1994)\r\n\r\nSigned-off-by: Takagi, Isamu <isamu.takagi@tier4.jp>\r\n\r\n* Fix lint errors in lanelet2_extension (#2028)\r\n\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\n\r\n* add sort-package-xml hook in pre-commit (#1881)\r\n\r\n* add sort xml hook in pre-commit\r\n\r\n* change retval to exit_status\r\n\r\n* rename\r\n\r\n* add prettier plugin-xml\r\n\r\n* use early return\r\n\r\n* add license note\r\n\r\n* add tier4 license\r\n\r\n* restore prettier\r\n\r\n* change license order\r\n\r\n* move local hooks to public repo\r\n\r\n* move prettier-xml to pre-commit-hooks-ros\r\n\r\n* update version for bug-fix\r\n\r\n* apply pre-commit\r\n\r\n* Revert \"[map_loader] modify colors for lane markers for better visualization (#398)\" (#2063)\r\n\r\nThis reverts commit 046dc9a770bf03fb8813ddf6aa1b2f05e9357b67.\r\n\r\n* Fix elevation_map_loader downsample (#2055)\r\n\r\n* Add elevation_map data dir (#2093)\r\n\r\n* Minor fixes of map_loader's README (#2116)\r\n\r\n* Minor fixes of map_loader's README\r\n\r\n* Fix map_loader run command\r\n\r\nCo-authored-by: kosuke55 <kosuke.tnp@gmail.com>\r\n\r\n* Fix elevation_map hash due to mutiple slashes of pcd path (#2192)\r\n\r\n* Fix elevation_map hash due to mutiple slashes of pcd path\r\n\r\n* Use filesystem lexically_normal\r\n\r\n* Fix broken links of images on lanelet2_extension docs (#2206)\r\n\r\n* Add lanelet XML API (#2262)\r\n\r\n* show traffic light id marker (#1554) (#1678)\r\n\r\n* show traffic light id\r\n\r\n* fix typo\r\n\r\nCo-authored-by: satoshi-ota <satoshi.ota@gmail.com>\r\n\r\nCo-authored-by: Satoshi OTA <44889564+satoshi-ota@users.noreply.github.com>\r\nCo-authored-by: satoshi-ota <satoshi.ota@gmail.com>\r\n\r\n* Feature/porting behavior path planner (#1645)\r\n\r\n* Add behavior path planner pkg with Lane Change (#1525)\r\n\r\n* add lanelet extension funcs\r\n\r\nSigned-off-by: Takamasa Horibe <horibe.takamasa@gmail.com>\r\n\r\n* add planning msgs for FOA\r\n\r\nSigned-off-by: Takamasa Horibe <horibe.takamasa@gmail.com>\r\n\r\n* add behavior_path_planner pkg\r\n\r\nSigned-off-by: Takamasa Horibe <horibe.takamasa@gmail.com>\r\n\r\n* apply clang format\r\n\r\nSigned-off-by: Takamasa Horibe <horibe.takamasa@gmail.com>\r\n\r\n* add error handling for config load failure\r\n\r\nSigned-off-by: Takamasa Horibe <horibe.takamasa@gmail.com>\r\n\r\n* replace word: foa with remote control\r\n\r\nSigned-off-by: Takamasa Horibe <horibe.takamasa@gmail.com>\r\n\r\n* add readme\r\n\r\nSigned-off-by: Takamasa Horibe <horibe.takamasa@gmail.com>\r\n\r\n* use pointer for return value of path\r\n\r\nSigned-off-by: Takamasa Horibe <horibe.takamasa@gmail.com>\r\n\r\n* fix hz\r\n\r\nSigned-off-by: Takamasa Horibe <horibe.takamasa@gmail.com>\r\n\r\n* remove debug print\r\n\r\nSigned-off-by: Takamasa Horibe <horibe.takamasa@gmail.com>\r\n\r\n* remove shide-shift & avoidance related files\r\n\r\nSigned-off-by: Takamasa Horibe <horibe.takamasa@gmail.com>\r\n\r\n* Clip path by goal\r\n\r\n* add build depend for behavior tree cpp\r\n\r\nSigned-off-by: Takamasa Horibe <horibe.takamasa@gmail.com>\r\n\r\n* temporally disable lint test in lanelet2_extension\r\n\r\nSigned-off-by: Takamasa Horibe <horibe.takamasa@gmail.com>\r\n\r\nCo-authored-by: rej55 <rej55.g@gmail.com>\r\n\r\n* Add avoidance module in behavior_path_planner (#1528)\r\n\r\n* Revert \"remove shide-shift & avoidance related files\"\r\n\r\nThis reverts commit d819ea0291fca251012e4b9ffd16de3896830aa2.\r\n\r\n* refactor findNewShiftPoint func\r\n\r\nSigned-off-by: Takamasa Horibe <horibe.takamasa@gmail.com>\r\n\r\n* remove duplicated decleration\r\n\r\nSigned-off-by: Takamasa Horibe <horibe.takamasa@gmail.com>\r\n\r\n* fix barkward length issue\r\n - add clipPathLenght func in avoidance\r\n\r\nSigned-off-by: Takamasa Horibe <horibe.takamasa@gmail.com>\r\n\r\n* refactor:\r\n - translate english\r\n - minor modification for traffic distance\r\n\r\nSigned-off-by: Takamasa Horibe <horibe.takamasa@gmail.com>\r\n\r\n* support debug marker in behavior_path_planner\r\n\r\nSigned-off-by: Takamasa Horibe <horibe.takamasa@gmail.com>\r\n\r\n* clean up side shift module\r\n\r\nSigned-off-by: Takamasa Horibe <horibe.takamasa@gmail.com>\r\n\r\n* change topic name\r\n\r\nSigned-off-by: Takamasa Horibe <horibe.takamasa@gmail.com>\r\n\r\n* remove japanese\r\n\r\nSigned-off-by: Takamasa Horibe <horibe.takamasa@gmail.com>\r\n\r\n* Update planning/scenario_planning/lane_driving/behavior_planning/behavior_path_planner/include/behavior_path_planner/scene_module/side_shift/side_shift_module.hpp\r\n\r\nCo-authored-by: Yukihiro Saito <yukky.saito@gmail.com>\r\n\r\n* fix typo\r\n\r\nSigned-off-by: Takamasa Horibe <horibe.takamasa@gmail.com>\r\n\r\n* remove unused var\r\n\r\nSigned-off-by: Takamasa Horibe <horibe.takamasa@gmail.com>\r\n\r\n* adress reviewer comments:\r\n - add const for variables\r\n - add comment\r\n - fix typo\r\n\r\nSigned-off-by: Takamasa Horibe <horibe.takamasa@gmail.com>\r\n\r\n* fix typo\r\n\r\nSigned-off-by: Takamasa Horibe <horibe.takamasa@gmail.com>\r\n\r\nCo-authored-by: Yukihiro Saito <yukky.saito@gmail.com>\r\n\r\n* Replace behavior_path utilities with autoware_utils (#1532)\r\n\r\n* replace calcDistance\r\n\r\nSigned-off-by: Takamasa Horibe <horibe.takamasa@gmail.com>\r\n\r\n* replace arange\r\n\r\nSigned-off-by: Takamasa Horibe <horibe.takamasa@gmail.com>\r\n\r\n* replave convertToEigenPt with autoware_utils::fromMsg\r\n\r\nSigned-off-by: Takamasa Horibe <horibe.takamasa@gmail.com>\r\n\r\n* replace normalizeRadian\r\n\r\nSigned-off-by: Takamasa Horibe <horibe.takamasa@gmail.com>\r\n\r\n* cosmetic change\r\n\r\nSigned-off-by: Takamasa Horibe <horibe.takamasa@gmail.com>\r\n\r\n* import #1526 into behavior path planner (#1531)\r\n\r\nSigned-off-by: Takamasa Horibe <horibe.takamasa@gmail.com>\r\n\r\n* Fix/behavior path empty path output guard (#1536)\r\n\r\n* add guard\r\n\r\nSigned-off-by: Takamasa Horibe <horibe.takamasa@gmail.com>\r\n\r\n* Update planning/scenario_planning/lane_driving/behavior_planning/behavior_path_planner/src/behavior_path_planner.cpp\r\n\r\n* fix lateral jerk calculation (#1549)\r\n\r\nSigned-off-by: Takamasa Horibe <horibe.takamasa@gmail.com>\r\n\r\n* fix: error handling on exception in behavior_path_planner (#1551)\r\n\r\nSigned-off-by: Takamasa Horibe <horibe.takamasa@gmail.com>\r\n\r\n* Fix ignore too steep avoidance path (#1550)\r\n\r\n* ignore too steep path\r\n\r\nSigned-off-by: Takamasa Horibe <horibe.takamasa@gmail.com>\r\n\r\n* Update planning/scenario_planning/lane_driving/behavior_planning/behavior_path_planner/src/scene_module/avoidance/avoidance_module.cpp\r\n\r\n* parametrize lateral jerk limit\r\n\r\nSigned-off-by: Takamasa Horibe <horibe.takamasa@gmail.com>\r\n\r\n* Update planning/scenario_planning/lane_driving/behavior_planning/behavior_path_planner/include/behavior_path_planner/scene_module/avoidance/avoidance_module.hpp\r\n\r\nCo-authored-by: tkimura4 <tomoya.kimura@tier4.jp>\r\n\r\nCo-authored-by: tkimura4 <tomoya.kimura@tier4.jp>\r\n\r\n* use offsetNoThrow and add error log (#1615)\r\n\r\nSigned-off-by: Takamasa Horibe <horibe.takamasa@gmail.com>\r\n\r\n* Ignore object ahead goal for avoidance (#1618)\r\n\r\n* Ignore object ahead goal for avoidance\r\n\r\n* Add flag\r\n\r\n* Fix position of definition of goal_pose\r\n\r\n* Fix arclength calculation\r\n\r\n* Fix position of definition of goal_pose\r\n\r\n* fix intersection stop line (#1636)\r\n\r\n* fix intersection stop line\r\n\r\n* fix typo\r\n\r\n* add document (#1635)\r\n\r\nSigned-off-by: Takamasa Horibe <horibe.takamasa@gmail.com>\r\n\r\n* Port behavior path planner to ros2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* Apply lint\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* Fix typo\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* Fix map qos\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* debug slope calculation in behavior (#1566)\r\n\r\n* update\r\n\r\n* update\r\n\r\n* revert change of autoware_utils\r\n\r\n* define getPose in behavior_path_planner\r\n\r\n* update\r\n\r\n* update\r\n\r\n* update\r\n\r\n* update\r\n\r\n* interpolate z in obstacle_avoidance_planner\r\n\r\n* update velocity controller\r\n\r\n* fix detection area and scene\r\n\r\n* Update planning/scenario_planning/lane_driving/behavior_planning/behavior_path_planner/src/utilities.cpp\r\n\r\nCo-authored-by: tkimura4 <tomoya.kimura@tier4.jp>\r\n\r\n* update comment in velocity controller\r\n\r\n* remove debug print\r\n\r\n* update\r\n\r\nCo-authored-by: tkimura4 <tomoya.kimura@tier4.jp>\r\n\r\n* Address review: Fix config file name\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* pre-commit fixes\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* Fix redeclaring parameters\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* Add missing tf2 geometry function\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* Apply lint\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* Fix rclcpp Time initialization\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* Use now() instead of msg stamp\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* Use throttle output in getExpandedLanelet\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* Add missing const\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* Fix lint\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\nCo-authored-by: Takamasa Horibe <horibe.takamasa@gmail.com>\r\nCo-authored-by: rej55 <rej55.g@gmail.com>\r\nCo-authored-by: Yukihiro Saito <yukky.saito@gmail.com>\r\nCo-authored-by: tkimura4 <tomoya.kimura@tier4.jp>\r\nCo-authored-by: Takayuki Murooka <takayuki5168@gmail.com>\r\n\r\n* change type of traffic light marker (SPHERE_LIST->SPHERE) (#1789)\r\n\r\n* fix alpha (#1797)\r\n\r\n* Feature/improve intersection detection area (#1958)\r\n\r\n* exclude ego_lanes from detection_area\r\n\r\n* add empty handling\r\n\r\n* remove unused function\r\n\r\n* Fix for uncrustify\r\n\r\nCo-authored-by: Kenji Miyake <31987104+kenji-miyake@users.noreply.github.com>\r\n\r\n* Apply format (#1999)\r\n\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\n\r\nFix cpplint\r\n\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\n\r\n* Feature/expand drivable area (#1812)\r\n\r\n* check if ego lane has adjacent lane or not\r\n\r\n* expand drivable area by using lanelet\r\n\r\n* remove unnecessary operator\r\n\r\n* use extra drivable area\r\n\r\n* fix variable names\r\n\r\n* fix indent\r\n\r\n* get polygon by id\r\n\r\n* fix variable name\r\n\r\n* remove redundant logic\r\n\r\n* update area name\r\n\r\n* disable expand by default\r\n\r\nCo-authored-by: satoshi-ota <satoshi.ota@gmail.com>\r\n\r\n* add shoulder road lanelets (#2121)\r\n\r\n* add shoulder lanelets\r\n\r\n* Update map/lanelet2_extension/lib/query.cpp\r\n\r\nCo-authored-by: Daisuke Nishimatsu <42202095+wep21@users.noreply.github.com>\r\n\r\n* Update map/lanelet2_extension/lib/visualization.cpp\r\n\r\nCo-authored-by: Daisuke Nishimatsu <42202095+wep21@users.noreply.github.com>\r\n\r\n* Update map/lanelet2_extension/include/lanelet2_extension/visualization/visualization.hpp\r\n\r\nCo-authored-by: Daisuke Nishimatsu <42202095+wep21@users.noreply.github.com>\r\n\r\n* Update map/lanelet2_extension/include/lanelet2_extension/visualization/visualization.hpp\r\n\r\nCo-authored-by: Daisuke Nishimatsu <42202095+wep21@users.noreply.github.com>\r\n\r\n* Update map/lanelet2_extension/lib/visualization.cpp\r\n\r\nCo-authored-by: Daisuke Nishimatsu <42202095+wep21@users.noreply.github.com>\r\n\r\nCo-authored-by: Daisuke Nishimatsu <42202095+wep21@users.noreply.github.com>\r\n\r\n* Feature/no stopping area reg element (#2144)\r\n\r\n* add no stopping area to ll2\r\n\r\n* add no stopping area visualization\r\n\r\n* add no stopping area marker to RVIZ\r\n\r\n* make no stopping area stop line as optional\r\n\r\n* Update map/map_loader/src/lanelet2_map_loader/lanelet2_map_visualization_node.cpp\r\n\r\nCo-authored-by: taikitanaka3 <65527974+taikitanaka3@users.noreply.github.com>\r\n\r\nCo-authored-by: tkimura4 <tomoya.kimura@tier4.jp>\r\n\r\n* Add document for new map format (#1778)\r\n\r\n* add roadside lane doc\r\n\r\n* fix typo\r\n\r\n* fix typo\r\n\r\n* fix typo\r\n\r\n* fix typo\r\n\r\n* Add markdown lint\r\n\r\n* add reason for new subtype definition\r\n\r\n* fix typo\r\n\r\nCo-authored-by: kyoichi <kyoichi.sugahara@tier4.jp>\r\n\r\n* Change formatter to clang-format and black (#2332)\r\n\r\n* Revert \"Temporarily comment out pre-commit hooks\"\r\n\r\nThis reverts commit 748e9cdb145ce12f8b520bcbd97f5ff899fc28a3.\r\n\r\n* Replace ament_lint_common with autoware_lint_common\r\n\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\n\r\n* Remove ament_cmake_uncrustify and ament_clang_format\r\n\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\n\r\n* Apply Black\r\n\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\n\r\n* Apply clang-format\r\n\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\n\r\n* Fix build errors\r\n\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\n\r\n* Fix for cpplint\r\n\r\n* Fix include double quotes to angle brackets\r\n\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\n\r\n* Apply clang-format\r\n\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\n\r\n* Fix build errors\r\n\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\n\r\n* Add COLCON_IGNORE (#500)\r\n\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\n\r\n* port lanelet2_extension (#483)\r\n\r\n* port with auto_msgs\r\n\r\n* remove COLCON_IGNORE\r\n\r\nCo-authored-by: Takayuki Murooka <takayuki.murooka@tier4.jp>\r\n\r\n* port map loader (#508)\r\n\r\n* remove COLCON_IGNORE in system_packages and map_tf_generator (#532)\r\n\r\n* add readme (#561)\r\n\r\n* fix old description\r\n\r\nCo-authored-by: mitsudome-r <ryohsuke.mitsudome@tier4.jp>\r\nCo-authored-by: Taichi Higashide <taichi.higashide@tier4.jp>\r\nCo-authored-by: Kosuke Murakami <kosuke.murakami@tier4.jp>\r\nCo-authored-by: Ryohsuke Mitsudome <43976834+mitsudome-r@users.noreply.github.com>\r\nCo-authored-by: Nikolai Morin <nnmmgit@gmail.com>\r\nCo-authored-by: Takamasa Horibe <horibe.takamasa@gmail.com>\r\nCo-authored-by: Esteve Fernandez <esteve@apache.org>\r\nCo-authored-by: nik-tier4 <71747268+nik-tier4@users.noreply.github.com>\r\nCo-authored-by: isamu-takagi <43976882+isamu-takagi@users.noreply.github.com>\r\nCo-authored-by: Kenji Miyake <31987104+kenji-miyake@users.noreply.github.com>\r\nCo-authored-by: Kazuki Miyahara <kmiya@outlook.com>\r\nCo-authored-by: tkimura4 <tomoya.kimura@tier4.jp>\r\nCo-authored-by: Makoto Tokunaga <vios-fish@users.noreply.github.com>\r\nCo-authored-by: Adam Dąbrowski <adam.dabrowski@robotec.ai>\r\nCo-authored-by: Daisuke Nishimatsu <42202095+wep21@users.noreply.github.com>\r\nCo-authored-by: Keisuke Shima <19993104+KeisukeShima@users.noreply.github.com>\r\nCo-authored-by: pre-commit <pre-commit@example.com>\r\nCo-authored-by: Yukihiro Saito <yukky.saito@gmail.com>\r\nCo-authored-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\nCo-authored-by: Kosuke Takeuchi <kosuke.tnp@gmail.com>\r\nCo-authored-by: Hiroki OTA <hiroki.ota@tier4.jp>\r\nCo-authored-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\nCo-authored-by: Takeshi Ishita <ishitah.takeshi@gmail.com>\r\nCo-authored-by: Satoshi OTA <44889564+satoshi-ota@users.noreply.github.com>\r\nCo-authored-by: satoshi-ota <satoshi.ota@gmail.com>\r\nCo-authored-by: rej55 <rej55.g@gmail.com>\r\nCo-authored-by: Takayuki Murooka <takayuki5168@gmail.com>\r\nCo-authored-by: Sugatyon <32741405+Sugatyon@users.noreply.github.com>\r\nCo-authored-by: kyoichi <kyoichi.sugahara@tier4.jp>\r\nCo-authored-by: Takayuki Murooka <takayuki.murooka@tier4.jp>\r\nCo-authored-by: Takeshi Miura <57553950+1222-takeshi@users.noreply.github.com>\r\n\r\n* fix: fix isInLanelet (#770) (#151)\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\nCo-authored-by: Fumiya Watanabe <rej55.g@gmail.com>\r\n\r\n* fix: fix angle diff calculation of mission_planner (#772) (#152)\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\nCo-authored-by: Takayuki Murooka <takayuki5168@gmail.com>\r\nCo-authored-by: Takeshi Miura <57553950+1222-takeshi@users.noreply.github.com>\r\nCo-authored-by: Kenji Miyake <31987104+kenji-miyake@users.noreply.github.com>\r\nCo-authored-by: taikitanaka3 <65527974+taikitanaka3@users.noreply.github.com>\r\n\r\n* fix(lanelet2_extension): add guard for inner product (#256)\r\n\r\n* fix: add guard for inner product\r\n\r\nSigned-off-by: kyoichi sugahara <81.s.kyo.19@gmail.com>\r\n\r\n* ci(pre-commit): autofix\r\n\r\nSigned-off-by: kyoichi sugahara <81.s.kyo.19@gmail.com>\r\n\r\n* fix: delete unnecessary comments\r\n\r\nSigned-off-by: kyoichi sugahara <81.s.kyo.19@gmail.com>\r\n\r\n* Update map/lanelet2_extension/lib/query.cpp\r\n\r\nCo-authored-by: Hiroki OTA <hiroki.ota@tier4.jp>\r\nSigned-off-by: kyoichi sugahara <81.s.kyo.19@gmail.com>\r\n\r\n* delete equal in comparison operator\r\n\r\nSigned-off-by: kyoichi sugahara <81.s.kyo.19@gmail.com>\r\n\r\n* fix: use normilized radian for calculation of angle difference\r\n\r\nSigned-off-by: kyoichi sugahara <81.s.kyo.19@gmail.com>\r\n\r\n* ci(pre-commit): autofix\r\n\r\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>\r\nCo-authored-by: Hiroki OTA <hiroki.ota@tier4.jp>\r\n\r\n* fix(lanelet2_extension): fix getAngleDifference (#264)\r\n\r\n* chore(query): update and add gtest\r\n\r\nSigned-off-by: tanaka3 <ttatcoder@outlook.jp>\r\n\r\n* ci(pre-commit): autofix\r\n\r\n* chore(query): add deprecated attribute to getAngleDifference\r\n\r\nSigned-off-by: tanaka3 <ttatcoder@outlook.jp>\r\n\r\n* chore(query): deprecated as comment to avoid clang errror\r\n\r\nSigned-off-by: tanaka3 <ttatcoder@outlook.jp>\r\n\r\n* Revert \"chore(query): deprecated as comment to avoid clang errror\"\r\n\r\nThis reverts commit 28cc95d75ae55ddeef3813c91c18f0a02b95a41d.\r\n\r\nSigned-off-by: tanaka3 <ttatcoder@outlook.jp>\r\n\r\n* Revert \"chore(query): add deprecated attribute to getAngleDifference\"\r\n\r\nThis reverts commit 3b56ce7a91d76a029eadc190b224a295c01eb02f.\r\n\r\nSigned-off-by: tanaka3 <ttatcoder@outlook.jp>\r\n\r\n* Revert \"ci(pre-commit): autofix\"\r\n\r\nThis reverts commit 61e05c4718eef343f8ba198fe46e501048e0b784.\r\n\r\nSigned-off-by: tanaka3 <ttatcoder@outlook.jp>\r\n\r\n* Revert \"chore(query): update and add gtest\"\r\n\r\nThis reverts commit 027c4cf53883c233f28da75c633e53278ce2a1ca.\r\n\r\nSigned-off-by: tanaka3 <ttatcoder@outlook.jp>\r\n\r\n* fix(lanelet2_extension): fix getAngleDifference\r\n\r\nSigned-off-by: tanaka3 <ttatcoder@outlook.jp>\r\n\r\n* fix(lanelet2_extension): ref value\r\n\r\nCo-authored-by: Kenji Miyake <31987104+kenji-miyake@users.noreply.github.com>\r\nSigned-off-by: tanaka3 <ttatcoder@outlook.jp>\r\n\r\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>\r\nCo-authored-by: Kenji Miyake <31987104+kenji-miyake@users.noreply.github.com>\r\n\r\n* feat(lanelet2_extension,map_loader): add guard_rail wall fence as lanelet tag (#478)\r\n\r\n* feat(lanelet2_extension): add guard_rails fence wall as lanelet tag\r\n\r\nSigned-off-by: tanaka3 <ttatcoder@outlook.jp>\r\n\r\n* feat(map_loader): add visualization for partion lanelet\r\n\r\nSigned-off-by: tanaka3 <ttatcoder@outlook.jp>\r\n\r\n* fix(tier4_autoware_utils): modify build error in rolling (#720)\r\n\r\n* fix(tier4_autoware_utils): modify build error in rolling\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(lanelet2_extension): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(ekf_localizer): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(freespace_planning_algorithms): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(interpolation): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(freespace_planner): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(lane_departure_checker): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(map_based_prediction): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(ground_segmentation): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(motion_velocity_smoother): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(multi_object_tracker): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(trajectory_follower): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(control_performance_analysis): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(detected_object_validation): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(goal_distance_calculator): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(ndt_scan_matcher): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(route_handler): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(behavior_path_planner): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(mission_planner): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(obstacle_avoidance_planner): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(obstacle_stop_planner): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(obstacle_collision_checker): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(shape_estimation): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(behavior_velocity_planner): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(path_distance_calculator): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(detection_by_tracker): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(surround_obstacle_checker): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(probabilistic_occupancy_grid_map): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(tier4_debug_tools): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(tier4_vehicle_rviz_plugin): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(pure_pursuit): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(trajectory_follower_nodes): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(occupancy_grid_map_outlier_filter): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(traffic_light_map_based_detector): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(planning_error_monitor): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(planning_evaluator): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* fix(lidar_centerpoint): add target compile definition for geometry2\r\n\r\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\n\r\n* style: fix format of package.xml (#844)\r\n\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\n\r\n* chore: remove bad chars (#845)\r\n\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\n\r\n* refactor: use autoware cmake (#849)\r\n\r\n* remove autoware_auto_cmake\r\n\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\n\r\n* add build_depend of autoware_cmake\r\n\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\n\r\n* use autoware_cmake in CMakeLists.txt\r\n\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\n\r\n* fix bugs\r\n\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\n\r\n* fix cmake lint errors\r\n\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\n\r\n* refactor: simplify Rolling support (#854)\r\n\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\n\r\n* chore: upgrade cmake_minimum_required to 3.14 (#856)\r\n\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\n\r\n* feat: isolate gtests in all packages (#693)\r\n\r\nSigned-off-by: Maxime CLEMENT <maxime.clement@tier4.jp>\r\n\r\n* feat(behavior_path_planner): weakened noise filtering of drivable area (#838)\r\n\r\n* feat(behavior_path_planner): Weakened noise filtering of drivable area\r\n\r\nSigned-off-by: Takayuki Murooka <takayuki5168@gmail.com>\r\n\r\n* fix lanelet's longitudinal disconnection\r\n\r\nSigned-off-by: Takayuki Murooka <takayuki5168@gmail.com>\r\n\r\n* add comments of erode/dilate process\r\n\r\nSigned-off-by: Takayuki Murooka <takayuki5168@gmail.com>\r\n\r\n* feat: visualize lane boundaries (#923)\r\n\r\n* feat: visualize lane boundaries\r\n\r\n* fix: start_bound\r\n\r\n* ci(pre-commit): autofix\r\n\r\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>\r\n\r\n* feat(map_loader): visualize center line by points (#931)\r\n\r\n* feat: visualize center line points\r\n\r\n* fix: delete space\r\n\r\n* feat: visualize center line by arrow\r\n\r\n* revert insertMarkerArray\r\n\r\n* fix: delete space\r\n\r\n* fix(lanelet2_extension): fix low FPS when visualizing center_line_arrows at a large map (#1032)\r\n\r\n* fix(lanelet2_extension): fix low FPS when visualizing center_line_arrows at a large map\r\n\r\nSigned-off-by: h-ohta <hiroki.ota@tier4.jp>\r\n\r\n* fix: fix size\r\n\r\n* feat: change arrow size\r\n\r\n* fix(lanelet2_extension): remove unnecessary error message (#1043)\r\n\r\nSigned-off-by: Takayuki Murooka <takayuki5168@gmail.com>\r\n\r\n* feat(intersection): add conflicting area with margin debug (#1021)\r\n\r\n* add detection area margin debug\r\n\r\nSigned-off-by: 1222-takeshi <m.takeshi1995@gmail.com>\r\n\r\n* extention lanelet in intersection function\r\n\r\n* feat: add conflicting area with margin\r\n\r\nSigned-off-by: 1222-takeshi <m.takeshi1995@gmail.com>\r\n\r\n* fix(intersection_module): remove unnecessary comment\r\n\r\nSigned-off-by: 1222-takeshi <m.takeshi1995@gmail.com>\r\n\r\n* fix check collision\r\n\r\nSigned-off-by: 1222-takeshi <m.takeshi1995@gmail.com>\r\n\r\n* fix(intersection_module): remove unnecessary diff\r\n\r\nSigned-off-by: 1222-takeshi <m.takeshi1995@gmail.com>\r\n\r\n* ci(pre-commit): autofix\r\n\r\n* fix(intersection_module): fix expand lane only right bound\r\n\r\nSigned-off-by: 1222-takeshi <m.takeshi1995@gmail.com>\r\n\r\n* fix(intersection_module): remove calc of detection area to object distance\r\n\r\nSigned-off-by: 1222-takeshi <m.takeshi1995@gmail.com>\r\n\r\n* ci(pre-commit): autofix\r\n\r\n* fix(intersection_module): split lane extentions\r\n\r\nSigned-off-by: 1222-takeshi <m.takeshi1995@gmail.com>\r\n\r\n* ci(pre-commit): autofix\r\n\r\n* refactor: lanelet::utils::resamplePoints -> resamplePoints\r\n\r\nSigned-off-by: 1222-takeshi <m.takeshi1995@gmail.com>\r\n\r\n* feat: add right and left margin parameter\r\n\r\nSigned-off-by: 1222-takeshi <m.takeshi1995@gmail.com>\r\n\r\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>\r\n\r\n* fix: is_in_parking_lot check method (#992)\r\n\r\nSigned-off-by: NorahXiong <norah.xiong@autocore.ai>\r\n\r\n* fix(behavior_velocity_planner): use only forward path for launching module (#1028)\r\n\r\n* fix(behavior_velocity_planner): use only foward path for launching module\r\n\r\nSigned-off-by: kosuke55 <kosuke.tnp@gmail.com>\r\n\r\n* Make functions common\r\n\r\nSigned-off-by: kosuke55 <kosuke.tnp@gmail.com>\r\n\r\n* Fix precommit include_what_you_use\r\n\r\nSigned-off-by: kosuke55 <kosuke.tnp@gmail.com>\r\n\r\n* Move functions to utils\r\n\r\nSigned-off-by: kosuke55 <kosuke.tnp@gmail.com>\r\n\r\n* feat(lanelet2_extension): add route checker (#1149)\r\n\r\n* feat(lanelet2_extension): add route checker\r\n\r\nSigned-off-by: Shumpei Wakabayashi <shumpei.wakabayashi@tier4.jp>\r\n\r\n* chore: move pkg from tier4_autoware_utils to lanelet2_extension\r\n\r\nSigned-off-by: Shumpei Wakabayashi <shumpei.wakabayashi@tier4.jp>\r\n\r\n* fix: test\r\n\r\nSigned-off-by: Shumpei Wakabayashi <shumpei.wakabayashi@tier4.jp>\r\n\r\n* ci(pre-commit): autofix\r\n\r\n* chore: add comment\r\n\r\nSigned-off-by: Shumpei Wakabayashi <shumpei.wakabayashi@tier4.jp>\r\n\r\n* ci(pre-commit): autofix\r\n\r\n* chore: rm unused pkg\r\n\r\nSigned-off-by: Shumpei Wakabayashi <shumpei.wakabayashi@tier4.jp>\r\n\r\n* Update map/lanelet2_extension/test/src/test_route_checker.cpp\r\n\r\nCo-authored-by: Kenji Miyake <31987104+kenji-miyake@users.noreply.github.com>\r\n\r\n* Update map/lanelet2_extension/test/src/test_route_checker.cpp\r\n\r\nCo-authored-by: Kenji Miyake <31987104+kenji-miyake@users.noreply.github.com>\r\n\r\n* chore: update code style\r\n\r\nSigned-off-by: Shumpei Wakabayashi <shumpei.wakabayashi@tier4.jp>\r\n\r\n* ci(pre-commit): autofix\r\n\r\n* fix: change interface\r\n\r\nSigned-off-by: Shumpei Wakabayashi <shumpei.wakabayashi@tier4.jp>\r\n\r\n* ci(pre-commit): autofix\r\n\r\n* fix: change style\r\n\r\nSigned-off-by: Shumpei Wakabayashi <shumpei.wakabayashi@tier4.jp>\r\n\r\n* ci(pre-commit): autofix\r\n\r\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>\r\nCo-authored-by: Kenji Miyake <31987104+kenji-miyake@users.noreply.github.com>\r\n\r\n* docs(lanelet2_extention): add route cheker and update launching args (#1205)\r\n\r\n* docs(lanelet2_extention): update lanelet2 validation\r\n\r\nSigned-off-by: Shumpei Wakabayashi <shumpei.wakabayashi@tier4.jp>\r\n\r\n* docs(lanelet2_extention): add route checker\r\n\r\nSigned-off-by: Shumpei Wakabayashi <shumpei.wakabayashi@tier4.jp>\r\n\r\n* docs: update README\r\n\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\n\r\n* refactor\r\n\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\n\r\n* fix Clang-Tidy warnings\r\n\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\n\r\n* apply diff\r\n\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\n\r\n* add NOLINT\r\n\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\n\r\n* remove autoware_auto_msgs from reverse_depends/build_depends.repos\r\n\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\n\r\n* remove reverse_depends/map/lanelet2_extension\r\n\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\n\r\n* fix typo\r\n\r\n* use Humble for clang-tidy-differential\r\n\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\n\r\n* fix clang-tidy warnings\r\n\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\n\r\n* fix clang-tidy warnings\r\n\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\n\r\n* fix for cpplint\r\n\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\n\r\n* apply autowarefoundation/autoware.universe#1506\r\n\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\n\r\nCo-authored-by: taikitanaka3 <65527974+taikitanaka3@users.noreply.github.com>\r\nCo-authored-by: mitsudome-r <ryohsuke.mitsudome@tier4.jp>\r\nCo-authored-by: Taichi Higashide <taichi.higashide@tier4.jp>\r\nCo-authored-by: Kosuke Murakami <kosuke.murakami@tier4.jp>\r\nCo-authored-by: Ryohsuke Mitsudome <43976834+mitsudome-r@users.noreply.github.com>\r\nCo-authored-by: Nikolai Morin <nnmmgit@gmail.com>\r\nCo-authored-by: Takamasa Horibe <horibe.takamasa@gmail.com>\r\nCo-authored-by: Esteve Fernandez <esteve@apache.org>\r\nCo-authored-by: nik-tier4 <71747268+nik-tier4@users.noreply.github.com>\r\nCo-authored-by: isamu-takagi <43976882+isamu-takagi@users.noreply.github.com>\r\nCo-authored-by: Kazuki Miyahara <kmiya@outlook.com>\r\nCo-authored-by: tkimura4 <tomoya.kimura@tier4.jp>\r\nCo-authored-by: Makoto Tokunaga <vios-fish@users.noreply.github.com>\r\nCo-authored-by: Adam Dąbrowski <adam.dabrowski@robotec.ai>\r\nCo-authored-by: Daisuke Nishimatsu <42202095+wep21@users.noreply.github.com>\r\nCo-authored-by: Keisuke Shima <19993104+KeisukeShima@users.noreply.github.com>\r\nCo-authored-by: pre-commit <pre-commit@example.com>\r\nCo-authored-by: Yukihiro Saito <yukky.saito@gmail.com>\r\nCo-authored-by: wep21 <border_goldenmarket@yahoo.co.jp>\r\nCo-authored-by: Kosuke Takeuchi <kosuke.tnp@gmail.com>\r\nCo-authored-by: Hiroki OTA <hiroki.ota@tier4.jp>\r\nCo-authored-by: Takeshi Ishita <ishitah.takeshi@gmail.com>\r\nCo-authored-by: Satoshi OTA <44889564+satoshi-ota@users.noreply.github.com>\r\nCo-authored-by: satoshi-ota <satoshi.ota@gmail.com>\r\nCo-authored-by: rej55 <rej55.g@gmail.com>\r\nCo-authored-by: Takayuki Murooka <takayuki5168@gmail.com>\r\nCo-authored-by: Sugatyon <32741405+Sugatyon@users.noreply.github.com>\r\nCo-authored-by: kyoichi <kyoichi.sugahara@tier4.jp>\r\nCo-authored-by: Takayuki Murooka <takayuki.murooka@tier4.jp>\r\nCo-authored-by: Takeshi Miura <57553950+1222-takeshi@users.noreply.github.com>\r\nCo-authored-by: kyoichi-sugahara <81.s.kyo.19@gmail.com>\r\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>\r\nCo-authored-by: Maxime CLEMENT <78338830+maxime-clem@users.noreply.github.com>\r\nCo-authored-by: NorahXiong <103234047+NorahXiong@users.noreply.github.com>\r\nCo-authored-by: Shumpei Wakabayashi <42209144+shmpwk@users.noreply.github.com>",
+      "files_changed": 46,
+      "additions": 6897,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "wep21",
+      "date": "2023-05-29T14:05:09Z",
+      "sha": "b8cbf612ad506ccca44905774b151b29e3e41691",
+      "message": "build: fix build error with lanelet2 1.2.1 (#183)\n\nSigned-off-by: wep21 <daisuke.nishimatsu1021@gmail.com>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "takayuki5168",
+      "date": "2023-05-09T02:22:35Z",
+      "sha": "0997475414a334cceec4401c161acca7a631b265",
+      "message": "docs(lanelet2_extension): hatched road markings (#179)\n\nSigned-off-by: Takayuki Murooka <takayuki5168@gmail.com>",
+      "files_changed": 1,
+      "additions": 22,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "f0reachARR",
+      "date": "2024-06-14T13:31:30Z",
+      "sha": "e07b5fff6f63521222eb496fb9c66f89c637236d",
+      "message": "fix: boost optional build error on rolling environment (#241)\n\nSigned-off-by: f0reachARR <f0reach@f0reach.me>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "yukkysaito",
+      "date": "2022-08-27T04:54:17Z",
+      "sha": "946c2a752a2924f4eb5b6e509387224621b99d45",
+      "message": "fix: traffic light visualization bug (#96)\n\nSigned-off-by: Yukihiro Saito <yukky.saito@gmail.com>\r\n\r\nSigned-off-by: Yukihiro Saito <yukky.saito@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "cyn-liu",
+      "date": "2023-11-22T09:39:48Z",
+      "sha": "0f0f5f5028bf517da054bf4515034e4ce71d910c",
+      "message": "feat(lanelet2_extension): replace autoware_auto_mapping_msg with autoware_map_msg (#216)\n\n* feat(lanelet2_extension): replace autoware-auto-mapping-msg to autoware-map-msg\r\n\r\nSigned-off-by: liu cui <cynthia.liu@autocore.ai>\r\n\r\n* style(pre-commit): autofix\r\n\r\n---------\r\n\r\nSigned-off-by: liu cui <cynthia.liu@autocore.ai>\r\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>",
+      "files_changed": 6,
+      "additions": 12,
+      "deletions": 12,
+      "commit_type": "ci"
+    },
+    {
+      "author": "shmpwk",
+      "date": "2024-03-04T04:01:36Z",
+      "sha": "27166f29094b32f275c662f505c8cdf9b135d168",
+      "message": "fix(lanelet2_extension): invalid access (#240)",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "ahmeddesokyebrahim",
+      "date": "2023-06-08T10:20:12Z",
+      "sha": "7eaa838f3c3b9cc197cf56d56bc973d1190f4ac3",
+      "message": "feat: handle invalid lanelet (#175)\n\n* feat: updating lanelet2_format_extention documentation with invalid lanelet tag\r\n\r\nSigned-off-by: AhmedEbrahim <ahmed.a.d.ebrahim@gmail.com>\r\n\r\n* feat: changing module name from invalid_lanelet to no_drivable_lane\r\n\r\nSigned-off-by: AhmedEbrahim <ahmed.a.d.ebrahim@gmail.com>\r\n\r\n* feat: fixing merge conflict mistake\r\n\r\nSigned-off-by: AhmedEbrahim <ahmed.a.d.ebrahim@gmail.com>\r\n\r\n* style(pre-commit): autofix\r\n\r\n* feat: fixing the autofix commit problem\r\n\r\nSigned-off-by: AhmedEbrahim <ahmed.a.d.ebrahim@gmail.com>\r\n\r\n* style(pre-commit): autofix\r\n\r\n* feat: fixing autofix commit changes\r\n\r\nSigned-off-by: AhmedEbrahim <ahmed.a.d.ebrahim@gmail.com>\r\n\r\n* feat: fixing relevant path document to be github link\r\n\r\nSigned-off-by: AhmedEbrahim <ahmed.a.d.ebrahim@gmail.com>\r\n\r\n* feat(no_drivable_lane): updating no_drivable_lane concept doc link after merging universe\r\n\r\nSigned-off-by: AhmedEbrahim <ahmed.a.d.ebrahim@gmail.com>\r\n\r\n---------\r\n\r\nSigned-off-by: AhmedEbrahim <ahmed.a.d.ebrahim@gmail.com>\r\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 23,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "isamu-takagi",
+      "date": "2024-01-18T10:56:44Z",
+      "sha": "5a9c9879a21b591767c9d2b2d71ff936a5ba270e",
+      "message": "refactor(lanelet2_extension): move RegisterRegulatoryElement to cpp file (#222)\n\nSigned-off-by: Takagi, Isamu <isamu.takagi@tier4.jp>",
+      "files_changed": 16,
+      "additions": 47,
+      "deletions": 32,
+      "commit_type": "code"
+    },
+    {
+      "author": "satoshi-ota",
+      "date": "2023-06-13T07:05:59Z",
+      "sha": "c461b1c848e68db4fb10d0214ae9814258da6f03",
+      "message": "feat(lanelet2_extension): add crosswalk regulatory element (#187)\n\n* feat(lanelet2_extension): add crosswalk regulatory element\r\n\r\nSigned-off-by: satoshi-ota <satoshi.ota928@gmail.com>\r\n\r\n* fix(lanelet2_extension): fix incorrect comments\r\n\r\nSigned-off-by: satoshi-ota <satoshi.ota928@gmail.com>\r\n\r\n* docs(lanelet2_extension): add description for crosswalk regulatory element\r\n\r\nSigned-off-by: satoshi-ota <satoshi.ota928@gmail.com>\r\n\r\n* refactor(lanelet2_extension): clean up\r\n\r\nSigned-off-by: satoshi-ota <satoshi.ota928@gmail.com>\r\n\r\n* feat(lanelet2_extension): show crosswalk areas\r\n\r\nSigned-off-by: satoshi-ota <satoshi.ota928@gmail.com>\r\n\r\n* docs(lanelet2_extension): add objective\r\n\r\nSigned-off-by: satoshi-ota <satoshi.ota928@gmail.com>\r\n\r\n---------\r\n\r\nSigned-off-by: satoshi-ota <satoshi.ota928@gmail.com>",
+      "files_changed": 11,
+      "additions": 531,
+      "deletions": 6,
+      "commit_type": "docs"
+    },
+    {
+      "author": "SakodaShintaro",
+      "date": "2023-12-26T07:27:34Z",
+      "sha": "99b3dcf4d0e2636aa2aa8fd38d5bd7afbd0db2b2",
+      "message": "feat(lanelet2_extension): added localization landmark (#219)\n\n* Added localization landmark\r\n\r\nSigned-off-by: Shintaro Sakoda <shintaro.sakoda@tier4.jp>\r\n\r\n* style(pre-commit): autofix\r\n\r\n* Changed to return Polygon\r\n\r\nSigned-off-by: Shintaro Sakoda <shintaro.sakoda@tier4.jp>\r\n\r\n* Added cspell:ignore apiltag\r\n\r\nSigned-off-by: Shintaro Sakoda <shintaro.sakoda@tier4.jp>\r\n\r\n* Added NOLINT\r\n\r\nSigned-off-by: Shintaro Sakoda <shintaro.sakoda@tier4.jp>\r\n\r\n---------\r\n\r\nSigned-off-by: Shintaro Sakoda <shintaro.sakoda@tier4.jp>\r\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>",
+      "files_changed": 5,
+      "additions": 314,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "TakaHoribe",
+      "date": "2023-05-23T06:57:25Z",
+      "sha": "3c5bb74e4d7a0d0084e199d16fa45b75b01db541",
+      "message": "chore(lanelet2_extension): change log level from error to warn for visualization (#181)\n\nSigned-off-by: Takamasa Horibe <horibe.takamasa@gmail.com>",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "kyoichi-sugahara",
+      "date": "2023-10-19T11:07:40Z",
+      "sha": "32f0c4d4770d26f1208ac7ac034e209e18d88f71",
+      "message": "feat(lanelet2_extention): add getAllFences (#209)\n\nadd getAllFences\r\n\r\nSigned-off-by: kyoichi-sugahara <kyoichi.sugahara@tier4.jp>",
+      "files_changed": 2,
+      "additions": 15,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "saka1-s",
+      "date": "2023-09-13T14:44:46Z",
+      "sha": "7d4dc1a741ff58d0716f872ab4601e29804b6e2f",
+      "message": "feat(lanelet2_extensions): add query curbstones from vector map (#206)\n\n* query curbstones from vector map\r\n\r\nSigned-off-by: Shohei Sakai <saka1s.jp@gmail.com>\r\n\r\n* style(pre-commit): autofix\r\n\r\n---------\r\n\r\nSigned-off-by: Shohei Sakai <saka1s.jp@gmail.com>\r\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>",
+      "files_changed": 2,
+      "additions": 15,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "kminoda",
+      "date": "2023-08-02T10:02:40Z",
+      "sha": "735a856eace85f1ac4f0c7b45b950689c1c2a779",
+      "message": "feat(lanelet2_extensions): add transverse mercator projector (#191)\n\n* Now Transverse Mercator Projection works\r\n\r\nSigned-off-by: kminoda <koji.minoda@tier4.jp>\r\n\r\n* style(pre-commit): autofix\r\n\r\n* Remove unnecessary line\r\n\r\nSigned-off-by: kminoda <koji.minoda@tier4.jp>\r\n\r\n* update comment\r\n\r\nSigned-off-by: kminoda <koji.minoda@tier4.jp>\r\n\r\n* fix header\r\n\r\nSigned-off-by: kminoda <koji.minoda@tier4.jp>\r\n\r\n* reflected comments\r\n\r\nSigned-off-by: kminoda <koji.minoda@tier4.jp>\r\n\r\n* update readme\r\n\r\nSigned-off-by: kminoda <koji.minoda@tier4.jp>\r\n\r\n* update nolint\r\n\r\nSigned-off-by: kminoda <koji.minoda@tier4.jp>\r\n\r\n---------\r\n\r\nSigned-off-by: kminoda <koji.minoda@tier4.jp>\r\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>",
+      "files_changed": 4,
+      "additions": 126,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "VRichardJP",
+      "date": "2023-05-03T15:37:24Z",
+      "sha": "2e71946669fe4031d3e66a360dacc294a6241d63",
+      "message": "build: mark autoware_cmake as <buildtool_depend> (#176)\n\n* build: mark autoware_cmake as <buildtool_depend>\r\n\r\nSince autoware_cmake only provide cmake macros only <buildtool_depend> is necessary.\r\nWith <build_depend>, autoware_cmake is automatically exported with ament_target_dependencies() (unecessary)\r\n\r\nSigned-off-by: Vincent Richard <richard-v@macnica.co.jp>\r\n\r\n* style(pre-commit): autofix\r\n\r\n* chore: fix pre-commit errors\r\n\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\n\r\n---------\r\n\r\nSigned-off-by: Vincent Richard <richard-v@macnica.co.jp>\r\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\r\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>\r\nCo-authored-by: Kenji Miyake <kenji.miyake@tier4.jp>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 2,
+      "commit_type": "ci"
+    },
+    {
+      "author": "tkhmy",
+      "date": "2023-04-26T08:12:30Z",
+      "sha": "c08ad643a9b91756a7695d73dd8864629c4baa0e",
+      "message": "feat: remove local x local y parser, move it to map_loader (#174)\n\n* remove local x local y parser, move it to map_loader\r\n\r\nSigned-off-by: tkhmy <tkh.my.p@gmail.com>\r\n\r\n* update docs\r\n\r\nSigned-off-by: tkhmy <tkh.my.p@gmail.com>\r\n\r\n* add map loader packege url\r\n\r\nSigned-off-by: tkhmy <tkh.my.p@gmail.com>\r\n\r\n---------\r\n\r\nSigned-off-by: tkhmy <tkh.my.p@gmail.com>",
+      "files_changed": 3,
+      "additions": 1,
+      "deletions": 12,
+      "commit_type": "docs"
+    },
+    {
+      "author": "takanotaiga",
+      "date": "2023-04-03T08:37:16Z",
+      "sha": "030d27a7fd19558aefc08aaf0b828096cbf4de53",
+      "message": "perf(lanelet2_extension): improve performance of getClosestLanelet (#161)\n\n* perf(lanelet2_extension): improve performance of getClosestLanelet\r\n\r\nSigned-off-by: Taiga Takano <taiga.takano@tier4.jp>\r\n\r\n* style(pre-commit): autofix\r\n\r\nSigned-off-by: Taiga Takano <taiga.takano@tier4.jp>\r\n\r\n---------\r\n\r\nSigned-off-by: Taiga Takano <taiga.takano@tier4.jp>\r\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "purewater0901",
+      "date": "2023-03-16T06:25:08Z",
+      "sha": "0f694189bd67666b55ced0e38b2cbe1d88a546a5",
+      "message": "feat(lanelet2_extension): add lateral distance calculation functions (#162)\n\n* feat(lanelet2_extension): add a function that calcuates lateral distance\r\n\r\nSigned-off-by: yutaka <purewater0901@gmail.com>\r\n\r\n* fix format\r\n\r\nSigned-off-by: yutaka <purewater0901@gmail.com>\r\n\r\n* change name\r\n\r\nSigned-off-by: yutaka <purewater0901@gmail.com>\r\n\r\n* update\r\n\r\nSigned-off-by: yutaka <purewater0901@gmail.com>\r\n\r\n---------\r\n\r\nSigned-off-by: yutaka <purewater0901@gmail.com>",
+      "files_changed": 2,
+      "additions": 21,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "tkimura4",
+      "date": "2023-02-06T06:11:48Z",
+      "sha": "bcbf8902c58bfbeedd825dbad9c9cabe6c5fce7b",
+      "message": "feat(lanalet2_extension): set frame_locked to false (#153)\n\nSigned-off-by: tomoya.kimura <tomoya.kimura@tier4.jp>",
+      "files_changed": 1,
+      "additions": 12,
+      "deletions": 12,
+      "commit_type": "code"
+    },
+    {
+      "author": "TomohitoAndo",
+      "date": "2022-08-26T08:41:36Z",
+      "sha": "0f46efa096ccb208759e6c49223fe58234c05a13",
+      "message": "feat: add visualization for no detection area (#92)\n\n* feat: add no detection area filter\r\n\r\nSigned-off-by: Tomohito Ando <tomohito.ando@tier4.jp>\r\n\r\n* chore: use the string equality operator\r\n\r\nSigned-off-by: Tomohito Ando <tomohito.ando@tier4.jp>\r\n\r\n* chore: move the position of the function\r\n\r\nSigned-off-by: Tomohito Ando <tomohito.ando@tier4.jp>\r\n\r\n* feat: add function that allows to get polygons by type\r\n\r\nSigned-off-by: Tomohito Ando <tomohito.ando@tier4.jp>\r\n\r\n* chore: add visualization for no obstacle segmentation area\r\n\r\nSigned-off-by: Tomohito Ando <tomohito.ando@tier4.jp>\r\n\r\n* chore: fix typo\r\n\r\nSigned-off-by: Tomohito Ando <tomohito.ando@tier4.jp>\r\n\r\n* docs: add ducuments for no_obstacle_segmentation_area\r\n\r\nSigned-off-by: Tomohito Ando <tomohito.ando@tier4.jp>\r\n\r\n* ci(pre-commit): autofix\r\n\r\nSigned-off-by: Tomohito Ando <tomohito.ando@tier4.jp>\r\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>",
+      "files_changed": 5,
+      "additions": 102,
+      "deletions": 1,
+      "commit_type": "ci"
+    }
+  ]
+}

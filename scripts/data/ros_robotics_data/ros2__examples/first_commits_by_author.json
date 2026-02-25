@@ -1,0 +1,571 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T01:09:45Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros2",
+    "repo": "examples"
+  },
+  "data": [
+    {
+      "author": "ahcorde",
+      "date": "2020-05-12T14:48:43Z",
+      "sha": "f7acea16f19f2e599424f1b678ab43b7b91cea93",
+      "message": "Initialized count in examples_rclcpp_multithreaded_executor (#269)\n\nSigned-off-by: ahcorde <ahcorde@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "araitaiga",
+      "date": "2025-10-21T07:52:20Z",
+      "sha": "a68dd069b52ba52e3db8e87ac1718ff48fd572c9",
+      "message": "Add rclcpp single goal action server example (#429)\n\nSigned-off-by: Taiga Arai <araitaiga2020.service@gmail.com>",
+      "files_changed": 2,
+      "additions": 154,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "fujitatomoya",
+      "date": "2020-05-28T00:41:48Z",
+      "sha": "16bffa238dfa3ff305f14b1ec75ed41dce634ffb",
+      "message": "spin_some might throw exception.(#266) (#270)\n\nSigned-off-by: Tomoya.Fujita <Tomoya.Fujita@sony.com>",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "clalancette",
+      "date": "2018-06-25T17:45:51Z",
+      "sha": "0f430bd1d44038a5532e9ec3f83b31acd3726ca1",
+      "message": "Change the not_composable example to destroy subscription first. (#210)\n\n* Change the not_composable example to not use a global node.\r\n\r\nWe are seeing the following message when hitting Ctrl-C\r\nin the subscriber not_composable node:\r\n\r\n[ERROR] [rclcpp]: Error in destruction of rcl subscription handle: the Node Handle was destructed too early. You will leak memory\r\n\r\nThe problem is that setting g_node to nullptr causes the\r\nnode destructor to be run before the subscriber is destructed.\r\nDue to another bug, we can't just remove that assignment, so\r\ninstead we make it all locally scoped in main for now, which\r\nworks around the problem.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Manually destroy the subscription first.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "mosfet80",
+      "date": "2025-07-07T11:07:42Z",
+      "sha": "bdfef47425c781f55eb0779d26c031c4fd7786d3",
+      "message": "Fix CMAKE deprecation (#419)\n\ncmake version < then 3.10 is deprecated\n\nSigned-off-by: mosFet <realeandrea@yahoo.it>",
+      "files_changed": 12,
+      "additions": 12,
+      "deletions": 12,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jncfa",
+      "date": "2025-05-11T16:50:09Z",
+      "sha": "153d692a70871c0974fe00edaadb7ff867aaa1f9",
+      "message": "Improve readibility of reported thread ids in the multithreaded executor example (#415)\n\n* improve readibility of reported thread ids\n\nSigned-off-by: jncfa <20467009+jncfa@users.noreply.github.com>\n\n* lint fixes\n\nSigned-off-by: jncfa <20467009+jncfa@users.noreply.github.com>\n\n* apply changes from review\n\nSigned-off-by: jncfa <20467009+jncfa@users.noreply.github.com>\n\n* use cend for consistency\n\nSigned-off-by: jncfa <20467009+jncfa@users.noreply.github.com>\n\n---------\n\nSigned-off-by: jncfa <20467009+jncfa@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 10,
+      "deletions": 2,
+      "commit_type": "ci"
+    },
+    {
+      "author": "cottsay",
+      "date": "2021-03-18T19:29:04Z",
+      "sha": "dd6badd06587bbc7268badcaf80a35a2568db60f",
+      "message": "0.10.3",
+      "files_changed": 47,
+      "additions": 97,
+      "deletions": 28,
+      "commit_type": "docs"
+    },
+    {
+      "author": "sloretz",
+      "date": "2017-09-11T04:15:54Z",
+      "sha": "6f1d6ad029971c53853bef1ebbd1d1066863e251",
+      "message": "Examples for Executors and callback groups (#182)\n\nAdded examples with a mock up of an API for executors and callback groups\r\nMisc fixes to work with executors implementation",
+      "files_changed": 20,
+      "additions": 613,
+      "deletions": 44,
+      "commit_type": "config"
+    },
+    {
+      "author": "mrjogo",
+      "date": "2024-05-16T07:52:06Z",
+      "sha": "65bd653621b0b8a8d8bab318dd63e75695f1d902",
+      "message": "Add guard on Python single goal action server example (#380)\n\nSigned-off-by: Ruddick Lawrence <679360+mrjogo@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 1,
+      "commit_type": "ci"
+    },
+    {
+      "author": "marcoag",
+      "date": "2024-04-26T15:32:26Z",
+      "sha": "06298ddabcf71790898414b4073db910d2f35c03",
+      "message": "Changelog.\n\nSigned-off-by: Marco A. Gutierrez <marcogg@marcogg.com>",
+      "files_changed": 22,
+      "additions": 66,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jmachowinski",
+      "date": "2024-04-12T12:29:14Z",
+      "sha": "2e22a55e2c7bb59df8062341495607da044d093a",
+      "message": "fix: Fixed compilation after API change of TimerBase::execute (#375)\n\nSigned-off-by: Janosch Machowinski <J.Machowinski@cellumation.com>\r\nCo-authored-by: Janosch Machowinski <J.Machowinski@cellumation.com>",
+      "files_changed": 2,
+      "additions": 7,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "FelipeGdM",
+      "date": "2023-06-05T13:00:21Z",
+      "sha": "780ab412ca1e9bf1b318ae555d03ec69ff5f7e1e",
+      "message": "Split lambda and subscriber def in minimal example (#363)\n\nSigned-off-by: Felipe Gomes de Melo <felipegmelo.42@gmail.com>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "Yadunund",
+      "date": "2023-03-14T14:42:18Z",
+      "sha": "b905830472e1946ea7d28ba415df1127195ff316",
+      "message": "Enable document generation using rosdoc2 for ament_python pkgs (#357)\n\n* Add missing action_msgs dep\r\n\r\n* Add exec_deps for launch_testing_examples\r\n\r\nSigned-off-by: Yadunund <yadunund@openrobotics.org>",
+      "files_changed": 2,
+      "additions": 13,
+      "deletions": 10,
+      "commit_type": "config"
+    },
+    {
+      "author": "Chen Lihui",
+      "date": "2023-02-28T14:24:55Z",
+      "sha": "ac1e6ae0b8dc50d9c10111764ef9c21de52ba7d2",
+      "message": "increase the timeout for window platform to avoid flaky test (#355)\n\n* increase the time out for window platform to avoid flaky test\r\n\r\nSigned-off-by: Chen Lihui <lihui.chen@sony.com>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "test"
+    },
+    {
+      "author": "audrow",
+      "date": "2020-08-05T15:18:50Z",
+      "sha": "9267b589018d90b6066b04bbabf2084c5a0fa88c",
+      "message": "[rclpy] Create a package with an example showing how guard conditions work (#283)\n\n* Create package with an example showing how guard conditions work\r\n\r\nSigned-off-by: Audrow <audrow.nash@gmail.com>\r\n\r\n* Update version to match other packages\r\n\r\nSigned-off-by: Audrow <audrow.nash@gmail.com>\r\n\r\n* Replace thread with a timer and shutdown after guard's callback\r\n\r\nSigned-off-by: Audrow <audrow.nash@gmail.com>\r\n\r\n* Rename node name\r\n\r\nCo-authored-by: Jacob Perron <jacob@openrobotics.org>\r\nSigned-off-by: Audrow <audrow.nash@gmail.com>\r\n\r\nCo-authored-by: Jacob Perron <jacob@openrobotics.org>",
+      "files_changed": 9,
+      "additions": 176,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "mergify[bot]",
+      "date": "2022-07-25T19:41:59Z",
+      "sha": "daa1fcc604e0af5ffecbbb4b3f5e0e4e5c67f653",
+      "message": "Add test linting to wait_set and fix issues. (#346) (#347)\n\nSigned-off-by: Allison Thackston <allison@allisonthackston.com>\r\n(cherry picked from commit 357183cfb0e82195e54235ffb51e1071711a8661)\r\n\r\nCo-authored-by: Allison Thackston <allison@allisonthackston.com>",
+      "files_changed": 3,
+      "additions": 10,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "paudrow",
+      "date": "2022-01-14T16:34:46Z",
+      "sha": "d7299217650fd70ae13ec5191d45ed17b8ae96eb",
+      "message": "0.14.0\n\nSigned-off-by: Audrow Nash <audrow@hey.com>",
+      "files_changed": 54,
+      "additions": 152,
+      "deletions": 32,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ralph-lange",
+      "date": "2021-03-11T19:09:25Z",
+      "sha": "73e38491a50518b349685e34432aa108b28731e5",
+      "message": "Demo for callback-group-level executor concept. (#302)\n\n* Demo for callback-group-level executor concept.\r\n\r\nSigned-off-by: Ralph Lange <ralph.lange@de.bosch.com>\r\n\r\n* Apply suggestions from code review\r\n\r\nCo-authored-by: Karsten Knese <Karsten1987@users.noreply.github.com>\r\nSigned-off-by: Ralph Lange <ralph.lange@de.bosch.com>\r\n\r\n* Fixed CMake line length warning.\r\n\r\nSigned-off-by: Ralph Lange <ralph.lange@de.bosch.com>\r\n\r\n* First attempt for support of macOS.\r\n\r\nSigned-off-by: Ralph Lange <ralph.lange@de.bosch.com>\r\n\r\n* Fixed linter warnings.\r\n\r\nSigned-off-by: Ralph Lange <ralph.lange@de.bosch.com>\r\n\r\n* Simplified #ifdefs for logger.\r\n\r\nSigned-off-by: Ralph Lange <ralph.lange@de.bosch.com>\r\n\r\n* make compile on osx\r\n\r\nSigned-off-by: Karsten Knese <Karsten1987@users.noreply.github.com>\r\n\r\n* Fixed includes so that CPPLINT.cfg can be removed and formatting of int64 in logging.\r\n\r\nSigned-off-by: Ralph Lange <ralph.lange@de.bosch.com>\r\n\r\n* fix osx cpu affinity\r\n\r\nSigned-off-by: Karsten Knese <Karsten1987@users.noreply.github.com>\r\n\r\n* duplicate main methods for simplicity\r\n\r\nSigned-off-by: Karsten Knese <Karsten1987@users.noreply.github.com>\r\n\r\n* uncrustify\r\n\r\nSigned-off-by: Karsten Knese <Karsten1987@users.noreply.github.com>\r\n\r\n* Ensure that both executor instance continue after the scheduling configuration.\r\n\r\nSigned-off-by: Ralph Lange <ralph.lange@de.bosch.com>\r\n\r\n* wip, thread suspend\r\n\r\nSigned-off-by: Karsten Knese <Karsten1987@users.noreply.github.com>\r\n\r\n* Improved documentation and cleaned up main functions.\r\n\r\nSigned-off-by: Ralph Lange <ralph.lange@de.bosch.com>\r\n\r\n* Added note on failed core pinning under macOS.\r\n\r\nSigned-off-by: Ralph Lange <ralph.lange@de.bosch.com>\r\n\r\n* Removed unused timestamp variables.\r\n\r\nSigned-off-by: Ralph Lange <ralph.lange@de.bosch.com>\r\n\r\n* Added explicit cast from size_t to int32.\r\n\r\nSigned-off-by: Ralph Lange <ralph.lange@de.bosch.com>\r\n\r\nCo-authored-by: Karsten Knese <Karsten1987@users.noreply.github.com>",
+      "files_changed": 12,
+      "additions": 1011,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "aprotyas",
+      "date": "2022-02-16T18:52:38Z",
+      "sha": "0088f1a49a85cdfb6ea9390c6c85a96d81a26e96",
+      "message": "Use `const&` signature for read-only sub callbacks (#337)\n\nconst& signatures for read-only subscriber callbacks\r\n\r\nSigned-off-by: Abrar Rahman Protyasha <aprotyas@u.rochester.edu>",
+      "files_changed": 4,
+      "additions": 11,
+      "deletions": 11,
+      "commit_type": "code"
+    },
+    {
+      "author": "Barry-Xu-2018",
+      "date": "2022-01-25T19:09:33Z",
+      "sha": "200a16c2290e09a26eaa91f201555887cbb3e379",
+      "message": "Add an example about how to use wait_for_all_acked (#316)\n\nSigned-off-by: Barry Xu <barry.xu@sony.com>",
+      "files_changed": 2,
+      "additions": 98,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "adityapande-1995",
+      "date": "2021-10-08T17:48:17Z",
+      "sha": "85a0d743c298ea3cb4a12cce1bde2e1cf41679d7",
+      "message": "Moved examples (#324)\n\n* Moved examples\r\n\r\nSigned-off-by: Aditya Pande <aditya050995@gmail.com>\r\n\r\n* Fixed test dependencies\r\n\r\nSigned-off-by: Aditya Pande <aditya050995@gmail.com>\r\n\r\n* Added README\r\n\r\nSigned-off-by: Aditya Pande <aditya050995@gmail.com>\r\n\r\n* Fixed package.xml, setup.py\r\n\r\nSigned-off-by: Aditya Pande <aditya050995@gmail.com>\r\n\r\n* Removed custom nodes\r\n\r\nSigned-off-by: Aditya Pande <aditya050995@gmail.com>\r\n\r\n* Changed email\r\n\r\nSigned-off-by: Aditya Pande <aditya050995@gmail.com>\r\n\r\n* Removed MakeTestNode class and added functions\r\n\r\nSigned-off-by: Aditya Pande <aditya050995@gmail.com>\r\n\r\n* Added test dependency\r\n\r\nSigned-off-by: Aditya Pande <aditya050995@gmail.com>",
+      "files_changed": 13,
+      "additions": 412,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ivanpauno",
+      "date": "2021-04-21T13:42:51Z",
+      "sha": "53b0dd4268d0a72994af0464bcbdc0262c2413e0",
+      "message": "Use underscores instead of dashes in setup.cfg (#310)\n\nSigned-off-by: Ivan Santiago Paunovic <ivanpauno@ekumenlabs.com>",
+      "files_changed": 9,
+      "additions": 18,
+      "deletions": 18,
+      "commit_type": "config"
+    },
+    {
+      "author": "Abrar Rahman Protyasha",
+      "date": "2021-08-23T07:39:33Z",
+      "sha": "669ec3e6807a0b2620a01b26513e713e8a9a14f0",
+      "message": "Fix deprecated subscriber callbacks (#323)\n\nThese fixes target the following packages within examples:\r\n* `examples_rclcpp_cbg_executor`\r\n* `multithreaded_executor`\r\n* `minimal_subscriber`\r\n* `minimal_publisher`\r\n\r\nSigned-off-by: Abrar Rahman Protyasha <abrar@openrobotics.org>",
+      "files_changed": 9,
+      "additions": 16,
+      "deletions": 16,
+      "commit_type": "code"
+    },
+    {
+      "author": "carlossvg",
+      "date": "2021-07-31T01:30:43Z",
+      "sha": "45014687f76307839638c3092801aa6cdaaf52dc",
+      "message": "Add wait set examples (#315)\n\n* wip\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* more WIP examples\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* updates\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* adding examples using Subscription::take()\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* use rclcpp::MessageInfo\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* break examples into separate files\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* update to support thread-safe wait set\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* style\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* Add addtional wait-set examples\r\n\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* Shuffle publish calls\r\n\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* Refactor publisher in a node class\r\n\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* Update examples\r\n\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* Add waiset example using composition\r\n\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* Rename minimal_subscriber waitset example\r\n\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* Update README\r\n\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* Update waitset_example_main\r\n\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* Refactoring\r\n\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* Add example using different topic rates\r\n\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* Rename examples\r\n\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* Use handle_message to handle callbacks\r\n\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* Refactor random talker example\r\n\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* Fix cpplint errors\r\n\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* Rename executables\r\n\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* Add minimal subscriber example using a timer triggered node\r\n\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* Fix incomplete executable name\r\n\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* Complete README.md\r\n\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* Refactor wait-set policies examples\r\n\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* Refactor MinimalSubscriber wait-set examples\r\n\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* Document missing wait-set examples\r\n\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* Fix incorrect path for README.md\r\n\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* Style fixes\r\n\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* Replace RCLCPP_ERROR with RCLCPP_WARN\r\n\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* Update rclcpp/wait_set/wait_set_topics_and_timer.cpp\r\n\r\nCo-authored-by: William Woodall <william+github@osrfoundation.org>\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* Update rclcpp/minimal_subscriber/README.md\r\n\r\nCo-authored-by: William Woodall <william+github@osrfoundation.org>\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* Spin nodes in executor\r\n\r\nSigned-off-by: Carlos San Vicente <carlos.svic@gmail.com>\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* Remove out of place line\r\n\r\nSigned-off-by: Carlos San Vicente <carlos.svic@gmail.com>\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* Rename Listener to RandomListener\r\n\r\nSigned-off-by: Carlos San Vicente <carlos.svic@gmail.com>\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* Move wait-set loop thread to the node\r\n\r\nSigned-off-by: Carlos San Vicente <carlos.svic@gmail.com>\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* Minimize vertical whitespace\r\n\r\nSigned-off-by: Carlos San Vicente <carlos.svic@gmail.com>\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* Register nodes as components\r\n\r\nSigned-off-by: Carlos San Vicente <carlos.svic@gmail.com>\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* Rename waitset to wait_set\r\n\r\nSigned-off-by: Carlos San Vicente <carlos.svic@gmail.com>\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* Add minimal siatic wait-set subscriber example\r\n\r\nSigned-off-by: Carlos San Vicente <carlos.svic@gmail.com>\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* Refactor CMakeLists.txt\r\n\r\nSigned-off-by: Carlos San Vicente <carlos.svic@gmail.com>\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* Remove comment about simulating inter-process communications\r\n\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* Add joinable\r\n\r\nSigned-off-by: Carlos San Vicente <carlos.svic@gmail.com>\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* README.md format\r\n\r\nSigned-off-by: Carlos San Vicente <carlos.svic@gmail.com>\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* Update rclcpp/minimal_subscriber/static_wait_set.cpp\r\n\r\nCo-authored-by: William Woodall <william+github@osrfoundation.org>\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* Update rclcpp/minimal_subscriber/wait_set.cpp\r\n\r\nCo-authored-by: William Woodall <william+github@osrfoundation.org>\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* Update rclcpp/minimal_subscriber/wait_set_time_triggered.cpp\r\n\r\nCo-authored-by: William Woodall <william+github@osrfoundation.org>\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* Adress reviewer comments for minimal_subscriber\r\n\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* Convert wait-set minimal subscribers to components\r\n\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* Add note in README for wait-set use cases\r\n\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* Restore rclcpp/README.md modified indent\r\n\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* Remove dll compile definitions\r\n\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* Minor fixes\r\n\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* Use rclcpp_components_register_node to register components\r\n\r\nSigned-off-by: Carlos San Vicente <carlos.sanvicente@apex.ai>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* Update rclcpp/topics/minimal_subscriber/README.md\r\n\r\nCo-authored-by: William Woodall <william+github@osrfoundation.org>\r\nSigned-off-by: Carlos San Vicente <carlos.svic@gmail.com>\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* fix signed converison or potential loss of data warnings\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* avoid conversion warnings by using size_t everywhere\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\nCo-authored-by: William Woodall <william@osrfoundation.org>\r\nCo-authored-by: William Woodall <william+github@osrfoundation.org>",
+      "files_changed": 24,
+      "additions": 1538,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "anamud",
+      "date": "2021-04-05T17:17:06Z",
+      "sha": "c378340b7a3da6dc85531c6b6ce1213d72170733",
+      "message": "Unique network flows (#296)\n\n* Demonstrate unique network flows feature\r\n\r\nSigned-off-by: Ananya Muddukrishna <ananya.x.muddukrishna@ericsson.com>\r\n\r\n* Use new unique network flow option\r\n\r\nSigned-off-by: Ananya Muddukrishna <ananya.x.muddukrishna@ericsson.com>\r\n\r\n* Modify to match renamed API\r\n\r\nSigned-off-by: Ananya Muddukrishna <ananya.x.muddukrishna@ericsson.com>\r\n\r\n* Rename files for consistency\r\n\r\nSigned-off-by: Ananya Muddukrishna <ananya.x.muddukrishna@ericsson.com>\r\n\r\n* Update build configuration\r\n\r\nSigned-off-by: Ananya Muddukrishna <ananya.x.muddukrishna@ericsson.com>\r\n\r\n* Catch exception on failure to create subscriber\r\n\r\nSigned-off-by: Ananya Muddukrishna <ananya.x.muddukrishna@ericsson.com>\r\n\r\nCo-authored-by: Ananya Muddukrishna <ananya.x.muddukrishna@ericsson.com>",
+      "files_changed": 4,
+      "additions": 240,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "joshua-qnx",
+      "date": "2021-03-23T16:59:56Z",
+      "sha": "654358e36762bda2a632cd0eccf82cb8a88f8714",
+      "message": "Support for cbg_executor package on QNX (#305)\n\n* added support for thread affinity in qnx\r\n\r\nSigned-off-by: Joshua Kurien <jkurien@blackberry.com>",
+      "files_changed": 1,
+      "additions": 36,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "flynneva",
+      "date": "2021-03-11T19:44:54Z",
+      "sha": "64bd3a07276792ad5cf4a4377488735e037ddcb7",
+      "message": "add pointcloud publisher example (#276)",
+      "files_changed": 9,
+      "additions": 203,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "alemme",
+      "date": "2021-02-12T18:48:52Z",
+      "sha": "54b437c551eb15a5579d7e58d01f8446b8de6540",
+      "message": "using asyncio with ros2 action client (#301)\n\n* using asyncio with ros2 action client\r\n\r\nSigned-off-by: Andre Lemme <17647526+alemme@users.noreply.github.com>\r\nCo-authored-by: Chris Lalancette <clalancette@gmail.com>",
+      "files_changed": 2,
+      "additions": 118,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "jacobperron",
+      "date": "2018-11-20T06:02:06Z",
+      "sha": "8155b356c4bcbaf904e793ce75fdc0193ee5480e",
+      "message": "Update maintainer for rclcpp example packages (#219)\n\n* Update maintainer for rclcpp example packages\r\n\r\n* Update author list",
+      "files_changed": 6,
+      "additions": 12,
+      "deletions": 6,
+      "commit_type": "config"
+    },
+    {
+      "author": "athackst",
+      "date": "2020-08-13T14:24:21Z",
+      "sha": "155225c81d317c5aba161bca99e85ab5ec2be2f6",
+      "message": "Added missing linting tests (#287)\n\n* fixed linting issues\r\n* added missing python tests\r\n\r\nSigned-off-by: Allison Thackston <allison@lyonthackston.com>",
+      "files_changed": 13,
+      "additions": 164,
+      "deletions": 19,
+      "commit_type": "code"
+    },
+    {
+      "author": "dabonnie",
+      "date": "2020-07-22T16:16:42Z",
+      "sha": "e7477f183109d11143e2590458b3b0e439e849bb",
+      "message": "Add Topic Statistics Example (#281)\n\n* Add subscriber example for Topic Statistics\r\nFix linting errors\r\n\r\nSigned-off-by: Devin Bonnie <dbbonnie@amazon.com>\r\n\r\n* Revert unrelated changes\r\n\r\nSigned-off-by: Devin Bonnie <dbbonnie@amazon.com>\r\n\r\n* Fix uncrustify errors\r\n\r\nSigned-off-by: Devin Bonnie <dbbonnie@amazon.com>",
+      "files_changed": 2,
+      "additions": 65,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "hidmic",
+      "date": "2019-11-18T16:52:21Z",
+      "sha": "81a914a4cc71143981d97aafc0a946ca014204f6",
+      "message": "Fix client_cancel example. (#258)\n\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "claireyywang",
+      "date": "2020-05-01T06:14:42Z",
+      "sha": "c14cd3ab1b287af1a6c4bb819b72d056ad0eb265",
+      "message": "bump to version 0.9.0\n\nSigned-off-by: claireyywang <clairewang@openrobotics.org>",
+      "files_changed": 39,
+      "additions": 102,
+      "deletions": 23,
+      "commit_type": "docs"
+    },
+    {
+      "author": "wjwwood",
+      "date": "2014-08-12T06:14:03Z",
+      "sha": "d99bfee0a201c1de036f2e2d1cfdd4c6d9aaf338",
+      "message": "update repos",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "maryaB-osr",
+      "date": "2020-04-08T21:37:55Z",
+      "sha": "6a84082331ec8d0fc68eb73d92dc6a5637c2c13f",
+      "message": "New readme (#263)\n\n* change readme link\r\n\r\nSigned-off-by: maryaB-osr <marya@openrobotics.org>\r\n\r\n* typo\r\n\r\nSigned-off-by: maryaB-osr <marya@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "dirk-thomas",
+      "date": "2014-07-16T17:12:26Z",
+      "sha": "6c98b4333f2d663405f687aac7f81bd9302c7c9c",
+      "message": "add std_msgs and foo",
+      "files_changed": 7,
+      "additions": 212,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mjcarroll",
+      "date": "2018-04-23T15:55:37Z",
+      "sha": "4012c5b1de52ab204b2b9c964ace9de675ad83f6",
+      "message": "Change #if to #ifdef",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "jhdcs",
+      "date": "2019-10-08T18:12:15Z",
+      "sha": "e483811cc31e8220d9ac15286252646862b8a742",
+      "message": "Implemented Multithreaded Executor example (#251)\n\n* Distro A; OPSEC #2893\r\nRelease Version of Multithreaded Executor example\r\n\r\nSigned-off-by: Jacob Hassold <jhassold@dcscorp.com>",
+      "files_changed": 6,
+      "additions": 447,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Gonzalo de Pedro",
+      "date": "2019-09-26T21:23:41Z",
+      "sha": "b3f49aa988ae7d19b6934ac5fc91dcbe8a3f15b3",
+      "message": "0.8.0",
+      "files_changed": 22,
+      "additions": 22,
+      "deletions": 22,
+      "commit_type": "config"
+    },
+    {
+      "author": "Karsten1987",
+      "date": "2016-11-01T21:54:33Z",
+      "sha": "13e15a5e54c0023e6e9ca78b64092a93380b4e5c",
+      "message": "(fix) rename listener and talker with suffix _c (#126)\n\n* (fix) rename listener and talker with suffix _c\r\n\r\n* (fix) use only rcl(c) dependencies",
+      "files_changed": 1,
+      "additions": 27,
+      "deletions": 16,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Siddharth Kucheria",
+      "date": "2019-05-28T18:19:19Z",
+      "sha": "bbe1903918af0ac2edd2dd05a67ba64a377476ab",
+      "message": "Fix examples to address rclpy issue#359 (#246)\n\nSigned-off-by: Siddharth Kucheria <kucheria@usc.edu>",
+      "files_changed": 2,
+      "additions": 0,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "nuclearsandwich",
+      "date": "2018-10-11T18:34:32Z",
+      "sha": "73acf25ed2caa2bb3a3a06d69a0f8697e969cc87",
+      "message": "Set library path environment hook. (#215)",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mikaelarguedas",
+      "date": "2016-06-22T18:05:03Z",
+      "sha": "1df40225eb0c0e6e8d1a201093fe90b0a247c898",
+      "message": "import message at module level (#112)",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 9,
+      "commit_type": "code"
+    },
+    {
+      "author": "youtalk",
+      "date": "2017-12-17T13:01:44Z",
+      "sha": "5c635c95b3ae46314fe56d446c1c36293f5ccf2f",
+      "message": "Use std::chrono_literals only (#197)\n\n* use std::chrono_literals to call create_wall_timer()\r\n\r\n* remove redundant #include <chrono>\r\n\r\n* Revert \"remove redundant #include <chrono>\"\r\n\r\nThis reverts commit 308f2f31ed53ace4d1c7654c44cac03e2e58060f.",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "dhood",
+      "date": "2016-04-25T22:13:06Z",
+      "sha": "1b40be308b5f36cbfb6cdfa874dedda9be3db9cd",
+      "message": "Remove unused test dependency on gtest",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "codebot",
+      "date": "2015-08-25T23:32:17Z",
+      "sha": "9559852b3d4a01dd28c939e700c7ccd2079c9e5a",
+      "message": "minimalist imu listener example",
+      "files_changed": 3,
+      "additions": 43,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Rafal Kozik",
+      "date": "2016-11-22T12:22:15Z",
+      "sha": "50185df769d898d2c2291eb6cc79606eaa20a181",
+      "message": "Added a service mapping rule\n\nIt enables ros1_bridge to connect the AddTwoInts service\nfrom this package with the TwoInts from ros/roscpp_tutorials.",
+      "files_changed": 3,
+      "additions": 8,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Rafał Kozik",
+      "date": "2016-10-28T22:59:54Z",
+      "sha": "32da22d9ef825e6f83e9152c06932013a9b91913",
+      "message": "Updated the service server example (#130)\n\n* Updated the service server example\r\n\r\nThere must be at least one shared pointer to the service instance\r\nso it is not destroyed.\r\n\r\n* Renamed a variable from client to server",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "rohbotics",
+      "date": "2016-08-02T19:51:01Z",
+      "sha": "2e4d50b85bd79e77b69ad6a3691ac94e8a4fae50",
+      "message": "Added list verb functionality (#119)\n\n* Added list verb functionality\r\n\r\n* Better error printing\r\n\r\n* Better use of returns instead of too much nesting\r\n\r\n* Fix code style\r\n\r\n\r\nFix code style\r\n\r\n* Declare variable in narrowest scope",
+      "files_changed": 1,
+      "additions": 45,
+      "deletions": 15,
+      "commit_type": "code"
+    },
+    {
+      "author": "gerkey",
+      "date": "2015-11-11T23:41:14Z",
+      "sha": "4069905efd17c8a7f9495bb8603f7ca4698cc685",
+      "message": "Run multiple examples. Add support for reading regular expressions from a file.",
+      "files_changed": 6,
+      "additions": 84,
+      "deletions": 80,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jacquelinekay",
+      "date": "2015-07-21T20:35:28Z",
+      "sha": "38e31a14022ab622a5408dd0d51164da9cb8cc7f",
+      "message": "Merge pull request #37 from ros2/memory_dependency_injection\n\nExample for switching MemoryStrategy",
+      "files_changed": 2,
+      "additions": 63,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Jackie Kay",
+      "date": "2015-07-13T19:02:27Z",
+      "sha": "90ec9dd06c6fb0acc1659e81ce858f2e06d068e1",
+      "message": "Added example that uses dependency injection of memory strategy",
+      "files_changed": 2,
+      "additions": 69,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "esteve",
+      "date": "2014-11-22T02:07:17Z",
+      "sha": "3ed731505b5cc0fc796bd4de2cab211969773779",
+      "message": "Update README.md",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Esteve Fernandez",
+      "date": "2014-11-10T20:17:01Z",
+      "sha": "c34e8a1027a1e30490ebb8b557ff2567e07e6063",
+      "message": "Added missing arguments",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "tfoote",
+      "date": "2015-03-14T02:24:44Z",
+      "sha": "d735e808b3517f63b8e85458ea84fae02557e9e2",
+      "message": "using windows branches",
+      "files_changed": 1,
+      "additions": 10,
+      "deletions": 10,
+      "commit_type": "code"
+    },
+    {
+      "author": "vmayoral",
+      "date": "2014-08-14T22:24:18Z",
+      "sha": "cc276ff48c7fe78c0c18b33c66ba514d4ee4c1e2",
+      "message": "Intraprocess prototype\n\nROS 2 publisher and subscriber exchange a ROS message (string\nin this example) through a pointer to the data. This is useful\nfor intraprocess comunication where instead of transferring all\nthe data through the underlying dds, just a pointer (uint_64) is\ntransferred.\n\nThe implementation uses a struct that keeps a pointer to the data\nand a count.",
+      "files_changed": 4,
+      "additions": 98,
+      "deletions": 1,
+      "commit_type": "docs"
+    }
+  ]
+}

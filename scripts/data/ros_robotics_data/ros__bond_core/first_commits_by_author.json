@@ -1,0 +1,341 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T04:29:26Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros",
+    "repo": "bond_core"
+  },
+  "data": [
+    {
+      "author": "ahcorde",
+      "date": "2025-04-14T18:50:30Z",
+      "sha": "81a6100c2270c71e9518d62105460fd32905650b",
+      "message": "Use target_link_libraries instead of ament_target_dependencies (#112)\n\nSigned-off-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mini-1235",
+      "date": "2026-02-17T08:09:50Z",
+      "sha": "adcd8241e78eb800140c08d8c7da4901220548b4",
+      "message": "get rid of deprecated rclcpp::spin_some() (#115)\n\nSigned-off-by: mini-1235 <mauricepurnawan@gmail.com>",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "ewak",
+      "date": "2025-04-14T20:45:09Z",
+      "sha": "51536917f0d2c51a40c9f9cd73a9bce1c9a07bff",
+      "message": "memory safe subscription callback (#108)\n\nInherit from std::enable_shared_from_this\nand wrap subscription callback in lambda\ncapturing a weak_ptr using weak_from_this()\nto check that Bond object is still\nin scope before processing the bondStatusCB\nmember function.\n\nCo-authored-by: root <root@dev-lt-wakem.home>\nCo-authored-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>",
+      "files_changed": 4,
+      "additions": 107,
+      "deletions": 33,
+      "commit_type": "code"
+    },
+    {
+      "author": "evshary",
+      "date": "2025-04-14T18:12:14Z",
+      "sha": "340d3a7740fea91eec74da0a919f1d169d44b30c",
+      "message": "Check the availability of mutex before locking it. (#111)\n\nSigned-off-by: ChenYing Kuo <evshary@gmail.com>",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "clalancette",
+      "date": "2021-01-26T19:38:32Z",
+      "sha": "eab5c34ca6d34480792ff41e7f90d2b87ccc09e6",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 5,
+      "additions": 19,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "sosoeeee",
+      "date": "2025-01-24T13:03:45Z",
+      "sha": "ff6ed3c2c6ef4ec452c3dba43c58b1900ac4e7b4",
+      "message": "increase buffer size of bond_status callback in bondpy (#96)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "traversaro",
+      "date": "2025-01-23T21:08:01Z",
+      "sha": "cad72f7a11da0f5f2378b330d3929a20bd707171",
+      "message": "Do not include windows.h in statemap.hpp (#109)\n\n* Do not include windows.h in statemap.hpp\r\n\r\n* Simplify ifdef structure",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 14,
+      "commit_type": "code"
+    },
+    {
+      "author": "mjcarroll",
+      "date": "2020-11-05T19:54:09Z",
+      "sha": "afa3b15fdf902396d009fb5de0f3d2139753d1d9",
+      "message": "2.0.0\n\nSigned-off-by: Michael Carroll <michael@openrobotics.org>",
+      "files_changed": 5,
+      "additions": 35,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "gros-antoine",
+      "date": "2024-02-09T16:07:09Z",
+      "sha": "e6d0fc2cf132584778f7bc33a7a4c5c307964d94",
+      "message": "bondpy migration to ROS2 (#89)\n\n* move source code for ROS2 python pkg + translate code to ROS2\r\n\r\n* add basic ros2 tests\r\n\r\n* test for connection and disconnection\r\n\r\n* use function to convert ros2 duration to seconds everywhere\r\n\r\n* add 'data_files' argument for marker file\r\n\r\n* adapt to current source code architecture\r\n\r\n* add pytest\r\n\r\n* reformat code to pass flake8 test\r\n\r\n* add copyright\r\n\r\nCo-authored-by: Chris Lalancette <clalancette@gmail.com>",
+      "files_changed": 12,
+      "additions": 247,
+      "deletions": 94,
+      "commit_type": "ci"
+    },
+    {
+      "author": "Tobias-Fischer",
+      "date": "2023-10-23T19:45:59Z",
+      "sha": "330a2a719ecdb2b5fe03cebc643e756d8c352f57",
+      "message": "Fix osx and win32 builds (#83)\n\n* Fix osx and win32 builds\r\n\r\n* Explicitly mark symbol visibility and fix test_bond compilation on Windows\r\n\r\n* Fix definition of BONDCPP_BUILDING_LIBRARY\r\n\r\n* Switch to use target_compile_definitions to define NOMINMAX\r\n\r\n* Cast msg fields to float.\r\n\r\nThis is to avoid a warning on Windows.  It is safe to do\r\nsince the heartbeat timeout or period aren't expected to\r\nbe outside the range a float can represent.\r\n\r\n* Revamp copyString to use memcpy.\r\n\r\nAlso make it allocate less memory in general.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>\r\nCo-authored-by: Silvio <silvio@traversaro.it>\r\nCo-authored-by: Michael Carroll <michael@openrobotics.org>",
+      "files_changed": 6,
+      "additions": 150,
+      "deletions": 10,
+      "commit_type": "test"
+    },
+    {
+      "author": "audrow",
+      "date": "2022-11-18T13:51:02Z",
+      "sha": "3a542ab6b2c181b6a8e177e3bf80d58de7e119a9",
+      "message": "[ros2] Update maintainers - 2022-11-07 (#90)",
+      "files_changed": 8,
+      "additions": 35,
+      "deletions": 7,
+      "commit_type": "config"
+    },
+    {
+      "author": "SteveMacenski",
+      "date": "2020-09-01T23:50:17Z",
+      "sha": "99e8e634178e8ffcfe5d32242f9ff8886526fa06",
+      "message": "Lifecycle support 2 (#67)\n\nSupersedes #64 to:\r\n\r\n* Enable lifecycle nodes in ROS2\r\n* Fix ROS2 porting issues\r\n* Fix ROS2 WaitUntilXYZ() functions with spins on nodes already spinning (requirement for this to work)\r\n* Tested to be actually working now & integrated into Nav2\r\n* No reduced capability\r\n* Removes a number of crashing problems introduced in porting",
+      "files_changed": 7,
+      "additions": 194,
+      "deletions": 95,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Karsten1987",
+      "date": "2019-09-10T21:59:11Z",
+      "sha": "995c4d316c29a43faa49787029675e7a3f4892ca",
+      "message": "Ros2 devel (#54)\n\n* bond-core porting to ros2\r\n\r\n* added linter test cases.\r\n\r\n* modified travis.yml file.\r\n\r\n* Readme added in test_bond, Copyright information modified\r\n\r\n* ros2_migration_readme.md is added, it contains overview, test procedure, changes related to migration.\r\n\r\n* ros2_migration_readme.md is added and modified, it contains overview, build and test procedure, and changes related to migration.\r\n\r\n* ros2_migration_readme.md is modified, it contains overview, build and test procedure, and changes related to migration.\r\n\r\n* ros2_migration_readme.md is modified, ssh link added\r\n\r\n* ros2_migration_readme.md file modified, errors removed\r\n\r\n* travis.yml and ros2_migration_readme.md files modified\r\n\r\n* CHANGELOG.rst file restored for each subpackage\r\n\r\n* Added bondpy, bondpy is not migrated in ROS2 yet\r\n\r\n* bondcpp/CMakeLists.txt modified, removed dependency on Boost as it is not used in code.\r\n\r\n* test_bond_srv_gen removed, now Testbond.srv is genrated in test_bond\r\n\r\n* package.xml file is modified for bond and test_bond, std_msgs and builtin_interfaces made to build and exec depends.\r\n\r\n* Version in each subpackage is changed to 2.0.0.\r\n\r\n* license information restored, enabled BSD, disabled Apache License 2.0\r\n\r\n* statemap.py file added, modifications done for linter test.\r\n\r\n* Renamed smclibcpp to smclib\r\n\r\n* take over pr43\r\n\r\nSigned-off-by: Karsten Knese <karsten@openrobotics.org>\r\n\r\n* remove apache2 license\r\n\r\nSigned-off-by: Karsten Knese <karsten@openrobotics.org>",
+      "files_changed": 39,
+      "additions": 2137,
+      "deletions": 2837,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mikaelarguedas",
+      "date": "2016-03-10T21:56:51Z",
+      "sha": "89c4e663cdb37c41eb00b4d42a1d0c1a1656d65d",
+      "message": "update maintainer",
+      "files_changed": 6,
+      "additions": 7,
+      "deletions": 7,
+      "commit_type": "config"
+    },
+    {
+      "author": "johnsonshih",
+      "date": "2018-08-06T18:20:42Z",
+      "sha": "e9541580c58206567e4a12d07d2cc2f6691c7bc0",
+      "message": "Fix build issue on Windows (#38)\n\n* Fix build issue on Windows\r\n\r\n* indent for better readability",
+      "files_changed": 2,
+      "additions": 34,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "skydes",
+      "date": "2018-04-29T20:40:15Z",
+      "sha": "1240bce50ca1538cdad07dc472d31797257e0851",
+      "message": "Argument to Boost Milliseconds must be integral in Boost >= 1.67 (#37)\n\n* Argument to Boost milliseconds  must be integral\r\n\r\n* Fix style\r\n\r\n* More consistent type",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "flixr",
+      "date": "2017-07-20T18:53:22Z",
+      "sha": "38fccce9d493a126803b8695371fa11b575dca66",
+      "message": "Use SteadyTime and SteadyTimer for bond timeouts (#18)\n\n* use steady clock for bond timeouts\r\n\r\n* use new SteadyTimer instead of WallTimer\r\n\r\n* fix conflict resolution mistakes",
+      "files_changed": 4,
+      "additions": 15,
+      "deletions": 15,
+      "commit_type": "code"
+    },
+    {
+      "author": "amiller27",
+      "date": "2017-04-07T00:38:49Z",
+      "sha": "ca90ed293f6938e251e109219b516c45358b5230",
+      "message": "Fixes problem with bondpy not exiting with the node (#21)\n\nmake timer threads daemon threads",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "stonier",
+      "date": "2015-10-24T05:54:09Z",
+      "sha": "4d18c52e69aaca9415df2818b584437312dd4b78",
+      "message": "Queue size for a publisher\n\nSquash the warning.",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "esteve",
+      "date": "2014-02-14T18:15:10Z",
+      "sha": "801436f65d9d3bf11f4ecd5ce228232e7d32fbfd",
+      "message": "Update maintainer field",
+      "files_changed": 6,
+      "additions": 6,
+      "deletions": 6,
+      "commit_type": "config"
+    },
+    {
+      "author": "Hugo Boyer",
+      "date": "2015-12-09T23:13:12Z",
+      "sha": "e6a542a72baaf18b1ded74935f109fd728544d51",
+      "message": "made local timer a member so we can cancel it during shutdown",
+      "files_changed": 1,
+      "additions": 13,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "Esteve Fernandez",
+      "date": "2014-10-23T21:06:03Z",
+      "sha": "f4265d6b28f250d95364197f2694653db9618245",
+      "message": "Use FindUUID.cmake from cmake-modules to find the UUID libraries",
+      "files_changed": 2,
+      "additions": 6,
+      "deletions": 9,
+      "commit_type": "docs"
+    },
+    {
+      "author": "cottsay",
+      "date": "2014-04-25T21:31:30Z",
+      "sha": "85c918710f161382253f5e58a72b7deb1a4c3f19",
+      "message": "bondpy: Add catkin_package call to CMakeLists.txt\n\nIf catkin_package is not called, the package.xml is not installed",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "vrabaud",
+      "date": "2012-10-01T10:20:23Z",
+      "sha": "914c040d751bd3d2b45e0005af9fb86e5614dbdf",
+      "message": "catkinize the package and bump to 1.7.0 even though it is not tagged yet",
+      "files_changed": 21,
+      "additions": 122,
+      "deletions": 185,
+      "commit_type": "docs"
+    },
+    {
+      "author": "dirk-thomas",
+      "date": "2012-10-17T20:57:57Z",
+      "sha": "a92e0c7a86e5ddd6775d2f09c238a335bd2dae19",
+      "message": "fixed compiling tests",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "wjwwood",
+      "date": "2012-12-05T23:57:58Z",
+      "sha": "1a02b26d4ea115976454fc8d5bc574fc687c3a68",
+      "message": "Updated url tags in package.xml's",
+      "files_changed": 5,
+      "additions": 15,
+      "deletions": 5,
+      "commit_type": "config"
+    },
+    {
+      "author": "davidhodo",
+      "date": "2013-08-13T20:18:00Z",
+      "sha": "5b3614d5fd1ce775e193a10a28a3c5fb447f0957",
+      "message": "use rpc for uuid on windows",
+      "files_changed": 2,
+      "additions": 24,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Mirza Shah",
+      "date": "2012-12-06T00:16:33Z",
+      "sha": "c7591772244c7d0aa0f8c0852977a973938e7316",
+      "message": "Merge pull request #1 from ros/catkin_cleanup\n\nLooks fine, merging",
+      "files_changed": 6,
+      "additions": 20,
+      "deletions": 13,
+      "commit_type": "config"
+    },
+    {
+      "author": "tfoote",
+      "date": "2011-06-27T22:25:37Z",
+      "sha": "eb1b7443f0dcf6fa897aad527d3d5d2504b0a878",
+      "message": "removing non bond releated things",
+      "files_changed": 300,
+      "additions": 0,
+      "deletions": 55384,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Ken Conley",
+      "date": "2011-06-27T23:30:13Z",
+      "sha": "6283df50bfd79e7dc847b8397cf0609e0256c6c8",
+      "message": "preparing bond_core for prerelease (version, stack.xml)",
+      "files_changed": 2,
+      "additions": 9,
+      "deletions": 11,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Brian Gerkey",
+      "date": "2012-01-19T22:57:42Z",
+      "sha": "b66d4c923d54fdef24ed9a5029cc8173a7825cdd",
+      "message": "removed spurious reference to libroslib",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Stuart Glaser",
+      "date": "2011-07-15T01:48:19Z",
+      "sha": "76732eb3ef601fe7bbf026e640166a371cfcb457",
+      "message": "Fixed destruction bug: doesn't destroy things if the bond was never started.",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "invalid-email-address",
+      "date": "2009-09-04T23:10:08Z",
+      "sha": "c9888efd6c36ad96f315498bc6f2c30cd05a775b",
+      "message": "migration part 1\n\n--HG--\nextra : convert_revision : svn%3Aeb33c2ac-9c88-4c90-87e0-44a10359b0c3/stacks/common/trunk%4023884",
+      "files_changed": 237,
+      "additions": 37353,
+      "deletions": 0,
+      "commit_type": "docs"
+    }
+  ]
+}

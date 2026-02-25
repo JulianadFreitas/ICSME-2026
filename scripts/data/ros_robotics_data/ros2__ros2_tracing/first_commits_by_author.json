@@ -1,0 +1,331 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T03:32:19Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros2",
+    "repo": "ros2_tracing"
+  },
+  "data": [
+    {
+      "author": "SarthakBagga",
+      "date": "2026-02-16T08:11:34Z",
+      "sha": "757d1a9649c3eb0115d22005e220399cf540c1af",
+      "message": "tracetools_launch: use parse_if_substitutions for non-string action params (#234)\n\nSigned-off-by: Sarthak Bagga <sarthak.bagga2005@gmail.com>",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 18,
+      "commit_type": "code"
+    },
+    {
+      "author": "reeceholland",
+      "date": "2026-01-22T22:26:59Z",
+      "sha": "91ff6165773e1177a5fd41431d1b1dc274ac4ee1",
+      "message": "Use <lttng/lttng.h> in lttngpy and clean up includes (#222)\n\nSigned-off-by: Reece Holland <reece.j.holland@gmail.com>",
+      "files_changed": 11,
+      "additions": 13,
+      "deletions": 28,
+      "commit_type": "code"
+    },
+    {
+      "author": "ahcorde",
+      "date": "2020-10-23T15:31:47Z",
+      "sha": "0d0f8642060c47708ef2286359f7d4dab44fae72",
+      "message": "Increased code coverage > 94%\n\nSigned-off-by: ahcorde <ahcorde@gmail.com>",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "christophebedard",
+      "date": "2019-05-14T13:46:15Z",
+      "sha": "7c51d238502749a650b3a1cfb5fbffe19cf01d8b",
+      "message": "Add empty README",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mini-1235",
+      "date": "2025-11-11T13:26:01Z",
+      "sha": "342d91ff6fc3f6c16c3925f64d803f72e66e2cac",
+      "message": "Update subscription callback signatures (#217)\n\nSigned-off-by: mini-1235 <mauricepurnawan@gmail.com>",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "ShravanDeva5327",
+      "date": "2025-04-26T20:31:44Z",
+      "sha": "01d969a6975b08c26dcbe44cc4082ea4090cdc7e",
+      "message": "Fix pluralization in ros2 trace output (#169)\n\nSigned-off-by: Shravan Deva <devashravan7@gmail.com>",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "mosfet80",
+      "date": "2025-05-20T10:08:18Z",
+      "sha": "148d46f09890f11412a66061a0a1f07cb65423cc",
+      "message": "Update CMakeLists.txt (#176)\n\nSigned-off-by: mosfet80 <10235105+mosfet80@users.noreply.github.com>",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "ci"
+    },
+    {
+      "author": "hidmic",
+      "date": "2025-07-31T20:06:42Z",
+      "sha": "d373a61c90a3ad3a4a833e46679bb736d4952746",
+      "message": "Add runtime tracing opt-out mechanism (#185)\n\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>",
+      "files_changed": 11,
+      "additions": 172,
+      "deletions": 33,
+      "commit_type": "docs"
+    },
+    {
+      "author": "clalancette",
+      "date": "2020-06-19T15:10:07Z",
+      "sha": "899a401586b05ea575350ee1480394625e3c2375",
+      "message": "Add pytest.ini file to suppress pytest warnings.\n\nWithout this, when running with the default pytest on Ubuntu 20.04,\nit will display warnings like:\n\n.local/lib/python3.6/site-packages/_pytest/junitxml.py:417\n  .local/lib/python3.6/site-packages/_pytest/junitxml.py:417: PytestDeprecationWarning: The 'junit_family' default value will change to 'xunit2' in pytest 6.0.\n  Add 'junit_family=xunit1' to your pytest.ini file to keep the current format in future versions of pytest and silence this warning.\n\nAdding it here suppresses the warning.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "cottsay",
+      "date": "2024-11-21T18:02:45Z",
+      "sha": "60170d72c9b81b9ba9770fe1b1985ec25c12f4b7",
+      "message": "Don't try to build on BSD (#142)\n\nThe 'BSD' variable was added in CMake 3.25. Note that variables which\r\nare not defined will evaluate to 'False', so this shouldn't regress\r\nplatforms using CMake versions older than 3.25.\r\n\r\nSigned-off-by: Scott K Logan <logans@cottsay.net>",
+      "files_changed": 3,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mjcarroll",
+      "date": "2025-03-21T14:35:56Z",
+      "sha": "ffbcd3a737b2717a523d81db206ccb2a6b9c53a7",
+      "message": "Switch to ament_cmake_ros_core package (#162)\n\nSigned-off-by: Scott K Logan <logans@cottsay.net>",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "traversaro",
+      "date": "2025-02-28T19:06:58Z",
+      "sha": "b11e0068357aaa5afcb62052dcacc94637ff1f46",
+      "message": "Remove SHARED from pybind11_add_module (#154)\n\nSigned-off-by: Silvio Traversaro <silvio@traversaro.it>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "InvincibleRMC",
+      "date": "2025-02-24T21:21:30Z",
+      "sha": "4422a687677d2b6af90e7182af6fd9ff2d85f258",
+      "message": "Expose types for tracing tools (#153)\n\nSigned-off-by: Michael Carlstrom <rmc@carlstrom.com>",
+      "files_changed": 5,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "nwn",
+      "date": "2024-08-12T22:08:07Z",
+      "sha": "a866b9c701311bc8200a00c949b4a0fff9803777",
+      "message": "Add missing dependency on pkg-config to lttngpy (#130)\n\nSigned-off-by: Nathan Wiebe Neufeldt <nwiebeneufeldt@clearpath.ai>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "mat-kie",
+      "date": "2024-05-21T20:44:52Z",
+      "sha": "7e8d42e3816dc9f7dc268109a2bb9cc66cc4d4ee",
+      "message": "Fix type for buffer index argument in tracepoint event declaration. (#117)\n\nSigned-off-by: Mattis Kieffer <62772198+mat-kie@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "ci"
+    },
+    {
+      "author": "marcoag",
+      "date": "2024-03-27T13:56:39Z",
+      "sha": "fbd6d9ddcd965220dfdfa2aa81bd53456c5bfa26",
+      "message": "Changelog.\n\nSigned-off-by: Marco A. Gutierrez <marcogg@marcogg.com>",
+      "files_changed": 10,
+      "additions": 57,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "h-suzuki-isp",
+      "date": "2024-04-05T16:46:20Z",
+      "sha": "a68989120ffa625bddf73b3e244b03ac698af1dd",
+      "message": "Add test for GenericPublisher/Subscriber (#97)\n\nSigned-off-by: h-suzuki <h-suzuki@isp.co.jp>\r\nSigned-off-by: h-suzuki-isp <146712054+h-suzuki-isp@users.noreply.github.com>",
+      "files_changed": 5,
+      "additions": 833,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "cwecht",
+      "date": "2023-04-14T16:48:55Z",
+      "sha": "67d3579529628741f4f4a7926c1ce2415531fc2d",
+      "message": "Make subbuffer size configurable with Trace action (#51)\n\nSigned-off-by: Christopher Wecht <cwecht@mailbox.org>\r\nCo-authored-by: Christophe Bedard <christophe.bedard@apex.ai>",
+      "files_changed": 3,
+      "additions": 55,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "Yadunund",
+      "date": "2023-03-13T19:16:05Z",
+      "sha": "e664e5bbd28b42da6430623fc1bcf644d6b6a449",
+      "message": "Enable document generation using rosdoc2 for ament_python pkgs (#50)\n\n* Add missing folder\r\n* Add dep for tracetools_launch\r\n* Use only exec_depends\r\n\r\nSigned-off-by: Yadunund <yadunund@openrobotics.org>",
+      "files_changed": 4,
+      "additions": 5,
+      "deletions": 5,
+      "commit_type": "config"
+    },
+    {
+      "author": "Nizerlak",
+      "date": "2023-05-02T20:34:49Z",
+      "sha": "309a745d42e964302ac023d92e8ad5fab7418832",
+      "message": "Disable tracing on Android (#71)\n\nSigned-off-by: Przemysław Dąbrowski <57660090+Nizerlak@users.noreply.github.com>",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "ci"
+    },
+    {
+      "author": "ymski",
+      "date": "2023-04-13T14:56:19Z",
+      "sha": "3a1a0ae335c8ce6a9abae99701fafd3fc8c3337d",
+      "message": "Add intra-process tracepoints (#30)\n\nSigned-off-by: Kodai Yamasaki <114902604+ymski@users.noreply.github.com>",
+      "files_changed": 9,
+      "additions": 651,
+      "deletions": 4,
+      "commit_type": "ci"
+    },
+    {
+      "author": "sloretz",
+      "date": "2022-02-04T23:32:46Z",
+      "sha": "6b2089a2b9fecb88587c4a7a939b95298d978edd",
+      "message": "Install headers to include/${PROJECT_NAME}\n\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 5,
+      "commit_type": "docs"
+    },
+    {
+      "author": "iluetkeb",
+      "date": "2019-07-04T15:44:56Z",
+      "sha": "3cc5eb714976ddbc58be1f7aed9b3bf25db91420",
+      "message": "Merge branch '14-create-docker-image-with-dependencies-installed-already'",
+      "files_changed": 2,
+      "additions": 25,
+      "deletions": 22,
+      "commit_type": "config"
+    },
+    {
+      "author": "flynneva",
+      "date": "2021-08-25T17:15:41Z",
+      "sha": "0b8e8ceae76981c8c7a2636b3ef5299e4d57fd0a",
+      "message": "update README on how to add user to tracing group, closes #123\n\nSigned-off-by: Evan Flynn <evanflynn.msu@gmail.com>",
+      "files_changed": 1,
+      "additions": 11,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Abrar Rahman Protyasha",
+      "date": "2021-08-07T08:28:41Z",
+      "sha": "5bf8d2f5fd0f43984c34ba8e736a7de227256743",
+      "message": "Fixing deprecated subscriber callback warnings\n\nSigned-off-by: Abrar Rahman Protyasha <abrar@openrobotics.org>",
+      "files_changed": 3,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "ivanpauno",
+      "date": "2021-07-26T19:31:12Z",
+      "sha": "b85e2e3b1fe86670aa063339dcd3388e49bf91b1",
+      "message": "Export target on Windows and export an interface if TRACETOOLS_DISABLED\n\nSigned-off-by: Ivan Santiago Paunovic <ivanpauno@ekumenlabs.com>",
+      "files_changed": 1,
+      "additions": 24,
+      "deletions": 12,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jamoralp",
+      "date": "2020-07-22T11:06:10Z",
+      "sha": "34096967b20dfbf911d2534f13f9795b62de0637",
+      "message": "Release micro-ROS Foxy: disable tracetools status app\n\nSigned-off-by: José Antonio Moral <joseantoniomoralparras@gmail.com>",
+      "files_changed": 2,
+      "additions": 19,
+      "deletions": 11,
+      "commit_type": "docs"
+    },
+    {
+      "author": "dirk-thomas",
+      "date": "2020-04-08T22:31:18Z",
+      "sha": "57298502c6f28f1d8752b231b7e110c09c33c30f",
+      "message": "use ament_export_targets() instead of deprecated ament_export_interfaces()\n\nSigned-off-by: Dirk Thomas <dirk-thomas@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "ci"
+    },
+    {
+      "author": "brawner",
+      "date": "2020-02-28T17:10:40Z",
+      "sha": "b9838903a1ec980072776559cd42c717f5958f46",
+      "message": "Setting AMENT_CMAKE_CPPCHECK_ADDITIONAL_INCLUDE_DIRS with lttng\n\nSigned-off-by: Stephen Brawner <brawner@gmail.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "nuclearsandwich",
+      "date": "2019-12-09T19:17:18Z",
+      "sha": "ae1c4766a2676230455ab8e7505195e587f1fdbb",
+      "message": "Use imperative mood in constructor docstring.\n\nResolves D401 in pydocstyle and flake8.\n\nSigned-off-by: Steven! Ragnarök <steven@nuclearsandwich.com>",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Ingo Lütkebohle",
+      "date": "2019-06-17T08:48:37Z",
+      "sha": "e7ed83217ef43bc6ef10afaaf820e6c40c1a1e12",
+      "message": "Add a short intro.",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "tobiasblass",
+      "date": "2019-07-19T08:02:56Z",
+      "sha": "145278733611c787b2106f05a875e7849272b33b",
+      "message": "Enable tracing by default if LTTng is available\n\nAlso removed the colcon.meta file that implicitly enabled tracing anyway",
+      "files_changed": 5,
+      "additions": 49,
+      "deletions": 60,
+      "commit_type": "config"
+    }
+  ]
+}

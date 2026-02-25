@@ -1,0 +1,41 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T14:09:07Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros-event-camera",
+    "repo": "event_camera_py"
+  },
+  "data": [
+    {
+      "author": "berndpfrommer",
+      "date": "2022-10-20T14:08:18Z",
+      "sha": "e9d5efa0df6a36dc713842b60a8337a3fd3328fe",
+      "message": "first draft",
+      "files_changed": 8,
+      "additions": 368,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "k-chaney",
+      "date": "2023-08-18T14:40:27Z",
+      "sha": "c87de22dc1459adfa0611410c1c8d5f403acc5e8",
+      "message": "Updated decode function to zero copy\n\n- updated decode function to what should be a zero copy\n  - grab the base pointer from the original object type instead of\n    casting to a numpy array first\n\n- Expanded tests for ros1\n  - Now includes decode, decode_bytes, and decode_array",
+      "files_changed": 2,
+      "additions": 100,
+      "deletions": 11,
+      "commit_type": "code"
+    },
+    {
+      "author": "fcladera",
+      "date": "2023-02-09T04:34:34Z",
+      "sha": "a24b8e332eb1e6bf74ed691b7b6d4c13b4bfbb8b",
+      "message": "events type is bytes, not bytearray",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    }
+  ]
+}

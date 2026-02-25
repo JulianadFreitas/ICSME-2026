@@ -1,0 +1,1041 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T04:03:47Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros",
+    "repo": "diagnostics"
+  },
+  "data": [
+    {
+      "author": "christophfroehlich",
+      "date": "2025-03-12T17:04:13Z",
+      "sha": "207f0c0f1f8e9bd1842a07d90459aa9a2b670c23",
+      "message": "Fix reported hd_monitor available value (#443)\n\n* Use percentage for HD usage instead of ratio\n* Update readme\n* Use global vars as default values\n* Fix test\n* Add ParameterDescriptor\n\n---------\n\nSigned-off-by: Christian Henkel <christian.henkel2@de.bosch.com>\nCo-authored-by: Christian Henkel <christian.henkel2@de.bosch.com>",
+      "files_changed": 3,
+      "additions": 25,
+      "deletions": 12,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ct2034",
+      "date": "2022-11-21T13:40:37Z",
+      "sha": "94f28e61726ea5dda93fdec2a25933676262f7c4",
+      "message": "Not storing logs",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 4,
+      "commit_type": "config"
+    },
+    {
+      "author": "mergify[bot]",
+      "date": "2025-11-26T09:59:58Z",
+      "sha": "1326f5daf2f97069ac067a506b93dde645dbaac6",
+      "message": "Merge pull request #533 from ros/fix/distro_from_branch_name\n\nFixing the determination of ros distro from branch name",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "config"
+    },
+    {
+      "author": "SuperJappie08",
+      "date": "2025-11-18T10:34:32Z",
+      "sha": "cebb7b1bdb3ed08f2335ab4ffad5e4fa3bbf614d",
+      "message": "Correct porting status of diagnostic_common_diagnostics in README (#530)\n\nSigned-off-by: SuperJappie08 <36795178+SuperJappie08@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "ci"
+    },
+    {
+      "author": "dwffls",
+      "date": "2025-03-04T09:16:31Z",
+      "sha": "6e54e7fb2aa7f7dca32e1b1d23551a4335815a62",
+      "message": "Grafana Integration (#425)\n\n* First working version of remote_logging\n* Added more error handling, and skipping values when new line is present in stat\n* Changed default telegraf url to reflect the change to influxdb_v2_listener\n* Made node composable and changed name to influx to better reflect use cases\n* Added README\n* Escaping string values fixed\n* Build fix on farm\n* Adde curl dependency\n* Removed Curl Dependency as build does not work on farm\n* Curl Dependency\n* Added unit tests for influx_line_protocol\n* Only depend on gtest when testing\n* Apply suggestions from code review\n* Added diagnostic_remote_logging\n* Added BSD clause and added untested function\n* Apply suggestions from code review\n* Implemented linter feedback\n* removed build warning\n* Fixed linting erorrs that were fixed by auto formatting\n\n---------\n\nCo-authored-by: Daan Wijffels <dwijffels@lely.com>\nCo-authored-by: Thiever Base <thiever@lely.com>\nCo-authored-by: Christian Henkel <6976069+ct2034@users.noreply.github.com>",
+      "files_changed": 12,
+      "additions": 846,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "herrvonregen",
+      "date": "2025-05-26T11:54:13Z",
+      "sha": "219c2db5c660f797beb0ff6ed5c5d96cee2ed6d2",
+      "message": "fix: Missing link to libcurl (#505)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "homalozoa",
+      "date": "2025-05-16T15:50:21Z",
+      "sha": "3e1b842004c991006ce1879be2b2d6bb037026e1",
+      "message": "fix: replace deprecated MessageUniquePtr  (#400)\n\n* fix: replace deprecated MessageUniquePtr\n\nSigned-off-by: homalozoa <nx.tardis@gmail.com>\n\n* lint: reformat code\n\nSigned-off-by: homalozoa <nx.tardis@gmail.com>\n\n---------\n\nSigned-off-by: homalozoa <nx.tardis@gmail.com>\nCo-authored-by: Christian Henkel <christian.henkel2@de.bosch.com>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "hilary-luo",
+      "date": "2025-04-03T18:03:15Z",
+      "sha": "d8ff096466494a5c8b9cda6a78447be4affde6ee",
+      "message": "Fix: Merge messages if all level 0 in C++ (matching python) (#436)\n\n* Merge messages if all level 0, matching python\n* Update tests for merged \"OK\" status messages",
+      "files_changed": 3,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "traversaro",
+      "date": "2025-01-27T11:58:20Z",
+      "sha": "913becd1b8bdc4c3a24977f9c3e10196ceb43a82",
+      "message": "Add Windows support (#426)",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "roncapat",
+      "date": "2025-01-07T12:48:48Z",
+      "sha": "53555cffc4d99b50b4b4594ddd434a139dfb869e",
+      "message": "Support custom `rclcpp::NodeOptions` (#417)\n\n* Support custom `rclcpp::NodeOptions`\r\n\r\nThis eases static composition of multiple ROS 2 nodes\r\n\r\n* Fix\r\n\r\n* Update aggregator.hpp",
+      "files_changed": 2,
+      "additions": 11,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "sjusner",
+      "date": "2024-12-18T12:14:14Z",
+      "sha": "cca0f14917870cb6902132071f66502600db2229",
+      "message": "common_diagnostics cleaned hostname string (#405)\n\n* Hostnames are properly cleaned to only contain alphanumeric characters or underscore.\r\n\r\n* changed string sanitation (symbols must be ascii and alphanumeric)\r\n\r\n* Changes now conforming to linting rules\r\n\r\n* flake8 fixes\r\n\r\nSigned-off-by: Christian Henkel <christian.henkel2@de.bosch.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Christian Henkel <christian.henkel2@de.bosch.com>\r\nCo-authored-by: Christian Henkel <christian.henkel2@de.bosch.com>",
+      "files_changed": 4,
+      "additions": 21,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "rkent",
+      "date": "2024-12-03T16:08:15Z",
+      "sha": "095894604064ad48b75585673b7fd65a1d4bdb2a",
+      "message": "Add missing rclpy dependency to common_diagnostics to fix rosdoc2 output (#402)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "limaanto",
+      "date": "2024-07-03T12:30:50Z",
+      "sha": "05a96450bad1f074156615aaafa00a78b894d312",
+      "message": "Port hd_monitor to ROS2 (#334)\n\n* Port hd_monitor.py\r\n* Adapt documentation and CMakeList to new hd_monitor.py\r\n* Fix execution flag of hd_monitor\r\n* Add launch test for hd_monitor\r\n* Implement low and crit parameters in hd_monitor\r\n* Improve hd_monitor code quality",
+      "files_changed": 5,
+      "additions": 283,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "reinzor",
+      "date": "2017-05-02T18:16:56Z",
+      "sha": "d6fe734bd5d54b332db9f942268e19487093f4bf",
+      "message": "Create package.xml",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "MartinCornelis2",
+      "date": "2024-06-27T06:42:34Z",
+      "sha": "5e1415c042e770bab4a7925a55a1325e3b5fb15c",
+      "message": "Add add_analyzer functionality (#329)\n\n* Add add_analyzer functionality\r\n* Add copyright notice and license, remove unused includes, re-order includes correctly\r\n* Increase clarity of prefix_ by renaming it to analyzers_ns_\r\n* Add add_analyzer functionality\r\n* Fix bug where base_path is not reset correctly\r\n* Make the parameter forwarding condition more generic, fix the default service namespace from diagnostics_agg to analyzers\r\n* Add an add_analyzer example to the diagnostic_aggregator\r\n* Update the relevant READMEs\r\n* Fix linter errors\r\n* Add test for add_analyzer at runtime, remove unnecessary ros info logger, remove unnecessary hardcoded namespace from yaml files\r\n* Remove the now redundant analyzers_ns_\r\n* Change the copyright of add_analyzer, forgot to update it to Nobleo after copying the notice",
+      "files_changed": 19,
+      "additions": 343,
+      "deletions": 29,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Timple",
+      "date": "2023-02-04T18:51:16Z",
+      "sha": "068777f04d9ff860f412c6e11b7af1d92c9f38ea",
+      "message": "Fix code-analyser bug",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "haudren-woven",
+      "date": "2024-06-26T15:48:45Z",
+      "sha": "19f64806fd3bc23d880f00dca3456bd54ddc5413",
+      "message": "Fix usage of rclcpp::ok with a non-default context (#352)\n\n* Fix usage of rclcpp::ok with a non-default context\r\n\r\nThe current implementation calls `rclcpp::ok` without any arguments,\r\nwhich amounts to verifying that the global default context is valid. In\r\nthe case where a node is added to a custom context, and the global\r\ncontext is not used, `rclcpp::ok` without any arguments will always\r\nreturn `false` since the global context has never been initialized. To\r\nfix it, pass to rclcpp the context that's available via the node's base\r\ninterface.\r\n\r\n* Add a test for custom context",
+      "files_changed": 2,
+      "additions": 37,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "tonynajjar",
+      "date": "2024-05-14T14:03:23Z",
+      "sha": "7efb71ad5118f6b7d57d32d8e6b93ce4aa53e41e",
+      "message": "NTP monitor improvements (#342)\n\n* NTP monitor improvements\r\n* commit to run tests again\r\n* bring back double callback\r\n* remove whiteline\r\n\r\n---------\r\n\r\nCo-authored-by: Angsa Deployment Team <team@angsa-robotics.com>",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "RichardvdK",
+      "date": "2024-03-22T10:37:13Z",
+      "sha": "f89beba1b2c8537399e0e38986d6f2356d5a1ebd",
+      "message": "Port cpu_monitor to ROS2 (#326)\n\n* add cpu monitor to the common diagnostics\r\n* add 3 unittests\r\n* add psutil to package xml\r\n* add debug print for cpu percentages and change checking percentage to -1\r\n* update code with review comments. Added a SetUp() method in the test and move the sleep to there to make sure this is done every test in a systemactic way\r\n\r\n---------\r\n\r\nCo-authored-by: Richardvdketterij <richard.van.de.ketterij@nobleo.nl>",
+      "files_changed": 6,
+      "additions": 271,
+      "deletions": 10,
+      "commit_type": "docs"
+    },
+    {
+      "author": "asymingt",
+      "date": "2024-01-25T14:39:14Z",
+      "sha": "1401f487c272d72a96a194a8371ce282a6fb599a",
+      "message": "Avoid rolling up an ERROR state when empty GenericAnalyzer blocks are marked discard_stale, or when all of their items are STALE. (#315)\n\n* If discard_stale = true, don't interpret stale as ERROR when rolling up\r\n* Check in test to exercise behavior\r\n\r\n---------\r\n\r\nSigned-off-by: Andrew Symington <andrew.c.symington@gmail.com>\r\nSigned-off-by: Christian Henkel <christian.henkel2@de.bosch.com>\r\nCo-authored-by: Christian Henkel <christian.henkel2@de.bosch.com>",
+      "files_changed": 5,
+      "additions": 317,
+      "deletions": 6,
+      "commit_type": "docs"
+    },
+    {
+      "author": "outrider-jhulas",
+      "date": "2023-12-05T10:25:45Z",
+      "sha": "9e44dd83470250af591f31da4f969db16fe8f91d",
+      "message": "feat: publish top level msg when error is received (#317)",
+      "files_changed": 4,
+      "additions": 145,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "KevinSchwarzer",
+      "date": "2023-07-27T19:46:09Z",
+      "sha": "f67c4b2a2f295575cf4d7350f46024bb391dec9a",
+      "message": "fix: method names & verbose logging (#307)",
+      "files_changed": 4,
+      "additions": 56,
+      "deletions": 4,
+      "commit_type": "config"
+    },
+    {
+      "author": "h-wata",
+      "date": "2023-05-04T09:23:04Z",
+      "sha": "8b7c40b08cf15a598141f676464d1aaa3e4385fc",
+      "message": "Fix diagnostic_updater timestamps (#299)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "jordan-palacios",
+      "date": "2023-02-13T15:15:02Z",
+      "sha": "dc05e97b76600ea485f3d3bb147b31e7b36b8532",
+      "message": "Use default implementation for copy constructor (#285)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "trainman419",
+      "date": "2014-04-24T00:05:16Z",
+      "sha": "0a2c805a41946e66119c8d5bdeb0a7af137a2399",
+      "message": "1.8.3",
+      "files_changed": 7,
+      "additions": 7,
+      "deletions": 7,
+      "commit_type": "config"
+    },
+    {
+      "author": "ralph-lange",
+      "date": "2022-10-26T14:40:51Z",
+      "sha": "61e7728b473d78508e40bfe7064caeb21ff52af5",
+      "message": "Make Ralph Lange maintainer for ros2-devel.\n\nSigned-off-by: Ralph Lange <ralph.lange@de.bosch.com>",
+      "files_changed": 8,
+      "additions": 8,
+      "deletions": 8,
+      "commit_type": "config"
+    },
+    {
+      "author": "RFRIEDM-Trimble",
+      "date": "2022-11-22T07:40:12Z",
+      "sha": "9d5391590ebb9a1b7c84ef45a7e69011f9130d33",
+      "message": "Port ntp_monitor to ROS2 (#242)\n\n* Port ntp_monitor to ROS2\r\n* Update to python3\r\n* Modify cmake package structure to support ament_python_cmake\r\n* Use argparse\r\n* Refactor exception handling for python3\r\n* Fix re.match to decode bytes object\r\n* Reduce code duplication\r\n* Handle quitting subprocess call correctly according to latest docs\r\n* Enable linters on diagnostics_common_diagnostics\r\n* Disable linting the files that aren't ported to ROS2\r\n* Add an author warning for disabled files, since eventually these should be enabled\r\n* Get lint tests to pass\r\n* Switch depreacted author attribute to maintainer in package.xml\r\n* use forthcoming version instead of version bump\r\n* Parse argv rather than only sys.argv and use members\r\n* sys args should be the 2nd and later elements, but needs to be passed\r\nin like so: https://stackoverflow.com/questions/38853812/how-to-use-python-argparse-with-args-other-than-sys-argv\r\n* Use class member variables now that ntp_diag() has access to the variables\r\nSigned-off-by: Ryan Friedman <ryan_friedman@trimble.com>\r\nCo-authored-by: Christian Henkel <post@henkelchristian.de>",
+      "files_changed": 7,
+      "additions": 164,
+      "deletions": 135,
+      "commit_type": "docs"
+    },
+    {
+      "author": "KeisukeShima",
+      "date": "2021-10-27T01:08:22Z",
+      "sha": "2ca97af943ae5d5a411ab24286353941c84f0bdf",
+      "message": "Use regex to search AnalyzerGroup",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "bergercookie",
+      "date": "2022-11-12T16:48:16Z",
+      "sha": "5c9fc463210636ab27a1b915c7541e0f6ac995dc",
+      "message": "Check if parameter is already declared to avoid re-declaring it. (#227)\n\n* Check if parameter is already declared to avoid re-declaring it.\r\n\r\nA parameter can only be declared once. When implementing a LicecycleNode\r\none would normally do all the initialization in `on_configure()` and the\r\ncleanup, deinitialization in the `on_cleanup` method. Furthermore, these\r\ntransitions could potentially be called multiple times, depending on how\r\nthe node is t ransitioned from the lifecycles are triggered. However,\r\nthis approach doesn't currently work well with Diagnostics since, in the\r\nconstructor, of `diagnostic_updater::Updater` it's declaring a static\r\nparameter without checking whether that parameter has already been\r\ndeclared. In subsequent calls to `on_configure` (and thus,\r\nif Diagnostics are initialized there, in subsequent calls to the\r\n`Updater` constructor, this results in the following message:\r\n\r\n```\r\nOriginal error: parameter 'diagnostic_updater.period' has already been declared\r\n```\r\n\r\nTo avoid this, until the Foxy version, the wrapper code could explicitly\r\ncall `undeclare_parameter` on the parameter that the `Updater` is\r\ndeclaring, but as of Galactic, undeclaring a static parameter is not\r\nallowed anymore. See e.g., https://github.com/ros2/rclcpp/pull/1850.\r\n\r\nIn this commit, I'm checking explicitly if the parameter has already\r\nbeen registered and if so, I'm just reading its value before attempting\r\nto re-declare it.\r\n\r\n* Replaced try-catch with has_parameter check.\r\n\r\nCo-authored-by: Nikos Koukis <nikolaos@slamcore.com>\r\nCo-authored-by: Ralph Lange <ralph-lange@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 2,
+      "commit_type": "ci"
+    },
+    {
+      "author": "alsora",
+      "date": "2022-11-04T15:16:28Z",
+      "sha": "c1988973f646614466b193eba1ab21f0b7f64ce9",
+      "message": "update CMakeLists.txt to support modern cmake syntax\n\nSigned-off-by: Alberto Soragna <alberto.soragna@gmail.com>",
+      "files_changed": 2,
+      "additions": 29,
+      "deletions": 5,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ralwing",
+      "date": "2022-10-28T08:05:17Z",
+      "sha": "57fa408ffa0657fdab69662399e47b7627fce103",
+      "message": "Fix implicit conversion warnings",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "clalancette",
+      "date": "2021-10-18T12:14:11Z",
+      "sha": "d34d1e0cbc72f7388fcaa12abeeefc489c2945dc",
+      "message": "Return the actual future from async_send_request (#209)\n\nRecent changes to rclcpp in Rolling make it return a structure\r\nrather than just the future.  In order to maintain this test,\r\nreturn the actual future.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "norro",
+      "date": "2020-07-01T16:59:53Z",
+      "sha": "989a18fff8e3b8337481ae79cd16bf536c9b70d8",
+      "message": "Aggregator bugfix, tests, and nicer example (#147)\n\n* Nicer example\r\n\r\nSigned-off-by: Arne Nordmann <arne.nordmann@de.bosch.com>\r\n\r\n* Fixes toplevel diagnostic status calculation\r\n\r\nSee https://github.com/ros/diagnostics/issues/146\r\n\r\nSigned-off-by: Arne Nordmann <arne.nordmann@de.bosch.com>\r\n\r\n* Testing actual aggregator output\r\n\r\nIn addition to previous tests for correct creation of the aggregator and\r\nanalyzers, this commit adds tests on the actual output of the aggregator.\r\nTests run the aggregator in different configurations, start a listener\r\non the aggregator topic, and match content of the produced diagnostic\r\nmessages.\r\n\r\nSigned-off-by: Arne Nordmann <arne.nordmann@de.bosch.com>\r\n\r\n* Improved readibility\r\n\r\nSigned-off-by: Arne Nordmann <arne.nordmann@de.bosch.com>\r\n\r\n* Fixes windows tests, updates github actions\r\n\r\nSigned-off-by: Arne Nordmann (CR/AEA2) <arne.nordmann@de.bosch.com>\r\n\r\n* Don't hard-code python executable\r\n\r\nSigned-off-by: Arne Nordmann <arne.nordmann@de.bosch.com>\r\n\r\n* upgrade GH actions\r\n\r\nSigned-off-by: Karsten Knese <karsten.knese@us.bosch.com>\r\n\r\nCo-authored-by: Karsten Knese <karsten.knese@us.bosch.com>",
+      "files_changed": 17,
+      "additions": 290,
+      "deletions": 94,
+      "commit_type": "ci"
+    },
+    {
+      "author": "MarcoLm993",
+      "date": "2021-08-03T20:21:57Z",
+      "sha": "3d99214d45d6d9535609d2d1451dd57dc4d7b98a",
+      "message": "[ROS2] Time Diagnostics can be used with Simulated Time (#201)\n\n* TopicDiagnostic accepts optional clock instance\r\n\r\nSigned-off-by: Marco Lampacrescia <Marco.Lampacrescia@de.bosch.com>\r\n\r\n* clock arguments default to a Ptr to a valid clock instance\r\n\r\nSigned-off-by: Marco Lampacrescia <Marco.Lampacrescia@de.bosch.com>\r\n\r\nSigned-off-by: Marco Lampacrescia <Marco.Lampacrescia@de.bosch.com>\r\n\r\n* Linting\r\n\r\nSigned-off-by: Marco Lampacrescia <Marco.Lampacrescia@de.bosch.com>\r\n\r\n* Order includes alphabetically\r\n\r\nSigned-off-by: Marco Lampacrescia <Marco.Lampacrescia@de.bosch.com>",
+      "files_changed": 2,
+      "additions": 22,
+      "deletions": 9,
+      "commit_type": "code"
+    },
+    {
+      "author": "kenji-miyake",
+      "date": "2021-10-18T13:41:44Z",
+      "sha": "b9e0bcd42d6281124a3bde94673e2900a316c549",
+      "message": "Use node clock for diagnostic_aggregator and diagnostic_updater (#210)\n\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>",
+      "files_changed": 2,
+      "additions": 5,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "BasVolkers",
+      "date": "2021-03-01T22:17:33Z",
+      "sha": "651c3ad11c796f0f48fb12c9707d657501abd048",
+      "message": "Enable multiple tasks publishing for diagnostic updater (#182)",
+      "files_changed": 1,
+      "additions": 10,
+      "deletions": 9,
+      "commit_type": "code"
+    },
+    {
+      "author": "Karsten1987",
+      "date": "2019-03-04T21:31:42Z",
+      "sha": "c40d0cb24f7adacc19a3d44ced5f04499dc702a5",
+      "message": "ament ignores in all packages",
+      "files_changed": 9,
+      "additions": 0,
+      "deletions": 30,
+      "commit_type": "config"
+    },
+    {
+      "author": "mitsudome-r",
+      "date": "2021-03-03T21:00:37Z",
+      "sha": "d6271333c4f5f5709f3020767c568e7c44800912",
+      "message": "Introduce history depth parameter for subscription (#168)\n\n* add history_depth parameter to modify queue size for diagnostic_aggregator\r\n\r\nSigned-off-by: mitsudome-r <ryohsuke.mitsudome@tier4.jp>\r\n\r\n* uncrustify\r\n\r\nCo-authored-by: Karsten Knese <Karsten1987@users.noreply.github.com>",
+      "files_changed": 2,
+      "additions": 6,
+      "deletions": 1,
+      "commit_type": "ci"
+    },
+    {
+      "author": "cdbierl",
+      "date": "2021-01-28T16:43:39Z",
+      "sha": "470e22293cad6ce3b221b0badf1cd0410e01954f",
+      "message": "[ROS2] Move Aggregator publishing to timer to allow subscription callback more processing time. (#180)\n\nCo-authored-by: Chris Bierl <cbierl@moog.com>",
+      "files_changed": 3,
+      "additions": 14,
+      "deletions": 29,
+      "commit_type": "code"
+    },
+    {
+      "author": "airballking",
+      "date": "2020-08-05T14:40:23Z",
+      "sha": "48e16167bdef2760ce0536f226cad264a607b96d",
+      "message": "Fix installation of diagnostic aggregator example. (#159)\n\n* Fix: Installing example publisher for diagnostic_aggregator example as program.\r\n\r\n* Fix: Corrected shebang line of diagnostic_aggregator example_pub.py to also work on OSX.",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "cottsay",
+      "date": "2013-02-22T23:51:07Z",
+      "sha": "f0603d5875322c254c086c6eaf6c43fcef601178",
+      "message": "Added rostest to build requirements\n\nNot sure how this one slipped through, but rostest is find_package()'d in the CMakeLists.txt.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "DensoADAS",
+      "date": "2020-03-03T15:19:49Z",
+      "sha": "af7f89ba5ca7bad34e62f810b2002b37a0a90d1d",
+      "message": "Fix DiagnosedPublisher (#135)\n\n* The DiagnosedPublisher should be a wrapper around a publisher for any type of message, but it could only be used with publishers for DiagnosticArray messages. This was fixed.\r\n\r\n* cpplint: include utility\r\n\r\n* Check message type for header",
+      "files_changed": 1,
+      "additions": 35,
+      "deletions": 11,
+      "commit_type": "code"
+    },
+    {
+      "author": "rotu",
+      "date": "2019-08-27T18:12:51Z",
+      "sha": "a5d49c632da527706b380d681463b718e72631ab",
+      "message": "Make DiagnosticStatusWrapper no longer implicitly copyable (#117)\n\nBefore this, the following code would implicitly copy a `DiagnosticStatusWrapper`, updating the copy and silently discarding it:\r\n```\r\n  updater->add(\"power\", [this](auto t) { update_power_diagnostics(t); });\r\n```\r\nNow, the code will fail with a compile-time error. You will need to change it to something like the following to get it to build:\r\n```\r\n  updater->add(\"power\", [this](auto & t) { update_power_diagnostics(t); });\r\n```",
+      "files_changed": 1,
+      "additions": 10,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "vaibhav-bhadade",
+      "date": "2019-02-18T05:43:45Z",
+      "sha": "570a92c6c66daa85a9645ee9e4cec9b02728192c",
+      "message": "ament_uncrustify run on dignostic_updater package",
+      "files_changed": 6,
+      "additions": 1144,
+      "deletions": 1116,
+      "commit_type": "code"
+    },
+    {
+      "author": "icolwell",
+      "date": "2018-08-16T14:50:36Z",
+      "sha": "8397aebfcb17fc0c86d6c17dfb246551086726ef",
+      "message": "Custom names for existing diagnostics tasks",
+      "files_changed": 2,
+      "additions": 38,
+      "deletions": 32,
+      "commit_type": "code"
+    },
+    {
+      "author": "NilsHaukeBussas-TomTom",
+      "date": "2018-07-11T11:52:10Z",
+      "sha": "f7224d139fa4c1aab257bf7d0df5e738f1ab4aab",
+      "message": "Make FrequencyStatus' name configurable",
+      "files_changed": 1,
+      "additions": 11,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "moriarty",
+      "date": "2018-04-17T00:25:56Z",
+      "sha": "c6519742144b3053ba81570027ded6ae6153713d",
+      "message": "[Aggregator] Fixes C++ Warnings (pluginlib)\n\nThis fixes the following warnings:\n\nwarning: Including header <pluginlib/class_list_macros.h>\n is deprecated,include <pluginlib/class_list_macros.hpp> instead. [-Wcpp]\n\nwarning: Including header <pluginlib/class_loader.h>\n is deprecated, include <pluginlib/class_loader.hpp> instead. [-Wcpp]\n\nThe .hpp files have been backported to indigo",
+      "files_changed": 3,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "nlamprian",
+      "date": "2017-02-17T16:22:00Z",
+      "sha": "7f1a7193e08b6f2cd81c403676928450a20ad4bc",
+      "message": "Fixed bug with merge summary in status wrapper",
+      "files_changed": 2,
+      "additions": 27,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "Loy van Beek",
+      "date": "2018-02-09T12:26:54Z",
+      "sha": "8a2297d5583a14cadf3b10b7a69a5f74a2bfa310",
+      "message": "Merge remote-tracking branch 'upstream/indigo-devel' into indigo-devel",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "LoyVanBeek",
+      "date": "2018-02-03T12:58:23Z",
+      "sha": "a1a53143395667a2f2a72502f7c36b03bcf93f32",
+      "message": "Add Python version of Heartbeat DiagnosticTask",
+      "files_changed": 1,
+      "additions": 15,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "loy",
+      "date": "2018-02-03T11:05:33Z",
+      "sha": "0c41ad75a169864cf24eb522c08136be99122019",
+      "message": "Add a very very simple Heartbeat DiagnosticTask",
+      "files_changed": 1,
+      "additions": 23,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Rein Appeldoorn",
+      "date": "2017-04-11T09:32:33Z",
+      "sha": "58a644ae100687e2eea94c13f1bcb14de0477395",
+      "message": "feat(common_diagnostics): Added CPU percentage monitor\n\nCPU monitor that outputs the average CPU percentage and a percentage per\nCPU. The user can specify the warning CPU percentage. When one CPU exceeds\nthis percentage, the diagnostics status is set to WARN.",
+      "files_changed": 1,
+      "additions": 47,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "sandeep",
+      "date": "2017-04-10T12:30:15Z",
+      "sha": "3bf7405c644c7080bd51d07018be02cfb1632d44",
+      "message": "Remove warning for missing queue size specification",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "bulwahn",
+      "date": "2013-10-16T06:05:34Z",
+      "sha": "31910c5be5938d099131e5ec254561afe963b63e",
+      "message": "check for CATKIN_ENABLE_TESTING",
+      "files_changed": 6,
+      "additions": 21,
+      "deletions": 15,
+      "commit_type": "docs"
+    },
+    {
+      "author": "guillaumeautran",
+      "date": "2017-03-09T19:30:36Z",
+      "sha": "62e4e9b0fcb0146c8ab4a25a440d8898b7d20b2b",
+      "message": "Created a command to print rosdiagnostics to the console.\nWorks very much like rostopic echo but instead automatically connects to the aggregated diagnostics and output in a friendly format the content of the diagnostic report.\n\nIssue: https://github.com/ros/diagnostics/issues/57",
+      "files_changed": 7,
+      "additions": 260,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mikepurvis",
+      "date": "2014-11-18T01:26:00Z",
+      "sha": "f1da87cc11d81cc1b12cf608165e9cd4eabafc0b",
+      "message": "Add queue_size to diagnostic_updater for Python.\n\ncf. http://wiki.ros.org/rospy/Overview/Publishers%20and%20Subscribers#queue_size:_publish.28.29_behavior_and_queuing",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Aris Synodinos",
+      "date": "2017-03-03T11:11:20Z",
+      "sha": "49b763bb8e555a6ec27c4715f1187b9d16456fd6",
+      "message": "Changed all deprecated PLUGINLIB_DECLARE_CLASS to PLUGINLIB_EXPORT_CLASS macros",
+      "files_changed": 6,
+      "additions": 10,
+      "deletions": 22,
+      "commit_type": "code"
+    },
+    {
+      "author": "Mustafa Safri",
+      "date": "2016-06-10T18:39:20Z",
+      "sha": "98f4b72efc8ec500a6da250a54e3ff1e008e5791",
+      "message": "Start bond after add_diagnostics service is available",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "heuristicus",
+      "date": "2015-09-08T09:01:20Z",
+      "sha": "a88b5738f1880a1c5975e373abc1895a3726e6a6",
+      "message": "Add functionality for dynamically adding analyzers",
+      "files_changed": 14,
+      "additions": 452,
+      "deletions": 46,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Mitchell Wills",
+      "date": "2014-02-15T06:00:23Z",
+      "sha": "373ba2859cec39f7d1b4b570e66cc24fb79a4554",
+      "message": "Added ability to supply node handle and private node handle to Updater",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "jonbinney",
+      "date": "2014-06-11T00:45:54Z",
+      "sha": "6087b50fbddd8a8b90cba3b8f48e8b7ab46f53fb",
+      "message": "Add dependency on message generation",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "bricerebsamen",
+      "date": "2012-05-02T07:19:52Z",
+      "sha": "a777643e39a16bbc41742fc48509995a5c1adf9c",
+      "message": "Added Python API to diagnostic_updater",
+      "files_changed": 7,
+      "additions": 932,
+      "deletions": 0,
+      "commit_type": "test"
+    },
+    {
+      "author": "ahendrix",
+      "date": "2014-04-08T03:52:25Z",
+      "sha": "ed4dcd676c5032fe3353bf7136b71fe9a0d5c92c",
+      "message": "Add myself as maintainer",
+      "files_changed": 7,
+      "additions": 7,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "Aero",
+      "date": "2014-02-16T06:02:39Z",
+      "sha": "ccbbe1d11e6cf7c921d7bd1491dee4bd3a62eb4c",
+      "message": "Added ability to supply a custom node name (prefix) to Updater",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "wjwwood",
+      "date": "2013-04-03T19:42:29Z",
+      "sha": "5972c9d60715fce1ca8f4d0293a75dfec2c3bc5c",
+      "message": "Updating metapackages to reflect REP-0127",
+      "files_changed": 2,
+      "additions": 6,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "130s",
+      "date": "2013-02-25T06:24:52Z",
+      "sha": "8d15ae4dd5fddb8a9f212fb068c88f1ea2f53279",
+      "message": "diagnostic_aggregator) Removed redundancy in package.xml.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 3,
+      "commit_type": "config"
+    },
+    {
+      "author": "tfoote",
+      "date": "2008-08-15T20:48:20Z",
+      "sha": "b8ecb933b4269971363a839a239d2b07bf3a5bfc",
+      "message": "beginnings of package for runtime monitoring",
+      "files_changed": 1,
+      "additions": 16,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "Aaron Blasdel",
+      "date": "2012-12-21T18:21:53Z",
+      "sha": "ab37f8fb920143f9620f780b6728f76b24ed7f76",
+      "message": "added missing license headers",
+      "files_changed": 5,
+      "additions": 161,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Isaac Saito",
+      "date": "2012-12-20T20:52:10Z",
+      "sha": "df05a549a23a21570e9304be22dce2c9093665f0",
+      "message": "diagnostic_aggregator) Maintainer added.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "dirk-thomas",
+      "date": "2012-12-04T22:44:40Z",
+      "sha": "b3c2e9477eaa5b3cdd7e1136219346c117d44b3b",
+      "message": "fix setup.py requires",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "vrabaud",
+      "date": "2012-09-17T15:39:11Z",
+      "sha": "4f924256067b1befbe6c27965c09c9d9573d55c4",
+      "message": "use the proper gtest macro",
+      "files_changed": 4,
+      "additions": 7,
+      "deletions": 14,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Thibault Kruse",
+      "date": "2012-11-26T15:49:05Z",
+      "sha": "5c9bc74582f88da7063f0b9340a7952d7812a971",
+      "message": "missing includedirs from roscpp cause compile errors.\n\ndiagnostic_aggregator/include/diagnostic_aggregator/status_item.h:45:21: fatal error: ros/ros.h: No such file or directory\n\ndiagnostics/diagnostic_updater/include/diagnostic_updater/diagnostic_updater.h:42:29: fatal error: ros/node_handle.h: No such file or directory\ncompilation terminated.",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "dthomas",
+      "date": "2012-03-16T20:40:49Z",
+      "sha": "1ad64f76bdd6dac6361f7eece6ca23b6b9c89d76",
+      "message": "added separate publisher for toplevel state in diagnostic_aggregator (#5187)",
+      "files_changed": 2,
+      "additions": 27,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "kwc",
+      "date": "2009-09-04T23:12:08Z",
+      "sha": "0c549dde9250258c4c5a4e5b2afe5a01d21a3cfa",
+      "message": "moving trunk out of pkg",
+      "files_changed": 0,
+      "additions": 0,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "watts",
+      "date": "2009-09-17T00:15:47Z",
+      "sha": "0efe6b420f0423db76b7df6b2de665d3d868ad35",
+      "message": "Adding extra arg to the runtime monitor's constructor to work around ROS#1702. Arg is optional",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "straszheim",
+      "date": "2011-07-13T23:31:39Z",
+      "sha": "dadd1f552d3039d1305c01694a07bf34752d24ac",
+      "message": "\nRemove unused (according to K. Watts) class that depends on now\nnonexistent ros::Message",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 70,
+      "commit_type": "code"
+    },
+    {
+      "author": "blaise",
+      "date": "2009-10-09T00:09:08Z",
+      "sha": "18e6f94df6e1f2e97a3677c72ef3b96e655b900a",
+      "message": "Updated diagnosed publisher code to be able to work with a CameraPublisher",
+      "files_changed": 1,
+      "additions": 85,
+      "deletions": 28,
+      "commit_type": "code"
+    },
+    {
+      "author": "tfield",
+      "date": "2010-03-15T21:46:42Z",
+      "sha": "283dd3ea9b24f48641af89f246a9b11f487616cf",
+      "message": "runtime_monitor: added initial version of an rxbag plugin",
+      "files_changed": 4,
+      "additions": 144,
+      "deletions": 8,
+      "commit_type": "config"
+    },
+    {
+      "author": "gerkey",
+      "date": "2008-12-17T01:26:52Z",
+      "sha": "6547d49e6db41511f4689cb74104f8d09c479af1",
+      "message": "Removed dependencies on roslaunch, now that it's part of the bootstrap build",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "jfaust",
+      "date": "2009-11-23T19:39:15Z",
+      "sha": "1dd284e228b62c7977c1e3a4ee8a27e9e583e1ab",
+      "message": "Escape now closes the viewer panel (#3023)",
+      "files_changed": 1,
+      "additions": 10,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "wim",
+      "date": "2010-03-29T19:54:51Z",
+      "sha": "13526e22bb0860d7f6dbabef50b36a3b48ef5e85",
+      "message": "rename forearm camera's on hw",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "wheeler",
+      "date": "2009-12-01T01:10:38Z",
+      "sha": "f3551e4d6fd328cd3979b3be0d7528a9508a5d24",
+      "message": "Remove use of deprecated rosbuild macros",
+      "files_changed": 2,
+      "additions": 10,
+      "deletions": 10,
+      "commit_type": "docs"
+    },
+    {
+      "author": "blaisegassend",
+      "date": "2009-05-11T21:19:26Z",
+      "sha": "3e8924117c2cf9cbea13df1338e85ea01258b344",
+      "message": "Added a DiagnosticStatusWrapper class derived from DiagnosticStatus. It adds a few methods to more \nconveniently set the DiagnosticStatus's fields. The diagnostic_updater has been updated so that it can work \nwith DiagnosticStatus or DiagnosticStatusWrapper.:",
+      "files_changed": 2,
+      "additions": 101,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "leibs",
+      "date": "2009-10-03T20:01:35Z",
+      "sha": "591f83734ce6f1b98d740383ed9a0e8fd5db0b3a",
+      "message": "Getting diagnostic_updater to compile.  Still spewing a bunch of warnings.",
+      "files_changed": 4,
+      "additions": 14,
+      "deletions": 8,
+      "commit_type": "docs"
+    },
+    {
+      "author": "wattsk",
+      "date": "2009-01-21T01:17:50Z",
+      "sha": "7f0b12e4000748e4375702c1ecd6ce1c19120426",
+      "message": "Made fixes on cart, looking into controller spawning",
+      "files_changed": 5,
+      "additions": 16,
+      "deletions": 15,
+      "commit_type": "config"
+    },
+    {
+      "author": "jfaustwg",
+      "date": "2008-09-29T22:27:09Z",
+      "sha": "6aef00628d5ad22ddafa01ad6c97ceffdaa0e2e7",
+      "message": "",
+      "files_changed": 0,
+      "additions": 0,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "ehberger",
+      "date": "2008-11-13T06:22:07Z",
+      "sha": "4c2758f4974abc42de572de15e0d0bc192386db6",
+      "message": "Moving package review status from wiki to manifests",
+      "files_changed": 4,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "meeussen",
+      "date": "2008-12-09T21:27:08Z",
+      "sha": "7977d12bf2b9e3214d605e9133e3e3e1c6af69a1",
+      "message": "add live test with teleop-manipulation",
+      "files_changed": 3,
+      "additions": 20,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "eitanme",
+      "date": "2009-05-15T18:59:49Z",
+      "sha": "3c38479a69a65cfdf28f0eb6c974cd2aa5335465",
+      "message": "Fixed a bug in ntp monitor, should work fine now",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "rob_wheeler",
+      "date": "2008-09-16T16:55:28Z",
+      "sha": "c88dccc328d269c72b83f8984d14f33a3efa7cad",
+      "message": "Make wxmonitor display string data as well as float values",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "sfkwc",
+      "date": "2008-10-03T20:42:17Z",
+      "sha": "b059f270dfbd08ac3ca2fea9fd612afbf739bb57",
+      "message": "rewrote use of roslaunch to conform to recent API changes",
+      "files_changed": 4,
+      "additions": 26,
+      "deletions": 30,
+      "commit_type": "test"
+    },
+    {
+      "author": "morgan_quigley",
+      "date": "2009-06-27T08:51:20Z",
+      "sha": "0a55da347b1f3141307fa5c0e8fa3088848a8493",
+      "message": "add cstdio include for gcc 4.4",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "j_bohren",
+      "date": "2009-06-21T18:24:05Z",
+      "sha": "945cfd091eef149f567bd5b7af12ff348c218f1b",
+      "message": "Updating runtime_monitor/expected.py to import diagnosic_msgs instead of robot_msgs",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "syrnick",
+      "date": "2009-06-16T05:52:19Z",
+      "sha": "f661d05a0eb6e81d79c870590454da8cb5130fca",
+      "message": "From Kevin: changed robot_msgs to diagnostic_msgs",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "wghassan",
+      "date": "2009-05-06T22:29:18Z",
+      "sha": "b0f99aac3e88b628a23653758ef10ea8e40667b1",
+      "message": "added the ability to update a note using noteid",
+      "files_changed": 1,
+      "additions": 15,
+      "deletions": 11,
+      "commit_type": "code"
+    },
+    {
+      "author": "vijaypradeep",
+      "date": "2009-03-03T21:40:39Z",
+      "sha": "18ef2081b598752d9f571fdc8d609d9481e5ff8c",
+      "message": "Fixed load_manifest line in ntp_monitor",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "pmihelich",
+      "date": "2009-04-07T21:56:15Z",
+      "sha": "f60bb411adf08b71ad53cf438467887175dfd5d9",
+      "message": "diagnostic_updater: Now can be used with classes that don't inherit from Node.",
+      "files_changed": 1,
+      "additions": 15,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "hsujohnhsu",
+      "date": "2009-01-19T19:41:05Z",
+      "sha": "eba6b4c5b72485eabcc62c4fdd128eb83c5c29cb",
+      "message": "update qualification and life_test to use the new pr2.xml directory structure.",
+      "files_changed": 18,
+      "additions": 23,
+      "deletions": 23,
+      "commit_type": "config"
+    },
+    {
+      "author": "wg_cmeyers",
+      "date": "2009-03-05T02:29:53Z",
+      "sha": "f2e77ec3e55e0b5dd61d5ff8f2ccee6a623f8633",
+      "message": "Merge branch 'analysis' into merge\n\nConflicts:\n\thardware_test/diagnostics_analysis/plot_histogram.py\n\tmotion_planning/mpglue/include/mpglue/costmap.h\n\tmotion_planning/mpglue/include/mpglue/costmapper.h\n\tmotion_planning/mpglue/include/mpglue/estar_planner.h\n\tmotion_planning/mpglue/include/mpglue/footprint.h\n\tmotion_planning/mpglue/include/mpglue/navfn_planner.h\n\tmotion_planning/mpglue/include/mpglue/plan.h\n\tmotion_planning/mpglue/include/mpglue/planner.h\n\tmotion_planning/mpglue/include/mpglue/sbpl_environment.h\n\tmotion_planning/mpglue/include/mpglue/sbpl_planner.h",
+      "files_changed": 2,
+      "additions": 85,
+      "deletions": 45,
+      "commit_type": "code"
+    },
+    {
+      "author": "mmwise",
+      "date": "2008-08-12T20:35:34Z",
+      "sha": "8e95cee9cc93cf904c2f65daa504f1364ad941db",
+      "message": "adding test dir",
+      "files_changed": 1,
+      "additions": 30,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "rdiankov",
+      "date": "2008-12-27T01:45:36Z",
+      "sha": "74c78b3bc9ead15e55888a4301164c3f489673f6",
+      "message": "correct pr2 gripper transmissions now working",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "jleibs",
+      "date": "2008-08-12T21:05:36Z",
+      "sha": "87a7b602dd1c1864d7c6d14712c7db732af4b2c9",
+      "message": "Moving hokuyo_tester into hardware_test directory.",
+      "files_changed": 10,
+      "additions": 1012,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "stuglaser",
+      "date": "2008-11-21T01:33:15Z",
+      "sha": "dce29bd8eb366e87028dce7d6c389c415248a3b8",
+      "message": "Beginnings of the caster life test",
+      "files_changed": 6,
+      "additions": 62,
+      "deletions": 0,
+      "commit_type": "config"
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T05:17:25Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros-drivers",
+    "repo": "transport_drivers"
+  },
+  "data": [
+    {
+      "author": "sven-hoek",
+      "date": "2023-02-01T07:09:34Z",
+      "sha": "d74ec4e5c6acb3c9e6ee28909306625afd097908",
+      "message": "Close port after error",
+      "files_changed": 1,
+      "additions": 60,
+      "deletions": 102,
+      "commit_type": "code"
+    },
+    {
+      "author": "Ryanf55",
+      "date": "2023-06-22T20:35:48Z",
+      "sha": "1ff4a602b556f6910f7d010e8ba0082b32fe7b58",
+      "message": "Bump minimum versions for humble (#91)\n\n* Use C++17\r\n* Use CMake 3.14.4\r\n* https://www.ros.org/reps/rep-2000.html#humble-hawksbill-may-2022-may-2027\r\n\r\nSigned-off-by: Ryan Friedman <ryanfriedman5410+github@gmail.com>",
+      "files_changed": 4,
+      "additions": 10,
+      "deletions": 10,
+      "commit_type": "docs"
+    },
+    {
+      "author": "pawelir",
+      "date": "2023-05-15T13:35:16Z",
+      "sha": "87a4299d6721de5d7e133e851403bfa6c1213934",
+      "message": "Fix msg conversion resizing bug (#90)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "wep21",
+      "date": "2021-08-30T23:08:52Z",
+      "sha": "6e3cc00333d28fadf3de5b1e19aeb1437f816ac9",
+      "message": "Remove deprecated api from galactic (#57)\n\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>",
+      "files_changed": 3,
+      "additions": 9,
+      "deletions": 9,
+      "commit_type": "code"
+    },
+    {
+      "author": "esteve",
+      "date": "2019-08-08T14:14:44Z",
+      "sha": "abac860fa29bde591cd486fbdda1d7635c7f7d50",
+      "message": "Initial checkin",
+      "files_changed": 10,
+      "additions": 653,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "JWhitleyWork",
+      "date": "2021-08-30T22:14:40Z",
+      "sha": "98ea4813ac1a9762f4534952a98bd505c10e36e3",
+      "message": "CI: Updating main branch to run Galactic job",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 7,
+      "commit_type": "ci"
+    },
+    {
+      "author": "RFRIEDM-Trimble",
+      "date": "2022-02-07T20:02:18Z",
+      "sha": "85e0bc9bfd54896b8be925eb3664bdfc8e195f22",
+      "message": "Support serial_break (#76)\n\n* Support serial_break\r\n\r\n* Add protection to serial break and unit tests",
+      "files_changed": 3,
+      "additions": 63,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "chenjunnn",
+      "date": "2021-12-20T22:02:32Z",
+      "sha": "9d06e73e01e0531bfd4548229c8a19c4741c3a28",
+      "message": "Fix the converter Converter between `std_msgs::msg::UInt8MultiArray` and `std::vector<uint8_t>` (#73)\n\n* example_interfaces is redundant\r\nas std_msgs includes UInt8MultiArray\r\n\r\n* udp_msgs.hpp should not include \"converters.hpp\"\r\n\r\n* Fix the converter\r\nstd_msgs::msg::UInt8MultiArray <-> std::vector<uint8_t>",
+      "files_changed": 10,
+      "additions": 34,
+      "deletions": 60,
+      "commit_type": "config"
+    },
+    {
+      "author": "HaoruXue",
+      "date": "2021-06-11T16:07:11Z",
+      "sha": "3d23734994ebbfb558c42e4a9854d8cafb6e240b",
+      "message": "Serial driver debugs (#56)\n\n* debugged message conversion\r\ndebugged serial bridge segfault (publisher accessed before initialized)\r\n\r\n* refactored message conversion",
+      "files_changed": 2,
+      "additions": 6,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "Joshua Whitley",
+      "date": "2019-08-13T18:26:10Z",
+      "sha": "7af9298eab95fbc103bd1493e597444cc077dedb",
+      "message": "Set up CI with Azure Pipelines\n\n[skip ci]",
+      "files_changed": 1,
+      "additions": 25,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "flynneva",
+      "date": "2021-03-03T17:41:47Z",
+      "sha": "89c97fb01948b213cfddc16c7e446793c8f338fb",
+      "message": "move ci to ros-tooling gh actions, ignore .vscode (#34)",
+      "files_changed": 3,
+      "additions": 42,
+      "deletions": 42,
+      "commit_type": "config"
+    },
+    {
+      "author": "reza-ebrahimi",
+      "date": "2021-03-03T16:37:35Z",
+      "sha": "71fdbe429c92a1d8008d433f08d9442592540054",
+      "message": "Implement UdpSocket for both Syn. & Async modes (Send & Receive functionality) (#31)\n\n* Refactor & add UdpReceiver class\r\n\r\n* Add UdpSender class\r\n\r\n* Update node class to refactored driver\r\n\r\n* Update CMake\r\n\r\n* Update tests\r\n\r\n* Resolve a conflict on test/test_udp_driver.cpp\r\n\r\n* Update Readme\r\n\r\n* Rename header file to cpp format\r\n\r\n* Rename header file to cpp format\r\n\r\n* Delete old files\r\n\r\n* Update Udp Driver Node\r\n\r\n* Add message converters\r\n\r\n* Add IoContext class\r\n\r\n* Add UdpDriver class\r\n\r\n* Add UdpSocket class\r\n\r\n* Add IoContext test case\r\n\r\n* Add Udp data transmission test cases\r\n\r\n* Add Udp receive test case\r\n\r\n* Add Udp Sender test case\r\n\r\n* Add UdpDriver test cases\r\n\r\n* Update CMakeLists file\r\n\r\n* Add converters header & source files\r\n\r\n* Add IoContext header & source files\r\n\r\n* Add UdpSocket header & source files\r\n\r\n* Add UdpDriver header & source files\r\n\r\n* Add visibility header file\r\n\r\n* Add UdpDriverNode to examples directory\r\n\r\n* Add main google test program\r\n\r\n* Add IoContext test\r\n\r\n* Add UdpSocket test\r\n\r\n* Add UdpDriver test\r\n\r\n* Add UDP communication tests\r\n\r\n* Add UdpDriverNode test\r\n\r\n* Add changelog file\r\n\r\n* Add CMakeLists file\r\n\r\n* Add package.xml file\r\n\r\n* Delete old udp_driver package\r\n\r\n* Add design document\r\n\r\n* Add std_msgs/Int* variants converters\r\n\r\n* Update converters to ROS2 message in function names\r\n\r\n* Refactor converters to their ROS2 namespaces in converters directory\r\n\r\n* Add common converters header\r\n\r\n* Update licenses\r\n\r\n* Reformat code\r\n\r\n* Remove unnecessary print\r\n\r\n* Update google test header includes to library convention\r\n\r\n* Implement unsigned integer and floating point message variants converters\r\n\r\n* Fix comment in converters\r\n\r\n* Update test and example\r\n\r\n* Update changelog - Bump major version to 0.1.0\r\n\r\n* Update readme\r\n\r\n* Revert back changelog file\r\n\r\n* Update readme\r\n\r\n* Move udp_driver to separate package\r\n\r\n* Revert package name change\r\n\r\n* Apply linter fixes\r\n\r\nCo-authored-by: Joshua Whitley <josh.whitley@autoware.org>",
+      "files_changed": 29,
+      "additions": 1736,
+      "deletions": 438,
+      "commit_type": "docs"
+    },
+    {
+      "author": "gavanderhoorn",
+      "date": "2020-02-06T12:29:59Z",
+      "sha": "7660c2a02700ffafe8fc0839d45ff688c1a31db4",
+      "message": "Be specific about which parts of Boost are necessary (#10)\n\n* serial: be specific about Boost dependency.\r\n\r\n* udp: be specific about Boost dependency.",
+      "files_changed": 2,
+      "additions": 10,
+      "deletions": 2,
+      "commit_type": "config"
+    }
+  ]
+}

@@ -1,0 +1,1821 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T04:54:38Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "mavlink",
+    "repo": "mavros"
+  },
+  "data": [
+    {
+      "author": "dependabot[bot]",
+      "date": "2025-11-24T03:41:14Z",
+      "sha": "b85baa6d057cf7092cd26b3bd777d1e01258b08b",
+      "message": "build(deps): bump actions/checkout from 5 to 6\n\nBumps [actions/checkout](https://github.com/actions/checkout) from 5 to 6.\n- [Release notes](https://github.com/actions/checkout/releases)\n- [Changelog](https://github.com/actions/checkout/blob/main/CHANGELOG.md)\n- [Commits](https://github.com/actions/checkout/compare/v5...v6)\n\n---\nupdated-dependencies:\n- dependency-name: actions/checkout\n  dependency-version: '6'\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "vooon",
+      "date": "2013-12-12T22:15:28Z",
+      "sha": "f2512f3f0f4e92b742c4cb90240189cd4f2685e1",
+      "message": "Initial\n\nImport Mavlink.msg from mavlink_ros package\n( https://github.com/mavlink/mavlink_ros ).",
+      "files_changed": 3,
+      "additions": 240,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "alexbennett",
+      "date": "2026-02-03T21:08:35Z",
+      "sha": "6ea0636e34b8e268c4a044b91bc2294e21e8e26e",
+      "message": "add atomic completion flag to `ParamSetOpt`",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Tuxliri",
+      "date": "2025-12-15T06:46:49Z",
+      "sha": "27f529f38d1b930272afe165a99189623c524fcb",
+      "message": "feat: add px4 offboard control example script",
+      "files_changed": 1,
+      "additions": 182,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "paulerikf",
+      "date": "2025-12-11T13:22:55Z",
+      "sha": "4639bef8935d2075d55b79d83e1b5ff755c1b0a2",
+      "message": "Add test for synchronise_stamp overflow",
+      "files_changed": 1,
+      "additions": 22,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "peakyquest",
+      "date": "2025-10-21T04:54:49Z",
+      "sha": "d22970ba3975cac941213ce8726e399dc1b084ea",
+      "message": "adding mavros_examples",
+      "files_changed": 6,
+      "additions": 790,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Haroon Rasheed",
+      "date": "2025-10-21T15:23:05Z",
+      "sha": "691a5406ab7245fd894ad10334601343ef7eae76",
+      "message": "setting mavros_examples for draft pr",
+      "files_changed": 3,
+      "additions": 96,
+      "deletions": 8,
+      "commit_type": "docs"
+    },
+    {
+      "author": "zekesarosi",
+      "date": "2025-09-29T06:51:45Z",
+      "sha": "4d281df4950637151dc3bb4422d8659267751de8",
+      "message": "fixes #2070: adding support for OBSTACLE_DISTANCE_3D message (#2071)\n\n* feat: add Obstacle Distance 3D plugin\n\n- Introduced a new plugin `obstacle_distance_3d` to handle 3D obstacle distance data.\n- Subscribes to a custom ROS 2 message `Obstacle3D` and sends corresponding MAVLink messages.\n- Updated CMakeLists.txt and package.xml to include dependencies for the new plugin.\n\n* add native message support\n\n* clean up changes\n\n* removed redundant time param in the message, and changed default logging to debug\n\n---------\n\nCo-authored-by: zekesarosi <zsarosi@flyseneca.com>",
+      "files_changed": 5,
+      "additions": 149,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "gm14",
+      "date": "2025-10-06T15:48:28Z",
+      "sha": "fdda58ac0f94913e0bf3e97701e1db307352def8",
+      "message": "Fixing TF timestamps to use system time in landing_target plugin",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Bruno Celaries",
+      "date": "2025-09-12T08:36:13Z",
+      "sha": "2ceae56ed97fca0dada10a78be5476435dadae6f",
+      "message": "DDS equivalent of latched topic for gp_origin topic",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "ArielSulton",
+      "date": "2025-09-13T10:21:39Z",
+      "sha": "347111b6e9081aed15046473b56df99b0ffa3ded",
+      "message": "fix: yaml_cpp_vendor linking in mavros_extras",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "amarburg",
+      "date": "2025-08-21T15:10:05Z",
+      "sha": "907865d7137529c07499c57722c1e6dc6f5e7ae8",
+      "message": "Put add_on_set_parameters_callback in time-delayed function.\n\nResolves bad_weak_ptr issue when starting router as composable node",
+      "files_changed": 1,
+      "additions": 18,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "FAC94",
+      "date": "2025-07-11T08:47:32Z",
+      "sha": "e7a3e40e55f57e7b70d16b029f4cea37a1e971cf",
+      "message": "Update ArduPlane mode 14 from LAND to AVOID_ADSB.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "emmanuel-ferdman",
+      "date": "2025-05-15T10:14:03Z",
+      "sha": "43a40efc818c1e27c1ef44b78ccca61353c751e3",
+      "message": "fix: display topic on service timeout error\n\nSigned-off-by: Emmanuel Ferdman <emmanuelferdman@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "schashni",
+      "date": "2025-05-11T08:37:43Z",
+      "sha": "427d697074657eef354672e46a55c1de7a209cb7",
+      "message": "Initialize last_pos_time with RCL_ROS_TIME",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "mishmetall",
+      "date": "2025-05-06T11:34:35Z",
+      "sha": "aa534f1c57e2c6146372f8444fe17416e040c022",
+      "message": "Fix incorrect macro usage\n\nRCLCPP_SMART_PTR_DEFINITIONS eventually is expanding to:\n\n\\#define __RCLCPP_MAKE_UNIQUE_DEFINITION(...) \\\n  template<typename ... Args> \\\n  static std::unique_ptr<__VA_ARGS__> \\\n  make_unique(Args && ... args) \\\n  { \\\n    return std::unique_ptr<__VA_ARGS__>(new __VA_ARGS__(std::forward<Args>(args) ...)); \\\n  }\n\nwhich is incorrect for abstract classes like Endpoint or Plugin\n\nRCLCPP_SMART_PTR_DEFINITIONS_NOT_COPYABLE is used instead excluding make_unique functionality",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "gus-robotics88",
+      "date": "2024-10-08T19:45:28Z",
+      "sha": "2ae9759bb67e43972fea2ab419a80c78c5775aed",
+      "message": "Adding OpenDroneID plugin and messages (#3)",
+      "files_changed": 9,
+      "additions": 247,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "denis",
+      "date": "2025-04-25T14:25:45Z",
+      "sha": "816b1b96d22939119b839c77e3efcfd30c6f67cb",
+      "message": "Fix: Corrected compass calibration result report to match mavlink documentation (MAG_CAL_REPORT (192))",
+      "files_changed": 2,
+      "additions": 42,
+      "deletions": 5,
+      "commit_type": "docs"
+    },
+    {
+      "author": "InvincibleRMC",
+      "date": "2024-10-16T00:04:51Z",
+      "sha": "a0adc8a501e3b1f0028d6da1799fade17d047fe7",
+      "message": "built successfully",
+      "files_changed": 2,
+      "additions": 34,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "pryre",
+      "date": "2024-12-18T14:02:36Z",
+      "sha": "f023b4e9ce76d54fb2c866c741ddb6f75c80eca3",
+      "message": "Added support for MAV_FRAME::BODY_FRD to landing_target",
+      "files_changed": 1,
+      "additions": 40,
+      "deletions": 7,
+      "commit_type": "code"
+    },
+    {
+      "author": "edxmorgan",
+      "date": "2025-01-08T20:29:22Z",
+      "sha": "72306e94746eab02c75696a3ace59a62013631f5",
+      "message": "update readme to align with ros2 instructions",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 5,
+      "commit_type": "docs"
+    },
+    {
+      "author": "leocencetti",
+      "date": "2024-10-08T14:32:42Z",
+      "sha": "cd1c337045c4cf6856df01bb2dc0a5bb7853d23e",
+      "message": "fix: Correct 3x3 covariance matrix rotation",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "evan-palmer",
+      "date": "2024-09-14T00:41:39Z",
+      "sha": "6da19102ef3ee8a650772712abec63e0bb27ec73",
+      "message": "Resolved build error with yaml-cpp",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "rolker",
+      "date": "2024-07-17T16:13:30Z",
+      "sha": "0d0f5441a4455a09b257e07fffdfec90827d3e76",
+      "message": "Add missing std_srvs dependency",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "dakejahl",
+      "date": "2024-08-06T22:36:57Z",
+      "sha": "341854d22e1284217649cc9883468a4dd736c035",
+      "message": "depcrecation errors",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "config"
+    },
+    {
+      "author": "EnderMandS",
+      "date": "2024-07-15T08:28:31Z",
+      "sha": "ce01a6ddf9fe03ea6ad37016a938c9e19a302d24",
+      "message": "add frame_id parameter",
+      "files_changed": 5,
+      "additions": 64,
+      "deletions": 21,
+      "commit_type": "code"
+    },
+    {
+      "author": "wentasah",
+      "date": "2024-07-07T06:45:33Z",
+      "sha": "a71060bf291207e7ff61d2d7793434a303cf7656",
+      "message": "Fix compile error when compiling with gcc 13\n\nThe error is:\n\n    src/plugins/mag_calibration_status.cpp:64:22: error: ‘bitset’ is not a member of ‘std’",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Crowdedlight",
+      "date": "2024-05-21T14:35:18Z",
+      "sha": "5646ba4e7af87b153e6fd29657f524208632eb82",
+      "message": "removed prefix in enums in messages and changed to use existing functions for string and quaternion convert",
+      "files_changed": 5,
+      "additions": 50,
+      "deletions": 68,
+      "commit_type": "code"
+    },
+    {
+      "author": "Mark-Beaty",
+      "date": "2023-02-01T22:10:59Z",
+      "sha": "304e17cd1aa1b44287a23042589319c75e49277f",
+      "message": "Added gimbal_control plugin\n\nAdded all functionality to support a plugin to enable compatibility with MAVLink Gimbal Protocol v2",
+      "files_changed": 16,
+      "additions": 967,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "beniaminopozzan",
+      "date": "2023-11-13T17:13:57Z",
+      "sha": "92e406293ea90e547c5a88a3ddeb5781a286964c",
+      "message": "[camera plugin] Fix image_index and capture_result not properly filled\n\nSigned-off-by: Beniamino Pozzan <b.pozzan@archangel.im>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "danielkalmanson",
+      "date": "2024-05-15T12:46:14Z",
+      "sha": "ed35d1981b44d3975f42fb45e38be246ace35e3a",
+      "message": "Update mavlink.py\n\nFixed bug #569 from mavros. Fixed another bug in the building of the ros mavlink message- the seq field was not added to the ros mavlink message.",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "elgarbe",
+      "date": "2024-02-29T23:37:05Z",
+      "sha": "ef8de4cc8b733134839ca9a9433b7afac4b6a6a0",
+      "message": "move /conn parameters to /sys and /time",
+      "files_changed": 2,
+      "additions": 9,
+      "deletions": 17,
+      "commit_type": "config"
+    },
+    {
+      "author": "amilcarlucas",
+      "date": "2019-01-29T19:13:21Z",
+      "sha": "f0c4b567fb6ee36007afbc9f0fac45dda9d27181",
+      "message": "Update the readme",
+      "files_changed": 1,
+      "additions": 104,
+      "deletions": 8,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ahcorde",
+      "date": "2024-02-08T14:11:23Z",
+      "sha": "227bb05c34a75188f1d6fccff6f767d0cc9129b0",
+      "message": "Removed warning from geometry2 header\n\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>",
+      "files_changed": 5,
+      "additions": 5,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "victor",
+      "date": "2023-11-08T09:12:15Z",
+      "sha": "1337728038397791572365199c8444ddd98b139b",
+      "message": "handle events",
+      "files_changed": 3,
+      "additions": 95,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "sathak93",
+      "date": "2023-11-05T00:54:21Z",
+      "sha": "ca50f1a0394002f446837f761a97ad7180267bca",
+      "message": "fix mav service  call and wp load",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "mgiurato",
+      "date": "2023-10-24T13:39:27Z",
+      "sha": "56523b80f23d28b93922659cad801be2b77fb6aa",
+      "message": "Fix typo\n\nfix typo in odometry frame child id",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Moma98",
+      "date": "2023-10-24T14:56:15Z",
+      "sha": "f67712440a7703d1169a11991067394f07017433",
+      "message": "Update wheel_odometry.cpp\n\nfix typo",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "haavarpb",
+      "date": "2023-10-18T12:19:33Z",
+      "sha": "67caa4d281b961516a39e65f00d12241511bd7ae",
+      "message": "Removed unused variable",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "kribe48",
+      "date": "2023-05-24T07:17:37Z",
+      "sha": "b5576dda4ffbe139d87b30576e14e2f0b219ee38",
+      "message": "Use SensorDataQoS for gp_origin subscriber",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "SwiftGust",
+      "date": "2023-10-06T07:48:31Z",
+      "sha": "e0be266e675db5b3d615404d910c164430d46da9",
+      "message": "Fix errata in GPSRAW.msg",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "mzahana",
+      "date": "2017-11-30T20:26:41Z",
+      "sha": "d06f9a3fca3dd61eee055964a70a659e21464ed8",
+      "message": "Global position setpoint plugin (#764)\n\n* fix fake gps rate\r\n\r\n* fix\r\n\r\n* fix plugin_list\r\n\r\n* fix\r\n\r\n* add global position setpoint plugin\r\n\r\n* add plugin to CMakeList\r\n\r\n* fix bugs\r\n\r\n* add altitude\r\n\r\n* move GPS setpoints to setpoint_position plugin\r\n\r\n* fix gps setpoint subscriber name\r\n\r\n* move  GeographicLib::Geocentric earth inside callback\r\n\r\n* add warning msg if timestamp is not updates\r\n\r\n* Fix ROS_WARN",
+      "files_changed": 2,
+      "additions": 92,
+      "deletions": 5,
+      "commit_type": "config"
+    },
+    {
+      "author": "IdoGuzi",
+      "date": "2023-09-09T10:17:57Z",
+      "sha": "e44ce0630c079e6e412bb2c03ff53592fa1c5849",
+      "message": "local takeoff and land topics (#1890)\n\n* local takeoff and land topics\r\n\r\n* vector3 position type, rename to TOLLocal\r\n\r\n* remove auto include line",
+      "files_changed": 3,
+      "additions": 59,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "natmol",
+      "date": "2023-09-06T11:30:51Z",
+      "sha": "cb8fafe680f31e69fd85f44c3c9e267f031a6c3d",
+      "message": "Bugfix/update map origin with home position (#1892)\n\n* Update map origin with home position\r\n\r\n* Uncrustify\r\n\r\n* Revert \"Uncrustify\"\r\n\r\nThis reverts commit f1387c79c7670cc241986586436e3da43842e877.\r\n\r\n* Change to relative topic\r\n\r\n---------\r\n\r\nCo-authored-by: Natalia Molina <molina-munoz@wingcopter.com>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "MKargus0",
+      "date": "2023-08-26T20:02:33Z",
+      "sha": "23988e779f051b1f28ef350ce8766e5c18b7898e",
+      "message": "fixed header.stamp conversion in landing target",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "altproc",
+      "date": "2023-06-27T19:56:47Z",
+      "sha": "3a7dea1c37334966f7ea4566abab2c9e29ba0e40",
+      "message": "Added message optical flow",
+      "files_changed": 5,
+      "additions": 230,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mortenfyhn",
+      "date": "2019-10-14T07:13:55Z",
+      "sha": "92fcb8618ec607515b47b8b83a11d1a92bb9f6a0",
+      "message": "obstacle distance plugin: Add ROS param for mavlink frame\n\nMakes it possible to specify the 'frame' field in the MAVLink\nOBSTACLE_DISTANCE message sent by this plugin. Previously the\nframe was not defined, which means it defaulted to MAV_FRAME_GLOBAL.\n(See https://mavlink.io/en/messages/common.html#OBSTACLE_DISTANCE)\nThe default frame is therefore still MAV_FRAME_GLOBAL.",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "robobe",
+      "date": "2023-04-10T03:21:29Z",
+      "sha": "43021113214099bb8c0502a0152e46aea3101770",
+      "message": "Delete test_convert_to_rosmsg.py",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 103,
+      "commit_type": "test"
+    },
+    {
+      "author": "robo",
+      "date": "2023-04-08T04:40:02Z",
+      "sha": "7892bc98ab824a1c9c903bf14e1eb04272cbdc96",
+      "message": "cast payload_octest to int\n\ntest script ,",
+      "files_changed": 2,
+      "additions": 100,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "vacabun",
+      "date": "2023-02-23T13:13:42Z",
+      "sha": "3de8bcf4e0b9cb68379cf275f773af6d9326dd1f",
+      "message": "fix px4 launch file on ROS2.",
+      "files_changed": 4,
+      "additions": 255,
+      "deletions": 228,
+      "commit_type": "config"
+    },
+    {
+      "author": "eMrazSVK",
+      "date": "2023-03-02T14:14:49Z",
+      "sha": "227c02e04d778c89d01fb480d1a27c4db7c9becb",
+      "message": "Fix apm config and launch ROS2",
+      "files_changed": 3,
+      "additions": 4,
+      "deletions": 6,
+      "commit_type": "config"
+    },
+    {
+      "author": "lopsided98",
+      "date": "2020-05-24T03:48:13Z",
+      "sha": "a6a98ca0cfb25ab7c59747427f2a5c4cc8108b73",
+      "message": "wind plugin: fix ArduPilot wind transformation",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "snwu1996",
+      "date": "2023-02-14T22:14:31Z",
+      "sha": "f3c9f48932b8a3660b67b4db9231938cb218877d",
+      "message": "made it such that the gp_origin topic published latched.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "lucasw",
+      "date": "2022-12-26T16:38:02Z",
+      "sha": "97a03144c347fb5e81fd7fd72ad718a21ddbb9d4",
+      "message": "use hpp instead of deprecated .h pluginlib headers",
+      "files_changed": 62,
+      "additions": 62,
+      "deletions": 62,
+      "commit_type": "code"
+    },
+    {
+      "author": "sverrevr",
+      "date": "2022-02-11T08:38:44Z",
+      "sha": "bcc6b9451291ec8e50f86691b6fcb0b1203eb711",
+      "message": "Implement debug float array handler\n\nCo-authored-by: Morten Fyhn Amundsen <morten.f.amundsen@scoutdi.com>",
+      "files_changed": 2,
+      "additions": 52,
+      "deletions": 11,
+      "commit_type": "code"
+    },
+    {
+      "author": "rosrunne",
+      "date": "2022-10-25T11:00:14Z",
+      "sha": "6b4949bd484f4503016a88cdef7603853801d058",
+      "message": "libmavconn: fix MAVLink v1.0 output selection\n\nFix #1787",
+      "files_changed": 2,
+      "additions": 8,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "snktshrma",
+      "date": "2022-07-18T21:11:01Z",
+      "sha": "fe92997ceaa129eba997f715b3b792c9abe220c3",
+      "message": "plugins: add guided_target to accept offboard position targets\n\nUpdate guided_target.cpp\n\nUpdate guided_target.cpp\n\nUpdate mavros_plugins.xml\n\nUpdate CMakeLists.txt\n\nAdded offboard_position.cpp\n\nUpdate apm_config.yaml\n\nUpdate offboard_position.cpp\n\nUpdate offboard_position.cpp\n\nRename offboard_position.cpp to guided_target.cpp\n\nUpdate CMakeLists.txt\n\nUpdate mavros_plugins.xml\n\nUpdate apm_config.yaml\n\nUpdate guided_target.cpp",
+      "files_changed": 4,
+      "additions": 211,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "acxz",
+      "date": "2019-11-17T04:49:59Z",
+      "sha": "3da41d770ca0e021f597bef30ffe6fcefe3e6959",
+      "message": "add macro for get_io_service() to work with boost>1.70",
+      "files_changed": 1,
+      "additions": 11,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "alehed",
+      "date": "2022-06-07T09:37:48Z",
+      "sha": "686c53167a4ad59b65deb75674a8a2829156617b",
+      "message": "Make compatible with pymavlink type annotations PR\n\nIn that PR, the attribute name is changed to msgname due to conflicts\nwith message instance variables.",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "antonyramsy",
+      "date": "2022-05-15T11:13:06Z",
+      "sha": "a0a085a1499e55cadf6ebc8faf0941d37be58608",
+      "message": "fix subscribe_raw_salellites typo \n\nsubscribe_raw_salellites -> subscribe_raw_satellites",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "clydemcqueen",
+      "date": "2022-04-25T18:32:07Z",
+      "sha": "30d2e16fd51e1febad40f22a39584458948c286b",
+      "message": "Initialize last_transform_stamp with RCL_ROS_TIME, fixes #1734",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "LightningPORTO",
+      "date": "2022-03-30T08:25:53Z",
+      "sha": "de6b3a8e2d15b0cf70ac6da0055d26803fc33ed5",
+      "message": "Add CellularStatus plugin and message",
+      "files_changed": 5,
+      "additions": 98,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Sylvain Pastor",
+      "date": "2021-12-17T16:17:50Z",
+      "sha": "f2d0145ec073c602ed06c640d66c7bf50e14b1fb",
+      "message": "fix deadlock when call close()\n\n  When calling the close() function (by a different thread), a lock (mutex) is taken at\n  the start of this function which closes the socket and waits the end of io_service thread.\n\n  Closing the socket causes the 'Operation aborted' error in do_recv() function called by\n  io_service thread which in turn calls the close() function: sthis->close().\n\n  This causes a 'deadlock'.\n\n  fix: Reduce the scope of the lock in the close() function so that it is released before\n  waiting for the thread to end.",
+      "files_changed": 1,
+      "additions": 12,
+      "deletions": 10,
+      "commit_type": "code"
+    },
+    {
+      "author": "rob-clarke",
+      "date": "2019-08-30T12:34:18Z",
+      "sha": "a39bf315c4235664630907faa26ccb3b80b87411",
+      "message": "Add boolean to check if IMU data has been received\n\nFollow sensor_msgs/Imu convention when data not present",
+      "files_changed": 1,
+      "additions": 12,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "karthikdesai",
+      "date": "2019-06-11T10:50:13Z",
+      "sha": "27bb3626360b8984643b7ff6430226ac7c21e3f0",
+      "message": "Added NAV_CONTROLLER_OUTPUT Plugin",
+      "files_changed": 5,
+      "additions": 92,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "OroelNaitec",
+      "date": "2022-02-07T18:44:26Z",
+      "sha": "ca01ab4e5adf05513df4a7e2678e7daae67d232f",
+      "message": "Bugfix: wrong interpolation when the reduction ratio (scale_factor) is not integer.",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 7,
+      "commit_type": "code"
+    },
+    {
+      "author": "okalachev",
+      "date": "2018-01-13T08:23:16Z",
+      "sha": "7426a6a75ceea449824b3a9c681ea8b955d3ae45",
+      "message": "manual_control: `send` topic for sending MANUAL_CONTROL message to FCU",
+      "files_changed": 1,
+      "additions": 18,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "AndersonRayner",
+      "date": "2021-12-14T20:48:26Z",
+      "sha": "7538b1474c61ef57d4af1e5d6c190312388bd90a",
+      "message": "Add plugin for reporting terrain height estimate from FCU",
+      "files_changed": 5,
+      "additions": 91,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "BOB4Drone",
+      "date": "2021-12-03T04:33:33Z",
+      "sha": "4c94dd001f2dbfe5a607f6f2e1b2f9220753b4ff",
+      "message": "fix bof",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Hs293Go",
+      "date": "2021-12-06T16:34:27Z",
+      "sha": "5a3a35fe0bd03f0339e73dcdb9960d3f1abbebae",
+      "message": "plugin: setpoint_raw: move getParam to initializer\n\nRepeatedly getting the thrust_scaling parameter in a callback that can\nbe invoked from a fast control loop may fail spuriously and trigger a\nfatal error",
+      "files_changed": 1,
+      "additions": 11,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "windelbouwman",
+      "date": "2021-12-07T13:42:00Z",
+      "sha": "fd4121de23b1afbb1fea0d2018a6b259945e7873",
+      "message": "Fix spurious bug because class field was uninitialized.",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Anne Wendt",
+      "date": "2021-12-01T10:48:08Z",
+      "sha": "4f2e723f2d4de476ac773154a58579890fcf46cf",
+      "message": "update Contributing.md",
+      "files_changed": 1,
+      "additions": 61,
+      "deletions": 31,
+      "commit_type": "docs"
+    },
+    {
+      "author": "asherikov",
+      "date": "2021-11-26T13:36:20Z",
+      "sha": "126b752879cb151833d2c0a8b73dc957221edcec",
+      "message": "Fix multiple bugs\n\n- fix bad_weak_ptr on connect and disconnect\n- introduce new API to avoid thread race when assigning callbacks\n- fix uninitialized variable in TCP client constructor which would\nrandomly block TCP server\n\nThis is an API breaking change: if client code creates connections using\nmake_shared<>() instead of open_url(), it is now necessary to call new\nconnect() method explicitly.",
+      "files_changed": 11,
+      "additions": 141,
+      "deletions": 81,
+      "commit_type": "code"
+    },
+    {
+      "author": "Jaeyoung-Lim",
+      "date": "2019-06-01T05:36:10Z",
+      "sha": "5e2d96b3bee898868b5d85111aff0f644227dd13",
+      "message": "Add setpoint_trajectory plugin template",
+      "files_changed": 3,
+      "additions": 173,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "shubham-shahh",
+      "date": "2021-10-07T11:31:06Z",
+      "sha": "28a1b160968e4738dbabfdb2cb5bd4660186e1f2",
+      "message": "Update param.py",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "marcelino-pensa",
+      "date": "2021-09-22T15:35:39Z",
+      "sha": "1bfd755f41e8a038e9d203949bf4feff6c360fb7",
+      "message": "Remove reference",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Val Doroshchuk",
+      "date": "2021-09-22T13:44:54Z",
+      "sha": "5d1efe4919b38e5b68646ad5841f7e164b203b10",
+      "message": "Show ENOTCONN error instead of crash\n\nWhen a client suddenly drops the connection,\nsocket.shutdown() will throw an exception:\nboost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::system::system_error> >\n  what():  shutdown: Transport endpoint is not connected\n\nShowing an error in this common case looks more reasonable than crashing.",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "dayjaby",
+      "date": "2019-08-14T11:48:00Z",
+      "sha": "c05d19340b90807d5b81c49866fe4c1ab09e4570",
+      "message": "added amount of satellites to global_position/raw/",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "RicardoM17",
+      "date": "2020-08-03T08:27:32Z",
+      "sha": "00485f94bc241097314214cd8ed2d85f2b929370",
+      "message": "Add esc_status plugin.\n\nSigned-off-by: Ricardo Marques <marques.ricardo17@gmail.com>",
+      "files_changed": 8,
+      "additions": 208,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "André Filipe",
+      "date": "2021-07-20T14:26:26Z",
+      "sha": "5c480be751f024b68abb9707b6a7a605a2df8676",
+      "message": "Add compass calibration feedback status. Add service to call the 'Next' button in calibrations.",
+      "files_changed": 5,
+      "additions": 150,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "abhi2198",
+      "date": "2021-07-26T21:21:21Z",
+      "sha": "d5a879d93ccb83343f53b514421824264a98562d",
+      "message": "fixed some compile errors",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "uvrussell",
+      "date": "2021-07-26T18:48:07Z",
+      "sha": "a07965f675fd4697f4057321f47f73d7d28f372c",
+      "message": "added esc_telemetry plugin",
+      "files_changed": 6,
+      "additions": 128,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Peter010103",
+      "date": "2021-08-24T16:53:33Z",
+      "sha": "52cb4b193a4b9e4b4cf84aed9252d25b17212315",
+      "message": "Boilerplate vision_pose_estimate plugin",
+      "files_changed": 3,
+      "additions": 32,
+      "deletions": 106,
+      "commit_type": "docs"
+    },
+    {
+      "author": "BV-OpenSource",
+      "date": "2021-07-29T09:10:40Z",
+      "sha": "7df029f76d90c44cd400cc4e804748fefa194a3b",
+      "message": "Exclude changes to launch files.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "sfalexrog",
+      "date": "2019-02-10T16:18:53Z",
+      "sha": "a8a30b3caca5ac92126cd36a0eefc6e469a39829",
+      "message": "mavros_msgs: Fix line endings for OpticalFlowRad message",
+      "files_changed": 1,
+      "additions": 14,
+      "deletions": 14,
+      "commit_type": "code"
+    },
+    {
+      "author": "ThomasRigi",
+      "date": "2021-04-15T07:56:26Z",
+      "sha": "7e26c548e66f38aac133bc544bdc59547ebba754",
+      "message": "convert whole expression to mm",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Charlie-Burge",
+      "date": "2021-03-30T08:12:19Z",
+      "sha": "8acad0e8df5dc39d0758146fac5d623451851473",
+      "message": "MissionBase: breakout mission protocol from waypoint.cpp",
+      "files_changed": 2,
+      "additions": 958,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "mrpollo",
+      "date": "2021-03-01T22:08:37Z",
+      "sha": "ceb53a42102eb3f6f63b561a5c0e82cb38a5c5f6",
+      "message": "README: Update PX4 Autopilot references\n\nMuch needed fixes to clarify the project is named correctly throughout the README\r\nfor the PX4 Autopilot, QGroundControl, and MAVLink",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 5,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Tobias-Fischer",
+      "date": "2021-03-03T00:04:43Z",
+      "sha": "48e545b5bcb508d28f3fe9a270636c37e3ccc541",
+      "message": "Fix https://github.com/mavlink/mavros/issues/849",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "zhouzhiwen2000",
+      "date": "2021-02-13T21:54:47Z",
+      "sha": "e88158854cf19f099c61ca70e5457a995f74004b",
+      "message": "fix inconsistency in direction of yaw when using set_position in BODY frames and fix problems with yaw in setponit_raw",
+      "files_changed": 4,
+      "additions": 33,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "John Gifford",
+      "date": "2021-02-10T10:35:32Z",
+      "sha": "7ccca3eac1c8dda6c6972b0a971223bfea254d79",
+      "message": "Fixed a bug in mavros_extras/src/plugins/odom.cpp by switching lines 175 and 180.\n\nRationale: The pose covariance matrix published to the /mavros/odometry/in topic is exclusively zeros. This is because the transformation matrix r_pose is initialised as zeros (line 140), then applied to the covariance matrix cov_pose (line 176) and then populated (line 180). Clearly the latter two steps should be the other way around, and the comments in the code appear to suggest that this was the intention, but that lines 175 and 180 were accidentally written the wrong way around. Having switched them, the pose covariance is now published to /mavros/odometry/in as expected.\n\nJohnG897",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ashwinvk94",
+      "date": "2021-01-19T14:32:29Z",
+      "sha": "341bac3b4180f0e0f936f25342e14dd88b3f83b1",
+      "message": "bugfix - add estimator type in odom message\n\nAdd missing estimator_type field in  Odometry message.\r\nIssue #1524",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "krisklau",
+      "date": "2020-09-22T12:26:11Z",
+      "sha": "b718ae9dff60b9dd9bb677e035b9a26537d3fd7d",
+      "message": "mavros_extras: distance_sensor: Don't publish data when orientation configuration does not match incomming data.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Marcelino",
+      "date": "2020-06-18T20:12:00Z",
+      "sha": "a9f1278ab4a9a03af0cedaa1f717cffde85e4519",
+      "message": "allow mavros to compile in CI environment",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 9,
+      "commit_type": "docs"
+    },
+    {
+      "author": "bart02",
+      "date": "2020-08-31T13:47:17Z",
+      "sha": "e0267c3725e2f9f14d853d7727ff70b0fd9e3662",
+      "message": "Add error message",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "oysteinskotheim",
+      "date": "2020-02-14T08:44:22Z",
+      "sha": "0d9e58f6584eb7b4e4e112395627dee22098e249",
+      "message": "Fixed compilation error: publish std_msgs::String, not std::string for gcs_ip",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "ajshank",
+      "date": "2020-08-01T01:33:17Z",
+      "sha": "973bad2ac29d433195bd685bafe6778cecac49bf",
+      "message": "adding support for publishing rtkbaseline msgs over ROS",
+      "files_changed": 3,
+      "additions": 64,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "xuyuan",
+      "date": "2020-05-04T21:11:22Z",
+      "sha": "91e733475bdabd20da586d7c3fc126f5a070cd35",
+      "message": "transform based on coordinate_frame",
+      "files_changed": 1,
+      "additions": 10,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "bromeara",
+      "date": "2020-01-23T13:46:31Z",
+      "sha": "dbdc72bfa0a990bd398fec95778c584409333bce",
+      "message": "Replaced MISSION_ITEM",
+      "files_changed": 1,
+      "additions": 184,
+      "deletions": 10,
+      "commit_type": "code"
+    },
+    {
+      "author": "mrivi",
+      "date": "2018-01-16T12:50:07Z",
+      "sha": "e4343a6ee90a83cb2b12d45846e8252ad337af20",
+      "message": "mavros: default fcu_protocol parameter to mavlink v2.0",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "mattkoos",
+      "date": "2020-03-31T18:21:10Z",
+      "sha": "166b347bde8b61a06af02188fe2dc2a881d54446",
+      "message": "updates apmrover2 modes and allows for arduboat mode changes",
+      "files_changed": 1,
+      "additions": 14,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "Alamoris",
+      "date": "2020-02-17T11:23:29Z",
+      "sha": "62ae4b5881d34def262167ddc69eab525cf9948b",
+      "message": "Visualization of the direction of the device",
+      "files_changed": 1,
+      "additions": 24,
+      "deletions": 7,
+      "commit_type": "code"
+    },
+    {
+      "author": "aykutkabaoglu",
+      "date": "2020-03-26T14:12:41Z",
+      "sha": "52c7b2a8453081ded68dccae0fc7a264d36d9f24",
+      "message": "mavsafety kill feature for emergency stop",
+      "files_changed": 1,
+      "additions": 14,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "agoeckner",
+      "date": "2020-02-19T14:39:25Z",
+      "sha": "dcef73674718a80202d68336cb0aa6e88142a71d",
+      "message": "Include trajectory_msgs in CMakeLists.txt\n\nThis allows build to complete successfully.",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jgoppert",
+      "date": "2016-04-20T20:49:58Z",
+      "sha": "e36610fb190335a5e296b2c77c993b3cb950bbfb",
+      "message": "Fix for kinetic std::isnan.",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "saifullah3396",
+      "date": "2019-11-14T10:17:01Z",
+      "sha": "5e9c1fbcbb924f72cf7fba77daf504ee26827383",
+      "message": "Added a publisher for estimator status message received from mavlink in sys_status.",
+      "files_changed": 3,
+      "additions": 38,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "kamilritz",
+      "date": "2019-10-07T07:29:40Z",
+      "sha": "425bf490bbcf70fd8971cb8971ca9b90364243a7",
+      "message": "Enable publishing multiple static tfs at once, publish standard static tfs",
+      "files_changed": 2,
+      "additions": 30,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "koby08",
+      "date": "2019-07-31T11:13:44Z",
+      "sha": "56d782d4bc55209550cf3d2628bb1a6ae94a384c",
+      "message": "libmavconn: simplify parse_buffer, and fix dropped_packets and parse_error counters\n\nCurrently the dropped_packets & parse_error counters are always published as 0 in mavros_diag.cpp.\nThis seems to be caused by using the wrong status struct.\n\nSeems like mavros was editing m_status after mavlink_frame_char_buffer. This struct\nseems to be the parsing state, and looks like it shouldn't be modified by the caller (for example\nstatus->parse_error is zeroed out in the end of mavlink_frame_char_buffer).\nAlso, the crc & signature checks done in mavros seems redundant.\n\nr_mavlink_status seems to be the struct that holds the mavlink connection information, therefore I\nchanged get_status to return it instead.\n\nThis fixes #1285.",
+      "files_changed": 2,
+      "additions": 10,
+      "deletions": 20,
+      "commit_type": "code"
+    },
+    {
+      "author": "TSC21",
+      "date": "2014-08-14T12:55:50Z",
+      "sha": "46c43105f4a8fb70ac1d051e3518045a9e42f615",
+      "message": "Update on setpoint_attitude plugin\n\n* changed Twist to TwistStamped\n* added reverse_throttle option for throttle control\n* use cmd_vel as the same topic to control linear a angular velocities (it's commonly used by controllers)\n* added normalization filter to thrust",
+      "files_changed": 1,
+      "additions": 29,
+      "deletions": 10,
+      "commit_type": "code"
+    },
+    {
+      "author": "szobov",
+      "date": "2019-04-19T13:38:30Z",
+      "sha": "cb39e6c7274cd4f38f97826866f27af700eb5ca3",
+      "message": "mavros/src/plugins/command.cpp: log if command's wait ack timeout (#1222)\n\n* mavros/src/plugins/command.cpp: log if command's wait ack timeout\r\n\r\n* mavros/src/plugins/command.cpp: log timeout in wait_ack_for",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "baumanta",
+      "date": "2018-10-24T12:38:51Z",
+      "sha": "5352cc412220580e094b9bbbb50b6538f9974618",
+      "message": "Add message for avoidance status",
+      "files_changed": 2,
+      "additions": 13,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "nsteele",
+      "date": "2019-08-16T18:32:47Z",
+      "sha": "e50aae1217d442e2fef8ef6147c9d756e2a7ab10",
+      "message": "Fix global origin conversion to ecef (was using amsl where hae was required)\n\nSummary: Fix global origin conversion to ecef (was using amsl where hae was required)",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Lucas Hill",
+      "date": "2019-06-17T21:35:22Z",
+      "sha": "1dada7e2e91aad5178ff0030ea3d99c1d1e8ac14",
+      "message": "Removed tf loop",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "ericjohnson97",
+      "date": "2019-07-09T00:03:52Z",
+      "sha": "0b79098b049be88a2b0533080bbce12cdf199ab1",
+      "message": "added a check for gps fix before setting origin for global_position/local odometry topic",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "rapsealk",
+      "date": "2018-11-06T10:24:33Z",
+      "sha": "7a9dbd70015b4908d375680818ddae8eab1a5f13",
+      "message": "fix: a typing error \"alredy\" to \"already\"",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "jkflying",
+      "date": "2019-05-22T16:11:27Z",
+      "sha": "d27e5761280fe21b6e6721c3ff4a2a999b7a4ed9",
+      "message": "Switch to double-reflections instead of axes-reassignments",
+      "files_changed": 1,
+      "additions": 29,
+      "deletions": 11,
+      "commit_type": "code"
+    },
+    {
+      "author": "ShingoMatsuura",
+      "date": "2017-12-09T03:44:00Z",
+      "sha": "edb5750ed3161cc1c48a713e378243cfdbfd36f2",
+      "message": "move member variable earth initialization",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "jmachuca77",
+      "date": "2019-05-03T19:23:27Z",
+      "sha": "206c91cad4858e4d55d6277f4946ad4735c83c5b",
+      "message": "Fixed an issue when the laser scan topic contains NaN values they where being sent as 0 distances. (#1218)",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Nico van Duijn",
+      "date": "2019-05-03T13:30:04Z",
+      "sha": "18b6b95478a170cf53c74dbbe26eb7842dd95aca",
+      "message": "Filter heartbeats by component id as well\n\nThis addresses #1107 and #1227, by filtering incoming heartbeats\nby component ids before publishing the state.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "jveitchmichaelis",
+      "date": "2019-03-20T15:48:51Z",
+      "sha": "1e9d805632eb6133c46859104f0fcec2778accdc",
+      "message": "Fix leading space before setpoint_raw\n\nThis causes an error when running `roslaunch`:\r\n\r\n```\r\nerror loading <rosparam> tag:\r\n        file /opt/ros/kinetic/share/mavros/launch/apm_config.yaml contains invalid YAML:\r\nwhile parsing a block mapping\r\n  in \"<string>\", line 4, column 1:\r\n    startup_px4_usb_quirk: false\r\n    ^\r\nexpected <block end>, but found '<block mapping start>'\r\n  in \"<string>\", line 103, column 2:\r\n     setpoint_raw:\r\n     ^\r\nXML is <rosparam command=\"load\" file=\"$(arg config_yaml)\"/>\r\nThe traceback for the exception was written to the log file\r\n```",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "Mike Lautman",
+      "date": "2019-02-27T19:31:53Z",
+      "sha": "1278df66fe418f062d3e4d3a99591cbc6450b351",
+      "message": "updating msg and srv list",
+      "files_changed": 2,
+      "additions": 17,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mikaelarguedas",
+      "date": "2018-04-12T20:04:48Z",
+      "sha": "28b43d144e2ac6963111904a8381c09e93c17689",
+      "message": "disable all packages but messages",
+      "files_changed": 4,
+      "additions": 0,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "khancyr",
+      "date": "2016-05-25T09:21:33Z",
+      "sha": "77e77a0b3173fde564e414090f61c8acf3f5324b",
+      "message": "Test_mavros : fix compilation on gcc6.1",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "test"
+    },
+    {
+      "author": "KiloNovemberDelta",
+      "date": "2019-02-12T13:16:42Z",
+      "sha": "762895ccc01a3ae3b2de9a3f4dfc894afdd65668",
+      "message": "Update apm_config.yaml\n\nSetting thrust_scaling in the setpoint_raw message (in my case, to use /mavros/setpoint_raw/attitude)\r\nWithout it, when using Gazebo, get the following problem\r\n\"Recieved thrust, but ignore_thrust is true: the most likely cause of this is a failure to specify the thrust_scaling parameters on px4/apm_config.yaml. Actuation will be ignored.\" from the function void attitude_cb in setpoint_raw.cpp (http://docs.ros.org/kinetic/api/mavros/html/setpoint__raw_8cpp_source.html)",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "Adam Watkins",
+      "date": "2019-02-07T21:43:39Z",
+      "sha": "74616828ade00df6ea1ac965aa5c6abd866cc46d",
+      "message": "Issue #1174 Added dependency for mavros_msgs and mavros",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "rmackay9",
+      "date": "2016-12-09T02:14:58Z",
+      "sha": "b3c35c1795c73e1e4ef2223fde0e7a7a30964497",
+      "message": "lib: update ArduPilot modes",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Jan Heitmann",
+      "date": "2019-01-29T16:38:50Z",
+      "sha": "1b55eb543d8512640e794868e7cb997433bf75dd",
+      "message": "added tf2_eigen to dependencies, so that building with catkin tools does not fail anymore",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "angri",
+      "date": "2018-12-12T15:07:10Z",
+      "sha": "cd8fc2d93530c09d35fe74f819f2b5ace3905895",
+      "message": "plugin:param rerequest timed out parameters asap\n\nAvoid vaiting for the next timeout",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "pavloblindnology",
+      "date": "2017-11-01T11:23:41Z",
+      "sha": "4fbf58a5f8cd461db95a60b4904fee6d5badcfdb",
+      "message": "ENU<->ECEF transforms fix. (#847)\n\n* ENU<->ECEF transforms fix.\r\n\r\n* Changes after review. Unit tests added.",
+      "files_changed": 5,
+      "additions": 149,
+      "deletions": 69,
+      "commit_type": "code"
+    },
+    {
+      "author": "Kiwa21",
+      "date": "2018-12-09T17:59:34Z",
+      "sha": "6d30e80e825578a3ab511d5988b20d51197940be",
+      "message": "sys_status : add MAV_TYPE as a parameter",
+      "files_changed": 4,
+      "additions": 132,
+      "deletions": 20,
+      "commit_type": "config"
+    },
+    {
+      "author": "shylent",
+      "date": "2018-08-11T15:31:09Z",
+      "sha": "0b74e9d8e56d1d9b0f48a1591dd9b97961905bd2",
+      "message": "mavros_extras/log_transfer: Log transfer plugin",
+      "files_changed": 3,
+      "additions": 129,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "xinnad",
+      "date": "2018-11-29T18:51:39Z",
+      "sha": "ed19640e39d3a0f772997fcb5eabd6b14b468546",
+      "message": "Fixed NavSatFix bug in mavcmd takeoffcur and landcur",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "fnoop",
+      "date": "2017-11-20T11:16:06Z",
+      "sha": "129f38afdd37e427765d9935d21b6a8a2660e23d",
+      "message": "Ensure dataset files exist, not just directories #867",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Pedro-Roque",
+      "date": "2017-11-17T22:11:09Z",
+      "sha": "48a7e3b7ed5bf80b4bfd53043b52777be24d69a3",
+      "message": "Pushing troubleshooting section for Mavros.",
+      "files_changed": 1,
+      "additions": 14,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Gaogeolone",
+      "date": "2018-10-31T11:07:04Z",
+      "sha": "79cf74a8dbb804a3451c44e3802c24e44a53489e",
+      "message": "with this fix ,it will avoid eigen error on 32 bits system",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Moritz Zimmermann",
+      "date": "2018-10-22T12:42:07Z",
+      "sha": "5ebcec91443e2b5291c6214da7813f7c42a98f26",
+      "message": "Add service to send mavlink TRIGG_INTERVAL commands\n\nAdapt trigger_control service to current mavlink cmd spec. Add a new service to change trigger interval and integration time",
+      "files_changed": 5,
+      "additions": 35,
+      "deletions": 7,
+      "commit_type": "docs"
+    },
+    {
+      "author": "kshahar",
+      "date": "2018-10-14T22:53:32Z",
+      "sha": "1e19a1b8d73e6c380ca31f84a12c6036313cb7de",
+      "message": "bind should be called after reuse_address is set",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "dgonano",
+      "date": "2018-09-06T20:21:10Z",
+      "sha": "a6bf6d3a4baa13ab4aa9ddffcbb4f0d7597a2720",
+      "message": "Fix odom message to use covariance from msg",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "AlexisTM",
+      "date": "2017-08-25T11:01:35Z",
+      "sha": "916525db1ab497ce66f8a1caa8a77d355b5d196c",
+      "message": "Solving default frame consistency in config files",
+      "files_changed": 2,
+      "additions": 8,
+      "deletions": 8,
+      "commit_type": "config"
+    },
+    {
+      "author": "mhkabir",
+      "date": "2014-10-06T14:57:36Z",
+      "sha": "c3336e6b5bf0c435af79ee8c6af77cb04d35b908",
+      "message": "Initial sys_time plugin import",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 44,
+      "commit_type": "code"
+    },
+    {
+      "author": "Pavlo Kolomiiets",
+      "date": "2018-05-25T08:45:59Z",
+      "sha": "37dc5cb0883e25065b2e15b1ab199eec8a3ca4b0",
+      "message": "GPS accuracy wo approximations (#1034)\n\n* GPS horizontal and vertical accuracy are based now on h_acc, v_acc of GPS_RAW_INT.\r\n\r\n* GPS horizontal and vertical accuracy are based now on h_acc, v_acc of GPS_RAW_INT if on mavlink v2.0,\r\nor on DOP values otherwise.\r\n\r\n* GPS accuracy update.",
+      "files_changed": 3,
+      "additions": 14,
+      "deletions": 5,
+      "commit_type": "config"
+    },
+    {
+      "author": "Thomas Stastny",
+      "date": "2018-04-13T07:19:28Z",
+      "sha": "815e26ddc89da2218805b8cedd35c62bff99d457",
+      "message": "imu plugin: publish differential pressure (#1001)\n\n* imu plugin: publish differential pressure\r\n\r\n* imu plugin: fix doxygen snippets",
+      "files_changed": 1,
+      "additions": 35,
+      "deletions": 14,
+      "commit_type": "code"
+    },
+    {
+      "author": "Sondre Engebråten",
+      "date": "2018-04-23T22:26:48Z",
+      "sha": "d45f5ca595fc16a3359f6a4fd3fee08b7ae81699",
+      "message": "Updated apm.launch to forward new fcu_protocol parameter",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Timo Hinzmann",
+      "date": "2018-04-20T20:07:13Z",
+      "sha": "76b4b677864d0d6a3d20a4c719a2eb37b9dcabd6",
+      "message": "Split temperature publisher.",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "lamping7",
+      "date": "2018-01-26T12:08:30Z",
+      "sha": "30ecc2087f58f2a2dc916308a372ceb9d4fab89b",
+      "message": "libmavconn: warn->debug table entry message",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "korigod",
+      "date": "2018-03-23T00:17:53Z",
+      "sha": "3497a28fd2f51de9089dabaeab283105d25238c6",
+      "message": "plugin: ftp: fix typo",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "anassinator",
+      "date": "2018-02-11T22:02:28Z",
+      "sha": "95d44abb54350815b2c5585ac96b40a56d3f4e96",
+      "message": "Add ability to send STATUSTEXT messages",
+      "files_changed": 3,
+      "additions": 43,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "bulwahn",
+      "date": "2017-09-04T15:17:12Z",
+      "sha": "658347978fc97675dbdff480f4557eb772e915dc",
+      "message": "CMake: explicitly link the atomic library (#797)\n\nFor arm & mips architecture, the linker must explicitly be asked to\r\nlink the atomic library (with `-latomic`).\r\n\r\nOtherwise, the linking fails with:\r\n\r\n```\r\n| devel/lib/libmavros.so: undefined reference to `__atomic_load_8'\r\n| devel/lib/libmavros.so: undefined reference to `__atomic_store_8'\r\n| collect2: error: ld returned 1 exit status\r\n```\r\n\r\nLinking `atomic` unconditionally as library is strictly needed only\r\nfor arm & mips, but it seems not to imply any further differences\r\nwith other architectures. Hence, this commit simply adds `atomic`\r\nunconditionally for a uniform handling of all machine architectures.\r\n\r\nThis is an alternative solution to the proposed solution in #790.\r\n\r\nThe issue was discovered cross-compiling mavros in meta-ros, the\r\nOpenEmbedded layer for ROS. Some further pointers are available at:\r\n\r\n  https://github.com/bmwcarit/meta-ros/issues/525\r\n\r\nSigned-off-by: Lukas Bulwahn <lukas.bulwahn@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ChristophTobler",
+      "date": "2017-12-15T14:59:36Z",
+      "sha": "55ee276a83b4a3e9a94caaf34c430f556ac07118",
+      "message": "IMU plugin: add raw IMU conversion for PX4",
+      "files_changed": 1,
+      "additions": 10,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "James Mare",
+      "date": "2017-08-10T01:59:58Z",
+      "sha": "f35223946e673aa47c919b37b20917c6ce733c43",
+      "message": "Partial Waypoint: handle service call in waypoint plugin",
+      "files_changed": 1,
+      "additions": 57,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "andresR8",
+      "date": "2017-12-06T00:47:57Z",
+      "sha": "5a5df4e39a718c02312c151884c88b3007b452d5",
+      "message": "update script to support cycle_time on cmd trigger_control",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "patrickelectric",
+      "date": "2017-10-21T20:40:13Z",
+      "sha": "7d790dc5a0810cb99c2f9604761c979076e0d1c7",
+      "message": "Update geographiclib script to work with zsh",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "JonasVautherin",
+      "date": "2017-09-07T07:36:40Z",
+      "sha": "22d487a5b36ac9ba0e141baf20c79e5ef289a95e",
+      "message": "scripts: fix typos and improve help messages consistency\n\ncommad -> command\nsafty -> safety\n\nStart help messages with a capital letter.",
+      "files_changed": 5,
+      "additions": 41,
+      "deletions": 44,
+      "commit_type": "code"
+    },
+    {
+      "author": "gui2dev",
+      "date": "2017-09-27T01:50:18Z",
+      "sha": "6d824f5508f775574cebcdd15e2b0c0b62aea3ea",
+      "message": "plugin waypoint: Add MISSION_ITEM_REACHED publisher\n\n* Changes to be committed:\n\tmodified:   mavros/src/plugins/waypoint.cpp\n\tmodified:   mavros_msgs/CMakeLists.txt\n\tnew file:   mavros_msgs/srv/WaypointReached.srv\n* change reached service name to classic topic\n* Changed reached service to topic\n* removed unused file\n* Removed WaypointReached service\n* Change reached message type to std_msgs::UInt16\n* Delete WaypointReached.srv\n* Restore WaypointPush.srv\n* Fix tipo\n* Update waypoint.cpp",
+      "files_changed": 1,
+      "additions": 17,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Andres Rengifo",
+      "date": "2017-09-23T23:47:56Z",
+      "sha": "70df176dec4f6e65c8139e6627ee210ca6c9f88d",
+      "message": "fix: attitude callback trigger",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "JamesStewy",
+      "date": "2017-08-09T07:55:51Z",
+      "sha": "e36b92a22dc176b8a309073b8e8dcf4e51f3030a",
+      "message": "Partial waypoint: added partial updating to mavwp",
+      "files_changed": 4,
+      "additions": 38,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "sputnick1124",
+      "date": "2017-05-16T19:48:52Z",
+      "sha": "10076d0a2596d28813e62a8bfa6eaece3f988fac",
+      "message": "update ExtendedState with new MAV_LANDED_STATE enum",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "ffurrer",
+      "date": "2017-02-07T10:30:31Z",
+      "sha": "31ad11dc57aaf7dfac6f8d810162184b0f4d3ef4",
+      "message": "lib #626: Porting of PR #650 - Fix OSX pthread set name.",
+      "files_changed": 2,
+      "additions": 14,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "staroselskii",
+      "date": "2016-10-12T10:28:36Z",
+      "sha": "556dfa4f9a1a6c0f1cb88016565f6fbd4a5dec91",
+      "message": "README: fixed a couple of typos\n\nit's -> its (where appropriate)\r\ncontain -> contains (ditto)",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 5,
+      "commit_type": "docs"
+    },
+    {
+      "author": "vilhjalmur89",
+      "date": "2016-08-26T16:03:54Z",
+      "sha": "14ede4cdf4651280e1a3257104afebc82639972a",
+      "message": "Fake gps plugin",
+      "files_changed": 3,
+      "additions": 195,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "bkueng",
+      "date": "2016-09-06T19:00:39Z",
+      "sha": "7a2ed24b55c534978ef7ca00a73dcd42f467a885",
+      "message": "add hil_actuator_controls mavlink message",
+      "files_changed": 6,
+      "additions": 90,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "LorenzMeier",
+      "date": "2015-07-06T09:58:12Z",
+      "sha": "0ec1da0b1f7aaed96f88b36ec8291d6181ccd2d6",
+      "message": "Perform the autopilot version request as broadcast",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "pvechersky",
+      "date": "2016-06-22T15:20:01Z",
+      "sha": "45bb1afc832a3d00a0904fc2e0d4907c535fccce",
+      "message": "Added a plugin that publishes HIL_CONTROLS as ROS messages",
+      "files_changed": 5,
+      "additions": 99,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "justinthomas",
+      "date": "2016-04-29T17:59:23Z",
+      "sha": "b96bf672a718b9f0c9694e4314283e385ba96231",
+      "message": "Fix bug with orientation in setpoint_raw plugin\n\nFixes a bug where the ned_desired_orientation was not actually passed into set_attitude_target. Instead, the desired_orientation (wrong frame) was passed.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "kartikmohta",
+      "date": "2016-03-28T00:53:24Z",
+      "sha": "29af3a3c14da0e5b92ebad40b8befa8e0141b63d",
+      "message": "MAVConnSerial: Stop io_service before closing serial device (Fixes #130)\n\nThe serial device was closed before calling io_service.stop() so io_service::run() never returned, leading to hang on join in MAVConnSerial::close()\r\n\r\nBacktrace:\r\n#0  0x00007f80217e966b in pthread_join (threadid=140188059690752, thread_return=0x0) at pthread_join.c:92\r\n#1  0x00007f80215602d7 in std::thread::join() ()\r\n#2  0x00007f8020ccc674 in mavconn::MAVConnSerial::close() ()\r\n#3  0x00007f8020ccc6f5 in mavconn::MAVConnSerial::~MAVConnSerial() ()\r\n#4  0x00007f8020cc7b2e in boost::detail::sp_counted_impl_pd<mavconn::MAVConnSerial*, boost::detail::sp_ms_deleter<mavconn::MAVConnSerial> >::dispose() ()\r\n#5  0x000000000040ee0a in boost::detail::sp_counted_base::release() [clone .part.27] [clone .constprop.472] ()\r\n#6  0x000000000041eb22 in mavros::MavRos::~MavRos() ()\r\n#7  0x000000000040eb38 in main ()",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "francois",
+      "date": "2016-02-03T10:47:16Z",
+      "sha": "cba7e30eceea18592381d1ff543eab08d2be1f0d",
+      "message": "configurable vehicle model",
+      "files_changed": 1,
+      "additions": 92,
+      "deletions": 91,
+      "commit_type": "code"
+    },
+    {
+      "author": "gauxonz",
+      "date": "2016-03-02T14:08:02Z",
+      "sha": "1df66a048402b3339bd70ecf20bfbc7a509304ca",
+      "message": "quality added",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "joshvillbrandt",
+      "date": "2016-02-05T02:14:51Z",
+      "sha": "71ece95d1778d6c2ea47bfae2bf904a48e69c8cb",
+      "message": "Treat submarine vehicles like copter vehicles",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Eddy",
+      "date": "2015-11-02T17:12:40Z",
+      "sha": "33edf33451f5fb65ef02d829e37692aa2a28c707",
+      "message": "Added velocity output of FCU's local position estimate to ROS node",
+      "files_changed": 1,
+      "additions": 17,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "AndreasAntener",
+      "date": "2015-08-31T15:59:22Z",
+      "sha": "f25a8776d542f714755098350b492fd41de5cb02",
+      "message": "updated mavlink byte buffer conversion",
+      "files_changed": 1,
+      "additions": 13,
+      "deletions": 18,
+      "commit_type": "code"
+    },
+    {
+      "author": "jonbinney",
+      "date": "2015-09-22T23:17:02Z",
+      "sha": "3a4e6f1f0d262c0be244d1b277d8ab746fcb5f70",
+      "message": "Mavros library depends on mavros_msgs headers\n\nAdding this dependency makes sure that mavros_msgs message headers are\ngenerated before the mavros library is built, since it needs those\nheaders.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "v01d",
+      "date": "2015-08-09T16:16:22Z",
+      "sha": "cacab176e316593756b41a35dcabb0274e44a26b",
+      "message": "opencv 3.0/2.4 header compatibility",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "devbharat",
+      "date": "2015-07-20T02:56:02Z",
+      "sha": "08750fa3683ad7a50753afece02964c85b78b8d5",
+      "message": "Added launch file for PX4 posix sitl to launch gcs_bridge node for bridging posix and gazebo",
+      "files_changed": 1,
+      "additions": 11,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "tonybaltovski",
+      "date": "2014-08-14T18:04:32Z",
+      "sha": "3728fa8c08eba7aea02a03e69a3776a273f4ff23",
+      "message": "Added mocap_pose_estimate plugin.",
+      "files_changed": 1,
+      "additions": 119,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "andre-nguyen",
+      "date": "2015-08-08T00:52:57Z",
+      "sha": "c15904101ca0ecc8aa13712d92cc5382ddc0af18",
+      "message": "fix orientation empty error",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "anuragmakineni",
+      "date": "2015-07-28T18:18:43Z",
+      "sha": "248cb389b122fa94a68578a48e50d4f240df4629",
+      "message": "Fixed bug in send_attitude_target()\n\nThe transformed quaternion wasn't being passed to set_attitude_target(), resulting in an incorrect attitude setpoint. I've now fixed this issue.",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "wangsen1312",
+      "date": "2015-07-18T01:07:14Z",
+      "sha": "72b789553afe6309239c6e445eeaba59eda62491",
+      "message": "Update iris_empty_world_offboard_ctl.launch",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "mstuettgen",
+      "date": "2015-02-28T22:03:06Z",
+      "sha": "7d8c8b9678626cafd1542c0b2a1eef6a042ffda6",
+      "message": "inital draft for set_actuator_control plugin",
+      "files_changed": 2,
+      "additions": 145,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "claymation",
+      "date": "2015-02-25T15:34:17Z",
+      "sha": "7912bc32e5a5ab76a15cbf07b835d1cc0aa5af2a",
+      "message": "Document launch files",
+      "files_changed": 1,
+      "additions": 16,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "gitter-badger",
+      "date": "2015-01-13T12:31:41Z",
+      "sha": "ddfc474e96c18332b6105547370fa799773d17ab",
+      "message": "Added Gitter badge",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mthz",
+      "date": "2014-08-14T06:56:52Z",
+      "sha": "52a49a7315fa427c691c96cb3499862300866833",
+      "message": "mavros -> ros-message parameter fix\n\nonly parameter1 was forwarded into the ros message",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 9,
+      "commit_type": "code"
+    }
+  ]
+}

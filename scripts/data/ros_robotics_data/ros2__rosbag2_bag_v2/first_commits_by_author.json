@@ -1,0 +1,151 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T10:24:26Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros2",
+    "repo": "rosbag2_bag_v2"
+  },
+  "data": [
+    {
+      "author": "Karsten1987",
+      "date": "2018-03-29T14:54:58Z",
+      "sha": "6b51b8dd8729be47f7029200133fc51b479c3cfc",
+      "message": "Initial commit",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "emersonknapp",
+      "date": "2020-02-18T17:10:12Z",
+      "sha": "ef48a3ef8a8753b3005862a7c437ff19d70e1745",
+      "message": "Raise an error instead of a warning without ROS 1 (#23)\n\n* Raise an error instead of a warning when ROS 1 and the bridge are not installed, since this can't actually build without them.\r\n* Make error message not say skipping\r\n\r\nSigned-off-by: Emerson Knapp <eknapp@amazon.com>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 7,
+      "commit_type": "docs"
+    },
+    {
+      "author": "clalancette",
+      "date": "2021-01-13T18:24:41Z",
+      "sha": "1d88c628480199943445071db4f15aa29f1af90f",
+      "message": "Update to the latest rosbag1.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 6,
+      "additions": 58,
+      "deletions": 635,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Emerson Knapp",
+      "date": "2021-01-12T18:19:27Z",
+      "sha": "c4508c11f56d700c5b847bd8097dc26bb5c6952e",
+      "message": "Fix build for latest rosbag2 StorageOptions API\n\nSigned-off-by: Emerson Knapp <eknapp@amazon.com>",
+      "files_changed": 5,
+      "additions": 15,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "thomas-moulard",
+      "date": "2020-09-21T20:53:02Z",
+      "sha": "5387df1e8ccace9700f55f6bed2e5ec43cb3aadb",
+      "message": "Merge pull request #33 from ros2/emersonknapp/codeowners\n\nAdd CODEOWNERS file",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "mabelzhang",
+      "date": "2020-05-08T19:41:30Z",
+      "sha": "528b753f3e765afc0265e1e7f1c0d9a5053715b6",
+      "message": "Fix compiler error about virtual storage filter interface (#28)\n\n* implement filters\r\n\r\nSigned-off-by: Mabel Zhang <mabel@openrobotics.org>\r\n\r\n* fix TopicMetadata initialization warnings\r\n\r\nSigned-off-by: Mabel Zhang <mabel@openrobotics.org>\r\n\r\n* struct initialization\r\n\r\nSigned-off-by: Mabel Zhang <mabel@openrobotics.org>\r\n\r\n* fix tests\r\n\r\nSigned-off-by: Knese Karsten <karsten@openrobotics.org>\r\n\r\n* add missing project name to CMakeLists.txt\r\n\r\nSigned-off-by: Knese Karsten <karsten@openrobotics.org>\r\n\r\nCo-authored-by: Knese Karsten <karsten@openrobotics.org>",
+      "files_changed": 9,
+      "additions": 83,
+      "deletions": 23,
+      "commit_type": "docs"
+    },
+    {
+      "author": "zmichaels11",
+      "date": "2019-11-12T01:10:00Z",
+      "sha": "39a0a84ce54ef87ecdace727729d368a3398fc40",
+      "message": "Implement changes in io interfaces (#7)\n\n* Implement changes in io interfaces\r\n\r\nSigned-off-by: Zachary Michaels <zmichaels11@gmail.com>\r\n\r\n* Include method documentation for get_identifier on RosbagV2Storage\r\n\r\nSigned-off-by: Zachary Michaels <zmichaels11@gmail.com>\r\n\r\n* Made identifier a constant\r\n\r\nSigned-off-by: Zachary Michaels <zmichaels11@gmail.com>\r\n\r\n* Update rosbag2_bag_v2_plugins/src/rosbag2_bag_v2_plugins/storage/rosbag_v2_storage.cpp\r\n\r\nCo-Authored-By: Thomas Moulard <thomas.moulard@gmail.com>\r\nSigned-off-by: Zachary Michaels <zmichaels11@gmail.com>\r\n\r\n* Support IO interface changes\r\n\r\nSigned-off-by: Zachary Michaels <zmichaels11@gmail.com>",
+      "files_changed": 3,
+      "additions": 34,
+      "deletions": 6,
+      "commit_type": "docs"
+    },
+    {
+      "author": "DensoADAS",
+      "date": "2019-03-25T21:05:13Z",
+      "sha": "05b9c4cc9e9ff13265e32e5b6be9e5da20319286",
+      "message": "removed dependency to ros1_bridge package (#90)\n\n* removed dependency to ros1_bridge package:\r\n * checking if package is available\r\n * if not skipping (with warnings)\r\n * now rosbag2_tests builds on systems without ros1\r\n\r\n* check ros1 deps correctly on all packages\r\n\r\n* add ros1_bridge to test package\r\n\r\n* silently try to find the bridge",
+      "files_changed": 5,
+      "additions": 30,
+      "deletions": 40,
+      "commit_type": "docs"
+    },
+    {
+      "author": "AAlon",
+      "date": "2019-02-12T19:07:36Z",
+      "sha": "3397b4675650595ed36e1dbd4b5569a4710bfc24",
+      "message": "Consistent node naming across ros2cli tools (#60)\n\n* Passing CLI_NODE_NAME_PREFIX from ros2cli and using it to start the nodes with appropriate naming.\r\n\r\n* Passing CLI_NODE_NAME_PREFIX from ros2cli and using it to start the nodes with appropriate naming.\r\n\r\n* Fixing linter errors.\r\n\r\n* Renaming CLI_NODE_NAME_PREFIX -> NODE_NAME_PREFIX",
+      "files_changed": 7,
+      "additions": 29,
+      "deletions": 10,
+      "commit_type": "code"
+    },
+    {
+      "author": "anhosi",
+      "date": "2018-09-05T16:39:43Z",
+      "sha": "c23d188a664f7328d576692593b0d709d6e8598b",
+      "message": "Record and play multiple topics (#27)\n\n* GH-61 Read topic directly from message when playing and allow to play multiple topics\r\n\r\n* GH-61 Add test for SqliteStorage and update old ones\r\n\r\n* GH-62 Extend function to poll for any number of specified topics\r\n\r\n* GH-62 Allow subscription to several topics\r\n\r\n* GH-61 Obtain the topic name directly from the database\r\n\r\n- Uses a JOIN instead of mapping the topic_id to the name in code\r\n\r\n* GH-61 Cache read row in result iterator\r\n\r\nThis allows repeated dereferencing on same row without quering the\r\ndatabase again.\r\n\r\n* GH-62 Change demo-record to allow specifying multiple topics\r\n\r\n* GH-62 Add test to write non-string topic + refactoring\r\n\r\n* GH-62 Add test for subscription to multiple topics\r\n\r\n* GH-62 Cleanup\r\n\r\n* GH-62 Simplify test setup\r\n\r\n* GH-61 Cleanup\r\n\r\n* GH-61 consolidate storage integration test\r\n\r\n* GH-62 Consolidate write integration tests\r\n\r\n* GH-61 enhance read integration test to check multiple topics\r\n\r\n* GH-62 Improve rosbag integration test\r\n\r\n* GH-62: Polish rosbag2_rosbag_node_test\r\n\r\n* GH-62 Fix cpplint\r\n\r\n* GH-62 Fix memory leak in rosbag helper\r\n\r\n* GH-62 Cleanup of subscriptions\r\n\r\n* GH-62 do not use flaky timers in rosbag2_write_integration_test\r\n\r\n* GH-62 Use rmw_serialize_message_t consistently in test helper classes\r\n\r\n* GH-73 Use test_msgs in read_integration_test\r\n\r\n* GH-26 Cleanup: fix alphabetic orderung",
+      "files_changed": 23,
+      "additions": 629,
+      "deletions": 395,
+      "commit_type": "test"
+    },
+    {
+      "author": "Martin-Idel-SI",
+      "date": "2018-09-03T23:28:17Z",
+      "sha": "3f77b33a4a7e54078c56f189eebeb60e6cb6fef4",
+      "message": "Use serialized message directly (#24)\n\n* Adapt new interface\r\n\r\n* Try to write and read rcutils_char_array_t BLOBs in sqlite\r\n\r\n* Add simple test for arbitrary char ptr\r\n\r\n* Refactor SqliteWrapper and add tests\r\n\r\n* Write and read actual timestamp from serialized message and add relative tests\r\n\r\n* Add SqliteStatementWrapper class and refactor SqliteStorage and SqliteWrapper\r\n\r\n* Refactor test fixture\r\n\r\n* GH-50 Assert message content in write_integration_test, and remove TODOs\r\n\r\n* GH-50 Remove sqlite_storage_plugin unit tests\r\n\r\n* GH-50 Refactor SqliteStatements and SqliteStorage\r\n\r\n* GH-50 Fix build after rebase\r\n\r\n* GH-50 Make has_next() method no more const\r\n\r\n* GH-52 Extend statement wrapper with a generic bind\r\n\r\n* GH-50 Refactor after rebase\r\n\r\n* GH-59 cleanup db interface\r\n\r\n- Remove virtual on methods as this was added only for unit tests. We\r\n  decided to use only integration tests for the sqlite plugins.\r\n- Changes semantics of SqliteStatement: represents always a prepared\r\n  statement if not null.\r\n- Ensures that a SqliteStatementWrapper cannot be copied and does not\r\n  publicly expose its sqlite_stmt as this would cause memory corruption.\r\n\r\n* GH-59 Introduce general read interface for sqlite statements\r\n\r\n- Uses a std::tuple for row data\r\n- Exposes an iterator interface for the query result\r\n\r\n* GH-59 Cleanup: remove unused files\r\n\r\n* GH-59 make sqlite interface fluent\r\n\r\n* GH-59 move creation of serialized message to rosbag2_storage\r\n\r\nThis is not storage plugin specific but will be needed by most (if\r\nnot all) plugins.\r\n\r\n* Change rcutil_char_array_t to rmw_serialized_message_t in subscriber\r\n\r\n* Remove debugging output in test",
+      "files_changed": 25,
+      "additions": 940,
+      "deletions": 201,
+      "commit_type": "docs"
+    },
+    {
+      "author": "botteroa-si",
+      "date": "2018-07-25T00:32:38Z",
+      "sha": "5876645c5e750b0e4a68ca3a703e12d9c2191360",
+      "message": "(demo, sqlite3) First working rosbag2 implementation (#6)\n\n* First implementation of writer\r\n\r\n* Extract storage interface and sqlite3 implementation\r\n\r\n* Add test for sqlite storage\r\n\r\n* Split main() and rosbag2::record()\r\n\r\n* Add close() method to Storage\r\n\r\n* Add getMessage() method and refactor test\r\n\r\n* Refactor SqliteStorage constructor and open()\r\n\r\n* Add linters\r\n\r\n* Fix uncrustify\r\n\r\n* Fix cpplint\r\n\r\n* Specify test working directory\r\n\r\n* Better error handling\r\n\r\n* Use gmock matchers for assertions\r\n\r\n* Add test fixture for SqliteStorage tests\r\n\r\n* Extract message retrieval in tests into separate method\r\n\r\n* Add integration test for rosbag2::record()\r\n\r\n* Add ignore files for empty packages\r\n\r\n* Introduce create() method and refactor open()\r\n\r\n* Use shared pointer of Storage instead of SqliteStorage\r\n\r\n* Remove getDatabaseHandle() method\r\n\r\n* Fix uncrustify\r\n\r\n* Improve storage interface and add storage factory\r\n\r\n* Remove need of sleep() from integration test by usage of std::future\r\n\r\n* Move deletion of test database from fixture constructor to destructor\r\n\r\n* Use sqlite3 directly in intergration test instead of own sqlite wrapper\r\n\r\n* Move rosbag2::record() into Rosbag2 class\r\n\r\n* Use the test name as database file name\r\n\r\n* Add build instructions to README\r\n\r\n* GH-37 Rename camelCase methods to snake_case\r\n\r\n* Use common test fixture\r\n\r\n* Add RAII wrapper for sqlite API\r\n\r\n* Mock away sqlite from sqlite_storage test\r\n\r\n* Use more reasonable assert\r\n\r\n* Add test\r\n\r\n* Add virtual destructor to WritableStorage\r\n\r\n* Use file_name instead of database_name in StorageFactory\r\n\r\n* Implement saving of test files in a tmp directory for linux/Mac\r\n\r\n* Try to implement saving of test files in a tmp directory for Windows\r\n\r\n* Write and use proper gmock SqliteWrappe mock\r\n\r\n* Refactor integration test and get rid of promise/future where possible\r\n\r\n* Throw exception in resource aquisition constructors\r\n\r\n* Make SqliteWrapper destructor virtual\r\n\r\n* Refactor test fixture and update SqliteWrapper mock\r\n\r\n* Fix warning when moving a temporary object\r\n\r\n* GH-38 Refactor integration test\r\n\r\n* GH-38 Get rid of superfluous string constructor in emplace_back()\r\n\r\n* GH-38 Assert also execute_query() argument in sqlite_storage_test\r\n\r\n* GH-38 add StorageFactory test\r\n\r\n* GH-38 Refactor rosbag2 Test Fixture\r\n\r\n* GH-40 Add first implementation of a rosbag reader and publisher\r\n\r\n* GH-40 Add StorageFactory test when reading non-existing file\r\n\r\n* GH-40 Fix uncrustify\r\n\r\n* GH-40 Minor cleanup of CMakeLists\r\n\r\n* GH-40 Wrap sqlite statements\r\n\r\n* GH-40 Remove superfluous import\r\n\r\n* GH-40 Use better include\r\n\r\n* GH-40 Add play integration test\r\n\r\n* GH-40 Fix Warning when moving a temporary object in reading\r\n\r\n* GH-40 Initialize database pointer to nullpointer\r\n\r\n* GH-40 Fix reader integration test\r\n\r\n* GH-40 Polish storage wrapper\r\n\r\n* Revert \"GH-40: Wrap sqlite statements\"\r\n\r\n* GH-38 Fix Test Fixture after rebase\r\n\r\n* GH-38 Refactor read_integration_test and refix Windows conversion warning\r\n\r\n* GH-38 Add StorageFactory test\r\n\r\n* Simplify storage factory test\r\n\r\n* GH-38 Try to fix flaky test\r\n\r\n* GH-38 Move rclcpp::shutdown() at the end\r\n\r\n* GH-41 Fix windows warning due to virtual explicit operator bool\r\n\r\n* GH-41 Use sqlite3 vendor package in rosbag2\r\n\r\n* GH-41 Stop linking tests to sqlite\r\n\r\n* GH-41 Fix test fixture on Windows\r\n\r\n* GH-41 Cleanup test fixture includes\r\n\r\n* GH-41 Print test database name\r\n\r\n* GH-41 Correctly determine temp dir on Windows\r\n\r\n* GH-41 Show error message on sqlite_open failure\r\n\r\n* GH-41 Actually create temp dir on Windows\r\n\r\n* GH-41 Fix bool conversion warning in VS2015 build\r\n\r\n* Fix CMakeLists.txt after rebase\r\n\r\n* GH-40 Implement workouround to fix flaky test\r\n\r\n* Update package.xml\r\n\r\n* Add gtest test dependencies to package.xml\r\n\r\n* GH-40 Move to sqlite3_storage_plugin folder\r\n\r\n- The separation into the intended structure and plugin apis is not\r\n  there yet. However, most code will stay in the storage plugin for\r\n  sqlite3 file.\r\n- Proper separation of this code into storage plugin and rosbag layer\r\n  will be done in https://github.com/bsinno/aos-rosbag2/issues/5.\r\n\r\n* GH-40 Add TODO comments and small cleanup",
+      "files_changed": 25,
+      "additions": 1261,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "greimela-si",
+      "date": "2018-10-17T21:48:23Z",
+      "sha": "e395391629c5fbf1002106b46b1d7584f0970f15",
+      "message": "Use directory as bagfile and add additonal record options (#43)\n\n* Use directory instead of file to reference bag files\r\n\r\n* Extract process execution helper from e2e tests\r\n\r\n* Prefix autogenerated bag name with `rosbag2_`\r\n\r\n* GH-109 Improve e2e-test process handling on linux\r\n\r\n- Use SIGINT instead of SIGTERM which is the correct equivalent to\r\n  pressing Ctrl-C within a shell\r\n- Use exec instead of system inside the forked test child process.\r\n- Check the return code of the child after the waitpid instead of\r\n  after the call to system.\r\nUsing system inside a child process is unnecessary as system forks\r\nagain. Whether the actual \"ros2 bag\" process was put in the same\r\nprocess group seemed to be shell dependent. Exec avoids these issues.",
+      "files_changed": 22,
+      "additions": 556,
+      "deletions": 161,
+      "commit_type": "docs"
+    },
+    {
+      "author": "René Scheibe",
+      "date": "2018-05-16T19:12:07Z",
+      "sha": "779eaaedd80dcd8384bacd8004c14898e7e1611a",
+      "message": "Benchmarks for SQLite write performance (#1)",
+      "files_changed": 39,
+      "additions": 2892,
+      "deletions": 52,
+      "commit_type": "docs"
+    }
+  ]
+}

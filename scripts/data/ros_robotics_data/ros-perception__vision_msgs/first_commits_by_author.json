@@ -1,0 +1,231 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T11:09:24Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros-perception",
+    "repo": "vision_msgs"
+  },
+  "data": [
+    {
+      "author": "ahcorde",
+      "date": "2025-05-22T17:13:34Z",
+      "sha": "5adc691661d53825a4ef50908c23278ff4573ed8",
+      "message": "rclcpp::filesystem deprecation (#107)\n\nSigned-off-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>",
+      "files_changed": 2,
+      "additions": 6,
+      "deletions": 9,
+      "commit_type": "docs"
+    },
+    {
+      "author": "SteveMacenski",
+      "date": "2023-02-03T18:38:40Z",
+      "sha": "f18874ba0770592feb82e4c35b1aa9517ca73a51",
+      "message": "Revert \"std::basic_ostream<char>’ has no member named ‘str’ (#81)\" (#82)\n\nThis reverts commit 03fbe93ebd503e07a4c30ff7f08f4b3a61e088ce.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "roshambo919",
+      "date": "2024-07-23T17:17:53Z",
+      "sha": "21b2d3ff0f8e95b1330dca87a21aea1cc3feda58",
+      "message": "Set topic description in bounding_box_3d to BoundingBox3D (#102)\n\nTopic description was previously Detection3D and should be BoundingBox3D.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "jmm-slamcore",
+      "date": "2023-07-26T21:59:50Z",
+      "sha": "4ef5f0f2d9b4d7cbe9388dd6cc35c2f17266d895",
+      "message": "Clear stale markers (#95)",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "MarqRazz",
+      "date": "2023-03-10T20:13:30Z",
+      "sha": "a6d6777ebc28c5791bb795a4ae57cb222905d7f7",
+      "message": "Validate BoundingBox3D message (#85)\n\n* Validate BoundingBox3D message\r\n\r\n* correct small size comparison\r\n\r\n* add if/else brackets\r\n\r\n* fix formatting errors\r\n\r\n* fix formatting round 2",
+      "files_changed": 2,
+      "additions": 60,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "NovoG93",
+      "date": "2023-01-31T17:45:42Z",
+      "sha": "87c3ba4800abbeb6d5200e5aae5eabbdbd11643b",
+      "message": "Added rviz plugins (#79)\n\n* Added rviz plugins\r\nAdded meta package and moved initial vision_msgs package\r\n\r\n* Removed submodule & restructure\r\n\r\n* Update package.xml\r\n\r\nRemoved qt5 depend\r\n\r\n* Update package.xml\r\n\r\nAdded boost depend\r\n\r\n* Fixed most tests\r\n\r\n* Removed boost + colcon test fixes + change requests\r\n\r\n* Adapt copyright + changed for yaml_cpp_vendor\r\n\r\n* Update package.xml\r\n\r\n* removed tf_transformations dependency",
+      "files_changed": 50,
+      "additions": 2859,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "gorghino",
+      "date": "2023-02-03T18:17:22Z",
+      "sha": "03fbe93ebd503e07a4c30ff7f08f4b3a61e088ce",
+      "message": "std::basic_ostream<char>’ has no member named ‘str’ (#81)\n\nFix https://github.com/ros-perception/vision_msgs/issues/80",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Kukanani",
+      "date": "2017-05-08T22:12:08Z",
+      "sha": "e7de0911e123b53301675f1e3f24f3515e334944",
+      "message": "Initial commit",
+      "files_changed": 8,
+      "additions": 331,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "pepisg",
+      "date": "2022-02-08T20:28:00Z",
+      "sha": "7edefb5e21c8b6dadb3b62ac9874dbe9e59e29fd",
+      "message": "[FEAT]: Add semantic segmentation messages",
+      "files_changed": 5,
+      "additions": 70,
+      "deletions": 47,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ijnek",
+      "date": "2022-03-16T02:53:42Z",
+      "sha": "4f8141f870772f3350e4536dbc6a37127765b21a",
+      "message": "replace deprecated pose2d with pose (#64)\n\n* replace deprecated geometry_msgs/Pose2D with geometry_msgs/Pose\r\n\r\nSigned-off-by: Kenji Brameld <kenjibrameld@gmail.com>\r\n\r\n* replace Pose2D with Pose.\r\n\r\nSigned-off-by: Kenji Brameld <kenjibrameld@gmail.com>\r\n\r\n* add Pose2D.msg\r\n\r\nSigned-off-by: Kenji Brameld <kenjibrameld@gmail.com>\r\n\r\n* undo some changes made\r\n\r\nSigned-off-by: Kenji Brameld <kenjibrameld@gmail.com>\r\n\r\n* Update msg/Pose2D.msg\r\n\r\nCo-authored-by: Adam Allevato <Kukanani@users.noreply.github.com>\r\n\r\nCo-authored-by: Adam Allevato <Kukanani@users.noreply.github.com>",
+      "files_changed": 3,
+      "additions": 8,
+      "deletions": 1,
+      "commit_type": "ci"
+    },
+    {
+      "author": "Fruchtzwerg94",
+      "date": "2021-07-22T10:41:39Z",
+      "sha": "504d6f709d77ea43f658ee3fe8c7846c95db5bd5",
+      "message": "Added BoundingBox2DArray message",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "dusty-nv",
+      "date": "2021-06-09T01:02:10Z",
+      "sha": "c2b7aef023136e6fabbadfdee24938e2116b1309",
+      "message": "Patch for how C++14 is set for ROS2 (#58)\n\n* set C++14\r\n\r\n* set C++14\r\n\r\n* fixed tabs in C++14 settings",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "peci1",
+      "date": "2021-01-08T22:09:22Z",
+      "sha": "163d5389d6df1271688e2ce12f7d6c0ff3296ad8",
+      "message": "Decouple source data from the detection/classification messages. (#53)\n\n* Decouple source data from the detection/classification messages.\r\n\r\nThis commit drops dependency on sensor_msgs\r\n\r\n* Improved documentation.",
+      "files_changed": 8,
+      "additions": 38,
+      "deletions": 50,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mintar",
+      "date": "2017-05-23T23:18:35Z",
+      "sha": "dc7e28c1153c2b78b853c1074c283e9f8801e22a",
+      "message": "Bring back bounding boxes (#3)\n\nThese somehow got lost underway; the BoundingBoxXD message definitions are still\r\nthere, but were not included in the DetectionXD messages.",
+      "files_changed": 2,
+      "additions": 6,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "sloretz",
+      "date": "2019-10-04T22:29:45Z",
+      "sha": "fac5ee222a4a36307f936dbf60b9362bb269c19e",
+      "message": "Merge branch 'master' into sync_with_kinetic",
+      "files_changed": 16,
+      "additions": 112,
+      "deletions": 36,
+      "commit_type": "docs"
+    },
+    {
+      "author": "LeroyR",
+      "date": "2019-10-04T21:25:46Z",
+      "sha": "35539554822a4a59f050019e4f17ddfe20023d89",
+      "message": "add BoundingBox3DArray message (#30)\n\n* add BoundingBoxArray message",
+      "files_changed": 2,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "hakuturu583",
+      "date": "2019-07-19T22:16:09Z",
+      "sha": "0d20a431089af80fd8eb987500bd3876382fbcfa",
+      "message": "add tracking ID to the Detection Message (#19)\n\n* add tracking ID to the Detection\r\n* modify comments\r\n* Change UUID messages to strings\r\n* Improve comment for tracking_id and fix whitespace",
+      "files_changed": 2,
+      "additions": 16,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mistermult",
+      "date": "2019-07-19T21:54:56Z",
+      "sha": "866d02f63d461297aabc77f8ccdc7bb4779362e4",
+      "message": "Convert id to string (#22)",
+      "files_changed": 3,
+      "additions": 8,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "RonaldEnsing",
+      "date": "2018-11-29T02:20:22Z",
+      "sha": "baf25480cb36b798132406de4aa16de85b3e43d4",
+      "message": "Fix dependency of unit test. (#14)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mikaelarguedas",
+      "date": "2018-04-04T16:44:47Z",
+      "sha": "f8d4964b8bb10ec9ef8ba08ff4f845029fbe25c6",
+      "message": "[ros2] use package format 3 (#12)",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 3,
+      "commit_type": "config"
+    },
+    {
+      "author": "Adam Allevato",
+      "date": "2017-06-07T19:05:33Z",
+      "sha": "642f21107522ab049548158e2629969ea8efc95a",
+      "message": "Added headers to the *Array messages (#8)",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "procopiostein",
+      "date": "2017-05-23T23:18:10Z",
+      "sha": "1929d27ea018d7e59c5e02580467086c9cca74c6",
+      "message": "unifying 2D and 3D messages  (#2)\n\n* unified ObjectHypothesis 2D and 3D in ObjectHypothesisWithPose\r\n\r\n* better description and attempt in normalizing fields\r\n\r\nalso changed datatype to uint32 as we are in the pixel space for 2D BB\r\n\r\n* changed DetectionXD.msg to use generic ObjectHypothesisWithPose",
+      "files_changed": 7,
+      "additions": 14,
+      "deletions": 27,
+      "commit_type": "docs"
+    }
+  ]
+}

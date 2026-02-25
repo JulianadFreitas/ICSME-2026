@@ -1,0 +1,171 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T13:11:10Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros2",
+    "repo": "console_bridge_vendor"
+  },
+  "data": [
+    {
+      "author": "clalancette",
+      "date": "2020-05-27T15:31:39Z",
+      "sha": "10d7daef21275cb66797d6b5b580b6e1c9185d4c",
+      "message": "Make sure console_bridge_vendor is relocatable. (#9)\n\nUpstream console_bridge 0.5.1 contains the fix to use a\r\nTARGET for console_bridge, so switch to that.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 5,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ahcorde",
+      "date": "2020-05-27T13:02:28Z",
+      "sha": "d8d1205b915a6462faff26a60a0d673a5c65db9c",
+      "message": "QD Update Version Stability to stable version (#14)\n\nSigned-off-by: ahcorde <ahcorde@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "cottsay",
+      "date": "2021-02-11T18:45:14Z",
+      "sha": "c6839f96cb80dd144d70c71fa838682384cc8e75",
+      "message": "Always preserve source permissions in vendor packages (#29)\n\nIn vendor packages where we're installing an executable, we use\r\nUSE_SOURCE_PERMISSIONS to make sure that the executable permissions on\r\nthe binaries are maintained when the external project's staging\r\ndirectory is recursively installed to the final installation directory.\r\n\r\nIn most of our vendor packages, we aren't using that flag where we don't\r\nexpect an executable binary to be installed. However, for reasons I\r\nwon't go into here, some systems use executable permissions on shared\r\nobject libraries as well. The linker seems to handle this on our behalf,\r\nbut we're losing the permissions during the recursive copy operation if\r\nwe don't use this flag.\r\n\r\nSigned-off-by: Scott K Logan <logans@cottsay.net>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "marcoag",
+      "date": "2024-04-26T14:58:25Z",
+      "sha": "bebb7efc58b93d81a468bf9fa71b40df8bd564ae",
+      "message": "Changelog.\n\nSigned-off-by: Marco A. Gutierrez <marcogg@marcogg.com>",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "christophebedard",
+      "date": "2024-04-23T20:44:25Z",
+      "sha": "e20efd4ec46b6074ba0dfb60d76a34ed53484c5e",
+      "message": "Update quality declaration doc (#41)\n\nSigned-off-by: Christophe Bedard <christophe.bedard@apex.ai>",
+      "files_changed": 1,
+      "additions": 15,
+      "deletions": 8,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Yadunund",
+      "date": "2023-04-27T04:44:04Z",
+      "sha": "afa0c3183285e0052e2cbeb166e683754166c588",
+      "message": "1.7.0",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "audrow",
+      "date": "2020-09-18T17:29:02Z",
+      "sha": "4b77b221c647bc50a0e28667497770b7d3cbfaf8",
+      "message": "Enable -Wall, -Wextra, and -Wpedantic (#20)\n\nSigned-off-by: Audrow Nash <audrow.nash@gmail.com>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Crola1702",
+      "date": "2022-09-12T14:39:39Z",
+      "sha": "1d818435e8e6258fa00fe87c5eb1c477955d249f",
+      "message": "Fixes policy CMP0135 warning for CMake >= 3.24 (#36)\n\n* Fixes policy CMP0135 warning for CMake >= 3.24\r\n\r\nSigned-off-by: Crola1702 <cristobal.arroyo@ekumenlabs.com>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "paudrow",
+      "date": "2022-05-05T17:20:01Z",
+      "sha": "bcc48159f3afc00308c029096938151dffb99e37",
+      "message": "1.5.1 (#34)\n\n* 1.5.0\r\n\r\nSigned-off-by: Audrow Nash <audrow@hey.com>\r\n\r\n* 1.5.1\r\n\r\nSigned-off-by: Audrow Nash <audrow@hey.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "sloretz",
+      "date": "2022-03-11T21:14:13Z",
+      "sha": "eb6227f0a6a42e88e676eb2b729d588b1f1dfea4",
+      "message": "Install headers to include/${PROJECT_NAME} (#33)\n\n* Install headers to include/${PROJECT_NAME}\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* Hardcode updated include path\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* Build 1.0.2 instead of patching\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* Use URL and URL_HASH\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 7,
+      "commit_type": "docs"
+    },
+    {
+      "author": "shonigmann",
+      "date": "2021-04-02T06:31:17Z",
+      "sha": "2dfeedba69fc73b13d103d0e2a8586e7a7c5bdb6",
+      "message": "updating quality declaration links (re: ros2/docs.ros2.org#52) (#30)\n\nSigned-off-by: Simon Honigmann <shonigmann@blueorigin.com>\r\n\r\nCo-authored-by: Simon Honigmann <shonigmann@blueorigin.com>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 5,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jacobperron",
+      "date": "2020-08-03T22:44:49Z",
+      "sha": "6cffe405a707a4cbf6ff7a1d13ac22552b3e22ae",
+      "message": "1.2.2",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "Blast545",
+      "date": "2020-05-07T20:58:56Z",
+      "sha": "ce24a6f27262c612273f75ab077e763e239ae138",
+      "message": "Add quality declaration console_bridge_vendor (#8)\n\n* Add 1st quality declaration draft for the package\r\n* Reformat to match REP-2004 template\r\n* Fix link to external dependency QD\r\n* Add review suggestion Quality_Declaration.md\r\n* Add review suggestion Quality_Declaration.md\r\n* Address review feedback\r\n* Fix peer review comments\r\n* Rephrase API/ABI ROS stability section\r\n* Rename QD file to all caps\r\n* Renamed file\r\n* Add missing CONTRIBUTING.md file\r\n* Improve License section\r\n* Rephrase license improv\r\n* Reformat to include 1.vi with 1.v and 1.iv\r\n* Address small nit\r\n\r\nSigned-off-by: Jorge Perez <jjperez@ekumenlabs.com>\r\nCo-authored-by: brawner <brawner@gmail.com>",
+      "files_changed": 2,
+      "additions": 131,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "nuclearsandwich",
+      "date": "2018-11-16T18:55:41Z",
+      "sha": "37579afaa7cdd472c33f9cec0fc11c7cebe544a6",
+      "message": "Require console-bridge 0.4.1 or build it from source.",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 7,
+      "commit_type": "docs"
+    },
+    {
+      "author": "emersonknapp",
+      "date": "2019-03-21T21:23:15Z",
+      "sha": "7415ba81c8c10553e90a45f80f24bd64f63ce986",
+      "message": "Pass through c++ build flags (#4)\n\n* Pass through c++ build flags\r\n\r\nSigned-off-by: Emerson Knapp <eknapp@amazon.com>",
+      "files_changed": 1,
+      "additions": 13,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mikaelarguedas",
+      "date": "2018-07-05T15:30:47Z",
+      "sha": "126a9e1b075ebfdcd7343ae3b181cab25231f705",
+      "message": "Initial commit",
+      "files_changed": 2,
+      "additions": 203,
+      "deletions": 0,
+      "commit_type": "docs"
+    }
+  ]
+}

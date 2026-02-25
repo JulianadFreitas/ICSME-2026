@@ -1,0 +1,51 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T07:48:14Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "rt-net",
+    "repo": "raspimouse_slam_navigation_ros2"
+  },
+  "data": [
+    {
+      "author": "KuraZuzu",
+      "date": "2024-11-28T02:50:32Z",
+      "sha": "0357d49777c1be454fc7a92827ea444e96550d1f",
+      "message": "ROS 2 Jazzyへの対応 (#13)\n\n* Update \"slam_node\" to utilize LifecycleNode in accordance with changes made in \"slam_toolbox\".\r\n\r\n* collision_monitorを仮で設定\r\n\r\n* \"bt_navigator\"で\"plugin_lib_names\"がデフォルトで選ばれるようになり、残しておくと複数定義でエラーとなるため削除。充電ドックを設定しないといけないためダミーの値を設定\r\n\r\n* \"docking_server\"を最低限の構成に変更した\r\n[補足]コストマップは読み込めるがナビゲーションできない状態\r\n\r\n* 速度について`Twist`から`TwistStamped`に統一するための設定\"enable_stamped_cmd_vel: True\"を記述\r\n\r\n* \"collisiton_monitor\"の\"use_sim_time\"を\"True\"にしてシミュレーション上でのNavigationが動作することを確認した。\r\n\r\n* \"default_nav_to_pose_bt_xml\"と\"default_nav_through_poses_bt_xml\"について指定方法の記述を追加（しかし、デフォルトを指定されるようにコメントアウト）\r\n\r\n* 実験的に\"use_sim_time\"を\"True\"で実験をした変更のコミット。\r\n[補足]\"controller_server\"では\"True\"にするとNavigationが開始されない。\r\n\r\n* \"use_sim_time\"を起動コマンドから与えるように変更した\r\n[補足]シミュレータ上での動作のみを確認した\r\n\r\n* パラメータファイルでの構成要素を最低限にした\r\n\r\n* Update README for Jazzy\r\n\r\n* Fix reference links\r\n\r\n* Add branch links\r\n\r\n* Update CI for Jazzy\r\n\r\n* Move .ci.rosinstall file\r\n\r\n* Fix typo in README\r\n\r\n* Add .ci.rosinstall settings for dependent packages\r\n\r\n* Adapted format for ROS 2 Jazzy\r\n\r\n* Add authors\r\n\r\n* Removed \"-devel\" in branch name\r\n\r\n* Set the default for \"use_sim_time\" to \"False\" and corrected the specification method in the README\r\n\r\n* Fixed MAP path",
+      "files_changed": 15,
+      "additions": 444,
+      "deletions": 321,
+      "commit_type": "docs"
+    },
+    {
+      "author": "YusukeKato",
+      "date": "2023-08-07T01:03:08Z",
+      "sha": "ca43f5db3324eae81a37b913de5aa8e4db114467",
+      "message": "HumbleリリースのためにCHANGELOG.rstとpackage.xmlを更新 (#7)\n\n* HumbleリリースのためにCHANGELOG.rstを更新\r\n\r\n* 2.0.0",
+      "files_changed": 6,
+      "additions": 16,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Shota Aoki",
+      "date": "2024-01-15T06:49:20Z",
+      "sha": "f9966f2abee7862b4e74ca04bf18d73aead23967",
+      "message": "Use rplidar_a1_launch.py because rplidar.launch.py does not exist. (#8)\n\n* Use rplidar_a1_launch.py because rplidar.launch.py does not exist.\r\n\r\n* Remove a note from README.md",
+      "files_changed": 3,
+      "additions": 2,
+      "deletions": 6,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Shuhei Kozasa",
+      "date": "2021-11-19T08:26:15Z",
+      "sha": "ad55eff9e32aa2727c0dca9b889f5878a912cc4e",
+      "message": "Initial commit",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "docs"
+    }
+  ]
+}

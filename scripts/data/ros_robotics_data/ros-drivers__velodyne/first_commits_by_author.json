@@ -1,0 +1,711 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T05:12:00Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros-drivers",
+    "repo": "velodyne"
+  },
+  "data": [
+    {
+      "author": "JWhitleyWork",
+      "date": "2022-07-08T17:24:36Z",
+      "sha": "f8ba9da2776bc7db0417343227cc32c3473f4198",
+      "message": "Updating for new Galactic, Humble, and Rolling Releases.",
+      "files_changed": 5,
+      "additions": 86,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mallanmba",
+      "date": "2025-08-28T03:44:55Z",
+      "sha": "2ecada9b78fcf66992efb260b55f90f8354170c8",
+      "message": "switch to yaml_cpp_vendor to ensure that the version that is used is the same as is used in core ros packages (#564)\n\nCo-authored-by: Mark B. Allan <Mark.B.Allan@nasa.gov>",
+      "files_changed": 2,
+      "additions": 3,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "clalancette",
+      "date": "2019-06-14T19:49:48Z",
+      "sha": "276c19d8baed4ec1be6f94683487c8070636fe31",
+      "message": "Delete trailing whitespace.\n\nNo changes to the code.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 23,
+      "additions": 147,
+      "deletions": 156,
+      "commit_type": "docs"
+    },
+    {
+      "author": "g-kurz",
+      "date": "2024-10-30T15:57:09Z",
+      "sha": "9c005f5d333ca6ed44ce1e6f08fa7199c519ee6f",
+      "message": "Fix exports (#535)\n\n* export includes and dependencies\r\n\r\n* export libraries\r\n\r\n* Fix up exports for velodyne_pointcloud.\r\n\r\nCo-authored-by: Chris Lalancette <clalancette@gmail.com>",
+      "files_changed": 1,
+      "additions": 14,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "thomasemter",
+      "date": "2024-10-30T15:39:02Z",
+      "sha": "f8023608a594707945d2c883ba1e8ab401d9263a",
+      "message": "Add package to compile in Jazzy (#539)\n\n* Add package to compile in Jazzy\r\n\r\nCo-authored-by: Chris Lalancette <clalancette@gmail.com>",
+      "files_changed": 2,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "PierrickKoch",
+      "date": "2023-07-20T20:24:03Z",
+      "sha": "04a7ca722eaed13fe902366e0831717e91f9f77a",
+      "message": "Feature script add two pt ros2 (#498)\n\n* [velodyne_pointcloud] add_two_pt scripts\r\n\r\nsee issues: #109 #295\r\nand commit: f30d68735c47312aa73d29203ddb16abc01357f4\r\n\r\n* [velodyne_pointcloud] gen_calibration: add two_pt\r\n\r\nsee issues: #109 #295\r\nand commit: f30d68735c47312aa73d29203ddb16abc01357f4\r\n\r\n* [velodyne_pointcloud] add two_pt in params/64e_*\r\n\r\n* [velodyne_pointcloud] update test_calibration\r\n\r\n* Applying linter fixes for ROS2 port\r\n\r\n* Linter fix.\r\n\r\n---------\r\n\r\nCo-authored-by: Joshua Whitley <josh@electrifiedautonomy.com>",
+      "files_changed": 6,
+      "additions": 2306,
+      "deletions": 730,
+      "commit_type": "test"
+    },
+    {
+      "author": "takanotaiga",
+      "date": "2023-07-20T20:19:21Z",
+      "sha": "d2304ce2dd04c200e70426873dc89d8f1dd19ae9",
+      "message": "delete unused valiable (#529)\n\nSigned-off-by: Taiga Takano <ttttghghnb554z@outlook.jp>",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "msz-rai",
+      "date": "2023-06-16T20:02:12Z",
+      "sha": "3353568859618d79244b4b6f002e500dd55ab64d",
+      "message": "Add vert offset corrections to VLP16 calib file (#518)",
+      "files_changed": 1,
+      "additions": 16,
+      "deletions": 16,
+      "commit_type": "config"
+    },
+    {
+      "author": "wep21",
+      "date": "2022-01-05T13:27:28Z",
+      "sha": "ce3f03942b0b3905168f9c82eabecfb1b7765199",
+      "message": "Add laserscan support for new PointXYZIR structure (#316) (#439)\n\n* Add laserscan support for new PointXYZIR structure\r\n\r\n* Support PointCloud2 offsets that are multiples of 4\r\n\r\nCo-authored-by: Kevin Hallenbeck <khallenbeck@dataspeedinc.com>",
+      "files_changed": 1,
+      "additions": 10,
+      "deletions": 7,
+      "commit_type": "code"
+    },
+    {
+      "author": "Hi-Zed",
+      "date": "2022-10-18T15:37:52Z",
+      "sha": "f149faf8392f6dee0387969bce5b518953c1fcf5",
+      "message": "using std::round to calculate the scan array size (#459)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "sundermann",
+      "date": "2017-12-12T11:03:08Z",
+      "sha": "d66c72914143edc372060ae9dee4e9f7cd29dc18",
+      "message": "Use std::abs instead of abs\n\nabs is the c version which returns an integer. This is probably not intended here, so use the templated std::abs function.",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Nagy Dániel Zoltán",
+      "date": "2021-11-11T19:03:07Z",
+      "sha": "4f58e982bcc52e80ecfb8e477f0a31eebce35d11",
+      "message": "reuse Velodyne UDP port (#427)",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "jkquigley",
+      "date": "2022-01-04T15:22:15Z",
+      "sha": "3c6b0c5ba44b201f95cab004aef30a39fde584bd",
+      "message": "Replace deprecated argument names in launch (#430)",
+      "files_changed": 18,
+      "additions": 66,
+      "deletions": 66,
+      "commit_type": "code"
+    },
+    {
+      "author": "Joshua Whitley",
+      "date": "2017-10-18T18:40:37Z",
+      "sha": "76be2bec35cc29528ae072a407b553b5aaeda435",
+      "message": "Merge pull request #127 from swri-robotics/add_vlp16_hires_support\n\nAdd VLP16 Puck Hi-Res config file",
+      "files_changed": 1,
+      "additions": 50,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "hidmic",
+      "date": "2019-12-11T19:49:25Z",
+      "sha": "ec9adec6a523ab705ee526b06141aa9ad8d43c4f",
+      "message": "Fix ring retrieval from float pointcloud iterator. (#322)\n\n* Fix ring retrieval from float pointcloud iterator.\r\n\r\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>\r\n\r\n* Explain fix in a comment.\r\n\r\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "pjreed",
+      "date": "2019-10-30T20:49:48Z",
+      "sha": "da00ed11da38896c7fb49280185894a4e611e8cc",
+      "message": "Check for intra-process subscribers\n\nWhen running as a composed node in a container, the usual\n`get_subscription_count()` method may return 0; it's necessary to also\ncheck `get_intra_process_subscription_count()`.\n\nDistribution Statement A; OPSEC #2893\n\nSigned-off-by: P. J. Reed <preed@swri.org>",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "klintan",
+      "date": "2019-04-11T06:19:08Z",
+      "sha": "f21f99ec864a095bf37864bfe01faf70fb19a15b",
+      "message": "custom messages in ROS2",
+      "files_changed": 5,
+      "additions": 38,
+      "deletions": 18,
+      "commit_type": "docs"
+    },
+    {
+      "author": "spuetz",
+      "date": "2018-12-13T04:03:26Z",
+      "sha": "68e9e3c9626aade4628c5a4c67a5e73813ba261f",
+      "message": "wip organized pc with container, clean up",
+      "files_changed": 19,
+      "additions": 310,
+      "deletions": 126,
+      "commit_type": "config"
+    },
+    {
+      "author": "dandedrick",
+      "date": "2019-05-20T13:50:23Z",
+      "sha": "25838c239b3ab039488f079bc43ef2a9d8861893",
+      "message": "driver: add enabled reconfigure param\n\nThis will allow polling to be disabled when the device has been disabled\nin some way. Specifically this is interesting when the rpm is set to 0\nwhen not is use. This also adds a mask value for the time_offset so that\nit won't be touched if it wasn't reconfigured.",
+      "files_changed": 3,
+      "additions": 20,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "mpitropov",
+      "date": "2019-03-26T20:46:10Z",
+      "sha": "8a698be1d7beb12a3bc6dd2c3d3c230fc4f57f24",
+      "message": "Added code and test",
+      "files_changed": 4,
+      "additions": 84,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "khallenbeck-dsi",
+      "date": "2016-12-08T00:01:21Z",
+      "sha": "d678c8798e0e9f0cd301d2eee0bf8e1fbb4d5ef1",
+      "message": "Added velodyne_laserscan package and inserted into existing launch files",
+      "files_changed": 13,
+      "additions": 378,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "icolwell",
+      "date": "2018-06-20T19:38:23Z",
+      "sha": "d1f563977a8110f0171740f3827bd83c8540d245",
+      "message": "Added diagnostic publishing",
+      "files_changed": 6,
+      "additions": 58,
+      "deletions": 10,
+      "commit_type": "docs"
+    },
+    {
+      "author": "geordi",
+      "date": "2019-03-18T14:03:08Z",
+      "sha": "215d367e5fbb3227f4b42ceae38eb98c4587b898",
+      "message": "Fixed links in README.md",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "NilsHaukeBussas-TomTom",
+      "date": "2019-03-18T12:29:46Z",
+      "sha": "b3426867d9749329ff6096e21f9c075d7a119d07",
+      "message": "Transform static variable into member",
+      "files_changed": 2,
+      "additions": 11,
+      "deletions": 9,
+      "commit_type": "code"
+    },
+    {
+      "author": "xiesc",
+      "date": "2018-12-06T09:29:20Z",
+      "sha": "b035febb1e82f18b0c8ad15de12143f69ee9c5b5",
+      "message": "add support for 64E_S3",
+      "files_changed": 5,
+      "additions": 78,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "kveretennicov",
+      "date": "2018-09-22T20:54:30Z",
+      "sha": "80bb8aafef314f91cc184a08e93690fa6a25a656",
+      "message": "Fix malformed plugin description XML\n\nROS pluginlib only recognizes multiple <library> elements if they are under\r\n<class_libraries> XML root. It silently ignores malformed XMLs with multiple\r\n<library> \"root\"s and just reads the first one, due to relaxed way tinyxml2 does\r\nparsing. Though if you do `rosrun nodelet declared_nodelets`, the issue is\r\nreported properly.\r\n\r\nSee also similar issue in https://github.com/ros-perception/perception_pcl/issues/131",
+      "files_changed": 1,
+      "additions": 33,
+      "deletions": 29,
+      "commit_type": "config"
+    },
+    {
+      "author": "moooeeeep",
+      "date": "2018-09-20T10:00:04Z",
+      "sha": "15771a42cf91ffaa946846174c639edf1056b693",
+      "message": "bugfix: getPacket() function is expected to return negative value on error",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "Davide Faconti",
+      "date": "2018-03-09T17:25:20Z",
+      "sha": "bf4b6f912cbeee614d01ab46338b876be89534cf",
+      "message": "avoid unecesary calculations in unpack",
+      "files_changed": 1,
+      "additions": 52,
+      "deletions": 48,
+      "commit_type": "code"
+    },
+    {
+      "author": "facontidavide",
+      "date": "2018-05-12T07:44:56Z",
+      "sha": "9fe6e23282f3c89429167dc6e9f0b2bd08dcadfa",
+      "message": "fix stupid error",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "sts-thm",
+      "date": "2018-08-01T08:45:20Z",
+      "sha": "de152345df2aaea49bae9353ca8ac11ef615e344",
+      "message": "Changes fixing deadlock for specific cut_angle values.",
+      "files_changed": 2,
+      "additions": 36,
+      "deletions": 9,
+      "commit_type": "code"
+    },
+    {
+      "author": "C-NR",
+      "date": "2018-07-27T09:03:28Z",
+      "sha": "8c34bb720482ba9423f6f5c1c42286f697adbf1c",
+      "message": "Merge branch 'master-origin' into velodyne-master",
+      "files_changed": 26,
+      "additions": 42,
+      "deletions": 43,
+      "commit_type": "config"
+    },
+    {
+      "author": "awesomebytes",
+      "date": "2018-03-09T08:59:05Z",
+      "sha": "6b4242be73164270aa8553e606eae4b489304d50",
+      "message": "Fix packet rate for the Velodyne 32C",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "axd",
+      "date": "2018-02-21T10:39:18Z",
+      "sha": "118c9a26db183f2aff342890747f1beb4600e3a9",
+      "message": "Added a periodic update of the diagnostics so that when no data is received at all from the Velodyne, a diagnostic information will be published. The previous implementation would publish diagnostics only on packet reception.",
+      "files_changed": 2,
+      "additions": 10,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "mikaelarguedas",
+      "date": "2018-02-15T21:26:43Z",
+      "sha": "db6b5ee5ecb241e436ace9229d2b98d03baaa534",
+      "message": "update to use non deprecated pluginlib macro",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "KyleARectorAStuff",
+      "date": "2018-01-05T17:20:09Z",
+      "sha": "b311237db0a1ee60d99fb2625f6f144b27fd5d42",
+      "message": "Adding missing 32C configuration file.",
+      "files_changed": 1,
+      "additions": 98,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "ASDeveloper00",
+      "date": "2018-01-04T21:17:48Z",
+      "sha": "29665186a17e329f3e6697d33715ff3e683e15a6",
+      "message": "change readme",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "kennouni",
+      "date": "2018-01-04T13:30:31Z",
+      "sha": "6281d2568b9bea9ccba193c557feb621bc36383f",
+      "message": "initial commit",
+      "files_changed": 3,
+      "additions": 154,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "Andre Volk",
+      "date": "2017-09-28T15:22:35Z",
+      "sha": "cb8898d218258bd3622343e4fe69930a7b280af6",
+      "message": "Updated cut_at_specified_angle_feature with latest master version.",
+      "files_changed": 41,
+      "additions": 1106,
+      "deletions": 270,
+      "commit_type": "config"
+    },
+    {
+      "author": "cfneuhaus",
+      "date": "2017-11-30T16:21:08Z",
+      "sha": "559d0eb65806f3619cc039246e08034a447da83a",
+      "message": "bugfix: when no device ip is set, we still want to filter by udp port.",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "robustify",
+      "date": "2017-11-06T20:38:20Z",
+      "sha": "f40555d68bd1efaf3806187f0077596951e5b816",
+      "message": "Merge remote-tracking branch 'ros-drivers/master'",
+      "files_changed": 8,
+      "additions": 106,
+      "deletions": 17,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Kris Kozak",
+      "date": "2017-09-28T23:24:41Z",
+      "sha": "462c80930a094fd816dfee9c8478eb10d5f2c11f",
+      "message": "Add VLP16 Puck Hi-Res support",
+      "files_changed": 1,
+      "additions": 50,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "volkandre",
+      "date": "2017-09-28T13:55:03Z",
+      "sha": "00f407e3fb2b487d5c1e42444e804ccc8fc8f4b3",
+      "message": "Fixed bug. Laserscans now cover full 360 degrees.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "jack-oquin",
+      "date": "2013-04-10T22:54:50Z",
+      "sha": "3a2c89453127144bf029a9a329e40fdfada80273",
+      "message": "convert velodyne_msgs to catkin (#1); delete obsolete migration rules",
+      "files_changed": 5,
+      "additions": 38,
+      "deletions": 196,
+      "commit_type": "docs"
+    },
+    {
+      "author": "tstoyanov",
+      "date": "2016-12-20T14:38:16Z",
+      "sha": "e6560cc0841b51aa81b02eaa4e0bb75765b3704c",
+      "message": "Added an interface to set up raw data processing from a locally defined calibration file. This method is useful when processing data offline from a bag file, without starting any ros master",
+      "files_changed": 2,
+      "additions": 45,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Daniel Jartoux",
+      "date": "2016-08-11T15:35:21Z",
+      "sha": "26c24ef3d3d64bc3c07d141cf276582abe7eb831",
+      "message": "Add more options in launch files.\n\n- rpm, device_ip, port, read_once, read_fast, repeat_delay",
+      "files_changed": 3,
+      "additions": 39,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "fudger",
+      "date": "2016-08-11T14:03:42Z",
+      "sha": "3a19dcca856bbe947ac449cc2aa2dc05240237a1",
+      "message": "Fix misleading typecasts.\n\nintensity and VPoint::intensity are both of type float.",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "teosnare",
+      "date": "2016-08-09T15:40:12Z",
+      "sha": "2495c8f1526b9b8a3bce41bdda9df02f0b4a08a9",
+      "message": "velodyne_driver/src/lib/input.cc : fix for device_ip filter\n\nFix for device_ip filter in InputSocket: initialization of devip_ for correct ip filtering in InputSocket::getPacket.",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Priyanka Dey",
+      "date": "2016-07-01T03:59:53Z",
+      "sha": "58040a0f1b45a276f7106707dbfe9c127fd2bd84",
+      "message": "updated VLP-16 packet rate from user manual.\nAlso verified with sensor. It reduced overlap in the pointcloud",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Adam Stambler",
+      "date": "2016-06-02T20:56:51Z",
+      "sha": "00db43dc6eb784d839cd2020220c3ac9cf8286eb",
+      "message": "Modified  velodyne_pointcloud/src/conversion/colors.cc to remove\naddress build warning for strict-aliasing.\n\nvelodyne/velodyne_pointcloud/src/conversions/colors.cc:84:58:\n error: dereferencing type-punned pointer will break strict-aliasing rules [-Werror=strict-aliasing]\n         p.rgb = *reinterpret_cast<float*>(&rainbow[color]);\n                                                          ^",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Ilya",
+      "date": "2016-05-25T22:50:07Z",
+      "sha": "8ca4f472858b3295242e6bc99009ee623a82d72d",
+      "message": "update velodyne_driver package description to include all models",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "Tones29",
+      "date": "2016-04-20T09:31:21Z",
+      "sha": "5e4a52eb8bc4b39364c818ec921c1fd3c3796431",
+      "message": "velodyne_pointcloud: Fix compile warning \"Wrong initialization order\"",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "wjwwood",
+      "date": "2013-07-11T23:01:14Z",
+      "sha": "5c76ff665255f923aef49c818baed93632af2af1",
+      "message": "driver: add dependency on catkin exported targets",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "acschaefer",
+      "date": "2016-02-08T09:55:41Z",
+      "sha": "0c235c135aa4c72ed8de2538014c99d419e01706",
+      "message": "Fix and add a few comments.",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 5,
+      "commit_type": "docs"
+    },
+    {
+      "author": "pomerlef",
+      "date": "2016-02-11T23:11:21Z",
+      "sha": "3f6924e732445e7e5e1cfab787b71eb5831e0e17",
+      "message": "resolve sign error",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "jlblancoc",
+      "date": "2015-11-29T13:47:31Z",
+      "sha": "f75228e44aada8203024e994b230e9e6fd627e22",
+      "message": "Remove unused variable\n\nI think that `dsr` was unused. See line 317: \r\n\r\nfor (int dsr=0; ...",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "lemiant",
+      "date": "2015-07-21T00:31:13Z",
+      "sha": "74b420a08ff544daa53540fd0521cce618238fdc",
+      "message": "Fixed azimuth overflow bug.\nFor interpolated azimuth values between 35999.5 and 36000.0 the nested round(fmod())\nyields a value of 36000 which is invalid and overflows the pre-computed sin/cos arrays,\nsince they only go form 0..35999",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Kun Li",
+      "date": "2015-06-22T15:22:54Z",
+      "sha": "356cfb1afa522bcede549b07ef7101800662537e",
+      "message": "Added vertical sin angle correction",
+      "files_changed": 1,
+      "additions": 43,
+      "deletions": 10,
+      "commit_type": "code"
+    },
+    {
+      "author": "prclibo",
+      "date": "2015-04-10T07:01:25Z",
+      "sha": "88352fdb718fb77b5216a446ba2b01f7c2919198",
+      "message": "fixed rounding bug in intensity calculation found by songshiyu",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "PatrickHussey",
+      "date": "2015-03-30T19:16:05Z",
+      "sha": "0235e9f7d8b62caa862d860267afc2bca73d7838",
+      "message": "adding support for the VLP16",
+      "files_changed": 7,
+      "additions": 270,
+      "deletions": 3,
+      "commit_type": "config"
+    },
+    {
+      "author": "libo24",
+      "date": "2015-01-26T08:18:48Z",
+      "sha": "fc20169be77cb7f649961fb97f91e565fe9ba28a",
+      "message": "fixed a calibration file parsing bug",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "junior",
+      "date": "2015-01-08T04:11:05Z",
+      "sha": "d48c203e3bcbca364254bb25a72ab71e30388ba6",
+      "message": "parameters to set the udp port",
+      "files_changed": 2,
+      "additions": 11,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "bricerebsamen",
+      "date": "2014-04-24T00:40:56Z",
+      "sha": "da56cd73c261c8b888c89df8db3f437261492ccc",
+      "message": "fixed #16 (diagnostic rate for driver)",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "ddillenberger",
+      "date": "2014-10-10T13:59:33Z",
+      "sha": "425f5b27f9e00e7de8e11be05b9606546b47971e",
+      "message": "parameter and code added for working with multiple velodynes",
+      "files_changed": 3,
+      "additions": 48,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "totosolat",
+      "date": "2014-02-14T13:49:49Z",
+      "sha": "06d8efcb48b1567d9c78904ebaa5165319d2830f",
+      "message": "Update rawdata.h\n\ndefine 2 new configuration parameters: min_angle and max_angle to be used in rawdata.cc",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "cottsay",
+      "date": "2014-03-24T23:56:41Z",
+      "sha": "0b7a20918f65962f1bf0b4183722589aef239584",
+      "message": "Added support for YAML-CPP 0.5+.\n\nThe new yaml-cpp API removes the \"node >> outputvar;\" operator, and\nit has a new way of loading documents. There's no version hint in the\nlibrary's headers, so I'm getting the version number from pkg-config.\n\nThis part of the patch is a port of the ones created by @ktossell for\nmap_server and other packages.\n\nThe new yaml-cpp also uses a different method for loading documents.",
+      "files_changed": 2,
+      "additions": 37,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "gabor-meszaros",
+      "date": "2013-07-24T10:09:03Z",
+      "sha": "432f5dd946efdebf3755b41ccfe1b422e2652b53",
+      "message": "added support for HDL-64E S2.x models",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "jack.oquin",
+      "date": "2010-01-17T01:54:03Z",
+      "sha": "e39ea2dd0c98e6a53e475472593973ffdf56ee61",
+      "message": "Import source files into google code repository.",
+      "files_changed": 43,
+      "additions": 4036,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "piyushk",
+      "date": "2010-10-06T16:50:32Z",
+      "sha": "4b1e3e21439e83b01dea03e588d9734b8f472d1c",
+      "message": "missing ros.h include that should have been there",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "austinrobot",
+      "date": "2010-02-11T23:05:59Z",
+      "sha": "a5d5ac3425a31b40caa9f64fc265aa559a58f609",
+      "message": "make launch file for vehicle",
+      "files_changed": 2,
+      "additions": 14,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "michael.quinlan",
+      "date": "2010-02-17T18:31:21Z",
+      "sha": "92c7a03c9199fe35c4ebc74a0c5faf4904a4839f",
+      "message": "velodyne examples",
+      "files_changed": 5,
+      "additions": 280,
+      "deletions": 0,
+      "commit_type": "docs"
+    }
+  ]
+}

@@ -1,0 +1,471 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T04:31:28Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros-perception",
+    "repo": "image_transport_plugins"
+  },
+  "data": [
+    {
+      "author": "ahcorde",
+      "date": "2023-09-27T09:03:47Z",
+      "sha": "ee2cc15d70a520266265db147a5654ba9f3c25b2",
+      "message": "zstd image transport plugin\n\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>",
+      "files_changed": 11,
+      "additions": 940,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mini-1235",
+      "date": "2025-10-06T08:44:36Z",
+      "sha": "3b9f367703c77dec18e2808fef890dab50a13964",
+      "message": "Fix unable to load compressedDepth plugin (#211)\n\nSigned-off-by: mini-1235 <mauricepurnawan@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "JafarAbdi",
+      "date": "2025-09-10T07:42:42Z",
+      "sha": "3d192bff0b770cd9b0a202fd4c858254c1cc726f",
+      "message": "Fix passing parameters to cv::imencode for OpenCV 4.7 (#207)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "nkhedekar",
+      "date": "2025-08-09T21:15:31Z",
+      "sha": "e06f866b60ba49b5335f5a1be55294c0b676c95e",
+      "message": "Fix typo (#202)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "roncapat",
+      "date": "2025-07-28T12:35:10Z",
+      "sha": "a0a47f3037a7c381bc3a15bf8178ff570c8aef0d",
+      "message": "Fix linter warning (#201)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "ijnek",
+      "date": "2022-11-09T01:22:49Z",
+      "sha": "08090238ee3a8f7c0d3767d20e93b5248764b0a3",
+      "message": "update package.xml\n\nSigned-off-by: Kenji Brameld <kenjibrameld@gmail.com>",
+      "files_changed": 4,
+      "additions": 11,
+      "deletions": 6,
+      "commit_type": "config"
+    },
+    {
+      "author": "bjsowa",
+      "date": "2025-05-26T11:53:05Z",
+      "sha": "6396e30057cbd3431fe57fcd4f14aa8fa713cd5d",
+      "message": "Fix inconsistent transport param names\n\nMake sure the leading slash is removed when running the node under namespace, before replacing slashes with dots.",
+      "files_changed": 4,
+      "additions": 8,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "vermaete",
+      "date": "2025-06-10T09:58:27Z",
+      "sha": "e073dbc7b4f8d7e494758a5b72d95af9b06e7fdb",
+      "message": "Adding the include of cstdint (#189)\n\nSigned-off-by: Jan Vermaete <jan.vermaete@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "traversaro",
+      "date": "2025-01-09T12:00:58Z",
+      "sha": "0352721b71ca24d6bc085c1b45bca3636620bab3",
+      "message": "Use standard C++ type unsigned int in place of uint (#174)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "wodtko",
+      "date": "2024-11-29T09:15:17Z",
+      "sha": "ccb2e9bf447c16c1857afc0d935413dcc2969cea",
+      "message": "[ADD] flag for jpeg compression of bayer format (#98)",
+      "files_changed": 1,
+      "additions": 15,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Bitterisland6",
+      "date": "2024-11-25T09:35:57Z",
+      "sha": "9695d1b2a88e3dcae8ab2f28e1078e68a7893af5",
+      "message": "inlcude alpha channel in PNG compression (#171)\n\nSigned-off-by: Aleksander Szymański <bitterisland6@gmail.com>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "anilsripadarao",
+      "date": "2023-08-17T13:57:12Z",
+      "sha": "23937bbe8c6aa8cc46f53cef4e9f3ad534713f80",
+      "message": "Adding RVL Codec support.\nCopied rvl_codec.cpp/.h files from noetic-devel branch.",
+      "files_changed": 3,
+      "additions": 126,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "bmegli",
+      "date": "2023-04-17T10:59:25Z",
+      "sha": "58b7f6fd9b34bea6442f6c1207af715c73325fef",
+      "message": "add transport scoped parameters for CompressedPublisher\n\n- <image>.<transport>.<param> as future replacement of  <image>.<param>\n  - e.g. `image.compressed.format` instead of `image.format`\n- support both ways for now\n- emit deprecation warnings on setting through non-transport scoped parameter\n- synchronize deprecated changes to new ones\n  - this is necessary for dynamic reconfigure\n\nSimilar changes will be needed for:\n- other transports\n- subscribers\n\nRelated to ros-perception#140",
+      "files_changed": 3,
+      "additions": 212,
+      "deletions": 151,
+      "commit_type": "config"
+    },
+    {
+      "author": "Marcel Zeilinger",
+      "date": "2022-10-19T10:34:23Z",
+      "sha": "020be42b6cb24c862669cd3eaecc1174aedb7607",
+      "message": "Declare depth compression params in a per-topic namespace",
+      "files_changed": 1,
+      "additions": 49,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "ivanpauno",
+      "date": "2021-07-07T22:11:53Z",
+      "sha": "b8c377b7c50ad09fa0d3229b4edba9848d625b5f",
+      "message": "[ros2] Fix RCLCPP_* logs, a string literal must be the first argument (#72)\n\n* Fix RCLCPP_* logs, a literal string must be the first argument\r\n\r\nSigned-off-by: Ivan Santiago Paunovic <ivanpauno@ekumenlabs.com>\r\n\r\n* fix\r\n\r\nSigned-off-by: Ivan Santiago Paunovic <ivanpauno@ekumenlabs.com>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "clalancette",
+      "date": "2022-04-18T15:41:38Z",
+      "sha": "339fb35d20a58c2d18e1d36bc029647614497841",
+      "message": "Cleanup the cmake code to be more modern (#96)\n\n* Cleanup cmake code to be more modern.\r\n\r\nNot only does this use our current best practices, but it also\r\nshould fix the build on the ROS 2 buildfarm.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 2,
+      "additions": 66,
+      "deletions": 69,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jacobperron",
+      "date": "2022-04-09T00:58:37Z",
+      "sha": "006b7a8321d5e03f3291685ee797a7fbdb06f2fb",
+      "message": "2.4.0",
+      "files_changed": 4,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "config"
+    },
+    {
+      "author": "mjcarroll",
+      "date": "2018-08-21T15:10:00Z",
+      "sha": "cc030a7b81360e84beb8cd7f9c4a3eab5c0b568d",
+      "message": "Update compressed_image_transport to ros2 (#26)\n\n* Ignore other packages for now.\r\n\r\n* Update to new plugin API.\r\n\r\n* Add support for parameters.\r\n\r\n* Address reviewer feedback.\r\n\r\n* Switch to RCLCPP loggers.",
+      "files_changed": 11,
+      "additions": 213,
+      "deletions": 154,
+      "commit_type": "docs"
+    },
+    {
+      "author": "smnogar",
+      "date": "2021-07-14T21:31:16Z",
+      "sha": "8369c7debcbd276ccdd38de110d0f61ff55ffc6e",
+      "message": "mac fix (#76)\n\nCo-authored-by: Michael Carroll <michael@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 10,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Briancbn",
+      "date": "2021-04-16T14:27:21Z",
+      "sha": "7cedbf04d5deb3b183d92756b912816ce7618aca",
+      "message": "Fix ament_export_dependencies syntax in CMake (#65)\n\nSigned-off-by: Chen Bainian <chenbn@artc.a-star.edu.sg>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 6,
+      "commit_type": "docs"
+    },
+    {
+      "author": "lukaszmitka",
+      "date": "2020-04-14T15:45:14Z",
+      "sha": "134c4ce9e36a64da2cc195cc14985522b56274ef",
+      "message": "Add parameter declarations (#52)",
+      "files_changed": 2,
+      "additions": 38,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "galou",
+      "date": "2019-10-23T14:35:28Z",
+      "sha": "e3ebd1d093d54cb496940dca1bbba1590382ec46",
+      "message": "Remove dependency to ${PROJECT_NAME} (#46)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "dgossow",
+      "date": "2019-07-01T14:52:01Z",
+      "sha": "e764fc0168de0f3b61936afef366e411d5a8207b",
+      "message": "Merge pull request #38 from Kapernikov/ros2\n\nFix theora plugin wrong path (#37)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "Frank Dekervel",
+      "date": "2019-06-18T06:35:31Z",
+      "sha": "94d8b058e171c3168c0cfba86de012fe84f976f4",
+      "message": "Fix theora plugin wrong path",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "klintan",
+      "date": "2019-02-16T21:44:59Z",
+      "sha": "ffd20905d1e8181c08daed9cf074d84ce896ccba",
+      "message": "fixed portability warning for name",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "vrabaud",
+      "date": "2012-12-28T17:58:38Z",
+      "sha": "b308b4223db43700288980a8d1a980c8e25cf208",
+      "message": "make sure the plugins are visible by image_transport",
+      "files_changed": 6,
+      "additions": 27,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "bulwahn",
+      "date": "2016-09-30T14:52:06Z",
+      "sha": "1f4ddc559b9f0647a294e112108695052c3f74eb",
+      "message": "address gcc6 build error and tune\n\nWith gcc6, compiling fails with `stdlib.h: No such file or directory`,\nas including '-isystem /usr/include' breaks with gcc6, cf.,\nhttps://gcc.gnu.org/bugzilla/show_bug.cgi?id=70129.\n\nThis commit addresses this issue for this package in the same way\nit was addressed in various other ROS packages. A list of related\ncommits and pull requests is at:\n\n  https://github.com/ros/rosdistro/issues/12783\n\nSigned-off-by: Lukas Bulwahn <lukas.bulwahn@oss.bmw-carit.de>",
+      "files_changed": 3,
+      "additions": 5,
+      "deletions": 6,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Mac Mason",
+      "date": "2016-01-13T22:58:22Z",
+      "sha": "973cf79e635748b484867bfd654c8e5128a0c791",
+      "message": "Refactor the codec into its own .h and .cpp.",
+      "files_changed": 5,
+      "additions": 410,
+      "deletions": 275,
+      "commit_type": "docs"
+    },
+    {
+      "author": "cedricpradalier",
+      "date": "2015-04-27T11:49:19Z",
+      "sha": "8f72766f7b61857206b3f73321abf75845e150e4",
+      "message": "Updated for indigo-devel",
+      "files_changed": 4,
+      "additions": 59,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "wjwwood",
+      "date": "2014-07-19T01:35:21Z",
+      "sha": "ce6a1365f47544b845e21ae2cadc4974ae33bda8",
+      "message": "Merge pull request #13 from NikolausDemmel/patch1\n\nSome cleanup in package.xml and CMakeLists.txt",
+      "files_changed": 2,
+      "additions": 5,
+      "deletions": 6,
+      "commit_type": "docs"
+    },
+    {
+      "author": "NikolausDemmel",
+      "date": "2014-06-10T21:14:41Z",
+      "sha": "16fe2a02ee50ae24f7d78fa6d1230d1d0a9f6a10",
+      "message": "Some cleanup in package.xml and CMakeLists.txt\n\n - builds broke sporadically (I think because of the missing *_gencpp in\n   add_dependencies) with missing Packet.h file.\n - I’m no catkin expert, but these changes make catkin_lint happy (no\n   more errors at least).",
+      "files_changed": 2,
+      "additions": 5,
+      "deletions": 6,
+      "commit_type": "docs"
+    },
+    {
+      "author": "tfoote",
+      "date": "2009-12-12T01:44:41Z",
+      "sha": "e6596be98c77ea0e2fa5c52ce74e14d456435e3b",
+      "message": "fixing old opencv stack dependency",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "Kei Okada",
+      "date": "2014-05-10T08:45:56Z",
+      "sha": "2dddaa63e4671b0b1847f4926fd0a658c647bca6",
+      "message": "remove __connection_header for indigo see http://github.com/ros-perception/image_transport_plugins.git",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "David Gossow",
+      "date": "2013-06-27T23:05:29Z",
+      "sha": "6dd89102be1810db3ac5e98b659ac7c03da230c0",
+      "message": "buildtool_depend catkin, added metapackage CMakelists.txt",
+      "files_changed": 2,
+      "additions": 6,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jkammerl",
+      "date": "2012-11-21T07:32:36Z",
+      "sha": "e9c27689dbe246e3bf23e097a4e38bcb0dfad9de",
+      "message": "github migration from code.ros.org (r40053)",
+      "files_changed": 36,
+      "additions": 1109,
+      "deletions": 370,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Aaron Blasdel",
+      "date": "2012-12-21T23:27:34Z",
+      "sha": "58da44be1fb7879a35cff880fb88f2effa32346a",
+      "message": "added license headers to various cpp and h files",
+      "files_changed": 18,
+      "additions": 612,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "dirk-thomas",
+      "date": "2012-12-20T01:03:10Z",
+      "sha": "bffed24bfb88d7acfc483ec39d7a7a2417dd330f",
+      "message": "fix dyn reconf",
+      "files_changed": 4,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "config"
+    },
+    {
+      "author": "mirzashah",
+      "date": "2012-12-14T22:23:24Z",
+      "sha": "bf749c9f9a5a345b12467e5cf291d035dcd79559",
+      "message": "Updated package.xml for new buildtool_depend tag for catkin requirement",
+      "files_changed": 4,
+      "additions": 8,
+      "deletions": 4,
+      "commit_type": "config"
+    },
+    {
+      "author": "mihelich",
+      "date": "2009-09-30T21:38:03Z",
+      "sha": "a9a62792579f3588c298abfabf23cb3b738b5ea3",
+      "message": "compressed_image_transport: Updated for compatibility with post-0.1 image_transport.",
+      "files_changed": 4,
+      "additions": 30,
+      "deletions": 98,
+      "commit_type": "code"
+    },
+    {
+      "author": "kwc",
+      "date": "2009-09-04T23:12:08Z",
+      "sha": "6c321e4d1e390e9a257195e608e55a3a9dae01a0",
+      "message": "moving trunk out of pkg",
+      "files_changed": 0,
+      "additions": 0,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "gerkey",
+      "date": "2009-09-06T18:53:08Z",
+      "sha": "136901ccb765a676bfc119c143fe168d620f1e34",
+      "message": "Removed explicit library prefix and suffix",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ethan",
+      "date": "2009-10-07T23:58:05Z",
+      "sha": "c8bee4f896d13e909cfe7b81ef130bcd5e34ba08",
+      "message": "Updating theora_image_transport to work with the latest image_transport API",
+      "files_changed": 4,
+      "additions": 41,
+      "deletions": 91,
+      "commit_type": "code"
+    },
+    {
+      "author": "mquigley",
+      "date": "2009-12-01T21:19:50Z",
+      "sha": "ce2cf27b8d00ab655c628ba693820c236e5bdcd7",
+      "message": "add a dependency on the libogg ubuntu/debian package",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "wheeler",
+      "date": "2009-11-30T23:24:46Z",
+      "sha": "2cb1c05f39206c0ea14d964b29a2fa1b71a384c5",
+      "message": "Remove use of deprecated rosbuild macros",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jamesb",
+      "date": "2009-11-19T19:36:45Z",
+      "sha": "c1f1f810f713eb920a7cbf67352183cfec908d1f",
+      "message": "Switch to opencv2",
+      "files_changed": 3,
+      "additions": 4,
+      "deletions": 3,
+      "commit_type": "config"
+    },
+    {
+      "author": "pmihelich",
+      "date": "2009-09-01T00:17:11Z",
+      "sha": "71eed942d034cbd464ae7e285b176ef45422bf98",
+      "message": "image_transport_plugins: Initial stack check-in. Includes theora_image_transport, compressed_image_transport and libtheora. Currently depends on opencv, but may excise this in the future.",
+      "files_changed": 24,
+      "additions": 1166,
+      "deletions": 0,
+      "commit_type": "docs"
+    }
+  ]
+}

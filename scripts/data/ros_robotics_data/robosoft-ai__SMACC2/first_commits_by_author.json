@@ -1,0 +1,111 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T10:46:01Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "robosoft-ai",
+    "repo": "SMACC2"
+  },
+  "data": [
+    {
+      "author": "brettpac",
+      "date": "2020-09-30T18:19:38Z",
+      "sha": "958e828e24c1f82adaefbda0f1f7553e745d138d",
+      "message": "Initial commit",
+      "files_changed": 2,
+      "additions": 30,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "pabloinigoblasco",
+      "date": "2020-10-04T11:31:35Z",
+      "sha": "bb8ee350b56edcff6f7e832236e90bc053c69dac",
+      "message": "initial commit smacc2. Also the sm_atomic example: ros2 launch sm_atomic sm_atomic.py",
+      "files_changed": 126,
+      "additions": 11250,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "onionsflying",
+      "date": "2025-11-02T09:54:35Z",
+      "sha": "8229ed71359464f0021c23b895263c42e7d898ee",
+      "message": "Fixed an UB in client_bases/smacc_subscriber_client.hpp (#635)\n\n* Initialize 'initialized_' in SmaccSubscriberClient constructor\n\n* Fix formatting in SmaccSubscriberClient constructor",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "yassiezar",
+      "date": "2024-06-28T15:51:53Z",
+      "sha": "4c0b961431da4cbb4f3e0408a80f98fe5d6fdb0e",
+      "message": "Reverting to the baseline clang-format (#547)",
+      "files_changed": 2,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "config"
+    },
+    {
+      "author": "sukhrajklair",
+      "date": "2024-06-19T16:26:07Z",
+      "sha": "344ff3cb08bbb13f462baa27ac8d2a5b8cd50244",
+      "message": "simple state machine with an action client and a topic subscriber (#543)\n\n* create a simple state machine with two states, one action server client and one subscriber client\r\n\r\n* added the template copyright and license info to all code files\r\n\r\n* renamed package and files to fit the established naming convention\r\n\r\n* added missing license for mode_selection_client and orhtogonals files\r\n\r\n* moved license to the top of the cl_mode_select.hpp file\r\n\r\n* fixed formatting errors\r\n\r\n---------\r\n\r\nCo-authored-by: Sukhraj Klair <sukhraj.k@radskunkworks.com>",
+      "files_changed": 16,
+      "additions": 644,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "invalid-email-address",
+      "date": "2023-08-28T16:27:20Z",
+      "sha": "76b6b4aee85ff552556bd853b04c7c08153d6467",
+      "message": "Merge branch 'feature/project_mine_and_office' into 'humble'\n\nAñadidos directorios para archivos de proyectos mine y office\n\nSee merge request root/smacc2_pablo!3",
+      "files_changed": 194,
+      "additions": 68863,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "atobaruela-ibrrobotics",
+      "date": "2023-08-28T12:51:49Z",
+      "sha": "4e03d2b6e988e50c409d870944dcabaac9f17541",
+      "message": "Añadidos directorios para archivos de proyectos mine y office",
+      "files_changed": 194,
+      "additions": 68863,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "nuclearsandwich",
+      "date": "2023-06-17T01:00:10Z",
+      "sha": "d198fc6673c89f1e75a497a3f41bb1c76251c9b1",
+      "message": "Add test dependencies on Humble branch. (#516)\n\nament_lint_auto nor ament_lint_common are not listed as dependencies for\r\nsmacc2_msgs. ament_lint_auto is required due to the `find_package` call\r\nand while `ament_lint_common` is not mentioned by name, ament_lint_auto\r\nwill only work if there are ament_lint packages present for it to\r\nconfigure.\r\n\r\nThis is causing the build failures mentioned in\r\nhttps://github.com/robosoft-ai/SMACC2/issues/508#issuecomment-1591685849",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "destogl",
+      "date": "2021-08-11T18:53:22Z",
+      "sha": "0f81c06af4b625bc8861ddce8b2d55dc2c003a7e",
+      "message": "Add GH actions setup for galactic.",
+      "files_changed": 9,
+      "additions": 363,
+      "deletions": 28,
+      "commit_type": "config"
+    },
+    {
+      "author": "mergify[bot]",
+      "date": "2022-03-05T07:47:59Z",
+      "sha": "161125d61583565932ba2a2a37b717208e080a7b",
+      "message": "Update foxy-source-build.yml (backport #243) (#245)\n\nCo-authored-by: Denis Štogl <denis@stogl.de>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T06:49:08Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ctu-vras",
+    "repo": "ros-utils"
+  },
+  "data": [
+    {
+      "author": "peci1",
+      "date": "2019-02-06T14:32:48Z",
+      "sha": "455c2416bc0fcb6cf3fadb5fc393f7cd7861a1c0",
+      "message": "Initial commit",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Tobias-Fischer",
+      "date": "2025-11-08T14:25:52Z",
+      "sha": "beb105958ae53ae02a605745c834a0008981497c",
+      "message": "Add cras_semaphore to cras_tf2_utils dependencies (#10)\n\nFix:\r\n│ │ FAILED: [code=1] devel/lib/libcras_tf2_utils.dylib \r\n │ │ : && $BUILD_PREFIX/bin/arm64-apple-darwin20.0.0-clang++ -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0\r\n │ │  -isystem $PREFIX/include -fdebug-prefix-map=$SRC_DIR=/usr/local/src/conda/ros-noetic-cras-cpp-common-2.5.1 -fdebug-prefix-map=$PREFIX=/usr/local/src/conda-prefix -DBOOST_ERRO\r\n │ │ R_CODE_HEADER_ONLY -O3 -DNDEBUG -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.15\r\n │ │  -dynamiclib -Wl,-headerpad_max_install_names -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,$PREFIX/lib -L$PREFIX/lib -o devel/lib/libcras_tf2_utils.dylib\r\n │ │  -install_name @rpath/libcras_tf2_utils.dylib CMakeFiles/cras_tf2_utils.dir/src/tf2_utils.cpp.o CMakeFiles/cras_tf2_utils.dir/src/tf2_utils/interruptible_buffer.cpp.o  -Wl,-rp\r\n │ │ ath,$SRC_DIR/build/devel/lib  devel/lib/libcras_log_utils.dylib  devel/lib/libcras_thread_utils.dylib  $PREFIX/lib/libdiagnostic_updater.dylib  $PREFIX/lib/libdynamic_reconfig\r\n │ │ ure_config_init_mutex.dylib  $PREFIX/lib/libmean.dylib  $PREFIX/lib/libparams.dylib  $PREFIX/lib/libincrement.dylib  $PREFIX/lib/libmedian.dylib  $PREFIX/lib/libtransfer_funct\r\n │ │ ion.dylib  $PREFIX/lib/libnodeletlib.dylib  $PREFIX/lib/libbondcpp.dylib  $PREFIX/lib/libclass_loader.dylib  $PREFIX/lib/libPocoFoundation.dylib  -ldl  $PREFIX/lib/libroslib.d\r\n │ │ ylib  $PREFIX/lib/librospack.dylib  $PREFIX/lib/libboost_program_options.dylib  $PREFIX/lib/libtinyxml2.dylib  $PREFIX/lib/liborocos-kdl.dylib  $PREFIX/lib/libtf2_ros.dylib  $\r\n │ │ PREFIX/lib/libactionlib.dylib  $PREFIX/lib/libmessage_filters.dylib  $PREFIX/lib/libtf2.dylib  $PREFIX/lib/libtopic_tools.dylib  $PREFIX/lib/libroscpp.dylib  $PREFIX/lib/libbo\r\n │ │ ost_chrono.dylib  $PREFIX/lib/libboost_filesystem.dylib  $PREFIX/lib/librosconsole.dylib  $PREFIX/lib/librosconsole_log4cxx.dylib  $PREFIX/lib/librosconsole_backend_interface.\r\n │ │ dylib  $PREFIX/lib/liblog4cxx.dylib  $PREFIX/lib/libboost_regex.dylib  $PREFIX/lib/libroscpp_serialization.dylib  $PREFIX/lib/libxmlrpcpp.dylib  $PREFIX/lib/librostime.dylib  \r\n │ │ $PREFIX/lib/libboost_date_time.dylib  $PREFIX/lib/libcpp_common.dylib  $PREFIX/lib/libboost_system.dylib  $PREFIX/lib/libboost_thread.dylib  $PREFIX/lib/libconsole_bridge.1.0.\r\n │ │ dylib  devel/lib/libcras_string_utils.dylib  devel/lib/libcras_time_utils.dylib  $PREFIX/lib/libdiagnostic_updater.dylib  $PREFIX/lib/libdynamic_reconfigure_config_init_mutex.\r\n │ │ dylib  $PREFIX/lib/libmean.dylib  $PREFIX/lib/libparams.dylib  $PREFIX/lib/libincrement.dylib  $PREFIX/lib/libmedian.dylib  $PREFIX/lib/libtransfer_function.dylib  $PREFIX/lib\r\n │ │ /libnodeletlib.dylib  $PREFIX/lib/libbondcpp.dylib  $PREFIX/lib/libclass_loader.dylib  $PREFIX/lib/libPocoFoundation.dylib  -ldl  $PREFIX/lib/libroslib.dylib  $PREFIX/lib/libr\r\n │ │ ospack.dylib  $PREFIX/lib/libboost_program_options.dylib  $PREFIX/lib/libtinyxml2.dylib  $PREFIX/lib/liborocos-kdl.dylib  $PREFIX/lib/libtf2_ros.dylib  $PREFIX/lib/libactionli\r\n │ │ b.dylib  $PREFIX/lib/libmessage_filters.dylib  $PREFIX/lib/libtf2.dylib  $PREFIX/lib/libtopic_tools.dylib  $PREFIX/lib/libroscpp.dylib  $PREFIX/lib/libboost_chrono.dylib  $PRE\r\n │ │ FIX/lib/libboost_filesystem.dylib  $PREFIX/lib/librosconsole.dylib  $PREFIX/lib/librosconsole_log4cxx.dylib  $PREFIX/lib/librosconsole_backend_interface.dylib  $PREFIX/lib/lib\r\n │ │ log4cxx.dylib  $PREFIX/lib/libboost_regex.dylib  $PREFIX/lib/libroscpp_serialization.dylib  $PREFIX/lib/libxmlrpcpp.dylib  $PREFIX/lib/librostime.dylib  $PREFIX/lib/libboost_d\r\n │ │ ate_time.dylib  $PREFIX/lib/libcpp_common.dylib  $PREFIX/lib/libboost_system.dylib  $PREFIX/lib/libboost_thread.dylib  $PREFIX/lib/libconsole_bridge.1.0.dylib  $PREFIX/lib/lib\r\n │ │ iconv.dylib && :\r\n │ │ Undefined symbols for architecture arm64:\r\n │ │   \"cras::ReverseSemaphore::acquire()\", referenced from:\r\n │ │       cras::InterruptibleTFBuffer::canTransform(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, std::__1::basic_string<char, std::\r\n │ │ __1::char_traits<char>, std::__1::allocator<char>> const&, ros::Time const&, ros::Duration) const in interruptible_buffer.cpp.o\r\n │ │       cras::InterruptibleTFBuffer::canTransform(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, std::__1::basic_string<char, std::\r\n │ │ __1::char_traits<char>, std::__1::allocator<char>> const&, ros::Time const&, ros::Duration, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>\r\n │ │ >*) const in interruptible_buffer.cpp.o",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "knorth55",
+      "date": "2025-04-22T21:36:59Z",
+      "sha": "0bc90d95cae50743c1d431d424ab211f3d9f7a67",
+      "message": "fix depends in tf_static_publisher (#7)\n\n* fix depends in tf_static_publisher",
+      "files_changed": 2,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "tpet",
+      "date": "2019-02-13T09:19:28Z",
+      "sha": "a90d3311a99bb98d29389d83a20125c55349a5b9",
+      "message": "Moved to common/exploration repo.",
+      "files_changed": 24,
+      "additions": 0,
+      "deletions": 2631,
+      "commit_type": "docs"
+    },
+    {
+      "author": "CTU Base",
+      "date": "2019-08-15T05:39:25Z",
+      "sha": "9a252cf34de01e7fa0c95eaf165bd2cb007cf700",
+      "message": "Added hack_frame_id",
+      "files_changed": 1,
+      "additions": 39,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "bayerja1",
+      "date": "2019-02-11T19:42:21Z",
+      "sha": "adb8d9bd7236ec0bc203008cb97e0255d622d781",
+      "message": "ROS mapping and exploration node has been initialized.",
+      "files_changed": 24,
+      "additions": 2631,
+      "deletions": 0,
+      "commit_type": "docs"
+    }
+  ]
+}

@@ -1,0 +1,571 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T07:00:33Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros2",
+    "repo": "cartographer_ros"
+  },
+  "data": [
+    {
+      "author": "clalancette",
+      "date": "2019-05-17T18:08:39Z",
+      "sha": "8ea07d2c60cd894b298632ede9f49e96ec89aad1",
+      "message": "Apply omnibus cartographer ROS 2 port.\n\nIt's too complicated to keep the old port.  Changes in this\nport contributed by:\n\nChris Lalancette (Open Robotics)\nMikael Arguedas (Open Robotics)\nShane Loretz (Open Robotics)\nDarby Lim (ROBOTIS)\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 26,
+      "additions": 1056,
+      "deletions": 942,
+      "commit_type": "docs"
+    },
+    {
+      "author": "traversaro",
+      "date": "2025-05-20T15:16:38Z",
+      "sha": "f74e98b860552c639d789c38a1b9efed4ae1a63e",
+      "message": "Fix compilation with glog >= 0.7.0 (#76)\n\n* Fix compilation with glog >= 0.7.0\n\nSigned-off-by: Silvio Traversaro <silvio@traversaro.it>",
+      "files_changed": 2,
+      "additions": 20,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "wolfv",
+      "date": "2022-06-23T16:01:28Z",
+      "sha": "098e6bf8556070b9228b9fa7d5766238bc141a90",
+      "message": "fix cmake to prevent multiple definitions (#63)",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 7,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Guillaume Doisy",
+      "date": "2021-05-05T21:59:24Z",
+      "sha": "a967698b4ceb35335303db412ef15eaf84aa2aed",
+      "message": "ros2 conversion\n\nSigned-off-by: Guillaume Doisy <guillaume.doisy@wyca.fr>",
+      "files_changed": 51,
+      "additions": 1670,
+      "deletions": 1458,
+      "commit_type": "docs"
+    },
+    {
+      "author": "imstevenpmwork",
+      "date": "2021-06-04T07:29:17Z",
+      "sha": "9d523f5d3f444bb6cfc598ec111e59aeabb8e1e4",
+      "message": "wip not compiling\n\nSigned-off-by: Guillaume Doisy <guillaume.doisy@wyca.fr>",
+      "files_changed": 6,
+      "additions": 150,
+      "deletions": 120,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Guillaume dev PC",
+      "date": "2021-10-27T15:29:52Z",
+      "sha": "2d9dbbe57ae13a3672ef09cb2b992910b11b16da",
+      "message": "Q_EMIT / slot working but material error\n\nSigned-off-by: Guillaume Doisy <guillaume.doisy@wyca.fr>",
+      "files_changed": 6,
+      "additions": 34,
+      "deletions": 24,
+      "commit_type": "code"
+    },
+    {
+      "author": "Jonathan Huber",
+      "date": "2020-10-21T12:03:15Z",
+      "sha": "804595b9cea1f8238a08837f96c98905c00e49ec",
+      "message": "Make publishing tf optional, enable publishing PoseStamped (#1099)\n\nIf the output of cartographer should be used as an input to an additional sensor fusion method,\r\nusing the published TF transform is inconvenient or in our specific use case even harmful\r\nbecause we don't want to add the raw cartographer output to our TF tree.\r\n\r\nWith this change it becomes optional to broadcast to /tf.\r\nMorever there is an option to publish the tracked frame pose as a PoseStamped message.\r\nWe add two new optional parameters:\r\n- `publish_to_tf` if false no tf transform is broadcasted\r\n-  `publish_tracked_pose` If set `true` a PoseStamped representing the position of the\r\ntracked pose w.r.t. map frame is published.\r\n\r\nIf default launchers and settings are used this PR causes no change in the behavior.\r\n\nSigned-off-by: Guillaume Doisy <guillaume.doisy@wyca.fr>",
+      "files_changed": 7,
+      "additions": 68,
+      "deletions": 29,
+      "commit_type": "docs"
+    },
+    {
+      "author": "MichaelGrupp",
+      "date": "2017-11-14T13:49:19Z",
+      "sha": "b56903c1bb965fae2309312d4af757a6658c2ab0",
+      "message": "Do not include trimmed submaps into the occupancy grid (#591)\n\nDerive submap IDs that don't appear in the submap list anymore and delete the corresponding slices from our state before drawing.",
+      "files_changed": 1,
+      "additions": 14,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "mohamedsayed18",
+      "date": "2021-01-25T09:21:50Z",
+      "sha": "2cbe3f26c2b47248a10735fddf50cfc389b67e06",
+      "message": "Fixing typo in the docs (#1588)\n\nSigned-off-by: mohamedsayed18 <mohamed95.a.s@gmail.com>\nSigned-off-by: Guillaume Doisy <guillaume.doisy@wyca.fr>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "wohe",
+      "date": "2016-08-03T12:54:45Z",
+      "sha": "961afb68175e64a57d7acbb809da9053d0586b33",
+      "message": "Add code to allow offline processing of 2D Cartographer bags. (#1)\n\n* Add code to allow offline processing of 2D Cartographer bags.\r\n\r\nFixes waiting for transforms to be published, adds support for multi-echo\r\nlaser scans, sets default values for the submap topic and query for the\r\nRViz plugin.",
+      "files_changed": 9,
+      "additions": 184,
+      "deletions": 93,
+      "commit_type": "docs"
+    },
+    {
+      "author": "stribor14",
+      "date": "2020-11-13T12:22:31Z",
+      "sha": "1dfb8a085f2cad4582245d1ff87e6069a6dea657",
+      "message": "Check if we already publihed transformation at same timestamp Fix #1555 (#1556)\n\nSigned-off-by: stribor14 <mirko.kokot@romb-technologies.hr>\r\n\r\nCo-authored-by: stribor14 <mirko.kokot@romb-technologies.hr>\nSigned-off-by: Guillaume Doisy <guillaume.doisy@wyca.fr>",
+      "files_changed": 2,
+      "additions": 10,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "zhenzhenxiang",
+      "date": "2020-11-11T12:46:46Z",
+      "sha": "359e580310e1a9ff968741b1bef63a45a709ccf1",
+      "message": "Update algo_walkthrough.rst (#1545)\n\nFix typos.\r\n\r\nSigned-off-by: zhenzhenxiang <405090724@163.com>\nSigned-off-by: Guillaume Doisy <guillaume.doisy@wyca.fr>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "erikreed",
+      "date": "2020-10-21T17:49:50Z",
+      "sha": "1cc08e957a99a4eac904f41851cd965dd5bcfd34",
+      "message": "Add color requirement note for point_cloud_viewer (#1424)\n\nI was running through these docs and having [trouble](https://github.com/googlecartographer/point_cloud_viewer/issues/389)\r\nwith map visualization via `point_cloud_viewer`.\r\nNotably, color is required for plys ingested by `point_cloud_viewer` (in contrast to Meshlab).\r\n\r\nThis PR adds a note to make this clear.\r\n\r\nSigned-off-by: Erik Reed <ereed.uw@gmail.com>\nSigned-off-by: Guillaume Doisy <guillaume.doisy@wyca.fr>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Geonhee-LEE",
+      "date": "2020-08-29T09:49:05Z",
+      "sha": "30d643012cd400cbf9e247f038d7a8717e3132a6",
+      "message": "Update assets_writer.rst (#1442)\n\nSigned-off-by: Geonhee-LEE <gunhee6392@gmail.com>\nSigned-off-by: Guillaume Doisy <guillaume.doisy@wyca.fr>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "bochen87",
+      "date": "2020-06-17T11:47:28Z",
+      "sha": "f8c572b31c89e71de7ddd976b9af6c952131440b",
+      "message": "Fix broken build for melodic. Use official ros docker image. (#1484)\n\nEssentially revert #1021 as image seems to be fixed\r\n\r\nSigned-off-by: Bo Chen <bo@enway.ai>\nSigned-off-by: Guillaume Doisy <guillaume.doisy@wyca.fr>",
+      "files_changed": 3,
+      "additions": 6,
+      "deletions": 72,
+      "commit_type": "ci"
+    },
+    {
+      "author": "tfoote",
+      "date": "2019-08-27T07:44:15Z",
+      "sha": "76f8989dcaea57da4f41df74a66f1e8ca4f4ceb7",
+      "message": "Remove EOL Distros from CI matrix (#1379)\n\nIndigo and Lunar are both EOL\n\nSigned-off-by: Guillaume Doisy <guillaume.doisy@wyca.fr>",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "mgladkova",
+      "date": "2019-05-07T14:53:06Z",
+      "sha": "2c20ec34940af738fbeb80c7376e91fbcc8444ec",
+      "message": "Simplify start_trajectory service (RFC-28) (#1245)\n\n* Simplify start_trajectory.\r\n\r\n* Ran clang-format.\r\n\r\n* Make corrections based on the review\r\n\r\n* Make corrections based on review #2, remove obsolete functions\r\n\r\n* Remove unnecessary local variables\r\n\nSigned-off-by: Guillaume Doisy <guillaume.doisy@wyca.fr>",
+      "files_changed": 11,
+      "additions": 88,
+      "deletions": 381,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ashnarayan13",
+      "date": "2019-04-17T12:23:38Z",
+      "sha": "1f712de2b31f72909710599c251653024ae1ae47",
+      "message": "Updated doc to remove abseil-cpp from ROS (#1211)\n\nI have added a few lines to the doc to alert users to remove ros abseil-cpp and also to change the rosinstall file if they wish to checkout a different version of cartographer. As discussed in #1208\n\nSigned-off-by: Guillaume Doisy <guillaume.doisy@wyca.fr>",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "chargerKong",
+      "date": "2021-10-28T19:34:33Z",
+      "sha": "447e993429f13616d534abc7238e5b891b685598",
+      "message": "add pbstream_to_ros_map_node (#54)",
+      "files_changed": 2,
+      "additions": 7,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "hidmic",
+      "date": "2020-10-30T20:16:04Z",
+      "sha": "fdba488d2deb466aef950311a020f5f54b1834c3",
+      "message": "Handle multiple ROS messages with the same timestamp (#46)\n\n* Handle multiple ROS messages with the same timestamp\r\n\r\nIgnore all but the first one. Prevents cartographer\r\nfrom crashing when simulated clock latency results\r\nin time not moving forward fast enough.\r\n\r\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "sloretz",
+      "date": "2019-12-18T21:58:59Z",
+      "sha": "e69aed09079e303a42b14850339a2d4480db87cb",
+      "message": "Strip ROS args before passing to GFlags (#40)\n\n* Use AllowComandLineReparsing\r\n\r\nSigned-off-by: Shane Loretz <sloretz@openrobotics.org>",
+      "files_changed": 2,
+      "additions": 9,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "emersonknapp",
+      "date": "2019-12-08T14:04:57Z",
+      "sha": "a01b63ecc98430b5dbe86a0373989248bb23fe9a",
+      "message": "Fix argument intiialization to allow node to take in params (#39)",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "rotu",
+      "date": "2019-07-26T20:08:20Z",
+      "sha": "1df73d37d525ce4c074c6e28e84440a026c0d52a",
+      "message": "QoS changes (#29)\n\n* More appropriate QoS\r\n\r\n* Style fixup.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "fprott",
+      "date": "2019-01-30T12:46:41Z",
+      "sha": "5f1ff900b4a7d75a7fceafc86f33eb587a8fecdf",
+      "message": "Fixed wrong Topic name for Landmarks (#1171)\n\nThe expected topic name for the cartographer seems to be landmark not landmarks even tough a list of landmarks is expected.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "sebastianklose",
+      "date": "2018-05-09T11:58:17Z",
+      "sha": "be71e346a50bc9da0ddb3f7b94cffd52e1634d5c",
+      "message": "Adapt to new mapping proto location of cartographer (#860)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "esteve",
+      "date": "2019-01-16T13:10:54Z",
+      "sha": "68f60ff763c014c8240b5b72b26237f30629413d",
+      "message": "Fix typo (#1130)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ojura",
+      "date": "2017-02-09T14:58:35Z",
+      "sha": "02044fc86a8c192dc37cb6c2b41f8573c3e982b5",
+      "message": "Enable adding as a CMake subproject (#262)\n\nAdd support for building libcartographer in the same project\r\n\r\nSupport adding as a CMake subproject by using the PROJECT_*_DIR variables\r\ninstead of the absolute CMAKE_*_DIR variables.\r\n\r\nResolve a signed-unsigned comparison compiler warning\r\nFix comment typo",
+      "files_changed": 4,
+      "additions": 7,
+      "deletions": 7,
+      "commit_type": "docs"
+    },
+    {
+      "author": "redkite",
+      "date": "2018-11-06T06:06:28Z",
+      "sha": "c493369594fc51f304f6f3ce170e4cefc514372e",
+      "message": "Only include correct source files in cmake (#1085)\n\nThis fixes #1050. Tested standalone compilation and with the debian fakeroot tool. I had to build with a custom Protobuf3 instance though, so another build-check on a regular setup would be appreciated.\r\n\r\nBefore this change all *.cc files would be included. If subprojects\r\nwere run individually with the Debian package generator. This resulted in an\r\ninclusion of temporarily checked out *.cc from the abseil include. This\r\nchange fixes the import behaviour and enables the creation of a valid\r\npackage.",
+      "files_changed": 2,
+      "additions": 5,
+      "deletions": 5,
+      "commit_type": "docs"
+    },
+    {
+      "author": "FlorentRevest",
+      "date": "2018-11-05T11:22:55Z",
+      "sha": "ba33291392d846926633375a5a6f8db547bfbf34",
+      "message": "Rework the documentation as a step-by-step guide (#952)\n\nThis restructures the doc as a tutorial leading newcomers to becoming experimented users.\r\n\r\nIt adds pages on:\r\n - how to get started with Cartographer on a new .bag\r\n - how Cartographer works and can be tuned step-by-step\r\n - how to use \"extra\" features of Cartographer\r\n - how to contribute to Cartographer\r\n\r\nIt also provides some cosmethic changes with: new titles, non-indented code blocks, various illustrations, reworked paragraphs for clarity...",
+      "files_changed": 15,
+      "additions": 889,
+      "deletions": 198,
+      "commit_type": "docs"
+    },
+    {
+      "author": "pifon2a",
+      "date": "2018-01-25T09:44:30Z",
+      "sha": "7cf570d19e389692617c509aa00199dc1a11f1f4",
+      "message": "Add a launch file for 2d localization demo with gRPC. (#682)",
+      "files_changed": 2,
+      "additions": 44,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "alireza-hosseini",
+      "date": "2018-09-27T10:44:29Z",
+      "sha": "dd4d2af58b3a7f34b036abe5bf16b7d545b6e7d5",
+      "message": "feat: Publish progress of processing the bagfile (#940)",
+      "files_changed": 4,
+      "additions": 69,
+      "deletions": 6,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mikaelarguedas",
+      "date": "2017-08-08T09:41:39Z",
+      "sha": "b6acc2755397cb2614891df9809bd4e3a13a8c4a",
+      "message": "Depend on Ceres 1.12.0 instead of 1.12.0rc4 (#477)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Christoph Schütte",
+      "date": "2017-08-30T14:34:48Z",
+      "sha": "0305ac67d8b33b1ba42c583231c7ce3082440529",
+      "message": "Add mem stats for offline node. (#493)",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "gaschler",
+      "date": "2017-09-13T14:43:25Z",
+      "sha": "b8d63f3cc906c73fcfb23f71fd15555a8c411d65",
+      "message": "Handle multiple textures in protobuf. (#503)\n\nHandle the protobuf change from\r\ngooglecartographer/cartographer#519\r\nby forwarding the first SubmapTexture if multiple are available.\r\n\r\n* Nit.\r\n\r\n* Check.\r\n\r\n* Nit.",
+      "files_changed": 1,
+      "additions": 15,
+      "deletions": 10,
+      "commit_type": "code"
+    },
+    {
+      "author": "Kevin Daun",
+      "date": "2018-04-17T13:13:44Z",
+      "sha": "1f55b18eb6bc0e8a4411f6514a9f532a2f44ea94",
+      "message": "Enable rendering of submaps without a grid (#829)\n\n- related to https://github.com/googlecartographer/cartographer_ros/issues/819",
+      "files_changed": 2,
+      "additions": 3,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "davetcoleman",
+      "date": "2018-07-05T08:57:20Z",
+      "sha": "0beb972763f03c83eeb7023feadcd41ace382e9a",
+      "message": "Minor grammar fix. (#900)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Alexander Reimann",
+      "date": "2018-05-25T01:20:54Z",
+      "sha": "037ea79e9b482ad084cdc14e83ed66d24bf652cf",
+      "message": "[docs] Add warning on pure_localization submap resolutions (#858)\n\nCloses #847",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "rsmallegoor",
+      "date": "2018-05-25T00:58:00Z",
+      "sha": "cf8c05b62323d64d56d29389ce4a7f3f6032ed10",
+      "message": "Assets writer (ROS map) urdf typo fix (#875)\n\nThe ROS map assets writer launch file can now find the default urdf file when no argument is provided.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Guilherme Lawless",
+      "date": "2018-04-19T23:32:19Z",
+      "sha": "0a917893c525b2641415780903449a3803a4caed",
+      "message": "Add a launch and configuration file for writing a ROS map (#577) (#721)\n\n( Trying again, accidentally deleted source branch for previous PR )\r\n\r\nRelated issue: #577\r\n\r\nThe min/max range default to the same as the backback_2d examples; same thing for the URDF file.\r\n\r\nHowever, the name of both the config file and the launch file are kept generic.",
+      "files_changed": 2,
+      "additions": 69,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "zjwoody",
+      "date": "2018-04-10T07:40:05Z",
+      "sha": "7689e6f1860f12a88cd7fc12c7a97560e7730e2f",
+      "message": "Internal cleanup. (#818)\n\nMove the self header file after system header.",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "schwoere",
+      "date": "2018-04-06T14:48:21Z",
+      "sha": "f818bc79d9aeeab0716e468818b31e59757e822c",
+      "message": "moved run method of assets writer main to separate files (#807)\n\nMoved the run method of the assets_writer_main to the separate assets_writer files.\r\nWill extract asset_writer class in the future to keep the main file small and allow re-usability and more flexibility of the asset_writer.",
+      "files_changed": 4,
+      "additions": 285,
+      "deletions": 226,
+      "commit_type": "code"
+    },
+    {
+      "author": "kdaun",
+      "date": "2018-03-26T14:45:58Z",
+      "sha": "7d09140ee4407dac92ba21a09a8ea06d7a8870bd",
+      "message": "Add constraint-dependent trajectory visualization. (#756)",
+      "files_changed": 2,
+      "additions": 75,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "SirVer",
+      "date": "2016-09-02T11:25:43Z",
+      "sha": "a2567ab0aba1ce285a92f7450245184f791ebf79",
+      "message": "Use WallTimer to always publish pose and submaps. (#47)\n\nThis makes the publishing independent from the inflow of sensor data and\r\nis more in line with how the ROS world works.\r\n\r\nFixes #44.",
+      "files_changed": 4,
+      "additions": 27,
+      "deletions": 23,
+      "commit_type": "code"
+    },
+    {
+      "author": "spielawa",
+      "date": "2018-01-05T17:06:30Z",
+      "sha": "dd00ede58ab52ef03f79a3df8084812b7b063311",
+      "message": "Change link ordering to fix libcartographer_rviz.so. (#648)\n\nThis fixes the issue that rviz crashes when loading the cartographer_rviz plugin saying that the symbol `cartographer::io::UnpackTextureData(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, int)` is undefined.\r\n\r\nPAIR=@wohe,@SirVer",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jihoonl",
+      "date": "2017-07-06T13:57:32Z",
+      "sha": "6b1e9fb55c752862b384ab59e5eb71ba4984278b",
+      "message": "support map loading in offline node (#411)\n\n* support map loading in offline node\r\n\r\n* support map loading in offline node\r\n\r\n* offline_node_main.cc\r\n\r\nadd todo to replace loadmap later\r\n\r\n* rename map_filename to pbstream filename",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "drigz",
+      "date": "2017-11-09T12:36:40Z",
+      "sha": "ae6aefaf97430fbf0fb0a9402809e8645bce7179",
+      "message": "Don't `set -o verbose` in ros_entrypoint.sh (#558)\n\nAll it does is source some large scripts, which results in lots of\r\nlogspam when the container starts up. It then runs exec, after which the\r\n`verbose` setting has no effect.",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "damonkohler",
+      "date": "2016-08-03T10:45:08Z",
+      "sha": "63c2321d262c6ab7917e6027022d4bf7308d4884",
+      "message": "Initial import of Cartographer codebase.",
+      "files_changed": 41,
+      "additions": 3412,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "yutakaoka",
+      "date": "2017-05-31T09:21:24Z",
+      "sha": "9d5b221ed41783b15c84bc90b71527194b8d9a49",
+      "message": "Enable multi-trajectory on ROS node (#346)",
+      "files_changed": 18,
+      "additions": 560,
+      "deletions": 221,
+      "commit_type": "docs"
+    },
+    {
+      "author": "damienrg",
+      "date": "2017-07-27T09:59:09Z",
+      "sha": "907586a7fc24f3b26f01eb08ccc45c9e48516622",
+      "message": "Track googlecartographer/cartographer#423 (#446)",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "aochiai",
+      "date": "2017-06-09T08:23:00Z",
+      "sha": "51fe6fa021d2815b4c2e88cdcddcde4a23982dc1",
+      "message": "Fix missing ID handling related to starting trajectory (#369)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "jpapon",
+      "date": "2017-05-09T08:26:05Z",
+      "sha": "f6fc7ac6b262815a4bee9e8631b60787f0fd77b6",
+      "message": "Added reading intensity values from point clouds (#321)",
+      "files_changed": 1,
+      "additions": 29,
+      "deletions": 7,
+      "commit_type": "code"
+    },
+    {
+      "author": "macmason",
+      "date": "2017-04-19T14:24:13Z",
+      "sha": "1babc6982ae633b4bb254bf75c0f6d575709a237",
+      "message": "Correct for googlecartographer/cartographer#227. (#303)\n\nCorrect for googlecartographer/cartographer#227.",
+      "files_changed": 1,
+      "additions": 16,
+      "deletions": 11,
+      "commit_type": "code"
+    },
+    {
+      "author": "at-wat",
+      "date": "2016-11-08T08:21:34Z",
+      "sha": "22d8573bd04059daf061d237e8bc8c9a27af8224",
+      "message": "Fixes urdfdom_headers version compatibility (#162)\n\nUrdf changed their shared ptr type from boost to std. This PR detects which version of urdf is installed and uses the correct ptr type.",
+      "files_changed": 2,
+      "additions": 11,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "thiagodefreitas",
+      "date": "2016-10-26T15:46:46Z",
+      "sha": "7d958521924161a012650719026c793cfa3943e4",
+      "message": "Set INCLUDE_DIRS in catking_package (#147)",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "skohlbr",
+      "date": "2016-08-04T14:52:30Z",
+      "sha": "61055d1dcb6b3d374cd14699b44e2882349ac83d",
+      "message": "Optional install instructions using wstool (#8)\n\n* Adds rosinstall file\r\n* Adds optional install instructions using wstool",
+      "files_changed": 2,
+      "additions": 27,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "rohbotics",
+      "date": "2016-08-24T09:47:09Z",
+      "sha": "428cd6f62d379d9b0f701a85d3fb0097442621ad",
+      "message": "Adds basic odometry integration (#20)\n\nAdds an 'expect_odometry_data' option to the configuration. When enabled,\r\nlistens to the '/odom' topic, which must provide odometry that is taken\r\ninto account for SLAM.\r\n\r\nAlso renames the 'provide_odom' option to 'provide_odom_frame'.",
+      "files_changed": 5,
+      "additions": 69,
+      "deletions": 8,
+      "commit_type": "docs"
+    }
+  ]
+}

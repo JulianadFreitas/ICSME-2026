@@ -1,0 +1,111 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T10:13:40Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "rt-net",
+    "repo": "raspimouse2"
+  },
+  "data": [
+    {
+      "author": "KuraZuzu",
+      "date": "2024-10-23T01:57:35Z",
+      "sha": "02ff085f6bfa6d58c83d56e31f8fda6bf9c60f5d",
+      "message": "ROS 2 Jazzyへの対応 (#53)\n\n* Replaced \"Twist\" with \"TwistStamped\" (Changed in all instances, revert if any unexpected issues occur, \"revert\").\r\n\r\n* \"README.md\"をROS 2 Jazzyの対応に合わせて修正\r\n\r\n* 表示できていなかった実機の画像リンクを修正\r\n\r\n* 変更点の反映と、不足手順を追記\r\n\r\n* Updated documentation for compatibility with ROS 2 Jazzy\r\n[Note] Updated major version due to breaking changes in \"/cmd_vel\" backwards compatibility.\r\n\r\n* Revert \"Updated documentation for compatibility with ROS 2 Jazzy\"\r\n\r\nThis reverts commit 69bcbd5db1b76153e5aacfc7b9379a2022971195.\r\n\r\n* add author to package.xml\r\n\r\n* Updated the environment variables in \"industrial_ci.yml\" to Jazzy\r\n\r\n* Removed unnecessary steps for launching the launch file in the \"README.md\"\r\n\r\n* Corrected import order to comply with flake8\r\n\r\n* Applied \"isort\"\r\n\r\n* Sort import-modules for flake8\r\n\r\n* Replace the CI script with syntax supported by act\r\n\r\n* Update README.md (.bash extension completion)\r\n\r\nCo-authored-by: YusukeKato <YusukeKato@users.noreply.github.com>\r\n\r\n* Update checkout version of GitHub Action\r\n\r\nCo-authored-by: YusukeKato <YusukeKato@users.noreply.github.com>\r\n\r\n---------\r\n\r\nCo-authored-by: YusukeKato <YusukeKato@users.noreply.github.com>",
+      "files_changed": 6,
+      "additions": 35,
+      "deletions": 37,
+      "commit_type": "ci"
+    },
+    {
+      "author": "YusukeKato",
+      "date": "2023-08-24T06:24:34Z",
+      "sha": "05393ad82b3313007fe00b76c0b57337496b8faa",
+      "message": "リリースのためにCHANGELOGとpackage.xmlを更新 (#51)\n\n* リリースに向けてCHANGELOGを更新\r\n\r\n* 1.1.2",
+      "files_changed": 4,
+      "additions": 11,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "uhobeike",
+      "date": "2023-03-01T05:26:54Z",
+      "sha": "2bac95b37d32ea28e8db5c83e2b70b8c46f14d79",
+      "message": "Calculate speed from robot parameters (#50)\n\n* Feature calculate speed from robot parameters\r\n\r\n* Reformat code",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "Shuhei Kozasa",
+      "date": "2021-11-19T06:34:17Z",
+      "sha": "6ee71bb149f1355b47a56d87ce7d84c573ac30fe",
+      "message": "パラメータの追加 （#34） (#36)\n\n* Adds wheel params\r\n\r\n* Adds PULSES param\r\n\r\n* Delete comment\r\n\r\n* Changes variable names.\r\n\r\nROS param case to lower case.\r\nConstant value names to upper case.\r\n\r\nCo-authored-by: Shota Aoki <s.aoki@rt-net.jp>\r\n\r\n* Changes constant value name to upper case\r\n\r\nCo-authored-by: Shota Aoki <s.aoki@rt-net.jp>\r\n\r\n* Changes constant value name to upper case\r\n\r\nCo-authored-by: Shota Aoki <s.aoki@rt-net.jp>\r\n\r\n* Changes PULSES_PER_REVOLUTION value to constant value\r\n\r\nCo-authored-by: Shota Aoki <s.aoki@rt-net.jp>\r\n\r\n* Update default values\r\n\r\nCo-authored-by: Shota Aoki <s.aoki@rt-net.jp>\r\n\r\n* Update default value\r\n\r\n* Changes param name\r\n\r\n* Adds param info\r\n\r\n* Changes constant values to upeer case\r\n\r\n* Changes value to constant value\r\n\r\nCo-authored-by: Shota Aoki <s.aoki@rt-net.jp>\r\n\r\nCo-authored-by: Shota Aoki <s.aoki@rt-net.jp>",
+      "files_changed": 2,
+      "additions": 41,
+      "deletions": 7,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Shota Aoki",
+      "date": "2020-01-09T09:10:31Z",
+      "sha": "c4f1ef840bd6308e83868258bddb9efac56cac3f",
+      "message": "Merge pull request #7 from rt-net/add_contributors\n\nAdd contributors",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ShotaAk",
+      "date": "2022-06-30T02:08:50Z",
+      "sha": "a77b28375110415356c27df25f9576ef556bef8e",
+      "message": "ノードの実行を簡単にするためlaunchファイルとconfigファイルを追加",
+      "files_changed": 5,
+      "additions": 105,
+      "deletions": 9,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Tiryoh",
+      "date": "2019-12-24T05:19:21Z",
+      "sha": "34ceda9fb48019ab3009a0d9cf9bdb42f15a5872",
+      "message": "Add contributors",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "youtalk",
+      "date": "2019-08-30T09:34:47Z",
+      "sha": "5b20fb40117c911aeb87c704ff2010e2e6eaa940",
+      "message": "Re-enable tf (#3)\n\n* comment in tf\r\n\r\n* initialize all instance variables\r\n\r\n* update readme",
+      "files_changed": 2,
+      "additions": 5,
+      "deletions": 9,
+      "commit_type": "docs"
+    },
+    {
+      "author": "shotahirama",
+      "date": "2019-05-16T22:13:56Z",
+      "sha": "90528988fb846187abc0268a4fbdb8d4d169ea9a",
+      "message": "Add Crystal support (#1)\n\n* Add Crystal support\r\n\r\n* Use type alias for CallbackReturn",
+      "files_changed": 2,
+      "additions": 21,
+      "deletions": 20,
+      "commit_type": "code"
+    },
+    {
+      "author": "gbiggs",
+      "date": "2018-09-07T09:15:26Z",
+      "sha": "c610cd74b9d6bb4bc58be619b31fb66f8a830ad2",
+      "message": "Initial commit",
+      "files_changed": 2,
+      "additions": 252,
+      "deletions": 0,
+      "commit_type": "code"
+    }
+  ]
+}

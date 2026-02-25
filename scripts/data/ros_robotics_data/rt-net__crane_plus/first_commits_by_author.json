@@ -1,0 +1,71 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T03:55:51Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "rt-net",
+    "repo": "crane_plus"
+  },
+  "data": [
+    {
+      "author": "KuraZuzu",
+      "date": "2025-12-11T05:28:11Z",
+      "sha": "219971e5f3416c4160d8d646a3f82dd0c47f388e",
+      "message": "MoveItとtf2のヘッダファイル名の修正 (#92)\n\n* includeするMoveItとtf2のヘッダファイルを.hから.hppに変更\n\n* rollingをCIの対象から削除\n\n* Revert \"rollingをCIの対象から削除\"\n\nThis reverts commit 4b72014708b6069a11299139f363aedb857df027.",
+      "files_changed": 7,
+      "additions": 11,
+      "deletions": 11,
+      "commit_type": "code"
+    },
+    {
+      "author": "YusukeKato",
+      "date": "2023-07-03T05:18:10Z",
+      "sha": "82ab8dac7119a2f9a72ebc669bd74d93254ae7b3",
+      "message": "Feature/support humble (#58)\n\n* 依存関係の不具合を修正するためDockerfileを編集\r\n\r\n* CIをgalactic向けに変更\r\n\r\n* joint_state_controllerをjoint_state_broadcasterに変更\r\n\r\n* galactic 対応 (#31)\r\n\r\nCo-authored-by: Ryuji Yasukochi <r.yasukouchi@m2-labo.jp>\r\n\r\n* Humbleでビルドが通った\r\n\r\n* 実機で動作確認した\r\n\r\n* 古いcrane_plus_gazeboを削除\r\n\r\n* Gazebo対応中（未対応）\r\n\r\n* Gazeboの起動確認はできたが、まだ動かない\r\n\r\n* Gazeboの動作を確認\r\n\r\n* 不必要な箇所を削除\r\n\r\n* use_sim_timeを有効化\r\n\r\n* galacticをhumbleに変更\r\n\r\n* foxyをhumbleに変更\r\n\r\n* foxyをhumbleに変更\r\n\r\n* ignitionをgazeboに変更\r\n\r\n* crane_plus_gazeboの動作確認完了\r\n\r\n* ビルド時の警告に対応\r\n\r\n* authorに名前を追加\r\n\r\n* Humbleをhumbleに修正\r\n\r\n* bridgeノードを追加、動作確認完了\r\n\r\n* インデントを修正\r\n\r\n* インデントを修正\r\n\r\n* READMEをhumble版に修正\r\n\r\n* Humbleイメージのビルドを確認完了\r\n\r\n* foxyをhumbleに修正\r\n\r\n* Update crane_plus_gazebo/CHANGELOG.rst\r\n\r\nCo-authored-by: Shota Aoki <s.aoki@rt-net.jp>\r\n\r\n* Update crane_plus_examples/README.md\r\n\r\nCo-authored-by: Shota Aoki <s.aoki@rt-net.jp>\r\n\r\n* レビューコメントに対応\r\n\r\n* Gazeboのモデルデータのダウンロード先を変更（初回起動失敗に対応）\r\n\r\n---------\r\n\r\nCo-authored-by: ShotaAk <s.aoki@rt-net.jp>\r\nCo-authored-by: Ryuji Yasukochi <ryuji.yasu@gmail.com>\r\nCo-authored-by: Ryuji Yasukochi <r.yasukouchi@m2-labo.jp>",
+      "files_changed": 32,
+      "additions": 399,
+      "deletions": 486,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Kuwamai",
+      "date": "2022-06-03T05:35:03Z",
+      "sha": "e2f9c14cd61cd409aa1609133d6e7e125631b71a",
+      "message": "hardware_interfaceのパラメータをxacro引数から変更する (#35)\n\n* Add a port_num parameter\r\n\r\n* xacro読み込み時に引数が渡せない\r\n\r\n* Add argument to change port_name\r\n\r\n* Fix code style\r\n\r\n* Update README\r\n\r\n* Update README",
+      "files_changed": 7,
+      "additions": 78,
+      "deletions": 45,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mizonon",
+      "date": "2024-12-20T07:15:30Z",
+      "sha": "478e9a38edd9cd66d35c6a256f2001bac0182707",
+      "message": "Jazzy対応 (#78)\n\n* jazzy対応（MoveitConfigsBuilder）\n* MoveitCofigsBuilderを使ってmoveit_configの枠を作る\n\n* planning_plugins, requesr_adaptorsの設定をompl_planning.yamlの先頭で行う\n\n* ompl_planning.yamlにstart_state_max_bounds_errorの設定を追加\n\n* 7/19ここまで\n\n* MoveitConfigsBuilderを使うに伴った、yamlファイルの指定の項目追加\n\n* 一通りMoveItConfigsBuilderに対応\n\n* MoveIt Setup Assistantを使って設定ファイルを生成\n\n* urdfの指定を追加\n\n* crane_plus_configのrun_move_group.launchを呼ぶ\n\n* Unable to parse SRDFのエラーが解決できない\n\n* demo.launchが起動できるようになった\n\n* 余計なコメントアウト部分削除\n\n* 余計なコメントアウト削除\n\n* rviz上でMottionPlanningができるようになった\n\n* 余計なコメントアウト削除\n\n* 不要なコメント削除\n\n* 不要ファイルのignore\n\n* crane_plus_moveit_config/launchの中の不要ファイル削除\n\n* default_***_scaling_factorを0.1->1.0に変更\n\n* setup assistantによる書換わりを元の書き方に修正\n\n* exampleのdemo.lauch修正\n\n* run_move_group.rviz削除\n\n* sensors_3d.yaml削除\n\n* solverを元に戻す\n\n* .gitignore変更\n\n* setup_assistant関連のファイル追加\n\n* ciのjazzy対応\n\n* run_move_froup.lauch.pyの整理\n\n* 不要な権限変更\n\n* 不要な権限変更\n\n* 不要なscript削除\n\n* kinematicの設定修正\n\n* ソルバーをKDLに戻す\n\n* warehouse_ros_mongoをcrane_plus_moveit_configのpackage.xmlに含めない\n\n* レビュー結果反映\n\n* README.md(jazzy対応＆バイナリインストール方法追加）\n\n* .dockerのREADME.mdのjazzy対応\n\n* CI対応（copyright追加）\n\n* CI対応\n\n* CI対応(setup_assistant.launch.py)\n\n* CI対応(package.xmlの不要な部分削除)\n\n* コメントをjazzyに合わせる\n\n* ign fuelでgazeboのモデルをダウンロードする記述削除\n\n* ciのDockerイメージをjazzyに対応\n\n* 他の製品と設定を共通化\n\n* crane_plus_description/package.xmlのauthorに溝口を追加\n\n* ompl_planning.yamlに抜けていた記述追加\n\n* .gitignoreの末尾に.vscode追加\n\n* 旧115行目の改行復活\n\n* ファイル名変更controllers.yaml->moveit_controllers.yaml\n\n* kinematics_solver_attemptsの指定削除\n\n* RobotDescriptionLoader対応とmoveit_configの不必要な定義削除\n\n* robot_description_kinematicsの設定を削除\n\n* 削除したrun_move_group.rvizの内容をmoveit.rvizとして反映\n\n* Sciurus17のrun_move_group.launch.pyの書き方に合わせる\n\n* gz_sim対応(crane_plus_gazeboパッケージ)\n\n* gz_sim対応(crane_plus_descriptionパッケージ)\n\n* Ignitionを使用するかのパラメタuse_ignition削除\n\n* test_use_gazeboをGazebo Harmonicに対応\n\n* 3D SceneのGUIをGazebo Harmonicに対応\n\n* MoveitConfigsBuilderを使いつつ、rvizの設定ファイルを適切に設定する要修正\n\n* MoveitConfigsBuilderを使いつつ、rvizの設定ファイルを適切に設定する修正\n\n* Gazebo環境にカメラを追加 (#83)\n\n* カメラ追加\n\n* use_sim_timeオプション追加\n\n* カメラの画角調整\n\n* 色検出サンプルの色しきい値調整\n\n* 把持位置調整\n\n* 現バージョンのデフォルト設定を反映\n\n* ArUcoマーカ付きの立方体を追加\n\n* ワールド、launchファイル追加\n\n* use_cameraの有効化\n\n* use_cameraを引数で切り替えられるように変更\n\n* カメラスタンドのURDF修正\n\n* GazeboのCameraモデル対応したコードのign->gz対応\n\n* CI対応\n\n* CI対応\n\n* rviz_configの名称統一\n\n* spawn_gripper_contolollerの記述を他のコントローラの記述と合わせる\n\n* rviz_configの切替えの仕方を修正\n\n* スタイル修正\n\n* declare_rviz_config追加\n\n* configファイルのパス設定を修正\n\n* gazebo表記をgzに統一\n\n* スタイル修正\n\n* gui.config修正\n\n---------\n\nCo-authored-by: Kuwamai <kuwagata@rt-net.jp>",
+      "files_changed": 36,
+      "additions": 397,
+      "deletions": 361,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Shota Aoki",
+      "date": "2020-09-15T09:36:40Z",
+      "sha": "6e452c4ae7de2fad45ea695dcded5b7e73bcf2d7",
+      "message": "Update xacro (#1)\n\n* fix joint origin\r\n\r\n* Fix joint limits\r\n\r\n* Fix collision model",
+      "files_changed": 2,
+      "additions": 29,
+      "deletions": 28,
+      "commit_type": "code"
+    },
+    {
+      "author": "ShotaAk",
+      "date": "2020-09-15T04:47:32Z",
+      "sha": "ed90ec8726e4c4d4f9e1adba75d71edb052ee6af",
+      "message": "First commit -m",
+      "files_changed": 13,
+      "additions": 415,
+      "deletions": 0,
+      "commit_type": "docs"
+    }
+  ]
+}

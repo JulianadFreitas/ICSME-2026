@@ -1,0 +1,1031 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T01:36:15Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros2",
+    "repo": "ros2cli"
+  },
+  "data": [
+    {
+      "author": "fujitatomoya",
+      "date": "2020-06-18T13:58:20Z",
+      "sha": "112c8fa5a60b13b1ca13b8cdc2e69bda5618a34d",
+      "message": "support QoS Depth and History via ros2 topic pub/echo. (#528)\n\n* support QoS Depth and History via ros2 topic pub/echo.\r\n\r\nAlso keep depth at least 1 with transient_local setting.\r\n\r\nSigned-off-by: Tomoya.Fujita <Tomoya.Fujita@sony.com>",
+      "files_changed": 4,
+      "additions": 40,
+      "deletions": 14,
+      "commit_type": "code"
+    },
+    {
+      "author": "DLu",
+      "date": "2023-05-19T20:15:30Z",
+      "sha": "4b2b2fd1ed3bc06463bdf30a38dae55f5200acb8",
+      "message": "Add interface type filters to ros2 interface package (#765)\n\n* Add interface type filters to ros2 interface package\r\n\r\nSigned-off-by: David V. Lu <davidvlu@gmail.com>",
+      "files_changed": 2,
+      "additions": 80,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "araitaiga",
+      "date": "2026-02-05T06:04:37Z",
+      "sha": "1d18cd4225a924120532f3120188710b09c70f9d",
+      "message": "Add per-node timeout option to ros2 param list (#1170)\n\n* Add timeout to param list\n\nSigned-off-by: Taiga Arai <araitaiga2020.service@gmail.com>\n\n* Show timeout value in list_parameters error message\n\nSigned-off-by: Taiga Arai <araitaiga2020.service@gmail.com>\n\n---------\n\nSigned-off-by: Taiga Arai <araitaiga2020.service@gmail.com>",
+      "files_changed": 4,
+      "additions": 93,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "tonynajjar",
+      "date": "2026-01-25T16:59:51Z",
+      "sha": "8fd43d82bcf59d3f164212ddcdcb4806e3f1a1ce",
+      "message": "Add fzf-based interactive selection to ros2cli commands (#1151)\n\nSigned-off-by: Tony Najjar <tony.najjar@dexory.com>",
+      "files_changed": 14,
+      "additions": 366,
+      "deletions": 77,
+      "commit_type": "config"
+    },
+    {
+      "author": "Barry-Xu-2018",
+      "date": "2025-02-19T12:39:21Z",
+      "sha": "1760f4adad4d3b3cb3173ec951c5324def833c16",
+      "message": "Correct the license content (#979)\n\nSigned-off-by: Barry Xu <barry.xu@sony.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "ahcorde",
+      "date": "2020-03-03T09:43:19Z",
+      "sha": "96cf5b949d1aa870111bba0664eca1c359d3307c",
+      "message": "used get_available_rmw_implementations from rclpy (#461)\n\nSigned-off-by: ahcorde <ahcorde@gmail.com>",
+      "files_changed": 5,
+      "additions": 5,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "nomumu",
+      "date": "2025-12-10T09:27:32Z",
+      "sha": "e6ab7c09b52aa41d137d5debf6ba8f7667bde1c7",
+      "message": "add \"--all/-a\" option to \"ros2 topic bw\" with screen refresh. (#1130)\n\nSigned-off-by: nomumu <h.nom.tech@gmail.com>",
+      "files_changed": 2,
+      "additions": 164,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "parth-20-07",
+      "date": "2025-12-05T14:29:55Z",
+      "sha": "59553796a02a1d5cb2bfff88244d95d54447205e",
+      "message": "Add Native ROS2 Rust Package Create Capability (#1107)\n\n* feat: add ament_cargo parsing in ros2pkg/api/create.py as package build type\n\nSigned-off-by: Parth Patel <parth.pmech@gmail.com>\n\n* feat: add Cargo.toml EmPy Package for ament_cargo\n\nSigned-off-by: Parth Patel <parth.pmech@gmail.com>\n\n* feat: add main.rs EmPy file for rust package generation\n\nSigned-off-by: Parth Patel <parth.pmech@gmail.com>\n\n* feat: add rust package generate support to create verb\n\nSigned-off-by: Parth Patel <parth.pmech@gmail.com>\n\n* fix: populate_ament_cargo maintainer information\n\n- fix incorrect parsing for maintainer name and email\n- remove parameter for node name for ament_cargo and only pass library\nname\n\nSigned-off-by: Parth Patel <parth.pmech@gmail.com>\n\n* fix: populate_rust_node function to take in parameters correctly\n\n- use library_name as node_name\n- correct path for rust file resource\n- correctly generate rust package\n\nSigned-off-by: Parth Patel <parth.pmech@gmail.com>\n\n* fix: add missing buildtool_depends and depend in package.xml\n\nSigned-off-by: Parth Patel <parth.pmech@gmail.com>\n\n* feat: update populate_rust_node to take in node_name as optional parameter\n\nSigned-off-by: Parth Patel <parth.pmech@gmail.com>\n\n* style: fix flake8 errors/warning based on ci\n\n- CI Test Report: https://build.ros2.org/job/Rpr__ros2cli__ubuntu_noble_amd64/282/testReport/ros2pkg.ros2pkg.test/test_flake8/test_flake8/\n\nSigned-off-by: Parth Patel <parth.pmech@gmail.com>\n\n* fix(deps): change node dependecy to `rclrs`\n\nSigned-off-by: Parth Patel <parth.pmech@gmail.com>\n\n---------\n\nSigned-off-by: Parth Patel <parth.pmech@gmail.com>",
+      "files_changed": 6,
+      "additions": 201,
+      "deletions": 110,
+      "commit_type": "test"
+    },
+    {
+      "author": "InvincibleRMC",
+      "date": "2025-03-27T22:12:27Z",
+      "sha": "0e34880d5965a979ef41a7a9311e0abba7bc915e",
+      "message": "Use `get_service` in `ros2service call` (#994)\n\nSigned-off-by: Michael Carlstrom <rmc@carlstrom.com>",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 13,
+      "commit_type": "code"
+    },
+    {
+      "author": "leeminju531",
+      "date": "2023-10-16T04:05:26Z",
+      "sha": "41b5073db20d3cbe9efa754d26e6ab5b2e3c10e2",
+      "message": "Add ros2 service info (#771)\n\nSigned-off-by: leeminju531 <dlalswn531@naver.com>",
+      "files_changed": 4,
+      "additions": 66,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "cottsay",
+      "date": "2019-08-12T20:25:09Z",
+      "sha": "e24cf7bda7d1a3ce2f3987ecc1b26a0294cfd511",
+      "message": "Convert list comprehension to generator (#314)\n\nAddresses flake8 C412 errors introduced by flake8-comprehension 2.2.0\r\n\r\nSigned-off-by: Scott K Logan <logans@cottsay.net>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "mini-1235",
+      "date": "2025-11-03T08:08:23Z",
+      "sha": "58f324536b19dbdfc9879b0fd6f58e9605008695",
+      "message": "Add error handling when parsing package locally (#1108)\n\n* Add error handling when parsing package locally\n\nSigned-off-by: mini-1235 <mauricepurnawan@gmail.com>\n\n* Format\n\nSigned-off-by: mini-1235 <mauricepurnawan@gmail.com>\n\n---------\n\nSigned-off-by: mini-1235 <mauricepurnawan@gmail.com>",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Kaju-Bubanja",
+      "date": "2025-08-28T23:10:00Z",
+      "sha": "a22b39bc4c147132984c3f1f636b5948b53a66f1",
+      "message": "fix: Also catch a TimeoutError (#1092)\n\nSigned-off-by: Kaju Bubanja <kaju.bubanja@cesag.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "clalancette",
+      "date": "2017-10-03T20:56:57Z",
+      "sha": "ce77579d2fd8cbdc27352b67ff3fcf67a2369209",
+      "message": "Support non-absolute topic names. (#57)\n\n* Support non-absolute topic names.\r\n\r\nIf the user passes \"/topic_name\" to the ros2 echo\r\ncommand, it works properly.  If they pass \"topic_name\"\r\nto the ros2 echo command, it fails to match.  This\r\nchange just allows us to deal with non-absolute topic\r\nnames.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "mosfet80",
+      "date": "2025-07-11T13:03:22Z",
+      "sha": "8a90dbeeebc7a6022bd6794a540284ac768ad8f4",
+      "message": "fix setuptools deprecations (#1066)\n\nSigned-off-by: mosFet <realeandrea@yahoo.it>",
+      "files_changed": 14,
+      "additions": 68,
+      "deletions": 27,
+      "commit_type": "code"
+    },
+    {
+      "author": "christophebedard",
+      "date": "2025-06-23T18:12:50Z",
+      "sha": "a3985a168bdf5189e558ba2f633b43ab8fb2589c",
+      "message": "Make sure to install py.typed files (#1058)\n\nSigned-off-by: Christophe Bedard <bedard.christophe@gmail.com>",
+      "files_changed": 13,
+      "additions": 13,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "traversaro",
+      "date": "2025-06-16T08:20:53Z",
+      "sha": "6652d53fe68c603b86e5e6a1845893cb749a30b5",
+      "message": "Reduce boilerplate in install(TARGETS for library (#1056)\n\nSigned-off-by: Silvio Traversaro <silvio@traversaro.it>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "Mario-DL",
+      "date": "2025-06-04T09:42:40Z",
+      "sha": "c0fabeaa7cdef097a92965104e3d809d9f6926f1",
+      "message": "Assert HistoryQoS in test_ros2cli_daemon (#1040)\n\nSigned-off-by: Mario Dominguez <mariodominguez@eprosima.com>",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 2,
+      "commit_type": "test"
+    },
+    {
+      "author": "leander-dsouza",
+      "date": "2025-04-12T16:24:30Z",
+      "sha": "526401b42107014f56f9d77dcf3df005f360bc91",
+      "message": "Custom Completion Finder for fetching topic prototype. (#995)\n\n* Double yaml encoding for fetching topic prototype.\n\nSigned-off-by: Leander Stephen D'Souza <leanderdsouza1234@gmail.com>\n\n* Use a custom completer for yaml strings.\n\nSigned-off-by: Leander Stephen D'Souza <leanderdsouza1234@gmail.com>\n\n---------\n\nSigned-off-by: Leander Stephen D'Souza <leanderdsouza1234@gmail.com>",
+      "files_changed": 2,
+      "additions": 33,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "peci1",
+      "date": "2025-04-10T16:49:29Z",
+      "sha": "1a0dcf22b61534c9a391a7d60fbc95a972d23d06",
+      "message": "ros2topic: Documented now and auto keywords (#1008)\n\nSigned-off-by: Martin Pecka <peckama2@fel.cvut.cz>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "exMachina316",
+      "date": "2025-04-09T21:37:40Z",
+      "sha": "bfc52454d07a1554226b56b64dfdbf5bcb6b3f6b",
+      "message": "Conditional deserialization of message for `ros2 topic hz` (#1005)\n\nSigned-off-by: Kostubh Khandelwal <khandelwalkostubh@gmail.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "FabianThomsen",
+      "date": "2025-04-04T08:08:29Z",
+      "sha": "e8a0fb42548d9a75f85787197047f2718b2b65f2",
+      "message": "Enable `ros2 topic echo` with entries of array fields (#996)\n\nSigned-off-by: Fabian Thomsen <fabian.thomsen@ika.rwth-aachen.de>",
+      "files_changed": 2,
+      "additions": 80,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "mjcarroll",
+      "date": "2019-04-16T20:19:37Z",
+      "sha": "930dea5c8de47d47ac0b3814ee1c08bac8a70c22",
+      "message": "Fix component arguments to be inline with service. (#220)\n\nSigned-off-by: Michael Carroll <michael@openrobotics.org>",
+      "files_changed": 2,
+      "additions": 6,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "florcabral",
+      "date": "2025-04-02T22:17:52Z",
+      "sha": "644310d5afec2b6744549e782e83dfa0cbd2e30a",
+      "message": "Patch CVE-2024-42002\n\nSigned-off-by: Florencia <49619072+florcabral@users.noreply.github.com>\nSigned-off-by: Michael Carroll <mjcarroll@intrinsic.ai>",
+      "files_changed": 4,
+      "additions": 234,
+      "deletions": 9,
+      "commit_type": "ci"
+    },
+    {
+      "author": "TonyWelte",
+      "date": "2025-03-12T04:09:05Z",
+      "sha": "0c9f233067c06f94131c38c73b117a4e1c3cf00c",
+      "message": "Add support for topic QOS for ros2topic bw, delay and hz (#935)\n\n* Add support for topic QOS for ros2topic bw, delay and hz\n\nSigned-off-by: Anthony Welte <tony.welte@gmail.com>\n\n* Fix style according to flake8\n\nSigned-off-by: Anthony Welte <tony.welte@gmail.com>\n\n* Fix instability in test_topic_bw\n\nSigned-off-by: Anthony Welte <tony.welte@gmail.com>\n\n* Add tests for bw, delay and hz qos parameters\n\nSigned-off-by: Anthony Welte <tony.welte@gmail.com>\n\n* Remove extract_qos_arguments and move choose_qos\n\n- Remove extract_qos_arguments since it's doing nothing useful. The QoS\n  arguments are passed to choose_qos with other argument unfiltered\n- Move choose_qos outside of the _rostopic_verb method for bw and delay.\n  The _rostopic_verb method takes a QoSProfile instead of the cli\n  arguments\n\nSigned-off-by: Anthony Welte <tony.welte@gmail.com>\n\n---------\n\nSigned-off-by: Anthony Welte <tony.welte@gmail.com>",
+      "files_changed": 7,
+      "additions": 297,
+      "deletions": 85,
+      "commit_type": "test"
+    },
+    {
+      "author": "shynur",
+      "date": "2025-02-21T15:44:26Z",
+      "sha": "f5e5a798d57c437410452f2b106f115d3a42c7a2",
+      "message": "* ros2pkg/resource/cpp/main.cpp.em: Use modern C++17 syntax. (#982)\n\nSigned-off-by: 谢骐 <shynur@outlook.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "sloretz",
+      "date": "2018-03-27T01:00:36Z",
+      "sha": "f11e2c366af5a0b8361c9719d2f0339e7f072018",
+      "message": "`ros2 service` Use new client api (#77)\n\n* Use new client api\r\n* try_shutdown() -> shutdown()",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "lgezelius",
+      "date": "2025-02-11T21:57:24Z",
+      "sha": "da96480074fbac942e7edc3e6b39f85d577978e3",
+      "message": "Try to use the git global user.name for maintainer-name (#968)\n\nSigned-off-by: Larry Gezelius <lgezelius@gmail.com>",
+      "files_changed": 1,
+      "additions": 26,
+      "deletions": 18,
+      "commit_type": "code"
+    },
+    {
+      "author": "sea-bass",
+      "date": "2025-02-06T21:24:24Z",
+      "sha": "a91bbc1b25d1d45e727d430a86d9f05646e71288",
+      "message": "Update minimum CMake version CMakeLists.txt.em (#969)\n\nSigned-off-by: Sebastian Castro <4603398+sea-bass@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "ci"
+    },
+    {
+      "author": "Yadunund",
+      "date": "2023-03-13T12:54:25Z",
+      "sha": "7ba272cb59aad51283f48c7c9983d73f45b562f2",
+      "message": "Enable document generation using rosdoc2 (#811)\n\n* Fix warnings for ros2component, ros2doctor, ros2interface, and ros2node\r\n\r\nSigned-off-by: Yadunund <yadunund@openrobotics.org>",
+      "files_changed": 5,
+      "additions": 9,
+      "deletions": 5,
+      "commit_type": "config"
+    },
+    {
+      "author": "sangteak601",
+      "date": "2025-01-24T21:51:11Z",
+      "sha": "e8138a12787a829915e9aa553eaba0b1031c245d",
+      "message": "support multiple fields in ros2topic echo (#964)\n\n* support multiple fields in ros2topic echo\n\nSigned-off-by: Sangtaek Lee <sangtaek.lee@qltech.net>\nSigned-off-by: Sangtaek Lee <sangteak601@gmail.com>\n\n* add tests for echo multi fields\n\nSigned-off-by: Sangtaek Lee <sangteak601@gmail.com>\n\n* fix line too long\n\nSigned-off-by: Sangtaek Lee <sangteak601@gmail.com>\n\n* update line end\n\nSigned-off-by: Sangtaek Lee <sangteak601@gmail.com>\n\n---------\n\nSigned-off-by: Sangtaek Lee <sangtaek.lee@qltech.net>\nSigned-off-by: Sangtaek Lee <sangteak601@gmail.com>",
+      "files_changed": 2,
+      "additions": 131,
+      "deletions": 41,
+      "commit_type": "code"
+    },
+    {
+      "author": "Sukhvansh2004",
+      "date": "2025-01-21T05:21:15Z",
+      "sha": "f3fc36cc06395035748d71c672cb3e40995eb850",
+      "message": "Maintaining consistency of automatically putting time stamps in the service and action calls similiar to publishing in rostopics. (#961)\n\n* Fix issue #945\n\nSigned-off-by: Sukhvansh2004 <sukhvanshjain@gmail.com>\n\n* Fixed code style error\n\nSigned-off-by: Sukhvansh2004 <sukhvanshjain@gmail.com>\n\n* Fixed Indentation\n\nSigned-off-by: Sukhvansh2004 <sukhvanshjain@gmail.com>\n\n* Called the setters for the message fix\n\nSigned-off-by: Sukhvansh2004 <sukhvanshjain@gmail.com>\n\n* Fixed Format Ros2Action\n\nSigned-off-by: Sukhvansh2004 <sukhvanshjain@gmail.com>\n\n* Fixed copyright issue\n\nSigned-off-by: Sukhvansh2004 <sukhvanshjain@gmail.com>\n\n* Revert format to original\n\nSigned-off-by: Sukhvansh2004 <sukhvanshjain@gmail.com>\n\n* Update ros2action/ros2action/verb/send_goal.py\r\n\r\nCommited Suggestion\n\nCo-authored-by: Tomoya Fujita <Tomoya.Fujita@sony.com>\nSigned-off-by: Sukhvansh Jain <120120146+Sukhvansh2004@users.noreply.github.com>\n\n* Minor Fix of print statement\n\nSigned-off-by: Sukhvansh2004 <sukhvanshjain@gmail.com>\n\n---------\n\nSigned-off-by: Sukhvansh2004 <sukhvanshjain@gmail.com>\nSigned-off-by: Sukhvansh Jain <120120146+Sukhvansh2004@users.noreply.github.com>\nCo-authored-by: Tomoya Fujita <Tomoya.Fujita@sony.com>",
+      "files_changed": 2,
+      "additions": 14,
+      "deletions": 2,
+      "commit_type": "ci"
+    },
+    {
+      "author": "Guillaumebeuzeboc",
+      "date": "2024-11-01T19:57:45Z",
+      "sha": "fce8ae79fb38056de8581b4a75b298a59fa8be18",
+      "message": "feat(echo --clear): add --clear option to echo (#819)\n\n* feat(echo --clear): add --clear option to echo\r\n\r\nSigned-off-by: Guillaumebeuzeboc <guillaume.beuzeboc@gmail.com>\r\n\r\n* address review comments, and adjust test result check.\r\n\r\nSigned-off-by: Tomoya Fujita <Tomoya.Fujita@sony.com>\r\n\r\n* use escape sequence instead of clear/cls, and remove test.\r\n\r\nSigned-off-by: Tomoya Fujita <Tomoya.Fujita@sony.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Guillaumebeuzeboc <guillaume.beuzeboc@gmail.com>\r\nSigned-off-by: Tomoya Fujita <Tomoya.Fujita@sony.com>\r\nCo-authored-by: Tomoya Fujita <Tomoya.Fujita@sony.com>",
+      "files_changed": 1,
+      "additions": 12,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "AngeLoGa",
+      "date": "2024-10-28T09:05:06Z",
+      "sha": "a3198b80f8a993ac01501d8e3fbdd76e7aaf92dc",
+      "message": "New flag and code update for its use (#942)\n\nSigned-off-by: AngeLoGa <angeloga.rea@gmail.com>",
+      "files_changed": 3,
+      "additions": 22,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "marcoag",
+      "date": "2024-03-27T13:49:18Z",
+      "sha": "1cc852d3e486581a7dc8561237881ffd0a4d42f4",
+      "message": "Changelog.\n\nSigned-off-by: Marco A. Gutierrez <marcogg@marcogg.com>",
+      "files_changed": 15,
+      "additions": 50,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "akssri-sony",
+      "date": "2024-03-09T02:50:09Z",
+      "sha": "64d216cb8fafef83d046b79ee6294afb06b7c595",
+      "message": "ros2cli.node.daemon : try getting fdsize from /proc for open fd limit (#888)\n\n* ros2cli.node.daemon : try getting fdsize from /proc for open fd limit\r\n\r\n* - add with-block; remove linux check\r\n\r\n* - use removeprefix\r\n\r\n* - replace filter with loop\r\n\r\nSigned-off-by: akssri <akshay.srinivasan@sony.com>",
+      "files_changed": 1,
+      "additions": 16,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "lalten",
+      "date": "2024-01-12T23:35:12Z",
+      "sha": "426d6e9c6a3b6d3ec7dac5f1b222e389be5d4318",
+      "message": "Replace unmaintained `netifaces` library to avoid local wheel builds (#875)\n\n* Replace netifaces with ifaddr\r\n\r\nSigned-off-by: Laurenz Altenmüller <laurenz.altenmueller@fernride.com>\r\n\r\n* use psutil instead\r\n\r\nSigned-off-by: Laurenz Altenmüller <laurenz.altenmueller@fernride.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Laurenz Altenmüller <laurenz.altenmueller@fernride.com>",
+      "files_changed": 3,
+      "additions": 10,
+      "deletions": 17,
+      "commit_type": "config"
+    },
+    {
+      "author": "Chen Lihui",
+      "date": "2023-03-02T13:07:41Z",
+      "sha": "ae9a8e347b16b8a0f0a34ff3a7c1d7a8ef4588fe",
+      "message": "avoid flaky test that subscriber might not receive the message (#810)\n\nincrease publish times as the publisher and subscriber are not using reliable QoS settings\r\n\r\nSigned-off-by: Chen Lihui <lihui.chen@sony.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "MatthijsBurgh",
+      "date": "2023-10-17T03:37:18Z",
+      "sha": "6724a58deaf3f653406c2ad64ac65d50c1c6628a",
+      "message": "(ros2doctor) fix PackageCheck (#860)\n\n* (ros2doctor)(package) improve result string generation\r\n\r\nSigned-off-by: Matthijs van der Burgh <matthijs.van.der.burgh@vbti.nl>",
+      "files_changed": 1,
+      "additions": 38,
+      "deletions": 31,
+      "commit_type": "code"
+    },
+    {
+      "author": "ymd-stella",
+      "date": "2023-08-03T19:50:28Z",
+      "sha": "351ef3c7442f49013d84084dea23fe399517690f",
+      "message": "Load a message/request/goal from standard input (#844)\n\n* Load a message/request/goal from standard input\r\n\r\nSigned-off-by: ymd-stella <world.applepie@gmail.com>",
+      "files_changed": 4,
+      "additions": 49,
+      "deletions": 7,
+      "commit_type": "code"
+    },
+    {
+      "author": "emersonknapp",
+      "date": "2019-05-21T02:07:17Z",
+      "sha": "7aa006cd712a248459f7380576fddf22507ade49",
+      "message": "Use rclpy qos name translations instead of defining here (#240)\n\n* Use rclpy qos name translations instead of defining here\r\n\r\nSigned-off-by: Emerson Knapp <eknapp@amazon.com>\r\n\r\n* Use revised name mapping APIs\r\n\r\nSigned-off-by: Emerson Knapp <eknapp@amazon.com>",
+      "files_changed": 2,
+      "additions": 6,
+      "deletions": 49,
+      "commit_type": "code"
+    },
+    {
+      "author": "mmmarinho",
+      "date": "2023-07-06T13:09:30Z",
+      "sha": "ef5d8116a4899b069b0cb444b1fdf8e3b1b7b6d4",
+      "message": "Update ros2 param dump dosctring. (#837)\n\n\"\"\"Dump the parameters of a node to a yaml file.\"\"\" -> \"\"\"Show all of the parameters of a node in a YAML file format.\"\"\"\r\n\r\nBased on the documentation at\r\nhttps://docs.ros.org/en/rolling/How-To-Guides/Using-ros2-param.html#ros2-param-dump\r\n\r\nSigned-off-by: Murilo M. Marinho <murilomarinho@ieee.org>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "achim-k",
+      "date": "2023-06-13T12:22:36Z",
+      "sha": "960962a142323c7a13c4ddef3a7e661d77905f93",
+      "message": "Add marshalling functions for rclpy.type_hash.TypeHash (rep2011) (#816)\n\n* Add marshalling functions for rclpy.type_hash.TypeHash\r\n\r\nSigned-off-by: Hans-Joachim Krauch <achim.krauch@gmail.com>\r\nCo-authored-by: Chris Lalancette <clalancette@gmail.com>",
+      "files_changed": 3,
+      "additions": 21,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "ihasdapie",
+      "date": "2022-07-22T21:55:47Z",
+      "sha": "fc02ffe4c9b242da9b50e4c9c8a8c94fdd58f0c7",
+      "message": "refactor: make ros2param use rclpy.parameter_client (#716)\n\nRefactors ros2param to use rclpy.parameter_client (https://github.com/ros2/rclpy/commit/3053a8ad9cc266300c7c8e3070bb6552652cf88d). \r\n\r\n\r\n\r\nCo-authored-by: Jacob Perron <jacob@openrobotics.org>\r\nSigned-off-by: Brian Chen <brian.chen@openrobotics.org>",
+      "files_changed": 6,
+      "additions": 96,
+      "deletions": 252,
+      "commit_type": "code"
+    },
+    {
+      "author": "Crola1702",
+      "date": "2023-02-27T18:15:28Z",
+      "sha": "14e640c6060fcb191eee266c55bbf4bed6ac97db",
+      "message": "Fix linters (#808)\n\nSigned-off-by: Crola1702 <cristobal.arroyo@ekumenlabs.com>",
+      "files_changed": 2,
+      "additions": 1,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "arjo129",
+      "date": "2023-01-18T14:33:23Z",
+      "sha": "1a4766098f917819508ce8b06ca44bdd041f5fc3",
+      "message": "Refactor common types (#791)\n\n* Refactor common types\r\n\r\nA lot of types across verbs in ros2 topic are shared. This\r\nPR refactors the types to be used by different verbs preventing\r\nredefinition of the same types in different verbs. There is no\r\nbehaviour changed introduced.\r\n\r\nSigned-off-by: Arjo Chakravarty <arjo@openrobotics.org>",
+      "files_changed": 5,
+      "additions": 22,
+      "deletions": 41,
+      "commit_type": "code"
+    },
+    {
+      "author": "ijnek",
+      "date": "2023-02-05T23:22:41Z",
+      "sha": "ad0c2a881c42e12840eaff337a5ca9db5bca3b47",
+      "message": "resolve #790 (#801)\n\nSigned-off-by: ijnek <kenjibrameld@gmail.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "mjbogusz",
+      "date": "2023-01-13T00:30:22Z",
+      "sha": "aadc580fe16925ba18895067468373aa6669e0de",
+      "message": "ZSH argcomplete: call compinit only if needed (#750)\n\nSigned-off-by: Maciej Bogusz <mjbogusz+github@gmail.com>\r\n\r\nSigned-off-by: Maciej Bogusz <mjbogusz+github@gmail.com>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "ivanpauno",
+      "date": "2019-03-15T17:03:17Z",
+      "sha": "4fb00346f3be2d07c8d7804b6909a36c42dc6cb2",
+      "message": "ros2lifecycle `nodes` and `get` verbs, now showing hidden nodes when requested (#208)\n\n* Fixed issue 169\r\n\r\nSigned-off-by: ivanpauno <ivanpauno@ekumenlabs.com>\r\n\r\n* nipick: remove newline\r\n\r\nSigned-off-by: ivanpauno <ivanpauno@ekumenlabs.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "RFRIEDM-Trimble",
+      "date": "2022-11-15T20:33:36Z",
+      "sha": "619b3d1c9b38f49bfd2a9286b1086d8eed1ecb94",
+      "message": "Add alias library targets for CMake (#718)\n\nSigned-off-by: Ryan Friedman <ryan_friedman@trimble.com>\r\n\r\nSigned-off-by: Ryan Friedman <ryan_friedman@trimble.com>",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "audrow",
+      "date": "2020-05-15T20:34:19Z",
+      "sha": "b622109d96e16506f1cd31cc9a4664c7df7332ec",
+      "message": "Fix typo in `ros2 topic delay` help (#510)\n\nSigned-off-by: Audrow Nash <audrow.nash@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "MikeWrock",
+      "date": "2022-11-08T21:48:10Z",
+      "sha": "b0bd06a8cbf8d6820bcae8d80734b251f3e7d52f",
+      "message": "Updated wording in list.py (#775)\n\n* Updated wording in list.py\r\n\r\nSigned-off-by: Michael Wrock <michael.wrock@picknik.ai>\r\nCo-authored-by: Chris Lalancette <clalancette@gmail.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "llapx",
+      "date": "2022-09-21T19:04:40Z",
+      "sha": "36ff5173ab09c1e78ca13d6faa3c9a57dee167db",
+      "message": "Add support use_sim_time for ros2 topic hz/bw/pub. (#754)\n\n* Add support use_sim_time for ros2 topic hz/bw/pub.\r\n\r\nSigned-off-by: Lei Liu <Lei.Liu.AP@sony.com>\r\n\r\n* Add testcase.\r\n\r\nSigned-off-by: Lei Liu <Lei.Liu.AP@sony.com>\r\n\r\n* Update code.\r\n\r\nSigned-off-by: Lei Liu <Lei.Liu.AP@sony.com>\r\n\r\n* Update code again.\r\n\r\nSigned-off-by: Lei Liu <Lei.Liu.AP@sony.com>\r\n\r\n* Add warning log.\r\n\r\nSigned-off-by: Lei Liu <Lei.Liu.AP@sony.com>\r\n\r\n* Revert STEADY_TIME.\r\n\r\nSigned-off-by: Lei Liu <Lei.Liu.AP@sony.com>\r\n\r\n* Fix flake8 warnings.\r\n\r\nSigned-off-by: Lei Liu <Lei.Liu.AP@sony.com>\r\n\r\n* Update code.\r\n\r\nSigned-off-by: Lei Liu <Lei.Liu.AP@sony.com>\r\n\r\nSigned-off-by: Lei Liu <Lei.Liu.AP@sony.com>",
+      "files_changed": 5,
+      "additions": 277,
+      "deletions": 4,
+      "commit_type": "config"
+    },
+    {
+      "author": "esteve",
+      "date": "2022-09-07T15:30:53Z",
+      "sha": "151303481bd2e239c4c312c801a694a8040c494c",
+      "message": "Expand auto to the current time when passed to a Header field (#749)\n\n* Expand auto to the current time when passed to a Header field\r\n\r\nSigned-off-by: Esteve Fernandez <esteve.fernandez@tier4.jp>\r\n\r\n* Make sure that the stamp field is updated every time the message is published\r\n\r\nSigned-off-by: Esteve Fernandez <esteve.fernandez@tier4.jp>\r\n\r\n* Added support for passing 'now' as a value to a 'builtin_interfaces.msg.Time'. Added comments and expand docstring\r\n\r\nSigned-off-by: Esteve Fernandez <esteve.fernandez@tier4.jp>\r\n\r\n* Only update timestamp fields that have been passed 'now' as a value\r\n\r\nSigned-off-by: Esteve Fernandez <esteve.fernandez@tier4.jp>\r\n\r\n* Fix lint errors\r\n\r\nSigned-off-by: Esteve Fernandez <esteve.fernandez@tier4.jp>\r\n\r\n* Added tests\r\n\r\nSigned-off-by: Esteve Fernandez <esteve.fernandez@tier4.jp>\r\n\r\n* Remove node argument from set_message_fields_expanded\r\n\r\nSigned-off-by: Esteve Fernandez <esteve.fernandez@tier4.jp>\r\n\r\n* Fix flake8 errors\r\n\r\nSigned-off-by: Esteve Fernandez <esteve.fernandez@tier4.jp>\r\n\r\nSigned-off-by: Esteve Fernandez <esteve.fernandez@tier4.jp>",
+      "files_changed": 2,
+      "additions": 235,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jacobperron",
+      "date": "2018-12-17T17:31:52Z",
+      "sha": "451bb5268daabc77a2808e12898192a48c07ef07",
+      "message": "Fix node info verb description (#186)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "paudrow",
+      "date": "2022-01-15T00:55:09Z",
+      "sha": "3c5626b6bdfc67b294aa5be08968587748e8100d",
+      "message": "0.16.0\n\nSigned-off-by: Audrow Nash <audrow@hey.com>",
+      "files_changed": 41,
+      "additions": 94,
+      "deletions": 26,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Karsten1987",
+      "date": "2018-03-13T17:47:47Z",
+      "sha": "5247fd911439777b7d8c453698acfc91253a233f",
+      "message": "ros2 pkg create (#42)\n\n* initial commit for ros2 pkg create\r\n\r\n* managed interpreter\r\n\r\n* cleanup cmakelists.txt.em\r\n\r\n* single quote prints\r\n\r\n* alpha order\r\n\r\n* copy paste error correction\r\n\r\n* ament-cmake -> ament_cmake\r\n\r\n* fix typo\r\n\r\n* style\r\n\r\n* correct line breaks in cmake\r\n\r\n* enhance CMakeLists.txt with testing section\r\n\r\n* clear separation between ament_cmake and plain cmake\r\n\r\n* whitespace\r\n\r\n* alpha order\r\n\r\n* import order\r\n\r\n* use platform for uname\r\n\r\n* address style comments\r\n\r\n* add include and header file if building library\r\n\r\n* use git config to get email and username\r\n\r\n* use os.curdir\r\n\r\n* cleanup cmake config\r\n\r\n* address style comments\r\n\r\n* disable some linters\r\n\r\n* cleanup prints\r\n\r\n* print error message in a single statement\r\n\r\n* consolidate block\r\n\r\n* add comment about disabled linters\r\n\r\n* switch back to format 2 for now\r\n\r\n* use build type in help text rather than build tool\r\n\r\n* build type\r\n\r\n* deb --> dep\r\n\r\n* ament_common --> ament_lint_common\r\n\r\n* use target_include_directories\r\n\r\n* target_include_dir and export\r\n\r\n* export symbols on plain cmake\r\n\r\n* use library/node name for targets\r\n\r\n* naming convention for export targets\r\n\r\n* rethink nargs\r\n\r\n* using ament_package data types\r\n\r\n* linters\r\n\r\n* set correct values in package.xml\r\n\r\n* clean up package.xml with buldtool_depends and test_depends",
+      "files_changed": 12,
+      "additions": 754,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "aalbaali",
+      "date": "2022-02-11T15:35:58Z",
+      "sha": "0479d5d17ee0f7ccad2b30835d464d5aaa19bb65",
+      "message": "Use local git config instead of global (#693)\n\n- This solves the issue reported in #477, which is fixed for ROS2\r\n  Elequent in #479, but not other distros.\r\n\r\nSigned-off-by: aalbaali <albaalia@live.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "aprotyas",
+      "date": "2021-11-30T21:23:47Z",
+      "sha": "aeb2e8c6179e509115400bbc254d33e26e832988",
+      "message": "[ros2pkg] Skip copyright tests in template packages (#676)\n\n* [ros2pkg] Skip copyright test in ament_python pkg\r\n\r\nThe template sources populated through `ros2 pkg create` for the\r\n`ament_python` build type do not have a well-formed copyright header,\r\nand as such fail the `ament_copyright` test when run as-is.\r\n\r\nThis commit skips said test by default, instead informing the user to\r\nremove the `skip` decorator once they've populated their sources with\r\nthe proper copyright headers.\r\n\r\nSigned-off-by: Abrar Rahman Protyasha <aprotyas@u.rochester.edu>\r\n\r\n* [ros2pkg] Skip copyright test in ament_cmake pkg\r\n\r\nThe template sources populated through `ros2 pkg create` for the\r\n`ament_cmake` build type do not have a well-formed copyright header\r\nand the package itself does not have a proper license file. As such, the\r\ncopyright and cpplint linters report missing license/copyright problems\r\nwith the generated package.\r\n\r\nThis commit skips said tests by default, instead informing the user to\r\ncomment out the lines which allow the copyright and cpplint linter\r\nchecks to be skipped once license/copyright headers are placed in the\r\npackage appropriately.\r\n\r\nSigned-off-by: Abrar Rahman Protyasha <aprotyas@u.rochester.edu>",
+      "files_changed": 2,
+      "additions": 7,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "tfoote",
+      "date": "2020-01-03T03:09:57Z",
+      "sha": "41638fec8e9b40cb8ec6c1ae8d28cd2b555170e1",
+      "message": "Consistent interpretation of dependency type\n\nSigned-off-by: Tully Foote <tfoote@osrfoundation.org>",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "adityapande-1995",
+      "date": "2021-09-23T22:54:15Z",
+      "sha": "44a654c9077252eed50b2a6d9034ba47b634bf98",
+      "message": "Removed redundant code (#666)\n\nSigned-off-by: Aditya Pande <aditya050995@gmail.com>",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 16,
+      "commit_type": "code"
+    },
+    {
+      "author": "Blast545",
+      "date": "2021-10-27T04:57:02Z",
+      "sha": "0f2374947a8150bf6cb8e88c9ff1be600fccb112",
+      "message": "Update lost messages test case (#669)\n\nSigned-off-by: Jorge Perez <jjperez@ekumenlabs.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "matthews-jca",
+      "date": "2021-09-09T19:47:20Z",
+      "sha": "d974fdefb0e8f0af095ac6e211e5b17b0115974a",
+      "message": "Implementation of message filtering for ros2 (#654)\n\nSigned-off-by: Matthew <matthew.s@jcaelectronics.ca>\r\n\r\nImplementation changes, based tests for filter\r\n\r\nAdd all filter and all pass filtering tests\r\n\r\nSigned-off-by: Matthew <matthew.s@jcaelectronics.ca>\r\n\r\nUpdate ros2topic/ros2topic/verb/echo.py\r\n\r\nCo-authored-by: Tomoya Fujita <Tomoya.Fujita@sony.com>\r\n\r\nSigned-off-by: Matthew <matthew.s@jcaelectronics.ca>\r\n\r\nremove unneeded line\r\n\r\nSigned-off-by: Matthew <matthew.s@jcaelectronics.ca>\r\n\r\nUpdate ros2topic/ros2topic/verb/echo.py\r\n\r\nCo-authored-by: Tomoya Fujita <Tomoya.Fujita@sony.com>\r\n\r\nremove unneeded line\r\n\r\nSigned-off-by: Matthew <matthew.s@jcaelectronics.ca>",
+      "files_changed": 2,
+      "additions": 68,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "gonzodepedro",
+      "date": "2021-05-01T02:44:22Z",
+      "sha": "9263c037d0089ee903b09822efcf24a3230154c7",
+      "message": "Make Lost Messages option ON by default (#633)\n\n* lost messages option ON by default\r\n\r\nSigned-off-by: Gonzalo de Pedro <gonzalo@depedro.com.ar>\r\n\r\n* Changes based on review. Removed warning on lost_messages not supported by implementation\r\n\r\nSigned-off-by: Gonzalo de Pedro <gonzalo@depedro.com.ar>\r\n\r\n* Removed import\r\n\r\nSigned-off-by: Gonzalo de Pedro <gonzalo@depedro.com.ar>\r\n\r\n* changes based on review\r\n\r\nSigned-off-by: Gonzalo de Pedro <gonzalo@depedro.com.ar>",
+      "files_changed": 1,
+      "additions": 22,
+      "deletions": 10,
+      "commit_type": "code"
+    },
+    {
+      "author": "hidmic",
+      "date": "2019-04-15T18:17:33Z",
+      "sha": "b73107adff475f4a2853c73060a6c5c56ed6062b",
+      "message": "Add Component CLI (#217)\n\n* Add ros2 component CLI verb package.\r\n\r\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>\r\n\r\n* Fix ros2 component CLI verbs.\r\n\r\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>\r\n\r\n* Improve ros2component CLI verbs and api documentation and style.\r\n\r\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>\r\n\r\n* Add ros2component dummy API tests.\r\n\r\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>",
+      "files_changed": 15,
+      "additions": 771,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "iwmq",
+      "date": "2021-06-08T16:36:21Z",
+      "sha": "a9def450ab9fed95d40b8bddd358cc06442192a4",
+      "message": "Skip None Result (#646)\n\nSigned-off-by: jaywang <iwmq@qq.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "rob-clarke",
+      "date": "2021-06-04T03:35:04Z",
+      "sha": "72cd9fbe2aada4a9357dd5c5e2d420181e251c5d",
+      "message": "Handle ValueError (#643)\n\n* Add invalid package name test\r\n\r\nTracking work in progress in https://github.com/ament/ament_index/pull/69\r\n\r\nSigned-off-by: Rob Clarke <robert.clarke@bristol.ac.uk>\r\n\r\n* Handle ValueError from get_package_prefix\r\n\r\nSigned-off-by: Rob Clarke <robert.clarke@bristol.ac.uk>\r\n\r\n* Lint\r\n\r\nSigned-off-by: Rob Clarke <robert.clarke@bristol.ac.uk>",
+      "files_changed": 2,
+      "additions": 5,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "tim-fan",
+      "date": "2021-05-27T22:32:54Z",
+      "sha": "21b988ce6d93b1cb5a7f66c172b13f1b38f05fdb",
+      "message": "Pass package exports to template in pkg create api (#619) (#628)\n\nSigned-off-by: Tim Fanselow <tim.fanselow@gmail.com>",
+      "files_changed": 2,
+      "additions": 6,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "alsora",
+      "date": "2021-04-16T16:03:07Z",
+      "sha": "a4daa7672f287997d1345a44ebb9e0c3d0c490b6",
+      "message": "Continue to next iteration after exceptions in generate_reports (#623)\n\nrun_checks loops\r\n\r\nSigned-off-by: Alberto Soragna <alberto.soragna@gmail.com>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "evshary",
+      "date": "2019-12-16T19:12:51Z",
+      "sha": "93e717c042a06d21e267a89a7de7780335acb323",
+      "message": "Add support for showing info of hidden topic (#423)\n\nSigned-off-by: evshary <evshary@gmail.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "v-lopez",
+      "date": "2021-02-13T17:48:41Z",
+      "sha": "14eb345688213c3547c7c859511b8cd2c271738b",
+      "message": "Add rosparam verb load (#590)\n\n* Add rosparam verb load\r\n\r\nSigned-off-by: Victor Lopez <victor.lopez@pal-robotics.com>\r\n\r\n* Move load_parameter_file implementation to api, add test_verb_load\r\n\r\nSigned-off-by: Victor Lopez <victor.lopez@pal-robotics.com>\r\n\r\n* Apply fixes for linter\r\n\r\nSigned-off-by: Victor Lopez <victor.lopez@pal-robotics.com>\r\n\r\n* Remove TODO comment\r\n\r\nSigned-off-by: Victor Lopez <victor.lopez@pal-robotics.com>\r\n\r\n* Fix linter errors\r\n\r\nSigned-off-by: Audrow Nash <audrow.nash@gmail.com>\r\n\r\nCo-authored-by: Audrow Nash <audrow.nash@gmail.com>",
+      "files_changed": 5,
+      "additions": 397,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "claireyywang",
+      "date": "2019-12-03T02:06:54Z",
+      "sha": "2c1768d1f464aa6e8d7f4cb162a5e36647036a43",
+      "message": "simplify helper function\n\nSigned-off-by: claireyywang <clairewang@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 12,
+      "deletions": 19,
+      "commit_type": "code"
+    },
+    {
+      "author": "daisukes",
+      "date": "2021-02-12T18:50:05Z",
+      "sha": "d864a364fc1fbcbe602cb73d5c33b2d1456025d1",
+      "message": "bugfix for #563 (#570)\n\nSigned-off-by: Daisuke Sato <daisukes@cmu.edu>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "ymollard",
+      "date": "2020-09-17T15:27:26Z",
+      "sha": "84ce52f3a8327c1fc22d0297652a34ad3d0b58ec",
+      "message": "Added dependency to python3-argcomplete to ros2cli (#564)\n\n* Added dependency to python3-argcomplete to ros2cli\r\n\r\nSigned-off-by: Yoan Mollard <ymollard@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "dirk-thomas",
+      "date": "2017-06-06T22:14:20Z",
+      "sha": "cc351ff88965ff7191773ddfc69d569763e93069",
+      "message": "add LICENSE and CONTRIBUTING.md files",
+      "files_changed": 2,
+      "additions": 215,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "dawonn-haval",
+      "date": "2020-07-20T12:38:38Z",
+      "sha": "acb13d9852a150517b51ce71ae8dc8eca5e6ae58",
+      "message": "Enable --no-daemon flag for some cli tools (#514)\n\nFixes #511\r\n\r\nSigned-off-by: Dereck Wonnacott <dereck.wonnacott@havalus.com>",
+      "files_changed": 5,
+      "additions": 26,
+      "deletions": 9,
+      "commit_type": "code"
+    },
+    {
+      "author": "sharminramli",
+      "date": "2020-05-27T16:38:52Z",
+      "sha": "29cdf68280f048680b406e3d4c02123bca492ae2",
+      "message": "[ros2interface] Allow stdin input for 'ros2 interface show' (#387)\n\n* Allow stdin input for 'ros2 interface show'\r\n\r\nSigned-off-by: Nursharmin Ramli <nursharminramli@gmail.com>\r\n\r\n* just use help for all the information\r\n\r\nSigned-off-by: Dirk Thomas <dirk-thomas@users.noreply.github.com>\r\n\r\n* fix import order\r\n\r\nSigned-off-by: Dirk Thomas <dirk-thomas@users.noreply.github.com>\r\n\r\n* simplify logic\r\n\r\nSigned-off-by: Dirk Thomas <dirk-thomas@users.noreply.github.com>\r\n\r\n* catch empty values in case stdin doesn't contain output\r\n\r\nSigned-off-by: Dirk Thomas <dirk-thomas@users.noreply.github.com>\r\n\r\n* Add test for 'ros2 interface show' with stdin\r\n\r\nSigned-off-by: Nursharmin Ramli <nursharminramli@gmail.com>\r\n\r\n* Use test_msgs instead of std_msgs for stdin test\r\n\r\nSigned-off-by: Nursharmin Ramli <nursharminramli@gmail.com>\r\n\r\n* Use example_interfaces in help for show\r\n\r\nSigned-off-by: Nursharmin Ramli <nursharminramli@gmail.com>\r\n\r\nCo-authored-by: Dirk Thomas <dirk-thomas@users.noreply.github.com>",
+      "files_changed": 2,
+      "additions": 40,
+      "deletions": 4,
+      "commit_type": "ci"
+    },
+    {
+      "author": "mm318",
+      "date": "2020-04-02T17:21:27Z",
+      "sha": "d485407d9afd0ffda782682f0dd8a9b3fee47249",
+      "message": "Fix formatting of \"ros2 topic info -v\" output (#473)\n\n* fix formatting of \"ros2 topic info -v\" output\r\n\r\nSigned-off-by: Miaofei <miaofei@amazon.com>\r\n\r\n* improve test strictness vertical spacing of \"ros2 topic info -v\" output\r\n\r\nSigned-off-by: Miaofei <miaofei@amazon.com>",
+      "files_changed": 2,
+      "additions": 3,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "mikaelarguedas",
+      "date": "2017-06-27T19:06:11Z",
+      "sha": "6a3ac4e6941bac8d736fdea170492fd676a98ed3",
+      "message": "use a package containing services in the example of the help message (#20)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "nuclearsandwich",
+      "date": "2018-11-19T22:07:49Z",
+      "sha": "0e4591e68c33f2e6e26abd69c9435936d34b0a47",
+      "message": "0.6.0",
+      "files_changed": 21,
+      "additions": 21,
+      "deletions": 21,
+      "commit_type": "config"
+    },
+    {
+      "author": "DongheeYe",
+      "date": "2020-04-10T18:04:51Z",
+      "sha": "bf4941afd06064d20914c19687a8ca98186687e6",
+      "message": "[ros2param] Add timeout to ros2param list (#469)\n\nSigned-off-by: Donghee Ye <donghee.ye@samsung.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "jaisontj",
+      "date": "2020-02-27T17:30:30Z",
+      "sha": "c3bf21d00e7846020186d530636026564610c461",
+      "message": "Enhanced ros2 topic info to display node name, node namespace, topic type and qos profile of the publishers and subscribers. (#385)\n\nSigned-off-by: Jaison Titus <jaisontj92@gmail.com>\r\nSigned-off-by: Miaofei <miaofei@amazon.com>\r\nCo-authored-by: Miaofei Mei <ameision@hotmail.com>",
+      "files_changed": 2,
+      "additions": 63,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "pbaughman",
+      "date": "2020-03-06T22:16:20Z",
+      "sha": "af44e53252b015adbb30af67692c754cfb352aaa",
+      "message": "Remove ready_fn from test descriptions (#376)\n\nSigned-off-by: Pete Baughman <pete.baughman@apex.ai>",
+      "files_changed": 7,
+      "additions": 21,
+      "deletions": 21,
+      "commit_type": "code"
+    },
+    {
+      "author": "Claire Wang",
+      "date": "2019-08-19T17:00:38Z",
+      "sha": "3ff2adb1ff5d5dae462a9cf4c7eba5212fcf66f3",
+      "message": "Add distribution check and report feature to `ros2 doctor` command   (#311)\n\n* created ros2debug package\r\n\r\nSigned-off-by: clairewangosrf <clairewang@openrobotics.org>\r\nSigned-off-by: claireyywang <clairewang@openrobotics.org>\r\n\r\n* created setup verb, need revision\r\n\r\nSigned-off-by: clairewangosrf <clairewang@openrobotics.org>\r\nSigned-off-by: claireyywang <clairewang@openrobotics.org>\r\n\r\n* added simple setup check\r\n\r\nSigned-off-by: clairewangosrf <clairewang@openrobotics.org>\r\nSigned-off-by: claireyywang <clairewang@openrobotics.org>\r\n\r\n* added simple setup check, need testing\r\n\r\nSigned-off-by: clairewangosrf <clairewang@openrobotics.org>\r\nSigned-off-by: claireyywang <clairewang@openrobotics.org>\r\n\r\n* added four standard tests\r\n\r\nSigned-off-by: clairewangosrf <clairewang@openrobotics.org>\r\nSigned-off-by: claireyywang <clairewang@openrobotics.org>\r\n\r\n* add new line to end of file\r\n\r\nSigned-off-by: clairewangosrf <clairewang@openrobotics.org>\r\nSigned-off-by: claireyywang <clairewang@openrobotics.org>\r\n\r\n* corrected code format\r\n\r\nSigned-off-by: clairewangosrf <clairewang@openrobotics.org>\r\nSigned-off-by: claireyywang <clairewang@openrobotics.org>\r\n\r\n* update debug api Signed-off by: Claire Wang clairewang@openrobotics.org\r\n\r\nSigned-off-by: clairewangosrf <clairewang@openrobotics.org>\r\nSigned-off-by: claireyywang <clairewang@openrobotics.org>\r\n\r\n* update code format\r\n\r\nSigned-off-by: clairewangosrf <clairewang@openrobotics.org>\r\nSigned-off-by: claireyywang <clairewang@openrobotics.org>\r\n\r\n* added rosdistro\r\n\r\nSigned-off-by: clairewangosrf <clairewang@openrobotics.org>\r\nSigned-off-by: claireyywang <clairewang@openrobotics.org>\r\n\r\n* fixed style and added rosdistro\r\n\r\nSigned-off-by: claireyywang <clairewang@openrobotics.org>\r\n\r\n* fixed code style\r\n\r\nSigned-off-by: claireyywang <clairewang@openrobotics.org>\r\n\r\n* corrected code style\r\n\r\nSigned-off-by: claireyywang <clairewang@openrobotics.org>\r\n\r\n* added network interface print command\r\n\r\nSigned-off-by: claireyywang <clairewang@openrobotics.org>\r\n\r\n* leave out network verb, change cmd name to doctor, add alias wtf\r\n\r\nSigned-off-by: claireyywang <clairewang@openrobotics.org>\r\n\r\n* remove network.py\r\n\r\nSigned-off-by: claireyywang <clairewang@openrobotics.org>\r\n\r\n* add version, rosdistro, platformdist, fallback checks, fallback checks\r\n\r\nSigned-off-by: claireyywang <clairewang@openrobotics.org>\r\n\r\n* add wtf alias, separate checks and report\r\n\r\nSigned-off-by: claireyywang <clairewang@openrobotics.org>\r\n\r\n* remove duplicates, correct grammer\r\n\r\nSigned-off-by: claireyywang <clairewang@openrobotics.org>\r\n\r\n* add entrypoints for checks and report, output failed checks\r\n\r\nSigned-off-by: claireyywang <clairewang@openrobotics.org>\r\n\r\n* corrected code format\r\n\r\nSigned-off-by: claireyywang <clairewang@openrobotics.org>\r\n\r\n* reformat report, correct typo\r\n\r\nSigned-off-by: claireyywang <clairewang@openrobotics.org>",
+      "files_changed": 11,
+      "additions": 334,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "BMarchi",
+      "date": "2019-11-11T19:25:03Z",
+      "sha": "ce963cef2aa5711d10311c916ebe18cc839aab59",
+      "message": "Assert on listener node output for ros2topic cli test\n\nSigned-off-by: Brian Ezequiel Marchi <brian.marchi65@gmail.com>",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "maryaB-osr",
+      "date": "2019-07-12T22:19:43Z",
+      "sha": "8e06796bac3cbde5188bf8c9a5f30c9a55a8a7af",
+      "message": "Create README (#294)\n\n* Create README\r\n\r\nissue #157\r\nWould appreciate review for correct use of language, relevance of links, content, etc.\r\n\r\nSigned-off-by: maryaB-osr <marya@openrobotics.org>\r\n\r\n* Changed command/verb usage and included add command tutorial\r\n\r\nSigned-off-by: Marya <marya@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 27,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "artivis",
+      "date": "2019-06-07T16:40:31Z",
+      "sha": "b5c52870afbd1ba825201610e20054fb2ca9c3c0",
+      "message": "add 'topic type' verb (#272)\n\n* add 'topic type' verb\r\n\r\nSigned-off-by: artivis <jeremie.deray@canonical.com>\r\n\r\n* fix doc\r\n\r\nSigned-off-by: artivis <jeremie.deray@canonical.com>\r\n\r\n* add func return code\r\n\r\nSigned-off-by: artivis <jeremie.deray@canonical.com>",
+      "files_changed": 2,
+      "additions": 43,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "jpace121",
+      "date": "2019-09-20T16:45:05Z",
+      "sha": "1d8bbaa128a089944966dbd4e782084ce5631391",
+      "message": "Add ros2 pkg create for ament python (#296)\n\n* Add pkg create for ament_python.\r\n\r\nSigned-off-by: James Pace <jpace121@gmail.com>\r\n\r\n* Add entries for setup.py to make it closer to package.xml.\r\n\r\nSigned-off-by: James Pace <jpace121@gmail.com>\r\n\r\n* Fix yucky formatting.\r\n\r\nSigned-off-by: James Pace <jpace121@gmail.com>\r\n\r\n* Provide default node name for python if one is not provided. Refactor how cpp node names are handle so we do sane things if using python build tool, but pass in a cpp node name.\r\n\r\nSigned-off-by: James Pace <jpace121@gmail.com>\r\n\r\n* Fix formatting issues brought up by colcon test.\r\n\r\nSigned-off-by: James Pace <jpace121@gmail.com>\r\n\r\n* PR feedback.\r\n\r\nSigned-off-by: James Pace <jpace121@gmail.com>\r\n\r\n* Replace --cpp-node-name and --python-node-name options with --node-name option.\r\n\r\nSigned-off-by: James Pace <jpace121@gmail.com>\r\n\r\n* Handle library_name option for ament_python packages.\r\n\r\nSigned-off-by: James Pace <jpace121@gmail.com>\r\n\r\n* Add default linters to ament_python packages.\r\n\r\nSigned-off-by: James Pace <jpace121@gmail.com>\r\n\r\n* Abort when package name = test.\r\n\r\nSigned-off-by: James Pace <jpace121@gmail.com>\r\n\r\n* PR feedback: Remove unneccessary new lines.\r\n\r\nSigned-off-by: James Pace <jpace121@gmail.com>\r\n\r\n* PR Feedback: Improve error message.\r\n\r\nSigned-off-by: James Pace <jpace121@gmail.com>",
+      "files_changed": 10,
+      "additions": 232,
+      "deletions": 30,
+      "commit_type": "config"
+    },
+    {
+      "author": "Siddharth Kucheria",
+      "date": "2019-06-27T22:24:44Z",
+      "sha": "dec900e1ba3b2de4025820c7ee0bf74d53b0b576",
+      "message": "Added ros2interface to replace ros2 msg/srv (#288)\n\n* adding ros2 interface command line tool \r\n\r\nSigned off by: Siddharth Kucheria",
+      "files_changed": 17,
+      "additions": 683,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "Juan Ignacio Ubeira",
+      "date": "2019-07-30T21:33:59Z",
+      "sha": "f8afbed18c7d299981b73c95ba26e7f386da9dc4",
+      "message": "Adjusting ros2param tests to take into account automatic declaration of 'use_sim_time' parameter. (#307)\n\nSigned-off-by: Juan Ignacio Ubeira <jubeira@ekumenlabs.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "vinnamkim",
+      "date": "2019-07-09T16:29:37Z",
+      "sha": "d99c0d42eda7eac25a7b08e428cffb17e11e45e5",
+      "message": "Add no_str and no_arr options for ros2 topic echo (#216)\n\n* Add no_str and no_arr options for ros2 topic echo\r\n\r\nSigned-off-by: vinnamkim <vinnam.kim@gmail.com>\r\n\r\n* Modify argument help\r\n\r\nSigned-off-by: vinnamkim <vinnam.kim@gmail.com>",
+      "files_changed": 1,
+      "additions": 14,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "Arnatious",
+      "date": "2019-07-03T16:53:40Z",
+      "sha": "c2ee69dcbd90706cb234a58b83ee69dd0f7f3063",
+      "message": "rename package-format to match other flags (#291)\n\nSigned-off-by: Ted Kern <ted.kern@canonical.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "sgvandijk",
+      "date": "2019-04-25T18:45:57Z",
+      "sha": "fe7fb512a4056d4fe8d64cfe0aa42d56f97f021e",
+      "message": "Add capability to use ros2 param set for array types (#199)\n\n* Add tests for converting string values to parameter types\r\n\r\nSigned-off-by: Sander G. van Dijk <sgvandijk@gmail.com>\r\n\r\n* Use YAML parsing to convert parameters to correct type\r\n\r\nSigned-off-by: Sander G. van Dijk <sgvandijk@gmail.com>\r\n\r\n* Do not perform redundant type conversions\r\n\r\nSigned-off-by: Sander G. van Dijk <sgvandijk@gmail.com>\r\n\r\n* Fix import ordering\r\n\r\nSigned-off-by: Sander G. van Dijk <sgvandijk@gmail.com>\r\n\r\n* Use single quotes instead of double\r\n\r\nSigned-off-by: Sander G. van Dijk <sgvandijk@gmail.com>\r\n\r\n* Prevent unnecessary list comprehensions\r\n\r\nSigned-off-by: Sander G. van Dijk <sgvandijk@gmail.com>\r\n\r\n* Consolidate similar tests into single paramatrized function\r\n\r\nSigned-off-by: Sander G. van Dijk <sgvandijk@gmail.com>\r\n\r\n* remove obsolete functions\r\n\r\nSigned-off-by: Dirk Thomas <dirk-thomas@users.noreply.github.com>\r\n\r\n* expect array.array for numerics\r\n\r\nSigned-off-by: Dirk Thomas <dirk-thomas@users.noreply.github.com>",
+      "files_changed": 2,
+      "additions": 106,
+      "deletions": 22,
+      "commit_type": "ci"
+    },
+    {
+      "author": "yechun1",
+      "date": "2018-08-01T16:02:49Z",
+      "sha": "be38ea405388672c42eeb02fc9ccbffb6ed6945d",
+      "message": "Fix echo for big array messages (#126)\n\nIssue1: ros2 topic echo pointcould2(big arrays), has no response, updated the logical to make more sensible.\r\n\r\n    a. (by default) full_length=false, truncate_length=128, then print max 128 (fix big arrays issue)\r\n\r\n    b. pass truncate_length=X, then print max X.\r\n\r\n    c. pass full_length=true (whatever truncate_length), then set truncate_length=None and print full_length.\r\n\r\nIssue2: missed truncate_length to _convert_value().\r\n    Since truncate_length is a key argument, pass it explicitly to _convert_value()\r\n\r\nSigned-off-by: Chris Ye <chris.ye@intel.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "AAlon",
+      "date": "2019-01-29T13:08:44Z",
+      "sha": "9186400ddf009c6e26ba01e7edfbe54825facbe4",
+      "message": "Consistent node naming (#158)\n\n* Support for easy integration with ros2 security features by starting CLI nodes with a consistent prefix.\r\n\r\n* Removing unneeded comment\r\n\r\n* Making DirectNode visible (removing hidden node prefix) to have consistent node naming for ros2cli.\r\n\r\n* Start all CLI nodes as hidden.\r\n\r\n* Shortening the default CLI node name prefix from '_ros2cli_node' to '_ros2cli'\r\n\r\n* Importing HIDDEN_NODE_PREFIX from rclpy, renaming CLI_NODE_NAME_PREFIX -> NODE_NAME_PREFIX.\r\n\r\n* ros2node - Importing HIDDEN_NODE_PREFIX from rclpy\r\n\r\n* Linter fixes.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 5,
+      "additions": 22,
+      "deletions": 9,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ross-desmond",
+      "date": "2018-12-07T00:04:54Z",
+      "sha": "8e9d7184165a266ea98161267c37623ec3bda383",
+      "message": "Add ros2 node info verb (#159)\n\n* Add ros node info verb\r\n\r\n* Fix copyright headers\r\n\r\n* Fix flake8 issues\r\n\r\n* Addresses comments for exceptional case\r\n\r\n* Simplify error message when we can't find the node.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 3,
+      "additions": 90,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "dhood",
+      "date": "2018-04-02T16:13:21Z",
+      "sha": "7fba445312e2548aed66112dc7bfede92cde1a59",
+      "message": "Avoid use of license as variable name",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Nickolaim",
+      "date": "2018-05-11T18:13:00Z",
+      "sha": "7e22e5eb0fc54c434461ad37f7e7981a25f373a5",
+      "message": "Info verb for ros2topic (#88)\n\n* info verb for ros2 topic\r\n\r\n* Fix flake8 issues with the existing code in info.py\r\n\r\n* Add unit test for test_info()\r\n\r\n* Count publishers and subscribers in topic into\r\n\r\n* Add test for `topic info`\r\n\r\n* Fix flake8 issues.\r\n\r\n* Address PR feedback:\r\n- Update the output text\r\n- Rename the test topic name\r\n- Delete obsolete code\r\n\r\n* Use contextlib.redirect_stdout instead of a custom decorator\r\n\r\n* remove single use vars",
+      "files_changed": 3,
+      "additions": 74,
+      "deletions": 0,
+      "commit_type": "test"
+    },
+    {
+      "author": "aeudes",
+      "date": "2017-11-14T23:36:30Z",
+      "sha": "cf17fdabbb62015418ca76eaabfa141e0826da08",
+      "message": "Improve parameters passing to node in ros2run (#61)\n\n* Improve parameter passing to node in ros2run\r\n\r\n* Enforce PEP\r\n\r\n* Fix remaining warning\r\n\r\n* move argparse import",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "volkandre",
+      "date": "2017-07-26T21:04:35Z",
+      "sha": "f588d2a221cbe955199b386f9cc64805043a3e68",
+      "message": "added --prefix argument to ros2 run (#41)\n\n* added --prefix argument to ros2 run\r\n\r\n* Fixed issues from review by @dirk-thomas and @wjwwood\r\n\r\n* rephrased help message\r\n\r\n* added space in help message",
+      "files_changed": 2,
+      "additions": 15,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "wjwwood",
+      "date": "2017-06-14T19:37:54Z",
+      "sha": "d4fd9776e82344f60431d95712427ff0ff6f4f4c",
+      "message": "gitignore",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Hunter Allen",
+      "date": "2017-06-21T23:04:04Z",
+      "sha": "fcd7c74126c0c159195be403d85c7519d8042ea7",
+      "message": "Removed node from call to get_executable path in ros2 run command, (#13)\n\nsee ros2/ros2cli#12.",
+      "files_changed": 1,
+      "additions": 13,
+      "deletions": 15,
+      "commit_type": "code"
+    }
+  ]
+}

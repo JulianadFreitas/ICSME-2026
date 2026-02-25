@@ -1,0 +1,141 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T14:58:57Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ament",
+    "repo": "google_benchmark_vendor"
+  },
+  "data": [
+    {
+      "author": "cottsay",
+      "date": "2020-07-14T17:28:56Z",
+      "sha": "5c8bf9449bab2328da351b59be8bfa90279daf32",
+      "message": "Initial commit\n\nSigned-off-by: Scott K Logan <logans@cottsay.net>",
+      "files_changed": 0,
+      "additions": 0,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "mosfet80",
+      "date": "2025-03-28T17:28:30Z",
+      "sha": "a39485da54edbe10ca0c7b411fc9e5f272208f30",
+      "message": "Update CMakeLists.txt (#35)\n\ngoogle benckmark require cmake 3.10 (minimum).\r\n\r\nhttps://github.com/google/benchmark/blob/v1.8.3/CMakeLists.txt\n\nSigned-off-by: mosfet80 <realeandrea@yahoo.it>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "clalancette",
+      "date": "2020-12-07T23:51:16Z",
+      "sha": "96539c8f0cf19f84bae820fa5bdb4460ac6ad854",
+      "message": "0.0.4",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "marcoag",
+      "date": "2024-04-04T16:01:51Z",
+      "sha": "189599dd2acc99f7266c3cc2d807f7ddda6b6075",
+      "message": "Update to 1.8.3. (#29)\n\nSigned-off-by: Marco A. Gutierrez <marcogg@marcogg.com>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mjcarroll",
+      "date": "2022-12-07T19:57:40Z",
+      "sha": "173518d23ab7780b6a74d969bb464e521c277d94",
+      "message": "Remove set but unused variable (#24)\n\nClang checks -Wunused-but-set-variable.\r\nThis fails the build with -Werror also enabled.\r\n\r\nSigned-off-by: Michael Carroll <michael@openrobotics.org>",
+      "files_changed": 2,
+      "additions": 34,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "audrow",
+      "date": "2022-11-17T14:02:16Z",
+      "sha": "07b54823be024bbd3dd11b81dba11199d9843282",
+      "message": "[rolling] Update maintainers - 2022-11-07 (#22)",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "paudrow",
+      "date": "2021-11-18T20:27:59Z",
+      "sha": "ebbbf036ad6fe3b44b69b30d0a6b708295ab3948",
+      "message": "Update maintainers to Audrow Nash (#18)\n\nSigned-off-by: Audrow Nash <audrow@hey.com>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "nuclearsandwich",
+      "date": "2022-03-15T15:40:19Z",
+      "sha": "f867c65c6c2d7fb4b28b57ecb002b9fd58756aa7",
+      "message": "Add git buildtool dependency.\n\nSince we normally install git as part of our regular development\nworkflow this build tool dependency is often overlooked. However doing\ncursed things with containers I stumbled upon the need for git during\nthe build stage.\n\nSigned-off-by: Steven! Ragnarök <steven@nuclearsandwich.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "sloretz",
+      "date": "2022-03-10T19:40:23Z",
+      "sha": "d5f23bcd2bdc380a6068f4842b68c2e3e3ff3953",
+      "message": "Use git hash for google_benchmark_vendor (#20)\n\nCMake ExternalProject_add recommends using a specific git hash with\r\nGIT_TAG because branches and tags can be updated to point to different\r\nreferences.\r\n\r\nhttps://cmake.org/cmake/help/latest/module/ExternalProject.html\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "homalozoa",
+      "date": "2021-05-25T00:13:40Z",
+      "sha": "9416ce954dd66778b1d92c9bb57248fa4c39fa12",
+      "message": "Update google_benchmark to v1.5.3 (#16)\n\n1. Change google_benchmark version from v1.5.2 to v1.5.3. Because v1.5.2\r\n   can not build with GCC 11\r\n2. Removed shrink-tz-offset-size.patch because of this patch was merged in\r\ngoogle-benchmark repo.\r\n\r\nSigned-off-by: Homalozoa <nx.tardis@gmail.com>",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 55,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ivanpauno",
+      "date": "2021-05-07T21:13:28Z",
+      "sha": "24ce571011f7bc4978f88fa5b21bb926e2c8a2f9",
+      "message": "Add changelog (#15)\n\nSigned-off-by: Ivan Santiago Paunovic <ivanpauno@ekumenlabs.com>",
+      "files_changed": 1,
+      "additions": 37,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "hidmic",
+      "date": "2020-10-08T19:17:34Z",
+      "sha": "fded186fbdb0d84e1b0584f62cbf245d886d2135",
+      "message": "Update package maintainers. (#10)\n\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "asobhy-qnx",
+      "date": "2020-09-29T20:27:53Z",
+      "sha": "a8fe69f2e44e2db43d4b3e06f2f699ce78b8d164",
+      "message": "upgrade google benchmark from v1.5.1 to v1.5.2 to include QNX patch (#9)\n\nSigned-off-by: Ahmed Sobhy <asobhy@blackberry.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    }
+  ]
+}
