@@ -1,0 +1,81 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-26T02:05:19Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "roboception",
+    "repo": "rc_dynamics_api"
+  },
+  "data": [
+    {
+      "author": "flixr",
+      "date": "2017-08-16T17:25:45Z",
+      "sha": "bc0dd5474f91a3df23041a16f6039ce7e453a3bc",
+      "message": "add tools",
+      "files_changed": 3,
+      "additions": 273,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Dr. Heiko Hirschmüller",
+      "date": "2018-01-04T21:52:44Z",
+      "sha": "91ba3c7b5dbe9d51c05ed0d98bb4eecd87e6100a",
+      "message": "Added protobuf as submodule for making the repository fully self contained",
+      "files_changed": 7,
+      "additions": 489,
+      "deletions": 412,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ce047",
+      "date": "2017-06-08T11:05:30Z",
+      "sha": "61a2042c6a21a6dc9e546f259a2ec501eee27040",
+      "message": "added git submodules for external libs\n* libcpr (in version 1.3.0)\n* libjson (in version v2.0.0)",
+      "files_changed": 3,
+      "additions": 8,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "schallerr",
+      "date": "2019-04-29T15:13:44Z",
+      "sha": "d346c414041a98325b8d1fe197422329f89c1d8e",
+      "message": "on windows, by default do not use system curl",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "gavanderhoorn",
+      "date": "2018-12-11T10:34:31Z",
+      "sha": "2d7c24e685b1a3453b4fa7b6e79ea9cb7ca1d2e9",
+      "message": "readme: fix link to visard site.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "felixendres",
+      "date": "2017-12-07T20:35:35Z",
+      "sha": "806608928ca005268be5794d26a251ad439371d9",
+      "message": "Provide start_slam + stop_slam for rc_dynamics\n\nAdapt to newest rc_dynamics version.\nChanged interface:\n  start(bool with_restart) -> start() and restart()\n\nThis way it is consistent with the REST-API.\n\nWith a straightforward extension, some combinations of with_restart and\nstarting SLAM would not be directly translatable to (and thus not be\nconsistent with) the REST API inteface, e.g. with\n- start(bool with_restart, bool with_slam)\nstart(true, true) needs REST-API \"restart\" if SLAM is running, but\n\"restart\" and \"start_slam\" otherwise.",
+      "files_changed": 3,
+      "additions": 34,
+      "deletions": 18,
+      "commit_type": "docs"
+    },
+    {
+      "author": "heikohimu",
+      "date": "2017-02-16T12:36:36Z",
+      "sha": "0a7aea2c807d0fd2ce0c595c03a0cbeec271add6",
+      "message": "start",
+      "files_changed": 10,
+      "additions": 2840,
+      "deletions": 0,
+      "commit_type": "docs"
+    }
+  ]
+}

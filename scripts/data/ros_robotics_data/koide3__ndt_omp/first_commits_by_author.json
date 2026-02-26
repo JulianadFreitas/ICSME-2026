@@ -1,0 +1,181 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T22:32:28Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "koide3",
+    "repo": "ndt_omp"
+  },
+  "data": [
+    {
+      "author": "koide3",
+      "date": "2017-10-31T08:35:56Z",
+      "sha": "853f7424db79cc2c24d95ade261c40b92486d4ee",
+      "message": "initial commit",
+      "files_changed": 11,
+      "additions": 3482,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "hridaybavle",
+      "date": "2024-08-30T09:14:19Z",
+      "sha": "dfea9f0fb9e77bb5585de34d511dc79d0d8593ed",
+      "message": "Add template instantion for pcl::PointXYZRGB",
+      "files_changed": 3,
+      "additions": 3,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "esteve",
+      "date": "2023-02-02T08:40:42Z",
+      "sha": "f809626ba5d4f0dc9635612190573ea396b39a42",
+      "message": "build(ndt_omp): add ros_environment dependency (#20)\n\nNeeded so that `CMakeLists.txt` can access the `$ROS_VERSION` environment variable in the ROS buildfarm\n\nSigned-off-by: Esteve Fernandez <esteve.fernandez@tier4.jp>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "LorenzoMontano",
+      "date": "2022-12-01T09:44:33Z",
+      "sha": "4edb74110f317e896291177fddd92c3a77063025",
+      "message": "fix export library target for ROS2",
+      "files_changed": 1,
+      "additions": 13,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "pjreed",
+      "date": "2022-11-22T02:42:24Z",
+      "sha": "c6ea87f5a5dcf7a2a712cce874d186bf4b4daa68",
+      "message": "Use ament_auto_add_library instead of add_library\n\nThe regular `add_library` function did not cause `ament_auto_package`\nto install the library, but this one will.\n\nSigned-off-by: P. J. Reed <phillipreed@hatchbed.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "kminoda",
+      "date": "2022-11-21T08:13:05Z",
+      "sha": "0383b4528b246c57614fa83fbae648b334583dd9",
+      "message": "fix: clang-format\n\nSigned-off-by: kminoda <koji.minoda@tier4.jp>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "markuspi",
+      "date": "2022-10-06T11:20:53Z",
+      "sha": "9196187f3098d87ee8727e2be0f99b9ccb3a428f",
+      "message": "Fix call to deprecated function testGradient",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "epsilonkei",
+      "date": "2022-02-02T14:32:15Z",
+      "sha": "940c2c5f4b960c394615d1f2a6fbb263b8cba1ea",
+      "message": "Fix sign of c2 and d1 in computing Hessian of NDT",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "KeisukeShima",
+      "date": "2022-01-24T07:46:02Z",
+      "sha": "2f85e58b0b9b17cfe22cb0fdf42901ba771d2e0d",
+      "message": "change minimum required cmake version\n\nSigned-off-by: Keisuke Shima <19993104+KeisukeShima@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "ci"
+    },
+    {
+      "author": "kenji-miyake",
+      "date": "2022-01-13T08:00:22Z",
+      "sha": "27c5e349cdabdeafe6aaca4ae71eac62a7d70282",
+      "message": "Support ROS2 build (#5)\n\n* Support ROS2 build\n\nSigned-off-by: Kenji Miyake <kenji.miyake@tier4.jp>\n\n* fix merge error\n\nSigned-off-by: Keisuke Shima <19993104+KeisukeShima@users.noreply.github.com>\n\n* fix git clone error\n\nSigned-off-by: Keisuke Shima <19993104+KeisukeShima@users.noreply.github.com>\n\n* remove duplicate command\n\nSigned-off-by: Keisuke Shima <19993104+KeisukeShima@users.noreply.github.com>\n\n* add Dockerfile for foxy and galactic\n\nSigned-off-by: Keisuke Shima <19993104+KeisukeShima@users.noreply.github.com>\n\n* fix build error\n\nSigned-off-by: Keisuke Shima <19993104+KeisukeShima@users.noreply.github.com>\n\n* fix git clone error\n\nSigned-off-by: Keisuke Shima <19993104+KeisukeShima@users.noreply.github.com>\n\n* add new line\n\nSigned-off-by: Keisuke Shima <19993104+KeisukeShima@users.noreply.github.com>\n\n* remove ROS2 build\n\nSigned-off-by: Keisuke Shima <19993104+KeisukeShima@users.noreply.github.com>\n\n* change to be able to run ci in pull request\n\nSigned-off-by: Keisuke Shima <19993104+KeisukeShima@users.noreply.github.com>\n\nCo-authored-by: Keisuke Shima <19993104+KeisukeShima@users.noreply.github.com>\nSigned-off-by: Keisuke Shima <19993104+KeisukeShima@users.noreply.github.com>",
+      "files_changed": 11,
+      "additions": 183,
+      "deletions": 20,
+      "commit_type": "ci"
+    },
+    {
+      "author": "h-ohta",
+      "date": "2021-08-03T08:15:49Z",
+      "sha": "fa5012faf2f7d82f2295f96a4e67e7e45ea09a8c",
+      "message": "fix deprecated",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "kmiya",
+      "date": "2021-07-21T11:50:12Z",
+      "sha": "f1143599b9f9ed6fda4a2cec5d99b9427142eedf",
+      "message": "Fix typos",
+      "files_changed": 8,
+      "additions": 74,
+      "deletions": 74,
+      "commit_type": "docs"
+    },
+    {
+      "author": "lixin-Lee",
+      "date": "2021-07-07T15:52:40Z",
+      "sha": "906421a054940c9c01e365b0c16442686b64b523",
+      "message": "exchange header order and replace pcl_isfinite with std::isfinite",
+      "files_changed": 2,
+      "additions": 7,
+      "deletions": 7,
+      "commit_type": "code"
+    },
+    {
+      "author": "AchmadFathoni",
+      "date": "2021-04-17T00:47:34Z",
+      "sha": "61ddf2e4cbd638de18fd93026b757d87214d3f00",
+      "message": "Change boost::shared_ptr to pcl::shared_ptr",
+      "files_changed": 3,
+      "additions": 8,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "marbosjo",
+      "date": "2019-08-19T13:25:55Z",
+      "sha": "cf5ea870df1cf993aa840302ae7e9158d9bfcc15",
+      "message": "solved linking issue with pcl",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "kenji koide",
+      "date": "2019-03-05T07:06:02Z",
+      "sha": "e956da12d928340a995718eafe2ea003ce6f678b",
+      "message": "add license info",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "Toby",
+      "date": "2018-08-28T07:59:04Z",
+      "sha": "3d9780f93b264438676396a98b93d1ee46bbed13",
+      "message": "Added install commands",
+      "files_changed": 1,
+      "additions": 16,
+      "deletions": 0,
+      "commit_type": "docs"
+    }
+  ]
+}

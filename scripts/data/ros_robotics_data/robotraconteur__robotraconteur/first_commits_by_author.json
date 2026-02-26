@@ -1,0 +1,41 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-26T02:43:47Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "robotraconteur",
+    "repo": "robotraconteur"
+  },
+  "data": [
+    {
+      "author": "johnwason",
+      "date": "2018-09-14T06:16:21Z",
+      "sha": "eea0e2f3196e7178b70dc95c038d2abc67db65a8",
+      "message": "Initial GitHub commit\n\nSigned-off-by: John Wason <wason@wasontech.com>",
+      "files_changed": 300,
+      "additions": 187705,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "dependabot[bot]",
+      "date": "2024-11-25T18:27:30Z",
+      "sha": "5ee9c1dee939b54c53900dd6d4e5737848b42356",
+      "message": "Bump actions/upload-pages-artifact from 1 to 3 (#163)\n\nBumps [actions/upload-pages-artifact](https://github.com/actions/upload-pages-artifact) from 1 to 3.\r\n- [Release notes](https://github.com/actions/upload-pages-artifact/releases)\r\n- [Commits](https://github.com/actions/upload-pages-artifact/compare/v1...v3)\r\n\r\n---\r\nupdated-dependencies:\r\n- dependency-name: actions/upload-pages-artifact\r\n  dependency-type: direct:production\r\n  update-type: version-update:semver-major\r\n...\r\n\r\nSigned-off-by: dependabot[bot] <support@github.com>\r\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "ci"
+    },
+    {
+      "author": "BillyONeal",
+      "date": "2025-03-25T21:01:12Z",
+      "sha": "0fe6efd8c448f68ae6c33c261b9df734b372ee47",
+      "message": "Remove workarounds for broken OpenSSL packages which cause other broken. (#310)\n\n* Remove workarounds for broken OpenSSL packages which cause other broken.\n\nThis is replayed from https://github.com/microsoft/vcpkg/pull/44354/commits/90aa71196adf52091524ce94ef09632079e7163b\n\nThe extra 'z' at least causes build errors like:\n\n```\n/usr/bin/ld: cannot find -lz: No such file or directory\n```\n\nand it is OpenSSL::OpenSSL's responsibility to make sure any of its dependencies are dragged in.\n\n* Add CMAKE_DL_LIBS",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    }
+  ]
+}

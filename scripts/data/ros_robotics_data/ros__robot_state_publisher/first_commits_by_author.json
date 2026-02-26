@@ -1,0 +1,591 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-26T02:40:20Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros",
+    "repo": "robot_state_publisher"
+  },
+  "data": [
+    {
+      "author": "ahcorde",
+      "date": "2024-08-28T20:14:20Z",
+      "sha": "bf87636b1ef9658faa66af4490d7c202b9227be3",
+      "message": "update urdf model header (#223)\n\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "mini-1235",
+      "date": "2025-12-01T12:33:22Z",
+      "sha": "ccfc694828dba9f7604a8e2830f4b276c311fb98",
+      "message": "Update subscription callback signatures (#241)\n\nSigned-off-by: mini-1235 <mauricepurnawan@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "kbrameld",
+      "date": "2025-10-17T07:46:19Z",
+      "sha": "5f0b74096fdcdea5bcf40d261e71696cf6d1913f",
+      "message": "Add functionality to read description from a topic instead of a parameter (#234)\n\nSigned-off-by: Kenji Brameld <kbrameld@traclabs.com>\nCo-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>",
+      "files_changed": 6,
+      "additions": 181,
+      "deletions": 29,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mosfet80",
+      "date": "2025-09-22T14:30:38Z",
+      "sha": "a5c6ff678d356d2f0d727a2dbd5c6d4bc72e51ed",
+      "message": "fix cmake deprecation (#232)\n\nSigned-off-by: Andrea <realeandrea@yahoo.it>\nSigned-off-by: Mos <realeandrea@yahoo.it>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "cottsay",
+      "date": "2019-06-10T19:07:30Z",
+      "sha": "24f91eda34cac78e3a368bbc9dfa72a797aeeaef",
+      "message": "Use rclcpp::Time for stamping transforms (#20)\n\n* Use rclcpp::Time for stamping transforms\r\n\r\nThe motivation is that right now, `robot_state_publisher` doesn't respect\r\n`use_sim_time` at all.\r\n\r\n* Use std::chrono constructor to represent 0.5 sec",
+      "files_changed": 2,
+      "additions": 6,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "clalancette",
+      "date": "2017-02-23T15:23:19Z",
+      "sha": "b9da64fd509521c9f24f9be634054d8366174180",
+      "message": "Style cleanup throughout the tree.\n\nSigned-off-by: Chris Lalancette <clalancette@osrfoundation.org>",
+      "files_changed": 11,
+      "additions": 123,
+      "deletions": 132,
+      "commit_type": "config"
+    },
+    {
+      "author": "roncapat",
+      "date": "2024-12-09T15:30:00Z",
+      "sha": "9558725e15f8a5ade93f53ccd7a5a4612c8c1702",
+      "message": "Use `emplace()` with `std::map`s (#231)\n\nSigned-off-by: Patrick Roncagliolo <ronca.pat@gmail.com>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "marcoag",
+      "date": "2024-04-26T14:39:25Z",
+      "sha": "d6a0389ace1ceb1acb093419684ff8715d24ec80",
+      "message": "Changelog.\n\nSigned-off-by: Marco A. Gutierrez <marcogg@marcogg.com>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "doisyg",
+      "date": "2024-01-04T23:36:18Z",
+      "sha": "e72adfc35be14a43d1688d08a0960608c5dc648a",
+      "message": "Fix reload after a description with a mimic joint (#212)\n\n* fix mimic_.clear();\r\n\r\n* Make the copy explicit.\r\n\r\n* Add in a test for the mimic change crash.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>\r\nCo-authored-by: Guillaume Doisy <guillaume@dexory.com>",
+      "files_changed": 5,
+      "additions": 208,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "nlamprian",
+      "date": "2023-05-25T20:31:56Z",
+      "sha": "ed51b1a2dd4590125549280dedfa9f98fd994bf2",
+      "message": "Improve log messages (#206)\n\nSigned-off-by: Nick Lamprianidis <info@nlamprian.me>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "audrow",
+      "date": "2022-11-15T21:36:58Z",
+      "sha": "ca824907a51ca4545e258ace6535cd19482a1441",
+      "message": "[rolling] Update maintainers - 2022-11-07 (#203)",
+      "files_changed": 2,
+      "additions": 6,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "paudrow",
+      "date": "2022-04-05T21:30:44Z",
+      "sha": "6e11ed88d24a63a00472c000075f568f270334ed",
+      "message": "3.0.2\n\nSigned-off-by: Audrow Nash <audrow@hey.com>",
+      "files_changed": 2,
+      "additions": 6,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jacobperron",
+      "date": "2019-05-09T00:57:13Z",
+      "sha": "8eb71ecf0629e6d00eb11f79e38811510c19c8f3",
+      "message": "2.2.2",
+      "files_changed": 2,
+      "additions": 6,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ijnek",
+      "date": "2022-03-17T20:37:43Z",
+      "sha": "b6fbbd0a821c14d6ea34f83bcab93c77358caeef",
+      "message": "export dependencies, to use robot_state_publisher as a component (#193)\n\n* ament export dependencies\r\n\r\nSigned-off-by: Kenji Brameld <kenjibrameld@gmail.com>",
+      "files_changed": 2,
+      "additions": 22,
+      "deletions": 33,
+      "commit_type": "docs"
+    },
+    {
+      "author": "sloretz",
+      "date": "2019-08-07T16:11:33Z",
+      "sha": "e14bc6bf9cf663230747d08dade303886c7a429a",
+      "message": "Remove unused Eigen3 dependency (#27)\n\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "RussellJoyce",
+      "date": "2021-11-12T09:26:35Z",
+      "sha": "17af0ac5b04056cafc73f9baa0c4bf3703fc5dcc",
+      "message": "Publish new fixed transforms when URDF is updated\n\nA new URDF may come with a new set of fixed transforms, so if the URDF\nis updated through the `robot_description` parameter, we also need to\npublish its new transforms.\n\nFixes #181\n\nSigned-off-by: Russell Joyce <russell@russellj.co.uk>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "adeschamps",
+      "date": "2021-10-26T15:32:55Z",
+      "sha": "8b3f6b8e03432651e2b788128e17603f0972c677",
+      "message": "Make joint_states subscription QoS configurable; default to SensorDataQoS. (#179)\n\nThis changes the subscription default from `reliable` to\r\n`best_effort`. This is helpful when visualizing a robot that's running\r\non a wifi-connected device, and eliminates a warning when starting up\r\ndrivers on a robot that publishes with `best_effort`.\r\n\r\nThe subscription defaults to `best_effort`, but can be overridden with\r\nthe following config:\r\n\r\n```yaml\r\nrobot_state_publisher:\r\n  ros__parameters:\r\n    qos_overrides:\r\n      /joint_states:\r\n        subscription:\r\n          reliability: reliable\r\n```",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 3,
+      "commit_type": "config"
+    },
+    {
+      "author": "Abrar Rahman Protyasha",
+      "date": "2021-08-21T05:45:27Z",
+      "sha": "51c5f53baa19232e6f99e2638619a9faa6697d78",
+      "message": "Fix deprecated subscriber callbacks (#173)",
+      "files_changed": 2,
+      "additions": 3,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "schnili",
+      "date": "2021-06-24T16:07:30Z",
+      "sha": "7d3ecb34f41a4bc09177002316b685b8b5320d16",
+      "message": "corrected publish_frequency default in README (#166)\n\nCorrected the default `publish_frequency` value in the README as it was missing its unit and was also not reflecting the correct value that is specified [in the code](https://github.com/ros/robot_state_publisher/blob/d8b471b742bd16734184167622eca3c6dce10980/src/robot_state_publisher.cpp#L119).",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "smnogar",
+      "date": "2021-05-25T13:46:58Z",
+      "sha": "8a256873b5899d60ca97d388a9f99bdbc5e9bf18",
+      "message": "Restore tf frame prefix support for ROS 2 (#159)\n\nquick and dirty frame_prefix support for foxy\r\n\r\nAlso make it so we don't handle / specially.\r\nAdd in tests and documentation as well.\r\n\r\nCo-authored-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 7,
+      "additions": 193,
+      "deletions": 6,
+      "commit_type": "docs"
+    },
+    {
+      "author": "tfoote",
+      "date": "2012-10-07T04:43:16Z",
+      "sha": "cebb654438c2162cf59bfdd91e45e5d043e9d0d5",
+      "message": "compiling with new catkin",
+      "files_changed": 4,
+      "additions": 53,
+      "deletions": 72,
+      "commit_type": "docs"
+    },
+    {
+      "author": "dirk-thomas",
+      "date": "2017-09-28T17:33:46Z",
+      "sha": "0ca9251e665d15a63d4f0b9e0db2e4fd385200a7",
+      "message": "update style to match latest uncrustify",
+      "files_changed": 4,
+      "additions": 10,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "claireyywang",
+      "date": "2019-10-23T23:31:30Z",
+      "sha": "8cc74848189aed30c5c936e49894847fbccb267c",
+      "message": "CHANGELOG\n\nSigned-off-by: claireyywang <clairewang@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "pohzhiee",
+      "date": "2019-09-06T17:44:23Z",
+      "sha": "dac0072ea1128863a6327c10902cf57036657ce8",
+      "message": "Install include directories (#31)",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Patrick Beeson",
+      "date": "2019-07-09T22:53:52Z",
+      "sha": "9a67da3611c17d6c93b4421ea47c27f84bd4566a",
+      "message": "Publish URDF string on startup.  Don't wait until /joint_states is received.  This allows unit testts and other programs that want to use the URDF (without parsing it themselves) but might not be hooked up to a live robot/simulation, or even know what joints exist before getting this URDF string.",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "Carl Delsey",
+      "date": "2019-08-06T21:25:12Z",
+      "sha": "4b7397b97050c3e08d753de08965cc42fb023343",
+      "message": "Don't export exe as library. (#25)\n\nThis results in a failure when someone adds\r\nfind_package(robot_state_publisher) to their CMakeLists.txt.\r\n\r\nYou get the error\r\n'robot_state_publisher' exports 'robot_state_publisher' which\r\ncan't be found.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "wjwwood",
+      "date": "2014-07-24T21:15:43Z",
+      "sha": "292b068b34d02763ae25dbfa4ca8c416713b9ce9",
+      "message": "add version depend on orocos_kdl >= 1.3.0\n\nConflicts:\n\tpackage.xml",
+      "files_changed": 1,
+      "additions": 12,
+      "deletions": 12,
+      "commit_type": "config"
+    },
+    {
+      "author": "nuclearsandwich",
+      "date": "2017-06-19T17:41:07Z",
+      "sha": "9320413533edd7242a0b7f0ea7f6459fe896fa24",
+      "message": "Reconcile package.xml and changelog versions. (#3)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "Karsten1987",
+      "date": "2017-03-02T00:26:53Z",
+      "sha": "4988ec4dbf413c6ec2518991d96254f4869ed954",
+      "message": "inital ros2 migration",
+      "files_changed": 10,
+      "additions": 368,
+      "deletions": 232,
+      "commit_type": "docs"
+    },
+    {
+      "author": "bponsler",
+      "date": "2018-05-01T18:41:22Z",
+      "sha": "1e13dd7c18958843cf4860c267b38c8086157cec",
+      "message": "Updates to publish robot model (#9)\n\n* Updated to publish robot model\r\n\r\nUpdated the robot state publisher to publish the robot model URDF as a std_msgs/String. This is to allow rviz, or other nodes, to access the robot model.\r\n\r\n* style fixup\r\n\r\n* style fixup\r\n\r\n* fix style and improve error message\r\n\r\n* fix style",
+      "files_changed": 4,
+      "additions": 55,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "mikaelarguedas",
+      "date": "2017-06-15T20:51:46Z",
+      "sha": "b0fd1337ebc8b382b85a0b7130be895dd58515d4",
+      "message": "use CMAKE_X_STANDARD and check compiler rather than platform",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "dhood",
+      "date": "2017-12-05T23:04:14Z",
+      "sha": "856cb599e6b8a298eada257ca47103c96d924339",
+      "message": "Update for rclcpp namespace removals (#11)",
+      "files_changed": 4,
+      "additions": 6,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "jspricke",
+      "date": "2017-01-05T18:42:28Z",
+      "sha": "9d9c600a120817021c6a7985e38df455cacdf7a1",
+      "message": "Use urdf::*ShredPtr instead of boost::shared_ptr (#60)\n\n* Use urdf::*SharedPtr instead of boost::shared_ptr\r\n\r\nurdfdom_headers uses C++ std::shared_ptr. As it exports it as custom\r\n*SharedPtr type, we can use them to stay compatible.\r\n\r\nThis also adds a proper dependency for urdfdom-headers\r\n\r\n* Adoptions to build against both urdfdom 0.3 and 0.4",
+      "files_changed": 5,
+      "additions": 10,
+      "deletions": 6,
+      "commit_type": "docs"
+    },
+    {
+      "author": "sbarthelemy",
+      "date": "2016-11-16T18:41:53Z",
+      "sha": "9992dd39243bf4194ed296534b43d2a13dbc4101",
+      "message": "downgrade undeserved error log for empty JointState.position (#64)\n\nAs per the JointState message doc, the ``position`` member must be\r\neither empty OR have the same size as the ``name`` member.\r\n\r\nIn case it is empty, the message is valid, but we will still warn\r\nwe won't use it.",
+      "files_changed": 1,
+      "additions": 10,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "facontidavide",
+      "date": "2016-10-20T18:44:19Z",
+      "sha": "32d71eecba9f7b33fbdb85a72785541759ee9279",
+      "message": "adding a parameter \"ignore_timestamp\" (#65)\n\n* added the parameter ignore_timestamp\r\n\r\n* added ignore_timestamp\r\n\r\n* fixup",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "isucan",
+      "date": "2013-11-21T01:13:19Z",
+      "sha": "b1688a8c666f782cf4c1cf4424133cee08e69bcd",
+      "message": "Merge pull request #2 from piyushk/hydro_tf_prefix\n\nenable the tf_prefix parameter",
+      "files_changed": 4,
+      "additions": 15,
+      "deletions": 11,
+      "commit_type": "code"
+    },
+    {
+      "author": "rhaschke",
+      "date": "2016-09-13T21:12:51Z",
+      "sha": "155eade5b79e66bdd324b856adcee20de3ca4ca8",
+      "message": "fix cmake eigen3 warning (#62)",
+      "files_changed": 2,
+      "additions": 3,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "meyerj",
+      "date": "2016-07-19T18:42:05Z",
+      "sha": "e957b26827d1be4866e3e6ef07aec59ad1cf2a2b",
+      "message": "Publish fixed joints over tf_static by default\n\nFor some reason the original commit 7d82611 got lost during the kinetic\nrelease. The default value of the use_tf_static parameter used to be true\nin jade. The erroneous commit that changed it back to false is 19294fb.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "jacquelinekay",
+      "date": "2015-10-16T23:48:01Z",
+      "sha": "9e24de684f288cc2d90241d194eb9b575a26afa2",
+      "message": "Merge pull request #28 from clearpathrobotics/tf2-static\n\nPort to tf2 and enable using static broadcaster",
+      "files_changed": 8,
+      "additions": 59,
+      "deletions": 46,
+      "commit_type": "docs"
+    },
+    {
+      "author": "kartikmohta",
+      "date": "2016-06-10T16:00:26Z",
+      "sha": "739b3ba306cb494bdc9d2ab01644b0afe80cd9fe",
+      "message": "Add target_link_libraries for joint_state_listener library + install it (#54)",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 5,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Jackie Kay",
+      "date": "2015-10-19T17:38:37Z",
+      "sha": "3be5ed985e8a9595b6201fa3198635578fc57fbe",
+      "message": "Correct failing tests",
+      "files_changed": 13,
+      "additions": 143,
+      "deletions": 140,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Paul Bovbel",
+      "date": "2015-06-24T18:08:56Z",
+      "sha": "086699c73feec19c7e93aeb995fbe79ac8402da4",
+      "message": "Port to tf2 and enable using static broadcaster",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "jbohren",
+      "date": "2014-02-26T00:44:15Z",
+      "sha": "f4925f4d55a62a39aa8e2316118a52c95bb650b5",
+      "message": "Re-enabling rostests",
+      "files_changed": 2,
+      "additions": 24,
+      "deletions": 24,
+      "commit_type": "docs"
+    },
+    {
+      "author": "scpeters",
+      "date": "2015-12-09T22:33:39Z",
+      "sha": "232fb691da5540c3b8a7f73b88a5467561b2ee00",
+      "message": "Fix API break in publishFixedTransforms\n\nA bool argument was added to\nRobotStatePublisher::publishFixedTransforms\nwhich broke API.\nI've added a default value of false, to match\nthe default specified in the JointStateListener\nconstructor.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "remod",
+      "date": "2015-10-19T12:48:28Z",
+      "sha": "9dccd4971a684bbbe6fb01e122b7c17f8eb3db4b",
+      "message": "Removed git merge conflict related lines.",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "toliver",
+      "date": "2015-09-01T19:11:37Z",
+      "sha": "8235bce9b65ee9723a4f0a0e03d7258737cf07ff",
+      "message": "Check URDF to distinguish fixed joints from floating joints. Floating joint are ignored by the publisher.",
+      "files_changed": 4,
+      "additions": 16,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "DLu",
+      "date": "2013-10-08T19:36:55Z",
+      "sha": "6b85caa0769d62f1fe7a898bb983556b48712ba9",
+      "message": "Fixed debug print message",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "xqms",
+      "date": "2015-03-30T19:39:39Z",
+      "sha": "49bca4e3998de7be75f25ad70f4bcdc60a8e12a6",
+      "message": "get rid of argv[0] debug output on startup",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "rcodddow",
+      "date": "2014-11-07T15:15:33Z",
+      "sha": "0e39e348e9c386f4dfce41ac2464c519ae9b5c45",
+      "message": "issue_16_removelegacy\n\nRemoves a seemingly old dependancy",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Timm Linder",
+      "date": "2014-08-20T19:00:37Z",
+      "sha": "61767ea643d1782415490d2e7e29c4e15867ba8b",
+      "message": "Fix for joint transforms not being published anymore after a clock reset (e.g. when playing a bagfile and looping)",
+      "files_changed": 2,
+      "additions": 11,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "jensenb",
+      "date": "2013-11-19T13:06:36Z",
+      "sha": "1ae325fba96e46d0227ce32069ff35bed1801249",
+      "message": "Update KDL SegmentMap interface to optionally use shared pointers\n\nThe KDL Tree API optionally uses shared pointers on platforms where\nthe STL containers don't support incomplete types.",
+      "files_changed": 2,
+      "additions": 11,
+      "deletions": 9,
+      "commit_type": "code"
+    },
+    {
+      "author": "konradb3",
+      "date": "2014-03-02T15:53:40Z",
+      "sha": "a3e8bee93c9b4db2551df4a84d7307077681a4a4",
+      "message": "Add support for mimic tag.",
+      "files_changed": 2,
+      "additions": 29,
+      "deletions": 12,
+      "commit_type": "code"
+    },
+    {
+      "author": "bit-pirate",
+      "date": "2013-12-08T05:35:35Z",
+      "sha": "c8b1d0cce5f27c30f019d09fa991da5f6a7b038e",
+      "message": "adds orocos_kdl dependency and linking rules (fixes #8)",
+      "files_changed": 2,
+      "additions": 9,
+      "deletions": 6,
+      "commit_type": "docs"
+    },
+    {
+      "author": "piyushk",
+      "date": "2013-08-07T21:10:28Z",
+      "sha": "97343f61f5d140c71fafb8d2ea1545656fae4c72",
+      "message": "enable the tf_prefix parameter",
+      "files_changed": 4,
+      "additions": 12,
+      "deletions": 11,
+      "commit_type": "code"
+    },
+    {
+      "author": "fsuarez6",
+      "date": "2013-10-24T09:56:49Z",
+      "sha": "2e7df06f6ef81cd458f95c124505a298a4062052",
+      "message": "Get the tf_prefix parameter from the closest namespace",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "William Woodall",
+      "date": "2012-12-19T01:06:02Z",
+      "sha": "d029a6c48981cca648eb02a6847aad0c51e1401a",
+      "message": "Removed non-catkin find_package of orocos_kdl",
+      "files_changed": 1,
+      "additions": 14,
+      "deletions": 18,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Ioan Sucan",
+      "date": "2012-08-02T17:59:41Z",
+      "sha": "21a0ad1651e1afdd826eb0db2badcbd118728fec",
+      "message": "initial copy from robot_model (history not copied over, but exists in the old repository)",
+      "files_changed": 22,
+      "additions": 4313,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "vrabaud",
+      "date": "2012-11-06T21:36:19Z",
+      "sha": "50cb07d97261ee6b6eac32c89700e8ac0c3ea117",
+      "message": "do not depend on meta-packages",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 8,
+      "commit_type": "config"
+    }
+  ]
+}

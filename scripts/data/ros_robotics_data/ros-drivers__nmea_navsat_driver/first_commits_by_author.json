@@ -1,0 +1,181 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T22:45:40Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros-drivers",
+    "repo": "nmea_navsat_driver"
+  },
+  "data": [
+    {
+      "author": "djpetti",
+      "date": "2022-10-16T22:12:11Z",
+      "sha": "b168f499349e5f26e3aed9982deb44ed2f41f8e2",
+      "message": "Fix a bug in the GPS time parsing.\n\nThis causes it to emit incorrect time reference messages if the\nsystem time is off the GPS time by more than a second.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "evenator",
+      "date": "2017-12-06T14:49:42Z",
+      "sha": "a9a929a9a6119d948bf65763289b78f2abc1d14d",
+      "message": "Update maintainer to Ed Venator\n\nAlso, remove boilerplate comments from package.xml",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 11,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ggaessler",
+      "date": "2022-01-02T17:54:45Z",
+      "sha": "9413fe0baf6539cf9975d138388261b0b273562c",
+      "message": "Add automated testing (via catkin_virtualenv) (#136)\n\nAutomatically test the code on every push or PR by playing back data to the driver and test whether the expected amount of messages is outputted by the driver and the messages contain the expected data.\r\n\r\nThe tester can cover more functionality that the current version of the nmea_navsat_driver supports, for these features new PRs will be created. The full usage can be observed in the boschresearch fork.\r\n\r\nSigned-off-by: Gabriel Gaessler <gabriel.gaessler@de.bosch.com>",
+      "files_changed": 10,
+      "additions": 631,
+      "deletions": 3,
+      "commit_type": "config"
+    },
+    {
+      "author": "vonunwerth",
+      "date": "2020-06-13T18:34:06Z",
+      "sha": "b67cfaccc2972b7852dcbd4fde14fbae5cd889f8",
+      "message": "Trim whitespace in nmea_topic_driver (#98)\n\nnmea_topic_driver gets raw NMEA sentences. Those may contain carriage return and new lines, which do not pass the validation regex. Strip whitespace from the nmea sentence before processing for consistency with the parser validator.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "rgov",
+      "date": "2020-02-01T22:30:27Z",
+      "sha": "062f379a87254080d75964c26dc79d38b0af6a44",
+      "message": "Rewrite nmea_socket_driver to use serversocket (#92)\n\nUse Python's SocketServer rather than low level socket APIs. This simplifies code and makes it easier to add TCP support in the future. The buffer_size parameter is no longer necessary because this is an internal detail of UDPServer.",
+      "files_changed": 1,
+      "additions": 45,
+      "deletions": 52,
+      "commit_type": "code"
+    },
+    {
+      "author": "zhixy",
+      "date": "2019-08-17T16:21:23Z",
+      "sha": "1ee32b37b769ccb87a351c5229d07cb2c2272f82",
+      "message": "Add an Option to Use GNSS Time and Improve Time Parsing (#79)\n\n- Add an optional parameter `use_GNSS_time` to use the time from the GPS sentences for ROS message time instead of using system time.\r\n- Improve GPS time parsing to support nanosecond precision on devices that support it.\r\n- Improve GPS time parsing to use RMC message for date when available.\r\n- Improve GPS time parsing to resolve ambiguities in date and century using system time.",
+      "files_changed": 3,
+      "additions": 96,
+      "deletions": 30,
+      "commit_type": "code"
+    },
+    {
+      "author": "diasdm",
+      "date": "2019-02-28T23:28:21Z",
+      "sha": "80df328102afc03a1ecfc1396292682948682025",
+      "message": "Add nmea_serial_driver launch file (#60)\n\nAdd example nmea_serial_driver launch file.",
+      "files_changed": 2,
+      "additions": 24,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "tonybaltovski",
+      "date": "2018-12-29T18:57:09Z",
+      "sha": "689936f115b8aa1cb917c6ba252469181a6a4784",
+      "message": "Removed roslint as build depend. (#59)\n\nroslint was accidentally re-added as a build dependency in #25.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "mr337",
+      "date": "2018-10-14T15:51:56Z",
+      "sha": "a3a3d10f7573ced06b13e879061896020e9adb12",
+      "message": "Publish heading (#25)\n\nAdd support for publishing heading from GPHDT as a `QuanternionStamped` message to a new topic `/heading`.",
+      "files_changed": 3,
+      "additions": 19,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "Nick-Sullivan",
+      "date": "2018-08-28T23:11:25Z",
+      "sha": "c457319ecbb4ccd97c559a801d552fdc486b927c",
+      "message": "Improve Covariance Estimation (#46)\n\nUse GST covariance where available, otherwise uses default covariances estimated from fix type.\r\n\r\nThe previous implementation set covariance to HDOP^2. Instead, it should multiply that by the measurement variance. HDOP should be greater than 1.0.",
+      "files_changed": 3,
+      "additions": 110,
+      "deletions": 30,
+      "commit_type": "code"
+    },
+    {
+      "author": "LoyVanBeek",
+      "date": "2018-08-26T20:53:07Z",
+      "sha": "e36f9cd1efd7bb4624305e83d98631afe65921d6",
+      "message": "Add Socket Driver (#32)\n\nAdd a NMEA socket driver node, which is like the existing serial driver node, but instead of attaching to a TTY handle from a serial port, it listens to a UDP port for NMEA sentences.",
+      "files_changed": 3,
+      "additions": 98,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Vikrant Shah",
+      "date": "2018-08-25T02:20:41Z",
+      "sha": "9fb652d04ba2b71533724b265b360a11ad52d679",
+      "message": "Add code to handle serial exception to allow node to exit cleanly (#52)\n\n- Catch Serial exceptions and exit cleanly, instead of printing Python stack trace.\r\n- Catch Serial exception when opening the serial port, log a FATAL message, and exit instead of printing Python stack trace.",
+      "files_changed": 1,
+      "additions": 16,
+      "deletions": 10,
+      "commit_type": "code"
+    },
+    {
+      "author": "anlif",
+      "date": "2018-08-14T15:40:43Z",
+      "sha": "12dd9d759b7cc9e506bc398f7896d883fccfa7df",
+      "message": "Remove MSL compensation (#36)\n\nFix for #29 Altitude vs Elipsoid Height.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "mikepurvis",
+      "date": "2013-09-13T17:48:46Z",
+      "sha": "09ade02b1e1260074b3df7505ed1b54616279adf",
+      "message": "Publish vel from RMC even in GGA mode.",
+      "files_changed": 1,
+      "additions": 23,
+      "deletions": 20,
+      "commit_type": "code"
+    },
+    {
+      "author": "ericperko",
+      "date": "2013-07-21T18:36:49Z",
+      "sha": "052f243b13a68d903a89b9cd7d60828d14142d5e",
+      "message": "Initial commit",
+      "files_changed": 5,
+      "additions": 240,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "roehling",
+      "date": "2016-06-17T10:03:57Z",
+      "sha": "904ea247aa0c5305facf71811defc846394b28d3",
+      "message": "Add GLONASS support\n\nGLONASS capable devices send different NMEA sentences, which are\nbasically identical to the GPS sentences, but with other prefixes.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "baronep",
+      "date": "2016-04-07T21:30:01Z",
+      "sha": "70704649ea88eeedf3ed2a6ec7f049f2c050f3cd",
+      "message": "Updated driver to accept status of 9 which some novatel recievers report for a WAAS (SBAS) fix.\n\nSee http://www.novatel.com/support/known-solutions/which-novatel-position-types-correspond-to-the-gga-quality-indicator/",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "code"
+    }
+  ]
+}

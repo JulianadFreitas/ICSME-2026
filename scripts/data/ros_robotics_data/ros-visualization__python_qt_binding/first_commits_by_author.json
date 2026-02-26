@@ -1,0 +1,411 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-26T01:54:13Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros-visualization",
+    "repo": "python_qt_binding"
+  },
+  "data": [
+    {
+      "author": "ahcorde",
+      "date": "2024-04-25T12:25:54Z",
+      "sha": "4fe5bceb353f5dfcef4f78f9266c0983521bd7ac",
+      "message": "Only suppress Python warnings on new enough CMake (#139)\n\n* Older CMake doesn't have the policy, so skip it there.\r\n\r\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "mosfet80",
+      "date": "2025-10-03T07:57:08Z",
+      "sha": "19eee00ecc5bb7e7e943175f04404c9087a3c864",
+      "message": "fix cmake deprecation (#150)\n\ncmake version < then 3.10 is deprecated",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "cottsay",
+      "date": "2019-08-16T18:35:43Z",
+      "sha": "da0d50772af8605f2c785d1e67c3d9dec8dea67d",
+      "message": "If present, use the sipconfig suggested sip program (#70)\n\nThe value of `SIP_EXECUTABLE` is not used in the sip invocation within `sip_configure.py`. Instead, the `sip_bin` configuration is loaded from the `sipconfig` Python module.\r\n\r\nInstead of assuming that the sip executable is called `sip` in the CMake which detects whether the sip binding generator is present, try to find the executable in the same way that `sip_configure.py` will.\r\n\r\nSigned-off-by: Scott K Logan <logans@cottsay.net>",
+      "files_changed": 1,
+      "additions": 12,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "clalancette",
+      "date": "2020-06-19T14:55:26Z",
+      "sha": "361dee952bbda33c79cd4e366ae56b0ce4ca81bb",
+      "message": "Add pytest.ini so local tests don't display warning (#93)\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "marcoag",
+      "date": "2024-03-28T10:04:22Z",
+      "sha": "29ea65c5c6712fe3dade9fcfb841e49a9d2806e2",
+      "message": "Changelog.\n\nSigned-off-by: Marco A. Gutierrez <marcogg@marcogg.com>",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "christophebedard",
+      "date": "2024-02-23T20:46:56Z",
+      "sha": "ef7b38b2b78bd3392900f08269119640877945d4",
+      "message": "Switch to C++17 for SIP and Shiboken (#135)\n\nSigned-off-by: Christophe Bedard <christophe.bedard@apex.ai>",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "mjcarroll",
+      "date": "2023-03-01T19:31:27Z",
+      "sha": "d8fc6179f0dbb87f464aa18f69588da4b58f1daf",
+      "message": "Revert \"Add windows support for pyside helper (#116)\" (#124)\n\nThis reverts commit 0a7f68ec8cb219233c9a640ca8517af73510949d.",
+      "files_changed": 3,
+      "additions": 5,
+      "deletions": 477,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Crola1702",
+      "date": "2023-03-02T14:31:38Z",
+      "sha": "1e2994c122572912793004de65ab14711c827099",
+      "message": "Fix flake8 linter regression (#125)\n\nSigned-off-by: Crola1702 <cristobal.arroyo@ekumenlabs.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "hellantos",
+      "date": "2023-03-01T15:40:21Z",
+      "sha": "0a7f68ec8cb219233c9a640ca8517af73510949d",
+      "message": "Add windows support for pyside helper (#116)",
+      "files_changed": 3,
+      "additions": 477,
+      "deletions": 5,
+      "commit_type": "docs"
+    },
+    {
+      "author": "srmainwaring",
+      "date": "2023-03-01T15:04:41Z",
+      "sha": "cacbd7b31645218a6a786318d6d380fd02fa2832",
+      "message": "Remove pyqt from default binding order for macOS (#118)\n\n- Suppress debug messages\r\n- Remove pyqt from default binding order\r\n\r\nSigned-off-by: Rhys Mainwaring <rhys.mainwaring@me.com>",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "audrow",
+      "date": "2022-11-28T19:46:12Z",
+      "sha": "db96c09268474bc0142cca94f59ed4e68cb86a5e",
+      "message": "[rolling] Update maintainers - 2022-11-07 (#120)\n\n* Add Shane Loretz to CODEOWNERs file\r\n\r\n* Update maintainers to Shane Loretz\r\n\r\nSigned-off-by: Audrow Nash <audrow@openrobotics.org>",
+      "files_changed": 2,
+      "additions": 6,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "paudrow",
+      "date": "2022-05-11T00:17:55Z",
+      "sha": "12607245533bd917441bb98120cca80d5f00a067",
+      "message": "1.2.0\n\nSigned-off-by: Audrow Nash <audrow@hey.com>",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "homalozoa",
+      "date": "2021-11-29T15:25:11Z",
+      "sha": "dbf553b69f47d5c9a4c50783c61ddb21a43ea2e1",
+      "message": "[Fix] Replace PythonInterp to Python3 COMPONENTS (#108)\n\n1. Replace PythonInterp & PythonLibs to COMPONENTS\r\n2. Replace PYTHON_INCLUDE_DIRS to Python3_INCLUDE_DIRS\r\n3. Replace PYTHON_EXECUTABLE to Python3_EXECUTABLE\r\n\r\nSigned-off-by: Homalozoa <nx.tardis@gmail.com>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "lopsided98",
+      "date": "2021-11-19T15:32:26Z",
+      "sha": "6b5d12e7c39ef74f2b0a0cd9b2e405e3c568068b",
+      "message": "Use PyQt5 module path to find SIP bindings (ROS 2) (#106)\n\n* Use PyQt5 module path to find SIP bindings (#105)\r\n\r\n`sipconfig._pkg_config['default_mod_dir']` is currently used to find the PyQt5 SIP bindings, but this location is determined by where SIP is installed, which may not be the same as where PyQt5 is installed. A real world example of this is in Nix, where each package is installed to a separate isolated directory. Instead, we can use `PyQt5.__path__[0]`, which will always point to the location of the PyQt5 module.\r\n\r\nCo-authored-by: Akash Patel <17132214+acxz@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "sloretz",
+      "date": "2020-10-29T16:54:57Z",
+      "sha": "3fc729cd55cb531368e11522826643ac89adacf1",
+      "message": "Update maintainers (#96) (#98)\n\nPrevious: @dirk-thomas\r\nNew: @claireyywang, @sloretz\r\n\r\nSigned-off-by: Shane Loretz <sloretz@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "jacobperron",
+      "date": "2020-05-06T00:51:33Z",
+      "sha": "b1c2d040588ff9824a85a04301bf80e319ec1bb5",
+      "message": "1.0.4",
+      "files_changed": 2,
+      "additions": 10,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "dirk-thomas",
+      "date": "2012-01-21T01:25:07Z",
+      "sha": "c81c8b0e24b51fca6d0fd146a2d891fbe70c28a1",
+      "message": "added additional helper for building bindings",
+      "files_changed": 4,
+      "additions": 152,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "rhaschke",
+      "date": "2020-05-26T22:21:01Z",
+      "sha": "7b140ec3fe785240598f9e7451fac2b007a281e3",
+      "message": "Use magic $(MAKE) variable to suppress build warning (#91)\n\nAccording to the gnu make documentation, a subprocess make should use\r\nthe $(MAKE) variable or +make to tell the parent make process that\r\nthe child is actually a make process as well.\r\n\r\nThis is required to suppress the warning\r\n`warning: jobserver unavailable: using -j1. Add `+' to parent make rule.`",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "anton-matosov",
+      "date": "2020-05-26T22:17:39Z",
+      "sha": "5ae703a9f858d332a41b3fcc96062e226978beb5",
+      "message": "Fix linking with non framework builds of qt (e.g. from conda-forge) (#84)\n\n* Fix linking with non framework builds of qt (e.g. from conda-forge)\r\n\r\n* add blank line to fix flake8\r\n\r\n* use single quotes\r\n\r\nCo-authored-by: Dirk Thomas <dirk-thomas@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 15,
+      "deletions": 2,
+      "commit_type": "ci"
+    },
+    {
+      "author": "stertingen",
+      "date": "2020-02-28T23:38:17Z",
+      "sha": "ff3ef8c76b1051af82aef5a9fc96837d5117f3bf",
+      "message": "Use PySide2 and Shiboken2 targets for variables (#79)\n\n* Inserted blank lines to improve readability\n\n* Set PYSIDE_LIBRARY and PYSIDE_INCLUDE_DIR for Pyside >= 5.12\n\n* Set SHIBOKEN_LIBRARY and SHIBOKEN_INCLUDE_DIR for newer shiboken version\n\n* Moved location where SHIBOKEN_BINARY is set, added message output\n\n* shiboken_helper.cmake: Print PYSIDE_INCLUDE_DIR and SHIBOKEN_INCLUDE_DIR\n\n* shiboken_helper.cmake: Refactor find_package for Shiboken and PySide\n\n* shiboken_helper.cmake: Include current directory, enable pyside ext.\n\n* shiboken_helper.cmake: Fixed compilation on Kinetic/Xenial\n\n* remove unnecessary whitespace changes\n\n* reorder some lines\n\n* condition can check the variable name\n\n* remove conditionally for very old shiboken versions\n\n* add CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES to shiboken invocation\n\nCo-authored-by: Dirk Thomas <dirk-thomas@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 26,
+      "deletions": 16,
+      "commit_type": "ci"
+    },
+    {
+      "author": "no-preserve-root",
+      "date": "2019-10-24T15:58:01Z",
+      "sha": "fa9114875dad2ab2fee6af34d8ab431cdf86c084",
+      "message": "check if Shiboken2Config.cmake defines a target instead of a variable, fixes #69 (#77)",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "hgaiser",
+      "date": "2019-01-02T21:56:59Z",
+      "sha": "3bfc459daa7a8c774decd8cacca1d2ebbbf2fa0f",
+      "message": "Don't add -l prefix if it already exists. (#59)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Daniel Wang",
+      "date": "2019-07-23T22:43:36Z",
+      "sha": "c2d826b52277504951bdfe7f2ff32cefc9b661ad",
+      "message": "fixing trivial accidental string concatenation (#66)\n\nSigned-off-by: Daniel Wang <daniel.wang@canonical.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "brawner",
+      "date": "2018-10-26T00:07:24Z",
+      "sha": "a527d32d65b0128b52a1d9b4425bc1a109c3b183",
+      "message": "Ros2 port (#52)\n\n* Modifying files for ros2\r\n\r\n* Moving .cmake.em to .cmake\r\n\r\n* Removing QtBindingHelper\r\n\r\n* autopep8\r\n\r\n* Adding tests\r\n\r\n* autopep8 (#51)\r\n\r\n* autopep8\r\n\r\n* wrap\r\n\r\n* autopep8 fixup\r\n\r\n* Adding tests\r\n\r\n* Reverting copyright\r\n\r\n* Updating package.xml\r\n\r\n* Cleaning up\r\n\r\n* Updating package.xml\r\n\r\n* Cmakelists\r\n\r\n* package.xml\r\n\r\n* tests working again\r\n\r\n* package.xml\r\n\r\n* package.xml\r\n\r\n* package.xml\r\n\r\n* package.xml\r\n\r\n* package.xml\r\n\r\n* package.xml\r\n\r\n* package.xml\r\n\r\n* package.xml\r\n\r\n* cmakelists\r\n\r\n* Updating cmake files to work with qt_gui_cpp\r\n\r\n* Building and installing\r\n\r\n* Reverting to original imports\r\n\r\n* Pass flake8\r\n\r\n* Removing install\r\n\r\n* Moving python files back to src\r\n\r\n* Addressing pull request\r\n\r\n* Addressing pull request comments\r\n\r\n* Cleaning up\r\n\r\n* one import per line\r\n\r\n* Addressing pull request comments\r\n\r\n* comment case only",
+      "files_changed": 14,
+      "additions": 158,
+      "deletions": 71,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mlautman",
+      "date": "2018-10-19T23:34:10Z",
+      "sha": "49031b313269ff7f2bc5dd6e2bbc1438a68e1c5d",
+      "message": "autopep8 (#51)\n\n* autopep8\n\n* wrap\n\n* autopep8 fixup",
+      "files_changed": 3,
+      "additions": 26,
+      "deletions": 11,
+      "commit_type": "code"
+    },
+    {
+      "author": "jspricke",
+      "date": "2016-01-10T10:06:25Z",
+      "sha": "88b0da08f1f474d82654545e49d7b8d174abb6e4",
+      "message": "Remove LGPL and GPL from licenses, all code is BSD",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "machinekoder",
+      "date": "2018-03-30T21:30:55Z",
+      "sha": "04cb54a3782bf7188a87963e20920d80d6fbc50a",
+      "message": "add support for Qt5 modules (#45)\n\n* add support for Qt5 modules\r\n\r\n* remove Qt4.x only modules",
+      "files_changed": 1,
+      "additions": 21,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "riebl",
+      "date": "2017-10-20T20:15:49Z",
+      "sha": "633993813ea58469cb3f40d5ee4940c6213f6092",
+      "message": "prefer qmake-qt5 over qmake",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Ruben Smits",
+      "date": "2016-12-27T11:58:02Z",
+      "sha": "f5b61afc590d4005acac02edebe6114572cf2469",
+      "message": "Fixes failing framework detection on OSX\n\nApparently the framework detection on OSX does not work properly if installed in a non standard location like /usr/local/Cellar/... As Homebrew by default installs Qt5 modules as frameworks this probably does not harm.",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Nodd",
+      "date": "2014-09-19T09:04:03Z",
+      "sha": "aaf9be1ca78a02c82258015e07a362170c5a31c0",
+      "message": "__builtin__ became builtins in python3",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "NikolausDemmel",
+      "date": "2014-07-01T18:07:09Z",
+      "sha": "08ebbbbde3d46fcfe5708df930485dea2b025c4c",
+      "message": "Update sip_helper to use python header dirs\n\nThis fixes https://github.com/ros-visualization/qt_gui_core/pull/46 and https://github.com/ros-visualization/rviz/pull/788; needed at least on OS X, likely some other platforms as well.",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Isaac Saito",
+      "date": "2013-03-15T18:07:21Z",
+      "sha": "d2b6c88e0d91ceb1db9e5366d83e51516c6edb96",
+      "message": "Minor refactoring (if statement optimized)",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "130s",
+      "date": "2013-03-03T03:18:04Z",
+      "sha": "94c6451f171815b1c57070683d08e225ec2f048b",
+      "message": "maintainer added.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "Aaron Blasdel",
+      "date": "2012-12-21T18:01:09Z",
+      "sha": "79218240262e23f9bc185494d8392d2ddf928e0f",
+      "message": "file missing license header",
+      "files_changed": 1,
+      "additions": 32,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "hershwg",
+      "date": "2012-10-12T22:42:05Z",
+      "sha": "9d9ac1d523bada59014ac8b6cf4bea95991fb5da",
+      "message": "package.xml: added missing dependencies and soon-to-be-important rosbuild export line.",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "vrabaud",
+      "date": "2012-09-18T19:26:34Z",
+      "sha": "cb3ccafa4599462a9b86926967a346fe976e8e82",
+      "message": "catkinize the stack",
+      "files_changed": 4,
+      "additions": 35,
+      "deletions": 6,
+      "commit_type": "docs"
+    },
+    {
+      "author": "DorianScholz",
+      "date": "2012-05-10T16:10:59Z",
+      "sha": "896badc31a5ef1e4e46d22f117f0bb9eadeac29b",
+      "message": "updated shiboken_helper.cmake to work with shiboken > 1.1.0 which brings its own generator binary",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "kwc",
+      "date": "2012-04-07T14:39:42Z",
+      "sha": "ac16534c52270f0f631d40a72211502e8e80cf3e",
+      "message": "ros rosdep dependency, 0.1.3",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Dave Hershberger",
+      "date": "2012-01-18T22:14:43Z",
+      "sha": "5128538610b7587d2f8c3be8fe1b46b122712354",
+      "message": "python_qt_binding: first stab at contents of this stack-package.  Not expected to do much yet.",
+      "files_changed": 8,
+      "additions": 280,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Ken Conley",
+      "date": "2012-02-20T21:21:22Z",
+      "sha": "aee33b4ebb134a7d8d58a37d632f745cd8850045",
+      "message": "removing rosdep.yaml",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 29,
+      "commit_type": "config"
+    }
+  ]
+}

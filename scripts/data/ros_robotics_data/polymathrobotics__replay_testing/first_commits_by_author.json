@@ -1,0 +1,61 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-26T02:21:14Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "polymathrobotics",
+    "repo": "replay_testing"
+  },
+  "data": [
+    {
+      "author": "troygibb",
+      "date": "2024-11-13T18:26:22Z",
+      "sha": "6318bf8fa9057896bab83edc8b271bc37dbbfc3d",
+      "message": "Merge branch 'tgibb-mvp' into 'main'\n\nReplay Testing MVP\n\nSee merge request polymathrobotics/replay_testing!1",
+      "files_changed": 34,
+      "additions": 1857,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "f0reachARR",
+      "date": "2025-12-10T15:49:37Z",
+      "sha": "8a2b2fddbc0cd46d1f2e1a08bb85c67a7bbf7c6c",
+      "message": "Add option to prevent auto-termination after MCAP playback (#31)\n\n* Fix parameter passing error\n* run.default with params now works written in README.md\n\n* Add ignore_playback_finish options\n* To meet our requirements, controlling shutdown condition in `Run` class is needed\n\n* Add ignore_playback_finish in README\n\n* Add test for replay finish condition\n\n* run pre-commit",
+      "files_changed": 5,
+      "additions": 117,
+      "deletions": 15,
+      "commit_type": "docs"
+    },
+    {
+      "author": "emersonknapp",
+      "date": "2025-04-30T23:37:02Z",
+      "sha": "af8b4a79d8d2062d794914287b409f264b5319fb",
+      "message": "The mcap binary download was making a lot of wrong assumptions\n\n* Linux environment\n* With `curl` installed\n* As `root` to be able to write to `/usr/local/bin`\n\nSo instead,\n\n* use `find_program` to find `mcap` if it's available on `PATH` at all, not just in one location\n* Use native `FetchContent` to download the binary file instead of shell execution\n* Install the binary to this package's install space so it's available to those depending on us, rather than assuming some global install location\n* Restrict Nexus test to an environment where Nexus is available",
+      "files_changed": 3,
+      "additions": 42,
+      "deletions": 48,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Edwardius",
+      "date": "2025-04-22T18:43:59Z",
+      "sha": "3a0dfa79356bbcaebce4b2d4daaee605653786df",
+      "message": "spelling error :P",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "amazing-bettyanne",
+      "date": "2024-11-05T17:15:49Z",
+      "sha": "f26ea019b2828d663b1e5509d8dac3a40043cce5",
+      "message": "Initial commit",
+      "files_changed": 2,
+      "additions": 203,
+      "deletions": 0,
+      "commit_type": "docs"
+    }
+  ]
+}

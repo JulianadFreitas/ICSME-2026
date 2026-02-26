@@ -1,0 +1,471 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T19:40:04Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "UniversalRobots",
+    "repo": "Universal_Robots_ROS2_Driver"
+  },
+  "data": [
+    {
+      "author": "urfeex",
+      "date": "2024-11-11T07:37:08Z",
+      "sha": "f64ff97c37320ec8d1e1d1e2d91d7f5db1bd50d9",
+      "message": "Cleanup workflows (#1177)\n\n* Remove superflous branch specification for workflow_dispatch\r\n\r\n* Give clear names to all jobs\r\n\r\n* Add realtime_tools to rolling and jazzy upstream workspaces\r\n\r\n* Do not create docker subnet when running in ACT\r\n\r\n* Cleanup reusable_ici\r\n\r\n* Add ccache for ici flow\r\n\r\n* Add MoveIt to upstream workspace\r\n\r\nThis way, ros2_control will not be shadowed by installed binary\r\ndependencies.",
+      "files_changed": 19,
+      "additions": 67,
+      "deletions": 52,
+      "commit_type": "ci"
+    },
+    {
+      "author": "traversaro",
+      "date": "2025-06-16T09:26:24Z",
+      "sha": "04997b892741f411b8f2f9e1bd02918ffdc7fb03",
+      "message": "ur_controllers: Fix compilation on Windows (#1402)",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "JenniferBuehler",
+      "date": "2026-02-02T10:40:37Z",
+      "sha": "6f725cc3bf20172e13003b64ed59ac8a56680212",
+      "message": "Add sim_time to servo launch file (#1651)",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "CalaW",
+      "date": "2024-01-24T15:17:38Z",
+      "sha": "e5ba31cd38c34076f95b25a047daaa16f7c3466c",
+      "message": "fix move_group_node crash during initialization (#906)\n\n- change planning plugin to a list of plugins, according to the change introduced in 12/2023 in moveit rolling.\r\n- split request_adapters to request_adapters and response_adapters, according to the refactor of planning pipeline introduced in 10/2023 in moveit rolling.",
+      "files_changed": 1,
+      "additions": 12,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "github-actions[bot]",
+      "date": "2023-05-22T10:02:55Z",
+      "sha": "4734c7617efc362b836051239edaeee264d7ca2c",
+      "message": "Auto-update pre-commit hooks (#654)\n\nCo-authored-by: fmauch <fmauch@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 8,
+      "commit_type": "ci"
+    },
+    {
+      "author": "li-yunwen",
+      "date": "2026-01-13T09:23:46Z",
+      "sha": "2144b65bd4c5f92ac2fdc56ee701465711400f61",
+      "message": "Fix flange-to-TCP wrench transformation (#1615)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "taDachs",
+      "date": "2026-01-13T08:29:10Z",
+      "sha": "376b4c52dc0188328c39929f0916cde34eaad421",
+      "message": "Exposes `rw_rate` in xacro macro for hardware interface (#1631)\n\nSigned-off-by: Max Schik <schik@fzi.de>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "rahatchd",
+      "date": "2026-01-13T06:42:01Z",
+      "sha": "5180801b0571b0c22b2eeee1f71f56b04d14d3bc",
+      "message": "Ensure latched qos is reliable (#1594)\n\nCo-authored-by: Rahat Dhande <rahat@sanctuary.ai>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "dependabot[bot]",
+      "date": "2023-04-26T06:25:56Z",
+      "sha": "f9082b04f43d63129ed4939c21b97aa2be503198",
+      "message": "Bump ros-tooling/action-ros-ci from 0.2 to 0.3\n\nBumps [ros-tooling/action-ros-ci](https://github.com/ros-tooling/action-ros-ci) from 0.2 to 0.3.\n- [Release notes](https://github.com/ros-tooling/action-ros-ci/releases)\n- [Commits](https://github.com/ros-tooling/action-ros-ci/compare/v0.2...v0.3)\n\n---\nupdated-dependencies:\n- dependency-name: ros-tooling/action-ros-ci\n  dependency-type: direct:production\n  update-type: version-update:semver-minor\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "matthias-mayr",
+      "date": "2025-11-12T10:06:48Z",
+      "sha": "32dc385d7f1401e99f62f4a5e35a0c1788790013",
+      "message": "Docs: Corrects forward hardware interfaces & Contributing.md (#1569)\n\n* Docs: Corrects forward controller docs\n\n- Fixes velocity & position controller docs\n- Adds \"forward_effort_controller\"\n\n* Docs: The main branch is \"main\" now",
+      "files_changed": 2,
+      "additions": 9,
+      "deletions": 7,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mathias31415",
+      "date": "2025-11-06T08:41:16Z",
+      "sha": "4893313c56e5a8fe01f243fc85f05b03cdcfc58b",
+      "message": "Implement motion_primitive interface in hardware interface (#1341)\n\nWith this it is possible to use motion_primitives to command the robot's motion.",
+      "files_changed": 14,
+      "additions": 1146,
+      "deletions": 14,
+      "commit_type": "docs"
+    },
+    {
+      "author": "URJala",
+      "date": "2024-10-08T09:36:00Z",
+      "sha": "d1290a7f4e577fb0a707b5260b8e2b136cccd362",
+      "message": "Service to get software version of robot (#964)\n\n* Implemented get_version service\r\n\r\n* Implemented test of get_version service and integrated it with the test of tool contact\r\n\r\n* Update ur_robot_driver/test/test_common.py\r\n\r\nCo-authored-by: Felix Exner (fexner) <felix_mauch@web.de>\r\n\r\n* Renamed service to \"GetRobotSoftwareVersion\" everywhere.\r\n\r\nAlso moved the version information from being stored in the command interface to be stored in the state interface\r\n\r\n* Remove tool contact from test.\r\n\r\n* Implemented test of get_version service and integrated it with the test of tool contact\r\n\r\n* Renamed service to \"GetRobotSoftwareVersion\" everywhere.\r\n\r\nAlso moved the version information from being stored in the command interface to be stored in the state interface\r\n\r\n* Remove tool contact from test.\r\n\r\n* Create new URConfigurationController\r\n\r\nAnd moved the get_robot_software_version service in to it.\r\n\r\n* Make configuration controller thread safe\r\n\r\nAlso minor cleanup and add testing of the robot software version service\r\n\r\n* Use ptr-safe RealTimeBoxBestEffort\r\n\r\nthe RealTimeBox used before is not really real-time safe and the way it was\r\nimplemented there was unnecessary data allocation in both, the activate method\r\nand the service callback.\r\n\r\nUsing the RealTimeBoxBestEffort makes allocating additional memory unnecessary\r\nand makes things really thread-safe.\r\n\r\n* Added back files that were mistakenly deleted",
+      "files_changed": 11,
+      "additions": 304,
+      "deletions": 3,
+      "commit_type": "test"
+    },
+    {
+      "author": "urmahp",
+      "date": "2021-05-10T06:41:30Z",
+      "sha": "53ee6b04035a1488bc3b5c5dbd8b5802e74c1aea",
+      "message": "Added dockerfile for the driver (#105)\n\nAdded dockerfile for the driver and Updated README to reflect transfer to Universal Robots GitHub\r\n\r\nCo-authored-by: Rune Søe-Knudsen <41109954+urrsk@users.noreply.github.com>\r\nCo-authored-by: G.A. vd. Hoorn <g.a.vanderhoorn@tudelft.nl>",
+      "files_changed": 2,
+      "additions": 46,
+      "deletions": 2,
+      "commit_type": "ci"
+    },
+    {
+      "author": "christophfroehlich",
+      "date": "2024-04-15T19:25:25Z",
+      "sha": "2d5e315404147093a7cdd868b3f9cc95f923c58f",
+      "message": "Update installation instructions for source build (#967)\n\n* Update installation.rst\r\n\r\n* Fix git command",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "destogl",
+      "date": "2021-04-10T05:23:24Z",
+      "sha": "5a2d96d655189c699eec66c51a624b20623ec27c",
+      "message": "Use Launch Arguments to reuse the files (#58)\n\n* Launch Arguments for xacro are working, not all params added\r\n\r\n* Moved files and one step further with the Arguemnts\r\n\r\n* Add launch for all version of UR robots\r\n\r\n* Minor comment and xacro cleanup\r\n\r\nCo-authored-by: AndyZe <zelenak@picknik.ai>",
+      "files_changed": 23,
+      "additions": 1129,
+      "deletions": 116,
+      "commit_type": "docs"
+    },
+    {
+      "author": "saikishor",
+      "date": "2025-03-05T07:58:37Z",
+      "sha": "b0f9c7aa422825203ea17263d085e76d84559735",
+      "message": "cast to double for future variant API (#1283)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "fdurchdewald",
+      "date": "2023-10-17T08:38:09Z",
+      "sha": "f16ae2af7eb63f8d1c74c7e873347d4f32cacf4f",
+      "message": "Port configuration  (#835)\n\nAdded possibility to change the reverse_port, script_sender_port and trajectory_port",
+      "files_changed": 1,
+      "additions": 34,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "urrsk",
+      "date": "2021-05-17T06:21:46Z",
+      "sha": "39aeda5281530c66e617e370150a8e3adddf3f6a",
+      "message": "Update the Readme.md (#106)\n\nAdded some additional introduction test to the readme files as well as linked to the ExternalControl URCap and the Client Library\r\n\r\nCo-authored-by: Marvin Große Besselmann <35597356+MGBla@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 2,
+      "commit_type": "ci"
+    },
+    {
+      "author": "bmagyar",
+      "date": "2024-12-28T12:00:18Z",
+      "sha": "88364dbf201abb2b4498983ae02545a0e58a315a",
+      "message": "Remove unused include (#1220)",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "cpsiff",
+      "date": "2024-12-20T10:07:52Z",
+      "sha": "25bbede73bc63e2dac2fb4ee6fe983b6b6847c96",
+      "message": "improve docs around usage of extracted calibration info (#1214)",
+      "files_changed": 2,
+      "additions": 34,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "VinDp",
+      "date": "2024-07-10T13:44:51Z",
+      "sha": "5ef04fe41e7d8d38f4f6b2887fc1b1f1d9c58996",
+      "message": "[doc] Note about required OS (#1053)\n\n* Specified Linux as only possible option for the driver",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "b-bremer",
+      "date": "2024-12-03T05:41:17Z",
+      "sha": "d8517e745419879dd59c20acb15278998226212d",
+      "message": "Initialize segments in constructor of DHRobot in calibration.hpp (#1197)\n\nAlso add missing #include <cassert>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "fmauch",
+      "date": "2021-12-22T17:17:19Z",
+      "sha": "33fdf5326adcd5cb7a6a1358ac1a3479367ef003",
+      "message": "Do not print an error output if writing is not possible (#266)\n\n* Do not print an error output if writing is not possible\r\n\r\nIf writing to the hardware is not possible, as the interpreting program\r\nis currently not running, there's no need to print an error message in each\r\ncontrol cycle.\r\n\r\n* Update ur_robot_driver/src/hardware_interface.cpp\r\n\r\nCo-authored-by: Denis Štogl <destogl@users.noreply.github.com>\r\n\r\nCo-authored-by: Denis Štogl <destogl@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 4,
+      "commit_type": "ci"
+    },
+    {
+      "author": "firesurfer",
+      "date": "2023-05-12T06:55:06Z",
+      "sha": "d8b296468d246e63dbceed4afed750a6a87995d0",
+      "message": "Ported controllers to generate_parameters libary and added prefix for controllers (Multiarm part 2) (#594)\n\n* This commits adds additional configuration parameters needed for multiarm support.\r\nAdditionally is cleans up the parameters parsing in the on_activate method.\r\n\r\nAdded parameters:\r\n\r\n- trajectory_port\r\n- script_command_port\r\n- keep_alive_count\r\n\r\nSee Universal_Robots_ROS2_Description for more explainations\r\n\r\n* Port gpio_controller to generate_parameters.\r\nAdded prefix to gpio_controller and speed_scaling_state_broad_caster (and the hardware interface where applicable)\r\n\r\n* fix remaining issues after rebasing onto main\r\n\r\n* using tf_prefix instead of prefix\r\n\r\n* reverted prefixing of gpio controller topics. Topics will now use the standard ros2 control scheme: <controller name>/<topic name>\r\n\r\n* Readded scaled JTC and adapted it for multiarm setup\r\n\r\n* added empty tf_prefix workaround\r\n\r\n* Implemented suggested description renaming\r\n\r\n* Readded startRTDECommunication\r\n\r\n* Code formatting\r\n\r\n* replaced prefix with tf_prefix\r\n\r\n* remove old flag\r\n\r\n* readd scaled jtc to CMakeLists\r\n\r\n* Renamed more prefix to tf_prefix occurences\r\n\r\n* removed old tf_prefix line\r\n\r\n* Code formatting\r\n\r\nFixed EOF in yaml files\r\n\r\n* Updated example controllers with tf_prefix\r\n\r\n---------\r\n\r\nCo-authored-by: Lennart Nachtigall <firesurfer@firesurfer.de>\r\nCo-authored-by: Lennart Nachtigall <lennart.nachtigall@sci-mo.de>\r\nCo-authored-by: Lennart Nachtigall <mail@firesurfer.de>\r\nCo-authored-by: Felix Exner <exner@fzi.de>",
+      "files_changed": 12,
+      "additions": 227,
+      "deletions": 99,
+      "commit_type": "docs"
+    },
+    {
+      "author": "MatthijsBurgh",
+      "date": "2024-04-15T18:56:24Z",
+      "sha": "d16eabaa326bbd0900f667d46872c66495d06acf",
+      "message": "Fix multi-line strings in DeclareLaunchArgument (#948)\n\n* (driver) fix multi-line strings in DeclareLaunchArgument\r\n* (moveit) fix multi-line strings in DeclareLaunchArgument",
+      "files_changed": 11,
+      "additions": 49,
+      "deletions": 49,
+      "commit_type": "code"
+    },
+    {
+      "author": "RobertWilbrandt",
+      "date": "2022-06-13T06:49:00Z",
+      "sha": "73692e35f962b9c7766f49b937e749a1680a9d8e",
+      "message": "Fix README links to installation documentation (#389)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Yadunund",
+      "date": "2023-08-23T12:51:01Z",
+      "sha": "e2b22b15ca627cfb375c3d58e585e1d3dee5f484",
+      "message": "Handle api changes related to traj_external_point_ptr_ (#779)\n\n* Handle api changes related to traj_external_point_ptr_\r\n\r\nSigned-off-by: Yadunund <yadunund@openrobotics.org>\r\n\r\n* Fix formatting\r\n\r\n---------\r\n\r\nSigned-off-by: Yadunund <yadunund@openrobotics.org>\r\nCo-authored-by: Robert Wilbrandt <wilbrandt@fzi.de>",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 10,
+      "commit_type": "code"
+    },
+    {
+      "author": "tungbq",
+      "date": "2023-05-24T14:45:58Z",
+      "sha": "13f6580399f361b4fd3a5c823bb8db01dfb43e97",
+      "message": "Forcing committer and author in automatic create PR workflow (#681)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "livanov93",
+      "date": "2020-12-01T04:21:10Z",
+      "sha": "deaaaffc11d61f20a8a6f37090ede87e8d27bd97",
+      "message": "Make xacro property propagate to robot_description (#9)\n\n* Add robot_description parsing via xacro in launch file. Remove decimal places for limits.\r\n\r\n* Remove old commented urdf parsing.\r\n\r\n* Remove empty line.\r\n\r\n* Change xacro files.\r\n\r\n* Adapt launch file to new urdf folder.\r\n\r\n* Alphabetize Python imports\r\n\r\nCo-authored-by: AndyZe <zelenak@picknik.ai>",
+      "files_changed": 4,
+      "additions": 421,
+      "deletions": 206,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Lennart Nachtigall",
+      "date": "2022-12-09T09:02:55Z",
+      "sha": "d2093ae7a0df0ec3433776a04bfa28553ddefa16",
+      "message": "This commits adds additional configuration parameters needed for multiarm support.\nAdditionally is cleans up the parameters parsing in the on_activate method.\n\nAdded parameters:\n\n- trajectory_port\n- script_command_port\n- keep_alive_count\n\nSee Universal_Robots_ROS2_Description for more explainations\n\nMinor comment adaptions\n\nCode formatting\n\nUpdate prefix -> tf_prefix\n\nUpdate ur_bringup launchfile, as well\n\nUntil we really deprecate ur_bringup, we'll have to keep it up to date.\n\nUpdate binary build dependencies\n\nSince with recent changes we need the latest description, we should modify the dependencies files, as well.",
+      "files_changed": 5,
+      "additions": 56,
+      "deletions": 46,
+      "commit_type": "docs"
+    },
+    {
+      "author": "stefanscherzinger",
+      "date": "2023-03-01T22:48:52Z",
+      "sha": "6e036d33b23d77d0970f79ab4b92ccc33206d580",
+      "message": "Prepare changelog for upcoming release",
+      "files_changed": 7,
+      "additions": 96,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "adverley",
+      "date": "2022-08-15T19:02:18Z",
+      "sha": "f580ae73edc67b10ce89ff72d30f70269935e39d",
+      "message": "add ur_moveit.launch.py parameter to use working controller when using fake hardware (#464)\n\nadd script parameter to use correct controller when using fake hardware",
+      "files_changed": 1,
+      "additions": 13,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "relffok",
+      "date": "2021-11-25T14:49:09Z",
+      "sha": "dfe03c909cde206534135f88a3b10873645afadb",
+      "message": "fix missing executable arg of joint_state_broadcaster (#248)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Maltergate",
+      "date": "2022-02-23T10:32:13Z",
+      "sha": "5da91a827b932cff9517bd5d6a00aedb59fefe90",
+      "message": "Used `spawner` instead of `spanwer.py` in launch files (#293)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "AndyZe",
+      "date": "2020-10-29T19:11:12Z",
+      "sha": "e63e3f27f5d271497909f8df3b9e86530c84fcde",
+      "message": "Initial copy of the ROS1 driver",
+      "files_changed": 117,
+      "additions": 10363,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Vatan Aksoy Tezer",
+      "date": "2021-11-09T14:28:09Z",
+      "sha": "28ef61d366fba93dbb4703537006fc7cb83c0c92",
+      "message": "Ignition Gazebo simulation for UR robots (#232)\n\n* Make ur and ignition happy\r\n\r\n* More ur sim stuff\r\n\r\n* Remove pycache\r\n\r\n* Remove visual colors, so colors are read from dae\r\n\r\n* Better tuning\r\n\r\n* Organizational changes, docs and a little more tuning\r\n\r\n* More organizational changes\r\n\r\n* Move world link outside xacro if\r\n\r\n* pre-commit fixes\r\n\r\n* Add ros_ign to repos\r\n\r\n* Better tuning = less jerkiness\r\n\r\n* Re-tuning\r\n\r\n* Apply suggestions from code review\r\n\r\nCo-authored-by: AndyZe <andyz@utexas.edu>\r\n\r\n* Add comments on environment hooks\r\n\r\nCo-authored-by: AndyZe <andyz@utexas.edu>",
+      "files_changed": 17,
+      "additions": 422,
+      "deletions": 31,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jrgnicho",
+      "date": "2021-09-14T14:52:23Z",
+      "sha": "4c4f39f39802b01c1ec701c2771a2286efcc12e9",
+      "message": "fixes access to the prefix property (#149)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "shonigmann",
+      "date": "2021-09-19T18:57:32Z",
+      "sha": "1431c19c7511c43ad97a0ffe40f91f6cdc107958",
+      "message": "Update Universal_Robots_ROS2_Driver.repos (#170)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "nbbrooks",
+      "date": "2021-07-09T19:17:04Z",
+      "sha": "d837e747aa9f58fd83f8d77cc7b2a8496dbed633",
+      "message": "Use dessant/issue-states workflow to close issues moved to project board Done column (#139)",
+      "files_changed": 1,
+      "additions": 15,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "kbogert",
+      "date": "2021-05-25T16:30:57Z",
+      "sha": "7d795522531c1be385fc229d7992c4b05674629c",
+      "message": "Update for changes to ros2_control and ros2_controllers\n\nSee: https://github.com/ros-controls/ros2_control/commit/156a3f6aaed319585a8a1fd445693e2e08c30ccd\nand: https://github.com/ros-controls/ros2_controllers/commit/612f610c24d026a41abd2dd026902c672cf778c9#diff-5d3e18800b3a217b37b91036031bdb170f5183970f54d1f951bb12f2e4847706",
+      "files_changed": 2,
+      "additions": 78,
+      "deletions": 16,
+      "commit_type": "config"
+    },
+    {
+      "author": "MGBla",
+      "date": "2021-02-10T17:02:05Z",
+      "sha": "98acc9e97ed0e7596ce1d5d8805c672cb0038d69",
+      "message": "Initial version of the speed_scaling_state_controller\n\nController is base on the current joint_state_controller of ros2 control",
+      "files_changed": 7,
+      "additions": 264,
+      "deletions": 12,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jaykoby",
+      "date": "2021-05-21T09:03:07Z",
+      "sha": "c5b84dbbe309b60371f40459b9b9119bfde3c45c",
+      "message": "change version of ros2_controllers in Universal_Robots_ROS2_Driver.repos to 0.2.1 - project builds now",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Abishalini",
+      "date": "2021-04-14T19:57:08Z",
+      "sha": "fb2c4a1d23aa9f0c0a234bb38ae3900cfe407b34",
+      "message": "Add doc on hardware setup",
+      "files_changed": 1,
+      "additions": 12,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "zultron",
+      "date": "2020-11-03T23:48:05Z",
+      "sha": "38af628553406d0ea2c1e122233eb79caac5fd6e",
+      "message": "Update packaging for ROS2\n\n- No `roslaunch` and `rostest` rosdep keys in ROS2\n- Remove `catkin` `exec_depend`\n- Renamed `rviz` rosdep key to `rviz2`\n- Reenable package `colcon build`",
+      "files_changed": 6,
+      "additions": 3,
+      "deletions": 9,
+      "commit_type": "config"
+    },
+    {
+      "author": "davetcoleman",
+      "date": "2021-03-10T17:03:42Z",
+      "sha": "a91031c578355c2b6531ef79fb47599eb1fde4b6",
+      "message": "Restore note on org ownership (#59)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "skolk",
+      "date": "2021-02-17T08:43:39Z",
+      "sha": "39e90ad1eb547444bff00f3c35f19bd3b1fe96c4",
+      "message": "Update Readme.md (#41)\n\nnotice that the development branch can be found here: \r\nhttps://github.com/PickNikRobotics/Universal_Robots_ROS2_Driver/tree/develop",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    }
+  ]
+}

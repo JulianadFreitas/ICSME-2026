@@ -1,0 +1,161 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-26T01:31:32Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "PlotJuggler",
+    "repo": "plotjuggler-ros-plugins"
+  },
+  "data": [
+    {
+      "author": "facontidavide",
+      "date": "2020-10-16T15:04:53Z",
+      "sha": "9c3bcbb46027f80f9e83951e6bba460d88c6addb",
+      "message": "Initial commit",
+      "files_changed": 3,
+      "additions": 694,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ksuszka",
+      "date": "2025-12-21T07:52:18Z",
+      "sha": "1295aac38d867ec2ada8a007a95fb23682273b04",
+      "message": "Fix O(n^2) complexity in ROS2 topic selection dialog. (#106)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "wentasah",
+      "date": "2024-02-26T14:32:39Z",
+      "sha": "35d8d66cd5411b44d94a86f8a38d04419cde1202",
+      "message": "Fix detection of ROS 2 Humble (#82)\n\nDetecting the ROS distribution based on the content of\r\nAMENT_PREFIX_PATH does not always work. For example, when using the\r\nNix package manager, paths in AMENT_PREFIX_PATH could never match the\r\ncurrently used pattern. It's better to use ROS_DISTRO variable for\r\nthis purpose. This should (I think) work everywhere.",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "roncapat",
+      "date": "2025-06-05T20:03:02Z",
+      "sha": "5221d260f84d194b736327db2febafd985be677a",
+      "message": "Add missing dependency (#99)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "xmfcx",
+      "date": "2025-05-31T12:49:33Z",
+      "sha": "4f4ca9ce8f72d38ebd45bd9ad11f29bcc59c5a13",
+      "message": "Keep humble compatibility with send_timestamp in dataload_ros2.cpp (#97)\n\n* Update dataload_ros2.cpp\n\nwhile building it shows that send_timestamp has no member named. it replaced by the time_stamp which is the member of SerializedBagMessage struct.\n\n* keep jazzy compatibility\n\nSigned-off-by: M. Fatih Cırıt <mfc@autoware.org>\n\n---------\n\nSigned-off-by: M. Fatih Cırıt <mfc@autoware.org>\nCo-authored-by: PunitKVerma <155130932+PunitKVerma@users.noreply.github.com>",
+      "files_changed": 2,
+      "additions": 7,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "bcohen116",
+      "date": "2024-05-09T12:37:08Z",
+      "sha": "d0692ad5fb7ea9f314f40816ea9e0a4fe55f8397",
+      "message": "Fixing wstring ROS2 data type, and import rename for latest release build compatibility (#86)\n\nCo-authored-by: Davide Faconti <davide.faconti@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "TonyWelte",
+      "date": "2024-01-04T15:43:38Z",
+      "sha": "5c560f181c0d1a444613dfaa19617731e56ddb3b",
+      "message": "Add support for compressed rosbags (#77)",
+      "files_changed": 2,
+      "additions": 6,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "v-lopez",
+      "date": "2023-01-11T14:02:22Z",
+      "sha": "2dcc60a560ca1aa03d0ced0c420b74db1d120828",
+      "message": "Fix mapping of multiple pal_statistics topics (#61)",
+      "files_changed": 2,
+      "additions": 17,
+      "deletions": 9,
+      "commit_type": "code"
+    },
+    {
+      "author": "v4hn",
+      "date": "2022-03-02T18:31:54Z",
+      "sha": "e72800145dd748418732ea62ea5cd7f9ca5d1c17",
+      "message": "fix implicit uint8_t -> double narrowing (#42)\n\nYES, the standard committee believes this might be narrowing\r\nand clang 12 throws this error:\r\n\r\n> error: non-constant-expression cannot be narrowed from type 'uint8_t' (aka 'unsigned char') to 'double' in initializer list [-Wc++11-narrowing]",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "simulacrus",
+      "date": "2021-10-11T17:18:00Z",
+      "sha": "75cf73f075cf3d4480918fa0b2a20b9dd94e6479",
+      "message": "segmentation fault off (#30)",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "k-okada",
+      "date": "2021-06-18T11:07:38Z",
+      "sha": "518885e958ffe6095f73d42992932791592b5b18",
+      "message": "forget to install launch file for ROS1",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Davide Faconti",
+      "date": "2020-10-16T19:15:33Z",
+      "sha": "f72d9a212034e6dd43c7ba29ec159b7354a564a4",
+      "message": "code moved from PlotJuggler3-beta",
+      "files_changed": 143,
+      "additions": 32656,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Tobias-Fischer",
+      "date": "2021-01-06T06:22:54Z",
+      "sha": "b48b036a661bc8516f09c9398f727dcd0cca0609",
+      "message": "Fix double-defined ERROR",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "paulerikf",
+      "date": "2021-01-04T20:28:57Z",
+      "sha": "91112aa5feebf51665abe084939964177f8e6e77",
+      "message": "Add diagnostic_msgs as ROS2 dependency in CMakeLists.txt files",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "uhobeike",
+      "date": "2020-11-25T17:13:55Z",
+      "sha": "e71f0df1175ac851fce209b8f6013800436eef87",
+      "message": "Made it possible to install",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    }
+  ]
+}

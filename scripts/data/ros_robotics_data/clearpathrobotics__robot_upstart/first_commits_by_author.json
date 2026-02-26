@@ -1,0 +1,221 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-26T02:41:10Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "clearpathrobotics",
+    "repo": "robot_upstart"
+  },
+  "data": [
+    {
+      "author": "civerachb-cpr",
+      "date": "2020-05-22T17:41:44Z",
+      "sha": "c97bd5a10488e61ece1e3c066795c057679b98f1",
+      "message": "Update the python scripts to be python3-compatible",
+      "files_changed": 4,
+      "additions": 22,
+      "deletions": 22,
+      "commit_type": "code"
+    },
+    {
+      "author": "tonybaltovski",
+      "date": "2017-01-20T19:51:21Z",
+      "sha": "971fe6c4c6366b163dbe6f0dd46de480e9952655",
+      "message": "Moved detect_providers to providers.py (#46)\n\n* Moved detect_providers to providers.py\r\n\r\n* Made default args of install/uninstall to None in job.py.",
+      "files_changed": 3,
+      "additions": 18,
+      "deletions": 15,
+      "commit_type": "code"
+    },
+    {
+      "author": "sragin",
+      "date": "2025-05-15T05:22:13Z",
+      "sha": "5e0ec3de50fb56a3bfdfd183d9ad046cd08eae94",
+      "message": "Support multiple launch file patterns (py, xml, yaml)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "roni-kreinin",
+      "date": "2022-04-20T16:39:01Z",
+      "sha": "699815624d17bcebae1799dcf0020eb3da5e0231",
+      "message": "Removed master_uri, added rmw, cyclonedds_config, and fastrtps_config",
+      "files_changed": 3,
+      "additions": 36,
+      "deletions": 15,
+      "commit_type": "code"
+    },
+    {
+      "author": "zifengqi123",
+      "date": "2021-11-04T09:04:36Z",
+      "sha": "cad30d0fe93b37f0fd98e5b81da488052cb2b5b2",
+      "message": "ros2 foxy",
+      "files_changed": 5,
+      "additions": 42,
+      "deletions": 36,
+      "commit_type": "config"
+    },
+    {
+      "author": "mikaelarguedas",
+      "date": "2020-08-09T15:29:41Z",
+      "sha": "e6f20442cc93329df5291f3169871fb9a30f0707",
+      "message": "run ci on ROS noetic\n\nSigned-off-by: Mikael Arguedas <mikael.arguedas@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "yotabits",
+      "date": "2021-05-12T16:36:51Z",
+      "sha": "54fa59f09186776d1ad948d8adf203970a641e85",
+      "message": " Enable customization of  After= in service (#104)\n\n* Cosmetic\r\n\r\nRemove unnecessary parenthesis.\r\n\r\n* Correct typo\r\n\r\n* FIX: Remove unreachable code\r\n\r\n* Enable customizable After= in service\r\n\r\nThis feature enables the user to define the services after which the\r\ngenerated service will. This is handy when hardware-related system\r\nservices have to start before the ROS software.",
+      "files_changed": 4,
+      "additions": 14,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "Crowdedlight",
+      "date": "2020-06-16T12:11:16Z",
+      "sha": "b0efbd4703a8d0d809bd1f84ea57e7473b016beb",
+      "message": "updated to work with python3",
+      "files_changed": 8,
+      "additions": 18,
+      "deletions": 16,
+      "commit_type": "code"
+    },
+    {
+      "author": "130s",
+      "date": "2017-09-11T19:30:20Z",
+      "sha": "8ed6882c30609259cc0867eb8b620b3ce626b4b5",
+      "message": "Clarify the reason of the error due to wrong pkgpath passed. (#57)\n\n**Issue**\r\nWhen the path passed to pkgpath does NOT start from the path of the directory of the package your upstart launch is located at, the following error occurs, which does not provide enough info why failing.\r\n\r\n```\r\n$ rosrun robot_upstart install catkin_ws/src/foo/foo_support/launch/upstart.launch --user autoboot --setup /etc/ros/setup.bash\r\nUnable to locate path src/foo/foo_support/launch/upstart.launch in package catkin_ws. Installation aborted.\r\nTraceback (most recent call last):\r\n  File \"/opt/ros/indigo/lib/robot_upstart/install\", line 32, in <module>\r\n    exit(main())\r\n  File \"/opt/ros/indigo/lib/python2.7/dist-packages/robot_upstart/install_script.py\", line 80, in main\r\n    if os.path.isfile(found_path[0]):\r\n      IndexError: list index out of range\r\n```\r\n\r\n**Solution**\r\nIn the error message, clearly instruct what path should be passed.\r\nAlso add more description to the result of \"help\".",
+      "files_changed": 1,
+      "additions": 11,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Rayman",
+      "date": "2019-10-09T16:46:34Z",
+      "sha": "737bef8402a98acae580efb86e198bb660f1d0ec",
+      "message": "Melodic compatibility: modify getifip for bionic output (#88)\n\n* Add net-tools as dependency because ifconfig is used\r\n\r\n* Modify getifip to handle bionic ifconfig output",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "mikepurvis",
+      "date": "2013-08-22T01:38:29Z",
+      "sha": "ae8ee92c8945a56ae11a14c35f312266d157b4a2",
+      "message": "Bare beginnings of a generalized ROS upstart package.",
+      "files_changed": 8,
+      "additions": 307,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "msadowski",
+      "date": "2019-07-19T15:05:21Z",
+      "sha": "647bdeda706e6899accc15d9d5e72f8e719174f7",
+      "message": "Add support for wait flag in the install script (#73)",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "mikehosmar",
+      "date": "2018-05-23T13:57:40Z",
+      "sha": "a5d81ccee7685ecf12f3113eb37d300b5e73d3fc",
+      "message": "Add a dependency onto network-online.target (#67)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "tfurf",
+      "date": "2017-03-14T20:47:56Z",
+      "sha": "ae14f47995fd7f50b5946888c1ecc9838471f156",
+      "message": "Allow ROS_HOME to be set previously by env file. (#54)",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "zacwitte",
+      "date": "2016-08-11T23:17:59Z",
+      "sha": "98c075fde5da3d8bc2434138594b92ac3cd7521c",
+      "message": "Added a spin wait until ros processes exit. (#40)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "ncasaril",
+      "date": "2016-11-11T04:13:50Z",
+      "sha": "28e0097213edb4a1721865a0f8fc457b9b2f7f57",
+      "message": "Added option to install under systemd rather than upstart (#41)",
+      "files_changed": 5,
+      "additions": 142,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "kmalhan",
+      "date": "2016-11-09T15:40:11Z",
+      "sha": "647b14922df974f84eac8adcac8a7e14a416dcb5",
+      "message": "Added option to add launch files as symbolic link (#43)",
+      "files_changed": 4,
+      "additions": 18,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "jjekircp",
+      "date": "2015-09-30T20:05:52Z",
+      "sha": "4bd6ced22f1061cf66cb22043d581216ddee818f",
+      "message": "Updated install script to allow adding multiple launch files to a job at once",
+      "files_changed": 1,
+      "additions": 13,
+      "deletions": 10,
+      "commit_type": "code"
+    },
+    {
+      "author": "Gaël Ecorchard",
+      "date": "2015-02-13T13:30:26Z",
+      "sha": "e75c272fff30850ba95ec3d735ee23d66183aed0",
+      "message": "Add a documentation section about permissions",
+      "files_changed": 1,
+      "additions": 12,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "eisoku9618",
+      "date": "2014-12-17T07:06:53Z",
+      "sha": "7e10d1aae60796232223be3336873ef438159e94",
+      "message": "fix invalid range error on grep\n\n`rosrun robot_upstart install turtlebot_bringup/launch/minimal.launch --interface wlan0` described in http://wiki.ros.org/robot_upstart did not work due to http://stackoverflow.com/questions/26754181/greps-invalid-range-end-bug-or-feature\r\n```\r\nIf you want to match the character -, among others, just add it in the edges of the expression: as the first or last item.\r\n```",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "mgruhler",
+      "date": "2014-09-02T13:01:13Z",
+      "sha": "575e905be4f45a8ce7c41aca9b8242ad279645af",
+      "message": "add argument to specify log directory",
+      "files_changed": 3,
+      "additions": 19,
+      "deletions": 9,
+      "commit_type": "code"
+    }
+  ]
+}

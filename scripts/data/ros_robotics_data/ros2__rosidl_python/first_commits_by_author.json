@@ -1,0 +1,571 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-26T02:59:31Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros2",
+    "repo": "rosidl_python"
+  },
+  "data": [
+    {
+      "author": "InvincibleRMC",
+      "date": "2025-04-04T08:34:29Z",
+      "sha": "8aefd489b840d46c138245095402fcc50d3559f4",
+      "message": "fix (#224)\n\nSigned-off-by: Michael Carlstrom <rmc@carlstrom.com>",
+      "files_changed": 2,
+      "additions": 6,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "TonyWelte",
+      "date": "2026-01-16T17:07:41Z",
+      "sha": "fde430c5028a6244ccd380506f8dd83b0d64df4e",
+      "message": "Add DEPENDS_EXPLICIT_ONLY to remove implicit dependencies (#238)\n\n* Add DEPENDS_EXPLICIT_ONLY to remove implicit dependencies\n\nSigned-off-by: Anthony Welte <tony.welte@gmail.com>\n\n* Use version check instead of bumping minimum cmake version\n\nSigned-off-by: Anthony Welte <tony.welte@gmail.com>\n\n---------\n\nSigned-off-by: Anthony Welte <tony.welte@gmail.com>\nCo-authored-by: mergify[bot] <37929162+mergify[bot]@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "ahcorde",
+      "date": "2020-04-10T10:24:01Z",
+      "sha": "dda5ada7f7d4cad380fb450390acf28c73a5689c",
+      "message": "added rosidl_runtime c and cpp depencencies (#100)\n\n* added rosidl_runtime c and cpp depencencies\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Removed rosidl_generator_c dependency\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Fixed rosidl_runtime dependencies\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Fixed rosidl_runtime_c dependencies\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Fixed rosidl_runtime_c dependencies\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Removed rosidl_runtime_c from test_depend\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Added rosidl_generator_x to rosidl_generator_py\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* removed rosidl_generator_x dependencies rosidl_typesupport provides all transitive dependencies\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Fixed rosidl_generator_py test\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>",
+      "files_changed": 3,
+      "additions": 7,
+      "deletions": 6,
+      "commit_type": "test"
+    },
+    {
+      "author": "christophebedard",
+      "date": "2025-08-04T16:13:05Z",
+      "sha": "c29f0363be047e90278fcda6cbc298d9f58f247f",
+      "message": "Update changelogs\n\nSigned-off-by: Christophe Bedard <bedard.christophe@gmail.com>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "cottsay",
+      "date": "2018-12-07T04:13:06Z",
+      "sha": "8a10302aa84711d4d231fe11d360dba9140fd422",
+      "message": "Update package maintainer (#22)\n\nThank you to Mikael for his contributions",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "fujitatomoya",
+      "date": "2022-08-09T23:35:56Z",
+      "sha": "20df68351e4602c11d5303495aeaaab87118895d",
+      "message": "Change decode error mode to replace (#176)\n\nSigned-off-by: Tomoya Fujita <Tomoya.Fujita@sony.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "sloretz",
+      "date": "2018-10-30T01:15:48Z",
+      "sha": "98d630c5d43c1395525e5a2b23596b3ff3b4b2c9",
+      "message": "Generate .c file for any .msg regardless of folder",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "clalancette",
+      "date": "2017-11-01T12:11:57Z",
+      "sha": "24555d22ee80119c0a0e4df60c58e7044252cbb1",
+      "message": "Zero initialization (#236)\n\n* Add in infrastructure for zero-initialization.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Fix up linters.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Rename MyVector3 -> FieldsWithSameTypeSomeDefaults\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Remove the build_depend.\r\n\r\nIt is not necessary to have rosidl_generator_c as a build_depend\r\nfor this package, just as an export (and for tests).\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Make sure the expected value is always first.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Remove redundant default_value check.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Rename test_initialization to test_msg_initialization.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Use the fully-namespaced field name.\r\n\r\nThis is more correct, and makes this actually work for services\r\nthat reference messages.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Make sure to check for the size of the array for fixed types.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Add in a test for service initialization.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Rename PrimitivesSomeDefault -> Various.\r\n\r\nThat's because it no longer contains only primitives.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 11,
+      "additions": 639,
+      "deletions": 51,
+      "commit_type": "test"
+    },
+    {
+      "author": "marcoag",
+      "date": "2024-03-27T13:11:38Z",
+      "sha": "7feb870c72a72ab9bbf6dde7a5e25a62c0378478",
+      "message": "Changelog.\n\nSigned-off-by: Marco A. Gutierrez <marcogg@marcogg.com>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Matthias Schoepfer",
+      "date": "2024-04-12T14:13:16Z",
+      "sha": "75c10dfe45a6ee8450e715aa87f424c9a489833c",
+      "message": "Revert install of .so files into python path (#211)\n\nThere seems that some regression might have happened after #195.\r\nWhen removing those 2 lines, we avoid to install the .so files\r\nin lib *and* python path.\r\n\r\nSigned-off-by: Matthias Schoepfer <m.schoepfer@rethinkrobotics.com>",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "130s",
+      "date": "2023-08-04T12:06:05Z",
+      "sha": "0945b61598d4e3ca5c6b32bb0cb0a05ee72092d9",
+      "message": "Fix: Missing dependency that causes cmake error in downstream (resolves https://github.com/ros2/rosidl_python/issues/198) (#199)\n\n* Fix: Missing dependency that causes cmake error in downstream (resolves https://github.com/ros2/rosidl_python/issues/198)\r\n\r\nSigned-off-by: Isaac Saito <130s@2000.jukuin.keio.ac.jp>\r\nCo-authored-by: Chris Lalancette <clalancette@gmail.com>",
+      "files_changed": 1,
+      "additions": 10,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "Yadunund",
+      "date": "2023-04-28T10:48:54Z",
+      "sha": "f1451cfe71d2b988328588a05735f3103c948554",
+      "message": "0.19.0",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Voldivh",
+      "date": "2023-04-10T12:49:15Z",
+      "sha": "6d5d50486c6b20d8828cd883af11efa6b5f25198",
+      "message": "Hides the assertions that checks the data types of the message fields. (#194)\n\n* Hides the assertions in the _msg.py.em template\r\n\r\nSigned-off-by: Voldivh <eloyabmfcv@gmail.com>",
+      "files_changed": 3,
+      "additions": 58,
+      "deletions": 47,
+      "commit_type": "code"
+    },
+    {
+      "author": "ihasdapie",
+      "date": "2023-02-03T20:17:47Z",
+      "sha": "122b738f3b490280c217440e0bc2f5904f10fe3b",
+      "message": "Service introspection (#178)\n\n* add service event message support\r\n\r\nSigned-off-by: Brian Chen <brian.chen@openrobotics.org>\r\nSigned-off-by: Brian Chen <brian.chen@openrobotics.org>",
+      "files_changed": 6,
+      "additions": 82,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "audrow",
+      "date": "2022-11-15T21:34:47Z",
+      "sha": "9017e66f17c17de232b970e562330ec77c0d6ea3",
+      "message": "[rolling] Update maintainers - 2022-11-07 (#189)",
+      "files_changed": 2,
+      "additions": 8,
+      "deletions": 3,
+      "commit_type": "config"
+    },
+    {
+      "author": "lopsided98",
+      "date": "2022-10-01T12:19:07Z",
+      "sha": "20bcc4ca118145a8a2914fa20aaef20a8e3ce72d",
+      "message": "Remove stray numpy import (#185)\n\nNumPy was being imported in the template code (not the template output) for\r\napparently no reason. This was causing problems when cross-compiling, where\r\nNumPy is only available for the target platform.\r\n\r\nSigned-off-by: Ben Wolsieffer <benwolsieffer@gmail.com>",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Crola1702",
+      "date": "2022-09-02T14:18:01Z",
+      "sha": "ddb5ee807d4b598b3cdf84a67ca80bc313b52257",
+      "message": ":man_farmer: Fix NaN values bound numpy windows version (#182)\n\n* Replaced equal_nan for numpy<1.19\r\n\r\nSigned-off-by: Crola1702 <cristobal.arroyo@ekumenlabs.com>",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "oysstu",
+      "date": "2022-08-22T18:14:15Z",
+      "sha": "52e099efef21366ff651385da865e305228d24ec",
+      "message": "Allow NaN values to pass floating point bounds check. (#167)\n\n* Invert bounds check in order to permit floating point NaN values\r\n\r\nSigned-off-by: Øystein Sture <os@skarvtech.com>\r\n\r\n* Allow floating point numbers set to Inf to pass bounds check\r\n\r\nSigned-off-by: Øystein Sture <os@skarvtech.com>\r\n\r\n* Add float/double NaN/Inf tests\r\n\r\nSigned-off-by: Øystein Sture <os@skarvtech.com>\r\n\r\n* Increase precision of float32 bounds\r\n\r\nSigned-off-by: Øystein Sture <os@skarvtech.com>\r\n\r\n* Only perform float64 bounds check on non-compliant IEEE 754 systems\r\n\r\nSigned-off-by: Øystein Sture <os@skarvtech.com>\r\n\r\n* Disable bounds test for float64 on IEEE 754 compatible systems\r\n\r\nSigned-off-by: Øystein Sture <os@skarvtech.com>\r\n\r\n* Disable bounds test for float64 on IEEE 754 compatible systems\r\n\r\nSigned-off-by: Øystein Sture <os@skarvtech.com>\r\n\r\n* Resolve failing nan/inf test by comparing the same types\r\n\r\nSigned-off-by: Øystein Sture <os@skarvtech.com>\r\n\r\n* Change decode error mode to replace (#176)\r\n\r\nSigned-off-by: Tomoya Fujita <Tomoya.Fujita@sony.com>\r\n\r\n* Replace rosidl_cmake imports with rosidl_pycommon (#177)\r\n\r\nSigned-off-by: Jacob Perron <jacob@openrobotics.org>\r\n\r\n* Delete trailing whitespace\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\n* Split fail case array check tests into two\r\n\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\n\r\nSigned-off-by: Øystein Sture <os@skarvtech.com>\r\nSigned-off-by: Tomoya Fujita <Tomoya.Fujita@sony.com>\r\nSigned-off-by: Jacob Perron <jacob@openrobotics.org>\r\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>\r\nCo-authored-by: Tomoya Fujita <Tomoya.Fujita@sony.com>\r\nCo-authored-by: Jacob Perron <jacob@openrobotics.org>\r\nCo-authored-by: Shane Loretz <sloretz@osrfoundation.org>",
+      "files_changed": 2,
+      "additions": 93,
+      "deletions": 18,
+      "commit_type": "code"
+    },
+    {
+      "author": "jacobperron",
+      "date": "2018-12-21T18:06:00Z",
+      "sha": "1c3995172acae2c4edbca70dad4fa2107f98055d",
+      "message": "Change uncrustify max line length to 0 (#25)\n\nThis is for compatibility with uncrustify v0.68.",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "quarkytale",
+      "date": "2022-05-11T01:20:44Z",
+      "sha": "eeae282ee0de3d431abae8ebadcf4c7def762b73",
+      "message": "adding maintainer\n\nSigned-off-by: quarkytale <dharini@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "paudrow",
+      "date": "2022-05-04T21:17:46Z",
+      "sha": "4d0d65db926621c1691d8dd772de760d877f724e",
+      "message": "0.15.0\n\nSigned-off-by: Audrow Nash <audrow@hey.com>",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ivanpauno",
+      "date": "2019-08-06T19:32:51Z",
+      "sha": "ddd7710c1581797a40332e3895ec503c891904ba",
+      "message": "Add utility functions to get interface from identifier\n\n* Add get_namespaced_type, get_message_namespaced_type, get_service_namespaced_type and get_action_namespaced_type functions.\r\n\r\nSigned-off-by: ivanpauno <ivanpauno@ekumenlabs.com>\r\n\r\n* Add is_message, is_service and is_action functions.\r\n\r\nSigned-off-by: ivanpauno <ivanpauno@ekumenlabs.com>\r\n\r\n* Add get_interface, get_message, get_service and get_action functions\r\n\r\nSigned-off-by: ivanpauno <ivanpauno@ekumenlabs.com>",
+      "files_changed": 2,
+      "additions": 218,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "spiderkeys",
+      "date": "2022-02-10T21:42:01Z",
+      "sha": "4acc8fc6098f9fd1f0172c42d9422d35527b411c",
+      "message": "Removes erroneous unmatched closing parenthesis (#125)\n\n* Removes erroneous unmatched closing parenthesis\r\n\r\nSigned-off-by: Charles Cross <charles@missionrobotics.us>\r\nCo-authored-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 4,
+      "additions": 20,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "wjwwood",
+      "date": "2014-09-17T18:22:59Z",
+      "sha": "d31eae4e0c0597bebd96dfabe3cbd435b9ceb913",
+      "message": "fix missing string include which breaks OS X build",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Chen Lihui",
+      "date": "2021-12-17T20:06:23Z",
+      "sha": "fb0eade5e9404f8832421638c5553d73f7c7a631",
+      "message": "fix for msg file containing a property field that is not at the end (#151)\n\n* fix for msg file containing a property field that is not at the end\r\n\r\nSigned-off-by: Chen Lihui <lihui.chen@sony.com>\r\n\r\n* add a test\r\n\r\nSigned-off-by: Chen Lihui <lihui.chen@sony.com>",
+      "files_changed": 4,
+      "additions": 49,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "hidmic",
+      "date": "2019-01-08T20:34:20Z",
+      "sha": "735bc97f414ebf33ad40426cf4801229e5dcddeb",
+      "message": "Throw on non-ascii characters in string and char message fields. (#26)",
+      "files_changed": 1,
+      "additions": 42,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "squizz617",
+      "date": "2021-06-15T12:28:41Z",
+      "sha": "7638b52d325a0efd2250786300ccb40d83a4a291",
+      "message": "add missing float/double bounds check (#128)\n\n* add missing float/double bounds check\r\n\r\nSigned-off-by: Seulbae Kim <squizz617@gmail.com>\r\nCo-authored-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 2,
+      "additions": 50,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "ksuszka",
+      "date": "2021-06-11T16:22:03Z",
+      "sha": "1796dfd5b2f4834fb7901bf79d2d69c5830411a8",
+      "message": "Added optimization for copying arrays of simple types from python to C using buffer protocol (#129)\n\n* Added optimization for copying arrays of simple types from python to C\r\n\r\nSigned-off-by: ksuszka <ksuszka@autonomous-systems.pl>\r\n\r\n* Apply suggestions from code review\r\n\r\nCo-authored-by: Chris Lalancette <clalancette@gmail.com>\r\nSigned-off-by: Krzysztof Suszka <ksuszka@autonomous-systems.pl>\r\n\r\n* Remove setting error message twice\r\n\r\nSigned-off-by: Krzysztof Suszka <ksuszka@autonomous-systems.pl>\r\n\r\nCo-authored-by: Chris Lalancette <clalancette@gmail.com>",
+      "files_changed": 1,
+      "additions": 139,
+      "deletions": 110,
+      "commit_type": "code"
+    },
+    {
+      "author": "asorbini",
+      "date": "2021-03-25T13:39:40Z",
+      "sha": "6a21c54045575af76bcd00450df84a9c47092cb1",
+      "message": "Remove dependency from rosidl_typesupport_connext_c (#127)\n\nSigned-off-by: Andrea Sorbini <asorbini@rti.com>",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "claireyywang",
+      "date": "2020-10-07T19:39:23Z",
+      "sha": "77f2251079e75e1bd30f5171eb7807057ed29660",
+      "message": "update maintainers (#119)\n\n* udpate maintainers\r\n* add author\r\n\r\nSigned-off-by: claireyywang <22240514+claireyywang@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 1,
+      "commit_type": "ci"
+    },
+    {
+      "author": "dirk-thomas",
+      "date": "2014-07-11T19:18:10Z",
+      "sha": "896cc3afa9cf0039d0d409d6eb6a03ad28df6f41",
+      "message": "add license",
+      "files_changed": 1,
+      "additions": 202,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "samiamlabs",
+      "date": "2020-02-11T12:33:18Z",
+      "sha": "f19748a1150375a1339c84fbd8a873aa4d0d2ec4",
+      "message": "Add warnings for reserved Python keywords in interface members, services and actions (#96)\n\nSigned-off-by: Samuel <samuel@dynorobotics.se>",
+      "files_changed": 1,
+      "additions": 46,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "richmattes",
+      "date": "2019-08-02T14:54:30Z",
+      "sha": "a7ce53c8922963439ba526f7f6c92dc0cc955c5f",
+      "message": "Find numpy headers in non-debian paths (#75) (#75)\n\nUpdate rosidl_generator_py to test for numpy headers exist on the python\r\ninclude paths, and query numpy for its include path if the headers are\r\nnot found.\r\n\r\nResolves #66\r\n\r\nSigned-off-by: Rich Mattes <richmattes@gmail.com>",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "mikaelarguedas",
+      "date": "2016-03-30T20:16:52Z",
+      "sha": "5434124b8e4a80c61e3fc2d0e0c50fb9d4c17d9a",
+      "message": "add nested message implementation",
+      "files_changed": 6,
+      "additions": 254,
+      "deletions": 181,
+      "commit_type": "code"
+    },
+    {
+      "author": "artivis",
+      "date": "2019-07-12T01:46:42Z",
+      "sha": "2d8af1e0fbb120dd9101ca620c24c59e940d1be6",
+      "message": "handle set_message_fields given some non-basic type (#68)\n\nFix #67\r\n\r\nSigned-off-by: artivis <jeremie.deray@canonical.com>",
+      "files_changed": 2,
+      "additions": 19,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "vinnamkim",
+      "date": "2019-07-09T16:28:46Z",
+      "sha": "3a1bb97183b01c2733a6c48d03cf72882ff78423",
+      "message": "Add no_arr and no_str parameters (#38)\n\n* Add no_arr and no_str params\r\n - For the issue : https://github.com/ros2/ros2cli/issues/136\r\n\r\nSigned-off-by: vinnamkim <vinnam.kim@gmail.com>\r\n\r\n* Fix formats on --noarr and --nostr\r\n\r\nSigned-off-by: vinnamkim <vinnam.kim@gmail.com>\r\n\r\n* Fix review\r\n\r\nSigned-off-by: vinnamkim <vinnam.kim@gmail.com>\r\n\r\n* Fix comments and remove outer parenthesis\r\n\r\nSigned-off-by: vinnamkim <vinnam.kim@gmail.com>\r\n\r\n* Distinguish between array, sequence and unbounded sequence\r\n\r\nSigned-off-by: vinnamkim <vinnam.kim@gmail.com>\r\n\r\n* Fix test failure\r\n\r\nSigned-off-by: vinnamkim <vinnam.kim@gmail.com>",
+      "files_changed": 1,
+      "additions": 88,
+      "deletions": 27,
+      "commit_type": "docs"
+    },
+    {
+      "author": "nuclearsandwich",
+      "date": "2017-06-22T19:34:36Z",
+      "sha": "0db440edbdabce997b7712c167ffac86fecd6fdd",
+      "message": "Add empy dependency. (#218)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "apojomovsky",
+      "date": "2018-10-25T12:51:52Z",
+      "sha": "dd88cb5bd41d87fae7b63e6686a50b1e6eef9601",
+      "message": "Added support to msg/srv generation from within an action directory",
+      "files_changed": 5,
+      "additions": 55,
+      "deletions": 25,
+      "commit_type": "code"
+    },
+    {
+      "author": "mlautman",
+      "date": "2018-11-19T22:07:51Z",
+      "sha": "fc8b868f6086d843b28d3265b52d9a1b5bf44b05",
+      "message": "Adding a get_slot_fields_and_types method to python msg classes (#19)\n\n* Adding a get_slot_fields_and_types method to python msg classes\r\n\r\n* removing noqa: W504",
+      "files_changed": 2,
+      "additions": 84,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "martins-mozeiko",
+      "date": "2018-05-24T05:37:05Z",
+      "sha": "cf692c13dba0d33ab7ae38e0a01d4aa386fdbd40",
+      "message": "Generate imports for assert only in debug mode (#277)\n\n* generate imports for assert only in debug mode\r\n\r\n* fix indentation",
+      "files_changed": 1,
+      "additions": 44,
+      "deletions": 43,
+      "commit_type": "code"
+    },
+    {
+      "author": "dhood",
+      "date": "2016-05-28T01:13:03Z",
+      "sha": "e364f951f9d1f3b9e8c4ada737e1cf1a49b62604",
+      "message": "Only add linter tests if option in rosidl_generate_interfaces is set (#142)",
+      "files_changed": 4,
+      "additions": 33,
+      "deletions": 38,
+      "commit_type": "code"
+    },
+    {
+      "author": "mjcarroll",
+      "date": "2018-04-23T15:37:16Z",
+      "sha": "3cc9b9b31a7c8335532722b265677e7a4fd6c366",
+      "message": "Change #if to #ifdef.\n\nNeeded because you can't use preprocessor on undefined variables in\nMISRA.",
+      "files_changed": 15,
+      "additions": 30,
+      "deletions": 30,
+      "commit_type": "code"
+    },
+    {
+      "author": "allenh1",
+      "date": "2017-07-12T19:55:52Z",
+      "sha": "882a0149d7fa760b6a247ec039bd1b9a93b50d94",
+      "message": "Check return value of msg `__init` calls (#220)\n\n* Added checks for the return value of msg `__init` calls.\r\n\r\n* Fixed a warning created by the test code\r\n\r\n* Removed cleanup statements, as they are not needed.\r\n\r\n* Add missing destroy call, fix indentation.\r\n\r\n* Added a test for invalid initialization.\r\n\r\n* Wrap arg1 and arg2 in parenthesis in EXPECT macros to cover the case of complex messages.",
+      "files_changed": 6,
+      "additions": 124,
+      "deletions": 31,
+      "commit_type": "docs"
+    },
+    {
+      "author": "yamokosk",
+      "date": "2017-04-21T00:04:15Z",
+      "sha": "69400938eef1f6886fd65951d18fae7d3780e47d",
+      "message": "adds *__destroy_ros_message function for generated message code (#215)\n\n* adds *__destroy_ros_message function for generated message code\r\n\r\n* remove extra blank line\r\n\r\n* add _DESTRO_ROS_MESSAGE metaclass attribute",
+      "files_changed": 3,
+      "additions": 12,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "gerkey",
+      "date": "2014-11-17T19:34:13Z",
+      "sha": "498071342d824746a0d0c5a76e1f142d564f467d",
+      "message": "adding CONTRIBUTING.md",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "meyerj",
+      "date": "2016-12-26T10:49:43Z",
+      "sha": "132493f5b84c700c2055d46de90c063705c44dd1",
+      "message": "fixed size check in BoundedVector<T>::assign(first, last)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "codebot",
+      "date": "2016-12-13T22:42:13Z",
+      "sha": "bc4a535ae19390ae5ab437b374d4b009547d2632",
+      "message": "c++14 (#187)",
+      "files_changed": 3,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Karsten1987",
+      "date": "2016-10-03T23:07:38Z",
+      "sha": "7cc3cdf8804d0805662251f8d01207dd6502a24f",
+      "message": "(dev) comply with D213 (#163)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "jacquelinekay",
+      "date": "2015-07-22T18:55:05Z",
+      "sha": "5c64221e87d37c365094b4e3e7d59b331ae17570",
+      "message": "Merge pull request #33 from ros2/fixed_size\n\nImplement has_fixed_size and test",
+      "files_changed": 26,
+      "additions": 412,
+      "deletions": 25,
+      "commit_type": "docs"
+    },
+    {
+      "author": "esteve",
+      "date": "2015-01-17T00:34:33Z",
+      "sha": "b2a6fe74a8e93f96d956a9121ef4306cda059391",
+      "message": "Merge pull request #2 from ros2/request_reply\n\nAdded support for services",
+      "files_changed": 7,
+      "additions": 153,
+      "deletions": 50,
+      "commit_type": "code"
+    },
+    {
+      "author": "Jackie Kay",
+      "date": "2015-07-16T18:27:25Z",
+      "sha": "13a3c6ba39317104c7ae8632834072ffbf31e886",
+      "message": "Implemented has_fixed_size and test showing sizeof is sufficient",
+      "files_changed": 26,
+      "additions": 412,
+      "deletions": 25,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ernestmc",
+      "date": "2015-11-12T20:03:50Z",
+      "sha": "a37305ce6424529a9666771bcbc972017a155536",
+      "message": "Merge pull request #44 from ernestmc/issue_26\n\nFixes #26",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "Ernesto Corbellini",
+      "date": "2015-11-10T20:39:41Z",
+      "sha": "4f8ab7bc63501e62ff38c6064efd8d63058bfa93",
+      "message": "Fixed static array issue.\n\nSepareted in two conditions for when the static array type is primitive and when it's a complex one.",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "Esteve Fernandez",
+      "date": "2014-11-14T21:43:06Z",
+      "sha": "ae01f8cc2d724d3f4235ee50a02702cc43660cc9",
+      "message": "Added Python generator",
+      "files_changed": 11,
+      "additions": 487,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "tfoote",
+      "date": "2015-12-18T18:44:46Z",
+      "sha": "28b1c37ab537b78ffcf01a3e15e90fbbd466f775",
+      "message": "add additional dependencies to workaround ros2/ros2#174",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "vmayoral",
+      "date": "2014-08-16T00:29:14Z",
+      "sha": "c34786f06a6f3cf3cd7eb1dd530e07dabcd4316b",
+      "message": "static and dynamic arrays",
+      "files_changed": 3,
+      "additions": 10,
+      "deletions": 10,
+      "commit_type": "code"
+    }
+  ]
+}

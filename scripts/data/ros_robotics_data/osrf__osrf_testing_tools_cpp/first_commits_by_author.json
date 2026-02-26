@@ -1,0 +1,241 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-26T01:00:49Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "osrf",
+    "repo": "osrf_testing_tools_cpp"
+  },
+  "data": [
+    {
+      "author": "mosfet80",
+      "date": "2024-04-30T20:42:22Z",
+      "sha": "f22a62ec1eb8346536a9fc2bc2e557fc0519e594",
+      "message": "Update CMakeLists.txt (#85)\n\nUse the same GTE version used into\r\n\r\nhttps://github.com/osrf/osrf_testing_tools_cpp/blob/rolling/osrf_testing_tools_cpp/CMakeLists.txt\r\nremoved old library\r\n\r\n.",
+      "files_changed": 7,
+      "additions": 1,
+      "deletions": 17,
+      "commit_type": "docs"
+    },
+    {
+      "author": "cottsay",
+      "date": "2023-04-06T21:25:26Z",
+      "sha": "3189b94fb4e055535467ad1c52b49035f90a6017",
+      "message": "Fix mpark/variant conditional for MSVC (#77)\n\nThis conditional currently evaluates to TRUE when _MSC_VER is not\r\ndefined, meaning that __SHOULD_USE_MPARK_VARIANT is 1 for ALL SYSTEMS\r\nexcept newer MSVC, which is certainly not correct.\r\n\r\nFixes 06e1dbe4ffb1d677a237f00035e323896dc7ffdb",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "clalancette",
+      "date": "2018-06-13T00:07:17Z",
+      "sha": "54968fb5b9cc26f72423671ea0504d6876daac9f",
+      "message": "Make sure that my_first_function does not get optimized away. (#8)\n\nIn the nightly builds, the \"Release\" versions started having\r\ntest failures.  After some investigation, I realized that the\r\nproblem is that a malloc() followed by an immediate free() is\r\nconsidered to have no side-effects, so higher optimizations\r\nlevels optimize the calls away.  To make sure that my_first_function()\r\ndoesn't get optimized away, do a memcpy from an input source\r\n(memset is not enough).\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 15,
+      "deletions": 9,
+      "commit_type": "code"
+    },
+    {
+      "author": "marcoag",
+      "date": "2024-04-26T11:28:33Z",
+      "sha": "d7861a838972c64e118f80214bb17c4221dba0c2",
+      "message": "Changelog.\n\nSigned-off-by: Marco A. Gutierrez <marcogg@marcogg.com>",
+      "files_changed": 2,
+      "additions": 6,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "CursedRock17",
+      "date": "2023-03-18T12:46:21Z",
+      "sha": "40c6589f69e92bf384f4b77cb1b7c51cd23ebec5",
+      "message": "Changing C++ Compile Version (#76)\n\nCo-authored-by: Chris Lalancette <clalancette@gmail.com>",
+      "files_changed": 3,
+      "additions": 5,
+      "deletions": 5,
+      "commit_type": "docs"
+    },
+    {
+      "author": "audrow",
+      "date": "2020-11-19T20:39:42Z",
+      "sha": "585c3802c17cb6b4786999e64620266289324122",
+      "message": "Add googletest v1.10.0 (#55)\n\n* Add googletest v1.10.0\r\n\r\nSigned-off-by: Audrow Nash <audrow.nash@gmail.com>",
+      "files_changed": 4,
+      "additions": 5,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Crola1702",
+      "date": "2022-09-08T13:24:06Z",
+      "sha": "637156bfba738472f502ffd419c287c9533fdf1a",
+      "message": "Fixes policy CMP0135 warning in CMake 3.24 (#71)\n\n* Sets policy CMP0135\r\n\r\nSigned-off-by: Cristobal Arroyo <cristobal.arroyo@ekumenlabs.com>\r\n\r\nCo-authored-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "wjwwood",
+      "date": "2017-04-19T19:37:35Z",
+      "sha": "f07a6ea48ee5f560fc96c2dd6df4c46162a853f0",
+      "message": "Allocator and error handling in c utilities (#16)\n\n* initial move of error_handling from rmw\r\n\r\n* initial move of allocator from rcl\r\n\r\n* refactor allocator implementation\r\n\r\n* refactor error_handling\r\n\r\n* leave gtest where it was being used before\r\n\r\n* suppress internal gmock warnings\r\n\r\n* proctect call to set_target_properties\r\n\r\n* avoid segfault\r\n\r\n* fix whitespace in cmake\r\n\r\n* fix doc\r\n\r\n* comment\r\n\r\n* fix error string logic and check deallocate before using\r\n\r\n* typo\r\n\r\n* simplify logic in CMake\r\n\r\n* remove redundant check and free",
+      "files_changed": 7,
+      "additions": 705,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "traversaro",
+      "date": "2022-02-14T22:09:57Z",
+      "sha": "5b1109b051b1f905fdd88b3ae28b6c01ccf6540c",
+      "message": "Use CMAKE_DL_LIBS CMake library to link library that provides dlopen (#68)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 8,
+      "commit_type": "docs"
+    },
+    {
+      "author": "paudrow",
+      "date": "2022-01-14T15:00:02Z",
+      "sha": "1ab092f7cb4c4aa2e502e12022b5b8962fc75076",
+      "message": "1.5.0\n\nSigned-off-by: Audrow Nash <audrow@hey.com>",
+      "files_changed": 4,
+      "additions": 13,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "christophebedard",
+      "date": "2021-11-08T18:42:51Z",
+      "sha": "2fdc2ef550728a177839090a0e5497c20486c399",
+      "message": "Update backward-cpp to latest master commit (#64)\n\n* Revert changes on top of backward-cpp subtree\r\n\r\n* CMake warning Windows fix\r\n   * https://github.com/osrf/osrf_testing_tools_cpp/pull/45/commits/ae8e0f54ec446d108405b0044891d867479384af\r\n* Static cast\r\n   * https://github.com/osrf/osrf_testing_tools_cpp/pull/54/commits/4404ea5eaa2288c1348baaf4b7d4233a70326133\r\n\r\nSigned-off-by: Christophe Bedard <bedard.christophe@gmail.com>\r\n\r\n* Remove backward-cpp subtree\r\n\r\nSigned-off-by: Christophe Bedard <bedard.christophe@gmail.com>\r\n\r\n* Squashed 'osrf_testing_tools_cpp/src/memory_tools/vendor/bombela/backward-cpp/' content from commit 3bb9240\r\n\r\ngit-subtree-dir: osrf_testing_tools_cpp/src/memory_tools/vendor/bombela/backward-cpp\r\ngit-subtree-split: 3bb9240cb15459768adb3e7d963a20e1523a6294\r\n\r\n* Re-apply CMake warning fix for Windows\r\n\r\nSee https://github.com/osrf/osrf_testing_tools_cpp/pull/45/commits/ae8e0f54ec446d108405b0044891d867479384af\r\n\r\nSigned-off-by: Christophe Bedard <bedard.christophe@gmail.com>",
+      "files_changed": 5,
+      "additions": 508,
+      "deletions": 133,
+      "commit_type": "docs"
+    },
+    {
+      "author": "homalozoa",
+      "date": "2021-06-02T18:22:33Z",
+      "sha": "65adefdf0e080485f2b935a23260f2431c388f11",
+      "message": "Patch googletest to 1.10.0.2 (#65)\n\nFix warning \"may be used uninitialized\" of googletest when compiling with GCC 11.1, change version to 1.10.0.2\r\n\r\nSigned-off-by: Homalozoa <nx.tardis@gmail.com>",
+      "files_changed": 2,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "brawner",
+      "date": "2020-11-26T01:00:56Z",
+      "sha": "129e75fc9e2bd3c38b6400d0007ea5e9f89fb72c",
+      "message": "Update cmake minimum version to 2.8.12 (#61)\n\n* Update cmake minimum version to 2.8.12\r\n\r\nSigned-off-by: Stephen Brawner <brawner@gmail.com>\r\n\r\n* Try setting policy explicitly\r\n\r\nSigned-off-by: Stephen Brawner <brawner@gmail.com>\r\n\r\n* Trying this\r\n\r\nSigned-off-by: Stephen Brawner <brawner@gmail.com>\r\n\r\n* Manually patching archive\r\n\r\nSigned-off-by: Stephen Brawner <brawner@gmail.com>",
+      "files_changed": 3,
+      "additions": 7,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "jacobperron",
+      "date": "2020-04-09T21:16:00Z",
+      "sha": "f5a7ccfe5ebbb6ba749db549aa3ce55e950a6196",
+      "message": "1.3.0",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "rotu",
+      "date": "2019-12-13T18:41:52Z",
+      "sha": "2eefb7fc4d42b6243e24b83fa4f17faf5239faef",
+      "message": "Explicitly ignore unused argument (#33)",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "asobhy-qnx",
+      "date": "2020-07-28T19:48:33Z",
+      "sha": "df807c03c36b167c7ed051e45e430e266c0941d3",
+      "message": "fix execinfo.h not found for QNX (#50)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "dirk-thomas",
+      "date": "2017-06-15T19:05:29Z",
+      "sha": "c79c9dd8473d484e96c740871b908d739731d97d",
+      "message": "remove target specific warning flags",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "nuclearsandwich",
+      "date": "2018-11-15T21:20:52Z",
+      "sha": "90cc59cd2e6d270b337c69361d850d0a5248d33e",
+      "message": "1.1.0",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "emersonknapp",
+      "date": "2019-05-15T03:45:41Z",
+      "sha": "afe870ca9f37fb006e0cf2c5f4ceda696ab08b32",
+      "message": "Static Allocator - Aligned allocations (#31)\n\n* Aligned memory pool allocations\r\n\r\nSigned-off-by: Emerson Knapp <eknapp@amazon.com>\r\n\r\n* Fix formatting\r\n\r\nSigned-off-by: Emerson Knapp <eknapp@amazon.com>\r\n\r\n* Address some review nitpicks\r\n\r\nSigned-off-by: Emerson Knapp <eknapp@amazon.com>\r\n\r\n* Fix formatting\r\n\r\nSigned-off-by: Emerson Knapp <eknapp@amazon.com>\r\n\r\n* A pass at adding unit test for StaticAllocator\r\n\r\nSigned-off-by: Emerson Knapp <eknapp@amazon.com>",
+      "files_changed": 6,
+      "additions": 67,
+      "deletions": 35,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mikaelarguedas",
+      "date": "2017-07-24T21:49:20Z",
+      "sha": "f85e1fc4c55631e3b091684b7def3b508277adc6",
+      "message": "Use _WIN32 everywhere (#41)\n\n* Use _WIN32 everywhere\r\n\r\n* add missing endif comment",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mjcarroll",
+      "date": "2018-11-21T16:20:22Z",
+      "sha": "0d5e9765f627cc51855ff0392177cafec0af9e23",
+      "message": "Add support for BFD when present. (#20)",
+      "files_changed": 1,
+      "additions": 22,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jpsamper2009",
+      "date": "2018-06-12T20:29:31Z",
+      "sha": "0bc5fb764eabebea70a7573689afebadddfef10c",
+      "message": "Remove .gitattributes since gtest not tracked via lfs (#7)",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Juan Pablo Samper",
+      "date": "2018-06-12T16:23:20Z",
+      "sha": "ceb437e556f8a9de9b58803fca1fb0785a8d0918",
+      "message": "Include CTest before BUILD_TESTING",
+      "files_changed": 3,
+      "additions": 4,
+      "deletions": 5,
+      "commit_type": "docs"
+    }
+  ]
+}

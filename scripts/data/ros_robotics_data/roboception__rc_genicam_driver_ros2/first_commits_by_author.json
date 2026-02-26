@@ -1,0 +1,61 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-26T02:07:43Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "roboception",
+    "repo": "rc_genicam_driver_ros2"
+  },
+  "data": [
+    {
+      "author": "flixr",
+      "date": "2021-01-14T09:27:04Z",
+      "sha": "1016ea1d6b5cc26421b3ab617af4f82864856ff2",
+      "message": "package is just called rc_genicam_driver",
+      "files_changed": 3,
+      "additions": 6,
+      "deletions": 6,
+      "commit_type": "docs"
+    },
+    {
+      "author": "heikohimu",
+      "date": "2021-01-13T14:00:27Z",
+      "sha": "e441cbe038288ad8216a45575d3f003732a4ff50",
+      "message": "Initial commit",
+      "files_changed": 33,
+      "additions": 4960,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "ce047",
+      "date": "2023-12-04T17:00:23Z",
+      "sha": "395d99ceb620f889462d335edc41ddd0e5c1dd9f",
+      "message": "fix: parameter 'camera_wb_red' cannot be set\n\nFixes wrong naming of two camera parameters which caused the driver\nto crash with error \"parameter 'camera_wb_red' cannot be set because\nit was not declared\" for color cameras.",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "vigni",
+      "date": "2021-07-30T07:15:34Z",
+      "sha": "611523b5630a1daeaef546cfe6891858e8a734ad",
+      "message": "Extend color format to RGB8 for ros foxy",
+      "files_changed": 6,
+      "additions": 60,
+      "deletions": 14,
+      "commit_type": "code"
+    },
+    {
+      "author": "clalancette",
+      "date": "2021-02-01T22:48:51Z",
+      "sha": "3cfc5a522b9df977230199d69b73079550c64a35",
+      "message": "Small fixes to make rc_genicam_driver work on latest Rolling.\n\nIn particular:\n\n1.  Use image_transport.hpp to get rid of a warning\n2.  Use C-strings for RCLCPP_ macros.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 7,
+      "additions": 7,
+      "deletions": 7,
+      "commit_type": "code"
+    }
+  ]
+}

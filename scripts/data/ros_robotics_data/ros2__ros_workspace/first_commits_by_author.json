@@ -1,0 +1,91 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-26T02:55:40Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros2",
+    "repo": "ros_workspace"
+  },
+  "data": [
+    {
+      "author": "mjcarroll",
+      "date": "2023-02-15T20:55:19Z",
+      "sha": "69ad870694606c8e3b0547e6f3c5c24c0271dba8",
+      "message": "Remove path hook generation from ament_environment (#28)\n\nSigned-off-by: Michael Carroll <michael@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "audrow",
+      "date": "2022-11-17T17:06:08Z",
+      "sha": "211ebab7aad33954489eb48b98b3207621a480b7",
+      "message": "[latest] Update maintainers - 2022-11-07 (#26)",
+      "files_changed": 2,
+      "additions": 7,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "cottsay",
+      "date": "2021-02-05T02:43:00Z",
+      "sha": "2c260489cd2a666843f5a12785e2020e00d026f4",
+      "message": "Use GNUInstallDirs to determine multiarch library dir (#20)\n\nThe CMAKE_INSTALL_LIBDIR variable set by GNUInstallDirs contains the\r\nplatform's preferred library directory name. On most platforms, this\r\nwill be either 'lib' or 'lib64'. Debian does things a little\r\ndifferently - it always uses 'lib', but creates a subdirectory for\r\neach supported architecture.\r\n\r\nIn the end, the use case that drives this extra environment hook is a\r\npackage that uses CMAKE_INSTALL_LIBDIR instead of using the ament\r\npattern of just installing directly to 'lib'. Rather than predict the\r\ndebian-style pattern, it supports more platforms and is less fragile to\r\njust let GNUInstallDirs do its thing and tell us where the libraries are\r\nexpected to be placed.\r\n\r\nOne curiosity I noticed is that during local builds, GNUInstallDirs\r\ncontinued to report the 'lib' directory for use on Ubuntu. After looking\r\nat the underlying script, it seems that because we're using a custom\r\nCMAKE_INSTALL_PREFIX, the script doesn't suffix the arch-specific\r\ndirectory like I was expecting. It turns out that debhelper actually\r\nspecifies a static CMAKE_INSTALL_LIBDIR value that overrides\r\nGNUInstallDirs. At first I thought we'd need extra logic to ensure the\r\nsubdirectory is suffixed despite our non-standard CMAKE_INSTALL_PREFIX,\r\nbut we actually just want to just let the dance play out normally,\r\nbecause that's what the downstream projects are going to do, too.\r\n\r\nSo in the end, we should see:\r\n* Local builds on Debian should report 'lib', and this skip the hook\r\n* Debian binary package builds should report 'lib/arch-triple', as\r\n  debhelper will override the script\r\n* Other platforms will report 'lib64' or 'lib' based on the platforms\r\n  'void *' size\r\n\r\nSigned-off-by: Scott K Logan <logans@cottsay.net>",
+      "files_changed": 2,
+      "additions": 17,
+      "deletions": 12,
+      "commit_type": "docs"
+    },
+    {
+      "author": "dirk-thomas",
+      "date": "2019-02-07T17:56:47Z",
+      "sha": "4f22f707f2734b1938875bcc4f9928f8a05653ed",
+      "message": "add COLCON_PREFIX_PATH env var (#11)",
+      "files_changed": 2,
+      "additions": 10,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "nuclearsandwich",
+      "date": "2017-05-31T13:53:57Z",
+      "sha": "cccf89afe0158d512a50e293dc581891ea87b57d",
+      "message": "This might not be enough, but it might be just enough.",
+      "files_changed": 2,
+      "additions": 28,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jacobperron",
+      "date": "2020-05-13T02:51:30Z",
+      "sha": "ea212375dc7f95a3f28c5f1b33905bff4255e4bb",
+      "message": "Extend library path to have multiarch directory (#18)",
+      "files_changed": 2,
+      "additions": 13,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "seanyen",
+      "date": "2020-05-08T22:03:04Z",
+      "sha": "fa49a143573b9fb2ce0dec0524223da057ff0e06",
+      "message": "Enable Windows build. (#17)",
+      "files_changed": 1,
+      "additions": 15,
+      "deletions": 5,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mikaelarguedas",
+      "date": "2018-07-26T16:38:45Z",
+      "sha": "da4e64b639ec9a392ba80505b3ba70053644cfd9",
+      "message": "set language to NONE as this doesnt compile any code (#9)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    }
+  ]
+}

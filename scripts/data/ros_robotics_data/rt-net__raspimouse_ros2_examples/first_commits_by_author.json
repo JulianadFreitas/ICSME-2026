@@ -1,0 +1,71 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-26T02:03:10Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "rt-net",
+    "repo": "raspimouse_ros2_examples"
+  },
+  "data": [
+    {
+      "author": "KuraZuzu",
+      "date": "2024-11-25T01:08:08Z",
+      "sha": "b0ac05587321a77950a27462e061434448b9247a",
+      "message": "ROS 2 Jazzy対応 (#62)\n\n* The header file \"cv_bridge.h\" in the cv_bridge package has been renamed to \"cv_bridge.hpp\". This change has been applied to all corresponding \"#include\" statements.\r\n\r\n* Replaced \"Twist\" with \"TwistStamped\" in \"joystick_control.py\"\r\n\r\n* Replaced \"Twist\" with \"TwistStamped\" for \"camera_line_follower.launch.py\"\r\n\r\n* Replaced \"Twist\" with \"TwistStamped\" for \"object_tracking.launch.py\"\r\n\r\n* Replaced \"Twist\" with \"TwistStamped\" (Changed in all instances, revert if any unexpected issues occur, \"revert\").\r\n\r\n* Modify CI to ensure compatibility with the act tool\r\n\r\n* Add author\r\n\r\n* Update README for Support Jazzy\r\n\r\n* Add CI settings for Rolling\r\n\r\n* Revert \"Add CI settings for Rolling\"\r\n\r\nThis reverts commit 5996db3226d4d2340659d48411bb86b8562599f7.\r\n\r\n* Replace ROS_REPO: [ros] with ROS_REPO: [main]\r\n\r\n* Add rosinstall for CI\r\n\r\n* Adapt clang-format with Google style\r\n\r\n* Fix order of include in c file\r\n\r\n* Revert \"Add rosinstall for CI\"\r\n\r\nThis reverts commit b9605cd9fe072790801e70af384c22851083c28d.\r\n\r\n* Reapply \"Add rosinstall for CI\"\r\n\r\nThis reverts commit a06b8a9e68346bccf4a36196962cf368b5bd13e2.\r\n\r\n* Revert \"Fix order of include in c file\"\r\n\r\nThis reverts commit 356a417c83db166834756630dac80638e5d534fa.\r\n\r\n* Revert \"Adapt clang-format with Google style\"\r\n\r\nThis reverts commit 0a420431a45f3d96bc840e58502d364106c554f0.\r\n\r\n* fix typo of distribution name\r\n\r\n* Applied \"ament_clang_format\" and passed cpplint, with manual adjustments made to the \"include\" order\r\n\r\n* Adapted ruff formetter\r\n\r\n* fix \"import\" module order\r\n\r\n* Adaptted \"ament_uncrustify\"\r\n\r\n* Update README.en.md fo Jazzy\r\n\r\n* Fix pictures and page links\r\n\r\n* Fix images for README in japanese\r\n\r\n* Update Copyright years\r\n\r\n* Fix Indent and replace .h with .hpp\r\n\r\n* FIxed autho name\r\n\r\n* Add warnings for camera settings",
+      "files_changed": 25,
+      "additions": 510,
+      "deletions": 473,
+      "commit_type": "docs"
+    },
+    {
+      "author": "YusukeKato",
+      "date": "2023-08-03T08:12:01Z",
+      "sha": "55468404708194ecf2ef1fbc20748dad90f06a51",
+      "message": "HumbleリリースのためにCHANGELOG.rstとpackage.xmlを更新 (#42)\n\n* update changelog\r\n\r\n* 2.0.0",
+      "files_changed": 2,
+      "additions": 6,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Shota Aoki",
+      "date": "2020-03-02T06:46:47Z",
+      "sha": "dc3d34cbde86f9a67229d75b40632d404261e6c1",
+      "message": "Add github workflow (#1)\n\n* Add github workflow\r\n\r\n* Update workflow\r\n\r\n* Update workflow\r\n\r\n* Update README.md",
+      "files_changed": 2,
+      "additions": 39,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "ShotaAk",
+      "date": "2020-02-28T04:57:59Z",
+      "sha": "707eb577067a5bd5d74fa2f30d986b64c3023321",
+      "message": "first commit",
+      "files_changed": 8,
+      "additions": 118,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "Shuhei Kozasa",
+      "date": "2021-11-18T08:07:33Z",
+      "sha": "50b63846027ef1253fdaa4e7dc768d811ba4f8c3",
+      "message": "Adds config file for DUALSHOCK4 (#36)",
+      "files_changed": 1,
+      "additions": 33,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "Tiryoh",
+      "date": "2020-03-26T06:41:57Z",
+      "sha": "58f5c3579553e060fb85fec10fee54280a7afb8c",
+      "message": "Add industrial_ci test settings (#3)\n\n* Add industrial_ci test settings\r\n\r\n* Add status badge to README",
+      "files_changed": 2,
+      "additions": 27,
+      "deletions": 1,
+      "commit_type": "docs"
+    }
+  ]
+}

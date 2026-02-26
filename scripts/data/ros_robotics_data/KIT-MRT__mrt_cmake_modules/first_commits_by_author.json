@@ -1,0 +1,441 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T22:06:54Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "KIT-MRT",
+    "repo": "mrt_cmake_modules"
+  },
+  "data": [
+    {
+      "author": "keroe",
+      "date": "2020-09-22T13:27:09Z",
+      "sha": "3664a84c917ea39fdaf7e63ada99d5f80c5fb1cc",
+      "message": "delete old check which compares the python module name and the python api.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "reinzor",
+      "date": "2024-08-22T09:26:10Z",
+      "sha": "cae1fe33cdeafc500544c7ecd9d19e5df5c12286",
+      "message": "fix(FindFLANN): set(FLANN_FOUND ON) if target already defined\n\nFixes #37\n\nSigned-off-by: Rein Appeldoorn <rein.appeldoorn@nobleo.nl>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "shenyinzhe",
+      "date": "2024-06-04T20:16:53Z",
+      "sha": "15d2ff0f033bbfc786812a0305fe50711a3dbab7",
+      "message": "FindGeographicLib: Fix for GeographicLib 2.* and Windows\n\nSince GeographicLib version 2, the library name changed from `libGeographic.so` to `libGeographicLib.so`, see https://github.com/geographiclib/geographiclib/blob/5e4425da84a46eb70e59656d71b4c99732a570ec/NEWS#L208 .\nTo ensure that GeographicLib 2.* is found correcty, I think we should add also `GeographicLib` to the names used by `find_library`.\nFurthermore, on Windows the import library is called `GeographicLib-i.lib` (see https://github.com/geographiclib/geographiclib/blob/v2.3/src/CMakeLists.txt#L119), so to find the library correctly on Windows we also look for GeographicLib-i .",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Mrt Builder",
+      "date": "2018-12-23T10:19:25Z",
+      "sha": "93b5465090cabdf7df5529815fe4bf12b879f200",
+      "message": "Silence error about unnecessary parantheses in reconfigure files",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "poggenhans",
+      "date": "2016-09-09T17:00:16Z",
+      "sha": "22278916f979cbb2ff7daf58ff5b3f803e4dd5de",
+      "message": "silently use qt5 instead of qt4 to avoid boost issues",
+      "files_changed": 2,
+      "additions": 166,
+      "deletions": 4,
+      "commit_type": "config"
+    },
+    {
+      "author": "jhpauls",
+      "date": "2022-03-16T13:43:47Z",
+      "sha": "643d2193af10e562b221d3e40e169c4dc9c2a721",
+      "message": "Add ZeroMQ",
+      "files_changed": 2,
+      "additions": 14,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "JohannesBeck",
+      "date": "2022-01-30T14:26:01Z",
+      "sha": "063b924c49c2b87061aa3007b1aa9406c773dc8c",
+      "message": "Add zxing-cpp to cmake.yaml.",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "wep21",
+      "date": "2021-11-11T04:22:07Z",
+      "sha": "7253e6544e9a0b2d670244212edab47a19e2c1ab",
+      "message": "Set PYTHON_EXECUTABLE for rolling\n\nSigned-off-by: wep21 <border_goldenmarket@yahoo.co.jp>",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Johannes Beck",
+      "date": "2015-07-13T05:31:50Z",
+      "sha": "735953d881ec0f024983e6c830ec7a53f6e0b0e3",
+      "message": "Initial commit of mrt cmake modules (debian package and upstream)",
+      "files_changed": 20,
+      "additions": 629,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "kroeper",
+      "date": "2021-02-26T15:20:41Z",
+      "sha": "065e8aac5294c2c07909b214a5fa5e26bb9af349",
+      "message": "add boost iostreams component",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "Piotr Orzechowski",
+      "date": "2016-10-27T13:50:48Z",
+      "sha": "a39b2c55f953f16f795dc84c2da8832e89c9d17a",
+      "message": "Fix broken libann dependent builds for Ubuntu 16.04",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Ilia Baltashov",
+      "date": "2020-07-03T16:30:50Z",
+      "sha": "ff966649e735fec7d8a3967bd2ad6af95b38c555",
+      "message": "Add cuda support for node and nodelet.",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "m-naumann",
+      "date": "2016-12-13T15:13:26Z",
+      "sha": "c6e1eba7d7bbabbc0d5e62c0f483f05c21c8285c",
+      "message": "fixed build error that occured in qtcreator when depending on qt5",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Sven Richter",
+      "date": "2019-07-04T13:23:41Z",
+      "sha": "01b19b80318543444ff711f06fe68e46a8233435",
+      "message": "Fixed include variable name of TBB include",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "Christian-Eike Framing",
+      "date": "2020-05-24T17:00:01Z",
+      "sha": "df568cbfb04cf122aa18dfb3320ee3e6714ada13",
+      "message": "Replace deprecated platform.distro call with rospkg",
+      "files_changed": 2,
+      "additions": 10,
+      "deletions": 8,
+      "commit_type": "config"
+    },
+    {
+      "author": "autonomobil",
+      "date": "2020-04-23T12:25:31Z",
+      "sha": "b7bf140c0d01994a299291a2dfad2b1cf9cdc019",
+      "message": "Update README.md",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "MRT",
+      "date": "2019-01-30T20:56:03Z",
+      "sha": "a31e31f6edadd8312c4f9e900cbda73cf288f6fc",
+      "message": "Update yaml/mrt-ros.yaml for distribution bionic",
+      "files_changed": 1,
+      "additions": 474,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "Johannes Janosovits",
+      "date": "2017-08-02T15:55:31Z",
+      "sha": "fb7aa07dec1a82e7a74df7eff173755220c44ae8",
+      "message": "necessary changes to use minpack",
+      "files_changed": 2,
+      "additions": 45,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "janstrohbeck",
+      "date": "2020-03-23T18:33:22Z",
+      "sha": "8ee2bdc826cdd80d596cec60d39175cc22fbb4b1",
+      "message": "Fix linking against python3 version of boost python on cmake>=3.11.",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Tilman Kuehner",
+      "date": "2018-11-22T06:58:19Z",
+      "sha": "d142c045e586188006f1b4fb3720bffc86cb558e",
+      "message": "add glew and glfw to base.yaml",
+      "files_changed": 1,
+      "additions": 20,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "filiperinaldi",
+      "date": "2019-12-04T14:40:00Z",
+      "sha": "9ddefc00303983b8d84fc2e050a2c568a34d0ecd",
+      "message": "Fix build for non-x86 architectures\n\nWhen MRT_ARCH is not explicitly set, UseMrtStdCompilerFlags.cmake\ncurrently forces the target architecture to be tuned to the Sandy Bridge\n(x86) architecture.\n\nThis patch constraints this behaviour to x86-based targets. This allow\nprojects based on MRT Cmake Modules to be rebuild transparently in other\narchitectures without any extra build settings.\n\nNote that this change works with both cross-compilation and native\nnon-x86 builds.\n\nSee #7.\n\nChange-Id: Ibc1ed1eaf1c014df4c44d774ea8fd3760a1679e7\nSigned-off-by: Filipe Rinaldi <filipe.rinaldi@arm.com>",
+      "files_changed": 1,
+      "additions": 20,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "christiankinzig",
+      "date": "2019-11-20T09:12:11Z",
+      "sha": "83e1d45f16d5c9fd287848e26614c452233b4bf0",
+      "message": "add packages 2 metapackage yaml",
+      "files_changed": 1,
+      "additions": 10,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "omersahintas",
+      "date": "2015-08-04T11:49:36Z",
+      "sha": "8a9b444866abce48fad71a931343bb0572b3f269",
+      "message": "libopenscenegraph added",
+      "files_changed": 3,
+      "additions": 392,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "florianwirth",
+      "date": "2019-08-29T15:24:44Z",
+      "sha": "bbd4a388af58b96a1a6845aa22c7dd64e702661d",
+      "message": "remove even more paths",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "olesalscheider",
+      "date": "2016-06-23T12:09:27Z",
+      "sha": "24464be41fbc48208c6bc8f344fc4be5c9334202",
+      "message": "Convert the mrt_cmake_modules to a Catkin package\n\nThis way, they can be used by third parties without the MRT tools.",
+      "files_changed": 41,
+      "additions": 470,
+      "deletions": 511,
+      "commit_type": "docs"
+    },
+    {
+      "author": "koenigshof",
+      "date": "2018-05-17T13:52:01Z",
+      "sha": "7fc9491bbf073f0c58bfafef360d2e236585bc2d",
+      "message": "Add -faligned-new flag to avoid compilation warnings for gcc7",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Sascha Wirges",
+      "date": "2015-09-15T05:55:36Z",
+      "sha": "fb738c04ea83490cb99cf2260c3b737807655415",
+      "message": "Added libpcap find script",
+      "files_changed": 2,
+      "additions": 79,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "Marc Sons",
+      "date": "2019-02-13T13:06:05Z",
+      "sha": "efdde1ab669c85fd2c88a8658371b2fb7e61edb8",
+      "message": "add gitlab ci yaml",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "Nico Berwanger",
+      "date": "2019-02-01T14:35:41Z",
+      "sha": "f75ebc2a8a3e85e5ebf4e7a204fdb2cb1e8f4227",
+      "message": "Fixed mrt-gnu-arm-embedded-toolchain for xenial",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "kuemmerle",
+      "date": "2019-01-13T13:51:09Z",
+      "sha": "489d64190e760f5e274027e2f9bbca58cf03e37b",
+      "message": "Revert \"Update FindMrtCTensorflow.cmake\"\n\nThis reverts commit 207a8da443f473847af304540e97826051f8d872.",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "F P",
+      "date": "2018-12-20T14:19:45Z",
+      "sha": "4b4dd96b9b8d2c8ee96265fc192cb9c105121cc5",
+      "message": "Remove no longer used Qt5 modules",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "opeluser",
+      "date": "2017-06-07T12:25:46Z",
+      "sha": "b8d6b194e0ec91928ff954195726c4cf067c3a5b",
+      "message": "fix of ebus sdk; addition of armadillo",
+      "files_changed": 1,
+      "additions": 10,
+      "deletions": 3,
+      "commit_type": "config"
+    },
+    {
+      "author": "Johannes Graeter",
+      "date": "2017-05-30T09:31:12Z",
+      "sha": "ab390cd66a2a3821eae50a11877636ecacdf0556",
+      "message": "add ubuntu system paths to FindMRrtSuiteSparse, similar to FindSuiteSparse in ceres",
+      "files_changed": 1,
+      "additions": 12,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "sons",
+      "date": "2017-02-20T14:20:13Z",
+      "sha": "6a93894cf5722d170e77652165de4e49a4fa67f3",
+      "message": "fix scripts for new ebus sdk",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "Julius Kuemmerle",
+      "date": "2016-11-08T06:56:40Z",
+      "sha": "96ecfd4572e03efdcfccdda5211be654e57acfca",
+      "message": "Added missing Qt5XmlPatterns module for xenial in mrt_qt*",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "Maximilian",
+      "date": "2017-05-10T09:33:48Z",
+      "sha": "03e10f954a22a476e3ab7bcd92e0e075bbb98296",
+      "message": "added g2o > FindG2O.cmake",
+      "files_changed": 1,
+      "additions": 113,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Andre-Marcel Hellmund",
+      "date": "2016-12-12T14:41:33Z",
+      "sha": "b0f971664bf9f0eb198ceb43d232c3b09418787b",
+      "message": "added xerces-c as dependency for ubuntu",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "sascha.wirges@kit.edu",
+      "date": "2016-11-09T13:50:00Z",
+      "sha": "d95436754243b6cd9b8485ac5d9bdb1c7cb94a30",
+      "message": "add compatibility for cmake < 3.1",
+      "files_changed": 1,
+      "additions": 15,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Andi Hellmund",
+      "date": "2016-11-15T11:39:53Z",
+      "sha": "da56e29bfe0a7bb59b8d5371ded3671b257a21e4",
+      "message": "Added libproj as new dependency",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "ChristophBurger89",
+      "date": "2016-09-23T07:40:26Z",
+      "sha": "29a98a958cd586972e257bc8c5eb7f68e7f37534",
+      "message": "fixed Ceres autoDep error",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "JQuehl",
+      "date": "2016-09-12T13:41:38Z",
+      "sha": "5d373f85d25c0d44901042339bcd75f40e0c4b64",
+      "message": "enable fallback to system opencv/pcl in case mrt_pcl/opencv was not found",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Claudio Bandera",
+      "date": "2015-08-04T10:50:32Z",
+      "sha": "0cd8d74d918e1bd80632eb10087ae0fa0147d179",
+      "message": "Added GSL",
+      "files_changed": 2,
+      "additions": 177,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "Tobias Strauß",
+      "date": "2015-08-03T17:23:37Z",
+      "sha": "34f60500263a094cb8325910b29bcc2d21037877",
+      "message": "added qwt",
+      "files_changed": 2,
+      "additions": 127,
+      "deletions": 0,
+      "commit_type": "config"
+    }
+  ]
+}

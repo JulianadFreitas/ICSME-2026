@@ -1,0 +1,241 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-26T03:01:12Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros2",
+    "repo": "rosidl_runtime_py"
+  },
+  "data": [
+    {
+      "author": "VmirGerts",
+      "date": "2026-01-15T10:31:45Z",
+      "sha": "ed094a419d2b70554d0478c803c9521e473a8169",
+      "message": "Add py.typed to the package (#37)\n\nSigned-off-by: Vladimir Gerts <vladimir_gerts@outlook.de>",
+      "files_changed": 2,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "clalancette",
+      "date": "2019-05-30T21:13:54Z",
+      "sha": "ed383a73b60d3b8fcba7c3938b06c28918cc030b",
+      "message": "Fix the setting of array variables. (ros2/rosidl_python#59)\n\n* Fix the setting of array variables.\n\nIf the type of the field is array.array, then a simple\n\n  x = array.array(mylist)\n\ndoesn't work; the typecode *must* be specified.  Special-case\narrays here so that we do:\n\n  x = array.array(typecode, list)\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 12,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "mosfet80",
+      "date": "2025-07-23T16:38:27Z",
+      "sha": "7c3df5c3ea352c3b6993a5e7f695ecdd67533bad",
+      "message": "fix setuptools deprecations (#35)\n\nSigned-off-by: mosfet80 <10235105+mosfet80@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 2,
+      "commit_type": "ci"
+    },
+    {
+      "author": "cottsay",
+      "date": "2025-04-18T21:32:33Z",
+      "sha": "cb4673d58a2054ccf6dc9b7c26bba736b8220a96",
+      "message": "0.14.1",
+      "files_changed": 3,
+      "additions": 8,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "fujitatomoya",
+      "date": "2022-03-16T17:30:05Z",
+      "sha": "730c461726165e8b58f8b25da908e0db81e188a4",
+      "message": "add yaml dump flow style. (#16)\n\nSigned-off-by: Tomoya Fujita <Tomoya.Fujita@sony.com>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "marcoag",
+      "date": "2024-03-27T12:40:13Z",
+      "sha": "0eb1eb5d458615881697909bb08be1ea9bebd154",
+      "message": "Changelog.\n\nSigned-off-by: Marco A. Gutierrez <marcogg@marcogg.com>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Yadunund",
+      "date": "2023-04-28T10:53:16Z",
+      "sha": "82af486e09d5463c2c4cc5135d2e122735d4f2be",
+      "message": "0.13.0",
+      "files_changed": 3,
+      "additions": 5,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Voldivh",
+      "date": "2023-04-03T11:58:54Z",
+      "sha": "e2b5b717305180e8263b6773e2bedc7acaa6d8e7",
+      "message": "Replace the use __slots__ for the appropiate API (#23)\n\n* Replace the use __slots__ for the appropiate API\r\n\r\nSigned-off-by: Voldivh <eloyabmfcv@gmail.com>",
+      "files_changed": 2,
+      "additions": 24,
+      "deletions": 12,
+      "commit_type": "code"
+    },
+    {
+      "author": "YXL76",
+      "date": "2023-03-14T18:28:03Z",
+      "sha": "a23f361fca010e042af5c38ce00e4f3e2516d806",
+      "message": "fix(typing): `get_interface_packages` returns a dict (#22)\n\nSigned-off-by: 兰陈昕 <43405544+YXL76@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "ci"
+    },
+    {
+      "author": "audrow",
+      "date": "2021-11-24T23:39:23Z",
+      "sha": "f1bfe509c457e4693f8c1e85a5cecdd8483bd7d2",
+      "message": "Update maintainers (#15)\n\n* Update maintainers to Shane Loretz\r\n\r\nSigned-off-by: Audrow Nash <audrow@hey.com>\r\n\r\n* Update Shane's email\r\n\r\nCo-authored-by: Shane Loretz <sloretz@openrobotics.org>\r\n\r\nSigned-off-by: Audrow Nash <audrow@hey.com>",
+      "files_changed": 2,
+      "additions": 6,
+      "deletions": 3,
+      "commit_type": "config"
+    },
+    {
+      "author": "esteve",
+      "date": "2022-09-13T17:43:39Z",
+      "sha": "0d7c227badc0fec281a55cd2bd1cf3f1b326963d",
+      "message": "Expand timestamps for std_msgs.msg.Header and builtin_interfaces.msg.Time if 'auto' and 'now' are passed as values (#19)\n\nSigned-off-by: Esteve Fernandez <esteve.fernandez@tier4.jp>",
+      "files_changed": 2,
+      "additions": 214,
+      "deletions": 33,
+      "commit_type": "code"
+    },
+    {
+      "author": "paudrow",
+      "date": "2022-03-28T22:35:53Z",
+      "sha": "9bb27db96e80ad743af56034f513f26190840e85",
+      "message": "0.9.2\n\nSigned-off-by: Audrow Nash <audrow@hey.com>",
+      "files_changed": 3,
+      "additions": 11,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jacobperron",
+      "date": "2019-03-28T17:50:24Z",
+      "sha": "700137e13a1c0b3fb2c1c9984723a2d053c74136",
+      "message": "Add rosidl_runtime_py package\n\nMigrated utility functions for working with Python ROS messages from the package `ros2topic`.\n\nConversion implementation taken from:\n\nhttps://github.com/ros2/ros2cli/blob/978fc8807cb1f70b5f9c2b085e7b6fa74d191d0e/ros2topic/ros2topic/verb/echo.py\n\nSet message implementation taken from\n\nhttps://github.com/ros2/ros2cli/blob/978fc8807cb1f70b5f9c2b085e7b6fa74d191d0e/ros2topic/ros2topic/api/__init__.py#L93-L119\n\nSigned-off-by: Jacob Perron <jacob@openrobotics.org>",
+      "files_changed": 9,
+      "additions": 413,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "dirk-thomas",
+      "date": "2019-04-04T16:32:17Z",
+      "sha": "ca965b3697c97d695613c985dce43c0cad4b335c",
+      "message": "fix echo of numpy.number values (ros2/rosidl_python#37)\n\nSigned-off-by: Dirk Thomas <dirk-thomas@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "ci"
+    },
+    {
+      "author": "evshary",
+      "date": "2019-12-05T20:50:28Z",
+      "sha": "61a67b454c1b7bbf0508482d7de9bee12000a662",
+      "message": "Limit the interface path to prevent security issues. (#7)\n\n* Limit the interface path to prevent security issues.\r\n\r\nSigned-off-by: evshary <evshary@gmail.com>\r\n\r\n* Remove namespace checking since constant, param may be added in the\r\nfuture.\r\n\r\nSigned-off-by: evshary <evshary@gmail.com>\r\n\r\n* Add interface to the error message.\r\n\r\nSigned-off-by: evshary <evshary@gmail.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "mjcarroll",
+      "date": "2019-09-26T17:11:11Z",
+      "sha": "614bad797ad84b55655463810d153c113af261bb",
+      "message": "0.8.0\n\nSigned-off-by: Michael Carroll <michael@openrobotics.org>",
+      "files_changed": 3,
+      "additions": 56,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "galou",
+      "date": "2019-11-02T05:13:24Z",
+      "sha": "694c2b49effb8fe71b82bfecd12c0b6611e00ed6",
+      "message": "Add .gitignore (#5)\n\nSigned-off-by: Gaël Écorchard <gael.ecorchard@cvut.cz>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "hidmic",
+      "date": "2019-08-22T18:12:03Z",
+      "sha": "6ebce88a040330774443dce59ac97d5f0f6910ee",
+      "message": "Fix type name queries for string types. (ros2/rosidl_python#77)\n\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "ivanpauno",
+      "date": "2019-08-06T19:32:51Z",
+      "sha": "73a40442fcc5f49f0fdf28309d0c1967c19dd0be",
+      "message": "Add utility functions to get interface from identifier\n\n* Add get_namespaced_type, get_message_namespaced_type, get_service_namespaced_type and get_action_namespaced_type functions.\n\nSigned-off-by: ivanpauno <ivanpauno@ekumenlabs.com>\n\n* Add is_message, is_service and is_action functions.\n\nSigned-off-by: ivanpauno <ivanpauno@ekumenlabs.com>\n\n* Add get_interface, get_message, get_service and get_action functions\n\nSigned-off-by: ivanpauno <ivanpauno@ekumenlabs.com>",
+      "files_changed": 2,
+      "additions": 218,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "mikaelarguedas",
+      "date": "2019-05-03T03:26:09Z",
+      "sha": "ad2d2858a4374812fb3396160cfee66145ad15c8",
+      "message": "store types as tuple of abstract types (ros2/rosidl_python#33)\n\n* store types as constant and return ordered dict\n\nSigned-off-by: Mikael Arguedas <mikael.arguedas@gmail.com>\n\nupdate tests\n\nSigned-off-by: Mikael Arguedas <mikael.arguedas@gmail.com>\n\nsimplify logic by printing member type directly\n\nSigned-off-by: Mikael Arguedas <mikael.arguedas@gmail.com>\n\nmove dict construction to rosidl_runtime_py\n\nSigned-off-by: Mikael Arguedas <mikael.arguedas@gmail.com>\n\nadd utility to import complex message and add support for nested array in set_message\n\nSigned-off-by: Mikael Arguedas <mikael.arguedas@gmail.com>\n\nupdate tests and remove coverage for dict to avoid circular dependency\n\nSigned-off-by: Mikael Arguedas <mikael.arguedas@gmail.com>\n\nmore descriptive variable name\n\nSigned-off-by: Mikael Arguedas <mikael.arguedas@gmail.com>\n\nrefactor import logic according to ros2/rosidl_python#35\n\nSigned-off-by: Mikael Arguedas <mikael.arguedas@gmail.com>\n\nmove imports to top of file\n\nSigned-off-by: Mikael Arguedas <mikael.arguedas@gmail.com>\n\nstring maximum size doesn't need quoting or str conversion\n\nSigned-off-by: Mikael Arguedas <mikael.arguedas@gmail.com>\n\nupdate docblock\n\nSigned-off-by: Mikael Arguedas <mikael.arguedas@gmail.com>\n\nslot_types_dict_from_message -> get_message_slot_types\n\nSigned-off-by: Mikael Arguedas <mikael.arguedas@gmail.com>\n\ncheck Abstrct type instead of 'list'\n\nSigned-off-by: Mikael Arguedas <mikael.arguedas@gmail.com>\n\nuse NestedType\n\nSigned-off-by: Mikael Arguedas <mikael.arguedas@gmail.com>\n\nadd conditional is namespaces is an empty list\n\nSigned-off-by: Mikael Arguedas <mikael.arguedas@gmail.com>\n\none liner\n\nSigned-off-by: Mikael Arguedas <mikael.arguedas@gmail.com>\n\nextend test suite to cover NesteTypes of NamespacedTypes\n\nSigned-off-by: Mikael Arguedas <mikael.arguedas@gmail.com>\n\nsingle message fixture to use\n\nSigned-off-by: Mikael Arguedas <mikael.arguedas@gmail.com>\n\nuse NestedType\n\nSigned-off-by: Mikael Arguedas <mikael.arguedas@gmail.com>\n\nadd coverage for static array of nested messages\n\nSigned-off-by: Mikael Arguedas <mikael.arguedas@gmail.com>\n\nrestore old API\n\nSigned-off-by: Mikael Arguedas <mikael.arguedas@gmail.com>\n\nSLOT_TYPES improvement from dirk-thomas\n\nSigned-off-by: Mikael Arguedas <mikael.arguedas@gmail.com>\n\nresolve conflicts\n\nSigned-off-by: Mikael Arguedas <mikael.arguedas@gmail.com>\n\n* add back I100 ignore\n\nSigned-off-by: Mikael Arguedas <mikael.arguedas@gmail.com>\n\n* use new rosidl_parser.definition types and new test interfaces\n\nSigned-off-by: Mikael Arguedas <mikael.arguedas@gmail.com>\n\n* restore original test, add test for SLOT_TYPES\n\nSigned-off-by: Mikael Arguedas <mikael.arguedas@gmail.com>",
+      "files_changed": 6,
+      "additions": 89,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "artivis",
+      "date": "2019-07-12T01:46:42Z",
+      "sha": "85be413a7bcff2160c77e0ad2f698bb56902dde0",
+      "message": "handle set_message_fields given some non-basic type (ros2/rosidl_python#68)\n\nFix ros2/rosidl_python#67\n\nSigned-off-by: artivis <jeremie.deray@canonical.com>",
+      "files_changed": 2,
+      "additions": 19,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "vinnamkim",
+      "date": "2019-07-09T16:28:46Z",
+      "sha": "9fb725dccfcba32b2faca45401b905869e10e53d",
+      "message": "Add no_arr and no_str parameters (ros2/rosidl_python#38)\n\n* Add no_arr and no_str params\n - For the issue : https://github.com/ros2/ros2cli/issues/136\n\nSigned-off-by: vinnamkim <vinnam.kim@gmail.com>\n\n* Fix formats on --noarr and --nostr\n\nSigned-off-by: vinnamkim <vinnam.kim@gmail.com>\n\n* Fix review\n\nSigned-off-by: vinnamkim <vinnam.kim@gmail.com>\n\n* Fix comments and remove outer parenthesis\n\nSigned-off-by: vinnamkim <vinnam.kim@gmail.com>\n\n* Distinguish between array, sequence and unbounded sequence\n\nSigned-off-by: vinnamkim <vinnam.kim@gmail.com>\n\n* Fix test failure\n\nSigned-off-by: vinnamkim <vinnam.kim@gmail.com>",
+      "files_changed": 1,
+      "additions": 88,
+      "deletions": 27,
+      "commit_type": "docs"
+    },
+    {
+      "author": "nuclearsandwich",
+      "date": "2019-04-14T12:05:04Z",
+      "sha": "45f85f2497beff0f25943f0d719c2e28184f17f9",
+      "message": "0.7.0",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "config"
+    }
+  ]
+}

@@ -1,0 +1,1661 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T19:47:25Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "eProsima",
+    "repo": "Fast-DDS"
+  },
+  "data": [
+    {
+      "author": "emiliocuestaf",
+      "date": "2025-07-18T10:53:41Z",
+      "sha": "a1a0676ca9173cc7028f021e9f5de39872c01353",
+      "message": "Branch out 3.4.x (#5940)\n\n* Add 3.3.x to pr template backport\n\nSigned-off-by: Emilio Cuesta <emiliocuesta@eprosima.com>\n\n* Add 3.3.x nightly tests\n\nSigned-off-by: Emilio Cuesta <emiliocuesta@eprosima.com>\n\n* Mirror master with 3.4.x\n\nSigned-off-by: Emilio Cuesta <emiliocuesta@eprosima.com>\n\n* Extended EOL of 2.6.x in order to match ROS 2 Humble EOL (May 2027)\n\nSigned-off-by: Emilio Cuesta <emiliocuesta@eprosima.com>\n\n* Updated jobs names and changed ill-named file\n\nSigned-off-by: Emilio Cuesta <emiliocuesta@eprosima.com>\n\n---------\n\nSigned-off-by: Emilio Cuesta <emiliocuesta@eprosima.com>",
+      "files_changed": 7,
+      "additions": 94,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "rsanchez15",
+      "date": "2020-07-07T14:04:36Z",
+      "sha": "b820c8c950d69694af96dde01dd320c81f8f9c2a",
+      "message": "Fixed documentation link in README.md (#1288)\n\nSigned-off-by: RaulSanchez <raul@eprosima.com>\r\n\r\nCo-authored-by: RaulSanchez <raul@eprosima.com>",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 6,
+      "commit_type": "docs"
+    },
+    {
+      "author": "cferreiragonz",
+      "date": "2023-10-02T05:56:16Z",
+      "sha": "b84825a5b2ce30f3b5042bb615e27804cffb4dfc",
+      "message": "Updatable disable_positive_acks period (#3879)\n\n* Refs #19576: Test Update positive_acks period on RTPS Layer\r\n\r\nSigned-off-by: cferreiragonz <carlosferreira@eprosima.com>\r\n\r\n* Refs #19567: Fix Update positive_acks period on RTPS Layer\r\n\r\nSigned-off-by: cferreiragonz <carlosferreira@eprosima.com>\r\n\r\n* Refs #19576: Test Update positive_acks period on DDS Layer\r\n\r\nSigned-off-by: cferreiragonz <carlosferreira@eprosima.com>\r\n\r\n* Refs #19576: Fix ack_timer and Updatability of positive_acks on DDS Layer\r\n\r\nSigned-off-by: cferreiragonz <carlosferreira@eprosima.com>\r\n\r\n* Refs #19576: Uncrustify fix\r\n\r\nSigned-off-by: cferreiragonz <carlosferreira@eprosima.com>\r\n\r\n* Refs #19576: Fix linux ci\r\n\r\nSigned-off-by: cferreiragonz <carlosferreira@eprosima.com>\r\n\r\n* Ref #19576: DataReaderImpl update and updateAttributes call\r\n\r\nSigned-off-by: cferreiragonz <carlosferreira@eprosima.com>\r\n\r\n* Refs #19576: Fix mac-ci\r\n\r\nSigned-off-by: cferreiragonz <carlosferreira@eprosima.com>\r\n\r\n* Refs #19576: move if clause\r\n\r\nSigned-off-by: cferreiragonz <carlosferreira@eprosima.com>\r\n\r\n---------\r\n\r\nSigned-off-by: cferreiragonz <carlosferreira@eprosima.com>",
+      "files_changed": 11,
+      "additions": 356,
+      "deletions": 14,
+      "commit_type": "code"
+    },
+    {
+      "author": "raulojeda22",
+      "date": "2026-01-21T08:38:40Z",
+      "sha": "8b28dabf3768ed869edeec591a0efcb2b1a897f8",
+      "message": "Fix build in GCC 15 (#6263)\n\n* Include cstdint needed in g++ 15.2.0\n\nSigned-off-by: Raül <raulojeda@eprosima.com>\n\n* Add Security and Statistics features in the alternative build workflow\n\nSigned-off-by: Raül <raulojeda@eprosima.com>\n\n* Suprpess false positive warning in GCC 15 at sqlite3.c\n\nSigned-off-by: Raül <raulojeda@eprosima.com>\n\n* Add missing cmake-args and includes in alphabetical order\n\nSigned-off-by: Raül <raulojeda@eprosima.com>\n\n---------\n\nSigned-off-by: Raül <raulojeda@eprosima.com>",
+      "files_changed": 3,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "ci"
+    },
+    {
+      "author": "MiguelCompany",
+      "date": "2018-02-21T14:55:55Z",
+      "sha": "834b98e44bf1e452489413eb75193e1e2a3578ae",
+      "message": "Refs #2535.\n- Fixed hasChanged value when setting whole list of partition names\n- Added XML loading functions to PubSubReader and PubSubWriter\n- Regression test added",
+      "files_changed": 4,
+      "additions": 104,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "mergify[bot]",
+      "date": "2021-08-13T09:30:20Z",
+      "sha": "741b6bd79c5cae8a86f5d0e1ae36cdc049b2a924",
+      "message": "Deadline error when no Reliable DataReaders in VOLATILE DataWriters (#2118)\n\n* Refs #12321: Change handle reference\r\n\r\nSigned-off-by: jparisu <javierparis@eprosima.com>\r\n\r\n* Refs #12321: Add regression tests\r\n\r\nSigned-off-by: Eduardo Ponz Segrelles <eduardoponz@eprosima.com>\r\n\r\n* Refs #12321: Make test more robust\r\n\r\nSigned-off-by: Eduardo Ponz Segrelles <eduardoponz@eprosima.com>\r\n\r\n* Refs 12321: Apply suggestions\r\n\r\nSigned-off-by: Eduardo Ponz Segrelles <eduardoponz@eprosima.com>\r\n\r\nCo-authored-by: Eduardo Ponz Segrelles <eduardoponz@eprosima.com>\r\n(cherry picked from commit e357fe85faac5f40fd15a9ae56db00ff828e96be)\r\n\r\nCo-authored-by: jparisu <69341543+jparisu@users.noreply.github.com>",
+      "files_changed": 2,
+      "additions": 56,
+      "deletions": 1,
+      "commit_type": "ci"
+    },
+    {
+      "author": "richiware",
+      "date": "2015-07-20T14:03:07Z",
+      "sha": "5b66bf7fdd8620dcdc094814ad44c16fa51a166d",
+      "message": "CMake support",
+      "files_changed": 136,
+      "additions": 4516,
+      "deletions": 253,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Danipiza",
+      "date": "2026-01-12T11:08:09Z",
+      "sha": "e40854b33704e9fad2406bb6c76b3ebe2ce0f4bd",
+      "message": "Upgrade Linters CI runner image to `ubuntu-24.04` (#6248)\n\n* [#23611] Upgraded runner image to 'ubuntu-24.04'\n\nSigned-off-by: danipiza <dpizarrogallego@gmail.com>\n\n* [#23611] Allow manual triggering of uncrustify workflow\n\nSigned-off-by: danipiza <dpizarrogallego@gmail.com>\n\n---------\n\nSigned-off-by: danipiza <dpizarrogallego@gmail.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "ci"
+    },
+    {
+      "author": "juanlofer-eprosima",
+      "date": "2021-10-08T10:45:18Z",
+      "sha": "7e617577da511d89ccdbb42293c795254d07b964",
+      "message": "Fix buffers exhaution when compiled with statistics (#2243)\n\n* Print traces for investigating InitMonitorTests failure in CI\r\n\r\nSigned-off-by: Juan López Fernández <juanlopez@eprosima.com>\r\n\r\n* Modified fastrtps.repos to use this branch\r\n\r\nSigned-off-by: Juan López Fernández <juanlopez@eprosima.com>\r\n\r\n* Print more traces for investigating InitMonitorTests failure in CI\r\n\r\nSigned-off-by: Juan López Fernández <juanlopez@eprosima.com>\r\n\r\n* Refs #12629: Reverting investigation changes\r\n\r\nSigned-off-by: Juan López Fernández <juanlopez@eprosima.com>\r\n\r\n* Refs #12629: Fixed buffers exhaution when statistics on\r\n\r\nSigned-off-by: Juan López Fernández <juanlopez@eprosima.com>\r\n\r\n* Refs #12629: Create internal buffer for async flow controller\r\n\r\nSigned-off-by: Juan López Fernández <juanlopez@eprosima.com>\r\n\r\n* Refs #12629: Fixed tests\r\n\r\nSigned-off-by: Juan López Fernández <juanlopez@eprosima.com>",
+      "files_changed": 2,
+      "additions": 3,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "wep21",
+      "date": "2025-11-19T11:25:27Z",
+      "sha": "3aa20266649cf9fcdfada297d0f5eea017c2fa51",
+      "message": "Replace logWarning with EPROSIMA_LOG_WARNING in RTCPHeader.h (#6175)\n\n* chore: replace logWarning with EPROSIMA_LOG_WARNING in RTCPHeader.h\n\nSigned-off-by: Daisuke Nishimatsu <42202095+wep21@users.noreply.github.com>\n\n* Disable old log macros in fastdds build config\n\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>\n\n---------\n\nSigned-off-by: Daisuke Nishimatsu <42202095+wep21@users.noreply.github.com>\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>\nCo-authored-by: Miguel Company <miguelcompany@eprosima.com>",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "ci"
+    },
+    {
+      "author": "zesk1999",
+      "date": "2025-10-10T11:02:36Z",
+      "sha": "3230d1d7ffa0b70e0d3e4200887c7ec3d8edcafc",
+      "message": "Handle maximum deadline misses case (#6016)\n\n* Refs #23289. Handle maximum deadline misses case. Data writer implementation.\n\nSigned-off-by: zesk1999 <zesk1999@gmail.com>\n\n* Refs #23289. Handle maximum deadline misses case. Data reader implementation.\n\nSigned-off-by: zesk1999 <zesk1999@gmail.com>\n\n* Refs #23289. Handle maximum deadline misses case. Tests.\n\nSigned-off-by: zesk1999 <zesk1999@gmail.com>\n\n---------\n\nSigned-off-by: zesk1999 <zesk1999@gmail.com>",
+      "files_changed": 9,
+      "additions": 628,
+      "deletions": 113,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jepemi",
+      "date": "2023-12-13T06:49:41Z",
+      "sha": "dd4c434ccd3a029e1a4aa207443e79b05db5eb61",
+      "message": "TCP deadlock on channel reuse (#4099)\n\n* Refs #19939: Channel disabling relocated and OnDataReceived() callback protected\r\n\r\nSigned-off-by: Jesus Perez <jesusperez@eprosima.com>\r\n\r\n* Refs #19939: Uncrustify\r\n\r\nSigned-off-by: Jesus Perez <jesusperez@eprosima.com>\r\n\r\n* Refs #19939: Apply suggestions\r\n\r\nSigned-off-by: Jesus Perez <jesusperez@eprosima.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Jesus Perez <jesusperez@eprosima.com>",
+      "files_changed": 4,
+      "additions": 52,
+      "deletions": 11,
+      "commit_type": "code"
+    },
+    {
+      "author": "Carlosespicur",
+      "date": "2024-06-25T05:35:32Z",
+      "sha": "f835c2e62a438c44b84e75111aa66cbfc3ebe19a",
+      "message": "Fix compilation in Ubuntu 22.04 platforms (#4987)\n\nSigned-off-by: Carlosespicur <carlosespicur@proton.me>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Barry-Xu-2018",
+      "date": "2023-03-30T05:34:03Z",
+      "sha": "8a5a9160482b1543495c1ba49f3100fcceda12d9",
+      "message": "Fix repeated matched event notification (#3396)\n\n* Fix repeated matched event notification\r\n\r\nSigned-off-by: Barry Xu <barry.xu@sony.com>\r\n\r\n* Fix coding style\r\n\r\nSigned-off-by: Barry Xu <barry.xu@sony.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Barry Xu <barry.xu@sony.com>",
+      "files_changed": 2,
+      "additions": 30,
+      "deletions": 20,
+      "commit_type": "code"
+    },
+    {
+      "author": "Mario-DL",
+      "date": "2022-10-20T13:46:33Z",
+      "sha": "3f420647956dc2788cc3824303083fd4eb10d049",
+      "message": "Fix null-dereference on parseXMLEnumDynamicType (#3022)\n\n* Refs #15344. Added regression test\r\n\r\nSigned-off-by: Mario Dominguez <mariodominguez@eprosima.com>\r\n\r\n* Refs #15344. Error Fix\r\n\r\nSigned-off-by: Mario Dominguez <mariodominguez@eprosima.com>\r\n\r\n* Update src/cpp/rtps/xmlparser/XMLDynamicParser.cpp\r\n\r\nCo-authored-by: Miguel Company <miguelcompany@eprosima.com>\r\n\r\nSigned-off-by: Mario Dominguez <mariodominguez@eprosima.com>\r\nCo-authored-by: Miguel Company <miguelcompany@eprosima.com>",
+      "files_changed": 3,
+      "additions": 9,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "EugenioCollado",
+      "date": "2024-08-02T07:36:11Z",
+      "sha": "ebb0f0b26e3d934166e6eb7fd954fd354734249d",
+      "message": "Update fastcdr thirdparty (#5123)\n\nSigned-off-by: Eugenio Collado <eugeniocollado@eprosima.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Javier Gil Avilés",
+      "date": "2025-04-21T13:14:52Z",
+      "sha": "3a7b0e9127b3610112c04595eaeef2db6257a688",
+      "message": "Fix oss-fuzz `XMLParserTest` over `wstring_builder` being `nullptr` (#5761)\n\n* Refs #23030: Add test to regressions on XMLParserTests\n\nSigned-off-by: Javier Gil Aviles <javiergil@eprosima.com>\n\n* Refs #23030: Add case nullptr for wstring_builder on XMLDynamicParser.cpp\n\nSigned-off-by: Javier Gil Aviles <javiergil@eprosima.com>\n\n---------\n\nSigned-off-by: Javier Gil Aviles <javiergil@eprosima.com>",
+      "files_changed": 3,
+      "additions": 9,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "tempate",
+      "date": "2024-01-09T06:28:54Z",
+      "sha": "5aa169cce1c0ae57f44e9a7f55d10113ab2da238",
+      "message": "Fix DNS filter in CMakeLists file (#4211)\n\nSigned-off-by: tempate <danieldiaz@eprosima.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "gavanderhoorn",
+      "date": "2025-05-28T05:56:40Z",
+      "sha": "0707c2dcd6838c9bc8587cb853565e482b42e905",
+      "message": "Update ROSin imgage links in Readme (#5830)\n\nSigned-off-by: G.A. vd. Hoorn <g.a.vanderhoorn@tudelft.nl>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "RookieCLY",
+      "date": "2025-02-07T07:49:59Z",
+      "sha": "28b11cab9be774eff1b9a78fd53bed819304678a",
+      "message": "Support compiler MSYS2-MinGW (#5600)\n\n* feature: support compiler MSYS2-MinGW #5575\r\n\r\nSigned-off-by: RookieCLY <2238379153@qq.com>\r\n\r\n* feature: support compiler MSYS2-MinGW eProsima#5575\r\n\r\nSigned-off-by: RookieCLY <2238379153@qq.com>\r\n\r\n* feature: support compiler MSYS2-MinGW and fix some format problem  eProsima#5575\r\n\r\nSigned-off-by: RookieCLY <2238379153@qq.com>\r\n\r\n---------\r\n\r\nSigned-off-by: RookieCLY <2238379153@qq.com>",
+      "files_changed": 9,
+      "additions": 240,
+      "deletions": 12,
+      "commit_type": "docs"
+    },
+    {
+      "author": "juanjo4936",
+      "date": "2025-01-30T11:23:58Z",
+      "sha": "90790cea8fb3a4da01bde6b5d3ca4d04cd59f80b",
+      "message": "Reliable volatile change dropped when all history acked  (#5606)\n\n* Refs #22658: Regression test\r\n\r\nSigned-off-by: Juanjo Garcia <juanjosegarcia@eprosima.com>\r\n\r\n* Refs #22658: Fix bug\r\n\r\nSigned-off-by: Juanjo Garcia <juanjosegarcia@eprosima.com>\r\n\r\n* Refs #22658: corrected failing CI\r\n\r\nSigned-off-by: Juanjo Garcia <juanjosegarcia@eprosima.com>\r\n\r\n* Refs #22658: Included reviewer suggestions\r\n\r\nSigned-off-by: Juanjo Garcia <juanjosegarcia@eprosima.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Juanjo Garcia <juanjosegarcia@eprosima.com>",
+      "files_changed": 3,
+      "additions": 52,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "ma30002000",
+      "date": "2023-09-28T10:00:13Z",
+      "sha": "df180560df98940fea043f776016af75f5ab9050",
+      "message": "Use foonathan memory manager for reducing allocations in SharedMemManager.hpp (#3833)\n\n* Add helpers for std::list node sizes.\r\n\r\nSigned-off-by: Matthias Schneider <ma30002000@yahoo.de>\r\n\r\n* Use foonathan memory pool for storing buffer nodes in shared mem manager in order to reduce dynamic heap allocations.\r\n\r\nSigned-off-by: Matthias Schneider <ma30002000@yahoo.de>\r\n\r\n* Uncrustify.\r\n\r\nSigned-off-by: Matthias Schneider <ma30002000@yahoo.de>\r\n\r\n* Add foonathan dependency to SharedMemTests.\r\n\r\nSigned-off-by: Matthias Schneider <ma30002000@yahoo.de>\r\n\r\n* Initialize allocator with more realistic allocation assumption.\r\n\r\n* Fix include order\r\n\r\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>\r\n\r\n* Removed unnecessary constexpr.\r\n\r\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>\r\n\r\n* Fix copyright year.\r\n\r\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>\r\n\r\n* Fix EOL.\r\n\r\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>\r\n\r\n* Fix windows build of unit test.\r\n\r\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Matthias Schneider <ma30002000@yahoo.de>\r\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>\r\nCo-authored-by: Miguel Company <MiguelCompany@eprosima.com>",
+      "files_changed": 5,
+      "additions": 89,
+      "deletions": 8,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Javgilavi",
+      "date": "2024-11-27T09:47:27Z",
+      "sha": "9d3753cd48b158c111dbb300badc3dedbd5682ad",
+      "message": "Correct examples on README (#5424)\n\n* Correct examples on README\n\nSigned-off-by: Javier Gil Aviles <javgilavi@eprosima.com>\n\n* Correct minor remain mistake in README\n\nSigned-off-by: Javier Gil Aviles <javiergil@eprosima.com>\n\n---------\n\nSigned-off-by: Javier Gil Aviles <javgilavi@eprosima.com>\nSigned-off-by: Javier Gil Aviles <javiergil@eprosima.com>\nCo-authored-by: Javier Gil Aviles <javgilavi@eprosima.com>",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 25,
+      "commit_type": "docs"
+    },
+    {
+      "author": "fujitatomoya",
+      "date": "2022-07-01T07:37:30Z",
+      "sha": "3bbf60f6cd5d995b05b49c475ca007697f5526f9",
+      "message": "Improve on_data_available documentation (#2780)\n\nhttps://github.com/eProsima/Fast-DDS/issues/2760\r\n\r\nSigned-off-by: Tomoya Fujita <Tomoya.Fujita@sony.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "YangboLong",
+      "date": "2021-06-07T12:53:25Z",
+      "sha": "61267e378c9b90f0385cf3e1cf219bb8bbc20ed5",
+      "message": "Allow fully qualified name in TypeDescriptor (#1831)\n\n* Allow fully qualified name in TypeDescriptor\r\n\r\nAccording to the DDS-XTypes spec 7.5.2.4.10, the name of TypeDescriptor\r\nshould be the fully qualified name, which is the concatenation of\r\nmodule names with the name of a type inside of those modules.\r\n\r\nThis change will allow an object of DynamicTypeBuilder to set a type\r\nname that contains colon in it.\r\n\r\nSigned-off-by: Yangbo Long <yangbo.long.mav@gmail.com>\r\n\r\n* Try to fix linters\r\n\r\nSigned-off-by: Yangbo Long <yangbo.long.mav@gmail.com>\r\n\r\n* Add some unit tests for type descriptor names\r\n\r\nSigned-off-by: Yangbo Long <yangbo.long.mav@gmail.com>\r\n\r\n* Fix linters\r\n\r\nSigned-off-by: Yangbo Long <yangbo.long.mav@gmail.com>",
+      "files_changed": 3,
+      "additions": 128,
+      "deletions": 28,
+      "commit_type": "code"
+    },
+    {
+      "author": "Santti4go",
+      "date": "2025-01-08T07:43:11Z",
+      "sha": "165d64e3f44b483b48a27efd531475c78687c840",
+      "message": "Log any errors before cancel_init() (#5530)\n\n* Log any errors before cancel_init()\r\n\r\nSigned-off-by: Santti4go <santiaupi@gmail.com>\r\n\r\n* Code style\r\n\r\nSigned-off-by: Santti4go <santiaupi@gmail.com>\r\n\r\n* Apply suggestion\r\n\r\nSigned-off-by: Santti4go <santiaupi@gmail.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Santti4go <santiaupi@gmail.com>",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "aln8",
+      "date": "2025-01-03T08:10:34Z",
+      "sha": "8d1976bf5c7ba3f979b6561469980a8a68b5eb3e",
+      "message": "Update sqlite from 3.36.0 to 3.47.2 (#5526)\n\nSigned-off-by: aln8 <aln8un@gmail.com>",
+      "files_changed": 2,
+      "additions": 44464,
+      "deletions": 18258,
+      "commit_type": "code"
+    },
+    {
+      "author": "xjzer",
+      "date": "2024-12-20T08:47:18Z",
+      "sha": "059457aad375a3d9422acd1336f2e3e4f55a11c0",
+      "message": "Fix double-locking issue in `DataSharingListener` (#5468)\n\nSigned-off-by: Xiaojing Cao <xiaojing.cao@hirain.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "kistlin",
+      "date": "2024-11-26T09:17:59Z",
+      "sha": "81f00693974dc603bd67e1afcb0ae85f273071f6",
+      "message": "Fix build with `-Werror=template-id-cdtor` (#5341)\n\nerror: template-id not allowed for constructor in C++20 [-Werror=template-id-cdtor]",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "depink5",
+      "date": "2024-07-29T05:17:52Z",
+      "sha": "bb3a05600e9c4dae66e849a890764e1cbf59ea0a",
+      "message": "Fix wait argument in configuration example (#5106)\n\nSigned-off-by: Denisa <denisa@eprosima.com>\r\nCo-authored-by: Denisa <denisa@eprosima.com>",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "JesusPoderoso",
+      "date": "2023-02-16T13:55:17Z",
+      "sha": "87b207d61bc905a8ea3ce1057434e3c7f19ab559",
+      "message": "Remove check 'Documentation builds and test pass locally' from pull request template (#3267)\n\n* Refs #16910: Remove check 'Documentation builds and test pass locally' from github PR template\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>\r\n\r\n* Refs #16910: create new yaml for CI task (githubaction)\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>\r\n\r\n* Refs #16910: Build proper test: testing in process\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>\r\n\r\n* Refs #16910: Force run CI action\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>\r\n\r\n* Refs #16910: Fix apt-install script\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>\r\n\r\n* Refs #16910: Fix apt-install script for documentation\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>\r\n\r\n* Refs #16910: Remove doc8 from installation dependencie\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>\r\n\r\n* Refs #16910: Modify branch usage for docs\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>\r\n\r\n* Refs #16910: Include apt update to avoid apt errors\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>\r\n\r\n* Refs #16910: Install vcs properly\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>\r\n\r\n* Refs #16910: Change branch management\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>\r\n\r\n* Refs #16910: Update branch management\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>\r\n\r\n* Refs #16910: Source venv before building and testing\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>\r\n\r\n* Refs #16910: Rename variable for documentation branch\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>\r\n\r\n* Refs #16910: Uncomment skip-ci condition\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>\r\n\r\n* Refs #16910: Add missing EOF\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>\r\n\r\n* Refs #16910: Lauch action\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>\r\n\r\nRefs #16910: Test new changes\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>\r\n\r\nRefs #16910: Test checkout action\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>\r\n\r\nRefs #16910: Test checkout action\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>\r\n\r\nRefs #16910: Test checkout action\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>\r\n\r\nRefs #16910: Test checkout action\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>\r\n\r\nRefs #16910: Test vcs import repos\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>\r\n\r\nRefs #16910: Remove fastrtps from repos file\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>\r\n\r\nRefs #16910: Remove fastrtps from repos file\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>\r\n\r\nRefs #16910: Remove fastrtps from repos file\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>\r\n\r\nRefs #16910: Remove fastrtps from repos file\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>\r\n\r\nRefs #16910: Remove fastrtps from repos file\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>\r\n\r\nRefs #16910: Remove fastrtps from repos file\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>\r\n\r\nRefs #16910: Remove fastrtps from repos file\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>\r\n\r\nRefs #16910: Fix repo name\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>\r\n\r\nRefs #16910: Fix repo name\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>\r\n\r\nRefs #16910: Fix repo name\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>\r\n\r\nRefs #16910: Fix repo name\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>\r\n\r\nRefs #16910: Test github action\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>\r\n\r\nRefs #16910: Test github action\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>\r\n\r\nRefs #16910: Test github action\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>\r\n\r\n* Refs #16910: Apply revision suggestions\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>\r\n\r\n---------\r\n\r\nSigned-off-by: JesusPoderoso <jesuspoderoso@eprosima.com>",
+      "files_changed": 4,
+      "additions": 113,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "fwae-mihir",
+      "date": "2024-10-25T06:11:04Z",
+      "sha": "2a1cdf6f3341f7f4cc4412ae5c84e073f3b4e394",
+      "message": "Removed dead code (#5351)\n\nSigned-off-by: Mihir Patel <mihir.patel@fortescue.com>",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 20,
+      "commit_type": "code"
+    },
+    {
+      "author": "mosfet80",
+      "date": "2024-10-04T09:08:55Z",
+      "sha": "a02c4cfecea37e1a38dbdd74f09cf0d7335c3dad",
+      "message": "Update asio version from 1.18.1 to 1.31.0 (#5188)\n\nupdated from v 1.18.1 to 1.31.0",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "LuciaEchevarria99",
+      "date": "2024-02-10T06:42:40Z",
+      "sha": "ec3cdcdff1dbd9600415314d26b2ebb24a30981f",
+      "message": "Add serialization for Log::Kind to ostream (#4292)\n\n* Add serialization for Log::Kind to ostream\r\n\r\nSigned-off-by: Lucia Echevarria <luciaechevarria@eprosima.com>\r\n\r\n* Apply Log::Kind ostream serialization in LogConsumer::print_header\r\n\r\nSigned-off-by: Lucia Echevarria <luciaechevarria@eprosima.com>\r\n\r\n* Make operator << inline\r\n\r\nSigned-off-by: Lucia Echevarria <luciaechevarria@eprosima.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Lucia Echevarria <luciaechevarria@eprosima.com>",
+      "files_changed": 2,
+      "additions": 27,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "adriancampo",
+      "date": "2022-07-04T06:37:13Z",
+      "sha": "6b13daa4c7ccc062d966203dbd9139c916442442",
+      "message": "Adding check_xml_static_discovery API (#2795)\n\n* Add check_xml_static_discovery UNSUPPORTED\r\n\r\nSigned-off-by: adriancampo <adriancampo@eprosima.com>\r\n\r\n* Add check_xml_static_discovery UNSUPPORTED\r\n\r\nSigned-off-by: adriancampo <adriancampo@eprosima.com>\r\n\r\n* Apply suggestions from code review\r\n\r\nCo-authored-by: jsantiago-eProsima <90755661+jsantiago-eProsima@users.noreply.github.com>\r\nSigned-off-by: adriancampo <adriancampo@eprosima.com>\r\n\r\n* Uncrustify\r\n\r\nSigned-off-by: adriancampo <adriancampo@eprosima.com>\r\n\r\nCo-authored-by: jsantiago-eProsima <90755661+jsantiago-eProsima@users.noreply.github.com>",
+      "files_changed": 3,
+      "additions": 29,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "paxifaer",
+      "date": "2023-11-08T07:04:50Z",
+      "sha": "7b6b3628bd17488f2682d7b33ceb2b53d89f4d5c",
+      "message": "Simplify code in CDRMessage (#3855)\n\n* for test\r\nSigned-off-by: Parsifal <51481718+paxifaer@users.noreply.github.com>\r\n\r\n* 1。Removed the macro and replaced it with a template function addPrimitive to handle the addition of primitive types.\r\n2.Each specific function (addOctet, addUInt16, etc.) now calls the addPrimitive function.\r\n\r\nSigned-off-by: Parsifal <51481718+paxifaer@users.noreply.github.com>\r\n\r\n* fix little bug.I put an extra A in a certain line\r\n\r\nSigned-off-by: Parsifal <51481718+paxifaer@users.noreply.github.com>\r\n\r\n* change the style\r\n\r\nSigned-off-by: Parsifal <51481718+paxifaer@users.noreply.github.com>\r\n\r\n* accept MiguelCompany comment\r\n\r\nSigned-off-by: Parsifal <51481718+paxifaer@users.noreply.github.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Parsifal <51481718+paxifaer@users.noreply.github.com>",
+      "files_changed": 2,
+      "additions": 65,
+      "deletions": 134,
+      "commit_type": "ci"
+    },
+    {
+      "author": "EduPonz",
+      "date": "2019-06-18T13:06:37Z",
+      "sha": "cccb13f4365610970906dd89d35325b0bc96efd4",
+      "message": "Log error when default profiles xml loads with error + unittest [5596] (#556)\n\n* Log error when default profiles xml loads with error + unittest\r\n\r\n* More verbose error\r\n\r\n* log opening error also when the file is DEFAULT_FASTRTPS_PROFILES\r\n\r\n* combine xml loading and error checking",
+      "files_changed": 3,
+      "additions": 11,
+      "deletions": 3,
+      "commit_type": "test"
+    },
+    {
+      "author": "elianalf",
+      "date": "2023-12-05T13:36:11Z",
+      "sha": "5184f315ad01eb8fcae4caf939ee67bff72aca94",
+      "message": "Add interface whitelist by name  (#3973)\n\n* Refs #19780: Add the possibility to whitelist interfaces defining the name (not only the ip) in cpp files\r\n\r\nSigned-off-by: elianalf <62831776+elianalf@users.noreply.github.com>\r\n\r\n* Refs #19780: Modified the xml parser to add the same feature (whitelisting by interface names) also with xml files\r\n\r\nSigned-off-by: elianalf <62831776+elianalf@users.noreply.github.com>\r\n\r\n* Refs #19780: Please linter\r\n\r\nSigned-off-by: elianalf <62831776+elianalf@users.noreply.github.com>\r\n\r\n* Refs 19780: Added two tests, one is to check the communication once the whitelist is set for both pub and sub by interface name and the other is to test with asyncronous settings\r\n\r\nSigned-off-by: elianalf <62831776+elianalf@users.noreply.github.com>\r\n\r\n* Refs #19780: Added a test to make the connection fail when pub and sub are defined with different whitelist (filled by interface name) and added a test to establish the connection with whitelist filled by names through TCPv4 protocol\r\n\r\nSigned-off-by: elianalf <62831776+elianalf@users.noreply.github.com>\r\n\r\n* Refs #19780: Add test to check whitelist parsing by name\r\n\r\nSigned-off-by: elianalf <62831776+elianalf@users.noreply.github.com>\r\n\r\n* Refs #19780: Please linter\r\n\r\nSigned-off-by: elianalf <62831776+elianalf@users.noreply.github.com>\r\n\r\n* Refs #19780: Apply suggestions\r\n\r\nSigned-off-by: elianalf <62831776+elianalf@users.noreply.github.com>\r\n\r\n* Refs #19780: Please linter\r\n\r\nSigned-off-by: elianalf <62831776+elianalf@users.noreply.github.com>\r\n\r\n* Refs #19780: Add 'interface_name'\r\n\r\nSigned-off-by: elianalf <62831776+elianalf@users.noreply.github.com>\r\n\r\n* Refs #19780: Fix 'interface_name' definition in xsd file\r\n\r\nSigned-off-by: elianalf <62831776+elianalf@users.noreply.github.com>\r\n\r\n* Refs #19780: Apply suggestions\r\n\r\nSigned-off-by: elianalf <62831776+elianalf@users.noreply.github.com>\r\n\r\n* Refs #19780: Uncrustify\r\n\r\nSigned-off-by: elianalf <62831776+elianalf@users.noreply.github.com>\r\n\r\n* Refs #19780: Aplly suggestions\r\n\r\nSigned-off-by: elianalf <62831776+elianalf@users.noreply.github.com>\r\n\r\n* Refs 19780: Apply suggestions\r\n\r\nSigned-off-by: elianalf <62831776+elianalf@users.noreply.github.com>\r\n\r\n* Refs #19780: Update versions file and apply suggestions\r\n\r\nSigned-off-by: elianalf <62831776+elianalf@users.noreply.github.com>\r\n\r\n* Refs #19780: Update comment in test\r\n\r\nSigned-off-by: elianalf <62831776+elianalf@users.noreply.github.com>\r\n\r\n* Refs #19780: Update tests to test all different cases\r\n\r\nSigned-off-by: elianalf <62831776+elianalf@users.noreply.github.com>\r\n\r\n* Refs #19780: Apply suggestion about a test\r\n\r\nSigned-off-by: elianalf <62831776+elianalf@users.noreply.github.com>\r\n\r\n* Refs #19780: Fix failed tests\r\n\r\nSigned-off-by: elianalf <62831776+elianalf@users.noreply.github.com>\r\n\r\n* Refs #19780: Apply suggestion\r\n\r\nSigned-off-by: elianalf <62831776+elianalf@users.noreply.github.com>\r\n\r\n* Refs #19780: Rename a local variable\r\n\r\nSigned-off-by: elianalf <62831776+elianalf@users.noreply.github.com>\r\n\r\n---------\r\n\r\nSigned-off-by: elianalf <62831776+elianalf@users.noreply.github.com>",
+      "files_changed": 13,
+      "additions": 360,
+      "deletions": 91,
+      "commit_type": "ci"
+    },
+    {
+      "author": "MambaWong",
+      "date": "2024-07-10T06:13:15Z",
+      "sha": "f5495d44feb05757dd91d28482cc3d957ec17194",
+      "message": "Fix typo in CMakeLists.txt (#5039)\n\nSigned-off-by: jason_w <wongzheng@126.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "JLBuenoLopez",
+      "date": "2020-09-18T14:05:53Z",
+      "sha": "4313b9168a7b635c60ff9345aa785c1ff2394179",
+      "message": "Update CMakeLists.txt not setting C++11 compiler flag (#1349)\n\n* Refs: #9126 Update CMakeLists.txt not setting C++11 compiler flag. Update Examples README.txt\r\n\r\nSigned-off-by: JLBuenoLopez-eProsima <joseluisbueno@eprosima.com>\r\n\r\n* Refs: #9126: Update CMakeList.txt CustomListenerExample\r\n\r\nSigned-off-by: JLBuenoLopez-eProsima <joseluisbueno@eprosima.com>\r\n\r\n* Apply suggestions from code review\r\n\r\nCo-authored-by: laura <52071480+laura-eprosima@users.noreply.github.com>\r\n\r\nCo-authored-by: laura <52071480+laura-eprosima@users.noreply.github.com>",
+      "files_changed": 101,
+      "additions": 386,
+      "deletions": 425,
+      "commit_type": "ci"
+    },
+    {
+      "author": "manuelValch",
+      "date": "2024-05-08T08:44:00Z",
+      "sha": "af75423618ccc3875a033fdf76aef7e8e7639176",
+      "message": "Address compilation issue for GLIBC version (#4753)\n\nIf this commit is applied then distribution with GLIBC version\r\n< 2.30 will be able to compiled Fast-DDS.\r\n\r\ndefined gettid as a syscall to SYS_gettid.\r\n\r\nSigned-off-by: Manuel Valch <manuelValch@proton.me>",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "ahcorde",
+      "date": "2024-04-18T06:35:34Z",
+      "sha": "82585079864bee11718eecf8d745d5b56cb4da67",
+      "message": "Removed warning (#4693)\n\n* Removed warning\r\n\r\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>\r\n\r\n* Added suggestions\r\n\r\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "Desglaneurs",
+      "date": "2024-03-12T08:34:01Z",
+      "sha": "355706386f4af9ce74125eeec3c449b06113112b",
+      "message": "Merge pull request from GHSA-9m2j-qw67-ph4w\n\n* Refs #20549: Add BB test\n\nSigned-off-by: Mario Dominguez <mariodominguez@eprosima.com>\n\n* Fix:Fixed integer overflow causing heap overflow\n\nWhen a sub node receives a manipulated DATA sub-message, an Integer Overflow occurs in uint32_t payload_size. This causes a heap buffer overflow error. A comparison statement was inserted before the line that calculates the variable, which fixes the error.\n\nSigned-off-by: Desglaneurs <cveissacgleaning@gmail.com>\n\n* Refs #20549: Fix review\n\nSigned-off-by: Mario Dominguez <mariodominguez@eprosima.com>\n\n* Refs #201549: Reset the change data fields before exiting\n\nSigned-off-by: Mario Dominguez <mariodominguez@eprosima.com>\n\n---------\n\nSigned-off-by: Mario Dominguez <mariodominguez@eprosima.com>\nSigned-off-by: Desglaneurs <cveissacgleaning@gmail.com>\nCo-authored-by: Mario Dominguez <mariodominguez@eprosima.com>",
+      "files_changed": 17,
+      "additions": 1650,
+      "deletions": 65,
+      "commit_type": "docs"
+    },
+    {
+      "author": "irenebm",
+      "date": "2023-05-25T11:19:35Z",
+      "sha": "23be906a7ec0f0ce3af745540479147e8657d903",
+      "message": "Print output Dynamic Types inline (#3484)\n\n* Add output to string\r\n\r\nSigned-off-by: Irene Bandera <irenebandera@eprosima.com>\r\n\r\n* API compatible\r\n\r\nSigned-off-by: Irene Bandera <irenebandera@eprosima.com>\r\n\r\n* Uncrustify\r\n\r\nSigned-off-by: Irene Bandera <irenebandera@eprosima.com>\r\n\r\n* Change std::string to std::ostream&\r\n\r\nSigned-off-by: Irene Bandera <irenebandera@eprosima.com>\r\n\r\n* Uncrustify\r\n\r\nSigned-off-by: Irene Bandera <irenebandera@eprosima.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Irene Bandera <irenebandera@eprosima.com>",
+      "files_changed": 2,
+      "additions": 466,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "shumov-ag",
+      "date": "2022-06-02T05:41:34Z",
+      "sha": "afd8e1fc6369e9f9e8b5f0849e62c4c1b18ca3c2",
+      "message": "Change the order of destruction to prevent use of released objects (#2642)\n\n* Change destruction order to prevent using released objects\r\n\r\nSigned-off-by: Artem Shumov <agshumov@sberautotech.ru>\r\n\r\n* Refs #14737: Disable periodic HB event before deinit\r\n\r\nSigned-off-by: Eduardo Ponz <eduardoponz@eprosima.com>\r\n\r\nCo-authored-by: Eduardo Ponz <eduardoponz@eprosima.com>",
+      "files_changed": 1,
+      "additions": 10,
+      "deletions": 10,
+      "commit_type": "code"
+    },
+    {
+      "author": "ZgblKylin",
+      "date": "2023-11-14T10:27:38Z",
+      "sha": "2601e95429f5676c47c25200e995fb93157e7815",
+      "message": "Fix: mac address overflow on windows (#3983)\n\n* Fix: mac address overflow on windows\r\n\r\nPIP_ADAPTER_ADDRESSES->PhysicalAddressLength will get max up to 8 bytes, but we have only 6 bytes for mac address.\r\nIn some case, GetAdaptersAddresses() will report address with PhysicalAddressLength=8, e.g. \"Microsoft Teredo Tunneling Adapter\", which will cause crash at DomainParticipantFactory::create_participant()\r\n\r\nSigned-off-by: fei.chong@calmcar.com <fei.chong@calmcar.com>\r\nSigned-off-by: Fei Chong <13114351+ZgblKylin@users.noreply.github.com>\r\n\r\n* Fix build error due to windows `min` macro\r\n\r\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>\r\n\r\n---------\r\n\r\nSigned-off-by: fei.chong@calmcar.com <fei.chong@calmcar.com>\r\nSigned-off-by: Fei Chong <13114351+ZgblKylin@users.noreply.github.com>\r\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>\r\nCo-authored-by: Miguel Company <miguelcompany@eprosima.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "ci"
+    },
+    {
+      "author": "jsan-rt",
+      "date": "2021-10-06T13:51:57Z",
+      "sha": "af0ff6896841443000ee350016973adb186f9fb7",
+      "message": "delete_contained_entities implementation (#2223)\n\n* Refs #12532: Added delete_contained_entities implementation to DomainParticipant, Publisher, Subscriber and DataReader\r\n\r\nSigned-off-by: Javier Santiago <javiersantiago@eprosima.com>\r\n\r\n* Refs #12532: Added tests to validate the new delete_contained_entities implementation\r\n\r\nSigned-off-by: Javier Santiago <javiersantiago@eprosima.com>\r\n\r\n* Refs #12532: Formatting and comment cleanup\r\n\r\nSigned-off-by: Javier Santiago <javiersantiago@eprosima.com>\r\n\r\n* Refs #12532: Modified test to check for entity presence with a different function\r\n\r\nSigned-off-by: Javier Santiago <javiersantiago@eprosima.com>\r\n\r\n* Refs #12532: Added delete_contained_entities to Statistics mock classes\r\n\r\nSigned-off-by: Javier Santiago <javiersantiago@eprosima.com>\r\n\r\n* Refs #12532: Modified locking logic and unit test\r\n\r\nSigned-off-by: Javier Santiago <javiersantiago@eprosima.com>\r\n\r\n* Refs #12532: General improvements from PR suggestions\r\n\r\nSigned-off-by: Javier Santiago <javiersantiago@eprosima.com>\r\n\r\n* Refs #12532: Comment cleanup\r\n\r\nSigned-off-by: Javier Santiago <javiersantiago@eprosima.com>",
+      "files_changed": 18,
+      "additions": 897,
+      "deletions": 63,
+      "commit_type": "docs"
+    },
+    {
+      "author": "cvilas",
+      "date": "2023-07-27T05:14:32Z",
+      "sha": "a7697c7dc9dce5b6aab46c93b21b0020804560ee",
+      "message": "[19256] Remove mutex from TimedEventImpl (#3745)\n\n* Removes mutex from TimedEventImpl\r\n\r\nSigned-off-by: Vilas Chitrakaran <cvilas@gmail.com>\r\n\r\n* Please linters.\r\n\r\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Vilas Chitrakaran <cvilas@gmail.com>\r\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>\r\nCo-authored-by: Miguel Company <MiguelCompany@eprosima.com>\r\nCo-authored-by: Holger Schulz <holger.schulz@durham.ac.uk>",
+      "files_changed": 2,
+      "additions": 9,
+      "deletions": 29,
+      "commit_type": "code"
+    },
+    {
+      "author": "MiguelBarro",
+      "date": "2018-12-20T07:57:41Z",
+      "sha": "3a1bf2ab6670cf5295eae3af5641522c84716c35",
+      "message": "Remove C++14 code from the sources which prevent linux installation (#358)",
+      "files_changed": 4,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "lixiaoxin1989",
+      "date": "2023-07-10T09:51:14Z",
+      "sha": "34c52729977a3d643730bbed5804d966b1774597",
+      "message": "Fix spelling mistake: SUBSTRACTION to SUBTRACTION (#3666)\n\nSigned-off-by: Xiaoxin Li <lixiaoxin1989@126.com>",
+      "files_changed": 4,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "jparisu",
+      "date": "2020-09-14T05:11:58Z",
+      "sha": "bf2a7c87175f0097c69ffa9b9fabac2a9d79d3d0",
+      "message": "Autogenerate idl files in examples. Refactor executable names (#1371)\n\n* Refs #1280: Autogenerate idl files in examples. Refactor executable names to uniform with directory name\r\n\r\nSigned-off-by: jparisu <javierparis@eprosima.com>\r\n\r\n* Refs #9125: Fix windows warning in autogenerated files\r\n\r\nSigned-off-by: jparisu <javierparis@eprosima.com>",
+      "files_changed": 252,
+      "additions": 9233,
+      "deletions": 5699,
+      "commit_type": "docs"
+    },
+    {
+      "author": "dcoello-dev",
+      "date": "2023-06-21T06:43:51Z",
+      "sha": "eacbb25e1e90971e272fb28625578f99848ba429",
+      "message": "Add BitmapRange UT (#2737)\n\n* Add BitmapRange UT\r\n\r\nSigned-off-by: David Coello Pulido <davidcoello@eprosima.com>\r\n\r\n* Fix signed/unsigned comparisons\r\n\r\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>\r\n\r\n---------\r\n\r\nSigned-off-by: David Coello Pulido <davidcoello@eprosima.com>\r\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>\r\nCo-authored-by: Miguel Company <miguelcompany@eprosima.com>",
+      "files_changed": 1,
+      "additions": 138,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "jay-sridharan",
+      "date": "2023-06-21T06:40:02Z",
+      "sha": "7bcbfa316d1b1b26b583f918472b2b21a89bb96e",
+      "message": "Fix partition copy in QoS (#1947)\n\nSigned-off-by: Jay Sridharan <jsridharan@relativityspace.com>\r\nCo-authored-by: Jay Sridharan <jsridharan@relativityspace.com>",
+      "files_changed": 2,
+      "additions": 3,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "yeren0143",
+      "date": "2023-06-21T05:23:41Z",
+      "sha": "b89013ab7624c63feb17bcbf182546a09fc72da2",
+      "message": "Check endianness of TCPControlMsgHeader&TCPHeader (#2776)\n\n* valid endianness of TCPControlMsgHeader&TCPHeader\r\n\r\nSigned-off-by: jiayin.liu <835619932@qq.com>\r\n\r\n* Refs #18911: TCPv4 tests fix\r\n\r\nSigned-off-by: Mario Dominguez <mariodominguez@eprosima.com>\r\n\r\n* Refs #18911: Linter\r\n\r\nSigned-off-by: Mario Dominguez <mariodominguez@eprosima.com>\r\n\r\n---------\r\n\r\nSigned-off-by: jiayin.liu <835619932@qq.com>\r\nSigned-off-by: Mario Dominguez <mariodominguez@eprosima.com>\r\nCo-authored-by: Mario Dominguez <mariodominguez@eprosima.com>",
+      "files_changed": 6,
+      "additions": 53,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "mtheall",
+      "date": "2021-05-31T09:10:53Z",
+      "sha": "e5b306be76a20067a6fe9946efc7ec6edb251a40",
+      "message": "include asio/steady_timer.hpp (#1148)\n\nSigned-off-by: Michael Theall <mtheall@oceaneering.com>\r\n\r\nCo-authored-by: Michael Theall <mtheall@oceaneering.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "dasisttao",
+      "date": "2023-06-06T12:35:44Z",
+      "sha": "3d2fbaedb3121db1a9c4dbe54c03de7bb8be0343",
+      "message": "Correct the overhead time unit (#3516)\n\nSigned-off-by: dasisttao <dasisttao@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "janondrusek",
+      "date": "2023-05-10T05:38:02Z",
+      "sha": "4b97144d359886822399db4838bede003a178b4a",
+      "message": "Forward compatibility with boost interprocess 1.74+ (#3488)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "sloretz",
+      "date": "2018-01-04T17:44:05Z",
+      "sha": "8f245e61f8a2a19d7d21bf07963bd1e4ca249254",
+      "message": "Fix hiding of local declaration\n\nMoves creation of exception object to eliminate warning on windows",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "chachoi",
+      "date": "2023-03-28T05:20:35Z",
+      "sha": "8d2e7dc4a31a158159d64c799ee595dea305e234",
+      "message": "QNX 7.1 build (#3360)\n\nSigned-off-by: James Choi <chachoi@blackberry.com>",
+      "files_changed": 37,
+      "additions": 457,
+      "deletions": 26,
+      "commit_type": "docs"
+    },
+    {
+      "author": "MRicoIE2CS",
+      "date": "2022-07-27T09:32:47Z",
+      "sha": "2171c99079a81c9f183494f3353a8401e963e6ba",
+      "message": "Fix doxygen documentation to clearly state which API is unsupported (#2879)\n\n* Refs #14686: Add warning to indicate unsupported APIs in DomainParticipant.hpp\r\n\r\nSigned-off-by: Mikel Rico <mikelrico@eprosima.com>\r\n\r\n* Refs #14686: Add warning to indicate unsupported APIs in DomainParticipantFactory.hpp\r\n\r\nSigned-off-by: Mikel Rico <mikelrico@eprosima.com>\r\n\r\n* Refs #14686: Add warning to indicate unsupported APIs in DataWriter.hpp\r\n\r\nSigned-off-by: Mikel Rico <mikelrico@eprosima.com>\r\n\r\n* Refs #14686: Add warning to indicate unsupported APIs in Publisher.hpp\r\n\r\nSigned-off-by: Mikel Rico <mikelrico@eprosima.com>\r\n\r\n* Refs #14686: Add warning to indicate unsupported APIs in DataReader.hpp\r\n\r\nSigned-off-by: Mikel Rico <mikelrico@eprosima.com>\r\n\r\n* Refs #14686: Add warning to indicate unsupported APIs in Subscriber.hpp\r\n\r\nSigned-off-by: Mikel Rico <mikelrico@eprosima.com>\r\n\r\n* Refs #14686: Add warning to indicate unsupported APIs in Topic.hpp\r\n\r\nSigned-off-by: Mikel Rico <mikelrico@eprosima.com>\r\n\r\n* Refs #14686: In accordance with  [15158] ReadConditions Implementation #2872, some methods of DataReader.hpp are going to be implemented. This commit removes the not-supported warning for the merge.\r\n\r\nSigned-off-by: Mikel Rico <mikelrico@eprosima.com>",
+      "files_changed": 7,
+      "additions": 28,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "light-tech",
+      "date": "2023-03-27T05:22:22Z",
+      "sha": "c24bef2d7fffa0089fc29a22942814c67ff8b6cb",
+      "message": "Include the right header when building for iOS (#3002)\n\nSigned-off-by: Lightech <lightech@outlook.com>",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "squizz617",
+      "date": "2023-03-16T15:36:23Z",
+      "sha": "3aa3ee0259deaebe3d578e0ec200947bdfe7d06f",
+      "message": "Implement a validity check for firstSN (#3274)\n\n* Implement a validity check for firstSN\r\n\r\nFollowing 8.3.8.6.3 of DDS-RTPS 2.5.\r\nThis fixes issue #3236.\r\n\r\nSigned-off-by: Seulbae Kim <squizz617@gmail.com>\r\n\r\n* fix typo\r\n\r\nSigned-off-by: Seulbae Kim <squizz617@gmail.com>\r\n\r\n* add test input for issue #3236 (pr #3274)\r\n\r\nSigned-off-by: Seulbae Kim <squizz617@gmail.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Seulbae Kim <squizz617@gmail.com>",
+      "files_changed": 2,
+      "additions": 7,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "clalancette",
+      "date": "2017-08-17T15:01:04Z",
+      "sha": "a6af37d0bb2aa03ec96bcea6403366027048e9e2",
+      "message": "Quiet signed overflow warning on gcc 7.1\n\nWhen compiling Fast-RTPS with gcc 7.1 and -O2, a warning is issued:\n\nFast-RTPS/include/fastrtps/rtps/messages/../common/SequenceNumber.h:190:5: warning: assuming signed overflow does not occur when assuming that (X + c) < X is always false [-Wstrict-overflow]\n     if(seq1.high > seq2.high)\n\nI believe that this is actually a bogus warning, but it\nhas real consequences; the outcome of this warning is\nthat gcc optimizes away the check.  We can workaround\nthis problem by assigning the result of the base + 255\nto an intermediate variable, then comparing against this\nintermediate variable instead.  This gets rid of the warning.\n\nThis should fix #126\n\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Chen Lihui",
+      "date": "2023-01-06T13:31:18Z",
+      "sha": "a9e49cda9a1913a30a40952495e8072e7a9f2ecb",
+      "message": "Fix waitset notification (#3087)\n\n* fix notification lost\r\n\r\nSigned-off-by: Chen Lihui <lihui.chen@sony.com>\r\n\r\n* add a regression test\r\n\r\nSigned-off-by: Chen Lihui <lihui.chen@sony.com>\r\n\r\n* rename a variable name and update comments\r\n\r\nSigned-off-by: Chen Lihui <lihui.chen@sony.com>\r\n\r\n* fix uncrustify issue\r\n\r\nSigned-off-by: Chen Lihui <lihui.chen@sony.com>\r\n\r\n* make the regression test better\r\n\r\nSigned-off-by: Chen Lihui <lihui.chen@sony.com>\r\n\r\n* fix uncrustify\r\n\r\nSigned-off-by: Chen Lihui <lihui.chen@sony.com>\r\n\r\n* Refs #16192. Fix deadlock on WaitSetImpl.\r\n\r\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>\r\n\r\n* Refs 16192. Workaround for deadlock and notify pessimization\r\n\r\nSigned-off-by: Miguel Barro <miguelbarro@eprosima.com>\r\n\r\n* Refs 16192. Mandatory logic fix\r\n\r\nSigned-off-by: Miguel Barro <miguelbarro@eprosima.com>\r\n\r\n* Refs 16192. linter\r\n\r\nSigned-off-by: Miguel Barro <miguelbarro@eprosima.com>\r\n\r\n* Refs #16192. Catch up any notification lost\r\n\r\nSigned-off-by: Miguel Barro <miguelbarro@eprosima.com>\r\n\r\n* Refs 16192. Avoid predicate evaluation on spurious wakeups.\r\n\r\nSigned-off-by: Miguel Barro <miguelbarro@eprosima.com>\r\n\r\n* Refs 16192. Fixing gcc warnings\r\n\r\nSigned-off-by: Miguel Barro <miguelbarro@eprosima.com>\r\n\r\n* Refs 16192. Allowing wait without previous notification\r\n\r\nSigned-off-by: Miguel Barro <miguelbarro@eprosima.com>\r\n\r\nSigned-off-by: Chen Lihui <lihui.chen@sony.com>\r\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>\r\nSigned-off-by: Miguel Barro <miguelbarro@eprosima.com>\r\nCo-authored-by: Miguel Company <miguelcompany@eprosima.com>\r\nCo-authored-by: Miguel Barro <miguelbarro@eprosima.com>",
+      "files_changed": 3,
+      "additions": 112,
+      "deletions": 15,
+      "commit_type": "docs"
+    },
+    {
+      "author": "tongtongdi",
+      "date": "2022-10-11T09:01:04Z",
+      "sha": "a0b274a7a3621cef33d055608fb76d1816620c59",
+      "message": "Fix build on old compilers when FASTDDS_STATISTICS is define (#2929)\n\nSigned-off-by: wangtong <wangtong11@xiaomi.com>\r\n\r\nSigned-off-by: wangtong <wangtong11@xiaomi.com>\r\nCo-authored-by: wangtong <wangtong11@xiaomi.com>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "giusebar",
+      "date": "2022-09-26T10:28:35Z",
+      "sha": "5318ccb31d947102e344f74372f510c46390141f",
+      "message": "Add python3 dependency to package.xml (#2960)\n\nSigned-off-by: Giuseppe Barbieri  <giuse.barbieri@gmail.com>\r\nSigned-off-by: giuse.barbieri <giuse.barbieri@gmail.com>\r\n\r\nSigned-off-by: Giuseppe Barbieri  <giuse.barbieri@gmail.com>\r\nSigned-off-by: giuse.barbieri <giuse.barbieri@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "methylDragon",
+      "date": "2022-09-22T08:49:27Z",
+      "sha": "78473a0de3d878a71565ee5d6c8e1e01c34beb70",
+      "message": "Fix complex member printing for DynamicDataHelper (#2957)\n\n* DynamicDataHelper::print can print Sequences as well as Arrays\r\nSigned-off-by: Will Stott <willstott101@gmail.com>\r\n\r\n* Fix complex member printing\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Clean up prints\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Fix FastDDS windows CI error\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\nCo-authored-by: Will Stott <willstott101@gmail.com>",
+      "files_changed": 1,
+      "additions": 68,
+      "deletions": 30,
+      "commit_type": "code"
+    },
+    {
+      "author": "duchengyao",
+      "date": "2022-08-01T04:55:17Z",
+      "sha": "75c536b7d1770c0ecd726404c91303697dfba7ab",
+      "message": "Fix spelling mistake (#2896)\n\nSigned-off-by: s1nh <hbyls@live.com>",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "dameidu",
+      "date": "2022-07-14T07:17:08Z",
+      "sha": "796176aec4802f532d04f6796ae200dd37dcd4e9",
+      "message": "Fix liveliness core dump caused by unprotected code (#2828)\n\n* fix:  liveliness core dump caused by omit mutex lock\r\n\r\n* Refactor that includes the fix and speeds things up\r\n\r\nSigned-off-by: Miguel Barro <miguelbarro@eprosima.com>\r\n\r\n* Fixing Clang warnings\r\n\r\nSigned-off-by: Miguel Barro <miguelbarro@eprosima.com>\r\n\r\nCo-authored-by: jim <jim@jim-ubuntu>\r\nCo-authored-by: Miguel Barro <miguelbarro@eprosima.com>",
+      "files_changed": 2,
+      "additions": 15,
+      "deletions": 17,
+      "commit_type": "docs"
+    },
+    {
+      "author": "antonrv",
+      "date": "2022-07-04T12:12:02Z",
+      "sha": "1a2b0c4cff881311f5355121e032e1f6b60803df",
+      "message": "Reorganization of examples and dir name changes (#2675)\n\n* Refs #14540: Reorganization of examples and dir name changes\r\n\r\nSigned-off-by: Anton Rey <aanton.rv@gmail.com>\r\n\r\n* Refs #14540: Avoiding project name collisions on the examples\r\n\r\nSigned-off-by: Miguel Barro <miguelbarro@eprosima.com>\r\n\r\n* Refs #14540: Fixing DDSStaticHelloWorldExample installation\r\n\r\nSigned-off-by: Miguel Barro <miguelbarro@eprosima.com>\r\n\r\n* Refs #14540: Upgrade DDSHelloWorldExample to load QoS from environment\r\n\r\nSigned-off-by: Miguel Barro <miguelbarro@eprosima.com>\r\n\r\n* Refs #14540. Linter pass\r\n\r\nSigned-off-by: Miguel Barro <miguelbarro@eprosima.com>\r\n\r\n* Refs #14540. Hint how to use the new cli.\r\n\r\nSigned-off-by: Miguel Barro <miguelbarro@eprosima.com>\r\n\r\n* Refs #14540. Keep backward compatibility.\r\n\r\nSigned-off-by: Miguel Barro <miguelbarro@eprosima.com>\r\n\r\n* Refs #14540. Load all entitities profile (not only participant)\r\n\r\nSigned-off-by: Miguel Barro <miguelbarro@eprosima.com>\r\n\r\n* Refs @14540. Piggyback fix in DataReader profile loading from @MiguelCompany\r\n\r\nSigned-off-by: Miguel Barro <miguelbarro@eprosima.com>\r\n\r\n* Refs @14540. Extend profile example to the DataReader & DataWriter\r\n\r\nSigned-off-by: Miguel Barro <miguelbarro@eprosima.com>\r\n\r\n* Refs #14540: Updated Docker paths\r\n\r\nSigned-off-by: Javier Santiago <javiersantiago@eprosima.com>\r\n\r\n* Refs #14540. Addressing reviewer's comments\r\n\r\nSigned-off-by: Miguel Barro <miguelbarro@eprosima.com>\r\n\r\nCo-authored-by: Miguel Barro <miguelbarro@eprosima.com>\r\nCo-authored-by: Javier Santiago <javiersantiago@eprosima.com>",
+      "files_changed": 300,
+      "additions": 1673,
+      "deletions": 37227,
+      "commit_type": "docs"
+    },
+    {
+      "author": "roehling",
+      "date": "2020-12-07T14:47:21Z",
+      "sha": "bf608ee0bfded7cea31a106c9801e096a810f8f4",
+      "message": "Fix spelling errors (#1628)\n\nSigned-off-by: Timo Röhling <timo@gaussglocke.de>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "fschoenm",
+      "date": "2022-06-02T15:29:03Z",
+      "sha": "cd7b812911b48e71ea0f5aef7640c9785ed9d8a7",
+      "message": "Fix missing return in WLP::remove_local_writer() (#2661)\n\nSigned-off-by: Frank Schoenmann <fschoenm@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "sfod",
+      "date": "2020-11-27T07:14:35Z",
+      "sha": "3e38c3638f2e22fd06e767423b3f21c91408e6f3",
+      "message": "Remove unnecessary waiting in ResourceEvent loop (#1597)\n\n* Remove unnecessary waiting in ResourceEvent loop\r\n\r\nDo not wait on active timers in ResourceEvent loop if there are pending\r\ntimers.\r\n\r\nSigned-off-by: Igor Abdrakhimov <abdrahimov@arrival.com>\r\n\r\n* Refs 10028. Uncrustify.\r\n\r\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>\r\n\r\n* Refs 10028. Refactor soultion to early continue.\r\n\r\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>\r\n\r\n* Refs 10028. Added condition for early stop.\r\n\r\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>\r\n\r\n* Refs 10028. Added regression test.\r\n\r\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>\r\n\r\n* Refs 10028. Uncrustify.\r\n\r\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>\r\n\r\n* Apply code review suggestion\r\n\r\nCo-authored-by: IkerLuengo <57146230+IkerLuengo@users.noreply.github.com>\r\n\r\n* Remove excess comment\r\n\r\nSigned-off-by: Igor Abdrakhimov <abdrahimov@arrival.com>\r\n\r\nCo-authored-by: Igor Abdrakhimov <abdrahimov@arrival.com>\r\nCo-authored-by: Miguel Company <MiguelCompany@eprosima.com>\r\nCo-authored-by: IkerLuengo <57146230+IkerLuengo@users.noreply.github.com>",
+      "files_changed": 2,
+      "additions": 95,
+      "deletions": 10,
+      "commit_type": "ci"
+    },
+    {
+      "author": "maruniluk",
+      "date": "2022-05-13T05:12:43Z",
+      "sha": "e6e7eac5a642f606fdaa40a0a2a16617ae9384da",
+      "message": "Don't use android-ifaddrs with Android APIs >= 24 (#2677)\n\nGoogle removed support for functions used by android-ifaddrs library\r\nin API30. This means that FastDDS compiled for Android API level 30+\r\ndoes not work. Fortunately native ifaddrs.h is available since API 24\r\nso android-ifaddrs is not needed anymore. Therefore, we use\r\nandroid-ifaddrs only for APIs < 24.\r\n\r\nSigned-off-by: Lukáš Maruniak <marunluk@fel.cvut.cz>",
+      "files_changed": 2,
+      "additions": 8,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "pablogs9",
+      "date": "2022-03-25T10:39:07Z",
+      "sha": "e8581dbe3e58905c108017eaa14ed225bcd8f76f",
+      "message": "Add const overload of DataReader::guid() (#2590)\n\n* Add const to DataReader::guid()\r\n\r\nSigned-off-by: Pablo Garrido <pablogs9@gmail.com>\r\n\r\n* Add non-const version of guid() method\r\n\r\nSigned-off-by: Pablo Garrido <pablogs9@gmail.com>",
+      "files_changed": 2,
+      "additions": 12,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "VictorMMaroto",
+      "date": "2022-02-25T06:14:20Z",
+      "sha": "74cde32a30a5242e79eabb96e314f09e2e680153",
+      "message": "Port fastdds-discovery-server to DDS API (#2477)\n\n* refs 13782 Port fastdds-discovery-server to DDS API\r\n\r\nSigned-off-by: Victor M Maroto <victormaroto@eprosima.com>\r\nSigned-off-by: Eduardo Ponz <eduardoponz@eprosima.com>\r\n\r\n* refs 13782 Port fastdds-discovery-server to DDS API\r\n\r\nSigned-off-by: Victor M Maroto <victormaroto@eprosima.com>\r\nSigned-off-by: Eduardo Ponz <eduardoponz@eprosima.com>\r\n\r\n* refs 13782 Port fastdds-discovery-server to DDS API\r\n\r\nSigned-off-by: Victor M Maroto <victormaroto@eprosima.com>\r\nSigned-off-by: Eduardo Ponz <eduardoponz@eprosima.com>\r\n\r\n* Update tools/fds/server.cpp\r\n\r\nSigned-off-by: Victor M Maroto <victormaroto@eprosima.com>\r\n\r\nCo-authored-by: Miguel Company <miguelcompany@eprosima.com>\r\nSigned-off-by: Eduardo Ponz <eduardoponz@eprosima.com>\r\n\r\n* Update tools/fds/server.cpp\r\n\r\nCo-authored-by: Eduardo Ponz Segrelles <eduardoponz@eprosima.com>\r\nSigned-off-by: Eduardo Ponz <eduardoponz@eprosima.com>\r\n\r\n* Refs 13782: Encapsulate functionality in function within namespace\r\n\r\nSigned-off-by: Eduardo Ponz <eduardoponz@eprosima.com>\r\n\r\n* Refs 13782: Style modifications\r\n\r\nSigned-off-by: Eduardo Ponz <eduardoponz@eprosima.com>\r\n\r\n* Refs 13782: Include what you use\r\n\r\nSigned-off-by: Eduardo Ponz <eduardoponz@eprosima.com>\r\n\r\n* Refs 13782: Properly include option parser\r\n\r\nSigned-off-by: Eduardo Ponz <eduardoponz@eprosima.com>\r\n\r\n* Refs 13782: Be consistent with use of std::endl\r\n\r\nSigned-off-by: Eduardo Ponz <eduardoponz@eprosima.com>\r\n\r\n* Refs 13782. Remove header guards on cpp file.\r\n\r\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>\r\n\r\n* Refs 13782. Ensure optionparser is included after a system header.\r\n\r\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>\r\n\r\nCo-authored-by: Miguel Company <miguelcompany@eprosima.com>\r\nCo-authored-by: Eduardo Ponz Segrelles <eduardoponz@eprosima.com>",
+      "files_changed": 1,
+      "additions": 132,
+      "deletions": 120,
+      "commit_type": "code"
+    },
+    {
+      "author": "Nir-Az",
+      "date": "2022-01-19T06:01:54Z",
+      "sha": "378e34e626a45f55ff38069dca9fbcfe9065ea0b",
+      "message": "Remove UDP transport from shared memory DDS example (#2407)\n\nSigned-off-by: Nir Azkiel <nir.azkiel@intel.com>",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 12,
+      "commit_type": "code"
+    },
+    {
+      "author": "inesluno",
+      "date": "2022-02-23T07:24:33Z",
+      "sha": "8e40f7013adb55782fa4f11235072b8c40044b8b",
+      "message": "Fix Doxygen Warnings (#2494)\n\nSigned-off-by: Ines Luño <inesluno@eprosima.com>",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "IkerLuengo",
+      "date": "2019-11-20T10:41:17Z",
+      "sha": "2feecb9ccd515322fd0a67be4b80f810e68c0a7c",
+      "message": "Build option to check documentation [6877] (#862)\n\n* Refs #6724. New option CHECK_DOCUMENTATION avoids download from readthedocs.\r\n\r\n* Refs #6724. Avoid usage of dot tool.\r\n\r\n* Refs #6724. Fixing indentation on TimedEvent.h\r\n\r\n* Refs #6724. Not installing manual.\r\n\r\n* Refs #6724. Fixing AnnotationParameterValue.h\r\n\r\n* Refs #6724. Not requiring wget and unzip.\r\n\r\n* Refs #6724. Fixing TypeIdentifierTypes.h\r\n\r\n* Refs #6724. Fixing more headers.",
+      "files_changed": 7,
+      "additions": 47,
+      "deletions": 319,
+      "commit_type": "docs"
+    },
+    {
+      "author": "SamuelWHalodi",
+      "date": "2021-12-17T07:01:33Z",
+      "sha": "4253b8c044d548bd879cd1c6289b48f9ccb3041f",
+      "message": "Adds profile loading from XML string (#2245)\n\n* Adds profile loading from XML string\r\n\r\nSigned-off-by: Samuel Wilhelmsson <samuel@halodi.com>\r\n\r\n* Fixes uncrustify errors\r\n\r\nSigned-off-by: Samuel Wilhelmsson <samuel@halodi.com>\r\n\r\n* fixes uncrustify error in Domain\r\n\r\nSigned-off-by: Samuel Wilhelmsson <samuel@halodi.com>\r\n\r\n* Changes indent + some comments in Domain.h for uncrustify\r\n\r\nSigned-off-by: Samuel Wilhelmsson <samuel@halodi.com>\r\n\r\n* More uncrustify appeared and fixed\r\n\r\nSigned-off-by: Samuel Wilhelmsson <samuel@halodi.com>\r\n\r\n* Another uncrustify commit\r\n\r\nSigned-off-by: Samuel Wilhelmsson <samuel@halodi.com>\r\n\r\n* Adds unit test for loading profiles from XML string, based on test loading from file\r\n\r\nSigned-off-by: Samuel Wilhelmsson <samuel@halodi.com>\r\n\r\n* Uncrustify fix\r\n\r\nSigned-off-by: Samuel Wilhelmsson <samuel@halodi.com>",
+      "files_changed": 9,
+      "additions": 1001,
+      "deletions": 172,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Foxei",
+      "date": "2021-11-04T06:09:45Z",
+      "sha": "5fc0d6c0331d663a44bcb3954e238ef78166bc33",
+      "message": "Removing unused macro to avoid naming clashes (#2305)\n\nAs discussed in issue #1997 this macro was clashing with function from the Gtk3 UI library. As it is not needed it was proposed by MiguelCompany to remove it.\r\n\r\nSigned-off-by: Simon Schaefer <simon.schaefer@rwth-aachen.de>",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "phretor",
+      "date": "2021-10-20T11:00:38Z",
+      "sha": "b2bbea8489e47cb7bc0598a703196469bed3bdf9",
+      "message": "New fuzz harness + refactoring into fuzz/ (#2273)\n\n* - Added `fuzz_XMLProfiles harness`\r\n- Appended `uncrustify.cfg` pattern into `.gitignore`\r\n- Moved all harnesses into `fuzz/`\r\n- Refactored make files\r\n\r\nI sent a PR to google/oss-fuzz with these commits to conclude integration of refactored fuzzers. Will keep an eye on the build process and fix it if something will go wrong.\r\n\r\nhttps://github.com/google/oss-fuzz/compare/master...phretor:fast-dds/refactor?expand=1\r\nSigned-off-by: Federico Maggi <fede@maggi.cc>\r\n\r\n* Removing old fuzzer\r\n\r\nSigned-off-by: Federico Maggi <federico@maggi.cc>\r\n\r\n* Setting `MIN_SIZE` to `RTPSMESSAGE_HEADER_SIZE`\r\n\r\nSigned-off-by: Federico Maggi <federico@maggi.cc>",
+      "files_changed": 77,
+      "additions": 331,
+      "deletions": 5,
+      "commit_type": "docs"
+    },
+    {
+      "author": "pablorcum",
+      "date": "2021-03-23T14:39:29Z",
+      "sha": "9cef20210f5cf4ba349952ae73a23b8fb76018ca",
+      "message": "Fix QNX included header on IPFinder (#1843)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "aleksas",
+      "date": "2021-07-16T05:23:21Z",
+      "sha": "689071df1e80871ab825dc31a1f1814e4b5b499d",
+      "message": "Fix code on SHM clean (#2072)\n\nSigned-off-by: Aleksas Pielikis <ant.kampo@gmail.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "jamoralp",
+      "date": "2021-06-07T12:58:46Z",
+      "sha": "a438e8d48b20e651ffd69f30e3ac936ee50da4cc",
+      "message": "Add DynamicData::get_union_id() method (#1903)\n\n* Add DynamicData::get_union_id() method\r\n\r\nSigned-off-by: Jose Antonio Moral <joseantoniomoralparras@gmail.com>\r\n\r\n* Uncrustify\r\n\r\nSigned-off-by: Jose Antonio Moral <joseantoniomoralparras@gmail.com>",
+      "files_changed": 2,
+      "additions": 110,
+      "deletions": 51,
+      "commit_type": "code"
+    },
+    {
+      "author": "Dani-Cabezas",
+      "date": "2021-05-31T07:25:21Z",
+      "sha": "24bb88216a286a3923b531e63d9857dbee262a31",
+      "message": "Extend README.md quick demo with real example (#1942)\n\n* Extend README.md quick demo with real example \r\n\r\nSigned-off-by: Dani-Cabezas <DanielCabezas@eprosima.com>\r\n\r\n* Consistency on version naming\r\n\r\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>\r\n\r\nCo-authored-by: Miguel Company <miguelcompany@eprosima.com>",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "elnormous",
+      "date": "2021-05-19T10:29:02Z",
+      "sha": "46ad378e92d5c56c9a54a62cb49aa102da882f9c",
+      "message": "Add missing std:: (#1974)\n\n* Add missing std::\r\n\r\nSigned-off-by: Elviss Strazdins <elviss@elviss.lv>\r\n\r\n* Refs 11591. Uncrustify.\r\n\r\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>\r\n\r\nCo-authored-by: Miguel Company <MiguelCompany@eprosima.com>",
+      "files_changed": 1,
+      "additions": 15,
+      "deletions": 7,
+      "commit_type": "code"
+    },
+    {
+      "author": "catenacyber",
+      "date": "2021-05-18T05:06:30Z",
+      "sha": "00fb1fdf437f18bafc1af0be3d386c2ef3a93456",
+      "message": "oss-fuzz integration (#1968)\n\nSigned-off-by: Philippe Antoine <contact@catenacyber.fr>",
+      "files_changed": 3,
+      "additions": 40,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "RFRIEDM-Trimble",
+      "date": "2021-05-14T08:15:04Z",
+      "sha": "6afc1e4224508863884e4f0be905999e9050bbf1",
+      "message": "Set a default ipv6 address for multicast (#1959)\n\n* Set a good default ipv6 address\r\n\r\nSigned-off-by: Ryan Friedman <ryan_friedman@trimble.com>\r\n\r\n* Linters\r\n\r\nSigned-off-by: Miguel Company <MiguelCompany@eprosima.com>\r\n\r\nCo-authored-by: Miguel Company <miguelcompany@eprosima.com>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "JakubSosnovec",
+      "date": "2021-04-16T09:12:44Z",
+      "sha": "8b3cfaa032195ded465c25f99f3be7416c6a5a79",
+      "message": "Disable data sharing in LatencyTest by default (#1904)\n\nSigned-off-by: Jakub Sosnovec <jakub.sosnovec@nxp.com>\r\n\r\nCo-authored-by: Jakub Sosnovec <jakub.sosnovec@nxp.com>",
+      "files_changed": 2,
+      "additions": 16,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "princeward",
+      "date": "2021-04-06T18:10:26Z",
+      "sha": "4d067d07e949a2b4b9b1c8276be2787257a13bda",
+      "message": "Fix asan and undefined behavior error (#1845)\n\n* Fix asan and undefined behavior error, take 2\r\n\r\nSigned-off-by: Zijian Wang <zjwang@fb.com>\r\n\r\n* Centralise the generation of the default DataSharing domain ID\r\n\r\nThe code to generate the default DataSharing domain ID has been\r\nextracted to a common place to avoid code duplication and maintenance.\r\n\r\nSigned-off-by: Iker Luengo <ikerluengo@eprosima.com>\r\n\r\n* Resolve test linker errors\r\n\r\nSigned-off-by: Iker Luengo <ikerluengo@eprosima.com>\r\n\r\nCo-authored-by: Iker Luengo <ikerluengo@eprosima.com>",
+      "files_changed": 10,
+      "additions": 97,
+      "deletions": 35,
+      "commit_type": "docs"
+    },
+    {
+      "author": "cottsay",
+      "date": "2021-03-16T15:15:47Z",
+      "sha": "8bf58ce093cf80cea90cdd718f014b9014812a24",
+      "message": "Add an explicit build dependency on libssl-dev (#1830)\n\n* Add an explicit build dependency on libssl-dev\r\n\r\nIt appears that libasio-dev is pulling in this dependency at build time, but it is actually directly needed to build Fast-DDS with SECURITY=ON.\r\n\r\nSigned-off-by: Scott K Logan <logans@cottsay.net>\r\n\r\n* Consolidate libssl-dev dependency to a single depend\r\n\r\nSigned-off-by: Scott K Logan <logans@cottsay.net>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 4,
+      "commit_type": "config"
+    },
+    {
+      "author": "mp3guy",
+      "date": "2021-03-16T14:01:11Z",
+      "sha": "83d7c69161ab90a9881eb8568c33dad9d6699900",
+      "message": "Avoid using a custom atomic type for shared pointer data (#1826)\n\nSigned-off-by: Thomas Whelan <twhelan@fb.com>\r\n\r\nCo-authored-by: Thomas Whelan <twhelan@fb.com>",
+      "files_changed": 1,
+      "additions": 28,
+      "deletions": 20,
+      "commit_type": "code"
+    },
+    {
+      "author": "imontesino",
+      "date": "2020-07-27T11:40:25Z",
+      "sha": "fd01b326011a40c7311fa2a7e91cb7a05b5e7a8a",
+      "message": "Fixed DDS lifespan example (#1302)\n\nSigned-off-by: imontesino <monte.igna@gmail.com>\r\n\r\nCo-authored-by: imontesino <monte.igna@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "asobhy-qnx",
+      "date": "2020-09-01T13:58:19Z",
+      "sha": "4fd1656195d2242be9175e8729ba8980fe7894f9",
+      "message": "adds qnx compiler id and removes librt for qnx (#1352)\n\nSigned-off-by: asobhy <asobhy@blackberry.com>",
+      "files_changed": 2,
+      "additions": 3,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "KatKel-eProsima",
+      "date": "2020-04-15T11:04:59Z",
+      "sha": "493d7111eeaa1821dd6725d5a0620cee655d58ae",
+      "message": "Update README.md",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "advancenOO",
+      "date": "2020-11-17T06:36:54Z",
+      "sha": "52b6983e3f1cec3aff07723e59b0ad1b814dc981",
+      "message": "Calling update_interval_millisec on WLP::remove_local_writer (#1564)\n\nThe interval of WLP timer should be updated when remove_local_writer is called.\r\nBut the parameter min_automatic_ms_ and min_manual_by_participant_ms_ are in MILLI-second, we should call update_interval_millisec instead of update_interval.\r\n\r\nSigned-off-by: advancenOO <52030336+advancenOO@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "ci"
+    },
+    {
+      "author": "alsora",
+      "date": "2020-12-09T06:22:37Z",
+      "sha": "b1325d147e085872cc1b25437f96cc4bd883acf2",
+      "message": "Update participant attributes equality comparison (#1598)\n\n* Update ParticipantAttributes.h\r\n\r\nSigned-off-by: Alberto Soragna <alberto.soragna@gmail.com>\r\n\r\n* fix uncrustify issues\r\n\r\nSigned-off-by: Alberto Soragna <alberto.soragna@gmail.com>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "ThijsRay",
+      "date": "2020-11-06T15:12:51Z",
+      "sha": "03921694e68a3eb766f998c7c84f7032c7c124d9",
+      "message": "Fix mismatching tag in package.xml (#1553)\n\nSigned-off-by: Thijs Raymakers <thijs@raymakers.nl>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "pbleyer",
+      "date": "2020-10-22T18:22:03Z",
+      "sha": "6f687a48b094ad5962d73dcd44e2fae22e6c0ee2",
+      "message": "Add module and option to detect and enable linking with -latomic in environments that need it (#1503)\n\nSigned-off-by: Pablo Bleyer <pablo@bleyer.org>",
+      "files_changed": 2,
+      "additions": 56,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "zchen24",
+      "date": "2020-10-16T06:06:22Z",
+      "sha": "3d0c464ea486bf0978cf11eb8b61cd650ad4550a",
+      "message": "Minor Typo: ms2_rmw_shared_memory_data_share_sony.md (#1372)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Luis Gasco",
+      "date": "2019-04-25T05:28:41Z",
+      "sha": "d6add0c518da09e5f138395b5a88143a0927f08b",
+      "message": "Maximum Domain ID limitation [5151] (#496)\n\n* Refs #5149 Added checks to the calculated ports.\r\n\r\n* Refs #5151 Requested changes.\r\n\r\n* Refs #5151 Avoid valgrind test in PortParametersTests",
+      "files_changed": 6,
+      "additions": 161,
+      "deletions": 7,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jwillemsen",
+      "date": "2017-06-21T09:29:47Z",
+      "sha": "6972a173616ed86dda6d3a5d425e8f57798aecab",
+      "message": "Add missing include of functional for std::function",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Karsten1987",
+      "date": "2016-09-30T16:49:11Z",
+      "sha": "6919e07f7f2ec8e6cb0961703da66fdf2b090b49",
+      "message": "introduce user transport option to set TTL",
+      "files_changed": 6,
+      "additions": 20,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "lauramg15",
+      "date": "2019-07-10T05:32:38Z",
+      "sha": "b4ac04dc3fbd5a95acb4cb218049444afd905a53",
+      "message": "Test/duration t [5760] (#591)\n\n* Duration_t unit test added\r\n\r\n* #5737 - Investigate if Duration_t type is loaded correctly from XML\r\n\r\n* #5737 - Unittest added to check the duration_t functionality\r\n\r\n* EmptyDefaultFile test added\r\n\r\n* Changed to adapt it to master branch\r\n\r\n* fix warnings in windows\r\n\r\n* Fix unsigned ints",
+      "files_changed": 3,
+      "additions": 157,
+      "deletions": 0,
+      "commit_type": "test"
+    },
+    {
+      "author": "adolfomarver",
+      "date": "2019-11-14T08:52:57Z",
+      "sha": "16a887222485b631aa1b4d1eba5092c83d7f0fac",
+      "message": "Transport moved from deprecated to rtps [6734] (#818)\n\n* transport moved from deprecated to rtps\r\n\r\n* transport moved from deprecated to rtps\r\n\r\n* copy transport headers to dds/rtps & modify namespace\r\n\r\n* Guards, and namespaces aliases\r\n\r\n* Log compilation errors solved\r\n\r\n* tests build errors solved\r\n\r\n* Correct compilation warnings\r\n\r\n* deleted UDPTransportInterface.cpp from deprecated\r\n\r\n* Refs #6734. Remove unnecessary lines.\r\n\r\n* Refs #6734. Fix compilation error when INTERNAL_DEBUG=ON\r\n\r\n* Refs #6734. Really remove unnecessary lines.",
+      "files_changed": 94,
+      "additions": 3464,
+      "deletions": 2476,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jayhou",
+      "date": "2020-06-09T15:05:30Z",
+      "sha": "f4c5a77673807561894a4357c7cac1db9edaa1c9",
+      "message": "remove link libs rt for Android NDK compiling. (#1253)\n\n* remove link libs rt for Android NDK compiling.\r\n\r\n-lrt ld params will lead Android NDK cross-compiling failed.\r\n\r\nSigned-off-by: JayHou <houjie@lixiang.com>\r\n\r\n* Apply suggestions from code review\r\n\r\nCo-authored-by: Miguel Company <miguelcompany@eprosima.com>\r\nSigned-off-by: JayHou <houjie@lixiang.com>\r\n\r\nCo-authored-by: JayHou <houjie@lixiang.com>\r\nCo-authored-by: Miguel Company <miguelcompany@eprosima.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "JaimeMartin",
+      "date": "2014-02-18T14:52:05Z",
+      "sha": "6d19129693c3e5ad6ebd515229f9f7a71c9b3db4",
+      "message": "Project creation\n\n\nFormer-commit-id: 0435922d0e53f89a8ed35ed6085da40fa1b92d27",
+      "files_changed": 2,
+      "additions": 24,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "jason-fox",
+      "date": "2020-05-28T15:08:02Z",
+      "sha": "dd610b46d45683f5cd2ba3654bcee11cf7cbfa12",
+      "message": "Adding FIWARE info and badges to ReadMe (#1236)",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "rotu",
+      "date": "2020-05-27T09:22:59Z",
+      "sha": "d7517d35306520114f53ed3028e73f7d7a278b85",
+      "message": "link atomic under clang (#1232)\n\nFix #1223\r\n\r\nSigned-off-by: Dan Rose <dan@digilabs.io>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "brawner",
+      "date": "2020-05-11T06:37:22Z",
+      "sha": "796d251dc794abd0036901fa17d4a92419210085",
+      "message": "Initialize num_properties to 0 in ParameterSerializer.hpp (#1206)\n\n* Initialize num_properties to 0\r\n\r\nSigned-off-by: Stephen Brawner <brawner@gmail.com>\r\n\r\n* Fixed indentation\r\n\r\nCo-authored-by: Miguel Company <miguelcompany@eprosima.com>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "dodsonmg",
+      "date": "2020-04-15T06:08:21Z",
+      "sha": "9150c090e6246d0a0fa8d00c5ebec1a2766de7b7",
+      "message": "add freebsd support (#1143)\n\n* add freebsd support\r\n\r\nthis header is necessary when compiling on freebsd\r\n\r\nSigned-off-by: Michael Dodson <md403@cam.ac.uk>\r\n\r\n* use #if defined convention\r\n\r\nchange preprocessor directive for FreeBSD to follow convention used for Win32.\r\n\r\nSigned-off-by: Michael Dodson <md403@cam.ac.uk>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "artivis",
+      "date": "2020-04-14T12:56:31Z",
+      "sha": "8492d5a9eae9afc12e97d3c65fc072d4dd873383",
+      "message": "Add Security Logging Plugin. (#1125)\n\n* Add security logging (#1)\r\n\r\n* add security logging to file as per dds-spec\r\n* add set/get logger to security plugin base classes\r\n* logging integration to SecurityManager\r\n* add SECURITY_LOGGING macros\r\n\r\nSigned-off-by: artivis <jeremie.deray@canonical.com>\r\n\r\n* handle empty filename\r\n\r\nSigned-off-by: artivis <jeremie.deray@canonical.com>\r\n\r\n* post-master-merge fix\r\n\r\nSigned-off-by: artivis <jeremie.deray@canonical.com>\r\n\r\n* handle empty filename\r\n\r\nSigned-off-by: artivis <jeremie.deray@canonical.com>\r\n\r\n* fix typo test filename\r\n\r\nSigned-off-by: artivis <jeremie.deray@canonical.com>\r\n\r\n* fix linking error\r\n\r\n* some doc fixes\r\n\r\nSigned-off-by: artivis <jeremie.deray@canonical.com>\r\n\r\n* some doc fixes\r\n\r\nSigned-off-by: artivis <jeremie.deray@canonical.com>\r\n\r\n* support logging in SecurityPluginFactory Mock\r\n\r\nSigned-off-by: artivis <jeremie.deray@canonical.com>\r\n\r\n* include log in security logging for macro support & cleanup\r\n\r\nSigned-off-by: artivis <jeremie.deray@canonical.com>\r\n\r\n* add missing source\r\n\r\nSigned-off-by: artivis <jeremie.deray@canonical.com>\r\n\r\n* replace 'library' includes with 'system'\r\n\r\nSigned-off-by: artivis <jeremie.deray@canonical.com>\r\n\r\n* uncrustify\r\n\r\nSigned-off-by: artivis <jeremie.deray@canonical.com>\r\n\r\n* add log to file test\r\n\r\nSigned-off-by: artivis <jeremie.deray@canonical.com>\r\n\r\n* fix warnings\r\n\r\nSigned-off-by: artivis <jeremie.deray@canonical.com>\r\n\r\n* fix error msg typo\r\n\r\nSigned-off-by: artivis <jeremie.deray@canonical.com>\r\n\r\n* fix linking error\r\n\r\nSigned-off-by: artivis <jeremie.deray@canonical.com>\r\n\r\n* fix warning\r\n\r\nSigned-off-by: artivis <jeremie.deray@canonical.com>\r\n\r\n* add verbosity level to file logs\r\n\r\nSigned-off-by: artivis <jeremie.deray@canonical.com>\r\n\r\n* test file logs header\r\n\r\nSigned-off-by: artivis <jeremie.deray@canonical.com>\r\n\r\n* use logging in Permission\r\n\r\nSigned-off-by: artivis <jeremie.deray@canonical.com>\r\n\r\n* use logging in PKIDH\r\n\r\nSigned-off-by: artivis <jeremie.deray@canonical.com>\r\n\r\n* use logging in SecurityManager\r\n\r\nSigned-off-by: artivis <jeremie.deray@canonical.com>",
+      "files_changed": 27,
+      "additions": 1729,
+      "deletions": 91,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Julián Bermúdez Ortega",
+      "date": "2020-03-27T06:10:13Z",
+      "sha": "f5ec7afea0d895b012fbc32a36a37e74b36531c8",
+      "message": "Implement XML parsing for Requester and Replier entities. (#1058)",
+      "files_changed": 14,
+      "additions": 910,
+      "deletions": 191,
+      "commit_type": "config"
+    },
+    {
+      "author": "geoffviola",
+      "date": "2019-12-20T10:30:14Z",
+      "sha": "a181a67b94e88839755e83a52ec72af4c9145ac6",
+      "message": "Include What You Use BlackboxTests.hpp (#928)\n\n* support gtest 1_10\r\n\r\n* Try using old macro name for now\r\n\r\n* undo coma change\r\n\r\n* add include to other files\r\n\r\n* more includes",
+      "files_changed": 23,
+      "additions": 53,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "alireza-hosseini",
+      "date": "2019-12-16T08:25:23Z",
+      "sha": "fc8490871320034027ccff8724cda41cd31821a5",
+      "message": "feat: Add `SQLITE3_SUPPORT` option [7076] (#922)\n\n* feat: Add option to disable compilation of `sqlite3 persistence service`\r\n\r\n - To do so the `SQLITE3_SUPPORT` option shall be set to `OFF`\r\n\r\n* build: Don't build `RTPSTest_persistent` if `SQLITE_SUPPORT` is `FALSE`\r\n\r\n* test: Don't build `PERSISTENCETESTS` if `SQLITE3_SUPPORT` is `FALSE`\r\n\r\n* test: Disable Persistence blackbox tests if `SQLITE3_SUPPORT` is `FALSE`\r\n\r\n* test: Add checks to sqlite3 persistence service related functions\r\n\r\n* feat: Don't include and use `Sqlite3PersistenceService` if its disabled\r\n\r\n* build: Use `SQLITE3_SUPPORT` instead of `HAVE_SQLITE3`\r\n\r\nCo-Authored-By: Ricardo González <correoricky@gmail.com>\r\n\r\n* build(examples): Use `SQLITE3_SUPPORT` instead of `HAVE_SQLITE3`\r\n\r\nCo-Authored-By: Ricardo González <correoricky@gmail.com>\r\n\r\n* build: properly set sqlite3 sources\r\n\r\n* feat: no  discovery protocol if sqlite3 is disabled",
+      "files_changed": 13,
+      "additions": 60,
+      "deletions": 8,
+      "commit_type": "test"
+    },
+    {
+      "author": "lemunozm",
+      "date": "2019-10-31T13:41:34Z",
+      "sha": "e43c9aa788a6484117f109b27da05e6989df6182",
+      "message": "Removed bad placed inline keyword (#836)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "AlvaroMolinillo",
+      "date": "2019-06-04T13:27:41Z",
+      "sha": "87d38b66c77c0505592b274cdc40e0b7e167b190",
+      "message": "Adds tests for ReaderHistory [5503] (#547)\n\n* Refs #5486. First tests for ReaderHistory\r\n\r\nGetRepeatedSequenceNumber test will fail until the bug is fixed\r\n\r\n* Refs #5486. Added more tests for ReaderHistory\r\n\r\nGetChange test will fail until the bug is fixed\r\n\r\nAlso fixed a bug in ReaderHistory::remove_changes_with_guid function. The comparison between writerGUIDs was wrong. operator == is used instead.\r\n\r\n* Refs #5486. Fixed memory leaks\r\n\r\n* Refs #5486. Fixed Windows warnings\r\n\r\n* Refs #5486. Code Style\r\n\r\n* Refs #5486. Fixed Mac Warning\r\n\r\n* Refs #5486. Fixed Mac Warning\r\n\r\n* Refs #5486. Removed set_reader function from ReaderHistory. Added new constructor to the StatefulReader mock instead.\r\n\r\n* Refs #5486. Added default constructors\r\n\r\n* Refs #5486. Removed code needed\r\n\r\n* Refs #5486. Fix error in RTPSReader mock (security did not pass)",
+      "files_changed": 7,
+      "additions": 287,
+      "deletions": 12,
+      "commit_type": "docs"
+    },
+    {
+      "author": "raquelalvarezbanos",
+      "date": "2019-02-20T13:10:47Z",
+      "sha": "be322ada5e8a871706fa7a35b85ad1e20beded8b",
+      "message": "Refs #4720 Removing warning message (#425)",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "Raquel Alvarez",
+      "date": "2019-09-19T08:14:29Z",
+      "sha": "6be1f66345093af1fa71802d8e84a7871074f033",
+      "message": "Revert \"Protecting AuthInfo timed event. (#714)\".\n\nThis reverts commit 449ff90e0e5971a148d25bfaa1ca121c74fe09d9.\n\nReverting as it was not clear that this commit had any effect.",
+      "files_changed": 2,
+      "additions": 15,
+      "deletions": 25,
+      "commit_type": "code"
+    },
+    {
+      "author": "Miguel Barro Otero",
+      "date": "2019-08-07T10:57:16Z",
+      "sha": "d3d58bf12682f82771c2c9e2acf646b7dd417e47",
+      "message": "Removed former mechanism. Modified builtin persistence mechanism to incorporate it to discovery server.",
+      "files_changed": 17,
+      "additions": 173,
+      "deletions": 36,
+      "commit_type": "code"
+    },
+    {
+      "author": "Álvaro Molinillo",
+      "date": "2019-06-11T12:18:17Z",
+      "sha": "0eb30f7fa921b9f16b9aadd26b5706eeb11cb769",
+      "message": "Tests for CacheChangePool [5599] (#557)\n\n* Refs #5551. First tests for CacheChangePool\r\n\r\n* Ignoring files for Eclipse and Visual Studio Code\r\n\r\n* Refs #5551. Tests for reserve_Cache function\r\n\r\n* Refs #5551. Improved tests for reserve_Cache function. Deleted CacheChangePoolAttributes, it uses a tuple and the Combine method instead.\r\n\r\n* Refs #5551. Added two more tests for CacheChangePool\r\nChecks the initialized status of a reserved cache_changed\r\nChecks the size of allChanges and freeChanges vectors\r\n\r\n* Refs #5552. Blackbox run with prealloc memory mode only\r\n\r\n* Refs #5552. Fixed certificate xml files and regenerated smime files\r\nAlso fixed bug in BlackboxTestsPersistence. Byte for Prealloc Memory Mode is '3'\r\n\r\n* Refs #5551. Fixed gtest comparisons between signed and unsigned types\r\nReplaced EXPECT with ASSERT\r\n\r\n* Refs #5551. Fixed Instanciation tests for Mac",
+      "files_changed": 49,
+      "additions": 723,
+      "deletions": 622,
+      "commit_type": "docs"
+    },
+    {
+      "author": "breezZe",
+      "date": "2019-06-18T12:22:59Z",
+      "sha": "21c295e85c2a0ae20d396d60cd3d6d15f8b8d73b",
+      "message": "Use java 1.8 or greater for fastrtpsgen.jar generation [5666] (#561)\n\n* Fix issus 555 for fastrtpsgen.jar generation\r\n\r\n* Update fastrtpsgen/src/main/java/com/eprosima/fastrtps/fastrtpsgen.java\r\n\r\nCo-Authored-By: Luis Gasco <lgasco@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "cparich",
+      "date": "2019-06-18T09:43:16Z",
+      "sha": "58ee05cf77110963124a152b997b705e074db2c6",
+      "message": "fix windows build (#551)\n\nupdate source and target for fastrtpsgen to java 7\r\nfix issue with long PATH env variables during build",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 7,
+      "commit_type": "code"
+    },
+    {
+      "author": "ThadHouse",
+      "date": "2019-05-03T06:29:33Z",
+      "sha": "333462c087c326810c85896a606e2b95605c542e",
+      "message": "Fix Resource Generation on windows (#513)\n\nThe old method was holding a file open during the entire execution, causing races and the build to sometimes succeed or fail",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "guillaumeautran",
+      "date": "2018-01-31T18:11:48Z",
+      "sha": "a137f0745f851c8b1ea7b4c23c4b4d7bb4e7c2b4",
+      "message": "Incorrect gapList.base field in GAP submessage\n\nGiven a gap list of sequence numbers 8, 9, 10, 15, 16, 19, 20, 23, 27, 28\nThe gapList.base field for the gap message was not set correctly causing the first gap sequence to be skipped by teh receiver.\n\nThis change correctly set the gapList.base to be +1 from the gapStart value. in our example: gapStart==8, gapList.base==11 gapList.set[15, 16, 19, 20, 23, 27, 28]\nPreviously, the gap values would be set incorrectly as such: gapStart==8, gapList.base==8 gapList.set[9, 10, 15, 16, 19, 20, 23, 27, 28] causing the gap seqnum 8 to be missed by the receiver.\n\nAlso addressed an issue if the last change requested by the remote reader is an invalid change, the local writer would never send a GAP packet (or anything else for that matter). That was caused by the fact that invalid changes (GAP) were ignored by the Acknack processing.\n\nIssue: #182",
+      "files_changed": 3,
+      "additions": 8,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "LuisGP",
+      "date": "2018-09-13T13:11:05Z",
+      "sha": "87d72f2962def36c074ffb0fb7a444d33ca7cc85",
+      "message": "Refs #3334 Added suport to define publishers and subscriber inside participants in the xml file. (#261)",
+      "files_changed": 2,
+      "additions": 20,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "seanyen",
+      "date": "2019-03-29T10:50:17Z",
+      "sha": "c776f0f0964e697f93b51590688569567a7056f3",
+      "message": "[Windows] No need to expose linked libs when the target is a shared lib (#448)",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "nuclearsandwich",
+      "date": "2017-04-01T14:11:18Z",
+      "sha": "b21d34875160bcc4680459f88d3137583020b650",
+      "message": "Check the CMake registry for configured versions of Asio and TinyXML2.\n\nFind modules override the CMake package registry by default.  On\nWindows, we have no standard file system hierarchy to check for\ninstalled libraries and using the CMake package registry [[1]] is the\neasiest way to announce installed dependencies to dependents.\n\nThese changes will force CMake to look in the package registry by\npassing the CONFIG directive to find_package, if no package is found,\nthe existing find module logic will be used.\n\nThis change should not affect builds on systems where the existing logic\nis successful unless those systems also include entries in the CMake\npackage registry and those entries are invalid.\n\n[1]: https://cmake.org/cmake/help/v3.5/manual/cmake-packages.7.html#id20",
+      "files_changed": 2,
+      "additions": 35,
+      "deletions": 25,
+      "commit_type": "config"
+    },
+    {
+      "author": "Jaime-Burgos",
+      "date": "2019-01-29T10:55:33Z",
+      "sha": "f7989aaf39c3ca298ae2245dfb445cb37048d15c",
+      "message": "Improve XML test for dynamic types [4452] (#390)\n\n* Refs #4194 XML test for dynamic types\r\n\r\nSome of the XML test were not checking correctly that the parsed types contained the expected structure. That issue has been fixed.\r\n\r\n* Name of the XML file moved to a class variable\r\n\r\n* Refs #4452. Return const reference",
+      "files_changed": 2,
+      "additions": 576,
+      "deletions": 575,
+      "commit_type": "config"
+    },
+    {
+      "author": "julionce",
+      "date": "2018-09-13T04:38:12Z",
+      "sha": "dd39fc8e058d8d55970f6809e9a26f2923cd0a04",
+      "message": "Refs #3139. Added topic profile support. (#256)\n\n* Refs #3271. Hotfix Github #245 Parser fails on id_range if 'min' tag present but not 'max' tag (#252)\r\n\r\n* Refs #3139. Added topic profile support.",
+      "files_changed": 6,
+      "additions": 99,
+      "deletions": 31,
+      "commit_type": "code"
+    },
+    {
+      "author": "JuanCarlos-Arce",
+      "date": "2018-10-11T13:21:18Z",
+      "sha": "cf247a59c2e064b1fa86c46bb3e31646bc9d6237",
+      "message": "TCP transport (#251)\n\n* Refs #2920 - Separate the cdr buffer from the message receives to set it into the socket infos.\r\n\r\n* Refs #2920 - Update the binding method for remote locators during the TCP negotiation.\r\n\r\n* Refs #2920 - Create socketinfo.cpp with the implemented methods from the header file.\r\n\r\n* Refs #2920 Updated receivers management to store them in a map for future connections.\r\n\r\n* Refs #2920 Fix UDP refactoring issues\r\n\r\n* Refs #2928 - Add TCP types to the XML Parser\r\n- Update TCP transport to fix an issue opening output channels over an input socket.\r\n\r\n* Refs #2928 - Remove the shared pointers from the Socket Infos\r\n\r\n* Refs #2928 - Remove shared pointers from several mutex on socket info\r\n\r\n* Refs #2928 - Remove the shared pointers for TCP acceptors and update the hello world initialization for UDP.\r\n\r\n* Refs #2926\r\n\r\n* Refs #2927 Only BindConnection adapted\r\n\r\n* Refs #2927 Payload usage\r\n\r\n* Refs #2927 Payload not used in headers. Size fixed.\r\n\r\n* Refs #2927 TCP Control Messages uses Cdr, but they are not using idl's union types yet.\r\nOpenLogicalPort negociation seems to work fine, redirection maybe not.\r\n\r\n* Refs #2928 - Adapt TCPv4 Transport without the ASIO_HAS_MOVE Macro for Android Devices.\r\n- Update project configuration to build fastrtps with fastcdr in Windows\r\n\r\n* Refs #2928 - Fix Compilation issue.\r\n\r\n* Refs #2927 Using Payload directly.\r\n\r\n* Refs #2927 Changed how buffer size is allocated.\r\n\r\n* Refs #2928 - Fix compilation warnings\r\n\r\n* Refs #2927\r\n\r\n* Refs #2927 OpenLogicalPort mechanism\r\n\r\n* Refs #2928 Unify the input logical ports management.\r\n\r\n* Refs #2928 Fix issue with the Participant discovery\r\n\r\n* Refs #2927\r\n\r\n* Refs #2927\r\n\r\n* Refs #2934 HelloWorldExample to HelloWorldExampleTCP and original HelloWorldExample recovered\r\n\r\n* Refs #2928 - Create Unit tests for TCPV4 Transport\r\n\r\n* Refs #2936 GTests compile. Some transport test need to be adapted.\r\n\r\n* Refs #2934 - HelloWorldTCP\r\n\r\n* Refs #2939 and #2940. Removed shared_ptr. SenderResource now has a pointer to the socket.\r\n\r\n* Refs #2938 -Refactor all the resources creation to force writers and readers to create the resources that they need.\r\n\r\n* Refs #2938 - Commit pending changes\r\n\r\n* Refs #2939\r\n\r\n* Refs #2938 Update sockets destruction to manage them asynchronously\r\n\r\n* Refs #2938 Adapt UDP protocol to the new initialization of the Participants\r\n\r\n* Refs #2938 - Update the retry system for ports creation.\r\n\r\n* Refs #2944 Bug fixes\r\n\r\n* Refs #2944\r\n\r\n* Refs #2938 Fix several issues with the TCP communication\r\n- Fix crash with the logger when the application is killed\r\n\r\n* Refs #2944\r\n\r\n* Refs #2944 Improved performance and thread-safe for standard log consumer.\r\n\r\n* Refs #2944 More log options\r\n\r\n* Refs #2938 Fix issue if the publisher is launched before the subscriber\r\n\r\n* Refs #2938. Remove debug checking\r\n\r\n* Refs #2944 log filtering\r\n\r\n* Refs #2944 Fixed multiple subscribers.\r\n\r\n* Refs #2938. Update the initialization of SenderResources and ReceiverResources in the ParticipantImpl\r\n- Create test_TCPV4Transport\r\n\r\n* Refs #2944 Fixed several subscribers and one left before publisher ends.\r\n\r\n* Refs #2944 Several fixes.\r\n\r\n* Refs #2948. Create Test_RTCPMessageManager to test errors during the TCP communication.\r\n\r\n* Refs #2948. Fix compilation warnings\r\n\r\n* Refs #2958 WAN support. HelloworldExampleTCP with best effort.\r\n\r\n* Refs #2969 Update RTCP messages management adding several security checks.\r\n\r\n* Refs #2934\r\n\r\n* Refs #2969 Fix a race condition while a subscriber closes the connection with the publisher.\r\n- Refactor several classes with the new coding style\r\n\r\n* Refs #2934 Fixed configuration for retrieve missing messages.\r\n\r\n* Refs #2969 - Create a timedEvent to clean the deleted sockets of the TCP Transport.\r\n- Update copyright year in several files\r\n\r\n* Refs #2969 Fix issue with the release of a timer in the tcp transport\r\n\r\n* Refs #2974 Fixed dirty disconnections.\r\n\r\n* Refs #2934 Helloworld with samples doesn't wait for enter.\r\n\r\n* Refs #2969 - Fix error when the publisher stops without unmatching.\r\n\r\n* Refs #2974 - Update the documentation and remove unnecessary variables.\r\n\r\n* Refs #2974 Update the documentation about TCP transport\r\n\r\n* Refs #2947 Remove the DefaultOutputLocator List because we don't need it in the new design\r\n\r\n* Refs #2974. Refactor the output locators management changing them for remote locators.\r\n\r\n* Refs #2974 Rename SocketInfo class for ChannelResource\r\n\r\n* Refs #2974. Fix an issue with the optimization of the SenderResource<->ChannelResource relationship.\r\n\r\n* Refs #2974 Update and fix several errors in the unit tests\r\n\r\n* Refs #2973 XML parser adapted to parse xml node.\r\n\r\n* Refs #2974. - Fix an issue opening an output logical port in the publisher side.\r\n\r\n* Refs #3024. Update the first implementation of TCPv6 Transport.\r\n\r\n* Refs #2974. Add extra checking before adding a logical port to open.\r\n\r\n* Refs #2974. Fix an issue with the discovering process. ( Pending Logical Ports )\r\n\r\n* Refs #2936 Fixed test and example compilation. Added MockReceiverResource.\r\n\r\n* Refs #2936 Transport tests adapted. Two tests commented.\r\n\r\n* Refs #3029. Implement transport parsing from XML files.\r\n\r\n* Refs #2936 Fixed warning in release (Jenkins)\r\n\r\n* Refs #2974. Fix Race condition during the destruction of a UDP transport.\r\n\r\n* Refs #3029. Update the parsing method for Locators to support TCPv4 and IP6 addresses\r\n\r\n* Refs #2936 Fixed XMLparser tests cmake\r\n\r\n* Refs #2974 Add a new method to move the logical ports between channels if the connection is lost and we need to create a new one.\r\n\r\n* Refs #2974. Create a security method to open a logical port if it's close during a send.\r\n\r\n* Refs #2974. Create a security method to open a logical port if it's close during a send.\r\n\r\n* Refs #2936 Test fixing and createParticipant added bool for IS.\r\n\r\n* Refs #2936 Performance tests.\r\n\r\n* Refs #2936 Profiling tests compile again.\r\n\r\n* Refs #3034. Update the output channel creation to send the size of the buffer that could be created.\r\n\r\n* Refs #3034. Create a new example benchmark to check how many messages can be sent with several configurations\r\n\r\n* Refs #2936 Test compatibility.\r\n\r\n* Refs #3034 Fixes for linux\r\n\r\n* Refs #3034 Anouncement period to 1s\r\n\r\n* Refs #2974 Testing avoid memcpy in send/recv.\r\n\r\n* Refs #2974 IPv6 versions\r\n\r\n* Refs #3034. Fix small issues in the benchmark.\r\n\r\n* Refs #3034 Fix issue with TCP transports and Best Effort configuration\r\n\r\n* Refs #2974 Restored Log header\r\n\r\n* Refs #2974 Added asio directory\r\n\r\n* Refs #3037 Close Socket now waits until all writers/readers closed it.\r\n\r\n* Refs #3034 Fix compilation warnings.\r\n\r\n* Refs #3034 Add an extra try-catch to manage an edge case\r\n\r\n* Refs #3034. Remove the historic in the subscriber to avoid fails during the second test\r\n\r\n* Rebase in process. Solving issues.\r\n\r\n* Merge\r\n\r\n* Refs #2975. Fix compilation warnings\r\n\r\n* Refs #2975\r\n\r\n* Refs #2975. Fix running issue on UDP4 & UDP6\r\n\r\n* Refs #2975. update header files.\r\n\r\n* Refs #2975\r\n\r\n* Refs #2975 Update OpenExtraOuputChannel method to remove a variable by reference\r\n\r\n* Refs #2975 Debugging\r\n\r\n* Refs #2975. Fix possible issue with buffer sizes.\r\n\r\n* Refs #2975. Refactor ChannelResource Classes\r\n\r\n* Refs #2975 Fix compilation issues with asio\r\n\r\n* Refs #2975 Update include relationships\r\n\r\n* Refs #2975. Fix compilation warning\r\n\r\n* Refs #2975 Valgrind fixing\r\n\r\n* Refs #2975 Valgrind fixes\r\n\r\n* Refs #2975 Split in different header files the transports and their descriptors.\r\n\r\n* Refs #2975 Fix issues on NetworkFactoryTests\r\n\r\n* Refs #2975 TCPv6 updated\r\n\r\n* Refs #2975 Added TCPv6Tests\r\n\r\n* Refs #2975 Added TCPv6Tests\r\n\r\n* Refs #2975 Network factory\r\n\r\n* Refs #2975. Update XML unit tests with moc transports\r\n\r\n* Refs #2975 Warnings fixed\r\n\r\n* Refs #3076. Fix test issue with the test_updv4 transport\r\n\r\n* Refs #3076. Fix compilation warnings on NetworkFactory Tests.\r\n\r\n* Refs #3076 Fixed Warnings.\r\n\r\n* Refs #3076. Fix compilation issues on Transport tests\r\n\r\n* Refs #3076. Fill several methods of moc Receiver Resource\r\n\r\n* Refs #3076 Fixing tests\r\n\r\n* Refs #3076. Fix TCP tests on Windows\r\n\r\n* Refs #3076. Apply memory fix to UPD transports\r\n\r\n* Refs #3076. Adapt test on Blackbox to use the new UDP transport descriptors\r\n\r\n* Refs #3076 Fixed IPv6 :D\r\n\r\n* Refs #3076 Fixed misleading-indentation warnings.\r\n\r\n* Refs #3076 Fixed lack of brackets\r\n\r\n* Refs #3076 Fix compilation warnings with HAVE_SECURITY\r\n\r\n* Refs #3076 Fix compilation warnings with HAVE_SECURITY\r\n\r\n* Refs #3076 Fix compilation warnings on VS2013\r\n\r\n* Refs #3076 Fix compilation warnings with HAVE_SECURITY\r\n\r\n* Refs #3076 Jenkins fixed\r\n\r\n* Refs #3076 Fixing Jenkins\r\n\r\n* Refs #3076 Clang warnings.\r\n\r\n* Refs #3076 Clang warnings.\r\n\r\n* Refs #2084 Refactor TCP transports to unify the common code in a parent class.\r\n\r\n* Refs #3084. Fix merge issue\r\n\r\n* Refs #3076 Anonymous unions named to avoid clang warnings.\r\n\r\n* Refs #3084. Create a base class to merge the common code of UDP transports\r\n\r\n* Refs #3076 Fixed warning (unused define)\r\n\r\n* Refs #3076 Fixed reconnection due to refactor.\r\n\r\n* Refs #3076 Disable two tests on TCPv6 because they can't be executed over the same machine.\r\n\r\n* #3076. Fix issue with security\r\n\r\n* Refs #3076. Fix issue with security tests\r\nRefactor UDPv4 transport to unify the ouput sockets management.\r\n\r\n* Refs #3076. Refactor UDPv6 transport to unify the ouput sockets management.\r\n\r\n* Refs #3084. Adapt the protocol creations for each TCP transport\r\n\r\n* Refs #3084. Merge all the common code between UDPv4 and UDPv6 in UDPTransportInterface\r\n\r\n* Refs #3084. Refactor the method \"OpenAndBindOutputSockets\" for UDPv4 and UDPv6\r\n\r\n* Refs #3076. Update one method to work with VS2013\r\n\r\n* Refs #3076. Fix an issue with the Log in VS2013\r\n\r\n* Refs #3076 Warning pedantic \";\"\r\n\r\n* Refs #3076 Fixed Blackbox tests when terminating Log.\r\n\r\n* Refs #3076. Adapt TCP sockets management for VS2013.\r\n\r\n* Refs #3076. Adapt TCP sockets management for VS2013.\r\n\r\n* Refs #3076. Update the fix for the Log system to work with VS2013\r\n\r\n* Refs #3085 Fix small issue during the TCP unit tests\r\n\r\n* Refs #3204. Fix an issue with a string copy in a method of UDP transports\r\n\r\n* Refs #3265 Comment uncompleted code that make crashes with TCP connections\r\n\r\n* Refs #3267. Implement some modifications from the merge request\r\n\r\n* Refs #3267. Restore removed code to override operators with ProtocolVersion Struct\r\n\r\n* Refs #3262. Fixing compilation errors introduced by rebase\r\n\r\n* Refs #3262 Changes due to comments on GitHub\r\n\r\n* Refs #3375. Refactor with new SocketTransportDescriptor\r\n\r\n* Refs #3373 WIP Locator refactor\r\n\r\n* Refs #3085 Fix small issue during the TCP unit tests\r\n\r\n# Conflicts:\r\n#\tsrc/cpp/transport/TCPTransportInterface.cpp\r\n#\ttest/unittest/transport/TCPv4Tests.cpp\r\n\r\n* Refs #3229 Fixed new GCC8 warnings\r\n\r\n# Conflicts:\r\n#\tsrc/cpp/transport/tcp/RTCPMessageManager.cpp\r\n\r\n* Refs #3265 Comment uncompleted code that make crashes with TCP connections\r\n\r\n# Conflicts:\r\n#\tinclude/fastrtps/transport/TCPChannelResource.h\r\n#\tsrc/cpp/transport/TCPTransportInterface.cpp\r\n\r\n* Refs #3265 Fixes warning with GCC8\r\n\r\n# Conflicts:\r\n#\texamples/C++/Benchmark/BenchmarkSubscriber.h\r\n\r\n* Refs #3231 Fixes\r\n\r\n# Conflicts:\r\n#\texamples/C++/Benchmark/BenchmarkSubscriber.cpp\r\n#\tsrc/cpp/rtps/participant/RTPSParticipantImpl.cpp\r\n\r\n* Merge branch 'DynamicTypes1.2' of https://192.168.1.4/LuisGasco/fastrtps into DynamicTypes1.2\r\n\r\n# Conflicts:\r\n#\tsrc/cpp/rtps/participant/RTPSParticipantImpl.cpp\r\n\r\n* Refs #3268 WIP Traces for Shapes Demo\r\n\r\n# Conflicts:\r\n#\tsrc/cpp/rtps/participant/RTPSParticipantImpl.cpp\r\n\r\n* Refs #3268 Logical Ports automatically calculated and added base negotiation on TCP if user left them as 0.\r\n\r\n* Refs #3268 Changed logical ports's logic to match UDP domain's port logic.\r\n\r\n# Conflicts:\r\n#\texamples/C++/HelloWorldExampleTCP/HelloWorldPublisher.cpp\r\n#\texamples/C++/HelloWorldExampleTCP/HelloWorldSubscriber.cpp\r\n#\texamples/C++/HelloWorldExampleTCP/HelloWorld_main.cpp\r\n#\tsrc/cpp/rtps/participant/RTPSParticipantImpl.cpp\r\n\r\n* Refs #3274 Added Blackbox tests for TCP and Domain's ports logic.\r\nAdded timestamp to Stdout Log\r\n\r\n* Refs #3371 TCP Commits added again (lost because they were added on dynamic types branch).\r\n\r\n* #3371 TCP cherry picking verification and testing\r\n\r\n* Refs #3396 WIP Refactor moving Locator configuration to transports.\r\n\r\n* Refs #3396 RTPSParticpantImpl refactor. Now transports are responsible of their locators.\r\n\r\n* Refs #3396 Iterate through all available transport and don't stop on first compatible.\r\n\r\n* Refs #3378. Input channels have pointer to new TransportReceiverInterface\r\n\r\n* Refs #3378. Updating tests\r\n\r\n* Refs #3378. Fixed move constructor of ReceiverResource.\r\n\r\n* Refs #3378. Fixing segfault on TCPChannelResource dtor\r\n\r\n* Refs #3378 Fixed warning and memory leak.\r\n\r\n* Refs #3378 Fixed compilation issues on Windows. FastCDR now links dynamically on transport tests. Tens of warning happens after include GTEST_LINKED_AS_SHARED...\r\n\r\n* Refs #3378 Remove unnecessary macro that breaks the compilation on Windows\r\n\r\n* Refs #3378 Fixed tests and discovery in TCP due to refactor.\r\n\r\n* Refs #3378 Refined blackbox tests.\r\n\r\n* Refs #3378. Minor improvements.\r\n\r\n* Refs #3378. Fixing errors on tests with security enabled.\r\n\r\n* Refs #3378. Fixing valgrind errors.\r\n\r\n* Refs #3378. Fixing compile error on example.\r\n\r\n* Refs #3378. Removing unnecessary buffer on MessageReceiver.\r\n\r\n* Refs #3378 Fixing valgrind issues.\r\n\r\n* Refs #3378 Fixing valgrind issues.\r\n\r\n* Refs #3371. Refactor IPLocator::createLocator to avoid allocation\r\n\r\n* Refs #3413.\r\n* Compare full address on compareAddressAndPhysicalPort\r\n* Removed metadata_logical_port\r\n* Fixed possible race condition on TCPChannelResource\r\n\r\n* Refs #3413 WIP: Unified ChannelResource lists. Removed some unused/trivial lists. Changed Receive method to return the remote locator instead only the destination logical port.\r\nTODO:\r\nCurrrently close channels must be broken, it didn't check if there are more locators in the map to the same channel.\r\nLogicalPorts managements can be broken as well.\r\n\r\n* Refs #3413 WIP: Removed mBoundOutputSockets map and uses mChannelResources instead.\r\nTODO:\r\nCurrrently close channels must be broken, it didn't check if there are more locators in the map to the same channel.\r\nLogicalPorts managements can be broken as well.\r\n\r\n* Refs #3413 WIP: Changed behaviour of OpenOutputChannel and removed ReceiversResources map from channel resources.\r\nTODO:\r\nCurrrently close channels must be broken, it didn't check if there are more locators in the map to the same channel.\r\nLogicalPorts managements can be broken as well.\r\n\r\n* Refs #3413 WIP: LogicalPorts management fixed.\r\nTODO:\r\nCurrrently close channels must be broken, it didn't check if there are more locators in the map to the same channel.\r\n\r\n* Refs #3413. Acceptor is not created in OpenInputChannel\r\n\r\n* Refs #3413. [WIP] Refactor of TCPConnector\r\n\r\n* Refs #3413. TCP doesn't AddDefaultOutputLocator anymore. IsOutputChannelOpen now checks if the asked logical port was added to the existing channel resource.\r\n\r\n* Refs #3413. BindConnection recovered\r\n\r\n* Refs #3413. Merge completed.\r\n\r\n* Refs #3413. TCPConnector responsibility changed to TCPChannelResource\r\n\r\n* Refs #3413. Fixed gcc errors and added new ChannelResource methods.\r\n\r\n* Refs #3413. Lost connection is retried. TODO: Set all logical ports as pending when connection is lost\r\n\r\n* Refs #3413. LogicalPort management changed to reflect new design.\r\n\r\n* Refs #3413. Added CopyPendingPortsFrom method and all opened ports are marked as pending on disconnect.\r\n\r\n* Refs #3413. Informing channel resources of closed input port\r\n\r\n* Refs #3413. Reconnection replaces channel resource on map.\r\n\r\n* Refs #3413. Physical port at fill methods\r\n\r\n* Refs #3413. Fixing condition on ConnectionLost\r\n\r\n* Refs #3413. Channel resource fully owns the physical socket. Some other minor changes and bugfixes.\r\n\r\n* Refs #3413. Don't sent close logical ports if connection isn't bound. Mutex on mReceiverResources. Clean unused methods.\r\n\r\n* Refs #3413. Fixed double free.\r\n\r\n* Refs #3413. Fixed double free due to bug.\r\n\r\n* Refs #3413. Wait for negotiation restored.\r\n\r\n* Refs #3413. Fixed warnings.\r\n\r\n* Refs #3413. Minor improvements\r\n\r\n* Refs #3413. Allow TCP blackbox tests to run in parallel\r\n\r\n* Refs #3413. Each transport adds its own metatraffic locators.\r\n\r\n* Refs #3413. Fixed unused parameters warnings.\r\n\r\n* Refs #3413. Fix bug setting logical default port for metatraffic.\r\n\r\n* Refs #3413. Each transport adds its own default unicast locators.\r\n\r\n* Refs #3413. New HelloWorld TCP Configuration.\r\n\r\n* Refs #3713. Fixing TCP BlackBox tests.\r\n\r\n* Refs #3713. Fixing TCP std::remove bad use.\r\n\r\n* Refs #3413. Fixing errors detected by unit tests.\r\n\r\n* Refs #3413. Fixing valgrind errors\r\n\r\n* Refs #3413. Picked changes from develop\r\n\r\n* Refs #3413. Fixed valgrind errors.\r\n\r\n* Refs #3413. Fixed more valgrind errors.\r\n\r\n* Refs #3413. Removed unused arguments.\r\n\r\n* Refs #3413. Removed warnings.\r\n\r\n* Refs #3413. Improve tcp blackbox tests.\r\n\r\n* Refs #3413. Added retries if not logical port openend.\r\n\r\n* Refs #3413. Removed unnecessary sleep.",
+      "files_changed": 214,
+      "additions": 21336,
+      "deletions": 3469,
+      "commit_type": "docs"
+    },
+    {
+      "author": "coquisx",
+      "date": "2019-01-08T11:15:19Z",
+      "sha": "846307b9baaaff49ad5d3aee68b9cb509851e4f3",
+      "message": "Feature/xml standard [4115] (#352)\n\n* Refs #4026 Adapted xmlparser to standard DDS-XTypes and added xml example\r\n\r\n* Refs #4026 Reformatted text\r\n\r\n* Refs #4026 Included key for datatypes\r\n\r\n* Refs #4026 Deleted old syntax allowed\r\n\r\n* Refs #4026 Fix mane of config file for dynamicTest\r\n\r\n* Refs #4026 Introduced cases to string and wstring in getDiscriminatorTypeBuilder\r\n\r\n* Refs #4026 Fix cases of bounded string and bounded wstring, in alias definitions and members definitions\r\n\r\n* Refs #4026 Added two new test for bounded string and bounded wstring\r\n\r\n* Refs #4026 Modified config file for dynamictype test\r\n\r\n* Refs #4127. Update XSD file and change part of the parser to be more restrictive\r\n\r\n* Refs #4127 Review the XML Parser to be more restrictive\r\n\r\n* Refs #4108 Update the parser of durations and locators with the new structures.\r\n\r\n* Refs #4127 Review the XMLParser class to make the parsing more restrictive.\r\n\r\n* Refs #4127 Review the tests and the resources to match with the new XML design.\r\n\r\n* Refs #4108 Create a new test to check recursive types\r\n\r\n* Refs #4115 Minor changes and better test comparision for dynamic types.",
+      "files_changed": 14,
+      "additions": 3294,
+      "deletions": 2460,
+      "commit_type": "config"
+    },
+    {
+      "author": "jacobperron",
+      "date": "2018-12-12T08:47:20Z",
+      "sha": "bd5513b3d58a61695729dfa3f299169b33c18ce3",
+      "message": "Account for potential target namespace for tinyxml2 [4107] (#349)\n\n* use new tinyxml cmake macro\r\n\r\n* use tinyxml2 as library\r\n\r\n* make tinyxml condition similar to tinyxml_vendor\r\n\r\n* find_package TinyXML2 in cmake config\r\n\r\nNow we can export the tinyxml2 target with the namespace.\r\n\r\n* Relax required constraint when finding TinyXML2",
+      "files_changed": 2,
+      "additions": 7,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "esteve",
+      "date": "2016-07-14T11:44:12Z",
+      "sha": "7ce6235f1d44df580097f59a9d7133496a889b0a",
+      "message": "Added support for UWP\n\nIncludes additional commits by @JavierIH's addressing the following\neProsima's internal refs:\n\n- Refs #1945. Reviewed StringMatching and added unit tests.",
+      "files_changed": 7,
+      "additions": 170,
+      "deletions": 145,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mikaelarguedas",
+      "date": "2017-04-18T04:04:08Z",
+      "sha": "128211e12b908e2574a24393c0a02faebf2e5b83",
+      "message": "fix_missing_braces_warning",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "testkit",
+      "date": "2018-06-08T01:02:08Z",
+      "sha": "a230204de5f8f332fde2ab05f832d238aa526768",
+      "message": "  Fix potential nullptr dereference issue in XMLElementParser.cpp",
+      "files_changed": 1,
+      "additions": 32,
+      "deletions": 15,
+      "commit_type": "code"
+    },
+    {
+      "author": "andrew-konecki-apexai",
+      "date": "2018-02-12T18:09:54Z",
+      "sha": "3d46388d077fb859f2a40b2848c41df909f9dcc8",
+      "message": "Refs #2547 tinyxml2 5.0.0 Compatabliity\n\nUpdate of another file for tinyxml2 5.0.0 compatability.",
+      "files_changed": 1,
+      "additions": 17,
+      "deletions": 10,
+      "commit_type": "code"
+    },
+    {
+      "author": "richiprosima",
+      "date": "2014-12-10T08:26:11Z",
+      "sha": "caefef93465146f4eaafcea7fedc6ec2944d1a11",
+      "message": "Refs #691. Removed info of preprocessor.",
+      "files_changed": 5,
+      "additions": 13,
+      "deletions": 8,
+      "commit_type": "config"
+    },
+    {
+      "author": "Borja Outerelo",
+      "date": "2017-10-18T08:01:32Z",
+      "sha": "908741255e40ab74c44c19689c8f7e4691084a80",
+      "message": "First version of parser node tree.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "BorjaOuterelo",
+      "date": "2017-09-05T12:08:28Z",
+      "sha": "9bc406e7c32f95e7b402dff3d58410eb0033f995",
+      "message": "Refs #2214. Solved compilation error due to GCC7.1.1 change.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Vicente Monge",
+      "date": "2017-02-01T09:42:09Z",
+      "sha": "fc5bb9d656b9c617a6d04d8e6e4567d83968fdb1",
+      "message": "Refs #1922. no sanity check on octetsToInlineQos",
+      "files_changed": 1,
+      "additions": 17,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "dirk-thomas",
+      "date": "2017-05-03T01:23:02Z",
+      "sha": "d09bac149adb618eea0eed7be48beb78994f8225",
+      "message": "assert that env vars exist",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "gaoethan",
+      "date": "2017-11-17T12:51:30Z",
+      "sha": "a248c8ed6f9818a690b149cd25b5e08aa148432d",
+      "message": "Fix issue of wrapper object use after free\nThe internal representation of temporary of type\nstd::string is freed by its destructor in c_str()\n\nSigned-off-by: Ethan Gao <ethan.gao@linux.intel.com>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "dhood",
+      "date": "2016-07-06T20:31:34Z",
+      "sha": "d3843569f848f174cdb5c36c8ea6d401297f6479",
+      "message": "Set default durability for WriterQos to match documentation",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "tparys",
+      "date": "2017-08-07T22:29:26Z",
+      "sha": "b769c6b2888b41c90839d01d0439f6d45c5b0d4a",
+      "message": "Fix typo in XML API",
+      "files_changed": 4,
+      "additions": 10,
+      "deletions": 10,
+      "commit_type": "code"
+    },
+    {
+      "author": "mcharleb",
+      "date": "2016-10-03T13:22:00Z",
+      "sha": "5c577714212a3ec14f66627e397f0e444f097e25",
+      "message": "Update README.md\n\nAdded missing installation steps",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "wjwwood",
+      "date": "2016-06-23T23:35:40Z",
+      "sha": "4fbd2c8bb152777d327ef85c06cc4f37445212e6",
+      "message": "use Boost_INCLUDE_DIRS to make boost headers available",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "JavierIH",
+      "date": "2016-08-05T11:25:43Z",
+      "sha": "d786c11a6ae0b9015e35667856088126e726e548",
+      "message": "fix typos in examples makefiles",
+      "files_changed": 7,
+      "additions": 34,
+      "deletions": 34,
+      "commit_type": "code"
+    },
+    {
+      "author": "Charles Cross",
+      "date": "2017-03-09T23:38:20Z",
+      "sha": "b5da77154bd6c916b8fe34acbc699694c93f75ba",
+      "message": "Added additional NDK variables to the Android build options",
+      "files_changed": 1,
+      "additions": 10,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Dmitry Rozhkov",
+      "date": "2017-02-10T08:04:05Z",
+      "sha": "32128614aec91ed48ac5e7fc435c68ed9fb3a8a0",
+      "message": "Indicate ABI compatibility with soversion\n\nThe currently built binary for *nix systems doesn't indicate\nits ABI version. This causes QA checks in some build systems\n(e.g. OpenEmbedded) report an issue.\n\nThis patch adds soversion to the library.\n\nSigned-off-by: Dmitry Rozhkov <dmitry.rozhkov@linux.intel.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "pantor",
+      "date": "2017-01-24T14:32:40Z",
+      "sha": "e13f90113cff2cf6c1172392b49c80075d88ec43",
+      "message": "fixed null exception error on macOS",
+      "files_changed": 1,
+      "additions": 32,
+      "deletions": 32,
+      "commit_type": "code"
+    },
+    {
+      "author": "SantiagoMunoz",
+      "date": "2016-04-19T08:05:11Z",
+      "sha": "22860e42d335810ff28fa50bb042a048625cc891",
+      "message": "Added QoS example code",
+      "files_changed": 15,
+      "additions": 1043,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "gerkey",
+      "date": "2016-08-25T22:40:23Z",
+      "sha": "078d7f6e73654f9e3cc1a1d7e82097d26b01d90a",
+      "message": "add pthread, needed on some ARM platforms",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "PabloMansanet",
+      "date": "2016-04-18T14:02:47Z",
+      "sha": "2f0405e22146d34c2d618152f1b916a0776e4839",
+      "message": "Initial Ownership Strength example implementation (post code review)",
+      "files_changed": 13,
+      "additions": 1064,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Santiago",
+      "date": "2016-04-28T12:51:22Z",
+      "sha": "aa93ff637c5bbc1ffcacfe6b1609a8e668607be1",
+      "message": "ref #1577 Bugfixes, fixing dependencies",
+      "files_changed": 4,
+      "additions": 17,
+      "deletions": 18,
+      "commit_type": "docs"
+    },
+    {
+      "author": "root",
+      "date": "2016-05-03T07:57:17Z",
+      "sha": "ae31a7ea1dc2e222f84c8ad9b07bdef1bca91857",
+      "message": "ref #1577 Modified MessageReceiver API to be more maintainable",
+      "files_changed": 3,
+      "additions": 54,
+      "deletions": 30,
+      "commit_type": "code"
+    },
+    {
+      "author": "RubenRubio",
+      "date": "2014-12-02T11:06:49Z",
+      "sha": "f4365c88bb37f3c70172a2d9c38a148cf870fc69",
+      "message": "First commit of the doxygen review.",
+      "files_changed": 29,
+      "additions": 727,
+      "deletions": 43,
+      "commit_type": "code"
+    },
+    {
+      "author": "RafaelLaraAlvarez",
+      "date": "2014-10-07T08:59:07Z",
+      "sha": "867ede40360957de43e8ebbceda971ec2f3e7c32",
+      "message": "- Added rtps project",
+      "files_changed": 48,
+      "additions": 12620,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "eProsimaUser01",
+      "date": "2014-02-18T14:52:05Z",
+      "sha": "b8ff5a27c6c0622c87df63d8a3d43049d39b95d7",
+      "message": "Project creation\n\n\nFormer-commit-id: 0435922d0e53f89a8ed35ed6085da40fa1b92d27",
+      "files_changed": 2,
+      "additions": 24,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "invalid-email-address",
+      "date": "2014-10-27T15:34:10Z",
+      "sha": "f93db21fc43c9d194efa2b7597a56142d0b96ce1",
+      "message": "- Completed linux package scripts. Only adding fastrpc libraries left to be done.",
+      "files_changed": 23,
+      "additions": 1569,
+      "deletions": 1112,
+      "commit_type": "code"
+    },
+    {
+      "author": "rafaellara",
+      "date": "2014-10-20T08:13:51Z",
+      "sha": "94426da19c1fc98f82f69c867100acfbda838c0e",
+      "message": "- Modifiled files to be compiled for ARM architectures",
+      "files_changed": 5,
+      "additions": 60,
+      "deletions": 76,
+      "commit_type": "code"
+    },
+    {
+      "author": "grcanosa",
+      "date": "2014-03-18T20:15:50Z",
+      "sha": "d08b7cb2310f004345de004492afd99d7a211e3a",
+      "message": "RTPSLog substitution for macros\n\n\nFormer-commit-id: e9dd83cc1bc1bcb40631fe603002e58118650a9b",
+      "files_changed": 21,
+      "additions": 466,
+      "deletions": 96,
+      "commit_type": "config"
+    },
+    {
+      "author": "Gonzalo Rodriguez (Win32)",
+      "date": "2014-03-06T14:54:50Z",
+      "sha": "e9ee5fe40a9b86caad98f4edcf1aaddfc4eab042",
+      "message": "Small changes in DomainTest\n\n\nFormer-commit-id: dfceb67d9d56c98d84acd695235478fc22b9f9c5",
+      "files_changed": 5,
+      "additions": 4,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "unknown",
+      "date": "2014-03-05T16:38:55Z",
+      "sha": "41a8a7430b05dfbf5e5d4fe58c4597e82cdddcb4",
+      "message": "Windows project created\n\n\nFormer-commit-id: 0e9058a487f0f745881e27ee816cba8354e1c45a",
+      "files_changed": 19,
+      "additions": 75,
+      "deletions": 24,
+      "commit_type": "code"
+    }
+  ]
+}

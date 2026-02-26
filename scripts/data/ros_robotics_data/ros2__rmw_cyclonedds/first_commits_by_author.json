@@ -1,0 +1,641 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-26T02:31:24Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros2",
+    "repo": "rmw_cyclonedds"
+  },
+  "data": [
+    {
+      "author": "jmachowinski",
+      "date": "2026-02-19T15:47:23Z",
+      "sha": "5147e01a012103d9cd650faa83ca18257136a362",
+      "message": "Performance improvements in serialization (#553)\n\n* perf: Fixed high CPU usage due to dynamic_cast\n\nThe dynamic_cast here turned out to be quite costly. Replacing\nit by the variant like function, we see a ~10% cpu usage reduction\nin our use case.\n\nSigned-off-by: Janosch Machowinski <J.Machowinski@cellumation.com>\n\n* perf: Replaced virtual functions by templates\n\nThis gives another performance improvement of around 2% of cpu\nusage in our usage scenario.\n\nSigned-off-by: Janosch Machowinski <J.Machowinski@cellumation.com>\n\n---------\n\nSigned-off-by: Janosch Machowinski <J.Machowinski@cellumation.com>\nCo-authored-by: Janosch Machowinski <J.Machowinski@cellumation.com>",
+      "files_changed": 2,
+      "additions": 41,
+      "deletions": 66,
+      "commit_type": "code"
+    },
+    {
+      "author": "BrandonSimoncic",
+      "date": "2026-01-16T23:25:00Z",
+      "sha": "b4963be0c79f5d78ed475cc63ba4215587a85068",
+      "message": "removed defaults, proper warnings come up (#549)",
+      "files_changed": 1,
+      "additions": 28,
+      "deletions": 24,
+      "commit_type": "code"
+    },
+    {
+      "author": "SuperJappie08",
+      "date": "2025-11-19T17:45:33Z",
+      "sha": "c080501a744340f29033190b939ab8587a554dc9",
+      "message": "Add VS Code folder to .gitignore to prevent #546 (#548)\n\nSigned-off-by: SuperJappie08 <36795178+SuperJappie08@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "clalancette",
+      "date": "2021-01-04T21:59:38Z",
+      "sha": "1c3716b452de8f091058c38e77c924b42776117e",
+      "message": "Switch to using the generic functions for the typesupport handles.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "ahcorde",
+      "date": "2020-04-10T10:26:45Z",
+      "sha": "654f3d46aa4d138da16c60ab74eedfab47f72d7d",
+      "message": "Added rosidl_runtime c and cpp dependencies (#138)\n\n* Replaced rosidl_generator_x with rosidl_runtime_x\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Fixed package.zml\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "leeminju531",
+      "date": "2023-09-29T12:35:15Z",
+      "sha": "2263814fab142ac19dd3395971fb1f358d22a653",
+      "message": "Add rmw count clients,services impl (#427)\n\n* Add rmw count clients,services impl\r\n\r\nSigned-off-by: leeminju531 <dlalswn531@naver.com>",
+      "files_changed": 1,
+      "additions": 56,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "christophebedard",
+      "date": "2020-06-19T20:36:31Z",
+      "sha": "4383911781047513545bc61092150d3ca080fdab",
+      "message": "Add space between 'ROS' and '2'\n\nSigned-off-by: Christophe Bedard <bedard.christophe@gmail.com>",
+      "files_changed": 4,
+      "additions": 14,
+      "deletions": 14,
+      "commit_type": "config"
+    },
+    {
+      "author": "mosfet80",
+      "date": "2025-04-29T08:07:48Z",
+      "sha": "406277084be4352fa48357047ed56be69e4942e5",
+      "message": "Update CMake requirement (#539)\n\nSigned-off-by: mosfet80 <realeandrea@yahoo.it>\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>\nCo-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "cottsay",
+      "date": "2019-08-29T22:52:56Z",
+      "sha": "428072358e1099293d7962c074e754a1390dfcb1",
+      "message": "Ensure all packages in the repository have the same version\n\nSigned-off-by: Scott K Logan <logans@cottsay.net>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "fujitatomoya",
+      "date": "2022-09-29T11:54:03Z",
+      "sha": "b59c3087e1f887bd22b5848deae8ded6fe83affc",
+      "message": "add NULL check before accessing object. (#423)\n\nSigned-off-by: Tomoya Fujita <Tomoya.Fujita@sony.com>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "MichaelOrlov",
+      "date": "2024-05-09T11:58:20Z",
+      "sha": "76c9d8f38a03d160b258902af6d1d06f6ed9391e",
+      "message": "Set received_timestamp to system_clock::now() in message_info (#491)\n\n* Set received_timestamp to steady_clock::now() in message_info\r\n\r\n* Use 'system_clock' instead of 'steady_clock'\r\n\r\n* Also update receive_timestamp for services.\r\n\r\nSigned-off-by: Michael Orlov <morlovmr@gmail.com>\r\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "marcoag",
+      "date": "2024-03-28T08:38:02Z",
+      "sha": "2b3a985cc857a4f97209a069184da70ddc4c07f5",
+      "message": "Chagnelog.\n\nSigned-off-by: Marco A. Gutierrez <marcogg@marcogg.com>",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "h-suzuki-isp",
+      "date": "2024-04-05T16:38:40Z",
+      "sha": "2f0e1ef39da47d6bf37b99acd76fd660565f6304",
+      "message": "Add tracepoint for publish/subscribe serialized message (#485)\n\nSigned-off-by: h-suzuki <h-suzuki@isp.co.jp>\r\nSigned-off-by: h-suzuki-isp <146712054+h-suzuki-isp@users.noreply.github.com>\r\nSigned-off-by: h-suzuki-isp <h-suzuki@isp.co.jp>\r\nCo-authored-by: eboasson <eb@ilities.com>",
+      "files_changed": 1,
+      "additions": 29,
+      "deletions": 1,
+      "commit_type": "ci"
+    },
+    {
+      "author": "cwecht",
+      "date": "2024-01-23T14:56:47Z",
+      "sha": "5bcdaed7ffe5ce6a02319f954534b03fa4924391",
+      "message": "Add timestamp to rmw_publish tracepoint (#454)\n\nSigned-off-by: Christopher Wecht <cwecht@mailbox.org>",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "Chen Lihui",
+      "date": "2020-08-26T19:11:43Z",
+      "sha": "416c01d45dba80bd713d38fd4cc6360efb7448f5",
+      "message": "Fix memory leak that string not deleted. (#224)\n\nSigned-off-by: Chen.Lihui <lihui.chen@sony.com>",
+      "files_changed": 1,
+      "additions": 14,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "Yadunund",
+      "date": "2023-04-27T09:47:40Z",
+      "sha": "ee3485a5d34cd052c55d43ce24379b68650f3317",
+      "message": "1.7.0",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "methylDragon",
+      "date": "2023-04-08T18:59:54Z",
+      "sha": "2bbb80929e32d36a9e938c1ecb40f3fbf271b9f3",
+      "message": "Add stubs for new rmw interfaces (#447)\n\nSigned-off-by: methylDragon <methylDragon@gmail.com>",
+      "files_changed": 1,
+      "additions": 52,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "gbiggs",
+      "date": "2023-04-08T04:35:29Z",
+      "sha": "6510ad2a0cfb381ca88e148b91c9f394d672840f",
+      "message": "[rmw_cyclonedds] Improve handling of dynamic discovery (#429)\n\n* First go at getting Cyclone to work with the new discovery configuration params\r\n\r\nSigned-off-by: Geoffrey Biggs <gbiggs@killbots.net>\r\n\r\n* Adopt suggestions from Erik\r\n\r\nSigned-off-by: Geoffrey Biggs <gbiggs@killbots.net>\r\n\r\n* most tests passing\r\n\r\nSigned-off-by: Michael X. Grey <grey@openrobotics.org>\r\n\r\n* Revised, recommended behavior for discovery\r\n\r\nSigned-off-by: Michael X. Grey <grey@openrobotics.org>\r\n\r\n* Update to latest rmw API\r\n\r\nSigned-off-by: Michael X. Grey <grey@openrobotics.org>\r\n\r\n* C++ 17, debug log, and linters\r\n\r\nSigned-off-by: Shane Loretz <sloretz@google.com>\r\n\r\n* NOT_SET and SYSTEM_DEFAULT values\r\n\r\nSigned-off-by: Shane Loretz <sloretz@google.com>\r\n\r\n* Remove TODO that won't be fixed\r\n\r\nSigned-off-by: Shane Loretz <sloretz@google.com>\r\n\r\n* Make linters happy\r\n\r\nSigned-off-by: Shane Loretz <sloretz@google.com>\r\n\r\n* Call rmw_discovery_options_init()\r\n\r\nSigned-off-by: Shane Loretz <sloretz@google.com>\r\n\r\n* Set max participant index to largest value possible\r\n\r\nSigned-off-by: Shane Loretz <sloretz@google.com>\r\n\r\n* Set ParticipantIndex to none when OFF\r\n\r\nSigned-off-by: Shane Loretz <sloretz@google.com>\r\n\r\n* Error when range is an invalid value\r\n\r\nSigned-off-by: Shane Loretz <sloretz@google.com>\r\n\r\n* Use localhost has peer address\r\n\r\nSigned-off-by: Shane Loretz <sloretz@google.com>\r\n\r\n* Set MaxAutoParticipantIndex to 32\r\n\r\nSigned-off-by: Shane Loretz <sloretz@google.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Geoffrey Biggs <gbiggs@killbots.net>\r\nSigned-off-by: Michael X. Grey <grey@openrobotics.org>\r\nSigned-off-by: Shane Loretz <sloretz@google.com>\r\nCo-authored-by: Michael X. Grey <grey@openrobotics.org>\r\nCo-authored-by: Shane Loretz <sloretz@google.com>",
+      "files_changed": 2,
+      "additions": 141,
+      "deletions": 26,
+      "commit_type": "docs"
+    },
+    {
+      "author": "emersonknapp",
+      "date": "2020-02-07T20:34:34Z",
+      "sha": "4209d7654b43370880a3a62eb2ba37fb6f0dfe74",
+      "message": "Fix MSBuild warnings C4146 and C4267\n\nSigned-off-by: Emerson Knapp <emerson.b.knapp@gmail.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Barry-Xu-2018",
+      "date": "2021-06-15T12:52:51Z",
+      "sha": "e6876a23592dd66df2cae2193d2c6907ecd8cd9a",
+      "message": "Add rmw_publisher_wait_for_all_acked support (#294)\n\nSigned-off-by: Barry Xu <barry.xu@sony.com>",
+      "files_changed": 1,
+      "additions": 33,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "audrow",
+      "date": "2022-11-15T21:33:59Z",
+      "sha": "87f0272476da5c00e35ff6c6c5c9fdba421906dd",
+      "message": "[rolling] Update maintainers - 2022-11-07 (#428)",
+      "files_changed": 2,
+      "additions": 6,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "sloretz",
+      "date": "2021-12-13T17:05:21Z",
+      "sha": "88f9dfd4d5f86e327eaa5b5880e31cb1dedd0a9d",
+      "message": "Export modern CMake targets (#357)\n\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>",
+      "files_changed": 1,
+      "additions": 16,
+      "deletions": 17,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ihasdapie",
+      "date": "2022-09-23T17:10:08Z",
+      "sha": "fc1c32455c4220db437f134b701fc910fc1c6b31",
+      "message": "Add rmw_get_gid_for_client impl (#402)\n\n* add rmw_get_gid_for_client impl\r\n\r\nSigned-off-by: Brian Chen <brian.chen@openrobotics.org>\r\n\r\n* uncrustify\r\n\r\nSigned-off-by: Jacob Perron <jacob@openrobotics.org>\r\n\r\n* Guard against null client argument\r\n\r\nSigned-off-by: Jacob Perron <jacob@openrobotics.org>\r\n\r\n* Use static_assert\r\n\r\nSigned-off-by: Brian Chen <brian.chen@openrobotics.org>\r\nSigned-off-by: Jacob Perron <jacob@openrobotics.org>\r\nCo-authored-by: Jacob Perron <jacob@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 23,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "tfoote",
+      "date": "2022-09-15T21:20:54Z",
+      "sha": "156142babe6dfc52c61ff6570950aad459aeddf7",
+      "message": "Merge pull request #410 from Voldivh/voldivh/create_topic_error_msg\n\nAdds topic name to error msg when create_topic fails",
+      "files_changed": 1,
+      "additions": 16,
+      "deletions": 15,
+      "commit_type": "code"
+    },
+    {
+      "author": "Voldivh",
+      "date": "2022-08-31T17:10:49Z",
+      "sha": "a38a28d748e436e51540c567f506bb59f7577248",
+      "message": "Adds topic name to error msg when create_topic fails\n\nSigned-off-by: Voldivh <eloyabmfcv@gmail.com>",
+      "files_changed": 1,
+      "additions": 16,
+      "deletions": 15,
+      "commit_type": "code"
+    },
+    {
+      "author": "paudrow",
+      "date": "2022-01-15T00:22:18Z",
+      "sha": "b28049f9055dbbc01caf6fa81a157053ff3f9484",
+      "message": "1.1.2\n\nSigned-off-by: Audrow Nash <audrow@hey.com>",
+      "files_changed": 2,
+      "additions": 6,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "eboasson",
+      "date": "2018-07-09T11:22:25Z",
+      "sha": "01ef31359a5dc3abf3f3af3bc097230a95a09f6b",
+      "message": "initial commit",
+      "files_changed": 23,
+      "additions": 3650,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "joespeed",
+      "date": "2020-09-17T17:59:28Z",
+      "sha": "253098bdc4805952e75bd743ea245f7c5c75f0ef",
+      "message": "Add quality declaration for Cyclone DDS (#218)\n\n* Add a quality declaration for CycloneDDS\r\n\r\nPR feedback\r\n\r\nPR feedback\r\n\r\n* Update Cyclone DDS quality declaration\r\n\r\nUpdated to provide missing information and clarifications, in\r\nparticular:\r\n\r\n* Mark as QL3\r\n* Clarify versioning policy\r\n* Clarify API/ABI policies\r\n* Reference CI, coverage, static analysis results\r\n\r\n* Rewrite Cyclone DDS quality declaration\r\n\r\nBe more precise about many things:\r\n\r\n* Correct use of spaces in project name\r\n* Versioning, stability\r\n* Distinguish between (stable) Public API and Evolving APIs\r\n* More carefully define API/ABI stability\r\n* Update CI platforms to current state\r\n\r\nSigned-off-by: Erik Boasson <eb@ilities.com>\r\n\r\n* Further rework of Quality Declaration\r\n\r\n* Reword QL2/QL3 discussion\r\n* Clarify relationship of Cyclone DDS API and ROS 2 API stability\r\n* Reference coding style\r\n\r\n* Address review comments\r\n\r\nCo-authored-by: Scott K Logan <logans@cottsay.net>\r\nCo-authored-by: Erik Boasson <eb@ilities.com>",
+      "files_changed": 1,
+      "additions": 236,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "jacobperron",
+      "date": "2020-05-05T00:21:31Z",
+      "sha": "fee15a96af40635cbe08d4980d4feb06da8d19a8",
+      "message": "0.6.0",
+      "files_changed": 2,
+      "additions": 37,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "j-rivero",
+      "date": "2022-05-03T17:35:02Z",
+      "sha": "4e711c7451912b0237322a50b33ddb0516cef4be",
+      "message": "Handle 'best_available' QoS policies (#389)\n\nIf users set certain QoS policies to BEST_AVAILABLE, then we query the graph for endpoint info.\r\nThe policy is updated such that it is compatible with all endpoints while maintaining the\r\nhighest possible level of service.\r\n\r\n* Handle best available policies for services and clients\r\n\r\nSigned-off-by: Jose Luis Rivero <jrivero@osrfoundation.org>",
+      "files_changed": 1,
+      "additions": 24,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "dkroenke",
+      "date": "2022-03-30T13:46:04Z",
+      "sha": "297df3d56d2e639a5862fa0b1399cf963e354920",
+      "message": "Additional checks for loan API\n\nSigned-off-by: Dietrich Krönke <dietrich.kroenke@apex.ai>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "ivanpauno",
+      "date": "2020-02-20T17:11:35Z",
+      "sha": "49d4a51abf15a884489706e6b46d36fc2daff5b8",
+      "message": "Update usage of rmw_topic_endpoint_info_array (#101)\n\nSigned-off-by: Ivan Santiago Paunovic <ivanpauno@ekumenlabs.com>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 7,
+      "commit_type": "code"
+    },
+    {
+      "author": "yushijinhun",
+      "date": "2022-03-24T03:58:24Z",
+      "sha": "48d8f65a227c9a3a34c644a7adebf193000442d0",
+      "message": "Fix error message in rmw_init_options_copy() (#380)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "sumanth-nirmal",
+      "date": "2021-04-08T22:14:44Z",
+      "sha": "51a8b3c9b418b049340701c348aacb604f851678",
+      "message": "Add loaned sample zero-copy API support (#297)\n\n* Add an API to determine if a type is self contained\r\n\r\nAdd helper functions for getting message size and for ini, fini of message\r\nAdd additional serdata_ops conditionally when SHM is enabled\r\nUpdate sertype initialization flags with msg fixed type information\r\nUpdate serdata_rmw to hold iceoryx chunk pointer\r\nUpdate to_sample and from_sample for zero-copy path\r\nUpdate Publish path for the zero-copy loaned API\r\nUpdate Subscription path for the zero-copy loaned API\r\nAvoid using of from_sample and to_sample in the zero-copy path\r\nUpdate sertype init flags with fixed type\r\nFix the serdata_rmw_from_iox signature\r\nUpdate can_loan_messages only when the loaning is possible from middleware\r\nEnable loaned message APIs only if the DDS supports it\r\nUpdates checks for loaning, if the loaning is not supported, then return RMW_RET_UNSUPPORTED\r\nUse extracted message typesupport for checking if a type is fixed\r\n\r\nSigned-off-by: Sumanth Nirmal <sumanth.724@gmail.com>",
+      "files_changed": 7,
+      "additions": 523,
+      "deletions": 25,
+      "commit_type": "docs"
+    },
+    {
+      "author": "irobot-ros",
+      "date": "2022-02-24T08:31:47Z",
+      "sha": "78ea379e3573a46e53c20a1c03c70286d9f3bdd3",
+      "message": "Add EventsExecutor (#256)\n\n* add RMW listener APIs\r\n\r\nRename Event_callback to ExecutorEventCallback\r\n\r\nUpdate name\r\n\r\nRename ExecutorEventCallback -> EventsExecutorCallback\r\n\r\nRename set_events_executor_callback->set_listener_callback\r\n\r\nUse data types when setting callbacks\r\n\r\nRestore name\r\n\r\nMove rcutils/executor_event_types.h to rmw/\r\n\r\nrename event types\r\n\r\nRename executor_context->callback_context\r\n\r\nRename callback_context->user_data\r\n\r\nReorder APIs arguments\r\n\r\nrename rmw_listener_cb_t->rmw_listener_callback_t\r\n\r\nEvents executor subscriptions support\r\n\r\nEvents executor guard conditions support\r\n\r\nAdd clients&services support\r\n\r\nSupport events (still work to do)\r\n\r\nCtest fixes\r\n\r\nUse dds_entity_t instead of auto. Remove comments\r\n\r\nPR suggestions\r\n\r\nOnly check callback pointer validity\r\n\r\nThis is the only item that is used in the RMW\r\nlayer, while the others are simply forwarded.\r\n\r\nuse void * to pass executor ptr\r\n\r\nImplement use previous events for guard conditions\r\n\r\nPush events happened before setting callback\r\n\r\nAdd support for events unread count\r\n\r\nRework unread count\r\n\r\nRework all\r\n\r\nProper init gc, clients and services callbacks\r\n\r\nRemove not needed subscription listener init\r\n\r\nAddress PR comments\r\n\r\nCrete apis for clarity\r\n\r\nRework executor callback data\r\n\r\nUse RMW renamed file\r\n\r\nAdd support for events\r\n\r\nDo not set listener event callbacks\r\n\r\ncheck user_data before calling callback\r\n\r\nEnable support for events\r\n\r\nFix: set listener to srv/cli -> sub, not pub.\r\n\r\n* Have callback & data per each event type\r\n\r\nSigned-off-by: Mauro Passerino <mpasserino@irobot.com>\r\n\r\n* remove comments\r\n\r\nSigned-off-by: Mauro Passerino <mpasserino@irobot.com>\r\n\r\n* Delete listeners after use, since they're copied\r\n\r\nSigned-off-by: Mauro Passerino <mpasserino@irobot.com>\r\n\r\n* Remove rmw_event_data_type_t\r\n\r\nSigned-off-by: Mauro Passerino <mpasserino@irobot.com>\r\n\r\n* Remove use_previous_event\r\n\r\nSigned-off-by: Mauro Passerino <mpasserino@irobot.com>\r\n\r\n* Use unread_count as arg\r\n\r\nSigned-off-by: Mauro Passerino <mpasserino@irobot.com>\r\n\r\n* Remove guard condition listener\r\n\r\nSigned-off-by: Mauro Passerino <mpasserino@irobot.com>\r\n\r\n* refactor to remove listener term\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* use correct callback for dds qos event listeners\r\n\r\nSigned-off-by: Alberto Soragna <alberto.soragna@gmail.com>\r\n\r\n* Use QoS depth on subscriptions before call callback\r\n\r\nSigned-off-by: Mauro Passerino <mpasserino@irobot.com>\r\n\r\n* Use new Cyclone APIs to coexist listeners/waitset\r\n\r\nSigned-off-by: Mauro Passerino <mpasserino@irobot.com>\r\n\r\n* Fix linter issues\r\n\r\nSigned-off-by: Mauro Passerino <mpasserino@irobot.com>\r\n\r\n* fix linter errors\r\n\r\nSigned-off-by: Alberto Soragna <alberto.soragna@gmail.com>\r\n\r\nCo-authored-by: Mauro <mpasserino@irobot.com>\r\nCo-authored-by: William Woodall <william@osrfoundation.org>\r\nCo-authored-by: Alberto Soragna <alberto.soragna@gmail.com>",
+      "files_changed": 1,
+      "additions": 290,
+      "deletions": 19,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mauropasse",
+      "date": "2021-11-19T20:22:05Z",
+      "sha": "fef7fc657181b99b9a549accc02d2c8a5320c422",
+      "message": "Add client/service QoS getters (#343)\n\nSigned-off-by: Mauro Passerino <mpasserino@irobot.com>",
+      "files_changed": 1,
+      "additions": 68,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "hidmic",
+      "date": "2020-04-10T16:19:15Z",
+      "sha": "f6866c5fc13c725d207e1c6edb1c651e18fe6ae0",
+      "message": "Register RMW output filters.\n\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>",
+      "files_changed": 2,
+      "additions": 35,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "guillaume-pais-siemens",
+      "date": "2021-08-30T16:02:33Z",
+      "sha": "91646cedfc368e29ab7e8f70cbf77aa1e354b5c4",
+      "message": "rmw_cyclonedds_cpp/CMakeLists.txt: add -latomic for RISC-V (#332)",
+      "files_changed": 1,
+      "additions": 11,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "MatthiasKillat",
+      "date": "2021-04-17T20:49:41Z",
+      "sha": "04e75b82aa2c931ee51bb7eeec895d1dbcf413a0",
+      "message": "Added shared memory support usage description\n\nSigned-off-by: Matthias Killat <matthias.killat@apex.ai>",
+      "files_changed": 1,
+      "additions": 218,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "nuclearsandwich",
+      "date": "2021-04-09T03:22:55Z",
+      "sha": "d2dac8c73c6dc4b6ec44618b7e4d674f1595c3e6",
+      "message": "0.22.0",
+      "files_changed": 2,
+      "additions": 6,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "anamud",
+      "date": "2021-04-05T17:16:08Z",
+      "sha": "e2a5eb641b70378948947e8c0ad81db55ed63fd7",
+      "message": "Indicate missing support for unique network flows (#282)\n\n* Indicate missing support for unique network flows\r\n\r\nSigned-off-by: Ananya Muddukrishna <ananya.x.muddukrishna@ericsson.com>\r\n\r\n* Rename for clarity\r\n\r\nSigned-off-by: Ananya Muddukrishna <ananya.x.muddukrishna@ericsson.com>\r\n\r\n* Rename file for consistency\r\n\r\nSigned-off-by: Ananya Muddukrishna <ananya.x.muddukrishna@ericsson.com>\r\n\r\n* Uncrustify\r\n\r\nSigned-off-by: Ananya Muddukrishna <ananya.x.muddukrishna@ericsson.com>\r\n\r\nCo-authored-by: Ananya Muddukrishna <ananya.x.muddukrishna@ericsson.com>",
+      "files_changed": 3,
+      "additions": 62,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "shonigmann",
+      "date": "2021-04-02T06:32:32Z",
+      "sha": "8d06764bf3c0881f934be4ee4b83714986416819",
+      "message": "updating quality declaration links (re: ros2/docs.ros2.org#52) (#295)\n\nSigned-off-by: Simon Honigmann <shonigmann@blueorigin.com>\r\n\r\nCo-authored-by: Simon Honigmann <shonigmann@blueorigin.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "brawner",
+      "date": "2020-11-24T20:34:47Z",
+      "sha": "b874b4c7a248c55a781d518186b0747783e8499a",
+      "message": "Handle potential divide by 0 (#267)\n\n* Handle potential divide by 0\r\n\r\nSigned-off-by: Stephen Brawner <brawner@gmail.com>\r\n\r\n* Use assert\r\n\r\nSigned-off-by: Stephen Brawner <brawner@gmail.com>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "pluris",
+      "date": "2020-11-03T14:03:02Z",
+      "sha": "d4fd025308138a61303f100817fed92e4ae26d63",
+      "message": "Fix incorrect log message(rmw_fastrtps_shared_cpp -> rmw_cylonedds_cpp) (#260)",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "Sven Brinkmann",
+      "date": "2020-09-02T10:15:55Z",
+      "sha": "6cec3393d1ac695eb11f42c1f324b1832c11ff86",
+      "message": "Change wrong use of %ld to print std::size_t to %zu\n\nUsing %ld to print a std::size_t leads to compiler warnings and will lead\nto wrong behavior whenever the specific std::size_t is bigger than LONG_MAX",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Lobotuerk",
+      "date": "2020-09-11T19:42:42Z",
+      "sha": "2a1f8ef89daceb85239d1af5664318d176a318c8",
+      "message": "Update rmw_publish() error returns (#239)\n\nSigned-off-by: lobotuerk <jtlorente@ekumenlabs.com>",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "rotu",
+      "date": "2019-09-13T09:54:06Z",
+      "sha": "3edf33257350d1dca12697af1b940c5a5d1b102d",
+      "message": "Use rosdep (#32)\n\n* Add Cyclone DDS build dependencies for rosdep\r\n\r\n* Update README.md\r\n\r\nChange apt install commands to rosdep install.\r\n\r\n* build_depend -> buildtool_depend for maven and java\r\n\r\n* Add vendor package to build cyclonedds from source\r\n\r\nRemove maven and java dependency (thanks, @eboasson)\r\n\r\n* remove --symlink-build flag\r\n\r\nthis obscures the intention of the code and sophisticated users can choose whether to use it or not.\r\n\r\n* add rosdep to readme",
+      "files_changed": 6,
+      "additions": 49,
+      "deletions": 11,
+      "commit_type": "docs"
+    },
+    {
+      "author": "SidFaber",
+      "date": "2020-03-05T21:08:26Z",
+      "sha": "99d2738a84e6fba5891dc89ae5378f86c6ed3be2",
+      "message": "Enable use of Cyclone DDS security features\n\nAdd utility function to insert security settings to the cyclone QOS\nobject used to create nodes.  Include a utility to find security\nfiles and properly format their location to use with DDS.\n\nSigned-off-by: Sid Faber <sid.faber@canonical.com>",
+      "files_changed": 2,
+      "additions": 95,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mjcarroll",
+      "date": "2019-10-24T13:30:46Z",
+      "sha": "de359efb5f4e13eb738c0a591995edef40bfd139",
+      "message": "0.4.1\n\nSigned-off-by: Michael Carroll <michael@openrobotics.org>",
+      "files_changed": 4,
+      "additions": 99,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "iluetkeb",
+      "date": "2020-04-23T21:29:39Z",
+      "sha": "27bc8194e72a62102ee58ba2767fcf0087b78028",
+      "message": "Fill in message_info timestamps (#163)\n\n* Fill in message_info timestamps\r\n\r\nSigned-off-by: Luetkebohle Ingo (CR/AEX3) <ingo.luetkebohle@de.bosch.com>\r\n\r\n* Report error when timestamp cannot be obtained.\r\n\r\nSigned-off-by: Luetkebohle Ingo (CR/AEX3) <ingo.luetkebohle@de.bosch.com>\r\n\r\n* return 0 for received timestamp to signify lack of support\r\n\r\nSigned-off-by: Luetkebohle Ingo (CR/AEX3) <ingo.luetkebohle@de.bosch.com>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Karsten1987",
+      "date": "2019-10-21T05:15:24Z",
+      "sha": "d8cb336f8f81e9d9e7db7ec8d9f3f2e7f444f641",
+      "message": "zero copy api for cyclonedds\n\nSigned-off-by: Karsten Knese <karsten@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 82,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "dodsonmg",
+      "date": "2020-04-14T05:53:38Z",
+      "sha": "21dd7c4570bb76a1d79f0e76200a382530337274",
+      "message": "implement safer align_ function (#141)\n\navoids unnecessary casts to pointer and pointer manipulation by reference",
+      "files_changed": 1,
+      "additions": 15,
+      "deletions": 9,
+      "commit_type": "code"
+    },
+    {
+      "author": "mikaelarguedas",
+      "date": "2020-04-13T13:29:31Z",
+      "sha": "0450e2d84058a1e708aaf360c3f163765bd9c2f8",
+      "message": "security-context -> enclave (#146)\n\nSigned-off-by: Mikael Arguedas <mikael.arguedas@gmail.com>",
+      "files_changed": 1,
+      "additions": 24,
+      "deletions": 24,
+      "commit_type": "code"
+    },
+    {
+      "author": "dirk-thomas",
+      "date": "2019-09-19T15:18:42Z",
+      "sha": "af5fa3c468c0f62da45cb4053184467629472548",
+      "message": "update repo URL with changed org unit (#38)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mm318",
+      "date": "2020-01-14T17:32:10Z",
+      "sha": "aed236fb269094a361e05a230778d7f77a1431b7",
+      "message": "Stubs for rmw_get_publishers_info_by_topic and rmw_get_subscriptions_info_by_topic (#81)\n\nSigned-off-by: Miaofei <miaofei@amazon.com>",
+      "files_changed": 2,
+      "additions": 43,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ThijsSassen",
+      "date": "2020-03-11T15:31:07Z",
+      "sha": "137678e99e63a4181ca683592cbeb70b48b5564b",
+      "message": "Updated version to match cyclonedds package\n\nSigned-off-by: Thijs Sassen <thijs.sassen@adlinktech.com>",
+      "files_changed": 4,
+      "additions": 32,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Dennis Potman",
+      "date": "2020-02-11T08:51:29Z",
+      "sha": "18317eff6ce4e3e77fca012289dd61508f5a1d1b",
+      "message": "Add #if version >= 0.8.2 to fix ros2 dashing builds\n\nSigned-off-by: Dennis Potman <dennis.potman@adlinktech.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "evshary",
+      "date": "2019-09-24T05:47:34Z",
+      "sha": "a61a014a11a612e55f3fe3fd77fcd4e027d98e90",
+      "message": "Return NODE_NAME_NON_EXISTENT instead of ERROR.\n\nSigned-off-by: evshary <evshary@gmail.com>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "dpotman",
+      "date": "2019-09-12T13:31:03Z",
+      "sha": "883ef011058dbfaf3199eb18126171429e607205",
+      "message": "Implemented byte-swapping in deserializer (#31)\n\n* Implemented byte-swapping in deserializer\r\n\r\nSet the correct endianness flag when serializing ROS messages to CDR\r\nand added support for byte-swapping in CDR deserializer when in a\r\nmixed-endian network.\r\n\r\nSigned-off-by: Dennis Potman <dennis.potman@adlinktech.com>\r\n\r\n* Fix float deser byte-swap and add byte-swap in cycprint\r\n\r\nFixed the byte-swapping in float/double deserialization and added byte-\r\nswapping in cycprint by creating a cycdeserbase that is shared with\r\ncycdeser.\r\n\r\nSigned-off-by: Dennis Potman <dennis.potman@adlinktech.com>",
+      "files_changed": 2,
+      "additions": 202,
+      "deletions": 118,
+      "commit_type": "code"
+    },
+    {
+      "author": "BMarchi",
+      "date": "2019-10-18T22:30:06Z",
+      "sha": "33fed3a65cde0cf638d5019d1f6507d40a2f3558",
+      "message": "Add localhost boolean parameter to create node function (#50)\n\n* Add localhost boolean parameter to create node function\r\n\r\nSigned-off-by: Brian Ezequiel Marchi <brian.marchi65@gmail.com>\r\n\r\n* Cast to void to avoid compilation warning\r\n\r\nSigned-off-by: Brian Ezequiel Marchi <brian.marchi65@gmail.com>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "allenh1",
+      "date": "2019-06-18T00:41:13Z",
+      "sha": "eb4aec84ca8ae980084ac879d6ba56205b379ef3",
+      "message": "Replace __attribute__((unused)) with static_cast<void>\n\nSigned-off-by: Hunter L. Allen <hunterlallen@protonmail.com>",
+      "files_changed": 2,
+      "additions": 80,
+      "deletions": 28,
+      "commit_type": "code"
+    },
+    {
+      "author": "Juan Oxoby",
+      "date": "2019-06-15T00:39:30Z",
+      "sha": "bc9beb77f91dd01720505cbced6a0b5928489344",
+      "message": "Add rmw_subscription_get_actual_qos implementation",
+      "files_changed": 1,
+      "additions": 12,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "YuSheng T",
+      "date": "2019-05-03T09:42:03Z",
+      "sha": "f7de5522d7d778ad6ac583d6b3aa746a3d44e723",
+      "message": "remove compile error when gcc 7",
+      "files_changed": 3,
+      "additions": 30,
+      "deletions": 26,
+      "commit_type": "code"
+    }
+  ]
+}

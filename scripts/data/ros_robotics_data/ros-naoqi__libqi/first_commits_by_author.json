@@ -1,0 +1,951 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T22:28:55Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros-naoqi",
+    "repo": "libqi"
+  },
+  "data": [
+    {
+      "author": "mbusy",
+      "date": "2021-12-12T14:10:38Z",
+      "sha": "afddc852185d2a38c91c6b9fed2d195eb83e545d",
+      "message": "Add default ROS 1 requirements",
+      "files_changed": 3,
+      "additions": 110,
+      "deletions": 130,
+      "commit_type": "config"
+    },
+    {
+      "author": "pmartin-sbre",
+      "date": "2018-09-24T10:01:02Z",
+      "sha": "4f43b28a1a815342583690a42663df27d702da9f",
+      "message": "qi.signal: Adds a warning on disconnection if link is not found. #42037\n\nChange-Id: I114739d42ab0f1e4f11392edb0cc51ea4021b1e6\nReviewed-on: http://gerrit.aldebaran.lan/92522\nReviewed-by: jmonnon <jmonnon@aldebaran.com>\nReviewed-by: vincent.palancher <vincent.palancher@external.softbankrobotics.com>\nReviewed-by: jlamotte <jlamotte@aldebaran.com>\nReviewed-by: philippe.martin <philippe.martin@softbankrobotics.com>\nTested-by: philippe.martin <philippe.martin@softbankrobotics.com>",
+      "files_changed": 2,
+      "additions": 61,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Victor Paleologue",
+      "date": "2018-03-22T12:39:07Z",
+      "sha": "025f69e0d273ec61035f539a5f8de5741f53b1fd",
+      "message": "Signal: let setOnSubscribers be public\n\nIt is safe and it is required to make callbacks that may do things with\nthe signal itself.\n\nChange-Id: Ib73c99fef2177a50513e348106927505a24a4e38\nReviewed-on: http://gerrit.aldebaran.lan/89317\nReviewed-by: vincent.palancher <vincent.palancher@external.softbankrobotics.com>\nReviewed-by: jlamotte <jlamotte@aldebaran.com>\nTested-by: vpaleologue <vpaleologue@aldebaran-robotics.com>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Vincent Palancher",
+      "date": "2017-04-07T15:31:42Z",
+      "sha": "a6066914ae9ba06ee8370f0e815dda6341068f8f",
+      "message": "PrettyPrint: Adds a class to print metatypes infos\n\nMetatypes can be pretty printed with user friendly formatting.\nAdded a new class qi::detail::StreamPrettyPrinter.\nAdded a function enabledColor in iocolor.hpp (it used to be\nnamed FC in metaobject.cpp)\n\nChange-Id: Ib9ccaf6b07638087e294aa5e32b4da585975d674\nReviewed-on: http://gerrit.aldebaran.lan/81977\nTested-by: vincent.palancher <vincent.palancher@external.softbankrobotics.com>\nReviewed-by: jmonnon <jmonnon@aldebaran.com>\nReviewed-by: jlamotte <jlamotte@aldebaran.com>",
+      "files_changed": 5,
+      "additions": 915,
+      "deletions": 157,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Sébastien Barthélémy",
+      "date": "2013-02-19T14:29:03Z",
+      "sha": "7519fab280f4814108b0e09ef8f92aa2ce1f1ffc",
+      "message": "remove qiprobe machinery\n\nbecause it was unused\n\nChange-Id: I4f49dc90ddf00b280b6c6010861baf2bc34a0f83\nReviewed-on: http://gerrit.aldebaran.lan:8080/12939\nReviewed-by: cgestes <gestes@aldebaran-robotics.com>\nTested-by: sbarthelemy <sbarthelemy@aldebaran-robotics.com>",
+      "files_changed": 2,
+      "additions": 0,
+      "deletions": 7,
+      "commit_type": "docs"
+    },
+    {
+      "author": "opennao",
+      "date": "2014-02-21T20:08:01Z",
+      "sha": "e61294143fccd8d3e1fb083e0ec9899826f104e7",
+      "message": "Merge commit 'refs/integration/team/platform/dev-38'",
+      "files_changed": 20,
+      "additions": 492,
+      "deletions": 236,
+      "commit_type": "config"
+    },
+    {
+      "author": "Jeremy Monnon",
+      "date": "2016-03-11T15:42:31Z",
+      "sha": "ca0fdf99c4af8826abd2aa55ee40140340efd96f",
+      "message": "Can now create an AnyFunction from a FunctionObject\n(lambda or any struct/class with a operator()).\n\nFor example, allow to pass a lambda to AnyObject::connect.\n\nChange-Id: I037d263eea2ab82f826e08b901fc97baca15e633\nReviewed-on: http://gerrit.aldebaran.lan/69974\nTested-by: jmonnon <jmonnon@aldebaran.com>\nReviewed-by: jmonnon <jmonnon@aldebaran.com>\nReviewed-by: jlamotte <jlamotte@aldebaran.com>\nTested-by: gerrit",
+      "files_changed": 7,
+      "additions": 569,
+      "deletions": 7,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Vincent Lartaud",
+      "date": "2020-06-05T08:43:34Z",
+      "sha": "1dfd1f24df29689e08f60e78d6cc3407d9d6ab8f",
+      "message": "libqi.application: fixes 'qi::Application' creation crash on protected path.\n\nFixes #45680\n\nBy default, 'qi::Application' tries to check if the path exists, but part of it\nmight be protected on some platforms, in which case a SIGABORT is triggered\nbecause of an uncatched exception.\n\nWe made sure that each time an error occurs on path construction, including\naccess errors, an empty path is returned so we can track those errors and\navoid crashes.\n\nChange-Id: I761bed51899cd9385a33968857a7abdb1bbc3723\nReviewed-on: http://gerrit2.aldebaran.lan/126\nReviewed-by: philippe.martin <philippe.martin@softbankrobotics.com>\nReviewed-by: vincent.palancher <vincent.palancher@softbankrobotics.com>\nTested-by: vincent.lartaud <vincent.lartaud@external.softbankrobotics.com>",
+      "files_changed": 6,
+      "additions": 174,
+      "deletions": 60,
+      "commit_type": "docs"
+    },
+    {
+      "author": "vincent.palancher",
+      "date": "2020-10-07T16:59:04Z",
+      "sha": "6b6689ff166b6a2b11f161d1afdbb518f069bea1",
+      "message": "misc: Removes .gitreview file.\n\nChange-Id: I45eb8cff4ccd53550206b5c27a2ad1e95064b206\nReviewed-on: http://gerrit2.aldebaran.lan/548\nReviewed-by: philippe.martin <philippe.martin@softbankrobotics.com>\nReviewed-by: jmonnon <jmonnon@aldebaran.com>\nReviewed-by: vincent.palancher <vincent.palancher@softbankrobotics.com>\nTested-by: vincent.palancher <vincent.palancher@softbankrobotics.com>",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "A. Joël Lamotte",
+      "date": "2020-01-14T16:51:33Z",
+      "sha": "6abfab57b63e90220c358082847b119dc1b456fb",
+      "message": "tests: Fixes timeout too low for some gateway tests.\n\nChange-Id: Ia7375d9019610d99e4a9975879aacd6fbe41df02\nReviewed-on: http://gerrit.aldebaran.lan/96974\nReviewed-by: vincent.palancher <vincent.palancher@softbankrobotics.com>\nReviewed-by: julien.bernard <julien.bernard@external.softbankrobotics.com>\nTested-by: jlamotte <jlamotte@aldebaran.com>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 6,
+      "commit_type": "test"
+    },
+    {
+      "author": "Joël LAMOTTE",
+      "date": "2017-09-06T12:57:47Z",
+      "sha": "7780c8fb79a1260aba55c2cefd831870eb42a3c7",
+      "message": "Fixes tests capturing local objects by reference in async callbacks.\n\nChange-Id: I8e8f3038bd2dd91bb88b5e98b23851f908042d46\nReviewed-on: http://gerrit.aldebaran.lan/85063\nReviewed-by: jmonnon <jmonnon@aldebaran.com>\nReviewed-by: jlamotte <jlamotte@aldebaran.com>\nTested-by: jlamotte <jlamotte@aldebaran.com>\nReviewed-by: vincent.palancher <vincent.palancher@external.softbankrobotics.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "blastrock",
+      "date": "2013-10-21T14:04:32Z",
+      "sha": "16721885921ba27e08f5eadd5796544cc242c42d",
+      "message": "TypeInterface: Removed const from type methods\n\nChange-Id: I11dbbbe6a6aa8504a825410877fe0d9aa81e6a9a\nReviewed-on: http://gerrit.aldebaran.lan/29665\nTested-by: gerrit\nReviewed-by: pdaouadi <pdaouadi@aldebaran-robotics.com>",
+      "files_changed": 13,
+      "additions": 57,
+      "deletions": 56,
+      "commit_type": "code"
+    },
+    {
+      "author": "Victor PALEOLOGUE",
+      "date": "2016-11-04T12:57:22Z",
+      "sha": "93d0d754b88e9c16bc59d93a8821dd121287696d",
+      "message": "Object: disconnection to be asynchronous\n\nPrevents deadlocks.\n\nChange-Id: I950b5dac20c1df02bdc787295e7d51b16bb5629e\nReviewed-on: http://gerrit.aldebaran.lan/75794\nReviewed-by: vpaleologue <vpaleologue@aldebaran-robotics.com>\nReviewed-by: jlamotte <jlamotte@aldebaran.com>\nTested-by: vpaleologue <vpaleologue@aldebaran-robotics.com>",
+      "files_changed": 2,
+      "additions": 8,
+      "deletions": 12,
+      "commit_type": "code"
+    },
+    {
+      "author": "ngargaud",
+      "date": "2018-06-14T12:41:35Z",
+      "sha": "cca650bb24c430d0c03310f442abb7b48c4b06ab",
+      "message": "Merge commits platform-224\n\nChange-Id: I4c1e4b954b14015e5af39ce3e2b3e98338424d0c",
+      "files_changed": 72,
+      "additions": 2349,
+      "deletions": 1022,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Anne-Claire Le Saos",
+      "date": "2019-09-12T12:32:27Z",
+      "sha": "d5f68a0a1c05641e40423d89c8042dc3d575a923",
+      "message": "qi.messaging: Fixes missing track of `SessionPrivate` lifetime.\n\nThe call to `track(..., ptr)` requires that the pointed object is still\nalive, so we need to track the callback that does the tracking even\nthough the only it does is track.\n\nChange-Id: I597dc94dca1063fa39bbc304e406c15cdf40333c\nReviewed-on: http://gerrit.aldebaran.lan/96134\nReviewed-by: philippe.martin <philippe.martin@softbankrobotics.com>\nReviewed-by: julien.bernard <julien.bernard@external.softbankrobotics.com>\nReviewed-by: jlamotte <jlamotte@aldebaran.com>\nTested-by: jlamotte <jlamotte@aldebaran.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Matthieu Paindavoine",
+      "date": "2017-08-03T14:44:47Z",
+      "sha": "b98364b4da87a03cdbf03d3c491beac7ea50cd7b",
+      "message": "messaging: fixes compile error\n\nChange-Id: I5a60ce88e00d480cc657f8bf61a7f23c3b3172e5\nReviewed-on: http://gerrit.aldebaran.lan/84464\nReviewed-by: vincent.palancher <vincent.palancher@external.softbankrobotics.com>\nReviewed-by: jlamotte <jlamotte@aldebaran.com>\nTested-by: jlamotte <jlamotte@aldebaran.com>\nReviewed-by: jmonnon <jmonnon@aldebaran.com>\nReviewed-by: matthieu.paindavoine <matthieu.paindavoine@softbankrobotics.com>",
+      "files_changed": 2,
+      "additions": 5,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "gstavrinos",
+      "date": "2019-07-03T13:41:46Z",
+      "sha": "2c6c51d7f600e6edfb7cc7b73b8a15bf52528aa6",
+      "message": "Fixed compilation errors for latest versions of cmake and boost",
+      "files_changed": 3,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "gvallat",
+      "date": "2015-07-08T16:02:32Z",
+      "sha": "4c8a5d7c4c8b0a31d750fe098f8088b45d7afa69",
+      "message": "add android dependencies (liblog)\n\nwas previously hidden in the android NDK cmake.\n\nChange-Id: I46828e3b5b4809d7dda7f33d291ff31852de317c\nReviewed-on: http://gerrit.aldebaran.lan/60756\nReviewed-by: gschweitzer <gschweitzer@aldebaran.com>\nTested-by: gvallat <gvallat@aldebaran-robotics.com>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Ludovic Guegan",
+      "date": "2018-01-12T13:37:31Z",
+      "sha": "2ca3104482e612fa61fb4c5bc24edf25f2d37cfd",
+      "message": "tools/wireshark: remove undeclared field\n\nChange-Id: Ic66721c68203cb84a7bc602ca4613d3918d5cf38\nReviewed-on: http://gerrit.aldebaran.lan/88849\nReviewed-by: vincent.palancher <vincent.palancher@external.softbankrobotics.com>\nTested-by: lguegan <lguegan@aldebaran-robotics.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Victor Paléologue",
+      "date": "2016-10-17T11:34:10Z",
+      "sha": "90c428e4c5de472e31ca0e7387244173860c1b01",
+      "message": "Property: support asynchronous setters and getters\n\nReferences were casted so that async calls would make a copy of them.\nUsing boost::ref in the signature ensures that the copy will still be\na reference to the original attribute.\n\nChange-Id: I47ca4ed2282aa5f6c737e604bc594ecbed023be4\nReviewed-on: http://gerrit.aldebaran.lan/76471\nReviewed-by: vpaleologue <vpaleologue@aldebaran-robotics.com>\nReviewed-by: jlamotte <jlamotte@aldebaran.com>\nTested-by: vpaleologue <vpaleologue@aldebaran-robotics.com>",
+      "files_changed": 3,
+      "additions": 29,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "gerrit",
+      "date": "2018-08-29T15:17:50Z",
+      "sha": "3fdd83aa278abf3d2bcecb5f08ecafd65debec61",
+      "message": "Merge commit 'refs/integration/team/platform/merge-238'",
+      "files_changed": 47,
+      "additions": 1128,
+      "deletions": 578,
+      "commit_type": "config"
+    },
+    {
+      "author": "Klaim",
+      "date": "2014-07-18T08:51:14Z",
+      "sha": "f0876e27b65f86305bc3ae811ae28cb5a86b0aff",
+      "message": "Fixed missing members initializations pointed by cppcheck.\n\nChange-Id: Ic26d7becc17b0dd1e1cbc419e8f4863600d36dfe\nReviewed-on: http://gerrit.aldebaran.lan/43189\nReviewed-by: jlamotte <jlamotte@aldebaran.com>\nReviewed-by: cgestes <gestes@aldebaran-robotics.com>\nTested-by: jlamotte <jlamotte@aldebaran.com>",
+      "files_changed": 3,
+      "additions": 12,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Miriam Bilac",
+      "date": "2018-08-03T17:19:06Z",
+      "sha": "dfe14ee2882fe8527daa1f004032bade6156608a",
+      "message": "Fixes ptrUid lost when using impl types with QI_REGISTER_IMPLEMENTATION_H\n\nQI_REGISTER_IMPLEMENTATION_H associates an interface type to an\nimplementation type that might be unrelated. However,\nnot like QI_REGISTER_IMPLEMENTATION (note the absence of `_H`),\nQI_REGISTER_IMPLEMENTATION_H generates special proxy types wrapping\nthe real implementation object.\n\nWhen using QI_REGISTER_IMPLEMENTATION_H and doing:\n\n    Object<Interface> obj{ make_shared<Impl> }; // Will instantiate wrapper\n\nthen the Object constructor detects this situation as a special case\nand instantiates the appropriate wrapper type then put the real\nimplementation object in it.\nIn the process, the ptrUid of the real objet is lost (without this patch)\nwhen creating the GenericObject associated to this wrapper+impl couple,\nbut it is still the real object being called in the end.\n\nIn this change we are making sure that we provide the real implementation\nptrUId instead of creating a new one based on the wrapper object\nwhen making the associated GenericObject.\n\nChange-Id: Iedca59079d4d2f199517e332a4fd4bd96a538057\nReviewed-on: http://gerrit.aldebaran.lan/91604\nReviewed-by: jmonnon <jmonnon@aldebaran.com>\nReviewed-by: vincent.palancher <vincent.palancher@external.softbankrobotics.com>\nReviewed-by: jlamotte <jlamotte@aldebaran.com>\nTested-by: jlamotte <jlamotte@aldebaran.com>",
+      "files_changed": 2,
+      "additions": 72,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "SÃÂ©bastien BarthÃÂ©lÃÂ©my",
+      "date": "2018-01-02T15:48:35Z",
+      "sha": "5edc7ba2c5978af7aa5f8b19642cf7d66a3c528e",
+      "message": "Signal Spy: ensure disconnection after destruction\n\nAnd thanks to Sébastien Barthélémy for the unit test reproducing it.\n\nChange-Id: I031e15b497ce3843a3a4a51b2f27c7fb3147c416\nReviewed-on: http://gerrit.aldebaran.lan/87514\nReviewed-by: sbarthelemy <sbarthelemy@aldebaran.com>\nTested-by: vpaleologue <vpaleologue@aldebaran-robotics.com>",
+      "files_changed": 3,
+      "additions": 34,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "Matthias Ballarini",
+      "date": "2018-05-24T06:59:25Z",
+      "sha": "82369e4f8e156358ed5a7c6bba22fad7c9e5273a",
+      "message": "Merge branch 'team/platform/merge-setunsetprop-221' into release-2.9\n\nChange-Id: I9b5a7b29661331b95196a10c8f3ac97f242f141c",
+      "files_changed": 25,
+      "additions": 1128,
+      "deletions": 160,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Jocelyn Martin",
+      "date": "2016-03-03T13:51:08Z",
+      "sha": "fe787c8f1dd44a2df39d8c676b4e0997675ea0bb",
+      "message": "Future: tryUnwrap to prefer universal references\n\nWith a const reference, it would potentially call implicitly for a\nconstructor of qi::Future which may wait for the value to be returned.\n\nChange-Id: I9524774455f386ab7cf3a613e2cfdefb472f6161\nReviewed-on: http://gerrit.aldebaran.lan/69600\nReviewed-by: jlamotte <jlamotte@aldebaran.com>\nTested-by: jmartin <jmartin@aldebaran-robotics.com>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "sbarthelemy",
+      "date": "2018-03-16T17:50:16Z",
+      "sha": "73a257300b5dcd05450dc3e2f96efd96d01d5c11",
+      "message": "fix parseQiPathConf argument name\n\nThe function expects an sdk prefix, not the full\n${prefix}/qi/patch.conf path.\n\nChange-Id: I4964f34dde408af7f4754d984f4e98bbc0d8c09c\nReviewed-on: http://gerrit.aldebaran.lan/89167\nReviewed-by: sbarthelemy <sbarthelemy@aldebaran.com>\nReviewed-by: vincent.palancher <vincent.palancher@external.softbankrobotics.com>\nTested-by: sbarthelemy <sbarthelemy@aldebaran.com>",
+      "files_changed": 2,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "Joël Lamotte",
+      "date": "2017-09-01T09:42:19Z",
+      "sha": "86d9f8b482b0bf8cc82d1b5dcd628a3c685f2f94",
+      "message": "Fixes test_qi\n\n - uninitialized atomics;\n - expression not compiling on VS2015;\n - concurrency issue with custom log handlers unregistration;\n\nChange-Id: I1d65fac8df3e238b32e273301211b539cef91178\nReviewed-on: http://gerrit.aldebaran.lan/84994\nReviewed-by: jlamotte <jlamotte@aldebaran.com>\nReviewed-by: vincent.palancher <vincent.palancher@external.softbankrobotics.com>\nTested-by: jlamotte <jlamotte@aldebaran.com>",
+      "files_changed": 6,
+      "additions": 28,
+      "deletions": 17,
+      "commit_type": "test"
+    },
+    {
+      "author": "Gerard.BOUURIAUD@ALD-1272-DE",
+      "date": "2018-03-20T15:44:34Z",
+      "sha": "5cc8b2411606f1200f21706ad4cbf68f4357d356",
+      "message": "Add BOOST_OS_ANDROID test for std::timed_mutex and std::recursive_timed_mutex : #41230\n\nSince std::timed_mutex and std::recursive_timed_mutex doesn't exit in Android C++, we ignore them for Android\nThe aim is to avoid compilation issue on Android.\n\nChange-Id: Ib3c00afa4facfa9ee2c3adf50ec4575fd00fc10b\nReviewed-on: http://gerrit.aldebaran.lan/89266\nReviewed-by: jlamotte <jlamotte@aldebaran.com>\nReviewed-by: vincent.palancher <vincent.palancher@external.softbankrobotics.com>\nTested-by: Gerard.BOURRIAUD <gerard.bourriaud@external.softbankrobotics.com>",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "JoÃ«l Lamotte",
+      "date": "2017-09-04T16:17:43Z",
+      "sha": "d4e3ff218e1aeb291ccf6949fc8304c00ceacae1",
+      "message": "future: Deprecates implicit casts.\n\nThis implicit cast blocks and is blocking unexpectedly in\nunexpected cases.\nWe will remove any form of cast from `Future<T>` to T as the user can\nalready retrieve the value using safer access functions.\n\nChange-Id: I552b4a08a949521dd763bc76e5fe3d6650438451\nReviewed-on: http://gerrit.aldebaran.lan/85026\nReviewed-by: vincent.palancher <vincent.palancher@external.softbankrobotics.com>\nTested-by: jlamotte <jlamotte@aldebaran.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "JoÃ???Ã??Ã?Â«l LAMOTTE",
+      "date": "2018-01-19T17:02:32Z",
+      "sha": "6748cc5b76e4ff71a2b0847d34b26e510eb9e2d5",
+      "message": "tests: Fixes tests not passing because connecting too fast to child process.\n\nSometimes (mainly on Windows in Debug mode) a child process will take some\ntime to startup. When a test launches such process and then tries\nto connect via a socket to it, a connection error might happen which might make\nthe test fail while the issue is not related to the test.\nTo prevent this, we provide test::tryConnect() to attempt several connections\nbefore considering the connection to be failed.\n\nChange-Id: I2a9bdda447d18e80d0d080c1525d8fcab2cdaf40\nReviewed-on: http://gerrit.aldebaran.lan/87996\nReviewed-by: jmonnon <jmonnon@aldebaran.com>\nReviewed-by: jlamotte <jlamotte@aldebaran.com>\nReviewed-by: vincent.palancher <vincent.palancher@external.softbankrobotics.com>\nTested-by: jlamotte <jlamotte@aldebaran.com>",
+      "files_changed": 4,
+      "additions": 32,
+      "deletions": 10,
+      "commit_type": "test"
+    },
+    {
+      "author": "JoÃ«l LAMOTTE",
+      "date": "2018-01-22T16:07:58Z",
+      "sha": "283eaf0bf1d7a222a109a80870080837fb461c3e",
+      "message": "Fixes compilation error using VS2015 caused by a compiler bug.\n\nThe error, failing to compile ExecutionContext::asyncAt/asyncDelay,\nonly appears with VS2015, not with VS2013 nor VS2017.\n\nChange-Id: Ib3b1c19541af7e0aa89b6f3e07f6dafa34cfa605\nReviewed-on: http://gerrit.aldebaran.lan/87893\nReviewed-by: vincent.palancher <vincent.palancher@external.softbankrobotics.com>\nReviewed-by: jmonnon <jmonnon@aldebaran.com>\nTested-by: jlamotte <jlamotte@aldebaran.com>",
+      "files_changed": 1,
+      "additions": 16,
+      "deletions": 18,
+      "commit_type": "code"
+    },
+    {
+      "author": "JoÃ?Â«l LAMOTTE",
+      "date": "2018-01-09T13:43:51Z",
+      "sha": "edc20de2af9d14529241f14f55cf35a24001c5d2",
+      "message": "tests: Removes dependency to libqi for execs used in \"spawn\" functions tests.\n\nSpawn functions tests (including ScopedProcess usage)\non Windows can fail because the launched executable fails on\nstartup as the working environment is incorrect (the executable is in\na temporary directory with no other dependencies)\nand the system does not find boost libraries dlls\nwhich are required by libqi.\nThis is because we do not make the child process inherit the test process environment\nwhen calling the spawn functions.\n\nThese executable do not need libqi anyway so removing the dependency\nfixes this issue (they can be run standalone).\n\nChange-Id: Id88b12c0a9fe7ad0328e9ee65e0707f76b13918e\nSigned-off-by: Joël LAMOTTE <jlamotte@softbankrobotics.com>\nReviewed-on: http://gerrit.aldebaran.lan/87633\nReviewed-by: vincent.palancher <vincent.palancher@external.softbankrobotics.com>\nReviewed-by: jmonnon <jmonnon@aldebaran.com>\nTested-by: jlamotte <jlamotte@aldebaran.com>",
+      "files_changed": 2,
+      "additions": 5,
+      "deletions": 5,
+      "commit_type": "test"
+    },
+    {
+      "author": "hcuche",
+      "date": "2011-06-16T14:55:16Z",
+      "sha": "28a22b3ae5011f37bcaa09a640e493059f0aef33",
+      "message": "libqi: change output of console log.",
+      "files_changed": 1,
+      "additions": 21,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "Marine CHAMOUX",
+      "date": "2016-03-16T16:25:19Z",
+      "sha": "0ae737c7549070f8b6f227fefb82de6d660d4a36",
+      "message": "loadService return the registered service id (#35327)\n\nChange-Id: Ifede62ddb773a5bbc240e3024a9cdfcb3977f354\nReviewed-on: http://gerrit.aldebaran.lan/70199\nReviewed-by: vpaleologue <vpaleologue@aldebaran-robotics.com>\nReviewed-by: hcuche <hcuche@aldebaran.com>\nTested-by: mchamoux <mchamoux@aldebaran-robotics.com>",
+      "files_changed": 3,
+      "additions": 20,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "Igor CESI",
+      "date": "2015-12-24T13:30:04Z",
+      "sha": "476ce2898cc94112802be952e9dec6d425935df5",
+      "message": "Implement at() function for AnyReference. (fix for NAOqi Bug #32976)\n\nChange-Id: I7c010c0b69ad18356f14354ee7b5ad0589a1a9c8\nReviewed-on: http://gerrit.aldebaran.lan/66703\nReviewed-by: icesi <icesi@aldebaran.com>\nReviewed-by: pdaouadi <pdaouadi@aldebaran-robotics.com>\nReviewed-by: jlamotte <jlamotte@aldebaran.com>\nTested-by: icesi <icesi@aldebaran.com>",
+      "files_changed": 3,
+      "additions": 100,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "llec",
+      "date": "2013-02-14T15:21:49Z",
+      "sha": "9b4785f5bf2dd32084f32851f74b36c9ffca86aa",
+      "message": "Revert \"Tests: remove useless parameter\"\n\nThis reverts commit cf1fc0b620b9e79ba03c3da26084ea6e62d17cd9\n\nChange-Id: Id6bf19c742a19d94c10046301820ec17f8457785\nReviewed-on: http://gerrit.aldebaran.lan:8080/12704\nReviewed-by: llec <llec@aldebaran-robotics.com>\nTested-by: llec <llec@aldebaran-robotics.com>",
+      "files_changed": 4,
+      "additions": 6,
+      "deletions": 6,
+      "commit_type": "test"
+    },
+    {
+      "author": "houssemkouki",
+      "date": "2015-06-03T17:32:10Z",
+      "sha": "c6a53105ba9240615ada6610c46ef2fb8ee17b65",
+      "message": "add qi/detail/futurebarrier.hpp to headers export list\n\nChange-Id: If8ccb4860b2725bf1f5fe9c86088433e59a8d92f",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Francis Visoiu Mistrih",
+      "date": "2015-10-02T09:25:22Z",
+      "sha": "46e03014f394a363dd540676d53e22bb8ca1e390",
+      "message": "Fix #32164: Adds access to application help text.\n\nAdds helptText() in qi::Application[Session] to allow\napplication developers to access the complete help text including usage.\n\nChange-Id: I1b0515f1359f4ed11723b1e7acf47b2b40e2a2e7\nReviewed-on: http://gerrit.aldebaran.lan/62953\nReviewed-by: jlamotte <jlamotte@aldebaran.com>\nReviewed-by: jmonnon <jmonnon@aldebaran.com>\nReviewed-by: vincent.palancher <vincent.palancher@external.softbankrobotics.com>\nTested-by: jlamotte <jlamotte@aldebaran.com>",
+      "files_changed": 8,
+      "additions": 171,
+      "deletions": 39,
+      "commit_type": "docs"
+    },
+    {
+      "author": "gschweitzer-aldebaran",
+      "date": "2011-12-22T14:06:37Z",
+      "sha": "4ebb11fb6deae85ce0b189bdb0176b059c8f2eae",
+      "message": "LibQi : project.hpp was duplicated from libnaoqi",
+      "files_changed": 2,
+      "additions": 0,
+      "deletions": 256,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jmassot",
+      "date": "2015-05-25T14:08:39Z",
+      "sha": "f20142e741aa2a1e17a52d218e3dacff65ccc815",
+      "message": "Fallback on the rigth application path if we use var env\n\nChange-Id: Id29c715d39951c3aa52ca53fe26ddcebe7c381e8\nReviewed-on: http://gerrit.aldebaran.lan/58316\nReviewed-by: goreal <goreal@aldebaran-robotics.com>\nTested-by: goreal <goreal@aldebaran-robotics.com>\nApproved: hcuche <hcuche@aldebaran.com>\nReviewed-by: hcuche <hcuche@aldebaran.com>\nTested-by: hcuche <hcuche@aldebaran.com>\nReviewed-on: http://gerrit.aldebaran.lan/58454\nReviewed-by: jmassot <jmassot@aldebaran-robotics.com>\nTested-by: jmassot <jmassot@aldebaran-robotics.com>",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Hervé Cuche",
+      "date": "2016-12-20T15:57:10Z",
+      "sha": "f24265ed1f9fa857911cec0da00c674cdec1554a",
+      "message": "libqi-bin was moved into qi-tools.git\n\nChange-Id: I1a115ac15ca4ba34c828bc2d2ee764de8480c7f0\nReviewed-on: http://gerrit.aldebaran.lan/78418\nReviewed-by: jmonnon <jmonnon@aldebaran.com>\nReviewed-by: hcuche <hcuche@aldebaran.com>\nTested-by: hcuche <hcuche@aldebaran.com>",
+      "files_changed": 52,
+      "additions": 0,
+      "deletions": 6634,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jlanca",
+      "date": "2016-03-08T17:29:54Z",
+      "sha": "3ddb94589fbadda496e9cbc6766a94b7ee4166d1",
+      "message": "StructTypeInterface: explicitely includes dependencies\n\nChange-Id: I198668ae62015321503bd979b99b62d5603a86e7\nReviewed-on: http://gerrit.aldebaran.lan/69800\nReviewed-by: jlamotte <jlamotte@aldebaran.com>\nTested-by: jlanca <jlanca@aldebaran.com>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "vpaleologue",
+      "date": "2011-12-12T14:13:39Z",
+      "sha": "fb2c93ad55a11f6d26675d4cc827956cd0e4864a",
+      "message": "core/libqi: new standart exceptions for typical io errors",
+      "files_changed": 2,
+      "additions": 45,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "claire RIVOIRE",
+      "date": "2017-03-22T15:58:58Z",
+      "sha": "0b022aeefdeaef1273d63957b46e100f26ef99b1",
+      "message": "TRANSLATOR [Feature] removing former way to get translation files\n\nChange-Id: Ibff438518eb8ba9e9b42c8bdbc94239cab0d3ff0\nReviewed-on: http://gerrit.aldebaran.lan/81221\nReviewed-by: crivoire <crivoire@aldebaran.com>\nTested-by: crivoire <crivoire@aldebaran.com>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 11,
+      "commit_type": "code"
+    },
+    {
+      "author": "Emmanuel NALEPA",
+      "date": "2017-02-02T14:20:33Z",
+      "sha": "e49546968137431c02ad4de3b0a2705947133207",
+      "message": "Remove dependency on qiprobes\n\nChange-Id: I0f89b82881c03050a0fd59f4327d175176ad447d\nReviewed-on: http://gerrit.aldebaran.lan/79741\nReviewed-by: enalepa <enalepa@aldebaran-robotics.com>\nTested-by: enalepa <enalepa@aldebaran-robotics.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "njauffret",
+      "date": "2016-08-25T09:35:28Z",
+      "sha": "61ef0e045c3fed0943655da39f97f363d4ea908e",
+      "message": "LibQi: os::isProcessRunning works with spaces in process filePath\n\n+ test\n\nChange-Id: I4a2224f18998a8d3ae56a79551e558ecf98626b6\nReviewed-on: http://gerrit.aldebaran.lan/74526\nReviewed-by: hkouki <hkouki@aldebaran-robotics.com>\nReviewed-by: jmonnon <jmonnon@aldebaran.com>\nTested-by: gerrit\nReviewed-by: njauffret <njauffret@aldebaran.com>\nTested-by: njauffret <njauffret@aldebaran.com>",
+      "files_changed": 3,
+      "additions": 25,
+      "deletions": 19,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Erwan Pinault",
+      "date": "2016-08-11T08:24:17Z",
+      "sha": "cac860e76a648ef10551b8b7732c1d5c9678f6d9",
+      "message": "Remove BOOST_ARCH_ARM for to_string definition\n\nBecause even for x86 architecture to_string doesn't exist when building with the Android NDK, remove the test of the arm achitecture\n\nChange-Id: Iefe825f31480af1a6c3cf9032d318d4b6331f46b",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Nicolas Cornu",
+      "date": "2012-09-19T17:26:18Z",
+      "sha": "14123af20afa4190bfc112f1c5f1767fa97cccc5",
+      "message": "Now cpu show percentage.\n\nChange-Id: I27584ed7ace0b9b08dcc246f2c441a4eec968f97\nReviewed-on: http://gerrit.aldebaran.lan:8080/5783\nReviewed-by: ncornu <ncornu@aldebaran-robotics.com>\nTested-by: ncornu <ncornu@aldebaran-robotics.com>",
+      "files_changed": 2,
+      "additions": 12,
+      "deletions": 18,
+      "commit_type": "code"
+    },
+    {
+      "author": "rom1v",
+      "date": "2016-02-15T12:58:17Z",
+      "sha": "f122befa1c66cf0efb762f1b3401b308b343acd7",
+      "message": "Catch filesystem_error in writablePath()\n\nboost::filesystem::exists(const path &) may throw a filesystem_error.\n\nIt actually throws this exception on Android when the path points to the\nsdcard and the WRITE_EXTERNAL_STORAGE permission is not granted to the\nprocess.\n\nChange-Id: I30fc614a4e3c853f2ceb3383c84735b2d218cb2c\nReviewed-on: http://gerrit.aldebaran.lan/68713\nReviewed-by: vpaleologue <vpaleologue@aldebaran-robotics.com>\nTested-by: rvimont <rvimont@presta.aldebaran.com>",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 7,
+      "commit_type": "code"
+    },
+    {
+      "author": "lsouchet",
+      "date": "2016-05-02T12:08:27Z",
+      "sha": "9acb8a4f26854f8dbafbfea86196bc0a020061a3",
+      "message": "QIPROJECT: add gtest as buildtime dependency.\n\nChange-Id: I7b1cc7bf44f995d77589fcda9d5a38796230bc93\nReviewed-on: http://gerrit.aldebaran.lan/71803\nReviewed-by: lsouchet <lsouchet@aldebaran-robotics.com>\nReviewed-by: jmonnon <jmonnon@aldebaran.com>\nReviewed-by: vbarbaresi <vbarbaresi@aldebaran-robotics.com>\nTested-by: lsouchet <lsouchet@aldebaran-robotics.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "dmerejkowsky",
+      "date": "2010-11-19T20:19:25Z",
+      "sha": "037ece3f9fcb0fff7af470e0eeea9efd5abeae94",
+      "message": "Fix compilation on old g++",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Alexandre Bossard",
+      "date": "2014-05-15T08:04:40Z",
+      "sha": "48f5a56fb57c1d2355b5913fdb9d51a8c10e7545",
+      "message": "qiproject: add path to python bindings\n\nChange-Id: I2f5c27dba0fa7dfceb9974c282abe80ab0d2b23c\nReviewed-on: http://gerrit.aldebaran.lan/40033\nReviewed-by: dmerejkowsky <dmerejkowsky@aldebaran-robotics.com>\nTested-by: dmerejkowsky <dmerejkowsky@aldebaran-robotics.com>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "jmartin",
+      "date": "2015-12-21T17:04:50Z",
+      "sha": "9be2cc60cbbaab40c14286a013f09af8faf17a66",
+      "message": "anyreference: add method unwrap\n\nChange-Id: I924eba37a1f4104d937e7df7434622946fb4a5c5\nReviewed-on: http://gerrit.aldebaran.lan/66605\nReviewed-by: jmartin <jmartin@aldebaran-robotics.com>\nTested-by: gerrit\nReviewed-by: vpaleologue <vpaleologue@aldebaran-robotics.com>",
+      "files_changed": 2,
+      "additions": 11,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Vincent Barbaresi",
+      "date": "2013-06-12T15:34:19Z",
+      "sha": "4e9050988ac1fc4fe628faa2fb4e9095685b044a",
+      "message": "Fix for qibuild 2.4\n\nChange-Id: I1b176916e3be67e9d25dcea037702001a161fff8\nReviewed-on: http://gerrit.aldebaran.lan:8080/19117\nReviewed-by: dmerejkowsky <dmerejkowsky@aldebaran-robotics.com>\nTested-by: dmerejkowsky <dmerejkowsky@aldebaran-robotics.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Taylor Veltrop",
+      "date": "2015-12-30T15:58:34Z",
+      "sha": "81f1ec3421cfc06c6bff39faf71b2fc52dc690ab",
+      "message": "Ensure that anyreferences use perfect forwarding\n\nChange-Id: I048dea7856afda02c72cfec5864049a6ec132e9c\nReviewed-on: http://gerrit.aldebaran.lan/66824\nReviewed-by: jlamotte <jlamotte@aldebaran.com>\nReviewed-by: tveltrop <tveltrop@aldebaran-robotics.com>\nTested-by: gerrit",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "Noé Rubinstein",
+      "date": "2015-03-11T13:48:49Z",
+      "sha": "81dddff4fd086e3a368054787b5342b0c73dc60a",
+      "message": "Compile without qiprobe\n\nThis uses CMake variable WITH_PROBES which is already used to\nactivate/de-activate qiprobes.\n\nThe C++ code uses preprocessor macro WITH_PROBES which is set by CMake\nfunction qiprobes_instrument_files.\n\nChange-Id: I85058acf80d1094217ca3763998b8fcb0c84cd0a\nReviewed-on: http://gerrit.aldebaran.lan/55514\nApproved: nrubinstein <nrubinstein@aldebaran-robotics.com>\nReviewed-by: nrubinstein <nrubinstein@aldebaran-robotics.com>\nTested-by: nrubinstein <nrubinstein@aldebaran-robotics.com>",
+      "files_changed": 2,
+      "additions": 17,
+      "deletions": 8,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jfremy",
+      "date": "2011-08-05T17:18:18Z",
+      "sha": "a5aa3abfb93a657c731821c034cf5740adcec604",
+      "message": "Revert \"libqi: Fix #4256\"\n\nThis reverts commit d10e8c6bfce7932092feaf829bbfc0ec83f846c8.",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "alkino",
+      "date": "2015-08-23T10:11:35Z",
+      "sha": "f060564247726e4fe772be676cf8a02d8ea88aba",
+      "message": "Stop using BOOST_STATIC_ASSERT* but use static_assert from c++11\n\nstatic_assert without message come with c++17 so add one when missing\n\nChange-Id: I293e70e544e59d952d09e6cb45c6a0f1fa5f57cc\nReviewed-on: http://gerrit.aldebaran.lan/61557\nTested-by: gerrit\nReviewed-by: ncornu <ncornu@aldebaran.com>",
+      "files_changed": 4,
+      "additions": 5,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "tfontenay",
+      "date": "2014-05-15T10:28:05Z",
+      "sha": "eca7e665459ba62bc6c8d3c2f57ee61b001ab9ac",
+      "message": "Fix accept issue\n\nFix an issue with the accept code that would not accept anymore connections\nif an error previously occurred.\n\nChange-Id: I46b2c6bec050f78a04d5e963c460d9f613e535fa\nReviewed-on: http://gerrit.aldebaran.lan/40076\nReviewed-by: tfontenay <tfontenay@aldebaran-robotics.com>\nTested-by: tfontenay <tfontenay@aldebaran-robotics.com>",
+      "files_changed": 2,
+      "additions": 68,
+      "deletions": 14,
+      "commit_type": "code"
+    },
+    {
+      "author": "goreal",
+      "date": "2012-10-15T12:19:27Z",
+      "sha": "eb30276e106d3f9627d901fd37a08ef973ca74e5",
+      "message": "fix compilation with qt for perfomance tests\n\nChange-Id: Idb220d5cc9fd7ccfd07d6465207d5c0533f0a7ad\nReviewed-on: http://gerrit.aldebaran.lan:8080/6752\nTested-by: goreal <goreal@aldebaran-robotics.com>\nReviewed-by: ncornu <ncornu@aldebaran-robotics.com>\nTested-by: ncornu <ncornu@aldebaran-robotics.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "guillaume-jcb",
+      "date": "2013-02-19T18:09:22Z",
+      "sha": "e9c789633d56a5d700815e270c5ec22b155c4033",
+      "message": "Fix compiler warning with qiLog\n\nChange-Id: I2de18bc335268b554eb5983a5eeddea695d7eeb1\nReviewed-on: http://gerrit.aldebaran.lan:8080/12991\nTested-by: gjacob <gjacob@aldebaran-robotics.com>\nReviewed-by: llec <llec@aldebaran-robotics.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "linux32-continuous-2",
+      "date": "2015-04-23T16:12:05Z",
+      "sha": "1f617c4780b7ed285bdf1a5086ba4e2a0c11cd88",
+      "message": "Merge commit 'refs/integration/team/release/dev-17'",
+      "files_changed": 5,
+      "additions": 41,
+      "deletions": 21,
+      "commit_type": "config"
+    },
+    {
+      "author": "platform",
+      "date": "2011-12-16T16:28:55Z",
+      "sha": "7f6a69b78cc7bf961c2a3c6d87652593b1ecfce3",
+      "message": "qios: Fix issue with utf8 (fopen, getenv, setenv).",
+      "files_changed": 2,
+      "additions": 9,
+      "deletions": 24,
+      "commit_type": "code"
+    },
+    {
+      "author": "agarcia",
+      "date": "2014-07-10T15:03:38Z",
+      "sha": "339ff9ec3d69cd89f052e2cbbd71c3c20c533fc0",
+      "message": "Preproc: Add QI_CREATE_ENUM_WITH_STRING_CONVERSION macro\n\nThis macro is used to create an enum with toString function.\n\nChange-Id: I9fe88e6d50e005ab67c5c4b877f180424b359cac\nReviewed-on: http://gerrit.aldebaran.lan/40396\nReviewed-by: cgestes <gestes@aldebaran-robotics.com>\nReviewed-by: agarcia <agarcia@aldebaran-robotics.com>\nTested-by: agarcia <agarcia@aldebaran-robotics.com>",
+      "files_changed": 1,
+      "additions": 29,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "cgestes",
+      "date": "2009-10-13T21:41:34Z",
+      "sha": "3b8d68c1bc7d6e7cd912fef74fe6e7fdffa4fdfb",
+      "message": "Merge remote branch 'origin/master'",
+      "files_changed": 0,
+      "additions": 0,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Mehdi Ambari",
+      "date": "2014-06-17T12:20:00Z",
+      "sha": "a433d03585d788783f19feef378d1513cd38f12e",
+      "message": "Modification of the doc\n\nChange-Id: I660f13a9b6341123c6e875f23c1e736c28260e46\nReviewed-on: http://gerrit.aldebaran.lan/41643\nReviewed-by: rvarannes <rvarannes@aldebaran-robotics.com>\nReviewed-by: mambari <mambari@aldebaran-robotics.com>\nTested-by: mambari <mambari@aldebaran-robotics.com>",
+      "files_changed": 6,
+      "additions": 24,
+      "deletions": 8,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Remy Varannes",
+      "date": "2014-06-12T10:17:01Z",
+      "sha": "91217eb4e77eebaeb789329e84f3574d999bf777",
+      "message": "Cxx-client cosmetic change\n\nreference to generic-interface_guide works\n\nChange-Id: I5c6870325ceca7045b71e6c393d44eacc7d04555\nReviewed-on: http://gerrit.aldebaran.lan/41504\nReviewed-by: rvarannes <rvarannes@aldebaran-robotics.com>\nTested-by: rvarannes <rvarannes@aldebaran-robotics.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 5,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Rémy Varannes",
+      "date": "2014-02-28T13:24:52Z",
+      "sha": "702e5d19929e04bf6a40f8909c35e801cbfccffa",
+      "message": "missing \\n. Bad doc generation.\n\nChange-Id: Ia66a39eb298a6c77b7dc59c7beac9cb9202d45f9\nReviewed-on: http://gerrit.aldebaran.lan/36811\nReviewed-by: rvarannes <rvarannes@aldebaran-robotics.com>\nTested-by: rvarannes <rvarannes@aldebaran-robotics.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "ckilner",
+      "date": "2010-08-03T15:56:45Z",
+      "sha": "4ec075aa93b3d04bf3f5df0910d36f7bfe22ca60",
+      "message": "Added vector float tests",
+      "files_changed": 1,
+      "additions": 67,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "zmarouf",
+      "date": "2014-05-26T01:57:49Z",
+      "sha": "c34aecf7dc0c8150cde19919081edea311a958be",
+      "message": "Revert \"Change log verbosity to Verbose for TCP_USER_TIMEOUT message\"\n\nThis reverts commit 9e7795ad5de9a1ff2377d5ce019c46cc08cdb69f\n\nChange-Id: I6c7fd41e22a544bc39dc4ce106d6afc583b8d0e1\nReviewed-on: http://gerrit.aldebaran.lan/40586\nApproved: zmarouf <zmarouf@aldebaran-robotics.com>\nReviewed-by: zmarouf <zmarouf@aldebaran-robotics.com>\nTested-by: zmarouf <zmarouf@aldebaran-robotics.com>",
+      "files_changed": 0,
+      "additions": 0,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "aparent",
+      "date": "2014-02-25T14:17:01Z",
+      "sha": "0f4e2fff576e57f323a1580ea90ba853cb0e0a46",
+      "message": "[python] Cleaner qi namespace (no sys or os)\n\nChange-Id: Ia53725feccdfc882a120c89b05fc15adf9c8fd0b\nReviewed-on: http://gerrit.aldebaran.lan/36601\nReviewed-by: ncornu <ncornu@aldebaran-robotics.com>\nReviewed-by: cgestes <gestes@aldebaran-robotics.com>\nTested-by: cgestes <gestes@aldebaran-robotics.com>",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "Matthieu Nottale",
+      "date": "2012-07-04T08:41:15Z",
+      "sha": "6b17262310858550ab5ac7e295858d644e2cbbda",
+      "message": "Functor: Add a new ctor to FunctorResult taking a FunctorResultBase.\n\nOtherwise one needs to implement both interfaces.\n\n\t* libqimessaging/qimessaging/functor.hpp: Here.\n\nChange-Id: Ief81b2bc56b9d286d678eec993b771de6205622e\nReviewed-on: http://gerrit.aldebaran.lan:8080/2596\nReviewed-by: cgestes <gestes@aldebaran-robotics.com>\nTested-by: cgestes <gestes@aldebaran-robotics.com>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Samuel Martin",
+      "date": "2012-01-23T18:23:51Z",
+      "sha": "67bdf31c8168f78ddcc2081dde94082d821a94e2",
+      "message": "test: test_qios: make test compliant with new ctc\n\nChange-Id: I67ed387976aea5bc7e94c5b1b35e39f8c8630f66",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "test"
+    },
+    {
+      "author": "Laurent LEC",
+      "date": "2012-02-09T16:05:35Z",
+      "sha": "e4b5535648047ebfa99284007fb7dc341f758ac0",
+      "message": "Refresh Session (Broker) C api.\n\nChange-Id: Ia1e8ba23bb7a5af0b464cb859794f7ad77ba5a17",
+      "files_changed": 2,
+      "additions": 198,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "CHHIM Ly William",
+      "date": "2013-08-06T18:26:17Z",
+      "sha": "d205d0a51db4d35877047ed82406f3f46c6d95a6",
+      "message": "ServiceDirectoryClient: Be (mostly) thread-safe.\n\nChange-Id: I3e52cbb5e1b5a473da2776cc5c19374ceafb0c94\nReviewed-on: http://gerrit.aldebaran.lan/23826\nReviewed-by: lwchhim <lwchhim@aldebaran-robotics.com>\nTested-by: lwchhim <lwchhim@aldebaran-robotics.com>\nReviewed-by: ncornu <ncornu@aldebaran-robotics.com>",
+      "files_changed": 2,
+      "additions": 32,
+      "deletions": 15,
+      "commit_type": "code"
+    },
+    {
+      "author": "Quentin Mignot",
+      "date": "2013-08-26T08:41:21Z",
+      "sha": "3f91582be8885a92a58f746b72f30900c4753329",
+      "message": "AutoService: New, Object<T> wrapper with automatic reconnexion\n\nChange-Id: Id4059e1b90fc5b60311ec9485a7910aa88a74bce\nReviewed-on: http://gerrit.aldebaran.lan/25083\nReviewed-by: qmignot <qmignot@aldebaran-robotics.com>\nReviewed-by: cgestes <gestes@aldebaran-robotics.com>\nTested-by: qmignot <qmignot@aldebaran-robotics.com>",
+      "files_changed": 5,
+      "additions": 537,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Pierre-Alexandre Goya",
+      "date": "2013-05-14T13:36:02Z",
+      "sha": "ee23fcf3d456c6c5ed7b4da6b19ef23bd3ca30bb",
+      "message": "decodeJSON: can parse int, float, string and array\n\nChange-Id: Iefc4dda152b758827fe04c63f3311ea7f42893f0\nReviewed-on: http://gerrit.aldebaran.lan:8080/17418\nReviewed-by: pagoya <pagoya@aldebaran-robotics.com>\nTested-by: pagoya <pagoya@aldebaran-robotics.com>\nTested-by: gerrit\nReviewed-by: cgestes <gestes@aldebaran-robotics.com>",
+      "files_changed": 4,
+      "additions": 427,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Pierre Roullon",
+      "date": "2012-05-03T08:58:51Z",
+      "sha": "c66951784668bc340916564e98f431e27330fde8",
+      "message": "fix return 1 for windows in qi-master\n\nChange-Id: If2c197b8163cf5b99333a3487231b3b85f962c11\nReviewed-on: http://gerrit.aldebaran.lan:8080/959\nReviewed-by: hcuche <hcuche@aldebaran-robotics.com>\nTested-by: hcuche <hcuche@aldebaran-robotics.com>\nReviewed-by: llec <llec@aldebaran-robotics.com>\nTested-by: llec <llec@aldebaran-robotics.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Ronny Chevalier",
+      "date": "2013-07-09T15:33:19Z",
+      "sha": "af495ec6ef1c7289683221e4d80b69ba454ab000",
+      "message": "add const qualifier on promise.future()\n\nChange-Id: I64ca14947f442bddbd5a797712c62e86cd339807\nReviewed-on: http://gerrit.aldebaran.lan/20855\nReviewed-by: rchevalier <rchevalier@aldebaran-robotics.com>\nReviewed-by: mnottale <mnottale@aldebaran-robotics.com>\nTested-by: gerrit\nReviewed-by: cgestes <gestes@aldebaran-robotics.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "cbegue",
+      "date": "2013-05-30T07:51:43Z",
+      "sha": "abae2fd11a9f7b762c4d89904f390647c92dea05",
+      "message": "python : Add factory support on the python backend\n\n- qi.createObject create an object register by the factory\n- qi.registerObjectFactory register a python class from the factory\n\nChange-Id: I6287c99ba1a2d2343d96d0cd8b4d1f94e7e4489c\nReviewed-on: http://gerrit.aldebaran.lan:8080/18172\nReviewed-by: mnottale <mnottale@aldebaran-robotics.com>\nTested-by: cbegue <cbegue@aldebaran-robotics.com>",
+      "files_changed": 10,
+      "additions": 246,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "proullon",
+      "date": "2012-05-29T08:30:34Z",
+      "sha": "209c3a91e1b36acd72d5a3bb3b5906272400ad13",
+      "message": "Revert \"Fix : Windows compilation : 2 operator>> is too much\"\n\nThis reverts commit 586d1397e49da4259c3668b64b288aca8dcca321\n\nChange-Id: I6d56abc7c86ab3749dd0ab43c0ac510916ccc550\nReviewed-on: http://gerrit.aldebaran.lan:8080/1451\nReviewed-by: cgestes <gestes@aldebaran-robotics.com>\nTested-by: cgestes <gestes@aldebaran-robotics.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "vbarbaresi",
+      "date": "2013-04-15T13:45:07Z",
+      "sha": "d77139372243d669a43ecd4d333c3ee442615126",
+      "message": "Fix another misuse of && instead of & in console qilog\n\nChange-Id: I6bc9a2264fb636bd5fe5fa8b805521c758e97408\nReviewed-on: http://gerrit.aldebaran.lan:8080/15920\nReviewed-by: llec <llec@aldebaran-robotics.com>\nTested-by: llec <llec@aldebaran-robotics.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Franck Michea",
+      "date": "2012-10-19T16:49:22Z",
+      "sha": "0cfb25e62a5b0e1802e14fb99458b05cb39f2edc",
+      "message": "PIMPL of qi::Url\n\nChange-Id: I2e0e6360d8f2449b297380b9128dedb898763263\nReviewed-on: http://gerrit.aldebaran.lan:8080/7142\nReviewed-by: cgestes <gestes@aldebaran-robotics.com>\nTested-by: fmichea <fmichea@aldebaran-robotics.com>",
+      "files_changed": 4,
+      "additions": 142,
+      "deletions": 88,
+      "commit_type": "docs"
+    },
+    {
+      "author": "clemolgat-SBR",
+      "date": "2012-05-22T15:53:02Z",
+      "sha": "46dcab013468b9d414140d46d1c0919d8c262595",
+      "message": "Port to qidoc\n\nChange-Id: I580e0835c3dc9805eb3dcedf52a6f24263da6680",
+      "files_changed": 69,
+      "additions": 9,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "Julien Freche",
+      "date": "2012-09-04T08:08:22Z",
+      "sha": "c7c23c269e72babdbd299e09a59b24962a573d15",
+      "message": "Add qi::os::getMachineId\n\nChange-Id: Ia96ca454b4e09cbc77e86ca65ab8a5fd16777074\nReviewed-on: http://gerrit.aldebaran.lan:8080/4692\nReviewed-by: cgestes <gestes@aldebaran-robotics.com>\nTested-by: jfreche <jfreche@aldebaran-robotics.com>",
+      "files_changed": 6,
+      "additions": 117,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "rhumbert",
+      "date": "2012-11-19T10:30:09Z",
+      "sha": "b1bd6d246ad18414c962cfd2026dc5a2cd697092",
+      "message": "EventLoop, handle notifications when a monitored fd (socket, ...) change\n\n\t* qi/eventloop.hpp: declare notifyFd that register callback to call\n\twhen a monitored fd change (is read or written).\n\t* src/eventloop.cpp: implement using libevent.\n\t* src/eventloop_p.hpp: private declaration.\n\nChange-Id: Icba9c0ec9679e2531fe23d13c410c7c2c95f31a5\nReviewed-on: http://gerrit.aldebaran.lan:8080/8057\nReviewed-by: cgestes <gestes@aldebaran-robotics.com>\nTested-by: rhumbert <rhumbert@aldebaran-robotics.com>",
+      "files_changed": 3,
+      "additions": 81,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "franck_duriez",
+      "date": "2012-10-29T17:04:47Z",
+      "sha": "870ed2faf2c705f633d5396c00a3e83071bbe660",
+      "message": "add cross platform version of POSIX snprintf\n\nChange-Id: I37c330e37f5ca560639f98c0dfb28612b54f6e33\nReviewed-on: http://gerrit.aldebaran.lan:8080/7445\nReviewed-by: cgestes <gestes@aldebaran-robotics.com>\nTested-by: fduriez <fduriez@aldebaran-robotics.com>\nReviewed-by: hcuche <hcuche@aldebaran-robotics.com>",
+      "files_changed": 4,
+      "additions": 33,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Sebastien Barthelemy",
+      "date": "2012-07-13T09:33:08Z",
+      "sha": "d79d5757c8aba426bb353673ee8657b08a5cfcc3",
+      "message": "run test_qipath.cpp from sdk_dir too\n\nChange-Id: I6c1b466e0730eea1a79acc971892eefa164b5797\nReviewed-on: http://gerrit.aldebaran.lan:8080/2924\nTested-by: cgestes <gestes@aldebaran-robotics.com>\nReviewed-by: cgestes <gestes@aldebaran-robotics.com>\nReviewed-by: hcuche <hcuche@aldebaran-robotics.com>\nTested-by: hcuche <hcuche@aldebaran-robotics.com>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "test"
+    },
+    {
+      "author": "fbriand",
+      "date": "2012-01-17T18:26:57Z",
+      "sha": "96a959527fd46e177755dfab7e3fc11cc7cf3802",
+      "message": "Fix compilation on Visual Studio",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "nhureau",
+      "date": "2011-10-04T09:24:32Z",
+      "sha": "59cfc95609c5c1d54917db53d3ade828da374a51",
+      "message": "Add flag for those of us who use Boost from the toolchain (1.44)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "bmarchand",
+      "date": "2011-10-07T08:36:29Z",
+      "sha": "1d97dab5d3d5a24f1243a5a4c4983839301b6688",
+      "message": "Tiny improvements in qimessaging examples",
+      "files_changed": 9,
+      "additions": 18,
+      "deletions": 17,
+      "commit_type": "code"
+    },
+    {
+      "author": "dgouaillier",
+      "date": "2011-09-12T16:29:51Z",
+      "sha": "783108704f24adb3d1244ed3b7b7633b05593245",
+      "message": "QI PATH : writable user path is the first one",
+      "files_changed": 2,
+      "additions": 9,
+      "deletions": 7,
+      "commit_type": "code"
+    },
+    {
+      "author": "pdepas",
+      "date": "2011-06-24T12:53:05Z",
+      "sha": "94dbcf6979cd4dc8f49d9217400e0d33f5da1564",
+      "message": "qiLog: fix a warning on mac.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    }
+  ]
+}

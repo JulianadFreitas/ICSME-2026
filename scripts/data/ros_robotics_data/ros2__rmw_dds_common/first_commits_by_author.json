@@ -1,0 +1,301 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-26T02:32:18Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros2",
+    "repo": "rmw_dds_common"
+  },
+  "data": [
+    {
+      "author": "cottsay",
+      "date": "2021-02-12T03:49:53Z",
+      "sha": "37d16b82e7bd98fdb5d3a11489ea35de6afad471",
+      "message": "Shorten some excessively long lines of CMake (#44)\n\nThe line length enforcement in ament_lint_cmake has been broken for some\r\ntime, but will be fixed by ament/ament_lint#236. This change brings this\r\npackage into compliance with a 120 column limit.\r\n\r\nSigned-off-by: Scott K Logan <logans@cottsay.net>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ahcorde",
+      "date": "2020-04-10T10:25:56Z",
+      "sha": "ea5e3e2899d047faa593bb40a5e61bbb7cf1a94e",
+      "message": "Changed rosidl_generator_cpp with rosidl_runtime_cpp (#10)\n\n* Changed rosidl_generator_cpp with rosidl_runtime_cpp\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Removed duplicated ament_export_dependencies\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* keep the originally used dependency type\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Added missing rosidl_cmake buildtool_export_depend\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Removed rosidl_cmake\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>",
+      "files_changed": 2,
+      "additions": 3,
+      "deletions": 10,
+      "commit_type": "docs"
+    },
+    {
+      "author": "fujitatomoya",
+      "date": "2025-03-31T20:43:00Z",
+      "sha": "4b33839e4944ac20e3d69da2cae71134c94dc7aa",
+      "message": "remove .github/ISSUE_TEMPLATE.md (old version of templates) (#78)\n\nSigned-off-by: Tomoya Fujita <Tomoya.Fujita@sony.com>",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 45,
+      "commit_type": "ci"
+    },
+    {
+      "author": "leeminju531",
+      "date": "2025-11-17T12:52:32Z",
+      "sha": "f9ab4ec56f8c08c32b8a4696177b52dcb3de8646",
+      "message": "Add get_clients_info_by_service and get_servers_info_by_service; introduce ServiceEntityInfo to handle service type hash in graph cache (#82)\n\nSigned-off-by: Minju, Lee <dlalswn531@naver.com>",
+      "files_changed": 4,
+      "additions": 342,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "christophebedard",
+      "date": "2025-09-30T13:23:15Z",
+      "sha": "6b94d8904708f22fc2b4c32e3b5402962934507c",
+      "message": "Remove deprecated GraphCache methods without type hash (#83)\n\nThey were deprecated in #70 for Iron and safe to remove in Jazzy.\n\nSigned-off-by: Christophe Bedard <bedard.christophe@gmail.com>",
+      "files_changed": 2,
+      "additions": 0,
+      "deletions": 99,
+      "commit_type": "code"
+    },
+    {
+      "author": "clalancette",
+      "date": "2020-05-26T19:50:00Z",
+      "sha": "fa7f65d219c822b0c2270eccaa0083a571fede5b",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mosfet80",
+      "date": "2025-05-07T08:08:43Z",
+      "sha": "f10f8bf208d6a4835ab091cb2009aa448a5ab84e",
+      "message": "Update cmake requirements (#80)\n\nSigned-off-by: mosfet80 <realeandrea@yahoo.it>\nSigned-off-by: Alejandro Hernández Cordero <ahcorde@gmail.com>\nCo-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "marcoag",
+      "date": "2024-04-26T17:42:17Z",
+      "sha": "f5c605b8496eee30146ed7a720c7bd133cf6249c",
+      "message": "Changelog.\n\nSigned-off-by: Marco A. Gutierrez <marcogg@marcogg.com>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "MiguelCompany",
+      "date": "2024-04-08T17:26:01Z",
+      "sha": "d82d23acd0035d5e543b0b4623fd8cb2fa912a52",
+      "message": "Add pkcs11 support to get_security_files (#66)\n\n* Adding overload of get_security_files.\r\n\r\n* Implement changes to support .p11 files.\r\n\r\n* Security tests converted into TEST_P\r\n\r\n* Adding pkcs11 specific tests.\r\n\r\nSigned-off-by: Miguel Company <miguelcompany@eprosima.com>",
+      "files_changed": 3,
+      "additions": 391,
+      "deletions": 45,
+      "commit_type": "test"
+    },
+    {
+      "author": "Chen Lihui",
+      "date": "2020-09-09T14:55:15Z",
+      "sha": "093e2c01954949be1da406b076d3e3f500481cd3",
+      "message": "Fix potential memory leak (#28)\n\nSigned-off-by: Chen.Lihui <lihui.chen@sony.com>",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "yoneken",
+      "date": "2023-10-05T19:28:22Z",
+      "sha": "d3095f8eb02291cce334ec9b4891c528913662cb",
+      "message": "Just remove rcpputils::fs dependency (#72)\n\n* Remove rcpputils::fs dependency\r\n\r\nSigned-off-by: Kenta Yonekura <yoneken@ieee.org>",
+      "files_changed": 3,
+      "additions": 63,
+      "deletions": 64,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Yadunund",
+      "date": "2023-04-27T09:50:50Z",
+      "sha": "f4b7aa02904b9a60b12a174e327aeb9d5a4b30a8",
+      "message": "2.1.0",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "emersonknapp",
+      "date": "2023-03-26T12:44:53Z",
+      "sha": "0dc8af3cc1c471c60a96e896ab66633d486feb50",
+      "message": "Type hash in GraphCache, user_data encoding tools (#70)\n\n* Add entrypoint to fill out type version hash\r\n\r\nSigned-off-by: Emerson Knapp <emerson.b.knapp@gmail.com>",
+      "files_changed": 9,
+      "additions": 275,
+      "deletions": 8,
+      "commit_type": "docs"
+    },
+    {
+      "author": "audrow",
+      "date": "2022-11-16T18:11:03Z",
+      "sha": "df101190b86f0466839f4a394ca5cd8b1dfe8af0",
+      "message": "[rolling] Update maintainers - 2022-11-07 (#65)\n\n* Add Ivan Paunovic to CODEOWNERs file\r\n\r\nSigned-off-by: Audrow Nash <audrow@openrobotics.org>\r\n\r\n* Update maintainers to Ivan Paunovic\r\n\r\nSigned-off-by: Audrow Nash <audrow@openrobotics.org>\r\n\r\nSigned-off-by: Audrow Nash <audrow@openrobotics.org>",
+      "files_changed": 2,
+      "additions": 6,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "hannes09",
+      "date": "2022-07-12T17:23:12Z",
+      "sha": "b05b7e0af0c909a96febb8f8fec7ab34f751fade",
+      "message": "build shared lib only if BUILD_SHARED_LIBS is set (#62)\n\nCo-authored-by: Hannes Harms <h.harms@grimme.de>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "paudrow",
+      "date": "2022-01-15T00:36:18Z",
+      "sha": "e743c118afff569efb7d32ad2e611018df20066e",
+      "message": "1.4.1\n\nSigned-off-by: Audrow Nash <audrow@hey.com>",
+      "files_changed": 2,
+      "additions": 6,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "methylDragon",
+      "date": "2022-05-06T17:45:42Z",
+      "sha": "208e31dd78e67e58c2d96d76d35049e5934a4c4f",
+      "message": "Update maintainers (#61)\n\nSigned-off-by: methylDragon <methylDragon@gmail.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "jacobperron",
+      "date": "2020-04-26T02:02:10Z",
+      "sha": "92890875baf2815ea9d67477da1c0b5e5bff6b76",
+      "message": "0.1.0",
+      "files_changed": 2,
+      "additions": 15,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "sloretz",
+      "date": "2022-02-07T17:49:42Z",
+      "sha": "acc7f0310c4ac198cdd557c3d78f13a03a5fb410",
+      "message": "Install headers to include/${PROJECT_NAME} (#56)\n\nSigned-off-by: Shane Loretz <sloretz@osrfoundation.org>",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ivanpauno",
+      "date": "2019-09-03T20:17:37Z",
+      "sha": "80f70d5323201aed2f96cf5d9ca39be50de0ad03",
+      "message": "First commit\n\nSigned-off-by: ivanpauno <ivanpauno@ekumenlabs.com>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "hidmic",
+      "date": "2020-05-07T16:08:58Z",
+      "sha": "a4a94a51186bf6a370abf7624773d24e8b816ce1",
+      "message": "Document rmw_dds_common package features. (#18)\n\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>",
+      "files_changed": 1,
+      "additions": 12,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Karsten1987",
+      "date": "2021-07-01T05:31:47Z",
+      "sha": "c9dc581512cd46011aa376ffd4f4b78dbe342c7b",
+      "message": "use `auto` to silence clang warning (`range-loop-construct`)\n\nI get warnings from clang when compiling the latest master:\r\n\r\n```\r\n/Users/karsten/workspace/ros2/ros2_master/src/ros2/rmw_dds_common/rmw_dds_common/src/security.cpp:38:52: error: loop variable 'el' has type 'const std::pair<std::string, std::string> &' (aka 'const pair<basic_string<char, char_traits<char>, allocator<char> >, basic_string<char, char_traits<char>, allocator<char> > > &') but is initialized with type 'const std::__1::__hash_map_const_iterator<std::__1::__hash_const_iterator<std::__1::__hash_node<std::__1::__hash_value_type<std::__1::basic_string<char>, std::__1::basic_string<char> >, void *> *> >::value_type' (aka 'const pair<const std::__1::basic_string<char>, std::__1::basic_string<char> >') resulting in a copy [-Werror,-Wrange-loop-construct]\r\n  for (const std::pair<std::string, std::string> & el : required_files) {\r\n                                                   ^\r\n/Users/karsten/workspace/ros2/ros2_master/src/ros2/rmw_dds_common/rmw_dds_common/src/security.cpp:38:8: note: use non-reference type 'std::pair<std::string, std::string>' (aka 'pair<basic_string<char, char_traits<char>, allocator<char> >, basic_string<char, char_traits<char>, allocator<char> > >') to keep the copy or type 'const std::__1::__hash_map_const_iterator<std::__1::__hash_const_iterator<std::__1::__hash_node<std::__1::__hash_value_type<std::__1::basic_string<char>, std::__1::basic_string<char> >, void *> *> >::value_type &' (aka 'const pair<const std::__1::basic_string<char>, std::__1::basic_string<char> > &') to prevent copying\r\n  for (const std::pair<std::string, std::string> & el : required_files) {\r\n       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n1 error generated.\r\n```",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "asorbini",
+      "date": "2021-05-13T19:05:15Z",
+      "sha": "eeb04c398d7cc0d21293db8de05615aeec7ca2c8",
+      "message": "Normalize rmw_time_t according to DDS spec (#48)\n\nSigned-off-by: Andrea Sorbini <asorbini@rti.com>",
+      "files_changed": 2,
+      "additions": 76,
+      "deletions": 18,
+      "commit_type": "code"
+    },
+    {
+      "author": "shonigmann",
+      "date": "2021-04-02T06:36:59Z",
+      "sha": "d0b29f1e180ab08fdbd9870e29c9382f3aaff130",
+      "message": "updating quality declaration links (re: ros2/docs.ros2.org#52) (#46)\n\nSigned-off-by: Simon Honigmann <shonigmann@blueorigin.com>\r\n\r\nCo-authored-by: Simon Honigmann <shonigmann@blueorigin.com>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 5,
+      "commit_type": "docs"
+    },
+    {
+      "author": "y-okumura-isp",
+      "date": "2021-01-28T14:07:13Z",
+      "sha": "a7c6ae3de327172909a216baaf8ee7769861cd8c",
+      "message": "Fix test_graph_cache ASAN errors (#41) (#42)\n\nSigned-off-by: y-okumura-isp <y-okumura@isp.co.jp>",
+      "files_changed": 1,
+      "additions": 16,
+      "deletions": 0,
+      "commit_type": "test"
+    },
+    {
+      "author": "brawner",
+      "date": "2020-04-29T14:17:00Z",
+      "sha": "cc4b6777dff7510ebb236b96a1ecbbe31d496c2b",
+      "message": "Add README and QUALITY_DECLARATION for current QL level (#17)\n\nSigned-off-by: Stephen Brawner <brawner@gmail.com>",
+      "files_changed": 2,
+      "additions": 144,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Michael Jeronimo",
+      "date": "2020-11-10T19:05:08Z",
+      "sha": "86384ff9b78c587a3097b09680bb35e28646f7aa",
+      "message": "Create a utility function to limit rmw_time_t to 32-bit values (#37)\n\n* Create a utility function to limit rmw_time_t to 32-bit values\r\n\r\nThe RMW layer maintains the rmw_time_t's seconds and nanoseconds\r\nvalues as 64-bit unsigned integers. However, the DDS standard\r\nspecifies the Time_t and Duration_t types with \"long sec\" and\r\n\"unsigned long nanosec\", and the IDL to C++11 mapping states that\r\nthe C++ types for long and unsigned long are mapped to int32_t and\r\nuint32_t, respectively. This difference can result in the seconds\r\n(and/or nanoseconds) value being truncated and incorrect, causing\r\nother downstream failures. This function can be used in different\r\nRMW adaptation layers that interface to the DDS providers when\r\nconverting from rmw_time_to to the DDS Duration_t (or Time_t),\r\nsuch as rmw_time_to_fast_rtps.\r\n\r\nSigned-off-by: Michael Jeronimo <michael.jeronimo@openrobotics.org>\r\n\r\n* Change name of function based on code review feedback\r\n\r\nSigned-off-by: Michael Jeronimo <michael.jeronimo@openrobotics.org>\r\n\r\n* One more name change for the function\r\n\r\nSigned-off-by: Michael Jeronimo <michael.jeronimo@openrobotics.org>\r\n\r\n* Fix uncrustify issues\r\n\r\nSigned-off-by: Michael Jeronimo <michael.jeronimo@openrobotics.org>",
+      "files_changed": 4,
+      "additions": 155,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "dirk-thomas",
+      "date": "2020-04-10T20:44:28Z",
+      "sha": "d7f6621961a60270e335899690e1a98bdadf137b",
+      "message": "make rmw_dds_common use rosidl_generator_interfaces normally (#12)\n\n* make rmw_dds_common use rosidl_generator_interfaces normally\r\n\r\nSigned-off-by: Dirk Thomas <dirk-thomas@users.noreply.github.com>\r\n\r\n* switch from .idl to .msg\r\n\r\nSigned-off-by: Dirk Thomas <dirk-thomas@users.noreply.github.com>\r\n\r\n* interface target must have the name of the package\r\n\r\nSigned-off-by: Dirk Thomas <dirk-thomas@users.noreply.github.com>\r\n\r\n* fix rebase\r\n\r\nSigned-off-by: Dirk Thomas <dirk-thomas@users.noreply.github.com>\r\n\r\n* fix rebase - take 2\r\n\r\nSigned-off-by: Dirk Thomas <dirk-thomas@users.noreply.github.com>",
+      "files_changed": 11,
+      "additions": 29,
+      "deletions": 128,
+      "commit_type": "ci"
+    },
+    {
+      "author": "mikaelarguedas",
+      "date": "2020-04-13T13:28:13Z",
+      "sha": "be71a29c05b82cf559b99e11bdd7866a465fff80",
+      "message": "security-context -> enclave (#13)\n\nSigned-off-by: Mikael Arguedas <mikael.arguedas@gmail.com>",
+      "files_changed": 2,
+      "additions": 17,
+      "deletions": 17,
+      "commit_type": "code"
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-26T03:00:19Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros2-rust",
+    "repo": "rosidl_rust"
+  },
+  "data": [
+    {
+      "author": "esteve",
+      "date": "2018-02-02T21:30:12Z",
+      "sha": "29b44b7c3433319baeb716de1356aae2e28e757e",
+      "message": "Initial implementation",
+      "files_changed": 34,
+      "additions": 1130,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "maspe36",
+      "date": "2023-04-06T14:13:03Z",
+      "sha": "fdc19d33969b319e1b5298da089836cb6541147e",
+      "message": "Swapped usage of rosidl_cmake over to the new rosidl_pycommon. (#297)\n\n* Swapped usage of rosidl_cmake over to the new rosidl_pycommon.\r\n\r\nAs of [rosidl 3.3.0](https://github.com/ros2/rosidl/commit/9348ce9b466335590dc334aab01f4f0dd270713b), the rosidl_cmake Python module was moved to a new rosidl_pycommon package and the Python module in rosidl_cmake was deprecated.\r\n\r\n* Support builds from older ROS 2 distros.\r\n\r\n* Fixed build for rolling\r\n\r\n* Added `test_depend` conditional inclusion as well.\r\n\r\n* Swap to a more elegant check\r\n\r\n* PR Feedback\r\n\r\n---------\r\n\r\nCo-authored-by: Sam Privett <sam@privett.dev>",
+      "files_changed": 3,
+      "additions": 24,
+      "deletions": 18,
+      "commit_type": "test"
+    },
+    {
+      "author": "mxgrey",
+      "date": "2024-03-12T11:36:02Z",
+      "sha": "40e697168a53f67e590c1f931f8212a87ecf470f",
+      "message": "Allow ros2_rust to be built within a distro workspace\n\nSigned-off-by: Michael X. Grey <mxgrey@intrinsic.ai>",
+      "files_changed": 3,
+      "additions": 8,
+      "deletions": 69,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mosfet80",
+      "date": "2025-09-22T17:01:19Z",
+      "sha": "bfc382b3567992e9d0ed55b313e3c6cebacbdc02",
+      "message": "fix cmake deprecation (#6)\n\n* fix cmake deprecation\n\ncmake version < then 3.10 is deprecated\n\n* Update CMakeLists.txt",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "knmcguire",
+      "date": "2025-04-26T07:41:51Z",
+      "sha": "77732ceb04fb5f1129b05f6e9dc721a975c54e02",
+      "message": "set python executable var to custom cmake commands (#3)",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "nwn",
+      "date": "2024-10-26T18:11:57Z",
+      "sha": "f59d00dd71d4a0cd8b3ade496e24bae15fbc2825",
+      "message": "Action message support (#417)\n\n* Added action template\r\n\r\n* Added action generation\r\n\r\n* Added basic create_action_client function\r\n\r\n* dded action generation\r\n\r\n* checkin\r\n\r\n* Fix missing exported pre_field_serde field\r\n\r\n* Removed extra code\r\n\r\n* Sketch out action server construction and destruction\r\n\r\nThis follows generally the same pattern as the service server. It\r\nrequired adding a typesupport function to the Action trait and pulling\r\nin some more rcl_action bindings.\r\n\r\n* Fix action typesupport function\r\n\r\n* Add ActionImpl trait with internal messages and services\r\n\r\nThis is incomplete, since the service types aren't yet being generated.\r\n\r\n* Split srv.rs.em into idiomatic and rmw template files\r\n\r\nThis results in the exact same file being produced for services,\r\nexcept for some whitespace changes. However, it enables actions to\r\ninvoke the respective service template for its generation, similar to\r\nhow the it works for services and their underlying messages.\r\n\r\n* Generate underlying service definitions for actions\r\n\r\nNot tested\r\n\r\n* Add runtime trait to get the UUID from a goal request\r\n\r\nC++ uses duck typing for this, knowing that for any `Action`, the type\r\n`Action::Impl::SendGoalService::Request` will always have a `goal_id`\r\nfield of type `unique_identifier_msgs::msg::UUID` without having to\r\nprove this to the compiler. Rust's generics are more strict, requiring\r\nthat this be proven using type bounds.\r\n\r\nThe `Request` type is also action-specific as it contains a `goal` field\r\ncontaining the `Goal` message type of the action. We therefore cannot\r\nenforce that all `Request`s are a specific type in `rclrs`.\r\n\r\nThis seems most easily represented using associated type bounds on the\r\n`SendGoalService` associated type within `ActionImpl`. To avoid\r\nintroducing to `rosidl_runtime_rs` a circular dependency on message\r\npackages like `unique_identifier_msgs`, the `ExtractUuid` trait only\r\noperates on a byte array rather than a more nicely typed `UUID` message\r\ntype.\r\n\r\nI'll likely revisit this as we introduce more similar bounds on the\r\ngenerated types.\r\n\r\n* Integrate RMW message methods into ActionImpl\r\n\r\nRather than having a bunch of standalone traits implementing various\r\nmessage functions like `ExtractUuid` and `SetAccepted`, with the\r\ntrait bounds on each associated type in `ActionImpl`, we'll instead add\r\nthese functions directly to the `ActionImpl` trait. This is simpler on\r\nboth the rosidl_runtime_rs and the rclrs side.\r\n\r\n* Add rosidl_runtime_rs::ActionImpl::create_feedback_message()\r\n\r\nAdds a trait method to create a feedback message given the goal ID and\r\nthe user-facing feedback message type. Depending on how many times we do\r\nthis, it may end up valuable to define a GoalUuid type in\r\nrosidl_runtime_rs itself. We wouldn't be able to utilize the\r\n`RCL_ACTION_UUID_SIZE` constant imported from `rcl_action`, but this is\r\npretty much guaranteed to be 16 forever.\r\n\r\nDefining this method signature also required inverting the super-trait\r\nrelationship between Action and ActionImpl. Now ActionImpl is the\r\nsub-trait as this gives it access to all of Action's associated types.\r\nAction doesn't need to care about anything from ActionImpl (hopefully).\r\n\r\n* Add GetResultService methods to ActionImpl\r\n\r\n* Implement ActionImpl trait methods in generator\r\n\r\nThese still don't build without errors, but it's close.\r\n\r\n* Replace set_result_response_status with create_result_response\r\n\r\nrclrs needs to be able to generically construct result responses,\r\nincluding the user-defined result field.\r\n\r\n* Implement client-side trait methods for action messages\r\n\r\nThis adds methods to ActionImpl for creating and accessing\r\naction-specific message types. These are needed by the rclrs\r\nActionClient to generically read and write RMW messages.\r\n\r\nDue to issues with qualified paths in certain places\r\n(https://github.com/rust-lang/rust/issues/86935), the generator now\r\nrefers directly to its service and message types rather than going\r\nthrough associated types of the various traits. This also makes the\r\ngenerated code a little easier to read, with the trait method signatures\r\nfrom rosidl_runtime_rs still enforcing type-safety.\r\n\r\n* Format the rosidl_runtime_rs::ActionImpl trait\r\n\r\n* Wrap longs lines in rosidl_generator_rs action.rs\r\n\r\nThis at least makes the template easier to read, but also helps with the\r\ngenerated code. In general, the generated code could actually fit on one\r\nline for the function signatures, but it's not a big deal to split it\r\nacross multiple.\r\n\r\n* Use idiomatic message types in Action trait\r\n\r\nThis is user-facing and so should use the friendly message types.\r\n\r\n* Cleanup ActionImpl using type aliases\r\n\r\nSigned-off-by: Michael X. Grey <grey@openrobotics.org>\r\n\r\n* Formatting\r\n\r\n* Switch from std::os::raw::c_void to std::ffi::c_void\r\n\r\nWhile these are aliases of each other, we might as well use the more\r\nappropriate std::ffi version, as requested by reviewers.\r\n\r\n* Clean up rosidl_generator_rs's cmake files\r\n\r\nSome of the variables are present but no longer used. Others were not\r\nupdated with the action changes.\r\n\r\n* Add a short doc page on the message generation pipeline\r\n\r\nThis should help newcomers orient themselves around the rosidl_*_rs\r\npackages.\r\n\r\n---------\r\n\r\nSigned-off-by: Michael X. Grey <grey@openrobotics.org>\r\nCo-authored-by: Esteve Fernandez <esteve@apache.org>\r\nCo-authored-by: Michael X. Grey <grey@openrobotics.org>",
+      "files_changed": 9,
+      "additions": 351,
+      "deletions": 79,
+      "commit_type": "code"
+    },
+    {
+      "author": "fawdlstty",
+      "date": "2023-08-22T11:12:20Z",
+      "sha": "96322cdd0bfd0e6fa522f301d1f654e7e9ecebcf",
+      "message": "add serde big array support (fixed #327) (#328)\n\n* add serde big array support",
+      "files_changed": 6,
+      "additions": 17,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "Tacha-S",
+      "date": "2022-10-18T18:16:18Z",
+      "sha": "0db3a63495461d1132707455b83e72f17fabf6ee",
+      "message": "Remove libc dependencies (#284)",
+      "files_changed": 3,
+      "additions": 13,
+      "deletions": 14,
+      "commit_type": "code"
+    },
+    {
+      "author": "nnmm",
+      "date": "2022-02-18T17:55:08Z",
+      "sha": "34b005d1dcf6bc3615d144666b63d3fe238e272a",
+      "message": "Use the ament_cargo build type (#73)\n\n* Use the ament_cargo build type\r\n\r\nThe rclrs_crate_config_generator is superseded by colcon-ros-cargo.\r\nThe ament_cmake_export_crates mechanism is subsumed by creating entries in the ament index directly in the rosidl_generator_rs and cargo-ament-build.\r\n\r\n* Install colcon-cargo and colcon-ros-cargo\r\n\r\n* Force running pip3 as root\r\n\r\n* Install cargo-ament-build\r\n\r\n* Removed no longer needed dependencies\r\n\r\n* Disable Rolling job\r\n\r\n* Update README\r\n\r\n* Update rust.yml\r\n\r\n* Update README.md\r\n\r\nCo-authored-by: Esteve Fernandez <esteve@apache.org>",
+      "files_changed": 3,
+      "additions": 4,
+      "deletions": 22,
+      "commit_type": "docs"
+    },
+    {
+      "author": "wep21",
+      "date": "2022-06-07T08:29:41Z",
+      "sha": "ac8793e89128dc3767578b43cbde17e19e5c99e0",
+      "message": "feat: obtain interface version from cmake variable (#191)\n\n* feat: obtain interface version from cmake variable\r\n\r\nSigned-off-by: Daisuke Nishimatsu <border_goldenmarket@yahoo.co.jp>\r\n\r\n* refactor: append package version into generator arguments file\r\n\r\nSigned-off-by: Daisuke Nishimatsu <border_goldenmarket@yahoo.co.jp>",
+      "files_changed": 4,
+      "additions": 11,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "jhdcs",
+      "date": "2021-11-22T13:48:36Z",
+      "sha": "0e94f69489835bfecd15e1c7d647850246d52536",
+      "message": "Build system refactor (#64)\n\n* Experimental change to build system.\r\nAllows IDE to parse dependencies.\r\nDistro A, OPSEC #4584. You may have additional rights; please see https://rosmilitary.org/faq/?category=ros-2-license\r\n\r\nSigned-off-by: Jacob Hassold <jhassold@dcscorp.com>\r\n\r\n* Remove commented code\r\nDistro A, OPSEC #4584. You may have additional rights; please see https://rosmilitary.org/faq/?category=ros-2-license\r\n\r\nSigned-off-by: Jacob Hassold <jhassold@dcscorp.com>\r\n\r\n* Refactoring to workspace layout. Does not compile.\r\nDistro A, OPSEC #4584. You may have additional rights; please see https://rosmilitary.org/faq/?category=ros-2-license\r\n\r\nSigned-off-by: Jacob Hassold <jhassold@dcscorp.com>\r\n\r\n* Revert change to workspace, general CMake tweaks\r\nDistro A, OPSEC #4584. You may have additional rights; please see https://rosmilitary.org/faq/?category=ros-2-license\r\n\r\nSigned-off-by: Jacob Hassold <jhassold@dcscorp.com>\r\n\r\n* Initial re-make of build system\r\nDistro A, OPSEC #4584. You may have additional rights; please see https://rosmilitary.org/faq/?category=ros-2-license\r\n\r\nSigned-off-by: Jacob Hassold <jhassold@dcscorp.com>\r\n\r\n* Fixing warnings within rosidl_generator\r\nDistro A, OPSEC #4584. You may have additional rights; please see https://rosmilitary.org/faq/?category=ros-2-license\r\n\r\nSigned-off-by: Jacob Hassold <jhassold@dcscorp.com>\r\n\r\n* Make sure cargo builds within the correct directory\r\nDistro A, OPSEC #4584. You may have additional rights; please see https://rosmilitary.org/faq/?category=ros-2-license\r\n\r\nSigned-off-by: Jacob Hassold <jhassold@dcscorp.com>\r\n\r\n* Add in checks for ROS 2 version to change\r\nthe compilation syntax\r\nDistro A, OPSEC #4584. You may have additional rights; please see https://rosmilitary.org/faq/?category=ros-2-license\r\n\r\nSigned-off-by: Jacob Hassold <jhassold@dcscorp.com>\r\n\r\n* Properly query environment variable\r\nDistro A, OPSEC #4584. You may have additional rights; please see https://rosmilitary.org/faq/?category=ros-2-license\r\n\r\nSigned-off-by: Jacob Hassold <jhassold@dcscorp.com>\r\n\r\n* Only bind rcl, rmw, and rcutils\r\nDistro A, OPSEC #4584. You may have additional rights; please see https://rosmilitary.org/faq/?category=ros-2-license\r\n\r\nSigned-off-by: Jacob Hassold <jhassold@dcscorp.com>\r\n\r\n* Re-write to move most of `rclrs_common` to `rclrs`\r\nDistro A, OPSEC #4584. You may have additional rights; please see https://rosmilitary.org/faq/?category=ros-2-license\r\n\r\nSigned-off-by: Jacob Hassold <jhassold@dcscorp.com>\r\n\r\n* Updating/fixing package XML to comply with\r\nformat 3 schema\r\nDistro A, OPSEC #4584. You may have additional rights; please see https://rosmilitary.org/faq/?category=ros-2-license\r\n\r\nSigned-off-by: Jacob Hassold <jhassold@dcscorp.com>\r\n\r\n* Missed a schema update\r\nDistro A, OPSEC #4584. You may have additional rights; please see https://rosmilitary.org/faq/?category=ros-2-license\r\n\r\nSigned-off-by: Jacob Hassold <jhassold@dcscorp.com>\r\n\r\n* Missed another schema...\r\nDistro A, OPSEC #4584. You may have additional rights; please see https://rosmilitary.org/faq/?category=ros-2-license\r\n\r\nSigned-off-by: Jacob Hassold <jhassold@dcscorp.com>\r\n\r\n* Remove manual crate paths in toml files\r\nDistro A, OPSEC #4584. You may have additional rights; please see https://rosmilitary.org/faq/?category=ros-2-license\r\n\r\nSigned-off-by: Jacob Hassold <jhassold@dcscorp.com>",
+      "files_changed": 4,
+      "additions": 25,
+      "deletions": 16,
+      "commit_type": "docs"
+    },
+    {
+      "author": "nnarain",
+      "date": "2020-08-24T08:59:21Z",
+      "sha": "515b1dc53fc2c3d4a698a837cd1660aea6457369",
+      "message": "Build on Dashing+ (#24)\n\n* fix warnings\r\n\r\n* update README for Ubuntu 18.04\r\n\r\n* Build on Dashing\r\n\r\n* Build on Eloquent\r\n\r\n* Build on Foxy\r\n\r\n* clean in IDL generator\r\n\r\n* Use foxy in pipeline\r\n\r\nCo-authored-by: deb0ch <tom@blackfoot.io>\r\nCo-authored-by: deb0ch <thomas.de.beauchene@gmail.com>",
+      "files_changed": 7,
+      "additions": 213,
+      "deletions": 236,
+      "commit_type": "docs"
+    },
+    {
+      "author": "lelongg",
+      "date": "2019-05-05T11:17:14Z",
+      "sha": "cae8d5406ee6a8f6bd56b25c20daf76999bd733d",
+      "message": "Crystal and more (#3)\n\n* nested messages working\r\n\r\n* fix array support\r\n\r\n* add rcl_sys\r\n\r\n* add author & fix compilation order\r\n\r\n* readme\r\n\r\n* format\r\n\r\n* fix clippy warnings\r\n\r\n* delete patch\r\n\r\n* remove leftover build.rs\r\n\r\n* fix authors\r\n\r\n* add qos support\r\n\r\n* add spin & change handle handling\r\n\r\n* clippy\r\n\r\n* edit readme\r\n\r\n* Update README.md\r\n\r\n* fix message generation issue\r\n\r\n* remove messages\r\n\r\n* fix fixed size nested array issue\r\n\r\n* delete unused files\r\n\r\n* reset authors\r\n\r\n* remove rcl_sys\r\n\r\n* remove remaining authors & revert readme\r\n\r\n* fix quickstart\r\n\r\n* fix fixed size array warning\r\n\r\n* add rosidl_defaults to repos\r\n\r\n* fix warnings with array generation\r\n\r\n* register the 'rosidl_generator_rs'\r\n\r\n* revert message generation to its initial state\r\n\r\n* add rcl build dependency to rclrs\r\n\r\n* move spin and spin_once from Node to rclrs\r\n\r\n* move publisher sleep at the end of the loop\r\n\r\n* re-add msg to rosidl_generator_rs\r\n\r\n* add TODO for publisher and subscription lifetime",
+      "files_changed": 6,
+      "additions": 41,
+      "deletions": 34,
+      "commit_type": "docs"
+    }
+  ]
+}

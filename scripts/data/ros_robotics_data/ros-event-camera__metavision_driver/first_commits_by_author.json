@@ -1,0 +1,61 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T20:45:35Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros-event-camera",
+    "repo": "metavision_driver"
+  },
+  "data": [
+    {
+      "author": "berndpfrommer",
+      "date": "2021-07-27T23:25:48Z",
+      "sha": "afaf7be713a7ab175479c5d6dff33200d808b9ac",
+      "message": "initial commit",
+      "files_changed": 14,
+      "additions": 760,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "AndreasAZiegler",
+      "date": "2024-08-13T13:51:11Z",
+      "sha": "f7a4fb6133a36692d088b88273ff286ada8ffbc6",
+      "message": "Support for trail filters (#50)\n\n* Added support for Metavision SDK trail filters (Andreas Ziegler)\r\n\r\n---------\r\n\r\nCo-authored-by: Bernd Pfrommer <bernd.pfrommer@gmail.com>",
+      "files_changed": 6,
+      "additions": 79,
+      "deletions": 7,
+      "commit_type": "docs"
+    },
+    {
+      "author": "agaidev-sony",
+      "date": "2023-10-16T10:15:38Z",
+      "sha": "11e8db87e9e340b3cacbeafe69a4332b03bdbf10",
+      "message": "Modify launch file to accept params as args.",
+      "files_changed": 1,
+      "additions": 19,
+      "deletions": 9,
+      "commit_type": "code"
+    },
+    {
+      "author": "lbristiel-psee",
+      "date": "2023-07-13T08:11:26Z",
+      "sha": "0805e628fd704cc80a572cf760931e9d8bcee9df",
+      "message": "updated links in README",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 6,
+      "commit_type": "docs"
+    },
+    {
+      "author": "k-chaney",
+      "date": "2022-03-25T00:25:17Z",
+      "sha": "46ef6f0ae1d802bfaacf7bf079fd6129ed76b919",
+      "message": "External trigger pin support\n\nStarts to add support for external trigger pins.\n\n- metavision_wrapper pulls in a configuration template for the trigger\n  setup and executes based on the hardware templates available. These\n  trigger events are linked to a callback for these events.\n- driver_ros1 passes in the configurations for the triggers and\n  publishes events to a new topic with a new encoding type.\n- README starts to reflect the changes in parameter options\n- config/trigger_pins.yaml contains the pin mappings for silkyevcam\n  along with the officially listed pin mappings from the metavision hal\n  examples.\n\nSigned-off-by: Kenneth Chaney",
+      "files_changed": 8,
+      "additions": 283,
+      "deletions": 2,
+      "commit_type": "docs"
+    }
+  ]
+}

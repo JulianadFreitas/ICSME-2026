@@ -1,0 +1,691 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-26T03:06:38Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros-visualization",
+    "repo": "rqt_common_plugins"
+  },
+  "data": [
+    {
+      "author": "clalancette",
+      "date": "2022-05-11T19:45:23Z",
+      "sha": "b30e72440405b1639db65ad2cc3b2294203b338a",
+      "message": "Remove unreleased plugins from rqt_common_plugins. (#465)\n\nThese are ones that either don't work well, or have never\r\nbeen ported to ROS 2.  We can always add them back if we\r\nport them over.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 5,
+      "commit_type": "config"
+    },
+    {
+      "author": "ivanpauno",
+      "date": "2021-04-08T21:38:35Z",
+      "sha": "e24e8797c653f5308f08b2a8574ee424baeeed02",
+      "message": "Update maintainers (#464)\n\nSigned-off-by: Ivan Santiago Paunovic <ivanpauno@ekumenlabs.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "wjwwood",
+      "date": "2012-10-12T00:06:40Z",
+      "sha": "b38a2fbf993ff5b3ec3d0153b0f5e682285be1be",
+      "message": "rqt_robot_dashboard: initial import from external\n\nInitial stack setup.\n\nBasic plugin setup.\n\nDon't export a plugin.\n\nAdded basic robot_monitor widget.\n\nImproved robot_monitor. Still need to remove items dynamically from tree.\n\nAdded inspector with snapshot function.\n\nSplit robot monitor in to seperate stack.\n\nFix catkin python setup.\n\nAdded basic API and a RobotMonitorWidget.\n\nForgot to add robot_monitor_widget.\n\nRefactoring and add console widget.\n\nFixed issue with widgets not closing.\n\nDashboard is now a toolbar.\n\nAdded a basic menu widget.\n\nAdded basic sphinx docs.\n\nStarted writing documentation.\n\nMove all widgets into one widgets.py file.\n\nMore documentation.\n\nBasic test icons.\n\nAdded a simple button widget.\n\nUse a proper toolbar.\n\nAdded a state util push buttons now display state.\n\nMenus have state too.\n\nConsolidate set_state action into make_stately.\n\nsig_state accepts one int.\n\nToolbars should get a name.\n\nMonitor displays state.\n\nUse context add_widget for robot monitor.\n\nUse lists not dictionaries.\n\nBasic progres bar based battery widget.\n\nAdded on close.\n\nSetup before anything else happens.\n\nDestroyed not on_close.\n\nAdded on click for convinience.\n\nAdd a bunch of utils.\n\nMonitor now uses new icon system.\n\nDocs for IconToolButton.\n\nConsole and battery now use new icon system.\n\nIconToolButton now generates a default icon set.\n\nUpdate state does not override button press.\n\nProper shutdown.\n\nNeed a 0% battery icon.\n\nMenu widget now uses new icon system. Needs icon.\n\nRemove stately and update docs.\n\nPreliminary mode icons.\n\nRemove old images.\n\nAdded nav icons.\n\nRename nav icons.\n\nThis dummy didn't put the nav images in images.\n\nAdded nav_view widget type.\n\nDocs docs docs!\n\nUpdate manifest.xml\n\nnav_view dependency was missing.\n\nNew python binding system\n\nadded zero battery support\n\nadded missing dependancy\n\ncleanup for battery update\n\nadded separator support to MenuDashWidget, enabled toggling on console/monitor buttons and console logging from launch of program\n\nadded tooltips\n\nAdded ability to update tooltip with # of console messages and changed the icon state to indicate the last 30 seconds of console messags\n\nfixed the issue with the icon not appearing initially\n\nadded title support to Dashboard and allow children to set self.name in their setup functions\n\nMinor fix for name setting.\n\nfixed integer rounding error\n\nfixed issue with pyside portability\n\nSetting repository up for merge with rqt\n\nConflicts:\n\n\trqt_robot_dashboard/.gitignore\n\trqt_robot_dashboard/README.md",
+      "files_changed": 43,
+      "additions": 1167,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Michael Jeronimo",
+      "date": "2020-12-07T19:19:23Z",
+      "sha": "81bd44c2b340e6715be05b969f3a719bd8a8ac54",
+      "message": "Add rqt_bag to the rqt_common_plugins metapackage (#463)\n\nSigned-off-by: Michael Jeronimo <michael.jeronimo@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "dirk-thomas",
+      "date": "2011-10-01T10:16:18Z",
+      "sha": "3822bc83cc1fbf5447c91254b6b0422a6ff72bbc",
+      "message": "added yet empty ros_gui stack",
+      "files_changed": 4,
+      "additions": 30,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mikaelarguedas",
+      "date": "2019-10-22T23:20:17Z",
+      "sha": "8fc5a515303551a89fdc6b6fa5e894ca76f36de7",
+      "message": "convert to package format 2 (#455)\n\n* convert to package format 2\r\n\r\nSigned-off-by: Mikael Arguedas <mikael.arguedas@gmail.com>\r\n\r\n* remove obsolete comment about rqt_marble",
+      "files_changed": 1,
+      "additions": 25,
+      "deletions": 23,
+      "commit_type": "docs"
+    },
+    {
+      "author": "martonmiklos",
+      "date": "2016-04-05T21:09:33Z",
+      "sha": "f73be7ffdde27065d12897940ee4de44f5514db1",
+      "message": "Added menu hide context menu (#431)",
+      "files_changed": 3,
+      "additions": 159,
+      "deletions": 125,
+      "commit_type": "code"
+    },
+    {
+      "author": "MJohnson459",
+      "date": "2017-04-24T16:10:05Z",
+      "sha": "329e93058e8c585bddb0c88834c24564d1da7a52",
+      "message": "[rqt_graph] Show bad nodes even if debug (quiet) is set (#448)\n\n* Showing bad nodes even if debug is set to support master only connections (docker)\r\n\r\n* Added hide unreachable checkbox to the rqt_graph GUI",
+      "files_changed": 3,
+      "additions": 40,
+      "deletions": 13,
+      "commit_type": "code"
+    },
+    {
+      "author": "Lucas Walter",
+      "date": "2017-03-03T16:10:45Z",
+      "sha": "6d9fdf5157dfa32f1813618f8621002039e17989",
+      "message": "Convenience launch file for rqt_bag (#440)",
+      "files_changed": 2,
+      "additions": 7,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Marc Bestmann",
+      "date": "2017-03-27T17:10:20Z",
+      "sha": "f2990639b85d0cb549f79dc8b88dd736d3059254",
+      "message": "proposed solution for issue #443. small import error (#446)\n\n* proposed solution for issue #443. small import error\r\n\r\n* tried to clear error confusion",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "rossctaylor",
+      "date": "2017-03-26T22:31:49Z",
+      "sha": "77fe636a5093352ab7b6003d202ef2471e2ca935",
+      "message": "Add option to show system dependencies using rospack.get_rosdeps",
+      "files_changed": 3,
+      "additions": 29,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "lucasw",
+      "date": "2017-03-21T23:53:07Z",
+      "sha": "2b2c04c946dec91d22fc03dd79f48f65be3ad965",
+      "message": "#430 subscribe to saved topic even if it is not available yet",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 10,
+      "commit_type": "code"
+    },
+    {
+      "author": "sosswald",
+      "date": "2017-03-02T11:56:51Z",
+      "sha": "ceb46bc2d890a011cfe434767d3498ed07c2b61e",
+      "message": "Fix crash of rqt_graph when enable_statistics == true, fixes #428",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "contradict",
+      "date": "2017-02-20T20:37:20Z",
+      "sha": "ab96e8167443c7c4ba11ab21342a51193cca2b51",
+      "message": "[rqt_image_view] Add a scroll area\n\nWhen selecting a 1-to-1 pixel view, the previous implementation resized the\nwindow to the full image size. This is inconvenient for images much larger than\nthe screen resolution. This patch places the RatioLayoutedFrame in a ScrollArea\nso the window still fits on the screen and the user can pan on the full image.",
+      "files_changed": 2,
+      "additions": 43,
+      "deletions": 50,
+      "commit_type": "code"
+    },
+    {
+      "author": "DLu",
+      "date": "2017-01-06T15:50:03Z",
+      "sha": "097a3b347ec62977201f58d2ae7796eafce71b84",
+      "message": "Plot bools",
+      "files_changed": 2,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "kunaltyagi",
+      "date": "2017-02-03T16:12:41Z",
+      "sha": "7feb880e0d1b773e754fc44c15fd3a422266c437",
+      "message": "Start shell with a load script (Issue #296) (#403)\n\n* added feature to start shell with script",
+      "files_changed": 7,
+      "additions": 39,
+      "deletions": 12,
+      "commit_type": "code"
+    },
+    {
+      "author": "130s",
+      "date": "2012-11-08T22:59:39Z",
+      "sha": "bc6c84d0e7a549475b00165f8aade9fd64373777",
+      "message": "rqt_robot_monitor:\n Fixing defects / unsuitable behaviors:\n - Pop-up windows never shows after they're opened for the 1st time.\n - Pop-up windows remain open even rqt_gui is closed.\n - Size of each tree panes are fixed and never be able to be resized.\n - Scroll bar's position gets reset per second.\n\n Adding functionalities:\n - Show warn/error msg content on tree nodes\n - Show icons that stand for the device status\n\n Adding design features:\n - Introduce .ui file (ie. removing layout description from source code as much as possible).",
+      "files_changed": 10,
+      "additions": 1120,
+      "deletions": 327,
+      "commit_type": "docs"
+    },
+    {
+      "author": "arne48",
+      "date": "2017-01-03T10:29:38Z",
+      "sha": "2b870bc05225b6a06582b391e300497997f44850",
+      "message": "catching unhandled exceptions when rosmaster disappears while widget is running",
+      "files_changed": 1,
+      "additions": 32,
+      "deletions": 29,
+      "commit_type": "code"
+    },
+    {
+      "author": "jspricke",
+      "date": "2015-11-11T21:01:43Z",
+      "sha": "d83e3322bb510468b2910f1cc08825170ebfee43",
+      "message": "Add missing include",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "rsinnet",
+      "date": "2016-12-03T14:18:57Z",
+      "sha": "cb1f5c2bc75a401efae71750e5873ebf230aadaf",
+      "message": "Fixes #341: Adding feature to load all params in a launch config onto parameter server.",
+      "files_changed": 3,
+      "additions": 23,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "DorianScholz",
+      "date": "2011-10-07T17:45:43Z",
+      "sha": "12ea1309ccdfc5931cd6ca178fe2a66ce5800bd9",
+      "message": "added package for common python code",
+      "files_changed": 10,
+      "additions": 290,
+      "deletions": 33,
+      "commit_type": "config"
+    },
+    {
+      "author": "jacquelinekay",
+      "date": "2016-11-11T00:33:33Z",
+      "sha": "ed90bc8b92a7de84f6976f45a209634948e54469",
+      "message": "Add 'save' and 'load' files to rqt_reconfigure",
+      "files_changed": 1,
+      "additions": 50,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "samuelba",
+      "date": "2016-07-06T12:15:05Z",
+      "sha": "be75dc2f74c44df9f92dff62d80b35fabe900268",
+      "message": "use smooth transformation for image scaling",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "garaemon",
+      "date": "2016-01-23T08:31:57Z",
+      "sha": "dec5fa6d7c9d046f11d4b4e309680e8ae60e60b9",
+      "message": "Show file size of bag file at the end of rqt_bag",
+      "files_changed": 4,
+      "additions": 39,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "hugbed",
+      "date": "2016-06-27T23:12:36Z",
+      "sha": "2d0ea69983d07da3befcb46d9f6c6c585775cb5e",
+      "message": "fix crash when toggling thumbnail in rqt_bag (#380) (#381)\n\nFixes the crash in image_timeline_renderer.py when toggling thumbnails in rqt_bag.\r\nSeems like the constructor for QPen expects a QColor and not a QBrush.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "trainman419",
+      "date": "2014-05-23T03:24:16Z",
+      "sha": "beea7243a01c7fb91580268be28cc86b66f619f9",
+      "message": "Start adding plot plugin",
+      "files_changed": 1,
+      "additions": 51,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "ojura",
+      "date": "2016-05-06T17:29:14Z",
+      "sha": "8161d7dcab33590204678dfd6d10f84811266bcc",
+      "message": "rqt_reconfigure: fix accessing attribute superseded in Qt5 (#370)\n\n* rqt_reconfigure: fix accessing attribute superseded in Qt5\r\n\r\n* use only window() attribute\r\n\r\n* remove reference to Qt5\r\n\r\n* fix indentation to conform to PEP8",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 3,
+      "commit_type": "config"
+    },
+    {
+      "author": "ablasdel",
+      "date": "2013-03-11T18:27:09Z",
+      "sha": "075b9f8986a39181c12ee50f8d959b816bec25dc",
+      "message": "fixes #36",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "pgorczak",
+      "date": "2013-03-22T10:29:05Z",
+      "sha": "bdef026abaa791f21cbc4443fca4d8a805e96caa",
+      "message": "rqt_image_view: Adding the possibility to publish mouse events.",
+      "files_changed": 7,
+      "additions": 129,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Rein Appeldoorn",
+      "date": "2016-04-14T09:52:00Z",
+      "sha": "baf9869b67d6592bc3b8053230a5422d76b629de",
+      "message": "Pass y from scene to map_y_to_topic function",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "eric-wieser",
+      "date": "2016-02-21T20:29:35Z",
+      "sha": "3f954c5528e8261eb9c0bf2c8f20a3b3e75f64d5",
+      "message": "Fixes #333\n\nPrefix all node and topic names with `n_` and `t_` respectively, to allow dot to distinguish them",
+      "files_changed": 1,
+      "additions": 21,
+      "deletions": 10,
+      "commit_type": "code"
+    },
+    {
+      "author": "bchretien",
+      "date": "2016-02-09T07:38:17Z",
+      "sha": "d420caf0b5733a9579b14d0178b4e93b7d3333be",
+      "message": "rqt_top: fix exception catching\n\nAccessDenied is a psutil exception.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "lsouchet",
+      "date": "2015-10-20T13:50:40Z",
+      "sha": "dcb7412ec83f54cf9280c52fab2ae28bd779b4b6",
+      "message": "RQT_BAG: Ensure monotonic clock publishing.\n\nDue to parallelism issues, a message can be published\nwith a simulated timestamp in the past. This lead to\nundesired behaviors when using TF for example.",
+      "files_changed": 3,
+      "additions": 26,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "vrabaud",
+      "date": "2013-01-21T18:24:09Z",
+      "sha": "0a09cdddb14d5955aba29be1177c5c060bda612b",
+      "message": "trust cv_bridge more",
+      "files_changed": 1,
+      "additions": 32,
+      "deletions": 40,
+      "commit_type": "code"
+    },
+    {
+      "author": "rhaschke",
+      "date": "2015-04-20T20:47:29Z",
+      "sha": "60b0025f50053a6e946a19d27090ee7db74f2b7e",
+      "message": "fixed topic_completer to handle array subscriptions\n\nGiven a topic reference for a message like /topic/field[1]/subfield[2],\nthe message_tree_model splits it into /topic/field/[*]/subfield/[*],\ni.e. inserting an additional level for the array itself, before listing\nthe individual elements.\nHowever, the TreeModelCompleter only splits along / and thus stops\nworking at array subscripts [*].\nOverwriting the splitPath() method (inserting a / before array\nsubscripts) fixes this issue.",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "cottsay",
+      "date": "2014-02-09T01:25:20Z",
+      "sha": "8d2362293b733db2cad73d3c31e3c36e050197bd",
+      "message": "rqt_reconfigure: Re-write widget data flow\n\nrqt_reconfigure is virtually unusable as is, and sends duplicate and unnecessary updates to the server frequently. This patch updates the PyQt widgets' structure to address many of the issues reported with rqt_reconfigure.",
+      "files_changed": 1,
+      "additions": 102,
+      "deletions": 74,
+      "commit_type": "config"
+    },
+    {
+      "author": "suryaambrose",
+      "date": "2014-09-08T09:40:21Z",
+      "sha": "f0fe7cf55510e7859204a6e9f5708381c3b95166",
+      "message": "No region_changed signal emission when no start/end stamps are set",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "k-okada",
+      "date": "2014-12-31T08:22:32Z",
+      "sha": "4e8730284c465c2a50e9d003c4bedc2a674ae7ec",
+      "message": "add refresh button to re-scan reconfigure server list",
+      "files_changed": 2,
+      "additions": 38,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "mickael9",
+      "date": "2015-01-11T19:14:35Z",
+      "sha": "d1ba2165f834db6eb35929d1e2aaaa2a4a4c6ad1",
+      "message": "Fix version clash when PyQt5 is installed\n\nWhen PyQt5 is installed, matplotlib uses the Qt5 backend by default, so we need to force the usage of the Qt4 backend.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Christian-Eike Framing",
+      "date": "2014-12-15T08:42:42Z",
+      "sha": "7eecff4af857bd28a166adde025917fcdfc94c53",
+      "message": "Remove dead nodes from memory and rebuild uri cache when nodes are restarted",
+      "files_changed": 1,
+      "additions": 14,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "Michael Jae-Yoon Chung",
+      "date": "2014-11-12T16:56:54Z",
+      "sha": "95f015504328802f01a4ed4372c3e1e1c135452f",
+      "message": "fix image shrinking problem #291",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Maxime Rio",
+      "date": "2014-09-03T15:28:00Z",
+      "sha": "a598f3ce440676bc71c015101aa25e386371f902",
+      "message": "enable display of depth image thumbnails in rqt_bag",
+      "files_changed": 1,
+      "additions": 11,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "mrdanbrooks",
+      "date": "2014-08-19T00:00:57Z",
+      "sha": "df9b875697e73f1998e51a1e8ffd7f6441708d3e",
+      "message": "updates package names to full plugin names for scripts",
+      "files_changed": 19,
+      "additions": 25,
+      "deletions": 19,
+      "commit_type": "code"
+    },
+    {
+      "author": "stonier",
+      "date": "2012-12-03T23:40:08Z",
+      "sha": "771020bc8aa236894259a70bf38783385e8c2737",
+      "message": "Background colour for the scene\n\nThe ros graph plugin shows up badly in dark coloured qt themes (black ellipses on a dark background).\r\n\r\nI usually don't like forcing colours in an themed application, but in a rendered scene, your theme doesn't have a choice over the colours of the components (black ellipses for the nodes, etc), so it's choice of matching background is often wrong. This helps with that.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "adwilson10",
+      "date": "2014-06-12T18:42:47Z",
+      "sha": "650c5e1630edb69cf2585aa93bd4367a77f6506b",
+      "message": "Added markers option to plotting backend, fixed curve colors on backend switch",
+      "files_changed": 5,
+      "additions": 74,
+      "deletions": 37,
+      "commit_type": "config"
+    },
+    {
+      "author": "Aaron Blasdel",
+      "date": "2012-06-13T23:57:29Z",
+      "sha": "8bf055400a82e9a64a909202859c78a514dfc703",
+      "message": "fixed matplot imports",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "bricerebsamen",
+      "date": "2014-06-13T18:52:46Z",
+      "sha": "b19da342d1d3a48c998f8e23cce2a3fdc46ed24b",
+      "message": "imported qDebug in data_plot/__init__.py",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "jbohren",
+      "date": "2014-05-15T19:13:35Z",
+      "sha": "11cb360ea19568baadaa96613b2e7322e2fd19f6",
+      "message": "rqt_reconfigure: Removing unnecessary margins which make rqt_reconfigure useless on small screens",
+      "files_changed": 8,
+      "additions": 26,
+      "deletions": 5,
+      "commit_type": "config"
+    },
+    {
+      "author": "forouher",
+      "date": "2014-03-27T13:39:30Z",
+      "sha": "3fdbe904ef0396a997bf6ec295bfc837053da4d8",
+      "message": "add displaying of topic/connection statistics along edges\n\nif topic statistics are available (/statistics) then print\nthem along the edges (if in NODE_NODE mode).\n\nDisplayed are\n\n* frequency, delay (based on the header.stamp) and traffic (in kb/s)\n  as text\n* delay again using the color of the edge is an indicator (green to red)\n* traffic using the penwidth of the edge",
+      "files_changed": 2,
+      "additions": 137,
+      "deletions": 6,
+      "commit_type": "config"
+    },
+    {
+      "author": "forrestv",
+      "date": "2014-04-28T18:40:45Z",
+      "sha": "f6c45a284827f289bb86f96a55dc49c3c07243da",
+      "message": "rqt_plot: don't add more padding for each additional curve",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Benjamin Chrétien",
+      "date": "2014-04-30T09:46:22Z",
+      "sha": "5a7645e96e467d059d8bca46605f7dadfa8f1360",
+      "message": "rqt_bag_plugins: fix PIL/Pillow error.\n\nFix #224",
+      "files_changed": 4,
+      "additions": 6,
+      "deletions": 5,
+      "commit_type": "config"
+    },
+    {
+      "author": "scpeters",
+      "date": "2014-04-01T06:36:43Z",
+      "sha": "9813c6912b70e3c42ba940229713bd980dc80976",
+      "message": "using CATKIN_ENABLE_TESTING to optionally configure tests",
+      "files_changed": 2,
+      "additions": 6,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "dlaz",
+      "date": "2013-11-11T23:12:59Z",
+      "sha": "fdee53da871570e8c95ede460ece343b4c18357f",
+      "message": "fix an error caused by SIGKILLing nodes",
+      "files_changed": 1,
+      "additions": 13,
+      "deletions": 11,
+      "commit_type": "code"
+    },
+    {
+      "author": "MatthiasNieuwenhuisen",
+      "date": "2013-12-19T13:44:21Z",
+      "sha": "f455dd6a1b4154d4e54f3bacc1ad816a133ac5e7",
+      "message": "rqt_bag: added functionality to publish /clock topic",
+      "files_changed": 5,
+      "additions": 46,
+      "deletions": 13,
+      "commit_type": "config"
+    },
+    {
+      "author": "jensenb",
+      "date": "2013-11-25T14:55:48Z",
+      "sha": "3b15b0396e65d9ae7015c7cdfaad985d63e929c4",
+      "message": "Properly handle aligned images",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Isao Isaac Saito",
+      "date": "2013-07-24T02:41:01Z",
+      "sha": "6991f210ac717697c5c211f7d43f58f0facefc53",
+      "message": "rqt_cpp_common) add missing dependency that caused error on buildfarm",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "markusachtelik",
+      "date": "2013-07-10T15:06:42Z",
+      "sha": "ed826d96e49c215eadaf364cb894bd5794fa00b3",
+      "message": "fixed an unexpected type error that occurs for enum parameters with strings; fixed calling update_value() twice",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "Isaac Saito",
+      "date": "2012-12-08T23:57:06Z",
+      "sha": "e6d7f3fdc948a621384b2667cc894d31a23d73a4",
+      "message": "Merge branch 'master' of https://github.com/ros-visualization/rqt",
+      "files_changed": 12,
+      "additions": 82,
+      "deletions": 77,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Isaac Isao Saito",
+      "date": "2013-04-11T02:09:41Z",
+      "sha": "e7cca35456826036fabea1bfeee2c3c75872ccf9",
+      "message": "Trivial) Added links to description in package.xml",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 5,
+      "commit_type": "config"
+    },
+    {
+      "author": "Felix Kolbe",
+      "date": "2013-06-19T14:46:05Z",
+      "sha": "95ffff328da60af27ea0770314ce25cdce8b86f0",
+      "message": "Modify checkbox labels and tooltips to be more comprehensible.\n\nAs they were quite confusing what will happen in which checkbox state.",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "kalectro",
+      "date": "2013-04-01T15:24:36Z",
+      "sha": "0c6e6ea4116e56eb477f5b55e7f80249090f05f6",
+      "message": "added CMakeLists.txt for metapackage and remove update_value function for enum dropdown to prevent double update",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jksrecko",
+      "date": "2013-03-26T09:54:22Z",
+      "sha": "5a5d8985ce258ff85acf67b71e021d2e82bfa954",
+      "message": "rqt_reconfigure) fix division by zero\n\nThis change fixes issue 59 and also disables the widgets for fixed\r\nparameters, to make them stand out visually.",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "mikeferguson",
+      "date": "2013-02-22T03:41:36Z",
+      "sha": "8ef4fbda12b7cedd9cafe154fc6af4ce0b443653",
+      "message": "ampersand is not legal in the xml",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "zklapow",
+      "date": "2012-07-31T18:40:58Z",
+      "sha": "38f50d99fff9162fd6acef5d26ef21ce42b2c1f3",
+      "message": "rqt_robot_monitor: initial import\n\nSplit robot_monitor from robot_dahsboard.\n\nRobot monitor should export its own plugin.\n\nFix catkin python setup.\n\nFix not closing properly.\n\nStatus should actually update.\n\nUpdate src/robot_monitor/robot_monitor.py\n\nAdded window title\n\nTimeline displays. Not yet clickable.\n\nTimeline is now clickable.\n\nDouble timeline queue size.\n\nOnly valid messages are clickable.\n\nInspectors now have timelines.\n\nMake sure levels are always correct.\n\nFix layout and sizing.\n\nPreparing for import into rqt",
+      "files_changed": 10,
+      "additions": 470,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "tfoote",
+      "date": "2012-12-08T21:14:18Z",
+      "sha": "976838ab8d422c070246e65becc7634f3dc5d863",
+      "message": "rqt 0.1.5 for dirk",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Thibault Kruse",
+      "date": "2012-05-14T17:54:35Z",
+      "sha": "8c4b35cbfc0868dbc4c09c54457b557516bc3853",
+      "message": "extracted and tested namespace filter splitting",
+      "files_changed": 2,
+      "additions": 338,
+      "deletions": 126,
+      "commit_type": "test"
+    },
+    {
+      "author": "tkruse",
+      "date": "2012-04-18T04:48:46Z",
+      "sha": "03d338ed0ee5708e5f73f80033904b50058b0291",
+      "message": "allow to specify label position",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Dorian Scholz",
+      "date": "2011-10-05T13:44:29Z",
+      "sha": "2285f83412213f6af340c80e8be76c9a6d309662",
+      "message": "added custom title bar to dockwidgets",
+      "files_changed": 4,
+      "additions": 487,
+      "deletions": 2,
+      "commit_type": "code"
+    }
+  ]
+}

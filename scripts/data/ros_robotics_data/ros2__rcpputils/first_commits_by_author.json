@@ -1,0 +1,481 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-26T02:14:13Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros2",
+    "repo": "rcpputils"
+  },
+  "data": [
+    {
+      "author": "wjwwood",
+      "date": "2020-09-25T03:31:12Z",
+      "sha": "ba5d1e49cec09e8f6db56bbda154b4fba96c5c99",
+      "message": "Revert \"Make sure that an existing path is a directory for create_directories (#95)\" (#96)\n\nThis reverts commit a54db52d9297cfc09c77e83a300e1d8188163c9f.",
+      "files_changed": 2,
+      "additions": 1,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "ahcorde",
+      "date": "2020-04-02T07:21:27Z",
+      "sha": "52f69e4797c0f596551e977546db21bae664b085",
+      "message": "Included abstraction for rcutils::shared_library (#49)\n\n* Included abstraction for rcutils::shared_library\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Fixed headers and doc\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Added basic test with sanitizers for shared libray\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* fixed linters in test_shared_library.cpp\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* adapted to rcutils shared library API\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* rcutils is a depend in package.xml\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Added get_library_path method to SharedLibrary class\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* throw bad_alloc\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Added exception to docblock\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* fixed CMakeLists issues\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Default value for DISABLE_SANITIZERS to OFF\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Added more tests to test_shared_library\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Included rcutils_get_error_string and rcutils_reset_error\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Removed sanitizer in CMakeLists.txt\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* get_library_path throws an exception - updated docs too\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Removed comments and fixed test on shared library\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Fixed cpplint test_shared_library\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Added target_compile_definitions for dummy_shared_library\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Added get_platform_library_name to SharedLibrary\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Visibility of SharedLibray Class on windows\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Avoid noreturn issue on windows\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Avoid noreturn issue on windows on more tests\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* fixed docbloc\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>",
+      "files_changed": 7,
+      "additions": 314,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "clalancette",
+      "date": "2020-05-08T15:53:17Z",
+      "sha": "aa065d871ad228ce2cee01784268ce8ac891e001",
+      "message": "Changelog.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mosfet80",
+      "date": "2025-06-20T18:48:04Z",
+      "sha": "688ebf9cb7532bfa04c72fddd2f81871a559e508",
+      "message": "fix cmake deprecation (#214)\n\ncmake version <3.10 is deprecated\n\nSigned-off-by: mosfet80 <10235105+mosfet80@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "ci"
+    },
+    {
+      "author": "Aposhian",
+      "date": "2025-06-18T20:57:16Z",
+      "sha": "8e29c4c16857656244e7fd9d5450569d0208a0ab",
+      "message": "add thread naming utilities (#213)\n\nSigned-off-by: Adam Aposhian <adam.aposhian@fireflyautomatix.com>",
+      "files_changed": 4,
+      "additions": 230,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "cottsay",
+      "date": "2020-05-18T20:26:30Z",
+      "sha": "34689021f711fe4554284b95205fdea2d79f79cb",
+      "message": "Remove mention of random file from temporary_directory_path doc (#64)\n\nThe documented return value for this function seems to reference a\r\ndifferent temp function - one that returns a random temp filename. The\r\nimplementation is returning the path to a temp directory as instructed\r\nthrough environment variables and not a path to a file.\r\n\r\nSigned-off-by: Scott K Logan <logans@cottsay.net>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "mjcarroll",
+      "date": "2019-04-02T18:41:13Z",
+      "sha": "52c438fd23128b4de96805ed5e09b91013914122",
+      "message": "Add commonly-used filesystem helper to utils (#5)\n\n* Add commonly-used filesystem helper to utils.\r\n\r\nSigned-off-by: Michael Carroll <michael@openrobotics.org>\r\n\r\n* Add split and tests.\r\n\r\nSigned-off-by: Michael Carroll <michael@openrobotics.org>\r\n\r\n* Update header path and fix tests.\r\n\r\nSigned-off-by: Michael Carroll <michael@openrobotics.org>\r\n\r\n* Add basic `is_absolute` functionality.\r\n\r\nSigned-off-by: Michael Carroll <michael@openrobotics.org>\r\n\r\n* Lint.\r\n\r\nSigned-off-by: Michael Carroll <michael@openrobotics.org>\r\n\r\n* Fixes for tests on Windows and Linux.\r\n\r\nSigned-off-by: Michael Carroll <michael@openrobotics.org>\r\n\r\n* Change documentation note about std::filesystem.\r\n\r\nSigned-off-by: Michael Carroll <michael@openrobotics.org>\r\n\r\n* Move preferred separator location.\r\n\r\nSigned-off-by: Michael Carroll <michael@openrobotics.org>",
+      "files_changed": 5,
+      "additions": 568,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jmachowinski",
+      "date": "2025-03-17T15:07:04Z",
+      "sha": "ceca3c8e56e6d5391bea778ca598effc45b4133a",
+      "message": "feat: Added marco do disable deprecation warnings (#210)\n\nHelper for suppressing compile warning. Useful for testing\ndeprecated APIs etc.\n\nSigned-off-by: Janosch Machowinski <J.Machowinski@cellumation.com>",
+      "files_changed": 3,
+      "additions": 71,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Yadunund",
+      "date": "2023-04-27T09:27:11Z",
+      "sha": "a77662fca77ce3f579eeecc937b0c5b9e5216b46",
+      "message": "2.7.0",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "fujitatomoya",
+      "date": "2020-10-16T12:28:28Z",
+      "sha": "85bb625190d8c9abe930d7f62c5ca550a63e1571",
+      "message": "replace custom get env login into rcutils_get_env(). (#99)\n\nSigned-off-by: Tomoya.Fujita <Tomoya.Fujita@sony.com>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "MichaelOrlov",
+      "date": "2024-07-22T08:31:14Z",
+      "sha": "acd78ceadcc84937984c783939b595842ee790e9",
+      "message": "Replace create_temp_directory with the new create_temporary_directory (#198)\n\n* Replace create_temp_directory with the new create_temporary_directory\r\n\r\n- The newly added `create_temporary_directory(..)` uses\r\nstd::filesystem::path and doesn't have platform-specific code.\r\n- Also deprecated `create_temp_directory(..)` and `temp_directory_path`\r\n\r\nSigned-off-by: Michael Orlov <michael.orlov@apex.ai>",
+      "files_changed": 3,
+      "additions": 74,
+      "deletions": 13,
+      "commit_type": "code"
+    },
+    {
+      "author": "marcoag",
+      "date": "2024-04-26T17:05:04Z",
+      "sha": "4fcd7951799bb8aa08685bba44b25ab90ea27267",
+      "message": "Changelog.\n\nSigned-off-by: Marco A. Gutierrez <marcogg@marcogg.com>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "saikishor",
+      "date": "2024-03-28T22:03:20Z",
+      "sha": "bc0e3cfb4168fbc286034f0ee8d27319ffd1e945",
+      "message": "Generate version header with ament_generate_version_header function (#190)\n\nSigned-off-by: Sai Kishor Kothakota <sai.kishor@pal-robotics.com>",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "christophebedard",
+      "date": "2020-07-08T15:28:04Z",
+      "sha": "4e2b95cde54d559d546e9382f89a368fca701fd3",
+      "message": "Split get_env_var() into header and implementation (#83)\n\n* Split get_env.hpp into header and impl\r\n\r\nSigned-off-by: Christophe Bedard <bedard.christophe@gmail.com>\r\n\r\n* Add RCPPUTILS_PUBLIC to get_env_var() declaration\r\n\r\nSigned-off-by: Christophe Bedard <bedard.christophe@gmail.com>",
+      "files_changed": 3,
+      "additions": 58,
+      "deletions": 12,
+      "commit_type": "docs"
+    },
+    {
+      "author": "wojciechmadry",
+      "date": "2023-10-09T18:27:31Z",
+      "sha": "1905c950b5ff9557212b302ac1b7f484ec144e41",
+      "message": "Add a missing header due to missing PATH_MAX variable (#181)\n\n* Add a missing header due to missing PATH_MAX variable\r\n\r\nSigned-off-by: Wojciech Madry <madrywojciech99@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "emersonknapp",
+      "date": "2019-03-15T18:17:55Z",
+      "sha": "028a6cf70a7b9258cd0b69f926888e2316a65217",
+      "message": "Add thread annotation macros (#2)\n\n* Add thread annotation macros, tests for same, and documentation\r\n\r\nSigned-off-by: Emerson Knapp <eknapp@amazon.com>\r\n\r\n* Change macro namespace to RCPPUTILS_TSA\r\n\r\nSigned-off-by: Emerson Knapp <eknapp@amazon.com>\r\n\r\n* Allow build for clang w/ libstdc++, add test for NO_THREAD_SAFETY_ANALYSIS, and fix argument count of ASSERT_CAPABILITY macros\r\n\r\nSigned-off-by: Emerson Knapp <eknapp@amazon.com>",
+      "files_changed": 5,
+      "additions": 478,
+      "deletions": 5,
+      "commit_type": "docs"
+    },
+    {
+      "author": "bijoua29",
+      "date": "2023-01-05T21:30:23Z",
+      "sha": "8593a4fc66bb1348eba263639559ca638f21a19a",
+      "message": "Add missing header for strlen (#169)\n\nSigned-off-by: bijoua29 <73511637+bijoua29@users.noreply.github.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "sebastian-freitag",
+      "date": "2023-01-04T15:07:11Z",
+      "sha": "894f522905f6181a03ce71fe8849768afbd0873d",
+      "message": "issue-167 (#172)\n\nExplicitly added void to change the function to a function with prototype.\r\nSee https://discourse.llvm.org/t/rfc-enabling-wstrict-prototypes-by-default-in-c/60521\r\nSee https://reviews.llvm.org/D122895\r\nFixes: https://github.com/ros2/rcpputils/issues/167\r\n\r\nSigned-off-by: Sebastian Freitag <sebastian.freitag@pylot.tech>",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "audrow",
+      "date": "2021-11-19T13:54:27Z",
+      "sha": "60b28f5e7bbc679d6ed92029798040d34b13cf65",
+      "message": "Update maintainers to Chris Lalancette (#152)\n\nSigned-off-by: Audrow Nash <audrow@hey.com>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "paudrow",
+      "date": "2022-05-05T17:20:28Z",
+      "sha": "de4de21b793a1c6929d1973d901c157da5103465",
+      "message": "2.5.1 (#163)\n\n* 2.5.0\r\n\r\nSigned-off-by: Audrow Nash <audrow@hey.com>\r\n\r\n* 2.5.1\r\n\r\nSigned-off-by: Audrow Nash <audrow@hey.com>",
+      "files_changed": 2,
+      "additions": 9,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "shumov-ag",
+      "date": "2022-04-28T14:10:19Z",
+      "sha": "ce124919e98c8747d80eb0af245670e62afa07e4",
+      "message": "Fix possible race condition in create_directories() (#162)\n\nSigned-off-by: Artem Shumov <agshumov@sberautotech.ru>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "sloretz",
+      "date": "2022-01-21T21:23:34Z",
+      "sha": "b8fe7a3e91c7e1a940120bfb7466d3e1df1d25a8",
+      "message": "Install includes to include/${PROJECT_NAME} (#160)\n\nSigned-off-by: Shane Loretz <sloretz@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 20,
+      "deletions": 7,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jacobperron",
+      "date": "2019-06-12T15:53:29Z",
+      "sha": "1760a4f6ff74dc11b6671cb0eaa4154a42f248a7",
+      "message": "Add function 'find_and_replace' (#13)\n\n* Add function 'find_and_replace'\r\n\r\nSigned-off-by: Jacob Perron <jacob@openrobotics.org>\r\n\r\n* Fix spelling\r\n\r\nSigned-off-by: Jacob Perron <jacob@openrobotics.org>\r\n\r\n* Add shortcut for find == replace\r\n\r\nSigned-off-by: Jacob Perron <jacob@openrobotics.org>\r\n\r\n* Template on std::basic_string\r\n\r\nSigned-off-by: Jacob Perron <jacob@openrobotics.org>\r\n\r\n* changed find_and_replace to accept literals using magic 🌈✨\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* Fix lint\r\n\r\nSigned-off-by: Jacob Perron <jacob@openrobotics.org>",
+      "files_changed": 3,
+      "additions": 185,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "aprotyas",
+      "date": "2021-09-02T13:11:38Z",
+      "sha": "dd5fe5e3ba92a40271246fb841798f5abdf8ab79",
+      "message": "Add accumulator test to CMakeLists.txt (#144)\n\n* Add accumulator test to CMakeLists.txt\r\n\r\nAlso, use `gtest` instead of `gmock` headers in `test_accumulator`\r\nbecause no mocking is used in said test.\r\n\r\nSigned-off-by: Abrar Rahman Protyasha <aprotyas@u.rochester.edu>\r\nCo-authored-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 2,
+      "additions": 11,
+      "deletions": 1,
+      "commit_type": "test"
+    },
+    {
+      "author": "Barry-Xu-2018",
+      "date": "2021-11-18T16:50:42Z",
+      "sha": "a02ef91919c4cad91baba60ae53647e6c3a17d64",
+      "message": "Add checked convert_to_nanoseconds() function (#145)\n\nSigned-off-by: Barry Xu <barry.xu@sony.com>",
+      "files_changed": 3,
+      "additions": 92,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Octogonapus",
+      "date": "2021-09-22T12:27:51Z",
+      "sha": "ce44a14cce10132f0eff630e9ae016fbf296ac51",
+      "message": "Add missing cstddef include (#147)\n\n* Add missing cstddef include\r\n\r\nSigned-off-by: Octogonapus <firey45@gmail.com>\r\nCo-authored-by: Abrar Rahman Protyasha <aprotyas@u.rochester.edu>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Abrar Rahman Protyasha",
+      "date": "2021-07-14T21:56:28Z",
+      "sha": "1b9643746f2983c2ad12ba6a8ae7696f5a1706c5",
+      "message": "Fix `IllegalStateException` reference in FEATURES (#135)\n\nFEATURES.md incorrectly referred to `IllegalStateException`\r\nas `InvalidStateException`, which prevented appropriate\r\nlinking in the generated documentation for the package.\r\n\r\nSigned-off-by: Abrar Rahman Protyasha <abrar@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Karsten1987",
+      "date": "2019-06-13T18:32:21Z",
+      "sha": "398d5bf694a8bd9dd921d16c35a8503e7f4d1f31",
+      "message": "use iterators for split (#14)\n\n* use iterators for split\r\n\r\nSigned-off-by: Karsten Knese <karsten@openrobotics.org>\r\n\r\n* address review comments\r\n\r\nSigned-off-by: Karsten Knese <karsten@openrobotics.org>",
+      "files_changed": 2,
+      "additions": 122,
+      "deletions": 6,
+      "commit_type": "docs"
+    },
+    {
+      "author": "shonigmann",
+      "date": "2021-04-02T06:36:01Z",
+      "sha": "0fab5eba931821e3b24d81743d3998304db500cc",
+      "message": "updating quality declaration links (re: ros2/docs.ros2.org#52) (#130)\n\nSigned-off-by: Simon Honigmann <shonigmann@blueorigin.com>\r\n\r\nCo-authored-by: Simon Honigmann <shonigmann@blueorigin.com>",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 6,
+      "commit_type": "docs"
+    },
+    {
+      "author": "nnmm",
+      "date": "2021-03-29T18:38:17Z",
+      "sha": "bc300e7667603a4b8a6cc2b9d7b13f5b64e79265",
+      "message": "Make library attributes visible (#128)\n\n* Make library attributes visible\r\n\r\nSigned-off-by: Nikolai Morin <nikolai.morin@apex.ai>\r\n\r\n* Add function filename_for_library\r\n\r\nSigned-off-by: Nikolai Morin <nikolai.morin@apex.ai>\r\n\r\n* Uncrustify\r\n\r\nSigned-off-by: Nikolai Morin <nikolai.morin@apex.ai>\r\n\r\n* Use \\sa instead of @sa\r\n\r\nSigned-off-by: Nikolai Morin <nikolai.morin@apex.ai>\r\n\r\n* Add path_for_library() function\r\n\r\nSigned-off-by: nnmm <nnmmgit@gmail.com>\r\n\r\n* Fix test_lib_dir in test_find_library.cpp\r\n\r\nSigned-off-by: Nikolai Morin <nikolai.morin@apex.ai>",
+      "files_changed": 3,
+      "additions": 71,
+      "deletions": 18,
+      "commit_type": "test"
+    },
+    {
+      "author": "Chen Lihui",
+      "date": "2020-11-02T21:43:03Z",
+      "sha": "53e6fc2edde1ee1799ef5cf86afa2e13df24be0f",
+      "message": "overload functions for has_symbol and get_symbol with raw string literal (#110)\n\nSigned-off-by: Chen Lihui <lihui.chen@sony.com>",
+      "files_changed": 3,
+      "additions": 31,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "ivanpauno",
+      "date": "2020-10-05T18:49:10Z",
+      "sha": "41cb834a790110680a2f0606b795d0c7a62aeec6",
+      "message": "Changelogs\n\nSigned-off-by: Ivan Santiago Paunovic <ivanpauno@ekumenlabs.com>",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "hidmic",
+      "date": "2019-09-06T18:35:43Z",
+      "sha": "a5a973c2f3cf403af55e312d0054dc889995ba10",
+      "message": "Implement join() (#20)\n\n* Implement join().\r\n\r\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>\r\n\r\n* Correct join.hpp license.\r\n\r\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>",
+      "files_changed": 3,
+      "additions": 149,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "brawner",
+      "date": "2020-04-27T17:31:18Z",
+      "sha": "9d32f47d7b453fd70179bec5068608b3279d817f",
+      "message": "Quality declaration (#47)\n\n* First draft quality declaration\r\n\r\nSigned-off-by: Stephen Brawner <brawner@gmail.com>\r\n\r\n* QD now describes current status\r\n\r\nSigned-off-by: Stephen Brawner <brawner@gmail.com>\r\n\r\n* Fixup\r\n\r\nSigned-off-by: Stephen Brawner <brawner@gmail.com>\r\n\r\n* Fix link\r\n\r\nSigned-off-by: Stephen Brawner <brawner@gmail.com>\r\n\r\n* Fixup\r\n\r\nSigned-off-by: Stephen Brawner <brawner@gmail.com>\r\n\r\n* Update QUALITY_DECLARATION.md\r\n\r\nSigned-off-by: Stephen Brawner <brawner@gmail.com>",
+      "files_changed": 2,
+      "additions": 140,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "tfoote",
+      "date": "2019-05-08T22:27:10Z",
+      "sha": "e44526cbe8426583a8125404713ed3336297e277",
+      "message": "Merge pull request #12 from ros2/wjwwood/release\n\n0.1.0",
+      "files_changed": 1,
+      "additions": 13,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Michael Jeronimo",
+      "date": "2020-10-06T22:58:55Z",
+      "sha": "365af5b9051cb173986fc93c5eb9985e86e48c99",
+      "message": "Update the package.xml files with the latest Open Robotics maintainers (#102)\n\nSigned-off-by: Michael Jeronimo <michael.jeronimo@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "chapulina",
+      "date": "2020-10-01T16:59:03Z",
+      "sha": "4e474443cd0df29f2e8c6e48d61d7d94f8fb44d0",
+      "message": "Transfer ownership to Open Robotics (#100)\n\nSigned-off-by: Louise Poubel <louise@openrobotics.org>",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "dirk-thomas",
+      "date": "2019-03-20T15:41:43Z",
+      "sha": "3dcb27fd58e4b643f2690523edf207d6b411561f",
+      "message": "add section about DCO to CONTRIBUTING.md",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "v-lopez",
+      "date": "2020-07-14T23:11:07Z",
+      "sha": "c730cb7bcb50a7583b8502aa0e3edbb0028a476d",
+      "message": "Add clamp header (#85)\n\n* Add clamp header\r\n\r\n* Add clamp header to avoid using boost or C++17\r\n\r\nSigned-off-by: Victor Lopez <victor.lopez@pal-robotics.com>\r\n\r\n* Extend documentation of clamp methods\r\n\r\nSigned-off-by: Victor Lopez <victor.lopez@pal-robotics.com>",
+      "files_changed": 3,
+      "additions": 113,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "allenh1",
+      "date": "2020-07-02T00:03:48Z",
+      "sha": "63b515f7588923f78359be925325de33c5b22132",
+      "message": "Add cstring include for strcmp (#81)\n\nSigned-off-by: Hunter L. Allen <hunter.allen@ghostrobotics.io>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "dabonnie",
+      "date": "2020-06-25T01:06:15Z",
+      "sha": "7a7e7bcb965a5eb8be1ec66b45a73d9d30541053",
+      "message": "- bump setup-ros to 0.0.23 (#77)\n\n- bump action-ros-lint to 0.0.6\r\n- bump action-ros-ci to 0.0.17\r\n\r\nSigned-off-by: Devin Bonnie <dbbonnie@amazon.com>",
+      "files_changed": 2,
+      "additions": 8,
+      "deletions": 8,
+      "commit_type": "config"
+    },
+    {
+      "author": "nuclearsandwich",
+      "date": "2019-04-13T20:05:50Z",
+      "sha": "2ff4d9a674710f434b4582cfe6b0c12fbac6a227",
+      "message": "0.1.0",
+      "files_changed": 1,
+      "additions": 13,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "zmichaels11",
+      "date": "2020-01-31T21:08:45Z",
+      "sha": "09ec104fcb029cded45e34d3392717ac798b938a",
+      "message": "Add linting workflow (#32)\n\nSigned-off-by: Zachary Michaels <zmichaels11@gmail.com>",
+      "files_changed": 1,
+      "additions": 42,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "Anas Abou Allaban",
+      "date": "2019-11-07T00:17:20Z",
+      "sha": "2cf677f058b4a2d348e8f9feabfaf3fb9f29e94a",
+      "message": "Add new function to remove the extension of a file\n\nSigned-off-by: Anas Abou Allaban <allabana@amazon.com>",
+      "files_changed": 1,
+      "additions": 11,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "klintan",
+      "date": "2019-08-23T22:55:22Z",
+      "sha": "0052be504501ff5a2d3ae07af81ec0e39e67a94b",
+      "message": "File extension addition for camera calibration parser (#18)\n\n* file extension addition for camera calibration parser\r\n* added additional helper functions necessary for camera calibration parser\r\n* fixed minor bug\r\n* added tests and small fixes\r\n* PR feedback\r\n* fixed formatting issues\r\n* fixed whitespace linting issues\r\n\r\nSigned-off-by: Andreas Klintberg <ankl@kth.se>",
+      "files_changed": 3,
+      "additions": 89,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Thomas Moulard",
+      "date": "2019-04-06T01:51:09Z",
+      "sha": "418f95ca55d879554d1fbdabf1ad3af055c6f3e1",
+      "message": "Fix leak in test_basic.cpp\n\nSigned-off-by: Thomas Moulard <tmoulard@amazon.com>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 1,
+      "commit_type": "test"
+    },
+    {
+      "author": "Emerson Knapp",
+      "date": "2019-02-25T21:33:02Z",
+      "sha": "f07480ab7630ca9bcf066adf7b4acc1cb32ad1c6",
+      "message": "Initial commit",
+      "files_changed": 4,
+      "additions": 232,
+      "deletions": 0,
+      "commit_type": "docs"
+    }
+  ]
+}

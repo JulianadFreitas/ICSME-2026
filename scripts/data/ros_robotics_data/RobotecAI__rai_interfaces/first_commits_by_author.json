@@ -1,0 +1,61 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-26T02:00:16Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "RobotecAI",
+    "repo": "rai_interfaces"
+  },
+  "data": [
+    {
+      "author": "maciejmajek",
+      "date": "2024-08-05T15:23:50Z",
+      "sha": "f5f499b3594c5cca3c62bcb7d67fa6455382a215",
+      "message": "feat: human robot interface (#88)\n\n* feat: documents loader\r\n\r\n* feat: enhance typing, drop logging\r\n\r\n* feat: talk to docs app\r\n\r\n* build: update deps\r\n\r\n* style: remove tools.py:138:59: E203 whitespace before ':'\r\n\r\n* build: add parser dependencies\r\n\r\n* feat: use StateGraph instead of Graph\r\n\r\n* feat: implement rai-tts node (#83)\r\n\r\n* feat: implement rai-tts node\r\n\r\n* refactor: allow empty elevenlabs api key\r\n\r\n* chore: remove poetry lock\r\n\r\n* feat: asr node (#48)\r\n\r\n* feat: added asr node\r\n\r\n* build: added sounddevice to poetry\r\n\r\n* feat: added publishing string transcription messages by a topic\r\n\r\n* feat: model and language as input parameters\r\n\r\n* feat: parametrize node, add launch file\r\n\r\n* refactor: rename asr package into rai_asr\r\n\r\n* test: remove default tests\r\n\r\n* chore: update package.xml, minor changes\r\n\r\n* build: update pyproject, add docs for deps that cant be installed using rosdep\r\n\r\n* chore: update description and license in setup.py\r\n\r\n* Update base docs\r\n\r\n* docs: add node readme, add portaudio to deps\r\n\r\n* refactor: replace poratudio2 with portaudio19-dev\r\n\r\n* feat: add status topic\r\n\r\n* chore: remove poetry lock\r\n\r\n---------\r\n\r\nCo-authored-by: maciejmajek <maciej.majek@robotec.ai>\r\nCo-authored-by: Maciej Majek <46171033+maciejmajek@users.noreply.github.com>\r\nCo-authored-by: rachwalk <kajetan.rachwal@robotec.ai>\r\n\r\n* feat: add proof-of-concept HMI node (#85)\r\n\r\n* feat: add an initial implementation for the HMI node\r\n\r\n* chore: add missing files to make rai_hmi into a ROS2 package\r\n\r\n* docs: add README.md for rai_hmi package\r\n\r\n* chore: add comments describing the logic in handle_human_message\r\n\r\n* chore: fix code formatting with pre-commit script\r\n\r\n* fix: fix typo in topic name\r\n\r\n* fix: apply changes from review\r\n\r\n* chore: replace single quotes with double quotes\r\n\r\n---------\r\n\r\nCo-authored-by: Maciej Majek <46171033+maciejmajek@users.noreply.github.com>\r\n\r\n* chore: add poetry.lock\r\n\r\n* feat: add rai_bringup package, align topic names\r\n\r\n* feat: parametrize hri launch file\r\n\r\n* feat: vector store retrieval for rai_whoami\r\n\r\n* feat: identity service for rai_whoami\r\n\r\n* feat: request constitution and identity in rai_hmi node\r\n\r\n* feat: add documentation access to the hmi node\r\n\r\n* chore: rename identity to robot_identity.txt\r\n\r\n* feat: add vector database and robot identity to husarion_whoami, update load_docs script\r\n\r\n* fix: load docs path, identity path\r\n\r\n* refactor: move load docs to rai_cli\r\n\r\n* feat: add configuration package parameter to hmi\r\n\r\n* fix: change elevenlabs voice\r\n\r\n* feat: add asr latch mechanism\r\n\r\n* fix: load model once\r\n\r\n* refactor: use openai cloud based whisper\r\n\r\n* refactor: asr lock\r\n\r\n* style: clean up asr node\r\n\r\n* fix: final touch\r\n\r\n* docs: add information on creating robot's whoami\r\n\r\n* docs: add RAI_bringup info (hri)\r\n\r\n* Fixed resuming recording after receiving empty message\r\n\r\nSigned-off-by: Wiktoria Siekierska <wiktoria.siekierska@robotec.ai>\r\n\r\n---------\r\n\r\nSigned-off-by: Wiktoria Siekierska <wiktoria.siekierska@robotec.ai>\r\nCo-authored-by: Magdalena Kotynia <magdalena.kotynia@robotec.ai>\r\nCo-authored-by: rachwalk <kajetan.rachwal@robotec.ai>\r\nCo-authored-by: Adam Gotlib <adam.gotlib@robotec.ai>\r\nCo-authored-by: Wiktoria Siekierska <wiktoria.siekierska@robotec.ai>",
+      "files_changed": 3,
+      "additions": 18,
+      "deletions": 1,
+      "commit_type": "ci"
+    },
+    {
+      "author": "knicked",
+      "date": "2024-10-08T15:17:02Z",
+      "sha": "83fb3b53e7133b3338dd9965fa78d7459c0033b4",
+      "message": "Enhance ManipulatorMoveTo service definition\n\nSigned-off-by: Kacper Dąbrowski <kacper.dabrowski@robotec.ai>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "boczekbartek",
+      "date": "2024-09-06T07:23:55Z",
+      "sha": "964f27bece9e317f44ce93cf74b83c0fc2394fb2",
+      "message": "refactor: text hmi and implement hmi task as ros2 action (#176)\n\nSigned-off-by: Bartłomiej Boczek <bartlomiej.boczek@robotec.ai>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "rachwalk",
+      "date": "2024-08-13T08:15:03Z",
+      "sha": "cee707441e4a9bc1f870d820808cdb1a67ba77fd",
+      "message": "feat: add grouding dino ros2 node (#81)\n\n* Initial commit adding interfaces and grounding dino\r\n\r\n* Update gitignore to include ros build dirs\r\n\r\n* Create README with installation instructions, reproducible install\r\n\r\n* Add launch files, finalise readme\r\n\r\n* pre-commit format\r\n\r\n* Remove unnecessary tests\r\n\r\n* Remove weights from .gitignore\r\n\r\n* Add grounding dino as poetry dependency\r\n\r\n* Update package README\r\n\r\n* Update base docs\r\n\r\n* Add missing dependancy to docs\r\n\r\n* Remove venv from .gitignore\r\n\r\n* Formatting\r\n\r\n* Add vision_msgs as dependency\r\n\r\n* Fix typos\r\n\r\n* Add automatic download of weights\r\n\r\n* Add README\r\n\r\n* Update README.md\r\n\r\n* prettier\r\n\r\n* fix build\r\n\r\n* update docs with pythonpath modification\r\n\r\n* Update src/rai_grounding_dino/README.md\r\n\r\nCo-authored-by: Bartek Boczek <22739059+boczekbartek@users.noreply.github.com>\r\n\r\n* Update src/rai_interfaces/package.xml\r\n\r\nCo-authored-by: Bartek Boczek <22739059+boczekbartek@users.noreply.github.com>\r\n\r\n* Update src/rai_interfaces/package.xml\r\n\r\nCo-authored-by: Bartek Boczek <22739059+boczekbartek@users.noreply.github.com>\r\n\r\n* Update src/rai_interfaces/package.xml\r\n\r\nCo-authored-by: Bartek Boczek <22739059+boczekbartek@users.noreply.github.com>\r\n\r\n* rm redundant file\r\n\r\n* add rosidl_generator to package xml for interfaces\r\n\r\n---------\r\n\r\nCo-authored-by: Bartek Boczek <22739059+boczekbartek@users.noreply.github.com>",
+      "files_changed": 4,
+      "additions": 28,
+      "deletions": 3,
+      "commit_type": "ci"
+    },
+    {
+      "author": "adamdbrw",
+      "date": "2024-07-12T08:07:14Z",
+      "sha": "6ebfb17ebb4c0aa6e55c66cd6d4b99487a8df137",
+      "message": "Initial work on whoami package (#70)\n\n* initial work on whoami package\r\n\r\nSigned-off-by: Adam Dąbrowski <adam.dabrowski@robotec.ai>\r\n\r\n* Apply suggestions from code review\r\n\r\nCo-authored-by: Bartek Boczek <22739059+boczekbartek@users.noreply.github.com>\r\n\r\n* chore: pre-commit\r\n\r\n* feat: expand typing\r\n\r\n* test: skip tests\r\n\r\n* test: remove default ros2 rai_whoami tests\r\n\r\n* feat(`rai_whoami`): remove default values for ros parameters\r\n\r\n---------\r\n\r\nSigned-off-by: Adam Dąbrowski <adam.dabrowski@robotec.ai>\r\nCo-authored-by: Maciej Majek <46171033+maciejmajek@users.noreply.github.com>\r\nCo-authored-by: Bartek Boczek <22739059+boczekbartek@users.noreply.github.com>\r\nCo-authored-by: Maciej Majek <maciej.majek@robotec.ai>\r\nCo-authored-by: Bartłomiej Boczek <bartlomiej.boczek@robotec.ai>",
+      "files_changed": 3,
+      "additions": 246,
+      "deletions": 0,
+      "commit_type": "ci"
+    }
+  ]
+}

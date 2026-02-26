@@ -1,0 +1,81 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-26T01:49:18Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "open-rmf",
+    "repo": "pybind11_json_vendor"
+  },
+  "data": [
+    {
+      "author": "mxgrey",
+      "date": "2022-02-21T02:25:20Z",
+      "sha": "e37861a4033ab7a2d37c4a5c917aa750a800fcf9",
+      "message": "Add changelog (#3)\n\nSigned-off-by: Michael X. Grey <grey@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "luca-della-vedova",
+      "date": "2025-06-09T03:03:38Z",
+      "sha": "36f5cef02ff5f982bb9ef427107a9dece58355f8",
+      "message": "Bump main after kilted release (#14)\n\n* Update changelogs\n\nSigned-off-by: Luca Della Vedova <lucadv@intrinsic.ai>\n\n* 0.6.0\n\nSigned-off-by: Luca Della Vedova <lucadv@intrinsic.ai>\n\n---------\n\nSigned-off-by: Luca Della Vedova <lucadv@intrinsic.ai>",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Yadunund",
+      "date": "2023-05-25T07:23:24Z",
+      "sha": "61c0addc4312dc811fb0867e4cc4d956d9a86141",
+      "message": "Merge pull request #9 from open-rmf/emartinena/first_build_ci\n\n[CI] Initial build workflow",
+      "files_changed": 3,
+      "additions": 26,
+      "deletions": 1,
+      "commit_type": "ci"
+    },
+    {
+      "author": "cottsay",
+      "date": "2022-05-19T22:31:24Z",
+      "sha": "b9faa89d347678d5d0c3f9ff567519e1a5abe5f6",
+      "message": "Add missing buildtool_depend on git\n\nSigned-off-by: Scott K Logan <logans@cottsay.net>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "orensbruli",
+      "date": "2022-10-04T05:59:42Z",
+      "sha": "90e792d048ef75c51e646ed43b7232e00787fe68",
+      "message": "Updated nlohmann-json3-dev depend\n\nSigned-off-by: Esteban Martinena <orensbruli@gmail.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "youliangtan",
+      "date": "2022-01-12T00:50:42Z",
+      "sha": "35345ed8f76e9f5c95edaa624dcbfc85f08bf780",
+      "message": "Initial commit",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "nuclearsandwich",
+      "date": "2022-05-24T15:49:10Z",
+      "sha": "78d4800892c7ae1cc1905a3be6c68ec39fe1808e",
+      "message": "Add missing dependency on nlohmann::json.\n\nnlohmann::json is listed as a dependency of pybind11_json[1] and\nbuilding the vendor package on the build farm fails during CMake\nconfiguration since it is unable to find the package:\n\n    CMake Error at CMakeLists.txt:29 (find_package):\n      By not providing \"Findnlohmann_json.cmake\" in CMAKE_MODULE_PATH this\n      project has asked CMake to find a package configuration file provided by\n      \"nlohmann_json\", but CMake did not find one.\n\n      Could not find a package configuration file provided by \"nlohmann_json\"\n      (requested version 3.2.0) with any of the following names:\n\n        nlohmann_jsonConfig.cmake\n        nlohmann_json-config.cmake\n\n      Add the installation prefix of \"nlohmann_json\" to CMAKE_PREFIX_PATH or set\n      \"nlohmann_json_DIR\" to a directory containing one of the above files.  If\n      \"nlohmann_json\" provides a separate development package or SDK, be sure it\n      has been installed.\n\n[1]: https://github.com/pybind/pybind11_json#dependencies\n\nSigned-off-by: Steven! Ragnarök <steven@nuclearsandwich.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "config"
+    }
+  ]
+}

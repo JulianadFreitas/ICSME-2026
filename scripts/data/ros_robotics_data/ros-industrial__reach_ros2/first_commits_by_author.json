@@ -1,0 +1,121 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-26T02:18:28Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros-industrial",
+    "repo": "reach_ros2"
+  },
+  "data": [
+    {
+      "author": "thettasch-samxl",
+      "date": "2025-09-23T15:13:06Z",
+      "sha": "cd048ffcb69c5a0ba2b74124f15afa1ad63c27b5",
+      "message": "Set REACH_PLUGINS variable using an env hook (#47)\n\n* Set REACH_PLUGINS variable using an env hook\n\n* Use ament helper and project name token\n\n* Add explicit export, which is not covered by ament_append_unique_value\n\n* Use dsv hooks for better portability\n\n* Fix formatting with .run-cmake-format",
+      "files_changed": 3,
+      "additions": 4,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "nikhil-sethi",
+      "date": "2025-07-09T22:27:11Z",
+      "sha": "769735195bc7075756f0745389d54be4e620257b",
+      "message": "Add dockerfile and compose files (#44)\n\n* Add dockerfile and compose files\n\n* Add and test the demo compose file\n\n* Add ipc=host to allow ros comm between containers\n\n* Cleanup args and version\n\n* Update service name to reach_ros\n\n* Add rviz2 as dependency for the demo\n\n* Parameterize the ros distribution for the dockerfile\n\n* Add a ci job for docker\n\n* Updated docker job to run on foxy, humble and jazzy to match other CI jobs\n\n* Call `rosdep update` with EOL distributions argument\n\n---------\n\nCo-authored-by: Michael Ripperger <michael.ripperger@swri.org>",
+      "files_changed": 6,
+      "additions": 149,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "marip8",
+      "date": "2017-03-10T21:31:28Z",
+      "sha": "9d9e49f3a2475e658303b872c087b3c68b7faeef",
+      "message": "Initial commit",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Danilrivero",
+      "date": "2025-01-10T15:51:15Z",
+      "sha": "31d41e39582fba97abc22beccd9c76e454001513",
+      "message": "Update to later version of RICB that adds hook for PYTHONPATH (#51) (#40)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "timonegk",
+      "date": "2024-03-28T15:21:06Z",
+      "sha": "df5aa873a9477b176e6e29177d84d186cae7b883",
+      "message": "Change durability policy of mesh display to transient_local (#36)\n\nCo-authored-by: Timon Engelke <timon.engelke@dlr.de>",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "collinthornton",
+      "date": "2022-07-05T15:32:25Z",
+      "sha": "0d5091dcd4e1113c8453a303bd9a1f958076c9b2",
+      "message": "Fixed bug in reach_core/launch/setup.launch when starting the robot_state_publisher node (#26)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "SammyRamone",
+      "date": "2023-04-26T09:15:41Z",
+      "sha": "e5b66c5a679871d2ad86562688a034c41563973d",
+      "message": "make reach core package compile in ROS 2 rolling",
+      "files_changed": 1,
+      "additions": 22,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "DavidSpielman",
+      "date": "2022-07-22T19:24:33Z",
+      "sha": "5230e4de47ced41a3c0038bd4435c443d9cf9886",
+      "message": "Incorporated heat map coloring to rviz markers (#30)\n\n* Incorporated heat map coloring to rviz markers\r\n\r\n* Fixed formatting on heat map rviz marker code\r\n\r\n* Minor updates\r\n\r\nCo-authored-by: David Spielman <david.spielman@swri.org>\r\nCo-authored-by: Michael Ripperger <michael.ripperger@swri.org>",
+      "files_changed": 3,
+      "additions": 40,
+      "deletions": 35,
+      "commit_type": "code"
+    },
+    {
+      "author": "AndyZe",
+      "date": "2020-08-05T00:20:56Z",
+      "sha": "078c9624604eb324732d98fb69aa5367c968912d",
+      "message": "Change the fixed frame in rviz (#14)",
+      "files_changed": 1,
+      "additions": 39,
+      "deletions": 71,
+      "commit_type": "code"
+    },
+    {
+      "author": "nbbrooks",
+      "date": "2020-08-14T23:38:21Z",
+      "sha": "b85c626aef602ed2770dd94f451e253ab2697ce4",
+      "message": "Remove moveit_core dependency (#20)\n\n* Add moveit_core dependency\r\n\r\n* Remove moveit_core dep and header ref",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "LoyVanBeek",
+      "date": "2020-05-15T14:18:46Z",
+      "sha": "fce8981fbd5d65dce4d7a02346b325930be5b015",
+      "message": "Remove extraneous backtick (#10)\n\n* Remove extraneous backtick\r\n\r\n* Fix path where rosdep references `src` directory\r\n\r\nThere is not `src` directory in the `reach`, rosdep should be called from the catkin workspace root",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 2,
+      "commit_type": "docs"
+    }
+  ]
+}

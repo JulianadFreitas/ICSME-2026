@@ -1,0 +1,221 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-26T00:59:08Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "osrf",
+    "repo": "osrf_pycommon"
+  },
+  "data": [
+    {
+      "author": "clalancette",
+      "date": "2017-11-07T20:25:25Z",
+      "sha": "c44a7ba968f4e7954610eb4a5e156792bd8061e3",
+      "message": "Add I to the list of ignored flake8 errors. (#42)\n\nI202 warns about newlines between groups of imports in python.\r\nA recent change in flake8\r\n(https://github.com/PyCQA/flake8-import-order/commit/37dafcc35eec9343641d489ac01d316cd10a6c03)\r\nmade this start showing up in osrf_pycommon.  Since we use whitespace\r\nbetween imports, disable this warning in this repository.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "mosfet80",
+      "date": "2024-12-03T16:10:03Z",
+      "sha": "4eb6cec3793adb3bfe61a84b9c1eea00605c2eed",
+      "message": "Updated python version (#97)\n\nPython version 3.7 is no longer supported as of June 27, 2023\n\nCo-authored-by: Scott K Logan <logans@cottsay.net>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "audrow",
+      "date": "2022-11-07T14:13:55Z",
+      "sha": "2a629acb4340b1383f839109956a07db6e9c8c12",
+      "message": "2.1.1\n\nSigned-off-by: Audrow Nash <audrow@openrobotics.org>",
+      "files_changed": 3,
+      "additions": 7,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "christophebedard",
+      "date": "2025-02-24T09:41:05Z",
+      "sha": "f5ab4ff4674658821b237aeaa7e18e604e31c81c",
+      "message": "Merge pull request #103 from christophebedard/christophebedard/fix-typo-on-each-verb\n\nFix typo in verbs help output",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "marcoag",
+      "date": "2024-12-18T03:39:27Z",
+      "sha": "850c357c9cba4dfae9371a107dd8ce4fbabcfa1e",
+      "message": "Changelog.\n\nSigned-off-by: Marco A. Gutierrez <marcogg@marcogg.com>",
+      "files_changed": 1,
+      "additions": 32,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "cottsay",
+      "date": "2022-10-19T02:09:31Z",
+      "sha": "77cf537c71d3b8e30fca38ae47b9bd7bd1c9d552",
+      "message": "Declare test dependencies in [test] extra (#86)\n\nAdding a test dependency on 'pytest' will cause colcon to use pytest\r\nwhen running the package's tests, which yields a better experience than\r\nthe existing fallback to unittest.",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "nuclearsandwich",
+      "date": "2017-06-16T21:54:31Z",
+      "sha": "53fa61605269e4335fbbb4ec9e648002a09f2560",
+      "message": "Add python build dependencies. (#38)\n\n* Update package.xml for release building.",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "tfoote",
+      "date": "2023-06-26T23:01:54Z",
+      "sha": "00ee0a4ec73476d37e8bf5bf729d40e12a99cc45",
+      "message": "Add bookworm as a python3 target (#91)\n\nThis will need a release or manual flood to deploy.\r\n\r\nCo-authored-by: Scott K Logan <logans@cottsay.net>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "paudrow",
+      "date": "2022-01-20T19:38:13Z",
+      "sha": "d5fb7c9ef04a5c9b028f74e345894fb3055f5a75",
+      "message": "1.0.1\n\nSigned-off-by: Audrow Nash <audrow@hey.com>",
+      "files_changed": 3,
+      "additions": 7,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "wjwwood",
+      "date": "2014-05-08T23:11:16Z",
+      "sha": "aa1deb59913f7390023eadf5fb2c91854995cec7",
+      "message": "Initial commit",
+      "files_changed": 3,
+      "additions": 259,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mgorny",
+      "date": "2022-02-03T01:47:52Z",
+      "sha": "4b2f3a8e4969f33dced1dc2db2296230e7a55b1d",
+      "message": "Fix dependencies (#81)\n\n* Remove obsolete setuptools from install_requires\r\n\r\nNow that pkg_resources are no longer used, there is no need to depend\r\non setuptools at runtime.\r\n\r\n* Fix version-conditional dependency on importlib-metadata\r\n\r\nUse version markers to depend on importlib-metadata correctly.  Explicit\r\nconditions mean that wheels built with setup.py will either have the dep\r\nor not depending on what Python version they're built with, rather than\r\nwhat version they're installed on.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 3,
+      "commit_type": "config"
+    },
+    {
+      "author": "timonegk",
+      "date": "2021-02-27T02:01:37Z",
+      "sha": "e891e29d8319c0b111bd9653e20e1f21e042ac25",
+      "message": "add missing conflict to stdeb.cfg (#71)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "hidmic",
+      "date": "2021-01-12T21:49:38Z",
+      "sha": "6346ca9c0129916428bc0ce994454678d0b2ad23",
+      "message": "Fix osrf.py_common.process_utils.get_loop() implementation (#70)\n\nOn Windows, avoid loops closing during garbage collection\r\nand reuse existing ones if possible.\r\n\r\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>",
+      "files_changed": 1,
+      "additions": 13,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "jspricke",
+      "date": "2020-11-30T22:58:52Z",
+      "sha": "af40569ec63d96360008eb5f5a38fec470c5f004",
+      "message": "Python 2/3 version conflict (#69)\n\nBoth provide the same files. This is needed to upgrade from Ubuntu 18 to\r\n20.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "zmk5",
+      "date": "2020-04-28T20:23:11Z",
+      "sha": "ae04fa12f02e1ae84d68fc7c0ad4ee28b49efc93",
+      "message": "fixed simple deprecation warnings (issue #61) (#63)\n\n* fixed simple deprecation warnings\r\n\r\n* fixed the second assertRaisesRegex\r\n\r\n* deprecation fix that allows successful build in Python 2.7 for Xenial\r\n\r\n* added conditional for use of getargspec  Python2.7 in Xenial\r\n\r\n* getfullargspec returns 7 values instead of 4 like getargspec",
+      "files_changed": 2,
+      "additions": 42,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "sloretz",
+      "date": "2019-12-30T17:15:07Z",
+      "sha": "906e4cb0cc08d664b313bb0f61349fc0f6a7e174",
+      "message": "Remove old py2 platforms, add Suite3 option with Ubuntu Focal (#58)\n\n* Remove old platforms from py2 release\r\n\r\nSigned-off-by: Shane Loretz <sloretz@openrobotics.org>\r\n\r\n* Add Suite3 option with Ubuntu Focal\r\n\r\nSigned-off-by: Shane Loretz <sloretz@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "dirk-thomas",
+      "date": "2014-09-29T18:07:12Z",
+      "sha": "c8d64aa2c1a0feee7937402eaefc08a84baaf548",
+      "message": "add package.xml",
+      "files_changed": 1,
+      "additions": 12,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "stonier",
+      "date": "2019-02-24T02:51:18Z",
+      "sha": "f037f185a7134b113682328ed3b9885eb02eb334",
+      "message": "Use keyword arguments only for protocol_class invocations (#52)\n\n* Use keyword arguments only for protocol_class invocations\r\n\r\n* pep8 E501\r\n\r\n* pep8 warnings",
+      "files_changed": 4,
+      "additions": 14,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "mikaelarguedas",
+      "date": "2016-11-30T00:09:40Z",
+      "sha": "8aaf12c5538ddc1aa5a6eba912c518e4e68f717f",
+      "message": "add missing blank lines (#31)",
+      "files_changed": 3,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "csukuangfj",
+      "date": "2017-12-05T15:17:11Z",
+      "sha": "8d51c95fc10dce9b5aa756e77f226732a44375bd",
+      "message": "Fix some typos. (#44)",
+      "files_changed": 4,
+      "additions": 7,
+      "deletions": 7,
+      "commit_type": "code"
+    },
+    {
+      "author": "jbohren",
+      "date": "2015-06-25T15:37:10Z",
+      "sha": "9d1992ebdaf5d595086a11132c070e7d9ce5bf22",
+      "message": "execute_process: Don't close fds",
+      "files_changed": 5,
+      "additions": 20,
+      "deletions": 11,
+      "commit_type": "docs"
+    }
+  ]
+}

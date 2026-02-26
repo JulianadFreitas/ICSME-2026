@@ -1,0 +1,1381 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-26T01:29:50Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "facontidavide",
+    "repo": "PlotJuggler"
+  },
+  "data": [
+    {
+      "author": "Alvvalencia",
+      "date": "2026-02-16T12:44:59Z",
+      "sha": "23547457c3402a761e236b89d999047c1e4e398e",
+      "message": "Added new meme  (#1293)\n\n* New: wolf meme added\n\n* Fix: Added on main and qrc\n\n---------\n\nCo-authored-by: avalen2022 <a.valencia.2022@alumnos.urjc.es>",
+      "files_changed": 3,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "facontidavide",
+      "date": "2016-03-01T21:05:42Z",
+      "sha": "fad0cdf47616857ff8f5cc5377763f3df84d4ac5",
+      "message": "Initial commit",
+      "files_changed": 2,
+      "additions": 702,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Pana1v",
+      "date": "2025-12-21T11:59:15Z",
+      "sha": "ee5543ad18a3579c41e245af9720abc2f7b46fd2",
+      "message": "Fix: Explicitly use UTF-8 encoding for layout load/save to support Unicode strings (#1234)\n\nCo-authored-by: panav <panav@10xconstruction.com>",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "jelson",
+      "date": "2026-02-21T17:33:59Z",
+      "sha": "f3cba6e99e68a3c10f9bbe9feeeff097213718ca",
+      "message": "Support batched array messages in JSON/CBOR/BSON/MessagePack parsers (#1285)\n\nWhen streaming high-rate data (e.g. 5000 samples/sec from a DAQ),\nsending one UDP packet per sample creates significant overhead.\nThis change allows senders to batch multiple data points into a\nsingle message by wrapping them in a JSON array:\n\n  [{\"timestamp\": 0.0, \"value\": 1.0}, {\"timestamp\": 0.1, \"value\": 2.0}]\n\nEach array element is processed as a separate data point with its\nown timestamp, rather than being flattened with index notation.\n\nNon-array messages are unaffected.",
+      "files_changed": 1,
+      "additions": 15,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "pradhankukiran",
+      "date": "2026-02-21T15:51:49Z",
+      "sha": "39e816c3694080f958bfc64779793b4e03f74f33",
+      "message": "fix: guard undo/redo from firing during active popups (#1287)",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "tstienstra",
+      "date": "2026-02-19T23:53:27Z",
+      "sha": "2dbf234b7731282a2e2f087aa64aee897357189b",
+      "message": "fix: parsing of nested topics in ulogs (#1301)",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "simonsag96",
+      "date": "2024-01-17T23:39:39Z",
+      "sha": "b45e1d3795e850bc95217bbe90592c6992098621",
+      "message": "FIX DIAGNOSTIC STATUS (#916)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "dependabot[bot]",
+      "date": "2025-09-20T14:51:46Z",
+      "sha": "f194d5a40611bfd3079c7d55364c8392527f1925",
+      "message": "🛠️ Bump github/codeql-action from 2 to 3\n\nBumps [github/codeql-action](https://github.com/github/codeql-action) from 2 to 3.\n- [Release notes](https://github.com/github/codeql-action/releases)\n- [Changelog](https://github.com/github/codeql-action/blob/main/CHANGELOG.md)\n- [Commits](https://github.com/github/codeql-action/compare/v2...v3)\n\n---\nupdated-dependencies:\n- dependency-name: github/codeql-action\n  dependency-version: '3'\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "oystub",
+      "date": "2025-08-18T06:18:49Z",
+      "sha": "4a204ba3ea2c90c13f270b6c8dd9bdcd044c6123",
+      "message": "Fix error 127 from linuxdeploy in Docker builds (#1149)\n\n* dockerfile: set APPIMAGE_EXTRACT_AND_RUN so linuxdeploy-qt works in Docker\n\nThe Qt plugin is a separate AppImage, and the CLI flag doesn’t propagate.\nExporting the env var makes both linuxdeploy and the plugin run in extract-and-run\nmode, avoiding FUSE and fixing exit code 127 in container builds.\n\n* dockerfile: fix warning from inconsistent case",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "ci"
+    },
+    {
+      "author": "sachinkum0009",
+      "date": "2026-01-05T14:43:05Z",
+      "sha": "b6f0718b3b0fe9e4b468197f56eade83db56b9a8",
+      "message": "Adjust dialog size based on protocol selection in DataStreamZMQ",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "lucabonamini",
+      "date": "2026-01-13T10:00:13Z",
+      "sha": "a236edcecf04c02f515e950ee114dd3cd66b6686",
+      "message": "fix: inherit legend settings when splitting plot views (#1260)",
+      "files_changed": 1,
+      "additions": 11,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Copilot",
+      "date": "2025-09-18T08:48:24Z",
+      "sha": "9ecb698d79b9280a966828014522f2a920a24167",
+      "message": "Initial plan",
+      "files_changed": 0,
+      "additions": 0,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "vict-v",
+      "date": "2025-12-27T11:14:13Z",
+      "sha": "4e46144ebe85d7f916fc4233157b2e3e947b44b2",
+      "message": "Feature: add option to swap pan/zoom mouse actions (#1235)\n\n* add option to swap pan/zoom actions\n\n* handle cursor updates in panner/zoomer\n\n* add swap pan/zoom to preferences dialog\n\n---------\n\nCo-authored-by: Davide Faconti <davide.faconti@gmail.com>",
+      "files_changed": 10,
+      "additions": 139,
+      "deletions": 33,
+      "commit_type": "code"
+    },
+    {
+      "author": "panav",
+      "date": "2025-12-25T07:32:52Z",
+      "sha": "fb95b4949fe8231dfc6781dca787426a49375ed3",
+      "message": "Add hexadecimal timestamp parsing (0x prefix only)\n\nSupport hexadecimal values in CSV files when explicitly prefixed with 0x.\nThis avoids ambiguity with string labels like 'A' or 'B' which could\notherwise be misinterpreted as hex values.\n\nAddresses feedback from @facontidavide on #1227",
+      "files_changed": 2,
+      "additions": 14,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "NateLovallo",
+      "date": "2025-12-21T12:01:13Z",
+      "sha": "4f2b245d2036afa31e887c414d66a5770c73c3d9",
+      "message": "add qt5 deps to vcpkg for easier windows building (#740)\n\nCo-authored-by: nlovallo <nlovallo@kymetacorp.com>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "SammysHP",
+      "date": "2025-12-19T12:18:03Z",
+      "sha": "99887250cdd8c69d6aa23bc192f837636dd03b26",
+      "message": "Install plugins into lib tree (#1228)\n\nFixes #1153",
+      "files_changed": 2,
+      "additions": 6,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "wentasah",
+      "date": "2025-11-21T18:43:45Z",
+      "sha": "0ab8d0f6ee75ea1a224f5e79b209216b39ad04d7",
+      "message": "Fix detection of system-provided liblz4 and zstd (#1200)\n\nWithout this, cmake tries to download lz4 and zstd from the internet\neven if they are available in the system.",
+      "files_changed": 2,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "lakid",
+      "date": "2025-11-21T18:42:56Z",
+      "sha": "1b5a28a9c43ac55a9977b79973c85061caa07171",
+      "message": "Added a script to remove orphaned link upon uninstall on debian (#1205)\n\nThe symbolic link that gets created on postinst is left behind\nupon package removal. This was also causing reinstallation to\ndisplay an error stating that the link already exists.\n\nChange-Id: I6a85baa63ee61e843ad1accdd08e5b632a76d2e9",
+      "files_changed": 2,
+      "additions": 7,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "mortenfyhn",
+      "date": "2025-11-21T18:42:18Z",
+      "sha": "159ecba02a9939bfd63f540b0e498575e8ba5af0",
+      "message": "Update compile instructions for Fedora (#1206)\n\nI just tried installing deps and compiling on Fedora 42,\nand I had to make these changes to get it to build.\n\nNot sure which Fedora version these instructions were\nwritten for, so I specified that this is Fedora 42.",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "gvz",
+      "date": "2025-08-05T06:30:49Z",
+      "sha": "d7eb7f821a05ba14ca8cf2ea4e62d295be4d5bcd",
+      "message": "Fix protobuf compilation on linux hosts (#1143)\n\n* fix PROTOBUF_FOUND for case sentitive systems\n\n* fix compiler error in ParserProtobuf on linux\n\n---------\n\nCo-authored-by: Georg von Zengen <georg.vonzengen@isaraerospace.com>",
+      "files_changed": 3,
+      "additions": 4,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "af-maad",
+      "date": "2025-10-09T12:14:44Z",
+      "sha": "c31fa4d1f3a6612660af65894e074fee85b1febd",
+      "message": "Fix parquet timestamp selection when some columns are invalid types",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "MichelJansson",
+      "date": "2024-04-29T13:35:39Z",
+      "sha": "e3ec836af98f55aaeda34323de1ab8b5ad9ce6b9",
+      "message": "Save NlohmannParser (JSON) settings (#971)",
+      "files_changed": 1,
+      "additions": 50,
+      "deletions": 17,
+      "commit_type": "code"
+    },
+    {
+      "author": "davidmbyrne",
+      "date": "2025-09-28T13:04:55Z",
+      "sha": "81d423dd464774dfcde6936cf12f3a8388139aed",
+      "message": "Update dependencies needed for macOS installation (#1155)\n\nOn following the instructions for compiling in macOS on a new machine I ran into errors during the build. Installing git-lfs solved the issue",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "v4hn",
+      "date": "2024-08-10T14:19:23Z",
+      "sha": "f4f9d4192aee87fefac205fd48285b407f97e0b9",
+      "message": "drop broken test hook from Fast-CDR import (#986)\n\nThe tests were not imported but still referenced in the cmake depending on the system cmake version.",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 14,
+      "commit_type": "docs"
+    },
+    {
+      "author": "matthew-t-watson",
+      "date": "2025-09-10T14:26:45Z",
+      "sha": "dfd6bcca80367df69cd22af2bcae0225f67dcaae",
+      "message": "Fix atan bug in quat_to_x conversions",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "config"
+    },
+    {
+      "author": "Georg von Zengen",
+      "date": "2025-08-03T09:16:42Z",
+      "sha": "5c2eb6807b8a3afc0b9fe3f1f75275c0868fc4df",
+      "message": "flake: add more dependencies",
+      "files_changed": 2,
+      "additions": 22,
+      "deletions": 11,
+      "commit_type": "code"
+    },
+    {
+      "author": "bigFin",
+      "date": "2025-07-29T06:19:10Z",
+      "sha": "fbaa40b19418d536fc693281a2aee39208158b9b",
+      "message": "add nix flake",
+      "files_changed": 2,
+      "additions": 216,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "bresch",
+      "date": "2019-03-21T10:52:24Z",
+      "sha": "d39f5f1c629f29d217889d44e81961149aee87d1",
+      "message": "mainwindow - use yyyy-MM-dd_HH-mm-ss name when saving a plot as png. This allows to save several times without having to rename the previous image (#162)",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "giusebar",
+      "date": "2025-06-25T15:42:11Z",
+      "sha": "fcf9769bd18a0508d9d48891acdf90771560591b",
+      "message": "Fix core22 snap by updating CMake config and pinning snapcraft to 7.x (#1098)",
+      "files_changed": 2,
+      "additions": 22,
+      "deletions": 8,
+      "commit_type": "config"
+    },
+    {
+      "author": "leander-dsouza",
+      "date": "2025-05-22T10:52:22Z",
+      "sha": "943d6097653e1b0340afc60efb662e3c7e0309d7",
+      "message": "Added codespell as a pre-commit hook. (#1077)\n\nSigned-off-by: Leander Stephen D'Souza <leanderdsouza1234@gmail.com>",
+      "files_changed": 25,
+      "additions": 69,
+      "deletions": 48,
+      "commit_type": "config"
+    },
+    {
+      "author": "connoranderson",
+      "date": "2023-02-16T09:28:36Z",
+      "sha": "e67ddb44bbabef22700ea5a8810aa82d756654d4",
+      "message": "Support Proto's That Reference Google/Protobuf (#793)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "thenoname",
+      "date": "2025-07-26T08:02:18Z",
+      "sha": "86b7455a1b3b79546c523ca7290c389afdb21657",
+      "message": "Add no splash to settings (#1122)\n\n* Added option to skip splash screen to settings ini file\n\n* Added option to preference screen",
+      "files_changed": 3,
+      "additions": 45,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "blaiselcq",
+      "date": "2025-07-10T16:33:57Z",
+      "sha": "23d84ec6d00f63430fa1b5573963061dbe9f5590",
+      "message": "Move save plot fn to own header",
+      "files_changed": 4,
+      "additions": 93,
+      "deletions": 72,
+      "commit_type": "docs"
+    },
+    {
+      "author": "traversaro",
+      "date": "2025-07-06T10:34:39Z",
+      "sha": "42aa068f7294cefb2b89cc7096ac80131c3c9ae9",
+      "message": "Fix compilation with recent protobuf (#1108)",
+      "files_changed": 2,
+      "additions": 64,
+      "deletions": 9,
+      "commit_type": "code"
+    },
+    {
+      "author": "Valle125",
+      "date": "2024-11-10T15:12:17Z",
+      "sha": "78fb7a134983012fa8836ab2adc59925fcccbbb8",
+      "message": "Fix MQTT plugin (#1006, #1008) (#1009)\n\n* mqtt_client: fix bug where program flow gets stuck when calling mosquitto_connect_bind_v5.\r\n\r\nThe connection procedure starts with a fresh mosquitto instance each time. The instance will be destroyed on disconnect.\r\nAll mosquitto return codes are now checked during client configuration.\r\n\r\n* mqtt_client: add debug messages and improve QMessageBox messages.\r\n\r\n* mqtt_client: add mosquitto thread, fix #1006.\r\n\r\nThreaded mode of libmosquitto may not be supported on windows (libmosquitto < 2.1). At some point libmosquitto has removed threaded support (mosquitto_loop_start doesn't work and returns MOSQ_ERR_NOT_SUPPORTED). Threaded support will be added again in the future, see https://github.com/eclipse/mosquitto/issues/2707. This commit introduces a thread dedicated to mosquitto to solve the problem.\r\n\r\n* mqtt_client: fix typo.\r\n\r\n---------\r\n\r\nCo-authored-by: Valentin Platzgummer <valentin.platzgummer@tuwien.ac.at>",
+      "files_changed": 2,
+      "additions": 147,
+      "deletions": 19,
+      "commit_type": "code"
+    },
+    {
+      "author": "zdavkeos",
+      "date": "2022-06-16T22:20:27Z",
+      "sha": "0f078fa37615d68306eb6a454e6772969223c66d",
+      "message": "Add tooltip to the zoom out button (#670)",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "AlessandroCanossa",
+      "date": "2025-05-19T15:26:43Z",
+      "sha": "08151c1273d80905187de05f32aa0fcf70586d4d",
+      "message": "Add missing find_package for plojuggler_qwt (#1064)\n\nSigned-off-by: AlessandroCanossa <alessandro.canossa.99@gmail.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "dakejahl",
+      "date": "2025-04-29T22:09:13Z",
+      "sha": "5dd4280f5b17975b70aa033e6cb88b70e782ffd0",
+      "message": "statistics: add avg interval (#979)",
+      "files_changed": 3,
+      "additions": 15,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "bryceschober",
+      "date": "2025-04-29T21:57:06Z",
+      "sha": "945096a61aabc7b30bbce829c64d66b850e60fe2",
+      "message": "Fix IPv6 multicast (#1050)\n\n* Ignore default AppImage build\n\n* Fix IPv6 UDP multicast",
+      "files_changed": 3,
+      "additions": 38,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "ferrolho",
+      "date": "2025-04-29T21:55:02Z",
+      "sha": "05544da7cd2bceb53e4071de33e787cf7d937027",
+      "message": "Update macOS compile instructions (#1058)",
+      "files_changed": 2,
+      "additions": 7,
+      "deletions": 7,
+      "commit_type": "docs"
+    },
+    {
+      "author": "lucabart97",
+      "date": "2025-01-24T15:56:25Z",
+      "sha": "6fa3779ad7aad279be86c0e9a2d72cd06f6c4adb",
+      "message": "DataLoadMCAP: add support to mcap logTime (#1037)\n\nThe DataLoadMCAP plugin support only the publishTime of the mcap\r\nmessage. Add a radio button in the load dialog to select the\r\nlogTime or publishTime.\r\n\r\nSigned-off-by: Luca Bartoli <luca.bartoli@hipert.it>",
+      "files_changed": 4,
+      "additions": 57,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "SebastianoTaddei",
+      "date": "2025-01-28T21:55:27Z",
+      "sha": "45b678f2fa34d146304a2e99e2548b8ed6e6d69b",
+      "message": "Rebased and pre-commit checked (#951)",
+      "files_changed": 3,
+      "additions": 159,
+      "deletions": 40,
+      "commit_type": "code"
+    },
+    {
+      "author": "ahmetkkn07",
+      "date": "2025-01-24T15:55:50Z",
+      "sha": "94dce8ef402134b072110eddaccc6b625beb9ed9",
+      "message": "Feature: add float precision setting (#1021)",
+      "files_changed": 4,
+      "additions": 76,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "kibidev",
+      "date": "2025-01-24T15:53:55Z",
+      "sha": "377bdc7a91488a047577b9e6bc758b0ab43d141f",
+      "message": "fix(ulog): the index of the timestamp may be non-zero (#1016)\n\nThe previous parsing assumed that the timestamp for a ulog data series\r\nwas always at index 0, which is often, but not necessarily the case. The\r\nparser now store the correct index when parsing the definition.",
+      "files_changed": 2,
+      "additions": 17,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "PalmEmil",
+      "date": "2025-01-16T22:58:38Z",
+      "sha": "4aa9074dc193ca7233de435915469113eb4244ef",
+      "message": "fix broken parquet parsing when parquet file contains 'invalid' columns (#1034)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "ksm-dg",
+      "date": "2024-11-24T08:18:52Z",
+      "sha": "b1ad0896844e848c2495e09a6e5c3548685adedd",
+      "message": "Minor typo fixes (#1027)",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Jofkos",
+      "date": "2024-11-10T14:22:50Z",
+      "sha": "3665a90f43b4dc590106641712c079145424bd30",
+      "message": "installer: overriding existing installations when detected (#995)",
+      "files_changed": 3,
+      "additions": 160,
+      "deletions": 15,
+      "commit_type": "config"
+    },
+    {
+      "author": "trnila",
+      "date": "2024-11-10T14:20:29Z",
+      "sha": "107252d2e442f72a885a6b120a51b8dbfdea4ce7",
+      "message": "udp_server: fix crash when dialog opens for the first time (#1002)\n\nUDP server dialogue crashes when theres no protocol stored in settings,\r\nas the default is wrongly \"JSON\", but it should be \"json\".\r\n\r\nThis patch uses default \"json\" even when there is wrong protocol in\r\nsettings to prevent further crashes.",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Guillaumebeuzeboc",
+      "date": "2022-07-25T09:17:35Z",
+      "sha": "137316ad3428adfa21e10543ed64436a08ca2da3",
+      "message": "Dev/ros1 ros2 snap (#698)\n\n* fix(Config.cmake.in): move in dedicated directory\r\n\r\nMove in dedicated directory and check if target already exist\r\nbefire including the targets.cmake\r\n\r\n* fix(CMakeLists): Install rules\r\n\r\nMove install rules at the end\r\nExport targets and cmake config but only when not compilling with ROS\r\n\r\n* feat(snap): add snap\r\n\r\nBuild zmq, PJ, ROS 1 and ROS 2 plugin.\r\nDisable ROS 2 shared memory for strictly confined snap.\r\nAdd :desktop and .svg file for launcher\r\n\r\n* ci(snap): add workflow to build and publish snap\r\n\r\nPublish on \"candidate\" when tag and edge when commit on the main branch\r\n\r\n* fix(CI): snap cannot be tested since args are parse after qapp is init\r\n\r\nCo-authored-by: Davide Faconti <davide.faconti@gmail.com>",
+      "files_changed": 10,
+      "additions": 384,
+      "deletions": 2,
+      "commit_type": "ci"
+    },
+    {
+      "author": "ubaldot",
+      "date": "2024-04-29T09:40:56Z",
+      "sha": "94b05260fba5f65dc6cef588090f6f424bb27a55",
+      "message": "Added ZeroMQ and updated docs (#950)",
+      "files_changed": 2,
+      "additions": 10,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "kutukvpavel",
+      "date": "2024-04-29T09:40:10Z",
+      "sha": "eedbd9c9a13ece62411f0396ceb9df7a6b4c261d",
+      "message": "Fix infinite streaming buffer regression (#953)\n\nCo-authored-by: paul <paul@WorkLaptop>",
+      "files_changed": 1,
+      "additions": 20,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "jbendes",
+      "date": "2023-05-21T18:00:10Z",
+      "sha": "b2adb44c08a4d0f4f875d576ca423c753e023389",
+      "message": "Added zcm streaming support",
+      "files_changed": 5,
+      "additions": 249,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "declancm",
+      "date": "2024-03-08T10:43:35Z",
+      "sha": "b20eacdd29f8b064a856faac9d0dd7b11fd83aa0",
+      "message": "Fixed the value dereference for ULog information messages (#946)",
+      "files_changed": 1,
+      "additions": 14,
+      "deletions": 13,
+      "commit_type": "code"
+    },
+    {
+      "author": "manuelValch",
+      "date": "2024-01-26T10:51:56Z",
+      "sha": "3d13507e2450b71e7f4c2da95a5886874b9d3b00",
+      "message": "PlotJuggler with Fast-CDR-2.x.x (#920)\n\n* Update minimum cmake version\r\n\r\nUpdated minimum cmake version otherwise fastcdr find package fails.\r\nAs the issue is about building with fastcdr installed from eProsima\r\nreposotories I need it to work.\r\n\r\nIssues\r\n[https://github.com/facontidavide/PlotJuggler/issues/861]\r\n[https://github.com/facontidavide/PlotJuggler/issues/919]\r\n\r\n* Update Fast-CDR thirdparty\r\n\r\nIf this commit is applied then plotjuggler will be able to compile and\r\nrun with Fast-CDR version 2.x.x from eProsima.\r\nIt can compile from:\r\n- local thirdparty folder included within the repo\r\n- install of fastcdr within the machine (usually /usr/local)\r\n\r\nto do so:\r\n- Udpated files, API and namespace names\r\n\r\nDone it because I need to use plotJuggler with latest lib from eProsima\r\nand I would like this to be available for everyone.\r\n\r\nIssue:\r\n[https://github.com/facontidavide/PlotJuggler/issues/919]\r\n\r\n* Fix CI, added missing files\r\n\r\nAdded missing files from Fastcdr Ci shall build.\r\nPlotJuggler build again with or without fastcdr package installed.\r\n\r\nIssue:\r\n[https://github.com/facontidavide/PlotJuggler/issues/919]\r\n\r\n* Update CMakeLists.txt\r\n\r\n---------\r\n\r\nCo-authored-by: manuelValch <manuelValch@protonmail.com>\r\nCo-authored-by: Davide Faconti <davide.faconti@gmail.com>",
+      "files_changed": 31,
+      "additions": 12212,
+      "deletions": 8768,
+      "commit_type": "docs"
+    },
+    {
+      "author": "peci1",
+      "date": "2024-01-26T18:00:44Z",
+      "sha": "2e2bed4bd8f3458c651e8854865de732f6391ba4",
+      "message": "Fixed parsing JointState messages (#927)",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "Willmac16",
+      "date": "2024-01-26T10:53:39Z",
+      "sha": "958f3a6dd3ac541b93d4568cd0fc1d49831d08d1",
+      "message": "Link against Abseil for macOS builds & improve macOS compile docs #845 (#905)\n\n* Link against Abseil for macOS builds & improve macOS compile docs #845\r\n\r\n* Update plotjuggler_plugins/ParserProtobuf/CMakeLists.txt\r\n\r\n---------\r\n\r\nCo-authored-by: Davide Faconti <davide.faconti@gmail.com>",
+      "files_changed": 2,
+      "additions": 21,
+      "deletions": 6,
+      "commit_type": "docs"
+    },
+    {
+      "author": "rugged-robotics",
+      "date": "2024-01-25T09:01:50Z",
+      "sha": "3be95bbb0318f7944456870cf148b965532abef1",
+      "message": "attempt to match ambiguous ros msg within package before using external known type (#922)",
+      "files_changed": 1,
+      "additions": 24,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "TheOtherMarcus",
+      "date": "2024-01-09T10:52:29Z",
+      "sha": "c6b3af1efcdb3893615504a86ae8f39e32d36eb2",
+      "message": "Added a clear() function to Lua timeseries. (#898)\n\nCo-authored-by: Marcus Andersson <maran@kornet1.se>",
+      "files_changed": 2,
+      "additions": 8,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "atakanakbulut",
+      "date": "2023-10-17T18:13:24Z",
+      "sha": "51464b0c620a41a0f569d99c51aecc9de71014b6",
+      "message": "dot added.",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "MirkoFerrati",
+      "date": "2023-06-27T13:39:56Z",
+      "sha": "a3e8520f9ab7dd2820b3871ff94c751b9d3f13fb",
+      "message": "add snap for core22, remove ros1, enable humble",
+      "files_changed": 7,
+      "additions": 312,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "agoessling",
+      "date": "2022-06-27T20:03:47Z",
+      "sha": "ec24ddb7625996ae0e3687b1af8384584692b77e",
+      "message": "Fix CSV generated time axis. (#666)\n\nPreviously the CSV dataload plugin was not saving the correct XML state\r\nwhen a generated time axis was used.",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "paulbovbel",
+      "date": "2023-06-21T18:54:53Z",
+      "sha": "3b4b1d889d8def56a16a0c2f426beb1a8251f38b",
+      "message": "Use a more reliable method to select buildtool",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "faisal-shah",
+      "date": "2021-02-27T11:14:13Z",
+      "sha": "01e6560bcd64ecca152560da05d4ab4d755eecf0",
+      "message": "Use format string when time index is not a number (#406)",
+      "files_changed": 2,
+      "additions": 46,
+      "deletions": 7,
+      "commit_type": "code"
+    },
+    {
+      "author": "rinnaz",
+      "date": "2023-05-26T12:46:21Z",
+      "sha": "1ed1728bfad22e84b631fda61295663d847dc164",
+      "message": "fix: memory leak in protobuf parser",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "joajfreitas",
+      "date": "2023-05-23T20:58:10Z",
+      "sha": "2d876cbb63d8219429ad5ee9844d39ffd3e06de7",
+      "message": "Add missing cstdint include",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "bsilvereagle",
+      "date": "2023-05-05T18:10:58Z",
+      "sha": "0e0a993f9a26b3aa1e5563027f08d3ba8c5dcefa",
+      "message": "Add support for building AppImage via docker",
+      "files_changed": 4,
+      "additions": 54,
+      "deletions": 6,
+      "commit_type": "docs"
+    },
+    {
+      "author": "adobke",
+      "date": "2023-05-19T08:02:39Z",
+      "sha": "cd5d6f9c0bad3a4698b84d366b1badaa00b70857",
+      "message": "Handle protobuf maps (#824)\n\nProtobuf maps are just repeated protobuf messages with only 2 fields\r\n\"key\" and \"value\". Extract the map's key and use it in the series name\r\nand skip adding series for \"key\" fields to reduce the number of non\r\nuseful series. Additionally don't include \"value\" in the series name for\r\nthe value of a map.",
+      "files_changed": 4,
+      "additions": 114,
+      "deletions": 12,
+      "commit_type": "code"
+    },
+    {
+      "author": "ozzdemir",
+      "date": "2022-07-23T08:18:01Z",
+      "sha": "4191c956d599cd2cefd7ea741c1abf86145be477",
+      "message": "Include std::thread instead of QThread, since it is being utilized in the mqtt plugin instead of QThread. (#700)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "AndyZe",
+      "date": "2023-04-07T13:11:30Z",
+      "sha": "63fa1ec836f064923c74f8a03c38a6c8c3744ff7",
+      "message": "Add a \"central difference\" method of derivative calculation (#813)",
+      "files_changed": 1,
+      "additions": 36,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "awesomebytes",
+      "date": "2023-04-07T13:07:04Z",
+      "sha": "208a53459929130407d413e4349e2c19c07df7b5",
+      "message": "Updating COMPILE dependencies to install (#810)\n\nTaken from CI: https://github.com/facontidavide/PlotJuggler/blob/main/.github/workflows/ubuntu.yaml#L20-L31",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 2,
+      "commit_type": "ci"
+    },
+    {
+      "author": "Maverobot",
+      "date": "2023-04-07T13:06:33Z",
+      "sha": "6c6c822a5640eaf472ac1676c1fcee98d32099f2",
+      "message": "Fix the bug where the shared library Parquet is not linked (#807)\n\nThe actual path to the shared library is in `${PARQUET_SHARED_LIB}` instead of in\r\n`${PARQUET_LIBRARIES}`.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "erickisos",
+      "date": "2021-09-27T23:07:13Z",
+      "sha": "b962a37b0ab4acb2dafd3eac51fb2e6c5e67c0e6",
+      "message": "Homebrew path added into CMakeLists",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Bartimaeus-",
+      "date": "2022-05-29T17:37:19Z",
+      "sha": "aef7012727c001c524dc97589c968f362146162d",
+      "message": "Make link open in browser when clicked (#658)\n\nSet openExternalLinks property of label_4 to true to allow the hyperlink to open in a web browser when clicked",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "MichaelOrlov",
+      "date": "2023-02-08T18:14:15Z",
+      "sha": "721be841590eb7e0a2d0ff76701310bb9d1946a9",
+      "message": "Fix for segfault in DataLoadCSV destructor (#784)\n\n- Change order of deletion for dialogs.\r\n- First delete child dialog `_dateTime_dialog` then parent\r\n`_dialog`.\r\n\r\nSigned-off-by: Michael Orlov <michael.orlov@apex.ai>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "p-",
+      "date": "2023-01-19T20:57:36Z",
+      "sha": "2ab35b144a17f3469b7c53a1107d1115aaf3e3d0",
+      "message": "Add CodeQL workflow (#765)",
+      "files_changed": 1,
+      "additions": 75,
+      "deletions": 0,
+      "commit_type": "ci"
+    },
+    {
+      "author": "markcutler",
+      "date": "2022-12-18T18:15:56Z",
+      "sha": "f0bdaf88c116a8d636061334f6a675adade455f7",
+      "message": "fix typo (#770)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "augustinmanecy",
+      "date": "2023-01-02T19:32:08Z",
+      "sha": "e90caa9020954533d554ceebbb4f07849f7dd9fc",
+      "message": "Update Reactive Scripts on playback loop (#771)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "bonkuraps",
+      "date": "2022-08-17T13:13:55Z",
+      "sha": "a0cb10d17fc7a243fb651e2b02c639e54ae370af",
+      "message": "Add mac compilation section (#725)",
+      "files_changed": 1,
+      "additions": 22,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "avanover",
+      "date": "2022-12-18T18:21:03Z",
+      "sha": "7e19089a3d32b2a0763982c1439f9044ca450eb1",
+      "message": "Always use topic names for creating MQTT parsers (#746)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "orecham",
+      "date": "2022-10-26T16:23:13Z",
+      "sha": "b48212d9ae597cdee113cf29fb20d0407ccfbebc",
+      "message": "Add option to build plotjuggler_base to shared library (#757)",
+      "files_changed": 3,
+      "additions": 40,
+      "deletions": 18,
+      "commit_type": "docs"
+    },
+    {
+      "author": "cosmicog",
+      "date": "2022-10-07T19:45:28Z",
+      "sha": "8c1ae51dfe966faa4af9c69b5284a7613e6c83f9",
+      "message": "Add a new meme with The Rock (#751)\n\n* Add meme_89.jpg\r\n\r\n* Add meme_89.jpg to resource.qrc\r\n\r\n* Increase last_image_num to 89 for newly added meme",
+      "files_changed": 3,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "romainreignier",
+      "date": "2018-07-30T23:05:14Z",
+      "sha": "03a4c4fc073f947681a1c8989a41d8db2189ed31",
+      "message": "make hyperlinks clickable by allowing to open external links (#95)",
+      "files_changed": 2,
+      "additions": 8,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "artivis",
+      "date": "2022-08-17T18:10:03Z",
+      "sha": "7309d1dc24e0000783e5dcb7178cf011b9f9b209",
+      "message": "readme: add details about default snap command (#727)",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "GregorKikelj",
+      "date": "2022-08-05T07:57:29Z",
+      "sha": "51667148421312ffc7e570670bdbc03d9047e590",
+      "message": "add support for custom window titles (#715)",
+      "files_changed": 2,
+      "additions": 14,
+      "deletions": 5,
+      "commit_type": "code"
+    },
+    {
+      "author": "Hugal31",
+      "date": "2021-01-23T09:47:18Z",
+      "sha": "c4b4bb1c5db17c8757fcd79ff26ada2f454749a7",
+      "message": "Allow custom function return multiple points (#386)\n\n* Add possibility for custom functions to return multiple samples\r\n\r\n* Use caller-allocated vector for the `CustomFunction::calculatePoints`\r\n\r\nThis is to reduce the number of allocations.\r\n\r\n* Add some documentation for the custom lua functions.\r\n\r\n* Improve Lua custom function return type error message.\r\n\r\nThe message now lists the three ways to return values from a custom lua function.\r\n\r\n* Revert \"Add some documentation for the custom lua functions.\"\r\n\r\nThis reverts commit cc6a7fa6fcc6d8f09990d2887950fb73655b857c.\r\n\r\nCo-authored-by: Hugo Laloge <hla@lescompanions.com>",
+      "files_changed": 4,
+      "additions": 37,
+      "deletions": 17,
+      "commit_type": "docs"
+    },
+    {
+      "author": "RanoVeder",
+      "date": "2022-06-27T20:01:35Z",
+      "sha": "5fbe6e160ffd7692d5cebdd845a5a48486fe4360",
+      "message": "Added support for converted int types (#673)\n\n* Added support for converted int types\r\n\r\n* Added fallback for int32 and int64\r\n\r\nCo-authored-by: Rano Veder <r.veder@primevision.com>",
+      "files_changed": 1,
+      "additions": 86,
+      "deletions": 9,
+      "commit_type": "code"
+    },
+    {
+      "author": "lyrakisk",
+      "date": "2022-05-29T20:53:33Z",
+      "sha": "8ee45b8e43f0813499ae0e1a648c940debfbfd55",
+      "message": "Update README.md (#661)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "lucasw",
+      "date": "2022-05-11T16:50:19Z",
+      "sha": "4fee8e98a6560390eea8981664f97bdfee01b2e8",
+      "message": "add STATUS to CmakeLists.txt message() to avoid 'message called with incorrect number of arguments' (#649)\n\ncmake 3.22.1 errors on this",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ijnek",
+      "date": "2022-04-24T08:58:51Z",
+      "sha": "29e2385f4803f83eb325ecac4b85f2edd9ec66c3",
+      "message": "Passing CI on ROS2 Rolling (#629)\n\n* fix ament-index-cpp dependency on ubuntu jammy\r\n\r\nSigned-off-by: Kenji Brameld <kenjibrameld@gmail.com>\r\n\r\n* add rolling ci\r\n\r\nSigned-off-by: Kenji Brameld <kenjibrameld@gmail.com>",
+      "files_changed": 3,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "config"
+    },
+    {
+      "author": "krishnachaitanya7",
+      "date": "2022-03-31T15:42:56Z",
+      "sha": "8402312f29e2cf684d33945c0874a6bde678a955",
+      "message": "Modify install command and make it easier to install (#620)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ngpbach",
+      "date": "2022-02-20T17:34:05Z",
+      "sha": "c2b456d5d322e807bd4c21cc4006f021ba38146b",
+      "message": "Timestampfield (#601)",
+      "files_changed": 4,
+      "additions": 41,
+      "deletions": 25,
+      "commit_type": "docs"
+    },
+    {
+      "author": "salmagro",
+      "date": "2022-02-05T00:19:48Z",
+      "sha": "9ea1a13ba63dfd72f3f8a55b03444f6b73a19534",
+      "message": "Fix typo in toolbox Lua (#598)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "simchanu29",
+      "date": "2022-02-04T17:44:55Z",
+      "sha": "e27f2b0ac96cab48e4a099dc94c065b1c8fa1e56",
+      "message": "Fix MutableTimeseries shadowed by MutableScatterXY (#597)\n\n* Fix MutableTimeseries shadowed by MutableScatterXY\r\n\r\n* add math library\r\n\r\nCo-authored-by: Simon CHANU <simon.chanu@cmdl.pro>",
+      "files_changed": 2,
+      "additions": 50,
+      "deletions": 24,
+      "commit_type": "code"
+    },
+    {
+      "author": "adeebshihadeh",
+      "date": "2021-12-14T20:59:11Z",
+      "sha": "bcd90bcadd40d420aed04b884f8ea4186d9b22c3",
+      "message": "gitignore *.swp files (#569)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "martonmiklos",
+      "date": "2021-12-14T20:58:50Z",
+      "sha": "2d5186fcb94bb1fd84ee328c136cd54d105b3745",
+      "message": "Added libprotoc-dev to the apt install targets (#573)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "GerardoPardo",
+      "date": "2021-09-01T12:00:42Z",
+      "sha": "735c7750cc127683cbb202fb0624039b9ad0effd",
+      "message": "Fixed wrong slot name on PreferecesDialog and moved skin-based setting of MainWindowTitle after the setupUi() call",
+      "files_changed": 3,
+      "additions": 18,
+      "deletions": 17,
+      "commit_type": "code"
+    },
+    {
+      "author": "myd7349",
+      "date": "2021-08-31T10:10:50Z",
+      "sha": "63ca7d414e8a3926dc122bf3351b5613e20a80e7",
+      "message": "fix typo in preferences dialog",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "TSC21",
+      "date": "2021-06-16T07:12:20Z",
+      "sha": "bf363c79f12e273ce228d38286ce2163e15d081c",
+      "message": "fix typo when building without ROS support (#460)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "alkaes",
+      "date": "2021-01-25T17:43:04Z",
+      "sha": "c878f82d15187a59904abe6514be49f4e5a46daf",
+      "message": "Update udp_server.cpp (#393)\n\nFixes random corruptions of UDP Json messages (garbage collector related?)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "csavur",
+      "date": "2020-12-18T15:38:55Z",
+      "sha": "9d5aa83e5c7e1e4b276a55e9b60bce54951aa1db",
+      "message": "LabStreamlayer (LSL) plugin is developed. (#355)",
+      "files_changed": 12,
+      "additions": 715,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "bkueng",
+      "date": "2021-05-14T07:55:13Z",
+      "sha": "b21ed2ac235f035d6c4e24604275bdfa8f437f06",
+      "message": "ulog: ignore parameter default message (#413)",
+      "files_changed": 2,
+      "additions": 112,
+      "deletions": 89,
+      "commit_type": "code"
+    },
+    {
+      "author": "potaito",
+      "date": "2021-05-14T07:53:18Z",
+      "sha": "bc57c4f5e799bd327bb1f2d33b15a9745c77af84",
+      "message": "Fix typo in \"load transformations\" prompt (#416)\n\n* Fix typo in \"load transformations\" prompt\r\n\r\n* Another typo in \"load transformations\" prompt",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "yangxiang92",
+      "date": "2021-05-10T22:11:28Z",
+      "sha": "00e4c2e8af2d9e20402e8ead57fb341c1a6916fd",
+      "message": "Add libqt5x11extras5-dev into installation guide for fedora/ubuntu users. (#418)\n\nCo-authored-by: shawn.yang <shawn.yang@dji.com>",
+      "files_changed": 0,
+      "additions": 0,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "blanzer",
+      "date": "2021-02-27T10:53:27Z",
+      "sha": "4440b76f0933546da3ca8dbf4ad7b3ffef3b1311",
+      "message": "XY curve markers: fixed colors and removed ghosts symbols (#407)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "devnexen",
+      "date": "2021-01-23T09:14:45Z",
+      "sha": "1f8368ace295a7de2ae1b213221d134e489a8e43",
+      "message": "Apple Mac M1 build fix. (#392)\n\nbackward-cpp dependency fix for ARM 64 backport, wrong access to PC register.",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "jlmcmchl",
+      "date": "2020-12-28T17:30:16Z",
+      "sha": "ebafa21229c338351a8083dfee4ab721948a7f98",
+      "message": "Fixed message_parser plugin loading segfault (#376)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Tobias-Fischer",
+      "date": "2020-12-10T10:43:51Z",
+      "sha": "048c9a58205f06009963569bf271946f5907c49f",
+      "message": "Add required Qt5::Network for DataStreamUDP (#356)\n\n* Update CMakeLists.txt\r\n\r\n* Update CMakeLists.txt",
+      "files_changed": 2,
+      "additions": 3,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "gabm",
+      "date": "2020-12-10T12:04:18Z",
+      "sha": "92604a5adbdaca19c0bfd587f0f26832160ada2c",
+      "message": "Some template types have an enum ItemType. MSVC fails with compilation (#358)\n\nerror.",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "Davide Faconti",
+      "date": "2016-10-07T16:31:05Z",
+      "sha": "d8b4ab21a7fbcb807762b9db16c99e9eb31b7956",
+      "message": "removed minor bug",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "copterspace",
+      "date": "2020-05-18T11:18:28Z",
+      "sha": "75f80ea839cfc6cda74bef62f4dbc6b87eacf05f",
+      "message": "Added graph context menu description (#288)\n\nAdded graph context menu description to the Cheatsheet dialog",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "daf@blue-ocean-robotics.com",
+      "date": "2020-04-22T07:30:23Z",
+      "sha": "0e048d0c6d685c98742346a3ce67446205fd0fd0",
+      "message": "Updated backward-cpp",
+      "files_changed": 3,
+      "additions": 3858,
+      "deletions": 1581,
+      "commit_type": "docs"
+    },
+    {
+      "author": "veimox",
+      "date": "2019-11-18T10:29:59Z",
+      "sha": "d65cc343e106c62a3622a35752189720549638f7",
+      "message": "installing main executable as a gglobal binary in the workspace (#228)",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "v-lopez",
+      "date": "2017-03-31T17:23:17Z",
+      "sha": "00cbc7cbca525e206803b2355736df425c4de4ea",
+      "message": "Add dummy returns to function that required it (#36)",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "ShiauweiZhao",
+      "date": "2020-01-02T12:33:18Z",
+      "sha": "db7a30086d9f66d4c79a677fff2256a99613f2dc",
+      "message": "add include array header file to fix build error (#234)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "aeudes",
+      "date": "2019-05-29T12:48:13Z",
+      "sha": "5d532f96b5b9f391e8cf5888c9e585d6a6b266f4",
+      "message": "Infinite size buffer for streaming : (#174)\n\nWhen spinbox value is maximum use infinite buffer size and change color\r\nto red to remember possible memory limits issue.",
+      "files_changed": 1,
+      "additions": 16,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "timonegk",
+      "date": "2019-10-01T17:52:18Z",
+      "sha": "9c9be2131c66882be7b9c6b805d368d53a5fbb31",
+      "message": "RosMsgParsers: add cast to be clang compatible (#208)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "katzuv",
+      "date": "2019-10-01T11:25:50Z",
+      "sha": "6691203669e4e4652eca0460d30d60fc6114acef",
+      "message": "Correct \"Github\" to \"GitHub\" (#206)",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "efernandez",
+      "date": "2019-09-29T22:37:02Z",
+      "sha": "bfbf4bdc7b2f3f684765ff3dd342f7d63354303a",
+      "message": "Add missed abseil_cpp depend",
+      "files_changed": 2,
+      "additions": 3,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "kristiannoergaardx3d",
+      "date": "2019-06-26T18:43:22Z",
+      "sha": "e797449e571d72e683b63cc077a362971f5ba635",
+      "message": "Prompt user when one or more topics in the rosbag cannot be loaded\n * previous behaviour: the bag load was aborted\n * with this patch: prompt user whether or not to\n   * skip this problematic topic and continue loading\n   * skip this and other problematic topics that may arise when loading\n   * abort the load\n\nThe patch addresses a real life example when some of the ros messages are created\nfrom ROS-matlab, and therefore suffers from a bug related to a bad message description\nE.g. see https://github.com/rosjava/rosjava_bootstrap/issues/16",
+      "files_changed": 1,
+      "additions": 43,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "SiyuChen1",
+      "date": "2019-06-11T11:27:53Z",
+      "sha": "8250ba699176c65564265df14c87d7da2716207d",
+      "message": "Update datastreamserver.h\n\nfix virtual override bug",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "jfrascon",
+      "date": "2019-05-20T06:26:15Z",
+      "sha": "17f909d369e00876c170c97c376ed08d49d3db5b",
+      "message": "Fixed small typos in README.md (#172)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "azaparov",
+      "date": "2019-03-19T09:39:00Z",
+      "sha": "bd56df6e0ea59128d1820fa975158d0f636441ee",
+      "message": "On MacOS there are several mime formats generated in addition to \"curveslist\", this fix will keep curves array with names collected instead of resetting it for each new mime format. (#159)",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "RomanBapst",
+      "date": "2019-03-19T09:37:49Z",
+      "sha": "b0f008f62e869493a0c9ab928bbc5ef73fa5a257",
+      "message": "ulog_parser: fixed parsing of array topics (#157)\n\nSigned-off-by: Roman <bapstroman@gmail.com>",
+      "files_changed": 1,
+      "additions": 33,
+      "deletions": 16,
+      "commit_type": "code"
+    },
+    {
+      "author": "imgbot[bot]",
+      "date": "2019-02-27T11:29:16Z",
+      "sha": "11884774194ea2ae0390f1eb2cf589495a08c3a1",
+      "message": "[ImgBot] Optimize images (#149)\n\n*Total -- 205.73kb -> 159.78kb (22.34%)\r\n\r\n/plotter_gui/resources/old/add_column.png -- 0.87kb -> 0.60kb (31.61%)\r\n/plotter_gui/resources/light/remove_list.png -- 3.25kb -> 2.35kb (27.57%)\r\n/backward-cpp/doc/pretty.png -- 103.03kb -> 75.06kb (27.15%)\r\n/plotter_gui/resources/light/add_tab.png -- 0.92kb -> 0.68kb (26.69%)\r\n/backward-cpp/doc/nice.png -- 39.95kb -> 29.34kb (26.56%)\r\n/plotter_gui/resources/light/add_row.png -- 0.80kb -> 0.58kb (26.5%)\r\n/plotter_gui/resources/light/add_column.png -- 0.80kb -> 0.59kb (26.01%)\r\n/plotter_gui/resources/light/save.png -- 1.23kb -> 0.92kb (25.56%)\r\n/backward-cpp/doc/rude.png -- 6.04kb -> 4.67kb (22.58%)\r\n/plotter_gui/resources/light/settings_cog.png -- 2.52kb -> 1.98kb (21.22%)\r\n/plotter_gui/resources/light/zoom_max.png -- 2.11kb -> 1.66kb (21.04%)\r\n/plotter_gui/resources/light/pause.png -- 2.55kb -> 2.06kb (18.99%)\r\n/plotter_gui/resources/old/add_row.png -- 0.87kb -> 0.71kb (18.39%)\r\n/plotter_gui/resources/light/point_chart.png -- 2.26kb -> 1.86kb (17.95%)\r\n/plotter_gui/resources/light/colored_charts.png -- 3.82kb -> 3.15kb (17.68%)\r\n/plotter_gui/resources/light/play_arrow.png -- 0.78kb -> 0.66kb (15.38%)\r\n/plotter_gui/resources/old/splitbutton_vertical@2x.png -- 0.53kb -> 0.45kb (15.26%)\r\n/plotter_gui/resources/light/zoom_vertical.png -- 1.29kb -> 1.10kb (14.88%)\r\n/plotter_gui/resources/light/move.png -- 0.73kb -> 0.63kb (14.02%)\r\n/plotter_gui/resources/light/remove.png -- 1.89kb -> 1.67kb (12.07%)\r\n/plotter_gui/resources/old/splitbutton_horizontal@2x.png -- 0.52kb -> 0.46kb (11.59%)\r\n/plotter_gui/resources/light/zoom_horizontal.png -- 1.07kb -> 1.01kb (5.11%)\r\n/plotter_gui/resources/old/add_tab.png -- 0.62kb -> 0.59kb (3.95%)\r\n/plotter_gui/resources/old/line_chart_64px.png -- 1.83kb -> 1.76kb (3.74%)\r\n/plotter_gui/resources/light/zoom_in.png -- 1.11kb -> 1.07kb (3.44%)\r\n/plotter_gui/resources/old/zoom_in_32px.png -- 1.11kb -> 1.07kb (3.44%)\r\n/plotter_gui/resources/light/grid.png -- 0.35kb -> 0.34kb (3.06%)\r\n/plotter_gui/resources/old/chart.png -- 1.31kb -> 1.28kb (2.75%)\r\n/plotter_gui/resources/old/line_chart_tracker.png -- 1.19kb -> 1.16kb (2.22%)\r\n/plotter_gui/resources/old/zoom_out_32px.png -- 1.06kb -> 1.04kb (1.47%)\r\n/plotter_gui/resources/old/undo_32px.png -- 0.99kb -> 0.98kb (1.47%)\r\n/plotter_gui/resources/office_chart_line_stacked.png -- 1.98kb -> 1.96kb (1.18%)\r\n/color_widgets/src/alphaback.png -- 0.33kb -> 0.32kb (0.6%)\r\n/plotter_gui/resources/splash.jpg -- 16.03kb -> 16.01kb (0.13%)",
+      "files_changed": 34,
+      "additions": 0,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "d-walsh",
+      "date": "2019-02-11T06:26:08Z",
+      "sha": "46dfe8db01f6c6797bda4d007ccd0da4befe68e4",
+      "message": "Make default filename for tab image the tab name (#136)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Victor Lopez",
+      "date": "2018-08-28T14:54:35Z",
+      "sha": "db10389b3e3c7e2b41fd57a18482fb7211cc75dd",
+      "message": "Fix dragging/deletion of hidden items",
+      "files_changed": 2,
+      "additions": 25,
+      "deletions": 11,
+      "commit_type": "code"
+    },
+    {
+      "author": "matijazigic",
+      "date": "2018-11-09T11:29:54Z",
+      "sha": "40bddf84eda839b57b8a95e9e3d62701de9fe71a",
+      "message": "CMAKE_INSTALL_PREFIX flag fix for non-ROS user (#114)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ahundt",
+      "date": "2018-08-31T19:29:45Z",
+      "sha": "d20ba05710587eff525b5c8eaf3f20c0ec0156ce",
+      "message": "CMakeLists.txt add mac homebrew qt5 install directory (#111)\n\n* CMakeLists.txt add mac homebrew qt5 install directory\r\n\r\n* CMakeLists.txt whitespace\r\n\r\n* CMakeLists.txt fix RPATH warning\r\n\r\n* mainwindow.cpp load dylib files on macOS",
+      "files_changed": 2,
+      "additions": 11,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Enrique Fernández Perdomo",
+      "date": "2018-06-05T20:13:04Z",
+      "sha": "a022fd3c5ce163474db38cf900097425bb6155db",
+      "message": "Reorder header files to fix conflicts with boost and QT (#86)",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "PhilGauthier",
+      "date": "2018-01-11T11:58:47Z",
+      "sha": "5032d26cfff8ce9b263d633cef7cf2bb8de3ed2e",
+      "message": "A small plugin creating a websocket server (#64)\n\n* init Push of the plugin DadatSreamServer using QT websockets\r\n\r\n* Added licenses and a correct name as macro ifndef in .h\r\n\r\n* Added a check for QT version 5.3 to add DataStreamServer (websockets)\r\n\r\n* Clean up (variable init, unused variable) from Codacy",
+      "files_changed": 8,
+      "additions": 516,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "kartikmohta",
+      "date": "2016-10-25T02:08:20Z",
+      "sha": "a202aa87d663805941a04cdb451018eafc7b4b2b",
+      "message": "Small fixes for compiling with ROS",
+      "files_changed": 7,
+      "additions": 17,
+      "deletions": 19,
+      "commit_type": "docs"
+    },
+    {
+      "author": "eduherminio",
+      "date": "2017-04-23T19:16:28Z",
+      "sha": "4ff2d97e0b929c3b94d458b76ecfc162968d71da",
+      "message": "Update README.md & docs (#38)\n\n* Update README.md\r\n\r\nMissing ':'\r\n\r\n* Update visualization_howto.md\r\n\r\nFix bold styling",
+      "files_changed": 2,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Timple",
+      "date": "2017-03-16T09:30:51Z",
+      "sha": "d26a116708bdbecc4061b76a2e9ada8dbb66fd60",
+      "message": "Prevent compiler warning if compiling under ROS (#29)",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Siteleaf",
+      "date": "2017-01-23T15:55:11Z",
+      "sha": "00488a2764e20068a892864e33b124b2b6b5fa69",
+      "message": "Added Config",
+      "files_changed": 1,
+      "additions": 10,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "mikaelarguedas",
+      "date": "2017-01-08T20:45:36Z",
+      "sha": "baf22fb89ae2e0b92d9aa956ad6f87fa20ad803f",
+      "message": "use CATKIN_PACKAGE_BIN_DESTINATION and LIB equivalent",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "docs"
+    },
+    {
+      "author": "amdn",
+      "date": "2017-01-06T06:15:02Z",
+      "sha": "b9e85bd11d66f3f7a8674eb000baaacbe80ff281",
+      "message": "Update README.md",
+      "files_changed": 1,
+      "additions": 6,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "DorianScholz",
+      "date": "2016-10-24T13:36:17Z",
+      "sha": "b0cd733bd73a6bdff6bb70e4f0eb066d41b6cffc",
+      "message": "fix small autocomplete typo",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    }
+  ]
+}

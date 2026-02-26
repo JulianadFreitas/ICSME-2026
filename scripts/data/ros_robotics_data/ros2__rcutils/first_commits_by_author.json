@@ -1,0 +1,731 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-26T02:16:32Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "ros2",
+    "repo": "rcutils"
+  },
+  "data": [
+    {
+      "author": "Barry-Xu-2018",
+      "date": "2020-12-02T14:09:44Z",
+      "sha": "e15e1d92c47bcd075035ddafa4aacee939710f9a",
+      "message": "Update rcutils_calculate_directory_size() to support recursion (#306)\n\n* Update rcutils_calculate_directory_size() to support recursion\r\n\r\nSigned-off-by: Barry Xu <barry.xu@sony.com>\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\nCo-authored-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 6,
+      "additions": 314,
+      "deletions": 44,
+      "commit_type": "code"
+    },
+    {
+      "author": "ahcorde",
+      "date": "2020-04-01T15:53:36Z",
+      "sha": "35f29850064e0c33a4063cbc947ebbfeada11dba",
+      "message": "Included utils to load, unload and get symbols from shared libraries (#215)\n\n* Included utils to load, unload and get symbols from shared libraries\r\n\r\nShared library working on Windows\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* platform independent code moved outside of the conditional blocks\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Included feedback\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\nAdded shared library test\r\n\r\nfix return error on shared library for windows\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Exported CMake_DL_LIBS\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Included more feedback\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Improved tests\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Fixed argument checks in rcutils_has_symbol\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* fixed naming rcutils_unload_library to rcutils_unload_shared_library\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Added feedback\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* deallocated memory when open fails\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Added null after deallocate memory\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Updated doc shared_library\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Improved error handling\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Fixed uncrustify and cppcheck\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Added allocator argument to rcutils_load_shared_library funcion\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* checked inputs and deduplicate code\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* added more test to shared_library\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* fixed unscrustify test_shared_library\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Fixed docs\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Update include/rcutils/shared_library.h\r\n\r\nCo-Authored-By: William Woodall <william+github@osrfoundation.org>\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Improved docs\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* update shared library docs\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Avoided leak when a library is loaded two time without unload\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* changed the order to deallocate memory\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Added extension for different platforms in test_shared_libraries\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* fixed ccplint\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Fixed dummy library name\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Right library name in windows in test_shared_library\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* preprocessor directives not indented\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Added rcutils_get_platform_library_name fucntion to shared_library\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* fixed rcutils_snprintf buffer size\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Added target_compile_definitions for dummy_shared_library\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* defined len of str in rcutils_get_platform_library_name\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* Removed limitation on the path size for the library name\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\n* fixed condition len string in rcutils_get_platform_library_name\r\n\r\nSigned-off-by: ahcorde <ahcorde@gmail.com>\r\n\r\nCo-authored-by: William Woodall <william+github@osrfoundation.org>",
+      "files_changed": 6,
+      "additions": 578,
+      "deletions": 1,
+      "commit_type": "test"
+    },
+    {
+      "author": "tonynajjar",
+      "date": "2026-02-21T02:50:18Z",
+      "sha": "05753422783ce3518623d21e6b119838b4e4b9d9",
+      "message": "Add {short_file_name} as log format option (#541)\n\n* Add short_file_name\n\nSigned-off-by: Tony Najjar <tony.najjar@dexory.com>\n\n* PR comments\n\nSigned-off-by: Tony Najjar <tony.najjar@dexory.com>\n\n* fix windows set_env\n\nSigned-off-by: Tony Najjar <tony.najjar@dexory.com>\n\n---------\n\nSigned-off-by: Tony Najjar <tony.najjar@dexory.com>",
+      "files_changed": 5,
+      "additions": 140,
+      "deletions": 2,
+      "commit_type": "docs"
+    },
+    {
+      "author": "fujitatomoya",
+      "date": "2020-09-03T13:49:07Z",
+      "sha": "060a68a9ef092f1ed909967ff0611a2bac5f9f18",
+      "message": "stop using fprintf to avoid using file handles by changing as few lines of code as possible. (#289)\n\nSigned-off-by: Tomoya.Fujita <Tomoya.Fujita@sony.com>",
+      "files_changed": 3,
+      "additions": 56,
+      "deletions": 32,
+      "commit_type": "code"
+    },
+    {
+      "author": "sloretz",
+      "date": "2018-03-15T21:20:01Z",
+      "sha": "39545e38b949481e3e43db7841d5150c1a435494",
+      "message": "include format_string.h (#96)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "saikishor",
+      "date": "2025-08-21T00:43:55Z",
+      "sha": "89264ce6fc0a7421101bfa2791a7899adfa05820",
+      "message": "Add rcutils_raw_steady_time_now method for slew-free clock (#507)\n\n* Add rcutils_raw_steady_time_now method for slew-free clock\n\nSigned-off-by: Sai Kishor Kothakota <sai.kishor@pal-robotics.com>\n\n* Added RCUTILS_LOG_WARN_ONCE about the behaviour on unsupported platforms\n\n---------\n\nSigned-off-by: Sai Kishor Kothakota <sai.kishor@pal-robotics.com>",
+      "files_changed": 5,
+      "additions": 114,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "clalancette",
+      "date": "2017-08-10T18:54:24Z",
+      "sha": "42e7840defd2e1150df2f08eb802a4708283376c",
+      "message": "Make sure to free string_map->impl in fini.\n\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "razr",
+      "date": "2025-07-01T13:58:33Z",
+      "sha": "ead8874667205525a2d16f5adb694ab0dd01a325",
+      "message": "Implement rcutils_strnlen. (#430)\n\nThis is a portable version that uses memchr as its\nunderlying implementation.\n\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>",
+      "files_changed": 7,
+      "additions": 85,
+      "deletions": 20,
+      "commit_type": "docs"
+    },
+    {
+      "author": "cottsay",
+      "date": "2020-04-09T22:18:32Z",
+      "sha": "a6306c65c34fecf6f91310ac9830b694a768fed7",
+      "message": "Assume WIN32 HINSTANCE is a void * (#230)\n\nAccording to MSDN, `HINSTANCE` is a `HANDLE` is a `PVOID` is a `void *`\r\neverywhere on Windows. If we assume this, we can drop the problematic\r\nWindows.h include from our header and contain it to a single source\r\nfile.\r\n\r\nI included a sanity check that will break if this assumption is ever\r\nbroken.\r\n\r\nSigned-off-by: Scott K Logan <logans@cottsay.net>",
+      "files_changed": 2,
+      "additions": 13,
+      "deletions": 17,
+      "commit_type": "code"
+    },
+    {
+      "author": "mjcarroll",
+      "date": "2018-04-23T15:12:49Z",
+      "sha": "79a929621c7a8e406f0cba257b8a42d372f49e00",
+      "message": "Change #if to #ifdef.",
+      "files_changed": 37,
+      "additions": 74,
+      "deletions": 74,
+      "commit_type": "code"
+    },
+    {
+      "author": "Yadunund",
+      "date": "2023-04-27T09:31:08Z",
+      "sha": "025f78fa7c03666b5fa1057af00a32ed8bbd64a0",
+      "message": "6.3.0",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "felixf4xu",
+      "date": "2024-06-05T08:27:00Z",
+      "sha": "b2ad5ed4c5d11f21d514de9ea54c4d3cd0977ab6",
+      "message": "add mingw support (#468)\n\nSigned-off-by: U-CW01\\uig08771 <uig08771@HIL4255W.cw01.contiwan.com>\r\n(cherry picked from commit 826cd46cece1b43c15577965f10d17450f3694c2)",
+      "files_changed": 4,
+      "additions": 6,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "marcoag",
+      "date": "2024-03-28T08:43:47Z",
+      "sha": "c31c323c7a15ca45149e106de9d67394139ec465",
+      "message": "Changelog.\n\nSigned-off-by: Marco A. Gutierrez <marcogg@marcogg.com>",
+      "files_changed": 1,
+      "additions": 10,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Kaju-Bubanja",
+      "date": "2024-03-15T14:14:26Z",
+      "sha": "961c4c8d7afed2800fbd4299335385dbc2375d0b",
+      "message": "feat: Add human readable date to logging formats (#441)\n\n* feat: Add human readable date to logging formats\r\n\r\nSigned-off-by: Kaju Bubanja <bubanja.kaju@gmail.com>",
+      "files_changed": 4,
+      "additions": 139,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "christophebedard",
+      "date": "2020-10-15T13:50:31Z",
+      "sha": "0c2cc271c3d3a357d16f15037606c15e6f7b0978",
+      "message": "Add rcutils_expand_user() to expand user directory in path (#298)\n\nSigned-off-by: Christophe Bedard <bedard.christophe@gmail.com>",
+      "files_changed": 3,
+      "additions": 100,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "SammyRamone",
+      "date": "2024-02-13T21:42:53Z",
+      "sha": "7f3800fd18f97fa43897e149d06627b0f401894b",
+      "message": "Allow parsing of escape sequence in log format (#443)\n\nSigned-off-by: Marc Bestmann <marc.bestmann@dlr.de>",
+      "files_changed": 3,
+      "additions": 72,
+      "deletions": 11,
+      "commit_type": "code"
+    },
+    {
+      "author": "traversaro",
+      "date": "2023-11-08T13:22:58Z",
+      "sha": "645cc02577bf12932e335e7103fea292444fccb1",
+      "message": "time_win32: Update dead link (#438)\n\nSigned-off-by: Silvio Traversaro <silvio@traversaro.it>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "tylerjw",
+      "date": "2023-11-04T00:41:48Z",
+      "sha": "5b99aad816d5e49db22c29e11588fafa4e7365f7",
+      "message": "memmove for overlaping memory (#434)\n\n* memmove for overlaping memory\r\n\r\n* Add test for memcpy to memmove\r\n\r\nSigned-off-by: Tyler Weaver <maybe@tylerjw.dev>",
+      "files_changed": 2,
+      "additions": 29,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Chen Lihui",
+      "date": "2020-11-12T13:08:44Z",
+      "sha": "f1327dfc09c507500383e488f1107bd05afda083",
+      "message": "Fix format of code description on document (#313)\n\nSigned-off-by: Chen Lihui <lihui.chen@sony.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "methylDragon",
+      "date": "2023-04-11T06:02:03Z",
+      "sha": "e5cce955a7fa76df5c1ba5d06536445623bf0ad5",
+      "message": "Add convenience error handling macros (#421)\n\n* Add convenience error handling macros\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Refine error handling macros\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n* Remove conditional in error handling macros\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>\r\n\r\n---------\r\n\r\nSigned-off-by: methylDragon <methylDragon@gmail.com>",
+      "files_changed": 2,
+      "additions": 71,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "marioprats",
+      "date": "2023-03-28T18:24:32Z",
+      "sha": "5bd1230eb10595cec30168667adf03f48879b96c",
+      "message": "update cast to modern style (#418)\n\n* update cast to modern style\r\n\r\nSigned-off-by: Mario Prats <marioprats@gmail.com>",
+      "files_changed": 1,
+      "additions": 8,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "emersonknapp",
+      "date": "2019-06-04T02:57:04Z",
+      "sha": "e49e277efb2e58cc9df664827b16f519cc6d9c95",
+      "message": "Fix armhf warning (#163)\n\n* Fix armhf warning due to size_t being 32 bits\r\n\r\nSigned-off-by: Emerson Knapp <eknapp@amazon.com>\r\n\r\n* Include stdint.h\r\n\r\nSigned-off-by: Emerson Knapp <eknapp@amazon.com>\r\n\r\n* Just include limits and use SIZE_MAX, finding out if it works on Windows\r\n\r\nSigned-off-by: Emerson Knapp <eknapp@amazon.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "nnmm",
+      "date": "2023-03-02T17:58:11Z",
+      "sha": "16e6bfdb7e531a16e64ef69f3e4ac11ef2fc795f",
+      "message": "Fix memory leak in string_map.c in rcutils (#411)\n\n* Add in a string_map test for failure after certain allocations.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@gmail.com>\r\nSigned-off-by: Nikolai Morin <nikolai.morin@apex.ai>",
+      "files_changed": 2,
+      "additions": 113,
+      "deletions": 58,
+      "commit_type": "code"
+    },
+    {
+      "author": "audrow",
+      "date": "2022-11-15T21:34:38Z",
+      "sha": "2f647cc2cdcbdfbecadd00b9a5af8318702960e5",
+      "message": "[rolling] Update maintainers - 2022-11-07 (#404)",
+      "files_changed": 2,
+      "additions": 7,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "AIxWall",
+      "date": "2022-10-25T17:32:24Z",
+      "sha": "98d624a455e52c8bdd150c380ca302cf6a8a750c",
+      "message": "Fix build on OpenHarmony (#395)\n\n* Fix build on OpenHarmony\r\n\r\nOpenHarmony doesn't support dlinfo\r\n\r\nOpenHarmony doesn't support program_invocation_name\r\n\r\nSigned-off-by: AIxWall <31502690+AIxWall@users.noreply.github.com>",
+      "files_changed": 2,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "ci"
+    },
+    {
+      "author": "wjwwood",
+      "date": "2017-04-06T22:13:34Z",
+      "sha": "f8e91bdb5efebbff89907aebd5a1cc31f3e6baef",
+      "message": "Merge pull request #12 from ros2/fix_strdup_warning\n\nuse _strdup() on windows to avoid compiler warning",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "jacobperron",
+      "date": "2018-11-02T19:40:46Z",
+      "sha": "75fd146fcd3f4615fec9d92e8a7600a09471358e",
+      "message": "Fix typo (#122)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Felipe Neves",
+      "date": "2022-07-28T17:29:59Z",
+      "sha": "a0af2c46864e75cd54b778309011901bea95b6ba",
+      "message": "time_unix: add zephyr posix time (#368)\n\nown implementation allowing to fix error\r\nregarding CLOCK_MONOTONIC definition.\r\n\r\nSigned-off-by: Felipe <felipe.neves@linaro.org>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "Zopolis4",
+      "date": "2022-09-23T14:32:56Z",
+      "sha": "e46f124c2ab9af6889242b791dff84568ef27651",
+      "message": "Restrict overmatching MACH ifdef to only trigger on OSX and Mach (#386)\n\nSigned-off-by: Zopolis4 <creatorsmithmdt@gmail.com>",
+      "files_changed": 1,
+      "additions": 10,
+      "deletions": 10,
+      "commit_type": "code"
+    },
+    {
+      "author": "yakuni",
+      "date": "2022-08-26T15:34:58Z",
+      "sha": "c49b41c9b19ae9e76e746db662285fc6c7d3b1af",
+      "message": "Change syntax __VAR_ARGS__ to __VA_ARGS__ (#376)\n\n* Change syntax __VAR_ARGS__ to __VA_ARGS__\r\n\r\nSigned-off-by: Yakumoo <crater.broker0f@icloud.com>\r\n\r\n* Remove __VA_ARGS__\r\n\r\nSigned-off-by: Yakumoo <crater.broker0f@icloud.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "guijan",
+      "date": "2022-06-10T17:47:31Z",
+      "sha": "8826189e2e8aa8c5f94038d71d7906d5d8c84fff",
+      "message": "strdup.c: fix 1 byte buffer overread (#363)\n\nThis usage caused a 1 byte buffer overread:\r\n```c\r\nchar str[4] = \"test\";\r\nrcutils_strndup(str, sizeof(str), allocator);\r\n```\r\n\r\nSigned-off-by: Guilherme Janczak <guilherme.janczak@yandex.com>",
+      "files_changed": 2,
+      "additions": 17,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "paudrow",
+      "date": "2022-01-15T00:08:33Z",
+      "sha": "093ca359439bbf5a76ebb233de773389496250c1",
+      "message": "5.0.1\n\nSigned-off-by: Audrow Nash <audrow@hey.com>",
+      "files_changed": 2,
+      "additions": 6,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "aprotyas",
+      "date": "2022-05-17T20:41:07Z",
+      "sha": "8da2aace17bcecad3bdf0bebafe23298602f50c0",
+      "message": "Clarify duration arg description in logging macros (#359)\n\nThe expectation that the `duration` argument to the logging macros will\r\nbe an integral value in milliseconds is not explicit at all, and as such\r\nthe documentation for this argument should be clarified.\r\n\r\nPrior to this change, this information could only be found inside\r\n`RCUTILS_LOG_CONDITION_THROTTLE_BEFORE`, which is inconvenient.\r\n\r\nSigned-off-by: Abrar Rahman Protyasha <aprotyas@u.rochester.edu>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Blast545",
+      "date": "2020-02-13T19:43:00Z",
+      "sha": "e31371df45afdfac545752777cd61a3a64769ee2",
+      "message": "Split bug fix (#206)\n\n* Remove extra deallocation on memory not allocated\r\n* Remove not needed comment\r\n* Add test case for delimiters at the end of string\r\n* Add assert tests for data size before indexing\r\n* Remove redundant asserts performed on test_split funcs\r\n\r\nSigned-off-by: Jorge J. Perez <jjperez@ekumenlabs.com>",
+      "files_changed": 2,
+      "additions": 7,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ivanpauno",
+      "date": "2019-03-15T17:22:25Z",
+      "sha": "c507948bb4466c0eca5b8a787a6ca2d8dde9b773",
+      "message": "Modified CMakeLists to use ament_target_dependencies",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "shonigmann",
+      "date": "2021-04-02T06:29:32Z",
+      "sha": "5d3cecc8af601c10561f7c17d76eab740bb540ce",
+      "message": "updating quality declaration links (re: ros2/docs.ros2.org#52) (#335)\n\nSigned-off-by: Simon Honigmann <shonigmann@blueorigin.com>\r\n\r\nCo-authored-by: Simon Honigmann <shonigmann@blueorigin.com>",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 9,
+      "commit_type": "docs"
+    },
+    {
+      "author": "homalozoa",
+      "date": "2021-03-11T14:05:22Z",
+      "sha": "618a9d94565ab844b9f40e0f5828ddbab2bcdad1",
+      "message": "Remove references of __xstat (#330)\n\nRemove some refs of __xstat to fix building errors in Arch Linux. Also tested passed on Ubuntu 18.04 and Ubuntu 20.04.\r\n\r\n__xstat was removed in glibc 2.33, so do not use it anymore.\r\n\r\nSigned-off-by: Nxxx <nx.tardis@gmail.com>",
+      "files_changed": 1,
+      "additions": 24,
+      "deletions": 17,
+      "commit_type": "code"
+    },
+    {
+      "author": "asobhy-qnx",
+      "date": "2020-08-24T22:43:27Z",
+      "sha": "444fa85900f71b2755a52cac859dc3dd44e6ce82",
+      "message": "adds QNX support for rcutils_get_executable_name (#282)\n\nSigned-off-by: asobhy <asobhy@blackberry.com>",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "hidmic",
+      "date": "2019-02-27T19:36:12Z",
+      "sha": "5ac9e257c2a105b455f9027236f07c3e54a7d434",
+      "message": "Drops legacy launch API usage. (#134)\n\nSigned-off-by: Michel Hidalgo <michel@ekumenlabs.com>",
+      "files_changed": 2,
+      "additions": 50,
+      "deletions": 79,
+      "commit_type": "code"
+    },
+    {
+      "author": "brawner",
+      "date": "2020-06-03T21:26:30Z",
+      "sha": "646935abcfec98378b38dc20b9c01004dd32823f",
+      "message": "Set appropriate size for buffered logging on Windows (logging.c) (#259)\n\n* Set appropriate size for buffered logging on Windows\r\n\r\nSigned-off-by: Stephen Brawner <brawner@gmail.com>\r\n\r\n* Use BUFSIZE\r\n\r\nSigned-off-by: Stephen Brawner <brawner@gmail.com>\r\n\r\n* Set windows to BUFSIZ, others to 0\r\n\r\nSigned-off-by: Stephen Brawner <brawner@gmail.com>",
+      "files_changed": 2,
+      "additions": 27,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "felixendres",
+      "date": "2020-10-05T17:39:16Z",
+      "sha": "61b02641c9046065008459059dde1cfd7c390a05",
+      "message": "Remove the temporary variable in RCUTILS_LOGGING_AUTOINIT (#290)\n\nFix issue #285:\r\nRemove the temporary variable in a macro, because the name of the variable may shadow a variable of the macro user.\r\nAs suggested by @clalancette, also wrapped it into a do-while wrapping.\r\n\r\nWhile we are in here, also remove the semicolon and make it a true C-statement.\r\n\r\nSigned-off-by: Felix Endres <felix-endres-github@256bit.org>\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 3,
+      "additions": 21,
+      "deletions": 24,
+      "commit_type": "code"
+    },
+    {
+      "author": "dirk-thomas",
+      "date": "2017-04-03T16:16:29Z",
+      "sha": "e35bb508b71b54b9d196354a79b5aedb966fd0d3",
+      "message": "set compiler flags globally",
+      "files_changed": 2,
+      "additions": 7,
+      "deletions": 5,
+      "commit_type": "docs"
+    },
+    {
+      "author": "meyerj",
+      "date": "2020-06-29T12:30:34Z",
+      "sha": "049167533d473cca5c8ae8347becdd2209503927",
+      "message": "Add parenthesis around the argument in time conversion macros defined in time.h (#261)\n\n* Add parenthesis around the macro argument in time conversion macros defined in time.h\r\n\r\n... to protect against unexpected results of calls with arguments that are a sum or with\r\nother operators, that have a lower precedence than the multiplication or division operators.\r\n\r\nSigned-off-by: Johannes Meyer <johannes@intermodalics.eu>",
+      "files_changed": 2,
+      "additions": 75,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "nuclearsandwich",
+      "date": "2018-11-16T16:13:18Z",
+      "sha": "c85ec5530661f198e15862816b8637da3733bba8",
+      "message": "0.6.0",
+      "files_changed": 2,
+      "additions": 20,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ShotaAk",
+      "date": "2020-05-13T10:18:03Z",
+      "sha": "6acf8d88906a9b304c7785c7b2ce1174a5ce4ecd",
+      "message": "Fix a link to REP-2004 (#245)\n\nSigned-off-by: ShotaAk <s.aoki@rt-net.jp>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Suyash Behera",
+      "date": "2020-04-27T13:09:40Z",
+      "sha": "1973b4a32b6ff2e6452aa48a622a77aa31d116b0",
+      "message": "update rcutils_get_env to always use getenv (#237)\n\n* update rcutils_get_env to use getenv for all platforms\r\n\r\nSigned-off-by: Suyash458 <suyash.behera458@gmail.com>",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 25,
+      "commit_type": "code"
+    },
+    {
+      "author": "tfoote",
+      "date": "2017-11-10T00:33:48Z",
+      "sha": "3873006b378836324da4f94aa023be29e6d3b861",
+      "message": "Migrate CHECK_ARGUMENT_FOR_NULL and CHECK_FOR_NULL_WITH_MSG from rcl into rcutils.",
+      "files_changed": 1,
+      "additions": 30,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "dodsonmg",
+      "date": "2020-04-08T22:34:20Z",
+      "sha": "7a333908651d2aaac368438446c90b353822a4a6",
+      "message": "add freebsd support (#223)\n\nSigned-off-by: Michael Dodson <md403@cam.ac.uk>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "thomas-moulard",
+      "date": "2019-04-12T19:16:24Z",
+      "sha": "414ff5493f41c41f4495a2d1607e8e0f422ac293",
+      "message": "Fix ASAN failure in test_string_map.cpp (#147)\n\n* Fix ASAN failure in test_string_map.cpp\r\n\r\nPartially solves #146\r\n\r\nSigned-off-by: Thomas Moulard <tmoulard@amazon.com>\r\n\r\n* Avoid failing on non-initialized objects.\r\n\r\nSigned-off-by: Thomas Moulard <tmoulard@amazon.com>\r\n\r\n* Add back accidentally removed code.\r\n\r\nSigned-off-by: Thomas Moulard <tmoulard@amazon.com>\r\n\r\n* Break down unit tests to simplify initialization\r\n\r\nBreaking-down the test cases more allows the fixture\r\nto take care of most initialization and finalization\r\ncode.\r\n\r\nThis has several advantages such as factoring out\r\nthe memory management part and improving exception\r\nsafety.\r\n\r\nSigned-off-by: Thomas Moulard <tmoulard@amazon.com>\r\n\r\n* Remove TearDown from fixture\r\n\r\nSigned-off-by: Thomas Moulard <tmoulard@amazon.com>\r\n\r\n* Ensures code is properly freed if test cases fail\r\n\r\nSigned-off-by: Thomas Moulard <moulard@google.com>",
+      "files_changed": 2,
+      "additions": 84,
+      "deletions": 40,
+      "commit_type": "test"
+    },
+    {
+      "author": "Karsten1987",
+      "date": "2017-02-09T18:49:59Z",
+      "sha": "181c5bfe5b16ea059a829eb787b78722aeffe3c4",
+      "message": "initial commit",
+      "files_changed": 18,
+      "additions": 1082,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Peter Baughman",
+      "date": "2019-12-02T16:37:50Z",
+      "sha": "9c80b7684f322936d67390cfa48e54f7ef9aa7ef",
+      "message": "Fix race in rcutils launch_tests (#193)\n\n- The processes in these tests all self-terminate.  This causes a race with\r\n    the active tests.  If the processes all terminate before the tests complete,\r\n    launch_testing will treat it like an error.\r\n\r\n  - You can repro this issue by putting the ReadyToTest action behind a TimerAction\r\n    and delaying it a few seconds.\r\n\r\n  - Fix is to explicitly decorate the launch description with the keep_alive marker\r\n\r\nSigned-off-by: Pete Baughman <pete.baughman@apex.ai>",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "SteveMacenski",
+      "date": "2019-11-22T17:25:31Z",
+      "sha": "540d9472b0c7de4b029f2e26f3388e3b9a5bb1eb",
+      "message": "changing default logging format to include timestamp (#190)\n\n* changing default logging format to include timestamp\r\n\r\nSigned-off-by: stevemacenski <stevenmacenski@gmail.com>\r\n\r\n* change format from William's feedback\r\n\r\nSigned-off-by: stevemacenski <stevenmacenski@gmail.com>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "theseankelly",
+      "date": "2019-11-11T17:52:17Z",
+      "sha": "a010f2d3a55e1ec786d4111f80d0e64a0991cd93",
+      "message": "Use Win32 wrapper around 64 bit atomic operations (#186)\n\n64 bit comiler intrinsics are unavailable on x86 and ARM platforms in\r\nMSVC. This change uses the Win32/UWP wrapping API for the 64 bit\r\natomics. Per documentation on MSDN, the functions will leverage compiler\r\nintrinsics if available.\r\n\r\nSigned-off-by: Sean Kelly <sean@seankelly.dev>",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 7,
+      "commit_type": "docs"
+    },
+    {
+      "author": "rotu",
+      "date": "2019-10-23T20:40:55Z",
+      "sha": "c688c4a9e079648123f6d056ee83228d24fd65e7",
+      "message": "Specify working directory for filesystem test (#185)\n\nPrevent anticipated breakage from https://github.com/ament/ament_cmake/pull/206\r\nSigned-off-by: Dan Rose <dan@digilabs.io>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "BMarchi",
+      "date": "2019-10-21T21:07:08Z",
+      "sha": "e7eb74c7a11cf207aa9330d77f44098339528cac",
+      "message": "Make use of time source type for throttling logs (#183)\n\n* Make use of time source type for throttling logs\r\n\r\nSigned-off-by: Brian Ezequiel Marchi <brian.marchi65@gmail.com>",
+      "files_changed": 3,
+      "additions": 7,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "pbaughman",
+      "date": "2019-10-21T21:00:44Z",
+      "sha": "cfe98af15bbf6ee201e6b412d2addcb9e42aafe6",
+      "message": "Remove ready_fn - will be replaced by ReadyToTest() (#184)\n\nSigned-off-by: Pete Baughman <pete.baughman@apex.ai>",
+      "files_changed": 2,
+      "additions": 6,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "christianrauch",
+      "date": "2019-08-30T00:24:20Z",
+      "sha": "67f064e359a2cc6a3f588aff53884dda3e5ee6c9",
+      "message": "check and link against libatomic (#172)\n\nSigned-off-by: Christian Rauch <Rauch.Christian@gmx.de>",
+      "files_changed": 1,
+      "additions": 9,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "jpsamper2009",
+      "date": "2019-07-04T01:26:56Z",
+      "sha": "2497ff5e28f749a6c55d060d55faf438bf224e64",
+      "message": "Rewrite test_logging_throttle tests: (#167)\n\n- Make test robust to timing discrepancies\r\n\r\nSigned-off-by: Juan Pablo Samper <jp.samper@apex.ai>",
+      "files_changed": 1,
+      "additions": 50,
+      "deletions": 12,
+      "commit_type": "test"
+    },
+    {
+      "author": "Thomas Moulard",
+      "date": "2019-04-30T22:47:32Z",
+      "sha": "dcb2733b6bf643b9498a5dab3c9631d64855351c",
+      "message": "Use GCC extension for printf-like functions (#154)\n\n* Use GCC extension for printf-like functions\r\n\r\nThis commit annotates rcutils_format_string_limit, rcutils_log\r\nand rcutils_snprintf with the GCC extension for printf-like\r\nstatements.\r\n\r\nAnnotating this function allows GCC to emit warnings when dangerous\r\npatterns are used through the whole codebase.\r\n\r\nAs those functions are wrappers around different flavors of printf,\r\nsurfacing those warnings prevents dangerous printf statements.\r\n\r\nFor instance:\r\n\r\nconst char* message = // some dynamically evaluated logging message\r\nprintf(message);\r\n\r\n...is unsafe. Instead, we should be using:\r\n\r\nprintf(\"%s\", message);\r\n\r\n...to avoid crashes if the variable \"message\" contains a sequence\r\nof characters printf may recognize (like \"%d\").\r\n\r\nprintf-related warnings are enabled by '-Wformat*' flags ('-Wformat',\r\n'-Wformat-security', etc.).\r\n\r\nThe complete list of flags and detected patterns is available in\r\nthe GCC documentation:\r\n\r\nhttps://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html\r\n\r\nNote: clang does also support this attribute but not MSVC. On\r\nWindows, no additional safety is provided by this commit.\r\n\r\nSigned-off-by: Thomas Moulard <tmoulard@amazon.com>\r\n\r\n* Improves macros.h documentation\r\n\r\nSigned-off-by: Thomas Moulard <tmoulard@amazon.com>\r\n\r\n* Fix macro formatting\r\n\r\nSigned-off-by: Thomas Moulard <tmoulard@amazon.com>",
+      "files_changed": 7,
+      "additions": 39,
+      "deletions": 8,
+      "commit_type": "docs"
+    },
+    {
+      "author": "nburek",
+      "date": "2018-12-07T01:47:53Z",
+      "sha": "86b5c241bffa597817dedfcf76e876d053ac77aa",
+      "message": "Logging (#127)\n\n* Creating a logging configure function that can be used to select which output handlers you want to use and setting the framework to allow for multiple output handlers in the logging code.\r\n\r\ncr https://code.amazon.com/reviews/CR-3734291\r\n\r\n* refactoring so code for console sink can be reused\r\n\r\ncr https://code.amazon.com/reviews/CR-3682772\r\n\r\n* Moving the external logging library and rosout functions out to rcl. Also automatically uncrustifying and fixing unit tests.\r\n\r\n* Switching back to va_list for output handlers.\r\n\r\n* PR fixup\r\n\r\n* use strncat_s on Windows\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>\r\n\r\n* derp\r\n\r\nSigned-off-by: William Woodall <william@osrfoundation.org>",
+      "files_changed": 7,
+      "additions": 587,
+      "deletions": 252,
+      "commit_type": "config"
+    },
+    {
+      "author": "ruffsl",
+      "date": "2018-11-13T22:13:16Z",
+      "sha": "3c982d048914e1c30002d8ea69d86ac1cc6976fd",
+      "message": "Adding rcutils_to_native_path function (#119)\n\n* Adding rcutils_norm_path function\r\n\r\n* Refactor to use RCUTILS_PATH_DELIMITER\r\n\r\n* rcutils_normalize_path -> rcutils_to_native_path\r\n\r\n* doc fixup\r\n\r\n* add test for to_native_path\r\n\r\n* fix typo and clarify function brief description\r\n\r\nSigned-off-by: Ruffin White <roxfoxpox@gmail.org>",
+      "files_changed": 3,
+      "additions": 69,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "mikaelarguedas",
+      "date": "2017-04-04T05:18:30Z",
+      "sha": "7a043a36fc369d803c7ef8a08051f047c2c4c013",
+      "message": "Add get_env and filesystem utilities (#2)\n\n* add file permission utility functions\r\n\r\n* add get_env function\r\n\r\n* add docblocks for the newly added functions\r\n\r\n* add get_env test\r\n\r\n* return NULL on success and error string on failure\r\n\r\n* clarify note on windows read write test\r\n\r\n* rename file_permissions to filesystem\r\n\r\n* added test for filesystem functions\r\n\r\n* update functions docblocks\r\n\r\n* fix file flag on windows\r\n\r\n* include standard on windows\r\n\r\n* fix performance warning windows\r\n\r\n* commit folder for tests\r\n\r\n* linter and disable test for file/folders not pulled during git checkout on windows\r\n\r\n* reenable folder test, cpplint happiness\r\n\r\n* warning unused\r\n\r\n* warning on unused return type only where it makes sense\r\n\r\n* C linkage?\r\n\r\n* visibility macro before check return\r\n\r\n* copy-paste issues\r\n\r\n* fix memory allocation description\r\n\r\n* add join_path function\r\n\r\n* cleanup includes\r\n\r\n* docs\r\n\r\n* more docs since utilities_get_env is sort of weird\r\n\r\n* adress review comments\r\n\r\n* add test for null variable passed to get_cwd\r\n\r\n* more doc on return value\r\n\r\n* remove now unused vars",
+      "files_changed": 11,
+      "additions": 635,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "malsbat",
+      "date": "2018-06-25T18:31:13Z",
+      "sha": "8f611c45b550b2b137516afcbcfd05b744895638",
+      "message": "Remove redundant stat() call. (#108)\n\n* rcutils_exists() calls stat() then stat() is called again without checking\r\n  its return value.\r\n\r\nSigned-off-by: Todd Malsbary <todd.malsbary@intel.com>",
+      "files_changed": 1,
+      "additions": 3,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "dhood",
+      "date": "2017-08-24T22:12:35Z",
+      "sha": "2415445b2db80d4abfb53bc76cf0cb2e90fe1d0b",
+      "message": "Common logic for building suffix from a combination of features",
+      "files_changed": 1,
+      "additions": 33,
+      "deletions": 14,
+      "commit_type": "code"
+    },
+    {
+      "author": "testkit",
+      "date": "2018-06-04T06:54:10Z",
+      "sha": "d4a86bd6dc83f61bb400e2c0381e7087253795f4",
+      "message": "Fix a memory check issue in split.c (#104)\n\nSigned-off-by: testkit <cathy.shen@intel.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "sagniknitr",
+      "date": "2018-03-28T00:06:06Z",
+      "sha": "ba3f5896da0b9ec603e3115841def051959cbfad",
+      "message": "PR for issue#70 (#98)\n\n* Force flush for rcutils logging\r\n\r\n* Update logging.c\r\n\r\n* Fix logging.c as per the review received.\r\n\r\n* Remove redundant else case\r\n\r\nAlso added the name of the environment variable failing in the same function block,\r\n\r\n* Clean up the fprintf section\r\n\r\n* Update logging.c\r\n\r\n* Double check fprintf functions for correct spacing\r\n\r\nApply space for wraped strings inside fprintf.\r\n\r\n* add space between two strings\r\n\r\n* remove unnecessary quotes\r\n\r\n* add space between two strings",
+      "files_changed": 1,
+      "additions": 31,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "serge-nikulin",
+      "date": "2018-02-01T21:50:21Z",
+      "sha": "921cccd98e747684decffd4b81197063ea9d992f",
+      "message": "change rcutils_time_point_value_t type from uint64_t to int64_t (#84)\n\n* change rcutils_time_point_value_t type from uint64_t to int64_t\r\n\r\n* Fix rcutils_steady_time_now overflow and rcutils_system_time_now types",
+      "files_changed": 2,
+      "additions": 10,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "gaoethan",
+      "date": "2017-10-26T15:13:30Z",
+      "sha": "499f8577fc815eda6cdd6caa69dbd99b629673b9",
+      "message": "pointer illegal access to out-of-scope stack pointer (#61)\n\n* * pointer illegal access to out-of-scope stack pointer\r\nthe following line_number_expansion is stack pointer:\r\n\r\nchar line_number_expansion[10];\r\n\r\nand it has already been out-of-scope in the following\r\naccess, which may cause unintended program behaviors:\r\n\r\nsize_t n = strlen(token_expansion);\r\n...\r\nmemcpy(output_buffer + old_output_buffer_len, token_expansion, n + 1);\r\n\r\nSigned-off-by: Ethan Gao <ethan.gao@linux.intel.com>\r\n\r\n* comment fixup",
+      "files_changed": 1,
+      "additions": 5,
+      "deletions": 4,
+      "commit_type": "docs"
+    },
+    {
+      "author": "iankuan",
+      "date": "2017-11-28T18:16:40Z",
+      "sha": "bb531b4e77d7c73713fa0bbf87612e686d88c763",
+      "message": "Make LOG macro behave like genuine code (#76)\n\n* Make macro behave like genuine code\r\n\r\nMacro is really a code replacement. In this implementation, you may worry about\r\nsome bugs\r\n    1.\r\n        // Declaration\r\n        int func(int, int)\r\n        LOG(expected actural);\r\n    2.\r\n        while (lst & lst = lst->next) // Miss ';'\r\n        LOG(expected, actural)\r\n\r\nAfter this change, you could make LOG macro act like a genuine code and only use\r\nonce.\r\n\r\n* Make uncrustify happy.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Use the do..while trick when ENABLE_LOGGING is 0.\r\n\r\nWhile we are at it, also make it so that we don't get build\r\nwarnings when setting ENABLE_LOGGING to 0.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>\r\n\r\n* Make sure to cast X to (void) as well when logging is disabled.\r\n\r\nSigned-off-by: Chris Lalancette <clalancette@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 7,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "fmrico",
+      "date": "2017-07-11T03:34:13Z",
+      "sha": "1e4fd214ce20572d225e1ac2a7457dabdba26c5b",
+      "message": "add namespace to some existing functions #37 (#40)\n\n* add namespace to some existing functions #37\r\n\r\n* Fixed names in logging_macros\r\n\r\n* Fixed typo rclutils -> rcutils",
+      "files_changed": 9,
+      "additions": 105,
+      "deletions": 105,
+      "commit_type": "code"
+    },
+    {
+      "author": "gerkey",
+      "date": "2017-04-06T20:06:50Z",
+      "sha": "6ed86149d988bc7f6e6fd3f8e807b0e0198b8752",
+      "message": "use _strdup() on windows to avoid compiler warning",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "codebot",
+      "date": "2017-04-02T05:50:41Z",
+      "sha": "e45a4b39a6410e6dc3ed4cdaee5a8ba8a16b28aa",
+      "message": "c89 compliance: move declaration outside for loop",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    }
+  ]
+}

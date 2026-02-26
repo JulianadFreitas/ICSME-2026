@@ -1,0 +1,71 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T22:41:04Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "open-rmf",
+    "repo": "nlohmann_json_schema_validator_vendor"
+  },
+  "data": [
+    {
+      "author": "luca-della-vedova",
+      "date": "2025-06-09T03:04:36Z",
+      "sha": "f065d115ad4c24663664f2e8f7db65ef180500ba",
+      "message": "Bump main after kilted release (#19)\n\n* Update changelogs\n\nSigned-off-by: Luca Della Vedova <lucadv@intrinsic.ai>\n\n* 0.6.0\n\nSigned-off-by: Luca Della Vedova <lucadv@intrinsic.ai>\n\n---------\n\nSigned-off-by: Luca Della Vedova <lucadv@intrinsic.ai>",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Yadunund",
+      "date": "2023-06-06T08:59:45Z",
+      "sha": "9da7bbfeb7d416cc870ec4100595ee2c2123d53d",
+      "message": "Switch to rst changelogs\n\nSigned-off-by: Yadunund <yadunund@openrobotics.org>",
+      "files_changed": 2,
+      "additions": 51,
+      "deletions": 49,
+      "commit_type": "docs"
+    },
+    {
+      "author": "mxgrey",
+      "date": "2021-10-07T07:07:32Z",
+      "sha": "40f66b0779e49535053d416b86c3d4e44bf3859c",
+      "message": "Initial commit\n\nSigned-off-by: Michael X. Grey <grey@openrobotics.org>",
+      "files_changed": 3,
+      "additions": 211,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "orensbruli",
+      "date": "2022-11-11T09:48:13Z",
+      "sha": "80d8ab5f279425ea6e9df56bd7eae78b7042bb18",
+      "message": "Version updates from latest release synced to main (#12)\n\n* 0.1.1\r\n\r\nSigned-off-by: Esteban Martinena <orensbruli@gmail.com>\r\n\r\n* Added ament_cmake_libraries dependence\r\n\r\nSigned-off-by: Esteban Martinena <orensbruli@gmail.com>\r\n\r\n* 0.1.2\r\n\r\nSigned-off-by: Esteban Martinena <orensbruli@gmail.com>\r\n\r\n* Revert \"Change install behavior (#7)\"\r\n\r\nThis reverts commit b3bbc750372cf520a3724c300ea54f11cdc1af01.\r\n\r\nSigned-off-by: Michael X. Grey <grey@openrobotics.org>\r\n\r\n* testing cmake vendoring\r\n\r\nSigned-off-by: Esteban Martinena <orensbruli@gmail.com>\r\n\r\n* Updated changelog\r\n\r\nSigned-off-by: Esteban Martinena <orensbruli@gmail.com>\r\n\r\n* 0.1.3\r\n\r\nSigned-off-by: Esteban Martinena <orensbruli@gmail.com>\r\n\r\n* Update vendor package build. (#9)\r\n\r\n* Remove extra arguments that aren't used.\r\n\r\nAccording to the ExternalProject docs (1) `PREFIX` is used as the prefix\r\nfor the project directory generator expressions but is not otherwise\r\npassed to the external project's build directly.\r\n\r\nSimilarly the docs for the `INSTALL_DIR` option state:\r\n\r\n> Installation prefix to be placed in the <INSTALL_DIR> placeholder.\r\n> This does not actually configure the external project to install to the given prefix.\r\n> That must be done by passing appropriate arguments to the external project configuration step, e.g. using <INSTALL_DIR>.\r\n\r\nSo both of these arguments are unused and sources for potential\r\nconfusion.\r\n\r\n(1) https://cmake.org/cmake/help/latest/module/ExternalProject.html\r\n\r\n* Pin specific commit of vendored project.\r\n\r\nEven when targeting an upstream project's branch rather than a specific\r\nrelease vendor packages should pin to a specific commit so that changes\r\nto the upstream package are only introduced intentionally and not due to\r\nan unrelated rebuild on the build farm.\r\n\r\n* Remove unneeded BUILD_ALWAYS argument.\r\n\r\nThis argument does not do anything for this external project. Build farm\r\nbuilds will always build this package when required since they run in a\r\nclean workspace and since this external project is configured via git\r\nCMake has the ability to detect changes and know that a rebuild is\r\nrequired when working locally.\r\n\r\nFrom the documentation for this option:\r\n\r\n> Enabling this option forces the build step to always be run.\r\n> This can be the easiest way to robustly ensure that the external project's own build dependencies are evaluated rather than relying on the default success timestamp-based method.\r\n> This option is not normally needed unless developers are expected to modify something the external project's build depends on in a way that is not detectable via the step target dependencies (e.g. SOURCE_DIR is used without a download method and developers might modify the sources in SOURCE_DIR).\r\n\r\n* Fix formatting and update build options against changes in main.\r\n\r\nThis package does not use the standard `BUILD_TESTING` CMake argument\r\nbut it has namespaced arguments for building tests and examples.\r\n\r\nWhile updating these I also fixed some inconsistent whitespace and use\r\nthe CMake values ON/OFF for all boolean values for consistency.\r\n\r\n* Remove CMake patch which is not required for relocatability.\r\n\r\nThis patch is adapted from an earlier version of CMakeLists.txt and does\r\nnot appear to be required to build and find the vendored package in a\r\nlocal colcon workspace.\r\n\r\nSigned-off-by: Steven! Ragnarök <steven@nuclearsandwich.com>\r\n\r\n* 0.2.0\r\n\r\nSigned-off-by: Steven! Ragnarök <steven@nuclearsandwich.com>\r\n\r\n* Remove export of vendored project. (#10)\r\n\r\n* Add buildtool dependency on git.\r\n\r\nGit is being used to fetch the vendored project so it should be\r\navailable at build time.\r\n\r\nSigned-off-by: Steven! Ragnarök <steven@nuclearsandwich.com>\r\n\r\n* Do not export dependencies on the vendored project.\r\n\r\nament's dependency export system relies on adding corresponding exported\r\ndependencies in the `package.xml` file.\r\n\r\nIt actually would be possible to use this export if an additional\r\n`buildtool_export_depend` on `ament_cmake` was used so that all\r\ndownstream packages required `ament_cmake` to build using this package.\r\n\r\nHowever, that's a bit heavy handed for a vendor package in particular\r\nand it is a recommended practice that vendor packages be as transparent\r\nas possible so that they can be removed once deprecated.\r\n\r\nThis change will require updates to packages consuming this vendor\r\npackage.\r\n\r\nSigned-off-by: Steven! Ragnarök <steven@nuclearsandwich.com>\r\n\r\n* 0.2.1\r\n\r\nSigned-off-by: Esteban Martinena <orensbruli@gmail.com>\r\nSigned-off-by: Michael X. Grey <grey@openrobotics.org>\r\nSigned-off-by: Steven! Ragnarök <steven@nuclearsandwich.com>",
+      "files_changed": 3,
+      "additions": 108,
+      "deletions": 20,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Marco A. Gutiérrez",
+      "date": "2022-04-20T08:37:16Z",
+      "sha": "c4d35e015f6c85cc95bd6a428edd1852e3c7be4d",
+      "message": "Adding vendored package license to package.xml (#6)\n\nSigned-off-by: Marco A. Gutierrez <marco@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "marcoag",
+      "date": "2022-02-15T13:17:41Z",
+      "sha": "a4ba65bd2d19b9d9d9651fef867be11d3edcdad9",
+      "message": "remove dependency since there's no package (#5)\n\nSigned-off-by: Marco A. Gutierrez <marco@openrobotics.org>",
+      "files_changed": 1,
+      "additions": 0,
+      "deletions": 1,
+      "commit_type": "config"
+    }
+  ]
+}

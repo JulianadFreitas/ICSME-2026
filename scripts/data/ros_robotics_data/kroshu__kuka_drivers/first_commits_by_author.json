@@ -1,0 +1,201 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T19:39:01Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "kroshu",
+    "repo": "kuka_drivers"
+  },
+  "data": [
+    {
+      "author": "Svastits",
+      "date": "2021-10-14T14:15:45Z",
+      "sha": "f465c2bdce8cdc612d4b5c411d604a58d0be8a5c",
+      "message": "uncrustify, remove hard-coded ip and cmake fix",
+      "files_changed": 9,
+      "additions": 96,
+      "deletions": 83,
+      "commit_type": "docs"
+    },
+    {
+      "author": "pasztork",
+      "date": "2025-07-29T08:56:46Z",
+      "sha": "5fe3a51ffe2f196c86b2bf255bee6478b2c152e2",
+      "message": "Add EKI RSI Support (#217)\n\n* Add EKI server support for KSS driver\n\n* Don't handle test error event\n\n* Fix issue with lifecycle\n\n* Add setup doc\n\n* Change EKI RSI hardware interface to work with new external control SDK\n\n* Rename hardware interfaces\n\n* Add call to SystemInterface base class\n\n* Fix first write happening twice\n\n* Add initial implementation for plain RSI with extarnal control SDK\n\n* Minor cleanup\n\n* Clean up RSI configuration file\n\n* Remove second stop request\n\n* Add USE_EKI environment variable to jazzy workflow\n\n* Use ros_rsi_ethernet.xml with ros_rsi context\n\n* Format to pass checks\n\n* Format to pass checks\n\n* Change tests to use EKI RSI driver\n\n* Remove unused varible to pass checks\n\n* Remove unused client IP\n\n* Implement startup checks\n\n* Remove magic timeout\n\n* Remove joint type check\n\n* Remove magic number from plain RSI driver\n\n* Make configuration fail if init data is non-compliant\n\n* Rename method\n\n* Fix link in doc\n\n* Add option for turning dirves on and off\n\n* Use proper return type names\n\n* Depend on KSS-specific robot interface\n\n* Add robot model check\n\n* Create a single controller for all non-real time messages\n\n* Use KSS-specific event observer\n\n* Remove characters with accent\n\n* Add ROS support for changing cycle time at runtime\n\n* Use custom message for setting RSI cycle time\n\n* Set default cycle time\n\n* Rename cycle time command interface variable\n\n* Poll robot status from EKI server\n\n* Rename event handler extension\n\n* Use IPO mode for RSI by default\n\n* Activate hardware interface only if KRC in EXT\n\n* Only update status when changed\n\n* No need for DrivesEnabled status\n\n* Remove missing state interface\n\n* Initialize command interfaces on first status update\n\n* Fix pre-commit issues\n\n* Replace kuka_drive_handler with kuka_nrt_message_handler in package dependencies\n\n* Jazzy API change\n\n* Update documentation for the KSS driver\n\n* Add required parameters to kuka_nrt_message_handler\n\n* Add jazzy fix\n\n* Use bigger timeout for switch controller\n\n* Publish if there is a message that required the robot to be stopped\n\n* Update KSS and Controllers documentation\n\n* Update example robot model in KSS RSI documentation\n\n* Set drives enabled to OFF by default\n\n* Use condition variable instead of while loop\n\n* Fix robot model name check\n\n* Merge branch 'master' into feature/kss_ext_control_sdk\n\n* fix hardware interface name\n\n* align documentation format\n\n* fix hardware interface class name\n\n* run pre-commit\n\n* Fix merge errors\n\n* Fix license comment\n\n* Make driver version runtime configurable\n\n* Update tests\n\n* Fix rsi_simulator\n\n* Fix formatting\n\n* Make PR changes\n\n* Remove gmock test\n\n* Apply PR suggestions\n\n* Turn off drives by default\n\n* Move KRL files and update documentation\n\n* Add robot model verification for driver configuration\n\n* Fix typo in documentation\n\n* Lowercase robot model verification parameter\n\n* Turn on drives when activating hardware interface\n\n* Fix pre-commit issue\n\n* Update RSI context file references and clarify usage for older versions\n\n* Rename kss message handler\n\n* Publish KSS status cyclically\n\n* Move verify_robot_model argument in the doc\n\n* Mention that KSS message handler only work for the EKI + RSI driver\n\n* Increase hardware activation timeout\n\n* Simplify robot model verification logic in on_init method\n\n* Extract timeout and check interval constants for drives power activation\n\n* Improve error handling\n\n* Change warning to error log for unpowered drives in Read method",
+      "files_changed": 53,
+      "additions": 2569,
+      "deletions": 6354,
+      "commit_type": "ci"
+    },
+    {
+      "author": "Karnitscher",
+      "date": "2026-02-24T12:36:40Z",
+      "sha": "517e495eedd157752613dded19528e512192c53e",
+      "message": "Fixed the paths used for namespace organization (#311)\n\n* EAC driver namespace fix\n\n* RSI namespace fix\n\n* Sunrise namespace fix\n\n* format fixes\n\n* Increased test time for more reliable results",
+      "files_changed": 20,
+      "additions": 23,
+      "deletions": 29,
+      "commit_type": "config"
+    },
+    {
+      "author": "altex111",
+      "date": "2022-11-25T15:02:30Z",
+      "sha": "6b4464a18583767f1e8279c256579ac0da017fc8",
+      "message": "Complex circular motion for planner tests",
+      "files_changed": 1,
+      "additions": 48,
+      "deletions": 8,
+      "commit_type": "code"
+    },
+    {
+      "author": "Groebehavn",
+      "date": "2023-11-13T06:52:44Z",
+      "sha": "f887c4071ef52be6aacf31d576a969d607c82f4e",
+      "message": "Update README.md (#113)",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "naslevente",
+      "date": "2025-07-02T09:53:57Z",
+      "sha": "db31399078f0c60a9975c3f62b87b875ff59b0a5",
+      "message": "update to adhere to gazebo support feature on jazzy (#231)\n\nCo-authored-by: Levente Nas <sanyi.komaromi@gmail.com>",
+      "files_changed": 9,
+      "additions": 29,
+      "deletions": 23,
+      "commit_type": "docs"
+    },
+    {
+      "author": "GiuseppeMonetti95",
+      "date": "2024-10-18T13:45:35Z",
+      "sha": "08ccda7d1c1ea5abbd99799cc9f6c27378cdee6f",
+      "message": "FIX: Using the correct port (#195)\n\nCo-authored-by: Giuseppe Monetti <giuseppe.monetti@kuka.com>",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "krmihaly",
+      "date": "2024-08-29T13:21:14Z",
+      "sha": "e8e1fef794b21c6df2f8deda253a82a3ec09600d",
+      "message": "Feature/fri external torque broadcast (#178)\n\n* add additional joint state broadcaster with config for external torque\r\n\r\n* check for zero value in frictioncompensation\r\n\r\n* format\r\n\r\n* resolve friction conpensation edge case\r\n\r\n* Update 3_Sunrise_FRI.md\r\n\r\n* sorry I stole your branch\r\n\r\n---------\r\n\r\nCo-authored-by: Svastits <svastits1@gmail.com>",
+      "files_changed": 8,
+      "additions": 43,
+      "deletions": 8,
+      "commit_type": "ci"
+    },
+    {
+      "author": "PetoAdam",
+      "date": "2024-09-05T05:58:39Z",
+      "sha": "81a2d2369f34a0400ce5dde131e1fceb4ec61398",
+      "message": "Migrate master branch to ROS Jazzy (#175)\n\n* Add basic support for ros2 jazzy\r\n\r\n* change ros-industrial ci to jazzy\r\n\r\n* temporarily removed \"got segment base\" check for unittests\r\n\r\n* temporarily removed got segment base checks for multi robot startups\r\n\r\n* changed industrial_ci to run on ubuntu 24.04 noble\r\n\r\n* configured test suite for rsi_simulator and added dummy test\r\n\r\n* update readme from humble to jazzy\r\n\r\n* remove unused segment base checks\r\n\r\n* update readme\r\n\r\n* update readme (CI and sonarcloud checks for both jazzy and humble)\r\n\r\n* change readme github industrial ci link to redirect to github actions\r\n\r\n* address code-formatting requirements (pre-commit)\r\n\r\n* update README\r\n\r\n* update tests with robot initialized check\r\n\r\n---------\r\n\r\nCo-authored-by: Áron Svastits <49677296+Svastits@users.noreply.github.com>",
+      "files_changed": 20,
+      "additions": 41,
+      "deletions": 22,
+      "commit_type": "ci"
+    },
+    {
+      "author": "VX792",
+      "date": "2023-01-23T13:25:19Z",
+      "sha": "8820709f966c4a0ebfec928df14d509550554147",
+      "message": "Merge pull request #46 from kroshu/fix/check_activate_return\n\nFix freeze in case of errors",
+      "files_changed": 4,
+      "additions": 37,
+      "deletions": 28,
+      "commit_type": "code"
+    },
+    {
+      "author": "fazakaserik",
+      "date": "2023-11-20T07:59:26Z",
+      "sha": "1f4e390f18f647f542edac45ef2ee4d612365c48",
+      "message": "Installation guide (#116)\n\n* Added installation guide to README.md\r\n\r\n* New details to README.md\r\n\r\n* Removed KUKA logo\r\n\r\n* Remove -r from rosdep install\r\n\r\nCo-authored-by: G.A. vd. Hoorn <g.a.vanderhoorn@tudelft.nl>\r\n\r\n* rosdep init only if not done yet\r\n\r\n---------\r\n\r\nCo-authored-by: Erik.Fazakas <erik.fazakas@kuka.com>\r\nCo-authored-by: Svastits <49677296+Svastits@users.noreply.github.com>\r\nCo-authored-by: G.A. vd. Hoorn <g.a.vanderhoorn@tudelft.nl>\r\nCo-authored-by: Aron Svastits <svastits1@gmail.com>",
+      "files_changed": 1,
+      "additions": 46,
+      "deletions": 2,
+      "commit_type": "ci"
+    },
+    {
+      "author": "Aron Svastits",
+      "date": "2023-02-20T08:23:13Z",
+      "sha": "f976f3ae1d553498c738f7246755ad59d4452b83",
+      "message": "add torque controller name to launch files",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "kovacsge11",
+      "date": "2021-10-12T10:02:51Z",
+      "sha": "19e4d83bedf1037dbd4db2dab31fd13ce018008f",
+      "message": "fix strerror, update package maintainer, add fix and feat branches to travis",
+      "files_changed": 3,
+      "additions": 9,
+      "deletions": 7,
+      "commit_type": "config"
+    },
+    {
+      "author": "oprezz",
+      "date": "2022-06-09T11:32:39Z",
+      "sha": "a70412f4ec3af634ad5ec37c0e6f4c18013fd757",
+      "message": "updated readme for KRC4 and KRC5",
+      "files_changed": 2,
+      "additions": 121,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "resizoltan",
+      "date": "2019-11-05T07:40:04Z",
+      "sha": "dd01ce59f8948050834c7cf9d3178ae5ad6f403f",
+      "message": "Robot Manager and TCP Connection",
+      "files_changed": 6,
+      "additions": 407,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Gergely Kovacs",
+      "date": "2021-10-12T14:23:49Z",
+      "sha": "ab918a8ec30a6774ff2b964fb16c64f2ac5d1353",
+      "message": "uncrustify",
+      "files_changed": 6,
+      "additions": 103,
+      "deletions": 58,
+      "commit_type": "code"
+    },
+    {
+      "author": "Gergely Kovács",
+      "date": "2020-07-28T13:21:16Z",
+      "sha": "249510640a8931cc3485cda21be083872cbbcd16",
+      "message": "Fixed bugs marked by SonarCloud",
+      "files_changed": 3,
+      "additions": 5,
+      "deletions": 4,
+      "commit_type": "config"
+    },
+    {
+      "author": "gavanderhoorn",
+      "date": "2020-02-10T08:22:09Z",
+      "sha": "3ad783be0c9233ddcb942f9f68eb7be64cc3d890",
+      "message": "Typo: torqe -> torque.",
+      "files_changed": 2,
+      "additions": 3,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "Nemes, Gabor (Admin)",
+      "date": "2019-11-21T09:43:03Z",
+      "sha": "89f93f3dbc7d3faae310740eab552be5cde9533d",
+      "message": "Added README.md file",
+      "files_changed": 1,
+      "additions": 20,
+      "deletions": 0,
+      "commit_type": "docs"
+    }
+  ]
+}

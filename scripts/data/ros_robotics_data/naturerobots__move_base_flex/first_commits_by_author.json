@@ -1,0 +1,321 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-25T21:05:17Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "naturerobots",
+    "repo": "move_base_flex"
+  },
+  "data": [
+    {
+      "author": "amock",
+      "date": "2025-06-03T08:15:37Z",
+      "sha": "478b369e932ce0e6dc845d7f2ea7f7ea678a8520",
+      "message": "removed costmap2d packages (#350)",
+      "files_changed": 45,
+      "additions": 0,
+      "deletions": 5657,
+      "commit_type": "docs"
+    },
+    {
+      "author": "JustusBraun",
+      "date": "2025-08-20T11:59:42Z",
+      "sha": "b770e0e59721ecd6afcac6cb4eb72bd64b74e0d4",
+      "message": "Fix segfault in MbfGoalActionsPanel destructor.\n\nQT Objects are automatically deleted so there is no need for delete\ncalls in the destructor.",
+      "files_changed": 2,
+      "additions": 1,
+      "deletions": 35,
+      "commit_type": "code"
+    },
+    {
+      "author": "Cakem1x",
+      "date": "2023-11-07T08:23:53Z",
+      "sha": "94a2b2069a602335a0bfff7f3f0fc2fbeae92f58",
+      "message": "add colcon_ignore for all packages\n\nfixes workspace build for ros2",
+      "files_changed": 8,
+      "additions": 0,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "mklpiening",
+      "date": "2024-06-21T12:41:47Z",
+      "sha": "2b629385956ee05b38fa7d0aa10033c9333daaf7",
+      "message": "[fix] velocity frame id",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "mrvsht",
+      "date": "2023-11-07T09:42:53Z",
+      "sha": "6e2ea13347b97d774c4160a0ecb056d8084263d4",
+      "message": "Convert mbf_msgs to ros2",
+      "files_changed": 3,
+      "additions": 38,
+      "deletions": 55,
+      "commit_type": "docs"
+    },
+    {
+      "author": "renan028",
+      "date": "2023-04-17T05:25:02Z",
+      "sha": "d5fb272d024ea87efe30110c87b7d90137581c50",
+      "message": "fix replanning shutdown",
+      "files_changed": 2,
+      "additions": 7,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "corot",
+      "date": "2017-09-03T14:57:22Z",
+      "sha": "93095057660715f78e37b2d403a75c358e174fee",
+      "message": "Create our own version of nav_core, so we don't need to modify the one on ROS navigation",
+      "files_changed": 32,
+      "additions": 858,
+      "deletions": 31,
+      "commit_type": "docs"
+    },
+    {
+      "author": "spuetz",
+      "date": "2017-08-02T14:46:11Z",
+      "sha": "af9e4dab6aac376751116a0ece71f37f1aba4abe",
+      "message": "initial commit",
+      "files_changed": 53,
+      "additions": 20274,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "cli18",
+      "date": "2023-07-31T04:10:14Z",
+      "sha": "ac5adb4391061d6c45cd9eb23034b1a805af1474",
+      "message": "Add Velocity Command Ignored Checking (#321)\n\nReturn ROBOT_STUCK when robot ignores velocity commands for more than a timeout",
+      "files_changed": 4,
+      "additions": 91,
+      "deletions": 15,
+      "commit_type": "code"
+    },
+    {
+      "author": "Jorge Santos Simón",
+      "date": "2022-12-12T09:41:34Z",
+      "sha": "af3afbf37caa17a44ff41c71f8d1b3cc658455a2",
+      "message": "Remove Kinetic workflow from CI (#308)\n\n* Remove Kinetic workflow from CI\r\n* Remove Kinetic build from README",
+      "files_changed": 2,
+      "additions": 0,
+      "deletions": 19,
+      "commit_type": "ci"
+    },
+    {
+      "author": "ChristofDubs",
+      "date": "2020-01-15T12:28:43Z",
+      "sha": "48e9356bad7c199f274cac6be208fcb7d09f717f",
+      "message": "Add parameter to actively stop once the goal is reached (#166)",
+      "files_changed": 2,
+      "additions": 7,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "RainerKuemmerle",
+      "date": "2022-03-10T08:06:46Z",
+      "sha": "8ccf0ed1407a3012b9ee7b50eb47cf6f24e07868",
+      "message": "Fix race condition between finishing and updating a goal\n\nAbstractActionBase sets slot.in_use to false after having left runImpl.\nThis means that a check based on slot.in_use might still see a thread as\nrunning despite the goal got assigned a terminal state.\nHence, we also check that the goal is still active to consume an update.\n\nFix #295",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "dorezyuk",
+      "date": "2018-02-08T17:33:06Z",
+      "sha": "79b0fde46993dd8887bef8f6b26cd745041e3889",
+      "message": "Mbf abstract core cleanup (#42)\n\n* Remove unused TF dependency\r\n\r\n* Add missing doxygen documentation",
+      "files_changed": 3,
+      "additions": 6,
+      "deletions": 5,
+      "commit_type": "docs"
+    },
+    {
+      "author": "juliangaal",
+      "date": "2021-03-16T11:56:23Z",
+      "sha": "d2848552acf1db2ef559168df7011c97b3398cea",
+      "message": "enable max retries logic for controller execution test (#264)\n\n* enable max retries logic for controller execution test\r\n* wait for MAX_RETRIES until retries > max_retries",
+      "files_changed": 1,
+      "additions": 10,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Timple",
+      "date": "2018-03-30T13:19:41Z",
+      "sha": "6cfb507d78658062df0ca08e6ae8cac0f270b088",
+      "message": "Updated move_base_simple/goal to a relative topic (#61)\n\nThe original topic of move_base is relative. Removes the preceding slash.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Dima Dorezyuk",
+      "date": "2019-08-30T09:52:17Z",
+      "sha": "0ac0d244daddee0b9aef6cff229938bf8b90386e",
+      "message": "Add clear_on_shutdown functionality",
+      "files_changed": 2,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "code"
+    },
+    {
+      "author": "odean",
+      "date": "2020-09-16T07:36:36Z",
+      "sha": "f9c97ab94be7eafc912fe2aeffd87afab280321c",
+      "message": "Fixed error: reference to TF is ambifuous",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "FabianSchurig",
+      "date": "2020-06-12T09:50:39Z",
+      "sha": "9f9fd9c1b14ce56822118c820740ed22184b594a",
+      "message": "Hotfix: Prevent unrelated type casts for Cell (#197)\n\n* Use unsigned int for Cell to prevent unrelated type casts\r\n* Remove old c-style casts",
+      "files_changed": 2,
+      "additions": 6,
+      "deletions": 4,
+      "commit_type": "code"
+    },
+    {
+      "author": "reinzor",
+      "date": "2017-12-22T13:07:11Z",
+      "sha": "68bbd943ff5df22313e8f7603362bb5bff7d52b4",
+      "message": "Typo",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Ebrahim Shahrivar",
+      "date": "2020-04-17T18:22:30Z",
+      "sha": "134ea6eb8086674ff7d5960933aed47481739d5e",
+      "message": "mbf_tolerance check for missions (#182)\n\n* add goal_tolerance to action msg\r\n* set tolerance of the mission through setNewPlan method\r\n* closes #181 \r\nCo-authored-by: Ebrahim <eshahrivar@clearpath.ai>",
+      "files_changed": 4,
+      "additions": 43,
+      "deletions": 6,
+      "commit_type": "code"
+    },
+    {
+      "author": "MichaelGrupp",
+      "date": "2020-04-07T09:29:15Z",
+      "sha": "2202946242fe4da26ebc560e6e46dc0a232e0e57",
+      "message": "Ensure that check_costmap_mutex_ is destroyed after timer. (#180)\n\nReorders the member declaration so that the timer event can't attempt to\r\nlock the destroyed mutex.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "nlimpert",
+      "date": "2020-03-24T09:01:08Z",
+      "sha": "1656841804388bed1eb7229a1a1520ae06eddbca",
+      "message": "mbf_abstract_nav: remove explicit boost-exception dependency (#175)\n\nBoost >= 1.69 provides exception by default.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "docs"
+    },
+    {
+      "author": "YannickdeHoop",
+      "date": "2019-08-21T12:18:15Z",
+      "sha": "e4ff33d74c8f3ee4de5c8a5d9c1264f25d13b6c3",
+      "message": "fix: Spelling \"arrived to goal\" --> \"arrived at goal\" (#151)",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "ipa-fez",
+      "date": "2018-07-07T07:32:55Z",
+      "sha": "0ecbe042b05792c52b2fd8ff7a271d520c5546ab",
+      "message": "use stringstream to append enum to message (#76)",
+      "files_changed": 1,
+      "additions": 10,
+      "deletions": 3,
+      "commit_type": "code"
+    },
+    {
+      "author": "howardcochran",
+      "date": "2018-10-08T22:18:07Z",
+      "sha": "37670d043602f8895b29fb1dd9536dd97883659c",
+      "message": "Feature add outcome to feedback (#89)\n\nAdds outcome and message to the actions feedback in ExePath and MoveBase\r\nThese fields will allow external executives to understand why a MoveBase or\r\nExePath action is currently failing before it actually gives up.",
+      "files_changed": 7,
+      "additions": 58,
+      "deletions": 9,
+      "commit_type": "code"
+    },
+    {
+      "author": "Jannik Abbenseth",
+      "date": "2018-09-20T14:11:37Z",
+      "sha": "9e3c951d1ff7bd62bcb0d39c83c3c21502e72244",
+      "message": "Make concurrent move_base_flex melodic compatible (#83)\n\n* Make concurrent move_base_flex melodic compatible\r\n* Remove GoalHandle references in callbacks",
+      "files_changed": 35,
+      "additions": 226,
+      "deletions": 88,
+      "commit_type": "docs"
+    },
+    {
+      "author": "gavanderhoorn",
+      "date": "2018-06-03T14:56:28Z",
+      "sha": "fc2c3f3c14182b4ade2c703b67c5feb335d2e360",
+      "message": "move_base_flex: don't use relative urls in package description. (#71)\n\nThey will get prefixed with an additional `http://wiki.ros.org/` (on the ROS wiki), making the resulting URLs `404` when trying to navigate to them.",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "config"
+    },
+    {
+      "author": "alireza-hosseini",
+      "date": "2018-04-29T09:16:26Z",
+      "sha": "3fa9af0d00e9ec877618732bb4d0c18ab5db6561",
+      "message": "fix: Remove `xmlrpcpp` prefix (#67)\n\n- since ROS kinetic, The `XmlRpcException.h` has been moved to `xmlrpcpp` directory,\r\n   while in the indigo distro it is located in the $ROS_DISTRO/include.\r\n - So the include <xmlrpcpp/XmlRpcException.h> wouldn't work on the indigo distro.\r\n - This commit provides the backward compatibility by removing the xmlrpcpp prefix\r\n   so that it can be compiled on both of kinetic and indigo distros.",
+      "files_changed": 2,
+      "additions": 2,
+      "deletions": 2,
+      "commit_type": "code"
+    },
+    {
+      "author": "Rayman",
+      "date": "2018-02-08T13:25:59Z",
+      "sha": "128886c89c9593d7d5b06cbb4380fcc8024082ef",
+      "message": "Rename references to move_base_flex_msgs with mbf_msgs (#41)\n\nFixes old references that were introduced by 6141190c13527bd0ffdff009262ab0af492c127a\r\n\r\nCommand:\r\n  sed -i 's/move_base_flex_msgs/mbf_msgs/g' ...",
+      "files_changed": 3,
+      "additions": 15,
+      "deletions": 15,
+      "commit_type": "code"
+    },
+    {
+      "author": "Rein Appeldoorn",
+      "date": "2018-03-12T13:59:01Z",
+      "sha": "ee9e6cf7797c52ecba5e673f8dd8c7c5f41271fe",
+      "message": "chore: Typo 'to much' to 'too much'\n\nfind . -type f -exec sed -i 's/to much/too much/g' {} \\;",
+      "files_changed": 11,
+      "additions": 11,
+      "deletions": 11,
+      "commit_type": "code"
+    },
+    {
+      "author": "hcv1027",
+      "date": "2018-02-06T11:01:43Z",
+      "sha": "3b86ba6dd583380f7e917c3050a4b8c7a2b33d12",
+      "message": "Fix deadlock caused by planning_ flag (#38)",
+      "files_changed": 2,
+      "additions": 5,
+      "deletions": 0,
+      "commit_type": "code"
+    }
+  ]
+}

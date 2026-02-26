@@ -1,0 +1,91 @@
+{
+  "_meta": {
+    "fetched_at": "2026-02-26T01:14:05Z",
+    "source": "derived+rest",
+    "derivation": "earliest commit per author_login from commits.json; enrich via /commits/{sha} for files/stats",
+    "owner": "fujitatomoya",
+    "repo": "ros2_persist_parameter_server"
+  },
+  "data": [
+    {
+      "author": "fujitatomoya",
+      "date": "2019-11-18T05:22:36Z",
+      "sha": "536e8680832930e139e3278e280ad7d89d7b9a77",
+      "message": "Initial commit",
+      "files_changed": 1,
+      "additions": 2,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "SGSSGene",
+      "date": "2025-12-20T10:25:43Z",
+      "sha": "3600f365bbe38c6693f01a3b7cfaba496e8b8404",
+      "message": "fix: save floats in explicit float notation (#67)\n\n* fix: save floats in explicit float notation\n\nYAML only has the concept of scalar values. So a value of '1' could be\nan integer, float or string. ros2_persist_parameter_server relies\non being able to differentiate if something is a float or integer based\non the representation of numbers. Floating numbers must be written such\nthat they can not be mistaken as integers. This is comparable to how\nmany programming languages assume '1' is an integer and '1.0' is a\nfloating point number.\n\nThe library yaml-cpp exports a float without the distinguishing feature\nrequired for ros2_persist_parameter_server. To fix this we manually\nconvert the double into a string representation and ensure that\na '.0' extension will be added when required.\n\nNote to future maintainer. The current yaml-cpp branch has a\nYAML::FpToString function which is better suited than using\nstd::stringstream but is not available in the current yaml-cpp release.\n\n* fix: enforce a dot as decimal point\n\n* refactor convertDoubleToString function.\n\nSigned-off-by: Tomoya Fujita <Tomoya.Fujita@sony.com>\n\n* add test case to make sure double type can be handled.\n\nSigned-off-by: Tomoya Fujita <Tomoya.Fujita@sony.com>\n\n* remove this problem from known issue description in README.md.\n\nSigned-off-by: Tomoya Fujita <Tomoya.Fujita@sony.com>\n\n* skil auto-genrated CHANGELOG.rst from codespell checker.\n\nSigned-off-by: Tomoya Fujita <Tomoya.Fujita@sony.com>\n\n* use std::abs instead of c abs().\n\nSigned-off-by: Tomoya Fujita <Tomoya.Fujita@sony.com>\n\n---------\n\nSigned-off-by: Tomoya Fujita <Tomoya.Fujita@sony.com>\nCo-authored-by: Tomoya Fujita <Tomoya.Fujita@sony.com>",
+      "files_changed": 5,
+      "additions": 118,
+      "deletions": 13,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Barry-Xu-2018",
+      "date": "2025-10-14T05:13:33Z",
+      "sha": "0ac1fc13b9b947d80b2ab84f9861f7e4fc618d89",
+      "message": "Add a CHANGELOG.rst\n\nSigned-off-by: Barry Xu <barry.xu@sony.com>",
+      "files_changed": 1,
+      "additions": 64,
+      "deletions": 0,
+      "commit_type": "docs"
+    },
+    {
+      "author": "ahoenerBE",
+      "date": "2025-09-27T12:00:11Z",
+      "sha": "d0efac7cc89a4ef5843807a9105a81b06ead961a",
+      "message": "Added ros2 service call to manually trigger yaml save (#38)\n\n* Add ROS2 Service to manually trigger save\n\nUpdates the parameter server's SaveYamlFile function to optionally check the content before saving, aborting if there is an error. The service call uses this to make sure the save was successful.\n\nSigned-off-by: Andrew Hoener <ahoener@boston-engineering.com>\n\n* Add ROS2 Service to trigger a reload from file\n\nThis is mostly used for testing, but could be useful if a user wants to discard parameter changes and reload.\n\nSigned-off-by: Andrew Hoener <ahoener@boston-engineering.com>\n\n* Add tests to make sure save & reload works properly\n\nSigned-off-by: Andrew Hoener <ahoener@boston-engineering.com>\n\n* Remove old/unused test.cpp as tests have been refactored\n\nSigned-off-by: Andrew Hoener <ahoener@boston-engineering.com>\n\n---------\n\nSigned-off-by: Andrew Hoener <ahoener@boston-engineering.com>",
+      "files_changed": 11,
+      "additions": 165,
+      "deletions": 241,
+      "commit_type": "docs"
+    },
+    {
+      "author": "MahmoudAlmasri",
+      "date": "2025-03-19T16:09:37Z",
+      "sha": "5070632557f7a8fe74e864e8a73ae2e6ed883097",
+      "message": "perform periodic storing of the yaml file. (#36)\n\nThis is useful to avoid data loss in case the node is killed by an\nunexpected signal. By a SIGKILL for instance.\n\n\n\nrename frequency to period and review formatting\n\n\n\nimplement reviewer comments\n\n- throw if the given period is not strictly positive\n- use unsigned int for the period\n- don't make unecessary changes\n\n\n\ndon't perform periodic persistent parameter storing if the period is 0\n\nSigned-off-by: Mahmoud Almasri <mahm.al.masri@gmail.com>",
+      "files_changed": 4,
+      "additions": 56,
+      "deletions": 23,
+      "commit_type": "docs"
+    },
+    {
+      "author": "Hugal31",
+      "date": "2025-09-17T12:43:59Z",
+      "sha": "d215b374df30cb3009f22e1b582daf35c746ea96",
+      "message": "declare dependencies to boost dev libraries (#55)",
+      "files_changed": 1,
+      "additions": 4,
+      "deletions": 0,
+      "commit_type": "config"
+    },
+    {
+      "author": "rfzeg",
+      "date": "2022-11-07T09:48:55Z",
+      "sha": "0f95e03b78cfc1e98723247711e6a06c06f1438d",
+      "message": "Fix log statement of parameter type which are of an enum type",
+      "files_changed": 1,
+      "additions": 1,
+      "deletions": 1,
+      "commit_type": "code"
+    },
+    {
+      "author": "Ada-King",
+      "date": "2020-09-25T07:08:47Z",
+      "sha": "298ff44c798756444ae3f4cdab7151683ca3561b",
+      "message": "Support demos with client and verify basic functionalities\n\nSigned-off-by: Ada-King <Bingtao.Du@sony.com>",
+      "files_changed": 8,
+      "additions": 674,
+      "deletions": 9,
+      "commit_type": "docs"
+    }
+  ]
+}
