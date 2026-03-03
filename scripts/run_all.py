@@ -19,6 +19,8 @@ SCRIPTS = [
     "08_repo_overlap_table.py",
     "09_extract_repo_features_and_commits.py",
     "10_build_final_repo_dataset.py",
+    "11_apply_exclusion_criteria.py",
+    "12_analyze_community_features_rq4.py"
 ]
 
 def main():

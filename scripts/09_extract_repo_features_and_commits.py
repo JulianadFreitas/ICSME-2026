@@ -203,8 +203,8 @@ def fetch_readme(owner, repo):
     url = f"https://api.github.com/repos/{owner}/{repo}/readme"
     r = fetch_rest(url)
     if r and isinstance(r, dict):
-        return {"download_url": r.get("download_url"), "path": r.get("path"), "name": r.get("name")}
-    return {"download_url": None, "path": None, "name": None}
+        return {"download_url": r.get("download_url"), "path": r.get("path"), "name": r.get("name"), "size": r.get("size")}
+    return {"download_url": None, "path": None, "name": None, "size": None}
 
 def fetch_license(owner, repo):
     url = f"https://api.github.com/repos/{owner}/{repo}/license"
@@ -231,8 +231,8 @@ def fetch_contributing(owner, repo):
         url = f"https://api.github.com/repos/{owner}/{repo}/contents/{path}"
         r = fetch_rest(url)
         if r and isinstance(r, dict) and r.get("download_url"):
-            return {"found": True, "path": path, "download_url": r.get("download_url")}
-    return {"found": False, "path": None, "download_url": None}
+            return {"found": True, "path": path, "download_url": r.get("download_url"), "size": r.get("size")}
+    return {"found": False, "path": None, "download_url": None, "size": None}
 
 def fetch_code_of_conduct(owner, repo):
     candidates = [
@@ -247,14 +247,15 @@ def fetch_code_of_conduct(owner, repo):
         r = fetch_rest(url)
         if r and isinstance(r, dict) and r.get("download_url"):
             content_url = r["download_url"]
+            file_size = r.get("size")
             time.sleep(REQUEST_SLEEP)
             cr = requests.get(content_url, headers=HEADERS_REST)
             if cr.status_code == 200:
-                return {"found": True, "path": path, "download_url": content_url, "preview": cr.text[:500]}
-            return {"found": True, "path": path, "download_url": content_url, "preview": None}
-    return {"found": False, "path": None, "download_url": None, "preview": None}
+                return {"found": True, "path": path, "download_url": content_url, "preview": cr.text[:500], "size": file_size}
+            return {"found": True, "path": path, "download_url": content_url, "preview": None, "size": file_size}
+    return {"found": False, "path": None, "download_url": None, "preview": None, "size": None}
 
-def fetch_newcomer_labels(owner, repo):
+def fetch_newcomer_labels(owner, repo, retries=3, retry_delay=2):
     """
     Fetch all repository labels and detect newcomer-oriented labels.
     
@@ -301,30 +302,79 @@ def fetch_newcomer_labels(owner, repo):
         "up-for-grabs",
     }
     
+    def normalize_label_name(name: str) -> str:
+        """Normalize label name for flexible matching"""
+        # Convert hyphens to spaces, lowercase, strip extra spaces
+        normalized = name.lower().replace("-", " ").replace("_", " ").strip()
+        # Remove extra spaces
+        normalized = " ".join(normalized.split())
+        return normalized
+    
+    # Build normalized set for matching
+    normalized_newcomer_labels = {normalize_label_name(label) for label in NEWCOMER_LABELS}
+    
     url = f"https://api.github.com/repos/{owner}/{repo}/labels"
     out = []
-    page = 1
     found_newcomer = set()
+    total_fetched = 0
     
-    while True:
-        r = fetch_rest(url, params={"per_page": PER_PAGE, "page": page})
-        if not r:
-            break
-        if not isinstance(r, list) or len(r) == 0:
-            break
+    # Retry logic with exponential backoff
+    for attempt in range(retries):
+        out = []
+        found_newcomer = set()
+        page = 1
         
-        for label in r:
-            label_name = label.get("name", "").lower().strip()
-            out.append({
-                "name": label.get("name"),
-                "color": label.get("color"),
-                "description": label.get("description"),
-            })
-            # Check if this is a newcomer label (case-insensitive)
-            if label_name in NEWCOMER_LABELS:
-                found_newcomer.add(label.get("name"))
+        while True:
+            r = fetch_rest(url, params={"per_page": PER_PAGE, "page": page})
+            if not r:
+                print(f"[LABELS] {owner}/{repo} attempt {attempt+1}/{retries}: API returned None")
+                break
+            
+            if not isinstance(r, list):
+                print(f"[LABELS] {owner}/{repo} attempt {attempt+1}/{retries}: API returned non-list response")
+                break
+            
+            if len(r) == 0 and page == 1:
+                # First page is empty - might be error or repo truly has no labels
+                print(f"[LABELS] {owner}/{repo} attempt {attempt+1}/{retries}: First page empty, {retries - attempt - 1} retries left")
+                if attempt < retries - 1:
+                    time.sleep(retry_delay)
+                    break  # Break inner loop, try again
+                else:
+                    # No more retries, return empty result
+                    return {
+                        "all_labels": [],
+                        "found_newcomer_labels": [],
+                        "has_newcomer_labels": False,
+                    }
+            
+            if len(r) == 0:
+                # We fetched some pages but this one is empty, stop pagination
+                break
+            
+            total_fetched += len(r)
+            
+            for label in r:
+                label_name = label.get("name", "")
+                label_name_normalized = normalize_label_name(label_name)
+                
+                out.append({
+                    "name": label_name,
+                    "color": label.get("color"),
+                    "description": label.get("description"),
+                })
+                
+                # Check if this is a newcomer label (flexible matching)
+                if label_name_normalized in normalized_newcomer_labels:
+                    found_newcomer.add(label_name)
+            
+            page += 1
         
-        page += 1
+        # If we fetched some labels, break retry loop (success)
+        if total_fetched > 0:
+            if len(found_newcomer) > 0:
+                print(f"[LABELS] {owner}/{repo}: Found {len(found_newcomer)} newcomer labels in {total_fetched} total")
+            break
     
     return {
         "all_labels": out,
@@ -884,4 +934,4 @@ def process_csv(csv_path: str):
     print(f"\n[SUMMARY] processed={ok} skipped={skipped} total_rows={total}")
 
 if __name__ == "__main__":
-    process_csv("out/repos/github_repos_unique.csv")
+    process_csv("../out/repos/github_repos_unique.csv")
